@@ -22,13 +22,15 @@ function clockCounter () {
         const clockInterval = window.setInterval(() => {
             totalMs += 10;
             //if totalMs === 10000 -- go to stop function
+            if (ms === 10000) {
+                endTimer();
+            }
             //else go to updater function
+            updateTimer();
     
         }, 10);
 
     }
-
-
 
     function increment () {
         //incremements numbers -- called from updateTimer?
