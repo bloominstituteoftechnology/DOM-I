@@ -27,7 +27,7 @@ var timer = window.setInterval(function () {
         secCounter = 0;
         maxSeconds++;
     }
-    if (maxSeconds === 2) {
+    if (maxSeconds === 10) {
         secondOnes.innerHTML = 0;
         secondTens.innerHTML = 1;
         document.querySelector('.digits').classList.add('redDigit')
