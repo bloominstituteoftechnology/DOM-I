@@ -1,9 +1,9 @@
 
 const digits = document.getElementsByClassName(".digits");
-const tensSec = document.getElementById("#secondTens");
-const onesSec = document.getElementById("#secondOnes");
-const hundredsMil = document.getElementById("#msHundreds");
-const tensMil = document.getElementById("#msTens");
+const tensSec = document.getElementById("secondTens");
+const onesSec = document.getElementById("secondOnes");
+const hundredsMil = document.getElementById("msHundreds");
+const tensMil = document.getElementById("msTens");
 
 myTimer();
 
