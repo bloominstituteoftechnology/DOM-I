@@ -19,14 +19,16 @@ function clockCounter () {
         second1s.innerHTML = "0";
         second10s.innerHTML = "0";
 
+        const clockInterval = window.setInterval(() => {
+            totalMs += 10;
+            //if totalMs === 10000 -- go to stop function
+            //else go to updater function
+    
+        }, 10);
+
     }
 
-    const clockInterval = window.setInterval(() => {
-        totalMs += 10;
-        //if totalMs === 10000 -- go to stop function
-        //else go to updater function
 
-    }, 10);
 
     function increment () {
         //incremements numbers -- called from updateTimer?
