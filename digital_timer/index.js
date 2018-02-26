@@ -2,37 +2,46 @@ const secondTens = document.getElementById("secondTens");
 const secondOnes = document.getElementById("secondOnes");
 const msHundreds = document.getElementById("msHundreds");
 const msTens = document.getElementById("msTens");
+const colon = document.getElementById("colon");
+
 
 timer();
 
 function timer () {
-    init();
-    function init () {
-        secondTens.innerHTML = 0;
-        secondOnes.innerHTML = 0;
-        msTens.innerHTML = 0;
-        msHundreds.innerHTML = 0;
-    }
+   function init () {
+       secondTens.innerHTML = 0;
+       secondOnes.innerHTML = 0;
+       msTens.innerHTML = 0;
+       msHundreds.innerHTML = 0;
+       increment();
+   }
 
-    function increment(){
-        if (msHundreds<10){
-            window.setInterval(()=>{ msHundreds.innerHTML++; }, 100);}
-        if (msTens<10){
-            window.setInterval(()=>{ msTens.innerHTML++ }, 10);}
-        if (secondOnes<10){
-            window.setInterval(()=>{ secondOnes.innerHTML++ }, 1000);}
-        if (secondTens<10){
-        window.setInterval(()=>{ secondTens.innerHTML++ }, 10000);}
-    }
+   let count = 0;
 
-    function endTimer(){
-    }
+   const increment = setInterval(() => {
+       count++;
+       updateTimer();
+       if (count === 1000) {
+           endTimer();
+       }
+   }, 10);
 
-    function updateTimer(){
-    }
+   function endTimer(){
+       clearInterval(increment);
+       secondTens.classList.add("redDigit");
+       secondOnes.classList.add("redDigit");
+       msTens.classList.add("redDigit");
+       msHundreds.classList.add("redDigit");
+       colon.classList.add("redDigit");
+       //add red digits class to digit class
+   }
 
-    increment();
-    updateTimer();
-    endTimer();
+   function updateTimer(){
+        secondTens.innerHTML = Math.floor(count / 1000);
+        secondOnes.innerHTML = Math.floor(count / 100 % 100 % 10);
+        msHundreds.innerHTML = Math.floor(count / 10 % 10);
+        msTens.innerHTML = Math.floor(count % 100 % 10);
+   }
+   init();
 
 }
