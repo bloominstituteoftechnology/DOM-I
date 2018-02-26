@@ -39,6 +39,7 @@ const timerStart = (() => {
     }, 10);
 
     setTimeout(() => {
+        //stop all timers and set to final number
         secTens.innerHTML = "1";
         secOnes.innerHTML = "0";
         msTens.innerHTML = "0";
@@ -46,10 +47,13 @@ const timerStart = (() => {
         clearInterval(onesCounter);
         clearInterval(tensCounter);
         clearInterval(hunsCounter);
+
+        //set colors to red
         secTens.style.color = "red";
         secOnes.style.color = "red";
         msTens.style.color = "red";
         msHuns.style.color = "red";
+        document.getElementById("colon").style.color = "red";
     }, tenSecTimer);
 });
 timerStart();
