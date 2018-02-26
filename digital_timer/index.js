@@ -1,5 +1,6 @@
 const ms10 = document.querySelector("#msTens");
 const ms100 = document.querySelector("#msHundreds");
+const colon = document.querySelector("#colon");
 const seconds = document.querySelector("#secondOnes");
 const secondsTens = document.querySelector("#secondTens");
 ms10.innerHTML = 4;
@@ -10,26 +11,31 @@ ms100.innerHTML = 0;
 seconds.innerHTML = 0;
 secondsTens.innerHTML = 0;
 
-// const active = () => {
-//   // if ms is less than 10 we want to increment
-//   if (ms10.innerHTML < 1000) {
-//     ++ms10.innerHTML;
-//   }
+
+
+function counter() {
   
-
-// }
-
-// we want to change all digits to 0 before func call
-// 
-
-
-
-
-setInterval(() => {
-  // if ms is less than 10 we want to increment
-  if (ms10.innerHTML < 10) {
+  if (ms10.innerHTML < 9) {
     ++ms10.innerHTML;
+  } else {
+    ms10.innerHTML = 0;
+    if (ms100.innerHTML < 9) {
+      ++ms100.innerHTML;
+    } else {
+      ms100.innerHTML = 0;
+      if (seconds.innerHTML < 9) {
+        ++seconds.innerHTML;
+      } else {
+        seconds.innerHTML = 0;
+        clearInterval(countThis);
+        ++secondsTens.innerHTML
+        const parent = document.getElementsByClassName("digits");
+        parent.classList.toggle("redDigit");
+      }
+    }
   }
   
 
-}, 10);
+}
+
+const countThis = setInterval(function() { counter() }, 10);
