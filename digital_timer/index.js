@@ -17,15 +17,18 @@ function myTimer () {
     tensMil.innerHTML = "0";
 
 //set interval that calls update timer as well as calls endtimer after 10 seconds
+let myInterval = window.setInterval(() => {
+
+}, 10);
 
   }
-//  function increment () {
+  function increment () {
 // helper function that gets called by updateTimer
-//  }
-//  function endTimer () {
+  }
+  function endTimer () {
 
-//  }
-//  function updateTimer () {
+  }
+  function updateTimer () {
 
-//  }
+  }
 }
