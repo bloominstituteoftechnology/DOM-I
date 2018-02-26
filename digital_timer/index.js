@@ -29,14 +29,10 @@ var id = setInterval(function () {
         vsecondOnes = 0;
         // break;
     }
-
-
     //increment the hundreth ms
     //if the hundreth ms is equal to 10 => increment the tenth ms
     //if the tenth ms is equal to 10 => increment the second ones
     //if the second ones is equal to 10 => increment the tenth seconds
-    console.log(ms);
-    seconds.innerHTML = ms;
 }
 , 10);
 
