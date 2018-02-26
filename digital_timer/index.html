@@ -3,14 +3,9 @@
   <head>
     <title>DOM I</title>
     <link rel="stylesheet" href="./styles.css">
-    <script type="text/javascript">
-      function start() {
-            //Start clock
-            setInterval("countUp()", 10000);
-        }
-  </script>
   </head>
   <body>
+    <script defer ="defer" src"index.js"></script>
     <div class="digits">
       <div class="digit" id="secondTens">-</div>
       <div class="digit" id="secondOnes">-</div>
@@ -20,42 +15,3 @@
     </div>
   </body>
 </html>
-
-<!-- New HTML to Analyze-->
-
-  <!-- <head>
-    <title>My little countUp timer</title>
-    <script type="text/javascript">
-        var clock = 0;
-        var countUpId = 0;
-
-        function start() {
-            //Start clock
-            secondTens = setInterval("countUp()", 10000);
-        }
-
-        function countUp(){
-            if(clock < 10000){
-                clock = clock + 1;
-                document.getElementById('cdDiv').innerHTML = clock;
-            }
-            else {
-                //Stop clock
-                clearInterval(countUpId);
-            }
-        }
-    </script>
-  </head>
-  <body onload="start()">
-      <div id="cdDiv">0</div>
-  </body>
-</html> -->
-<!-- Variables -->
-
-const digits = document.querySelector(".digits");
-const secondTens = document.getElementById("secondTens");
-const secondOnes = document.getElementById("secondOnes");
-const msHundreds = document.getElementById("msHundreds");
-const msTens = document.getElementById("msTens");
-const msOnes = document.getElementById("msOnes");
-
