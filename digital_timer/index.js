@@ -1,10 +1,10 @@
 //Get the digits divs from the DOM
 //declare four variables to hold the time interval counter for each digit part
 
-let secondTens = document.getElementById("secondTens").innerHTML;
-let secondOnes = document.getElementById("secondOnes").innerHTML;
+let secondTens = document.getElementById("secondTens");
+let secondOnes = document.getElementById("secondOnes");
 let msHundreds = document.getElementById("msHundreds");
-let msTens = document.getElementById("msTens").innerHTML;
+let msTens = document.getElementById("msTens");
 //Counter
 //Inside counter: increment the digits
 //Stop at 10 seconds
@@ -18,17 +18,25 @@ var id = setInterval(function () {
     msHundreds.innerHTML = vmsHundreds;
     if (vmsHundreds === 10) {
         vmsTens++;
+        msTens.innerHTML = vmsTens;
         vmsHundreds = 0;
     }
     if (vmsTens === 10) {
         vsecondOnes++;
+        secondOnes.innerHTML = vsecondOnes;
         vmsTens = 0;
     }
     if (vsecondOnes === 10) {
         vsecondTens++;
+        secondTens.innerHTML = vsecondTens;
         vsecondOnes = 0;
-        // break;
     }
+    if (vsecondTens === 1) {
+        let newTens = document.getElementById("secondTens");
+        newTens.innerHTML = 1;
+    }
+
+
     //increment the hundreth ms
     //if the hundreth ms is equal to 10 => increment the tenth ms
     //if the tenth ms is equal to 10 => increment the second ones
