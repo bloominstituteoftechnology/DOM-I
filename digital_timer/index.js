@@ -45,7 +45,6 @@ function timer () {
       msHundreds.innerHTML = "0";
       msTens.innerHTML = "0";
     } else if (ms % 1000 === 0) {
-      console.log(increment(secondOnes.innerHTML))
       secondOnes.innerHTML = increment(secondOnes.innerHTML);
       msHundreds.innerHTML = "0";
       msTens.innerHTML = "0";
