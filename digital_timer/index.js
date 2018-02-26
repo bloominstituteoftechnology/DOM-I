@@ -46,8 +46,10 @@ const timerStart = (() => {
         clearInterval(onesCounter);
         clearInterval(tensCounter);
         clearInterval(hunsCounter);
-
-
+        secTens.style.color = "red";
+        secOnes.style.color = "red";
+        msTens.style.color = "red";
+        msHuns.style.color = "red";
     }, tenSecTimer);
 });
 timerStart();
