@@ -9,10 +9,12 @@ let msTens = document.getElementById("msTens").innerHTML;
 //Inside counter: increment the digits
 //Stop at 10 seconds
 
-var ms = 0;
-let seconds = document.getElementById("secondOnes");
+let vmsHundreds = 0;
+let vmsTens = 0;
+let vsecondOnes = 0;
+let vsecondTens = 0;
 var id = setInterval(function () {
-    vmsHundreds ++;
+    vmsHundreds++;
     msHundreds.innerHTML = vmsHundreds;
     if (vmsHundreds === 10) {
         vmsTens++;
@@ -25,17 +27,17 @@ var id = setInterval(function () {
     if (vsecondOnes === 10) {
         vsecondTens++;
         vsecondOnes = 0;
-        break;
+        // break;
     }
-    
-        
-        //increment the hundreth ms
-        //if the hundreth ms is equal to 10 => increment the tenth ms
-        //if the tenth ms is equal to 10 => increment the second ones
-        //if the second ones is equal to 10 => increment the tenth seconds
-        console.log(ms);
-        seconds.innerHTML = ms;
-    }
-}, 10);
+
+
+    //increment the hundreth ms
+    //if the hundreth ms is equal to 10 => increment the tenth ms
+    //if the tenth ms is equal to 10 => increment the second ones
+    //if the second ones is equal to 10 => increment the tenth seconds
+    console.log(ms);
+    seconds.innerHTML = ms;
+}
+, 10);
 
 
