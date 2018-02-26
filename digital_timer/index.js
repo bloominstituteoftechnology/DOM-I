@@ -29,8 +29,7 @@ function counter() {
         seconds.innerHTML = 0;
         clearInterval(countThis);
         ++secondsTens.innerHTML
-        const parent = document.getElementsByClassName("digits");
-        parent.classList.toggle("redDigit");
+        document.getElementsByClassName("digits")[0].classList.add("redDigit");
       }
     }
   }
