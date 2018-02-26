@@ -1,20 +1,14 @@
 const ms10 = document.querySelector("#msTens");
 const ms100 = document.querySelector("#msHundreds");
-const colon = document.querySelector("#colon");
 const seconds = document.querySelector("#secondOnes");
 const secondsTens = document.querySelector("#secondTens");
-ms10.innerHTML = 4;
-console.log(ms10);
 
 ms10.innerHTML = 0;
 ms100.innerHTML = 0;
 seconds.innerHTML = 0;
 secondsTens.innerHTML = 0;
 
-
-
-function counter() {
-  
+function counter() {  
   if (ms10.innerHTML < 9) {
     ++ms10.innerHTML;
   } else {
@@ -33,8 +27,6 @@ function counter() {
       }
     }
   }
-  
-
 }
 
 const countThis = setInterval(function() { counter() }, 10);
