@@ -2,7 +2,6 @@ let secondTens = document.querySelector("#secondTens");
 let secondOnes = document.querySelector("#secondOnes");
 let msHundreds = document.querySelector("#msHundreds");
 let msTens = document.querySelector("#msTens");
-let stopwatch = document.querySelector(".digits");
 
 let msCounter = 0;
 let secCounter = 0;
@@ -28,10 +27,10 @@ var timer = window.setInterval(function () {
         secCounter = 0;
         maxSeconds++;
     }
-    if (maxSeconds === 10) {
+    if (maxSeconds === 2) {
         secondOnes.innerHTML = 0;
         secondTens.innerHTML = 1;
-        stopwatch.style.color = "red";
+        document.querySelector('.digits').classList.add('redDigit')
         clearInterval(timer);
     }
 }, 10)
