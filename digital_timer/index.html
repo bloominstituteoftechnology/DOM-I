@@ -3,6 +3,12 @@
   <head>
     <title>DOM I</title>
     <link rel="stylesheet" href="./styles.css">
+    <script type="text/javascript">
+      function start() {
+            //Start clock
+            setInterval("countUp()", 10000);
+        }
+  </script>
   </head>
   <body>
     <div class="digits">
@@ -16,31 +22,31 @@
 </html>
 
 <!-- New HTML to Analyze-->
-<html>
-  <head>
-    <title>My little countdown timer</title>
+
+  <!-- <head>
+    <title>My little countUp timer</title>
     <script type="text/javascript">
-        var clock = 10;
-        var countdownId = 0;
+        var clock = 0;
+        var countUpId = 0;
 
         function start() {
             //Start clock
-            countdownId = setInterval("countdown()", 1000);
+            secondTens = setInterval("countUp()", 10000);
         }
 
-        function countdown(){
-            if(clock > 0){
-                clock = clock - 1;
+        function countUp(){
+            if(clock < 10000){
+                clock = clock + 1;
                 document.getElementById('cdDiv').innerHTML = clock;
             }
             else {
                 //Stop clock
-                clearInterval(countdownId);
+                clearInterval(countUpId);
             }
         }
     </script>
   </head>
   <body onload="start()">
-      <div id="cdDiv">10</div>
+      <div id="cdDiv">0</div>
   </body>
-</html>
+</html> -->
