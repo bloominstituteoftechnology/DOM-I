@@ -13,8 +13,8 @@ msTens.innerHTML = '0';
 
 //increment milliseconds...
 
-function myTimer() {
-document.getElementsById("secondTens");
+//function myTimer() {
+//document.getElementsById("secondTens");
 
 
-}
+//}
