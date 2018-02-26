@@ -36,8 +36,9 @@ var id = setInterval(function () {
         if (vsecondTens === 1) {
             let newTens = document.getElementById("secondTens");
             newTens.innerHTML = 1;
-            for (let i = 0; i < ; i++)
-            digits.classList.add("redDigit");
+            for (let i = 0; i < digits.length; i++) {
+                digits[i].classList.add("redDigit");
+            }
         }
     }
 }
