@@ -15,22 +15,22 @@ function timer () {
     }
 
     function increment(){
-        window.setInterval(()=>{ msHundreds.innerHTML++ }, 100);
-        window.setInterval(()=>{ msTens.innerHTML++ }, 10);
-        window.setInterval(()=>{ secondOnes.innerHTML++ }, 1000);
-        window.setInterval(()=>{ secondTens.innerHTML++ }, 10000);
+        if (msHundreds<10){
+            window.setInterval(()=>{ msHundreds.innerHTML++; }, 100);}
+        if (msTens<10){
+            window.setInterval(()=>{ msTens.innerHTML++ }, 10);}
+        if (secondOnes<10){
+            window.setInterval(()=>{ secondOnes.innerHTML++ }, 1000);}
+        if (secondTens<10){
+        window.setInterval(()=>{ secondTens.innerHTML++ }, 10000);}
     }
 
     function endTimer(){
-        clearInterval();
     }
 
     function updateTimer(){
-        window.setInterval(clearInterval(secondTens),10000);
-        window.setInterval(clearInterval(secondOnes),1000);
-        window.setInterval(clearInterval(msTens),10);
-        window.setInterval(clearInterval(msHundreds),100);
     }
+
     increment();
     updateTimer();
     endTimer();
