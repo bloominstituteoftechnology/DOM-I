@@ -12,26 +12,45 @@ let secondOnes = 0;
 let secondTens = 0;
 
 const cb = () => {
-    msHundreds++;
-    if (msHundreds === 10) {
-        msTens++;
-        msHundreds = 0;
-    }
-    if (msTens === 10) {
-        secondOnes++;
-        msTens = 0;
-    }
-    if (secondOnes === 10) {
-        secondTens++;
-        secondOnes = 0;
-    }
-    if (secondTens === 1) {
-        let divs = document.getElementsByClassName("digit");
-        for (var i = 0; i < divs.length; i++) {
-            divs[i].classList.add("redDigit");
-        }
-        clearInterval(intervalID);
-    }
+
+	let hundredsDiv = document.getElementById("msHundreds");
+
+	if (msHundreds === 10) {
+		msHundreds = 0;
+		hundredsDiv.innerHTML = msHundreds;
+		msTens++;
+	}
+	else{
+		hundredsDiv.innerHTML = msHundreds;
+		msHundreds++;
+	}
+
+	if (msTens === 10) {
+		msTens = 0;
+		secondOnes++;
+	}
+	else{
+
+
+	}
+
+	if (secondOnes === 10) {
+		secondOnes = 0;
+		secondTens++;
+	}
+	else{
+
+	}
+
+	if (secondTens === 1) {
+		let tensDiv = document.getElementById("secondTens");
+		tensDiv.innerHTML = "1";
+		let divs = document.getElementsByClassName("digit");
+		for (var i = 0; i < divs.length; i++) {
+			divs[i].classList.add("redDigit");
+		}
+		clearInterval(intervalID);
+	}
 
 }
 
