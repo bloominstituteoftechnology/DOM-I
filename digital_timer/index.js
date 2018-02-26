@@ -1,21 +1,31 @@
 
 const digits = document.getElementsByClassName(".digits");
-const Tens = document.getElementById("#secondTens");
-const Ones = document.getElementById("#secondOnes");
-const msHundreds = document.getElementById("#msHundreds");
-const msTens = document.getElementById("#msTens");
+const tensSec = document.getElementById("#secondTens");
+const onesSec = document.getElementById("#secondOnes");
+const hundredsMs = document.getElementById("#msHundreds");
+const tensMs = document.getElementById("#msTens");
 
+myTimer();
 
+function myTimer () {
+  init();
 
-Tens.innerHTML = "0";
-Ones.innerHTML = "0";
-msHundreds.innerHTML = "0";
-msTens.innerHTML = "0";
+  function init () {
+    tensSec.innerHTML = "0";
+    onesSec.innerHTML = "0";
+    hundredsMs.innerHTML = "0";
+    tensMs.innerHTML = "0";
 
-//increment milliseconds...
+//set interval that calls update timer as well as calls endtimer after 10 seconds
 
-//function myTimer() {
-//document.getElementsById("secondTens");
+  }
+//  function increment () {
+// helper function that gets called by updateTimer
+//  }
+//  function endTimer () {
 
+//  }
+//  function updateTimer () {
 
-//}
+//  }
+}
