@@ -16,7 +16,7 @@ function clockCounter () {
     const clockInterval = window.setInterval(() => {
         totalMs += 10;
         //if totalMs === 10000 -- go to stop function
-        //if not === 10000 then go to update function
+        //else go to updater function
 
 
     }, 10);
