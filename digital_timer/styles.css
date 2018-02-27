@@ -11,4 +11,6 @@ body {
 
 .redDigit {
   color: red;
+  display: inline-block;
+  font-size: 80px;
 }
