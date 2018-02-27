@@ -17,13 +17,14 @@ function timer() {
         if (msHundreds.innerHTML < 9) {
             ++msHundreds.innerHTML;
         } else {
-            msHundreds.innertHTML = 0;
+            msHundreds.innerHTML = 0;
             if (secondOnes.innerHTML < 9) {
                 ++secondOnes.innerHTML;
             } else {
                 secondOnes.innerHTML = 0;
                 clearInterval(countToTen);
-                ++secondTens.innerHTMLdocument.getElementsByClassName("digits")[0].classList.add("redDigit");
+                ++secondTens.innerHTML
+                document.getElementsByClassName("digits")[0].classList.add("redDigit");
             }
         }
     }
