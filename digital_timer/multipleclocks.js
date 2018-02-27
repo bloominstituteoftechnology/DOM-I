@@ -1,3 +1,36 @@
+
+
+
+
+
+
+
+function counter() {
+  if (ms10.innerHTML < 9) {
+    ++ms10.innerHTML;
+  } else {
+    ms10.innerHTML = 0;
+    if (ms100.innerHTML < 9) {
+      ++ms100.innerHTML;
+    } else {
+      ms100.innerHTML = 0;
+      if (seconds.innerHTML < 9) {
+        ++seconds.innerHTML;
+      } else {
+        seconds.innerHTML = 0;
+        clearInterval(countThis);
+        ++secondsTens.innerHTML
+        document.getElementsByClassName("digits")[0].classList.add("redDigit");
+      }
+    }
+  }
+}
+
+
+
+
+
+
 let clockNumber = 1;
 
 const createClock = () => {
@@ -38,8 +71,7 @@ const createClock = () => {
   document.querySelector('body').appendChild(newDiv);
   clockNumber++;
 }
-createClock();
-createClock();
-createClock();
-createClock();
-createClock();
+
+document.addEventListener("click", function () {
+  createClock();
+});
