@@ -26,5 +26,10 @@ function timer () {
     }, 10);
   }
 
-  
+  function endTimer (intervalId) {
+    clearInterval(intervalId);
+    Array.from(digits.children).forEach(digit => {
+      digit.classList.add("redDigit");
+    })
+  }
 }
