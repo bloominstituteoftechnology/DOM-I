@@ -15,7 +15,7 @@ function timer () {
 
     function endTimer () {
         // change color to red
-        secondTens.parentElement.style.color = 'red';
+        secondTens.parentElement.classList.add("redDigit");
         // clearInterval
         clearInterval(time);
     }
@@ -53,6 +53,8 @@ function timer () {
         msHundreds.innerHTML = '0';
         msTens.innerHTML = '0';
         
+        // remove redDigit if in the class
+        secondTens.parentElement.classList.remove("redDigit");
     }
 
     // initialize variables, html display
