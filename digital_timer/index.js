@@ -51,7 +51,8 @@ function myTimer () {
                 document.getElementById("msHundreds").classList.add("redDigit");
                 document.getElementById("msTens").classList.add("redDigit");
                 document.getElementById("colon").classList.add("redDigit");
-
+                clearInterval(timer2);
+                body.style.background = "#3498db";
             } 
         } 
     } 
@@ -64,9 +65,10 @@ function colorChange() {
         body.style.background = "#3498db";
     }
     isBlue = !isBlue;
-} 
-let timer = (setInterval(function () { myTimer(), colorChange() }, 10));
-
+    document.querySelector("body")
+}   
+let timer = (setInterval(function () { myTimer() }, 10));
+let timer2 = (setInterval(function () { colorChange() }, 1000 ));
  
 
 
