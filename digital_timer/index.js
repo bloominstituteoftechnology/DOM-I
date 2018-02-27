@@ -11,6 +11,7 @@ function myTimer () {
   init();
 
   function init () {
+    let time = 0; //set for use in myInterval function to begin interval at 0...
     tensSec.innerHTML = "0";
     onesSec.innerHTML = "0";
     hundredsMil.innerHTML = "0";
@@ -18,13 +19,13 @@ function myTimer () {
 
 //set interval that calls update timer as well as calls endtimer after 10 seconds
 let myInterval = window.setInterval(() => {
-
-
+// add 10 into time variable
+//if time has reached 10000 milliseconds (10 seconds) then stop the interval, otherwise continue running timer until such
 }, 10);
 }
-//  function increment () {
+  function increment () {
 // helper function that gets called by updateTimer
-//  }
+  }
 
   function endTimer () {
     clearInterval(myInterval);
@@ -32,8 +33,8 @@ let myInterval = window.setInterval(() => {
   }
 
 
-//  function updateTimer () {
+  function updateTimer () {
 //called by myTimer function, calls increment function
-//  }
+  }
 
 }
