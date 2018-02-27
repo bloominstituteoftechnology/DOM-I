@@ -12,30 +12,6 @@
       <div class="digit" id="msHundreds">-</div>
       <div class="digit" id="msTens">-</div>
     </div>
-    <script>
-    var nIntervId;
- let n = 0;
- function changeColor() {
-   nIntervId = setInterval(flashText, 1000);
- }
-
- function flashText() {
-   //var oElem = document.getElementById('my_box');
-   //oElem.style.color = oElem.style.color == 'red' ? 'blue' : 'red';
-   // 'red' ? 'blue' : 'red' is a ternary operator.
-   console.log(n);
-   n++;
-   if (n > 10) stopTextColor();
-  }
-
- function stopTextColor() {
-   clearInterval(nIntervId);
- }
-
- changeColor();
-
- 
-    </script>
     <script src="index.js"></script>
   </body>
 </html>
