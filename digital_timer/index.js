@@ -32,4 +32,18 @@ function timer () {
       digit.classList.add("redDigit");
     })
   }
+
+  function updateTimer (ms) {
+    if (ms === 10000) {
+      secondTens.innerHTML = "1";
+      secondOnes.innerHTML = "0";
+      msHundreds.innerHTML = "0";
+      msTens.innerHTML = "0";
+    } else if (ms % 1000 === 0) {
+      msHundreds.innerHTML = increment(msHundreds.innerHTML);
+      msTens.innerHTML = "0";
+    } else {
+      msTens.innerHTML = increment(msTens.innerHTML);
+    }
+  }
 }
