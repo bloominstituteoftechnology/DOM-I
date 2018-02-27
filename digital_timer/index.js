@@ -32,10 +32,10 @@ function clockCounter () {
 
     }
 
-    function increment () {
+    function increment (num) {
         //incremements numbers -- called from updateTimer?
-        let time = Number(num + 1);
-        // let time = Number(num) + 1;
+        //  let time = Number(num + 1);
+         let time = Number(num) + 1;
         return time;
     }
 
@@ -47,7 +47,7 @@ function clockCounter () {
 
     function updateTimer (totalMs) {
         //updater function - take totalMs and updates .innerHTML for each element based on total ms that has passed, using if statements?
-        if( totalMs === 10000){
+        if(totalMs === 10000){
             ms10s.innerHTML = "0";
             ms100s.innerHTML = "0";
             second1s.innerHTML = "0";
