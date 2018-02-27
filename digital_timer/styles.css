@@ -11,4 +11,24 @@ body {
 
 .redDigit {
   color: red;
+  display: inline-block;
+  font-size: 80px;
+}
+
+.blueDigit {
+  color: blue;
+  display: inline-block;
+  font-size: 80px;
+}
+
+.yellowDigit {
+  color: yellow;
+  display: inline-block;
+  font-size: 80px;
+}
+
+.orangeDigit {
+  color: orange;
+  display: inline-block;
+  font-size: 80px;
 }
