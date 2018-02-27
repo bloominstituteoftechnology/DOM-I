@@ -4,6 +4,10 @@ body {
   align-items: center;
 }
 
+.digits{
+  width: 340px;
+}
+
 .digit {
   display: inline-block;
   font-size: 80px;
