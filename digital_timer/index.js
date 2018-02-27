@@ -6,10 +6,7 @@
 // within for loop - statement to stop the loop
 // set interval, invoke cb, delay 10
 
-let msHundreds = 0;
-let msTens = 0;
-let secondOnes = 0;
-let secondTens = 0;
+
 
 const cb = () => {
 
@@ -17,9 +14,14 @@ const cb = () => {
     let msTensDiv = document.getElementById("msTens");
     let onesDiv = document.getElementById("secondOnes");
 
+
 	if (msHundreds === 10) {
 		msHundreds = 0;
 		hundredsDiv.innerHTML = msHundreds;
+<<<<<<< HEAD
+=======
+
+>>>>>>> dd203be40babd70d3f653ef8c6e639f46a7d061e
 		msTens = msTens + 1;
 	}
 	else {
@@ -28,6 +30,7 @@ const cb = () => {
 	}
 
 	if (msTens === 10) {
+<<<<<<< HEAD
         msTens = 0;
         msTensDiv.innerHTML = msTens;
 		onesDiv = onesDiv + 1;
@@ -46,6 +49,24 @@ const cb = () => {
 	else {
         onesDiv.innerHTML = secondOnes;
         secondOnes = secondOnes + 1;
+=======
+		msTens = 0;
+		msTensDiv.innerHTML = msTens;
+		secondOnes++;
+	}
+	else{
+		msTensDiv.innerHTML = msTens;
+	}
+
+	if (secondOnes === 10) {
+		secondOnes = 0;
+
+		secondOnesDiv.innerHTML = secondOnes;
+		secondTens++;
+	}
+	else{
+		secondOnesDiv.innerHTML = secondOnes;
+>>>>>>> dd203be40babd70d3f653ef8c6e639f46a7d061e
 
 	}
 
