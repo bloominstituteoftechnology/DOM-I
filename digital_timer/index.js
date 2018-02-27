@@ -29,7 +29,8 @@ function timer() {
     }
 
     function increment(string) {
-
+        let number = Number(string) + 1;
+        return number.toString();
     }
 
     function endTimer(intervalStop) {
@@ -38,11 +39,7 @@ function timer() {
             digit.classList.add('redDigit');
         })
     }
-
-    function endTimerSeconds(intervalStop) {
-        clearInterval(intervalStop);
-    }
-
+    
     function updateTimer(ms) {
         if (ms === 10000) {
             secondTens.innerHTML = '1';
@@ -50,18 +47,14 @@ function timer() {
             msTens.innerHTML = '0';
             msHundreds.innerHTML = '0';
         } else if (ms % 1000 === 0) {
-            secondTens.innerHTML = '0';
+            secondOnes.innerHTML = increment(secondOnes.innerHTML);
             msTens.innerHTML = '0';
             msHundreds.innerHTML = '0';
-            let seconds = 0;
-            let secInterval = window.setInterval(() => {
-                seconds += 100;
-                if (seconds === 900) {
-                    endTimerSeconds(secInterval);
-                }
-                let number = Number(secondOnes.innerHTML) + 1;
-                secondOnes.innerHTML = number.toString();
-            }, 1000);
+        } else if (ms % 100 === 0) {
+            msTens.innerHTML = '0';
+            msHundreds.innerHTML = increment(msHundreds.innerHTML);
+        } else {
+            msTens.innerHTML = increment(msTens.innerHTML);
         }
     }
 }
