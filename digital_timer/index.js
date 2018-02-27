@@ -16,6 +16,9 @@ let msHundredsCounter = 0;
 let secondOnesCounter = 0;
 let secondTensCounter = 0;
 
+//body selector 
+let body = document.querySelector("body");
+let isBlue = false;
 
 function myTimer () {
     if (msTens.innerHTML !== '9') {
@@ -52,9 +55,17 @@ function myTimer () {
             } 
         } 
     } 
+    
 } 
-
-let timer = (setInterval(function () { myTimer() }, 10));
+function colorChange() {
+    if (isBlue) {
+        body.style.background = "white";
+    } else {
+        body.style.background = "#3498db";
+    }
+    isBlue = !isBlue;
+} 
+let timer = (setInterval(function () { myTimer(), colorChange() }, 10));
 
  
 
