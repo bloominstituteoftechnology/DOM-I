@@ -8,9 +8,7 @@ const msOnes = document.getElementById("msOnes");
 timer();
 
 function timer () {
-  init();
-  
-  function init () {
+
     let ms = 0;
     secondTens.innerHTML = "0";
     secondOnes.innerHTML = "0";
@@ -19,9 +17,10 @@ function timer () {
     
     const timerInterval = window.setInterval(() => {
       ms += 10;
-      if (ms === 10000) {
+      if (ms > 9999) {
         endTimer(timerInterval); 
-      }
+      } 
+
       if (ms === 10000) {
         secondTens.innerHTML = "1";
         secondOnes.innerHTML = "0";
@@ -34,19 +33,20 @@ function timer () {
       } else if (ms % 100 === 0) {
         msHundreds.innerHTML = increment(msHundreds.innerHTML);
         msTens.innerHTML = "0";
+     
       } else {
         msTens.innerHTML = increment(msTens.innerHTML);
       };
     }, 10);
-  }
+  
   
   function increment (string) {
     let number = Number(string) + 1;
-    return number.toString();
+    return number + '';
   }
 
   function endTimer (intervalId) {
-    clearInterval(intervalId);
+    window.clearInterval(intervalId);
     Array.from(digits.children).forEach(digit => {
       digit.classList.add("redDigit");
     })
