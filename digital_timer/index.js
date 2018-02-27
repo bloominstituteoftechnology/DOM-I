@@ -1,71 +1,52 @@
-
-// document.getElementById("secondTens").innerHTML = "0";
-// document.getElementById("secondOnes").innerHTML = "0";
-// document.getElementById("msHundreds").innerHTML = "0";
-// document.getElementById("msTens").innerHTML = "0";
-
-// let secondTensLabel = document.getElementById("secondTens");
-// let secondOnesLabel = document.getElementById("secondOnes");
-// let msHundredsLabel = document.getElementById("msHundreds");
-// let msTensLabel = document.getElementById("msTens");
-
-// let totalSeconds = 0;
-// setInterval(setTime, 1000);
-
-// function setTime() {
-//   ++totalSeconds;
-//   secondTensLabel.innerHTML = pad(totalSeconds % 60);
-//   secondOnesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
-// }
-
-// function pad(val) {
-//   var valString = val + "";
-//   if (valString.length < 2) {
-//     return "0" + valString;
-//   } else {
-//     return valString;
-//   }
-// }
-
 const secondTens = document.getElementById("secondTens");
 const secondOnes = document.getElementById("secondOnes");
 const msHundreds = document.getElementById("msHundreds");
 const msTens = document.getElementById("msTens");
+const colon = document.getElementById("colon");
 
-timer(10);
+timer();
 
-function timer (number) {
-  init();
+function timer () {
 
   function init () {
     secondTens.innerHTML = "0";
     secondOnes.innerHTML = "0";
     msHundreds.innerHTML = "0";
     msTens.innerHTML = "0";
-
+    colon.innerHTML = ":";
     // set an interval that calls updateTimer as well as calls endTimer after 10 seconds
+    secondsCounter();
   }
 
   let totalSeconds = 0;
-  setInterval(setTime, 1000);
 
-  function setTime() {
-      ++totalSeconds;
-      msTens.innerHTML = (totalSeconds % 60);
-      //msHundreds.innerHTML = (parseInt(totalSeconds % 60));
-      if (msTens.innerHTML === 9) {
-        ++msHundreds.innerHTML
-      } else {
-      
-      }
-   }
-   
-  // function pad(val) {
-    // var valString = val + "";
-     // if (valString.length < 2) {
-      // return "0" + valString;
-     // } else {
-       // return valString;
-     // }
-   //}
+  const secondsCounter = setInterval (() => {
+    totalSeconds++;
+    updateTimer();
+
+    if (totalSeconds === 1000){
+        stop();
+    }
+
+  }, 10);
+
+  function stop () {
+      clearInterval(secondsCounter);
+      secondTens.classList.add('redDigit');
+      secondOnes.classList.add('redDigit');
+      msHundreds.classList.add('redDigit');
+      msTens.classList.add('redDigit');
+      colon.classList.add('redDigit');
+  }
+  
+  function updateTimer () {
+    secondTens.innerHTML = Math.floor(totalSeconds / 1000 % 10) ;
+    secondOnes.innerHTML = Math.floor(totalSeconds / 100 % 10);
+    msHundreds.innerHTML = Math.floor(totalSeconds / 10 % 10);
+    msTens.innerHTML = Math.floor(totalSeconds / 1 % 10);
+  }
+
+  init();
+
 }
+
