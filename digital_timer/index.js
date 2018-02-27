@@ -46,8 +46,8 @@ function timer() {
     msHundreds.innerHTML = window.setInterval(increment(msHundredsVal), 10); */
     window.setInterval(() => {
         //msHundreds.innerHTML = "It's been 5 seconds already";
-         
-        msHundreds.innerHTML = `This is i: ${for (let i = 0; i < 50; i++) {return i++}}`;
+        for (let i = 0; i < 50; i++) {return i++}
+        msHundreds.innerHTML = `This is i: ${i}`;
     }, 5000);
 
     window.setInterval(() => {
