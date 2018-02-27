@@ -32,11 +32,11 @@ function timer () {
 
   function stop () {
       clearInterval(secondsCounter);
-      secondTens.classList.add('redDigit');
-      secondOnes.classList.add('redDigit');
-      msHundreds.classList.add('redDigit');
-      msTens.classList.add('redDigit');
-      colon.classList.add('redDigit');
+      secondTens.style.color = 'red';
+      secondOnes.style.color = 'red';
+      msHundreds.style.color = 'red';
+      msTens.style.color = 'red';
+      colon.style.color = 'red';
   }
   
   function updateTimer () {
