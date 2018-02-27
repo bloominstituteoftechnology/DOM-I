@@ -13,38 +13,45 @@ let secondTens = 0;
 
 const cb = () => {
 
-	let hundredsDiv = document.getElementById("msHundreds");
+    let hundredsDiv = document.getElementById("msHundreds");
+    let msTensDiv = document.getElementById("msTens");
+    let onesDiv = document.getElementById("secondOnes");
 
 	if (msHundreds === 10) {
 		msHundreds = 0;
 		hundredsDiv.innerHTML = msHundreds;
-		msTens++;
+		msTens = msTens + 1;
 	}
-	else{
+	else {
 		hundredsDiv.innerHTML = msHundreds;
-		msHundreds++;
+		msHundreds = msHundreds + 1;
 	}
 
 	if (msTens === 10) {
-		msTens = 0;
-		secondOnes++;
+        msTens = 0;
+        msTensDiv.innerHTML = msTens;
+		onesDiv = onesDiv + 1;
 	}
-	else{
-
+	else { 
+        msTensDiv.innerHTML = msTens;
+        msTens = msTens + 1;
 
 	}
 
 	if (secondOnes === 10) {
-		secondOnes = 0;
-		secondTens++;
+        secondOnes = 0;
+        onesDiv.innerHTML = secondOnes;
+		secondTens = secondTens + 1;
 	}
-	else{
+	else {
+        onesDiv.innerHTML = secondOnes;
+        secondOnes = secondOnes + 1;
 
 	}
 
 	if (secondTens === 1) {
-		let tensDiv = document.getElementById("secondTens");
-		tensDiv.innerHTML = "1";
+        let tensDiv = document.getElementById("secondTens");
+        tensDiv.innerHTML = "1";
 		let divs = document.getElementsByClassName("digit");
 		for (var i = 0; i < divs.length; i++) {
 			divs[i].classList.add("redDigit");
