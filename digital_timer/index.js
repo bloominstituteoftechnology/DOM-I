@@ -45,4 +45,4 @@ function timer () {
                 }
         }
     }
-};
+}
