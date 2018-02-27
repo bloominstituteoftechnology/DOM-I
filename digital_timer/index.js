@@ -16,10 +16,8 @@ function timer() {
         msTens.innerHTML = '0';
         msHundreds.innerHTML = '0';
     
-        // set an interval that calls updateTimer as well as calls endTimer after 10 seconds
         let ms = 0;
         let timerInt = window.setInterval(() => {
-            // console.log('its been 10 ms already.');
             ms += 10;
             if (ms === 10000) {
                 endTimer(timerInt);
@@ -39,7 +37,7 @@ function timer() {
             digit.classList.add('redDigit');
         })
     }
-    
+
     function updateTimer(ms) {
         if (ms === 10000) {
             secondTens.innerHTML = '1';
