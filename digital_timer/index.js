@@ -16,5 +16,15 @@ function timer () {
     secondOnes.innerHTML = "0";
     msHundreds.innerHTML = "0";
     msTens.innerHTML = "0";
+
+    const timerInterval = window.setInterval(() => {
+      ms += 10;
+      if (ms === 10000) {
+        endTimer(timerInterval);
+      }
+      updateTimer(ms);
+    }, 10);
   }
+
+  
 }
