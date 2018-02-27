@@ -1,26 +1,21 @@
 
-
-
-
-
-
-
-function counter() {
-  if (ms10.innerHTML < 9) {
-    ++ms10.innerHTML;
+function runClock(msTens, msHundreds, seconds, secondsTens, newDiv, countThis) {
+  // console.log(msTens);
+  if (msTens.innerHTML < 9) {
+    ++msTens.innerHTML;
   } else {
-    ms10.innerHTML = 0;
-    if (ms100.innerHTML < 9) {
-      ++ms100.innerHTML;
+    msTens.innerHTML = 0;
+    if (msHundreds.innerHTML < 9) {
+      ++msHundreds.innerHTML;
     } else {
-      ms100.innerHTML = 0;
+      msHundreds.innerHTML = 0;
       if (seconds.innerHTML < 9) {
         ++seconds.innerHTML;
       } else {
         seconds.innerHTML = 0;
         clearInterval(countThis);
         ++secondsTens.innerHTML
-        document.getElementsByClassName("digits")[0].classList.add("redDigit");
+        newDiv.classList.add("redDigit");
       }
     }
   }
@@ -40,12 +35,12 @@ const createClock = () => {
   const secondsTens = document.createElement("div");
   secondsTens.classList.add("digit", `secondTens${clockNumber}`);
   
-  secondsTens.innerHTML = '-';
+  secondsTens.innerHTML = 0;
 
   const seconds = document.createElement("div");
   seconds.classList.add("digit", `second${clockNumber}`);
   
-  seconds.innerHTML = '-';
+  seconds.innerHTML = 0;
   
   const colon = document.createElement("div");
   colon.classList.add("digit", `colon${clockNumber}`);
@@ -55,20 +50,23 @@ const createClock = () => {
   const msHundreds = document.createElement("div");
   msHundreds.classList.add("digit", `msHundreds${clockNumber}`);
   
-  msHundreds.innerHTML = '-';
+  msHundreds.innerHTML = 0;
   
   const msTens = document.createElement("div");
   msTens.classList.add("digit", `msTens${clockNumber}`);
   
-  msTens.innerHTML = '-';
+  msTens.innerHTML = 0;
   
   newDiv.appendChild(secondsTens);
   newDiv.appendChild(seconds);
   newDiv.appendChild(colon);
   newDiv.appendChild(msHundreds);
   newDiv.appendChild(msTens);
-  console.log(newDiv);
+  console.log(msTens);
   document.querySelector('body').appendChild(newDiv);
+
+  var countThis = setInterval(function() { runClock(msTens, msHundreds, seconds, secondsTens, newDiv, countThis) }, 10);
+  
   clockNumber++;
 }
 

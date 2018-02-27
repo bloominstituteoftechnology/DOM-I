@@ -59,6 +59,10 @@ class Clock {
     }
   }
 
+  document.addEventListener("click", function () {
+    createClock();
+  });
+
   // countThis() {
   //   setInterval(() => { counter(); }, 10);
   // }
