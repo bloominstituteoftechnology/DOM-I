@@ -30,3 +30,4 @@ function counter() {
 }
 
 const countThis = setInterval(function() { counter() }, 10);
+
