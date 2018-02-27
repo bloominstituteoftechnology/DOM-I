@@ -1,90 +1,63 @@
-
-let secondTens = document.getElementById("secondTens");
-let secondOnes = document.getElementById("secondOnes");
-let msHundreds = document.getElementById("msHundreds");
-let msTens = document.getElementById("msTens");
+let tenSec = document.getElementById('secondTens');
+let oneSec = document.getElementById('secondOnes');
+let msHuns = document.getElementById('msHundreds');
+let msTens = document.getElementById('msTens');
 
 function timer() {
 
-    let intervalID = setInterval(updateTimer, 10);
+   let tenSeconds = 0;
+   let oneSeconds = 0;
+   let msHundred = 0;
+   let msTen = 0;
 
-    function init() {
-        secondTens.innerHTML = 0;
-        secondOnes.innerHTML = 0;
-        msHundreds.innherHTML = 0;
-        msTens.innerHTML = 0;
-    };
+   function init() {
 
-    function increment () {
-        
-    };
+       tenSec.innerHTML = 0;
+       oneSec.innerHTML = 0;
+       msHuns.innerHTML = 0;
+       msTens.innerHTML = 0;
+   }
 
-    function endTimer() {
-        clearInterval(intervalID)
-    };
+   init();
 
-    function updateTimer () {
-        let tenSeconds = 0;
-        let oneSeconds = 0;
-        let millHundreds = 0;
-        let millTens = 0;
-        millTens += 1;
-        if (millTens > 99) {
-            millHundreds += 1;
-            millTens = 0;
+   function endTimer () {
+
+       if(tenSeconds === 1){
+        clearInterval(stopID);
+       }
+   }
+
+   const stopID = setInterval(updatTimer, 10);
+
+   function updatTimer (){
+
+       msTen += 10;
+       if (msTen > 99) {
+           msHundred += 1;
+           msTen = 0;
         }
-        if (millHundreds > 999) {
-            oneSeconds += 1;
-            millHundreds = 0;
+       if (msHundred >= 9) {
+
+           oneSeconds += 1;
+           msHundred = 0;
         }
-        if (oneSeconds > 9) {
-            tenSeconds += 1;
-        }
-        msTens.innerHTML = millTens;
-        msHundreds.innerHTML = millHundreds;
-        secondOnes.innerHTML = oneSeconds;
-        secondTens.innerHTML = tenSeconds;
-    };
-    
-    init();
-    intervalID();
-};
+       if (oneSeconds > 9) {
+        oneSeconds = 0;
+        tenSeconds = 1;
+        endTimer();
+       }
+       if (tenSeconds === 1) {
+           tenSec.style.color = 'red';
+           oneSec.style.color = 'red';
+           msHuns.style.color = 'red';
+           msTens.style.color = 'red';
+       }
 
-timer();
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function newFunction() {
-    return document.getElementById("secondTens");
+       tenSec.innerHTML = tenSeconds;
+       oneSec.innerHTML = oneSeconds;
+       msHuns.innerHTML = msHundred;
+       msTens.innerHTML = msTen;
+   }
 }
 
-return "1" + "1";
+timer();
