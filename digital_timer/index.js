@@ -9,21 +9,26 @@ timer();
 
 function timer () {
   init();
-
+  
   function init () {
     let ms = 0;
     secondTens.innerHTML = "0";
     secondOnes.innerHTML = "0";
     msHundreds.innerHTML = "0";
     msTens.innerHTML = "0";
-
+    
     const timerInterval = window.setInterval(() => {
       ms += 10;
       if (ms === 10000) {
-        endTimer(timerInterval);
+        endTimer(timerInterval); 
       }
       updateTimer(ms);
     }, 10);
+  }
+  
+  function increment (string) {
+    let number = Number(string) + 1;
+    return number.toString();
   }
 
   function endTimer (intervalId) {
@@ -40,6 +45,10 @@ function timer () {
       msHundreds.innerHTML = "0";
       msTens.innerHTML = "0";
     } else if (ms % 1000 === 0) {
+      secondOnes.innerHTML = increment(secondOnes.innerHTML);
+      msHundreds.innerHTML = "0";
+      msTens.innerHTML = "0";
+    } else if (ms % 100 === 0) {
       msHundreds.innerHTML = increment(msHundreds.innerHTML);
       msTens.innerHTML = "0";
     } else {
