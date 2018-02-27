@@ -19,16 +19,21 @@ function myTimer () {
 //set interval that calls update timer as well as calls endtimer after 10 seconds
 let myInterval = window.setInterval(() => {
 
+
 }, 10);
-
-  }
-  function increment () {
+}
+//  function increment () {
 // helper function that gets called by updateTimer
-  }
+//  }
+
   function endTimer () {
-
+    clearInterval(myInterval);
+    // used when myTimer function has reached a certain condition, i.e., tensSec = 1, onesSec = 0, hundredsMil = 0 and tensMil =0.
   }
-  function updateTimer () {
 
-  }
+
+//  function updateTimer () {
+//called by myTimer function, calls increment function
+//  }
+
 }
