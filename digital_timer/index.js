@@ -46,15 +46,26 @@ function timer (number) {
     // set an interval that calls updateTimer as well as calls endTimer after 10 seconds
   }
 
-  function increment () {
-    // helper function that gets called by updateTimer
-  }
+  let totalSeconds = 0;
+  setInterval(setTime, 1000);
 
-  function endTimer () {
-
-  }
-
-  function updateTimer () {
-
-  }
+  function setTime() {
+      ++totalSeconds;
+      msTens.innerHTML = (totalSeconds % 60);
+      //msHundreds.innerHTML = (parseInt(totalSeconds % 60));
+      if (msTens.innerHTML === 9) {
+        ++msHundreds.innerHTML
+      } else {
+      
+      }
+   }
+   
+  // function pad(val) {
+    // var valString = val + "";
+     // if (valString.length < 2) {
+      // return "0" + valString;
+     // } else {
+       // return valString;
+     // }
+   //}
 }
