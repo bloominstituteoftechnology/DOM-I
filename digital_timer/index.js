@@ -1,14 +1,14 @@
 // Grab Object Class List
-let digits = document.getElementsByClassName("digits");
-let digit = document.getElementsByClassName("digit");
+const digits = document.getElementsByClassName("digits");
+const digit = document.getElementsByClassName("digit");
 
 // Store Class List Members
-let allText = digits[0];
+const allText = digits[0];
 
-let tens = digit[0];
-let ones = digit[1];
-let msH = digit[3];
-let msT = digit[4];
+const tens = digit[0];
+const ones = digit[1];
+const msH = digit[3];
+const msT = digit[4];
 
 // Initialize StopWatch Variables
 let ten = 0;
@@ -54,6 +54,6 @@ function startTimer() {
   }
 }
 
-var myTimer = setInterval(startTimer,10);
+let myTimer = setInterval(startTimer,10);
 
 // allText.classList.add("redDigit")
