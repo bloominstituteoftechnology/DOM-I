@@ -17,6 +17,10 @@ let h = 0;
 let t = 0;
 
 // Reset StopWatch on PageLoad 
+// I could set up a delay for this
+// Or a reset button, but I'm  just
+// reproducing what Ivans page example
+
 tens.innerHTML = ten;
 ones.innerHTML = one;
 msH.innerHTML = h;
