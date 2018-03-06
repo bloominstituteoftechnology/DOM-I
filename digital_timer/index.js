@@ -6,12 +6,16 @@ const msTens = document.querySelector('#msTens')
 let counter = 0
 
 const interval = setInterval(() => {
-  counter++
-  msTens.innerHTML = counter
-}, 10)
+  counter++;
+  msTens.innerHTML = counter;
+    }, 1000)
 
 setTimeout(() => {
-  clearTimeout(interval)
-}, 10000)
+  clearTimeout(interval);
+    msTens.style.color = 'red';
+    }, 10000);
+
+
+
 
 
