@@ -1,48 +1,32 @@
 let msTens = document.getElementById("msTens");
-let msHundreds = document.getElementById("msHundreds");
-let secondOnes = document.getElementById("secondOnes");
-let secondTens = document.getElementById("secondTens");
+let msHuns = document.getElementById("msHundreds");
+let seconds = document.getElementById("secondOnes");
+let sseconds = document.getElementById("secondTens");
+let digits = document.querySelector(".digits");
 
-let msTensNum = 0;
-let msHundredsNum = 0;
-let secondOnesNum = 0;
-let secondTensNum = 0;
+sseconds.innerHTML = "0";
+seconds.innerHTML = "0";
+msHundreds.innerHTML = "0";
+msTens.innerHTML = "0";
 
-let timer = setInterval(function () {
-    if (msTens.innerHTML === "-") msTens.innerHTML = "0";
-    if (msHundreds.innerHTML === "-") msHundreds.innerHTML = "0";
-    if (secondOnes.innerHTML === "-") secondOnes.innerHTML = "0";
-    if (secondTens.innerHTML === "-") secondTens.innerHTML = "0";
-
-
-    if (msTens.innerHTML !== "9") {
-        msTensNum++;
-        msTens.innerHTML = msTensNum.toString();
-  } else {
-        msTens.innerHTML = "0";
-        msTensNum = 0;
-    if (msHundreds.innerHTML !== "9") {
-        msHundredsNum++;
-        msHundreds.innerHTML = msHundredsNum.toString()
-  } else {
-        msHundreds.innerHTML = "0";
-        msHundredsNum = 0;
-    if (secondOnes.innerHTML !== "9") {
-        secondOnesNum++;
-        secondOnes.innerHTML = secondOnesNum.toString()
-  } else {
-        secondOnes.innerHTML = "0";
-        secondOnesNum = 0;
-        secondTensNum++;
-        secondTens.innerHTML = secondTensNum.toString();
-        msTens.className = "redDigit";
-        msHundreds.className = "redDigit";
-        secondOnes.className = "redDigit";
-        secondTens.className = "redDigit";
-        clearInterval(timer);
+function clockcounter() {
+       if (msTens.innerHTML < 9) {
+            ++msTens.innerHTML;
+        } else {
+            msTens.innerHTML = 0;
+            if (msHuns.innerHTML < 9) {
+                ++msHuns.innerHTML;
+            } else {
+                msHuns.innerHTML = 0;
+                if (seconds.innerHTML < 9) {
+                    ++seconds.innerHTML;
+                } else {
+                    seconds.innerHTML = 0;
+                    clearInterval(count);
+                    ++sseconds.innerHTML;
+                    document.getElementsByClassName("digits")[0].classList.add("redDigit");
+                }
             }
         }
     }
-}, 10);
-
-const changeColors = () => {
+    const count = setInterval(function() { clockcounter() }, 10); 
