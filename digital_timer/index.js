@@ -7,7 +7,7 @@ let timer = setInterval(function() {
 setTimeout(function () {
     clearInterval(timer);
     document.querySelectorAll('.digit').forEach(element => element.classList.add('redDigit'));
-}, 11000);
+}, 10000);
 
 
 
