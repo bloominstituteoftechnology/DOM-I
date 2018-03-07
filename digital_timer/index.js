@@ -8,25 +8,26 @@ const stopButton = document.querySelector('.stop-button')
 const resetButton = document.querySelector('.reset-button')
 const enterMs = document.querySelector('.enter-ms')
 
+let timer;
+let counter;
+let ms;
 
 const reset = () => {
-    secondTens.innerHTML = '0'
-    secondOnes.innerHTML = '0'
-    msHundreds.innerHTML = '0'
-    msTens.innerHTML     = '0'
+    secondTens.innerHTML = 0
+    secondOnes.innerHTML = 0
+    msHundreds.innerHTML = 0
+    msTens.innerHTML     = 0
     digits.style.color = 'black';
+    counter = 0;
     
 }
 
 reset();
 
-let timer;
-
-let counter = 0
-
 const incrementString = str => (Number(str) + 1).toString()
 
-function createTimer(stopTime) {
+//deleted stopTime bc its not needed
+function createTimer(ms) {
 
    timer = setInterval(() => {
     counter = counter + 10;
@@ -35,7 +36,7 @@ function createTimer(stopTime) {
       msTens.innerHTML = incrementString(msTens.innerHTML);
     }
 
-    if (counter % 100 === 0) {
+    if (counter % 100 == 0) {
       msTens.innerHTML = 0;
       msHundreds.innerHTML = incrementString(msHundreds.innerHTML);
     }
@@ -51,15 +52,27 @@ function createTimer(stopTime) {
     }
   }, 10)
 
-  setTimeout(() => {
-    clearTimeout(timer);
+
+
+setTimeout(() => {
+    clearInterval(ms);
     digits.style.color = 'red';
-  }, stopTime);
+  }, ms);
+    
+    
+    
+    
+    
 }
 
 startButton.addEventListener('click', (event) => {
-  let ms = enterMs.value;
-  createTimer(ms);
+    ms = enterMs.value;
+    createTimer(ms);
+  // we can also make setTimeout a method and call it here
+    //if the counter is not 0, counter needs to be the difference of ms and the time already in the counter.
+//    if(counter != 0 null, ){
+//    timer = ms - counter;
+//    }
 })
 
 stopButton.addEventListener('click', (event) => {
@@ -69,6 +82,10 @@ stopButton.addEventListener('click', (event) => {
 
 resetButton.addEventListener('click', (event) => {
     reset();
-//    clearTimeout(timer);
+    clearTimeout(timer);
+    clearInterval(timer);
+    
+    enterMs.innerHTML = 0;
+    //must also delete the stored history
 })
 
