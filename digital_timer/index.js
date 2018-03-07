@@ -9,8 +9,9 @@ const resetButton = document.querySelector('.reset-button');
 const enterMs     = document.querySelector('.enter-ms');
 
 let timer,
-    counter,
-    ms;
+    counter;
+
+const incrementString = str => (Number(str) + 1).toString();
 
 const reset = () => {
   secondTens.innerHTML = 0;
@@ -21,7 +22,12 @@ const reset = () => {
   counter = 0;
 }
 
-const incrementString = str => (Number(str) + 1).toString();
+const timeout = (ms, timer) => {
+  setTimeout(() => {
+    clearInterval(timer);
+    digits.style.color = 'red';
+  }, ms);
+}
 
 reset();
 
@@ -35,31 +41,28 @@ const createTimer = ms => {
       msTens.innerHTML = incrementString(msTens.innerHTML);
     }
 
-    if (counter % 100 == 0) {
+    if (counter % 100 === 0) {
       msTens.innerHTML = 0;
       msHundreds.innerHTML = incrementString(msHundreds.innerHTML);
     }
 
-    if(counter % 1000 == 0) {
+    if(counter % 1000 === 0) {
       msHundreds.innerHTML = 0;
       secondOnes.innerHTML = incrementString(secondOnes.innerHTML);
     }
 
-    if(counter % 10000 == 0) {
+    if(counter % 10000 === 0) {
       secondOnes.innerHTML = 0;
       secondTens.innerHTML = incrementString(secondTens.innerHTML);
     }
   }, 10);
 
-  setTimeout(() => {
-    clearInterval(timer);
-    digits.style.color = 'red';
-  }, ms);
+  timeout(ms, timer);
 }
 
 startButton.addEventListener('click', (event) => {
-    ms = enterMs.value;
-    createTimer(ms);
+  reset();
+  createTimer(enterMs.value);
   // we can also make setTimeout a method and call it here
   //if the counter is not 0, counter needs to be the difference of ms and the time already in the counter.
   //    if(counter != 0 null, ){
@@ -76,7 +79,8 @@ resetButton.addEventListener('click', (event) => {
   clearTimeout(timer);
   clearInterval(timer);
     
-  enterMs.innerHTML = 0;
+  enterMs.value = '';
+  counter = 0;
   //must also delete the stored history
 });
 
