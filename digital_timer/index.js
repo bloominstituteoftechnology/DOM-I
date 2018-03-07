@@ -12,6 +12,12 @@ const reset = () => {
     msTens.innerHTML = 0;
 }
 
+const timerController = () => {
+    ++count;
+    updateTimer();
+    killTimer();
+}
+
 const updateTimer = () => {
     if (count % 1000 == 0) increment(secondTens);
     if (count % 100 == 0) increment(secondOnes);
@@ -21,7 +27,6 @@ const updateTimer = () => {
 const increment = (element) => {
     if (element.innerHTML == 9) element.innerHTML = 0;
     else ++element.innerHTML;
-
 }
 
 const killTimer = () => {
@@ -38,11 +43,6 @@ const changeDigitsRed = () => {
     });
 }
 
-const timerController = () => {
-    ++count;
-    updateTimer();
-    killTimer();
-}
 
 reset();
 const timer = setInterval(() => timerController(), 10);
