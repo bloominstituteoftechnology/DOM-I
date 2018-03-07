@@ -8,8 +8,7 @@ function updateTime() {
   let msHundreds = document.getElementById("msHundreds");
   let msTens = document.getElementById("msTens");
   let digits = document.querySelector(".digits");
-  console.log(digits);
-
+  digits.classList.remove("redDigit");
   intervalId = setInterval(incrementDigit, 10);
 
   function incrementDigit() {
@@ -33,4 +32,7 @@ function updateTime() {
   }
 }
 
-window.onload = updateTime;
+// window.onload = updateTime;
+let start = document.querySelector(".startCounter");
+console.log(start);
+start.addEventListener('click', updateTime);
