@@ -4,13 +4,23 @@ const msHundreds  = document.querySelector('#msHundreds')
 const msTens      = document.querySelector('#msTens')
 const digits      = document.querySelector('.digits')
 const startButton = document.querySelector('.start-button')
+const stopButton = document.querySelector('.stop-button')
+const resetButton = document.querySelector('.reset-button')
 const enterMs = document.querySelector('.enter-ms')
 
-secondTens.innerHTML = '0'
-secondOnes.innerHTML = '0'
-msHundreds.innerHTML = '0'
-msTens.innerHTML     = '0'
 
+const reset = () => {
+    secondTens.innerHTML = '0'
+    secondOnes.innerHTML = '0'
+    msHundreds.innerHTML = '0'
+    msTens.innerHTML     = '0'
+    digits.style.color = 'black';
+    
+}
+
+reset();
+
+let timer;
 
 let counter = 0
 
@@ -18,7 +28,7 @@ const incrementString = str => (Number(str) + 1).toString()
 
 function createTimer(stopTime) {
 
-  const interval = setInterval(() => {
+   timer = setInterval(() => {
     counter = counter + 10;
 
     if (counter % 10 === 0) {
@@ -42,13 +52,23 @@ function createTimer(stopTime) {
   }, 10)
 
   setTimeout(() => {
-    clearTimeout(interval);
+    clearTimeout(timer);
     digits.style.color = 'red';
   }, stopTime);
 }
 
 startButton.addEventListener('click', (event) => {
-  let ms = enterMs.value
-  createTimer(ms)
+  let ms = enterMs.value;
+  createTimer(ms);
+})
+
+stopButton.addEventListener('click', (event) => {
+    clearTimeout(timer);
+
+})
+
+resetButton.addEventListener('click', (event) => {
+    reset();
+//    clearTimeout(timer);
 })
 
