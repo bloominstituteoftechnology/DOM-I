@@ -19,12 +19,12 @@ const timerController = () => {
 }
 
 const updateTimer = () => {
-    if (count % 1000 == 0) increment(secondTens);
-    if (count % 100 == 0) increment(secondOnes);
-    if (count % 10 == 0) increment(msHundreds)
+    if (count % 1000 == 0) incrementDigit(secondTens);
+    if (count % 100 == 0) incrementDigit(secondOnes);
+    if (count % 10 == 0) incrementDigit(msHundreds)
 }
 
-const increment = (element) => {
+const incrementDigit = (element) => {
     if (element.innerHTML == 9) element.innerHTML = 0;
     else ++element.innerHTML;
 }
