@@ -1,5 +1,4 @@
-const secondTens = document.getElementById("secondTens");
-const secondOnes = document.getElementById("secondOnes");
+
 const msHundreds = document.getElementById("msHundreds");
 const msTens = document.getElementById("msTens");
 
@@ -9,21 +8,16 @@ function digitalTimer () {
     initialize();
 
 initialize => { /* set initial counter numbers to zero */
-    secondTens.innerHTML = "0";
-    secondOnes.innerHTML = "0";
+    let millsec = 0;
     msHundreds.innerHTML = "0";
     msTens.InnerHTML = "0";
 }
-
-let setTime = setInterval(function() {
-    countTimer() }, 10);
-
-function updateTimer (){
-    ++msTens
 }
 
-
-
-
-
+let setTime = setInterval(()  => {
+    millsec +=10;
+    if(millsec === 1000) {
+        stopTimer(setTime);
+    }
 }
+
