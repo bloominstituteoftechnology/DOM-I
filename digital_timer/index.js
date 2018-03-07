@@ -9,6 +9,5 @@ document.getElementById('msHundreds').innerHTML = parseInt(timeLeft / 10);
 
 setTimeout(function () {
     clearInterval(timer);
-    document.getElementById('msTens').classList.add('redDigit');
-    document.getElementById('msHundreds').classList.add('redDigit');
+ document.querySelectorAll('.digit').forEach(element => element.classList.add('redDigit'));
 }, 10000);
