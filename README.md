@@ -31,3 +31,11 @@ Topics:
   * Should not count past 10 seconds
 
  You will also need to look up and use `window.setInterval`. For this method, and any of those listed in the "Topics" section of this README, you are encouraged to use MDN as your resource for Documentation. MDN can be challenging to consume at first, so you may also use something like W3schools if the MDN documentation on a given subject is a bit too complicated.
+
+ ## Stretch Goals
+  If you compelete the timer with time to spare:
+  * Self study and research DOM `events` and `event listeners`
+  * SG1: Implement a start button. The digital timer should not start until the button is pressed.
+  * SG2: Once you have a start button working, configure it so that when a user presses the start button it is disabled and not enabled until the timer finishes.
+  * SG3: Once you have finished SG2, add new new button called `reset` that resets the timer to 0:00:00 and then pressing the start button again will start the timer from 0.
+  * SG4: Finally, if you have completed all the stretch goals, spend some time styling your timer and buttons.
