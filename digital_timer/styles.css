@@ -4,9 +4,22 @@ body {
   align-items: center;
 }
 
+.digits {
+  width: 30%;
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+}
+
 .digit {
   display: inline-block;
   font-size: 80px;
+  width: 9.5%;
+}
+
+#colon {
+  display: flex;
+  justify-content: center;
 }
 
 .redDigit {
