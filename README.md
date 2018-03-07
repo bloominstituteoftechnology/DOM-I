@@ -1,5 +1,6 @@
 # DOM I
 
+
 Topics:
  * Interacting with the DOM
  * Selectors
