@@ -12,85 +12,74 @@ const alarm       = document.querySelector('#alarm');
 let timer,
     counter;
 
-const incrementString = str => (Number(str) + 1).toString();
+const incrementDigit = str =>
+  str === '9' ? '0' : (Number(str) + 1).toString()
 
-const reset = _ => {
+// SIDE-EFFECTS:
+const incrementCounter = (incBy) => counter = counter += incBy;
+const killCounter = () => counter = 0;
+const changeColor = (element, color) => element.style.color = color;
+const reset = () => {
   secondTens.innerHTML = 0;
   secondOnes.innerHTML = 0;
   msHundreds.innerHTML = 0;
-  msTens.innerHTML     = 0;
-  digits.style.color = 'black';
-  counter = 0;
+  msTens.innerHTML = 0;
+  changeColor(digits, 'black');
+  killCounter();
 }
 
+// Wrap this up in an init function?
+reset();
+
+const updateTimer = () => {
+  incrementCounter(10);
+  if (counter % 10 === 0) msTens.innerHTML = incrementDigit(msTens.innerHTML);
+  if (counter % 100 === 0) msHundreds.innerHTML = incrementDigit(msHundreds.innerHTML);
+  if (counter % 1000 === 0) secondOnes.innerHTML = incrementDigit(secondOnes.innerHTML);
+  if (counter % 10000 === 0) secondTens.innerHTML = incrementDigit(secondTens.innerHTML);
+}
+
+// Rename this function, trim it down some?
 const timeout = (ms, timer) => {
-  setTimeout(_ => {
+  setTimeout(() => {
     clearInterval(timer);
-    digits.style.color = 'red';
-    alarm.play();
+    changeColor(digits, 'red')
   }, ms);
 }
 
-reset();
-
 const createTimer = ms => {
-
-  timer = setInterval(_ => {
-    counter = counter + 10;
-
-    if (counter % 10 === 0) {
-      msTens.innerHTML = incrementString(msTens.innerHTML);
-    }
-
-    if (counter % 100 === 0) {
-      msTens.innerHTML = 0;
-      msHundreds.innerHTML = incrementString(msHundreds.innerHTML);
-    }
-
-    if(counter % 1000 === 0) {
-      msHundreds.innerHTML = 0;
-      secondOnes.innerHTML = incrementString(secondOnes.innerHTML);
-    }
-
-    if(counter % 10000 === 0) {
-      secondOnes.innerHTML = 0;
-      secondTens.innerHTML = incrementString(secondTens.innerHTML);
-    }
-  }, 10);
-
+  timer = setInterval(updateTimer, 10);
   timeout(ms, timer);
 }
 
 startButton.addEventListener('click', (event) => {
-  if(!counter) {
-    console.log('no counter!')
+  const input = enterMs.value;
+  // if counter is not 0, do some stuff. maybe call the `timeout` function in here?
+  if(counter) {
+    // Victor's pseudocode:
+    // we can also make setTimeout a method and call it here
+    //if the counter is not 0, counter needs to be the difference of ms and the time already in the counter.
+    //    if(counter != 0 null, ){
+    //    timer = ms - counter;
+    //    }
+    clearInterval(timer);
+    createTimer(input - counter);
   }
 
   reset();
-  createTimer(enterMs.value);
-  enterMs.value = ''
-  
-
-  // we can also make setTimeout a method and call it here
-  //if the counter is not 0, counter needs to be the difference of ms and the time already in the counter.
-  //    if(counter != 0 null, ){
-  //    timer = ms - counter;
-  //    }
+  createTimer(input);
 });
 
 stopButton.addEventListener('click', (event) => {
-  alarm.pause();
   clearTimeout(timer);
 });
 
 resetButton.addEventListener('click', (event) => {
-  alarm.pause();
   reset();
   clearTimeout(timer);
   clearInterval(timer);
     
   enterMs.value = '';
   counter = 0;
-  //must also delete the stored history
 });
 
