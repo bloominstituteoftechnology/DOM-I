@@ -7,13 +7,14 @@ const startButton = document.querySelector('.start-button');
 const stopButton  = document.querySelector('.stop-button');
 const resetButton = document.querySelector('.reset-button');
 const enterMs     = document.querySelector('.enter-ms');
+const alarm       = document.querySelector('#alarm');
 
 let timer,
     counter;
 
 const incrementString = str => (Number(str) + 1).toString();
 
-const reset = () => {
+const reset = _ => {
   secondTens.innerHTML = 0;
   secondOnes.innerHTML = 0;
   msHundreds.innerHTML = 0;
@@ -23,18 +24,18 @@ const reset = () => {
 }
 
 const timeout = (ms, timer) => {
-  setTimeout(() => {
+  setTimeout(_ => {
     clearInterval(timer);
     digits.style.color = 'red';
+    alarm.play();
   }, ms);
 }
 
 reset();
 
-//deleted stopTime bc its not needed
 const createTimer = ms => {
 
-  timer = setInterval(() => {
+  timer = setInterval(_ => {
     counter = counter + 10;
 
     if (counter % 10 === 0) {
@@ -61,8 +62,15 @@ const createTimer = ms => {
 }
 
 startButton.addEventListener('click', (event) => {
+  if(!counter) {
+    console.log('no counter!')
+  }
+
   reset();
   createTimer(enterMs.value);
+  enterMs.value = ''
+  
+
   // we can also make setTimeout a method and call it here
   //if the counter is not 0, counter needs to be the difference of ms and the time already in the counter.
   //    if(counter != 0 null, ){
@@ -71,10 +79,12 @@ startButton.addEventListener('click', (event) => {
 });
 
 stopButton.addEventListener('click', (event) => {
+  alarm.pause();
   clearTimeout(timer);
 });
 
 resetButton.addEventListener('click', (event) => {
+  alarm.pause();
   reset();
   clearTimeout(timer);
   clearInterval(timer);
