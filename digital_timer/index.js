@@ -15,7 +15,6 @@ let timer,
 const incrementDigit = str =>
   str === '9' ? '0' : (Number(str) + 1).toString()
 
-// SIDE-EFFECTS:
 const incrementCounter = (incBy) => counter = counter += incBy;
 const killCounter = () => counter = 0;
 const changeColor = (element, color) => element.style.color = color;
@@ -24,12 +23,19 @@ const reset = () => {
   secondOnes.innerHTML = 0;
   msHundreds.innerHTML = 0;
   msTens.innerHTML = 0;
+}
+
+const initTimer = () => {
+  reset();
   changeColor(digits, 'black');
   killCounter();
 }
 
-// Wrap this up in an init function?
-reset();
+const createTimer = ms => {
+  timer = setInterval(updateTimer, 10);
+  console.log(timer)
+  clearTime(ms, timer);
+}
 
 const updateTimer = () => {
   incrementCounter(10);
@@ -39,43 +45,40 @@ const updateTimer = () => {
   if (counter % 10000 === 0) secondTens.innerHTML = incrementDigit(secondTens.innerHTML);
 }
 
-// Rename this function, trim it down some?
-const timeout = (ms, timer) => {
+// clearTime :: Int, timer[ID] -> 
+const clearTime = (ms, timer) => {
   setTimeout(() => {
     clearInterval(timer);
     changeColor(digits, 'red')
   }, ms);
 }
 
-const createTimer = ms => {
-  timer = setInterval(updateTimer, 10);
-  timeout(ms, timer);
-}
-
+// EVENT LISTENERS:
 startButton.addEventListener('click', (event) => {
   const input = enterMs.value;
-  // if counter is not 0, do some stuff. maybe call the `timeout` function in here?
-  if(counter) {
-    // Victor's pseudocode:
-    // we can also make setTimeout a method and call it here
-    //if the counter is not 0, counter needs to be the difference of ms and the time already in the counter.
-    //    if(counter != 0 null, ){
-    //    timer = ms - counter;
-    //    }
+
+  if(counter && counter < input) {
     clearInterval(timer);
     createTimer(input - counter);
   }
 
-  reset();
-  createTimer(input);
+  else {
+    initTimer();
+    createTimer(input);
+  }
 });
 
 stopButton.addEventListener('click', (event) => {
-  clearTimeout(timer);
+  console.log(counter)
+  clearInterval(timer);
+  //clearTimeout(timer);
 });
 
 resetButton.addEventListener('click', (event) => {
-  reset();
+  console.log('timer:', timer)
+  console.log('counter:', counter)
+  initTimer();
+
   clearTimeout(timer);
   clearInterval(timer);
     

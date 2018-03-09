@@ -1,0 +1,39 @@
+* Thinking about handling timer state
+
+** Timestamp:
+<2018-03-09 Fri>
+
+** Functions & Their side-effects
+
+*** Mutates counter
+**** =incrementCounter=
+**** =killCounter=
+*** Mutates the DOM
+**** =changeColor=
+**** =resetDigits=
+*** Mutates timeout
+*** Mutates interval
+*** Controllers/multiple effects
+**** Create a controller?
+
+
+** Global variables
+
+*** timer
+Remove as global variable, use as parameter?
+*** counter
+Sift through =counter= versus =input= versus =ms= argument
+
+
+* Bugs
+
+** Color changes red after stopping timer
+** Hitting "start", "stop" then "start" again causes timer to run longer than expected
+Seems like we need to 
+
+Logging =timer= after initialization, and then on subsequent iterations is puzzling: first it just logs =1=, then =5=, then increments the return value by 4 every time after that.
+
+Might need to wipe away timer?
+
+Another idea is to create some storage to hold previous timers, and then a Stack to access the previous timer and input values and determine how long the next one needs to run for.
+
