@@ -9,8 +9,7 @@ const resetButton = document.querySelector('.reset-button');
 const enterMs     = document.querySelector('.enter-ms');
 const alarm       = document.querySelector('#alarm');
 
-let timer,
-    counter;
+let timer, timeout, counter;
 
 const incrementDigit = str =>
   str === '9' ? '0' : (Number(str) + 1).toString()
@@ -47,7 +46,7 @@ const updateTimer = () => {
 
 // clearTime :: Int, timer[ID] -> 
 const clearTime = (ms, timer) => {
-  setTimeout(() => {
+  timeout = setTimeout(() => {
     clearInterval(timer);
     changeColor(digits, 'red')
   }, ms);
@@ -71,7 +70,7 @@ startButton.addEventListener('click', (event) => {
 stopButton.addEventListener('click', (event) => {
   console.log(counter)
   clearInterval(timer);
-  //clearTimeout(timer);
+  clearTimeout(timeout);
 });
 
 resetButton.addEventListener('click', (event) => {
@@ -79,7 +78,6 @@ resetButton.addEventListener('click', (event) => {
   console.log('counter:', counter)
   initTimer();
 
-  clearTimeout(timer);
   clearInterval(timer);
     
   enterMs.value = '';
