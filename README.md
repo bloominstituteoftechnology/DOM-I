@@ -17,7 +17,7 @@ Topics:
 
 ## Beginning Project
  * You'll be working in the `digital_timer` directory
- * Add your script tag into you index.html
+ * Add your script tag into your index.html
  * You can open your `index.html` file in your browser to see your work, but you may also work in codepen.io first if you'd like
  * All your work will be done in `index.js`
  * Make sure to read both the `index.html` and `styles.css` files so that you know what you're working with
