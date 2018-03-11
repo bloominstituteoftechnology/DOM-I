@@ -2,31 +2,47 @@
 <html>
   <head>
     <title>DOM I</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link href="css/index.css" rel="stylesheet">
   </head>
   <body>
-    <div class="digits">
-      <div class="digit" id="secondTens">-</div>
-      <div class="digit" id="secondOnes">-</div>
-      <div class="digit" id="colon">:</div>
-      <div class="digit" id="msHundreds">-</div>
-      <div class="digit" id="msTens">-</div>
-    </div>
-    <div>
-        <form>
-	<input class="enter-ms" type="text" placeholder="Enter milliseconds"/>
-      </form>
-    </div>
-    <div class="start">
-      <button class="start-button">Start Timer</button>
-    </div>
-    <div class="stop">
-      <button class="stop-button">StopTimer</button>
-    </div>
-    <div class="reset">
-      <button class="reset-button">Reset Timer</button>
-    </div>
-    <audio id="alarm" src="alarm.mp3" preload="auto"></audio>
-    <script src="index.js"></script>
+    <div class="container-fluid">
+
+      <div id="timercounter" class="row d-flex justify-content-center align-self-center">
+        <div class="col-md-3 justify-content-center align-self-center">
+            <div class="digits">
+              <div class="digit" id="secondTens">-</div>
+              <div class="digit" id="secondOnes">-</div>
+              <div class="digit" id="colon">:</div>
+              <div class="digit" id="msHundreds">-</div>
+              <div class="digit" id="msTens">-</div>
+            </div>
+          </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-3">
+                <form class="ms-input mb-3">
+                    <input class="enter-ms" type="text" placeholder="    Enter Milliseconds"/>
+              </form>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-2">
+                <button type="button" class="start-button start btn-success">Start Timer</button>
+            </div>
+            <div class="col-md-2">
+                  <button type="button" class="stop-button stop btn-danger">Stop Timer</button>
+            </div>
+            <div class="col-md-2">
+                  <button type="button" class="reset-button reset btn-info">Reset Timer</button>
+            </div>
+          </div>
+        <audio id="alarm" src="media/alarm.mp3" preload="auto"></audio>
+        
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/index.js"></script>
+<!--    </span>-->
+    </div> <!---- container -->
   </body>
 </html>

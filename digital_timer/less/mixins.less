@@ -1,0 +1,37 @@
+// Mixins
+
+.border-radius (@radius: 5px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius:    @radius;
+	border-radius:         @radius;
+
+	-moz-background-clip:    padding;
+	-webkit-background-clip: padding-box;
+	background-clip:         padding-box;
+}
+
+.opacity (@opacity: 0.5) {
+	-webkit-opacity: 	@opacity;
+	-moz-opacity: 		@opacity;
+	opacity: 		@opacity;
+}
+
+.box-shadow (@string) {
+	-webkit-box-shadow: @string;
+	-moz-box-shadow:    @string;
+	box-shadow:         @string;
+}
+
+.rotate (@deg) {
+	-webkit-transform: rotate(@deg);
+	-moz-transform: 	 rotate(@deg);
+	-ms-transform: 		 rotate(@deg);
+	-o-transform: 		 rotate(@deg);
+}
+
+.skew (@deg, @deg2) {
+	-webkit-transform:       skew(@deg, @deg2);
+	-moz-transform: 	 skew(@deg, @deg2);
+	-ms-transform: 		 skew(@deg, @deg2);
+	-o-transform: 		 skew(@deg, @deg2);
+}
