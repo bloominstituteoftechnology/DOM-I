@@ -9,6 +9,7 @@ const resetButton = document.querySelector('.reset-button');
 const enterMs     = document.querySelector('.enter-ms');
 const alarm       = document.querySelector('#alarm');
 
+const digitsArray = [secondTens, secondOnes, msHundreds, msTens];
 let timer, timeout, counter, freshStart;
 
 const incrementDigit = str =>
@@ -18,12 +19,9 @@ const incrementCounter = incBy => counter = counter += incBy;
 const killCounter = () => counter = 0;
 const killInputValue = input => input.value = '';
 const changeColor = (element, color) => element.style.color = color;
-const resetTo = value => {
-  secondTens.innerHTML = value;
-  secondOnes.innerHTML = value;
-  msHundreds.innerHTML = value;
-  msTens.innerHTML     = value;
-}
+// setBulkInnerHTML :: List[DOM Elements] -> a -> Side-Effects
+const setBulkInnerHTML = arr => value => arr.forEach(element => element.innerHTML = value);
+const resetTo = setBulkInnerHTML(digitsArray);
 
 const initTimer = resetValue => {
   killCounter();
