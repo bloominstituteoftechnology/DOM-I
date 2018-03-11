@@ -9,25 +9,26 @@ const resetButton = document.querySelector('.reset-button');
 const enterMs     = document.querySelector('.enter-ms');
 const alarm       = document.querySelector('#alarm');
 
-let timer, timeout, counter;
+let timer, timeout, counter, freshStart;
 
 const incrementDigit = str =>
-  str === '9' ? '0' : (Number(str) + 1).toString()
+  str === '9' ? '0' : (Number(str) + 1).toString();
 
-const incrementCounter = (incBy) => counter = counter += incBy;
+const incrementCounter = incBy => counter = counter += incBy;
 const killCounter = () => counter = 0;
+const killInputValue = input => input.value = '';
 const changeColor = (element, color) => element.style.color = color;
-const reset = () => {
-  secondTens.innerHTML = 0;
-  secondOnes.innerHTML = 0;
-  msHundreds.innerHTML = 0;
-  msTens.innerHTML = 0;
+const resetTo = value => {
+  secondTens.innerHTML = value;
+  secondOnes.innerHTML = value;
+  msHundreds.innerHTML = value;
+  msTens.innerHTML     = value;
 }
 
-const initTimer = () => {
-  reset();
-  changeColor(digits, 'black');
+const initTimer = resetValue => {
   killCounter();
+  changeColor(digits, 'black');
+  resetTo(resetValue);
 }
 
 const createTimer = ms => {
@@ -48,6 +49,8 @@ const updateTimer = () => {
 const clearTime = (ms, timer) => {
   timeout = setTimeout(() => {
     clearInterval(timer);
+    killCounter();
+    killInputValue(enterMs);
     changeColor(digits, 'red')
   }, ms);
 }
@@ -62,7 +65,7 @@ startButton.addEventListener('click', (event) => {
   }
 
   else {
-    initTimer();
+    initTimer(0);
     createTimer(input);
   }
 });
@@ -76,11 +79,11 @@ stopButton.addEventListener('click', (event) => {
 resetButton.addEventListener('click', (event) => {
   console.log('timer:', timer)
   console.log('counter:', counter)
-  initTimer();
+  initTimer('-');
 
   clearInterval(timer);
     
-  enterMs.value = '';
+  killInputValue(enterMs);
   counter = 0;
 });
 
