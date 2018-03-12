@@ -23,6 +23,9 @@ const incrementCounter = incBy => counter = counter += incBy;
 const killCounter = () => counter = 0;
 const killInputValue = input => input.value = '';
 const changeColor = (element, color) => element.style.color = color;
+const resumeButton = () => {
+    startButton.innerHTML = 'Resume';
+      }
 
 
 /*** INITIALIZE TIMER ***/
@@ -54,6 +57,7 @@ const updateTimer = () => {
 /*** RESET TIMER ***/
 const createTimeout = (ms, timer) => {
   timeout = setTimeout(() => {
+    startButton.innerHTML ='Start Timer';
     clearInterval(timer);
     killCounter();
     killInputValue(enterMs);
@@ -83,7 +87,11 @@ const handleSubmit = event => {
 };
 
 startButton.addEventListener('click', event => handleSubmit(event));
-stopButton.addEventListener('click', event => killTimer());
+stopButton.addEventListener('click', event => {
+    killTimer();
+    resumeButton();
+    });
+    
 resetButton.addEventListener('click', event => {
   killTimer();
   killInputValue(enterMs);
