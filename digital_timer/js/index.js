@@ -57,7 +57,7 @@ const updateTimer = () => {
 /*** RESET TIMER ***/
 const createTimeout = (ms, timer) => {
   timeout = setTimeout(() => {
-    startButton.innerHTML ='Start Timer';
+    startButton.innerHTML ='Start';
     clearInterval(timer);
     killCounter();
     killInputValue(enterMs);

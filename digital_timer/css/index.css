@@ -8240,12 +8240,12 @@ a.text-dark:hover {
 body {
   display: flex;
   justify-content: center;
-  align-items: center;
+  max-width: 1200px;
 }
 @media (max-width: 768px) {
   body {
     width: 100%;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
   }
 }
@@ -8256,41 +8256,83 @@ body {
     justify-content: center;
   }
 }
-.container {
+.container-fluid {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: ;
+  max-width: 1200px;
+  width: 100%;
+  margin-bottom: 50%;
+}
+@media (max-width: 1200px) {
+  .container-fluid {
+    width: 50%;
+    margin-bottom: 50%;
+  }
 }
 @media (max-width: 768px) {
-  .container {
+  .container-fluid {
+    width: 50%;
+    display: inline-flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 400px) {
+  .container-fluid {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+  }
+}
+.border {
+  width: 50%;
+  margin-top: 5%;
+  border-color: 2px solid black;
+  border-radius: 20px;
+  border-width: 100%;
+  border-bottom: 500px;
+  border-style: 10px solid black;
+}
+@media (max-width: 1200px) {
+  .border {
+    width: 100%;
+    border: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .border {
+    width: 100%;
+    border: 100%;
+  }
+}
+@media (max-width: 400px) {
+  .border {
+    width: 100%;
+    border: 100%;
+  }
+}
+@media (max-width: 1200px) {
+  .container-fluid .row {
+    width: ;
+  }
+}
+@media (max-width: 768px) {
+  .container-fluid .row {
     width: 100%;
     display: flex;
     justify-content: center;
   }
 }
 @media (max-width: 400px) {
-  .container {
-    width: 100%;
-    display: inline-flex;
-    justify-content: center;
-  }
-}
-@media (max-width: 768px) {
-  .container .timercounter {
+  .container-fluid .row {
     width: 100%;
     display: flex;
-    justify-content: center;
-  }
-}
-@media (max-width: 400px) {
-  .container .timercounter {
-    width: 100%;
-    display: inline-flex;
     justify-content: center;
   }
 }
 .digits {
   display: inline-flex;
+  justify-content: center;
   width: 100%;
   font-size: 80px;
 }
@@ -8303,31 +8345,39 @@ body {
   .digits {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
+    align-self: center;
   }
 }
 @media (max-width: 400px) {
   .digits {
     width: 100%;
-    display: inline-flex;
+    display: flex;
     justify-content: center;
   }
 }
-.digit {
-  display: inline-flex;
-  font-size: 80px;
+form {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
 }
 @media (max-width: 1200px) {
   form {
     width: 100%;
     text-align: center;
+    justify-content: center;
   }
 }
 @media (max-width: 768px) {
   form {
     width: 100%;
-    display: flex;
-    justify-content: center;
+    display: inline-block;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
+    align-self: center;
   }
 }
 @media (max-width: 400px) {
@@ -8338,6 +8388,8 @@ body {
   }
 }
 button {
+  width: 100%;
+  border-width: 1px;
   border-radius: 10px;
 }
 @media (max-width: 1200px) {
@@ -8348,8 +8400,9 @@ button {
 @media (max-width: 768px) {
   button {
     width: 100%;
-    display: flex;
-    justify-content: center;
+    display: inline-flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
   }
 }
 @media (max-width: 400px) {
@@ -8357,5 +8410,6 @@ button {
     width: 100%;
     display: inline-flex;
     justify-content: center;
+    margin-bottom: 1rem;
   }
 }

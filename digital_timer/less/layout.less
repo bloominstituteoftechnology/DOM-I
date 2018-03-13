@@ -1,14 +1,16 @@
 body {
   display: flex;
   justify-content: center;
-  align-items: center;
+  max-width: 1200px;
+
+
     
     @media @desktop {
         
     }
     @media @tablet{
         width: 100%;
-        display: flex;
+        display: inline-flex;
         justify-content: center;
 
 
@@ -21,17 +23,22 @@ body {
         
     }
 }
-.container {
+.container-fluid {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: ;
+  max-width: 1200px;
+  width: 100%;
+  margin-bottom: 50%;
     
     @media @desktop {
+        width: 50%;
+        margin-bottom: 50%;
         
     }
     @media @tablet{
-        width: 100%;
-        display: flex;
+        width: 50%;
+        display: inline-flex;
         justify-content: center;
 
 
@@ -44,65 +51,108 @@ body {
     }
 }
 
-.container .timercounter{
-    @media @desktop {
-        
-    }
+.border{
+    width: 50%;
+    margin-top: 5%;
+    border-color: 2px solid black;
+    border-radius: 20px;
+    border-width: 100%;
+    border-bottom: 500px;
+    border-style: 10px solid black;
+
+    
+     @media @desktop {
+        width: 100%;
+        border: 100%;
+
+        }
     @media @tablet{
         width: 100%;
-        display: flex;
-        justify-content: center;
+        border: 100%;
 
-    }
+        }
     @media @phone{
         width: 100%;
-        display: inline-flex;
-        justify-content: center;
-        
-    }
+        border: 100%;
+
+        }
+    
+    
 }
+
+ .container-fluid .row {   
+        @media @desktop {
+            width: ;
+
+        }
+        @media @tablet{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+        }
+        @media @phone{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+        }
+    }
     
 
 
 .digits {
   display: inline-flex;
+justify-content: center;
   width: 100%;
   font-size: 80px;
     
-    @media @desktop {
+    @media @desktop{
     width: 100%;
         
     }
     @media @tablet{
         width: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
+        align-items: center;
+        align-content: space-around;
+        align-self: center;
 
     }
     @media @phone{
         width: 100%;
-        display: inline-flex;
+        display: flex;
         justify-content: center;
 
         
     }
 }
 
-.digit {
-  display: inline-flex;
-  font-size: 80px;
-}
+//.digit {
+//  display: inline-flex;
+//  font-size: 80px;
+//}
 
 form{
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    
     @media @desktop {
     width: 100%;
     text-align: center;
+    justify-content: center;
         
     }
     @media @tablet{
         width: 100%;
-        display: flex;
-        justify-content: center;
+        display: inline-block;
+        justify-content: space-around;
+        align-items: center;
+        align-content: space-around;
+        align-self: center;
+        
 
     }
     @media @phone{
@@ -116,6 +166,9 @@ form{
 
 
 button{
+    width: 100%;
+    border-width: 1px;
+    
    border-radius: 10px;
     &:hover {
 
@@ -126,8 +179,9 @@ button{
     }
     @media @tablet{
         width: 100%;
-        display: flex;
-        justify-content: center;
+        display: inline-flex;
+        justify-content: space-around;
+        margin-bottom: 1rem;
 
 
     }
@@ -135,6 +189,7 @@ button{
         width: 100%;
         display: inline-flex;
         justify-content: center;
+        margin-bottom: 1rem;
 
     }
 }
