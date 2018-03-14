@@ -2,15 +2,48 @@
 <html>
   <head>
     <title>DOM I</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link href="css/index.css" rel="stylesheet">
   </head>
-  <body>
-    <div class="digits">
-      <div class="digit" id="secondTens">-</div>
-      <div class="digit" id="secondOnes">-</div>
-      <div class="digit" id="colon">:</div>
-      <div class="digit" id="msHundreds">-</div>
-      <div class="digit" id="msTens">-</div>
+  ch<body>
+    <div class="container-fluid">
+<div class="border pl-5 pr-5 pb-5 pt-4">
+      <div id="timercounter" class="row d-flex justify-content-center align-self-center">
+        <div class="col-sm-12">
+            <div class="digits">
+              <div class="digit" id="secondTens">-</div>
+              <div class="digit" id="secondOnes">-</div>
+              <div class="digit" id="colon">:</div>
+              <div class="digit" id="msHundreds">-</div>
+              <div class="digit" id="msTens">-</div>
+            </div>
+          </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-sm-12">
+                <form class="ms-input mb-3" onsubmit="handleSubmit(event)">
+                    <input class="enter-ms" type="text" placeholder="    Enter Milliseconds" autofocus/>
+              </form>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-sm-4">
+                <button type="button" class="start-button border-success">Start</button>
+            </div>
+            <div class="col-sm-4">
+                  <button type="button" class="stop-button border-danger">Stop</button>
+            </div>
+            <div class="col-sm-4">
+                  <button type="button" class="reset-button border-info">Reset</button>
+            </div>
+          </div>
+        <audio id="alarm" src="media/alarm.mp3" preload="auto"></audio>
+        
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/index.js"></script>
+<!--    </span>-->
     </div>
+    </div> <!---- container -->
   </body>
 </html>
