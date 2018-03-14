@@ -8355,6 +8355,33 @@ body {
   .digits {
     width: 100%;
     display: flex;
+    jusstify-content: center;
+  }
+}
+.digit {
+  width: 5%;
+  display: inline-flex;
+  font-size: 5rem;
+  margin: 7%;
+  padding: ;
+}
+@media (max-width: 1200px) {
+  .digit {
+    width: 5%;
+  }
+}
+@media (max-width: 768px) {
+  .digit {
+    width: 15%;
+    display: inline-flex;
+    justify-content: center;
+    font-size: 4.5rem;
+  }
+}
+@media (max-width: 400px) {
+  .digit {
+    width: 10%;
+    display: flex;
     justify-content: center;
   }
 }
