@@ -1,11 +1,11 @@
 // constants
-const allDigits = document.getElementsByClassName('digits')
+const allDigits = document.querySelectorAll('.digit')
 let sTens = document.getElementById('secondTens')
 let sOnes = document.getElementById('secondOnes')
 let msHundreds = document.getElementById('msHundreds')
 let msTens = document.getElementById('msTens')
 
-timer();
+timeStart();
 
 // 0 for all digits
 msTens.innerHTML = 0;
@@ -16,44 +16,28 @@ sTens.innerHTML = 0;
 
 // add() function; adds 1 msTens per 10ms and adjusts other digits accordingly
 function add() {
-    parseInt(msTens.innerHTML);
-    msTens++;
-    console.log('function is working');
-    if (msTens >= 10) {
+    msTens.innerHTML++; // don't forget to specify what you're changing. eg.: '.innerHTML'
+    if (msTens.innerHTML >= 10 ) {
         // msHundreds: to int, +1, then to string
-        parseInt(msHundreds.innerHTML);
-        msHundreds++;
-        toString(msHundreds.innerHTML);
+        msHundreds.innerHTML++;
         // msTens: to int, +1, then to string
-        parseInt(msTens.innerHTML);
-        msTens = 0; // reset msTens to 0
-        toString(msTens.innerHTML);
+        msTens.innerHTML = 0; // reset msTens to 0
     }
-    if (msHundreds >= 10) {
-        parseInt(sOnes.innerHTML);
-        sOnes++;
-        toString(sOnes.innerHTML);
-        parseInt(msHundreds.innerHTML);
-        msHundreds = 0;
-        toString(msTens.innerHTML);
+    if (msHundreds.innerHTML >= 10) {
+        sOnes.innerHTML++;
+        msHundreds.innerHTML = 0;
     }
-    if (sOnes >= 10) {
-        parseInt(sTens.innerHTML);
-        sTens++;
-        toString(sTens.innerHTML);
-        parseInt(sOnes.innerHTML);
-        sOnes =0;
-        toString(sOnes.innerHTML);
+    if (sOnes.innerHTML >= 10) {
+        sTens.innerHTML++;
+        sOnes.innerHTML =0;
     }
-    if (sTens === 1) {
-        clearInterval(timer);
-        allDigits.classList.add("redDigit");
+    if (sTens.innerHTML >= 1) {
+        window.clearInterval(timer);
+        allDigits.forEach((element) => element.classList.add("redDigit"));
     }
-    toString(msTens.innerHTML);
 }
 
 // timer to start the clock
-function timer() {
-    window.setInterval(add, 10);
+function timeStart() {
+    timer = window.setInterval(add, 10);
 }
-
