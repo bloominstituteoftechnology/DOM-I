@@ -1,6 +1,7 @@
 const digits = document.getElementsByClassName('digit');
 const secTen = document.getElementById('secondTens');
 const secOne = document.getElementById('secondOnes');
+const colon = document.getElementById('colon');
 const msHun = document.getElementById('msHundreds');
 const msTen = document.getElementById('msTens');
 let counter = 0;
@@ -23,7 +24,14 @@ function myFunc() {
     secTen.innerHTML = `${counts[0]}`;
     if (counter === 10000) {
         window.clearInterval(interval);
-        digits.style.color = 'red';
+        for (let i = 0; i < digits.length; i++) {
+            digits[i].style.color = 'red';
+        }
+        // msTen.style.color = 'red';
+        // msHun.style.color = 'red';
+        // colon.style.color = 'red';
+        // secOne.style.color = 'red';
+        // secTen.style.color = 'red';
     }
 }
 
