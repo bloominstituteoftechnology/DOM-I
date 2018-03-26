@@ -11,3 +11,8 @@ secondTens.innerHTML = 0;
 msHundreds.innerHTML = 0;
 msTens.innerHTML = 0;
 
+tenSecondTimer = () => {
+
+}
+
+const timer = setInterval(tenSecondTimer, 10);
