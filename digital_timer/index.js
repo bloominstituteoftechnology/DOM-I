@@ -1,4 +1,5 @@
-const digits = document.getElementsByClassName('digit');
+const digits = document.querySelector('.digits');
+const digit = document.getElementsByClassName('digit');
 const secTen = document.getElementById('secondTens');
 const secOne = document.getElementById('secondOnes');
 const colon = document.getElementById('colon');
@@ -52,9 +53,11 @@ function timer() {
                 resetbtn.classList.remove('disabled');
                 resetbtn.disabled = false;
 
-                for (let i = 0; i < digits.length; i++) {
-                    digits[i].style.color = 'red';
-                }
+                digits.classList.add('redDigit');
+
+                // for (let i = 0; i < digit.length; i++) {
+                //     digit[i].style.color = 'red';
+                // }
 
                 ready = false;
 
@@ -82,10 +85,13 @@ function reset() {
 
     // resets appearance of timer
 
+    digits.classList.remove('redDigit');
 
-    for (let i = 0; i < digits.length; i++) {
-        digits[i].style.color = 'black';
-    }
+
+
+    // for (let i = 0; i < digit.length; i++) {
+    //     digit[i].style.color = 'black';
+    // }
 
     // returns color of timer back to black
 }
@@ -96,8 +102,11 @@ function reset() {
 //         resetbtn.classList.remove('disabled');
 //         resetbtn.disabled = false;
 
-//         for (let i = 0; i < digits.length; i++) {
-//             digits[i].style.color = 'black';
+//         digits.classList.remove('redDigit');
+
+
+//         for (let i = 0; i < digit.length; i++) {
+//             digit[i].style.color = 'black';
 //         }
 
 //         msTen.innerHTML = `0`;
@@ -107,7 +116,7 @@ function reset() {
 //         counter = 0;
 //         ready = true;
 //         startbtn.classList.remove('disabled');
-//         startbtn.disabled = false;         
+//         startbtn.disabled = false;
 //     }
 // }
 
