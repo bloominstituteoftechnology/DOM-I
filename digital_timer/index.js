@@ -3,6 +3,8 @@ let secondOnes = document.getElementById('secondOnes');
 let msHundreds = document.getElementById('msHundreds');
 let msTens = document.getElementById('msTens');
 
+let digits = document.getElementsByClassName('digits')[0];
+
 let msTensValue = 0;
 let msHundredsValue = 0;
 let secondOnesValue = 0;
@@ -22,6 +24,8 @@ const intervalId = setInterval(() => {
     secondOnes.textContent = 0;
     msHundreds.textContent = 0;
     msTens.textContent = 0;
+    digits.classList.add('redDigit');
+
     clearInterval(intervalId);
   }
 
