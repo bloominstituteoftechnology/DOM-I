@@ -27,6 +27,7 @@ function startTimer() {
         if(parseInt(secondOnes.innerText) > 8) {
           secondOnes.innerHTML = 0;
           secondTens.innerHTML = parseInt(secondTens.innerText) + 1;
+          
           return stopTimer();
         }
       }
@@ -38,6 +39,16 @@ function startTimer() {
 function stopTimer() {
   clearInterval(Timer);
 }
+function changeDigitColor() {
+    var digitList = document.querySelectorAll(".digitContainer");
+    for (let i = 0; i < array.length; i++) {
+        if(digitList !== digitlist[2]){
+digitList.style.color = "red"
+        }
+        
+    }
+}
+
 
 // DOM
 window.onload = function() {
