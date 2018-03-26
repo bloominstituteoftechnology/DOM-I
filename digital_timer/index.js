@@ -16,6 +16,8 @@ let ready = true;
 
 function timer() {
     if (ready) {
+        resetbtn.classList.add('disabled');
+        startbtn.classList.add('disabled');
         resetbtn.disabled = true;
         startbtn.disabled = true;
         let interval = window.setInterval(myFunc, 10);
@@ -34,6 +36,7 @@ function timer() {
             secTen.innerHTML = `${counts[0]}`;
             if (counter === 10000) {
                 window.clearInterval(interval);
+                resetbtn.classList.remove('disabled');
                 resetbtn.disabled = false;
                 for (let i = 0; i < digits.length; i++) {
                     digits[i].style.color = 'red';
@@ -56,6 +59,7 @@ function reset() {
     secTen.innerHTML = `0`;
     counter = 0;
     ready = true;
+    startbtn.classList.remove('disabled');
     startbtn.disabled = false;
         
     for (let i = 0; i < digits.length; i++) {
