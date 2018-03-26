@@ -1,10 +1,11 @@
 // Add variables
 
-const secTens = document.getElementById("secondTens");
-const secOnes = document.getElementById("secondOnes");
-const msOnes = document.getElementById("msTens");
-const msTens = document.getElementById("msHundreds");
-const startButton = document.querySelector(".button-start");
+const 	secTens = document.getElementById("secondTens"),
+ 	 	secOnes = document.getElementById("secondOnes"),
+ 	 	msOnes = document.getElementById("msTens"),
+ 	 	msTens = document.getElementById("msHundreds"),
+ 	 	startButton = document.querySelector(".button-start"),
+ 		resetButton = document.querySelector('.button-reset');
 
 // Wrap up all digits in a variable for easier manipulation
 
@@ -50,11 +51,29 @@ const countdownStart = () => {
 
 	// After certain time stop the timer with variable set to 0 except secTens
 
-	setInterval(() => {
+	const finalTimer = setInterval(() => {
 		// Add timer functions into an array for easier manipulation thanks to clear function
 		let timerFunctions = [msOnesTimer, msTensTimer, hundsTimer];
 		clear(timerFunctions);
 	}, 10000)
+
+	// reset function, different values than clear function but repetition hurts my eyes
+
+	const reset = () => {
+	let timerFunctions = [msOnesTimer, msTensTimer, hundsTimer, finalTimer];
+	secTens.innerHTML = "0";
+	secOnes.innerHTML = "0";
+	msOnes.innerHTML = "0";
+	msTens.innerHTML = "0";
+	timer.forEach((element) => element.classList.remove("redDigit"));
+	startButton.disabled = false;
+	timerFunctions.forEach((f) => clearInterval(f))
+
+	}
+
+	resetButton.addEventListener("click", function() {
+		reset();
+	})
 
 }
 
@@ -66,8 +85,10 @@ const clear = (element) => {
 	msTens.innerHTML = "0";
 	element.forEach((f) => clearInterval(f));
 	timer.forEach((element) => element.classList.add("redDigit"));
+	startButton.disabled = false;
 };
 
-startButton.addEventListener("click", () => {
+startButton.addEventListener("click", function() {
 	countdownStart();
+	this.disabled = true;
 });
