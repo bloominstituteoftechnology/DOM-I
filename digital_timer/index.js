@@ -29,6 +29,10 @@ function startTimer() {
         if(parseInt(secondOnes.innerText) > 8) {
           secondOnes.innerHTML = 0;
           secondTens.innerHTML = parseInt(secondTens.innerText) + 1;
+          secondOnes.style.color = 'red';
+          secondTens.style.color = 'red';
+          oneMilli.style.color = 'red';
+          tenMilli.style.color = 'red';
           return stopTimer();
         }
       }
