@@ -1,20 +1,22 @@
-// constants
-const allDigits = document.querySelectorAll('.digit')
-let sTens = document.getElementById('secondTens')
-let sOnes = document.getElementById('secondOnes')
-let msHundreds = document.getElementById('msHundreds')
-let msTens = document.getElementById('msTens')
+// definitions
+const allDigits = document.querySelectorAll('.digit');
+let sTens = document.getElementById('secondTens');
+let sOnes = document.getElementById('secondOnes');
+let msHundreds = document.getElementById('msHundreds');
+let msTens = document.getElementById('msTens');
 
-timeStart();
+// const startButton = documents.getElementById('startButton');
+// const resetButton = document.getElementById('resetButton');
 
 // 0 for all digits
 msTens.innerHTML = 0;
 msHundreds.innerHTML = 0;
 sOnes.innerHTML = 0;
 sTens.innerHTML = 0;
-    
 
-// add() function; adds 1 msTens per 10ms and adjusts other digits accordingly
+timeStart();
+
+// function; adds 1 msTens per 10ms and adjusts other digits accordingly
 function add() {
     msTens.innerHTML++; // don't forget to specify what you're changing. eg.: '.innerHTML'
     if (msTens.innerHTML >= 10 ) {
@@ -37,7 +39,11 @@ function add() {
     }
 }
 
-// timer to start the clock
+// function; timer to start the clock
 function timeStart() {
     timer = window.setInterval(add, 10);
 }
+
+
+// function; 
+// startButton.onclick = timeStart();
