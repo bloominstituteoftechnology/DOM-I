@@ -1,5 +1,4 @@
-let counter = 0;
-let msHun = 0;
+let counter = 100;
 let msTen = 0;
 let second = 0;
 let subNum = 0;
@@ -12,15 +11,16 @@ let msTens = document.querySelector('#msTens');
 let timer = window.setInterval(() => {
 
     if (counter !== 1100) {
-        //document.getElementById('msTens').innerHTML = counter - subNum;
-        //document.getElementById('msHundreds').style.display = 'none';
+        document.getElementById('msTens').innerHTML = counter - subNum;
+        document.getElementById('msHundreds').style.display = 'none';
         if (counter % 100 === 0) {
             document.getElementById('secondOnes').innerHTML = second;
             second++;
             counter++;
-            //subNum += 100;
+            subNum += 100;
             if (second === 11) {
-                //document.getElementById('msTens').innerHTML = 00;
+                document.getElementById('secondOnes').innerHTML = 10;
+                document.getElementById('msTens').innerHTML = 00;
                 document.querySelector('#secondTens').style.display = 'none';
                 document.querySelector('.digits').style.color = 'red';
                 return second;
