@@ -21,13 +21,15 @@
 
 
 
-// var count = 0;
+ let counter = 0;
 
 // function countdown () {
-    var seconds = document.getElementById('secondOnes');
+    //var seconds = document.getElementById('secondOnes');
     // seconds.innerHTML = "0";
 
-
+for(i = counter; i < 10; i++) {
+    counter = i;
+}
 
 // let digits 
 
@@ -40,9 +42,13 @@
 
 // countdown();
 
+ setInterval(function, 1000)
 
-var count = document.getElementById('secondOnes').innerHTML = "0";
-count.innerHTML = '1';
+let count = document.getElementById('secondOnes').innerHTML = "0";
+count = parseInt(counter, 10);
+document.getElementById("secondOnes").innerHTML = count;
+
+//console.log(count);
 
 // pseudo code 
 
