@@ -5,3 +5,9 @@ let msHundreds = document.querySelector("#msHundreds");
 let msTens = document.querySelector("#msTens");
 let digits = document.querySelector(".digits");
 
+// Initialize all variables to 0
+secondOnes.innerHTML = 0;
+secondTens.innerHTML = 0;
+msHundreds.innerHTML = 0;
+msTens.innerHTML = 0;
+
