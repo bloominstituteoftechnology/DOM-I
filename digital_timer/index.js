@@ -1,11 +1,14 @@
-let timeSecTen = document.getElementById('secondTens');
-let timeSecOne = document.getElementById('secondOnes');
-let timeSecMsHun = document.getElementById('msHundreds');
-let timeSecMsTen = document.getElementById('msTens');
+const secondTens = document.getElementById('secondTens');
+const secondOnes = document.getElementById('secondOnes');
+const msHundreds = document.getElementById('msHundreds');
+const msTens = document.getElementById('msTens');
 
- timeSecTen = 0;
- timeSecOne = 0; 
- timeSecMsHun = 0; 
- timeSecMsTen = 0; 
+function timerCall() {
+    document.getElementById('secondTens').innerHTML = "0";
+    document.getElementById('secondOnes').innerHTML = "0";
+    document.getElementById('msHundreds').innerHTML = "0";
+    document.getElementById('msTens').innerHTML = "0";
 
- timeSecTen.innerHTML = "0";
+    
+};
+timerCall();
