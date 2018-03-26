@@ -1,14 +1,21 @@
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .digit {
   display: inline-block;
   font-size: 80px;
 }
+.digits {
+  grid-column: 2/3;
+}
 
 .redDigit {
   color: red;
+}
+
+button {
+  max-width: 100px;
+  grid-column: 2/3;
 }
