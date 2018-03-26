@@ -39,7 +39,6 @@ function timeUp() {
     if (count <10) {
         count++;
     }
-
     document.getElementById("secondOnes").innerHTML = count;
 };
 
