@@ -25,6 +25,17 @@ tenSecondTimer = () => {
     // Reset msHundreds value and increment secondOnes
     msHundreds.innerHTML = 0;
     secondOnes.innerHTML++;
+  // Once 10 seconds have passed
+  } else if (secondOnes.innerHTML % 9 === 0) {
+    // Stop timer
+    clearInterval(timer);
+    // Reset Values
+    secondOnes.innerHTML = 0;
+    msTens.innerHTML = 0;
+    msHundreds.innerHTML = 0;
+    secondTens.innerHTML++;
+    // Turn digits color red
+    document.querySelector(".digits").className += " redDigit";
   }
 }
 
