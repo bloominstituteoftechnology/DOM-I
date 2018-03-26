@@ -16,26 +16,43 @@
 // }, 1000);
 
 
-var timer = {
-    currentTime: 1,
-    startTime: 1,
-    maxTime: 12,
-    interval: 200,
-    target: ".digits",
-    updateTime: function() {
-        document.querySelectorAll(this.target).value = this.currentTime;
-        this.currentTime++;
-        if (this.currentTime > this.maxTime) {
-            this.currentTime = this.startTime;
-        }
-    },
-    start: function() {
-        this.currentInterval = setInterval(this.updateTime.bind(this), this.interval);
-    },
-    stop: function() {
-        clearInterval(this.currentInterval);
-    }
-};
+//
+// GlobalVariables
+const startButton = document.getElementsByClassName("start")[0];
+const stopButton = document.getElementsByClassName("stop")[0];
+let oneMilli = document.getElementById("msHundredths");
+let tenMilli = document.getElementById('msTens');
 
-timer.start();
-timer.stop();
+let Timer;
+
+// functions
+function startTimer() {
+  oneMilli.innerHTML = 0;
+  Timer = window.setInterval(function() {
+    if(parseInt(oneMilli.innerText) > 8) {
+        if (oneMilli.innerText > 8){
+            oneMilli.innerText = 0;
+        }
+       return stopTimer();
+    }
+    oneMilli.innerHTML = parseInt(oneMilli.innerText) + 1;
+  }, 1000);
+}
+
+function stopTimer() {
+  clearInterval(Timer);
+  console.log("timer stopped!");
+}
+
+// DOM
+window.onload = function() {
+  window.addEventListener("click", function(event) {
+    if (event.target.nodeName === "BUTTON") {
+      if (event.target.classList.value === "start") {
+        startTimer();
+      } else {
+        stopTimer();
+      }
+    }
+  });
+};
