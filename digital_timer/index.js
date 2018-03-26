@@ -36,7 +36,10 @@
 function timeUp() {  
     //let count = document.getElementById('secondOnes');
     count = parseInt(count, 10);
-    count++;
+    if (count <10) {
+        count++;
+    }
+
     document.getElementById("secondOnes").innerHTML = count;
 };
 
