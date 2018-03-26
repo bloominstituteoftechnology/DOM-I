@@ -34,7 +34,7 @@ class Counter {
     this.c = c
   }
   checkIfDone() {
-    return this.c > 9990 ? handleCountdownStop() : false
+    return this.c > 10000 ? handleCountdownStop() : false
   }
   increment() {
     !this.checkIfDone() ? (this.c += 10) : ''
@@ -42,11 +42,34 @@ class Counter {
 }
 const countdownCounter = new Counter()
 
+const cacheFunction = cb => {
+  const cache = {}
+  const addToCache = obj => Object.assign(cache, obj)
+
+  // property names cannot be numbers
+  const isInCache = key => Object.keys(cache).includes(key.toString())
+
+  const handleAddToCache = k => {
+    const obj = {}
+    obj[k] = cb(k)
+    addToCache(obj)
+    return obj[k]
+  }
+
+  return k => (isInCache(k) ? cache[k] : handleAddToCache(k))
+}
+
+const renderCache = cacheFunction
 const render = num => {
-  //   secondTens
+  // secondTens
+  secondTens.innerText = `${num % 10}`
   // secondOnes
+  secondOnes.innerText = `${num % 100}`
   // msHundreds
+  msHundreds.innerText = `${num % 1000}`
   // msTens
+  msTens.innerText = `${num % 10000}`
+
   const timeArr = [secondTens, secondOnes, msHundreds, msTens]
 }
 
