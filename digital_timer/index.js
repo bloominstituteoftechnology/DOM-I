@@ -7,3 +7,6 @@ const secondOnes = document.getElementById('secondOnes');
 const colon = document.getElementById('colon');
 const msHundreds = document.getElementById('msHundreds');
 const msTens = document.getElementById('msTens');
+
+
+//Test comment
