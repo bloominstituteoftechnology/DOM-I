@@ -1,11 +1,14 @@
-// Initialize all variables to 0 by referencing DOM element IDs
-secondOnes.innerHTML = 0;
-secondTens.innerHTML = 0;
-msHundreds.innerHTML = 0;
-msTens.innerHTML = 0;
+reset = () => {
+  // Initialize all variables to 0 by referencing DOM element IDs
+  secondOnes.innerHTML = 0;
+  secondTens.innerHTML = 0;
+  msHundreds.innerHTML = 0;
+  msTens.innerHTML = 0;
+}
 
 tenSecondTimer = () => {
   msTens.innerHTML++;
+  
   // Once 100 milliseconds have passed
   if (msTens.innerHTML === '10') {
     // Reset msTens value and increment msHundreds
@@ -32,4 +35,5 @@ tenSecondTimer = () => {
 }
 
 // Start timer
+reset();
 const timer = setInterval(tenSecondTimer, 10);
