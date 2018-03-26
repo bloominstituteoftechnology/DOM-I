@@ -31,46 +31,50 @@ const handleCountdownStop = () => {
 
 class Counter {
   constructor() {
-    this.now = new Date(Math.abs(new Date() - this.start))
     this.start = new Date()
   }
+  now() {
+    return new Date(Math.abs(new Date() - this.start))
+  }
+
   checkIfDone() {
-    return this.now.getSeconds >= 10 ? handleCountdownStop() : false
+    return this.now().getMilliseconds() - this.start >= 10000
+      ? handleCountdownStop()
+      : false
   }
 }
 const countdownCounter = new Counter()
 
-const cacheFunction = cb => {
-  const cache = {}
-  const addToCache = obj => Object.assign(cache, obj)
+// const cacheFunction = cb => {
+//   const cache = {}
+//   const addToCache = obj => Object.assign(cache, obj)
 
-  // property names cannot be numbers
-  const isInCache = key => Object.keys(cache).includes(key.toString())
+//   // property names cannot be numbers
+//   const isInCache = key => Object.keys(cache).includes(key.toString())
 
-  const handleAddToCache = k => {
-    const obj = {}
-    obj[k] = cb(k)
-    addToCache(obj)
-    return obj[k]
-  }
+//   const handleAddToCache = k => {
+//     const obj = {}
+//     obj[k] = cb(k)
+//     addToCache(obj)
+//     return obj[k]
+//   }
 
-  return k => (isInCache(k) ? cache[k] : handleAddToCache(k))
-}
+//   return k => (isInCache(k) ? cache[k] : handleAddToCache(k))
+// }
 
-const renderCache = cacheFunction
+// const renderCache = cacheFunction
+
 const render = time => {
-  time = new Date(time)
-
   // secondTens
   secondTens.innerText =
-    secondTens.innerText === `${time.getSeconds() % 10}`
+    secondTens.innerText === `${time.getSeconds() % 1}`
       ? secondTens.innerText
-      : `${time.getSeconds() % 10}`
+      : `${time.getSeconds() % 1}`
   // secondOnes
   secondOnes.innerText =
-    secondOnes.innerText === `${time.getSeconds() % 1}`
+    secondOnes.innerText === `${time.getSeconds() % 10}`
       ? secondOnes.innerText
-      : `${time.getSeconds() % 1}`
+      : `${time.getSeconds() % 10}`
   // msHundreds
   msHundreds.innerText =
     msHundreds.innerText === `${time.getMilliseconds() % 100}`
@@ -92,6 +96,6 @@ function countdownTick() {
     // handle the trash
     // timeout runs an extra time
     // render our changes
-    render(countdownCounter.now)
+    render(countdownCounter.now())
   }
 }
