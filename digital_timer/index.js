@@ -3,6 +3,8 @@ class Timer {
     // Initialize at 00:00 and not running
     this.count = 0;
     this.running = false;
+    this.digits = Array.from(document.querySelectorAll('.digit:not(#colon)')); // Grab all the non-colon digits
+    this.allChars = Array.from(document.querySelectorAll('.digit')); // All of the display characters for color classes
 
     // Gather the control elements into properties
     this.startButton = document.querySelector('button#start');
@@ -33,16 +35,15 @@ class Timer {
   }
   update() { // Controls InnerHTML of digits and their display classes
     let timerString = this.count.toString().padStart(4, '0'); // Pad the count if it is not yet 1000
-    const digits = Array.from(document.querySelectorAll('.digit:not(#colon)')); // Grab all the non-colon digits
-    digits.forEach((element, index) => element.innerHTML = timerString[index]); // Assign each digit of the count sequentially
+    this.digits.forEach((element, index) => element.innerHTML = timerString[index]); // Assign each digit of the count sequentially
     if (timerString == '1000') {
-      console.log('done');
-      digits.push(document.querySelector('#colon')); // Add colon back to the collection
-      digits.forEach((element) => element.classList.add('redDigit')); // Turn them all red
-    }
+      this.allChars.forEach((element) => element.classList.add('redDigit')); // Turn them all red
+    } 
   }
-  reset() { // Start the count back at 0
+  reset() { // Start the count back at 0 and set color to black if necessary
+    this.stop();
     this.count = 0;
+    this.allChars.forEach((element) => element.classList.remove('redDigit'));
     this.update();
   }
 }
