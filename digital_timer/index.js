@@ -11,25 +11,11 @@
 //         }
 //     }
 //     tick();
-// }
-
-
-
-
-
-
-
-
-
- let counter = 0;
-
-// function countdown () {
+//// function countdown () {
     //var seconds = document.getElementById('secondOnes');
     // seconds.innerHTML = "0";
 
-for(i = counter; i < 10; i++) {
-    counter = i;
-}
+
 
 // let digits 
 
@@ -42,11 +28,28 @@ for(i = counter; i < 10; i++) {
 
 // countdown();
 
- setInterval(function, 1000)
+  //setInterval(function, 1000)
 
-let count = document.getElementById('secondOnes').innerHTML = "0";
-count = parseInt(counter, 10);
-document.getElementById("secondOnes").innerHTML = count;
+let variable = setInterval(selector, 1000);
+
+function selector(num) {  
+    let count = document.getElementById('secondOnes').innerHTML = "0";
+    // num++;
+    count = parseInt(num, 10);
+    document.getElementById("secondOnes").innerHTML = count;
+};
+
+for (i = 0; i < 10; i++) {
+    selector(i);
+}
+
+
+
+
+
+// for(i = counter; i < 10; i++) {
+//     counter = i;
+// }
 
 //console.log(count);
 
