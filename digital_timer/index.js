@@ -1,33 +1,31 @@
-let seconds = 0;
+startButton.onclick = function () { incrementTimer(); };
+
 let ms = 0;
-const timeLimit = 10;
+const LIMIT = 10000;
 
 document.getElementById('secondTens').innerHTML = 0;
 document.getElementById('secondOnes').innerHTML = 0;
 document.getElementById('msHundreds').innerHTML = 0;
 document.getElementById('msTens').innerHTML = 0;
 
-let msTimer = setInterval(function() {
-  document.getElementById('msHundreds').innerHTML = ((ms / 10).toFixed(0)) % 10;
-  document.getElementById('msTens').innerHTML = ms++ % 10;
-  if(ms === 100){
-    ms = 0;
-  }
-  if(seconds === timeLimit){
-    ms = 0;
-    document.getElementById('msTens').innerHTML = ms;
-    document.querySelector('.digits').style = 'color: red';
-    clearInterval(msTimer);
-    
-  }
-}, 10)
+function incrementTimer() {
+  ms += 10;
 
-let secondTimer = setInterval(function() {
-  document.getElementById('secondTens').innerHTML = parseInt(seconds / 10);
-  document.getElementById('secondOnes').innerHTML = ++seconds % 10;
-  if(seconds === timeLimit){
-    clearInterval(secondTimer);
-    document.getElementById('secondTens').innerHTML = 1;
-    document.getElementById('secondOnes').innerHTML = 0;
+  // document.getElementById('ms').innerHTML = ms;
+
+  document.getElementById('secondTens').innerHTML = parseInt(ms / 10000) % 10;
+  document.getElementById('secondOnes').innerHTML = parseInt(ms / 1000) % 10;
+  document.getElementById('msHundreds').innerHTML = parseInt(ms / 100) % 10;
+  document.getElementById('msTens').innerHTML = parseInt(ms / 10) % 10;
+
+  if (ms === LIMIT) {
+    stopTimer();
+    document.querySelector('.digits').style = 'color: red;'
   }
-}, 1000)
+}
+
+function stopTimer() {
+  clearInterval(msTimer);
+}
+
+let msTimer = setInterval(incrementTimer, 10);
