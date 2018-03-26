@@ -5,7 +5,8 @@ const 	secTens = document.getElementById("secondTens"),
  	 	msOnes = document.getElementById("msTens"),
  	 	msTens = document.getElementById("msHundreds"),
  	 	startButton = document.querySelector(".button-start"),
- 		resetButton = document.querySelector('.button-reset');
+ 		resetButton = document.querySelector(".button-reset"),
+ 		digits 		= document.querySelector(".digits");
 
 // Wrap up all digits in a variable for easier manipulation
 
@@ -28,7 +29,7 @@ const countdownStart = () => {
 	let tens = 0;
 	let hunds = 0;
 	let final = 0;
-
+	digits.classList.add("end");
 	// Interval function working in sync to produce desired outcome
 
 	const msOnesTimer = setInterval(() => {
@@ -67,6 +68,7 @@ const countdownStart = () => {
 	msTens.innerHTML = "0";
 	timer.forEach((element) => element.classList.remove("redDigit"));
 	startButton.disabled = false;
+	digits.classList.remove("end");
 	timerFunctions.forEach((f) => clearInterval(f))
 
 	}
@@ -85,7 +87,7 @@ const clear = (element) => {
 	msTens.innerHTML = "0";
 	element.forEach((f) => clearInterval(f));
 	timer.forEach((element) => element.classList.add("redDigit"));
-	startButton.disabled = false;
+	startButton.disabled = true;
 };
 
 startButton.addEventListener("click", function() {

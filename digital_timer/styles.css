@@ -1,14 +1,77 @@
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: url('background-blue.png') no-repeat;
+  background-size: cover;
+  min-height: 100vh;
 }
 
 .digit {
   display: inline-block;
-  font-size: 80px;
+  font-size: 12rem;
+  color: #FA6900;
+  text-shadow: 2px 2px 4px white;
 }
 
 .redDigit {
   color: red;
+}
+
+.controls {
+	margin-top: 20px;
+}
+
+.controls button {
+	font-size: 1.2rem;
+	font-weight: bold;
+	background-color: rgba(0,0,0,0.3);
+	font-family: 'Open Sans', sans-serif;
+	text-decoration:none;
+	color: #fff;
+	position:relative;
+	padding:10px 20px;
+	border-left:solid 1px #2ab7ec;
+	margin-left:35px;
+	background-image: linear-gradient(bottom, rgb(10,94,125) 0%, rgb(14,139,184) 100%);
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	box-shadow: inset 0px 1px 0px #FA6900, 0px 5px 0px 0px #FA6900, 0px 8px 3px #999;
+}
+
+.controls button:active {
+	top:3px;
+	background-image: linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%);
+	box-shadow: inset 0px 1px 0px #FA6900, 0px 2px 0px 0px #FA6900, 0px 5px 3px #999;
+}
+
+.end {
+	background-color: rgba(0,0,0, 0.7);
+	box-shadow: inset 0px 1px 0px #FA6900, 0px 2px 0px 0px #FA6900, 0px 5px 3px #999;	
+	padding: 20px;
+	-webkit-animation: background 10s cubic-bezier(1,0,0,1) 1;
+  	animation: background 10s cubic-bezier(1,0,0,1) 1;
+}
+
+
+
+@-webkit-keyframes background {
+  0% { background-color: rgba(0,0,0,0.1); }
+  16% { background-color: rgba(0,0,0,0.2); }
+  33% { background-color: rgba(0,0,0,0.3); }
+  48% { background-color: rgba(0,0,0,0.4); }  
+  67% { background-color: rgba(0,0,0,0.5); }
+  87% { background-color: rgba(0,0,0,0.6); }
+  100% { background-color:rgba(0,0,0,0.7); }
+}
+
+@keyframes background {
+  0% { background-color: rgba(0,0,0,0.1); }
+  16% { background-color: rgba(0,0,0,0.2); }
+  33% { background-color: rgba(0,0,0,0.3); }
+  48% { background-color: rgba(0,0,0,0.4); }  
+  67% { background-color: rgba(0,0,0,0.5); }
+  87% { background-color: rgba(0,0,0,0.6); }
+  100% { background-color:rgba(0,0,0,0.7); }
 }
