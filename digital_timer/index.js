@@ -58,12 +58,12 @@ const render = time => {
   msHundreds.innerText =
     msHundreds.innerText === `${time.getMilliseconds() % 100}`
       ? msHundreds.innerText
-      : `${time.getMilliseconds() % 100}`
+      : `${((time.getMilliseconds() % 100) / 10).toFixed()}`
   // msTens
   msTens.innerText =
-    msTens.innerText === `${time.getMilliseconds() % 10}`
+    msTens.innerText === `${time.getMilliseconds() % 1000}`
       ? msTens.innerText
-      : `${time.getMilliseconds() % 10}`
+      : `${((time.getMilliseconds() % 1000) / 100).toFixed()}`
 
   const timeArr = [secondTens, secondOnes, msHundreds, msTens]
 }
