@@ -12,7 +12,11 @@ msHundreds.innerHTML = 0;
 msTens.innerHTML = 0;
 
 tenSecondTimer = () => {
-
+  // Start timer by incrementing milliseconds
+  if (msTens.innerHTML < 9) {
+    msTens.innerHTML++;
+  }
 }
 
+// Start timer
 const timer = setInterval(tenSecondTimer, 10);
