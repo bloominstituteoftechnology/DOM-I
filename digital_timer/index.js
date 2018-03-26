@@ -2,7 +2,26 @@
 
 // In collaboration Axhon Ruiz 🐧, Kaitlyn Flynn👍, Tylar Pierson 🐘
 
-const secondTens = Document.getElementById('secondTens')
-const secondOnes = Document.getElementById('secondOnes')
-const msHundreds = Document.getElementById('msHundreds')
-const msTens = Document.getElementById('msTens')
+const secondTens = document.getElementById('secondTens')
+const secondOnes = document.getElementById('secondOnes')
+const msHundreds = document.getElementById('msHundreds')
+const msTens = document.getElementById('msTens')
+
+const blue = event => {
+  typeof event === typeof new Error()
+    ? handleError(event)
+    : handlesCountdownstart()
+}
+
+const handleError = err => console.log('oops', err.message)
+
+const handlesCountdownstart = () => {
+  setInterval(countdownTick(), 10)
+}
+function countdownTick() {
+  return () => {
+    // update our counter
+    // handle the trash
+    // render our changes
+  }
+}
