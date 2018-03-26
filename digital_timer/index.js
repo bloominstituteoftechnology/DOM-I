@@ -1,7 +1,8 @@
-let hundredths = document.getElementById('msHundreds');
-let tenths = document.getElementById('msTens');
-let ones = document.getElementById('secondOnes');
-let tens = document.getElementById('secondTens');
+const hundredths = document.getElementById('msHundreds');
+const tenths = document.getElementById('msTens');
+const ones = document.getElementById('secondOnes');
+const tens = document.getElementById('secondTens');
+const digits = document.getElementsByClassName('digit');
 
 let hundredthsCount = 1;
 let tenthsCount = 1;
@@ -23,7 +24,9 @@ int = setInterval(() => {
         tenths.innerHTML = '0';
         ones.innerHTML = '0';
         tens.innerHTML = '1';
-        document.getElementsByClassName('digits') = 
+        for(let i=0; i<digits.length; i++){
+            digits[i].style.color = 'red';
+        }
     }
 }, 10);
 
