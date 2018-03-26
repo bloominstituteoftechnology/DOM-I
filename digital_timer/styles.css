@@ -12,3 +12,7 @@ body {
 .redDigit {
   color: red;
 }
+
+#start {
+  align-self: flex-end;
+}
