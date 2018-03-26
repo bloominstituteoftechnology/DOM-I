@@ -15,3 +15,11 @@ secondOnes.innerHTML = '0';
 msHundreds.innerHTML = '0';
 msTens.innerHTML = '0';
 
+<<<<<<< HEAD
+=======
+secondTens.innerHTML = "0";
+secondOnes.innerHTML = "0";
+secondTens.innerHTML = "0";
+msHundreds.innerHTML = "0";
+msTens.innerHTML = "0";
+>>>>>>> c24f80577f9188d7c34ed864c23f600868c39ef3
