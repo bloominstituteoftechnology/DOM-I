@@ -2,15 +2,24 @@
 <html>
   <head>
     <title>DOM I</title>
-    <link rel="stylesheet" href="./styles.css">
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
   </head>
   <body>
     <div class="digits">
-      <div class="digit" id="secondTens">-</div>
-      <div class="digit" id="secondOnes">-</div>
-      <div class="digit" id="colon">:</div>
-      <div class="digit" id="msHundreds">-</div>
-      <div class="digit" id="msTens">-</div>
+      <div class="digitContainer">
+        <div class="digit" id="secondTens">-</div>
+        <div class="digit" id="secondOnes">-</div>
+        <div class="digit" id="colon">:</div>
+        <div class="digit" id="msTens">-</div>
+        <div class="digit" id="msHundredths">-</div>
+      </div>
+      <div class="buttonContainer">
+        <button type="button" class="start">Start</button>
+        <button type="button" class="stop">Stop</button>
+      </div>
     </div>
+    <script type="text/javascript" src="./index.js"></script>
   </body>
 </html>
