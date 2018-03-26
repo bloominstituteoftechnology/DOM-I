@@ -7,10 +7,15 @@ let msTens = document.querySelector('#msTens');
 
 let timer = window.setInterval( () => {
     if (counter < 10) {
+        document.getElementById('msHundreds').innerHTML = counter;
         counter++;
     } else {
-        clearInterval;
-        
+        clearInterval(timer);
     }
 }, 10);
 
+
+
+
+
+// document.querySelector('.digits').style.color = 'red';
