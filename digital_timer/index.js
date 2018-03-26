@@ -65,6 +65,7 @@ const render = time => {
       ? msTens.innerText
       : `${((time.getMilliseconds() % 1000) / 100).toFixed()}`
 
+  if (countdownCounter.now() > 10000) secondTens.innerText = '1'
   const timeArr = [secondTens, secondOnes, msHundreds, msTens]
 }
 
