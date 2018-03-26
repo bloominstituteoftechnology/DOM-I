@@ -6,11 +6,13 @@ const secondTens = document.getElementById('secondTens')
 const secondOnes = document.getElementById('secondOnes')
 const msHundreds = document.getElementById('msHundreds')
 const msTens = document.getElementById('msTens')
-
+let timer
 const blue = event => {
-  typeof event === typeof new Error()
-    ? handleError(event)
-    : handlesCountdownstart()
+  // handle error somewhere?
+  // typeof event === typeof new Error()
+  //   ? handleError(event)
+  //   :
+  timer = handlesCountdownstart()
 }
 
 const handleError = err => console.error('oops', err)
@@ -19,7 +21,10 @@ const handlesCountdownstart = () => {
   return setInterval(countdownTick(), 10)
 }
 
-const handleCountdownStop = () => {}
+const handleCountdownStop = () => {
+  clearInterval(timer)
+  return true
+}
 // create a counter
 // 0000
 // 0010 = 10 ms
@@ -29,11 +34,10 @@ class Counter {
     this.c = c
   }
   checkIfDone() {
-    return this.c > 9999 ? handleCountdownStop() : false
+    return this.c > 9990 ? handleCountdownStop() : false
   }
   increment() {
-    this.checkIfDone()
-    this.c += 10
+    !this.checkIfDone() ? (this.c += 10) : ''
   }
 }
 const countdownCounter = new Counter()
