@@ -1,6 +1,4 @@
 // GlobalVariables
-const startButton = document.getElementsByClassName("start")[0];
-const stopButton = document.getElementsByClassName("stop")[0];
 let oneMilli = document.getElementById("msHundredths");
 let tenMilli = document.getElementById('msTens');
 let secondOnes = document.getElementById('secondOnes');
@@ -8,12 +6,14 @@ let secondTens = document.getElementById('secondTens');
 let Timer;
 
 //functions
+
 function initializeTimer() {
   oneMilli.innerHTML = 0;
   tenMilli.innerHTML = 0;
   secondOnes.innerHTML = 0;
   secondTens.innerHTML = 0;
 }
+
 function updateColor(arr, color) {
   for (let i = 0; i < arr.length; i++) {
     if (arr[i].innerText !== ":") {
@@ -27,10 +27,10 @@ function startTimer() {
     if(parseInt(oneMilli.innerText) > 8) {
       oneMilli.innerHTML = 0;
       tenMilli.innerHTML = parseInt(tenMilli.innerText) + 1;
-      if(parseInt(tenMilli.innerText) > 8) {
+      if(parseInt(tenMilli.innerText) > 9) {
         tenMilli.innerHTML = 0;
         secondOnes.innerHTML = parseInt(secondOnes.innerText) + 1;
-        if(parseInt(secondOnes.innerText) > 8) {
+        if(parseInt(secondOnes.innerText) > 9) {
           secondOnes.innerHTML = 0;
           secondTens.innerHTML = parseInt(secondTens.innerText) + 1;
           stopTimer();
@@ -47,7 +47,7 @@ function stopTimer() {
   clearInterval(Timer);
 }
 
-// DOM
+// Event Listeners
 window.onload = function() {
   window.addEventListener("click", function(event) {
     if (event.target.nodeName === "BUTTON") {
