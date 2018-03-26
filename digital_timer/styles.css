@@ -27,10 +27,6 @@ body {
   transition-duration: 0.4s;
 }
 
-.button:hover {
-  cursor: pointer;
-}
-
 .start {
   border: 2px solid #4CAF50;  
 }
