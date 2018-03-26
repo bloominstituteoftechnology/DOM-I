@@ -1,5 +1,6 @@
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -11,4 +12,8 @@ body {
 
 .redDigit {
   color: red;
+}
+
+.controls {
+  margin-top: 0.4rem;
 }
