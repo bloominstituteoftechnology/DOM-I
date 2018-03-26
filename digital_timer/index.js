@@ -1,41 +1,65 @@
 let secTens = document.querySelector("#secondTens");
 let secOnes = document.querySelector("#secondOnes");
-let col = document.querySelector("#colon");
-let miliHundreds = document.querySelector("#msHundreds");
-let miliTens = document.querySelector("#msTens");
+let colon = document.querySelector("#colon");
+let msHundreds = document.querySelector("#msHundreds");
+let msTens = document.querySelector("#msTens");
 
+function timer() {
 
+    function stopTimer() {
+        clearInterval();
+    }
 
-
-function a() {
-    
-   let x = setInterval(()=>{
-    miliTens.innerHTML = 0;
-        while (miliTens.innerHTML <= 8) {
-            if(miliTens === 9) {
-                miliTens.innerHTML = 0;
-            }
-            miliTens.innerHTML++;
-           
-        };
-        b();
-    }, 100)
-}
-    function b() {
-    let y = setInterval(() => {
-        miliHundreds.innerHTML = 0;
+    function msTensPlace() {
+       
+        msTens.innerHTML = 0;
         
-        while(miliHundreds.innerHTML <= 8) {
-            if(miliTens === 9) {
-                clearInterval(y);
-            }
-            miliHundreds.innerHTML++;
+        function incMsTens() {
+            setInterval(() => {
+                while (msTens.innerHTML < 9) {
+                    return ++msTens.innerHTML;
+                }
+            }, 10)
         }
-    }, 1000)
- }
+       
+        incMsTens();
+        msHundredsPlace();
+
+    }
 
 
- a()
+
+    function msHundredsPlace() {
+        msHundreds.innerHTML = 0;
+
+        function incMsHundreds() {
+            setInterval(() => {
+                while (msHundreds.innerHTML < 9) {
+                    return ++msHundreds.innerHTML;
+                }
+            }, 100)
+            }
+        incMsHundreds()
+    }
+
+
+    function secOnesPlace() {
+        secOnes.innerHTML = 0;
+
+    }
+
+
+    function secTensPlace() {
+        secTens.innerHTML = 0;
+    }
+
+
+    msTensPlace()
+}
+
+
+timer();
+
  
 
  
