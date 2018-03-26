@@ -24,7 +24,7 @@ body {
   color: black;
   margin: 5px 0;
   padding: 5px 0;
-  transition-duration: 0.4s;
+  transition-duration: 0.5s;
 }
 
 .start {
@@ -42,6 +42,15 @@ body {
 
 .reset:hover {
   background-color: #555555;
+  color: white;
+}
+
+.stop {
+  border: 2px solid #f44336;
+}
+
+.stop:hover {
+  background-color: #f44336;
   color: white;
 }
 
