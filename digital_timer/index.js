@@ -4,35 +4,52 @@ const msHundreds = document.getElementById('msHundreds');
 const msTens = document.getElementById('msTens');
 
 
-    document.getElementById('secondOnes').innerHTML = 0;
-    document.getElementById('secondTens').innerHTML = 0;
-    document.getElementById('msHundreds').innerHTML = 0;
-    document.getElementById('msTens').innerHTML = 0;
+    secondOnes.innerHTML = 0;
+    secondTens.innerHTML = 0;
+    msHundreds.innerHTML = 0;
+    msTens.innerHTML = 0;
 
-let timer = setInterval(function() {
+
+    let msTensCounter = 0;
+    let msHundredsCounter = 0;
+    let secondsTensCounter = 0;
+    let secondsOnesCounter = 0;
+
+
     if (msTens.innerHTML < 9) {
-        msTens.innerHTML++;
+        msTensCounter++;
+        msTens.innerHTML = msTensCounter.toString();
     } else {
         msTens.innerHTML === 0;
+        msTensCounter === 0;
     }
+
         if (msHundreds.innerHTML < 9) {
-            msHundreds.innerHTML++;
+            msHundredsCounter++;
+            msHundreds.innerHTML = msHundredsCounter.toString();
         } else {
             msHundreds.innerHTML === 0;
+            msHundredsCounter === 0;
         }
+
+
         if (secondTens.innerHTML < 9) {
-            secondTens.innerHTML++;
+            secondTensCounter++;
+            secondTens.innerHTML = secondTensCounter.toString();
         } else {
             secondTens.innerHTML === 0;
+            secondTensCounter === 0; 
         }
+
+
             if (secondOnes.innerHTML < 9) {
-                secondOnes.innerHTML++;
+                secondOnesCounter++;
+                secondOnes.innerHTML = secondOnesCounter.toString();
             } else {
                 secondOnes.innerHTML === 0;
+                secondOnesCounter === 0;
             }
-
-                clearInterval();
-})
+            clearInterval();
 
 
 
