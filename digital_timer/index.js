@@ -4,6 +4,7 @@ const secTens = document.getElementById("secondTens");
 const secOnes = document.getElementById("secondOnes");
 const msOnes = document.getElementById("msTens");
 const msTens = document.getElementById("msHundreds");
+const startButton = document.querySelector(".button-start");
 
 // Wrap up all digits in a variable for easier manipulation
 
@@ -67,4 +68,6 @@ const clear = (element) => {
 	timer.forEach((element) => element.classList.add("redDigit"));
 };
 
-countdownStart();
+startButton.addEventListener("click", () => {
+	countdownStart();
+});
