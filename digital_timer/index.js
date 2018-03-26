@@ -3,11 +3,6 @@ let msTen = 0;
 let second = 0;
 let subNum = 0;
 
-let secondTens = document.querySelector('#secondTens');
-let secondOnes = document.querySelector('#secondOnes');
-let msHundreds = document.querySelector('#msHundreds');
-let msTens = document.querySelector('#msTens');
-
 let timer = window.setInterval(() => {
 
     if (counter !== 1101) {
@@ -18,8 +13,6 @@ let timer = window.setInterval(() => {
             second++;
             counter++;
             subNum += 100;
-            console.log(second);
-            console.log(counter);
             if (second === 11) {
                 document.getElementById('msTens').innerHTML = '00';
                 document.querySelector('#secondTens').style.display = 'none';
