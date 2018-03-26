@@ -1,24 +1,28 @@
-
-let count1 = 0; 
  
-let sT1 = document.querySelector("#msHundreds");
-let sT2 = document.querySelector("#msTens");
+ 
+const digits = document.querySelector(".digits"); 
+const secondTens = document.getElementById('secondTens');
+const secondOnes = document.getElementById('secondOnes');
+const msHundreds = document.getElementById('msHundreds');
+const msTens = document.getElementById('msTens');
 
 function timer() {
-    sT1 = window.setInterval(ms10, 10);
-    sT2 = window.setInterval(tenSec, 10000);
+    window.setInterval(msTens, 10);
+    window.setInterval(secondTens, 10000);
     
     const msTensTimer = setInterval(() => {
-        for (count1 <= 10000) ( {
-        msTens+=ms10, 
-        msTens.innerHTML = tens.toString(),
+        let counter = 10; 
+        for (counter <= 10000) ( {
+        counter +=10, 
+        msTens:innerHTML = tens.toString(),
     }, 10000);
     },
 
-    if (count1 >= st2) {
+    if(counter >= 10000) {
         digits.style.redDigit; 
-        clearInterval(tens); 
-        clearInterval(milis); 
+        clearInterval(msTens); 
+        clearInterval(secondTens); 
 
     }
 };
+timer(); 
