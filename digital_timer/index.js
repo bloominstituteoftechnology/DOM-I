@@ -42,13 +42,20 @@ class Counter {
 }
 const countdownCounter = new Counter()
 
-const render = num => console.log(num)
+const render = num => {
+  //   secondTens
+  // secondOnes
+  // msHundreds
+  // msTens
+  const timeArr = [secondTens, secondOnes, msHundreds, msTens]
+}
 
 function countdownTick() {
   return () => {
     // update our counter
     countdownCounter.increment()
     // handle the trash
+    // timeout runs an extra time
     // render our changes
     render(countdownCounter.c)
   }
