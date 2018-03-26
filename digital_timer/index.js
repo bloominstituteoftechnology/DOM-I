@@ -38,9 +38,7 @@ class Counter {
   }
 
   checkIfDone() {
-    return this.now().getMilliseconds() - this.start >= 10000
-      ? handleCountdownStop()
-      : false
+    return this.now() >= 10000 ? handleCountdownStop() : false
   }
 }
 const countdownCounter = new Counter()
