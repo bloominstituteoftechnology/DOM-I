@@ -3,10 +3,10 @@
 Topics:
  * Interacting with the DOM
  * Selectors
-  * selectElementsByClassname
+  * selectElementsByClassname //fails to set style
   * selectElementbyId
   * querySelector
-  * querySelectorAll
+  * querySelectorAll //fails to set style
  * NodeList
  * HTMLCollection
 
