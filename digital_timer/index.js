@@ -29,27 +29,16 @@
 // countdown();
 
   //setInterval(function, 1000)
+  setInterval(timeUp, 1000);
+  let count = document.getElementById('secondOnes').innerHTML = "0";
 
-let variable = setInterval(selector, 1000);
 
-function selector(num) {  
-    let count = document.getElementById('secondOnes').innerHTML = "0";
-    // num++;
-    count = parseInt(num, 10);
+function timeUp() {  
+    //let count = document.getElementById('secondOnes');
+    count = parseInt(count, 10);
+    count++;
     document.getElementById("secondOnes").innerHTML = count;
 };
-
-for (i = 0; i < 10; i++) {
-    selector(i);
-}
-
-
-
-
-
-// for(i = counter; i < 10; i++) {
-//     counter = i;
-// }
 
 //console.log(count);
 
