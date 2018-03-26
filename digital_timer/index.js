@@ -1,47 +1,42 @@
-// function updateTime() {
-//     var time = 0;
-//     setInterval(function() {
-//         document.querySelector(".digits").value = time;
-//         time++;
-//         if (time > 10) {
-//             time = 1;
-//         }
-//     }, 10);
-// }
-// updateTime();
-
-
-// let num = window.setInterval( function() {
-//     console.log('Look at this');
-// }, 1000);
-
-
-//
 // GlobalVariables
 const startButton = document.getElementsByClassName("start")[0];
 const stopButton = document.getElementsByClassName("stop")[0];
 let oneMilli = document.getElementById("msHundredths");
 let tenMilli = document.getElementById('msTens');
-
+let secondOnes = document.getElementById('secondOnes');
+let secondTens = document.getElementById('secondTens');
 let Timer;
 
-// functions
-function startTimer() {
+//functions
+function initializeTimer() {
   oneMilli.innerHTML = 0;
+  tenMilli.innerHTML = 0;
+  secondOnes.innerHTML = 0;
+  secondTens.innerHTML = 0;
+}
+
+function startTimer() {
+  initializeTimer();
   Timer = window.setInterval(function() {
     if(parseInt(oneMilli.innerText) > 8) {
-        if (oneMilli.innerText > 8){
-            oneMilli.innerText = 0;
+      oneMilli.innerHTML = 0;
+      tenMilli.innerHTML = parseInt(tenMilli.innerText) + 1;
+      if(parseInt(tenMilli.innerText) > 8) {
+        tenMilli.innerHTML = 0;
+        secondOnes.innerHTML = parseInt(secondOnes.innerText) + 1;
+        if(parseInt(secondOnes.innerText) > 8) {
+          secondOnes.innerHTML = 0;
+          secondTens.innerHTML = parseInt(secondTens.innerText) + 1;
+          return stopTimer();
         }
-       return stopTimer();
+      }
     }
     oneMilli.innerHTML = parseInt(oneMilli.innerText) + 1;
-  }, 1000);
+  }, 10);
 }
 
 function stopTimer() {
   clearInterval(Timer);
-  console.log("timer stopped!");
 }
 
 // DOM
@@ -49,6 +44,7 @@ window.onload = function() {
   window.addEventListener("click", function(event) {
     if (event.target.nodeName === "BUTTON") {
       if (event.target.classList.value === "start") {
+        stopTimer();
         startTimer();
       } else {
         stopTimer();
