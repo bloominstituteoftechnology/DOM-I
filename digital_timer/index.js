@@ -10,7 +10,6 @@
 
   // increment .01 every .01 seconds 
 
-  let allClass = document.getElementsByClassName('digits');
 
   let hundreth = document.getElementById('msTens');
   let tenths = document.getElementById('msHundreds');
@@ -22,9 +21,12 @@
   ones.innerHTML = 0;
   tens.innerHTML = 0;
 
+//   function clearTheInterval() {
+//     window.clearInterval(hundrethInterval);
+//     }
+
   let hundrethInterval = window.setInterval(() => {
     hundreth.innerHTML++;
-    
     if (hundreth.innerHTML > 9) {
         hundreth.innerHTML = 0;
         tenths.innerHTML++;
@@ -40,10 +42,19 @@
         tens.innerHTML++;
     }
 
-    if (tens.innerHTML > 9) {
-        tens.innerHTML = 1
-       allClass.style.color = 'red';
+     if (tens.innerHTML > 0) {
+        //allClass.style.color = 'red';
+        //document.getElementsByClassName('digit').className = 'redDigit';
+
+        document.getElementById('msTens').className += ' redDigit';
+        document.getElementById('msHundreds').className += ' redDigit';
+        document.getElementById('secondOnes').className += ' redDigit';
+        document.getElementById('secondTens').className += ' redDigit';
+        document.getElementById('colon').className += ' redDigit';
+        window.clearInterval(hundrethInterval);
+        
     }
+}, 10);
 
-    }, 10)
-
+//return to exit?
+//we need to fix 0 & 1 problem
