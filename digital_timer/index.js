@@ -1,6 +1,5 @@
 let ms = 0;
 const msLimit = 10000;
-let buttonEnabled = false;
 
 document.getElementById('secondTens').innerHTML = 0;
 document.getElementById('secondOnes').innerHTML = 0;
@@ -8,7 +7,7 @@ document.getElementById('msHundreds').innerHTML = 0;
 document.getElementById('msTens').innerHTML = 0;
 
 function resetTimer() {
-  if (buttonEnabled === false) {
+  if (startButton.disabled === false) {
     let ms = 0;
     document.getElementById('secondTens').innerHTML = 0;
     document.getElementById('secondOnes').innerHTML = 0;
@@ -19,35 +18,35 @@ function resetTimer() {
 }
 
 function startTimer() {
-  if (buttonEnabled === false) {
-    buttonEnabled = true;
-    document.getElementById('secondTens').innerHTML = 0;
-    document.getElementById('secondOnes').innerHTML = 0;
-    document.getElementById('msHundreds').innerHTML = 0;
-    document.getElementById('msTens').innerHTML = 0;
+  startButton.disabled = true;
+  resetButton.disabled = true;
+  document.getElementById('secondTens').innerHTML = 0;
+  document.getElementById('secondOnes').innerHTML = 0;
+  document.getElementById('msHundreds').innerHTML = 0;
+  document.getElementById('msTens').innerHTML = 0;
 
-    function incrementTimer() {
-      ms += 10;
+  function incrementTimer() {
+    ms += 10;
 
-      document.getElementById('secondTens').innerHTML = parseInt(ms / 10000) % 10;
-      document.getElementById('secondOnes').innerHTML = parseInt(ms / 1000) % 10;
-      document.getElementById('msHundreds').innerHTML = parseInt(ms / 100) % 10;
-      document.getElementById('msTens').innerHTML = parseInt(ms / 10) % 10;
+    document.getElementById('secondTens').innerHTML = parseInt(ms / 10000) % 10;
+    document.getElementById('secondOnes').innerHTML = parseInt(ms / 1000) % 10;
+    document.getElementById('msHundreds').innerHTML = parseInt(ms / 100) % 10;
+    document.getElementById('msTens').innerHTML = parseInt(ms / 10) % 10;
 
-      if (ms === msLimit) {
-        stopTimer();
-        document.querySelector('.digits').style = 'color: red;';
-      }
+    if (ms === msLimit) {
+      stopTimer();
+      document.querySelector('.digits').style = 'color: red;';
     }
-
-    function stopTimer() {
-      ms = 0;
-      buttonEnabled = false;
-      clearInterval(msTimer);
-    }
-
-    let msTimer = setInterval(incrementTimer, 10);
   }
+
+  function stopTimer() {
+    ms = 0;
+    startButton.disabled = false;
+    resetButton.disabled = false;
+    clearInterval(msTimer);
+  }
+
+  let msTimer = setInterval(incrementTimer, 10);
 }
 
 const startButton = document.createElement('button');
