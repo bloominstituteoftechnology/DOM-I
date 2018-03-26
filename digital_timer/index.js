@@ -30,6 +30,10 @@ function timer() {
             }else{
                 secondOnes.innerHTML = 0;
                 ++secondTens.innerHTML;
+                secondTens.style.color = 'red';
+                secondOnes.style.color = 'red';
+                msHundreds.style.color = 'red';
+                msTens.style.color = 'red';
                 clearInterval(counter);
             }
         }
