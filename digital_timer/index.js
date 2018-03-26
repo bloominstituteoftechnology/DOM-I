@@ -4,8 +4,10 @@ const secondOnes = document.getElementById('secondOnes');
 const msHundreds = document.getElementById('msHundreds');
 const msTens = document.getElementById('msTens');
 
+// start timer
 timer();
 function timer() {
+    //set everything to o
     secondTens.innerHTML = "0";
     secondOnes.innerHTML = "0";
     msHundreds.innerHTML = "0";
@@ -13,6 +15,7 @@ function timer() {
 
     let ms = 0; // milliseconds
 
+    // start timer
     const timerId = window.setInterval(() =>{
         ms += 10;
         if (ms === 10000) {
