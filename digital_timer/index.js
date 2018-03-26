@@ -10,7 +10,7 @@ let msTens = document.querySelector('#msTens');
 
 let timer = window.setInterval(() => {
 
-    if (counter !== 1100) {
+    if (counter !== 1101) {
         document.getElementById('msTens').innerHTML = counter - subNum;
         document.getElementById('msHundreds').style.display = 'none';
         if (counter % 100 === 0) {
@@ -18,9 +18,10 @@ let timer = window.setInterval(() => {
             second++;
             counter++;
             subNum += 100;
+            console.log(second);
+            console.log(counter);
             if (second === 11) {
-                document.getElementById('secondOnes').innerHTML = 10;
-                document.getElementById('msTens').innerHTML = 00;
+                document.getElementById('msTens').innerHTML = '00';
                 document.querySelector('#secondTens').style.display = 'none';
                 document.querySelector('.digits').style.color = 'red';
                 return second;
