@@ -15,6 +15,11 @@ tenSecondTimer = () => {
   // Start timer by incrementing milliseconds
   if (msTens.innerHTML < 9) {
     msTens.innerHTML++;
+  // Once 9 milliseconds have passed
+  } else if (msTens.innerHTML % 9 === 0 && msHundreds.innerHTML < 9) {
+    // Reset msTens value and increment msHundreds
+    msTens.innerHTML = 0;
+    msHundreds.innerHTML++;
   }
 }
 
