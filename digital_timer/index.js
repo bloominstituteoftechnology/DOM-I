@@ -45,25 +45,6 @@ class Counter {
 }
 const countdownCounter = new Counter()
 
-// const cacheFunction = cb => {
-//   const cache = {}
-//   const addToCache = obj => Object.assign(cache, obj)
-
-//   // property names cannot be numbers
-//   const isInCache = key => Object.keys(cache).includes(key.toString())
-
-//   const handleAddToCache = k => {
-//     const obj = {}
-//     obj[k] = cb(k)
-//     addToCache(obj)
-//     return obj[k]
-//   }
-
-//   return k => (isInCache(k) ? cache[k] : handleAddToCache(k))
-// }
-
-// const renderCache = cacheFunction
-
 const render = time => {
   // secondTens
   secondTens.innerText =
