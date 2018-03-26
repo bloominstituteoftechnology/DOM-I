@@ -20,6 +20,11 @@ tenSecondTimer = () => {
     // Reset msTens value and increment msHundreds
     msTens.innerHTML = 0;
     msHundreds.innerHTML++;
+  // Once 100 milliseconds have passed
+  } else if (msHundreds.innerHTML % 9 === 0 && secondOnes.innerHTML < 9) {
+    // Reset msHundreds value and increment secondOnes
+    msHundreds.innerHTML = 0;
+    secondOnes.innerHTML++;
   }
 }
 
