@@ -10,6 +10,12 @@ body {
   justify-content: space-around;
 }
 
+.digits {
+  border: 5px double black;
+  border-radius: 5px;
+  background-color: #008CBA;
+}
+
 .digit {
   display: inline-block;
   font-size: 80px;
