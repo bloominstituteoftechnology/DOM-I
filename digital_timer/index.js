@@ -28,16 +28,14 @@ const handleCountdownStop = () => {
 // create a counter
 // 0000
 // 0010 = 10 ms
-let c = 0
+
 class Counter {
-  constructor(c = 0) {
-    this.c = c
+  constructor() {
+    this.now = new Date(Math.abs(new Date() - this.start))
+    this.start = new Date()
   }
   checkIfDone() {
-    return this.c > 10000 ? handleCountdownStop() : false
-  }
-  increment() {
-    !this.checkIfDone() ? (this.c += 10) : ''
+    return this.now.getSeconds >= 10 ? handleCountdownStop() : false
   }
 }
 const countdownCounter = new Counter()
@@ -60,25 +58,29 @@ const cacheFunction = cb => {
 }
 
 const renderCache = cacheFunction
-const render = num => {
+const render = time => {
+  time = new Date(time)
+
   // secondTens
   secondTens.innerText =
-    secondTens.innerText === `${num % 10}`
+    secondTens.innerText === `${time.getSeconds() % 10}`
       ? secondTens.innerText
-      : `${num % 10}`
+      : `${time.getSeconds() % 10}`
   // secondOnes
   secondOnes.innerText =
-    secondOnes.innerText === `${num % 100}`
+    secondOnes.innerText === `${time.getSeconds() % 1}`
       ? secondOnes.innerText
-      : `${num % 100}`
+      : `${time.getSeconds() % 1}`
   // msHundreds
   msHundreds.innerText =
-    msHundreds.innerText === `${num % 1000}`
+    msHundreds.innerText === `${time.getMilliseconds() % 100}`
       ? msHundreds.innerText
-      : `${num % 1000}`
+      : `${time.getMilliseconds() % 100}`
   // msTens
   msTens.innerText =
-    msTens.innerText === `${num % 10000}` ? msTens.innerText : `${num % 10000}`
+    msTens.innerText === `${time.getMilliseconds() % 10}`
+      ? msTens.innerText
+      : `${time.getMilliseconds() % 10}`
 
   const timeArr = [secondTens, secondOnes, msHundreds, msTens]
 }
@@ -86,10 +88,10 @@ const render = num => {
 function countdownTick() {
   return () => {
     // update our counter
-    countdownCounter.increment()
+    countdownCounter.checkIfDone()
     // handle the trash
     // timeout runs an extra time
     // render our changes
-    render(countdownCounter.c)
+    render(countdownCounter.now)
   }
 }
