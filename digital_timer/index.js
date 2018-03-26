@@ -16,26 +16,32 @@
 // }, 1000);
 
 
-var timer = {
-    currentTime: 1,
-    startTime: 1,
-    maxTime: 12,
-    interval: 200,
-    target: ".digits",
-    updateTime: function() {
-        document.querySelectorAll(this.target).value = this.currentTime;
-        this.currentTime++;
-        if (this.currentTime > this.maxTime) {
-            this.currentTime = this.startTime;
-        }
-    },
-    start: function() {
-        this.currentInterval = setInterval(this.updateTime.bind(this), this.interval);
-    },
-    stop: function() {
-        clearInterval(this.currentInterval);
-    }
-};
+// 
 
-timer.start();
-timer.stop();
+let secondTens = document.getElementById("secondTens")
+let secondOnes = document.getElementById("secondOnes")
+let msHundreds = document.getElementById("msHundreds")
+let msTens = document.getElementById("msTens")
+secondTens.innerHTML = "0"
+secondOnes.innerHTML = "0"
+msHundreds.innerHTML = "0"
+msTens.innerHTML = "0"
+const secondsOnes = setInterval(
+    function timer(){ 
+        if (secondOnes.innerHTML <= 9)  secondOnes = 0;
+            secondOnes.innerHTML++;
+ }, 10); 
+const msTens = setInterval(
+    function timer(){ 
+        if ( msTens.innerHTML <= 9) msTens = 0;
+             msTens.innerHTML++;
+ }, 100);
+const msHundreds = setInterval(
+    function timer(){ 
+        if ( msHundreds.innerHTML <= 9) msTens = 0;
+             msHundreds.innerHTML++;
+ }, 1000);
+
+ 
+
+<meta charset="UTF-8"/>
