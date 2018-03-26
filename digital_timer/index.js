@@ -14,7 +14,13 @@ function initializeTimer() {
   secondOnes.innerHTML = 0;
   secondTens.innerHTML = 0;
 }
-
+function updateColor(arr, color) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].innerText !== ":") {
+      arr[i].style.color = color;
+    }
+  }
+}
 function startTimer() {
   initializeTimer();
   Timer = window.setInterval(function() {
@@ -27,7 +33,9 @@ function startTimer() {
         if(parseInt(secondOnes.innerText) > 8) {
           secondOnes.innerHTML = 0;
           secondTens.innerHTML = parseInt(secondTens.innerText) + 1;
-          return stopTimer();
+          stopTimer();
+          updateColor(document.getElementsByClassName('digit'), 'red');
+          return;
         }
       }
     }
@@ -44,6 +52,7 @@ window.onload = function() {
   window.addEventListener("click", function(event) {
     if (event.target.nodeName === "BUTTON") {
       if (event.target.classList.value === "start") {
+        updateColor(document.getElementsByClassName('digit'), 'black');
         stopTimer();
         startTimer();
       } else {
