@@ -18,6 +18,7 @@ sTens.innerHTML = 0;
 function add() {
     parseInt(msTens.innerHTML);
     msTens++;
+    console.log('function is working');
     if (msTens >= 10) {
         // msHundreds: to int, +1, then to string
         parseInt(msHundreds.innerHTML);
