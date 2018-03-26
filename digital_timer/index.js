@@ -62,13 +62,23 @@ const cacheFunction = cb => {
 const renderCache = cacheFunction
 const render = num => {
   // secondTens
-  secondTens.innerText = `${num % 10}`
+  secondTens.innerText =
+    secondTens.innerText === `${num % 10}`
+      ? secondTens.innerText
+      : `${num % 10}`
   // secondOnes
-  secondOnes.innerText = `${num % 100}`
+  secondOnes.innerText =
+    secondOnes.innerText === `${num % 100}`
+      ? secondOnes.innerText
+      : `${num % 100}`
   // msHundreds
-  msHundreds.innerText = `${num % 1000}`
+  msHundreds.innerText =
+    msHundreds.innerText === `${num % 1000}`
+      ? msHundreds.innerText
+      : `${num % 1000}`
   // msTens
-  msTens.innerText = `${num % 10000}`
+  msTens.innerText =
+    msTens.innerText === `${num % 10000}` ? msTens.innerText : `${num % 10000}`
 
   const timeArr = [secondTens, secondOnes, msHundreds, msTens]
 }
