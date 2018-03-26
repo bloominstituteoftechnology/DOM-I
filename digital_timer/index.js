@@ -1,4 +1,3 @@
-/*eslint-env browser*/
 // variables
 let msTens = document.querySelector('#msTens');
 let msHuns = document.querySelector('#msHundreds');
@@ -14,7 +13,7 @@ secOnes.innerHTML = '0';
 secTens.innerHTML = '0';
 
 // timer function
-timer = () => {
+const timer = () => {
     if (msTens.innerHTML < 9) {
         msTens.innerHTML++;
     } else {
@@ -27,16 +26,19 @@ timer = () => {
                 secOnes.innerHTML++;
             } else {
                 secOnes.innerHTML = 0;
-                // clearInterval(count); // stop
-                secTens.innerHTML++;
-                // digits.forEach(element => {
-                //     element.classList.add('redDigit');
-                // })
+                clearInterval(count); // stop timer function (setInterval)
+                secTens.innerHTML++;                
             }
         }
     }
 }
 
-set 10ms increments
-let count = setInterval(function(){ timer() }, 10);
-// setTimeout(timer(), 10000);
+// calls timer function every 10ms until cleared (clearInterval)
+let count = setInterval(timer, 10);
+
+const turnRed = () => {
+    digits.forEach(element => {
+        element.classList.add('redDigit');
+    })
+    setTimeout(turnRed, 10000);
+}
