@@ -51,9 +51,11 @@ function timer() {
                 window.clearInterval(interval);
                 resetbtn.classList.remove('disabled');
                 resetbtn.disabled = false;
+
                 for (let i = 0; i < digits.length; i++) {
                     digits[i].style.color = 'red';
                 }
+
                 ready = false;
 
                 // activates reset button at the end
@@ -80,6 +82,7 @@ function reset() {
 
     // resets appearance of timer
 
+
     for (let i = 0; i < digits.length; i++) {
         digits[i].style.color = 'black';
     }
@@ -92,6 +95,7 @@ function reset() {
 //         window.clearInterval(interval);
 //         resetbtn.classList.remove('disabled');
 //         resetbtn.disabled = false;
+
 //         for (let i = 0; i < digits.length; i++) {
 //             digits[i].style.color = 'black';
 //         }
