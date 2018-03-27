@@ -1,0 +1,63 @@
+:root {
+  font-size: 62.5%;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Press Start 2P', cursive;
+}
+html {
+  height: 100%;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+body .digits {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem 0.5rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  background: #dadada;
+}
+body .digits .digitContainer {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+body .digits .digitContainer .digit {
+  text-align: center;
+  margin-right: 0.5rem;
+  font-size: 4rem;
+  padding: 1rem;
+  border: 1px solid black;
+  background: #8e8f8f;
+}
+body .digits .digitContainer .stopTimer {
+  color: red;
+}
+body .digits .buttonContainer {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: bottom;
+}
+body .digits .buttonContainer button {
+  border-radius: 0;
+  border: 1px solid black;
+  padding: 0.5rem 1rem;
+  font-size: 1.4rem;
+}
+body .digits .buttonContainer button:hover {
+  cursor: pointer;
+  outline: none;
+}
