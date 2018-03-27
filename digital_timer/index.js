@@ -42,6 +42,10 @@ class Counter {
   checkIfDone() {
     return this.now() >= 10000 ? handleCountdownStop() : false
   }
+
+  reset() {
+      this.start = new Date()
+  }
 }
 const countdownCounter = new Counter()
 
