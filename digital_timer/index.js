@@ -13,6 +13,8 @@ function timer(){
   scO.innerHTML = 0;
   scT.innerHTML = 0;
   scT.innerHTML = 0;
+
+
   let timer = setInterval(function(){
       msH.remove();
       msT.innerHTML = counter;
@@ -21,19 +23,19 @@ function timer(){
         counter= 0;
       }
     },10);
-    }
+
   let timer2 = setInterval(()=>{
     scO.innerHTML = increm;
     increm++;
     if(increm === 11){
       scT.remove();
       increm = 0;
-      clearInterval(timer2);
-      // clearInterval(timer); can't set multiple clearIntervals?
+    clearInterval(timer2);
+     clearInterval(timer); //can't set multiple clearIntervals?
 
     }
   },1000)
-
+}
 timer();
 
 
