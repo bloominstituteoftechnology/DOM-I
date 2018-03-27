@@ -1,16 +1,19 @@
-let sTens = document.getElementById('secondTens');
-let sOnes = document.getElementById('secondOnes');
-let mHundreds = document.getElementById('msHundreds');
-let mTens = document.getElementById('msTens');
-
-const counter = {
-    sTens: 0,
-    sOnes: 0,
-    mHundreds: 0,
-    mTens:0
+console.log('test');
 
 
-}
+// let sTens = document.getElementById('secondTens');
+// let sOnes = document.getElementById('secondOnes');
+// let mHundreds = document.getElementById('msHundreds');
+// let mTens = document.getElementById('msTens');
+
+// const counter = {
+//     sTens: 0,
+//     sOnes: 0,
+//     mHundreds: 0,
+//     mTens:0
+
+
+// }
 
 
 
