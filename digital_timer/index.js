@@ -31,8 +31,10 @@ function timer(){
       scT.remove();
       increm = 0;
       clearInterval(timer2);
-      clearInterval(timer); //can't set multiple clearIntervals?
+      clearInterval(timer);
       msT.innerHTML = "00";
+      msT.style.color= 'red';
+      scO.style.color= 'red';
 
 
     }
