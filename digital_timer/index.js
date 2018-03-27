@@ -44,6 +44,7 @@ class Counter {
   }
 
   reset() {
+      handleCountdownStop()
       this.start = new Date()
   }
 }
