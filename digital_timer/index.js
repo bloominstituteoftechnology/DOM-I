@@ -18,7 +18,7 @@ function initializeTimer() {
 function startTimer() {
   initializeTimer();
   Timer = window.setInterval(function() {
-    if(parseInt(oneMilli.innerText) > 9) {
+    if(parseInt(oneMilli.innerText) > 8) {
       oneMilli.innerHTML = 0;
       tenMilli.innerHTML = parseInt(tenMilli.innerText) + 1;
       if(parseInt(tenMilli.innerText) > 9) {
