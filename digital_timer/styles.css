@@ -1,7 +1,9 @@
-body {
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-flow: column;
+  padding: 20px;
 }
 
 .digit {
@@ -11,4 +13,30 @@ body {
 
 .redDigit {
   color: red;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  margin: 20px;
+}
+
+.buttons button {
+  border-radius: 15px;
+  width: 80px;
+  height: 30px;
+  outline: none;
+}
+
+#startBtn {
+  background-color: rgb(54, 168, 54);
+}
+
+#stopBtn {
+  background-color: rgb(219, 23, 23);
+}
+
+#resetBtn {
+  background-color: rgb(226, 226, 226);
 }
