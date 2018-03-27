@@ -16,8 +16,13 @@ let msTens = document.querySelector("#msTens");
 function timer() {
 
         function stopTimer() {
-
-            clearInterval(x);
+            if (secTens.innerHTML === '1' && secOnes.innerHTML === '0' && msTens.innerHTML === '0' && msHundreds.innerHTML === '0' ){
+                window.clearInterval(stop);
+                msTens.innerHTML = '0';
+                msHundreds.innerHTML = '0';
+                secOnes.innerHTML = '0';
+                secTens.innerHTML = '0';
+            }
         }
         
     // Initialized digits   
@@ -32,7 +37,7 @@ function timer() {
     //  MsTens Function 
         function msTensPlace() {
 
-            setInterval(() => {
+           let a = setInterval(() => {
                 if (msTens.innerHTML === '0' || msTens.innerHTML % 9 !== '0' && msTens.innerHTML < 9) {
                     msTens.innerHTML++;
                 }
@@ -45,8 +50,8 @@ function timer() {
 
     //  MsHundreds Function 
         function msHundredsPlace() {
-        
-            setInterval(() => {
+    
+        let b =  setInterval(() => {
                 if (msTens.innerHTML === '9' && msHundreds.innerHTML === '0' || msHundreds.innerHTML < 9) {
                   msTens.innerHTML = '0';    
                   msHundreds.innerHTML++;
@@ -58,7 +63,8 @@ function timer() {
 
     //  SecOnes Function 
         function secOnesPlace() {
-            setInterval(() => {
+
+          let c =  setInterval(() => {
                 if (msHundreds.innerHTML === '9' && secOnes.innerHTML === '0' || secOnes.innerHTML < 9) {  //NOT NEEDED ' && msTens.innerHTML === '9 '
                     msTens.innerHTML = '0';
                     msHundreds.innerHTML = '0';
@@ -70,23 +76,27 @@ function timer() {
 
     // SecTens Function 
         function secTensPlace() {
-          let x = setInterval(() => {
+          let stop = setInterval(() => {
                 if (secOnes.innerHTML === '9' && secTens.innerHTML === '0' || secTens.innerHTML < 1) {
                     msTens.innerHTML = '0';
                     msHundreds.innerHTML = '0';
                     secOnes.innerHTML = '0';
                     secTens.innerHTML++;
+                    clearInterval(a);
+                    clearInterval(b);
+                    clearInterval(c);
+
                 }
-                else stopTimer();
+             
             }, 10000)
 
-            
+            stopTimer();
         }
 
 msTensPlace();
 }
 
-// timer();
+timer();
 
  
 
