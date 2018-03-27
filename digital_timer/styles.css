@@ -1,4 +1,4 @@
-body {
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,3 +12,4 @@ body {
 .redDigit {
   color: red;
 }
+
