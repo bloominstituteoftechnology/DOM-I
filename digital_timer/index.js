@@ -6,6 +6,7 @@ const secondTens = document.getElementById('secondTens')
 const secondOnes = document.getElementById('secondOnes')
 const msHundreds = document.getElementById('msHundreds')
 const msTens = document.getElementById('msTens')
+const digits = document.getElementsByClassName('digits')[0];
 let timer
 const blue = event => {
   // handle error somewhere?
@@ -23,6 +24,7 @@ const handlesCountdownstart = () => {
 
 const handleCountdownStop = () => {
   clearInterval(timer)
+  digits.classList.add('redDigit');
   return true
 }
 // create a counter
@@ -79,3 +81,5 @@ function countdownTick() {
     render(countdownCounter.now())
   }
 }
+
+
