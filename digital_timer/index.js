@@ -6,7 +6,7 @@ let tenMilli = document.getElementById('msTens');
 let secondOnes = document.getElementById('secondOnes');
 let secondTens = document.getElementById('secondTens');
 let Timer;
-
+//const element = document.querySelectorAll('.digitcontainer').style.color = "red"
 //functions
 function initializeTimer() {
   oneMilli.innerHTML = 0;
@@ -18,16 +18,17 @@ function initializeTimer() {
 function startTimer() {
   initializeTimer();
   Timer = window.setInterval(function() {
-    if(parseInt(oneMilli.innerText) > 8) {
+    if(parseInt(oneMilli.innerText) > 9) {
       oneMilli.innerHTML = 0;
       tenMilli.innerHTML = parseInt(tenMilli.innerText) + 1;
-      if(parseInt(tenMilli.innerText) > 8) {
+      if(parseInt(tenMilli.innerText) > 9) {
         tenMilli.innerHTML = 0;
         secondOnes.innerHTML = parseInt(secondOnes.innerText) + 1;
-        if(parseInt(secondOnes.innerText) > 8) {
+        if(parseInt(secondOnes.innerText) > 9) {
           secondOnes.innerHTML = 0;
           secondTens.innerHTML = parseInt(secondTens.innerText) + 1;
-          
+  
+        
           return stopTimer();
         }
       }
