@@ -26,6 +26,7 @@ timer = () => {
   }
 }
 
+// Initialize timer values
 zeroOut = () => {
   secondOnes.innerHTML = 0;
   secondTens.innerHTML = 0;
@@ -33,6 +34,7 @@ zeroOut = () => {
   msTens.innerHTML = 0;
 }
 
+// Set clock to non-numeric values
 reset = () => {
   if (resetBtn.className === 'active') {
     secondOnes.innerHTML = '-';
@@ -56,6 +58,7 @@ startTimer = () => {
   }
 }
 
+// Interval clear function
 stopTimer = () => {
   if (stopBtn.className === 'active') {
     clearInterval(timeInterval);
