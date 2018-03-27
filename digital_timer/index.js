@@ -30,8 +30,10 @@ function timer(){
     if(increm === 11){
       scT.remove();
       increm = 0;
-    clearInterval(timer2);
-     clearInterval(timer); //can't set multiple clearIntervals?
+      clearInterval(timer2);
+      clearInterval(timer); //can't set multiple clearIntervals?
+      msT.innerHTML = "00";
+
 
     }
   },1000)
