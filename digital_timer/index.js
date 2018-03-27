@@ -64,7 +64,7 @@ function digitFunction() {
             indDigit1.innerHTML = msTinterv / 1000
         } else {
             indDigit1.innerHTML = "";
-            indDigit2.innerHTML = Math.round(msTinterv / 100);
+            indDigit2.innerHTML = Math.floor((msTinterv / 100) % 10);
         }
     }
 
