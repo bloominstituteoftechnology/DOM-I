@@ -19,6 +19,7 @@ const blue = event => {
 const handleError = err => console.error('oops', err)
 
 const handlesCountdownstart = () => {
+  countdownCounter.start = new Date()
   return setInterval(countdownTick(), 10)
 }
 
