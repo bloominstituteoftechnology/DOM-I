@@ -15,76 +15,68 @@ let msTens = document.querySelector("#msTens");
 
 function timer() {
 
-    function stopTimer() {
+        function stopTimer() {
+            
+        }
         
-        clearInterval(x);
-    }
-// Initialized digits   
-    msTens.innerHTML = 0;
-    msHundreds.innerHTML = 0;
-    secOnes.innerHTML = 0;
-    secTens.innerHTML = 0;
+    // Initialized digits   
+       msTens.innerHTML = '0';
+       msHundreds.innerHTML = '0';
+       secOnes.innerHTML = '0';
+       secTens.innerHTML = '0';
 
 
-//  MsTens Function 
-    function msTensPlace() {
-        function incMsTens() {
+
+
+    //  MsTens Function 
+        function msTensPlace() {
+
             setInterval(() => {
-                while (msTens.innerHTML < 9) {
-                     ++msTens.innerHTML;
+                if (msTens.innerHTML === '0' || msTens.innerHTML % 9 !== '0' && msTens.innerHTML < 9) {
+                    msTens.innerHTML++;
                 }
+                
             }, 10)
+            msHundredsPlace();
+            
+            
         }
 
-        incMsTens();
-        msHundredsPlace();
-    }
-
-//  MsHundreds Function 
-    function msHundredsPlace() {
-        function incMsHundreds() {
+    //  MsHundreds Function 
+        function msHundredsPlace() {
+        
             setInterval(() => {
-                while (msHundreds.innerHTML < 1) {
-                     ++msHundreds.innerHTML;
+                if (msTens.innerHTML === '9' && msHundreds.innerHTML === '0' || msHundreds.innerHTML < 9) {
+                  msTens.innerHTML = '0';    
+                  msHundreds.innerHTML++;
                 }
             }, 100)
-            }
+            
+            secOnesPlace();
+        }
 
-        incMsHundreds();
-        secOnesPlace();
-    }
-
-//  SecOnes Function 
-    function secOnesPlace() {
-    
-        
-        function incSecOnes() {
+    //  SecOnes Function 
+        function secOnesPlace() {
             setInterval(() => {
-                while(secOnes.innerHTML < 9) {
+                if (msHundreds.innerHTML === '9' && msTens.innerHTML === '9' && secOnes.innerHTML === '0' || secOnes.innerHTML < 9) {
+                    msTens.innerHTML = '0';
+                    msHundreds.innerHTML = '0';
                     secOnes.innerHTML++;
                 }
             }, 1000)
-
         }
-        incSecOnes();
-        secTensPlace();
-    }
 
-// SecTens Function 
-    function secTensPlace() {
-        
-        let x = setInterval(() => {
-            while(secTens.innerHTML < 1) {
-                secTens.innerHTML++;
-            }
-        }, 10000)
-       stopTimer();
-    }
-    msTensPlace();
+    // SecTens Function 
+        function secTensPlace() {
+            setInterval(() => {
+                
+            }, 10000)
+        }
+
+msTensPlace();
 }
 
-
-timer();
+// timer();
 
  
 
