@@ -1,5 +1,4 @@
 const digits = document.querySelector('.digits');
-const digit = document.getElementsByClassName('digit');
 const secTen = document.getElementById('secondTens');
 const secOne = document.getElementById('secondOnes');
 const msHun = document.getElementById('msHundreds');
