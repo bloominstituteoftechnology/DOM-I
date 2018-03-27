@@ -1,4 +1,5 @@
 // GlobalVariables
+
 let oneMilli = document.getElementById("msHundredths");
 let tenMilli = document.getElementById('msTens');
 let secondOnes = document.getElementById('secondOnes');
@@ -21,6 +22,7 @@ function updateColor(arr, color) {
     }
   }
 }
+
 function startTimer() {
   initializeTimer();
   Timer = window.setInterval(function() {
@@ -48,6 +50,7 @@ function stopTimer() {
 }
 
 // Event Listeners
+
 window.onload = function() {
   window.addEventListener("click", function(event) {
     if (event.target.nodeName === "BUTTON") {

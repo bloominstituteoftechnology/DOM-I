@@ -22,6 +22,8 @@ body .digits {
   align-items: center;
   justify-content: center;
   padding: 2rem 1rem 0.5rem;
+  border: 1px solid black;
+  border-radius: 5px;
   background: #dadada;
 }
 body .digits .digitContainer {
@@ -34,8 +36,9 @@ body .digits .digitContainer {
 body .digits .digitContainer .digit {
   text-align: center;
   margin-right: 0.5rem;
-  font-size: 3rem;
+  font-size: 4rem;
   padding: 1rem;
+  border: 1px solid black;
   background: #8e8f8f;
 }
 body .digits .digitContainer .stopTimer {
@@ -52,6 +55,7 @@ body .digits .buttonContainer button {
   border-radius: 0;
   border: 1px solid black;
   padding: 0.5rem 1rem;
+  font-size: 1.4rem;
 }
 body .digits .buttonContainer button:hover {
   cursor: pointer;
