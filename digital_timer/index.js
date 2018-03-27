@@ -1,6 +1,7 @@
 let ms = 0;
 const LIMIT = 10000;
 
+startTimer();
 function startTimer() {
     ms = 0;
     document.querySelector('.digits').style = 'color: black;'
