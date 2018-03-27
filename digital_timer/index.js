@@ -16,12 +16,12 @@ function timer(){
 
 
   let timer = setInterval(function(){
-      msH.remove();
-      msT.innerHTML = counter;
-      ++counter;
-      if (counter === 100){
-        counter= 0;
-      }
+    msH.remove();
+    msT.innerHTML = counter;
+    ++counter;
+    if (counter === 100){
+      counter= 0;
+    }
     },10);
 
   let timer2 = setInterval(()=>{
@@ -35,8 +35,6 @@ function timer(){
       msT.innerHTML = "00";
       msT.style.color= 'red';
       scO.style.color= 'red';
-
-
     }
   },1000)
 }
