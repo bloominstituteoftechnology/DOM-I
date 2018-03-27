@@ -12,3 +12,38 @@ body {
 .redDigit {
   color: red;
 }
+
+.button {
+   background: #9920F6;
+   background-image: -webkit-linear-gradient(top, #9920F6, #B744D4);
+   background-image: -moz-linear-gradient(top, #9920F6, #B744D4);
+   background-image: -ms-linear-gradient(top, #9920F6, #B744D4);
+   background-image: -o-linear-gradient(top, #9920F6, #B744D4);
+   background-image: linear-gradient(to bottom, #9920F6, #B744D4);
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   color: #000000;
+   font-family: Verdana;
+   font-size: 27px;
+   font-weight: 100;
+   padding: 26px;
+   box-shadow: 1px 1px 20px 0px #000000;
+   -webkit-box-shadow: 1px 1px 20px 0px #000000;
+   -moz-box-shadow: 1px 1px 20px 0px #000000;
+   text-shadow: 1px 1px 20px #000000;
+   border: solid #000000 1px;
+   text-decoration: none;
+   display: inline-block;
+   cursor: pointer;
+}
+
+.button:hover {
+   background: #7C0FD0;
+   background-image: -webkit-linear-gradient(top, #7C0FD0, #D240F6);
+   background-image: -moz-linear-gradient(top, #7C0FD0, #D240F6);
+   background-image: -ms-linear-gradient(top, #7C0FD0, #D240F6);
+   background-image: -o-linear-gradient(top, #7C0FD0, #D240F6);
+   background-image: linear-gradient(to bottom, #7C0FD0, #D240F6);
+   text-decoration: none;
+}
