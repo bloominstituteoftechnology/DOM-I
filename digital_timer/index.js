@@ -30,7 +30,7 @@ function timer() {
         resetbtn.disabled = true;
         startbtn.disabled = true;
         interval = window.setInterval(myFunc, 10);
-        // ready = false;
+        // ready = false;   // this is if stop button is being used
 
         //prevents button interference while timer is running
 
