@@ -48,12 +48,12 @@ document.body.style.flexDirection = 'column';
 const myStartButton = document.createElement('button');
 myStartButton.innerHTML = 'Start';
 myStartButton.onclick = startTimer;
-myStartButton.style = 'margin: 10px; width: 100px; height: 30px; background-color: wheat; border: 2px solid black; border-radius: 25px;'
+myStartButton.style = 'margin: 10px; width: 100px; height: 30px; background-color: wheat; border: 1px solid black; border-radius: 25px;'
 document.body.appendChild(myStartButton);
 
 const myResetButton = document.createElement('button');
 myResetButton.innerHTML = 'Reset';
 myResetButton.disabled = true;
 myResetButton.onclick = resetTimer;
-myResetButton.style = 'margin: 10px; width: 100px; height: 30px; background-color: lightgray; border: 2px solid black; border-radius: 25px;'
+myResetButton.style = 'margin: 10px; width: 100px; height: 30px; background-color: lightgray; border: 1px solid black; border-radius: 25px;'
 document.body.appendChild(myResetButton);
