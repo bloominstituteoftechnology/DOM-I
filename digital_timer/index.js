@@ -2,7 +2,6 @@ const digits = document.querySelector('.digits');
 const digit = document.getElementsByClassName('digit');
 const secTen = document.getElementById('secondTens');
 const secOne = document.getElementById('secondOnes');
-const colon = document.getElementById('colon');
 const msHun = document.getElementById('msHundreds');
 const msTen = document.getElementById('msTens');
 const startbtn = document.getElementById('start');
@@ -55,19 +54,9 @@ function timer() {
 
                 digits.classList.add('redDigit');
 
-                // for (let i = 0; i < digit.length; i++) {
-                //     digit[i].style.color = 'red';
-                // }
-
                 ready = false;
 
                 // activates reset button at the end
-
-                // msTen.style.color = 'red';
-                // msHun.style.color = 'red';
-                // colon.style.color = 'red';
-                // secOne.style.color = 'red';
-                // secTen.style.color = 'red';
             }
         }
     }
@@ -87,12 +76,6 @@ function reset() {
 
     digits.classList.remove('redDigit');
 
-
-
-    // for (let i = 0; i < digit.length; i++) {
-    //     digit[i].style.color = 'black';
-    // }
-
     // returns color of timer back to black
 }
 
@@ -103,11 +86,6 @@ function reset() {
 //         resetbtn.disabled = false;
 
 //         digits.classList.remove('redDigit');
-
-
-//         for (let i = 0; i < digit.length; i++) {
-//             digit[i].style.color = 'black';
-//         }
 
 //         msTen.innerHTML = `0`;
 //         msHun.innerHTML = `0`;
