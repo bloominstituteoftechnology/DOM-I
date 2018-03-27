@@ -7,13 +7,27 @@ const secondOnes = document.getElementById('secondOnes')
 const msHundreds = document.getElementById('msHundreds')
 const msTens = document.getElementById('msTens')
 const digits = document.getElementsByClassName('digits')[0]
+const timeArr = [secondTens, secondOnes, msHundreds, msTens]
 let timer
+
 const blue = event => {
   // handle error somewhere?
   timer = handlesCountdownstart()
 }
 
 const handleError = err => console.error('oops', err)
+
+function changeIfNewSecond(time, mult, item) {
+  return item.innerText === `${time.getSeconds() % mult}`
+    ? item.innerText
+    : `${time.getSeconds() % mult}`
+}
+
+function changeIfNewMillisecond(time, mult, item) {
+  return item.innerText === `${time.getMilliseconds() % mult}`
+    ? item.innerText
+    : `${((time.getMilliseconds() % mult) / 100).toFixed()}`
+}
 
 const handlesCountdownstart = () => {
   countdownCounter.start = new Date()
@@ -25,8 +39,6 @@ const handleCountdownStop = () => {
   digits.classList.add('redDigit')
   return true
 }
-
-const timeArr = [secondTens, secondOnes, msHundreds, msTens]
 
 // create a counter
 class Counter {
@@ -59,18 +71,6 @@ const render = time => {
   msTens.innerText = changeIfNewMillisecond(time, 100, msHundreds)
 
   if (countdownCounter.now() > 10000) secondTens.innerText = '1'
-}
-
-function changeIfNewSecond(time, mult, item) {
-  return item.innerText === `${time.getSeconds() % mult}`
-    ? item.innerText
-    : `${time.getSeconds() % mult}`
-}
-
-function changeIfNewMillisecond(time, mult, item) {
-  return item.innerText === `${time.getMilliseconds() % mult}`
-    ? item.innerText
-    : `${((time.getMilliseconds() % mult) / 100).toFixed()}`
 }
 
 function countdownTick() {
