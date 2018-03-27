@@ -12,7 +12,7 @@ const colon = document.getElementById('colon');
 const timerAll = document.getElementsByClassName('digit');
 let currentmsTens = 0;
 let currentmsHundreds = 0;
-let currentSecondOnes = 9;
+let currentSecondOnes = 0;
 let currentSecondTens = 0;
 msHundreds.innerHTML = currentmsHundreds;
 msTens.innerHTML = currentmsTens;
@@ -63,7 +63,7 @@ function resetClock() {
     window.clearInterval(runClock);
     let currentmsTens = 0;
     let currentmsHundreds = 0;
-    let currentSecondOnes = 9;
+    let currentSecondOnes = 0;
     let currentSecondTens = 0;
     msHundreds.innerHTML = currentmsHundreds;
     msHundreds.style.color = 'black';
