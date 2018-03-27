@@ -5,12 +5,16 @@ const msHundreds = document.getElementById("msHundreds");
 const msTens = document.getElementById("msTens");
 const msOnes = document.getElementById("msOnes");
 const button = document.getElementById('button');
+const startButton = document.querySelector(".button-start");
+const restButton = document.querySelector(".button-reset");
 
 button.addEventListener('click', (e) => {
 timer();
 });
 
 function timer () {
+  document.querySelector(".button-start")
+  document.querySelector(".button-reset")
   init();
 
   function init () {
