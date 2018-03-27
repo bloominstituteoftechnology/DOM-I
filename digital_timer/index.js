@@ -9,10 +9,9 @@ const start = document.getElementById('start');
 
 
 
-let msTensValue = 0;
-let msHundredsValue = 0;
-let secondOnesValue = 0;
-let secondTensValue = 0;
+let msTensValue = 1;
+let msHundredsValue = 1;
+let secondOnesValue = 1;
 
 start.onclick = e => {
   // const intervalMsTensId = setInterval(() => {
