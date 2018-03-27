@@ -2,6 +2,7 @@ let secondTens = document.getElementById('secondTens');
 let secondOnes = document.getElementById('secondOnes');
 let msHundreds = document.getElementById('msHundreds');
 let msTens = document.getElementById('msTens');
+let digits = document.querySelectorAll(".digit")
 
 let counter = 0
 let counterMs = 0;
@@ -59,7 +60,11 @@ function atTen () {
     clearInterval(d);
     msHundreds.innerHTML = 0;
     msTens.innerHTML = 0;
-
+    digits[0].style.color = "red";
+    digits[1].style.color = "red";
+    digits[2].style.color = "red";
+    digits[3].style.color = "red";
+    digits[4].style.color = "red";
 };
 
 setInterval(atTen, 10000);
