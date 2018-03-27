@@ -22,7 +22,7 @@ timer = () => {
     // Stop timer
     stopTimer();
     // Turn digits color red
-    document.querySelector('.digits').className += ' redDigit';
+    digits.className += ' redDigit';
   }
 }
 
@@ -42,6 +42,7 @@ reset = () => {
     resetBtn.className = 'inactive';
     stopBtn.className = 'inactive';
     startBtn.className = 'active';
+    digits.classList.remove('redDigit');
   }
 }
 
@@ -58,6 +59,7 @@ startTimer = () => {
 stopTimer = () => {
   if (stopBtn.className === 'active') {
     clearInterval(timeInterval);
+    digits.className += ' redDigit';
     resetBtn.className = 'active';
   }
 }
