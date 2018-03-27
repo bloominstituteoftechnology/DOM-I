@@ -4,13 +4,10 @@ const msHundreds = document.getElementById('msHundreds'),
     secondTens = document.getElementById('secondTens'),
     digitsClass = document.getElementsByClassName('digits');
 
-let counter = 0000;
+let counter = 0;
 
 const digitalTimer = () => {
-    const stop = () => {
-        clearInterval(digitalTimer);
-    }
-    
+
     counter++;
 
     const counterArr = counter.toString().split('');
@@ -19,6 +16,7 @@ const digitalTimer = () => {
     msTens.innerText = counterArr[counterArr.length - 2];
     secondOnes.innerText = counterArr[counterArr.length - 3];
     secondTens.innerText = counterArr[counterArr.length - 4];
+
 }
 
 setInterval(digitalTimer, 10);
