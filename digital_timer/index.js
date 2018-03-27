@@ -1,28 +1,58 @@
- 
- 
-const digits = document.querySelector(".digits"); 
-const secondTens = document.getElementById('secondTens');
-const secondOnes = document.getElementById('secondOnes');
-const msHundreds = document.getElementById('msHundreds');
-const msTens = document.getElementById('msTens');
+// constants defined to be used form html selectors 
+const digits = document.querySelector(".digits");
+const secondTens = document.getElementById("secondTens");
+const secondOnes = document.getElementById("secondOnes");
+const msHundreds = document.getElementById("msHundreds");
+const msTens = document.getElementById("msTens");
+const msOnes = document.getElementById("msOnes");
+
+timer(); //calls the function 
 
 function timer() {
-    window.setInterval(msTens, 10);
-    window.setInterval(secondTens, 10000);
-    
-    const msTensTimer = setInterval(() => {
-        let counter = 10; 
-        for (counter <= 10000) ( {
-        counter +=10, 
-        msTens:innerHTML = tens.toString(),
-    }, 10000);
-    },
+    init(); // initialization for the 10ms counter function down to line 27
+    function init() {
+        let ms = 0;
+        secondTens.innerHTML = "0";
+        secondOnes.innerHTML = "0";
+        msHundreds.innerHTML = "0";
+        msTens.innerHTML = "0";
 
-    if(counter >= 10000) {
-        digits.style.redDigit; 
-        clearInterval(msTens); 
-        clearInterval(secondTens); 
-
+        const timerInterval = window.setInterval(() => { //counter 
+            ms += 10;
+            if (ms === 10000) {
+                endTimer(timerInterval);
+            }
+            updateTimer(ms);
+        }, 10); // ?? why 10 here in the counter again?
     }
-};
-timer(); 
+
+    function increment(string) {    //output string nums after incrementing 
+        let number = Number(string) + 1;
+        return number.toString();
+    }
+
+    function endTimer(intervalId) { //timer ender and num red function 
+        clearInterval(intervalId); //call clearInterval: interval ID
+        Array.from(digits.children).forEach(digit => { //
+            digit.classList.add("redDigit");
+        })
+    }
+
+    function updateTimer(ms) { //global timer, a little complicated bc you have to update all the place holders
+        if (ms === 10000) {
+            secondTens.innerHTML = "1";
+            secondOnes.innerHTML = "0";
+            msHundreds.innerHTML = "0";
+            msTens.innerHTML = "0";
+        } else if (ms % 1000 === 0) {
+            secondOnes.innerHTML = increment(secondOnes.innerHTML); //calling the increment function 
+            msHundreds.innerHTML = "0";
+            msTens.innerHTML = "0";
+        } else if (ms % 100 === 0) {
+            msHundreds.innerHTML = increment(msHundreds.innerHTML);
+            msTens.innerHTML = "0";
+        } else {
+            msTens.innerHTML = increment(msTens.innerHTML);
+        }
+    }
+}
