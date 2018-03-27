@@ -2,6 +2,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url(04087_riomaggioreatsunset_1920x1080.jpg);
 }
 
 .digit {
