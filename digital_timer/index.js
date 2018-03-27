@@ -1,8 +1,8 @@
 // variables
-let msTens = document.querySelector('#msTens');
-let msHuns = document.querySelector('#msHundreds');
-let secOnes = document.querySelector('#secondOnes');
-let secTens = document.querySelector('#secondTens');
+const msTens = document.querySelector('#msTens');
+const msHuns = document.querySelector('#msHundreds');
+const secOnes = document.querySelector('#secondOnes');
+const secTens = document.querySelector('#secondTens');
 
 const digits = document.querySelector(".digits"); // for red at 10s
 
@@ -36,3 +36,30 @@ const timer = () => {
 
 // calls timer function every 10ms until cleared (clearInterval)
 let count = setInterval(timer, 10);
+
+// stretch goals
+// START button
+const startBTN = document.createElement('BUTTON');
+const startText = document.createTextNode('START');
+
+startBTN.id = 'start'; // add 'start' id
+
+startBTN.appendChild(startText);
+document.body.appendChild(startBTN);
+
+const startFunc = () => {
+    document.getElementById('start').addEventListener('click', count);
+}
+
+
+
+
+// RESET button
+let resetBTN = document.createElement('BUTTON');
+let resetText = document.createTextNode('RESET');
+
+resetBTN.id = 'restart'; // add 'restart' id
+
+resetBTN.appendChild(resetText);
+document.body.appendChild(resetBTN);
+
