@@ -27,6 +27,7 @@ const timer = () => {
             } else {
                 secOnes.innerHTML = 0;
                 clearInterval(count); // stop timer function (setInterval)
+                digits.classList.add('redDigit'); // adds .redDigit to digits elements
                 secTens.innerHTML++;                
             }
         }
@@ -35,10 +36,3 @@ const timer = () => {
 
 // calls timer function every 10ms until cleared (clearInterval)
 let count = setInterval(timer, 10);
-
-const turnRed = () => {
-    digits.forEach(element => {
-        element.classList.add('redDigit');
-    })
-    setTimeout(turnRed, 10000);
-}
