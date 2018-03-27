@@ -1,0 +1,62 @@
+:root{
+    font-size: 62.5%;
+  }
+  
+  *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', cursive;
+  }
+  
+  html{
+    height: 100%;
+  }
+  
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    .digits{
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem 0.5rem;
+      background: rgb(218, 218, 218);
+      .digitContainer{
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2rem;
+        .digit{
+          text-align: center;
+          margin-right: 0.5rem;
+          font-size: 3rem;
+          padding: 1rem;
+          background: rgb(142, 143, 143);
+        }
+        .stopTimer{
+          color: red;
+        }
+      }
+      .buttonContainer{
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-items: bottom;
+        button{
+          border-radius: 0;
+          border: 1px solid black;
+          padding: 0.5rem 1rem;
+          &:hover{
+            cursor: pointer;
+            outline: none;
+          }
+        }
+      }
+    }
+  }
