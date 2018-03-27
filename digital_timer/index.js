@@ -10,9 +10,6 @@ const digits = document.getElementsByClassName('digits')[0]
 let timer
 const blue = event => {
   // handle error somewhere?
-  // typeof event === typeof new Error()
-  //   ? handleError(event)
-  //   :
   timer = handlesCountdownstart()
 }
 
@@ -28,11 +25,10 @@ const handleCountdownStop = () => {
   digits.classList.add('redDigit')
   return true
 }
-// create a counter
-// 0000
-// 0010 = 10 ms
+
 const timeArr = [secondTens, secondOnes, msHundreds, msTens]
 
+// create a counter
 class Counter {
   constructor() {
     this.start = new Date()
@@ -54,27 +50,27 @@ const countdownCounter = new Counter()
 
 const render = time => {
   // secondTens
-  secondTens.innerText =
-    secondTens.innerText === `${time.getSeconds() % 1}`
-      ? secondTens.innerText
-      : `${time.getSeconds() % 1}`
+  secondTens.innerText = changeIfNewSecond(time, 1, secondTens)
   // secondOnes
-  secondOnes.innerText =
-    secondOnes.innerText === `${time.getSeconds() % 10}`
-      ? secondOnes.innerText
-      : `${time.getSeconds() % 10}`
+  secondOnes.innerText = changeIfNewSecond(time, 10, secondOnes)
   // msHundreds
-  msHundreds.innerText =
-    msHundreds.innerText === `${time.getMilliseconds() % 1000}`
-      ? msHundreds.innerText
-      : `${((time.getMilliseconds() % 1000) / 10).toFixed()}`
+  msHundreds.innerText = changeIfNewMillisecond(time, 1000, msHundreds)
   // msTens
-  msTens.innerText =
-    msTens.innerText === `${time.getMilliseconds() % 100}`
-      ? msTens.innerText
-      : `${((time.getMilliseconds() % 100) / 100).toFixed()}`
+  msTens.innerText = changeIfNewMillisecond(time, 100, msHundreds)
 
   if (countdownCounter.now() > 10000) secondTens.innerText = '1'
+}
+
+function changeIfNewSecond(time, mult, item) {
+  return item.innerText === `${time.getSeconds() % mult}`
+    ? item.innerText
+    : `${time.getSeconds() % mult}`
+}
+
+function changeIfNewMillisecond(time, mult, item) {
+  return item.innerText === `${time.getMilliseconds() % mult}`
+    ? item.innerText
+    : `${((time.getMilliseconds() % mult) / 100).toFixed()}`
 }
 
 function countdownTick() {
