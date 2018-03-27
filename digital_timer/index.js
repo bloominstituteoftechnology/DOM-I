@@ -16,7 +16,8 @@ let msTens = document.querySelector("#msTens");
 function timer() {
 
         function stopTimer() {
-            
+
+            clearInterval(x);
         }
         
     // Initialized digits   
@@ -58,19 +59,28 @@ function timer() {
     //  SecOnes Function 
         function secOnesPlace() {
             setInterval(() => {
-                if (msHundreds.innerHTML === '9' && msTens.innerHTML === '9' && secOnes.innerHTML === '0' || secOnes.innerHTML < 9) {
+                if (msHundreds.innerHTML === '9' && secOnes.innerHTML === '0' || secOnes.innerHTML < 9) {  //NOT NEEDED ' && msTens.innerHTML === '9 '
                     msTens.innerHTML = '0';
                     msHundreds.innerHTML = '0';
                     secOnes.innerHTML++;
                 }
             }, 1000)
+            secTensPlace()
         }
 
     // SecTens Function 
         function secTensPlace() {
-            setInterval(() => {
-                
+          let x = setInterval(() => {
+                if (secOnes.innerHTML === '9' && secTens.innerHTML === '0' || secTens.innerHTML < 1) {
+                    msTens.innerHTML = '0';
+                    msHundreds.innerHTML = '0';
+                    secOnes.innerHTML = '0';
+                    secTens.innerHTML++;
+                }
+                else stopTimer();
             }, 10000)
+
+            
         }
 
 msTensPlace();
