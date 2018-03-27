@@ -13,6 +13,6 @@ body {
   color: red;
 }
 
-#start {
+#startButton {
   align-self: flex-end;
 }
