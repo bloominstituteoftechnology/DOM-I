@@ -5,14 +5,14 @@ const msHun = document.getElementById('msHundreds');
 const msTen = document.getElementById('msTens');
 const startbtn = document.getElementById('start');
 const resetbtn = document.getElementById('reset');
-// const stopbtn = document.getElementById('stop');
+// const stopbtn = document.getElementById('stop');  // this is for stop button
 
 // these are all constants since value will not be changed, will be used to 
 // access the document and make changes to the css/html
 
 startbtn.addEventListener('click', timer);
 resetbtn.addEventListener('click', reset);
-// stopbtn.addEventListener('click', stop);
+// stopbtn.addEventListener('click', stop);  // this is for stop button
 
 // this is where the eventListeners are added, allowing buttons to have a funciton
 let counter = 0;
