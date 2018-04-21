@@ -4,6 +4,16 @@ body {
   align-items: center;
 }
 
+.digits {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 300px;
+  border: 2px solid rgb(100, 100, 100);
+  box-shadow: 4px 6px 8px rgb(182, 182, 182);
+}
+
 .digit {
   display: inline-block;
   font-size: 80px;
