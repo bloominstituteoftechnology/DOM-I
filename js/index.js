@@ -49,10 +49,16 @@ nav[3].innerHTML = siteContent["nav"]["nav-item-4"];
 nav[4].innerHTML = siteContent["nav"]["nav-item-5"];
 nav[5].innerHTML = siteContent["nav"]["nav-item-6"];
 
+let node = document.createElement('a');
+node.innerHTML = 'Link';
+nav[5].appendChild(node);
+
+console.log(nav);
 
 nav.forEach(function(element){
   element.style.color = 'green';
 });
+
 
 let ctaHeader = document.getElementsByTagName('h1');
 ctaHeader[0].innerHTML = siteContent['cta']['h1'];
@@ -65,7 +71,6 @@ let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 
 
-
 let headingFour = document.getElementsByTagName('h4');
 headingFour[0].innerHTML = siteContent['main-content']['features-h4'];
 headingFour[1].innerHTML = siteContent['main-content']['about-h4'];
@@ -73,6 +78,7 @@ headingFour[2].innerHTML = siteContent['main-content']['services-h4'];
 headingFour[3].innerHTML = siteContent['main-content']['product-h4'];
 headingFour[4].innerHTML = siteContent['main-content']['vision-h4'];
 headingFour[5].innerHTML = siteContent['contact']['contact-h4'];
+
 
 let paragraph = document.getElementsByTagName('p');
 paragraph[0].innerHTML = siteContent['main-content']['features-content'];
@@ -85,9 +91,6 @@ paragraph[6].innerHTML = siteContent['contact']['phone'];
 paragraph[7].innerHTML = siteContent['contact']['email'];
 paragraph[8].innerHTML = siteContent['footer']['copyright'];
 
-console.log(paragraph);
-
-// "middle-img-src": "img/mid-page-accent.jpg",
 
 let midImg = document.getElementById("middle-img");
 midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
