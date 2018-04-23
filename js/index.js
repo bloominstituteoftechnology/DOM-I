@@ -47,10 +47,21 @@ let navBar = document.getElementsByTagName('a');
   navBar[i].innerHTML = siteContent.nav['nav-item-'[i]];
 };*/
 
+//let x = document.getElementsByClassName("contact");
+//let y = x.getElementsByTagName("h4");
 
+//y[0].innerHTML = siteContent.contact["contact-h4"];
 
-let foot = document.getElementsByTagName("p");
-foot[8].innerHTML = siteContent.footer.copyright; 
+let pElements = document.getElementsByTagName("p");
+pElements[0].innerHTML = siteContent['main-content']['features-content'];
+pElements[1].innerHTML = siteContent['main-content']['about-content'];
+pElements[2].innerHTML = siteContent['main-content']['services-content'];
+pElements[3].innerHTML = siteContent['main-content']['product-content'];
+pElements[4].innerHTML = siteContent['main-content']['vision-content'];
+pElements[5].innerHTML = siteContent.contact.address;
+pElements[6].innerHTML = siteContent.contact.phone;
+pElements[7].innerHTML = siteContent.contact.email;
+pElements[8].innerHTML = siteContent.footer.copyright; 
 
 
 
