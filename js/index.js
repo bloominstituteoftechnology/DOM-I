@@ -45,6 +45,7 @@ const mainContentTop = document.querySelector('.main-content .top-content');
 const middleImg = document.querySelector('#middle-img');
 const mainContentBottom = document.querySelector('.main-content .bottom-content')
 const contact = document.querySelector('.contact');
+const footer = document.querySelector('footer');
 
 navLinks.push(document.querySelector('#logo-img'));
 
@@ -88,3 +89,5 @@ contact.children[0].insertAdjacentText('afterbegin', siteContent.contact['contac
 contact.children[1].insertAdjacentText('afterbegin', siteContent.contact.address);
 contact.children[2].insertAdjacentText('afterbegin', siteContent.contact.phone);
 contact.children[3].insertAdjacentText('afterbegin', siteContent.contact.email);
+
+footer.children[0].insertAdjacentText('afterbegin', siteContent.footer.copyright);
