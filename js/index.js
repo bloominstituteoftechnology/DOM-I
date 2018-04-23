@@ -41,8 +41,10 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 let nav = document.querySelectorAll("a");
-let ctaText = document.querySelector('.cta .cta-text');
-let ctaImage = document.getElementById('#cta-img');
+let cta = document.querySelector('.cta');
+let ctaTextH1 = document.querySelector('.cta .cta-text h1');
+let ctaTextButton = document.querySelector('.cta .cta-text button');
+let ctaImage = document.getElementById('cta-img');
 let topContent = document.querySelectorAll('.top-content .text-content');
 let features = topContent[0];
 let about = topContent[1];
@@ -54,3 +56,12 @@ let vision = bottomContent[2];
 let contact = document.querySelector('.contact');
 let footer = document.querySelector('footer');
 
+nav[0].innerHTML = siteContent["nav"]["nav-item-1"];
+nav[1].innerHTML = siteContent["nav"]["nav-item-2"];
+nav[2].innerHTML = siteContent["nav"]["nav-item-3"];
+nav[3].innerHTML = siteContent["nav"]["nav-item-4"];
+nav[4].innerHTML = siteContent["nav"]["nav-item-5"];
+
+ctaTextH1.innerHTML = siteContent["cta"]["h1"].split(' ').join('<br>');
+ctaTextButton.innerHTML = siteContent["cta"]["button"];
+ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
