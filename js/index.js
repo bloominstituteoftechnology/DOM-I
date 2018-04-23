@@ -62,7 +62,8 @@ contact.innerHTML = "Contact";
 
 //CTA
 let h1Message = document.getElementsByTagName("h1")[0];
-h1Message.innerHTML = "DOM is Awesome";
+h1Message.innerHTML = "DOM Is Awesome";
+
 let button = document.getElementsByTagName("button")[0];
 button.innerHTML = "Get Started";
 
@@ -120,3 +121,27 @@ dylanThomas.innerHTML = "TomCat";
 let robertLazarus = document.createElement('a');
 nav.prepend(robertLazarus);
 robertLazarus.innerHTML = "BobCat";
+
+// Bit o' fun
+function haveACat() {
+  headerImg.setAttribute('src', 'https://scontent.fsea1-1.fna.fbcdn.net/v/t1.0-9/20799352_10154812374828085_1065182825737514534_n.jpg?_nc_cat=0&oh=ce3c571a9536d2c9554653d3bc4ca7b4&oe=5B593AED')
+  h1Message.innerHTML = "Cats are awesome";
+  button.innerHTML = "No, really";
+}
+
+function haveAnotherCat () {
+  headerImg.setAttribute('src', 'https://scontent.fsea1-1.fna.fbcdn.net/v/t1.0-9/20840672_10154812374933085_4615810351128590741_n.jpg?_nc_cat=0&oh=44fd469b861848217341018995edcd9f&oe=5B60B44F')
+  h1Message.innerHTML = "Cats are awesome";
+  button.innerHTML = "No, really";
+}
+dylanThomas.addEventListener('mouseover', haveACat)
+robertLazarus.addEventListener('mouseover', haveAnotherCat);
+
+// Back to seriousness
+function reality() {
+  headerImg.setAttribute('src', 'img/header-img.png');
+  h1Message.innerHTML = "DOM Is awesome";
+  button.innerHTML = "Get started";
+}
+dylanThomas.addEventListener('mouseout', reality);
+robertLazarus.addEventListener('mouseout', reality);
