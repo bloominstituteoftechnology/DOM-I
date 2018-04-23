@@ -77,13 +77,13 @@ document.getElementById('cta-img').setAttribute('src', siteContent.cta["img-src"
  */
 /** TOP CONTENT */
 let mainTop = document.getElementsByClassName('top-content').item(0);
-console.log(mainTop);
+// console.log(mainTop);
 /** MIDDLE CONTENT */
 let mainMiddle = document.getElementById('middle-img');
-console.log(mainMiddle);
+// console.log(mainMiddle);
 /** BOTTOM CONTENT */
 let mainBottom = document.querySelector('.bottom-content');
-console.log(mainBottom);
+// console.log(mainBottom);
 /** HANDLING WITH CONTENT */
 // Prepare DATA to insert to DOM
 const JSONMainContent = siteContent['main-content'];
@@ -111,7 +111,7 @@ Array.from( mainBottom.getElementsByClassName('text-content') ).forEach( (item, 
  * Selectors to <section.contact>
  */
 let contact = document.querySelectorAll('section.contact').item(0);
-console.log(contact);
+// console.log(contact);
 /** HANDLING WITH CONTENT */
 const contactContent = siteContent.contact
 // ADD content to <h4>
@@ -121,3 +121,9 @@ const contactPs = contact.querySelectorAll('p');
 contactPs.item(0).textContent = contactContent.address;
 contactPs.item(1).textContent = contactContent.phone;
 contactPs.item(2).textContent = contactContent.email;
+
+/**
+ * Selectors to <footer>
+ */
+console.log(document.querySelector('footer'));
+document.querySelector('footer').innerHTML = `<p>${siteContent.footer.copyright}</p>`;
