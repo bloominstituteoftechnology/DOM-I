@@ -59,16 +59,30 @@ let ctaLogo = document.getElementById("cta-img");
 ctaLogo.setAttribute('src', siteContent['cta']["img-src"]);
 
 //==========MAIN Section============
+//Logo section
 let mainLogo = document.getElementById("middle-img");
 mainLogo.setAttribute('src', siteContent['main-content']["middle-img-src"]);
 
 let mainTextContent = document.querySelectorAll(".text-content");
 //Features Section
 mainTextContent[0].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["features-h4"];
-mainTextContent[0].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["features-content"];
+mainTextContent[0].getElementsByTagName("p")[0].innerHTML  = siteContent["main-content"]["features-content"];
 
-//about Section
+//About Section
 mainTextContent[1].getElementsByTagName('h4')[0].innerHTML = siteContent["main-content"]["about-h4"];
-mainTextContent[1].getElementsByTagName('p')[0].innerHTML = siteContent["main-content"]["about-content"];
+mainTextContent[1].getElementsByTagName('p')[0].innerHTML  = siteContent["main-content"]["about-content"];
+
+//Services Section
+mainTextContent[2].getElementsByTagName('h4')[0].innerHTML = siteContent["main-content"]["services-h4"];
+mainTextContent[2].getElementsByTagName('p')[0].innerHTML  = siteContent["main-content"]["services-content"];
+
+//Product Section
+mainTextContent[3].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["product-h4"];
+mainTextContent[3].getElementsByTagName("p")[0].innerHTML  = siteContent["main-content"]["product-content"];
+
+
+//Vision Section
+mainTextContent[4].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["vision-h4"]
+mainTextContent[4].getElementsByTagName("p")[0].innerHTML  = siteContent["main-content"]["vision-content"]
 
 console.log("text-content", topContent);
