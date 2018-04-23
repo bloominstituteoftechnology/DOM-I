@@ -56,11 +56,21 @@ nav4[3].innerHTML = "Feautures";
 let nav5 = document.getElementsByTagName("a")
 nav5[4].innerHTML = "Contact";
 
-let navigation = document.querySelectorAll("a")
+let navigation = document.querySelectorAll("a")  //changing color to green in nav links
 let i;
 for (i = 0; i < navigation.length; i++) {
  navigation[i].style.color = 'green';
 }
+
+let nav = document.getElementsByTagName("nav")[0]; //adding 2 new nav links
+
+let inquiry = document.createElement("a");
+nav.appendChild(inquiry);
+inquiry.innerHTML = "Inquiries";
+
+let Port = document.createElement("a");
+nav.prepend(Port);
+Port.innerHTML = "portfolio";
 
 //cta
 let ctah1 = document.querySelector("h1");
