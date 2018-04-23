@@ -54,5 +54,11 @@ allNavSelectors.forEach(function (selector, index, selectors) {
   selector.innerHTML=siteContent['nav'][`nav-item-${index+1}`];
 });
 
+let ctaTxt = document.querySelectorAll(".cta-text");
 
-console.log(allNavSelectors);
+let ctaTxtElements = ctaTxt[0].children;
+
+for(let i = 0; i < ctaTxtElements.length; i++)
+{
+  console.log(ctaTxtElements[i].innerHTML=siteContent['cta'][Object.keys(siteContent['cta'])[i]]);
+}
