@@ -4,7 +4,8 @@ const siteContent = {
     "nav-item-2": "Product",
     "nav-item-3": "Vision",
     "nav-item-4": "Features",
-    "nav-item-5": "Contact",
+    "nav-item-5": "About",
+    "nav-item-6": "Contact",
     "img-src": "img/logo.png"
   },
   "cta": {
@@ -39,3 +40,19 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//First find our the selectors 'a' 
+
+let allNavSelectors = document.querySelectorAll('a');
+
+//Update the data with the Json Data 
+
+//allSelectors[0].setAttribute('innerHTML', 'test');
+
+
+allNavSelectors.forEach(function (selector, index, selectors) {
+  selector.innerHTML=siteContent['nav'][`nav-item-${index+1}`];
+});
+
+
+console.log(allNavSelectors);
