@@ -60,3 +60,14 @@ const createArray = function (obj, selector) {
   }
   return result;
 }
+
+// Create selectors
+const navLinks = document.querySelectorAll('nav a'),
+  headerLogo = document.getElementById('#logo-img'), // image
+  ctaTextEle = document.querySelectorAll('.cta-text > *'),
+  ctaImg = document.getElementById('#cta-img'), // image
+  mainContentHeaders = document.querySelectorAll('.main-content h4'),
+  mainContent = document.querySelectorAll('.main-content p'),
+  mainContentImg = document.getElementById('#middle-img'), // image
+  contactEle = document.querySelectorAll('.contact < *'),
+  footerEle = document.querySelectorAll('footer > *');
