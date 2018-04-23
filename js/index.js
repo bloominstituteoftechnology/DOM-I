@@ -41,3 +41,15 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // change made for inital github
+
+
+let ctaIMG = document.getElementById("cta-img");
+ctaIMG.setAttribute('src', siteContent["cta"]["img-src"])
+
+let mcImg = document.getElementById("middle-img-src");
+mcImg.setAttribute('src')
+
+
+
+
+
