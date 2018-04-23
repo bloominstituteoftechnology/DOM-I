@@ -4,7 +4,8 @@ const siteContent = {
     "nav-item-2": "Product",
     "nav-item-3": "Vision",
     "nav-item-4": "Features",
-    "nav-item-5": "Contact",
+    "nav-item-5": "About",
+    "nav-item-6": "Contact",
     "img-src": "img/logo.png"
   },
   "cta": {
@@ -47,6 +48,8 @@ navMenu[1].innerHTML = siteContent['nav']["nav-item-2"];
 navMenu[2].innerHTML = siteContent['nav']["nav-item-3"];
 navMenu[3].innerHTML = siteContent['nav']["nav-item-4"];
 navMenu[4].innerHTML = siteContent['nav']["nav-item-5"];
+navMenu[5].innerHTML = siteContent['nav']["nav-item-6"];
+
 // navMenu.forEach(function(item, i){
 //   item.innerHTML = siteContent['nav'][i];
 // }) 
