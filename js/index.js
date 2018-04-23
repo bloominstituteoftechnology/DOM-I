@@ -90,3 +90,18 @@ visionH4.innerHTML = siteContent["main-content"]["vision-h4"];
 
 let visionP = document.querySelectorAll(".bottom-content .text-content p")[2];
 visionP.innerHTML = siteContent["main-content"]["vision-content"];
+
+let contactH4 = document.querySelector(".contact h4");
+contactH4.innerHTML = siteContent["contact"]["contact-h4"];
+
+let contactAddress = document.querySelectorAll(".contact p")[0];
+contactAddress.innerHTML = siteContent["contact"]["address"];
+
+let contactPhone = document.querySelectorAll(".contact p")[1];
+contactPhone.innerHTML = siteContent["contact"]["phone"];
+
+let contactEmail = document.querySelectorAll(".contact p")[2];
+contactEmail.innerHTML = siteContent["contact"]["email"];
+
+let copyRight= document.querySelector("footer p");
+copyRight.innerHTML = siteContent["footer"]["copyright"];
