@@ -41,9 +41,27 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+let actionImg = document.getElementById("cta-img");
+actionImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+let actionHeader = document.querySelector("h1");
+actionHeader.innerHTML = (siteContent["cta"]["h1"])
+
+let actionButton = document.querySelector("button");
+actionButton.innerHTML = (siteContent["cta"]["button"])
+
 let navItems = document.getElementsByTagName("a");
 navItems[0].innerHTML = (siteContent["nav"]["nav-item-1"])
 navItems[1].innerHTML = (siteContent["nav"]["nav-item-2"])
 navItems[2].innerHTML = (siteContent["nav"]["nav-item-3"])
 navItems[3].innerHTML = (siteContent["nav"]["nav-item-4"])
 navItems[4].innerHTML = (siteContent["nav"]["nav-item-5"])
+
+let contentHeaders = document.getElementsByTagName("h4");
+contentHeaders[0].innerHTML = (siteContent["main-content"]["features-h4"])
+contentHeaders[1].innerHTML = (siteContent["main-content"]["about-h4"])
+contentHeaders[2].innerHTML = (siteContent["main-content"]["services-h4"])
+contentHeaders[3].innerHTML = (siteContent["main-content"]["product-h4"])
+contentHeaders[4].innerHTML = (siteContent["main-content"]["vision-h4"])
+contentHeaders[5].innerHTML = (siteContent["contact"]["contact-h4"])
+
