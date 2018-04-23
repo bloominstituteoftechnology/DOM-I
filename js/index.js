@@ -106,3 +106,10 @@ blogLink.href = '#';
       
 nav.appendChild(blogLink);
 nav.prepend(homeLink);
+
+// Change nav text color
+const navText = nav.children;
+
+for(let i = 0; i < navText.length; i++){
+  navText[i].style = 'color:green';
+}
