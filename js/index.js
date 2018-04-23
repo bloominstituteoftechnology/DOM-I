@@ -43,8 +43,8 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById('logo-img');
-logo.setAttribute('alt', 'This is company logo');
-logo.setAttribute('src', siteContent['nav']['img-src']);
+logo.alt = 'This is company logo';
+logo.src = siteContent['nav']['img-src'];
 
 let theNav = document.querySelector('nav');
 let textNode = document.createTextNode('The CEO');
@@ -68,8 +68,8 @@ theHead[5].style.color = 'green';
 // let textNode = document.createTextNode(' The CEO');
 // theHead[5].appendChild(textNode);
 let ctaImage = document.getElementById('cta-img');
-ctaImage.setAttribute('alt', 'An image of a code snippet.');
-ctaImage.setAttribute('src', siteContent['cta']['img-src']);
+ctaImage.alt = 'An image of a code snippet.';
+ctaImage.src = siteContent['cta']['img-src'];
 
 let middleImage = document.getElementById('middle-img');
 middleImage.setAttribute('alt', 'An image of code snippets across the screen');
