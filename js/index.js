@@ -78,15 +78,12 @@ document.getElementById('cta-img').setAttribute('src', siteContent.cta["img-src"
 /** TOP CONTENT */
 let mainTop = document.getElementsByClassName('top-content').item(0);
 console.log(mainTop);
-
 /** MIDDLE CONTENT */
 let mainMiddle = document.getElementById('middle-img');
 console.log(mainMiddle);
-
 /** BOTTOM CONTENT */
 let mainBottom = document.querySelector('.bottom-content');
 console.log(mainBottom);
-
 /** HANDLING WITH CONTENT */
 // Prepare DATA to insert to DOM
 const JSONMainContent = siteContent['main-content'];
@@ -94,7 +91,6 @@ let topContent = [];
 topContent.push(`<h4>${JSONMainContent['about-h4']}</h4><p>${JSONMainContent['about-content']}</p>`);
 topContent.push(`<h4>${JSONMainContent['features-h4']}</h4><p>${JSONMainContent['features-content']}</p>`);
 // console.log(top['1']);
-
 let bottomContent = [];
 bottomContent.push(`<h4>${JSONMainContent['services-h4']}</h4><p>${JSONMainContent['services-content']}</p>`);
 bottomContent.push(`<h4>${JSONMainContent['product-h4']}</h4><p>${JSONMainContent['product-content']}</p>`);
@@ -110,3 +106,18 @@ mainMiddle.setAttribute('src', JSONMainContent["middle-img-src"]);
 Array.from( mainBottom.getElementsByClassName('text-content') ).forEach( (item, i) => {
   item.innerHTML = bottomContent[i];
 });
+
+/**
+ * Selectors to <section.contact>
+ */
+let contact = document.querySelectorAll('section.contact').item(0);
+console.log(contact);
+/** HANDLING WITH CONTENT */
+const contactContent = siteContent.contact
+// ADD content to <h4>
+document.querySelector('.contact h4').textContent = contactContent['contact-h4'];
+// ADD content to <p>s
+const contactPs = contact.querySelectorAll('p');
+contactPs.item(0).textContent = contactContent.address;
+contactPs.item(1).textContent = contactContent.phone;
+contactPs.item(2).textContent = contactContent.email;
