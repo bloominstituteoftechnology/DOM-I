@@ -68,3 +68,16 @@ ctaText[0].innerHTML = 'Dom Is Awesome';
 
 let buttons = document.getElementsByTagName('button');
 buttons[0].innerHTML = 'Get Started';
+
+let headers = document.querySelectorAll('h4');
+headers[0].innerHTML = 'Features';
+
+headers[1].innerHTML = 'About';
+
+headers[2].innerHTML = 'Services';
+
+headers[3].innerHTML = 'Product';
+
+headers[4].innerHTML = 'Vision';
+
+headers[5].innerHTML = 'Contact';
