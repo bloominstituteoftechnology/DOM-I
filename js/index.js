@@ -5,7 +5,7 @@ const siteContent = {
     "nav-item-3": "Vision",
     "nav-item-4": "Features",
     "nav-item-5": "Contact",
-    "imgsrc": "img/logo.png"
+    "img-src": "img/logo.png"
   },
   "cta": {
     "h1": "DOM Is Awesome",
@@ -36,8 +36,6 @@ const siteContent = {
   },
 };
 
-
-//?
-
-let mainContent = document.querySelector(".main-content");
-mainContent.innerHTML = siteContent["main-content"].features-h4; 
+// Example: Update the img src for the logo
+let logo = document.getElementById("logo-img");
+logo.setAttribute('src', siteContent["nav"]["img-src"])
