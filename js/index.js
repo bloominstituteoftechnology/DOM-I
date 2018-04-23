@@ -39,3 +39,7 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let ctaH1 = document.querySelector("h1")
+ctaH1[0].innerHTML = siteContent["cta"]["h1"]
+// console.log(navLinks.innerHTML)
