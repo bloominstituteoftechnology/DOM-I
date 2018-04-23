@@ -37,6 +37,17 @@ const siteContent = {
   },
 };
 
+const newLink = document.createElement('link')
+const bla = document.querySelector("head");
+bla.insertBefore(newLink, bla.childNodes[0]);
+let oldLing = document.querySelectorAll("link")
+oldLing[0].setAttribute('rel', 'stylesheet');
+oldLing[0].setAttribute('integrity', 'sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4');
+oldLing[0].setAttribute('crossorigin', 'anonymous');
+oldLing[0].setAttribute('href', 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css');
+
+
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
@@ -49,6 +60,9 @@ selNavItem.forEach((element, index) => {
 let ctaHeading = document.querySelectorAll(".cta-text")
 ctaHeading[0].firstElementChild.innerHTML = siteContent.cta["h1"];
 ctaHeading[0].lastElementChild.innerHTML = siteContent.cta["button"];
+ctaHeading[0].lastElementChild.setAttribute('type', 'button');
+ctaHeading[0].lastElementChild.setAttribute('data-toggle', 'modal');
+ctaHeading[0].lastElementChild.setAttribute('data-target', '#exampleModalCenter');
 ctaHeading[0].firstElementChild.style = 'color: red';
 // 
 
@@ -86,11 +100,33 @@ footer.innerHTML = siteContent["footer"]["copyright"];
 // topContent.innerHTML = "jbaoifoiasdjf";
 
 //Stretch goals
-ctaHeading[0].lastElementChild.addEventListener("click", () => {
-  alert("FILTHY BUTTONCLICKER!")
-})
-
-// ctaHeading[0].lastElementChild.addEventListener(onclick, () => {
-//   let crazy = document.querySelector(".cta")
-//   crazy.innerHTML = <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true"></div>
+// ctaHeading[0].lastElementChild.addEventListener("click", () => {
+//   alert("FILTHY BUTTONCLICKER!")
 // })
+let functionWorked = false;
+ctaHeading[0].lastElementChild.addEventListener('mouseover', () => {
+  // console.log("hey")
+  let crazy = document.querySelector(".cta")
+
+  if (functionWorked === false) {
+    crazy.insertAdjacentHTML("beforeend", `<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">Modal that cost me 1.5 hours of my Life</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          This Modal is brought to you by JavaScript Injection!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>`);
+    functionWorked = !functionWorked;
+  }
+})
