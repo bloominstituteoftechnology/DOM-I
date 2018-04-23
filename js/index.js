@@ -123,3 +123,15 @@ headerNavA = document.querySelectorAll("header nav a");  // select all a in the 
 headerNavA.forEach(navItem => {     // iterate through nav nodelist
   navItem.style.color = "green";    // each item reasisgn the color of a to green
 });
+
+//Stretch task starts here.
+ctaButton.style.backgroundColor = "blue";
+ctaButton.style.color = "white";
+
+let body = document.querySelector("body");
+body.style.backgroundColor = "pink";
+
+ctaH1.style.fontSize = "100px";
+ctaH1.style.color = "white";
+ctaH1.style.textShadow = "5px 5px black";
+
