@@ -37,5 +37,44 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+let logo = document.querySelector("#logo-img");
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+// Insert Nav Items into Nav Bar
+
+let selNavItem = document.querySelectorAll("nav a");
+selNavItem.forEach((element, index) => {
+  if (index === 5) {return;}
+  element.innerHTML = siteContent["nav"]["nav-item-" + (index + 1)];
+})
+
+let ctaHeading = document.querySelector(".cta-text")
+ctaHeading.innerHTML = "DOM Is Awesome";
+
+let ctaLogo = document.querySelector("section img");
+ctaLogo.src = 'img/header-img.png';
+
+// let topContent = document.querySelector(".top-content .text-content")
+// topContent.firstElementChild.innerHTML = siteContent["main-content"]["features-h4"];
+// topContent.lastElementChild.innerHTML = siteContent["main-content"]["features-content"];
+
+let topContent = document.querySelector(".top-content");
+console.log(topContent.children);
+topContent.children[0].firstElementChild.innerHTML = siteContent["main-content"]["features-h4"];
+topContent.children[0].lastElementChild.innerHTML = siteContent["main-content"]["features-content"];
+topContent.children[1].firstElementChild.innerHTML = siteContent["main-content"]["about-h4"];
+topContent.children[1].lastElementChild.innerHTML = siteContent["main-content"]["about-content"];
+
+let middleImg = document.querySelector("#middle-img");
+middleImg.src = siteContent["main-content"]["middle-img-src"];
+
+let bottomContent = document.querySelector(".bottom-content")
+bottomContent.children[0].firstElementChild.innerHTML = siteContent["main-content"]["services-h4"];
+bottomContent.children[0].lastElementChild.innerHTML = siteContent["main-content"]["services-content"];
+bottomContent.children[1].firstElementChild.innerHTML = siteContent["main-content"]["product-h4"];
+bottomContent.children[1].lastElementChild.innerHTML = siteContent["main-content"]["product-content"];
+bottomContent.children[2].firstElementChild.innerHTML = siteContent["main-content"]["vision-h4"];
+bottomContent.children[2].lastElementChild.innerHTML = siteContent["main-content"]["vision-content"];
+
+// let topContent2 = document.querySelector("");
+// topContent2.innerHTML = "Try me!";
