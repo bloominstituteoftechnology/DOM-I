@@ -63,6 +63,10 @@ let ctaImage = document.getElementById('cta-img');
 ctaImage.setAttribute('alt', 'An image of a code snippet.');
 ctaImage.setAttribute('src', siteContent['cta']['img-src']);
 
+let middleImage = document.getElementById('middle-img');
+middleImage.setAttribute('alt', 'An image of code snippets across the screen');
+middleImage.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
 let ctaText = document.getElementsByTagName('h1');
 ctaText[0].innerHTML = 'Dom Is Awesome';
 
