@@ -4,6 +4,7 @@ const siteContent = {
     "nav-item-2": "Product",
     "nav-item-3": "Vision",
     "nav-item-4": "Features",
+    "nav-item-6": "About",
     "nav-item-5": "Contact",
     "img-src": "img/logo.png"
   },
@@ -39,3 +40,19 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+/** 
+ * Selectors to <nav>'s childs
+ */
+let nav = document.querySelector('nav');
+console.log(nav);
+let nav_a = Array.from(nav.getElementsByTagName('a'));
+console.log(nav_a);
+nav_a_length = nav_a.length;
+nav_a.forEach( (a, index) => {
+  console.log(a);
+  let aux = `nav-item-${index+1}`
+  console.log(aux);
+  a.textContent = siteContent.nav[aux];
+});
+
