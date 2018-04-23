@@ -45,14 +45,11 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let allNavSelectors = document.querySelectorAll('a');
 
-//Update the data with the Json Data 
-
-//allSelectors[0].setAttribute('innerHTML', 'test');
-
-
 allNavSelectors.forEach(function (selector, index, selectors) {
   selector.innerHTML=siteContent['nav'][`nav-item-${index+1}`];
 });
+
+//Update cta
 
 let ctaTxt = document.querySelectorAll(".cta-text");
 
@@ -62,3 +59,6 @@ for(let i = 0; i < ctaTxtElements.length; i++)
 {
   console.log(ctaTxtElements[i].innerHTML=siteContent['cta'][Object.keys(siteContent['cta'])[i]]);
 }
+
+document.getElementById("cta-img").setAttribute('src', siteContent["cta"]["img-src"])
+
