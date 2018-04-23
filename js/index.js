@@ -42,12 +42,10 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 
 // Update header image
-let headerimg = document.getElementById("cta-img");
-headerimg.setAttribute('src', siteContent["cta"]["img-src"]);
+document.getElementById("cta-img").src = siteContent['cta']['img-src']
 
 // Add middle image
-let middleimg = document.getElementById("middle-img");
-middleimg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+document.getElementById("middle-img").src = siteContent["main-content"]["middle-img-src"];
 
 //Add header links
 let nav = document.getElementsByTagName('nav');
@@ -56,3 +54,14 @@ nav[0].children[1].innerHTML = siteContent['nav']['nav-item-2']
 nav[0].children[2].innerHTML = siteContent['nav']['nav-item-3']
 nav[0].children[3].innerHTML = siteContent['nav']['nav-item-4']
 nav[0].children[4].innerHTML = siteContent['nav']['nav-item-5']
+
+// Add cta contect heading
+document.querySelector('.cta-text').firstElementChild.innerHTML = siteContent.cta.h1;
+
+// Add cta button
+document.querySelector('.cta-text').getElementsByTagName('button')[0].innerHTML = siteContent.cta.button;
+
+// Add main content
+
+
+// Add contact 
