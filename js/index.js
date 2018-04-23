@@ -50,3 +50,6 @@ for(let i = 0; i < 5; i++){
 let myCTA = document.getElementsByTagName("h1");
 
 myCTA[0].innerHTML = siteContent.cta.h1;
+
+let ctaIMG = document.getElementById("cta-img");
+ctaIMG.setAttribute('src', siteContent["cta"]["img-src"])
