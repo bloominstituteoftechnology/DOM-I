@@ -76,5 +76,8 @@ let contactBody = document.querySelectorAll(".contact p")
 contactBody[0].innerHTML = siteContent["contact"]["address"]
 contactBody[1].innerHTML = siteContent["contact"]["phone"]
 contactBody[2].innerHTML = siteContent["contact"]["email"]
+
+let footer = document.querySelector("footer")
+footer.innerHTML = siteContent["footer"]["copyright"];
 // let topContent2h = document.querySelector(".text-content p");
 // topContent.innerHTML = "jbaoifoiasdjf";
