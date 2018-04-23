@@ -4,7 +4,8 @@ const siteContent = {
     "nav-item-2": "Product",
     "nav-item-3": "Vision",
     "nav-item-4": "Features",
-    "nav-item-5": "Contact",
+    "nav-item-5": "About",
+    "nav-item-6": "Contact",
     "img-src": "img/logo.png"
   },
   "cta": {
