@@ -53,18 +53,22 @@ theNav.style.color = 'green';
 theNav.prepend('Hello User');
 let theHead = document.querySelectorAll('a');
 
+theHead.forEach(Element => {
+  return (Element.style.color = 'green');
+});
+
 theHead[0].innerHTML = siteContent['nav']['nav-item-1'];
-theHead[0].style.color = 'green';
+
 theHead[1].innerHTML = siteContent['nav']['nav-item-2'];
-theHead[1].style.color = 'green';
+
 theHead[2].innerHTML = siteContent['nav']['nav-item-3'];
-theHead[2].style.color = 'green';
+
 theHead[3].innerHTML = siteContent['nav']['nav-item-4'];
-theHead[3].style.color = 'green';
-theHead[4].innerHTML = siteContent['nav']['nav-item-5'];
-theHead[4].style.color = 'green';
-theHead[5].innerHTML = siteContent['nav']['nav-item-6'];
-theHead[5].style.color = 'green';
+
+theHead[4].innerHTML = 'About';
+
+theHead[5].innerHTML = siteContent['nav']['nav-item-5'];
+
 // let textNode = document.createTextNode(' The CEO');
 // theHead[5].appendChild(textNode);
 let ctaImage = document.getElementById('cta-img');
@@ -76,36 +80,31 @@ middleImage.setAttribute('alt', 'An image of code snippets across the screen');
 middleImage.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
 let ctaText = document.getElementsByTagName('h1');
-ctaText[0].innerHTML = 'Dom Is Awesome';
+ctaText[0].innerHTML = siteContent['cta']['h1'];
 
 let buttons = document.getElementsByTagName('button');
-buttons[0].innerHTML = 'Get Started';
+buttons[0].innerHTML = siteContent['cta']['button'];
 
 let headers = document.querySelectorAll('h4');
-headers[0].innerHTML = 'Features';
+headers[0].innerHTML = siteContent['main-content']['features-h4'];
 
-headers[1].innerHTML = 'About';
+headers[1].innerHTML = siteContent['main-content']['about-h4'];
 
-headers[2].innerHTML = 'Services';
+headers[2].innerHTML = siteContent['main-content']['services-h4'];
 
-headers[3].innerHTML = 'Product';
+headers[3].innerHTML = siteContent['main-content']['product-h4'];
 
-headers[4].innerHTML = 'Vision';
+headers[4].innerHTML = siteContent['main-content']['vision-h4'];
 
-headers[5].innerHTML = 'Contact';
+headers[5].innerHTML = siteContent['contact']['contact-h4'];
 
 let paragraphs = document.querySelectorAll('p');
-paragraphs[0].innerHTML =
-  'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-paragraphs[1].innerHTML =
-  'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-paragraphs[2].innerHTML =
-  'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-paragraphs[3].innerHTML =
-  'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-paragraphs[4].innerHTML =
-  'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-paragraphs[5].innerHTML = '123 Way 456 Street Somewhere, USA';
-paragraphs[6].innerHTML = '1 (888) 888-8888';
-paragraphs[7].innerHTML = 'sales@greatidea.io';
-paragraphs[8].innerHTML = 'Copyright Great Idea! 2018';
+paragraphs[0].innerHTML = siteContent['main-content']['features-content'];
+paragraphs[1].innerHTML = siteContent['main-content']['about-content'];
+paragraphs[2].innerHTML = siteContent['main-content']['services-content'];
+paragraphs[3].innerHTML = siteContent['main-content']['product-content'];
+paragraphs[4].innerHTML = siteContent['main-content']['vision-content'];
+paragraphs[5].innerHTML = siteContent['contact']['address'];
+paragraphs[6].innerHTML = siteContent['contact']['phone'];
+paragraphs[7].innerHTML = siteContent['contact']['email'];
+paragraphs[8].innerHTML = siteContent.footer.copyright;
