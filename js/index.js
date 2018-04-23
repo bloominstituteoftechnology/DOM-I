@@ -39,7 +39,7 @@ const siteContent = {
 
 
 // ~~~~~ Header ~~~~~
-// document.getElementById('nav').appendChild(a); //<--Not Working
+// document.querySelector('nav').appendChild(a); //<--Not Working
 
 let headerA = document.querySelectorAll('nav a');
 headerA[0].innerHTML = siteContent['nav']['nav-item-1'];
