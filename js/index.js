@@ -64,7 +64,8 @@ const createArray = function (obj, selector) {
 // Create selectors
 const navLinks = document.querySelectorAll('nav a'),
   headerLogo = document.getElementById('#logo-img'), // image
-  ctaTextEle = document.querySelectorAll('.cta-text > *'),
+  ctaHeader = document.querySelectorAll('.cta-text h1'),
+  ctaButton = document.querySelectorAll('.cta-text button'),
   ctaImg = document.getElementById('#cta-img'), // image
   mainContentHeaders = document.querySelectorAll('.main-content h4'),
   mainContent = document.querySelectorAll('.main-content p'),
