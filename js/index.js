@@ -73,7 +73,6 @@ main1[0].innerHTML = "Features";
 let content1 = document.getElementsByTagName("p")
 content1[0].innerHTML = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
-
 let main2 = document.getElementsByTagName("h4")
 main2[1].innerHTML = "About";
 let content2 = document.getElementsByTagName("p")
@@ -89,8 +88,10 @@ main4[3].innerHTML = "Product";
 let content4 = document.getElementsByTagName("p")
 content4[3].innerHTML = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
-
 let main5 = document.getElementsByTagName("h4")
 main5[4].innerHTML = "Vision";
 let content5 = document.getElementsByTagName("p")
 content5[4].innerHTML = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+let middleImg = document.getElementById("middle-img")
+middleImg.setAttribute('src', "img/mid-page-accent.jpg")
