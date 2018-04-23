@@ -42,4 +42,20 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // find 'a' class
 let allSelectors = document.querySelectorAll('a');
-allSelectors[0].innerHTML = siteContent['nav']['nav-item-1'];
+allSelectors.forEach(function (selector, index, selectors) {
+    selector.innerHTML=siteContent['nav']['nav-item-${index+1}'];
+});
+
+let cta = document.getElementByClass('cta-text h1');
+cta.innerHTML = siteContent('cta-text h1');
+
+let button = document.querySelectorAll('cta-text button');
+button.innerHTML = siteContent('cta-text button');
+});
+
+let ctaimg = document.getElementById("cta-img");
+ctaimg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let features = document.getElementByClass("features-h4");
+features.innerHTML;
+
