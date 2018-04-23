@@ -49,7 +49,6 @@ codeImg.setAttribute('src', siteContent["cta"]["img-src"])
 let codeMiddleImg = document.getElementById("middle-img");
 codeMiddleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
-
 // nav bar code here
 let navLinkOne = document.getElementsByTagName("a");
 navLinkOne[0].innerHTML = siteContent["nav"]["nav-item-1"]
@@ -71,9 +70,6 @@ let aTagTwo = document.createElement('a');
 aTagTwo.setAttribute('href', '#');
 aTagTwo.innerHTML = 'End';
 navigation.append(aTagTwo);
-// navigation.prepend('Home');
-// navigation.append('End');
-// navigation.style.color = 'green';
 
 //CTA Text and Button
 let ctaText = document.getElementsByTagName('h1');
@@ -111,8 +107,6 @@ contactText[7].innerHTML = siteContent['contact']['email']
 let footerText = document.getElementsByTagName('p');
 footerText[8].innerHTML = siteContent['footer']['copyright']
 
-
-
 //Nav text color change
 navLinkOne[0].style.color = 'green';
 navLinkOne[1].style.color = 'green';
@@ -122,5 +116,3 @@ navLinkOne[4].style.color = 'green';
 navLinkOne[5].style.color = 'green';
 navLinkOne[6].style.color = 'green';
 navLinkOne[7].style.color = 'green';
-
-
