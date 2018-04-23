@@ -38,6 +38,102 @@ const siteContent = {
 
 
 //?
+const navContent = [];
+const navBar = document.querySelector('nav');
+const navLinks = [].slice.call(document.querySelectorAll('nav a'));
+const cta = document.querySelector('.cta');
+const mainContent = document.querySelector('.main-content .top-content');
+const middleImg = document.querySelector('#middle-img');
+const mainContentBottom = document.querySelector('.main-content .bottom-content')
+const contact = document.querySelector('.contact');
+const footer = document.querySelector('footer');
+const newLinks = ['newLink1', 'newLink2'];
 
-let mainContent = document.querySelector(".main-content");
-mainContent.innerHTML = siteContent["main-content"].features-h4; 
+navLinks.push(document.querySelector('#logo-img'));
+
+// push the values of `siteContent.nav` into `navContent` array
+for (content in siteContent.nav) navContent.push(siteContent.nav[content]);
+
+// insert content into nav and logo image
+for (let i = 0; i < navContent.length; i++) {
+  if (i === navContent.length - 1) {
+    navLinks[navLinks.length - 1].src = navContent[i];
+  }
+  else {
+    navLinks[i].insertAdjacentText('afterbegin', navContent[i]);
+  }
+}
+
+// append new navigation links to navBar
+for (let i = 0; i < newLinks.length; i++) {
+  let newA = document.createElement('a');
+  newA.insertAdjacentText('afterbegin', newLinks[i]);
+
+  navBar.append(newA);
+}
+
+/************
+** CTA DIV **
+************/
+const ctaContent = cta.children[0];
+
+// cta h1
+ctaContent.children[0].insertAdjacentText('afterbegin', siteContent.cta.h1);
+// cta button
+ctaContent.children[1].insertAdjacentText('afterbegin', siteContent.cta.button);
+// cta image
+cta.children[1].src = siteContent.cta['img-src'];
+
+/*****************
+** MAIN CONTENT **
+*****************/
+const mainContentFeatures = mainContent.children[0];
+const mainContentAbout = mainContent.children[1];
+const mainContentServices = mainContentBottom.children[0];
+const mainContentProduct = mainContentBottom.children[1];
+const mainContentVision = mainContentBottom.children[2];
+
+// features h1
+mainContentFeatures.children[0].insertAdjacentText('afterbegin', siteContent['main-content']['features-h4']);
+// features p
+mainContentFeatures.children[1].insertAdjacentText('afterbegin', siteContent['main-content']['features-content']);
+
+// about h1
+mainContentAbout.children[0].insertAdjacentText('afterbegin', siteContent['main-content']['about-h4']);
+// about p
+mainContentAbout.children[1].insertAdjacentText('afterbegin', siteContent['main-content']['about-content']);
+
+// image
+middleImg.src = siteContent['main-content']['middle-img-src'];
+
+// services h4
+mainContentServices.children[0].insertAdjacentText('afterbegin', siteContent['main-content']['services-h4'])
+// services p
+mainContentServices.children[1].insertAdjacentText('afterbegin', siteContent['main-content']['services-content'])
+
+// product h4
+mainContentProduct.children[0].insertAdjacentText('afterbegin', siteContent['main-content']['product-h4'])
+// product p
+mainContentProduct.children[1].insertAdjacentText('afterbegin', siteContent['main-content']['product-content'])
+
+// vision h4
+mainContentVision.children[0].insertAdjacentText('afterbegin', siteContent['main-content']['vision-h4'])
+// vision p
+mainContentVision.children[1].insertAdjacentText('afterbegin', siteContent['main-content']['vision-content'])
+
+/************
+** CONTACT **
+************/
+// contact h4
+contact.children[0].insertAdjacentText('afterbegin', siteContent.contact['contact-h4']);
+// address
+contact.children[1].insertAdjacentText('afterbegin', siteContent.contact.address);
+// phone
+contact.children[2].insertAdjacentText('afterbegin', siteContent.contact.phone);
+// email
+contact.children[3].insertAdjacentText('afterbegin', siteContent.contact.email);
+
+/***********
+** FOOTER **
+***********/
+footer.children[0].insertAdjacentText('afterbegin', siteContent.footer.copyright);
