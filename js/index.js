@@ -60,6 +60,14 @@ navBar[2].style.color = "green";
 navBar[3].style.color = "green";
 navBar[4].style.color = "green";
 
+// appendChild to nav bar
+
+let node = document.createElement("a");
+let textNode = document.createTextNode("About");
+node.appendChild(textNode);
+navBar[5].appendChild(node);
+
+
 
 //cta
 let ctaH1 = document.getElementsByTagName("h1");
