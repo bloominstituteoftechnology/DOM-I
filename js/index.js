@@ -62,12 +62,14 @@ nav_a.forEach( (a, index) => {
 let cta = document.getElementsByClassName('cta').item(0);
 // console.log(cta);
 cta.querySelector('h1').textContent = siteContent.cta.h1;
-cta.getElementsByTagName('button').item(0).textContent = siteContent.cta.button;
+let ctaButton = cta.getElementsByTagName('button').item(0);
+ctaButton.textContent = siteContent.cta.button;
 
 /** Handling with the <img> */
 // OPTION 1
 // console.log(document.getElementById('cta-img'));
-document.getElementById('cta-img').setAttribute('src', siteContent.cta["img-src"])
+let ctaImg = document.getElementById('cta-img')
+ctaImg.setAttribute('src', siteContent.cta["img-src"])
 //OPTION 2
 // console.log(cta.getElementsByTagName('img'));
 // cta.getElementsByTagName('img').item(0).setAttribute('src', siteContent.cta["img-src"]);
@@ -141,3 +143,12 @@ for ( let a of nav_a ) {
 const newA = document.createElement('a');
 newA.textContent = "new <a>";
 nav.appendChild(newA);
+
+/**
+ * STRETCH GOALS
+ */
+/** UPDATE STYLES */
+console.log(ctaButton);
+ctaButton.style.cssText = 'background-color: aqua; border-radius: 2rem;';
+
+contact.style.cssText = `display: flex; flex-direction: column;`
