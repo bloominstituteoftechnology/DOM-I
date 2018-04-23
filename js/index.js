@@ -98,3 +98,6 @@ for(let paragraph in contactObj ){
 for(let i = 0; i < contactP.length;i++){
   contactParagraph[i].textContent = contactP[i];
 }
+
+let footerParagraph = document.querySelector('footer p')
+footerParagraph.textContent = siteContent.footer.copyright;
