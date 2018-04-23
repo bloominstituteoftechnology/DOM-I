@@ -63,12 +63,25 @@ const createArray = function (obj, selector) {
 
 // Create selectors
 const navLinks = document.querySelectorAll('nav a'),
-  headerLogo = document.getElementById('#logo-img'), // image
+  headerLogo = document.getElementById('logo-img'), // image
   ctaHeader = document.querySelectorAll('.cta-text h1'),
   ctaButton = document.querySelectorAll('.cta-text button'),
-  ctaImg = document.getElementById('#cta-img'), // image
+  ctaImg = document.getElementById('cta-img'), // image
   mainContentHeaders = document.querySelectorAll('.main-content h4'),
   mainContent = document.querySelectorAll('.main-content p'),
-  mainContentImg = document.getElementById('#middle-img'), // image
+  mainContentImg = document.getElementById('middle-img'), // image
   contactEle = document.querySelectorAll('.contact > *'),
   footerEle = document.querySelectorAll('footer > *');
+
+// Update HTML with JSON data
+updateHTML(createArray(siteContent['nav'], 'nav-item'), navLinks);
+updateHTML(createArray(siteContent['cta'], 'h1'), ctaHeader);
+updateHTML(createArray(siteContent['cta'], 'button'), ctaButton);
+updateHTML(createArray(siteContent['main-content'], 'h4'), mainContentHeaders);
+updateHTML(createArray(siteContent['main-content'], 'content'), mainContent);
+updateHTML(createArray(siteContent['contact'], ''), contactEle);
+updateHTML(createArray(siteContent['footer'], ''), footerEle);
+
+headerLogo.src = siteContent['nav']['img-src'];
+ctaImg.src = siteContent['cta']['img-src'];
+mainContentImg.src = siteContent['main-content']['middle-img-src'];
