@@ -50,6 +50,7 @@ let ctaHeading = document.querySelectorAll(".cta-text")
 ctaHeading[0].firstElementChild.innerHTML = siteContent.cta["h1"];
 ctaHeading[0].lastElementChild.innerHTML = siteContent.cta["button"];
 ctaHeading[0].firstElementChild.style = 'color: red';
+// 
 
 let ctaLogo = document.querySelector("section img");
 ctaLogo.src = 'img/header-img.png';
@@ -83,3 +84,13 @@ let footer = document.querySelector("footer")
 footer.innerHTML = siteContent["footer"]["copyright"];
 // let topContent2h = document.querySelector(".text-content p");
 // topContent.innerHTML = "jbaoifoiasdjf";
+
+//Stretch goals
+ctaHeading[0].lastElementChild.addEventListener("click", () => {
+  alert("FILTHY BUTTONCLICKER!")
+})
+
+// ctaHeading[0].lastElementChild.addEventListener(onclick, () => {
+//   let crazy = document.querySelector(".cta")
+//   crazy.innerHTML = <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true"></div>
+// })
