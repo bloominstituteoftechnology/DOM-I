@@ -51,14 +51,38 @@ allNavSelectors.forEach(function (selector, index, selectors) {
 
 //Update cta
 
-let ctaTxt = document.querySelectorAll(".cta-text");
+let ctaKeys = Object.keys(siteContent['cta']);
+let ctaText = document.querySelectorAll(".cta-text");
 
-let ctaTxtElements = ctaTxt[0].children;
+let ctaTextElements = ctaText[0].children;
 
-for(let i = 0; i < ctaTxtElements.length; i++)
+for(let i = 0; i < ctaTextElements.length; i++)
 {
-  console.log(ctaTxtElements[i].innerHTML=siteContent['cta'][Object.keys(siteContent['cta'])[i]]);
+  ctaTextElements[i].innerHTML=siteContent['cta'][ctaKeys[i]];
 }
 
 document.getElementById("cta-img").setAttribute('src', siteContent["cta"]["img-src"])
 
+//Update main content
+
+let mainContentKeys = Object.keys(siteContent['main-content']);
+let textContent = document.querySelectorAll(".text-content");
+
+console.log(mainContentKeys);
+
+let textContentElements = '';
+let counter = 0;
+
+for (let index = 0; index < 5; index++) {
+  textContentElements = textContent[index].children;
+  for(let i = 0; i < textContentElements.length; i++)
+  {
+    textContentElements[i].innerHTML=siteContent["main-content"][mainContentKeys[counter++]];
+  }
+  counter === 4 ? document.getElementById("middle-img").setAttribute('src', siteContent["main-content"][mainContentKeys[counter++]]) : counter;
+  
+}
+// document.getElementById("middle-img").setAttribute('src', siteContent["main-content"][mainContentKeys[4]])
+
+
+console.log(textContentElements);
