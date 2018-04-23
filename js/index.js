@@ -85,3 +85,19 @@ headers[3].innerHTML = 'Product';
 headers[4].innerHTML = 'Vision';
 
 headers[5].innerHTML = 'Contact';
+
+let paragraphs = document.querySelectorAll('p');
+paragraphs[0].innerHTML =
+  'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+paragraphs[1].innerHTML =
+  'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+paragraphs[2].innerHTML =
+  'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+paragraphs[3].innerHTML =
+  'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+paragraphs[4].innerHTML =
+  'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+paragraphs[5].innerHTML = '123 Way 456 Street Somewhere, USA';
+paragraphs[6].innerHTML = '1 (888) 888-8888';
+paragraphs[7].innerHTML = 'sales@greatidea.io';
+paragraphs[8].innerHTML = 'Copyright Great Idea! 2018';
