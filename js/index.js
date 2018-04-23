@@ -49,25 +49,27 @@ ctaIMG.setAttribute('src', siteContent["cta"]["img-src"])
 let mcImg = document.getElementById("middle-img");
 mcImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
+// Nav Section
+let navElements = document.querySelector("nav");
+let navs = navElements.querySelectorAll("a");
+console.log("nav is", navs);
+navs[0].innerHTML = siteContent["nav"]["nav-item-1"];
+let props2 = Object.entries(siteContent.nav);
+navs.forEach((item, index) => {
+  item.innerHTML = props2[index + 1][0];
+  console.log("nav is this", navs);
+});
+
 // Contact Section
 let contactElements = document.querySelector(".contact");
 console.log("contact is:", contactElements);
 let h4Tags = contactElements.querySelectorAll("h4");
 h4Tags[0].innerHTML = siteContent["contact"]["contact-h4"];
 let pTags = contactElements.querySelectorAll("p");
-let props = Object.values(siteContent.contact);
-console.log(props);
+let props = Object.entries(siteContent.contact);
 pTags.forEach((item, index) => {
-  item.innerHTML = props[index + 1];
+  item.innerHTML = props[index + 1][1];
 });
-// contactElements.setAttribute("p", siteContent["contact"]["contact-h4"]);
-
-// changes to nav
-// let navElements = document.querySelectorAll("nav");
-// navElements.setAttribute('nav', siteContent["header"]["nav"]);
-
-// let footerElement = document.getElementsById("footer");
-// footerElement.setAttribute('p', siteContent["footer"]["Copyright"]);
 
 
 
