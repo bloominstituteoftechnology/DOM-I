@@ -62,12 +62,21 @@ middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 let mainHeading = document.querySelectorAll("h4")
 let mainContent = siteContent['main-content']
 let mainHeadingArr = [];
+let mainContentArr = []
 for(let heading in mainContent){
   if(heading.includes('h4')){
     mainHeadingArr.push(mainContent[heading])
   }
+  else{
+    mainContentArr.push(mainContent[heading])
+  }
+
 }
+
+mainContentArr = mainContentArr.filter((e) =>  e !== 'img/mid-page-accent.jpg')
+
 
 for(let i = 0; i < mainHeadingArr.length; i++){
   mainHeading[i].textContent = mainHeadingArr[i];
+  mainHeading[i].nextElementSibling.textContent = mainContentArr[i]
 }
