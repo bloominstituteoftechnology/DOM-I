@@ -40,10 +40,10 @@ const siteContent = {
 // Example: Update the img src for the logo
 // let logo = document.getElementById("logo-img");
 // logo.setAttribute('src', siteContent["nav"]["img-src"]);
-let headerNav = document.querySelectorAll("header nav a");
+let headerNavA = document.querySelectorAll("header nav a");
 //headerNav[0].innerHTML = siteContent["nav"]["nav-item-1"];
-for(var i = 0; i < headerNav.length; i ++) {
-  headerNav[i].innerHTML = siteContent["nav"]["nav-item-" + (i + 1)];
+for(var i = 0; i < headerNavA.length; i ++) {
+  headerNavA[i].innerHTML = siteContent["nav"]["nav-item-" + (i + 1)];
 }
 
 let imgLogo = document.getElementById("logo-img");
@@ -105,3 +105,6 @@ contactEmail.innerHTML = siteContent["contact"]["email"];
 
 let copyRight= document.querySelector("footer p");
 copyRight.innerHTML = siteContent["footer"]["copyright"];
+
+//add 2 more navs
+
