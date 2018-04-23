@@ -4,6 +4,7 @@ const siteContent = {
     "nav-item-2": "Product",
     "nav-item-3": "Vision",
     "nav-item-4": "Features",
+    "nav-item-4.5": "About",
     "nav-item-5": "Contact",
     "img-src": "img/logo.png"
   },
@@ -43,8 +44,10 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 let myNavs = document.getElementsByTagName("a");
 let navText = Object.values(siteContent.nav);
 console.log(navText[1])
-for(let i = 0; i < 5; i++){
+for(let i = 0; i < 6; i++){
     myNavs[i].innerHTML = navText[i];
+    myNavs[i].setAttribute('style', 'color:green')
+
 }
 
 let myCTA = document.getElementsByTagName("h1");
