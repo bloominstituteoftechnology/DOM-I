@@ -47,17 +47,19 @@ logo.setAttribute('alt', 'This is company logo');
 logo.setAttribute('src', siteContent['nav']['img-src']);
 
 let theHead = document.querySelectorAll('a');
+
 theHead[0].innerHTML = 'Services';
-
+theHead[0].style.color = 'green';
 theHead[1].innerHTML = 'Product';
-
+theHead[1].style.color = 'green';
 theHead[2].innerHTML = 'Vision';
-
+theHead[2].style.color = 'green';
 theHead[3].innerHTML = 'Features';
-
+theHead[3].style.color = 'green';
 theHead[4].innerHTML = 'About';
-
+theHead[4].style.color = 'green';
 theHead[5].innerHTML = 'Contacts';
+theHead[5].style.color = 'green';
 
 let ctaImage = document.getElementById('cta-img');
 ctaImage.setAttribute('alt', 'An image of a code snippet.');
