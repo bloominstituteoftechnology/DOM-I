@@ -60,14 +60,53 @@ nav_a.forEach( (a, index) => {
  * Selectors to <section.cta>
  */
 let cta = document.getElementsByClassName('cta').item(0);
-console.log(cta);
+// console.log(cta);
 cta.querySelector('h1').textContent = siteContent.cta.h1;
 cta.getElementsByTagName('button').item(0).textContent = siteContent.cta.button;
+
 /** Handling with the <img> */
 // OPTION 1
-console.log(document.getElementById('cta-img'));
+// console.log(document.getElementById('cta-img'));
 document.getElementById('cta-img').setAttribute('src', siteContent.cta["img-src"])
 //OPTION 2
 // console.log(cta.getElementsByTagName('img'));
 // cta.getElementsByTagName('img').item(0).setAttribute('src', siteContent.cta["img-src"]);
 
+/**
+ * Selectors to <section.main-content>
+ */
+/** TOP CONTENT */
+let mainTop = document.getElementsByClassName('top-content').item(0);
+console.log(mainTop);
+
+/** MIDDLE CONTENT */
+let mainMiddle = document.getElementById('middle-img');
+console.log(mainMiddle);
+
+/** BOTTOM CONTENT */
+let mainBottom = document.querySelector('.bottom-content');
+console.log(mainBottom);
+
+/** HANDLING WITH CONTENT */
+// Prepare DATA to insert to DOM
+const JSONMainContent = siteContent['main-content'];
+let topContent = [];
+topContent.push(`<h4>${JSONMainContent['about-h4']}</h4><p>${JSONMainContent['about-content']}</p>`);
+topContent.push(`<h4>${JSONMainContent['features-h4']}</h4><p>${JSONMainContent['features-content']}</p>`);
+// console.log(top['1']);
+
+let bottomContent = [];
+bottomContent.push(`<h4>${JSONMainContent['services-h4']}</h4><p>${JSONMainContent['services-content']}</p>`);
+bottomContent.push(`<h4>${JSONMainContent['product-h4']}</h4><p>${JSONMainContent['product-content']}</p>`);
+bottomContent.push(`<h4>${JSONMainContent['vision-h4']}</h4><p>${JSONMainContent['vision-content']}</p>`);
+// ADD content to Top Content
+console.log(mainTop.getElementsByClassName('text-content'));
+Array.from( mainTop.getElementsByClassName('text-content') ).forEach( (item, index) => {
+  item.innerHTML = topContent[index];
+})
+// ADD content to Middle Content
+mainMiddle.setAttribute('src', JSONMainContent["middle-img-src"]);
+// ADD content to Bottom Content
+Array.from( mainBottom.getElementsByClassName('text-content') ).forEach( (item, i) => {
+  item.innerHTML = bottomContent[i];
+});
