@@ -61,5 +61,35 @@ imag.setAttribute('src', siteContent["cta"]["img-src"])
 let middleImag = document.getElementById("middle-img");
 middleImag.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
+let ctaText = document.querySelector(".cta-text");
+ctaText.childNodes[1].innerHTML = siteContent["cta"]["h1"];
+ctaText.childNodes[3].innerHTML = siteContent["cta"]["button"];
+
+let topContent = document.querySelector(".top-content");
+topContent.childNodes[1].children[0].innerHTML = siteContent["main-content"]["features-h4"];
+topContent.childNodes[1].children[1].innerHTML = siteContent["main-content"]["features-content"];
+
+topContent.childNodes[3].children[0].innerHTML = siteContent["main-content"]["about-h4"];
+topContent.childNodes[3].children[1].innerHTML = siteContent["main-content"]["about-content"];
+// topContent.childNodes[2].innerHTML = siteContent["main-content"]["features-h4"];
+// topContent.childNodes[3].innerHTML = siteContent["main-content"]["about-content"];
 
 
+let bottomContent = document.querySelector(".bottom-content");
+bottomContent.childNodes[1].children[0].innerHTML = siteContent["main-content"]["features-h4"];
+bottomContent.childNodes[1].children[1].innerHTML = siteContent["main-content"]["features-content"];
+
+bottomContent.childNodes[3].children[0].innerHTML = siteContent["main-content"]["about-h4"];
+bottomContent.childNodes[3].children[1].innerHTML = siteContent["main-content"]["about-content"];
+
+
+let contact = document.querySelector(".contact");
+contact.childNodes[1].innerHTML = siteContent["contact"]["contact-h4"];
+contact.childNodes[3].innerHTML = siteContent["contact"]["address"];
+contact.childNodes[5].innerHTML = siteContent["contact"]["phone"];
+contact.childNodes[7].innerHTML = siteContent["contact"]["email"];
+
+let footer = document.getElementsByTagName("footer");
+footer[0].innerHTML = siteContent["footer"]["copyright"];
+
+console.log(footer[0].childNodes);
