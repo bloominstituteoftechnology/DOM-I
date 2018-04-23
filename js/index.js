@@ -48,12 +48,28 @@ logo.setAttribute('alt', 'This is company logo');
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // Started working here
+let theNav = document.querySelector('nav');
+let textNode = document.createTextNode('The CEO');
+theNav.appendChild(textNode);
+theNav.style.color = 'green';
+theNav.prepend('Hello User');
+
+
 let theHead = document.querySelector('a');
 theHead[0].innerHTML = 'Services';
+theHead[0].style.color = 'green';
 theHead[1].innerHTML = 'Product';
+theHead[1].style.color = 'green';
 theHead[2].innerHTML = 'Vision';
+theHead[2].style.color = 'green';
 theHead[3].innerHTML = 'Features';
-theHead[4].innerHTML = 'Contacts';
+theHead[3].style.color = 'green';
+theHead[4].innerHTML = 'About';
+theHead[4].style.color = 'green';
+theHead[5].innerHTML = 'Contacts';
+theHead[5].style.color = 'green';
+let textNode = document.createTextNode('The CEO');
+theHead[5].appendChild(textNode);
 
 let ctaImage = document.getElementById('cta-img');
 ctaImage.setAttribute('alt', 'Image of a code snippet.');
@@ -61,7 +77,7 @@ ctaIamge.setAttribute('src', siteContent['cta']['img-src']);
 
 let middleImage = document.getElementById('middle-img');
 middleImage.setAttribute('alt', 'An image of code snippets across the screen');
-middleImage.setAttribute('src', siteContent ['main-content']['img/mid-page-accent.jpg'])
+middleImage.setAttribute('src', siteContent['main-content']['img/mid-page-accent.jpg'])
 
 let ctaText = document.getElementsByTagName('h1');
 cta[0].innerHTML = 'Dom is Awesome';
