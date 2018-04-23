@@ -44,6 +44,7 @@ const cta = document.querySelector('.cta');
 const mainContentTop = document.querySelector('.main-content .top-content');
 const middleImg = document.querySelector('#middle-img');
 const mainContentBottom = document.querySelector('.main-content .bottom-content')
+const contact = document.querySelector('.contact');
 
 navLinks.push(document.querySelector('#logo-img'));
 
@@ -82,3 +83,8 @@ mainContentBottom.children[1].children[1].insertAdjacentText('afterbegin', siteC
 
 mainContentBottom.children[2].children[0].insertAdjacentText('afterbegin', siteContent['main-content']['vision-h4'])
 mainContentBottom.children[2].children[1].insertAdjacentText('afterbegin', siteContent['main-content']['vision-content'])
+
+contact.children[0].insertAdjacentText('afterbegin', siteContent.contact['contact-h4']);
+contact.children[1].insertAdjacentText('afterbegin', siteContent.contact.address);
+contact.children[2].insertAdjacentText('afterbegin', siteContent.contact.phone);
+contact.children[3].insertAdjacentText('afterbegin', siteContent.contact.email);
