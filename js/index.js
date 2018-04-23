@@ -37,8 +37,6 @@ const siteContent = {
   },
 };
 
-console.log(document.getElementsByClassName("main-content"))
-
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
@@ -60,4 +58,20 @@ document.querySelector("h1").innerHTML = siteContent.cta.h1;
 document.querySelector("button").innerHTML = siteContent.cta.button;
 
 
+//Main Content
+let contentTitles = document.querySelectorAll('h4');
+contentTitles[0].innerHTML = siteContent["main-content"]["features-h4"];
+contentTitles[1].innerHTML = siteContent["main-content"]["about-h4"];
+contentTitles[2].innerHTML = siteContent["main-content"]["services-h4"];
+contentTitles[3].innerHTML = siteContent["main-content"]["product-h4"];
+contentTitles[4].innerHTML = siteContent["main-content"]["vision-h4"];
 
+let contentText = document.querySelectorAll("p");
+contentText[0].innerHTML = siteContent["main-content"]["features-content"];
+contentText[1].innerHTML = siteContent["main-content"]["about-content"];
+contentText[2].innerHTML = siteContent["main-content"]["services-content"];
+contentText[3].innerHTML = siteContent["main-content"]["product-content"];
+contentText[4].innerHTML = siteContent["main-content"]["vision-content"];
+
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
