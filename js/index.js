@@ -37,22 +37,27 @@ const siteContent = {
   },
 };
 
+console.log(document.getElementsByClassName("main-content"))
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-// let nav1 = document.querySelector("a");
-// nav1.innerHTML = siteContent['nav']['nav-item-1'];
-
+//navBar
 let navBar = document.querySelectorAll('a');
-// navBar[0].innerHTML = siteContent['nav']['nav-item-1']
 var navLinks = Object.values(siteContent.nav);
 for (let i = 0; i < navBar.length; i++) {
   navBar[i].innerHTML = navLinks[i]
 }
 
 
-// let middleImg = document.getElementById("middle-img");
-// middleImg.setAttribute('src', 'mid-page-accent.jpg')
+//CTA
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent['cta']['img-src']);
+
+document.querySelector("h1").innerHTML = siteContent.cta.h1;
+
+document.querySelector("button").innerHTML = siteContent.cta.button;
+
 
 
