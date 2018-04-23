@@ -4,8 +4,8 @@ const siteContent = {
     "nav-item-2": "Product",
     "nav-item-3": "Vision",
     "nav-item-4": "Features",
-    "nav-item-5": "Contact",
-    "nav-item-6": "About",
+    "nav-item-5": "About",
+    "nav-item-6": "Contact",
     "img-src": "img/logo.png"
   },
   "cta": {
@@ -40,5 +40,12 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
-
+// selectinf nav from the html page
 let nav = document.getElementsByTagName("a")
+// extracting array of navItems from the nav object
+let navObj = Object.values(siteContent.nav)
+//looping through the nav array and assigning nav content to navItems
+for(let i = 0; i < nav.length; i++){
+  nav[i].textContent = navObj[i]
+}
+
