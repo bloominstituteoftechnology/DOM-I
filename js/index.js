@@ -4,7 +4,8 @@ const siteContent = {
     "nav-item-2": "Product",
     "nav-item-3": "Vision",
     "nav-item-4": "Features",
-    "nav-item-5": "Contact",
+    "nav-item-5": "About",
+    "nav-item-6": "Contact",
     "img-src": "img/logo.png"
   },
   "cta": {
@@ -38,14 +39,47 @@ const siteContent = {
 
 
 // ~~~~~ Header ~~~~~
-let headerA = document.querySelectorAll('a');
-
+let headerA = document.querySelectorAll('nav a');
 headerA[0].innerHTML = siteContent['nav']['nav-item-1'];
 headerA[1].innerHTML = siteContent['nav']['nav-item-2'];
 headerA[2].innerHTML = siteContent['nav']['nav-item-3'];
 headerA[3].innerHTML = siteContent['nav']['nav-item-4'];
 headerA[4].innerHTML = siteContent['nav']['nav-item-5'];
+headerA[5].innerHTML = siteContent['nav']['nav-item-6'];
 
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+
+// ~~~~~ CTA ~~~~~
+let ctaH1 = document.querySelectorAll('.cta-text h1');
+ctaH1[0].innerHTML = siteContent['cta']['h1'];
+
+let ctaButton = document.querySelectorAll('.cta-text button');
+ctaButton[0].innerHTML = siteContent['cta']['button'];
+
+let ctaImg = document.querySelector('#cta-img');
+ctaImg.setAttribute('src', siteContent['cta']['img-src']);
+
+
+// ~~~~~ Main Content ~~~~~
+let mainContentTopH4 = document.querySelectorAll('.top-content .text-content h4');
+mainContentTopH4[0].innerHTML = siteContent['main-content']['features-h4'];
+mainContentTopH4[1].innerHTML = siteContent['main-content']['about-h4'];
+
+let mainContentTopP = document.querySelectorAll('.top-content .text-content p');
+mainContentTopP[0].innerHTML = siteContent['main-content']['features-content'];
+mainContentTopP[1].innerHTML = siteContent['main-content']['about-content'];
+
+let mainContentImg = document.querySelector('#middle-img');
+mainContentImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+let mainContentBottomH4 = document.querySelectorAll('.bottom-content .text-content h4');
+mainContentBottomH4[0].innerHTML = siteContent['main-content']['services-h4'];
+mainContentBottomH4[1].innerHTML = siteContent['main-content']['product-h4'];
+mainContentBottomH4[2].innerHTML = siteContent['main-content']['vision-h4'];
+
+let mainContentBottomP = document.querySelectorAll('.bottom-content .text-content p');
+mainContentBottomP[0].innerHTML = siteContent['main-content']['services-content'];
+mainContentBottomP[1].innerHTML = siteContent['main-content']['product-content'];
+mainContentBottomP[2].innerHTML = siteContent['main-content']['vision-content'];
