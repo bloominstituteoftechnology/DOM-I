@@ -87,6 +87,10 @@ header nav a {
     color: #b0b0b0;
 }
 
+.yellow {
+    background-color: yellow;
+}
+
 header nav a:hover {
     text-decoration: underline;
     color: black;
