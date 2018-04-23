@@ -91,3 +91,15 @@ for (let i = 1; i < 4; i++) {
 
 let myFooter = document.getElementsByTagName("footer")[0].getElementsByTagName("p");
 myFooter[0].innerHTML = siteContent["footer"]["copyright"]
+
+let newNav1 = document.createElement("a");
+let newNav2 = document.createElement("a");
+
+newNav1.innerHTML = "Stuff";
+newNav1.setAttribute('style', 'color:green');
+newNav2.innerHTML = "Things";
+newNav2.setAttribute('style', 'color:green');
+
+navSection = document.getElementsByTagName("nav")[0];
+navSection.prepend(newNav1);
+navSection.appendChild(newNav2);
