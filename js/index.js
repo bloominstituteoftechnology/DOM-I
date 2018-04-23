@@ -49,3 +49,12 @@ navBar[2].innerHTML = 'Vision';
 navBar[3].innerHTML = 'Features';
 navBar[4].innerHTML = 'About';
 navBar[5].innerHTML = 'Contact';
+
+//====CTA Section============
+let ctaSection = document.getElementsByClassName("cta-text")[0];
+ctaSection.getElementsByTagName("h1")[0].innerHTML = siteContent["cta"]["h1"];
+ctaSection.getElementsByTagName("button")[0].innerHTML = siteContent["cta"]["button"];
+
+let ctaLogo = document.getElementById("cta-img"); 
+ctaLogo.setAttribute('src', siteContent['cta']["img-src"]);
+
