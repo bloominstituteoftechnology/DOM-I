@@ -48,22 +48,31 @@ let navObj = Object.values(siteContent.nav)
 for(let i = 0; i < nav.length; i++){
   nav[i].textContent = navObj[i]
 }
+//selecting the cta h1 element
 let ctaText = document.querySelector("h1")
 ctaText.textContent = siteContent.cta.h1;
+// transversing to the parent of cta-text
 let cta = ctaText.parentElement
+//transversing to the button
 let ctaButton = cta.lastElementChild;
+//setting the button text
 ctaButton.textContent = siteContent.cta.button;
+// transversing to the cta image
 let ctaImage = cta.nextElementSibling;
+// setting the attribute of the cta image
 ctaImage.setAttribute('src',siteContent.cta["img-src"])
 
+//sellecting the middle image
 let middleImage = document.querySelector('#middle-img')
+// setting the attr of the middle image
 middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
-
+// selecting the mainheading H4
 let mainHeading = document.querySelectorAll("h4")
-let mainContent = siteContent['main-content']
+
+let mainContentObj = siteContent['main-content']
 let mainHeadingArr = [];
 let mainContentArr = []
-for(let heading in mainContent){
+for(let heading in mainContentObj){
   if(heading.includes('h4')){
     mainHeadingArr.push(mainContent[heading])
   }
