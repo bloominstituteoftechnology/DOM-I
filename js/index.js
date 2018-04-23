@@ -40,8 +40,9 @@ const siteContent = {
 // Example: Update the img src for the logo
 // let logo = document.getElementById("logo-img");
 // logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
 let headerNavA = document.querySelectorAll("header nav a");
-//headerNav[0].innerHTML = siteContent["nav"]["nav-item-1"];
+
 for(var i = 0; i < headerNavA.length; i ++) {
   headerNavA[i].innerHTML = siteContent["nav"]["nav-item-" + (i + 1)];
 }
@@ -106,3 +107,19 @@ contactEmail.innerHTML = siteContent["contact"]["email"];
 let copyRight= document.querySelector("footer p");
 copyRight.innerHTML = siteContent["footer"]["copyright"];
 
+let headerNav = document.querySelector("header nav"); // header nav
+
+let innovation = document.createElement("a"); // created a tag
+innovation.innerHTML = "Innovation";  // added innovation to a innerHtml
+innovation.href = "#"; // add href to a tag
+headerNav.appendChild(innovation); // header nav appendchild innovation
+
+let home = document.createElement("a");
+home.innerHTML = "Home";
+home.href = "#";
+headerNav.prepend(home);
+
+headerNavA = document.querySelectorAll("header nav a");  // select all a in the header nav to a node list
+headerNavA.forEach(navItem => {     // iterate through nav nodelist
+  navItem.style.color = "green";    // each item reasisgn the color of a to green
+});
