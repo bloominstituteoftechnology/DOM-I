@@ -102,3 +102,8 @@ for (let i=0; i<contactInfo.length; i++) {
 footer.firstElementChild.innerHTML = siteContent["footer"]["copyright"];
 
 nav.forEach((item) => {item.style.color = "green"});
+
+let container = document.querySelector(".container");
+container.style.width = "100%";
+container.style.maxWidth = "880px";
+
