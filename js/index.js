@@ -56,3 +56,22 @@ ctaIMG.setAttribute('src', siteContent["cta"]["img-src"])
 
 let myButton = document.getElementsByTagName("button")[0];
 myButton.innerHTML = siteContent["cta"]["button"]
+
+
+let textContent = document.getElementsByTagName("p");
+let textHeaders = document.getElementsByTagName("h4");
+let mainContent = Object.values(siteContent["main-content"]);
+
+
+for (let i = 0; i < 2; i++) {
+  textHeaders[i].innerHTML = mainContent[2*i];
+  textContent[i].innerHTML = mainContent[2*i + 1];
+}
+
+for (let i = 3; i < 6; i++) {
+  textHeaders[i - 1].innerHTML = mainContent[2*i - 1];
+  textContent[i - 1].innerHTML = mainContent[2*i];
+}
+
+let middleIMG = document.getElementById("middle-img");
+middleIMG.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
