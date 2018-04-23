@@ -85,4 +85,12 @@ mainTextContent[3].getElementsByTagName("p")[0].innerHTML  = siteContent["main-c
 mainTextContent[4].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["vision-h4"]
 mainTextContent[4].getElementsByTagName("p")[0].innerHTML  = siteContent["main-content"]["vision-content"]
 
+//=======Contact Section=======
+let contactList = document.getElementsByClassName("contact")[0];
+
+contactList.getElementsByTagName("h4")[0].innerHTML = siteContent["contact"]["contact-h4"];
+contactList.getElementsByTagName("p")[0].innerHTML  = siteContent["contact"]["address"];
+contactList.getElementsByTagName("p")[1].innerHTML  = siteContent["contact"][["phone"]];
+contactList.getElementsByTagName("p")[2].innerHTML  = siteContent["contact"]["email"];
+
 console.log("text-content", topContent);
