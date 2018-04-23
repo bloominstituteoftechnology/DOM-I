@@ -4,7 +4,8 @@ const siteContent = {
     "nav-item-2": "Product",
     "nav-item-3": "Vision",
     "nav-item-4": "Features",
-    "nav-item-5": "Contact",
+    "nav-item-5": "About",
+    "nav-item-6": "Contact",
     "img-src": "img/logo.png"
   },
   "cta": {
@@ -39,3 +40,25 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let navItems = siteContent.nav;
+let keys = Object.keys(navItems);
+let values = Object.values(navItems);
+
+for(let i = 0; i < keys.length; i++) {
+  if (keys[i] !== "img-src") {
+    document.getElementsByTagName('nav')[0].children[i].innerHTML = values[i];
+    document.getElementsByTagName('nav')[0].children[i].className = keys[i];
+  }
+}
+
+//adding the image
+
+document.getElementById('cta-img').src = siteContent.cta['img-src']
+
+//adding text to h1
+
+console.log(document.querySelector('.cta-text').getElementsByTagName('h1'))
+
+document.querySelector('.cta-text').firstElementChild.innerHTML = siteContent.cta.h1
+
