@@ -51,6 +51,7 @@ let aElement = document.querySelectorAll("a");
 for(let i =0 ;i < aElement.length - 1; i++ ){
   aElement[i].innerHTML = `${siteContent["nav"][`nav-item-${i+1}`]}`;
   aElement[i].style.color = "green";
+  aElement[i].style.fontFamily = "Impact,Charcoal,sans-serif";
 }
 
 let navElement = document.querySelector("nav");
@@ -69,11 +70,14 @@ h1Element.innerHTML = siteContent["cta"]["h1"];
 
 let buttonElement = document.querySelector("button");
 buttonElement.innerHTML = siteContent["cta"]["button"];
+buttonElement.style.backgroundColor = "black";
 
 let h4Element = document.querySelectorAll("h4");
 h4Element[0].innerHTML = siteContent["main-content"]["features-h4"];
+h4Element[0].style.color = "blue";
 
 h4Element[1].innerHTML = siteContent["main-content"]["about-h4"];
+h4Element[1].style.color = "blue";
 
 let pElement = document.querySelectorAll("p");
 pElement[0].innerHTML = siteContent["main-content"]["features-content"];
