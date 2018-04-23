@@ -37,6 +37,7 @@ const siteContent = {
 };
 
 let aTag = document.getElementsByTagName("a");
+let nav = document.getElementsByTagName("nav");
 // siteContent["nav"].forEach(element => {
 //   aTag;
 // });
@@ -45,15 +46,16 @@ aTag[1].innerHTML = siteContent["nav"]["nav-item-2"]
 aTag[2].innerHTML = siteContent["nav"]["nav-item-3"]
 aTag[3].innerHTML = siteContent["nav"]["nav-item-4"]
 aTag[4].innerHTML = siteContent["nav"]["nav-item-5"]
-aTag[5].innerHTML = siteContent["nav"]["nav-item-6"]
+//aTag[5].innerHTML = siteContent["nav"]["nav-item-6"]
+
+console.log(nav)
 
 
-
-var testElement = document.createElement("span");
+var testElement = document.createElement("a");
 testNode = document.createTextNode("Welcome");
 
 testElement.appendChild(testNode);
-aTag[5].appendChild(testNode);
+nav[0].appendChild(testElement);
 
 
 // Example: Update the img src for the logo
@@ -83,11 +85,14 @@ topContent.childNodes[3].children[1].innerHTML = siteContent["main-content"]["ab
 
 
 let bottomContent = document.querySelector(".bottom-content");
-bottomContent.childNodes[1].children[0].innerHTML = siteContent["main-content"]["features-h4"];
-bottomContent.childNodes[1].children[1].innerHTML = siteContent["main-content"]["features-content"];
+bottomContent.childNodes[1].children[0].innerHTML = siteContent["main-content"]["services-h4"];
+bottomContent.childNodes[1].children[1].innerHTML = siteContent["main-content"]["services-content"];
 
-bottomContent.childNodes[3].children[0].innerHTML = siteContent["main-content"]["about-h4"];
-bottomContent.childNodes[3].children[1].innerHTML = siteContent["main-content"]["about-content"];
+bottomContent.childNodes[3].children[0].innerHTML = siteContent["main-content"]["product-h4"];
+bottomContent.childNodes[3].children[1].innerHTML = siteContent["main-content"]["product-content"];
+
+bottomContent.childNodes[5].children[0].innerHTML = siteContent["main-content"]["vision-h4"];
+bottomContent.childNodes[5].children[1].innerHTML = siteContent["main-content"]["vision-content"];
 
 
 let contact = document.querySelector(".contact");
