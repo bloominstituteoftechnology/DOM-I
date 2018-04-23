@@ -52,7 +52,7 @@ let createAnchor1 = document.createElement('a');
 createAnchor1.innerHTML = 'About';
 
 let createAnchor2 = document.createElement('a');
-createAnchor2.innerHTML = 'What we Do';
+createAnchor2.innerHTML = 'What We Do';
 
 let nav = document.querySelector('nav');
 nav.prepend(createAnchor1);
@@ -63,5 +63,15 @@ navLinks = document.querySelectorAll('nav a');
 for (let i = 0; i < navLinks.length; i++) {
   navLinks[i].style.color = 'green';
 }
+
+let ctaText = document.querySelector('.cta-text h1');
+ctaText.innerText = siteContent.cta.h1;
+
+let button = document.querySelector('.cta-text button');
+button.innerText = siteContent.cta.h1;
+
+let img = document.querySelector('.cta img');
+img.src = siteContent['cta']['img-src'];
+
 
 
