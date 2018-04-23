@@ -53,3 +53,6 @@ myCTA[0].innerHTML = siteContent.cta.h1;
 
 let ctaIMG = document.getElementById("cta-img");
 ctaIMG.setAttribute('src', siteContent["cta"]["img-src"])
+
+let myButton = document.getElementsByTagName("button")[0];
+myButton.innerHTML = siteContent["cta"]["button"]
