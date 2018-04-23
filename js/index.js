@@ -41,5 +41,9 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-// let navItems = document.querySelectorAll("a");
-// navItems[0].setAttribute("a", siteContent["nav"]["nav-item-1"])
+let navItems = document.getElementsByTagName("a");
+navItems[0].innerHTML = (siteContent["nav"]["nav-item-1"])
+navItems[1].innerHTML = (siteContent["nav"]["nav-item-2"])
+navItems[2].innerHTML = (siteContent["nav"]["nav-item-3"])
+navItems[3].innerHTML = (siteContent["nav"]["nav-item-4"])
+navItems[4].innerHTML = (siteContent["nav"]["nav-item-5"])
