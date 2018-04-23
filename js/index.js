@@ -91,3 +91,23 @@ contact.getElementsByTagName("p")[2].innerHTML = siteContent["contact"]["email"]
 // Update Footer
 let footer = document.querySelector("footer");
 footer.getElementsByTagName("p")[0].innerHTML = siteContent["footer"]["copyright"];
+
+// Add New Content
+// Change navigation text color
+selectedNavLinks.forEach((link,i) => {
+  if (i === selectedNavLinks.length - 1){
+    return;
+  }
+  link.style.color = "green";
+  // console.log(link);
+})
+
+// Add two items to navigation
+selectedNavLinks = document.getElementsByTagName("nav")[0];
+let createNewNode = (name) => {
+  let newNode = document.createElement("a");
+  newNode.innerHTML = name;
+  return newNode;
+}
+selectedNavLinks.append(createNewNode("Extra Item 1"));
+selectedNavLinks.append(createNewNode("Extra Item 2"));
