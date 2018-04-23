@@ -4,7 +4,8 @@ const siteContent = {
     "nav-item-2": "Product",
     "nav-item-3": "Vision",
     "nav-item-4": "Features",
-    "nav-item-5": "Contact",
+    "nav-item-5": "About",
+    "nav-item-6": "Contact",
     "img-src": "img/logo.png"
   },
   "cta": {
@@ -59,7 +60,14 @@ const createArray = function (obj, selector) {
     }
   }
   return result;
-}
+};
+
+const createNewElement = function(nodeType, innerText, className){
+  const newNode = document.createElement(nodeType);
+  newNode.innerHTML = innerText;
+  if(className) newNode.className = className;
+  return newNode;
+};
 
 // Create selectors
 const navLinks = document.querySelectorAll('nav a'),
@@ -69,6 +77,8 @@ const navLinks = document.querySelectorAll('nav a'),
       mainContent = document.querySelectorAll('.main-content p'),
       contactEle = document.querySelectorAll('.contact > *'),
       footerEle = document.querySelectorAll('footer > *'),
+
+      nav = document.querySelector('nav'),
 
       headerLogo = document.getElementById('logo-img'), // image
       ctaImg = document.getElementById('cta-img'), // image
@@ -86,3 +96,13 @@ updateHTML(createArray(siteContent['footer'], ''), footerEle);
 headerLogo.src = siteContent['nav']['img-src'];
 ctaImg.src = siteContent['cta']['img-src'];
 mainContentImg.src = siteContent['main-content']['middle-img-src'];
+
+// Add new content
+const homeLink = createNewElement('a', 'Home'),
+      blogLink = createNewElement('a', 'Blog');
+
+homeLink.href = '#';
+blogLink.href = '#';
+      
+nav.appendChild(blogLink);
+nav.prepend(homeLink);
