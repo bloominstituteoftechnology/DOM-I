@@ -4,7 +4,8 @@ const siteContent = {
     "nav-item-2": "Product",
     "nav-item-3": "Vision",
     "nav-item-4": "Features",
-    "nav-item-5": "Contact",
+    "nav-item-5": "Features",
+    "nav-item-6": "Contact",
     "img-src": "img/logo.png"
   },
   "cta": {
@@ -39,5 +40,56 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
-
 logo.setAttribute('src', 'https://raw.githubusercontent.com/maribelcuales/DOM-I/master/img/logo.png')
+
+//Nav Header
+let navItem1 = document.querySelector("a")
+navItem1.innerHTML = siteContent["nav"]["nav-item-1"]
+
+let navItem2 = document.getElementsByTagName("a");
+console.log(navItem2[1].innerHTML);
+navItem2[1].innerHTML = siteContent["nav"]["nav-item-2"]
+
+let navItem3 = document.getElementsByTagName("a");
+console.log(navItem2[2].innerHTML);
+navItem2[2].innerHTML = siteContent["nav"]["nav-item-3"]
+
+let navItem4 = document.getElementsByTagName("a");
+console.log(navItem2[3].innerHTML);
+navItem2[3].innerHTML = siteContent["nav"]["nav-item-4"]
+
+let navItem5 = document.getElementsByTagName("a");
+console.log(navItem2[4].innerHTML);
+navItem2[4].innerHTML = siteContent["nav"]["nav-item-5"]
+
+let navItem6 = document.getElementsByTagName("a");
+console.log(navItem2[5].innerHTML);
+navItem2[5].innerHTML = siteContent["nav"]["nav-item-6"]
+
+
+//cta
+let ctaText = document.querySelector("h1");
+console.log(ctaText.innerHTML);
+ctaText.innerHTML = siteContent["cta"]["h1"]
+
+let ctaButton = document.getElementsByClassName(".cta-text");
+console.log(ctaButton.innerHTML);
+ctaButton.innerHTML = sitecontent["cta"]["button"]
+
+
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', sitecontent["cta"]["img-src"]);
+ctaImg.setAttribute('src', 'https://raw.githubusercontent.com/maribelcuales/DOM-I/master/img/header-img.png');
+
+//top-content 
+// let topFeatures = document.getElementsByTagName("h4");
+// console.log(features[0].innerHTML);
+// features[0].innerHTML = siteContent ["main-content"]["features-h4"]
+
+let topContent = document.getElementsByTagName('h4'); 
+topContent[0].innerText = siteContent.main-content["features-h4"];
+
+
+
+
+
