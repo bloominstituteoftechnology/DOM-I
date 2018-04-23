@@ -48,8 +48,9 @@ selNavItem.forEach((element, index) => {
   element.innerHTML = siteContent["nav"]["nav-item-" + (index + 1)];
 })
 
-let ctaHeading = document.querySelector(".cta-text")
-ctaHeading.innerHTML = "DOM Is Awesome";
+let ctaHeading = document.querySelectorAll(".cta-text")
+ctaHeading[0].firstElementChild.innerHTML = siteContent.cta["h1"];
+ctaHeading[0].lastElementChild.innerHTML = siteContent.cta["button"];
 
 let ctaLogo = document.querySelector("section img");
 ctaLogo.src = 'img/header-img.png';
