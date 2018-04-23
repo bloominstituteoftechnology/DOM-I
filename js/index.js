@@ -40,22 +40,35 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
-
 logo.setAttribute('src', 'https://raw.githubusercontent.com/maribelcuales/DOM-I/master/img/logo.png')
+
+// NAV
 
 let navItem1 = document.querySelector("a")
 navItem1.innerHTML = siteContent["nav"]["nav-item-1"]
 
-let navItem2 = document.getElementsByName("a");
-navItem2[1].innerHTML = ["nav"]["nav-item-2"]
+let navItem2 = document.getElementsByTagName("a");
+console.log(navItem2[1].innerHTML);
+navItem2[1].innerHTML = siteContent["nav"]["nav-item-2"]
 
-let middleImg = document.getElementById("cta-img");
-middleImg.setAttribute('src', sitecontent["cta"]["img-src"])
-middleImg.setAttribute('src', 'https://raw.githubusercontent.com/maribelcuales/DOM-I/master/img/header-img.png')
+let navItem3 = document.getElementsByTagName("a");
+console.log(navItem2[2].innerHTML);
+navItem2[2].innerHTML = siteContent["nav"]["nav-item-3"]
 
-let ctaText = document.getElementsByTagName("h1")
-ctaText.innerHTML = siteContent["cta"]["h1"]
+let navItem4 = document.getElementsByTagName("a");
+console.log(navItem2[3].innerHTML);
+navItem2[3].innerHTML = siteContent["nav"]["nav-item-4"]
 
-let ctaButton = document.getElementsByTagName("button");
-ctaButton.setAttribute('button', sitecontent[["cta"]["button"]])
- 
+let navItem5 = document.getElementsByTagName("a");
+console.log(navItem2[4].innerHTML);
+navItem2[4].innerHTML = siteContent["nav"]["nav-item-5"]
+
+let navItem6 = document.getElementsByTagName("a");
+console.log(navItem2[5].innerHTML);
+navItem2[5].innerHTML = siteContent["nav"]["nav-item-6"] 
+
+// CTA
+
+let ctaText = document.querySelector("h1");
+console.log(ctaText.innerHTML);
+ctaText.innerHTML = siteContent["cta"]["h1"] 
