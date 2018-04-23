@@ -56,6 +56,11 @@ nav4[3].innerHTML = "Feautures";
 let nav5 = document.getElementsByTagName("a")
 nav5[4].innerHTML = "Contact";
 
+let navigation = document.querySelectorAll("a")
+let i;
+for (i = 0; i < navigation.length; i++) {
+ navigation[i].style.color = 'green';
+}
 
 //cta
 let ctah1 = document.querySelector("h1");
