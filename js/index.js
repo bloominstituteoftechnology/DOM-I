@@ -4,7 +4,8 @@ const siteContent = {
     "nav-item-2": "Product",
     "nav-item-3": "Vision",
     "nav-item-4": "Features",
-    "nav-item-5": "Contact",
+    "nav-item-5": "About",
+    "nav-item-6": "Contact",
     "img-src": "img/logo.png"
   },
   "cta": {
@@ -41,7 +42,7 @@ const siteContent = {
 // logo.setAttribute('src', siteContent["nav"]["img-src"]);
 let headerNav = document.querySelectorAll("header nav a");
 //headerNav[0].innerHTML = siteContent["nav"]["nav-item-1"];
-for(var i = 0; i < headerNav.length -1; i ++) {
+for(var i = 0; i < headerNav.length; i ++) {
   headerNav[i].innerHTML = siteContent["nav"]["nav-item-" + (i + 1)];
 }
 
@@ -56,3 +57,18 @@ ctaButton.innerHTML = siteContent["cta"]["button"];
 
 let ctaImg = document.getElementById("cta-img");
 ctaImg.src = siteContent["cta"]["img-src"];
+
+let featuresH4 = document.querySelectorAll(".main-content .top-content .text-content h4");
+featuresH4[0].innerHTML = siteContent["main-content"]["features-h4"];
+
+let featuresP = document.querySelectorAll(".main-content .top-content .text-content p");
+featuresP[0].innerHTML = siteContent["main-content"]["features-content"];
+
+let aboutH4 = document.querySelectorAll(".main-content .top-content .text-content h4");
+aboutH4[1].innerHTML = siteContent["main-content"]["about-h4"];
+
+let aboutP = document.querySelectorAll(".main-content .top-content .text-content p");
+aboutP[1].innerHTML = siteContent["main-content"]["about-content"];
+
+
+
