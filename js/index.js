@@ -75,3 +75,15 @@ contentText[4].innerHTML = siteContent["main-content"]["vision-content"];
 
 let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+
+//Contact
+contentTitles[5].innerHTML = siteContent["contact"]["contact-h4"];
+
+contentText[5].innerHTML = siteContent["contact"]["address"];
+contentText[6].innerHTML = siteContent["contact"]["phone"];
+contentText[7].innerHTML = siteContent["contact"]["email"];
+
+
+//Footer
+contentText[8].innerHTML = siteContent["footer"]["copyright"];
