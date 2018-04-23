@@ -69,5 +69,5 @@ const navLinks = document.querySelectorAll('nav a'),
   mainContentHeaders = document.querySelectorAll('.main-content h4'),
   mainContent = document.querySelectorAll('.main-content p'),
   mainContentImg = document.getElementById('#middle-img'), // image
-  contactEle = document.querySelectorAll('.contact < *'),
+  contactEle = document.querySelectorAll('.contact > *'),
   footerEle = document.querySelectorAll('footer > *');
