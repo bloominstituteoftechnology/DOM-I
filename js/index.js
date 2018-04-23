@@ -46,3 +46,7 @@ console.log(navText[1])
 for(let i = 0; i < 5; i++){
     myNavs[i].innerHTML = navText[i];
 }
+
+let myCTA = document.getElementsByTagName("h1");
+
+myCTA[0].innerHTML = siteContent.cta.h1;
