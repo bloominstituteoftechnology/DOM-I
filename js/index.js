@@ -41,15 +41,13 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-
+// Start Nav
 let newNav1 = document.createElement('a');
-newNav1.style.color = "green";
 let text = document.createTextNode("Pics");
 newNav1.appendChild(text);
 document.querySelector("nav").appendChild(newNav1);
 
 let newNav2 = document.createElement('a');
-newNav2.style.color = "green";
 let text2 = document.createTextNode("Forum");
 newNav2.appendChild(text2);
 document.querySelector("nav").prepend(newNav2);
@@ -64,16 +62,6 @@ navBar[3].innerHTML = "Vision";
 navBar[4].innerHTML = "Features";
 navBar[5].innerHTML = "About";
 navBar[6].innerHTML = "Contact";
-// navBar[0].style.color = "green";
-// navBar[1].style.color = "green";
-// navBar[2].style.color = "green";
-// navBar[3].style.color = "green";
-// navBar[4].style.color = "green";
-// navBar[5].style.color = "green";
-
-
-
-
 // end nav
 
 let headerImg = document.querySelector("#cta-img");
