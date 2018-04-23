@@ -84,3 +84,10 @@ product.lastElementChild.innerHTML = siteContent["main-content"]["product-conten
 vision.firstElementChild.innerHTML = siteContent["main-content"]["vision-h4"];
 vision.lastElementChild.innerHTML = siteContent["main-content"]["vision-content"];
 
+const contactInfo = contact.children;
+const contactSource = Object.values(siteContent["contact"])
+for (let i=0; i<contactInfo.length; i++) {
+  contactInfo[i].innerHTML = contactSource[i];
+}
+
+footer.firstElementChild.innerHTML = siteContent["footer"]["copyright"];
