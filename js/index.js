@@ -45,3 +45,20 @@ const siteContent = {
 let logo = document.getElementById('logo-img');
 logo.setAttribute('alt', 'This is company logo');
 logo.setAttribute('src', siteContent['nav']['img-src']);
+
+let theHead = document.querySelectorAll('a');
+theHead[0].innerHTML = 'Services';
+
+theHead[1].innerHTML = 'Product';
+
+theHead[2].innerHTML = 'Vision';
+
+theHead[3].innerHTML = 'Features';
+
+theHead[4].innerHTML = 'About';
+
+theHead[5].innerHTML = 'Contacts';
+
+let ctaImage = document.getElementById('cta-img');
+ctaImage.setAttribute('alt', 'An imafe of a code snippet.');
+ctaImage.setAttribute('src', siteContent['cta']['img-src']);
