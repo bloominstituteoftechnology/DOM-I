@@ -37,16 +37,17 @@ const siteContent = {
   },
 };
 
-const newLink = document.createElement('link')
+// const newLink = document.createElement('link')
+// const bla = document.querySelector("head");
+// bla.insertBefore(newLink, bla.childNodes[0]);
+// let oldLing = document.querySelectorAll("link")
+// oldLing[0].setAttribute('rel', 'stylesheet');
+// oldLing[0].setAttribute('integrity', 'sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4');
+// oldLing[0].setAttribute('crossorigin', 'anonymous');
+// oldLing[0].setAttribute('href', 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css');
+
 const bla = document.querySelector("head");
-bla.insertBefore(newLink, bla.childNodes[0]);
-let oldLing = document.querySelectorAll("link")
-oldLing[0].setAttribute('rel', 'stylesheet');
-oldLing[0].setAttribute('integrity', 'sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4');
-oldLing[0].setAttribute('crossorigin', 'anonymous');
-oldLing[0].setAttribute('href', 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css');
-
-
+bla.insertAdjacentHTML("afterbegin", `<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">`)
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
