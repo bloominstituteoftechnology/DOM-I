@@ -127,3 +127,17 @@ contactPs.item(2).textContent = contactContent.email;
  */
 console.log(document.querySelector('footer'));
 document.querySelector('footer').innerHTML = `<p>${siteContent.footer.copyright}</p>`;
+
+
+/**
+ * TASK 3
+ */
+/** CHANGE color to <a>s */
+ // nav.style.color = `orange`; THIS DO NOT WORKS
+for ( let a of nav_a ) {
+  a.style.color = "green";
+}
+/** ADD new Node to <nav> */
+const newA = document.createElement('a');
+newA.textContent = "new <a>";
+nav.appendChild(newA);
