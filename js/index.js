@@ -49,7 +49,7 @@ document.getElementById("cta-img").src = siteContent['cta']['img-src']
 document.getElementById("middle-img").src = siteContent["main-content"]["middle-img-src"];
 
 // Add header links
-// Add for()loop to clean up this code.
+// TODO Add for()loop to clean up this code.
 let nav = document.getElementsByTagName('nav');
 nav[0].children[0].innerHTML = siteContent['nav']['nav-item-1']
 nav[0].children[1].innerHTML = siteContent['nav']['nav-item-2']
@@ -65,14 +65,19 @@ document.querySelector('.cta-text').firstElementChild.innerHTML = siteContent.ct
 document.querySelector('.cta-text').getElementsByTagName('button')[0].innerHTML = siteContent.cta.button;
 
 // Add main content
-// Add a for()loop to seperate the content-text into various parts for the site.
+//Seperate into Top Content and Bottom Content
+// TODO Add a for()loop to seperate the content-text into various parts for the site.
+// Top Content
+document.querySelector('.top-content')
+
+//Bottom Content
+document.querySelector('.bottom-content')
 
 // Add contact
 document.querySelector('.contact').getElementsByTagName('h4')[0].innerHTML = siteContent.contact["contact-h4"]
 document.querySelector('.contact').getElementsByTagName('p')[0].innerHTML = siteContent.contact["address"]
 document.querySelector('.contact').getElementsByTagName('p')[1].innerHTML = siteContent.contact["phone"]
 document.querySelector('.contact').getElementsByTagName('p')[2].innerHTML = siteContent.contact["email"]
-
 
 // Add footer
 document.querySelector('footer').getElementsByTagName('p')[0].innerHTML = siteContent.footer.copyright;
