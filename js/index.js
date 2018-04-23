@@ -4,7 +4,8 @@ const siteContent = {
     "nav-item-2": "Product",
     "nav-item-3": "Vision",
     "nav-item-4": "Features",
-    "nav-item-5": "Contact",
+    "nav-item-5": "About",
+    "nav-item-6": "Contact",
     "img-src": "img/logo.png"
   },
   "cta": {
@@ -44,7 +45,6 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 let selNavItem = document.querySelectorAll("nav a");
 selNavItem.forEach((element, index) => {
-  if (index === 5) {return;}
   element.innerHTML = siteContent["nav"]["nav-item-" + (index + 1)];
 })
 
@@ -76,5 +76,14 @@ bottomContent.children[1].lastElementChild.innerHTML = siteContent["main-content
 bottomContent.children[2].firstElementChild.innerHTML = siteContent["main-content"]["vision-h4"];
 bottomContent.children[2].lastElementChild.innerHTML = siteContent["main-content"]["vision-content"];
 
-// let topContent2 = document.querySelector("");
-// topContent2.innerHTML = "Try me!";
+let contactHead = document.querySelector(".contact h4");
+contactHead.innerHTML = siteContent["contact"]["contact-h4"];
+
+let contactBody = document.querySelectorAll(".contact p");
+contactBody[0].innerHTML = siteContent["contact"]["address"];
+contactBody[1].innerHTML = siteContent["contact"]["phone"];
+contactBody[2].innerHTML = siteContent["contact"]["email"];
+
+let footer = document.querySelector("footer");
+footer.innerHTML = siteContent["footer"]["copyright"];
+
