@@ -39,3 +39,36 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+
+let aElement = document.querySelectorAll("a");
+for(let i =0 ;i < aElement.length - 1; i++ ){
+  aElement[i].innerHTML = `<a href="#">${siteContent["nav"][`nav-item-${i+1}`]}</a>`;
+}
+
+
+let h1Element = document.querySelector("h1");
+h1Element.innerHTML = siteContent["cta"]["h1"];
+
+
+let buttonElement = document.querySelector("button");
+buttonElement.innerHTML = siteContent["cta"]["button"];
+
+let h4Element = document.querySelectorAll("h4");
+h4Element[0].innerHTML = siteContent["main-content"]["features-h4"];
+
+h4Element[1].innerHTML = siteContent["main-content"]["about-h4"];
+
+let pElement = document.querySelectorAll("p");
+pElement[0].innerHTML = siteContent["main-content"]["features-content"];
+
+pElement[1].innerHTML = siteContent["main-content"]["about-content"];
+
+
+
