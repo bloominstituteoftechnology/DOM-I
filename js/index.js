@@ -49,11 +49,19 @@ nav[3].innerHTML = siteContent["nav"]["nav-item-4"];
 nav[4].innerHTML = siteContent["nav"]["nav-item-5"];
 nav[5].innerHTML = siteContent["nav"]["nav-item-6"];
 
+let navbar = document.getElementsByTagName('nav')[0];
+
 let node = document.createElement('a');
 node.innerHTML = 'Link';
-nav[5].appendChild(node);
+navbar.appendChild(node);
+
+let nodeTwo = document.createElement('a');
+nodeTwo.innerHTML = '<a>Link</a>';
+navbar.prepend(nodeTwo);
 
 console.log(nav);
+
+nav = document.querySelectorAll("a");
 
 nav.forEach(function(element){
   element.style.color = 'green';
