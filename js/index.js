@@ -36,6 +36,13 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
+// Example: Update the img src for the logow
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let myNavs = document.getElementsByTagName("a");
+let navText = Object.values(siteContent.nav);
+console.log(navText[1])
+for(let i = 0; i < 5; i++){
+    myNavs[i].innerHTML = navText[i];
+}
