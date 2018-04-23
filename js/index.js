@@ -59,13 +59,8 @@ navItems[1].innerHTML = (siteContent["nav"]["nav-item-2"])
 navItems[2].innerHTML = (siteContent["nav"]["nav-item-3"])
 navItems[3].innerHTML = (siteContent["nav"]["nav-item-4"])
 navItems[4].innerHTML = (siteContent["nav"]["nav-item-5"])
-//Nav text color
-navItems[0].style.color = 'green';
-navItems[1].style.color = 'green';
-navItems[2].style.color = 'green';
-navItems[3].style.color = 'green';
-navItems[4].style.color = 'green';
-navItems[5].style.color = 'green';
+
+
 
 let navBar = document.querySelector('nav');
 let firstNewTag = document.createElement('a');
@@ -98,3 +93,12 @@ contentBody[6].innerHTML = (siteContent["contact"]["phone"])
 contentBody[7].innerHTML = (siteContent["contact"]["email"])
 contentBody[8].innerHTML = (siteContent["footer"]["copyright"])
 
+//Nav text color
+navItems[0].style.color = 'green';
+navItems[1].style.color = 'green';
+navItems[2].style.color = 'green';
+navItems[3].style.color = 'green';
+navItems[4].style.color = 'green';
+navItems[5].style.color = 'green';
+navItems[6].style.color = 'green';
+navItems[7].style.color = 'green';
