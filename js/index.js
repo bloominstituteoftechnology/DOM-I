@@ -35,11 +35,7 @@ const siteContent = {
     "copyright" : "Copyright Great Idea! 2018"
   },
 };
-
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
-
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
@@ -54,3 +50,30 @@ for (let i = 0; i < keys.length; i++) {
   }
 }
 
+//adding the image
+
+document.getElementById('cta-img').src = siteContent.cta['img-src'];
+
+//adding text to h1
+
+//console.log(document.querySelector('.cta-text').getElementsByTagName('h1'));
+
+document.querySelector('.cta-text').firstElementChild.innerHTML = siteContent.cta.h1;
+
+document.querySelector('.cta-text').getElementsByTagName('button')[0].innerHTML = siteContent.cta.button;
+
+// factory for adding h4s and p tags
+
+let textContentDivs = document.getElementsByClassName('text-content');
+//console.log(textContentDivs);
+//console.log(Object.keys(siteContent['main-content']).filter(item => item.includes('h4')));
+let h4Values = Object.keys(siteContent['main-content']).filter(item => item.includes('h4'));
+
+let mainContentPs = Object.keys(siteContent['main-content']).filter(item => item.includes('content'));
+
+for (let i = 0; i < h4Values.length; i++) {
+  textContentDivs[i].getElementsByTagName('h4')[0].innerHTML = siteContent['main-content'][h4Values[i]];
+  textContentDivs[i].getElementsByTagName('p')[0].innerHTML = siteContent['main-content'][mainContentPs[i]];
+};
+
+document.getElementById('middle-img').src = siteContent["main-content"]["middle-img-src"];
