@@ -41,9 +41,12 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+
+// start of tasks 1 and 2
 let navLinks = document.querySelectorAll("nav a");
 navLinks.forEach((element, i) => {
   element.innerHTML = siteContent["nav"]["nav-item-" + (i + 1)];
+  element.style = "color: green" //this is the first part of task 3
 })
 
 let ctaH1 = document.querySelectorAll(".cta-text h1");
@@ -75,3 +78,24 @@ bottomContent[1].lastElementChild.innerHTML = siteContent["main-content"]["produ
 
 bottomContent[2].firstElementChild.innerHTML = siteContent["main-content"]["vision-h4"];
 bottomContent[2].lastElementChild.innerHTML = siteContent["main-content"]["vision-content"];
+
+let contactHead = document.querySelector(".contact h4")
+contactHead.innerHTML = siteContent.contact["contact-h4"]
+
+let contactMain = document.querySelectorAll(".contact p")
+contactMain[0].innerHTML = siteContent["contact"]["address"]
+contactMain[1].innerHTML = siteContent["contact"]["phone"]
+contactMain[2].innerHTML = siteContent["contact"]["email"]
+
+let footer = document.querySelector("footer")
+footer.innerHTML = siteContent["footer"]["copyright"];
+
+//start of task 3
+
+let lastNav = document.createElement("A");
+lastNav.innerHTML = "Last";
+let navNav = document.querySelector("nav");
+navNav.appendChild(lastNav);
+let firstNav = document.createElement("A");
+firstNav.innerHTML = "First";
+navNav.prepend(firstNav);
