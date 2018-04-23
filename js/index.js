@@ -39,3 +39,20 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// updated to show the top right circle code snippet image
+let codeImg = document.getElementById("cta-img");
+codeImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+// updated to show the middle large width code snippet image
+let codeMiddleImg = document.getElementById("middle-img");
+codeMiddleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+// nav bar code here
+let navLinkOne = document.getElementsByTagName("a");
+navLinkOne[0].innerHTML = siteContent["nav"]["nav-item-1"]
+navLinkOne[1].innerHTML = siteContent["nav"]["nav-item-2"]
+navLinkOne[2].innerHTML = siteContent["nav"]["nav-item-3"]
+navLinkOne[3].innerHTML = siteContent["nav"]["nav-item-4"]
+navLinkOne[4].innerHTML = siteContent["nav"]["nav-item-5"]
+// navLinkOne.forEach(element => {console.log(element)});
