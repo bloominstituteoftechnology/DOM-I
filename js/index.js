@@ -56,8 +56,6 @@ navBar[3].style.color = "green";
 navBar[4].style.color = "green";
 navBar[5].style.color = "green";
 
-
-
 let newNav1 = document.createElement('a');
 newNav1.style.color = "green";
 let text = document.createTextNode("Pics");
@@ -79,6 +77,7 @@ let headerOne = document.querySelector("h1");
 headerOne.innerHTML = "DOM <br /> is Awesome!";
 headerOne.style.width = "241px";
 headerOne.style.height = "216px";
+headerOne.style.color = "green";
 
 let btn = document.querySelector("button")
 btn.innerHTML = "Get Started";
@@ -87,7 +86,11 @@ btn.innerHTML = "Get Started";
 let middleImg = document.querySelector("#middle-img");
 middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
-let contentT = document.getElementsByTagName("h4");
+let contentT = document.querySelectorAll("h4");
+contentT.forEach(function(colr){
+  colr.style.color = "green";
+});
+
 contentT[0].innerHTML = "Features";
 contentT[1].innerHTML = "About";
 contentT[2].innerHTML = "Services";
