@@ -63,6 +63,9 @@ ctaButton[0].innerText = siteContent.cta.button;
 let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent.cta['img-src']);
 
+let midPageImg = document.getElementById("middle-img");
+midPageImg.setAttribute('src', siteContent['main-content']["middle-img-src"]);
+
 // h4 elements
 let hFourElements = document.getElementsByTagName('h4');
 hFourElements[0].innerHTML = siteContent['main-content']['features-h4'];
