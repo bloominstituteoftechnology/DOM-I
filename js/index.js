@@ -39,4 +39,56 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+let nav = document.querySelectorAll("a");
+let cta = document.querySelector('.cta');
+let ctaTextH1 = document.querySelector('.cta .cta-text h1');
+let ctaTextButton = document.querySelector('.cta .cta-text button');
+let ctaImage = document.getElementById('cta-img');
+let topContent = document.querySelectorAll('.top-content .text-content');
+let features = topContent[0];
+let about = topContent[1];
+let middleImage = document.getElementById('middle-img');
+let bottomContent = document.querySelectorAll('.bottom-content .text-content');
+let services = bottomContent[0];
+let product = bottomContent[1];
+let vision = bottomContent[2];
+let contact = document.querySelector('.contact');
+let footer = document.querySelector('footer');
+
+nav[0].innerHTML = siteContent["nav"]["nav-item-1"];
+nav[1].innerHTML = siteContent["nav"]["nav-item-2"];
+nav[2].innerHTML = siteContent["nav"]["nav-item-3"];
+nav[3].innerHTML = siteContent["nav"]["nav-item-4"];
+nav[4].innerHTML = siteContent["nav"]["nav-item-5"];
+
+ctaTextH1.innerHTML = siteContent["cta"]["h1"].split(' ').join('<br>');
+ctaTextButton.innerHTML = siteContent["cta"]["button"];
+ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
+
+
+features.firstElementChild.innerHTML = siteContent["main-content"]["features-h4"];
+features.lastElementChild.innerHTML = siteContent["main-content"]["features-content"];
+
+about.firstElementChild.innerHTML = siteContent["main-content"]["about-h4"];
+about.lastElementChild.innerHTML = siteContent["main-content"]["about-content"];
+
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+services.firstElementChild.innerHTML = siteContent["main-content"]["services-h4"];
+services.lastElementChild.innerHTML = siteContent["main-content"]["services-content"];
+
+product.firstElementChild.innerHTML = siteContent["main-content"]["product-h4"];
+product.lastElementChild.innerHTML = siteContent["main-content"]["product-content"];
+
+vision.firstElementChild.innerHTML = siteContent["main-content"]["vision-h4"];
+vision.lastElementChild.innerHTML = siteContent["main-content"]["vision-content"];
+
+const contactInfo = contact.children;
+const contactSource = Object.values(siteContent["contact"])
+for (let i=0; i<contactInfo.length; i++) {
+  contactInfo[i].innerHTML = contactSource[i];
+}
+
+footer.firstElementChild.innerHTML = siteContent["footer"]["copyright"];
