@@ -41,34 +41,58 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+let a = document.querySelector("a");
+a.innerHTML = siteContent["nav"]["nav-item-1"];
+a.innerHTML = siteContent["nav"]["nav-item-2"];
+a.innerHTML = siteContent["nav"]["nav-item-3"];
+a.innerHTML = siteContent["nav"]["nav-item-4"];
+a.innerHTML = siteContent["nav"]["nav-item-5"];
+a.innerHTML = siteContent["nav"]["nav-item-6"];
 
-//let a = document.querySelectorAll('a');
-//a.forEach(function (selector, index, selectors) {
-//    selector.innerHTML=siteContent['nav']['nav-item-${index}'];
-//});
+let cta = document.querySelector(".cta-text h1");
+cta.innerHTML = siteContent["cta"]["h1"];
 
-let a = document.getElementbyIDAll("a");
-for (let i=0; i<a.length; i++) {
-    a.innerHTML = siteContent("nav""nav-item-[i]");
-};
-
-let cta = document.querySelector(".cta .cta-text h1");
-cta.innerHTML = siteContent(".cta .cta-text h1");
-
-let button = document.querySelectorAll("cta button");
-button.innerHTML = siteContent("cta button");
+let button = document.querySelector("button");
+button.innerHTML = siteContent["cta"]["button"];
 
 let ctaimg = document.getElementById("cta-img");
 ctaimg.setAttribute('src', siteContent["cta"]["img-src"]);
 
-let features = document.getElementByClass("features-h4");
-features.innerHTML = siteContent('features-h4');
+let features = document.querySelector(".main-content .top-content h4");
+features.innerHTML = siteContent["main-content"]["h4"];
 
-let featurescontent = document.getElementByClass("features-content");
-featurescontent.innerHTML = siteContent('features-content');
+let featurescontent = document.querySelector(".main-content .top-content .text-content");
+featurescontent.innerHTML = siteContent["main-content"]["p"];
 
-let about = document.getElementByClass("about");
-featurescontent.innerHTML = siteContent('features-content');
+let about = document.getElementsByClassName("about");
+featurescontent.innerHTML = siteContent["features-content"];
 
+let aboutcontent = document.querySelectorAll(".text-content");
+aboutcontent.innerHTML = siteContent[".text-content"];
 
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["img-src"]);
 
+let servicesh4 = document.getElementById("cta-img");
+ctaimg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let servicesContent = document.getElementById("cta-img");
+ctaimg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let producth4 = document.getElementById("cta-img");
+ctaimg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let productContent = document.getElementById("cta-img");
+ctaimg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let visionH4 = document.getElementById("cta-img");
+ctaimg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let visionContent = document.getElementById("cta-img");
+ctaimg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let contact = document.getElementsByClassName("contact");
+contact.innerHTML = siteContent["contact"];
+
+let footer = document.querySelectorAll("footer");
+footer.innerHTML = siteContent["footer"];
