@@ -47,7 +47,21 @@ let allSelectors = document.querySelectorAll('a');
 
 allSelectors.forEach(function(selector, index, selectors) {
   selector.innerHTML = siteContent[`nav`][`nav-item-${index+1}`]
+  selector.style.color = "green" 
 })
+
+//added append and prepend methods
+let newNav = document.querySelector("nav");
+
+var newNavEnd = document.createElement("a");
+newNav.appendChild(newNavEnd);
+newNavEnd.innerHTML = "Learn More";
+newNavEnd.style.color = "green"
+
+var newNavBegin = document.createElement("a");
+newNav.prepend(newNavBegin);
+newNavBegin.innerHTML = "DOM";
+newNavBegin.style.color = "green"
 
 //created selectors for imgs
 
