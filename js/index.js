@@ -4,7 +4,8 @@ const siteContent = {
     "nav-item-2": "Product",
     "nav-item-3": "Vision",
     "nav-item-4": "Features",
-    "nav-item-5": "Contact",
+    "nav-item-5": "About",
+    "nav-item-6": "Contact",
     "img-src": "img/logo.png"
   },
   "cta": {
@@ -41,19 +42,43 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let navBar = document.getElementsByTagName("a");
+
 navBar[0].innerHTML = "Services";
 navBar[1].innerHTML = "Product";
 navBar[2].innerHTML = "Vision";
 navBar[3].innerHTML = "Features";
 navBar[4].innerHTML = "About";
 navBar[5].innerHTML = "Contact";
+navBar[0].style.color = "green";
+navBar[1].style.color = "green";
+navBar[2].style.color = "green";
+navBar[3].style.color = "green";
+navBar[4].style.color = "green";
+navBar[5].style.color = "green";
+
+
+
+let newNav1 = document.createElement('a');
+newNav1.style.color = "green";
+let text = document.createTextNode("Pics");
+newNav1.appendChild(text);
+document.querySelector("nav").appendChild(newNav1);
+
+let newNav2 = document.createElement('a');
+newNav2.style.color = "green";
+let text2 = document.createTextNode("Forum");
+newNav2.appendChild(text2);
+document.querySelector("nav").prepend(newNav2);
+
 // end nav
 
 let headerImg = document.querySelector("#cta-img");
 headerImg.setAttribute('src', siteContent['cta']['img-src']);
 
 let headerOne = document.querySelector("h1");
-headerOne.innerHTML = "DOM is Awesome!";
+headerOne.innerHTML = "DOM <br /> is Awesome!";
+headerOne.style.width = "241px";
+headerOne.style.height = "216px";
 
 let btn = document.querySelector("button")
 btn.innerHTML = "Get Started";
@@ -78,7 +103,8 @@ contentP[4].innerHTML = "Vision content elementum magna eros, ac posuere elvit t
 // end text content
 
 contentT[5].innerHTML = "Contact";
-contentP[5].innerHTML = "123 Way 456 Street";
-contentP[6].innerHTML = "Somwhere, USA";
-contentP[7].innerHTML = "1 (888) 888-8888";
-contentP[8].innerHTML = "sales@greatidea.io";
+contentP[5].innerHTML = "123 Way 456 Street <br /> Somewhere, USA" ;
+contentP[6].innerHTML = "1 (888) 888-8888";
+contentP[7].innerHTML = "sales@greatidea.io";
+contentP[8].innerHTML = "Copyright Great Idea! 2018";
+
