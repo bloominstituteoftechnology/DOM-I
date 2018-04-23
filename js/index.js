@@ -48,4 +48,11 @@ let navObj = Object.values(siteContent.nav)
 for(let i = 0; i < nav.length; i++){
   nav[i].textContent = navObj[i]
 }
+let ctaText = document.querySelector("h1")
+ctaText.textContent = siteContent.cta.h1;
+let cta = ctaText.parentElement
+let ctaButton = cta.lastElementChild;
+ctaButton.textContent = siteContent.cta.button;
+let ctaImage = cta.nextElementSibling;
+ctaImage.setAttribute('src',siteContent.cta["img-src"])
 
