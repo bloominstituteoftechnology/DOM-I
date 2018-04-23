@@ -1,9 +1,11 @@
+
 const siteContent = {
   "nav": {
     "nav-item-1": "Services",
     "nav-item-2": "Product",
     "nav-item-3": "Vision",
     "nav-item-4": "Features",
+    "nav-item-6": "About",
     "nav-item-5": "Contact",
     "img-src": "img/logo.png"
   },
@@ -36,6 +38,28 @@ const siteContent = {
   },
 };
 
+let aTag = document.getElementsByTagName("a");
+// siteContent["nav"].forEach(element => {
+//   aTag;
+// });
+ aTag[0].innerHTML = siteContent["nav"]["nav-item-1"]
+ aTag[1].innerHTML = siteContent["nav"]["nav-item-2"]
+ aTag[2].innerHTML = siteContent["nav"]["nav-item-3"]
+ aTag[3].innerHTML = siteContent["nav"]["nav-item-4"]
+ aTag[4].innerHTML = siteContent["nav"]["nav-item-5"]
+ aTag[5].innerHTML = siteContent["nav"]["nav-item-6"]
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//Image of code snippet
+let imag = document.getElementById("cta-img");
+imag.setAttribute('src', siteContent["cta"]["img-src"])
+
+//Middle image
+let middleImag = document.getElementById("middle-img");
+middleImag.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+
+
