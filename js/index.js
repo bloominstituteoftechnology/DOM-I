@@ -36,6 +36,16 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
+
+// ~~~~~ Header ~~~~~
+let headerA = document.querySelectorAll('a');
+
+headerA[0].innerHTML = siteContent['nav']['nav-item-1'];
+headerA[1].innerHTML = siteContent['nav']['nav-item-2'];
+headerA[2].innerHTML = siteContent['nav']['nav-item-3'];
+headerA[3].innerHTML = siteContent['nav']['nav-item-4'];
+headerA[4].innerHTML = siteContent['nav']['nav-item-5'];
+
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
