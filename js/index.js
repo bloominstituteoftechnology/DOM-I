@@ -37,5 +37,26 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+// let logo = document.getElementById("logo-img");
+// logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// Pass in content [], elements to update []
+// if elements to update length is at least as long as content, proceed, othersie return false
+const updateHTML = function(content, elements){
+  if(elements.length >= content.length){
+    content.forEach((x, i) => {
+      elements[i].innerHTML = x;
+    });
+  }
+  return false;
+};
+
+const createArray = function (obj, selector) {
+  let result = [];
+  for (let i in obj) {
+    if (i.includes(selector)) {
+      result.push(obj[i]);
+    }
+  }
+  return result;
+}
