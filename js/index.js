@@ -60,4 +60,15 @@ ctaLogo.setAttribute('src', siteContent['cta']["img-src"]);
 
 //==========MAIN Section============
 let mainLogo = document.getElementById("middle-img");
-mainLogo.setAttribute('src', siteContent['main-content']["middle-img-src"])
+mainLogo.setAttribute('src', siteContent['main-content']["middle-img-src"]);
+
+let mainTextContent = document.querySelectorAll(".text-content");
+//Features Section
+mainTextContent[0].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["features-h4"];
+mainTextContent[0].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["features-content"];
+
+//about Section
+mainTextContent[1].getElementsByTagName('h4')[0].innerHTML = siteContent["main-content"]["about-h4"];
+mainTextContent[1].getElementsByTagName('p')[0].innerHTML = siteContent["main-content"]["about-content"];
+
+console.log("text-content", topContent);
