@@ -39,3 +39,16 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+let ctaText = document.querySelector(".cta-text");
+ctaText.childNodes[1].innerHTML = siteContent["cta"]["h1"];
+
+let ctaButton = document.querySelector(".cta-text");
+ctaText.childNodes[3].innerHTML = siteContent["cta"]["button"];
+console.log(ctaText.childNodes)
+
+let ctaImg = document.querySelector("#cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+
