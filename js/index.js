@@ -56,3 +56,18 @@ ctaButton.textContent = siteContent.cta.button;
 let ctaImage = cta.nextElementSibling;
 ctaImage.setAttribute('src',siteContent.cta["img-src"])
 
+let middleImage = document.querySelector('#middle-img')
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+let mainHeading = document.querySelectorAll("h4")
+let mainContent = siteContent['main-content']
+let mainHeadingArr = [];
+for(let heading in mainContent){
+  if(heading.includes('h4')){
+    mainHeadingArr.push(mainContent[heading])
+  }
+}
+
+for(let i = 0; i < mainHeadingArr.length; i++){
+  mainHeading[i].textContent = mainHeadingArr[i];
+}
