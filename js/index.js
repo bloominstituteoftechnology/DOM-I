@@ -52,11 +52,11 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
 // ~~~~~ CTA ~~~~~
-let ctaH1 = document.querySelectorAll('.cta-text h1');
-ctaH1[0].innerHTML = siteContent['cta']['h1'];
+let ctaH1 = document.querySelector('.cta-text h1');
+ctaH1.innerHTML = siteContent['cta']['h1'];
 
-let ctaButton = document.querySelectorAll('.cta-text button');
-ctaButton[0].innerHTML = siteContent['cta']['button'];
+let ctaButton = document.querySelector('.cta-text button');
+ctaButton.innerHTML = siteContent['cta']['button'];
 
 let ctaImg = document.querySelector('#cta-img');
 ctaImg.setAttribute('src', siteContent['cta']['img-src']);
@@ -83,3 +83,18 @@ let mainContentBottomP = document.querySelectorAll('.bottom-content .text-conten
 mainContentBottomP[0].innerHTML = siteContent['main-content']['services-content'];
 mainContentBottomP[1].innerHTML = siteContent['main-content']['product-content'];
 mainContentBottomP[2].innerHTML = siteContent['main-content']['vision-content'];
+
+
+// ~~~~~ Contact ~~~~~
+let contactH4 = document.querySelector('.contact h4');
+contactH4.innerHTML = siteContent['contact']['contact-h4'];
+
+let contactP = document.querySelectorAll('.contact p');
+contactP[0].innerHTML = siteContent['contact']['address'];
+contactP[1].innerHTML = siteContent['contact']['phone'];
+contactP[2].innerHTML = siteContent['contact']['email'];
+
+
+// ~~~~~ Footer ~~~~~
+let footerP = document.querySelector('footer p');
+footerP.innerHTML = siteContent['footer']['copyright'];
