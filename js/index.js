@@ -40,6 +40,11 @@ const siteContent = {
 //?
 const navContent = [];
 const navLinks = [].slice.call(document.querySelectorAll('nav a'));
+const cta = document.querySelector('.cta');
+const mainContentTop = document.querySelector('.main-content .top-content');
+const middleImg = document.querySelector('#middle-img');
+const mainContentBottom = document.querySelector('.main-content .bottom-content')
+
 navLinks.push(document.querySelector('#logo-img'));
 
 // push the values of `siteContent.nav` into `navContent` array
@@ -54,3 +59,26 @@ for (let i = 0; i < navContent.length; i++) {
     navLinks[i].insertAdjacentText('afterbegin', navContent[i]);
   }
 }
+
+// add content into `cta` div
+cta.children[0].children[0].insertAdjacentText('afterbegin', siteContent.cta.h1);
+cta.children[0].children[1].insertAdjacentText('afterbegin', siteContent.cta.button);
+cta.children[1].src = siteContent.cta['img-src'];
+
+// add content into `main-content` div
+mainContentTop.children[0].children[0].insertAdjacentText('afterbegin', siteContent['main-content']['features-h4']);
+mainContentTop.children[0].children[1].insertAdjacentText('afterbegin', siteContent['main-content']['features-content']);
+
+mainContentTop.children[1].children[0].insertAdjacentText('afterbegin', siteContent['main-content']['about-h4']);
+mainContentTop.children[1].children[1].insertAdjacentText('afterbegin', siteContent['main-content']['about-content']);
+
+middleImg.src = siteContent['main-content']['middle-img-src'];
+
+mainContentBottom.children[0].children[0].insertAdjacentText('afterbegin', siteContent['main-content']['services-h4'])
+mainContentBottom.children[0].children[1].insertAdjacentText('afterbegin', siteContent['main-content']['services-content'])
+
+mainContentBottom.children[1].children[0].insertAdjacentText('afterbegin', siteContent['main-content']['product-h4'])
+mainContentBottom.children[1].children[1].insertAdjacentText('afterbegin', siteContent['main-content']['product-content'])
+
+mainContentBottom.children[2].children[0].insertAdjacentText('afterbegin', siteContent['main-content']['vision-h4'])
+mainContentBottom.children[2].children[1].insertAdjacentText('afterbegin', siteContent['main-content']['vision-content'])
