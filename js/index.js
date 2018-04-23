@@ -4,7 +4,7 @@ const siteContent = {
     "nav-item-2": "Product",
     "nav-item-3": "Vision",
     "nav-item-4": "Features",
-    "nav-item-5": "Contact",
+    "nav-item-5": "About",
     "img-src": "img/logo.png"
   },
   "cta": {
@@ -40,6 +40,15 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
+let navItemSix = document.createElement("A");
+navItemSix.innerHTML = "Contact";
+let navContact = document.querySelector("nav");
+navContact.removeChild(navContact.childNodes[11]); // ?
+navContact.appendChild(navItemSix);
+let navHome = document.createElement("A");
+navHome.innerHTML = "Home";
+navContact.prepend(navHome);
+
 let nav = document.querySelectorAll("a");
 let cta = document.querySelector('.cta');
 let ctaTextH1 = document.querySelector('.cta .cta-text h1');
@@ -56,11 +65,11 @@ let vision = bottomContent[2];
 let contact = document.querySelector('.contact');
 let footer = document.querySelector('footer');
 
-nav[0].innerHTML = siteContent["nav"]["nav-item-1"];
-nav[1].innerHTML = siteContent["nav"]["nav-item-2"];
-nav[2].innerHTML = siteContent["nav"]["nav-item-3"];
-nav[3].innerHTML = siteContent["nav"]["nav-item-4"];
-nav[4].innerHTML = siteContent["nav"]["nav-item-5"];
+nav[1].innerHTML = siteContent["nav"]["nav-item-1"];
+nav[2].innerHTML = siteContent["nav"]["nav-item-2"];
+nav[3].innerHTML = siteContent["nav"]["nav-item-3"];
+nav[4].innerHTML = siteContent["nav"]["nav-item-4"];
+nav[5].innerHTML = siteContent["nav"]["nav-item-5"];
 
 ctaTextH1.innerHTML = siteContent["cta"]["h1"].split(' ').join('<br>');
 ctaTextButton.innerHTML = siteContent["cta"]["button"];
@@ -73,7 +82,7 @@ features.lastElementChild.innerHTML = siteContent["main-content"]["features-cont
 about.firstElementChild.innerHTML = siteContent["main-content"]["about-h4"];
 about.lastElementChild.innerHTML = siteContent["main-content"]["about-content"];
 
-middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+middleImage.setAttribute('src',siteContent["main-content"]["middle-img-src"]);
 
 services.firstElementChild.innerHTML = siteContent["main-content"]["services-h4"];
 services.lastElementChild.innerHTML = siteContent["main-content"]["services-content"];
@@ -91,3 +100,5 @@ for (let i=0; i<contactInfo.length; i++) {
 }
 
 footer.firstElementChild.innerHTML = siteContent["footer"]["copyright"];
+
+nav.forEach((item) => {item.style.color = "green"});
