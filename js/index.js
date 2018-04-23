@@ -40,14 +40,14 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-// change made for inital github
 
-
+// Change for cta image
 let ctaIMG = document.getElementById("cta-img");
 ctaIMG.setAttribute('src', siteContent["cta"]["img-src"])
 
-let mcImg = document.getElementById("middle-img-src");
-mcImg.setAttribute('src')
+// Change for Middle img
+let mcImg = document.getElementById("middle-img");
+mcImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 
 
