@@ -40,3 +40,62 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+// start of tasks 1 and 2
+let navLinks = document.querySelectorAll("nav a");
+navLinks.forEach((element, i) => {
+  element.innerHTML = siteContent["nav"]["nav-item-" + (i + 1)];
+  element.style = "color: green" //this is the first part of task 3
+})
+
+let ctaH1 = document.querySelectorAll(".cta-text h1");
+ctaH1[0].innerHTML = siteContent["cta"]["h1"]
+// console.log(navLinks.innerHTML)
+
+let ctaOther = document.querySelectorAll(".cta-text");
+ctaOther[0].lastElementChild.innerHTML = siteContent["cta"]["button"];
+
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let topContent = document.querySelectorAll(".top-content .text-content");
+topContent[0].firstElementChild.innerHTML = siteContent["main-content"]["features-h4"];
+topContent[0].lastElementChild.innerHTML = siteContent["main-content"]["features-content"];
+
+topContent[1].firstElementChild.innerHTML = siteContent["main-content"]["about-h4"];
+topContent[1].lastElementChild.innerHTML = siteContent["main-content"]["about-content"];
+
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+let bottomContent = document.querySelectorAll(".bottom-content .text-content");
+bottomContent[0].firstElementChild.innerHTML = siteContent["main-content"]["services-h4"];
+bottomContent[0].lastElementChild.innerHTML = siteContent["main-content"]["services-content"];
+
+bottomContent[1].firstElementChild.innerHTML = siteContent["main-content"]["product-h4"];
+bottomContent[1].lastElementChild.innerHTML = siteContent["main-content"]["product-content"];
+
+bottomContent[2].firstElementChild.innerHTML = siteContent["main-content"]["vision-h4"];
+bottomContent[2].lastElementChild.innerHTML = siteContent["main-content"]["vision-content"];
+
+let contactHead = document.querySelector(".contact h4")
+contactHead.innerHTML = siteContent.contact["contact-h4"]
+
+let contactMain = document.querySelectorAll(".contact p")
+contactMain[0].innerHTML = siteContent["contact"]["address"]
+contactMain[1].innerHTML = siteContent["contact"]["phone"]
+contactMain[2].innerHTML = siteContent["contact"]["email"]
+
+let footer = document.querySelector("footer")
+footer.innerHTML = siteContent["footer"]["copyright"];
+
+//start of task 3
+
+let lastNav = document.createElement("A");
+lastNav.innerHTML = "Last";
+let navNav = document.querySelector("nav");
+navNav.appendChild(lastNav);
+let firstNav = document.createElement("A");
+firstNav.innerHTML = "First";
+navNav.prepend(firstNav);
