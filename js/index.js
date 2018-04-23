@@ -37,5 +37,22 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+// let logo = document.getElementById("logo-img");
+// logo.setAttribute('src', siteContent["nav"]["img-src"]);
+let headerNav = document.querySelectorAll("header nav a");
+//headerNav[0].innerHTML = siteContent["nav"]["nav-item-1"];
+for(var i = 0; i < headerNav.length -1; i ++) {
+  headerNav[i].innerHTML = siteContent["nav"]["nav-item-" + (i + 1)];
+}
+
+let imgLogo = document.getElementById("logo-img");
+imgLogo.setAttribute("src", siteContent["nav"]["img-src"]);
+
+let ctaH1 = document.querySelector(".cta .cta-text h1");
+ctaH1.innerHTML = siteContent["cta"]["h1"];
+
+let ctaButton = document.querySelector(".cta .cta-text button");
+ctaButton.innerHTML = siteContent["cta"]["button"];
+
+let ctaImg = document.getElementById("cta-img");
+ctaImg.src = siteContent["cta"]["img-src"];
