@@ -38,6 +38,44 @@ const siteContent = {
   },
 };
 
+
+
+
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+
+let logo = document.getElementById("logo-png");
+logo.setAttribute('alt', 'This is company logo');
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// Started working here
+let theHead = document.querySelector('a');
+theHead[0].innerHTML = 'Services';
+theHead[1].innerHTML = 'Product';
+theHead[2].innerHTML = 'Vision';
+theHead[3].innerHTML = 'Features';
+theHead[4].innerHTML = 'Contacts';
+
+let ctaImage = document.getElementById('cta-img');
+ctaImage.setAttribute('alt', 'Image of a code snippet.');
+ctaIamge.setAttribute('src', siteContent['cta']['img-src']);
+
+let middleImage = document.getElementById('middle-img');
+middleImage.setAttribute('alt', 'An image of code snippets across the screen');
+middleImage.setAttribute('src', siteContent ['main-content']['img/mid-page-accent.jpg'])
+
+let ctaText = document.getElementsByTagName('h1');
+cta[0].innerHTML = 'Dom is Awesome';
+
+let buttons = document.getElementsByTagName('button');
+buttons[0].innerHTML = 'Get Started';
+
+let headers = document.querySelectorAll('h4');
+headers[0].innerHTML = 'Features';
+headers[1].innerHTML = 'About';
+headers[2].innerHTML = 'Services';
+headers[3].innerHTML = 'Product';
+headers[4].innerHTML = 'Vision';
+headers[5].innerHTML = 'Contact';
+
+let paragraphs = document.querySelectorAll('p');
+paragraphs[0].innerHTML = siteContent['main-content']['feature-content'];
