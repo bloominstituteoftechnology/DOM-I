@@ -4,7 +4,8 @@ const siteContent = {
     "nav-item-2": "Product",
     "nav-item-3": "Vision",
     "nav-item-4": "Features",
-    "nav-item-5": "Contact",
+    "nav-item-5": "About",
+    "nav-item-6": "Contact",
     "img-src": "img/logo.png"
   },
   "cta": {
@@ -39,3 +40,19 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// let nav1 = document.querySelector("a");
+// nav1.innerHTML = siteContent['nav']['nav-item-1'];
+
+let navBar = document.querySelectorAll('a');
+// navBar[0].innerHTML = siteContent['nav']['nav-item-1']
+var navLinks = Object.values(siteContent.nav);
+for (let i = 0; i < navBar.length; i++) {
+  navBar[i].innerHTML = navLinks[i]
+}
+
+
+// let middleImg = document.getElementById("middle-img");
+// middleImg.setAttribute('src', 'mid-page-accent.jpg')
+
+
