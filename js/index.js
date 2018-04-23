@@ -4,7 +4,8 @@ const siteContent = {
     "nav-item-2": "Product",
     "nav-item-3": "Vision",
     "nav-item-4": "Features",
-    "nav-item-5": "Contact",
+    "nav-item-5": "About",
+    "nav-item-6": "Contact",
     "img-src": "img/logo.png"
   },
   "cta": {
@@ -40,4 +41,21 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-logo.setAttribute('src', 'https://raw.githubusercontent.com/danteocualesjr/DOM-I/master/img/logo.png')
+logo.setAttribute('src', 'https://raw.githubusercontent.com/maribelcuales/DOM-I/master/img/logo.png')
+
+let navItem1 = document.querySelector("a")
+navItem1.innerHTML = siteContent["nav"]["nav-item-1"]
+
+let navItem2 = document.getElementsByName("a");
+navItem2[1].innerHTML = ["nav"]["nav-item-2"]
+
+let middleImg = document.getElementById("cta-img");
+middleImg.setAttribute('src', sitecontent["cta"]["img-src"])
+middleImg.setAttribute('src', 'https://raw.githubusercontent.com/maribelcuales/DOM-I/master/img/header-img.png')
+
+let ctaText = document.getElementsByTagName("h1")
+ctaText.innerHTML = siteContent["cta"]["h1"]
+
+let ctaButton = document.getElementsByTagName("button");
+ctaButton.setAttribute('button', sitecontent[["cta"]["button"]])
+ 
