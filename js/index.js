@@ -5,6 +5,7 @@ const siteContent = {
     "nav-item-3": "Vision",
     "nav-item-4": "Features",
     "nav-item-5": "Contact",
+    "nav-item-6": "About",
     "img-src": "img/logo.png"
   },
   "cta": {
@@ -47,13 +48,15 @@ document.getElementById("cta-img").src = siteContent['cta']['img-src']
 // Add middle image
 document.getElementById("middle-img").src = siteContent["main-content"]["middle-img-src"];
 
-//Add header links
+// Add header links
+// Add for()loop to clean up this code.
 let nav = document.getElementsByTagName('nav');
 nav[0].children[0].innerHTML = siteContent['nav']['nav-item-1']
 nav[0].children[1].innerHTML = siteContent['nav']['nav-item-2']
 nav[0].children[2].innerHTML = siteContent['nav']['nav-item-3']
 nav[0].children[3].innerHTML = siteContent['nav']['nav-item-4']
 nav[0].children[4].innerHTML = siteContent['nav']['nav-item-5']
+
 
 // Add cta contect heading
 document.querySelector('.cta-text').firstElementChild.innerHTML = siteContent.cta.h1;
@@ -62,6 +65,14 @@ document.querySelector('.cta-text').firstElementChild.innerHTML = siteContent.ct
 document.querySelector('.cta-text').getElementsByTagName('button')[0].innerHTML = siteContent.cta.button;
 
 // Add main content
+// Add a for()loop to seperate the content-text into various parts for the site.
+
+// Add contact
+document.querySelector('.contact').getElementsByTagName('h4')[0].innerHTML = siteContent.contact["contact-h4"]
+document.querySelector('.contact').getElementsByTagName('p')[0].innerHTML = siteContent.contact["address"]
+document.querySelector('.contact').getElementsByTagName('p')[1].innerHTML = siteContent.contact["phone"]
+document.querySelector('.contact').getElementsByTagName('p')[2].innerHTML = siteContent.contact["email"]
 
 
-// Add contact 
+// Add footer
+document.querySelector('footer').getElementsByTagName('p')[0].innerHTML = siteContent.footer.copyright;
