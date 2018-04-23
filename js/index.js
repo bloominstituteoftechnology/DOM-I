@@ -85,3 +85,6 @@ contactHeader[0].innerHTML = contactInfo[0];
 for (let i = 1; i < 4; i++) {
   contactSlots[i -1].innerHTML = contactInfo[i];
 }
+
+let myFooter = document.getElementsByTagName("footer")[0].getElementsByTagName("p");
+myFooter[0].innerHTML = siteContent["footer"]["copyright"]
