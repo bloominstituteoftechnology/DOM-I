@@ -40,18 +40,38 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-
-
-
-
 //nav bar
+let navBar = document.getElementsByTagName("nav");
 
-let navBar = document.getElementsByTagName('a');
-navBar[0].innerText = siteContent.nav["nav-item-1"];
-navBar[1].innerText = siteContent.nav["nav-item-2"];
-navBar[2].innerText = siteContent.nav["nav-item-3"];
-navBar[3].innerText = siteContent.nav["nav-item-4"];
-navBar[4].innerText = siteContent.nav["nav-item-5"];
+//nav link
+let navLink = document.getElementsByTagName('a');
+navLink[0].innerText = siteContent.nav["nav-item-1"];
+navLink[1].innerText = siteContent.nav["nav-item-2"];
+navLink[2].innerText = siteContent.nav["nav-item-3"];
+navLink[3].innerText = siteContent.nav["nav-item-4"];
+navLink[4].innerText = siteContent.nav["nav-item-5"];
+
+//prepend
+let newLink = document.createElement("a");
+let textNode = document.createTextNode("Home");
+newLink.appendChild(textNode);
+navBar[0].prepend(newLink);
+
+//append
+let newLink2 = document.createElement("a");
+let textNode2 = document.createTextNode("Sign In");
+newLink2.appendChild(textNode2);
+navBar[0].append(newLink2);
+
+//color change
+navLink[0].style.color = "green";
+navLink[1].style.color = "green";
+navLink[2].style.color = "green";
+navLink[3].style.color = "green";
+navLink[4].style.color = "green";
+navLink[5].style.color = "green";
+navLink[6].style.color = "green";
+
 
 //cta
 let ctaH1 = document.getElementsByTagName("h1");
