@@ -109,3 +109,14 @@ let i;
 for (i = 0; i < navigation.length; i++) {
   navigation[i].style.color = "green";
 }
+
+// Creating new elements
+let nav = document.getElementsByTagName('nav')[0];
+
+let dylanThomas = document.createElement('a');
+nav.appendChild(dylanThomas);
+dylanThomas.innerHTML = "TomCat";
+
+let robertLazarus = document.createElement('a');
+nav.prepend(robertLazarus);
+robertLazarus.innerHTML = "BobCat";
