@@ -45,14 +45,29 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
  * Selectors to <nav>'s childs
  */
 let nav = document.querySelector('nav');
-console.log(nav);
+// console.log(nav);
 let nav_a = Array.from(nav.getElementsByTagName('a'));
-console.log(nav_a);
+// console.log(nav_a);
 nav_a_length = nav_a.length;
 nav_a.forEach( (a, index) => {
-  console.log(a);
+  // console.log(a);
   let aux = `nav-item-${index+1}`
-  console.log(aux);
+  // console.log(aux);
   a.textContent = siteContent.nav[aux];
 });
+
+/**
+ * Selectors to <section.cta>
+ */
+let cta = document.getElementsByClassName('cta').item(0);
+console.log(cta);
+cta.querySelector('h1').textContent = siteContent.cta.h1;
+cta.getElementsByTagName('button').item(0).textContent = siteContent.cta.button;
+/** Handling with the <img> */
+// OPTION 1
+console.log(document.getElementById('cta-img'));
+document.getElementById('cta-img').setAttribute('src', siteContent.cta["img-src"])
+//OPTION 2
+// console.log(cta.getElementsByTagName('img'));
+// cta.getElementsByTagName('img').item(0).setAttribute('src', siteContent.cta["img-src"]);
 
