@@ -42,6 +42,7 @@ const navContent = [];
 const navBar = document.querySelector('nav');
 const navLinks = [].slice.call(document.querySelectorAll('nav a'));
 const cta = document.querySelector('.cta');
+const ctaContent = cta.children[0];
 const mainContentTop = document.querySelector('.main-content .top-content');
 const middleImg = document.querySelector('#middle-img');
 const mainContentBottom = document.querySelector('.main-content .bottom-content')
@@ -76,9 +77,9 @@ for (let i = 0; i < newLinks.length; i++) {
 ** CTA DIV **
 ************/
 // cta h1
-cta.children[0].children[0].insertAdjacentText('afterbegin', siteContent.cta.h1);
+ctaContent.children[0].insertAdjacentText('afterbegin', siteContent.cta.h1);
 // cta button
-cta.children[0].children[1].insertAdjacentText('afterbegin', siteContent.cta.button);
+ctaContent.children[1].insertAdjacentText('afterbegin', siteContent.cta.button);
 // cta image
 cta.children[1].src = siteContent.cta['img-src'];
 
