@@ -36,6 +36,16 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+const navContent = [];
+const navBar = document.querySelector('nav');
+const navLinks = [].slice.call(document.querySelectorAll('nav a'));
+const cta = document.querySelector('.cta');
+const mainContent = document.querySelector('.main-content .top-content');
+const middleImg = document.querySelector('#middle-img');
+const mainContentBottom = document.querySelector('.main-content .bottom-content')
+const contact = document.querySelector('.contact');
+const footer = document.querySelector('footer');
+const newLinks = ['newLink1', 'newLink2'];
+ 	 
+let mainContent = document.querySelector(".main-content");	
+navLinks.push(document.querySelector('#logo-img'));
