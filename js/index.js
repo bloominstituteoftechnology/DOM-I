@@ -107,13 +107,12 @@ let container = document.querySelector(".container");
 container.style.width = "100%";
 container.style.maxWidth = "880px";
 
-
 function popUp() {
   alert("you pushed the button");
 }
 
-function changeBackground(color, element) {
-  element.classList.toggle(color);
+function changeBackground() { 
+  cta.classList.toggle("yellow");
 }
 
-ctaTextButton.addEventListener("click", changeBackground('yellow', cta));
+ctaTextButton.addEventListener("click", changeBackground);
