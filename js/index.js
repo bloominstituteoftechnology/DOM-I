@@ -63,3 +63,48 @@ ctaWordsButton.innerHTML = "Get Started";
 let ctaPic = document.getElementById("cta-img");
 ctaPic.setAttribute('src', siteContent["cta"]["img-src"]);
 
+//Main Content Selectors & Edits:
+let features = document.getElementsByTagName('h4')[0];
+features.innerHTML = "Features";
+let featureWords = document.getElementsByTagName('p')[0];
+featureWords.innerHTML = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+let about = document.getElementsByTagName('h4')[1];
+about.innerHTML = "About";
+let aboutWords = document.getElementsByTagName('p')[1];
+aboutWords.innerHTML = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+let services = document.getElementsByTagName('h4')[2];
+services.innerHTML = "Services";
+let servicesWords = document.getElementsByTagName('p')[2];
+servicesWords.innerHTML = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+let product = document.getElementsByTagName('h4')[3];
+product.innerHTML = "Product"
+let productWords = document.getElementsByTagName('p')[3];
+productWords.innerHTML = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+let vision = document.getElementsByTagName('h4')[4];
+vision.innerHTML = "Vision";
+let visionWords = document.getElementsByTagName('p')[4];
+visionWords.innerHTML = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+let mainPic = document.getElementById("middle-img");
+mainPic.setAttribute('src', "img/mid-page-accent.jpg");
+
+//Contact Selectors & Edits:
+let contact = document.getElementsByTagName('h4')[5];
+contact.innerHTML = "Contact";
+let address = document.getElementsByTagName('p')[5];
+address.innerHTML = "123 Way 456 Street Somewhere, USA";
+let phoneNumber = document.getElementsByTagName('p')[6];
+phoneNumber.innerHTML = "1 (888) 888-8888";
+let email = document.getElementsByTagName('p')[7];
+email.innerHTML = "sales@greatidea.io";
+
+//Footer Selectors & Edits:
+let footer = document.getElementsByTagName('p')[8];
+footer.innerHTML = "Copyright Great Idea! 2018"
+
+//Stretch
+let textColors = document.querySelectorAll("p");
+let i;
+for (i = 0; i < textColors.length; i++) {
+  textColors[i].style.color = "blue";
+}
+
