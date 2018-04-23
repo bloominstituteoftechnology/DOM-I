@@ -71,4 +71,13 @@ navItem2[5].innerHTML = siteContent["nav"]["nav-item-6"]
 
 let ctaText = document.querySelector("h1");
 console.log(ctaText.innerHTML);
-ctaText.innerHTML = siteContent["cta"]["h1"] 
+ctaText.innerHTML = siteContent["cta"]["h1"]
+
+let ctaButton = document.getElementsByClassName(".cta-text");
+console.log(ctaButton.innerHTML);
+ctaButton.innerHTML = sitecontent["cta"]["button"]
+
+
+let middleImg = document.getElementById("cta-img");
+middleImg.setAttribute('src', sitecontent["cta"]["img-src"]);
+middleImg.setAttribute('src', 'https://raw.githubusercontent.com/maribelcuales/DOM-I/master/img/header-img.png');
