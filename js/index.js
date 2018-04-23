@@ -80,3 +80,21 @@ for(let i = 0; i < mainHeadingArr.length; i++){
   mainHeading[i].textContent = mainHeadingArr[i];
   mainHeading[i].nextElementSibling.textContent = mainContentArr[i]
 }
+
+let ContactHeading = document.querySelector('.contact h4')
+ContactHeading.textContent  = siteContent.contact["contact-h4"];
+
+let contactParagraph = document.querySelectorAll('.contact p')
+
+let contactP = [];
+let contactObj = siteContent.contact;
+
+for(let paragraph in contactObj ){
+  if(paragraph !== 'contact-h4' ){
+    contactP.push(contactObj[paragraph])
+  }
+}
+
+for(let i = 0; i < contactP.length;i++){
+  contactParagraph[i].textContent = contactP[i];
+}
