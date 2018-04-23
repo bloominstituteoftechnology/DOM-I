@@ -54,11 +54,11 @@ nav.forEach(function(element){
   element.style.color = 'green';
 });
 
-let cta = document.getElementsByClassName("cta-text");
-cta[0].innerHTML = siteContent['cta']['h1'];
+let ctaHeader = document.getElementsByTagName('h1');
+ctaHeader[0].innerHTML = siteContent['cta']['h1'];
 
 let button = document.getElementsByTagName('button');
-// button[0].innerHTML = siteContent['cta']['button'];
+button[0].innerHTML = siteContent['cta']['button'];
 
 
 let ctaImg = document.getElementById("cta-img");
