@@ -39,17 +39,20 @@ const siteContent = {
 
 
 // ~~~~~ Header ~~~~~
-// document.querySelector('nav').appendChild(a); //<--Not Working
+const a1 = document.createElement("a");
+document.querySelector('nav').appendChild(a1); // Appending
+const a2 = document.createElement("a");
+document.querySelector('nav').prepend(a2); // Prepending
 
 let headerA = document.querySelectorAll('nav a');
-headerA[0].innerHTML = siteContent['nav']['nav-item-1'];
-headerA[1].innerHTML = siteContent['nav']['nav-item-2'];
-headerA[2].innerHTML = siteContent['nav']['nav-item-3'];
-headerA[3].innerHTML = siteContent['nav']['nav-item-4'];
-headerA[4].innerHTML = siteContent['nav']['nav-item-5'];
-headerA[5].innerHTML = siteContent['nav']['nav-item-6'];
-// headerA[6].innerHTML = "IDK"; //<-- Not Working
-
+headerA[0].innerHTML = "Prepend";
+headerA[1].innerHTML = siteContent['nav']['nav-item-1'];
+headerA[2].innerHTML = siteContent['nav']['nav-item-2'];
+headerA[3].innerHTML = siteContent['nav']['nav-item-3'];
+headerA[4].innerHTML = siteContent['nav']['nav-item-4'];
+headerA[5].innerHTML = siteContent['nav']['nav-item-5'];
+headerA[6].innerHTML = siteContent['nav']['nav-item-6'];
+headerA[7].innerHTML = "Append";
 
 headerA.forEach(a => a.style = 'color: green'); // Making the nav green
 
