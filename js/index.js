@@ -63,15 +63,16 @@ const createArray = function (obj, selector) {
 
 // Create selectors
 const navLinks = document.querySelectorAll('nav a'),
-  headerLogo = document.getElementById('logo-img'), // image
-  ctaHeader = document.querySelectorAll('.cta-text h1'),
-  ctaButton = document.querySelectorAll('.cta-text button'),
-  ctaImg = document.getElementById('cta-img'), // image
-  mainContentHeaders = document.querySelectorAll('.main-content h4'),
-  mainContent = document.querySelectorAll('.main-content p'),
-  mainContentImg = document.getElementById('middle-img'), // image
-  contactEle = document.querySelectorAll('.contact > *'),
-  footerEle = document.querySelectorAll('footer > *');
+      ctaHeader = document.querySelectorAll('.cta-text h1'),
+      ctaButton = document.querySelectorAll('.cta-text button'),
+      mainContentHeaders = document.querySelectorAll('.main-content h4'),
+      mainContent = document.querySelectorAll('.main-content p'),
+      contactEle = document.querySelectorAll('.contact > *'),
+      footerEle = document.querySelectorAll('footer > *'),
+
+      headerLogo = document.getElementById('logo-img'), // image
+      ctaImg = document.getElementById('cta-img'), // image
+      mainContentImg = document.getElementById('middle-img'); // image
 
 // Update HTML with JSON data
 updateHTML(createArray(siteContent['nav'], 'nav-item'), navLinks);
