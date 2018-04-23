@@ -5,6 +5,7 @@ const siteContent = {
     "nav-item-3": "Vision",
     "nav-item-4": "Features",
     "nav-item-5": "Contact",
+    "nav-item-6": "About",
     "img-src": "img/logo.png"
   },
   "cta": {
@@ -39,3 +40,5 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let nav = document.getElementsByTagName("a")
