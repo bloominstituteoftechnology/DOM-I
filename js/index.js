@@ -70,5 +70,23 @@ aboutH4[1].innerHTML = siteContent["main-content"]["about-h4"];
 let aboutP = document.querySelectorAll(".main-content .top-content .text-content p");
 aboutP[1].innerHTML = siteContent["main-content"]["about-content"];
 
+let middleImg = document.getElementById("middle-img");
+middleImg.src = siteContent["main-content"]["middle-img-src"];
 
+let servicesH4 = document.querySelectorAll(".bottom-content .text-content h4")[0];
+servicesH4.innerHTML = siteContent["main-content"]["services-h4"];
 
+let servicesP = document.querySelectorAll(".bottom-content .text-content p")[0];
+servicesP.innerHTML = siteContent["main-content"]["services-content"];
+
+let productH4 = document.querySelectorAll(".bottom-content .text-content h4")[1];
+productH4.innerHTML = siteContent["main-content"]["product-h4"];
+
+let productP = document.querySelectorAll(".bottom-content .text-content p")[1];
+productP.innerHTML = siteContent["main-content"]["product-content"];
+
+let visionH4 = document.querySelectorAll(".bottom-content .text-content h4")[2];
+visionH4.innerHTML = siteContent["main-content"]["vision-h4"];
+
+let visionP = document.querySelectorAll(".bottom-content .text-content p")[2];
+visionP.innerHTML = siteContent["main-content"]["vision-content"];
