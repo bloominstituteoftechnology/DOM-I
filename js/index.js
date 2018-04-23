@@ -60,5 +60,11 @@ theHead[4].innerHTML = 'About';
 theHead[5].innerHTML = 'Contacts';
 
 let ctaImage = document.getElementById('cta-img');
-ctaImage.setAttribute('alt', 'An imafe of a code snippet.');
+ctaImage.setAttribute('alt', 'An image of a code snippet.');
 ctaImage.setAttribute('src', siteContent['cta']['img-src']);
+
+let ctaText = document.getElementsByTagName('h1');
+ctaText[0].innerHTML = 'Dom Is Awesome';
+
+let buttons = document.getElementsByTagName('button');
+buttons[0].innerHTML = 'Get Started';
