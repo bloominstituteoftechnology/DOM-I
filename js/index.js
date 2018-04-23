@@ -38,11 +38,12 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 logo.setAttribute('src', 'https://raw.githubusercontent.com/maribelcuales/DOM-I/master/img/logo.png')
 
-// NAV
+// HEADER
 
 let navItem1 = document.querySelector("a")
 navItem1.innerHTML = siteContent["nav"]["nav-item-1"]
