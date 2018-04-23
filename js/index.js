@@ -52,6 +52,28 @@ let navBar = document.getElementsByTagName('a');
 
 //y[0].innerHTML = siteContent.contact["contact-h4"];
 
+
+//cta
+let ctaH1 = document.getElementsByTagName("h1");
+ctaH1[0].innerText = siteContent.cta.h1;
+
+let ctaButton = document.getElementsByTagName("button");
+ctaButton[0].innerText = siteContent.cta.button;
+
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent.cta['img-src']);
+
+// h4 elements
+let hFourElements = document.getElementsByTagName('h4');
+hFourElements[0].innerHTML = siteContent['main-content']['features-h4'];
+hFourElements[1].innerHTML = siteContent['main-content']['about-h4'];
+hFourElements[2].innerHTML = siteContent['main-content']['services-h4'];
+hFourElements[3].innerHTML = siteContent['main-content']['product-h4'];
+hFourElements[4].innerHTML = siteContent['main-content']['vision-h4'];
+
+
+
+// p elements
 let pElements = document.getElementsByTagName("p");
 pElements[0].innerHTML = siteContent['main-content']['features-content'];
 pElements[1].innerHTML = siteContent['main-content']['about-content'];
