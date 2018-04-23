@@ -50,6 +50,23 @@ navMenu[3].innerHTML = siteContent['nav']["nav-item-4"];
 navMenu[4].innerHTML = siteContent['nav']["nav-item-5"];
 navMenu[5].innerHTML = siteContent['nav']["nav-item-6"];
 
+// create new Nav items
+let navNew = document.querySelector('nav')
+let newMap = document.createElement('a');
+newMap.setAttribute('href', '#');
+newMap.innerHTML = 'Map'
+navNew.appendChild(newMap)
+let newPrice = document.createElement('a');
+newPrice.setAttribute('href', '#');
+newPrice.innerHTML = 'Price'
+navNew.appendChild(newPrice);
+
+// style nav
+let navAlinks = document.querySelectorAll('nav a')
+navAlinks.forEach(function(item) {
+  item.style.color = 'green';
+});
+
 // navMenu.forEach(function(item, i){
 //   item.innerHTML = siteContent['nav'][i];
 // }) 
