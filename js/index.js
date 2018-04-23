@@ -38,5 +38,78 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+// let logo = document.getElementById("logo-img");
+// logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// Pass in content [], elements to update []
+// if elements to update length is at least as long as content, proceed, othersie return false
+const updateHTML = function(content, elements){
+  if(elements.length >= content.length){
+    content.forEach((x, i) => {
+      elements[i].innerHTML = x;
+    });
+  }
+  return false;
+};
+
+const createArray = function (obj, selector) {
+  let result = [];
+  for (let i in obj) {
+    if (i.includes(selector)) {
+      result.push(obj[i]);
+    }
+  }
+  return result;
+};
+
+const createNewElement = function(nodeType, innerText, className){
+  const newNode = document.createElement(nodeType);
+  newNode.innerHTML = innerText;
+  if(className) newNode.className = className;
+  return newNode;
+};
+
+// Create selectors
+const navLinks = document.querySelectorAll('nav a'),
+      ctaHeader = document.querySelectorAll('.cta-text h1'),
+      ctaButton = document.querySelectorAll('.cta-text button'),
+      mainContentHeaders = document.querySelectorAll('.main-content h4'),
+      mainContent = document.querySelectorAll('.main-content p'),
+      contactEle = document.querySelectorAll('.contact > *'),
+      footerEle = document.querySelectorAll('footer > *'),
+
+      nav = document.querySelector('nav'),
+
+      headerLogo = document.getElementById('logo-img'), // image
+      ctaImg = document.getElementById('cta-img'), // image
+      mainContentImg = document.getElementById('middle-img'); // image
+
+// Update HTML with JSON data
+updateHTML(createArray(siteContent['nav'], 'nav-item'), navLinks);
+updateHTML(createArray(siteContent['cta'], 'h1'), ctaHeader);
+updateHTML(createArray(siteContent['cta'], 'button'), ctaButton);
+updateHTML(createArray(siteContent['main-content'], 'h4'), mainContentHeaders);
+updateHTML(createArray(siteContent['main-content'], 'content'), mainContent);
+updateHTML(createArray(siteContent['contact'], ''), contactEle);
+updateHTML(createArray(siteContent['footer'], ''), footerEle);
+
+headerLogo.src = siteContent['nav']['img-src'];
+ctaImg.src = siteContent['cta']['img-src'];
+mainContentImg.src = siteContent['main-content']['middle-img-src'];
+
+// Add new content
+const homeLink = createNewElement('a', 'Home'),
+      blogLink = createNewElement('a', 'Blog');
+
+homeLink.href = '#';
+blogLink.href = '#';
+      
+nav.appendChild(blogLink);
+nav.prepend(homeLink);
+
+// Change nav text color
+const navText = nav.children;
+
+for(let i = 0; i < navText.length; i++){
+  navText[i].style = 'color:green';
+}
