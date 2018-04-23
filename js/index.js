@@ -4,7 +4,8 @@ const siteContent = {
     "nav-item-2": "Product",
     "nav-item-3": "Vision",
     "nav-item-4": "Features",
-    "nav-item-5": "Contact",
+    "nav-item-5": "About",
+    "nav-item-6": "Contact",
     "img-src": "img/logo.png"
   },
   "cta": {
@@ -40,22 +41,34 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-// find 'a' class
-let allSelectors = document.querySelectorAll('a');
-allSelectors.forEach(function (selector, index, selectors) {
-    selector.innerHTML=siteContent['nav']['nav-item-${index+1}'];
-});
 
-let cta = document.getElementByClass('cta-text h1');
-cta.innerHTML = siteContent('cta-text h1');
+//let a = document.querySelectorAll('a');
+//a.forEach(function (selector, index, selectors) {
+//    selector.innerHTML=siteContent['nav']['nav-item-${index}'];
+//});
 
-let button = document.querySelectorAll('cta-text button');
-button.innerHTML = siteContent('cta-text button');
-});
+let a = document.getElementbyIDAll("a");
+for (let i=0; i<a.length; i++) {
+    a.innerHTML = siteContent("nav""nav-item-[i]");
+};
+
+let cta = document.querySelector(".cta .cta-text h1");
+cta.innerHTML = siteContent(".cta .cta-text h1");
+
+let button = document.querySelectorAll("cta button");
+button.innerHTML = siteContent("cta button");
 
 let ctaimg = document.getElementById("cta-img");
 ctaimg.setAttribute('src', siteContent["cta"]["img-src"]);
 
 let features = document.getElementByClass("features-h4");
-features.innerHTML;
+features.innerHTML = siteContent('features-h4');
+
+let featurescontent = document.getElementByClass("features-content");
+featurescontent.innerHTML = siteContent('features-content');
+
+let about = document.getElementByClass("about");
+featurescontent.innerHTML = siteContent('features-content');
+
+
 
