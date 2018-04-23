@@ -39,6 +39,7 @@ const siteContent = {
 
 //?
 const navContent = [];
+const navBar = document.querySelector('nav');
 const navLinks = [].slice.call(document.querySelectorAll('nav a'));
 const cta = document.querySelector('.cta');
 const mainContentTop = document.querySelector('.main-content .top-content');
@@ -46,6 +47,7 @@ const middleImg = document.querySelector('#middle-img');
 const mainContentBottom = document.querySelector('.main-content .bottom-content')
 const contact = document.querySelector('.contact');
 const footer = document.querySelector('footer');
+const newLinks = ['newLink1', 'newLink2'];
 
 navLinks.push(document.querySelector('#logo-img'));
 
@@ -62,32 +64,68 @@ for (let i = 0; i < navContent.length; i++) {
   }
 }
 
-// add content into `cta` div
+// append new navigation links to navBar
+for (let i = 0; i < newLinks.length; i++) {
+  let newA = document.createElement('a');
+  newA.insertAdjacentText('afterbegin', newLinks[i]);
+
+  navBar.append(newA);
+}
+
+/************
+** CTA DIV **
+************/
+// cta h1
 cta.children[0].children[0].insertAdjacentText('afterbegin', siteContent.cta.h1);
+// cta button
 cta.children[0].children[1].insertAdjacentText('afterbegin', siteContent.cta.button);
+// cta image
 cta.children[1].src = siteContent.cta['img-src'];
 
-// add content into `main-content` div
+/*****************
+** MAIN CONTENT **
+*****************/
+// features h1
 mainContentTop.children[0].children[0].insertAdjacentText('afterbegin', siteContent['main-content']['features-h4']);
+// features p
 mainContentTop.children[0].children[1].insertAdjacentText('afterbegin', siteContent['main-content']['features-content']);
 
+// about h1
 mainContentTop.children[1].children[0].insertAdjacentText('afterbegin', siteContent['main-content']['about-h4']);
+// about p
 mainContentTop.children[1].children[1].insertAdjacentText('afterbegin', siteContent['main-content']['about-content']);
 
+// image
 middleImg.src = siteContent['main-content']['middle-img-src'];
 
+// services h4
 mainContentBottom.children[0].children[0].insertAdjacentText('afterbegin', siteContent['main-content']['services-h4'])
+// services p
 mainContentBottom.children[0].children[1].insertAdjacentText('afterbegin', siteContent['main-content']['services-content'])
 
+// product h4
 mainContentBottom.children[1].children[0].insertAdjacentText('afterbegin', siteContent['main-content']['product-h4'])
+// product p
 mainContentBottom.children[1].children[1].insertAdjacentText('afterbegin', siteContent['main-content']['product-content'])
 
+// vision h4
 mainContentBottom.children[2].children[0].insertAdjacentText('afterbegin', siteContent['main-content']['vision-h4'])
+// vision p
 mainContentBottom.children[2].children[1].insertAdjacentText('afterbegin', siteContent['main-content']['vision-content'])
 
+/************
+** CONTACT **
+************/
+// contact h4
 contact.children[0].insertAdjacentText('afterbegin', siteContent.contact['contact-h4']);
+// address
 contact.children[1].insertAdjacentText('afterbegin', siteContent.contact.address);
+// phone
 contact.children[2].insertAdjacentText('afterbegin', siteContent.contact.phone);
+// email
 contact.children[3].insertAdjacentText('afterbegin', siteContent.contact.email);
 
+/***********
+** FOOTER **
+***********/
 footer.children[0].insertAdjacentText('afterbegin', siteContent.footer.copyright);
