@@ -93,4 +93,9 @@ contactList.getElementsByTagName("p")[0].innerHTML  = siteContent["contact"]["ad
 contactList.getElementsByTagName("p")[1].innerHTML  = siteContent["contact"][["phone"]];
 contactList.getElementsByTagName("p")[2].innerHTML  = siteContent["contact"]["email"];
 
+//======Footer========
+let lastFooter = document.getElementsByTagName("footer")[0];
+
+lastFooter.getElementsByTagName('p')[0].innerHTML = siteContent["footer"]["copyright"];
+
 console.log("text-content", topContent);
