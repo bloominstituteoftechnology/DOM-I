@@ -142,3 +142,12 @@ ctaButton.addEventListener("click", function(){  /// added click eventListener t
   ctaH1.style.color = "green";
   }
 });
+
+setInterval(function(){            // added a setInterval to toggle color green and white every second
+  if(ctaH1.style.color === "green") {
+    ctaH1.style.color = "white";
+  } else {
+  ctaH1.style.color = "green";
+  }
+}, 1000);
+
