@@ -87,3 +87,5 @@ for (let i = 0; i < contactItems.length; i++) {
 }
 
 document.querySelector('footer').querySelector('p').innerHTML = siteContent.footer.copyright
+
+document.querySelector('nav').style.backgroundColor = 'green' 
