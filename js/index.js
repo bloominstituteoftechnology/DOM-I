@@ -74,10 +74,10 @@ let mainHeadingArr = [];
 let mainContentArr = []
 for(let heading in mainContentObj){
   if(heading.includes('h4')){
-    mainHeadingArr.push(mainContent[heading])
+    mainHeadingArr.push(mainContentObj[heading])
   }
   else{
-    mainContentArr.push(mainContent[heading])
+    mainContentArr.push(mainContentObj[heading])
   }
 
 }
