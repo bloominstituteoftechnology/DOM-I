@@ -99,13 +99,15 @@ bottomContent.push(`<h4>${JSONMainContent['product-h4']}</h4><p>${JSONMainConten
 bottomContent.push(`<h4>${JSONMainContent['vision-h4']}</h4><p>${JSONMainContent['vision-content']}</p>`);
 // ADD content to Top Content
 console.log(mainTop.getElementsByClassName('text-content'));
-Array.from( mainTop.getElementsByClassName('text-content') ).forEach( (item, index) => {
+let topTextContent = Array.from( mainTop.getElementsByClassName('text-content') );
+topTextContent.forEach( (item, index) => {
   item.innerHTML = topContent[index];
 })
 // ADD content to Middle Content
 mainMiddle.setAttribute('src', JSONMainContent["middle-img-src"]);
 // ADD content to Bottom Content
-Array.from( mainBottom.getElementsByClassName('text-content') ).forEach( (item, i) => {
+const bottomTextContent = Array.from( mainBottom.getElementsByClassName('text-content') )
+bottomTextContent.forEach( (item, i) => {
   item.innerHTML = bottomContent[i];
 });
 
@@ -150,5 +152,19 @@ nav.appendChild(newA);
 /** UPDATE STYLES */
 console.log(ctaButton);
 ctaButton.style.cssText = 'background-color: aqua; border-radius: 2rem;';
-
 contact.style.cssText = `display: flex; flex-direction: column;`
+
+/** 
+ * ADD BUTTON THAT UPDATES CONTENT
+ * toggle 'display: none' on random <div.text-content> Elements
+ */
+const allContent = topTextContent.concat(bottomTextContent);
+console.log(allContent);
+function toggleMainContent () {
+  const randomNode = Math.floor(Math.random()*allContent.length);
+  const item = allContent[randomNode];
+  item.classList.toggle('no-visible') ? item.style.display = 'none' : item.style.display = 'block';
+}
+ctaButton.textContent = "Play with me!";
+ctaButton.style.width = '200px';
+ctaButton.addEventListener('click', toggleMainContent);
