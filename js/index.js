@@ -63,8 +63,7 @@ ctaText.innerHTML = siteContent['cta']["h1"];
 ctaBut.innerHTML = siteContent['cta']["button"]; 
 ctaImg.setAttribute('src', siteContent['cta']["img-src"]); 
 
-// main-content
-// top-content
+// main-content  top-content
 let topContenth4 = document.querySelector('.text-content h4');
 let topContentP = document.querySelector('.text-content p');
 let topContenth4Second = document.querySelectorAll('.text-content h4')[1];
@@ -78,7 +77,7 @@ topContentPSecond.innerHTML = siteContent['main-content']['features-content'];
 
 topContentImg.setAttribute('src', siteContent['main-content']['middle-img-src']); 
 
-// bottom content
+//main-content   bottom content
 let bottomContenth4 = document.querySelector('.bottom-content .text-content h4');
 let bottomContentP = document.querySelector('.bottom-content .text-content p');
 let bottomContenth4Second = document.querySelectorAll('.bottom-content .text-content h4')[1];
