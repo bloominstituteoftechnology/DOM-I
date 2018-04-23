@@ -39,10 +39,10 @@ const siteContent = {
 };
 
 let aTag = document.getElementsByTagName("a");
-// siteContent["nav"].forEach(element => {
-//   aTag;
-// });
 
+for(let i = 0; i < aTag.length; i++) {
+  aTag[i].innerHTML = siteContent["nav"][0];
+}
 aTag[0].style.color = 'green';
 aTag[1].style.color = 'green';
 aTag[2].style.color = 'green';
@@ -50,13 +50,19 @@ aTag[3].style.color = 'green';
 aTag[4].style.color = 'green';
 aTag[5].style.color = 'green';
 
- aTag[0].innerHTML = siteContent["nav"]["nav-item-1"]
- aTag[1].innerHTML = siteContent["nav"]["nav-item-2"]
- aTag[2].innerHTML = siteContent["nav"]["nav-item-3"]
- aTag[3].innerHTML = siteContent["nav"]["nav-item-4"]
- aTag[4].innerHTML = siteContent["nav"]["nav-item-5"]
- aTag[5].innerHTML = siteContent["nav"]["nav-item-6"] 
+//  aTag[0].innerHTML = siteContent["nav"]["nav-item-1"]
+//  aTag[1].innerHTML = siteContent["nav"]["nav-item-2"]
+//  aTag[2].innerHTML = siteContent["nav"]["nav-item-3"]
+//  aTag[3].innerHTML = siteContent["nav"]["nav-item-4"]
+//  aTag[4].innerHTML = siteContent["nav"]["nav-item-5"]
+//  aTag[5].innerHTML = siteContent["nav"]["nav-item-6"] 
 
+   var testNode = document.createElement("a");
+ testNode.innerHTML = "Back";
+  aTag[5].appendChild(testNode);
+aTag[6].style.margin = "10px"
+
+ console.log();
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
