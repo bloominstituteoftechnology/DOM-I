@@ -1,3 +1,4 @@
+
 const siteContent = {
   "nav": {
     "nav-item-1": "Services",
@@ -39,3 +40,6 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// let navItems = document.querySelectorAll("a");
+// navItems[0].setAttribute("a", siteContent["nav"]["nav-item-1"])
