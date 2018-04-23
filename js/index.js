@@ -46,6 +46,11 @@ let logo = document.getElementById('logo-img');
 logo.setAttribute('alt', 'This is company logo');
 logo.setAttribute('src', siteContent['nav']['img-src']);
 
+let theNav = document.querySelector('nav');
+let textNode = document.createTextNode('The CEO');
+theNav.appendChild(textNode);
+theNav.style.color = 'green';
+theNav.prepend('Hello User');
 let theHead = document.querySelectorAll('a');
 
 theHead[0].innerHTML = 'Services';
@@ -60,7 +65,8 @@ theHead[4].innerHTML = 'About';
 theHead[4].style.color = 'green';
 theHead[5].innerHTML = 'Contacts';
 theHead[5].style.color = 'green';
-
+// let textNode = document.createTextNode(' The CEO');
+// theHead[5].appendChild(textNode);
 let ctaImage = document.getElementById('cta-img');
 ctaImage.setAttribute('alt', 'An image of a code snippet.');
 ctaImage.setAttribute('src', siteContent['cta']['img-src']);
