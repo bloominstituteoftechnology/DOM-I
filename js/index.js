@@ -59,37 +59,37 @@ let ctaimg = document.getElementById("cta-img");
 ctaimg.setAttribute('src', siteContent["cta"]["img-src"]);
 
 let features = document.querySelector(".main-content .top-content h4");
-features.innerHTML = siteContent["main-content"]["h4"];
+features.innerHTML = siteContent["main-content"]["features-h4"];
 
 let featurescontent = document.querySelector(".main-content .top-content .text-content");
-featurescontent.innerHTML = siteContent["main-content"]["p"];
+featurescontent.innerHTML = siteContent["main-content"]["features-content"];
 
-let about = document.getElementsByClassName("about");
-featurescontent.innerHTML = siteContent["features-content"];
+let abouth4 = document.querySelector(".main-content .top-content .text-content h4");
+abouth4.innerHTML = siteContent["main-content"]["about-h4"];
 
-let aboutcontent = document.querySelectorAll(".text-content");
-aboutcontent.innerHTML = siteContent[".text-content"];
+let aboutcontent = document.querySelector(".main-content .top-content .text-content p");
+aboutcontent.innerHTML = siteContent["main-content"]["about-content"];
 
 let middleImg = document.getElementById("middle-img");
-middleImg.setAttribute('src', siteContent["main-content"]["img-src"]);
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
-let servicesh4 = document.getElementById("cta-img");
-ctaimg.setAttribute('src', siteContent["cta"]["img-src"]);
+let servicesh4 = document.querySelector(".main-content .bottom-content .text-content h4" );
+servicesh4.innerHTML = siteContent["main-content"]["services-h4"];
 
-let servicesContent = document.getElementById("cta-img");
-ctaimg.setAttribute('src', siteContent["cta"]["img-src"]);
+let servicesContent = document.querySelector(".main-content .bottom-content .text-content p");
+servicesContent.innerHTML = siteContent["main-content"]["services-content"];
 
-let producth4 = document.getElementById("cta-img");
-ctaimg.setAttribute('src', siteContent["cta"]["img-src"]);
+let producth4 = document.querySelector(".main-content .bottom-content .text-content h4");
+producth4.innerHTML = siteContent["main-content"] ["product-h4"];
 
-let productContent = document.getElementById("cta-img");
-ctaimg.setAttribute('src', siteContent["cta"]["img-src"]);
+let productContent = document.querySelector(".main-content .bottom-content .text-content p");
+productContent.innerHTML = siteContent["main-content"]["product-content"];
 
-let visionH4 = document.getElementById("cta-img");
-ctaimg.setAttribute('src', siteContent["cta"]["img-src"]);
+let visionH4 = document.querySelector(".main-content .bottom-content .text-content h4");
+visionH4.innerHTML = siteContent["main-content"]["vision-h4"];
 
-let visionContent = document.getElementById("cta-img");
-ctaimg.setAttribute('src', siteContent["cta"]["img-src"]);
+let visionContent = document.querySelector(".main-content .bottom-content .text-content p");
+visionContent.innerHTML = siteContent["main-content"]["vision-content"];
 
 let contact = document.getElementsByClassName("contact");
 contact.innerHTML = siteContent["contact"];
