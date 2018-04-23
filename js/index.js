@@ -42,8 +42,7 @@ const navContent = [];
 const navBar = document.querySelector('nav');
 const navLinks = [].slice.call(document.querySelectorAll('nav a'));
 const cta = document.querySelector('.cta');
-const ctaContent = cta.children[0];
-const mainContentTop = document.querySelector('.main-content .top-content');
+const mainContent = document.querySelector('.main-content .top-content');
 const middleImg = document.querySelector('#middle-img');
 const mainContentBottom = document.querySelector('.main-content .bottom-content')
 const contact = document.querySelector('.contact');
@@ -76,6 +75,8 @@ for (let i = 0; i < newLinks.length; i++) {
 /************
 ** CTA DIV **
 ************/
+const ctaContent = cta.children[0];
+
 // cta h1
 ctaContent.children[0].insertAdjacentText('afterbegin', siteContent.cta.h1);
 // cta button
@@ -86,33 +87,39 @@ cta.children[1].src = siteContent.cta['img-src'];
 /*****************
 ** MAIN CONTENT **
 *****************/
+const mainContentFeatures = mainContent.children[0];
+const mainContentAbout = mainContent.children[1];
+const mainContentServices = mainContentBottom.children[0];
+const mainContentProduct = mainContentBottom.children[1];
+const mainContentVision = mainContentBottom.children[2];
+
 // features h1
-mainContentTop.children[0].children[0].insertAdjacentText('afterbegin', siteContent['main-content']['features-h4']);
+mainContentFeatures.children[0].insertAdjacentText('afterbegin', siteContent['main-content']['features-h4']);
 // features p
-mainContentTop.children[0].children[1].insertAdjacentText('afterbegin', siteContent['main-content']['features-content']);
+mainContentFeatures.children[1].insertAdjacentText('afterbegin', siteContent['main-content']['features-content']);
 
 // about h1
-mainContentTop.children[1].children[0].insertAdjacentText('afterbegin', siteContent['main-content']['about-h4']);
+mainContentAbout.children[0].insertAdjacentText('afterbegin', siteContent['main-content']['about-h4']);
 // about p
-mainContentTop.children[1].children[1].insertAdjacentText('afterbegin', siteContent['main-content']['about-content']);
+mainContentAbout.children[1].insertAdjacentText('afterbegin', siteContent['main-content']['about-content']);
 
 // image
 middleImg.src = siteContent['main-content']['middle-img-src'];
 
 // services h4
-mainContentBottom.children[0].children[0].insertAdjacentText('afterbegin', siteContent['main-content']['services-h4'])
+mainContentServices.children[0].insertAdjacentText('afterbegin', siteContent['main-content']['services-h4'])
 // services p
-mainContentBottom.children[0].children[1].insertAdjacentText('afterbegin', siteContent['main-content']['services-content'])
+mainContentServices.children[1].insertAdjacentText('afterbegin', siteContent['main-content']['services-content'])
 
 // product h4
-mainContentBottom.children[1].children[0].insertAdjacentText('afterbegin', siteContent['main-content']['product-h4'])
+mainContentProduct.children[0].insertAdjacentText('afterbegin', siteContent['main-content']['product-h4'])
 // product p
-mainContentBottom.children[1].children[1].insertAdjacentText('afterbegin', siteContent['main-content']['product-content'])
+mainContentProduct.children[1].insertAdjacentText('afterbegin', siteContent['main-content']['product-content'])
 
 // vision h4
-mainContentBottom.children[2].children[0].insertAdjacentText('afterbegin', siteContent['main-content']['vision-h4'])
+mainContentVision.children[0].insertAdjacentText('afterbegin', siteContent['main-content']['vision-h4'])
 // vision p
-mainContentBottom.children[2].children[1].insertAdjacentText('afterbegin', siteContent['main-content']['vision-content'])
+mainContentVision.children[1].insertAdjacentText('afterbegin', siteContent['main-content']['vision-content'])
 
 /************
 ** CONTACT **
