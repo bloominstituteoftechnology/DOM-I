@@ -37,16 +37,29 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//Appending Children
+let nav7 = document.createElement('a');
+let nav8 = document.createElement('a');
+
+let parent = document.querySelector('nav')
+parent.appendChild(nav7);
+parent.appendChild(nav8);
+
 
 //navBar
 let navBar = document.querySelectorAll('a');
 var navLinks = Object.values(siteContent.nav);
+
 for (let i = 0; i < navBar.length; i++) {
   navBar[i].innerHTML = navLinks[i]
-}
+  navBar[i].style.color = 'green'}  
+
+nav7.innerHTML = 'Prices';
+nav8.innerHTML = 'Login';
+
+let logo = document.getElementById("logo-img");
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 
 //CTA
