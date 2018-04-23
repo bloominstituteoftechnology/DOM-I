@@ -135,3 +135,10 @@ ctaH1.style.fontSize = "100px";
 ctaH1.style.color = "white";
 ctaH1.style.textShadow = "5px 5px black";
 
+ctaButton.addEventListener("click", function(){  /// added click eventListener to the cta button
+  if(ctaH1.style.color === "green") {
+    ctaH1.style.color = "white";
+  } else {
+  ctaH1.style.color = "green";
+  }
+});
