@@ -38,6 +38,19 @@ const siteContent = {
 
 
 //?
+const navContent = [];
+const navLinks = [].slice.call(document.querySelectorAll('nav a'));
+navLinks.push(document.querySelector('#logo-img'));
 
-let mainContent = document.querySelector(".main-content");
-mainContent.innerHTML = siteContent["main-content"].features-h4; 
+// push the values of `siteContent.nav` into `navContent` array
+for (content in siteContent.nav) navContent.push(siteContent.nav[content]);
+
+// insert content into nav and logo image
+for (let i = 0; i < navContent.length; i++) {
+  if (i === navContent.length - 1) {
+    navLinks[navLinks.length - 1].src = navContent[i];
+  }
+  else {
+    navLinks[i].insertAdjacentText('afterbegin', navContent[i]);
+  }
+}
