@@ -55,5 +55,11 @@ navLinks[5].innerHTML = "Contact";
 
 
 
-//CTA Selectors:
+//CTA Selectors & Edits:
+let ctaWordsH1 = document.getElementsByTagName("h1")[0];
+ctaWordsH1.innerHTML= "DOM Is Awesome";
+let ctaWordsButton = document.getElementsByTagName("button")[0];
+ctaWordsButton.innerHTML = "Get Started";
+let ctaPic = document.getElementById("cta-img");
+ctaPic.setAttribute('src', siteContent["cta"]["img-src"]);
 
