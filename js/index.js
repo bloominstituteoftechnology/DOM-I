@@ -53,6 +53,14 @@ navBar[2].innerText = siteContent.nav["nav-item-3"];
 navBar[3].innerText = siteContent.nav["nav-item-4"];
 navBar[4].innerText = siteContent.nav["nav-item-5"];
 
+//nav bar color change
+navBar[0].style.color = "green";
+navBar[1].style.color = "green";
+navBar[2].style.color = "green";
+navBar[3].style.color = "green";
+navBar[4].style.color = "green";
+
+
 //cta
 let ctaH1 = document.getElementsByTagName("h1");
 ctaH1[0].innerText = siteContent.cta.h1;
