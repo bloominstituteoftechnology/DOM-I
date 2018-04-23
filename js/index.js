@@ -88,7 +88,7 @@ visionH4.innerHTML = "Vision";
 let visionContent = document.getElementsByTagName('p')[4];
 visionContent.innerHTML = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
 
-//Content 
+//Contact
 
 let contactH4 = document.getElementsByTagName('h4')[5];
 contactH4.innerHTML = "Contact";
@@ -100,4 +100,12 @@ let email = document.getElementsByTagName('p')[7];
 email.innerHTML = "sales@greatidea.io";
 
 //footer
-let footer = document.getElementsByTagName
+let footer = document.getElementsByTagName('p')[8];
+footer.innerHTML = "Copyright Great Idea! 2018"
+
+//Changing color of nav links to green
+let navigation = document.querySelectorAll("a");
+let i;
+for (i = 0; i < navigation.length; i++) {
+  navigation[i].style.color = "green";
+}
