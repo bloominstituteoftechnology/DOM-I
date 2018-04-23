@@ -75,3 +75,13 @@ for (let i = 3; i < 6; i++) {
 
 let middleIMG = document.getElementById("middle-img");
 middleIMG.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+
+let contactInfo = Object.values(siteContent["contact"]);
+let myContact = document.querySelector(".contact");
+let contactHeader = myContact.getElementsByTagName("h4");
+let contactSlots = myContact.getElementsByTagName("p");
+contactHeader[0].innerHTML = contactInfo[0];
+for (let i = 1; i < 4; i++) {
+  contactSlots[i -1].innerHTML = contactInfo[i];
+}
