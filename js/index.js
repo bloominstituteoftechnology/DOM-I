@@ -40,18 +40,18 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+
+
+
+
+//nav bar
+
 let navBar = document.getElementsByTagName('a');
-
-/*for (let i = 0; i < 5; i++){
-  
-  navBar[i].innerHTML = siteContent.nav['nav-item-'[i]];
-};*/
-
-//let x = document.getElementsByClassName("contact");
-//let y = x.getElementsByTagName("h4");
-
-//y[0].innerHTML = siteContent.contact["contact-h4"];
-
+navBar[0].innerText = siteContent.nav["nav-item-1"];
+navBar[1].innerText = siteContent.nav["nav-item-2"];
+navBar[2].innerText = siteContent.nav["nav-item-3"];
+navBar[3].innerText = siteContent.nav["nav-item-4"];
+navBar[4].innerText = siteContent.nav["nav-item-5"];
 
 //cta
 let ctaH1 = document.getElementsByTagName("h1");
@@ -73,7 +73,6 @@ hFourElements[1].innerHTML = siteContent['main-content']['about-h4'];
 hFourElements[2].innerHTML = siteContent['main-content']['services-h4'];
 hFourElements[3].innerHTML = siteContent['main-content']['product-h4'];
 hFourElements[4].innerHTML = siteContent['main-content']['vision-h4'];
-
 
 
 // p elements
