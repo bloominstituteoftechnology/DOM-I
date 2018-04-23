@@ -40,3 +40,19 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//First find our the selectors 'a' 
+
+let allNavSelectors = document.querySelectorAll('a');
+
+//Update the data with the Json Data 
+
+//allSelectors[0].setAttribute('innerHTML', 'test');
+
+
+allNavSelectors.forEach(function (selector, index, selectors) {
+  selector.innerHTML=siteContent['nav'][`nav-item-${index+1}`];
+});
+
+
+console.log(allNavSelectors);
