@@ -77,3 +77,11 @@ for (let i = 0; i < h4Values.length; i++) {
 };
 
 document.getElementById('middle-img').src = siteContent["main-content"]["middle-img-src"];
+
+let contactItems = Object.values(siteContent.contact);
+//console.log(contactItems);
+for (let i = 0; i < contactItems.length; i++) {
+  document.querySelector('.contact').children[i].innerHTML = contactItems[i];
+}
+
+document.querySelector('footer').querySelector('p').innerHTML = siteContent.footer.copyright;
