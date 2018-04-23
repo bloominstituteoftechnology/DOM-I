@@ -58,3 +58,6 @@ ctaSection.getElementsByTagName("button")[0].innerHTML = siteContent["cta"]["but
 let ctaLogo = document.getElementById("cta-img"); 
 ctaLogo.setAttribute('src', siteContent['cta']["img-src"]);
 
+//==========MAIN Section============
+let mainLogo = document.getElementById("middle-img");
+mainLogo.setAttribute('src', siteContent['main-content']["middle-img-src"])
