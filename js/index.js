@@ -48,7 +48,7 @@ let ctaImage = document.getElementById('cta-img');
 let topContent = document.querySelectorAll('.top-content .text-content');
 let features = topContent[0];
 let about = topContent[1];
-let middleImage = document.getElementById('#middle-img');
+let middleImage = document.getElementById('middle-img');
 let bottomContent = document.querySelectorAll('.bottom-content .text-content');
 let services = bottomContent[0];
 let product = bottomContent[1];
@@ -65,3 +65,22 @@ nav[4].innerHTML = siteContent["nav"]["nav-item-5"];
 ctaTextH1.innerHTML = siteContent["cta"]["h1"].split(' ').join('<br>');
 ctaTextButton.innerHTML = siteContent["cta"]["button"];
 ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
+
+
+features.firstElementChild.innerHTML = siteContent["main-content"]["features-h4"];
+features.lastElementChild.innerHTML = siteContent["main-content"]["features-content"];
+
+about.firstElementChild.innerHTML = siteContent["main-content"]["about-h4"];
+about.lastElementChild.innerHTML = siteContent["main-content"]["about-content"];
+
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+services.firstElementChild.innerHTML = siteContent["main-content"]["services-h4"];
+services.lastElementChild.innerHTML = siteContent["main-content"]["services-content"];
+
+product.firstElementChild.innerHTML = siteContent["main-content"]["product-h4"];
+product.lastElementChild.innerHTML = siteContent["main-content"]["product-content"];
+
+vision.firstElementChild.innerHTML = siteContent["main-content"]["vision-h4"];
+vision.lastElementChild.innerHTML = siteContent["main-content"]["vision-content"];
+
