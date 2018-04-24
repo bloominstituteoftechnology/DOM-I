@@ -47,10 +47,15 @@ logo.alt = 'This is company logo';
 logo.src = siteContent['nav']['img-src'];
 
 let theNav = document.querySelector('nav');
-let textNode = document.createTextNode('The CEO');
-theNav.appendChild(textNode);
+
+theNav.prepend('Hello Users');
 theNav.style.color = 'green';
-theNav.prepend('Hello User');
+
+let textNode = document.createElement('a');
+textNode.innerHTML = 'The CEO';
+textNode.setAttribute('href', '#');
+// let textNode = document.createTextNode('The CEO');
+theNav.append(textNode);
 let theHead = document.querySelectorAll('a');
 
 theHead.forEach(Element => {
@@ -80,7 +85,7 @@ middleImage.setAttribute('alt', 'An image of code snippets across the screen');
 middleImage.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
 let ctaText = document.getElementsByTagName('h1');
-ctaText[0].innerHTML = siteContent['cta']['h1'];
+ctaText[0].innerHTML = 'Dom <br/> is <br/> awesome';
 
 let buttons = document.getElementsByTagName('button');
 buttons[0].innerHTML = siteContent['cta']['button'];
@@ -104,7 +109,7 @@ paragraphs[1].innerHTML = siteContent['main-content']['about-content'];
 paragraphs[2].innerHTML = siteContent['main-content']['services-content'];
 paragraphs[3].innerHTML = siteContent['main-content']['product-content'];
 paragraphs[4].innerHTML = siteContent['main-content']['vision-content'];
-paragraphs[5].innerHTML = siteContent['contact']['address'];
+paragraphs[5].innerHTML = '123 Way 456 Street <br/> Somewhere, USA';
 paragraphs[6].innerHTML = siteContent['contact']['phone'];
 paragraphs[7].innerHTML = siteContent['contact']['email'];
 paragraphs[8].innerHTML = siteContent.footer.copyright;
