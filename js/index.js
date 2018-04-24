@@ -40,15 +40,27 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-let navItemSix = document.createElement("A");
-navItemSix.innerHTML = "Contact";
-let navContact = document.querySelector("nav");
-navContact.removeChild(navContact.childNodes[11]); // ?
-navContact.appendChild(navItemSix);
+// create an element for contact in navbar
+let navContact = document.createElement("A");
+navContact.innerHTML = "Contact";
+navContact.setAttribute("href", "#");
+
+// get navbar element
+let navBar = document.querySelector("nav");
+
+// remove blank a tag from navbar
+navBar.removeChild(navBar.children[5]);
+
+// add contact to end of navbar
+navBar.appendChild(navContact);
+
+// create element for home in navbar and add to beginning of navbar
 let navHome = document.createElement("A");
 navHome.innerHTML = "Home";
-navContact.prepend(navHome);
+navHome.setAttribute("href", "#");
+navBar.prepend(navHome);
 
+// get necessary elements from DOM
 let nav = document.querySelectorAll("a");
 let cta = document.querySelector('.cta');
 let ctaTextH1 = document.querySelector('.cta .cta-text h1');
@@ -65,16 +77,14 @@ let vision = bottomContent[2];
 let contact = document.querySelector('.contact');
 let footer = document.querySelector('footer');
 
-nav[1].innerHTML = siteContent["nav"]["nav-item-1"];
-nav[2].innerHTML = siteContent["nav"]["nav-item-2"];
-nav[3].innerHTML = siteContent["nav"]["nav-item-3"];
-nav[4].innerHTML = siteContent["nav"]["nav-item-4"];
-nav[5].innerHTML = siteContent["nav"]["nav-item-5"];
+let navContent = Object.values(siteContent["nav"]);
+navContent.pop() // remove img from list
+navContent.forEach((item, index) => {nav[index+1].innerHTML = item});
 
+// make CTA text have new line for each word
 ctaTextH1.innerHTML = siteContent["cta"]["h1"].split(' ').join('<br>');
 ctaTextButton.innerHTML = siteContent["cta"]["button"];
 ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
-
 
 features.firstElementChild.innerHTML = siteContent["main-content"]["features-h4"];
 features.lastElementChild.innerHTML = siteContent["main-content"]["features-content"];
@@ -101,12 +111,15 @@ for (let i=0; i<contactInfo.length; i++) {
 
 footer.firstElementChild.innerHTML = siteContent["footer"]["copyright"];
 
+// color navbar green
 nav.forEach((item) => {item.style.color = "green"});
 
+// make site fluid
 let container = document.querySelector(".container");
 container.style.width = "100%";
 container.style.maxWidth = "880px";
 
+// functions for testing event listeners
 function popUp() {
   alert("you pushed the button");
 }
