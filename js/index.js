@@ -51,6 +51,15 @@ for(let i = 0; i < navItems.length; i++){
 }
 
 
+
+let newNavItems = document.createElement('a');
+newNavItems.textContent = 'Impact';
+newNavItems.setAttribute('href','#')
+navItems[0].parentElement.appendChild(newNavItems)
+
+
+
+
 //selecting the cta h1 element
 let ctaText = document.querySelector("h1")
 ctaText.textContent = siteContent.cta.h1;
