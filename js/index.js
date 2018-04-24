@@ -38,31 +38,34 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 
 // Change for cta image
 let ctaIMG = document.getElementById("cta-img");
-ctaIMG.setAttribute('src', siteContent["cta"]["img-src"])
+ctaIMG.setAttribute('src', siteContent["cta"]["img-src"]);
 
 // Change for Middle img
-let mcImg = document.getElementById("middle-img");
-mcImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+let midImg = document.getElementById("middle-img");
+midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
-// Nav Section
-let navElements = document.querySelector("nav");
-let navs = navElements.querySelectorAll("a");
-console.log("nav is", navs);
-navs[0].innerHTML = siteContent["nav"]["nav-item-1"];
-let props2 = Object.entries(siteContent.nav);
-navs.forEach((item, index) => {
-  item.innerHTML = props2[index + 1][0];
-  console.log("nav is this", navs);
-});
+// // Nav Section
+let navLinks = document.querySelectorAll('nav a');
+navLinks[0].innerText = siteContent.nav['nav-item-1'];
+navLinks[1].innerText = siteContent.nav['nav-item-2'];
+navLinks[2].innerText = siteContent.nav['nav-item-3'];
+navLinks[3].innerText = siteContent.nav['nav-item-4'];
+navLinks[4].innerText = siteContent.nav['nav-item-5'];
 
-// Contact Section
+
+// // Cta section
+let ctaTxt = document.querySelectorAll("cta");
+ctaTxt.innerText = siteContent.cta['h1'];
+console.log(ctaTxt.innerText);
+
+
+// // Contact Section
 let contactElements = document.querySelector(".contact");
-console.log("contact is:", contactElements);
 let h4Tags = contactElements.querySelectorAll("h4");
 h4Tags[0].innerHTML = siteContent["contact"]["contact-h4"];
 let pTags = contactElements.querySelectorAll("p");
@@ -70,6 +73,7 @@ let props = Object.entries(siteContent.contact);
 pTags.forEach((item, index) => {
   item.innerHTML = props[index + 1][1];
 });
+
 
 
 
