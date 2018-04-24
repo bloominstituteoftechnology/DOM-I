@@ -48,6 +48,12 @@ for(let i = 0; i < aTag.length; i++) {
   aTag[i].innerHTML = siteContent["nav"]["nav-item-"+(i+1)]
 }
 
+   var testNode = document.createElement("a");
+ testNode.innerHTML = "Back";
+  aTag[5].appendChild(testNode);
+aTag[6].style.margin = "10px"
+
+ console.log();
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
