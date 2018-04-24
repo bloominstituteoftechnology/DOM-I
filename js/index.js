@@ -37,52 +37,30 @@ const siteContent = {
   },
 };
 
-// LOGO (UPDATING IT)
+// Example: Update the img src for the logo
+let logoImg = document.getElementById("logo-img");
+logoImg.setAttribute("src", "img/logo.png");
 
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
-logo.setAttribute('src', 'https://raw.githubusercontent.com/danteocualesjr/DOM-I/master/img/logo.png')
+// IMAGES
 
-// HEADER
+let headerImage = document.getElementById("cta-img");
+headerImage.setAttribute("src", "img/header-img.png")
 
-let navItem1 = document.getElementsByTagName("a");
-console.log(navItem1[0].innerHTML);
-navItem1[0].innerHTML = siteContent["nav"]["nav-item-1"]
+let middleImage = document.getElementById("middle-img");
+middleImage.setAttribute("src", "img/mid-page-accent.jpg")
 
-let navItem2 = document.getElementsByTagName("a");
-console.log(navItem2[1].innerHTML);
-navItem2[1].innerHTML = siteContent["nav"]["nav-item-2"]
+// NAVIGATION
 
-let navItem3 = document.getElementsByTagName("a");
-console.log(navItem2[2].innerHTML);
-navItem2[2].innerHTML = siteContent["nav"]["nav-item-3"]
+let services = document.getElementsByTagName("a")[0];
+services.innerHTML = "Services";
+let product = document.getElementsByTagName("a")[1];
+product.innerHTML = "Product";
+let vision = document.getElementsByTagName("a")[2];
+vision.innerHTML = "Vision";
+let features = document.getElementsByTagName("a")[3];
+features.innerHTML = "Features";
+let about = document.getElementsByTagName("a")[4];
+about.innerHTML = "About"
+let contact = document.getElementsByTagName("a")[5];
+contact.innerHTML = "Contact";
 
-let navItem4 = document.getElementsByTagName("a");
-console.log(navItem2[3].innerHTML);
-navItem2[3].innerHTML = siteContent["nav"]["nav-item-4"]
-
-let navItem5 = document.getElementsByTagName("a");
-console.log(navItem2[4].innerHTML);
-navItem2[4].innerHTML = siteContent["nav"]["nav-item-5"]
-
-let navItem6 = document.getElementsByTagName("a");
-console.log(navItem2[5].innerHTML);
-navItem2[5].innerHTML = siteContent["nav"]["nav-item-6"] 
-
-// CTA TEXT
-
-let ctaText = document.querySelector("h1");
-console.log(ctaText.innerHTML);
-ctaText.innerHTML = siteContent["cta"]["h1"];
-
-// CTA BUTTON
-
-let ctaButton = document.getElementsByTagName("button");
-console.log(ctaButton.innerHTML);
-ctaButton.innerHTML = sitecontent["cta"]["button"];
-
-// MIDDLE IMAGE
-
-let middleImage = document.getElementById("cta-img");
-middleImg.setAttribute('src', sitecontent["cta"]["img-src"]);
-middleImg.setAttribute('src', 'https://raw.githubusercontent.com/danteocualesjr/DOM-I/master/img/header-img.png');
