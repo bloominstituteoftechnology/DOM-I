@@ -52,10 +52,9 @@ kelnav.getElementsByTagName("a")[4].innerHTML = siteContent["nav"]["nav-item-5"]
 kelnav.getElementsByTagName("a")[5].innerHTML = siteContent["nav"]["nav-item-6"];
 kelnav.prepend("This has been prepended. ");
 
-var test = document.createElement("a");
-var node = document.createTextNode("test");
-test.appendChild(node);
-document.nav.appendChild(test);
+let newa = document.createElement("a");
+newa.innerHTML = "what";
+kelnav.append(newa);
 
 /*let links = document.querySelectorAll("a");
 links.setAttribute("style", "color:green");*/
