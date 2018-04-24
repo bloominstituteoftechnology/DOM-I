@@ -37,16 +37,17 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
+// LOGO (UPDATING IT)
 
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
-logo.setAttribute('src', 'https://raw.githubusercontent.com/maribelcuales/DOM-I/master/img/logo.png')
+logo.setAttribute('src', 'https://raw.githubusercontent.com/danteocualesjr/DOM-I/master/img/logo.png')
 
 // HEADER
 
-let navItem1 = document.querySelector("a")
-navItem1.innerHTML = siteContent["nav"]["nav-item-1"]
+let navItem1 = document.getElementsByTagName("a");
+console.log(navItem1[0].innerHTML);
+navItem1[0].innerHTML = siteContent["nav"]["nav-item-1"]
 
 let navItem2 = document.getElementsByTagName("a");
 console.log(navItem2[1].innerHTML);
@@ -68,17 +69,20 @@ let navItem6 = document.getElementsByTagName("a");
 console.log(navItem2[5].innerHTML);
 navItem2[5].innerHTML = siteContent["nav"]["nav-item-6"] 
 
-// CTA
+// CTA TEXT
 
 let ctaText = document.querySelector("h1");
 console.log(ctaText.innerHTML);
-ctaText.innerHTML = siteContent["cta"]["h1"]
+ctaText.innerHTML = siteContent["cta"]["h1"];
 
-let ctaButton = document.getElementsByClassName(".cta-text");
+// CTA BUTTON
+
+let ctaButton = document.getElementsByTagName("button");
 console.log(ctaButton.innerHTML);
-ctaButton.innerHTML = sitecontent["cta"]["button"]
+ctaButton.innerHTML = sitecontent["cta"]["button"];
 
+// MIDDLE IMAGE
 
-let middleImg = document.getElementById("cta-img");
+let middleImage = document.getElementById("cta-img");
 middleImg.setAttribute('src', sitecontent["cta"]["img-src"]);
-middleImg.setAttribute('src', 'https://raw.githubusercontent.com/maribelcuales/DOM-I/master/img/header-img.png');
+middleImg.setAttribute('src', 'https://raw.githubusercontent.com/danteocualesjr/DOM-I/master/img/header-img.png');
