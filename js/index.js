@@ -43,6 +43,8 @@ const siteContent = { //this is an object with properties and values.
 // Example: Update the img src for the logo
 
 //var
+
+//nav
 let menu = document.getElementsByTagName('a');
 let services = menu[0];
   services.innerHTML = siteContent['nav']['nav-item-1'];
@@ -59,8 +61,14 @@ let contact = menu[5];
 
 let logo = document.querySelector("#logo-img"); //works
   logo.setAttribute('src', siteContent['nav']["img-src"]); //works
-// let ctaText = document.querySelector('.cta-text h1');
-// let ctaBut = document.querySelector('.cta-text button');
+
+//cta
+//text
+let ctaText = document.querySelector('.cta-text h1');
+  ctaText.innerHTML = siteContent["cta"]["h1"];
+//button
+let ctaBut = document.querySelector('.cta-text button');
+ ctaBut.innerHTML = siteContent['cta']['button'];
 let ctaImg = document.querySelector('.cta img'); //works
   ctaImg.setAttribute('src', siteContent["cta"]["img-src"]); //works
 // let topContent= document.querySelector('.text-content h4');
