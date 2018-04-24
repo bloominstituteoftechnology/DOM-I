@@ -60,6 +60,8 @@ let contact = menu[5];
   contact.innerHTML = siteContent['nav']['nav-item-6'];
   contact.style.color = 'green';
 
+
+
 let logo = document.querySelector('#logo-img'); 
   logo.setAttribute('src', siteContent['nav']['img-src']); 
 
@@ -117,6 +119,24 @@ let footerPTag = pTag[8];
 let middleImg = document.querySelector('.middle-img'); 
   middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']) 
 
+  //new navs
 
-// newNav.style.color = 'green';
-// newNewNav.style.color = 'green';
+//create text node to append to "a" element that will then append to
+//"nav" element.
+
+//append
+let navigator = document.querySelector('nav');
+let newNav = document.createElement('a');
+newNav.style.color = 'green';           
+let newNavText = document.createTextNode('Directions');    // Create a text node
+newNav.setAttribute('href', '#');
+newNav.appendChild(newNavText);
+navigator.appendChild(newNav);  
+
+//prepend
+let newNavTwo = document.createElement('a');
+newNavTwo.style.color = 'green';
+let newNavTextTwo = document.createTextNode('Examples');
+newNavTwo.setAttribute('href', '#');
+newNavTwo.appendChild(newNavTextTwo);
+navigator.prepend(newNavTwo);
