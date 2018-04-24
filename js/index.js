@@ -36,7 +36,7 @@ const siteContent = {
     "copyright": "Copyright Great Idea! 2018"
   },
 };
-
+// naive implementation of bootstrap framework
 // const newLink = document.createElement('link')
 // const bla = document.querySelector("head");
 // bla.insertBefore(newLink, bla.childNodes[0]);
@@ -46,10 +46,12 @@ const siteContent = {
 // oldLing[0].setAttribute('crossorigin', 'anonymous');
 // oldLing[0].setAttribute('href', 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css');
 
+// Inclusion of bootstrap framework
 const bla = document.querySelector("head");
 bla.insertAdjacentHTML("afterbegin", `<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">`)
 
-// Example: Update the img src for the logo
+// Header - Content
+
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
@@ -57,53 +59,24 @@ let selNavItem = document.querySelectorAll("nav a");
 selNavItem.forEach((element, index) => {
   element.innerHTML = siteContent["nav"]["nav-item-" + (index + 1)];
 })
+// !Header-Content
+
+// CTA - Content
 
 let ctaHeading = document.querySelectorAll(".cta-text")
+
 ctaHeading[0].firstElementChild.innerHTML = siteContent.cta["h1"];
 ctaHeading[0].lastElementChild.innerHTML = siteContent.cta["button"];
+
+// Modal- Implementation
+// BTN Manipulation
 ctaHeading[0].lastElementChild.setAttribute('type', 'button');
 ctaHeading[0].lastElementChild.setAttribute('data-toggle', 'modal');
 ctaHeading[0].lastElementChild.setAttribute('data-target', '#exampleModalCenter');
 ctaHeading[0].firstElementChild.style = 'color: red';
-// 
 
-let ctaLogo = document.querySelector("section img");
-ctaLogo.src = 'img/header-img.png';
+// Function to inject HTML Snippet
 
-let topContent = document.querySelector(".top-content")
-topContent.children[0].firstElementChild.innerHTML = siteContent["main-content"]["features-h4"];
-topContent.children[0].lastElementChild.innerHTML = siteContent["main-content"]["features-content"];
-topContent.children[1].firstElementChild.innerHTML = siteContent["main-content"]["about-h4"];
-topContent.children[1].lastElementChild.innerHTML = siteContent["main-content"]["about-content"];
-
-let middleImg = document.querySelector("#middle-img");
-middleImg.src = siteContent["main-content"]["middle-img-src"];
-
-let bottomContent = document.querySelector(".bottom-content")
-bottomContent.children[0].firstElementChild.innerHTML = siteContent["main-content"]["services-h4"];
-bottomContent.children[0].lastElementChild.innerHTML = siteContent["main-content"]["services-content"];
-bottomContent.children[1].firstElementChild.innerHTML = siteContent["main-content"]["product-h4"];
-bottomContent.children[1].lastElementChild.innerHTML = siteContent["main-content"]["product-content"];
-bottomContent.children[2].firstElementChild.innerHTML = siteContent["main-content"]["vision-h4"];
-bottomContent.children[2].lastElementChild.innerHTML = siteContent["main-content"]["vision-content"];
-
-let contactHead = document.querySelector(".contact h4")
-contactHead.innerHTML = siteContent.contact["contact-h4"]
-
-let contactBody = document.querySelectorAll(".contact p")
-contactBody[0].innerHTML = siteContent["contact"]["address"]
-contactBody[1].innerHTML = siteContent["contact"]["phone"]
-contactBody[2].innerHTML = siteContent["contact"]["email"]
-
-let footer = document.querySelector("footer")
-footer.innerHTML = siteContent["footer"]["copyright"];
-// let topContent2h = document.querySelector(".text-content p");
-// topContent.innerHTML = "jbaoifoiasdjf";
-
-//Stretch goals
-// ctaHeading[0].lastElementChild.addEventListener("click", () => {
-//   alert("FILTHY BUTTONCLICKER!")
-// })
 let functionWorked = false;
 ctaHeading[0].lastElementChild.addEventListener('mouseover', () => {
   // console.log("hey")
@@ -131,3 +104,68 @@ ctaHeading[0].lastElementChild.addEventListener('mouseover', () => {
     functionWorked = !functionWorked;
   }
 })
+// !Modal Implementation
+
+let ctaLogo = document.querySelector("section img");
+ctaLogo.src = 'img/header-img.png';
+
+// !CTA-Content
+
+// Main-Content
+
+
+let contentArr = [];
+for (var prop in siteContent["main-content"]) {
+  if (siteContent["main-content"].hasOwnProperty(prop) && prop !== "middle-img-src") {
+    contentArr.push(prop);
+  }
+}
+let j = 0;
+let textContent = document.querySelectorAll(".text-content")
+for (let i = 0; i < textContent.length; i++) {
+  textContent[i].children[0].textContent = siteContent["main-content"][contentArr[j]];
+  textContent[i].children[1].textContent = siteContent["main-content"][contentArr[j + 1]];
+  j += 2;
+}
+
+
+let middleImg = document.querySelector("#middle-img");
+middleImg.src = siteContent["main-content"]["middle-img-src"];
+
+// Naive Solution:
+// let topContent = document.querySelector(".top-content")
+// topContent.children[0].firstElementChild.innerHTML = siteContent["main-content"]["features-h4"];
+// topContent.children[0].lastElementChild.innerHTML = siteContent["main-content"]["features-content"];
+// topContent.children[1].firstElementChild.innerHTML = siteContent["main-content"]["about-h4"];
+// topContent.children[1].lastElementChild.innerHTML = siteContent["main-content"]["about-content"];
+
+// let bottomContent = document.querySelector(".bottom-content")
+// bottomContent.children[0].firstElementChild.innerHTML = siteContent["main-content"]["services-h4"];
+// bottomContent.children[0].lastElementChild.innerHTML = siteContent["main-content"]["services-content"];
+// bottomContent.children[1].firstElementChild.innerHTML = siteContent["main-content"]["product-h4"];
+// bottomContent.children[1].lastElementChild.innerHTML = siteContent["main-content"]["product-content"];
+// bottomContent.children[2].firstElementChild.innerHTML = siteContent["main-content"]["vision-h4"];
+// bottomContent.children[2].lastElementChild.innerHTML = siteContent["main-content"]["vision-content"];
+
+// !Main-Content
+
+// Contact-Content
+let contactHead = document.querySelector(".contact h4")
+contactHead.innerHTML = siteContent.contact["contact-h4"]
+
+let contactBody = document.querySelectorAll(".contact p")
+contactBody[0].innerHTML = siteContent["contact"]["address"]
+contactBody[1].innerHTML = siteContent["contact"]["phone"]
+contactBody[2].innerHTML = siteContent["contact"]["email"]
+
+let footer = document.querySelector("footer")
+footer.innerHTML = siteContent["footer"]["copyright"];
+
+
+// let topContent2h = document.querySelector(".text-content p");
+// topContent.innerHTML = "jbaoifoiasdjf";
+
+//Stretch goals
+// ctaHeading[0].lastElementChild.addEventListener("click", () => {
+//   alert("FILTHY BUTTONCLICKER!")
+// })
