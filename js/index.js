@@ -72,3 +72,26 @@ h1Message.innerHTML = "DOM Is Awesome";
 let button = document.getElementsByTagName("button")[0];
 button.innerHTML = "Get Started";
 
+// MAIN CONTENT
+
+let featuresH4 = document.getElementsByTagName('h4')[0];
+featuresH4.innerHTML = "Features";
+let featureContent = document.getElementsByTagName('p')[0];
+featureContent.innerHTML = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+let aboutH4 = document.getElementsByTagName('h4')[1];
+aboutH4.innerHTML = "About";
+let aboutContent = document.getElementsByTagName('p')[1];
+aboutContent.innerHTML = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+let servicesH4 = document.getElementsByTagName('h4')[2];
+servicesH4.innerHTML = "Services";
+let servicesContent = document.getElementsByTagName('p')[2];
+servicesContent.innerHTML = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+let productH4 = document.getElementsByTagName('h4')[3];
+productH4.innerHTML = "Product"
+let productContent = document.getElementsByTagName('p')[3];
+productContent.innerHTML = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+let visionH4 = document.getElementsByTagName('h4')[4];
+visionH4.innerHTML = "Vision";
+let visionContent = document.getElementsByTagName('p')[4];
+visionContent.innerHTML = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
