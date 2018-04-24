@@ -74,7 +74,6 @@ let ctaImg = document.querySelector('.cta img'); //works
   ctaImg.setAttribute('src', siteContent['cta']['img-src']); //works
 //main content
 //headlines
-let headlines = document.querySelectorAll('.text-content h4');
 
 let headline = document.getElementsByTagName('h4');
 let servicesHeadline = headline[0];
@@ -83,25 +82,35 @@ let productHeadline = headline[1];
   productHeadline.innerHTML = siteContent['main-content']['product-h4'];
 let visionHeadline = headline[2];
   visionHeadline.innerHTML = siteContent['main-content']['vision-h4'];
-let featuresHeadline = menu[3];
+let featuresHeadline = headline[3];
   featuresHeadline.innerHTML = siteContent['main-content']['features-h4'];
 let aboutHeadline = headline[4];
   aboutHeadline.innerHTML = siteContent['main-content']['about-h4'];
 let contactHeadline = headline[5];
   contactHeadline.innerHTML = siteContent['contact']['contact-h4'];
 
+//paragraphs
 
+let pTag = document.getElementsByTagName('p');
+let servicesPTag = pTag[0];
+  servicesPTag.innerHTML = siteContent['main-content']['services-content'];
+let productPTag = pTag[1];
+  productPTag.innerHTML = siteContent['main-content']['product-content'];
+let visionPTag = pTag[2];
+  visionPTag.innerHTML = siteContent['main-content']['vision-content'];
+let featuresPTag = pTag[3];
+  featuresPTag.innerHTML = siteContent['main-content']['features-content'];
+let aboutPTag = pTag[4];
+  aboutPTag.innerHTML = siteContent['main-content']['about-content'];
+let addressPTag = pTag[5];
+  addressPTag.innerHTML = siteContent['contact']['address'];
+let phonePTag = pTag[6];
+  phonePTag.innerHTML = siteContent['contact']['phone'];
+let emailPTag = pTag[7];
+  emailPTag.innerHTML = siteContent['contact']['email'];
+let footerPTag = pTag[8];
+  footerPTag.innerHTML = siteContent['footer']['copyright'];
 
-
-
-
-
-
-
-
-  // let topContentP = document.querySelector('.text-content p');
-// let topContentFeatures = document.querySelectorAll('.text-content h4')[1];
-// let topContentPIndexOne = document.querySelectorAll('.text-content p')[1];;
 let middleImg = document.querySelector('.middle-img'); //works
   middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']) //works
 // let bottomContenth4 = document.querySelector('.text-content h4')[2];
