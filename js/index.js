@@ -35,10 +35,26 @@ const siteContent = {
     "copyright" : "Copyright Great Idea! 2018"
   },
 };
+//window
+window.addEventListener('resize', (event) => {
+console.log("The window has been resized.")
+});
+
+//doc
+document.addEventListener('keydown', () => {
+  alert('You are moving down!!');
+});
+
+document.addEventListener('scroll', (event)  => {
+  document.log("You are scrolling")
+});
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.addEventListener('mouseup', (event) => {
+ console.log("UP!")
+});
 
 //nav
 let nav1 = document.getElementsByTagName("a")
@@ -75,16 +91,35 @@ Port.innerHTML = "portfolio";
 //cta
 let ctah1 = document.querySelector("h1");
 ctah1.innerHTML = "DOM is Awesome";
+ctah1.addEventListener('click', (event) => {
+  ctah1.classList.add("rotate")
+});
+ctah1.addEventListener('dblclick', (event) => {
+  ctah1.classList.remove("rotate")
+});
 
 let ctaButton = document.querySelector("button");
-ctaButton.innerHTML = "Get Started";
+ctaButton.innerHTML = "Click Me";
+ctaButton.addEventListener('click', (event) => {
+  ctaButton.style.backgroundColor = 'pink';
+  ctaButton.innerText = "hello";
+});
+ctaButton.addEventListener('dblclick', (event) => {
+  ctaButton.style.backgroundColor = 'white';
+  ctaButton.innerHTML = "Click Me";
+});
 
 let headerImg = document.getElementById("cta-img");
 headerImg.setAttribute('src', "img/header-img.png")
+headerImg.addEventListener('mouseover', (event) => {
+  console.log("I am a mouse");
+})
+
 
 //main content
 let main1 = document.getElementsByTagName("h4")
 main1[0].innerHTML = "Features";
+
 let content1 = document.getElementsByTagName("p")
 content1[0].innerHTML = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
@@ -110,6 +145,13 @@ content5[4].innerHTML = "Vision content elementum magna eros, ac posuere elvit t
 
 let middleImg = document.getElementById("middle-img")
 middleImg.setAttribute('src', "img/mid-page-accent.jpg")
+middleImg.addEventListener('mouseenter', (event) => {
+  console.log("Hi, I'm here!");
+})
+middleImg.addEventListener('mouseleave', (event) => {
+  console.log("I am leaving now.");
+})
+
 
 //contact 
 let contactTitle = document.getElementsByTagName("h4")
@@ -124,3 +166,4 @@ emailText[7].innerHTML = "sales@greatidea.io";
 //footer 
 let footerText = document.getElementsByTagName("p")
 footerText[8].innerHTML = "Copyright Great Idea! 2018";
+

@@ -126,10 +126,6 @@ header .logo {
     cursor: pointer;
 }
 
-.cta .cta-text button:hover {
-    background: black;
-    color: white;
-}
 
 /* Main Content Styles */
 
@@ -296,4 +292,7 @@ footer {
     .contact {
         margin: 20px;
     }
+}
+.rotate{
+    transform: rotate(20deg);
 }
