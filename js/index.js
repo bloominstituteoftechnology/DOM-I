@@ -95,3 +95,18 @@ visionH4.innerHTML = "Vision";
 let visionContent = document.getElementsByTagName('p')[4];
 visionContent.innerHTML = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
 
+// CONTACT
+
+let contactH4 = document.getElementsByTagName('h4')[5];
+contactH4.innerHTML = "Contact";
+let address = document.getElementsByTagName('p')[5];
+address.innerHTML = "123 Way 456 Street Somewhere, USA";
+let phone = document.getElementsByTagName('p')[6];
+phone.innerHTML = "1 (888) 888-8888";
+let email = document.getElementsByTagName('p')[7];
+email.innerHTML = "sales@greatidea.io";
+
+// FOOTER
+
+let footer = document.getElementsByTagName('p')[8];
+footer.innerHTML = "Copyright Great Idea! 2018"
