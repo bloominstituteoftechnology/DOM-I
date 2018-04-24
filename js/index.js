@@ -47,24 +47,14 @@ nav[0].children[3].innerHTML = siteContent["nav"]["nav-item-4"]
 
 document.getElementById("logo-img").src = siteContent["nav"]["img-src"];
 
-
-
 document.getElementById("cta-img").src = siteContent['cta']['img-src'];
 
-
 document.getElementById("middle-img").src = siteContent["main-content"]["middle-img-src"];
-
-// console.log(nav[0].children[0].innerHTML)
 
 document.querySelector('.cta-text').firstElementChild.innerHTML = siteContent.cta.h1;
 
 // Add cta button
 document.querySelector('.cta-text').getElementsByTagName('button')[0].innerHTML = siteContent.cta.button;
-
-// Add main content
-// Seperate into Top Content and Bottom Content
-// TODO Add a for()loop to seperate the content-text into various parts for the site.
-
 
 // Top 
 document.querySelector('.top-content').getElementsByTagName('h4')[0].innerHTML = siteContent["main-content"]["features-h4"];
@@ -90,67 +80,49 @@ document.querySelector('.contact').getElementsByTagName('p')[2].innerHTML = site
 document.querySelector('footer').getElementsByTagName('p')[0].innerHTML = siteContent.footer.copyright;
 
 
+// < !-- ## Task 1: Create selectors to point your data into elements
+//   * Create selectors by using any of the DOM element's methods
+//     * Note that IDs have been used on all images.Use the IDs to update src path content-- >
 
 
+//  Add Event Listener
+document.querySelector('nav').addEventListener('click', (event) => console.log("I am nav"));
+document.querySelector('.contact').addEventListener('click', (event) => console.log("I am container"));
+document.querySelector('h1').addEventListener('click', (event) => console.log("I am container"));
+document.querySelector('.bottom-content').addEventListener('click', (event) => console.log("I am container"));
+document.querySelector('.middle-img ').addEventListener('click', (event) => console.log("I am container"));
+document.querySelector('').addEventListener('click', (event) => console.log("I am container"));
+document.querySelector('nav').addEventListener('click', (event) => console.log("I am container"));
+document.querySelector('nav').addEventListener('click', (event) => console.log("I am container"));
+document.querySelector('nav').addEventListener('click', (event) => console.log("I am container"));
+document.querySelector('nav').addEventListener('click', (event) => console.log("I am container"));
+
+// document.querySelector('.container').addEventListener('click', (event) => { console.log("I am button"); });
+// document.querySelector('.container').addEventListener('click', (event) => { console.log("I am button"); });
+// document.querySelector('.container').addEventListener('click', (event) => { console.log("I am button"); });
 
 
+// myAnchor.addEventListener('click', (e) => {
 
+// let myContent = document.querySelector('.content');
 
-// let logo = document.getElementById("logo-img");
-// logo.setAttribute('src', siteContent["nav"]["img-src"]);
+// let myButton = document.querySelector('.custom-button');
+// let myHeading = document.querySelector('h1');
+// let myAnchor = document.querySelector('a');
 
-// let headering = document.getElementById("cta-img");
-// headering.setAttribute('src', siteContent["cta"]["img-src"]);
+// myAnchor.addEventListener('click', (e) => {
+//   e.preventDefault();
+// });
 
-// document.querySelector('button').innerHTML = siteContent['cta']['button'];
+// myContainer.addEventListener('click', (event) => {
+//   console.log("I am container");
+// });
+// myContent.addEventListener('click', (event) => {
+//   console.log("I am content");
+//   myHeading.classList.add("mega")
+// });
 
-
-
-// const maincontent = Object.entries(siteContent['main-content'])
-// const contact = Object.entries(siteContent.contact)
-// const footer = Object.entries(siteContent.footer)
-// // console.log('lets see', maincontent,'ok', contact,'ok', footer)
-
-// let maincontentElements = Array.from(document.getElementsByClassName('main-content')[0].children);
-
-// maincontentElements.forEach((item, index) => {
-//   if (item.className === 'middle-img') {
-//     item.setAttribute('src', siteContent['main-content']['middle-img-src']);
-//   } else {
-//     let ind = 0;
-//     let h4s = Array.from(item.getElementsByTagName('h4'));
-//     let ps = Array.from(item.getElementsByTagName('p'));
-//     h4s.forEach(item => {
-//       item.innerHTML = mainContent[ind][i];
-//       ind++
-//     })  
-//   }
-// })
-
-
-
-
-// // let middleimg = document.getElementById("middle-img");
-// // middleimg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
-
-
-// // console.log(Array.from(Object.entries(siteContent['main-content'])))
-
-// // Array.from(Object.entries(siteContent['main-content'])).slice(4, 1)
-// // Object.entries
-// //longest way Lol
-
-// // document.querySelector('h1').innerHTML = siteContent['cta']['h1'];
-
-// // document.getElementById("top-content").innerHTML = siteContent["main-content"]["features-h4"];
-// // // document.querySelector('p').innerHTML = siteContent["main-content"]["features-content"];
-
-
-// // // console.log(document.querySelector("h4").innerHTML)
-
-
-// // // document.getElementsByClass('h4').innerHTML = siteContent['contact']['contact-h4'];
-// // // console.log(document.querySelector('h4').innerHTML)
-
-
-
+// myButton.addEventListener('click', (event) => {
+//   event.stopImmediatePropagation();
+//   console.log("I am button");
+// });
