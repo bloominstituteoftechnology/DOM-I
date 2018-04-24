@@ -50,14 +50,20 @@ kelnav.getElementsByTagName("a")[2].innerHTML = siteContent["nav"]["nav-item-3"]
 kelnav.getElementsByTagName("a")[3].innerHTML = siteContent["nav"]["nav-item-4"];
 kelnav.getElementsByTagName("a")[4].innerHTML = siteContent["nav"]["nav-item-5"];
 kelnav.getElementsByTagName("a")[5].innerHTML = siteContent["nav"]["nav-item-6"];
-kelnav.prepend("This has been prepended. ");
+
 
 let newa = document.createElement("a");
-newa.innerHTML = "what";
+newa.innerHTML = "append";
 kelnav.append(newa);
 
-document.querySelector('a').style.color = "green";
+let another = document.createElement("a");
+another.innerHTML = "prepend";
+kelnav.prepend(another);
 
+for (let i=0; i<8; i++) {
+    let links = document.getElementsByTagName('a');
+    links[i].style.color = "green";
+}
 
 /*----------------CTA----------------------*/
 let cta = document.querySelector(".cta-text h1");
