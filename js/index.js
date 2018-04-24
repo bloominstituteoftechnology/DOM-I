@@ -59,8 +59,8 @@ navLinks[4].innerText = siteContent.nav['nav-item-5'];
 
 
 // // Cta section
-let ctaTxt = document.querySelectorAll("cta");
-ctaTxt.innerText = siteContent.cta['h1'];
+let ctaTxt = document.querySelector("cta")[0];
+ctaTxt.innerHTML = siteContent.cta['h1'];
 console.log(ctaTxt.innerText);
 
 
