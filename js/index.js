@@ -13,12 +13,14 @@ const siteContent = { //this is an object with properties and values.
     "button": "Get Started",//document.getElementByTagName("button") = siteContent["cta"][button]
     "img-src": "img/header-img.png" //document.querySelector("#cta-img) = siteContent["cta"]["img-src"]
   },
-  "main-content": { //siteContent["main-content"]
+  "main-content": { 
+    //topContent 
     "features-h4":"Features",//document.querySelectorAll(".top-content .text-content[0]") = siteContent["main-content"]["features-h4"]
     "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.", //document.querySelector(".top-content .text-content[0] p") = siteContent["main-content"]["features-content"]
     "about-h4":"About", //document.querySelectorAll(".top-content .text-content[1]") = siteContent["main-content"]["about-h4"]
     "about-content": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.", //document.querySelector(".top-content .text-content[1] p") = siteContent["main-content"]["about-content"]
     "middle-img-src": "img/mid-page-accent.jpg", //document.getElementById("middle-img") = siteContent["main-content"]["middle-img-src"]
+    //bottom-content
     "services-h4":"Services",//document.querySelector(".bottom-content .text-content[0] h4")" = siteContent["main-content]["services-h4"]
     "services-content": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",//document.querySelector(".bottom-content .text-content[0] p") = siteContent["main-content"]["services-content"]
     "product-h4":"Product", //document.querySelector(".bottom-content .text-content[1] h4") = siteContent["main-content"]["product-h4"]
@@ -41,64 +43,69 @@ const siteContent = { //this is an object with properties and values.
 // Example: Update the img src for the logo
 
 //var
-let menu = document.querySelectorAll('a');
-let nav = document.querySelector('nav')
-let newNav = document.createElement('a');
-let newNewNav = document.createElement('a');
-let navLinks = document.querySelectorAll('nav a')
-let logo = document.querySelector("#logo-img") 
-let ctaText = document.querySelector('.cta-text h1');
-let ctaBut = document.querySelector('.cta-text button');
-let ctaImg = document.querySelector('.cta img');
-let topContenth4 = document.querySelector('.text-content h4');
-let topContentP = document.querySelector('.text-content p');
-let topContenth4Second = document.querySelectorAll('.text-content h4')[1];
-let topContentPSecond = document.querySelectorAll('.text-content p')[1];;
-let topContentImg = document.querySelector('.middle-img');
+let menu = document.getElementsByTagName('a');
+let services = menu[0];
+  services.innerHTML = siteContent['nav']['nav-item-1'];
+let product = menu[1];
+  product.innerHTML = siteContent['nav']['nav-item-2'];
+let vision = menu[2];
+  vision.innerHTML = siteContent['nav']['nav-item-3'];
+let features = menu[3];
+  features.innerHTML = siteContent['nav']['nav-item-4'];
+let about = menu[4];
+  about.innerHTML = siteContent['nav']['nav-item-5'];
+let contact = menu[5];
+  contact.innerHTML = siteContent['nav']['nav-item-6'];
 
-// nav
-
-menu[0].innerHTML = siteContent['nav']["nav-item-1"];
-menu[1].innerHTML = siteContent['nav']["nav-item-2"];
-menu[2].innerHTML = siteContent['nav']["nav-item-3"];
-menu[3].innerHTML = siteContent['nav']["nav-item-4"];
-menu[4].innerHTML = siteContent['nav']["nav-item-5"];
-menu[5].innerHTML = siteContent['nav']["nav-item-6"];
-
-//logo pic
-logo.setAttribute('src', siteContent['nav']["img-src"]);
+let logo = document.querySelector("#logo-img"); //works
+  logo.setAttribute('src', siteContent['nav']["img-src"]); //works
+// let ctaText = document.querySelector('.cta-text h1');
+// let ctaBut = document.querySelector('.cta-text button');
+let ctaImg = document.querySelector('.cta img'); //works
+  ctaImg.setAttribute('src', siteContent["cta"]["img-src"]); //works
+// let topContent= document.querySelector('.text-content h4');
+// let topContentP = document.querySelector('.text-content p');
+// let topContentFeatures = document.querySelectorAll('.text-content h4')[1];
+// let topContentPIndexOne = document.querySelectorAll('.text-content p')[1];;
+let middleImg = document.querySelector('.middle-img'); //works
+  middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]) //works
+// let bottomContenth4 = document.querySelector('.text-content h4')[2];
+// let bottomContentP = document.querySelector('.text-content p')[2];
+// let bottomContenth4IndexThree = document.querySelector('text-content h4')[3];
+// let bottomContentPIndexThree = document.querySelector('text-content p')[3];
 
 // create new Nav items
-nav.appendChild(newNav)
-newNav.setAttribute('href', '#');
-newNav.innerHTML = 'Map '
 
-nav.appendChild(newNewNav)
-newNewNav.setAttribute('href', '#');
-newNewNav.innerHTML = 'Price'
+
+
 
 
 // style nav
 
-menu.forEach(function(item) {
- item.style.color = 'green';
-});
-
-newNav.style.color = 'green';
-newNewNav.style.color = 'green';
-// cta
 
 
-ctaText.innerHTML = siteContent['cta']["h1"]; 
-ctaBut.innerHTML = siteContent['cta']["button"]; 
-ctaImg.setAttribute('src', siteContent['cta']["img-src"]);
+// newNav.style.color = 'green';
+// newNewNav.style.color = 'green';
+// // cta
+
+
+// ctaText.innerHTML = siteContent['cta']["h1"]; 
+// ctaBut.innerHTML = siteContent['cta']["button"]; 
+// ctaImg.setAttribute('src', siteContent['cta']["img-src"]);
 
 // main-content  top-content
 
 
-topContenth4.innerHTML = siteContent['main-content']["features-h4"]; 
-topContentP.innerHTML = siteContent['main-content']["features-content"]; 
-topContenth4Second.innerHTML = siteContent['main-content']["about-h4"]; 
-topContentPSecond.innerHTML = siteContent['main-content']['features-content'];
+// topContenth4.innerHTML = siteContent['main-content']["features-h4"]; 
+// topContentP.innerHTML = siteContent['main-content']["features-content"]; 
+// topContenth4IndexOne.innerHTML = siteContent['main-content']["about-h4"]; 
+// topContentPIndexOne.innerHTML = siteContent['main-content']['features-content'];
 
-topContentImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+//middle img
+// topContentImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+// //main-content bottom-content
+// bottomContenth4 = siteContent["main-content"] ['services-h4'];
+// bottomContentP = siteContent["main-content"]["services-content"];
+// bottomContenth4IndexThree = siteContent["main-content"]["product-h4"];
+// bottomContentPIndexThree = siteContent["main-content"]["product-content"];
