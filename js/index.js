@@ -8,7 +8,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM IsAwesome",
+    "h1": "DOM Is Awesome",
 
     "button": "Get Started",
     "img-src": "img/header-img.png"
@@ -87,15 +87,26 @@ document.querySelector('footer').getElementsByTagName('p')[0].innerHTML = siteCo
 
 //  Add Event Listener
 document.querySelector('nav').addEventListener('click', (event) => console.log("I am nav"));
-document.querySelector('.contact').addEventListener('click', (event) => console.log("I am container"));
+document.querySelector('.contact').addEventListener('click', (event) => console.log("Dom statement"));
 document.querySelector('h1').addEventListener('click', (event) => console.log("I am container"));
-document.querySelector('.bottom-content').addEventListener('click', (event) => console.log("I am container"));
-document.querySelector('.middle-img ').addEventListener('click', (event) => console.log("I am container"));
-document.querySelector('').addEventListener('click', (event) => console.log("I am container"));
-document.querySelector('nav').addEventListener('click', (event) => console.log("I am container"));
-document.querySelector('nav').addEventListener('click', (event) => console.log("I am container"));
-document.querySelector('nav').addEventListener('click', (event) => console.log("I am container"));
-document.querySelector('nav').addEventListener('click', (event) => console.log("I am container"));
+document.getElementById("logo-img").addEventListener('click', (event) => console.log("logo img"));
+document.querySelector('.bottom-content').getElementsByTagName('h4')[0].addEventListener('click', (event) => console.log("I am Services "));
+document.querySelector('.bottom-content').getElementsByTagName('p')[0].addEventListener('click', (event) => console.log("Service paragraph"));
+document.querySelector('.bottom-content').getElementsByTagName('h4')[1].addEventListener('click', (event) => console.log("I am Product"));
+document.querySelector('.bottom-content').getElementsByTagName('p')[1].addEventListener('click', (event) => console.log("Separagraph"));
+document.querySelector('.bottom-content').getElementsByTagName('h4')[2].addEventListener('click', (event) => console.log("Vision"));
+document.querySelector('.bottom-content').getElementsByTagName('p')[2].addEventListener('click', (event) => console.log("Vision paragraph"));
+
+// document.querySelector('.middle-img ').addEventListener('click', (event) => console.log("I am container"));
+// document.querySelector('footer').addEventListener('click', (event) => console.log("I am container"));
+
+// document.querySelector('.bottom-content').getElementsByTagName('p').addEventListener('click', (event) => console.log("I am container"))
+// document.querySelector('.bottom-content').getElementsByTagName('h4').addEventListener('click', (event) => console.log("I am container"))
+
+// document.querySelector('').addEventListener('click', (event) => console.log("I am container"));
+// document.querySelector('nav').addEventListener('click', (event) => console.log("I am container"));
+// document.querySelector('nav').addEventListener('click', (event) => console.log("I am container"));
+// document.querySelector('nav').addEventListener('click', (event) => console.log("I am container"));
 
 // document.querySelector('.container').addEventListener('click', (event) => { console.log("I am button"); });
 // document.querySelector('.container').addEventListener('click', (event) => { console.log("I am button"); });
