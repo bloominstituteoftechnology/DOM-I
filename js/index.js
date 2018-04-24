@@ -53,30 +53,38 @@ headering.setAttribute('src', siteContent["cta"]["img-src"]);
 
 document.querySelector('button').innerHTML = siteContent['cta']['button'];
 
-let middleimg = document.getElementById("middle-img");
-middleimg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
-//moises way
+
+const maincontent = Object.entries(siteContent['main-content'])
+const contact = Object.entries(siteContent.contact)
+const footer = Object.entries(siteContent.footer)
+// console.log('lets see', maincontent,'ok', contact,'ok', footer)
+
+
+
+
+
+// let middleimg = document.getElementById("middle-img");
+// middleimg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+
 // console.log(Array.from(Object.entries(siteContent['main-content'])))
 
 // Array.from(Object.entries(siteContent['main-content'])).slice(4, 1)
 // Object.entries
 //longest way Lol
 
-document.querySelector('h1').innerHTML = siteContent['cta']['h1'];
-document.querySelector('h4').innerHTML = siteContent["main-content"]["features-h4"]
-document.querySelector('p').innerHTML = siteContent["main-content"]["features-content"]
+// document.querySelector('h1').innerHTML = siteContent['cta']['h1'];
 
-document.querySelector('').innerHTML = siteContent[''][''];
-document.querySelector('').innerHTML = siteContent[""][""]
-document.querySelector('').innerHTML = siteContent[""][""]
+// document.getElementById("top-content").innerHTML = siteContent["main-content"]["features-h4"];
+// // document.querySelector('p').innerHTML = siteContent["main-content"]["features-content"];
 
 
-// console.log(document.querySelector("h4").innerHTML)
+// // console.log(document.querySelector("h4").innerHTML)
 
 
-// document.getElementsByClass('h4').innerHTML = siteContent['contact']['contact-h4'];
-// console.log(document.querySelector('h4').innerHTML)
+// // document.getElementsByClass('h4').innerHTML = siteContent['contact']['contact-h4'];
+// // console.log(document.querySelector('h4').innerHTML)
 
 
 
