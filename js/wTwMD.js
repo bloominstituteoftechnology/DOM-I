@@ -42,31 +42,13 @@ const siteContent = {
 };
 
 
-
-
-
 //Note on using for() loops, treat siteContent as an array and use array methods!
 //Start by deconstructing siteContent into arrays.
-const mainArr = Array.from(Object.entries(siteContent));
-const navArr = Array.from(mainArr[0]);
-const ctaArr = Array.from(mainArr[1]);
-const mainContentArr = Array.from(mainArr[2]);
-const contactArr = Array.from(mainArr[3]);
-const footerArr = Array.from(mainArr[4]);
 
-
-console.log()
-
-// console.log(mainArr);
-// console.log(navArr);
-// console.log(ctaArr);
-// console.log(mainContentArr);
-// console.log(contactArr);
-// console.log(footerArr);
 
 
 // Update logo image
-document.getElementById("logo-img").src = siteContent['nav']['img-src'];
+document.getElementById("logo-img").src = siteContent["nav"]["img-src"];
 
 
 // Update header image
@@ -76,20 +58,11 @@ document.getElementById("cta-img").src = siteContent['cta']['img-src'];
 document.getElementById("middle-img").src = siteContent["main-content"]["middle-img-src"];
 
 // Add header links
-// TODO Add for()loop to clean up this code.
-/*let nav = document.getElementsByTagName('nav');
-nav[0].children[0].innerHTML = siteContent['nav']['nav-item-1'];
-nav[0].children[1].innerHTML = siteContent['nav']['nav-item-2'];
-nav[0].children[2].innerHTML = siteContent['nav']['nav-item-3'];
-nav[0].children[3].innerHTML = siteContent['nav']['nav-item-4'];
-nav[0].children[4].innerHTML = siteContent['nav']['nav-item-5'];
-nav[0].children[5].innerHTML = siteContent['nav']['nav-item-6'];*/
-
-//for() loop here
-
-
-
-
+let navElements = document.getElementsByTagName('nav')
+let copyOfNavElements = Array.from(navElements[0].children);
+copyOfNavElements.forEach((item, index)=> {
+    item.innerHTML = `${nav[index][1]}`
+})
 
 // Add cta contect heading
 document.querySelector('.cta-text').firstElementChild.innerHTML = siteContent.cta.h1;
@@ -101,6 +74,13 @@ document.querySelector('.cta-text').getElementsByTagName('button')[0].innerHTML 
 
 // Add main content
 // Seperate into Top Content and Bottom Content
+let mainContentelements = Array.from(document.getElementsByClassName('main-content')[0].children)
+function ContentTandBfilter(mainContentelements)
+
+
+
+
+
 
 // Top Content
 /*document.querySelector('.top-content').getElementsByTagName('h4')[0].innerHTML = siteContent["main-content"]["features-h4"];
@@ -134,3 +114,69 @@ document.querySelector('.bottom-content').getElementsByTagName('h4')[2].innerHTM
 
 // Add footer
 document.querySelector('footer').getElementsByTagName('p')[0].innerHTML = siteContent.footer.copyright;
+
+
+            // ## DOM I - JavaScript Content Management System
+
+        // ## Project Description
+
+// You are going to be emulating a content managment system by controlling the 
+// content in the JavaScript file instead of the HTML file. This project is an 
+// excercise pointed at selecting elements and then updating them without touching 
+// the HTML file using the DOM.
+
+// You have been provided a [JSON object](js/index.js) with all the necessary 
+// data to accomplish this task.  Use dot or bracket notation to traverse the data 
+// provided.
+
+
+        // ## ONE RULE
+
+// * You cannot update the HTML or CSS files directly.  You must use JavaScript 
+// and the DOM only for your tasks today.
+
+
+        // ## Task 1: Create selectors to point your data into elements
+
+// * Create selectors by using any of the DOM element's methods
+
+// * Note that IDs have been used on all images.  Use the IDs to update src path 
+// content
+
+
+        // ## Task 2: Update the HTML with the JSON data
+
+// * Remember, NO direct updating of the HTML is allowed.
+
+// * Using your selectors, update the content to match the example file.
+
+// * Remember to update the src attributes on images
+
+
+
+        // ## Task 3: Add new content
+
+//  * Change the color of the navigation text to be green.
+
+//  * Utilize `.appendChild()` and `.prepend()` to add two new items to the 
+//     navigation system. You can call them whatever you want.
+
+//  * Check your work by looking at the [original html](original.html) in the 
+//     browser
+
+
+
+        // ## Stretch Goals
+
+// * Update styles throughout the page as you see fit.  Study what happens when 
+//     you updated the DOM using style in JavaScript.
+
+// * Study tomorrow's lesson on events and try to integrate a button that can 
+//     update content on the site with a click of a button.  You could build a 
+//     similar data object with new values to help you test the click event.
+
+        // ## Stretch Project
+
+// This project is heavier on logic but employs some DOM manipulation to achieve 
+// it's goals.  Go check it out here: [stretch assignment](stretch-assignment) 
+// and see how far you can get.
