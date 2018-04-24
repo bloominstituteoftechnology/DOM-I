@@ -43,20 +43,19 @@ nav[0].children[0].innerHTML = siteContent["nav"]["nav-item-1"]
 nav[0].children[1].innerHTML = siteContent["nav"]["nav-item-2"]
 nav[0].children[2].innerHTML = siteContent["nav"]["nav-item-3"]
 nav[0].children[3].innerHTML = siteContent["nav"]["nav-item-4"]
-
-
-console.log(nav[0].children[0].innerHTML)
-
+// console.log(nav[0].children[0].innerHTML)
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 let headering = document.getElementById("cta-img");
 headering.setAttribute('src', siteContent["cta"]["img-src"])
 
-
-
 let middleimg = document.getElementById("middle-img");
 middleimg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+document.querySelector('button').innerHTML = siteContent['cta']['button']
+document.querySelector('h1').innerHTML = siteContent['cta']['h1']
+document.
 
 
 
