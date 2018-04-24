@@ -4,7 +4,7 @@ const siteContent = {
     "nav-item-2": "Product",
     "nav-item-3": "Vision",
     "nav-item-4": "Features",
-    "nav-item-5": "Features",
+    "nav-item-5": "About",
     "nav-item-6": "Contact",
     "img-src": "img/logo.png"
   },
@@ -42,6 +42,13 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 logo.setAttribute('src', 'https://raw.githubusercontent.com/maribelcuales/DOM-I/master/img/logo.png')
 
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', "img/header-img.png");
+
+let middleImage = document.getElementById("middle-img");
+middleImage.setAttribute('src', "img/mid-page-accent.jpg")
+
+
 //Nav Header
 let navItem1 = document.querySelector("a")
 navItem1.innerHTML = siteContent["nav"]["nav-item-1"]
@@ -72,24 +79,60 @@ let ctaText = document.querySelector("h1");
 console.log(ctaText.innerHTML);
 ctaText.innerHTML = siteContent["cta"]["h1"]
 
-let ctaButton = document.getElementsByClassName(".cta-text");
-console.log(ctaButton.innerHTML);
-ctaButton.innerHTML = sitecontent["cta"]["button"]
+ctaText.style.flexDirection = 'column' ;
+
+let ctaButton = document.getElementsByTagName("button")[0];
+ctaButton.innerHTML = "Get Started";
 
 
-let ctaImg = document.getElementById("cta-img");
-ctaImg.setAttribute('src', sitecontent["cta"]["img-src"]);
-ctaImg.setAttribute('src', 'https://raw.githubusercontent.com/maribelcuales/DOM-I/master/img/header-img.png');
+//Main Content 
 
 //top-content 
-// let topFeatures = document.getElementsByTagName("h4");
-// console.log(features[0].innerHTML);
-// features[0].innerHTML = siteContent ["main-content"]["features-h4"]
+let topFeatures = document.getElementsByTagName("h4")[0];
+topFeatures.innerHTML = siteContent ["main-content"]["features-h4"];
 
-let topContent = document.getElementsByTagName('h4'); 
-topContent[0].innerText = siteContent.main-content["features-h4"];
+let featureContent = document.getElementsByTagName("p")[0];
+featureContent.innerHTML = siteContent ["main-content"]["features-content"];
+
+let about = document.getElementsByTagName("h4")[1];
+about.innerHTML = siteContent ["main-content"]["about-h4"];
+
+let aboutContent = document.getElementsByTagName("p")[1];
+aboutContent.innerHTML = siteContent ["main-content"]["about-content"];
 
 
+//bottom-content
+let services = document.getElementsByTagName("h4")[2];
+services.innerHTML = siteContent ["main-content"]["services-h4"];
 
+let servicesContent = document.getElementsByTagName("p")[2];
+servicesContent.innerHTML = siteContent ["main-content"]["services-content"];
 
+let product = document.getElementsByTagName("h4")[3];
+product.innerHTML = siteContent ["main-content"]["product-h4"];
 
+let productContent = document.getElementsByTagName("p")[3];
+productContent.innerHTML = siteContent ["main-content"]["product-content"];
+
+let vision = document.getElementsByTagName("h4")[4];
+vision.innerHTML = siteContent ["main-content"]["vision-h4"];
+
+let visionContent = document.getElementsByTagName("p")[4];
+visionContent.innerHTML = siteContent ["main-content"]["vision-content"];
+
+//contact 
+let contactInfo  = document.getElementsByTagName("h4")[5];
+contactInfo.innerHTML = siteContent ["contact"]["contact-h4"];
+
+let addressInfo = document.getElementsByTagName("p")[5];
+addressInfo.innerHTML = siteContent ["contact"]["address"];
+
+let phoneInfo = document.getElementsByTagName("p")[6];
+phoneInfo.innerHTML = siteContent ["contact"]["phone"];
+
+let emailInfo = document.getElementsByTagName("p")[7];
+emailInfo.innerHTML = siteContent ["contact"]["email"];
+
+//footer 
+let footerInfo = document.getElementsByTagName("p")[8];
+footerInfo.innerHTML = siteContent["footer"]["copyright"]; 
