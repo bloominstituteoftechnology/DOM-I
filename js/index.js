@@ -56,10 +56,7 @@ let newa = document.createElement("a");
 newa.innerHTML = "what";
 kelnav.append(newa);
 
-function changeColor(id){
-    var weird = document.getElementsByTagName("a");
-    weird.style.color = "green !important";
-}
+document.querySelector('a').style.color = "green";
 
 
 /*----------------CTA----------------------*/
