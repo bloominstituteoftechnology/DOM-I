@@ -8,7 +8,8 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM IsAwesome",
+
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -48,14 +49,34 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 let headering = document.getElementById("cta-img");
-headering.setAttribute('src', siteContent["cta"]["img-src"])
+headering.setAttribute('src', siteContent["cta"]["img-src"]);
+
+document.querySelector('button').innerHTML = siteContent['cta']['button'];
 
 let middleimg = document.getElementById("middle-img");
 middleimg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
-document.querySelector('button').innerHTML = siteContent['cta']['button']
-document.querySelector('h1').innerHTML = siteContent['cta']['h1']
-document.
+//moises way
+// console.log(Array.from(Object.entries(siteContent['main-content'])))
+
+// Array.from(Object.entries(siteContent['main-content'])).slice(4, 1)
+// Object.entries
+//longest way Lol
+
+document.querySelector('h1').innerHTML = siteContent['cta']['h1'];
+document.querySelector('h4').innerHTML = siteContent["main-content"]["features-h4"]
+document.querySelector('p').innerHTML = siteContent["main-content"]["features-content"]
+
+document.querySelector('').innerHTML = siteContent[''][''];
+document.querySelector('').innerHTML = siteContent[""][""]
+document.querySelector('').innerHTML = siteContent[""][""]
+
+
+// console.log(document.querySelector("h4").innerHTML)
+
+
+// document.getElementsByClass('h4').innerHTML = siteContent['contact']['contact-h4'];
+// console.log(document.querySelector('h4').innerHTML)
 
 
 
