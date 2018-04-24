@@ -56,7 +56,7 @@ nav[0].children[1].innerHTML = siteContent['nav']['nav-item-2']
 nav[0].children[2].innerHTML = siteContent['nav']['nav-item-3']
 nav[0].children[3].innerHTML = siteContent['nav']['nav-item-4']
 nav[0].children[4].innerHTML = siteContent['nav']['nav-item-5']
-
+nav[0].children[5].innerHTML = siteContent['nav']['nav-item-6']
 
 // Add cta contect heading
 document.querySelector('.cta-text').firstElementChild.innerHTML = siteContent.cta.h1;
@@ -65,13 +65,23 @@ document.querySelector('.cta-text').firstElementChild.innerHTML = siteContent.ct
 document.querySelector('.cta-text').getElementsByTagName('button')[0].innerHTML = siteContent.cta.button;
 
 // Add main content
-//Seperate into Top Content and Bottom Content
+// Seperate into Top Content and Bottom Content
 // TODO Add a for()loop to seperate the content-text into various parts for the site.
-// Top Content
-document.querySelector('.top-content')
 
-//Bottom Content
-document.querySelector('.bottom-content')
+
+// Top 
+document.querySelector('.top-content').getElementsByTagName('h4')[0].innerHTML = siteContent["main-content"]["features-h4"]
+document.querySelector('.top-content').getElementsByTagName('p')[0].innerHTML = siteContent["main-content"]["features-content"]
+document.querySelector('.top-content').getElementsByTagName('h4')[1].innerHTML = siteContent["main-content"]["about-h4"]
+document.querySelector('.top-content').getElementsByTagName('p')[1].innerHTML = siteContent["main-content"]["about-content"]
+
+// Bottom Content
+document.querySelector('.bottom-content').getElementsByTagName('h4')[0].innerHTML = siteContent["main-content"]["services-h4"]
+document.querySelector('.bottom-content').getElementsByTagName('p')[0].innerHTML = siteContent["main-content"]["services-content"]
+document.querySelector('.bottom-content').getElementsByTagName('h4')[1].innerHTML = siteContent["main-content"]["product-h4"]
+document.querySelector('.bottom-content').getElementsByTagName('p')[1].innerHTML = siteContent["main-content"]["product-content"]
+document.querySelector('.bottom-content').getElementsByTagName('h4')[2].innerHTML = siteContent["main-content"]["vision-h4"]
+document.querySelector('.bottom-content').getElementsByTagName('p')[2].innerHTML = siteContent["main-content"]["vision-content"]
 
 // Add contact
 document.querySelector('.contact').getElementsByTagName('h4')[0].innerHTML = siteContent.contact["contact-h4"]
