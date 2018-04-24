@@ -41,13 +41,16 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 // selectinf nav from the html page
-let nav = document.getElementsByTagName("a")
+let navItems = document.getElementsByTagName("a")
 // extracting array of navItems from the nav object
 let navObj = Object.values(siteContent.nav)
 //looping through the nav array and assigning nav content to navItems
-for(let i = 0; i < nav.length; i++){
-  nav[i].textContent = navObj[i]
+for(let i = 0; i < navItems.length; i++){
+  navItems[i].textContent = navObj[i]
+  navItems[i].style.color = 'green'
 }
+
+
 //selecting the cta h1 element
 let ctaText = document.querySelector("h1")
 ctaText.textContent = siteContent.cta.h1;
@@ -87,7 +90,7 @@ mainContentArr = mainContentArr.filter((e) =>  e !== 'img/mid-page-accent.jpg')
 
 for(let i = 0; i < mainHeadingArr.length; i++){
   mainHeading[i].textContent = mainHeadingArr[i];
-  mainHeading[i].nextElementSibling.textContent = mainContentArr[i]
+  mainHeading[i].nextElementSibling.textContent = mainContentArr[i];
 }
 
 let ContactHeading = document.querySelector('.contact h4')
@@ -110,3 +113,4 @@ for(let i = 0; i < contactP.length;i++){
 
 let footerParagraph = document.querySelector('footer p')
 footerParagraph.textContent = siteContent.footer.copyright;
+
