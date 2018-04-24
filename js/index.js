@@ -50,14 +50,12 @@ for(let i = 0; i < navItems.length; i++){
   navItems[i].style.color = 'green'
 }
 
-
+// Strech challenge
 
 let newNavItems = document.createElement('a');
 newNavItems.textContent = 'Impact';
 newNavItems.setAttribute('href','#')
 navItems[0].parentElement.appendChild(newNavItems)
-
-
 
 
 //selecting the cta h1 element
@@ -123,3 +121,18 @@ for(let i = 0; i < contactP.length;i++){
 let footerParagraph = document.querySelector('footer p')
 footerParagraph.textContent = siteContent.footer.copyright;
 
+//strech chanlenge
+
+let addText = document.createElement('button');
+let inputText = document.createElement('input')
+
+addText.textContent = 'Change Text'
+ctaText.parentElement.appendChild(addText)
+ctaText.parentElement.appendChild(inputText)
+inputText.style.marginTop = '10px';
+inputText.style.width ='200px'
+
+addText.addEventListener('click', () =>{
+  ctaText.textContent = inputText.value;
+  inputText.value = '';
+})
