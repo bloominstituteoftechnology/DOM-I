@@ -77,12 +77,28 @@ for (let index = 0; index < 5; index++) {
   textContentElements = textContent[index].children;
   for(let i = 0; i < textContentElements.length; i++)
   {
-    textContentElements[i].innerHTML=siteContent["main-content"][mainContentKeys[counter++]];
-  }
-  counter === 4 ? document.getElementById("middle-img").setAttribute('src', siteContent["main-content"][mainContentKeys[counter++]]) : counter;
-  
+    textContentElements[i].innerHTML=siteContent["main-content"][mainContentKeys[counter]];
+    counter === 3 ? counter+=2 : counter++;
+  }  
 }
-// document.getElementById("middle-img").setAttribute('src', siteContent["main-content"][mainContentKeys[4]])
+
+document.getElementById("middle-img").setAttribute('src', siteContent["main-content"][mainContentKeys[4]]);
 
 
-console.log(textContentElements);
+//Update contact information
+
+let contactKeys = Object.keys(siteContent['contact']);
+let contact = document.querySelectorAll(".contact");
+
+console.log(contactKeys);
+
+let contactElements = '';
+
+contactElements = contact[0].children;
+for(let i = 0; i < contactElements.length; i++)
+{
+  contactElements[i].innerHTML=siteContent["contact"][contactKeys[i]];
+}  
+
+
+console.log(contactElements);
