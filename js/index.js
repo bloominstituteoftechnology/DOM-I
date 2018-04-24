@@ -6,6 +6,8 @@ const siteContent = {
     "nav-item-4": "Features",
     "nav-item-5": "About",
     "nav-item-6": "Contact",
+    "nav-item-7": "Chat",
+    "nav-item-8": "Log In",
     "img-src": "img/logo.png"
   },
   "cta": {
@@ -41,8 +43,8 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-//First find our the selectors 'a' 
 
+//First find our the selectors 'a' 
 let allNavSelectors = document.querySelectorAll('a');
 
 allNavSelectors.forEach(function (selector, index, selectors) {
@@ -50,10 +52,8 @@ allNavSelectors.forEach(function (selector, index, selectors) {
 });
 
 //Update cta
-
 let ctaKeys = Object.keys(siteContent['cta']);
 let ctaText = document.querySelectorAll(".cta-text");
-
 let ctaTextElements = ctaText[0].children;
 
 for(let i = 0; i < ctaTextElements.length; i++)
@@ -61,15 +61,11 @@ for(let i = 0; i < ctaTextElements.length; i++)
   ctaTextElements[i].innerHTML=siteContent['cta'][ctaKeys[i]];
 }
 
-document.getElementById("cta-img").setAttribute('src', siteContent["cta"]["img-src"])
+document.getElementById("cta-img").setAttribute('src', siteContent["cta"]["img-src"]);
 
 //Update main content
-
 let mainContentKeys = Object.keys(siteContent['main-content']);
 let textContent = document.querySelectorAll(".text-content");
-
-console.log(mainContentKeys);
-
 let textContentElements = '';
 let counter = 0;
 
@@ -84,23 +80,21 @@ for (let index = 0; index < 5; index++) {
 
 document.getElementById("middle-img").setAttribute('src', siteContent["main-content"][mainContentKeys[4]]);
 
-
 //Update contact information
-
 let contactKeys = Object.keys(siteContent['contact']);
 let contact = document.querySelectorAll(".contact");
+let contactElements = contact[0].children;
 
-console.log(contactKeys);
-
-let contactElements = '';
-
-contactElements = contact[0].children;
 for(let i = 0; i < contactElements.length; i++)
 {
   contactElements[i].innerHTML=siteContent["contact"][contactKeys[i]];
 }  
 
 //Update footer
-
 document.getElementsByTagName("footer")[0].getElementsByTagName("p")[0].innerHTML = siteContent["footer"]["copyright"];
 
+//Change the color navegation to green
+
+allNavSelectors.forEach(function (selector, index, selectors) {
+  selector.style.color = "green";
+});
