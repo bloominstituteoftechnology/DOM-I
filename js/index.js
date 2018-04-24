@@ -64,3 +64,11 @@ about.innerHTML = "About"
 let contact = document.getElementsByTagName("a")[5];
 contact.innerHTML = "Contact";
 
+// CTA
+
+let h1Message = document.getElementsByTagName("h1")[0];
+h1Message.innerHTML = "DOM Is Awesome";
+
+let button = document.getElementsByTagName("button")[0];
+button.innerHTML = "Get Started";
+
