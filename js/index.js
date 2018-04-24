@@ -43,7 +43,7 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 
-let logo = document.getElementById("logo-png");
+let logo = document.getElementById("logo-img");
 logo.setAttribute('alt', 'This is company logo');
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
@@ -55,32 +55,37 @@ theNav.style.color = 'green';
 theNav.prepend('Hello User');
 
 
-let theHead = document.querySelector('a');
+let theHead = document.querySelectorAll('a');
+theHead.forEach(Element => {
+  return (Element.style.color = 'green');
+});
+//console.log(theHead);
 theHead[0].innerHTML = 'Services';
-theHead[0].style.color = 'green';
+//theHead[0].style.color = 'green';
 theHead[1].innerHTML = 'Product';
-theHead[1].style.color = 'green';
+//theHead[1].style.color = 'green';
 theHead[2].innerHTML = 'Vision';
-theHead[2].style.color = 'green';
+//theHead[2].style.color = 'green';
 theHead[3].innerHTML = 'Features';
-theHead[3].style.color = 'green';
+//theHead[3].style.color = 'green';
 theHead[4].innerHTML = 'About';
-theHead[4].style.color = 'green';
+//theHead[4].style.color = 'green';
 theHead[5].innerHTML = 'Contacts';
-theHead[5].style.color = 'green';
-let textNode = document.createTextNode('The CEO');
-theHead[5].appendChild(textNode);
+//theHead[5].style.color = 'green';
+
+//let textNode = document.createTextNode('The CEO');
+//theHead[5].appendChild(textNode);
 
 let ctaImage = document.getElementById('cta-img');
 ctaImage.setAttribute('alt', 'Image of a code snippet.');
-ctaIamge.setAttribute('src', siteContent['cta']['img-src']);
+ctaImage.setAttribute('src', siteContent['cta']['img-src']);
 
 let middleImage = document.getElementById('middle-img');
 middleImage.setAttribute('alt', 'An image of code snippets across the screen');
-middleImage.setAttribute('src', siteContent['main-content']['img/mid-page-accent.jpg'])
+middleImage.setAttribute('src', siteContent['main-content']['img-src'])
 
 let ctaText = document.getElementsByTagName('h1');
-cta[0].innerHTML = 'Dom is Awesome';
+ctaText[0].innerHTML = 'Dom is Awesome';
 
 let buttons = document.getElementsByTagName('button');
 buttons[0].innerHTML = 'Get Started';
@@ -95,3 +100,22 @@ headers[5].innerHTML = 'Contact';
 
 let paragraphs = document.querySelectorAll('p');
 paragraphs[0].innerHTML = siteContent['main-content']['feature-content'];
+'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+paragraphs[1].innerHTML =
+  'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+paragraphs[2].innerHTML =
+  'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+paragraphs[3].innerHTML =
+  'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+paragraphs[4].innerHTML =
+  'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+paragraphs[5].innerHTML = '123 Way 456 Street Somewhere, USA';
+paragraphs[6].innerHTML = '1 (888) 888-8888';
+paragraphs[7].innerHTML = 'sales@greatidea.io';
+// paragraphs[8].innerHTML = 'Copyright Great Idea! 2018';
+
+
+// //footer
+// document.getElementByTagName('footer');
+let footer = document.querySelectorAll('footer');
+footer[0].innerHTML = 'Copyright Great Idea! 2018';
