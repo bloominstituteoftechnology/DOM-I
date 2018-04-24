@@ -1,1 +1,0 @@
-let msTens = document.getElementById('msTens')
