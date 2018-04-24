@@ -100,5 +100,7 @@ for(let i = 0; i < contactElements.length; i++)
   contactElements[i].innerHTML=siteContent["contact"][contactKeys[i]];
 }  
 
+//Update footer
 
-console.log(contactElements);
+document.getElementsByTagName("footer")[0].getElementsByTagName("p")[0].innerHTML = siteContent["footer"]["copyright"];
+
