@@ -81,12 +81,16 @@ topContent.childNodes[3].children[1].innerHTML = siteContent["main-content"]["ab
 
 
 let bottomContent = document.querySelector(".bottom-content");
-bottomContent.childNodes[1].children[0].innerHTML = siteContent["main-content"]["features-h4"];
-bottomContent.childNodes[1].children[1].innerHTML = siteContent["main-content"]["features-content"];
+bottomContent.childNodes[1].children[0].innerHTML = siteContent["main-content"]["services-h4"];
+bottomContent.childNodes[1].children[1].innerHTML = siteContent["main-content"]["services-content"];
 
-bottomContent.childNodes[3].children[0].innerHTML = siteContent["main-content"]["about-h4"];
-bottomContent.childNodes[3].children[1].innerHTML = siteContent["main-content"]["about-content"];
+bottomContent.childNodes[3].children[0].innerHTML = siteContent["main-content"]["product-h4"];
+bottomContent.childNodes[3].children[1].innerHTML = siteContent["main-content"]["product-content"];
 
+bottomContent.childNodes[5].children[0].innerHTML = siteContent["main-content"]["vision-h4"];
+bottomContent.childNodes[5].children[1].innerHTML = siteContent["main-content"]["vision-content"];
+
+console.log(bottomContent.childNodes);
 
 let contact = document.querySelector(".contact");
 contact.childNodes[1].innerHTML = siteContent["contact"]["contact-h4"];
