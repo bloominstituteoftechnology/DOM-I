@@ -6,7 +6,7 @@ const siteContent = {
     "nav-item-4": "Features",
     "nav-item-5": "About",
     "nav-item-6": "Contact",
-    "nav-item-7": "Chat",
+    "nav-item-7": "Home",
     "nav-item-8": "Log In",
     "img-src": "img/logo.png"
   },
@@ -93,7 +93,23 @@ for(let i = 0; i < contactElements.length; i++)
 //Update footer
 document.getElementsByTagName("footer")[0].getElementsByTagName("p")[0].innerHTML = siteContent["footer"]["copyright"];
 
+//Add two new items to navigation system
+
+var nav = document.getElementsByTagName("nav");
+var navItem7 = document.createElement("a");
+var navItem8 = document.createElement("a");
+
+navItem7.setAttribute("href", "#");
+navItem7.innerHTML=siteContent.nav["nav-item-7"];
+nav[0].prepend(navItem7);
+
+navItem8.setAttribute("href", "#");
+navItem8.innerHTML=siteContent.nav["nav-item-8"];
+nav[0].appendChild(navItem8);
+
 //Change the color navegation to green
+
+allNavSelectors = document.querySelectorAll('a');
 
 allNavSelectors.forEach(function (selector, index, selectors) {
   selector.style.color = "green";
