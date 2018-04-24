@@ -50,6 +50,15 @@ kelnav.getElementsByTagName("a")[2].innerHTML = siteContent["nav"]["nav-item-3"]
 kelnav.getElementsByTagName("a")[3].innerHTML = siteContent["nav"]["nav-item-4"];
 kelnav.getElementsByTagName("a")[4].innerHTML = siteContent["nav"]["nav-item-5"];
 kelnav.getElementsByTagName("a")[5].innerHTML = siteContent["nav"]["nav-item-6"];
+kelnav.prepend("This has been prepended. ");
+
+var test = document.createElement("a");
+var node = document.createTextNode("test");
+test.appendChild(node);
+document.nav.appendChild(test);
+
+/*let links = document.querySelectorAll("a");
+links.setAttribute("style", "color:green");*/
 
 
 /*----------------CTA----------------------*/
@@ -85,7 +94,7 @@ document.getElementsByTagName("p")[4].innerHTML = siteContent["main-content"]["v
 document.getElementsByTagName("h4")[5].innerHTML = siteContent["contact"]["contact-h4"]; 
 document.getElementsByTagName("p")[5].innerHTML = siteContent["contact"]["address"];
 document.getElementsByTagName("p")[6].innerHTML = siteContent["contact"]["phone"];
-document.getElementsByTagName("p")[7].innerHTML = siteContent["contact"]["email"]; 
+document.getElementsByTagName("p")[7].innerHTML = siteContent["contact"]["email"];
 
 /*-----------footer--------------*/
 
