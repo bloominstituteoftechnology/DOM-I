@@ -44,8 +44,7 @@ const siteContent = {
 // Example: Update the img src for the logo
 
 let logo = document.getElementById("logo-img");
-logo.setAttribute('alt', 'This is company logo');
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.src = '/Users/MarcoG/DOM-II/img /logo.png';
 
 // Started working here
 let theNav = document.querySelector('nav');
@@ -77,12 +76,12 @@ theHead[5].innerHTML = 'Contacts';
 //theHead[5].appendChild(textNode);
 
 let ctaImage = document.getElementById('cta-img');
-ctaImage.setAttribute('alt', 'Image of a code snippet.');
-ctaImage.setAttribute('src', siteContent['cta']['img-src']);
+ctaImage.alt = 'An image of a code snippet.';
+ctaImage.src = '/Users/MarcoG/DOM-II/img /header-img.png';
 
 let middleImage = document.getElementById('middle-img');
 middleImage.setAttribute('alt', 'An image of code snippets across the screen');
-middleImage.setAttribute('src', siteContent['main-content']['img-src'])
+middleImage.src = '/Users/MarcoG/DOM-II/img /mid-page-accent.jpg';
 
 let ctaText = document.getElementsByTagName('h1');
 ctaText[0].innerHTML = 'Dom is Awesome';
@@ -116,6 +115,6 @@ paragraphs[7].innerHTML = 'sales@greatidea.io';
 
 
 // //footer
-// document.getElementByTagName('footer');
+
 let footer = document.querySelectorAll('footer');
 footer[0].innerHTML = 'Copyright Great Idea! 2018';
