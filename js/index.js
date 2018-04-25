@@ -123,12 +123,10 @@ news.innerHTML = "News";
 support.innerHTML = "Support"
 header[0].prepend(news);
 header[0].appendChild(support);
-console.log(header[0]);
 
 let nav = document.getElementsByTagName("nav")[0].children;
+let navArr = Array.from(nav);
 
-for(let i = 0; i < nav.length; i++) {
-  nav[i].style.cssText = 'color: limegreen; ! important;'
-}
-
-
+navArr.forEach((item, index) => {
+  item.style.cssText = 'color: limegreen;'
+})
