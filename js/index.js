@@ -41,9 +41,6 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 
-// Change for cta image
-let ctaIMG = document.getElementById("cta-img");
-ctaIMG.setAttribute('src', siteContent["cta"]["img-src"]);
 
 // Change for Middle img
 let midImg = document.getElementById("middle-img");
@@ -59,20 +56,41 @@ navLinks[4].innerText = siteContent.nav['nav-item-5'];
 
 
 // // Cta section
-let ctaTxt = document.querySelector("cta")[0];
-ctaTxt.innerHTML = siteContent.cta['h1'];
+let ctaTxt = document.querySelector(".cta-text").children;
+ctaTxt[0].innerHTML = siteContent["cta"]['h1'];
+ctaTxt[1].innerHTML = siteContent["cta"]['button'];
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 console.log(ctaTxt.innerText);
 
 
+// Main section
+let topContent = document.querySelector(".top-content");
+let textContent = topContent[1];
+textContent[0].innerText = siteContent["main-content"]["features-h4"];
+topContent[1].innerText = siteContent["main-content"]["features-content"];
+topContent[2].innerText = siteContent["main-content"]["features-content"];
+topContent[3].innerText = siteContent["main-content"]["features-content"];
+topContent[4].innerText = siteContent["main-content"]["features-content"];
+
+
+// Bottom section
+
+
 // // Contact Section
-let contactElements = document.querySelector(".contact");
-let h4Tags = contactElements.querySelectorAll("h4");
-h4Tags[0].innerHTML = siteContent["contact"]["contact-h4"];
-let pTags = contactElements.querySelectorAll("p");
-let props = Object.entries(siteContent.contact);
-pTags.forEach((item, index) => {
-  item.innerHTML = props[index + 1][1];
-});
+let contactElements = document.querySelector(".contact").children;
+contactElements[0].innerHTML = siteContent["contact"]["contact-h4"];
+contactElements[1].innerHTML = siteContent["contact"]["address"];
+contactElements[2].innerHTML = siteContent["contact"]["phone"];
+contactElements[3].innerHTML = siteContent["contact"]["email"];
+
+
+// Footer section
+let footerElements = document.querySelector("footer p");
+footerElements.innerHTML = siteContent["footer"]["copyright"];
+
+
+
 
 
 
