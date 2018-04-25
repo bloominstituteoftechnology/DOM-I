@@ -116,3 +116,19 @@ email.innerHTML = "sales@greatidea.io";
 let copyright = document.getElementsByTagName("p")[8];
 copyright.innerHTML = "Copyright Great Idea! 2018";
 
+let header = document.getElementsByTagName("header")[0].children;
+let news = document.createElement("a");
+let support = document.createElement("a");
+news.innerHTML = "News";
+support.innerHTML = "Support"
+header[0].prepend(news);
+header[0].appendChild(support);
+console.log(header[0]);
+
+let nav = document.getElementsByTagName("nav")[0].children;
+
+for(let i = 0; i < nav.length; i++) {
+  nav[i].style.cssText = 'color: limegreen; ! important;'
+}
+
+
