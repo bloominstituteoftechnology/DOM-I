@@ -73,6 +73,14 @@ let navItem6 = document.getElementsByTagName("a");
 console.log(navItem2[5].innerHTML);
 navItem2[5].innerHTML = siteContent["nav"]["nav-item-6"]
 
+//change nav color to green 
+navItem1.style.color = "green";
+navItem2[1].style.color = "green";
+navItem3[2].style.color = "green";
+navItem4[3].style.color = "green";
+navItem5[4].style.color = "green";
+navItem6[5].style.color = "green";
+
 
 //cta
 let ctaText = document.querySelector("h1");
