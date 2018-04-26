@@ -71,6 +71,7 @@ topContent[1].innerText = siteContent["main-content"]["about-h4"];
 topContent[2].innerText = siteContent["main-content"]["services-h4"];
 topContent[3].innerText = siteContent["main-content"]["product-h4"];
 topContent[4].innerText = siteContent["main-content"]["vision-h4"];
+
 let topParagraphs = document.querySelectorAll("p");
 topParagraphs[0].innerText = siteContent["main-content"]["features-content"];
 topParagraphs[1].innerText = siteContent["main-content"]["about-content"];
