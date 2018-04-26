@@ -47,7 +47,7 @@ let midImg = document.getElementById("middle-img");
 midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 // // Nav Section
-let navLinks = document.querySelectorAll('nav a');
+let navLinks = document.querySelectorAll('a');
 navLinks[0].innerText = siteContent.nav['nav-item-1'];
 navLinks[1].innerText = siteContent.nav['nav-item-2'];
 navLinks[2].innerText = siteContent.nav['nav-item-3'];
@@ -65,13 +65,19 @@ console.log(ctaTxt.innerText);
 
 
 // Main section
-let topContent = document.querySelector(".top-content");
-let textContent = topContent[1];
-textContent[0].innerText = siteContent["main-content"]["features-h4"];
-topContent[1].innerText = siteContent["main-content"]["features-content"];
-topContent[2].innerText = siteContent["main-content"]["features-content"];
-topContent[3].innerText = siteContent["main-content"]["features-content"];
-topContent[4].innerText = siteContent["main-content"]["features-content"];
+let topContent = document.querySelectorAll("h4");
+topContent[0].innerText = siteContent["main-content"]["features-h4"];
+topContent[1].innerText = siteContent["main-content"]["about-h4"];
+topContent[2].innerText = siteContent["main-content"]["services-h4"];
+topContent[3].innerText = siteContent["main-content"]["product-h4"];
+topContent[4].innerText = siteContent["main-content"]["vision-h4"];
+let topParagraphs = document.querySelectorAll("p");
+topParagraphs[0].innerText = siteContent["main-content"]["features-content"];
+topParagraphs[1].innerText = siteContent["main-content"]["about-content"];
+topParagraphs[2].innerText = siteContent["main-content"]["services-content"];
+topParagraphs[3].innerText = siteContent["main-content"]["product-content"];
+topParagraphs[4].innerText = siteContent["main-content"]["vision-content"];
+
 
 
 // Bottom section
@@ -80,7 +86,7 @@ topContent[4].innerText = siteContent["main-content"]["features-content"];
 // // Contact Section
 let contactElements = document.querySelector(".contact").children;
 contactElements[0].innerHTML = siteContent["contact"]["contact-h4"];
-contactElements[1].innerHTML = siteContent["contact"]["address"];
+contactElements[1].innerHTML = '123 Way 456 Street <br/> London United Kingdom';
 contactElements[2].innerHTML = siteContent["contact"]["phone"];
 contactElements[3].innerHTML = siteContent["contact"]["email"];
 
