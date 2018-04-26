@@ -64,7 +64,7 @@ ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 console.log(ctaTxt.innerText);
 
 
-// Main section
+// Main section & Bottom section
 let topContent = document.querySelectorAll("h4");
 topContent[0].innerText = siteContent["main-content"]["features-h4"];
 topContent[1].innerText = siteContent["main-content"]["about-h4"];
@@ -77,10 +77,6 @@ topParagraphs[1].innerText = siteContent["main-content"]["about-content"];
 topParagraphs[2].innerText = siteContent["main-content"]["services-content"];
 topParagraphs[3].innerText = siteContent["main-content"]["product-content"];
 topParagraphs[4].innerText = siteContent["main-content"]["vision-content"];
-
-
-
-// Bottom section
 
 
 // // Contact Section
