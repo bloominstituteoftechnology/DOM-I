@@ -44,24 +44,29 @@ logoImg.setAttribute("src", "img/logo.png");
 // IMAGES
 
 let headerImage = document.getElementById("cta-img");
-headerImage.setAttribute("src", "img/header-img.png")
+headerImage.setAttribute("src", "img/header-img.png");
 
-let middleImage = document.getElementById("middle-img");
-middleImage.setAttribute("src", "img/mid-page-accent.jpg")
+middleImage = document.getElementById("middle-img");
+middleImage.setAttribute("src", "img/mid-page-accent.jpg");
 
 // NAVIGATION
 
 let services = document.getElementsByTagName("a")[0];
 services.innerHTML = "Services";
-let product = document.getElementsByTagName("a")[1];
+
+product = document.getElementsByTagName("a")[1];
 product.innerHTML = "Product";
-let vision = document.getElementsByTagName("a")[2];
+
+vision = document.getElementsByTagName("a")[2];
 vision.innerHTML = "Vision";
-let features = document.getElementsByTagName("a")[3];
+
+features = document.getElementsByTagName("a")[3];
 features.innerHTML = "Features";
-let about = document.getElementsByTagName("a")[4];
-about.innerHTML = "About"
-let contact = document.getElementsByTagName("a")[5];
+
+about = document.getElementsByTagName("a")[4];
+about.innerHTML = "About";
+
+contact = document.getElementsByTagName("a")[5];
 contact.innerHTML = "Contact";
 
 // CTA
@@ -69,41 +74,53 @@ contact.innerHTML = "Contact";
 let h1Message = document.getElementsByTagName("h1")[0];
 h1Message.innerHTML = "DOM Is Awesome";
 
-let button = document.getElementsByTagName("button")[0];
+button = document.getElementsByTagName("button")[0];
 button.innerHTML = "Get Started";
 
 // MAIN CONTENT
 
 let featuresH4 = document.getElementsByTagName('h4')[0];
 featuresH4.innerHTML = "Features";
-let featureContent = document.getElementsByTagName('p')[0];
+
+featureContent = document.getElementsByTagName('p')[0];
 featureContent.innerHTML = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
-let aboutH4 = document.getElementsByTagName('h4')[1];
+
+aboutH4 = document.getElementsByTagName('h4')[1];
 aboutH4.innerHTML = "About";
-let aboutContent = document.getElementsByTagName('p')[1];
+
+aboutContent = document.getElementsByTagName('p')[1];
 aboutContent.innerHTML = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
-let servicesH4 = document.getElementsByTagName('h4')[2];
+
+servicesH4 = document.getElementsByTagName('h4')[2];
 servicesH4.innerHTML = "Services";
-let servicesContent = document.getElementsByTagName('p')[2];
+
+servicesContent = document.getElementsByTagName('p')[2];
 servicesContent.innerHTML = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
-let productH4 = document.getElementsByTagName('h4')[3];
+
+productH4 = document.getElementsByTagName('h4')[3];
 productH4.innerHTML = "Product"
-let productContent = document.getElementsByTagName('p')[3];
+
+productContent = document.getElementsByTagName('p')[3];
 productContent.innerHTML = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
-let visionH4 = document.getElementsByTagName('h4')[4];
+
+visionH4 = document.getElementsByTagName('h4')[4];
 visionH4.innerHTML = "Vision";
-let visionContent = document.getElementsByTagName('p')[4];
+
+visionContent = document.getElementsByTagName('p')[4];
 visionContent.innerHTML = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
 
 // CONTACT
 
 let contactH4 = document.getElementsByTagName('h4')[5];
 contactH4.innerHTML = "Contact";
-let address = document.getElementsByTagName('p')[5];
+
+address = document.getElementsByTagName('p')[5];
 address.innerHTML = "123 Way 456 Street Somewhere, USA";
-let phone = document.getElementsByTagName('p')[6];
+
+phone = document.getElementsByTagName('p')[6];
 phone.innerHTML = "1 (888) 888-8888";
-let email = document.getElementsByTagName('p')[7];
+
+email = document.getElementsByTagName('p')[7];
 email.innerHTML = "sales@greatidea.io";
 
 // FOOTER
