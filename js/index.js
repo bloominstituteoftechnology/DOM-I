@@ -52,6 +52,23 @@ nav[3].innerHTML = siteContent.nav["nav-item-4"];
 nav[4].innerHTML = siteContent.nav["nav-item-5"];
 nav[5].innerHTML = siteContent.nav["nav-item-6"];
 
+let navBar = document.querySelector("nav");
+let home = document.createElement("a");
+let more = document.createElement("a");
+
+home.innerHTML = "Home";
+more.innerHTML = "More";
+
+navBar.prepend(home);
+navBar.appendChild(more);
+
+for (let i = 0; i < nav.length; i++) {
+  nav[i].style.color = "green";
+}
+
+
+
+
 //-----------------------CTA------------------------------------//
 
 let ctaHeadline = document.querySelector(".cta-text h1");
