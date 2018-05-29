@@ -40,3 +40,26 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+// Alex McEvoy
+// 05/29/18
+
+// Using variable assignment
+
+// Nav
+let navElements = document.querySelectorAll(".container header nav a");
+navElements.forEach((item, index) => {
+  item.innerHTML = siteContent["nav"][`nav-item-${index+1}`];
+});
+
+let ctaH1 = document.querySelector(".cta .cta-text h1");
+ctaH1.innerHTML = siteContent["cta"]["h1"];
+
+// Now without using variable assignment
+
+// cta
+document.querySelector(".cta .cta-text button").innerHTML = siteContent["cta"]["button"];
+document.querySelector("#cta-img").setAttribute("src", siteContent["cta"]["img-src"]);
+
+// Main content
