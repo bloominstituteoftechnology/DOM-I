@@ -40,3 +40,44 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+document.querySelectorAll("nav a")[0].innerHTML = siteContent["nav"]["nav-item-1"];
+document.querySelectorAll("nav a")[1].innerHTML = siteContent["nav"]["nav-item-2"];
+document.querySelectorAll("nav a")[2].innerHTML = siteContent["nav"]["nav-item-3"];
+document.querySelectorAll("nav a")[3].innerHTML = siteContent["nav"]["nav-item-4"];
+document.querySelectorAll("nav a")[4].innerHTML = siteContent["nav"]["nav-item-5"];
+document.querySelectorAll("nav a")[5].innerHTML = siteContent["nav"]["nav-item-6"];
+
+document.querySelector(".cta-text h1").innerHTML = siteContent["cta"]["h1"];
+document.querySelector(".cta-text button").innerHTML = siteContent["cta"]["button"];
+let logo2 = document.getElementById("cta-img");
+logo2.setAttribute('src', siteContent["cta"]["img-src"]);
+
+document.querySelectorAll(".top-content .text-content h4")[0].innerHTML = siteContent["main-content"]["features-h4"];
+document.querySelectorAll(".top-content .text-content p")[0].innerHTML = siteContent["main-content"]["features-content"];
+document.querySelectorAll(".top-content .text-content h4")[1].innerHTML = siteContent["main-content"]["about-h4"];
+document.querySelectorAll(".top-content .text-content p")[1].innerHTML = siteContent["main-content"]["about-content"];
+let logo3 = document.getElementById("middle-img");
+logo3.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+document.querySelectorAll(".bottom-content .text-content h4")[0].innerHTML = siteContent["main-content"]["services-h4"];
+document.querySelectorAll(".bottom-content .text-content p")[0].innerHTML = siteContent["main-content"]["services-content"];
+document.querySelectorAll(".bottom-content .text-content h4")[1].innerHTML = siteContent["main-content"]["product-h4"];
+document.querySelectorAll(".bottom-content .text-content p")[1].innerHTML = siteContent["main-content"]["product-content"];
+document.querySelectorAll(".bottom-content .text-content h4")[2].innerHTML = siteContent["main-content"]["vision-h4"];
+document.querySelectorAll(".bottom-content .text-content p")[2].innerHTML = siteContent["main-content"]["vision-content"];
+
+document.querySelectorAll(".contact h4")[0].innerHTML = siteContent["contact"]["contact-h4"];
+document.querySelectorAll(".contact p")[0].innerHTML = siteContent["contact"]["address"];
+document.querySelectorAll(".contact p")[1].innerHTML = siteContent["contact"]["phone"];
+document.querySelectorAll(".contact p")[2].innerHTML = siteContent["contact"]["email"];
+
+document.querySelector("footer p").innerHTML = siteContent["footer"]["copyright"];
+
+nav_a = document.querySelectorAll('nav a');
+
+for (let i=0; i<nav_a.length; i++) {
+  nav_a[i].style.color = 'green';
+}
+
+nav_a.appendChild("Location");
