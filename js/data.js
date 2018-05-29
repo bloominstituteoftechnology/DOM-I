@@ -1,11 +1,11 @@
-alert('we got in');
+alert('we got in')
 
 const siteContent = [
   {
-    "header": {
-      "key": "value"
+    header: {
+      key: 'value'
     }
   }
-];
+]
 
-export default siteContent;
+export default siteContent
