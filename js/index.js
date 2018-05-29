@@ -43,17 +43,38 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"])
 
+const a = document.createElement('a');
+const p = document.querySelector('nav a').appendChild(a);
+
+const l = document.createElement('a');
+const t = document.querySelector('nav a').prepend(l);
+
+
+
+
 let navmain = document.querySelectorAll("nav a");
-navmain[0].innerHTML = "Services";
-navmain[1].innerHTML = "Product";
-navmain[2].innerHTML = "Vision";
-navmain[3].innerHTML = "Features";
-navmain[4].innerHTML = "About";
-navmain[5].innerHTML = "Contact";
+navmain[0].innerHTML = "Prepended"
+navmain[1].innerHTML = "Services";
+navmain[2].innerHTML = "Product";
+navmain[3].innerHTML = "Vision";
+navmain[4].innerHTML = "Features";
+navmain[5].innerHTML = "About";
+navmain[6].innerHTML = "Contact";
+navmain[7].innerHTML = "Hi There";
+
+
+
+
+
+
+
+navmain.forEach(function (e){
+  e.style.color = "green";
+})
 
 
 let ctah1 = document.querySelector(".cta h1");
-ctah1.innerHTML = siteContent["cta"]["h1"];
+ctah1.innerHTML = "DOM <br> Is <br> Awesome";
 
 let ctabtn = document.querySelector(".cta button");
 ctabtn.innerHTML = "Get Started";
@@ -67,6 +88,12 @@ mainh4[1].innerHTML = "About";
 mainh4[2].innerHTML = "Services";
 mainh4[3].innerHTML = "Product";
 mainh4[4].innerHTML = "Vision";
+
+
+
+
+
+
 
 let mainh4con = document.querySelectorAll(".main-content p");
 mainh4con[0].innerHTML = siteContent["main-content"]["features-content"];
