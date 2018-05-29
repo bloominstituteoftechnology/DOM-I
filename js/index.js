@@ -113,3 +113,34 @@ contactInfo.childNodes[7].innerText = siteContent['contact']['email'];
 let footer = document.querySelector('footer p');
 footer.innerText = siteContent['footer']['copyright'];
 
+
+// events /////////////////////////////
+
+middleImg.addEventListener('mouseover', () => {
+ TweenMax.to(middleImg, .75, {
+   //all 4 corners    
+   borderRadius: "50%"
+ });
+})
+middleImg.addEventListener('mouseleave', () => {
+TweenMax.to(middleImg, .75, {
+  //top-left and bottom-right | top-right and bottom-left
+  borderRadius: "0px"
+});
+})
+
+
+ctaButton.addEventListener('dblclick', () => {
+  ctaImage.setAttribute('src', 'https://i.ytimg.com/vi/EadVhR6c49k/maxresdefault.jpg');
+  ctaImage.setAttribute('class', 'cat');
+  TweenMax.to(ctaImage, 2, {scale:"0.65"});
+});
+
+ctaButton.addEventListener('click', () => {
+ctaText.style.color = 'red';
+});
+
+ctaImage.addEventListener('dragend', () => {
+  ctaImage.setAttribute('src', siteContent['cta']['img-src']);
+  ctaImage.removeAttribute('class', 'cat');
+}); 

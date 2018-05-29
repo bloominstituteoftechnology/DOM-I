@@ -95,7 +95,9 @@ header nav a:hover {
 header .logo {
     align-self: flex-end;
     margin: 28px 0 0 91px;
+
 }
+
 
 /* Call To Action (CTA) Styles */
 
@@ -103,6 +105,12 @@ header .logo {
     display: flex;
     margin-top: 72px;
     justify-content: flex-end;
+}
+
+.cat {
+    display:block;
+    width: 100%;
+    filter: hue-rotate(180deg);
 }
 
 .cta .cta-text {
@@ -297,3 +305,4 @@ footer {
         margin: 20px;
     }
 }
+
