@@ -72,3 +72,6 @@ middleImage.setAttribute('src', siteContent['main-content']['middle-img-src'])
 
 let ctaText = document.getElementsByTagName('h1')
 ctaText[0].innerHTML = 'Dom <br/> is <br/> awesome'
+
+let buttons = document.getElementsByTagName('button')
+buttons[0].innerHTML = siteContent['cta']['button']
