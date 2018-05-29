@@ -42,13 +42,22 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-let nav = document.getElementsByTagName("a");
-nav[0].innerHTML = siteContent["nav"]["nav-item-1"];
-nav[1].innerHTML = siteContent["nav"]["nav-item-2"];
-nav[2].innerHTML = siteContent["nav"]["nav-item-3"];
-nav[3].innerHTML = siteContent["nav"]["nav-item-4"];
-nav[4].innerHTML = siteContent["nav"]["nav-item-5"];
-nav[5].innerHTML = siteContent["nav"]["nav-item-6"];
+const a = document.createElement('a')
+const p = document.querySelector('nav a').appendChild(a);
+const b = document.createElement('a')
+const q = document.querySelector('nav a').prepend(b)
+// nav.length.innerHTML = "Taco"
+
+let nav = document.querySelectorAll("a");
+nav[0].innerHTML = "Whats up";
+nav[1].innerHTML = siteContent["nav"]["nav-item-1"];
+nav[2].innerHTML = siteContent["nav"]["nav-item-2"];
+nav[3].innerHTML = siteContent["nav"]["nav-item-3"];
+nav[4].innerHTML = siteContent["nav"]["nav-item-4"];
+nav[5].innerHTML = siteContent["nav"]["nav-item-5"];
+nav[6].innerHTML = siteContent["nav"]["nav-item-6"];
+nav[7].innerHTML = "Hi There"
+nav.forEach (i => i.style.color = "green");
 
 //CTA Section
 let ctaH1 = document.querySelector(".cta-text h1");
