@@ -53,10 +53,19 @@ for (let i = 0; i < navItem.length; i++) {
   navItem[i].style.color = "green";
 }
 
-let node = document.createElement("nav");                 // Create a <li> node
-let textnode = document.createTextNode("Blog");         // Create a text node
-node.appendChild(textnode);                              // Append the text to <li>
-document.getElementById("navItem").appendChild(node);     // Append <li> to <ul> with id="myList"
+let blogElement = document.createElement("a");
+let blog = document.createTextNode("Blog");
+blogElement.setAttribute("href", "#");
+blogElement.appendChild(blog);
+document.querySelector(".container nav").appendChild(blogElement);
+blogElement.style.color = "green";
+
+let homeElement = document.createElement("a");
+let home = document.createTextNode("Home");
+homeElement.setAttribute("href", "#");
+homeElement.prepend(home);
+document.querySelector(".container nav").prepend(homeElement);
+homeElement.style.color = "green";
 
 let ctaHeader = document.querySelector(".cta-text h1");
 let ctaButton = document.querySelector(".cta-text button")
