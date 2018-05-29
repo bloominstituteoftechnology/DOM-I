@@ -49,6 +49,30 @@ nav[3].innerHTML = siteContent["nav"]["nav-item-4"];
 nav[4].innerHTML = siteContent["nav"]["nav-item-5"];
 nav[5].innerHTML = siteContent["nav"]["nav-item-6"];
 
+for(let i = 0; i < nav.length; i++) {
+  nav[i].style.color = "green";
+}
+
+let homeElement = document.createElement("a");
+let home = document.createTextNode("Home"); 
+homeElement.setAttribute('href', '#');
+homeElement.appendChild(home);
+homeElement.style.color = "green";
+document.querySelector(".container nav").prepend(homeElement);
+
+
+let learnElement = document.createElement("a");
+let learn = document.createTextNode("Learn"); 
+learnElement.setAttribute('href', '#');
+learnElement.appendChild(learn);
+learnElement.style.color = "green";
+document.querySelector(".container nav").appendChild(learnElement);
+
+
+
+nav = document.querySelectorAll(".container nav a");
+
+
 let ctaHeader = document.querySelector(".cta-text h1");
 let ctaButton = document.querySelector(".cta-text button");
 let ctaImg = document.querySelector("#cta-img");
