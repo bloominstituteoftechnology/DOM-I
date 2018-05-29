@@ -79,6 +79,10 @@ let contactNodes = document.querySelectorAll(".contact h4, .contact p");
 let contactContent = Object.values(siteContent["contact"]);
 contactNodes.forEach((item,index) => item.innerHTML = contactContent[index]);
 
+// footer
+
+document.querySelector("footer p").innerHTML = siteContent["footer"]["copyright"];
+
 // Add items to Nav
 let prepNav = document.createElement("a");
 prepNav.setAttribute("href", "#");
