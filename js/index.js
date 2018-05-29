@@ -45,12 +45,13 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 let navLinks = document.querySelectorAll('nav a');
 navLinks.forEach( (cv,ci) => {
   cv.innerHTML = siteContent['nav'][`nav-item-${ci+1}`];
+  cv.style.color = "green";
 } )
 
 //Update CTA
-let ctaH1 = document.querySelector('.cta-text h1').innerHTML = siteContent['cta']['h1']
-let ctaBtn = document.querySelector('.cta-text button').innerHTML = siteContent['cta']['button']
-let ctaImg = document.getElementById('cta-img').src = siteContent['cta']['img-src']
+document.querySelector('.cta-text h1').innerHTML = siteContent['cta']['h1']
+document.querySelector('.cta-text button').innerHTML = siteContent['cta']['button']
+document.getElementById('cta-img').src = siteContent['cta']['img-src']
 
 //Update Main Content
 
@@ -63,7 +64,7 @@ tch4[3].innerHTML = siteContent['main-content']['product-h4']
 tch4[4].innerHTML = siteContent['main-content']['vision-h4']
 
 //Update Main Content Image
-let midImg = document.getElementById('middle-img').src = siteContent['main-content']['middle-img-src']
+document.getElementById('middle-img').src = siteContent['main-content']['middle-img-src']
 
 //Update all p-tags in Main Content
 let tcP = document.querySelectorAll('.text-content p');
@@ -81,4 +82,21 @@ contactNodeList[0].children[2].innerHTML = siteContent['contact']['phone']
 contactNodeList[0].children[3].innerHTML = siteContent['contact']['email']
 
 //Update Footer
-let footerP = document.querySelector('footer p').innerHTML = siteContent['footer']['copyright']
+document.querySelector('footer p').innerHTML = siteContent['footer']['copyright']
+
+//Add links to nav  - really dumb way
+let navBar = document.querySelector('nav');
+
+//Create the links
+let link1 = document.createElement('a');
+let link2 = document.createElement('a');
+
+//Append the links
+navBar.appendChild(link1);
+navBar.appendChild(link2);
+
+//Update the links
+let link7 = document.querySelector('nav a:nth-child(7)');
+let link8 = document.querySelector('nav a:nth-child(8)');
+link7.innerHTML = 'Link7'
+link8.innerHTML = 'Link8'
