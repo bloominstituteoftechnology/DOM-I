@@ -41,7 +41,12 @@ const siteContent = {
   let logo = document.getElementById("logo-img");
   logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-// Selectors for Nav
-  let siteNav = document.querySelector("nav");
+// Nav Section
+  // let siteNav = document.querySelector("nav");
+  let siteNav = document.querySelectorAll("nav a");
+//assign properties and values to nav method
+  let siteNavItems = Object.values(siteContent["nav"]);
+  siteNavItems.forEach((item, index) => {siteNav[index+1].innerHTML = item});
 
+//CTA Section
 
