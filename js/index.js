@@ -41,8 +41,23 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-//let navItem1 = document.getElementByTagName("nav");
-//navItem1.getElementByTagName("a")[0].innerHTML = siteContent["nav"]["nav-item-1"];
+let navItem0 = document.getElementsByTagName("a");
+navItem0.item(0).innerHTML = siteContent["nav"]["nav-item-0"];
+
+let navItem1 = document.getElementsByTagName("a");
+navItem1.item(1).innerHTML = siteContent["nav"]["nav-item-1"];
+
+let navItem2 = document.getElementsByTagName("a");
+navItem2.item(2).innerHTML = siteContent["nav"]["nav-item-2"];
+
+let navItem3 = document.getElementsByTagName("a");
+navItem3.item(3).innerHTML = siteContent["nav"]["nav-item-3"];
+
+let navItem4 = document.getElementsByTagName("a");
+navItem4.item(4).innerHTML = siteContent["nav"]["nav-item-4"];
+
+let navItem5 = document.getElementsByTagName("a");
+navItem5.item(5).innerHTML = siteContent["nav"]["nav-item-5"];
 
 let ctaImage = document.getElementById("cta-img");
 ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
@@ -62,3 +77,5 @@ document.getElementsByTagName("p").item(0).innerHTML = siteContent["main-content
 document.getElementsByTagName("p").item(1).innerHTML = siteContent["main-content"]["about-content"];
 document.getElementsByTagName("p").item(2).innerHTML = siteContent["main-content"]["services-content"];
 document.getElementsByTagName("p").item(3).innerHTML = siteContent["main-content"]["product-content"];
+
+
