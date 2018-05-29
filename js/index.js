@@ -42,10 +42,10 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 const a = document.createElement('a');
-const p = document.querySelector('nav a').appendChild(a);
+const p = document.querySelector('nav').appendChild(a);
 
 const l = document.createElement('a');
-const m = document.querySelector('nav a').prepend(l);
+const m = document.querySelector('nav').prepend(l);
 
 let nav = document.querySelectorAll("nav a");
 nav[0].innerHTML = "Love";
