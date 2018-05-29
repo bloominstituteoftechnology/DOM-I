@@ -61,5 +61,31 @@ imgs.setAttribute('src', siteContent["cta"]["img-src"]);
 let imgmid = document.getElementById("middle-img");
 imgmid.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
-let featuresH4 = document.querySelector(".main-content .text-content h4");
-featuresH4.innerHTML = "Features"
+let featuresH4 = document.querySelectorAll(".main-content .top-content h4");
+featuresH4[0].innerHTML = "Features";
+featuresH4[1].innerHTML = "About";
+
+let toptext = document.querySelectorAll(".main-content .top-content p");
+toptext[0].innerHTML = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+toptext[1].innerHTML = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+let bottomH4 = document.querySelectorAll(".main-content .bottom-content h4");
+bottomH4[0].innerHTML = "Services";
+bottomH4[1].innerHTML = "Product";
+bottomH4[2].innerHTML = "Vision";
+
+let bottomtext = document.querySelectorAll(".main-content .bottom-content p");
+bottomtext[0].innerHTML = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+bottomtext[1].innerHTML = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+bottomtext[2].innerHTML = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+let contacth4 = document.querySelector(".contact h4");
+contacth4.innerHTML = "Contact"
+let contactp = document.querySelectorAll(".contact p");
+contactp[0].innerHTML = "123 Way 456 Street<br> Somewhere, USA"
+contactp[1].innerHTML = "1 (888) 888-8888"
+contactp[2].innerHTML = "sales@greatidea.io"
+
+
+let footer = document.querySelector("footer p");
+footer.innerHTML = "Copyright Great Idea! 2018"
