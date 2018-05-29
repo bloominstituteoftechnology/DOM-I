@@ -59,6 +59,7 @@ nav[7].innerHTML = "Hello";
 
 nav.forEach(function (e){
   e.style.color = "green";
+  e.setAttribute('href', '#')
 });
 
 
