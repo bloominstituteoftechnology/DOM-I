@@ -80,7 +80,7 @@ ctaimgJS.setAttribute('src', siteContent["cta"]["img-src"]);
 let mainTitle = document.querySelectorAll("h4");
 mainTitle[0].innerHTML = siteContent["main-content"]["features-h4"];
 mainTitle[1].innerHTML = siteContent["main-content"]["about-h4"];
-mainTitleS[2].innerHTML = siteContent["main-content"]["services-h4"];
+mainTitle[2].innerHTML = siteContent["main-content"]["services-h4"];
 mainTitle[3].innerHTML = siteContent["main-content"]["product-h4"];
 mainTitle[4].innerHTML = siteContent["main-content"]["vision-h4"];
 
