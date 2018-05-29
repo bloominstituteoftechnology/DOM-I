@@ -54,3 +54,12 @@ ctaH1.innerHTML = "Dom<br> Is<br> Awesome"
 
 let button = document.querySelector("button");
 button.innerHTML = "Get Started"
+
+let imgs = document.getElementById("cta-img");
+imgs.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let imgmid = document.getElementById("middle-img");
+imgmid.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+let featuresH4 = document.querySelector(".main-content .text-content h4");
+featuresH4.innerHTML = "Features"
