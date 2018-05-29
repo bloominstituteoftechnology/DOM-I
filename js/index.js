@@ -50,6 +50,9 @@ logo.src = siteContent['nav']['img-src']
 let theNav = document.querySelector('nav')
 let theHead = document.querySelectorAll('a')
 
+theNav.prepend('Hello Users')
+theNav.style.color = 'green'
+
 theHead[0].innerHTML = siteContent['nav']['nav-item-1']
 
 theHead[1].innerHTML = siteContent['nav']['nav-item-2']
