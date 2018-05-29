@@ -6,6 +6,8 @@ const siteContent = {
     "nav-item-4": "Features",
     "nav-item-5": "About",
     "nav-item-6": "Contact",
+    "new-nav-item-1": "",
+    "new-nav-item-2": "Last (new!)",
     "img-src": "img/logo.png"
   },
   "cta": {
@@ -39,7 +41,7 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logoImg = document.getElementById("logo-img");
-logoImg.setAttribute('src', siteContent["nav"]["img-src"]);  
+logoImg.setAttribute('src', siteContent["nav"]["img-src"]);
 
 document.querySelectorAll("a")[0].innerHTML = siteContent["nav"]["nav-item-1"];
 document.querySelectorAll("a")[1].innerHTML = siteContent["nav"]["nav-item-2"];
@@ -47,6 +49,30 @@ document.querySelectorAll("a")[2].innerHTML = siteContent["nav"]["nav-item-3"];
 document.querySelectorAll("a")[3].innerHTML = siteContent["nav"]["nav-item-4"];
 document.querySelectorAll("a")[4].innerHTML = siteContent["nav"]["nav-item-5"];
 document.querySelectorAll("a")[5].innerHTML = siteContent["nav"]["nav-item-6"];
+
+document.querySelectorAll("a")[0].style.color = "green";
+document.querySelectorAll("a")[1].style.color = "green";
+document.querySelectorAll("a")[2].style.color = "green";
+document.querySelectorAll("a")[3].style.color = "green";
+document.querySelectorAll("a")[4].style.color = "green";
+document.querySelectorAll("a")[5].style.color = "green";
+
+let newNavItem = document.createElement('a');
+newNavItem.textContent = 'First (new!)';
+newNavItem.style.color = "green";
+
+let myNav = document.querySelector('nav');
+myNav.prepend(newNavItem);
+
+let newNavItem2 = document.createElement('a');
+newNavItem2.textContent = 'Last (new!)';
+newNavItem2.style.color = "green";
+
+let myNav2 = document.querySelector('nav');
+myNav2.appendChild(newNavItem2);
+//Memo: Refactor this later to be less repetitive, please!
+
+
 //nav
 
 document.querySelector(".cta-text h1").innerHTML = siteContent["cta"]["h1"];
