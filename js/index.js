@@ -61,3 +61,7 @@ theHead[3].innerHTML = siteContent['nav']['nav-item-4']
 theHead[4].innerHTML = siteContent['nav']['nav-item-5']
 
 theHead[5].innerHTML = siteContent['nav']['nav-item-6']
+
+let ctaImage = document.getElementById('cta-img')
+ctaImage.alt = 'An image of a code snippet.'
+ctaImage.src = siteContent['cta']['img-src']
