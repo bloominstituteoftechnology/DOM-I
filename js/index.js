@@ -38,5 +38,41 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+
+
+
+// let n = document.querySelectorAll('nav a');
+// navMenu = Array.from(n);
+// navMenu.forEach((item, index) => {
+//   for(let i = 0; i < siteContent['nav'].keys.length; i++){
+//   item.innerHTML = siteContent['nav'][];
+//   }
+
+// })
+
+
+// nav menu
+
+let navMenu = document.querySelectorAll('nav a');
+navMenu[0].textContent = siteContent['nav']['nav-item-1'];
+navMenu[1].textContent = siteContent['nav']['nav-item-2'];
+navMenu[2].textContent = siteContent['nav']['nav-item-3'];
+navMenu[3].textContent = siteContent['nav']['nav-item-4'];
+navMenu[4].textContent = siteContent['nav']['nav-item-5'];
+navMenu[5].textContent = siteContent['nav']['nav-item-6'];
+
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+//cta section
+let ctaText = document.querySelector('.cta-text h1');
+ctaText.textContent = siteContent['cta']['h1'];
+let ctaButton = document.querySelector('.cta .cta-text button');
+ctaButton.innerText = siteContent['cta']['button'];
+let ctaImage = document.querySelector('#cta-img');
+ctaImage.setAttribute('src', siteContent['cta']['img-src']);
+
+
+//main content
+document.querySelector('.main-content .top-content h4').innerText = siteContent['main-content']['features-h4'];
+document.querySelector('.main-content .top-content p').innerText = siteContent['main-content']['features-content'];
