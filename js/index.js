@@ -64,7 +64,7 @@ newNavItem.style.color = "green";
 let myNav = document.querySelector('nav');
 myNav.prepend(newNavItem);
 
-let newNavItem2 = document.createElement('a');
+let newNavItem2 = document.createElement(`a`);
 newNavItem2.textContent = 'Last (new!)';
 newNavItem2.style.color = "green";
 
@@ -111,3 +111,50 @@ document.querySelectorAll(".contact p")[2].innerHTML = siteContent["contact"]["e
 
 document.querySelector("footer p").innerHTML = siteContent["footer"]["copyright"];
 //footer
+
+/* ASSIGNMENT II STARTS HERE */
+
+let productHeader = document.querySelector(".top-content");
+
+productHeader.addEventListener(`mouseover`, (event) => {
+  productHeader.style.color = "purple";
+});
+
+productHeader.addEventListener(`mouseleave`, (event) => {
+  productHeader.style.color = "black";
+});
+
+document.querySelector(".cta-text button").addEventListener('click', (event) => {
+  window.alert('Are you sure that you are ready to get started?');
+});
+
+document.addEventListener('wheel', (event) => {
+  document.querySelector(".cta button").style.backgroundColor = "red";
+});
+
+document.addEventListener('keydown', (event) => {
+  let keystrokeDiv = document.createElement('div');
+  keystrokeDiv.textContent = 'You pressed a key on your keyboard!';
+  keystrokeDiv.style.textAlign = "center";
+  document.querySelector(".main-content").appendChild(keystrokeDiv);
+});
+
+document.addEventListener('auxclick', (event) => {
+  document.querySelector('#cta-img').style.backgroundColor = "green";
+});
+
+document.addEventListener('dblclick', (event) => {
+  document.querySelector('#logo-img').style.backgroundColor = "blue";
+});
+
+document.addEventListener('contextmenu', (event) => {
+  window.alert(`Hey, I see you bringing up that context menu on this page.`)
+});
+
+document.querySelector('#middle-img').addEventListener('drag', (event) => {
+  document.querySelector('.main-content').style.backgroundColor = "gray";
+})
+
+document.querySelector('#middle-img').addEventListener('dragend', (event) => {
+  document.querySelector('.main-content').style.backgroundColor = "white";
+})
