@@ -46,6 +46,7 @@ const navLinks = document.querySelectorAll("nav a");
 
 navLinks.forEach((link,i) => {
   link.textContent = siteContent.nav[`nav-item-${i+1}`]; 
+  link.style.color = "green";
 });
 
 //CTA Section
