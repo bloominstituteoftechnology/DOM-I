@@ -41,13 +41,31 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
+const a = document.createElement('a');
+const p = document.querySelector('nav a').appendChild(a);
+p.text = "Hi there"
+
+const b = document.createElement('a');
+const p2 = document.querySelector('nav a').prepend(b);
+
 let nav = document.querySelectorAll("nav a");
-nav[0].innerHTML = "Services";
-nav[1].innerHTML = "Product";
-nav[2].innerHTML = "Vision";
-nav[3].innerHTML = "Features";
-nav[4].innerHTML = "About";
-nav[5].innerHTML = "Contact";
+nav[0].innerHTML = "Love";
+nav[1].innerHTML = "Services";
+nav[2].innerHTML = "Product";
+nav[3].innerHTML = "Vision";
+nav[4].innerHTML = "Features";
+nav[5].innerHTML = "About";
+nav[6].innerHTML = "Contact";
+nav[7].innerHTML = "Hi There";
+nav[0].style.color = "blue";
+nav[1].style.color = "blue";
+nav[2].style.color = "blue";
+nav[3].style.color = "blue";
+nav[4].style.color = "blue";
+nav[5].style.color = "blue";
+nav[6].style.color = "blue";
+nav[7].style.color = "blue";
+
 
 let ctaH1 = document.querySelector(".cta-text h1");
 ctaH1.innerHTML = "Dom<br> Is<br> Awesome"
