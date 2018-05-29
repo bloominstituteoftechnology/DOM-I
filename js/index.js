@@ -40,7 +40,7 @@ const siteContent = {
 // Example: Update the img src for the logo
 
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src','img/logo.png', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"])
 let nav = document.querySelectorAll("nav a");
 nav[0].innerHTML = "Services";
 nav[1].innerHTML = "Product";
@@ -50,13 +50,37 @@ nav[4].innerHTML = "About";
 nav[5].innerHTML = "Contact";
 
 let ctaImg = document.getElementById("cta-img");
-ctaImg.setAttribute('src','img/header-img.png',siteContent["cta"]["img-src"])
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
 let dom = document.querySelector(".cta-text h1");
 dom.innerHTML = "DOM <br> is <br> Awesome";
 let ctaButton = document.querySelector(".cta button");
 ctaButton.innerHTML = "Get Started";
 
-let features = document.querySelector(".main-content h4");
+let headingsTop = document.querySelectorAll(".top-content h4");
+headingsTop[0].innerHTML = "Features";
+headingsTop[1].innerHTML = "About";
+let paragraphsTop = document.querySelectorAll(".top-content p");
+paragraphsTop[0].innerHTML = siteContent["main-content"]["features-content"];
+paragraphsTop[1].innerHTML = siteContent["main-content"]["about-content"];
 
-// let ctaImg = document.getElementById("cta-img");
-// ctaImg.setAttribute('src','img/header-img.png',siteContent["cta"]["img-src"])
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+let headingsBottom = document.querySelectorAll(".bottom-content h4");
+headingsBottom[0].innerHTML = "Services";
+headingsBottom[1].innerHTML = "Product";
+headingsBottom[2].innerHTML = "Vision";
+let paragraphsBottom = document.querySelectorAll(".bottom-content p");
+paragraphsBottom[0].innerHTML = siteContent["main-content"]["services-content"];
+paragraphsBottom[1].innerHTML = siteContent["main-content"]["product-content"];
+paragraphsBottom[2].innerHTML = siteContent["main-content"]["vision-content"];
+
+let contacts = document.querySelector (".contact h4");
+contacts.innerHTML = "Contact";
+let contactInfo = document.querySelectorAll(".contact p");
+contactInfo[0].innerHTML = "123 Way 456 Street<br> Somewhere, USA";
+contactInfo[1].innerHTML = "1 (888) 888-8888";
+contactInfo[2].innerHTML = "sales@greatidea.io";
+
+let footer = document.querySelector("footer p");
+footer.innerHTML = "Copyright Great Idea! 2018";
