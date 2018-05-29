@@ -41,16 +41,29 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+const a = document.createElement('a');
+const p = document.querySelector('nav a').appendChild(a);
+
+const l = document.createElement('a');
+const m = document.querySelector('nav a').prepend(l);
+
 let nav = document.querySelectorAll("nav a");
-nav[0].innerHTML = "Services";
-nav[1].innerHTML = "Product";
-nav[2].innerHTML = "Vision";
-nav[3].innerHTML = "Features";
-nav[4].innerHTML = "About";
-nav[5].innerHTML = "Contact";
+nav[0].innerHTML = "Love";
+nav[1].innerHTML = "Services";
+nav[2].innerHTML = "Product";
+nav[3].innerHTML = "Vision";
+nav[4].innerHTML = "Features";
+nav[5].innerHTML = "About";
+nav[6].innerHTML = "Contact";
+nav[7].innerHTML = "Hello";
+
+nav.forEach(function (e){
+  e.style.color = "green";
+});
+
 
 let ctaH1 = document.querySelector(".cta-text h1");
-ctaH1.innerHTML = "<br>DOM<br> IS <br>AWESOME</br>";
+ctaH1.innerHTML = "<br>DOM<br> IS <br>AWESOME<br>";
 
 let ctaButton = document.querySelector(".cta-text button");
 ctaButton.innerHTML = siteContent["cta"]["button"];
@@ -89,6 +102,8 @@ contactP[2].innerHTML = siteContent["contact"]["email"];
 
 let footer = document.querySelector("footer");
 footer.innerHTML = siteContent["footer"]["copyright"];
+
+
 
 
 
