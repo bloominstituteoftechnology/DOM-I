@@ -39,7 +39,9 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+let nav = document.querySelector('nav');
 
 let navLinks = document.querySelectorAll('nav a');
 navLinks[0].innerText = siteContent['nav']['nav-item-1'];
@@ -48,6 +50,24 @@ navLinks[2].innerText = siteContent['nav']['nav-item-3'];
 navLinks[3].innerText = siteContent['nav']['nav-item-4'];
 navLinks[4].innerText = siteContent['nav']['nav-item-5'];
 navLinks[5].innerText = siteContent['nav']['nav-item-6'];
+// Section 3 //
+for(let i = 0; i < navLinks.length; i++) {
+  if(navLinks[i].href){
+    navLinks[i].style.color = 'green'
+  }
+}
+
+let additionalNavOne = document.createElement('a');
+additionalNavOne.href = '#';
+additionalNavOne.innerText = 'Idea 1';
+additionalNavOne.style.color='green';
+document.querySelector('nav').appendChild(additionalNavOne);
+
+let additionalNavTwo = document.createElement('a');
+additionalNavTwo.href = '#';
+additionalNavTwo.innerText = 'Idea 2';
+additionalNavTwo.style.color = 'green';
+nav.prepend(additionalNavTwo);
 
 let ctaHeadingOne = document.querySelector('h1');
 ctaHeadingOne.innerText = siteContent['cta']['h1'];
