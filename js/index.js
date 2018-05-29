@@ -42,12 +42,12 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 let navTop= document.querySelectorAll("nav a");
-navTop[0].innerHTML = "Services";
-navTop[1].innerHTML = "Product";
-navTop[2].innerHTML = "Vision";
-navTop[3].innerHTML = "Features";
-navTop[4].innerHTML = "About";
-navTop[5].innerHTML = "Contact";
+navTop[0].innerHTML = siteContent["nav"]["nav-item-1"]
+navTop[1].innerHTML = siteContent["nav"]["nav-item-2"]
+navTop[2].innerHTML = siteContent["nav"]["nav-item-3"]
+navTop[3].innerHTML = siteContent["nav"]["nav-item-4"]
+navTop[4].innerHTML = siteContent["nav"]["nav-item-5"]
+navTop[5].innerHTML = siteContent["nav"]["nav-item-6"]
 
 let callToAction = document.querySelector(".cta .cta-text h1");
 callToAction.innerHTML = "DOM<br>Is<br>Awesome";
@@ -56,7 +56,7 @@ let ctaImage = document.getElementById("cta-img");
 ctaImage.setAttribute("src", siteContent["cta"]["img-src"]);
 
 let ctaButton = document.querySelector(".cta .cta-text button");
-ctaButton.innerHTML = "Get Started";
+ctaButton.innerHTML = siteContent["cta"]["button"];
 
 let topHeaders = document.querySelectorAll(".top-content .text-content h4");
 topHeaders[0].innerHTML = siteContent["main-content"]["features-h4"];
@@ -78,3 +78,15 @@ let botParagraphs = document.querySelectorAll(".bottom-content .text-content p")
 botParagraphs[0].innerHTML = siteContent["main-content"]["services-content"];
 botParagraphs[1].innerHTML = siteContent["main-content"]["product-content"];
 botParagraphs[2].innerHTML = siteContent["main-content"]["vision-content"];
+
+let contactHeader = document.querySelector(".contact h4");
+contactHeader.innerHTML = siteContent["contact"]["contact-h4"];
+
+
+let contactParagraphs = document.querySelectorAll(".contact p");
+contactParagraphs[0].innerHTML = siteContent["contact"]["address"];
+contactParagraphs[1].innerHTML = siteContent["contact"]["phone"];
+contactParagraphs[2].innerHTML = siteContent["contact"]["email"];
+
+let footerStuff = document.querySelector("footer p");
+footerStuff.innerHTML = siteContent["footer"]["copyright"];
