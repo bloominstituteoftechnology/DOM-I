@@ -4,31 +4,35 @@ let secondOnes = document.getElementById('secondOnes');
 let secondTens = document.getElementById('secondTens');
 
 
-
 let timer = function(){
+
     setInterval (function() {
-        console.log(msTens.innerHTML, 'initial');
-        console.log(typeof(msTens.innerHTML), 'type of initial');
+
+        //Quite the timer if we get to 10 seconds
+        if (secondTens.innerHTML === '1') {
+            let digitArr = document.querySelectorAll('.digit');
+            digitArr.forEach( cv => cv.setAttribute('style','color:red'))
+            return;
+        }
+
         if (msTens.innerHTML === '-') {
             msTens.innerHTML = 0;
         } else if (msTens.innerHTML == '9'){
             msTens.innerHTML = 0;
-            incrementByDigit(msHundreds,5);
+            incrementByDigit(msHundreds,5, secondOnes);
         }else {
             ++msTens.innerHTML
-            console.log(msTens.innerHTML, 'final');
         }
-    },100)
+    },10)
 }
 
-function incrementByDigit(digit, carryOver){
+function incrementByDigit(digit, carryOver, nextDigit){
     if (digit.innerHTML === '-') {
         digit.innerHTML = 1;
     } else if (digit.innerHTML == carryOver){
         digit.innerHTML = 0;
-        incrementByDigit(secondOnes,9)
+        incrementByDigit(nextDigit,9,secondTens)
     }else {
         ++digit.innerHTML
-        console.log(digit.innerHTML, 'final');
     }
 }
