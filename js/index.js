@@ -48,3 +48,45 @@ nav.children[2].innerHTML = siteContent["nav"]["nav-item-3"]
 nav.children[3].innerHTML = siteContent["nav"]["nav-item-4"]
 nav.children[4].innerHTML = siteContent["nav"]["nav-item-5"]
 nav.children[5].innerHTML = siteContent["nav"]["nav-item-6"]
+
+let ctaH1 = document.querySelector('.cta h1')
+let ctaButton = document.querySelector('.cta button')
+let ctaImg = document.querySelector('#cta-img')
+
+ctaH1.innerHTML = siteContent.cta.h1
+ctaButton.innerHTML = siteContent.cta.button 
+ctaImg.src = siteContent.cta["img-src"]
+
+let featuresHeader = document.querySelector('.top-content').children[0].children[0]
+let featuresContent = document.querySelector('.top-content').children[0].children[1]
+
+let aboutHeader = document.querySelector('.top-content').children[1].children[0]
+let aboutContent = document.querySelector('.top-content').children[1].children[1]
+
+let servicesHeader = document.querySelector('.bottom-content').children[0].children[0]
+let servicesContent = document.querySelector('.bottom-content').children[0].children[1]
+
+let productHeader = document.querySelector('.bottom-content').children[1].children[0]
+let productContent = document.querySelector('.bottom-content').children[1].children[1]
+
+let visionHeader = document.querySelector('.bottom-content').children[2].children[0]
+let visionContent = document.querySelector('.bottom-content').children[2].children[1]
+
+let middleImg = document.querySelector('#middle-img')
+
+featuresHeader.innerHTML = siteContent["main-content"]["features-h4"]
+featuresContent.innerHTML = siteContent["main-content"]["features-content"]
+
+aboutHeader.innerHTML = siteContent["main-content"]["about-h4"]
+aboutContent.innerHTML = siteContent["main-content"]["about-content"]
+
+servicesHeader.innerHTML = siteContent["main-content"]["services-h4"]
+servicesContent.innerHTML = siteContent["main-content"]["services-content"]
+
+productHeader.innerHTML = siteContent["main-content"]["product-h4"]
+productContent.innerHTML = siteContent["main-content"]["product-content"]
+
+visionHeader.innerHTML = siteContent["main-content"]["vision-h4"]
+visionContent.innerHTML = siteContent["main-content"]["vision-content"]
+
+middleImg.src = siteContent["main-content"]["middle-img-src"]
