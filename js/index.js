@@ -84,3 +84,22 @@ function attachContent(nodes, contentObj,regex) {
 
 attachContent(textContentsH4, mainContentObj, /\bh4\b/);
 attachContent(textContentsP, mainContentObj, /\b-content\b/);
+
+//Contact Section
+
+const contactSection = document.querySelector('.contact');
+
+const contactHeading = contactSection.querySelector('h4');
+
+contactHeading.textContent = siteContent.contact["contact-h4"];
+
+const address = contactSection.querySelectorAll('p')[0];
+address.textContent = siteContent.contact.address;
+
+const phoneNum = contactSection.querySelectorAll('p')[1];
+phoneNum.textContent = siteContent.contact.phone;
+
+const email = contactSection.querySelectorAll('p')[2];
+
+email.textContent = siteContent.contact.email;
+
