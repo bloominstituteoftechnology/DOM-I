@@ -53,6 +53,17 @@ let theHead = document.querySelectorAll('a')
 theNav.prepend('Hello Users')
 theNav.style.color = 'green'
 
+let textNode = document.createElement('a')
+textNode.innerHTML = 'The CEO'
+textNode.style.color = 'green'
+textNode.setAttribute('href', '#')
+// let textNode = document.createTextNode('The CEO');
+theNav.append(textNode)
+
+theHead.forEach((Element) => {
+  return (Element.style.color = 'green')
+})
+
 theHead[0].innerHTML = siteContent['nav']['nav-item-1']
 
 theHead[1].innerHTML = siteContent['nav']['nav-item-2']
