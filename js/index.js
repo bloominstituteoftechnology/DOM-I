@@ -59,15 +59,24 @@ for (let i = 0; i < nav.length; i++) {
   nav[i].style.color = "green";
 }
 
-// Appended New Element to Nav and Color it Green
-let newElement = document.createElement("a");
-newElement.textContent = "New Element";
+// Appended to Nav and Color it Green
+let append = document.createElement("a");
+append.textContent = "Appended";
 
 let navList = document.querySelector("nav");
-navList.appendChild(newElement);
+navList.appendChild(append);
 
-newElement.style.color = "green";
-console.log(newElement);
+append.style.color = "green";
+console.log(append);
+
+// Prepend to Nav and Color Green
+let prepend = document.createElement("a");
+prepend.textContent = "Prepend";
+
+let preNavList = document.querySelector("nav");
+preNavList.prepend(prepend);
+
+prepend.style.color = "green";
 
 // let nav = document.querySelector("nav").childNodes;
 // console.log(nav);
