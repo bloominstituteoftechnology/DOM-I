@@ -1,16 +1,91 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DOM I</title>
-    <link rel="stylesheet" href="./styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+      <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+        
   </head>
   <body>
-    <div class="digits">
-      <div class="digit" id="secondTens">-</div>
-      <div class="digit" id="secondOnes">-</div>
-      <div class="digit" id="colon">:</div>
-      <div class="digit" id="msHundreds">-</div>
-      <div class="digit" id="msTens">-</div>
+<div class="container-fluid">
+
+
+
+
+
+
+
+
+
+  <div>
+    
+      
+      <div class="digits text-center">
+        <div class="digit" id="secondTens">-</div>
+        <div class="digit" id="secondOnes">-</div>
+        <div class="digit" id="colon">:</div>
+        <div class="digit" id="msHundreds">-</div>
+        <div class="digit" id="msTens">-</div>
+      </div>
+<br>
+
+
+
+
+
+
+
+<br>
+<div class="buttons row justify-content-center align-items-center">
+    <div id="myPlayDIV">
+    <button id="playButton" onclick= "disablePlayButton(); disableRefreshButton(); startCount();"style="font-size:48px;color:green"><i class="fa fa-play"></i></button> 
     </div>
+
+    <div id="myrefreshDIV">
+      <button id="refreshButton" onclick="disableRefreshButton();refreshCount(); enablePlayButton()"style="font-size:48px;color:blue"><i class="fa fa-refresh"></i></button></div>
+    </div>
+
+  </div>
+
+
+<script>
+document.getElementById("refreshButton").disabled = true;
+</script>
+
+
+            <h4 class="card-title text-center mt-3 timertitle" contenteditable="true" data-timerid="1">Lambda School: CS11 Cohort (editable  content)</h4>
+  <div>
+    <div class="row mb-12">
+    
+          
+    </div>
+            If you compelete the timer with time to spare:
+ <div class="card-block">
+Self study and research DOM events and event listeners <p>
+SG1: Implement a start button. The digital timer should not start until the button is pressed.</p>
+<p>SG2: Once you have a start button working, configure it so that when a user presses the start button it is disabled and not enabled until the timer finishes.</p>
+<p>SG3: Once you have finished SG2, add new button called reset that resets the timer to 00:00 and then pressing the start button again will start the timer from 0.</p>
+<p>SG4: Finally, if you have completed all the stretch goals, spend some time styling your timer and buttons.</p> <br> 
+
+          
+        </div>
+         
+
+
+          <div class="jumbotron">
+            <h1 class="text-center hidden-xs-down">Sam Khaled's Timer</h1><br>
+    <h2 class="text-center hidden-sm-up">DOM-1 Stretch goal </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script src="index.js"></script>
   </body>
 </html>
