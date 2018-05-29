@@ -42,19 +42,24 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 let navBar = document.querySelectorAll("nav a");
+logo.addEventListener("click", () => {logo.style.display = "none"});
 
 for (var i = 0; i < navBar.length; i++) {
-  navBar[i].innerHTML = siteContent["nav"] [`nav-item-${[1 + i]}`]
+  navBar[i].innerHTML = siteContent["nav"] [`nav-item-${[1 + i]}`];
 }
 
 let headerImg = document.getElementById("cta-img");
 headerImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+headerImg.addEventListener("dblclick", () => {headerImg.style.display = "none"});
 
 let ctaText = document.querySelector(".cta h1");
 ctaText.innerHTML = siteContent["cta"] ["h1"];
 
 let ctaButton = document.querySelector(".cta button");
 ctaButton.innerHTML = siteContent["cta"] ["button"];
+ctaButton.addEventListener("mouseenter", () => {ctaButton.style.padding = "100px"})
+ctaButton.addEventListener("mouseleave", () => {ctaButton.style.padding = "0px"})
 
 let textHeading = document.querySelectorAll(".text-content h4");
 let textContent = document.querySelectorAll(".text-content p");
