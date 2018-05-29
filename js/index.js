@@ -99,3 +99,56 @@ document.querySelector('nav a').innerHTML = "Home";
 
 document.querySelector('nav').firstElementChild.style.color = 'green';
 document.querySelector('nav').lastElementChild.style.color = 'green';
+document.querySelector('.container').style.backgroundColor = "white";
+
+
+//CODE FOR EVENT LISTENERS
+document.querySelector('.cta-text button').addEventListener("click", (e) => {
+  e.target.style.backgroundColor = 'yellow';
+})
+
+// document.querySelector('#cta-img').addEventListener("mouseenter", () => {
+//   alert('You hovered over the CTA Image!')
+// })
+
+
+
+document.body.addEventListener("keypress",  (e) => {
+  if (e.key == 'r' && document.querySelector('.container').style.backgroundColor != 'red') {
+    document.querySelector('.container').style.backgroundColor = 'red';
+  } else if (e.key == 'r' && document.querySelector('.container').style.backgroundColor == 'red') {
+      document.querySelector('.container').style.backgroundColor = 'white';
+    } else {
+      return alert('Something strange afoot');
+    }
+  });
+
+document.querySelector('.main-content .top-content .text-content p').addEventListener("select", (e) => {
+  e.target.style.color = "purple";
+});
+
+document.querySelector('.middle-img').style.visibility = "visible";
+
+document.querySelector('.middle-img').addEventListener("dblclick", (e) => {
+  if(e.target.style.visibility == "visible") {
+    e.target.style.visibility = "invisible";
+  } else {
+    e.target.style.visibility = "visible";
+  }
+});
+
+document.getElementById('logo-img').addEventListener("click", (e) => {
+  e.target.style.display = "hidden";
+});
+
+document.querySelectorAll('.main-content .top-content .text-content p')[1].addEventListener("mouseenter", (e) => {
+  e.target.style.backgroundColor = "orange";
+});
+
+document.querySelectorAll('.main-content .top-content .text-content p')[1].addEventListener("mouseleave", (e) => {
+  e.target.style.backgroundColor = "cyan";
+});
+
+document.body.addEventListener("copy", () => {
+  alert("You copied something!")
+})
