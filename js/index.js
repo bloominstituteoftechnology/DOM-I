@@ -41,6 +41,9 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
+//let navItem1 = document.getElementByTagName("nav");
+//navItem1.getElementByTagName("a")[0].innerHTML = siteContent["nav"]["nav-item-1"];
+
 let ctaImage = document.getElementById("cta-img");
 ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
 
@@ -49,3 +52,8 @@ ctah1.innerHTML = siteContent["cta"]["h1"];
 
 let ctaButton = document.querySelector(".cta button");
 ctaButton.innerHTML = siteContent["cta"]["button"];
+
+document.getElementsByTagName("h4").item(0).innerHTML = siteContent["main-content"]["features-h4"];
+document.getElementsByTagName("h4").item(1).innerHTML = siteContent["main-content"]["about-h4"];
+document.getElementsByTagName("h4").item(2).innerHTML = siteContent["main-content"]["services-h4"];
+document.getElementsByTagName("h4").item(3).innerHTML = siteContent["main-content"]["product-h4"];
