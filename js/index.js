@@ -54,7 +54,21 @@ const siteContent = {
   for (let i = 1; i < 7; i++) {
     navItem = navItem.slice(0, -1) + i;
     nav[i - 1].innerHTML = siteContent['nav'][navItem];
+    nav[i - 1].style.cssText = 'color: green';
   }
+
+  let navBar = document.querySelector('nav');
+  var firstA = document.createElement('a');
+  firstA.setAttribute('href', '#');
+  firstA.innerHTML = 'FIRST';
+  firstA.style.cssText = 'color: green';
+  navBar.prepend(firstA);
+
+  var lastA = document.createElement('a');
+  lastA.setAttribute('href', '#');
+  lastA.innerHTML = 'LAST';
+  lastA.style.cssText = 'color: green';
+  navBar.appendChild(lastA);
 }
 // CTA section
 {
@@ -103,7 +117,6 @@ const siteContent = {
   contactH4.innerHTML = siteContent.contact['contact-h4'];
 
   let contactPs = document.querySelectorAll('.contact p');
-  console.log('ps', contactPs);
   contactPs[0].innerHTML = siteContent.contact.address;
   contactPs[1].innerHTML = siteContent.contact.phone;
   contactPs[2].innerHTML = siteContent.contact.email;
