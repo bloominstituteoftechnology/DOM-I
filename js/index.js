@@ -110,3 +110,10 @@ let doubleClick = document.querySelector(".cta button");
 doubleClick.addEventListener("dblclick", () => {
   doubleClick.style.color = "yellow";
  });
+
+
+let mouseEnterImage = document.getElementById("cta-img");
+
+mouseEnterImage.addEventListener("mouseenter", () => {
+  mouseEnterImage.style.opacity = 0.2;
+ });
