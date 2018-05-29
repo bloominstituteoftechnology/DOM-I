@@ -90,3 +90,12 @@ document.querySelectorAll('.contact p')[1].innerHTML = siteContent['contact']['p
 document.querySelectorAll('.contact p')[2].innerHTML = siteContent['contact']['email'];
 
 document.querySelector('footer p').innerHTML = siteContent['footer']['copyright'];
+
+array.forEach(element => element.style.color = 'green');
+
+document.querySelector('nav').appendChild(document.createElement('a')).innerHTML = "Blog";
+document.querySelector('nav').prepend(document.createElement('a'));
+document.querySelector('nav a').innerHTML = "Home";
+
+document.querySelector('nav').firstElementChild.style.color = 'green';
+document.querySelector('nav').lastElementChild.style.color = 'green';
