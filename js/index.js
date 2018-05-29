@@ -64,15 +64,12 @@ nav1[5].innerHTML = "Contact";
   //  "h1": "DOM Is Awesome",
     //"button": "Get Started",
     //"img-src": "img/header-img.png"
+       
+
     
-let ctaSect = document.querySelector(".cta");    
 let ctaText = document.querySelector(".cta-text");
 ctaText.innerHTML = "DOM <br>Is <br>Awesome";
 ctaText.style = "font-family: Bangers; letter-spacing: 0px;";
-
-let myButton = document.getElementsByTagName("button");
-myButton.innerHTML = "Get Started"
-myButton.style = "border: 1px black solid;";
 
 let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute("src", "img/header-img.png");
@@ -106,5 +103,10 @@ contactContent[1].innerHTML = "1 (888) 888-8888"
 contactContent[2].innerHTML = "sales@greatidea.io"
 contactContent.style = "margin-top: 5px;";
 
-let foot = document.getElementsByTagName("footer");
-foot.innerHTML = "Copyright Great Idea! 2018";
+let footer = document.querySelector("footer");
+footer.innerHTML = "Copyright Great Idea! 2018";
+footre.style = "align-text: center; height: 50px;";
+
+
+let button = document.querySelector(".cta-text button");
+button.innerHTML = "Get Started";
