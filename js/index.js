@@ -75,9 +75,20 @@ mainContenth4[1].innerHTML = siteContent["main-content"]["product-h4"];
 mainContenth4[2].innerHTML = siteContent["main-content"]["vision-h4"];
 
 let mainContentBot = document.querySelectorAll(".bottom-content .text-content p");
-mainContentBot[0].innerHTML = siteContent["main-content"][];
-mainContentBot[1].innerHTML = siteContent["main-content"][];
-mainContentBot[2].innerHTML = siteContent["main-content"][];
+mainContentBot[0].innerHTML = siteContent["main-content"]["services-content"];
+mainContentBot[1].innerHTML = siteContent["main-content"]["product-content"];
+mainContentBot[2].innerHTML = siteContent["main-content"]["vision-content"];
+
+let contactHeader = document.querySelector(".contact h4");
+contactHeader.innerHTML = siteContent["contact"]["contact-h4"];
+
+let contactP = document.querySelectorAll(".contact p");
+contactP[0].innerHTML = siteContent["contact"]["address"];
+contactP[1].innerHTML = siteContent["contact"]["phone"];
+contactP[2].innerHTML = siteContent["contact"]["email"];
+
+let footer = document.querySelector("footer");
+footer.innerHTML = siteContent["footer"]["copyright"]; 
 
 
 
