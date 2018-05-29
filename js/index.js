@@ -42,6 +42,7 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"])
 
 //Header Section updated
+const nav = document.querySelector("nav");
 const navLinks = document.querySelectorAll("nav a");
 
 navLinks.forEach((link,i) => {
