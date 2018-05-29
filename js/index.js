@@ -41,6 +41,8 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
+
+// DOM-I //
 let nav = document.querySelector('nav');
 
 let navLinks = document.querySelectorAll('nav a');
@@ -106,3 +108,49 @@ contactParagraphs[2].innerText = siteContent['contact']['email'];
 
 let footer = document.querySelector('footer p');
 footer.innerText = siteContent['footer']['copyright'];
+
+
+// DOM-II //
+logo.addEventListener('mouseover', function() {
+  logo.style.background = 'lightgray';
+});
+
+logo.addEventListener('mouseout', function() {
+  logo.style.background = 'white'
+});
+
+logo.addEventListener('click', function() {
+  logo.style.background = 'purple';
+});
+
+logo.addEventListener('dblclick', function() {
+  logo.style.background = 'pink';
+});
+
+ctaHeadingOne.addEventListener('mouseenter', function() {
+  ctaHeadingOne.innerText = 'Heading Hovered';
+});
+
+ctaHeadingOne.addEventListener('mouseout', function() {
+  ctaHeadingOne.innerText = siteContent['cta']['h1'];
+});
+
+document.body.addEventListener('contextmenu', function() {
+  alert('are you peeking at my code?');
+});
+
+window.addEventListener('resize', function() {
+  ctaHeadingOne.innerText = 'One makes you smaller'
+});
+
+ctaButton.addEventListener('transitionrun', function() {
+  ctaButton.innerText = 'Transition Called';
+});
+
+ctaButton.addEventListener('transitionstart', function() {
+  ctaButton.innerText = 'Transition In Progress';
+});
+
+ctaButton.addEventListener('transitionend', function() {
+  ctaButton.innerText = 'Transition End';
+});

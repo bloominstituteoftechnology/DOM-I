@@ -124,6 +124,9 @@ header .logo {
     height: 32px;
     margin-top: 10px;
     cursor: pointer;
+    transition-property: background, color;
+    transition-duration: 1s;
+    transition-delay: .5s;
 }
 
 .cta .cta-text button:hover {
