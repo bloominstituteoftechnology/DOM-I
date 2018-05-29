@@ -53,11 +53,39 @@ for (let i = 0; i < navItem.length; i++) {
   navItem[i].style.color = "green";
 }
 
+let node = document.createElement("nav");                 // Create a <li> node
+let textnode = document.createTextNode("Blog");         // Create a text node
+node.appendChild(textnode);                              // Append the text to <li>
+document.getElementById("navItem").appendChild(node);     // Append <li> to <ul> with id="myList"
+
 let ctaHeader = document.querySelector(".cta-text h1");
 let ctaButton = document.querySelector(".cta-text button")
-let ctaImage = document.querySelector(".cta-text img");
-ctaHeader.innerHTML = siteContent["cta"]["h1"];
-ctaButton.innerHTML = siteContent["cta"]["button"];
+let ctaImage = document.querySelector("#cta-img");
+ctaHeader.textContent = siteContent["cta"]["h1"];
+ctaButton.textContent = siteContent["cta"]["button"];
+ctaImage.setAttribute("src", siteContent["cta"]["img-src"]); 
 
+let mainContentHeader = document.querySelectorAll(".text-content h4");
+let mainContentParagraph = document.querySelectorAll(".text-content p");
+let mainContentImage = document.querySelector("#middle-img");
+mainContentHeader[0].textContent = siteContent["main-content"]["features-h4"];
+mainContentParagraph[0].textContent = siteContent["main-content"]["features-content"]
+mainContentHeader[1].textContent = siteContent["main-content"]["about-h4"];
+mainContentParagraph[1].textContent = siteContent["main-content"]["about-content"]
+mainContentHeader[2].textContent = siteContent["main-content"]["services-h4"];
+mainContentParagraph[2].textContent = siteContent["main-content"]["services-content"]
+mainContentHeader[3].textContent = siteContent["main-content"]["product-h4"];
+mainContentParagraph[3].textContent = siteContent["main-content"]["product-content"]
+mainContentHeader[4].textContent = siteContent["main-content"]["vision-h4"];
+mainContentParagraph[4].textContent = siteContent["main-content"]["vision-content"]
+mainContentImage.setAttribute("src", siteContent["main-content"]["middle-img-src"])
 
+let contactHeader = document.querySelector(".contact h4");
+contactHeader.textContent = siteContent["contact"]["contact-h4"];
+let contactParagraph = document.querySelectorAll(".contact p");
+contactParagraph[0].textContent = siteContent["contact"]["address"];
+contactParagraph[1].textContent = siteContent["contact"]["phone"];
+contactParagraph[2].textContent = siteContent["contact"]["email"];
 
+let footer = document.querySelector("footer p");
+footer.textContent = siteContent["footer"]["copyright"];
