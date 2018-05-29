@@ -78,6 +78,30 @@ mainh4con[4].innerHTML = siteContent["main-content"]["vision-content"];
 let midlogo = document.getElementById("middle-img");
 midlogo.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
+// "contact": {
+//   "contact-h4" : "Contact",
+//   "address" : "123 Way 456 Street Somewhere, USA",
+//   "phone" : "1 (888) 888-8888",
+//   "email" : "sales@greatidea.io",
+
+let conth4 = document.querySelector(".contact h4");
+conth4.innerHTML = siteContent["contact"]["contact-h4"];
+
+let addr = document.querySelectorAll(".contact p");
+addr[0].innerHTML = siteContent["contact"]["address"];
+addr[1].innerHTML = siteContent["contact"]["phone"];
+addr[2].innerHTML = siteContent["contact"]["email"];
+
+// "footer": {
+//   "copyright" : "Copyright Great Idea! 2018"
+// },
+
+let foot = document.querySelector("footer p")
+foot.innerHTML = siteContent["footer"]["copyright"];
+
+
+
+
 
 
 
