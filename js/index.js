@@ -51,15 +51,43 @@ headerNav[5].innerHTML = siteContent.nav['nav-item-6'];
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-// logo.setAttribute('src', siteContent["nav"]["img-src"]);
 logo.src = siteContent.nav["img-src"];
 
-let cta = document.getElementsByClassName("cta-text");
-cta[0].innerHTML = siteContent.cta["h1"];
-cta[1].innerHTML = siteContent.cta["button"];
+
+let ctaText = document.querySelector(".cta-text h1");
+ctaText.innerHTML = siteContent.cta["h1"];
+let ctaButton = document.querySelector(".cta-text button");
+ctaButton.innerHTML = siteContent.cta["button"];
 
 
 let ctaLogo = document.querySelector("#cta-img");
 ctaLogo.src = "img/header-img.png";
 
+let topCont = document.querySelectorAll(".main-content h4")
+let mainCont = document.querySelectorAll(".main-content p")
+
+topCont[0].innerHTML = siteContent["main-content"]["features-h4"];
+mainCont[0].innerHTML = siteContent["main-content"]["features-content"];
+
+topCont[1].innerHTML = siteContent["main-content"]["about-h4"];
+mainCont[1].innerHTML = siteContent["main-content"]["about-content"];
+
+topCont[2].innerHTML = siteContent["main-content"]["services-h4"];
+mainCont[2].innerHTML = siteContent["main-content"]["services-content"];
+
+topCont[3].innerHTML = siteContent["main-content"]["product-h4"];
+mainCont[3].innerHTML = siteContent["main-content"]["product-content"];
+
+topCont[4].innerHTML = siteContent["main-content"]["vision-h4"];
+mainCont[4].innerHTML = siteContent["main-content"]["vision-content"];
+
+document.querySelector(".middle-img").src = siteContent["main-content"]["middle-img-src"];
+
+document.querySelector(".contact h4").innerHTML = siteContent["contact"]["contact-h4"];
+let contactInfo = document.querySelectorAll(".contact p");
+contactInfo[0].innerHTML = siteContent["contact"]["address"];
+contactInfo[1].innerHTML = siteContent["contact"]["phone"];
+contactInfo[2].innerHTML = siteContent["contact"]["email"];
+
+document.querySelector("footer p").innerHTML = siteContent["footer"]["copyright"];
 };
