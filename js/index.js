@@ -102,6 +102,11 @@ document.querySelector('nav').lastElementChild.style.color = 'green';
 document.querySelector('.container').style.backgroundColor = "white";
 
 
+
+
+
+
+
 //CODE FOR EVENT LISTENERS
 document.querySelector('.cta-text button').addEventListener("click", (e) => {
   e.target.style.backgroundColor = 'yellow';
@@ -130,15 +135,15 @@ document.querySelector('.main-content .top-content .text-content p').addEventLis
 document.querySelector('.middle-img').style.visibility = "visible";
 
 document.querySelector('.middle-img').addEventListener("dblclick", (e) => {
-  if(e.target.style.visibility == "visible") {
-    e.target.style.visibility = "invisible";
+  if (e.target.style.visibility == "visible") {
+    e.target.style.visibility = "hidden";
   } else {
     e.target.style.visibility = "visible";
   }
 });
 
 document.getElementById('logo-img').addEventListener("click", (e) => {
-  e.target.style.display = "hidden";
+  document.getElementById('logo-img').style.visibility = "hidden";
 });
 
 document.querySelectorAll('.main-content .top-content .text-content p')[1].addEventListener("mouseenter", (e) => {
