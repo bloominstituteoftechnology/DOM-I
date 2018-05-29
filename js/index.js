@@ -43,10 +43,13 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 // nav a
 
-let navParts = document.querySelectorAll("nav a");
-navParts.forEach((element, index) => {
+let nav = document.querySelectorAll("nav a");
+nav.forEach((element, index) => {
   element.innerHTML = Object.values(siteContent.nav)[index];
 })
+nav.forEach(function (green){
+  green.style.color = "green";
+});
 
 // cta
 
