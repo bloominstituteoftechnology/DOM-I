@@ -104,3 +104,9 @@ let selected = document.querySelector(".cta h1");
 selected.addEventListener("click", () => {
   selected.style.color = "chocolate";
  });
+
+let doubleClick = document.querySelector(".cta button");
+
+doubleClick.addEventListener("dblclick", () => {
+  doubleClick.style.color = "yellow";
+ });
