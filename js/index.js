@@ -103,3 +103,8 @@ const email = contactSection.querySelectorAll('p')[2];
 
 email.textContent = siteContent.contact.email;
 
+//Footer
+
+const footerP = document.querySelector('footer p');
+
+footerP.textContent = siteContent.footer.copyright;
