@@ -49,9 +49,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // Nav
 let navElements = document.querySelectorAll(".container header nav a");
-navElements.forEach((item, index) => {
-  item.innerHTML = siteContent["nav"][`nav-item-${index+1}`];
-});
+navElements.forEach((item, index) => item.innerHTML = siteContent["nav"][`nav-item-${index+1}`] );
 
 let ctaH1 = document.querySelector(".cta .cta-text h1");
 ctaH1.innerHTML = siteContent["cta"]["h1"];
@@ -63,3 +61,20 @@ document.querySelector(".cta .cta-text button").innerHTML = siteContent["cta"]["
 document.querySelector("#cta-img").setAttribute("src", siteContent["cta"]["img-src"]);
 
 // Main content
+
+// Create NodeList of all h4 and p nodes in main-content
+let mainH4andP = document.querySelectorAll(".main-content .text-content h4, .main-content .text-content p");
+// Create list of all content for headers and paragraph from siteContent
+let contentH4andP = Object.entries(siteContent["main-content"]).filter(item => item[0].includes("h4") || item[0].includes("content")).map(item => item[1]);
+// Loop through our NodeList and assign values from contentH4andP
+mainH4andP.forEach((item, index) => item.innerHTML = contentH4andP[index] );
+
+// Assign main-content image
+document.querySelector("#middle-img").setAttribute("src", siteContent["main-content"][["middle-img-src"]]);
+
+// Contact
+// Same as above, create NodeList of nodes, then array of content, and assign
+// Each content item to the appropriate node
+let contactNodes = document.querySelectorAll(".contact h4, .contact p");
+let contactContent = Object.values(siteContent["contact"]);
+contactNodes.forEach((item,index) => item.innerHTML = contactContent[index]);
