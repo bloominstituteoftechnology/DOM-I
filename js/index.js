@@ -85,3 +85,20 @@ contactP[2].innerHTML = siteContent["contact"]["email"];
 
 let footer = document.querySelector("footer");
 footer.innerHTML = siteContent["footer"]["copyright"];
+
+let navParent = document.querySelector("nav");
+let newNavItem = document.createElement("a");
+newNavItem.href = "#";
+newNavItem.innerHTML = "Photos";
+newNavItem.style.color = "green";
+navParent.appendChild(newNavItem);
+
+let newNavItem2 = document.createElement("a");
+newNavItem2.innerHTML = "Blog";
+newNavItem2.href = "#";
+newNavItem2.style.color = "green";
+navParent.prepend(newNavItem2);
+
+for (let i = 0; i < nav.length; i++) {
+  nav[i].style.color = "green";
+}
