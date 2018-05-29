@@ -42,6 +42,106 @@ const siteContent = {
   }
 };
 
-// Example: Update the img src for the logo -- First Pull
+// Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
+
+// Nav Bar
+let nav = document.getElementsByTagName("a");
+nav[0].innerHTML = siteContent.nav["nav-item-1"];
+nav[1].innerHTML = siteContent.nav["nav-item-2"];
+nav[2].innerHTML = siteContent.nav["nav-item-3"];
+nav[3].innerHTML = siteContent.nav["nav-item-4"];
+nav[4].innerHTML = siteContent.nav["nav-item-5"];
+nav[5].innerHTML = siteContent.nav["nav-item-6"];
+// Navigation Color
+for (let i = 0; i < nav.length; i++) {
+  nav[i].style.color = "green";
+}
+
+// let nav = document.querySelector("nav").childNodes;
+// console.log(nav);
+
+// nav[1].innerHTML = siteContent.nav["nav-item-1"];
+// nav[3].innerHTML = siteContent.nav["nav-item-2"];
+// nav[5].innerHTML = siteContent.nav["nav-item-3"];
+// nav[7].innerHTML = siteContent.nav["nav-item-4"];
+// nav[9].innerHTML = siteContent.nav["nav-item-5"];
+// nav[11].innerHTML = siteContent.nav["nav-item-6"];
+
+// for (let i = 0; i < nav.length; i++) {
+//   nav[i].innerHTML;
+// }
+
+// CTA Text Area
+let ctaText = document.querySelector(".cta-text > h1");
+ctaText.innerHTML = siteContent.cta.h1;
+
+let ctaButton = document.querySelector(".cta-text > button");
+ctaButton.innerHTML = siteContent.cta.button;
+
+// CTA Image
+let ctaImage = document.getElementById("cta-img");
+ctaImage.setAttribute("src", siteContent["cta"]["img-src"]);
+
+// Top Content
+var topContent = document.querySelector(".top-content").childNodes;
+// console.log(topContent); Tested location with this
+
+// Features
+topContent[1].firstElementChild.innerHTML =
+  siteContent["main-content"]["features-h4"];
+topContent[1].lastElementChild.innerText =
+  siteContent["main-content"]["features-content"];
+
+// About
+topContent[3].firstElementChild.innerHTML =
+  siteContent["main-content"]["about-h4"];
+topContent[3].lastElementChild.innerHTML =
+  siteContent["main-content"]["about-content"];
+
+// Middle Image
+let middleImage = document.getElementById("middle-img");
+middleImage.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+// Bottom Content
+var bottomContent = document.querySelector(".bottom-content").childNodes;
+// console.log(bottomContent); // Tested location with this
+
+// Services
+bottomContent[1].firstElementChild.innerHTML =
+  siteContent["main-content"]["services-h4"];
+bottomContent[1].lastElementChild.innerText =
+  siteContent["main-content"]["services-content"];
+
+// Product
+bottomContent[3].firstElementChild.innerHTML =
+  siteContent["main-content"]["product-h4"];
+bottomContent[3].lastElementChild.innerHTML =
+  siteContent["main-content"]["product-content"];
+
+// Vision
+bottomContent[5].firstElementChild.innerHTML =
+  siteContent["main-content"]["vision-h4"];
+bottomContent[5].lastElementChild.innerHTML =
+  siteContent["main-content"]["vision-content"];
+
+// Contact
+var contact = document.querySelector(".contact").childNodes;
+// console.log(contact);
+
+contact[1].innerHTML = siteContent.contact["contact-h4"];
+contact[3].innerHTML = siteContent.contact.address;
+contact[5].innerHTML = siteContent.contact.phone;
+contact[7].innerHTML = siteContent.contact.email;
+
+// Footer
+let footer = document.getElementsByTagName("footer");
+footer[0].innerHTML = siteContent.footer.copyright;
+
+// Append to Nav
+// var  = document.createElement("div");
+// var p = document.createElement("p");
+// parent.append("Some text", p);
+
+// console.log(parent.childNodes); // NodeList [ #text "Some text", <p> ]
