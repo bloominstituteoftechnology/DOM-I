@@ -51,7 +51,8 @@ navLinks.forEach( (cv,ci) => {
 //Update CTA
 document.querySelector('.cta-text h1').innerHTML = siteContent['cta']['h1']
 document.querySelector('.cta-text button').innerHTML = siteContent['cta']['button']
-document.getElementById('cta-img').src = siteContent['cta']['img-src']
+let ctaImg = document.getElementById('cta-img')
+ctaImg.src = siteContent['cta']['img-src']
 
 //Update Main Content
 
@@ -64,7 +65,8 @@ tch4[3].innerHTML = siteContent['main-content']['product-h4']
 tch4[4].innerHTML = siteContent['main-content']['vision-h4']
 
 //Update Main Content Image
-document.getElementById('middle-img').src = siteContent['main-content']['middle-img-src']
+let midImg = document.getElementById('middle-img')
+midImg.src = siteContent['main-content']['middle-img-src']
 
 //Update all p-tags in Main Content
 let tcP = document.querySelectorAll('.text-content p');
@@ -87,16 +89,43 @@ document.querySelector('footer p').innerHTML = siteContent['footer']['copyright'
 //Add links to nav  - really dumb way
 let navBar = document.querySelector('nav');
 
-//Create the links
+////  Create the links
 let link1 = document.createElement('a');
+link1.innerHTML = 'Link7';
 let link2 = document.createElement('a');
+link2.innerHTML = 'Link8';
 
-//Append the links
+////  Append the links
 navBar.appendChild(link1);
 navBar.appendChild(link2);
 
-//Update the links
-let link7 = document.querySelector('nav a:nth-child(7)');
-let link8 = document.querySelector('nav a:nth-child(8)');
-link7.innerHTML = 'Link7'
-link8.innerHTML = 'Link8'
+
+
+//DOM-II project
+document.querySelector('.cta-text button').addEventListener( "click", e => {
+  alert('You clicked on the button')
+})
+
+
+navBar.addEventListener( "mouseenter", e => {
+  console.log('enter')
+  navBar.setAttribute('style','background:lightblue')
+})
+navBar.addEventListener('mouseout', e => {
+  console.log('mouseout')
+  navBar.setAttribute('style','background:none')
+})
+
+ctaImg.addEventListener('dblclick', e =>{
+  let style = ctaImg.getAttribute('style');
+  if (!style) ctaImg.setAttribute('style','transform: rotate(180deg)')
+  else {
+    ctaImg.setAttribute('style','transform: rotate(0deg)')
+    ctaImg.removeAttribute('style')
+  }
+})
+
+midImg.addEventListener('mouseover', e => {
+  alert('You moused over the image!')
+})
+
