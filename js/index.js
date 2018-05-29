@@ -18,9 +18,6 @@ const siteContent = {
     "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "about-h4":"About",
     "about-content": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    // topcontent break
-
-
     // bottom content start
     "services-h4":"Services",
     "services-content": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
@@ -28,6 +25,7 @@ const siteContent = {
     "product-content": "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "vision-h4":"Vision",
     "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+    //img
     "middle-img-src": "img/mid-page-accent.jpg"
   },
   "contact": {
@@ -71,20 +69,21 @@ mainImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 // maincontent top
 let textContent = document.querySelectorAll(".text-content");
-// console.log(siteContent["main-content"]);
-// console.log(textContent);
+var stupidArrayNeededToMurderThisProblem = [];
 for(var key in siteContent["main-content"]) {
     if(siteContent["main-content"].hasOwnProperty(key)) {
         var keyValue = siteContent["main-content"][key];
-        for (var i = 0; i < textContent.length; i++){
-            for (var a = 0; a < 2; a++){
-            textContent[i].children[a].innerHTML = keyValue;
-          }
-        }
-        console.log(keyValue);
+          stupidArrayNeededToMurderThisProblem.push(keyValue);
     }
 }
-
+var count = 0;
+textContent.forEach(function(instance){
+for (var i = 0; i < 2; i++){
+  instance.children[i].innerHTML = stupidArrayNeededToMurderThisProblem[count];
+  count++;
+}
+console.log(instance.children);
+});
 
 
 
