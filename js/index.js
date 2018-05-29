@@ -50,6 +50,19 @@ navLinks.forEach((link,i) => {
   link.style.color = "green";
 });
 
+
+const freeStuffLink = document.createElement('a');
+freeStuffLink.textContent = "Free Items";
+freeStuffLink.style.cssText = navLinks[0].style.cssText;
+freeStuffLink.setAttribute('href', '#');
+nav.prepend(freeStuffLink);
+
+const donationsLink = document.createElement('a');
+donationsLink.textContent = "Donations";
+donationsLink.style.cssText = navLinks[0].style.cssText;
+donationsLink.setAttribute('href', '#');
+nav.append(donationsLink);
+
 //CTA Section
 const ctaSection = document.querySelector(".cta");
 const domText = ctaSection.querySelector(".cta-text h1");
