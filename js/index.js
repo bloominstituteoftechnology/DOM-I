@@ -88,3 +88,14 @@ headers[3].innerHTML = siteContent['main-content']['product-h4']
 headers[4].innerHTML = siteContent['main-content']['vision-h4']
 
 headers[5].innerHTML = siteContent['contact']['contact-h4']
+
+let paragraphs = document.querySelectorAll('p')
+paragraphs[0].innerHTML = siteContent['main-content']['features-content']
+paragraphs[1].innerHTML = siteContent['main-content']['about-content']
+paragraphs[2].innerHTML = siteContent['main-content']['services-content']
+paragraphs[3].innerHTML = siteContent['main-content']['product-content']
+paragraphs[4].innerHTML = siteContent['main-content']['vision-content']
+paragraphs[5].innerHTML = '123 Way 456 Street <br/> Somewhere, USA'
+paragraphs[6].innerHTML = siteContent['contact']['phone']
+paragraphs[7].innerHTML = siteContent['contact']['email']
+paragraphs[8].innerHTML = siteContent.footer.copyright
