@@ -109,3 +109,13 @@ navSections.forEach((item) =>
       item.style.color = 'yellow';
   }); 
 });
+
+let body = document.querySelector('body');
+ctaButton.addEventListener('mouseenter', () => 
+{
+  body.style.backgroundColor = 'black'
+});
+ctaButton.addEventListener('mouseleave', () =>
+{
+  body.style.backgroundColor = '';
+});
