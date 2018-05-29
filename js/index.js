@@ -41,37 +41,29 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-let nav = document.querySelectorAll(".container nav a");
-nav[0].innerHTML = siteContent["nav"]["nav-item-1"];
-nav[1].innerHTML = siteContent["nav"]["nav-item-2"];
-nav[2].innerHTML = siteContent["nav"]["nav-item-3"];
-nav[3].innerHTML = siteContent["nav"]["nav-item-4"];
-nav[4].innerHTML = siteContent["nav"]["nav-item-5"];
-nav[5].innerHTML = siteContent["nav"]["nav-item-6"];
-
-for(let i = 0; i < nav.length; i++) {
-  nav[i].style.color = "green";
-}
-
 let homeElement = document.createElement("a");
 let home = document.createTextNode("Home"); 
 homeElement.setAttribute('href', '#');
 homeElement.appendChild(home);
-homeElement.style.color = "green";
 document.querySelector(".container nav").prepend(homeElement);
-
 
 let learnElement = document.createElement("a");
 let learn = document.createTextNode("Learn"); 
 learnElement.setAttribute('href', '#');
 learnElement.appendChild(learn);
-learnElement.style.color = "green";
 document.querySelector(".container nav").appendChild(learnElement);
 
+let nav = document.querySelectorAll(".container nav a");
+nav[1].innerHTML = siteContent["nav"]["nav-item-1"];
+nav[2].innerHTML = siteContent["nav"]["nav-item-2"];
+nav[3].innerHTML = siteContent["nav"]["nav-item-3"];
+nav[4].innerHTML = siteContent["nav"]["nav-item-4"];
+nav[5].innerHTML = siteContent["nav"]["nav-item-5"];
+nav[6].innerHTML = siteContent["nav"]["nav-item-6"];
 
-
-nav = document.querySelectorAll(".container nav a");
-
+for(let i = 0; i < nav.length; i++) {
+  nav[i].style.color = "green";
+}
 
 let ctaHeader = document.querySelector(".cta-text h1");
 let ctaButton = document.querySelector(".cta-text button");
@@ -107,3 +99,29 @@ contactAddress[2].innerHTML = siteContent["contact"]["email"];
 
 let footer = document.querySelector("footer");
 footer.innerHTML = siteContent["footer"]["copyright"];
+// END of DOM - I
+
+// Start of DOM - II
+
+ctaButton.addEventListener("click", () => ctaButton.innerHTML = "You clicked me!");
+
+homeElement.addEventListener("dblclick", () => homeElement.style.color = "red");
+
+learnElement.addEventListener("contextmenu", () => learnElement.style.color = "blue");
+
+nav[1].addEventListener("dragstart", () => nav[1].setAttribute("style", "font-size: 20px; color: purple;"));
+
+ctaImg.addEventListener("mouseover", () => ctaImg.style.width = "100px");
+
+mainParagraphs.forEach(element => element.addEventListener("copy", () => alert("Copied!")));
+
+mainImg.addEventListener("dragend", () => mainImg.style.width = "50px");
+
+ctaHeader.addEventListener("wheel", () => ctaHeader.setAttribute("style", "font-size: 50px"));
+
+logo.addEventListener("mousemove", () => alert(`Don't touch me!`));
+
+contactHeader.addEventListener("mouseup", () => contactHeader.setAttribute("style", "background: grey; font-size: 30px;"));
+
+
+
