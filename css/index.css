@@ -147,6 +147,10 @@ header .logo {
     justify-content: space-around;
 }
 
+.main-content .top-content p {
+    margin: 10px;
+}
+
 .main-content .middle-img {
     display: block;
     margin: 30px auto;
@@ -159,7 +163,9 @@ header .logo {
 
 .main-content .bottom-content p {
     padding-right: 20px;
+    margin: 10px;
 }
+
 
 /* Contact Styles */
 
