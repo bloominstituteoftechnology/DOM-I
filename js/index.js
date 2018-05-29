@@ -40,3 +40,14 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+// let hmtlTag = document.getElementsByClassName(".lang");
+
+// htmlTag.className = "en";
+
+// let containerClass = document.getElementsByClassName(".container");
+
+let navItems = document.getElementsByTagName("a");
+
+navItems[0].innerHTML = "Services";
