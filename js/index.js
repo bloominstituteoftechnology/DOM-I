@@ -59,6 +59,16 @@ for (let i = 0; i < nav.length; i++) {
   nav[i].style.color = "green";
 }
 
+// Appended New Element to Nav and Color it Green
+let newElement = document.createElement("a");
+newElement.textContent = "New Element";
+
+let navList = document.querySelector("nav");
+navList.appendChild(newElement);
+
+newElement.style.color = "green";
+console.log(newElement);
+
 // let nav = document.querySelector("nav").childNodes;
 // console.log(nav);
 
