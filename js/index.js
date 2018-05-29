@@ -49,7 +49,6 @@ const ctaH1Element = ctaTextElements.getElementsByTagName('h1')[0];
 const ctaButtonElement = ctaTextElements.getElementsByTagName('button')[0];
 const ctaImgElement = document.getElementById('cta-img');
 
-const mainContent = Object.entries(siteContent['main-content']);
 const sectionHeaderElements = document.querySelectorAll('.text-content h4');
 const sectionTextElements = document.querySelectorAll('.text-content p');
 const mainImg = document.getElementById('middle-img');
@@ -68,6 +67,7 @@ ctaH1Element.innerHTML = siteContent['cta']['h1'].replace(/ /g, '<br>');
 ctaButtonElement.innerHTML = siteContent['cta']['button'];
 ctaImgElement.setAttribute('src', siteContent['cta']['img-src']);
 
+const mainContent = Object.entries(siteContent['main-content']);
 const headers = mainContent.filter(prop => prop[0].indexOf('-h4') > -1);
 const contents = mainContent.filter(prop => prop[0].indexOf('-content') > -1);
 
