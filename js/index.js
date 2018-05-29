@@ -60,27 +60,3 @@ domBtn.textContent = `Get Started`;
 
 const ctaImg = ctaSection.querySelector('#cta-img');
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
-
-//Main Content Section
-
-const mainContentObj = siteContent["main-content"];
-const middleImg = document.querySelector('#middle-img');
-middleImg.setAttribute('src', mainContentObj["middle-img-src"]);
-
-const textContentsH4 = document.querySelectorAll('.main-content h4');
-
-const textContentsP = document.querySelectorAll('.main-content p');
-
-function attachContent(nodes, contentObj,regex) {
-  let i = 0;
-  const regExp = new RegExp(regex);
-  for(let key in contentObj) {
-    if(key.match(regExp)) {
-      nodes[i].textContent = contentObj[key];
-      i++;
-    }
-  }
-}
-
-attachContent(textContentsH4, mainContentObj, /\bh4\b/);
-attachContent(textContentsP, mainContentObj, /\b-content\b/);
