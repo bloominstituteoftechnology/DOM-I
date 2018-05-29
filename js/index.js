@@ -132,3 +132,9 @@ selectText.addEventListener("mouseout", () => {
   selectText.style.color = "red";
  });
 
+
+let mouseOver = document.getElementById("middle-img");
+
+mouseOver.addEventListener("mouseover", () => {
+  mouseOver.style.opacity = 0.4;
+ });
