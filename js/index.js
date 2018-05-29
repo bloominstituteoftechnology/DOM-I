@@ -52,14 +52,25 @@ const siteContent = {
 
 
 // nav menu
+let nav = document.querySelector('nav');
+let linkHome = document.createElement('a');
+linkHome.textContent = 'Home';
+nav.prepend(linkHome);
+let linkBlog = document.createElement('a');
+linkBlog.textContent = 'Blog';
+nav.appendChild(linkBlog);
+let navMenu = document.querySelector('nav');
+navMenu.childNodes[2].textContent = siteContent['nav']['nav-item-1'];
+navMenu.childNodes[4].textContent = siteContent['nav']['nav-item-2'];
+navMenu.childNodes[6].textContent = siteContent['nav']['nav-item-3'];
+navMenu.childNodes[8].textContent = siteContent['nav']['nav-item-4'];
+navMenu.childNodes[10].textContent = siteContent['nav']['nav-item-5'];
+navMenu.childNodes[12].textContent = siteContent['nav']['nav-item-6'];
+let navLinks = document.querySelectorAll('nav a');
+navLinks.forEach(item => {
+  item.style.color = 'green';
+});
 
-let navMenu = document.querySelectorAll('nav a');
-navMenu[0].textContent = siteContent['nav']['nav-item-1'];
-navMenu[1].textContent = siteContent['nav']['nav-item-2'];
-navMenu[2].textContent = siteContent['nav']['nav-item-3'];
-navMenu[3].textContent = siteContent['nav']['nav-item-4'];
-navMenu[4].textContent = siteContent['nav']['nav-item-5'];
-navMenu[5].textContent = siteContent['nav']['nav-item-6'];
 
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
@@ -101,3 +112,4 @@ contactInfo.childNodes[7].innerText = siteContent['contact']['email'];
 
 let footer = document.querySelector('footer p');
 footer.innerText = siteContent['footer']['copyright'];
+
