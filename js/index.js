@@ -53,7 +53,7 @@ let ctaH1 = document.querySelector(".cta-text h1");
 ctaH1.innerHTML = "<br>DOM<br> IS <br>AWESOME</br>";
 
 let ctaButton = document.querySelector(".cta-text button");
-ctaButton.innerHTML = "Get Started";
+ctaButton.innerHTML = siteContent["cta"]["button"];
 
 let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
@@ -88,7 +88,7 @@ contactP[1].innerHTML = siteContent["contact"]["phone"];
 contactP[2].innerHTML = siteContent["contact"]["email"];
 
 let footer = document.querySelector("footer");
-footer.innerHTML = siteContent["footer"]["copyright"]; 
+footer.innerHTML = siteContent["footer"]["copyright"];
 
 
 
