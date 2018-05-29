@@ -89,3 +89,11 @@ contactHeader.innerHTML = siteContent["contact"]["contact-h4"];
 document.getElementsByTagName("p").item(5).innerHTML = siteContent["contact"]["address"];
 document.getElementsByTagName("p").item(6).innerHTML = siteContent["contact"]["phone"];
 document.getElementsByTagName("p").item(7).innerHTML = siteContent["contact"]["email"];
+document.getElementsByTagName("p").item(8).innerHTML = siteContent["footer"]["copyright"];
+
+document.getElementsByTagName("a").item(0).style.color= 'green';
+
+let navColor = document.getElementsByTagName("a");
+for(let i=0; i<navColor.length; i++){
+navColor.item(i).style.color = 'green';
+}
