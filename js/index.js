@@ -38,5 +38,25 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src','img/logo.png', siteContent["nav"]["img-src"])
+let nav = document.querySelectorAll("nav a");
+nav[0].innerHTML = "Services";
+nav[1].innerHTML = "Product";
+nav[2].innerHTML = "Vision";
+nav[3].innerHTML = "Features";
+nav[4].innerHTML = "About";
+nav[5].innerHTML = "Contact";
+
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src','img/header-img.png',siteContent["cta"]["img-src"])
+let dom = document.querySelector(".cta-text h1");
+dom.innerHTML = "DOM <br> is <br> Awesome";
+let ctaButton = document.querySelector(".cta button");
+ctaButton.innerHTML = "Get Started";
+
+let features = document.querySelector(".main-content h4");
+
+// let ctaImg = document.getElementById("cta-img");
+// ctaImg.setAttribute('src','img/header-img.png',siteContent["cta"]["img-src"])
