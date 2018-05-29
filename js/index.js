@@ -41,13 +41,31 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
+const a = document.createElement('a');
+const p = document.querySelector('nav').appendChild(a);
+p.innerHTML = "Examples"
+
+const l = document.createElement('a');
+const m = document.querySelector('nav').appendChild(l);
+m.innerHTML = "Portfolio"
+
+
 let navTop= document.querySelectorAll("nav a");
 navTop[0].innerHTML = siteContent["nav"]["nav-item-1"]
+navTop[0].style.color = "green";
 navTop[1].innerHTML = siteContent["nav"]["nav-item-2"]
+navTop[1].style.color = "green";
 navTop[2].innerHTML = siteContent["nav"]["nav-item-3"]
+navTop[2].style.color = "green";
 navTop[3].innerHTML = siteContent["nav"]["nav-item-4"]
+navTop[3].style.color = "green";
 navTop[4].innerHTML = siteContent["nav"]["nav-item-5"]
+navTop[4].style.color = "green";
 navTop[5].innerHTML = siteContent["nav"]["nav-item-6"]
+navTop[5].style.color = "green";
+navTop[6].style.color = "green";
+navTop[7].style.color = "green";
+
 
 let callToAction = document.querySelector(".cta .cta-text h1");
 callToAction.innerHTML = "DOM<br>Is<br>Awesome";
@@ -90,3 +108,5 @@ contactParagraphs[2].innerHTML = siteContent["contact"]["email"];
 
 let footerStuff = document.querySelector("footer p");
 footerStuff.innerHTML = siteContent["footer"]["copyright"];
+
+
