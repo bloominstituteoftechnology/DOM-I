@@ -90,3 +90,17 @@ visionHeader.innerHTML = siteContent["main-content"]["vision-h4"]
 visionContent.innerHTML = siteContent["main-content"]["vision-content"]
 
 middleImg.src = siteContent["main-content"]["middle-img-src"]
+
+let contactSection = document.querySelector('.contact')
+let contactHeader = contactSection.children[0]
+let address = contactSection.children[1] 
+let phone = contactSection.children[2]
+let email = contactSection.children[3]
+
+contactHeader.innerHTML = siteContent["contact"]["contact-h4"]
+address.innerHTML = siteContent["contact"]["address"]
+phone.innerHTML = siteContent["contact"]["phone"]
+email.innerHTML = siteContent["contact"]["email"]
+
+let footer = document.querySelector('footer p')
+footer.innerHTML = siteContent["footer"]["copyright"]
