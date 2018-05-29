@@ -75,3 +75,16 @@ ctaText[0].innerHTML = 'Dom <br/> is <br/> awesome'
 
 let buttons = document.getElementsByTagName('button')
 buttons[0].innerHTML = siteContent['cta']['button']
+
+let headers = document.querySelectorAll('h4')
+headers[0].innerHTML = siteContent['main-content']['features-h4']
+
+headers[1].innerHTML = siteContent['main-content']['about-h4']
+
+headers[2].innerHTML = siteContent['main-content']['services-h4']
+
+headers[3].innerHTML = siteContent['main-content']['product-h4']
+
+headers[4].innerHTML = siteContent['main-content']['vision-h4']
+
+headers[5].innerHTML = siteContent['contact']['contact-h4']
