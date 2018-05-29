@@ -57,3 +57,8 @@ document.getElementsByTagName("h4").item(0).innerHTML = siteContent["main-conten
 document.getElementsByTagName("h4").item(1).innerHTML = siteContent["main-content"]["about-h4"];
 document.getElementsByTagName("h4").item(2).innerHTML = siteContent["main-content"]["services-h4"];
 document.getElementsByTagName("h4").item(3).innerHTML = siteContent["main-content"]["product-h4"];
+
+document.getElementsByTagName("p").item(0).innerHTML = siteContent["main-content"]["features-content"];
+document.getElementsByTagName("p").item(1).innerHTML = siteContent["main-content"]["about-content"];
+document.getElementsByTagName("p").item(2).innerHTML = siteContent["main-content"]["services-content"];
+document.getElementsByTagName("p").item(3).innerHTML = siteContent["main-content"]["product-content"];
