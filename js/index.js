@@ -102,20 +102,25 @@ navBar.appendChild(link2);
 
 
 //DOM-II project
+
+// 1. Add click event listener to button
 document.querySelector('.cta-text button').addEventListener( "click", e => {
   alert('You clicked on the button')
 })
 
-
+// 2. add mouse enter to header
 navBar.addEventListener( "mouseenter", e => {
   console.log('enter')
   navBar.setAttribute('style','background:lightblue')
 })
+
+// 3. add mouse out to navbar
 navBar.addEventListener('mouseout', e => {
   console.log('mouseout')
   navBar.setAttribute('style','background:none')
 })
 
+// 4. add doubleclick on cta image
 ctaImg.addEventListener('dblclick', e =>{
   let style = ctaImg.getAttribute('style');
   if (!style) ctaImg.setAttribute('style','transform: rotate(180deg)')
@@ -125,7 +130,10 @@ ctaImg.addEventListener('dblclick', e =>{
   }
 })
 
+// 5. add mouseover to mid image
 midImg.addEventListener('mouseover', e => {
   alert('You moused over the image!')
 })
+
+
 
