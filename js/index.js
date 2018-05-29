@@ -97,3 +97,10 @@ let navColor = document.getElementsByTagName("a");
 for(let i=0; i<navColor.length; i++){
 navColor.item(i).style.color = 'green';
 }
+
+
+let selected = document.querySelector(".cta h1");
+
+selected.addEventListener("click", () => {
+  selected.style.color = "chocolate";
+ });
