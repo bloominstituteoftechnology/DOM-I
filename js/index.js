@@ -117,3 +117,9 @@ let mouseEnterImage = document.getElementById("cta-img");
 mouseEnterImage.addEventListener("mouseenter", () => {
   mouseEnterImage.style.opacity = 0.2;
  });
+
+let selectText = document.getElementById("featuresText");
+
+selectText.addEventListener("mouseout", () => {
+  selectText.style.color = "red";
+ });
