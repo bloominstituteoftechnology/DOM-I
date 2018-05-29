@@ -41,3 +41,5 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
+let ctaImage = document.querySelector("#cta-img");
+ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
