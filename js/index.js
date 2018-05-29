@@ -40,3 +40,36 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//MY CODE BELOW
+//above is shortened below, using no VAR
+// document.getElementById('logo-img').setAttribute('src', siteContent["nav"]["img-src"]) ;
+
+let myNavItems = document.getElementsByTagName('a') ;
+// console.log(myNavItems);
+myNavItems[0].innerHTML = (siteContent['nav']['nav-item-1']) ;
+myNavItems[1].innerHTML = (siteContent['nav']['nav-item-2']) ;
+myNavItems[2].innerHTML = (siteContent['nav']['nav-item-3']) ;
+myNavItems[3].innerHTML = (siteContent['nav']['nav-item-4']) ;
+myNavItems[4].innerHTML = (siteContent['nav']['nav-item-5']) ;
+
+document.querySelector('.cta-text h1').innerHTML = (siteContent['cta']['h1'])
+
+let myCtaClassButton = document.querySelector('.cta-text button') ;
+// console.log(myCtaClassButton);
+myCtaClassButton.innerHTML = (siteContent['cta']['button']) ;
+
+document.getElementById('cta-img').setAttribute('src', siteContent['cta']['img-src']) ;
+
+
+let myTopContent = document.querySelectorAll('.top-content') ;
+// console.log(myTopContent[0].children[0].children[0]);
+myTopContent[0].children[0].children[0].innerHTML = (siteContent['main-content']['features-h4']) ;
+myTopContent[0].children[0].children[1].innerHTML = (siteContent['main-content']['features-content']) ;
+myTopContent[0].children[1].children[0].innerHTML = (siteContent['main-content']['about-h4']) ;
+myTopContent[0].children[1].children[1].innerHTML = (siteContent['main-content']['about-content']) ;
+
+document.querySelector('#middle-img').setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+let myBottomContent = document.querySelector('.bottom-content') ;
+myBottomContent.children[0].children[0].insertAdjacentText('afterbegin', siteContent['main-content']['services-h4']) ;
