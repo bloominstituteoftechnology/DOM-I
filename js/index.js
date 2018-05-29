@@ -65,3 +65,7 @@ theHead[5].innerHTML = siteContent['nav']['nav-item-6']
 let ctaImage = document.getElementById('cta-img')
 ctaImage.alt = 'An image of a code snippet.'
 ctaImage.src = siteContent['cta']['img-src']
+
+let middleImage = document.getElementById('middle-img')
+middleImage.setAttribute('alt', 'An image of code snippets across the screen')
+middleImage.setAttribute('src', siteContent['main-content']['middle-img-src'])
