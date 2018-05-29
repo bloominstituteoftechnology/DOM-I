@@ -41,13 +41,13 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let nav = document.querySelectorAll('nav a');
-nav[0].innerHTML = "Services";
-nav[1].innerHTML = "Product";
-nav[2].innerHTML = "Vision";
-nav[3].innerHTML = "Features";
-nav[4].innerHTML = "About";
-nav[5].innerHTML = "Contact";
+let navItems = document.querySelectorAll('nav a');
+navItems[0].innerHTML = "Services";
+navItems[1].innerHTML = "Product";
+navItems[2].innerHTML = "Vision";
+navItems[3].innerHTML = "Features";
+navItems[4].innerHTML = "About";
+navItems[5].innerHTML = "Contact";
 
 document.querySelector('.cta-text h1').innerText = 'DOM\n Is\n Awesome';
 document.querySelector('.cta-text button').innerText = 'Get Started';
@@ -76,3 +76,22 @@ contactInfo[1].innerText = siteContent["contact"]["phone"];
 contactInfo[2].innerText = siteContent["contact"]["email"];
 
 document.querySelector('footer p').innerText = siteContent["footer"]["copyright"];
+
+navItems[0].style.color = 'green';
+navItems[1].style.color = 'green';
+navItems[2].style.color = 'green';
+navItems[3].style.color = 'green';
+navItems[4].style.color = 'green';
+navItems[5].style.color = 'green';
+
+let firstNav = document.createElement("a");
+firstNav.setAttribute("href", "#");
+firstNav.innerHTML = "First";
+firstNav.style.color = 'green';
+document.querySelector(".container header nav").prepend(firstNav);
+
+let lastNav = document.createElement("a");
+lastNav.setAttribute("href", "#");
+lastNav.innerHTML = "Last";
+lastNav.style.color = 'green';
+document.querySelector(".container header nav").append(lastNav);
