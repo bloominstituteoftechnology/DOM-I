@@ -40,3 +40,45 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//Update nav links
+let navLinks = document.querySelectorAll('nav a');
+navLinks.forEach( (cv,ci) => {
+  cv.innerHTML = siteContent['nav'][`nav-item-${ci+1}`];
+} )
+
+//Update CTA
+let ctaH1 = document.querySelector('.cta-text h1').innerHTML = siteContent['cta']['h1']
+let ctaBtn = document.querySelector('.cta-text button').innerHTML = siteContent['cta']['button']
+let ctaImg = document.getElementById('cta-img').src = siteContent['cta']['img-src']
+
+//Update Main Content
+
+//Update all h4s in Main Content
+let tch4 = document.querySelectorAll('.text-content h4');
+tch4[0].innerHTML = siteContent['main-content']['features-h4']
+tch4[1].innerHTML = siteContent['main-content']['about-h4']
+tch4[2].innerHTML = siteContent['main-content']['services-h4']
+tch4[3].innerHTML = siteContent['main-content']['product-h4']
+tch4[4].innerHTML = siteContent['main-content']['vision-h4']
+
+//Update Main Content Image
+let midImg = document.getElementById('middle-img').src = siteContent['main-content']['middle-img-src']
+
+//Update all p-tags in Main Content
+let tcP = document.querySelectorAll('.text-content p');
+tcP[0].innerHTML = siteContent['main-content']['features-content']
+tcP[1].innerHTML = siteContent['main-content']['about-content']
+tcP[2].innerHTML = siteContent['main-content']['services-content']
+tcP[3].innerHTML = siteContent['main-content']['product-content']
+tcP[4].innerHTML = siteContent['main-content']['vision-content']
+
+//Update Contact List
+let contactNodeList = document.querySelectorAll('.contact');
+contactNodeList[0].children[0].innerHTML = siteContent['contact']['contact-h4']
+contactNodeList[0].children[1].innerHTML = siteContent['contact']['address']
+contactNodeList[0].children[2].innerHTML = siteContent['contact']['phone']
+contactNodeList[0].children[3].innerHTML = siteContent['contact']['email']
+
+//Update Footer
+let footerP = document.querySelector('footer p').innerHTML = siteContent['footer']['copyright']
