@@ -39,7 +39,7 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 let navTop= document.querySelectorAll("nav a");
 navTop[0].innerHTML = "Services";
@@ -53,9 +53,28 @@ let callToAction = document.querySelector(".cta .cta-text h1");
 callToAction.innerHTML = "DOM<br>Is<br>Awesome";
 
 let ctaImage = document.getElementById("cta-img");
-ctaImage.setAttribute("src", siteContent["cta"]["img-src"])
+ctaImage.setAttribute("src", siteContent["cta"]["img-src"]);
 
 let ctaButton = document.querySelector(".cta .cta-text button");
 ctaButton.innerHTML = "Get Started";
 
-// let topHeaders = 
+let topHeaders = document.querySelectorAll(".top-content .text-content h4");
+topHeaders[0].innerHTML = siteContent["main-content"]["features-h4"];
+topHeaders[1].innerHTML = siteContent["main-content"]["about-h4"];
+
+let topParagraphs = document.querySelectorAll(".top-content .text-content p");
+topParagraphs[0].innerHTML = siteContent["main-content"]["features-content"];
+topParagraphs[1].innerHTML = siteContent["main-content"]["about-content"];
+
+let midImage = document.getElementById("middle-img");
+midImage.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+let botHeaders = document.querySelectorAll(".bottom-content .text-content h4");
+botHeaders[0].innerHTML = siteContent["main-content"]["services-h4"];
+botHeaders[1].innerHTML = siteContent["main-content"]["product-h4"];
+botHeaders[2].innerHTML = siteContent["main-content"]["vision-h4"];
+
+let botParagraphs = document.querySelectorAll(".bottom-content .text-content p");
+botParagraphs[0].innerHTML = siteContent["main-content"]["services-content"];
+botParagraphs[1].innerHTML = siteContent["main-content"]["product-content"];
+botParagraphs[2].innerHTML = siteContent["main-content"]["vision-content"];
