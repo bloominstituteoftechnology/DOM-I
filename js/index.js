@@ -61,13 +61,13 @@ const siteContent = {
   var firstA = document.createElement('a');
   firstA.setAttribute('href', '#');
   firstA.innerHTML = 'FIRST';
-  firstA.style.cssText = 'color: green';
+  firstA.style.cssText = 'color: red';
   navBar.prepend(firstA);
 
   var lastA = document.createElement('a');
   lastA.setAttribute('href', '#');
   lastA.innerHTML = 'LAST';
-  lastA.style.cssText = 'color: green';
+  lastA.style.cssText = 'color: red';
   navBar.appendChild(lastA);
 }
 // CTA section
