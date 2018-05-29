@@ -42,12 +42,42 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let nav = document.querySelector("nav")
+
+nav.style.color = 'green'
+
+
+nav.children[0].style.color = 'green'
 nav.children[0].innerHTML = siteContent["nav"]["nav-item-1"]
+
+nav.children[1].style.color = 'green'
 nav.children[1].innerHTML = siteContent["nav"]["nav-item-2"]
+
+nav.children[2].style.color = 'green'
 nav.children[2].innerHTML = siteContent["nav"]["nav-item-3"]
+
+nav.children[3].style.color = 'green'
 nav.children[3].innerHTML = siteContent["nav"]["nav-item-4"]
+
+nav.children[4].style.color = 'green'
 nav.children[4].innerHTML = siteContent["nav"]["nav-item-5"]
+
+nav.children[5].style.color = 'green'
 nav.children[5].innerHTML = siteContent["nav"]["nav-item-6"]
+
+const ClientLink = document.createElement('a')
+const PortfolioLink = document.createElement('a')
+
+const LinkFactory = (link, href, text) => {
+  link.setAttribute('href', href)
+  link.innerHTML = text
+  link.style.color = 'green'
+}
+
+LinkFactory(ClientLink, '#', 'Clients')
+LinkFactory(PortfolioLink, '#', 'Portfolio')
+
+nav.appendChild(ClientLink)
+nav.prepend(PortfolioLink)
 
 let ctaH1 = document.querySelector('.cta h1')
 let ctaButton = document.querySelector('.cta button')
