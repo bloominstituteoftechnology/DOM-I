@@ -37,6 +37,47 @@ const siteContent = {
   },
 };
 
+
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute("src", siteContent["nav"]["img-src"])
+
+let navmain = document.querySelectorAll("nav a");
+navmain[0].innerHTML = "Services";
+navmain[1].innerHTML = "Product";
+navmain[2].innerHTML = "Vision";
+navmain[3].innerHTML = "Features";
+navmain[4].innerHTML = "About";
+navmain[5].innerHTML = "Contact";
+
+
+let ctah1 = document.querySelector(".cta h1");
+ctah1.innerHTML = siteContent["cta"]["h1"];
+
+let ctabtn = document.querySelector(".cta button");
+ctabtn.innerHTML = "Get Started";
+
+let ctalogo = document.getElementById("cta-img");
+ctalogo.setAttribute("src", siteContent["cta"]["img-src"])
+
+let mainh4 = document.querySelectorAll(".main-content h4");
+mainh4[0].innerHTML = "Features";
+mainh4[1].innerHTML = "About";
+mainh4[2].innerHTML = "Services";
+mainh4[3].innerHTML = "Product";
+mainh4[4].innerHTML = "Vision";
+
+let mainh4con = document.querySelectorAll(".main-content p");
+mainh4con[0].innerHTML = siteContent["main-content"]["features-content"];
+mainh4con[1].innerHTML = siteContent["main-content"]["about-content"];
+mainh4con[2].innerHTML = siteContent["main-content"]["services-content"];
+mainh4con[3].innerHTML = siteContent["main-content"]["product-content"];
+mainh4con[4].innerHTML = siteContent["main-content"]["vision-content"];
+
+let midlogo = document.getElementById("middle-img");
+midlogo.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+
+
+
