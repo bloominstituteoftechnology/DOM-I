@@ -91,7 +91,15 @@ document.getElementsByTagName("p").item(6).innerHTML = siteContent["contact"]["p
 document.getElementsByTagName("p").item(7).innerHTML = siteContent["contact"]["email"];
 document.getElementsByTagName("p").item(8).innerHTML = siteContent["footer"]["copyright"];
 
-document.getElementsByTagName("a").item(0).style.color= 'green';
+var newLink1 = document.createElement('a');
+newLink1.innerHTML = "Blog";
+document.querySelector('nav').appendChild(newLink1);
+
+var newLink2 = document.createElement('a');
+newLink2.innerHTML = "News";
+document.querySelector('nav').prepend(newLink2);
+
+//document.getElementsByTagName("a").item(0).style.color= 'green';
 
 let navColor = document.getElementsByTagName("a");
 for(let i=0; i<navColor.length; i++){
@@ -123,3 +131,4 @@ let selectText = document.getElementById("featuresText");
 selectText.addEventListener("mouseout", () => {
   selectText.style.color = "red";
  });
+
