@@ -74,5 +74,8 @@ ctaImage.setAttribute('src', siteContent['cta']['img-src']);
 
 
 //main content
-document.querySelector('.main-content .top-content h4').innerText = siteContent['main-content']['features-h4'];
-document.querySelector('.main-content .top-content p').innerText = siteContent['main-content']['features-content'];
+let mainTop = document.querySelectorAll('.main-content .top-content .text-content')
+mainTop[0].childNodes[1].innerText = siteContent['main-content']['features-h4'];
+mainTop[0].childNodes[3].innerText = siteContent['main-content']['features-content'];
+mainTop[1].childNodes[1].innerText = siteContent['main-content']['about-h4'];
+mainTop[1].childNodes[3].innerText = siteContent['main-content']['about-content'];
