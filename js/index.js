@@ -137,3 +137,38 @@ email.innerHTML = "sales@greatidea.io";
 let footer = document.getElementsByTagName('p')[8];
 footer.innerHTML = "Copyright Great Idea! 2018";
 // End of Footer
+
+
+// Event Listeners
+
+// 1 turns 'DOM IS AWESOME' red
+h1.addEventListener('click', function(){ h1.style.color = 'red'; })
+
+//2 circle image disappears upon dblclick
+codeSnippet.addEventListener('dblclick', function(){ codeSnippet.style.visibility = 'hidden'; })
+
+//3  circle image reappears upon mouseleave
+codeSnippet.addEventListener('mouseleave', function(){ codeSnippet.style.visibility = 'visible'; })
+
+//4 codeBanner become opaque when moused over
+codeBanner.addEventListener('mouseover', function(){ codeBanner.style.opacity = "0.8"; })
+
+//5 codeBanner loses opactiy when mouse leaves
+codeBanner.addEventListener('mouseleave', function(){ codeBanner.style.opacity = '1.0'; })
+
+//6 logo disappears when mouse enters
+logo.addEventListener('mouseenter', function(){ logo.style.visibility = 'hidden'; })
+
+//7 logo reappears when mouse leaves
+logo.addEventListener('mouseout', function(){ logo.style.visibility = 'visible'; })
+
+
+let middleSect = document.querySelector('.main-content');
+//8 entire middle section disappears
+middleSect.addEventListener('dblclick', function(){ middleSect.style.visibility = 'hidden'; })
+
+//9 entire middle section reappears
+middleSect.addEventListener('mouseout', function(){ middleSect.style.visibility = 'visible'; })
+
+//10
+h1.addEventListener('dragstart', function(){ h1.style.color = 'black'; })
