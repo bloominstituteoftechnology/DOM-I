@@ -47,3 +47,5 @@ ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
 let ctah1 = document.querySelector(".cta h1");
 ctah1.innerHTML = siteContent["cta"]["h1"];
 
+let ctaButton = document.querySelector(".cta button");
+ctaButton.innerHTML = siteContent["cta"]["button"];
