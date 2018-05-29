@@ -78,3 +78,14 @@ document.querySelector("#middle-img").setAttribute("src", siteContent["main-cont
 let contactNodes = document.querySelectorAll(".contact h4, .contact p");
 let contactContent = Object.values(siteContent["contact"]);
 contactNodes.forEach((item,index) => item.innerHTML = contactContent[index]);
+
+// Add items to Nav
+let prepNav = document.createElement("a");
+prepNav.setAttribute("href", "#");
+prepNav.innerHTML = "Prepended Nav!";
+document.querySelector(".container header nav").prepend(prepNav);
+
+let appendNav = document.createElement("a");
+appendNav.setAttribute("href", "#");
+appendNav.innerHTML = "Appended Nav!";
+document.querySelector(".container header nav").append(appendNav);
