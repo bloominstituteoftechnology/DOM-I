@@ -41,5 +41,9 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-let ctaImage = document.querySelector("#cta-img");
+let ctaImage = document.getElementById("cta-img");
 ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let ctah1 = document.querySelector(".cta h1");
+ctah1.innerHTML = siteContent["cta"]["h1"];
+
