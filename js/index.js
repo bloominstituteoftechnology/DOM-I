@@ -48,7 +48,7 @@ navSections[2].innerHTML = siteContent["nav"]["nav-item-3"];
 navSections[3].innerHTML = siteContent["nav"]["nav-item-4"];
 navSections[4].innerHTML = siteContent["nav"]["nav-item-5"];
 navSections[5].innerHTML = siteContent["nav"]["nav-item-6"];
-//Task 3
+//Task 3  
 navSections.forEach((item) => item.style.color = 'green');
 let nav = document.querySelector("nav");
 let newA = document.createElement('newA');
@@ -59,6 +59,7 @@ newA2.innerHTML = 'Ideas';
 nav.prepend(newA2);
 newA2.style.color = 'green';
 newA.style.color = 'green';
+
 
 
 //CTA
@@ -101,3 +102,10 @@ contactText[2].innerHTML = siteContent['contact']['email'];
 let footer = document.querySelector('footer p');
 footer.innerHTML = siteContent['footer']['copyright'];
 
+//EventListeners
+navSections.forEach((item) => 
+  {item.addEventListener('click', () => 
+    {if(item.style.color === 'green')
+      item.style.color = 'yellow';
+  }); 
+});
