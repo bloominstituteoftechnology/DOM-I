@@ -37,7 +37,7 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
+// Images
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
@@ -47,30 +47,63 @@ headerImg.setAttribute('src', siteContent["cta"]["img-src"])
 let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
-document.querySelectorAll(".container header nav")[0].innerHTML = "<a>Services <a>Product <a>Vision <a>Features <a>About <a>Contact <a>Thing <a>Thingy"
-document.querySelectorAll(".container header nav a")[0].style.color = "green";
-document.querySelectorAll(".container header nav a")[1].style.color = "green";
-document.querySelectorAll(".container header nav a")[2].style.color = "green";
-document.querySelectorAll(".container header nav a")[3].style.color = "green";
-document.querySelectorAll(".container header nav a")[4].style.color = "green";
-document.querySelectorAll(".container header nav a")[5].style.color = "green";
-document.querySelectorAll(".container header nav a")[6].style.color = "green";
-document.querySelectorAll(".container header nav a")[7].style.color = "green";
-document.querySelector(".cta .cta-text h1").innerHTML = "DOM<br> is <br>Awesome";
-document.querySelector(".cta .cta-text button").innerHTML = "Get Started";
+// Update the nav links test
+let selectedNavLinks = document.querySelectorAll("nav a");
+selectedNavLinks.forEach((link, i) => {
+  if (i === selectedNavLinks.length - 1){
+    return;
+  }
+  link.innerHTML = siteContent.nav[`nav-item-${i+1}`];
+})
 
-document.querySelectorAll(".main-content .text-content h4")[0].innerHTML = "Features";
-document.querySelectorAll(".main-content .text-content h4")[1].innerHTML = "About";
-document.querySelectorAll(".main-content .text-content h4")[2].innerHTML = "Services";
-document.querySelectorAll(".main-content .text-content h4")[3].innerHTML = "Product";
-document.querySelectorAll(".main-content .text-content h4")[4].innerHTML = "Visions";
-document.querySelectorAll(".main-content .text-content p")[0].innerHTML = "elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis"
-document.querySelectorAll(".main-content .text-content p")[1].innerHTML = "elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis"
-document.querySelectorAll(".main-content .text-content p")[2].innerHTML = "elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis"
-document.querySelectorAll(".main-content .text-content p")[3].innerHTML = "elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis"
-document.querySelectorAll(".main-content .text-content p")[4].innerHTML = "elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis"
-document.querySelector(".contact h4").innerHTML = "Contact"
-document.querySelectorAll(".contact p")[0].innerHTML = "123 Way 456 Street <br> Somewhere, USA"
-document.querySelectorAll(".contact p")[1].innerHTML = "1(888) 888-8888"
-document.querySelectorAll(".contact p")[2].innerHTML = "sales@greatidea.io"
-document.querySelector("footer p").innerHTML = "Copyright Great Idea! 2018"
+// Update CTA
+let ctaText = document.getElementsByClassName("cta-text")[0];
+
+ctaText.getElementsByTagName("h1")[0].innerHTML = siteContent["cta"]["h1"];
+ctaText.getElementsByTagName("button")[0].innerHTML = siteContent["cta"]["button"];
+
+// console.log(document.getElementsByClassName("cta")[0])
+
+// Update MainContent
+let textContentList = document.querySelectorAll(".text-content");
+
+textContentList[0].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["features-h4"];
+textContentList[0].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["features-content"];
+textContentList[1].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["about-h4"];
+textContentList[1].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["about-content"];
+textContentList[2].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["services-h4"];
+textContentList[2].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["services-content"];
+textContentList[3].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["product-h4"];
+textContentList[3].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["product-content"];
+textContentList[4].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["vision-h4"];
+textContentList[4].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["vision-content"];
+
+// Update Contact
+let contact = document.getElementsByClassName("contact")[0];
+contact.getElementsByTagName("h4")[0].innerHTML = siteContent["contact"]["contact-h4"]
+contact.getElementsByTagName("p")[0].innerHTML = siteContent["contact"]["address"]
+contact.getElementsByTagName("p")[1].innerHTML = siteContent["contact"]["phone"]
+contact.getElementsByTagName("p")[2].innerHTML = siteContent["contact"]["email"]
+
+// Update Footer
+let footer = document.querySelector("footer");
+footer.getElementsByTagName("p")[0].innerHTML = siteContent["footer"]["copyright"];
+
+// Add New Content
+// Change navigation text color
+selectedNavLinks.forEach((link,i) => {
+  if (i === selectedNavLinks.length - 1){
+    return;
+  }
+  link.style.color = "green";
+})
+
+// Add two items to navigation
+selectedNavLinks = document.getElementsByTagName("nav")[0];
+let createNewNode = (name) => {
+  let newNode = document.createElement("a");
+  newNode.innerHTML = name;
+  return newNode;
+}
+selectedNavLinks.prepend(createNewNode("News"));
+selectedNavLinks.append(createNewNode("Olds"));
