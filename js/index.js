@@ -93,3 +93,11 @@ mainBottom[1].childNodes[1].innerText = siteContent['main-content']['product-h4'
 mainBottom[1].childNodes[3].innerText = siteContent['main-content']['product-content'];
 mainBottom[2].childNodes[1].innerText = siteContent['main-content']['vision-h4'];
 mainBottom[2].childNodes[3].innerText = siteContent['main-content']['vision-content'];
+let contactInfo = document.querySelector('.contact');
+contactInfo.childNodes[1].innerText = siteContent['contact']['contact-h4'];
+contactInfo.childNodes[3].innerText = siteContent['contact']['address'];
+contactInfo.childNodes[5].innerText = siteContent['contact']['phone'];
+contactInfo.childNodes[7].innerText = siteContent['contact']['email'];
+
+let footer = document.querySelector('footer p');
+footer.innerText = siteContent['footer']['copyright'];
