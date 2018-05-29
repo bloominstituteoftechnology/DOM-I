@@ -1,4 +1,4 @@
-alert('we got in');
+alert("we got in");
 
 const siteContent = [
   {
