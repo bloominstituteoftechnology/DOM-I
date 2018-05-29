@@ -107,9 +107,9 @@ document.querySelector('.cta-text button').addEventListener("click", (e) => {
   e.target.style.backgroundColor = 'yellow';
 })
 
-// document.querySelector('#cta-img').addEventListener("mouseenter", () => {
-//   alert('You hovered over the CTA Image!')
-// })
+document.querySelector('#cta-img').addEventListener("mouseenter", () => {
+  alert('You hovered over the CTA Image!')
+})
 
 
 
