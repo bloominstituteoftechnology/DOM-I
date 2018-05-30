@@ -130,7 +130,7 @@ getStartedButton.addEventListener("click", function trexReplace(event) {
 });
 
 //3. Add Hovering Insanity Blackness
-let hoverElems = document.querySelectorAll('header *, footer, .container section *');
+let hoverElems = document.querySelectorAll('header, footer, .container section');
 let hoverElemsArr = Array.from(hoverElems);
 
 function onHoverBgChange(event, bg) {
@@ -148,15 +148,19 @@ function onHoverBgChange(event, bg) {
     newTrigger = 'pointerenter';
   }
 
-  target.addEventListener(newTrigger, function (event) {
+  target.addEventListener(newTrigger, function toggleOldBg (event) {
+    event.stopPropagation;
     onHoverBgChange(event, oldBg);
+    target.removeEventListener(newTrigger, toggleOldBg);
   });
 }
 
 for (let i in hoverElemsArr) {
   let elem = hoverElemsArr[i];
-  elem.addEventListener('pointerenter', function (event) {
+  elem.addEventListener('pointerenter', function toggleBlackBg (event) {
     onHoverBgChange(event, "black");
+    event.stopPropagation;
+    elem.removeEventListener('pointerenter', toggleBlackBg)
   });
 }
 
@@ -190,7 +194,7 @@ window.addEventListener('mousemove', function mousetrail(event) {
   point.style.top = event.clientY + 'px';
   point.style.left = event.clientX + 'px';
   points.push(point);
-  if (points.length > 125) {
+  if (points.length > 25) {
     console.log('shiftedpoint');
     points[0].parentNode.removeChild(points[0]);
     points.shift();
