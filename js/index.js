@@ -48,6 +48,9 @@ navText[2].innerHTML = siteContent['nav']['nav-item-3'];
 navText[3].innerHTML = siteContent['nav']['nav-item-4'];
 navText[4].innerHTML = siteContent['nav']['nav-item-5'];
 navText[5].innerHTML = siteContent['nav']['nav-item-6'];
+navText.forEach((item, index) => {
+ item.style.color = 'green';
+});
 
 let ctaText = document.querySelector('.cta-text h1');
 ctaText.innerHTML = siteContent['cta']['h1'];
