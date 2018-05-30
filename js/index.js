@@ -138,3 +138,21 @@ let mouseOver = document.getElementById("middle-img");
 mouseOver.addEventListener("mouseover", () => {
   mouseOver.style.opacity = 0.4;
  });
+
+
+let textColor = document.getElementById("addressText");
+
+document.addEventListener("keydown", (e) => {
+	textColor.style.color = "red";
+});
+
+
+let colorChange = document.getElementsByTagName("h4");
+
+console.log(colorChange);
+
+document.addEventListener("scroll", (e) => {
+	for (let i = 0;i < colorChange.length;i++) {
+		colorChange[i].style.color = "red";
+	}
+});
