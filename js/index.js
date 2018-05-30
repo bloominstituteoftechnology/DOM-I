@@ -39,24 +39,24 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+// const logo = document.getElementById("logo-img");
+// logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
-let navJS = document.querySelectorAll("nav a");
-navJS[0].innerHTML = siteContent["nav"]["nav-item-1"];
-navJS[1].innerHTML = siteContent["nav"]["nav-item-2"];
-navJS[2].innerHTML = siteContent["nav"]["nav-item-3"];
-navJS[3].innerHTML = siteContent["nav"]["nav-item-4"];
-navJS[4].innerHTML = siteContent["nav"]["nav-item-5"];
-navJS[5].innerHTML = siteContent["nav"]["nav-item-6"];
-// navJS.style.color = "#b0b0b0";
-// navJS.style.alignContent = 
+// const ctaImg = document.getElementById("cta-img");
+// ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
+
+// const midImg = document.getElementById("middle-img");
+// midImg.setAttribute("alt", "");
+// midImg.setAttribute("src", siteContent["main-content"]["middle-image-src"]);
 
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let mainContentImgJS = document.getElementById("middle-img");
-mainContentImgJS.setAttribute('src', siteContent["main-content"]["img-src"]);
+mainContentImgJS.setAttribute('src', siteContent["main-content"]["middle-image-src"]);
+
+let ctaImgJS = document.getElementById("cta-img");
+ctaImgJS.setAttribute('src', siteContent["cta"]["img-src"]);
 
 let navJS = document.querySelectorAll("nav a");
 navJS[0].innerHTML = siteContent["nav"]["nav-item-1"];
@@ -67,6 +67,7 @@ navJS[4].innerHTML = siteContent["nav"]["nav-item-5"];
 navJS[5].innerHTML = siteContent["nav"]["nav-item-6"];
 // navJS.style.color = "#b0b0b0";
 // navJS.style.alignContent = 
+
 
 let ctaTextJS = document.querySelector(".cta-text h1");
 ctaTextJS.innerHTML = siteContent["cta"]["h1"];
@@ -74,10 +75,9 @@ ctaTextJS.innerHTML = siteContent["cta"]["h1"];
 let ctaButtonJS = document.querySelector(".cta .cta-text button");
 ctaButtonJS.innerHTML = siteContent["cta"]["button"];
 
-let ctaImgJS = document.getElementById("cta-img");
-ctaimgJS.setAttribute('src', siteContent["cta"]["img-src"]);
 
-let mainTitle = document.querySelectorAll("h4");
+
+let mainTitle = document.getElementsByTagName("h4");
 mainTitle[0].innerHTML = siteContent["main-content"]["features-h4"];
 mainTitle[1].innerHTML = siteContent["main-content"]["about-h4"];
 mainTitle[2].innerHTML = siteContent["main-content"]["services-h4"];
@@ -95,8 +95,10 @@ mainContentJS[4].innerHTML = siteContent["main-content"]["vision-content"];
 
 
 let contactJS = document.getElementsByClassName("contact")[0];
-contactJS.innerHTML = siteContent["contact"]["contact-h4"];
-contactJS.innerHTML = siteContent["contact"]["contact-p"];
+contactJS.getElementsByTagName("h4")[0].innerHTML = siteContent["contact"]["contact-h4"];
+contactJS.getElementsByTagName("p")[0].innerHTML = siteContent["contact"]["address"];
+contactJS.getElementsByTagName("p")[1].innerHTML = siteContent["contact"]["phone"]
+contactJS.getElementsByTagName("p")[2].innerHTML = siteContent["contact"]["email"]
 
 let footerJS = document.querySelector("footer");
 footerJS.getElementsByTagName("p")[0].innerHTML = siteContent["footer"]["copyright"];
