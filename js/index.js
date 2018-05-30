@@ -130,3 +130,13 @@ newAElement2.innerHTML = "newAElement2"; //Setting the content inbetween <a> tag
 navTag.appendChild(newAElement2);
 
 
+ctaTextButtonClass.addEventListener("mousemove", () => {
+  ctaTextButtonClass.innerHTML = "BEEP!!  :-)";
+});
+
+ctaTextButtonClass.addEventListener("mouseleave", () => {
+  ctaTextButtonClass.innerHTML = "Get Started";
+});
+
+contactClassH4Element[0].style.color = "green";
+contactClassH4Element[0].style.backgroundColor = "red";
