@@ -10,7 +10,8 @@ const siteContent = {
   },
   "cta": {
     "h1": "DOM Is Awesome",
-    "button": "Get Started",
+    "button1": "Get Started",
+    "h3": "Click 'p' for a picture",
     "img-src": "img/header-img.png"
   },
   "main-content": {
@@ -143,12 +144,12 @@ function onHoverBgChange(event, bg) {
   target.style.backgroundColor = bg;
   event.stopPropogation;
 
-  let newTrigger = 'pointerleave';
-  if (target.type === 'pointerleave') {
-    newTrigger = 'pointerenter';
+  let newTrigger = 'mouseleave';
+  if (target.type === 'mouseleave') {
+    newTrigger = 'mouseenter';
   }
 
-  target.addEventListener(newTrigger, function toggleOldBg (event) {
+  target.addEventListener(newTrigger, function toggleOldBg(event) {
     event.stopPropagation;
     onHoverBgChange(event, oldBg);
     target.removeEventListener(newTrigger, toggleOldBg);
@@ -157,10 +158,10 @@ function onHoverBgChange(event, bg) {
 
 for (let i in hoverElemsArr) {
   let elem = hoverElemsArr[i];
-  elem.addEventListener('pointerenter', function toggleBlackBg (event) {
+  elem.addEventListener('pointerenter', function toggleBlackBg(event) {
     onHoverBgChange(event, "black");
     event.stopPropagation;
-    elem.removeEventListener('pointerenter', toggleBlackBg)
+    elem.removeEventListener('mouseenter', toggleBlackBg)
   });
 }
 
@@ -195,7 +196,6 @@ window.addEventListener('mousemove', function mousetrail(event) {
   point.style.left = event.pageX + 'px';
   points.push(point);
   if (points.length > 25) {
-    console.log('shiftedpoint');
     points[0].parentNode.removeChild(points[0]);
     points.shift();
   }
@@ -204,7 +204,6 @@ window.addEventListener('mousemove', function mousetrail(event) {
 let containerElem = document.querySelector('.container');
 //7. removes trailing dot if mouse goes off screen
 containerElem.addEventListener('mouseout', function deletemousetrail(event) {
-  console.log(points[0].parentNode);
   for (let i = 0; i < points.length; i++) {
 
     points[i].parentNode.removeChild(points[i]);
@@ -212,18 +211,43 @@ containerElem.addEventListener('mouseout', function deletemousetrail(event) {
   points = [];
 });
 
-//8. drags images to relocate
+//8. drags images to make them disappear
+function dragBehavior(event) {
+  let target = event.target;
+  let parent = target.parentNode;
+  target.style.visibility = 'hidden';
+  event.stopPropagation;
+}
 
-// function dragBehavior (event) {
-//   let target = event.target;
-//   let parent = target.parentNode;
-//   target.style.opacity = '0.6';
-//   target.style.position = 'absolute'
-//   target.
-// }
+let imageArr = Array.from(document.querySelectorAll('img'));
+for (let i in imageArr) {
+  imageArr[i].addEventListener('dragend', dragBehavior);
+}
 
+//9. creates random image on buttoon press
+function buttonImgDrop(event) {
+  console.log(event.key);
+  if (event.key === 'p') {
+    let dragonImg = document.createElement('img');
+    dragonImg.setAttribute('src', './img/dragon.svg');
+    let dragonWidth = 100;
+    let dragonHeight = 100;
+    dragonImg.style.width = dragonWidth + 'px';
+    dragonImg.style.height = dragonWidth + 'px';
+    dragonImg.style.position = 'absolute';
+    let docWidth = window.screen.width;
+    let docHeight = window.screen.height;
+    let randX = (Math.random() * docWidth - 100) + 'px';
+    let randY = (Math.random() * docHeight - 100) + 'px';
+    containerElem.appendChild(dragonImg);
+    dragonImg.style.top = randX;
+    dragonImg.style.left = randY;
+    dragonImg.addEventListener('dragend', dragBehavior);
+    console.log('new dragon');
 
-// let imageArr = Array.from(document.querySelectorAll('img'));
-// for (let i in imageArr) {
-//   imageArr.addEventListener('ondrag' )
-// }
+  }
+
+}
+
+let dragonButton = document.querySelector('.dragon-button');
+document.addEventListener('keypress', buttonImgDrop);
