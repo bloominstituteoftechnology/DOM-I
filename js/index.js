@@ -169,3 +169,8 @@ document.addEventListener("keyup", (e) => {
         aboutTextColor.style.color = "yellow";
 });
 
+let mouseLeave = document.getElementById("productText");
+
+mouseLeave.addEventListener("mouseleave", () => {
+  mouseLeave.style.color = "orange";
+ });
