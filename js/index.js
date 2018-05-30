@@ -41,12 +41,96 @@ const siteContent = {
   let logo = document.getElementById("logo-img");
   logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-// Nav Section
-  // let siteNav = document.querySelector("nav");
-  let siteNav = document.querySelectorAll("nav a");
-//assign properties and values to nav method
-  let siteNavItems = Object.values(siteContent["nav"]);
-  siteNavItems.forEach((item, index) => {siteNav[index+1].innerHTML = item});
+//Nav Header
+  // let nav = document.querySelectorAll("nav a");
+  // let navContent = Object.values(siteContent["nav"]);
+
+  // navContent.forEach((item, index) => {nav[index+1].innerHTML = item});
+
+//********* Navigation Header (Instructor Solution) ***********************
+//Nav Header (Instructor Solution)
+let selectedNavLinks = document.querySelectorAll("nav a");
+selectedNavLinks.forEach((link, i) => {
+  if (i === selectedNavLinks.length - 1){
+    return;
+  }
+  link.innerHTML = siteContent.nav[`nav-item-${i+1}`];
+});
+
+//Nav Header - Change color (Instructor Solution)
+selectedNavLinks.forEach((link,i) => {
+  if (i === selectedNavLinks.length - 1){
+    return;
+  }
+  link.style.color = "green";
+});
+
+// Nav Header - Add two items to navigation (Instructor Solution)
+selectedNavLinks = document.getElementsByTagName("nav")[0];
+let createNewNode = (name) => {
+  let newNode = document.createElement("a");
+  newNode.innerHTML = name;
+  return newNode;
+}
+selectedNavLinks.prepend(createNewNode("Extra Item 1"));
+selectedNavLinks.append(createNewNode("Extra Item 2"));
+
+//**********************END of Instructor Solution****************************
 
 //CTA Section
+
+  let ctaTextH1 = document.querySelector('.cta .cta-text h1');
+  let ctaTextButton = document.querySelector('.cta .cta-text button');
+  let ctaImage = document.getElementById('cta-img');
+
+  ctaTextH1.innerHTML = siteContent["cta"]["h1"].split(' ').join('<br>');
+  ctaTextButton.innerHTML = siteContent["cta"]["button"];
+  ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
+
+
+//Main Content Section
+  let topContent = document.querySelectorAll('.top-content .text-content');
+  let features = topContent[0];
+  let about = topContent[1];
+  let middleImage = document.getElementById('middle-img');
+  let bottomContent = document.querySelectorAll('.bottom-content .text-content');
+  let services = bottomContent[0];
+  let product = bottomContent[1];
+  let vision = bottomContent[2];
+
+
+  features.firstElementChild.innerHTML = siteContent["main-content"]["features-h4"];
+  features.lastElementChild.innerHTML = siteContent["main-content"]["features-content"];
+
+
+  about.firstElementChild.innerHTML = siteContent["main-content"]["about-h4"];
+  about.lastElementChild.innerHTML = siteContent["main-content"]["about-content"];
+
+
+  middleImage.setAttribute('src',siteContent["main-content"]["middle-img-src"]);
+
+
+  services.firstElementChild.innerHTML = siteContent["main-content"]["services-h4"];
+  services.lastElementChild.innerHTML = siteContent["main-content"]["services-content"];
+
+
+  product.firstElementChild.innerHTML = siteContent["main-content"]["product-h4"];
+  product.lastElementChild.innerHTML = siteContent["main-content"]["product-content"];
+
+
+  vision.firstElementChild.innerHTML = siteContent["main-content"]["vision-h4"];
+  vision.lastElementChild.innerHTML = siteContent["main-content"]["vision-content"];
+
+//Contact Section
+let contact = document.querySelector('.contact');
+  const contactInfo = contact.children;
+  const contactSource = Object.values(siteContent["contact"])
+  for (let i=0; i<contactInfo.length; i++) {
+    contactInfo[i].innerHTML = contactSource[i];
+  }
+
+
+//Footer Section
+let footer = document.querySelector('footer');
+footer.firstElementChild.innerHTML = siteContent["footer"]["copyright"];
 
