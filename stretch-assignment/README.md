@@ -33,7 +33,7 @@ Topics:
  You will also need to look up and use `window.setInterval`. For this method, and any of those listed in the "Topics" section of this README, you are encouraged to use MDN as your resource for Documentation. MDN can be challenging to consume at first, so you may also use something like W3schools if the MDN documentation on a given subject is a bit too complicated.
 
  ## Stretch Goals
-  If you compelete the timer with time to spare:
+  If you complete the timer with time to spare:
   * Self study and research DOM `events` and `event listeners`
   * SG1: Implement a start button. The digital timer should not start until the button is pressed.
   * SG2: Once you have a start button working, configure it so that when a user presses the start button it is disabled and not enabled until the timer finishes.
