@@ -251,3 +251,10 @@ function buttonImgDrop(event) {
 
 let dragonButton = document.querySelector('.dragon-button');
 document.addEventListener('keypress', buttonImgDrop);
+
+//10. animation on logo right click
+logo.addEventListener('click', function() {
+  console.log('clicked');
+  logo.style.position='relative';
+  TweenLite.from(logo, 2, {opacity:0, left:"+=400px", ease:Bounce.easeOut});
+});
