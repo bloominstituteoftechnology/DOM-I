@@ -54,10 +54,20 @@ nav1[3].innerHTML = siteContent["nav"]["nav-item-4"];
 nav1[4].innerHTML = siteContent["nav"]["nav-item-5"];
 nav1[5].innerHTML = siteContent["nav"]["nav-item-6"];
 
-    
-let ctaText = document.querySelector(".cta-text");
-ctaText.innerHTML = "DOM <br>Is <br>Awesome";
-ctaText.style = "font-family: Bangers; letter-spacing: 0px;";
+let ctaText = document.getElementsByClassName("cta-text")[0];
+
+ctaText.getElementsByTagName("h1")[0].innerHTML = siteContent["cta"]["h1"];
+ctaText.getElementsByTagName("h1")
+ctaText.getElementsByTagName("button")[0].innerHTML = siteContent["cta"]["button"]; 
+
+//let ctaText = document.querySelector(".cta-text");
+//ctaText.innerHTML = "DOM <br>Is <br>Awesome";
+//ctaText.style = "font-family: Bangers; letter-spacing: 0px;";
+
+//let button = document.getElementsByTagName("button");
+//button.innerHTML = siteContent["cta"]["button"];
+
+//ctaText.getElementsByTagName("button").innerHTML = siteContent["cta"]["button"];
 
 let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
@@ -93,8 +103,5 @@ contactContent.style = "margin-top: 5px;";
 
 let footer = document.querySelector("footer");
 footer.innerHTML = siteContent["footer"]["copyright"];;
-footre.style = "align-text: center; height: 50px;";
 
 
-let button = document.querySelector(".cta-text button");
-button.innerHTML = siteContent["cta"]["button"];
