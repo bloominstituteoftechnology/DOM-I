@@ -144,3 +144,22 @@ ctaImage.addEventListener('dragend', () => {
   ctaImage.setAttribute('src', siteContent['cta']['img-src']);
   ctaImage.removeAttribute('class', 'cat');
 }); 
+
+document.addEventListener('keydown', (char) => {
+  if (char.keyCode === 78) {
+  alert('nightvision activated')
+  document.body.style.backgroundColor = 'black';
+  document.body.style.color = 'green';
+  }
+
+  if (char.keyCode === 82) {
+    alert('regular mode activated')
+    document.body.style.backgroundColor = 'white';
+    document.body.style.color = 'black';
+  }
+
+});
+
+window.addEventListener('load',()=>{
+  alert('press N to enter night vision mode, press R to return to regular mode')
+});
