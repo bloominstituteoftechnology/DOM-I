@@ -156,3 +156,9 @@ document.addEventListener("scroll", (e) => {
 		colorChange[i].style.color = "red";
 	}
 });
+
+let visionTextColor = document.getElementById("visionText");
+
+document.addEventListener("keypress", (e) => {
+        visionTextColor.style.color = "blue";
+});
