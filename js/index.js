@@ -81,11 +81,23 @@ navigation.forEach(element => element.style.color = 'green');
 let callToAction = document.querySelector('.cta-text h1');
 callToAction.innerHTML = siteContent['cta']['h1'];
 
+callToAction.addEventListener('click', (event) => {
+  event.target.innerHTML = 'This is the Best Great Idea';
+});
+
 let ctaButton = document.querySelector('.cta-text button');
 ctaButton.innerHTML = siteContent['cta']['button'];
 
+ctaButton.addEventListener('mouseover', (event) => {
+  event.target.style.background = 'orange';
+});
+
 let ctaImage = document.getElementById('cta-img');
 ctaImage.setAttribute('src', siteContent['cta']['img-src']);
+
+ctaImage.addEventListener('dblclick', (event) => {
+  event.target.style.display = 'none';
+});
 
 // Main Content
 
@@ -103,6 +115,10 @@ aboutContent.innerHTML = siteContent['main-content']['about-content'];
 
 let middleImage = document.getElementById('middle-img');
 middleImage.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+middleImage.addEventListener('mouseup', (event) => {
+  event.target.style.width = '50%';
+});
 
 let servicesHeader = document.querySelectorAll('.text-content h4')[2];
 servicesHeader.innerHTML = siteContent['main-content']['services-h4'];
@@ -136,7 +152,15 @@ contactPhone.innerHTML = siteContent['contact']['phone'];
 let contactEmail = document.querySelectorAll('.contact p')[2];
 contactEmail.innerHTML = siteContent['contact']['email'];
 
+contactEmail.addEventListener('mouseleave', (event) => {
+  event.target.innerHTML = 'email@emailaddress.com';
+});
+
 // Footer
 
 let footer = document.querySelector('footer p');
 footer.innerHTML = siteContent['footer']['copyright'];
+
+footer.addEventListener('mouseout', (event) => {
+  event.target.innerHTML = 'Ciara Burkett, CS11';
+});
