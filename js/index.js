@@ -162,3 +162,10 @@ let visionTextColor = document.getElementById("visionText");
 document.addEventListener("keypress", (e) => {
         visionTextColor.style.color = "blue";
 });
+
+let aboutTextColor = document.getElementById("aboutText");
+
+document.addEventListener("keyup", (e) => {
+        aboutTextColor.style.color = "yellow";
+});
+
