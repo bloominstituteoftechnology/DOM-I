@@ -191,8 +191,8 @@ window.addEventListener('mousemove', function mousetrail(event) {
   point.style.height = '2px'
   point.style.backgroundColor = 'red';
   body.appendChild(point);
-  point.style.top = event.clientY + 'px';
-  point.style.left = event.clientX + 'px';
+  point.style.top = event.pageY + 'px';
+  point.style.left = event.pageX + 'px';
   points.push(point);
   if (points.length > 25) {
     console.log('shiftedpoint');
@@ -211,3 +211,19 @@ containerElem.addEventListener('mouseout', function deletemousetrail(event) {
   }
   points = [];
 });
+
+//8. drags images to relocate
+
+// function dragBehavior (event) {
+//   let target = event.target;
+//   let parent = target.parentNode;
+//   target.style.opacity = '0.6';
+//   target.style.position = 'absolute'
+//   target.
+// }
+
+
+// let imageArr = Array.from(document.querySelectorAll('img'));
+// for (let i in imageArr) {
+//   imageArr.addEventListener('ondrag' )
+// }
