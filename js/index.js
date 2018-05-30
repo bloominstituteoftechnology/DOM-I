@@ -53,13 +53,6 @@ for (let i = 0; i < navItem.length; i++) {
   navItem[i].style.color = "green";
 }
 
-let blogElement = document.createElement("a");
-let blog = document.createTextNode("Blog");
-blogElement.setAttribute("href", "#");
-blogElement.appendChild(blog);
-document.querySelector(".container nav").appendChild(blogElement);
-blogElement.style.color = "green";
-
 let homeElement = document.createElement("a");
 let home = document.createTextNode("Home");
 homeElement.setAttribute("href", "#");
@@ -73,6 +66,17 @@ let ctaImage = document.querySelector("#cta-img");
 ctaHeader.textContent = siteContent["cta"]["h1"];
 ctaButton.textContent = siteContent["cta"]["button"];
 ctaImage.setAttribute("src", siteContent["cta"]["img-src"]); 
+ctaButton.style.borderRadius = '25px';
+ctaButton.style.background = "grey";
+
+
+let blogElement = document.createElement("a");
+let blog = document.createTextNode("Blog");
+blogElement.setAttribute("href", "#");
+blogElement.appendChild(blog);
+document.querySelector(".container nav").appendChild(blogElement);
+blogElement.style.color = "green";
+
 
 let mainContentHeader = document.querySelectorAll(".text-content h4");
 let mainContentParagraph = document.querySelectorAll(".text-content p");
@@ -88,6 +92,9 @@ mainContentParagraph[3].textContent = siteContent["main-content"]["product-conte
 mainContentHeader[4].textContent = siteContent["main-content"]["vision-h4"];
 mainContentParagraph[4].textContent = siteContent["main-content"]["vision-content"]
 mainContentImage.setAttribute("src", siteContent["main-content"]["middle-img-src"])
+for (let i = 0; i < mainContentParagraph.length; i++) {
+  mainContentParagraph[i].style.fontStyle = "italic";
+}
 
 let contactHeader = document.querySelector(".contact h4");
 contactHeader.textContent = siteContent["contact"]["contact-h4"];
@@ -98,3 +105,5 @@ contactParagraph[2].textContent = siteContent["contact"]["email"];
 
 let footer = document.querySelector("footer p");
 footer.textContent = siteContent["footer"]["copyright"];
+footer.style.border = "1px solid black";
+footer.style.padding = "20px";
