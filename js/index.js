@@ -82,18 +82,19 @@ for (let i=1; i<=3; i++){
 //Footer
 document.querySelector("footer p").innerHTML = siteContent.footer.copyright;
 
-//Change color
-nav_a = document.querySelectorAll('nav a');
-
-for (let i=0; i<nav_a.length; i++) {
-  nav_a[i].style.color = 'green';
-}
-
 //New a
 const a1 = document.createElement('a');
 const a2 = document.createElement('a');
 const nav = document.querySelector('nav');
+
 nav.prepend(a1);
 nav.appendChild(a2);
-nav.firstchild.innerHTML = "Home";
+
+nav.firstChild.innerHTML = "Home";
 nav.lastChild.innerHTML = "Exit";
+
+//Change color
+nav_a = document.querySelectorAll('nav a');
+for (let i=0; i<nav_a.length; i++) {
+  nav_a[i].style.color = 'green';
+}
