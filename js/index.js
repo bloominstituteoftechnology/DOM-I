@@ -52,6 +52,17 @@ myNavItems[1].innerHTML = (siteContent['nav']['nav-item-2']) ;
 myNavItems[2].innerHTML = (siteContent['nav']['nav-item-3']) ;
 myNavItems[3].innerHTML = (siteContent['nav']['nav-item-4']) ;
 myNavItems[4].innerHTML = (siteContent['nav']['nav-item-5']) ;
+myNavItems[5].innerHTML = (siteContent['nav']['nav-item-6']) ;
+
+
+/*
+FOR EACH EXAMPLE
+
+let selectedNavLinks = document.querySelectorAll("nav a");
+selectedNavLinks.forEach((link, i) => {
+link.innerHTML = siteContent.nav[`nav-item-${i+1}`];
+})
+*/
 
 document.querySelector('.cta-text h1').innerHTML = (siteContent['cta']['h1'])
 
@@ -71,5 +82,66 @@ myTopContent[0].children[1].children[1].innerHTML = (siteContent['main-content']
 
 document.querySelector('#middle-img').setAttribute('src', siteContent['main-content']['middle-img-src']);
 
+// /* SRC https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentText */
 let myBottomContent = document.querySelector('.bottom-content') ;
 myBottomContent.children[0].children[0].insertAdjacentText('afterbegin', siteContent['main-content']['services-h4']) ;
+
+myBottomContent.children[0].children[1].insertAdjacentText('afterbegin', siteContent['main-content']['services-content']) ;
+
+myBottomContent.children[1].children[0].insertAdjacentText('afterbegin', siteContent['main-content']['product-h4']) ;
+
+myBottomContent.children[1].children[1].insertAdjacentText('afterbegin', siteContent['main-content']['product-content']) ;
+
+myBottomContent.children[2].children[0].insertAdjacentText('afterbegin', siteContent['main-content']['vision-h4']) ;
+
+myBottomContent.children[2].children[1].insertAdjacentText('afterbegin', siteContent['main-content']['vision-content']) ;
+
+
+
+// /* I PREFER THIS WAY BELOW*/
+let myContact = document.getElementsByClassName('contact')[0] ;
+// console.log(myContact) ;
+myContact.getElementsByTagName('h4')[0].innerHTML = siteContent['contact']['contact-h4'] ;
+myContact.getElementsByTagName('p')[0].innerHTML = siteContent['contact']['address'] ;
+myContact.getElementsByTagName('p')[1].innerHTML = siteContent['contact']['phone'] ;
+myContact.getElementsByTagName('p')[2].innerHTML = siteContent['contact']['email'] ;
+
+
+document.querySelector('footer p').innerHTML = (siteContent['footer']['copyright']) ;
+
+
+// ## Task 3: Add new content
+// * Change the color of the navigation text to be green.
+let myNavItemsToGreen = document.querySelectorAll('nav a') ;
+myNavItemsToGreen.forEach((myItem, i) => {
+  myItem.style.color = 'green' ;
+});
+
+// * Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
+
+//SRC https://www.w3schools.com/jsref/met_node_appendchild.asp
+//CREATE ELEMENT - a link tag
+let myNewElement = document.createElement('A') ;
+//CREATE TEXT NODE
+let myNewTextNode = document.createTextNode('SUPER BOSS BUTTON') ;
+//APPEND TEXT TO NEW HTML TAG
+myNewElement.appendChild(myNewTextNode) ;
+//APPEND <a> to html
+document.querySelector('nav').appendChild(myNewElement) ;
+
+//SRC https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/prepend
+
+//////DIDN'T GET prepend TO WORK
+
+
+/*FUNCTION EXAMPLE
+// Add two items to navigation
+selectedNavLinks = document.getElementsByTagName("nav")[0];
+let createNewNode = (name) => {
+  let newNode = document.createElement("a");
+  newNode.innerHTML = name;
+  return newNode;
+}
+selectedNavLinks.prepend(createNewNode("Extra Item 1"));
+selectedNavLinks.append(createNewNode("Extra Item 2"));
+*/
