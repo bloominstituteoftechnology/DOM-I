@@ -38,13 +38,15 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-let logo = document.getElementById("logo-img");
+// Initialize selectors
 let nav = document.querySelector('nav');
-let cta = document.getElementById("cta");
-let mainContent = document.getElementById("main-content");
-let contact = document.getElementById("contact");
+let cta = document.querySelector('.cta');
+let ctaIMG = document.querySelector('#cta-img');
+let mainContent = document.querySelector('.main-content');
+let contact = document.querySelector('.contact');
 let footer = document.querySelector("footer");
 
 // Question to explore later: is there a way I can iterate through siteContent["nav"]?
@@ -54,3 +56,31 @@ nav.children[2].innerHTML = siteContent["nav"]["nav-item-3"];
 nav.children[3].innerHTML = siteContent["nav"]["nav-item-4"];
 nav.children[4].innerHTML = siteContent["nav"]["nav-item-5"];
 nav.children[5].innerHTML = siteContent["nav"]["nav-item-6"];
+
+cta.children[0].children[0].innerHTML = siteContent["cta"]["h1"];
+cta.children[0].children[1].innerHTML = siteContent["cta"]["button"];
+ctaIMG.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let mainContentHeaders = mainContent.querySelectorAll("div div h4");
+mainContentHeaders[0].innerHTML = siteContent["main-content"]["features-h4"];
+mainContentHeaders[1].innerHTML = siteContent["main-content"]["about-h4"];
+mainContentHeaders[2].innerHTML = siteContent["main-content"]["services-h4"];
+mainContentHeaders[3].innerHTML = siteContent["main-content"]["product-h4"];
+mainContentHeaders[4].innerHTML = siteContent["main-content"]["vision-h4"];
+
+let mainContentText = mainContent.querySelectorAll("div div p");
+mainContentText[0].innerHTML = siteContent["main-content"]["features-content"];
+mainContentText[1].innerHTML = siteContent["main-content"]["about-content"];
+mainContentText[2].innerHTML = siteContent["main-content"]["services-content"];
+mainContentText[3].innerHTML = siteContent["main-content"]["product-content"];
+mainContentText[4].innerHTML = siteContent["main-content"]["vision-content"];
+
+let midIMG = document.querySelector("#middle-img");
+midIMG.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+contact.children[0].innerHTML = siteContent["contact"]["contact-h4"];
+contact.children[1].innerHTML = siteContent["contact"]["address"];
+contact.children[2].innerHTML = siteContent["contact"]["phone"];
+contact.children[3].innerHTML = siteContent["contact"]["email"];
+
+footer.children[0].innerHTML = siteContent["footer"]["copyright"];
