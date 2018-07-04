@@ -38,5 +38,19 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+let nav = document.querySelector('nav');
+let cta = document.getElementById("cta");
+let mainContent = document.getElementById("main-content");
+let contact = document.getElementById("contact");
+let footer = document.querySelector("footer");
+
+// Question to explore later: is there a way I can iterate through siteContent["nav"]?
+nav.children[0].innerHTML = siteContent["nav"]["nav-item-1"];
+nav.children[1].innerHTML = siteContent["nav"]["nav-item-2"];
+nav.children[2].innerHTML = siteContent["nav"]["nav-item-3"];
+nav.children[3].innerHTML = siteContent["nav"]["nav-item-4"];
+nav.children[4].innerHTML = siteContent["nav"]["nav-item-5"];
+nav.children[5].innerHTML = siteContent["nav"]["nav-item-6"];
