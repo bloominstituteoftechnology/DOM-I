@@ -84,3 +84,13 @@ contact.children[2].innerHTML = siteContent["contact"]["phone"];
 contact.children[3].innerHTML = siteContent["contact"]["email"];
 
 footer.children[0].innerHTML = siteContent["footer"]["copyright"];
+
+nav.prepend(document.createElement('a'));
+nav.children[0].innerHTML = "Blog";
+nav.append(document.createElement('a'));
+nav.children[7].innerHTML = "Donate";
+
+for (let i = 0; i < nav.children.length; i++) {
+  nav.children[i].style.color = "green";
+  console.log(nav.children[i]);
+}
