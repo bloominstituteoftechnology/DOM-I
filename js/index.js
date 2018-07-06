@@ -8,6 +8,7 @@ const siteContent = {
     "nav-item-6": "Contact",
     "img-src": "img/logo.png"
   },
+
   "cta": {
     "h1": "DOM Is Awesome",
     "button": "Get Started",
@@ -40,3 +41,30 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let ctaimg = document.getElementById("cta-img");
+ctaimg.setAttribute('src', siteContent["cta"]["img-src"])
+
+
+
+
+let navKeyArray = Object.keys(siteContent.nav);
+console.log(navKeyArray);
+
+let nav = document.getElementsByTagName('nav')[0];
+let anchorList = nav.children;
+
+for (i = 0; i < anchorList.length; i++) {
+  anchorList[i].textContent = siteContent.nav[navKeyArray[i]];
+}
+
+var a = document.createElement("a");
+a.textContent = "Newsletter";
+nav.appendChild(a);
+
+var b = document.createElement("a");
+b.textContent = "HOME!";
+nav.prepend(b);
+
+nav.style.backgroundColor = "blue";
+
