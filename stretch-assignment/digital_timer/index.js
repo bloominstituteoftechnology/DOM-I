@@ -15,17 +15,19 @@ const timeCheck = function (maxTime) {
         document.getElementById("start-button").removeAttribute('disabled');
         return;
     }
-    theTensPlace.textContent = Math.floor(duration/10000);
+    theTensPlace.textContent = Math.floor(duration / 10000);
     theOnesPlace.textContent = Math.floor(duration / 1000) % 10;
     tenths.textContent = Math.floor(duration / 100) % 10;
     hundreths.textContent = Math.floor(duration / 10) % 10;
 }
+
 let timeLooper;
+
 const startButtonFunction = function() {
-   timeLooper = setInterval(timeCheck, 10, 3009);//the `09` is because of CMOS off by one error
-   startTime = new Date().getTime();
-   document.getElementById("start-button").setAttribute('disabled', 'disabled');
-   document.querySelector(".digits").style.color = "black";
+    timeLooper = setInterval(timeCheck, 10, 3009); //TODO the `09` is because of CMOS off by one error.  There's probably a smarter way to do this.
+    startTime = new Date().getTime();
+    document.getElementById("start-button").setAttribute('disabled', 'disabled');
+    document.querySelector(".digits").style.color = "black";
 }
 
 const resetButtonFunction = function() {
@@ -38,7 +40,6 @@ const resetButtonFunction = function() {
 
 const stopButtonFunction = function() {
     clearInterval(timeLooper);
-    console.log('anything you want')
     document.getElementById("start-button").removeAttribute('disabled');
 }
 
