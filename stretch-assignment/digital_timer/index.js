@@ -11,7 +11,6 @@ let startBtn = document.querySelector('.start-btn');
 let resetBtn = document.querySelector('.reset-btn');
 let timer = 0;
 
-
 displaySecTens.innerHTML = secondTens;
 displaySecOnes.innerHTML = secondOnes;
 displayMSTens.innerHTML = msTens;
@@ -58,7 +57,7 @@ function startTimer() {
   }
 
   if (secondTens == 1) {
-    console.log("Help");
+
     startBtn.disabled = false;
     clearInterval(timer);
     timer = 0;
