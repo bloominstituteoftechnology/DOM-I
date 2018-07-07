@@ -1,10 +1,13 @@
+//**Pointing to Divs*/
 
-let theTensPlace = document.querySelector("#secondTens");
+let theTensPlace = document.querySelector("#secondTens");  
 let theOnesPlace = document.querySelector("#secondOnes");
 let tenths = document.querySelector("#msHundreds");
 let hundreths = document.querySelector("#msTens");
 
-let startTime;
+let startTime; //Need to declare globaly so local scopes have access.
+
+//**Gets a duration measurement, converts that measurement to 4 sperate digits, puts them in the place they belong*/
 
 const timeCheck = function (maxTime) {
     let endTime = new Date().getTime();
@@ -21,7 +24,9 @@ const timeCheck = function (maxTime) {
     hundreths.textContent = Math.floor(duration / 10) % 10;
 }
 
-let timeLooper;
+let timeLooper; //Need to declare globaly so local scopes have access.
+
+//*Button Functions*/
 
 const startButtonFunction = function() {
     timeLooper = setInterval(timeCheck, 10, 3009); //TODO the `09` is because of CMOS off by one error.  There's probably a smarter way to do this.
@@ -42,6 +47,8 @@ const stopButtonFunction = function() {
     clearInterval(timeLooper);
     document.getElementById("start-button").removeAttribute('disabled');
 }
+
+//*Event Listeners*/
 
 document.getElementById("start-button").addEventListener("click", startButtonFunction);
 document.getElementById("reset-button").addEventListener("click", resetButtonFunction);
