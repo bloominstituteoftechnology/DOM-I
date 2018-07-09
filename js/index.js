@@ -49,6 +49,7 @@ const navKeys=Object.keys(siteContent["nav"]);
 let nav=document.querySelectorAll('nav a');
 for (let i=0; i<nav.length; i++) {
   nav[i].innerHTML=siteContent['nav'][navKeys[i]];
+  nav[i].style.color='green';
 }
 document.querySelector('.cta h1').innerHTML=siteContent['cta']['h1'];
 document.querySelector('.cta button').innerHTML=siteContent['cta']['button'];
@@ -78,4 +79,16 @@ for (let i=0; i<mainContenth4.length; i++) {
 }
 for (let i=0; i<mainContentp.length; i++) {
   mainContentp[i].innerHTML=siteContent['main-content'][mainContentInfo[i]];
+}
+let appendNode=document.createElement('A');
+let prependNode=document.createElement('A');
+let appendText=document.createTextNode('Boo');
+let prependText=document.createTextNode('Who');
+appendNode.appendChild(appendText);
+prependNode.appendChild(prependText);
+document.querySelector('nav').appendChild(appendNode);
+document.querySelector('nav').prepend(prependNode);
+nav=document.querySelectorAll('nav a');
+for (let i=0; i<nav.length; i++) {
+  nav[i].style.color='green';
 }
