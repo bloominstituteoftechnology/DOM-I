@@ -56,12 +56,9 @@ newNavItem1.prepend(newNavItem1Text);
 navBar.prepend(newNavItem1);
 
 const nav = document.querySelectorAll("a");
-nav[1].innerText = siteContent["nav"]["nav-item-1"];
-nav[2].innerText = siteContent["nav"]["nav-item-2"];
-nav[3].innerText = siteContent["nav"]["nav-item-3"];
-nav[4].innerText = siteContent["nav"]["nav-item-4"];
-nav[5].innerText = siteContent["nav"]["nav-item-5"];
-nav[6].innerText = siteContent["nav"]["nav-item-6"];
+for( let i = 1; i < nav.length - 1; i++) {
+  nav[i].innerText = siteContent["nav"][`nav-item-${i}`];
+}
 
 nav.forEach(i => i.style.color = "green");
 
