@@ -37,6 +37,15 @@ const siteContent = {
   },
 };
 
+// ===== STRETCH GOAL STYLES ======= 
+
+let body = document.querySelector('body');
+body.style.backgroundColor = "lightgrey";
+body.style.fontSize = "1.2rem"
+body.style.fontWeight = "bold"
+
+
+
 // appendChild method 
 let nav = document.querySelector('nav')
 let navBar = document.querySelectorAll('nav a');
@@ -79,7 +88,7 @@ ctaImage.setAttribute('src', siteContent['cta']['img-src'])
 
 // ============ Main Content ============= 
 
-let mainHeadings = document.querySelectorAll('.text-content h4')
+let mainHeadings = document.querySelectorAll('.text-content h4');
 mainHeadings[0].innerHTML = siteContent["main-content"]["features-h4"];
 mainHeadings[1].innerHTML = siteContent["main-content"]["about-h4"]
 mainHeadings[2].innerHTML = siteContent["main-content"]["services-h4"]
