@@ -49,14 +49,17 @@ logo.setAttribute('src', siteContent['nav']['img-src']);
 let qs = document.querySelector.bind(document);
 let qsa = document.querySelectorAll.bind(document);
 
+// Nav
 qsa('nav a').forEach((a, idx) => {
   a.textContent = siteContent.nav[`nav-item-${idx + 1}`];
 });
 
+// CTA
 qs('.cta h1').textContent = siteContent.cta.h1;
 qs('.cta button').textContent = siteContent.cta.button;
 qs('#cta-img').src = siteContent.cta['img-src'];
 
+// Main content
 qsa('.text-content').forEach((txtContainer, idx) => {
   const section = contents[idx];
   txtContainer.querySelector('h4').textContent =
@@ -65,3 +68,12 @@ qsa('.text-content').forEach((txtContainer, idx) => {
     siteContent['main-content'][`${section}-content`];
 });
 qs('#middle-img').src = siteContent['main-content']['middle-img-src'];
+
+// Contact
+qs('.contact h4').textContent = siteContent.contact['contact-h4'];
+qsa('.contact p')[0].textContent = siteContent.contact.address;
+qsa('.contact p')[1].textContent = siteContent.contact.phone;
+qsa('.contact p')[2].textContent = siteContent.contact.email;
+
+// Footer
+qs('footer p').textContent = siteContent.footer.copyright;
