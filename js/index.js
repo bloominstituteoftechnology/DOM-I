@@ -41,8 +41,8 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
+// nav
 let navElements = document.getElementsByTagName("a");
-
 navElements[0].innerHTML = siteContent["nav"]["nav-item-1"];
 navElements[1].innerHTML = siteContent["nav"]["nav-item-2"];
 navElements[2].innerHTML = siteContent["nav"]["nav-item-3"];
@@ -50,21 +50,18 @@ navElements[3].innerHTML = siteContent["nav"]["nav-item-4"];
 navElements[4].innerHTML = siteContent["nav"]["nav-item-5"];
 navElements[5].innerHTML = siteContent["nav"]["nav-item-6"];
 
+// cta
 let ctaH1 = document.getElementsByTagName("h1");
-
 ctaH1[0].innerHTML = siteContent["cta"]["h1"];
-
 let ctaButton = document.getElementsByTagName("button");
-
 ctaButton[0].innerHTML = siteContent["cta"]["button"];
-
 let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 
-let customID = document.getElementById("custom-id");
+// main-content
+let featureh4 = document.getElementById("h4");
+featureh4.innerHTML = siteContent["main-content"]["features-h4"];
 
-
-let customSelection = document.querySelector(".heading");
-
-
-let customSelectionAll = document.querySelectorAll("h1");
+//contact
+let contact = document.getElementsByClassName("contact");
+contact[0].innerHTML = siteContent["contact"]["contact-h4"];
