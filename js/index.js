@@ -41,7 +41,7 @@ const siteContent = {
     copyright: 'Copyright Great Idea! 2018'
   }
 };
-
+const contents = ['features', 'about', 'services', 'product', 'vision'];
 // Example: Update the img src for the logo
 let logo = document.getElementById('logo-img');
 logo.setAttribute('src', siteContent['nav']['img-src']);
@@ -56,3 +56,12 @@ qsa('nav a').forEach((a, idx) => {
 qs('.cta h1').textContent = siteContent.cta.h1;
 qs('.cta button').textContent = siteContent.cta.button;
 qs('#cta-img').src = siteContent.cta['img-src'];
+
+qsa('.text-content').forEach((txtContainer, idx) => {
+  const section = contents[idx];
+  txtContainer.querySelector('h4').textContent =
+    siteContent['main-content'][`${section}-h4`];
+  txtContainer.querySelector('p').textContent =
+    siteContent['main-content'][`${section}-content`];
+});
+qs('#middle-img').src = siteContent['main-content']['middle-img-src'];
