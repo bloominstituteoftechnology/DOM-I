@@ -49,8 +49,40 @@ navBarLinks.forEach((element, index) => {
 
 // CTA 
 let ctaText = document.querySelector(".cta .cta-text h1");
-ctaText.innerText = siteContent.cta.h1;
 let ctaButton = document.querySelector(".cta .cta-text button");
-ctaButton.innerText = siteContent.cta.button;
 let ctaLogo = document.getElementById("cta-img");
+
+ctaText.innerText = siteContent.cta.h1;
+ctaButton.innerText = siteContent.cta.button;
 ctaLogo.setAttribute('src', siteContent["cta"]["img-src"]);
+
+// Main Content
+let titles = document.querySelectorAll('.main-content .text-content h4');
+let content = document.querySelectorAll('.main-content .text-content p');
+
+titles[0].innerText = siteContent['main-content']['features-h4'];
+content[0].innerText = siteContent['main-content']['features-content'];
+titles[1].innerText = siteContent['main-content']['about-h4'];
+content[1].innerText = siteContent['main-content']['about-content'];
+titles[2].innerText = siteContent['main-content']['services-h4'];
+content[2].innerText = siteContent['main-content']['services-content'];
+titles[3].innerText = siteContent['main-content']['product-h4'];
+content[3].innerText = siteContent['main-content']['product-content'];
+titles[4].innerText = siteContent['main-content']['vision-h4'];
+content[4].innerText = siteContent['main-content']['vision-content'];
+
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+// Contact
+let contactTitle = document.querySelector('.contact h4');
+let contactContent = document.querySelectorAll('.contact p');
+
+contactTitle.innerText = siteContent['contact']['contact-h4'];
+contactContent[0].innerText = siteContent['contact']['address'];
+contactContent[1].innerText = siteContent['contact']['phone'];
+contactContent[2].innerText = siteContent['contact']['email'];
+
+// Footer
+let copyright = document.querySelector('footer p');
+copyright.innerText = siteContent.footer.copyright;
