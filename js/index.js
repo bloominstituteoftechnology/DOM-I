@@ -45,22 +45,22 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let navItem1 = document.querySelector("nav a");
 navItem1.innerHTML = siteContent["nav"]["nav-item-1"]
-
+navItem1.style.color = "green";
 let navItem2 = document.getElementsByTagName("a");
 navItem2[1].innerHTML = siteContent["nav"]["nav-item-2"]
-
+navItem2[1].style.color = "green";
 let navItem3 = document.getElementsByTagName("a");
 navItem3[2].innerHTML = siteContent["nav"]["nav-item-3"]
-
+navItem3[2].style.color = "green";
 let navItem4 = document.getElementsByTagName("a");
 navItem4[3].innerHTML = siteContent["nav"]["nav-item-4"]
-
+navItem4[3].style.color = "green";
 let navItem5 = document.getElementsByTagName("a");
 navItem5[4].innerHTML = siteContent["nav"]["nav-item-5"]
-
+navItem5[4].style.color = "green";
 let navItem6 = document.getElementsByTagName("a");
 navItem6[5].innerHTML = siteContent["nav"]["nav-item-6"]
-
+navItem6[5].style.color = "green";
 let ctaH1 = document.querySelector(".cta-text h1");
 ctaH1.innerHTML = siteContent["cta"]["h1"]
 
@@ -104,3 +104,12 @@ footer.innerHTML = siteContent["footer"]["copyright"]
 //"footer": {
 //  "copyright" : "Copyright Great Idea! 2018"
 
+navLink = document.getElementsByTagName("nav")[0];
+let createNode = (addNav) => {
+let newNavItem = document.createElement("a")
+newNavItem.innerHTML = addNav;
+return newNavItem;
+}
+
+navLink.appendChild(createNode("End of Nav"));
+navLink.prepend(createNode("Start of Nav"));
