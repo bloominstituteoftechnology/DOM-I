@@ -42,7 +42,6 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let headerNavAppend = document.querySelector("nav"); 
-let headerNavColor = document.querySelectorAll("nav a"); 
 let headerNav = document.querySelectorAll("nav a");
 let ctaContent = document.querySelector(".cta-text h1");
 let ctaContentButton = document.querySelector(".cta-text button");
@@ -91,18 +90,19 @@ contactP[2].innerText = siteContent["contact"]["email"];
 
 footer.innerText = siteContent["footer"]["copyright"];
 
-headerNavColor[0].style.color = "green";
-headerNavColor[1].style.color = "green";
-headerNavColor[2].style.color = "green";
-headerNavColor[3].style.color = "green";
-headerNavColor[4].style.color = "green";
-headerNavColor[5].style.color = "green";
+headerNav[0].style.color = "green";
+headerNav[1].style.color = "green";
+headerNav[2].style.color = "green";
+headerNav[3].style.color = "green";
+headerNav[4].style.color = "green";
+headerNav[5].style.color = "green";
 
 
-
+let appendNavNode = document.createElement("a");
 let appendedNav = document.createTextNode("nav1");
-headerNavAppend.appendChild(appendedNav);
+headerNavAppend.appendChild(appendNavNode).appendChild(appendedNav);
 
+let prependNavNode = document.createElement("a");
 let prependedNav = document.createTextNode("nav2");
-headerNavAppend.prepend(prependedNav);
+headerNavAppend.prepend(prependedNav).prepend(prependNavNode);
 
