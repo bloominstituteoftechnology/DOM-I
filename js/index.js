@@ -62,18 +62,40 @@ ctaH1.innerHTML = siteContent.cta.h1;
 
 // === Main Content
 // Features
-let featuresH4 = document.querySelector(".text-content h4")[0];
+let featuresH4 = document.querySelectorAll(".top-content h4")[0];
 featuresH4.innerHTML = siteContent["main-content"]["features-h4"];
 
-let featuresP = document.querySelector(".text-content p")[0];
+let featuresP = document.querySelectorAll(".top-content p")[0];
 featuresP.innerHTML = siteContent["main-content"]["features-content"];
 
 // About
-let aboutH4 = document.querySelector(".text-content h4")[1];
+let aboutH4 = document.querySelectorAll(".top-content h4")[1];
 aboutH4.innerHTML = siteContent["main-content"]["about-h4"];
 
-let aboutP = document.querySelector(".text-content p")[1];
+let aboutP = document.querySelectorAll(".top-content p")[1];
 aboutP.innerHTML = siteContent["main-content"]["about-content"];
 
-// let featuresP = document.querySelector(".top-content p");
-// featuresP.innerHTML = siteContent["main-content"]["features-content"];
+// Middle Image
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+// Services
+let servicesH4 = document.querySelectorAll(".top-content h4")[1];
+servicesH4.innerHTML = siteContent["main-content"]["services-h4"];
+
+let servicesP = document.querySelectorAll(".top-content p")[1];
+servicesP.innerHTML = siteContent["main-content"]["services-content"];
+
+// Product
+let productH4 = document.querySelectorAll(".bottom-content h4")[0];
+productH4.innerHTML = siteContent["main-content"]["product-h4"];
+
+let productP = document.querySelectorAll(".bottom-content p")[0];
+productP.innerHTML = siteContent["main-content"]["product-content"];
+
+// Vision
+let visionH4 = document.querySelectorAll(".bottom-content h4")[1];
+visionH4.innerHTML = siteContent["main-content"]["vision-h4"];
+
+let visionP = document.querySelectorAll(".bottom-content p")[1];
+visionP.innerHTML = siteContent["main-content"]["vision-content"];
