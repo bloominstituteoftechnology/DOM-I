@@ -1,5 +1,6 @@
 let timerInt = 100000;
-window.onload = function() {
+
+function runTimer() {
     setInterval(function() { 
         if (timerInt < 110000) {
             timerInt += 10;
