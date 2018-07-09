@@ -90,7 +90,7 @@ tagLinks[3].style.color = 'green';
 tagLinks[4].style.color = 'green';
 tagLinks[5].style.color = 'green';
 
-//Task 4: CreateElement, appendChild(), & prepend()
+//Task 3: CreateElement, appendChild(), & prepend()
 let newNavItem = document.createElement("a");
 let newNavText = document.createTextNode("New Item")
 
@@ -104,7 +104,5 @@ let secondNewNavItemText = document.createTextNode("New Item 2");
 
 secondNewNavItem.appendChild(secondNewNavItemText);
 navBar.appendChild(secondNewNavItem);
-
-
 
 
