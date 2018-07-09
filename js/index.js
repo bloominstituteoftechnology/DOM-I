@@ -38,5 +38,61 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+const logo = document.getElementById("logo-img");
+const navLinks = document.querySelectorAll("nav a");
+const ctaHeading = document.querySelector(".cta-text h1");
+const ctaBtn = document.querySelector(".cta-text button");
+const ctaImg = document.getElementById("cta-img");
+const textBoxHeadings = document.querySelectorAll(".text-content h4");
+const textBoxContent = document.querySelectorAll(".text-content p");
+const midImg = document.getElementById("middle-img");
+const contactHeading = document.querySelector(".contact h4");
+const contactContent = document.querySelectorAll(".contact p");
+const footerContent = document.querySelector("footer p");
+
+
+
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+navLinks[0].innerHTML = siteContent["nav"]["nav-item-1"];
+navLinks[0].style.color = "teal";
+navLinks[1].innerHTML = siteContent["nav"]["nav-item-2"];
+navLinks[1].style.color = "teal";
+navLinks[2].innerHTML = siteContent["nav"]["nav-item-3"];
+navLinks[2].style.color = "teal";
+navLinks[3].innerHTML = siteContent["nav"]["nav-item-4"];
+navLinks[3].style.color = "teal";
+navLinks[4].innerHTML = siteContent["nav"]["nav-item-5"];
+navLinks[4].style.color = "teal";
+navLinks[5].innerHTML = siteContent["nav"]["nav-item-6"];
+navLinks[5].style.color = "teal";
+
+
+ctaHeading.innerHTML = siteContent["cta"]["h1"];
+
+ctaBtn.innerHTML = siteContent["cta"]["button"];
+
+ctaImg.src = siteContent["cta"]["img-src"];
+
+textBoxHeadings[0].innerHTML = siteContent["main-content"]["features-h4"];
+textBoxContent[0].innerHTML = siteContent["main-content"]["features-content"];
+
+textBoxHeadings[1].innerHTML = siteContent["main-content"]["about-h4"];
+textBoxContent[1].innerHTML = siteContent["main-content"]["about-content"];
+
+textBoxHeadings[2].innerHTML = siteContent["main-content"]["services-h4"];
+textBoxContent[2].innerHTML = siteContent["main-content"]["services-content"];
+
+textBoxHeadings[3].innerHTML = siteContent["main-content"]["product-h4"];
+textBoxContent[3].innerHTML = siteContent["main-content"]["product-content"];
+
+textBoxHeadings[4].innerHTML = siteContent["main-content"]["vision-h4"];
+textBoxContent[4].innerHTML = siteContent["main-content"]["vision-content"];
+
+midImg.src = siteContent["main-content"]["middle-img-src"];
+
+contactHeading.innerHTML = siteContent["contact"]["contact-h4"];
+contactContent[0].innerHTML = siteContent["contact"]["address"];
+contactContent[1].innerHTML = siteContent["contact"]["phone"];
+contactContent[2].innerHTML = siteContent["contact"]["email"];
+
+footerContent.innerHTML = siteContent["footer"]["copyright"];
