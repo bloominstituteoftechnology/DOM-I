@@ -9,3 +9,5 @@ const siteContent = [
 ];
 
 export default siteContent;
+
+//intializing pull
