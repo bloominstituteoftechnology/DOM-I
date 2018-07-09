@@ -85,3 +85,8 @@ contactInfo[2].innerHTML = siteContent["contact"]["email"];
 let footer = document.querySelector("footer p");
 footer.innerHTML = siteContent["footer"]["copyright"];
 
+[].forEach.call(nav, function(aNav) {
+  aNav.style.color = "green";
+})
+
+
