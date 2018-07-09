@@ -71,14 +71,23 @@ a[3].innerHTML = siteContent['nav']['nav-item-4']
 a[4].innerHTML = siteContent['nav']['nav-item-5']
 a[5].innerHTML = siteContent['nav']['nav-item-6']
 
-// new a node
+// new a node with append
 let textnode = document.createTextNode('Super')
 let newA = document.createElement('a')
 newA.appendChild(textnode);
 nava.appendChild(newA);
 
+// prepend
+let newbutt = document.createElement("button");
+let buttnode = document.createTextNode("ImmaButton");
+newbutt.appendChild(buttnode);
+nava.prepend(newbutt);
+
 //color change
 butt.style.color = 'green';
+butt.style.backgroundColor = 'orange'
+butt.style.border = 'thick dashed magenta'
+
 
 //section
 h1cta.innerHTML = "DOM <br> IS <br> AWESOME";
