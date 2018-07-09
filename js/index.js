@@ -37,6 +37,68 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+// Image list
+let imageList = document.querySelectorAll("img");
+imageList[0].setAttribute('src', siteContent["nav"]["img-src"]);
+imageList[1].setAttribute('src', siteContent["cta"]["img-src"]);
+imageList[2].setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+// DOM for child
+Object.keys(siteContent).forEach(function(selector) {
+  let parent = document.querySelector(selector) || document.querySelector('.' + selector);
+  let childList = Array.from(parent.children);
+
+  childList.forEach(function(element, index) {
+    const arrayOfContent = Object.values(siteContent[selector]);
+    element.innerText = arrayOfContent[index];
+  })
+
+});
+
+// Brute force
+let cta  = document.querySelector('.cta .cta-text');
+cta.innerHTML = `
+                  <h1>${siteContent['cta']['h1']}</h1>
+                  <button>${siteContent['cta']['button']}</button>
+                `;
+
+let topContent = document.querySelector('.main-content .top-content');
+topContent.innerHTML = `
+                          <div class="text-content">
+                            <h4>${siteContent['main-content']['features-h4']}</h4>
+                            <p>${siteContent['main-content']['features-content']}</p>
+                          </div>
+                          <div class="text-content">
+                            <h4>${siteContent['main-content']['about-h4']}</h4>
+                            <p>${siteContent['main-content']['about-content']}</p>
+                          </div>
+                        `;
+
+let bottomContent = document.querySelector('.main-content .bottom-content');
+bottomContent.innerHTML = `
+                          <div class="text-content">
+                            <h4>${siteContent['main-content']['services-h4']}</h4>
+                            <p>${siteContent['main-content']['services-content']}</p>
+                          </div>
+                          <div class="text-content">
+                            <h4>${siteContent['main-content']['product-h4']}</h4>
+                            <p>${siteContent['main-content']['product-content']}</p>
+                          </div>
+                          <div class="text-content">
+                            <h4>${siteContent['main-content']['vision-h4']}</h4>
+                            <p>${siteContent['main-content']['vision-content']}</p>
+                          </div>  
+                        `; 
+
+// navigation color
+let navigationText = document.querySelectorAll('nav a');
+navigationText.forEach(function(text) {
+  text.style.color = 'green';
+})
+
+let RandomA = document.createElement("a");
+let RandomB = document.createElement("a");
+RandomA.innerText = 'RandomA';
+RandomB.innerText = 'RandomB';
+navigationText[0].parentNode.appendChild(RandomA);
+navigationText[0].parentNode.prepend(RandomB);
