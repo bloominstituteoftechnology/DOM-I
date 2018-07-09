@@ -40,3 +40,40 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// My Code
+// === Nav Links
+let navLinks = document.querySelectorAll("nav a");
+let navItems = "nav-item-";
+
+for (i = 1; i < navLinks.length; i++) {
+  navLinks[i].innerHTML = siteContent["nav"][navItems+i];
+}
+
+// === Call to Action
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let ctaBtn = document.querySelector("button");
+ctaBtn.innerHTML = siteContent.cta.button;
+
+let ctaH1 = document.querySelector(".cta h1");
+ctaH1.innerHTML = siteContent.cta.h1;
+
+// === Main Content
+// Features
+let featuresH4 = document.querySelector(".text-content h4")[0];
+featuresH4.innerHTML = siteContent["main-content"]["features-h4"];
+
+let featuresP = document.querySelector(".text-content p")[0];
+featuresP.innerHTML = siteContent["main-content"]["features-content"];
+
+// About
+let aboutH4 = document.querySelector(".text-content h4")[1];
+aboutH4.innerHTML = siteContent["main-content"]["about-h4"];
+
+let aboutP = document.querySelector(".text-content p")[1];
+aboutP.innerHTML = siteContent["main-content"]["about-content"];
+
+// let featuresP = document.querySelector(".top-content p");
+// featuresP.innerHTML = siteContent["main-content"]["features-content"];
