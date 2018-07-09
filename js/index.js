@@ -76,3 +76,51 @@ ctaButton.innerHTML = siteContent.cta.button;
 
 let ctaH1 = document.querySelector("h1");
 ctaH1.innerHTML = siteContent.cta.h1;
+
+//////////////////////////////////
+// main content DOM Manipulation//
+//////////////////////////////////
+
+
+let featuresH4 = document.querySelectorAll(".top-content .text-content h4")[0]
+featuresH4.innerHTML = siteContent["main-content"]["features-h4"]
+
+let featuresP1 = document.querySelectorAll(".top-content .text-content p")[0]
+featuresP1.innerHTML = siteContent["main-content"]["features-content"]
+
+let aboutH4 = document.querySelectorAll(".top-content .text-content h4")[1]
+aboutH4.innerHTML = siteContent["main-content"]["about-h4"]
+
+let aboutP1 = document.querySelectorAll(".top-content .text-content p")[1]
+aboutP1.innerHTML = siteContent["main-content"]["about-content"]
+
+let banner = document.getElementById("middle-img");
+banner.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+
+
+let servicesH4 = document.querySelectorAll(".bottom-content .text-content h4")[0]
+servicesH4.innerHTML = siteContent["main-content"]["services-h4"]
+
+let servicesP1 = document.querySelectorAll(".bottom-content .text-content p")[0]
+servicesP1.innerHTML = siteContent["main-content"]["services-content"]
+
+let productH4 = document.querySelectorAll(".bottom-content .text-content h4")[1]
+productH4.innerHTML = siteContent["main-content"]["product-h4"]
+
+let productP1 = document.querySelectorAll(".bottom-content .text-content p")[1]
+productP1.innerHTML = siteContent["main-content"]["product-content"]
+
+let visionH4 = document.querySelectorAll(".bottom-content .text-content h4")[2]
+visionH4.innerHTML = siteContent["main-content"]["vision-h4"]
+
+let visionP1 = document.querySelectorAll(".bottom-content .text-content p")[2]
+visionP1.innerHTML = siteContent["main-content"]["product-content"]
+
+//////////////////////////
+// bottom/footer section//
+//////////////////////////
+
+
+let contact = document.querySelector(".contact h4")
+contact.innerHTML = siteContent["main-content"]["contact h4"]
