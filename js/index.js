@@ -49,7 +49,6 @@ ctaimg.setAttribute('src', siteContent["cta"]["img-src"])
 
 
 let navKeyArray = Object.keys(siteContent.nav);
-console.log(navKeyArray);
 
 let nav = document.getElementsByTagName('nav')[0];
 let anchorList = nav.children;
@@ -68,3 +67,37 @@ nav.prepend(b);
 
 nav.style.backgroundColor = "blue";
 
+let ctaText = document.getElementsByTagName("h1")[0];
+ctaText.textContent = siteContent["cta"]["h1"];
+
+let buttonText = document.getElementsByTagName("button")[0];
+buttonText.textContent = siteContent["cta"]['button'];
+
+let contentHeaders = document.querySelectorAll('h4');
+
+contentHeaders[0].textContent = siteContent["main-content"]["features-h4"];
+contentHeaders[1].textContent = siteContent["main-content"]["about-h4"];
+contentHeaders[2].textContent = siteContent["main-content"]["services-h4"];
+contentHeaders[3].textContent = siteContent["main-content"]["product-h4"];
+contentHeaders[4].textContent = siteContent["main-content"]["vision-h4"];
+contentHeaders[5].textContent = siteContent["contact"]["contact-h4"];
+
+let contentText = document.querySelectorAll('p');
+
+contentText[0].textContent = siteContent["main-content"]["features-content"];
+contentText[1].textContent = siteContent["main-content"]["about-content"];
+contentText[2].textContent = siteContent["main-content"]["services-content"];
+contentText[3].textContent = siteContent["main-content"]["product-content"];
+contentText[4].textContent = siteContent["main-content"]["vision-content"];
+
+let middleImage = document.querySelector('#middle-img');
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+let contactP = document.querySelectorAll(".contact p");
+contactP[0].textContent = siteContent["contact"]["address"];
+contactP[1].textContent = siteContent["contact"]["phone"];
+contactP[2].textContent = siteContent["contact"]["email"];
+
+
+let footerP = document.querySelector("footer p");
+footerP.textContent = siteContent["footer"]["copyright"];

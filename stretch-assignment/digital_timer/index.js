@@ -28,6 +28,7 @@ let timeLooper; //Need to declare globaly so local scopes have access.
 
 //*Button Functions*/
 
+//The start button function begins the measurement that timecheck() ends.
 const startButtonFunction = function() {
     timeLooper = setInterval(timeCheck, 10, 3009); //TODO the `09` is because of CMOS off by one error.  There's probably a smarter way to do this.
     startTime = new Date().getTime();
