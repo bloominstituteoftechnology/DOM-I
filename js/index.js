@@ -80,3 +80,18 @@ mainParagraphs[3].innerHTML = siteContent['main-content']['product-content'];
 mainParagraphs[4].innerHTML = siteContent['main-content']['vision-content'];
 
 
+// ===== Contact ===== 
+
+let contactHeading = document.querySelector('.contact h4');
+contactHeading.innerHTML = siteContent['contact']['contact-h4']
+
+let contactInfo = document.querySelectorAll('.contact p')
+contactInfo[0].innerHTML = siteContent['contact']['address'];
+contactInfo[1].innerHTML = siteContent['contact']['phone'];
+contactInfo[2].innerHTML = siteContent['contact']['email'];
+
+
+// ======== footer ========
+
+let footer = document.querySelector('footer p')
+footer.innerHTML = siteContent['footer']['copyright']
