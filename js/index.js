@@ -46,3 +46,8 @@ image[0].setAttribute('src', siteContent["nav"]["img-src"]);
 image[1].setAttribute('src', siteContent["cta"]["img-src"]);
 image[2].setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
+document.querySelector('.cta button').innerHTML=siteContent['cta']['button'];
+document.querySelector('.cta h1').innerHTML=siteContent['cta']['h1'];
+document.querySelector('footer p').innerHTML=siteContent['footer']['copyright'];
+
+ 
