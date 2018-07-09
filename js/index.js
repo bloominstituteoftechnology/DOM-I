@@ -44,9 +44,19 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //nav-bar
 let nav = document.querySelector("nav").children;
-nav[1].innerHTML= "Fish"
-console.log(nav[1]);
+
 
 for (let index = 0; index < nav.length; index++) {
   nav[index].innerHTML = siteContent.nav["nav-item-"+(index+1)]
 }
+
+//cta text
+let ctaText = document.querySelector(".cta-text").children;
+
+ctaText[0].innerText = siteContent.cta.h1;
+ctaText[1].innerText = siteContent.cta.button;
+
+//cta img
+
+let ctaIMG = document.querySelector("#cta-img");
+ctaIMG.setAttribute('src', siteContent.cta["img-src"]);
