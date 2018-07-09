@@ -41,26 +41,29 @@ const siteContent = {
 const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-const nav = document.querySelectorAll("a");
-nav[0].innerText = siteContent["nav"]["nav-item-1"];
-nav[1].innerText = siteContent["nav"]["nav-item-2"];
-nav[2].innerText = siteContent["nav"]["nav-item-3"];
-nav[3].innerText = siteContent["nav"]["nav-item-4"];
-nav[4].innerText = siteContent["nav"]["nav-item-5"];
-nav[5].innerText = siteContent["nav"]["nav-item-6"];
-
-nav.forEach(i => i.style.color = "green");
-
-const navBar = document.querySelector("header nav");
-
-const newNavItem1 = document.createElement("a");
-const newNavItem1Text = document.createTextNode("Good Ideas");
-newNavItem1.appendChild(newNavItem1Text);
-navBar.prepend(newNavItem1);
+const navBar = document.querySelector("nav");
 
 const newNavItem2 = document.createElement("a");
+newNavItem2.setAttribute('href', '#');
 const newNavItem2Text = document.createTextNode("Bad Ideas");
-navBar.appendChild(newNavItem2).appendChild(newNavItem2Text);
+newNavItem2.appendChild(newNavItem2Text);
+navBar.appendChild(newNavItem2);
+
+const newNavItem1 = document.createElement("a");
+newNavItem1.setAttribute('href', '#');
+const newNavItem1Text = document.createTextNode("Good Ideas");
+newNavItem1.prepend(newNavItem1Text);
+navBar.prepend(newNavItem1);
+
+const nav = document.querySelectorAll("a");
+nav[1].innerText = siteContent["nav"]["nav-item-1"];
+nav[2].innerText = siteContent["nav"]["nav-item-2"];
+nav[3].innerText = siteContent["nav"]["nav-item-3"];
+nav[4].innerText = siteContent["nav"]["nav-item-4"];
+nav[5].innerText = siteContent["nav"]["nav-item-5"];
+nav[6].innerText = siteContent["nav"]["nav-item-6"];
+
+nav.forEach(i => i.style.color = "green");
 
 const ctaHeader = document.querySelector(".cta-text h1");
 ctaHeader.innerText = siteContent["cta"]["h1"];
