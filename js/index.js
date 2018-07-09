@@ -114,13 +114,32 @@ productP1.innerHTML = siteContent["main-content"]["product-content"]
 let visionH4 = document.querySelectorAll(".bottom-content .text-content h4")[2]
 visionH4.innerHTML = siteContent["main-content"]["vision-h4"]
 
-let visionP1 = document.querySelectorAll(".bottom-content .text-content p")[2]
-visionP1.innerHTML = siteContent["main-content"]["product-content"]
+let visionP1 = document.querySelectorAll(".bottom-content .text-content p")[2];
+visionP1.innerHTML = siteContent["main-content"]["product-content"];
 
 //////////////////////////
 // bottom/footer section//
 //////////////////////////
 
 
-let contact = document.querySelector(".contact h4")
-contact.innerHTML = siteContent["main-content"]["contact h4"]
+let contactH4 = document.querySelector(".contact h4");
+contactH4.innerHTML = siteContent["contact"]["contact-h4"];
+
+/*let contactP2 = document.querySelector(".contact p");
+let contactInfo = ["address", "phone", "email"];
+
+for (i = 1; i < contactInfo.length; i++) {
+  contactInfo[i].innerHTML = siteContent["nav"][contactInfo+i];
+
+}
+*/
+
+let contactPs = document.querySelectorAll(".contact p");
+let contactItems = ["address", "phone", "email"];
+
+for (i = 0; i < 3; i++) {
+  contactPs[i].innerHTML = siteContent["contact"][contactItems[i]];
+}
+
+let footerText = document.querySelector("footer p");
+footerText.innerHTML = siteContent.footer.copyright;
