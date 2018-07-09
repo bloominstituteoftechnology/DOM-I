@@ -14,26 +14,26 @@ const siteContent = {
     "img-src": "img/header-img.png"
   },
   "main-content": {
-    "features-h4":"Features",
+    "features-h4": "Features",
     "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "about-h4":"About",
+    "about-h4": "About",
     "about-content": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "middle-img-src": "img/mid-page-accent.jpg",
-    "services-h4":"Services",
+    "services-h4": "Services",
     "services-content": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "product-h4":"Product",
+    "product-h4": "Product",
     "product-content": "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "vision-h4":"Vision",
+    "vision-h4": "Vision",
     "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
   },
   "contact": {
-    "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
-    "phone" : "1 (888) 888-8888",
-    "email" : "sales@greatidea.io",
+    "contact-h4": "Contact",
+    "address": "123 Way 456 Street Somewhere, USA",
+    "phone": "1 (888) 888-8888",
+    "email": "sales@greatidea.io",
   },
   "footer": {
-    "copyright" : "Copyright Great Idea! 2018"
+    "copyright": "Copyright Great Idea! 2018"
   },
 };
 
@@ -53,12 +53,12 @@ document.querySelector("nav").prepend(bLink);
 
 document.querySelector("nav").appendChild(aLink);
 
-siteContent.nav["nav-item-0"] ="Home";
-siteContent.nav["nav-item-7"] ="Webring";
+siteContent.nav["nav-item-0"] = "Home";
+siteContent.nav["nav-item-7"] = "Webring";
 
 
 for (let index = 0; index < nav.length; index++) {
-  nav[index].innerHTML = siteContent.nav["nav-item-"+(index)]
+  nav[index].innerHTML = siteContent.nav["nav-item-" + (index)]
   nav[index].style.color = "green";
 
 }
@@ -78,15 +78,15 @@ ctaIMG.setAttribute('src', siteContent.cta["img-src"]);
 
 
 //text-content (main-content)
-const contentTitles = ["features","about","services","product","vision"];
+const contentTitles = ["features", "about", "services", "product", "vision"];
 
 
 let textContent = document.querySelectorAll(".text-content");
 
 for (let index = 0; index < textContent.length; index++) {
-  textContent[index].children[0].innerText =siteContent["main-content"][contentTitles[index] + "-h4"]
+  textContent[index].children[0].innerText = siteContent["main-content"][contentTitles[index] + "-h4"]
 
-  textContent[index].children[1].innerText =siteContent["main-content"][contentTitles[index] + "-content"]
+  textContent[index].children[1].innerText = siteContent["main-content"][contentTitles[index] + "-content"]
 
 }
 
@@ -99,11 +99,34 @@ document.querySelector("#middle-img").setAttribute('src', siteContent["main-cont
 
 let contact = document.querySelector(".contact").children;
 
-contact[0].innerText=siteContent.contact["contact-h4"];
-contact[1].innerText=siteContent.contact["address"];
-contact[2].innerText=siteContent.contact["phone"];
-contact[3].innerText=siteContent.contact["email"];
+contact[0].innerText = siteContent.contact["contact-h4"];
+contact[1].innerText = siteContent.contact["address"];
+contact[2].innerText = siteContent.contact["phone"];
+contact[3].innerText = siteContent.contact["email"];
 
 //footer
 
 document.querySelector("footer p").innerText = siteContent.footer.copyright;
+
+const footer = document.querySelector("footer");
+const createdButton = document.createElement("button");
+const spacer = document.createElement("br");
+
+footer.appendChild(spacer);
+
+footer.appendChild(createdButton);
+
+const flipButton =  document.querySelector("footer button")
+
+console.log(footer.children[1]);
+flipButton.innerText = "Australian use only"
+flipButton.setAttribute('onclick', "flip()");
+//functions
+
+const flip = () => {
+  if (document.querySelector(".container").style.transform != "rotate(180deg)") {
+    document.querySelector(".container").style.transform = "rotate(180deg)";
+  } else {
+    document.querySelector(".container").style.transform = "rotate(0deg)";
+  }
+}
