@@ -40,7 +40,7 @@ let startBtnText=document.createTextNode('Start Me Up');
 startBtn.setAttribute('id','startButton');
 startBtn.appendChild(startBtnText);
 document.querySelector('.digits').appendChild(startBtn);
-document.getElementById('startButton').addEventListener('click',()=>{document.getElementById('startButton').disabled=true; incrementTimer();});
+document.getElementById('startButton').addEventListener('click',()=>{reset();document.getElementById('startButton').disabled=true; incrementTimer();});
 let resetBtn=document.createElement('Button');
 let resetBtnText=document.createTextNode('Reset Me');
 resetBtn.setAttribute('id','resetButton');
