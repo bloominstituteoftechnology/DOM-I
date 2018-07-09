@@ -56,3 +56,20 @@ navItem4[3].innerHTML = siteContent["nav"]["nav-item-4"]
 let navItem5 = document.getElementsByTagName("a");
 navItem5[4].innerHTML = siteContent["nav"]["nav-item-5"]
 
+
+let ctaText = document.querySelector(".cta-text h1");
+ctaText.innerHTML = (siteContent["cta"]["h1"]);
+
+let ctaImg = document.getElementById("cta-img");
+ctaImg.src = siteContent["cta"]["img-src"];
+
+let ctaButton = document.querySelector(".cta-text button");
+ctaButton.innerHTML = (siteContent["cta"]["button"]);
+
+// Main Content
+
+let middleImg = document.getElementById("middle-img");
+middleImg.src = siteContent["main-content"] ["middle-img-src"];
+
+let mainContentFeatures = document.querySelectorAll(".main-content features")
+mainContentFeatures.innerHTML = siteContent["main-content"]["features"];
