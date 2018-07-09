@@ -42,43 +42,59 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let cta = document.getElementById('cta-img');
-cta.src = siteContent['cta']['img-src']
+cta.src = siteContent['cta']['img-src'];
+
 
 let mid = document.getElementById('middle-img');
-mid.src = siteContent['main-content']['middle-img-src']
+mid.src = siteContent['main-content']['middle-img-src'];
+mid.style.borderRadius = "25px";
 
-let navbar = document.getElementsByTagName('a');
-navbar[0].innerHTML = siteContent['nav']['nav-item-1']
-navbar[1].innerHTML = siteContent['nav']['nav-item-2']
-navbar[2].innerHTML = siteContent['nav']['nav-item-3']
-navbar[3].innerHTML = siteContent['nav']['nav-item-4']
-navbar[4].innerHTML = siteContent['nav']['nav-item-5']
+let navbar = document.querySelectorAll('header nav a');
+navbar.forEach((x,index) => {
+  x.innerText = siteContent["nav"][`nav-item-${index+1}`];
+  x.style.color = 'green';
+});
+
+let first = document.createElement("a");
+let last = document.createElement("a");
+let home = document.createTextNode('Home');
+let link = document.createTextNode('Links');
+let nav = document.querySelector('nav');
+first.appendChild(home);
+last.appendChild(link)
+nav.appendChild(last);
+nav.prepend(first);
+
 
 let ctaContent = document.querySelector('.cta .cta-text');
-ctaContent.querySelector('h1').innerText = siteContent['cta']['h1']
-ctaContent.querySelector('button').innerText = siteContent['cta']['button']
+ctaContent.querySelector('h1').innerText = siteContent['cta']['h1'];
+ctaContent.querySelector('button').innerText = siteContent['cta']['button'];
+ctaContent.style.color = 'red';
+ctaContent.style.border = '3px black solid';
+ctaContent.style.borderRadius = '10px';
 
 let contentTitle = document.querySelectorAll('.text-content h4');
-contentTitle[0].innerText = siteContent['main-content']['features-h4']
-contentTitle[1].innerText = siteContent['main-content']['about-h4']
-contentTitle[2].innerText = siteContent['main-content']['services-h4']
-contentTitle[3].innerText = siteContent['main-content']['product-h4']
-contentTitle[4].innerText = siteContent['main-content']['vision-h4']
+contentTitle[0].innerText = siteContent['main-content']['features-h4'];
+contentTitle[1].innerText = siteContent['main-content']['about-h4'];
+contentTitle[2].innerText = siteContent['main-content']['services-h4'];
+contentTitle[3].innerText = siteContent['main-content']['product-h4'];
+contentTitle[4].innerText = siteContent['main-content']['vision-h4'];
+
 
 let content = document.querySelectorAll('.text-content p');
-content[0].innerText = siteContent['main-content']['features-content']
-content[1].innerText = siteContent['main-content']['about-content']
-content[2].innerText = siteContent['main-content']['services-content']
-content[3].innerText = siteContent['main-content']['product-content']
-content[4].innerText = siteContent['main-content']['vision-content']
+content[0].innerText = siteContent['main-content']['features-content'];
+content[1].innerText = siteContent['main-content']['about-content'];
+content[2].innerText = siteContent['main-content']['services-content'];
+content[3].innerText = siteContent['main-content']['product-content'];
+content[4].innerText = siteContent['main-content']['vision-content'];
 
 let contact = document.querySelector('.contact h4');
-contact.innerText = siteContent['contact']['contact-h4']
+contact.innerText = siteContent['contact']['contact-h4'];
 
 let contactContent = document.querySelectorAll('.contact p')
-contactContent[0].innerText = siteContent['contact']['address']
-contactContent[1].innerText = siteContent['contact']['phone']
-contactContent[2].innerText = siteContent['contact']['email']
+contactContent[0].innerText = siteContent['contact']['address'];
+contactContent[1].innerText = siteContent['contact']['phone'];
+contactContent[2].innerText = siteContent['contact']['email'];
 
 let footer = document.querySelector('footer p');
-footer.innerText = siteContent['footer']['copyright']
+footer.innerText = siteContent['footer']['copyright'];
