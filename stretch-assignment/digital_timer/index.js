@@ -8,6 +8,10 @@ let time = 0;
 let start = document.getElementById('start');
 let reset = document.getElementById('reset');
 
+let buttons = document.getElementById('buttons');
+let button = document.querySelectorAll('button');
+console.log(button);
+
 
 start.addEventListener('click', () => {
 	let count = setInterval(function(){
@@ -51,3 +55,15 @@ reset.addEventListener('click', () => {
 		element.style.color = 'black';
 	})
 });
+
+buttons.style.width = '100%';
+buttons.style.display = 'flex';
+buttons.style['justify-content'] = 'center';
+button.forEach((element)=>{
+	element.style['border-radius'] = '4px';
+	element.style['padding'] = '10px 15px';
+	element.style['margin'] = '0px 10px';
+	element.style['border'] = '2px solid black';
+	element.style['background-color'] = '#74b9ff';
+});
+
