@@ -51,6 +51,21 @@ navItem[3].innerHTML = siteContent["nav"]["nav-item-4"];
 navItem[4].innerHTML = siteContent["nav"]["nav-item-5"];
 navItem[5].innerHTML = siteContent["nav"]["nav-item-6"];
 
+navItem.forEach(i => i.style.color = "green");
+
+navItem = document.getElementsByTagName("nav")[0];
+let createNewNode = (name) => {
+  let newNode = document.createElement("a");
+  newNode.innerHTML = name;
+  return newNode;
+} // Function to create new nodes nested inside the nav
+
+navItem.prepend(createNewNode("Is it working?"));
+navItem.append(createNewNode("Now is working!"));
+
+
+
+
 
 
 //============================CTA Items ===============================
@@ -107,3 +122,6 @@ contactInfo[2].innerHTML = siteContent["contact"]["email"];
 
 let footerInfo = document.querySelector("footer p");
 footerInfo.innerHTML = siteContent["footer"]["copyright"];
+
+
+
