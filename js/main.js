@@ -10,24 +10,61 @@ const ctaH1 = document.querySelector('.cta h1');
 const ctaBtn = document.querySelector('.cta button');
 const ctaImg = document.querySelector('.cta img');
 
-const mainContent = document.querySelector('.main-content');
-const topContent = document.querySelector('.main-content .top-content');
-const textContent = document.querySelectorAll('.main-content .text-content');
+const topText = document.querySelectorAll('.top-content .text-content p');
+const topH4 = document.querySelectorAll('.top-content .text-content h4');
 
 const midImg = document.querySelector('.main-content .middle-img');
 
-const bottomContent = document.querySelector('.main-content .bottom-content');
-const bottomText = document.querySelectorAll('.bottom-content .text-content');
+const bottomH4 = document.querySelectorAll('.main-content .bottom-content h4');
+const bottomText = document.querySelectorAll('.main-content .bottom-content p');
 
-const contact = document.querySelector('.contact');
+const contactH4 = document.querySelector('.contact h4');
 const contactPara = document.querySelectorAll('.contact p');
 
-const footer = document.querySelector('footer');
+const footerP = document.querySelector('footer p');
 
-console.log(cta);
+console.log(bottomText);
+
+
+footerP.innerHTML = siteContent.footer.copyright;
+
+contactH4.innerHTML = siteContent.contact["contact-h4"];
+contactPara[0].innerHTML = siteContent.contact.address;
+contactPara[1].innerHTML = siteContent.contact.phone
+contactPara[2].innerHTML = siteContent.contact.email;
+
+
+bottomH4[0].innerHTML = siteContent["main-content"]["services-h4"];
+bottomH4[1].innerHTML = siteContent["main-content"]["product-h4"];
+bottomH4[2].innerHTML = siteContent["main-content"]["vision-h4"];
+
+bottomText[0].innerHTML = siteContent["main-content"]["services-content"];
+bottomText[1].innerHTML = siteContent["main-content"]["product-content"];
+bottomText[2].innerHTML = siteContent["main-content"]["vision-content"];
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ctaH1.innerHTML = siteContent.cta.h1;
 ctaBtn.innerHTML = siteContent.cta.button;
+
+topH4[0].innerHTML = siteContent["main-content"]["features-h4"];
+topH4[1].innerHTML = siteContent["main-content"]["about-h4"];
+
+topText[0].innerHTML = siteContent["main-content"]["features-content"];
+topText[1].innerHTML = siteContent["main-content"]["about-content"];
+
+
 
 
 
