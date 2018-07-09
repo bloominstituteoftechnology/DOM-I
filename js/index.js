@@ -114,7 +114,7 @@ let newAText = document.createTextNode("Home");//Sets Place for text;
 //^end of first addition
 
 let newA2 = document.createElement("a")
-let newAText2 = document.createTextNode("Partners");
+let newAText2 = document.createTextNode("Template Change");
 //Now append the item to the NavBar
 
 newA.appendChild(newAText);//sets the created element to include the desired text. 
@@ -138,3 +138,34 @@ navBar.forEach(function (element){
 //Stretch goals  
 let containerText = document.querySelector(".container");
 containerText.style.fontFamily = "Apple Chancery"; 
+
+
+//My attempt to add an event handler 
+let modifiedTemplate = 0; // set to false means regular orginal template. //true will use different template. 
+function modifyTemplate (){
+  if(modifiedTemplate === 0){
+    containerText.style.color = "White";
+    containerText.style.backgroundColor = "Black"
+    modifiedTemplate = 1; 
+  } else if (modifiedTemplate === 1){
+    containerText.style.color = "Black";
+    containerText.style.backgroundColor = "Yellow";
+    modifiedTemplate = 2;  
+  } else if (modifiedTemplate === 2){
+    containerText.style.color = "Black";
+    containerText.style.backgroundColor = "Pink";
+    modifiedTemplate = 3;  
+  } else if (modifiedTemplate === 3){
+    containerText.style.color = "White";
+    containerText.style.backgroundColor = "Red";
+    modifiedTemplate = 4;
+  } else if (modifiedTemplate === 4){
+    containerText.style.color = "Black";
+    containerText.style.backgroundColor = "White";
+    modifiedTemplate = 0;
+  }
+}
+
+navBar[7].addEventListener("click",modifyTemplate, false);
+//^ this will change the template from orginal to 4 other template choices. 
+
