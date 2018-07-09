@@ -41,13 +41,13 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let nav = document.querySelectorAll("nav a");
-nav[0].innerHTML = siteContent["nav"]["nav-item-1"];
-nav[1].innerHTML = siteContent["nav"]["nav-item-2"];
-nav[2].innerHTML = siteContent["nav"]["nav-item-3"];
-nav[3].innerHTML = siteContent["nav"]["nav-item-4"];
-nav[4].innerHTML = siteContent["nav"]["nav-item-5"];
-nav[5].innerHTML = siteContent["nav"]["nav-item-6"];
+let navs = document.querySelectorAll("nav a");
+navs[0].innerHTML = siteContent["nav"]["nav-item-1"];
+navs[1].innerHTML = siteContent["nav"]["nav-item-2"];
+navs[2].innerHTML = siteContent["nav"]["nav-item-3"];
+navs[3].innerHTML = siteContent["nav"]["nav-item-4"];
+navs[4].innerHTML = siteContent["nav"]["nav-item-5"];
+navs[5].innerHTML = siteContent["nav"]["nav-item-6"];
 
 let ctaHeader = document.querySelector(".cta .cta-text h1");
 ctaHeader.innerHTML = siteContent["cta"]["h1"];
@@ -85,8 +85,13 @@ contactInfo[2].innerHTML = siteContent["contact"]["email"];
 let footer = document.querySelector("footer p");
 footer.innerHTML = siteContent["footer"]["copyright"];
 
-[].forEach.call(nav, function(aNav) {
-  aNav.style.color = "green";
+[].forEach.call(navs, function(nav) {
+  nav.style.color = "green";
 })
 
+let nav = document.querySelector('nav');
+let homeNav = document.createElement('a');
+homeNav.appendChild(document.createTextNode("Home"));
+homeNav.style.color = "green";
+nav.prepend(homeNav);
 
