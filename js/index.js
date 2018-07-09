@@ -106,8 +106,29 @@ footerParagraph.innerHTML = siteContent.footer.copyright;
 
 //Making changes and adding to content 
 
+//use .appendChild() and .prepend() to add new elements. Placed above changing the color to green because I want all the colors to match. 
+
+//Create the element desired to append or prepend
+let newA = document.createElement("a");//creates an A tag. 
+let newAText = document.createTextNode("Home");//Sets Place for text; 
+//^end of first addition
+
+let newA2 = document.createElement("a")
+let newAText2 = document.createTextNode("Partners");
+//Now append the item to the NavBar
+
+newA.appendChild(newAText);//sets the created element to include the desired text. 
+
+document.querySelector("nav").prepend(newA); //Sets a Home atag to the begining of the navBar.
+
+newA2.appendChild(newAText2);
+
+document.querySelector("nav").appendChild(newA2); 
+
+
 //Change the color of the navigation text to be green.
 //There is 6 elements within this so a ForEach method would be best to keep the code dry here. 
+navBar = document.querySelectorAll("nav a");
 
 navBar.forEach(function (element){
   element.style.color = "green"; 
