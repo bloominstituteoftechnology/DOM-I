@@ -38,5 +38,48 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+let doc = document;
+
+let logo = doc.querySelector("#logo-img");
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+let title = doc.querySelector("title");
+title.innerHTML = "Great Idea";
+
+let nav = doc.querySelector("nav");
+let ctaText = doc.querySelector(".cta-text h1");
+let button = doc.querySelector(".cta-text button");
+let ctaIMG = doc.querySelector("#cta-img");
+let features = doc.querySelectorAll(".text-content h4");
+features[0].innerHTML = "Features";
+let featuresText = doc.querySelector(".text-content p");
+let about = features[1];
+about.innerHTML = "About";
+let services = doc.querySelector(".bottom-content h4");
+let servicesText = doc.querySelector(".bottom-content p");
+let product = doc.querySelector("text-content h4");
+let productText = doc.querySelector("text-content p");
+let vision = doc.querySelector("bottom-content h4");
+let visionText = doc.querySelector("bottom-content p");
+let contact = doc.querySelectorAll(".contact");
+
+contact[0] 
+contact[1] 
+contact[2]
+contact[3]
+
+let footer = doc.querySelector("footer");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
