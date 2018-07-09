@@ -41,7 +41,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-//querySelectors 
+//QUERY SELECTORS
 
 //nav
 let nav = document.querySelectorAll("nav a");
@@ -55,10 +55,19 @@ let ctaLogo = document.querySelector("#cta-img");
 
 let mainContentHeaders = document.querySelectorAll(".text-content h4");
 let mainContentText = document.querySelectorAll(".text-content p");
+let mainContentImg = document.querySelector("#middle-img");
+
+//contact
+
+let contactHeader = document.querySelector(".contact h4");
+let contactText = document.querySelectorAll(".contact p");
+
+//footer
+
+let footer = document.querySelector("footer p");
 
 
-
-//HTML Manipulation
+//HTML MANIPULATION
 
 //nav
 nav[0].innerHTML = siteContent["nav"]["nav-item-1"];
@@ -86,4 +95,17 @@ mainContentText[1].innerHTML = siteContent["main-content"]["about-content"];
 mainContentText[2].innerHTML = siteContent["main-content"]["services-content"];
 mainContentText[3].innerHTML = siteContent["main-content"]["product-content"];
 mainContentText[4].innerHTML = siteContent["main-content"]["vision-content"];
+
+mainContentImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+//contact
+
+contactHeader.innerHTML = siteContent["contact"]["contact-h4"];
+contactText[0].innerHTML = siteContent["contact"]["address"];
+contactText[1].innerHTML = siteContent["contact"]["phone"];
+contactText[2].innerHTML = siteContent["contact"]["email"];
+
+//footer
+
+footer.innerHTML = siteContent["footer"]["copyright"];
 
