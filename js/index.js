@@ -45,8 +45,13 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 //QUERY SELECTORS
 
 //nav
-let nav = document.querySelectorAll("nav a");
+let nav = document.querySelector("nav");
+let navBar= document.querySelectorAll("nav a");
 
+let navLink1 = document.createElement("a");
+let navLink2 = document.createElement("a");
+let text1 = document.createTextNode("Memes");
+let text2 = document.createTextNode("Existential Dread");
 
 //cta
 let ctaHeader = document.querySelector(".cta-text h1");
@@ -72,14 +77,29 @@ let footer = document.querySelector("footer p");
 //HTML MANIPULATION
 
 //nav
-nav[0].innerHTML = siteContent["nav"]["nav-item-1"];
-nav[1].innerHTML = siteContent["nav"]["nav-item-2"];
-nav[2].innerHTML = siteContent["nav"]["nav-item-3"];
-nav[3].innerHTML = siteContent["nav"]["nav-item-4"];
-nav[4].innerHTML = siteContent["nav"]["nav-item-5"];
-nav[5].innerHTML = siteContent["nav"]["nav-item-6"];
+navBar[0].innerHTML = siteContent["nav"]["nav-item-1"];
+navBar[1].innerHTML = siteContent["nav"]["nav-item-2"];
+navBar[2].innerHTML = siteContent["nav"]["nav-item-3"];
+navBar[3].innerHTML = siteContent["nav"]["nav-item-4"];
+navBar[4].innerHTML = siteContent["nav"]["nav-item-5"];
+navBar[5].innerHTML = siteContent["nav"]["nav-item-6"];
 
-nav.forEach((element,index) => element.style.color = "green");
+navLink1.appendChild(text1);
+navLink2.appendChild(text2);
+
+nav.appendChild(navLink1);
+nav.prepend(navLink2);
+
+navLink1.style.color = "green";
+navLink2.style.color = "green";
+
+navLink1.setAttribute("href", "#");
+navLink2.setAttribute("href", "#");
+
+
+
+navBar.forEach((element,index) => element.style.color = "green");
+
 
 
 
