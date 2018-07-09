@@ -105,7 +105,7 @@ let footerItem = document.querySelectorAll("footer p");
 footerItem[0].innerHTML = siteContent["footer"]["copyright"];
 
 //new content
-let node = document.createElement("social-media");
-let socialMedia = document.createElement("Facebook"); 
-node.appendChild(socialMedia); 
-document.getElementsByClassName("contact").appendChild(node);
+let newTab = document.createElement("<a href='#'></a>"); 
+let newContent = 
+newTab.appendChild("nav")
+
