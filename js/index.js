@@ -40,3 +40,10 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let ctaHeader = document.querySelector("#cta-img");
+ctaHeader.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let navBar = document.querySelectorAll(a);
+
+navBar
