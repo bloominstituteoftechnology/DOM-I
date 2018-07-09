@@ -48,3 +48,38 @@ tagLinks[2].innerHTML = "Vision"
 tagLinks[3].innerHTML = "Features"
 tagLinks[4].innerHTML = "About"
 tagLinks[5].innerHTML = "Contact"
+
+let awesomeWords = document.querySelector("h1");
+awesomeWords.innerHTML = siteContent["cta"]["h1"]
+
+let ctaButton = document.querySelector("Button");
+ctaButton.innerHTML = "Get Started"
+
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
+// ctaImg.src = "img/header-img.png"
+
+let paragraphHeadings = document.getElementsByTagName("h4");
+paragraphHeadings[0].innerHTML = "Features"
+paragraphHeadings[1].innerHTML = "About"
+paragraphHeadings[2].innerHTML = "Services"
+paragraphHeadings[3].innerHTML = "Product"
+paragraphHeadings[4].innerHTML = "Vision"
+paragraphHeadings[5].innerHTML = "Contact"
+
+let paragraphText = document.getElementsByTagName("p");
+paragraphText[0].innerHTML = siteContent["main-content"]["features-content"]
+paragraphText[1].innerHTML = siteContent["main-content"]["about-content"]
+paragraphText[2].innerHTML = siteContent["main-content"]["services-content"]
+paragraphText[3].innerHTML = siteContent["main-content"]["product-content"]
+paragraphText[4].innerHTML = siteContent["main-content"]["vision-content"]
+paragraphText[5].innerHTML = siteContent["contact"]["address"]
+paragraphText[6].innerHTML = siteContent["contact"]["phone"]
+paragraphText[7].innerHTML = siteContent["contact"]["email"]
+paragraphText[8].innerHTML = siteContent["footer"]["copyright"]
+
+
+
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
