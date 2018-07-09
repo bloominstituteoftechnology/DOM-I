@@ -96,6 +96,7 @@ contactP[2].textContent = siteContent["contact"]["email"];
 
 footerP.textContent = siteContent["footer"]["copyright"];
 
+
 // Styles
 
 navItems[0].style.color = "green";
@@ -122,5 +123,17 @@ navBack.style.color = "green";
 document.querySelector("nav").prepend(navFront);
 document.querySelector("nav").appendChild(navBack);
 
+navFront.href = "#";
+navBack.href = "#";
 
+// Stretch Goals
+// CSS styles added via JavaScript are added inline
 
+document.querySelector(".contact").style.width = "150px";
+ctaH1.style.color = "dodgerblue";
+TCTCH4[0].style.color = "dodgerblue";
+TCTCH4[1].style.color = "dodgerblue";
+BCTCH4[0].style.color = "dodgerblue";
+BCTCH4[1].style.color = "dodgerblue";
+BCTCH4[2].style.color = "dodgerblue";
+contactH4.style.color = "dodgerblue";
