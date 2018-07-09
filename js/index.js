@@ -44,8 +44,21 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 // Nav Bar
 let navBarLinks = document.querySelectorAll('header nav a');
 navBarLinks.forEach((element, index) => {
-  element.innerText = siteContent["nav"][`nav-item-${index+1}`]
-})
+  element.innerText = siteContent["nav"][`nav-item-${index+1}`];
+  element.style.color = 'green';
+});
+
+let start = document.createElement("a");
+let end = document.createElement("a");
+let navBar = document.querySelector("nav");
+start.innerText = 'Start';
+end.innerText = 'End';
+start.href = '#';
+end.href = '#';
+navBar.appendChild(end);
+navBar.prepend(start);
+
+
 
 // CTA 
 let ctaText = document.querySelector(".cta .cta-text h1");
