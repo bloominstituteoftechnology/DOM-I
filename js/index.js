@@ -47,6 +47,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 //nav
 let nav = document.querySelectorAll("nav a");
 
+
 //cta
 let ctaHeader = document.querySelector(".cta-text h1");
 let ctaButton = document.querySelector(".cta-text button");
@@ -77,6 +78,10 @@ nav[2].innerHTML = siteContent["nav"]["nav-item-3"];
 nav[3].innerHTML = siteContent["nav"]["nav-item-4"];
 nav[4].innerHTML = siteContent["nav"]["nav-item-5"];
 nav[5].innerHTML = siteContent["nav"]["nav-item-6"];
+
+nav.forEach((element,index) => element.style.color = "green");
+
+
 
 //cta
 ctaHeader.innerHTML = "DOM<br> Is<br> Awesome";
