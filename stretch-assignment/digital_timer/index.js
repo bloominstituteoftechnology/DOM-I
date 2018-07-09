@@ -24,6 +24,7 @@ resetButton.innerText = 'Reset';
 resetButton.id = 'reset';
 pauseButton.innerText = 'Pause';
 pauseButton.id = 'pause';
+pauseButton.disabled = true;
 container.append(startButton);
 container.append(resetButton);
 container.append(pauseButton);
@@ -46,6 +47,7 @@ const updateClock = () => {
       clearInterval(clock);
       digits.style.color = 'red';
       startButton.disabled = false;
+      pauseButton.disabled = true;
     }
 
     secondTens.textContent = Math.floor(count / 10000);
@@ -53,13 +55,6 @@ const updateClock = () => {
     msHundreds.textContent = Math.floor(count / 100) % 10;
     msTens.textContent = Math.floor(count/10) % 10;
   }
-}
-
-const startClock = () => {
-  clock = setInterval(updateClock, 10);
-  startButton.disabled = true;
-  pauseButton.innerText = 'Pause';
-  isPaused = false;
 }
 
 const reset = () => {
@@ -75,6 +70,14 @@ const reset = () => {
   msTens.textContent = '-';
 
   startButton.disabled = false;
+  pauseButton.disabled = true;
+}
+
+const startClock = () => {
+  reset();
+  clock = setInterval(updateClock, 10);
+  startButton.disabled = true;
+  pauseButton.disabled = false;
 }
 
 const pauseToggle = () => {
