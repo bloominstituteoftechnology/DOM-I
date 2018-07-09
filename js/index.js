@@ -41,6 +41,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+let headerNavAppend = document.querySelector("nav"); 
 let headerNavColor = document.querySelectorAll("nav a"); 
 let headerNav = document.querySelectorAll("nav a");
 let ctaContent = document.querySelector(".cta-text h1");
@@ -97,5 +98,11 @@ headerNavColor[3].style.color = "green";
 headerNavColor[4].style.color = "green";
 headerNavColor[5].style.color = "green";
 
-let appendedNav = document.createElement("nav");
-document.appendChild(appendedNav);
+
+
+let appendedNav = document.createTextNode("nav1");
+headerNavAppend.appendChild(appendedNav);
+
+let prependedNav = document.createTextNode("nav2");
+headerNavAppend.prepend(prependedNav);
+
