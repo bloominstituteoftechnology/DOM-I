@@ -57,6 +57,15 @@ navItem[3].innerHTML = siteContent["nav"]["nav-item-4"];
 navItem[4].innerHTML = siteContent["nav"]["nav-item-5"];
 navItem[5].innerHTML = siteContent["nav"]["nav-item-6"];
 
+navItem[0].style.color ="green";
+navItem[1].style.color ="green";
+navItem[2].style.color ="green";
+navItem[3].style.color ="green";
+navItem[4].style.color ="green";
+navItem[5].style.color ="green";
+
+
+
 
 //cta content
 let buttonCTA = document.querySelectorAll(".cta-text button"); 
@@ -93,8 +102,10 @@ contactItem[1].innerHTML = siteContent["contact"]["phone"];
 contactItem[2].innerHTML = siteContent["contact"]["email"];
 
 let footerItem = document.querySelectorAll("footer p"); 
-footerItem[0].innerHTMl = siteContent["footer"]["copyright"];
+footerItem[0].innerHTML = siteContent["footer"]["copyright"];
 
 //new content
-
-
+let node = document.createElement("social-media");
+let socialMedia = document.createElement("Facebook"); 
+node.appendChild(socialMedia); 
+document.getElementsByClassName("contact").appendChild(node);
