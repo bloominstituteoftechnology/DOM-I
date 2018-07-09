@@ -41,11 +41,10 @@ const siteContent = {
 
 //  =========  Top Nav ==========
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.src = siteContent["nav"]["img-src"];
+
 
 let navItem = document.querySelectorAll("nav a");
-
-
 navItem[0].innerHTML = siteContent["nav"]["nav-item-1"];
 navItem[1].innerHTML = siteContent["nav"]["nav-item-2"];
 navItem[2].innerHTML = siteContent["nav"]["nav-item-3"];
@@ -54,16 +53,29 @@ navItem[4].innerHTML = siteContent["nav"]["nav-item-5"];
 navItem[5].innerHTML = siteContent["nav"]["nav-item-6"];
 
 
+let nav = document.querySelector("nav");
+let a = document.createElement("a");
+
+
+nav.prepend(document.createTextNode("Home"));
+nav.appendChild(document.createTextNode("Learn More"));
+
+nav.style.color = "green";
+
+
+for (let i =0; i<navItem.length; i++){
+  navItem[i].style.color = "green";
+};
 
 // =========== CTA ==========
 let ctaH1 = document.querySelector(".cta .cta-text h1");
 let ctaButton = document.querySelector(".cta .cta-text button");
 let ctaImg = document.getElementById("cta-img");
 
-
 ctaH1.innerHTML = siteContent["cta"]["h1"];
 ctaButton.innerHTML = siteContent["cta"]["button"];
 ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
+
 
 // ======== Content ===========
 let topContent = document.querySelectorAll(".text-content h4");
@@ -105,10 +117,5 @@ let footer = document.querySelector("footer p");
 footer.innerHTML = siteContent["footer"]["copyright"];
 
 
-
-// ========== Stretch Goals ========
-for (let i =0; i<navItem.length; i++){
-  navItem[i].style.color = "green";
-};
-
-
+document.body.style.background = "lightgrey";
+middleImg.style.boxShadow = "20px 20px black";
