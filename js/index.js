@@ -62,6 +62,7 @@ ctaButton.innerHTML = siteContent.cta.button;
 let middleImg = document.querySelector("#middle-img");
 middleImg.src = siteContent["main-content"]["middle-img-src"];//Just trying the lecture way out. 
 
+//Grabbing all of the h4 titles  there is 5 in total. 
 let contentTitles = document.querySelectorAll(".text-content h4");
 
 //This will put the titles on the page for the content. 
@@ -72,3 +73,12 @@ contentTitles[3].innerHTML = siteContent["main-content"]["product-h4"];
 contentTitles[4].innerHTML = siteContent["main-content"]["vision-h4"];
 //Titles completed
 
+//Grabbing all of the content p elements 
+let contentParagraphs = document.querySelectorAll(".text-content p");
+
+//This will add the content in the form of paragraphs.
+contentParagraphs[0].innerHTML = siteContent["main-content"]["features-content"];
+contentParagraphs[1].innerHTML = siteContent["main-content"]["about-content"];
+contentParagraphs[2].innerHTML = siteContent["main-content"]["services-content"];
+contentParagraphs[3].innerHTML = siteContent["main-content"]["product-content"];
+contentParagraphs[4].innerHTML = siteContent["main-content"]["vision-content"];
