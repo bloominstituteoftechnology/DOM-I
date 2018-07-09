@@ -47,7 +47,13 @@ let ctaH1 = document.querySelector(".cta-text h1");
 let ctaBtn = document.querySelector(".cta-text button");
 let ctaImg = document.querySelector("#cta-img");
 let TCTCH4 = document.querySelectorAll(".top-content .text-content h4");
-let TCTCP = document.querySelectorAll(".top-content .text-content p")
+let TCTCP = document.querySelectorAll(".top-content .text-content p");
+let middleImg = document.querySelector("#middle-img");
+let BCTCH4 = document.querySelectorAll(".bottom-content .text-content h4");
+let BCTCP = document.querySelectorAll(".bottom-content .text-content p");
+let contactH4 = document.querySelector(".contact h4");
+let contactP = document.querySelectorAll(".contact p");
+let footerP = document.querySelector("footer p");
 
 
 
@@ -66,3 +72,21 @@ ctaImg.src = siteContent["cta"]["img-src"];
 
 TCTCH4[0].textContent = siteContent["main-content"]["features-h4"];
 TCTCP[0].textContent = siteContent["main-content"]["features-content"];
+TCTCH4[1].textContent = siteContent["main-content"]["about-h4"];
+TCTCP[1].textContent = siteContent["main-content"]["about-content"];
+
+middleImg.src = siteContent["main-content"]["middle-img-src"];
+
+BCTCH4[0].textContent = siteContent["main-content"]["services-h4"];
+BCTCP[0].textContent = siteContent["main-content"]["services-content"];
+BCTCH4[1].textContent = siteContent["main-content"]["product-h4"];
+BCTCP[1].textContent = siteContent["main-content"]["product-content"];
+BCTCH4[2].textContent = siteContent["main-content"]["vision-h4"];
+BCTCP[2].textContent = siteContent["main-content"]["vision-content"];
+
+contactH4.textContent = siteContent["contact"]["contact-h4"];
+contactP[0].textContent = siteContent["contact"]["address"];
+contactP[1].textContent = siteContent["contact"]["phone"];
+contactP[2].textContent = siteContent["contact"]["email"];
+
+footerP.textContent = siteContent["footer"]["copyright"];
