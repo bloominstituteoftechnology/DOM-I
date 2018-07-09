@@ -77,6 +77,11 @@ nav[3].innerHTML = siteContent["nav"]["nav-item-4"];
 nav[4].innerHTML = siteContent["nav"]["nav-item-5"];
 nav[5].innerHTML = siteContent["nav"]["nav-item-6"];
 
+
+nav.forEach((element,index) => element.style.color = "green");
+
+
+
 //cta
 ctaHeader.innerHTML = "DOM<br> Is<br> Awesome";
 ctaButton.innerHTML = siteContent["cta"]["button"];
