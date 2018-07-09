@@ -81,3 +81,30 @@ paragraphText[8].innerHTML = siteContent["footer"]["copyright"]
 let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
+
+// Task 3: color of items
+tagLinks[0].style.color = 'green';
+tagLinks[1].style.color = 'green';
+tagLinks[2].style.color = 'green';
+tagLinks[3].style.color = 'green';
+tagLinks[4].style.color = 'green';
+tagLinks[5].style.color = 'green';
+
+//Task 4: CreateElement, appendChild(), & prepend()
+let newNavItem = document.createElement("a");
+let newNavText = document.createTextNode("New Item")
+
+newNavItem.appendChild(newNavText);
+
+let navBar = document.querySelector("nav");
+navBar.prepend(newNavItem);
+
+let secondNewNavItem = document.createElement("a");
+let secondNewNavItemText = document.createTextNode("New Item 2");
+
+secondNewNavItem.appendChild(secondNewNavItemText);
+navBar.appendChild(secondNewNavItem);
+
+
+
+
