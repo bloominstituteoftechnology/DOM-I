@@ -88,6 +88,9 @@ nav.prepend(newNavItem2);
 newNavItem1.style.color = "green";
 newNavItem2.style.color = "green";
 
+newNavItem1.setAttribute("href", "#");
+newNavItem2.setAttribute("href", "#");
+
 navItems[0].innerHTML = siteContent["nav"]["nav-item-1"];
 navItems[1].innerHTML = siteContent["nav"]["nav-item-2"];
 navItems[2].innerHTML = siteContent["nav"]["nav-item-3"];
