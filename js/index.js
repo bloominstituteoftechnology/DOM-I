@@ -40,7 +40,9 @@ const siteContent = {
 const siteMap = {
   'nav': populateNav,
   'cta': populateCta,
-  'main-content': populateMainContent
+  'main-content': populateMainContent,
+  'contact': contact,
+  'footer': footer
 }
 
 // Example: Update the img src for the logo
@@ -95,12 +97,27 @@ function populateMainContent (element, data){
   })
 
 
-
   for (const i in data){
-    console.log(elements[counter])
-    if (data[i] === 'middle-img')
-      middle_img.setAttribute('src', data['middle-img'])
+    if (i === 'middle-img-src')
+      middle_img.setAttribute('src', data[i])
     else
-      elements[counter++].text = data[i]
+      elements[counter++].textContent = data[i]
   }
+}
+
+function contact (element, data){
+  element = document.getElementsByClassName('contact')[0].childNodes
+  const elements = []
+  let counter = 0
+  element.forEach(e => e.length > 0 ? elements.push(e) : '')
+
+  console.log(elements)
+  for (d in data){
+    console.log(d)
+    element[counter++].textContent = data[d]
+  }
+}
+
+function footer (element, data){
+  element[0].childNodes[1].textContent = data.copyright
 }
