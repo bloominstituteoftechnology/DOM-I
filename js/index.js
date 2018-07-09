@@ -48,6 +48,8 @@ navItem[3].innerHTML = siteContent["nav"]["nav-item-4"];
 navItem[4].innerHTML = siteContent["nav"]["nav-item-5"];
 navItem[5].innerHTML = siteContent["nav"]["nav-item-6"];
 
+navItem.forEach((element,index) => element.style.color = "green");
+
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
