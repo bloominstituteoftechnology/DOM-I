@@ -96,3 +96,7 @@ contactHeader.innerHTML = siteContent["contact"]["contact-h4"];
 contactInfo[0].innerHTML = siteContent.contact.address;
 contactInfo[1].innerHTML = siteContent.contact.phone;
 contactInfo[2].innerHTML = siteContent.contact.email;
+
+//Footer section grab paragraph element
+let footerParagraph = document.querySelector("footer p");
+footerParagraph.innerHTML = siteContent.footer.copyright;
