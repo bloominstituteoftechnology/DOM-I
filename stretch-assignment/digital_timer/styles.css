@@ -4,9 +4,18 @@ body {
   align-items: center;
 }
 
+.row {
+  display: flex;
+  justify-content: center;
+}
+
 .digit {
   display: inline-block;
   font-size: 80px;
+}
+
+.digits {
+  color: black;
 }
 
 .redDigit {
