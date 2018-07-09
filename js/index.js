@@ -75,10 +75,14 @@ let aTags = document.querySelectorAll("a");
 const navFunction = function(){
   for(let i=1; i < 6; i++) {
       aTags[i].innerHTML = siteContent.nav[`nav-item-${i}`];
+      aTags[i].style.backgroundColor = "green";
   }
 }
 navFunction();
 
+
+// let nav = document.querySelector('nav');
+// nav.style.color = "blue";
 // const results =siteContent.filter(word => word.includes('content'));
 // console.log(siteContent);
 
