@@ -135,4 +135,6 @@ navBar.forEach(function (element){
 });
 //^For each element in NavBar change the color of the text to green
 
-
+//Stretch goals  
+let containerText = document.querySelector(".container");
+containerText.style.fontFamily = "Apple Chancery"; 
