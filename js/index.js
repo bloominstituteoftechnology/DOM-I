@@ -42,5 +42,12 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
-let nav1 = document.getElementById("nav-item-1");
-nav1.innerHTML = "Services";
+let nav5 = document.querySelector(".nav-item-5");
+nav5.innerHTML = "About";
+
+
+let feature = document.querySelector('h4');
+feature.innerHTML = "Features";
+
+let allBlank = document.querySelector("body");
+allBlank.innerHTML = "";
