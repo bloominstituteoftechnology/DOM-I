@@ -101,3 +101,17 @@ visionHead[4].innerHTML = siteContent["main-content"]["vision-h4"]
 let visionContent= document.querySelectorAll(".text-content p");
 visionContent[4].innerHTML = siteContent["main-content"]["vision-content"]
 
+let contactHead = document.querySelectorAll(".contact h4");
+contactHead[0].innerHTML = siteContent["contact"]["contact-h4"]
+
+let contactAddress = document.querySelectorAll(".contact p");
+contactAddress[0].innerHTML = siteContent["contact"]["address"]
+
+let contactPhone = document.querySelectorAll(".contact p");
+contactPhone[1].innerHTML = siteContent["contact"]["phone"]
+
+let contactEmail = document.querySelectorAll(".contact p");
+contactEmail[2].innerHTML = siteContent["contact"]["email"]
+
+let footerCr= document.querySelector("footer p");
+footerCr.innerHTML = siteContent["footer"]["copyright"]
