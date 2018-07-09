@@ -47,6 +47,53 @@ ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
+let nav = document.querySelectorAll("nav a");
+nav[0].innerHTML = siteContent["nav"]["nav-item-1"];
+nav[1].innerHTML = siteContent["nav"]["nav-item-2"];
+nav[2].innerHTML = siteContent["nav"]["nav-item-3"];
+nav[3].innerHTML = siteContent["nav"]["nav-item-4"];
+nav[4].innerHTML = siteContent["nav"]["nav-item-5"];
+nav[5].innerHTML = siteContent["nav"]["nav-item-6"];
+
+let callToAction = document.querySelector(".cta .cta-text h1");
+callToAction.innerHTML = "dom<br>is<br>awesome";
+
+let button = document.querySelector(".cta button");
+button.innerHTML = siteContent["cta"]["button"];
+
+
+
+let headerContent = document.querySelectorAll(".text-content h4");
+
+headerContent[0].innerHTML = siteContent["main-content"]["features-h4"];
+headerContent[1].innerHTML = siteContent["main-content"]["about-h4"];
+headerContent[2].innerHTML = siteContent["main-content"]["services-h4"];
+headerContent[3].innerHTML = siteContent["main-content"]["product-h4"]
+headerContent[4].innerHTML = siteContent["main-content"]["vision-h4"]
+
+let pContent = document.querySelectorAll(".text-content p");
+
+pContent[0].innerHTML = siteContent["main-content"]["features-content"];
+pContent[1].innerHTML = siteContent["main-content"]["about-content"];
+pContent[2].innerHTML = siteContent["main-content"]["services-content"];
+pContent[3].innerHTML = siteContent["main-content"]["product-content"];
+pContent[4].innerHTML = siteContent["main-content"]["vision-content"]
+
+
+
+let myHeader = document.querySelector(".contact h4");
+myHeader.innerHTML = siteContent["contact"]["contact-h4"];
+
+let contact = document.querySelectorAll(".contact p");
+
+contact[0].innerHTML = siteContent["contact"]["address"];
+contact[1].innerHTML = siteContent["contact"]["phone"];
+contact[2].innerHTML = siteContent["contact"]["email"];
+
+let footer = document.querySelector("footer");
+footer.innerHTML = siteContent["footer"]["copyright"];
+
+
 
 
 
