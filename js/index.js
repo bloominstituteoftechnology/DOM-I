@@ -38,6 +38,9 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+let head = document.querySelector('header');
+head.style.borderBottom = "2px solid blue";
+
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
@@ -72,6 +75,7 @@ ctaContent.querySelector('button').innerText = siteContent['cta']['button'];
 ctaContent.style.color = 'red';
 ctaContent.style.border = '3px black solid';
 ctaContent.style.borderRadius = '10px';
+ctaContent.querySelector('button').addEventListener('click', function(){alert('Hello')})
 
 let contentTitle = document.querySelectorAll('.text-content h4');
 contentTitle[0].innerText = siteContent['main-content']['features-h4'];
@@ -79,7 +83,10 @@ contentTitle[1].innerText = siteContent['main-content']['about-h4'];
 contentTitle[2].innerText = siteContent['main-content']['services-h4'];
 contentTitle[3].innerText = siteContent['main-content']['product-h4'];
 contentTitle[4].innerText = siteContent['main-content']['vision-h4'];
-
+contentTitle[0].style.backgroundColor = 'red';
+contentTitle[0].addEventListener('click',function(){
+  alert('Bye Bye');
+})
 
 let content = document.querySelectorAll('.text-content p');
 content[0].innerText = siteContent['main-content']['features-content'];
@@ -90,6 +97,7 @@ content[4].innerText = siteContent['main-content']['vision-content'];
 
 let contact = document.querySelector('.contact h4');
 contact.innerText = siteContent['contact']['contact-h4'];
+contact.style.color = 'teal';
 
 let contactContent = document.querySelectorAll('.contact p')
 contactContent[0].innerText = siteContent['contact']['address'];
@@ -98,3 +106,4 @@ contactContent[2].innerText = siteContent['contact']['email'];
 
 let footer = document.querySelector('footer p');
 footer.innerText = siteContent['footer']['copyright'];
+footer.style.color = 'purple';
