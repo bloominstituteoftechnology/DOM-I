@@ -58,10 +58,15 @@ for (const tag in siteContent) {
 function populateNav (element, data){
   const navElements = element[0].getElementsByTagName('a')
   let counter = 0;
+  const newE = document.createElement('h1')
+  newE.appendChild(document.createElement('a'))
+  newE.prepend('span')
 
   for (const title in data){
-    if (counter !== navElements.length)
+    if (counter !== navElements.length) {
+      navElements[counter].style.color = 'green'
       navElements[counter++].text = data[title]
+    }
   }
 }
 
@@ -69,7 +74,7 @@ function populateCta(element, data) {
   const cta_img = document.getElementById('cta-img')
   element = document.getElementsByClassName('cta-text')[0].childNodes
 
-  element[1].text = data.h1
+  element[1].textContent = data.h1
   element[3].textContent = data.button
   cta_img.setAttribute('src', data['img-src'])
 }
@@ -111,9 +116,7 @@ function contact (element, data){
   let counter = 0
   element.forEach(e => e.length > 0 ? elements.push(e) : '')
 
-  console.log(elements)
   for (d in data){
-    console.log(d)
     element[counter++].textContent = data[d]
   }
 }
