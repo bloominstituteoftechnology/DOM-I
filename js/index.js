@@ -44,6 +44,11 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 let ctaHeader = document.querySelector("#cta-img");
 ctaHeader.setAttribute('src', siteContent["cta"]["img-src"]);
 
-let navBar = document.querySelectorAll(a);
+let navBar = document.querySelectorAll("nav a");
 
-navBar
+navBar[0].innerHTML = siteContent["nav"]["nav-item-1"];
+navBar[1].innerHTML = siteContent["nav"]["nav-item-2"];
+navBar[2].innerHTML = siteContent["nav"]["nav-item-3"];
+navBar[3].innerHTML = siteContent["nav"]["nav-item-4"];
+navBar[4].innerHTML = siteContent["nav"]["nav-item-5"];
+navBar[5].innerHTML = siteContent["nav"]["nav-item-6"];
