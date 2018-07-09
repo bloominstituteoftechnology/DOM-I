@@ -43,14 +43,16 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+let navItem = document.querySelectorAll("nav a");
 
-let navItem1 = document.getElementsByTagName("a");
-navItem1[0].innerHTML = siteContent["nav"]["nav-item-1"];
-navItem1[1].innerHTML = siteContent["nav"]["nav-item-2"];
-navItem1[2].innerHTML = siteContent["nav"]["nav-item-3"];
-navItem1[3].innerHTML = siteContent["nav"]["nav-item-4"];
-navItem1[4].innerHTML = siteContent["nav"]["nav-item-5"];
-navItem1[5].innerHTML = siteContent["nav"]["nav-item-6"];
+
+navItem[0].innerHTML = siteContent["nav"]["nav-item-1"];
+navItem[1].innerHTML = siteContent["nav"]["nav-item-2"];
+navItem[2].innerHTML = siteContent["nav"]["nav-item-3"];
+navItem[3].innerHTML = siteContent["nav"]["nav-item-4"];
+navItem[4].innerHTML = siteContent["nav"]["nav-item-5"];
+navItem[5].innerHTML = siteContent["nav"]["nav-item-6"];
+
 
 
 // =========== CTA ==========
@@ -101,3 +103,12 @@ let footer = document.querySelector("footer p");
 
 
 footer.innerHTML = siteContent["footer"]["copyright"];
+
+
+
+// ========== Stretch Goals ========
+for (let i =0; i<navItem.length; i++){
+  navItem[i].style.color = "green";
+};
+
+
