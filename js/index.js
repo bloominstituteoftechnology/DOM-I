@@ -69,16 +69,36 @@ features[4].innerHTML =  siteContent["main-content"]["product-h4"];
 features[5].innerHTML =  siteContent["contact"]["contact-h4"];
 
 
+
 let aTags = document.querySelectorAll("a");
+
 // aTags[0].innerHTML= siteContent.nav[`nav-item-1`];
 // aTags[1].innerHTML= siteContent.nav[`nav-item-2`];
+
+
+nav.append('newItem');
+nav.prepend('oldItem')
+
 const navFunction = function(){
-  for(let i=1; i < 6; i++) {
+  for(let i=1; i < Object.keys(siteContent.nav).length-1; i++) {
       aTags[i].innerHTML = siteContent.nav[`nav-item-${i}`];
-      aTags[i].style.backgroundColor = "green";
+      aTags[i].style.color = "green";
   }
 }
 navFunction();
+
+let nav = document.querySelector(".container header nav");
+
+// console.log(nav);
+// let childA = document.createElement("a");
+
+
+// console.log(nav.childNodes);
+
+
+
+
+
 
 
 // let nav = document.querySelector('nav');
