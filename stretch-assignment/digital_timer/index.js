@@ -66,6 +66,6 @@ function timerGo () {
 }
 
 buttons[0].addEventListener("click", timerGo, false); 
-// buttons[1].addEventListener("click", stop, false); 
-button[1].addEventListener("click", stopTimer, false); 
+ 
+buttons[1].addEventListener("click", stopTimer, false); 
 
