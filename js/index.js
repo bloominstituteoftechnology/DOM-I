@@ -55,6 +55,13 @@ nav[3].innerHTML = siteContent["nav"]["nav-item-4"];
 nav[4].innerHTML = siteContent["nav"]["nav-item-5"];
 nav[5].innerHTML = siteContent["nav"]["nav-item-6"];
 
+nav[0].style.color = "green";
+nav[1].style.color = "green";
+nav[2].style.color = "green";
+nav[3].style.color = "green";
+nav[4].style.color = "green";
+nav[5].style.color = "green";
+
 let callToAction = document.querySelector(".cta .cta-text h1");
 callToAction.innerHTML = "dom<br>is<br>awesome";
 
