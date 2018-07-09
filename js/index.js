@@ -50,6 +50,10 @@ navigation[3].innerHTML = siteContent["nav"]["nav-item-4"];
 navigation[4].innerHTML = siteContent["nav"]["nav-item-5"];
 navigation[5].innerHTML = siteContent["nav"]["nav-item-6"];
 
+for(let link of navigation) {
+  link.style.color = 'green';
+}
+
 let centerText = document.querySelector(".cta-text h1");
 centerText.innerHTML = siteContent["cta"]["h1"];
 
