@@ -44,6 +44,8 @@ logo.setAttribute('src', siteContent['nav']['img-src']);
 
 // Selectors
 
+let navLinks = document.querySelectorAll('nav a');
+
 let ctaHdr = document.querySelector('.cta-text h1');
 let ctaBtn = document.querySelector('.cta-text button');
 let ctaImg = document.querySelector('#cta-img');
@@ -72,7 +74,7 @@ let copyright = document.querySelector('footer p');
 
 // Added content
 
-document.querySelectorAll('nav a').forEach((a, ind) => {
+navLinks.forEach((a, ind) => {
   a.textContent = siteContent['nav'][`nav-item-${ind + 1}`] // nav links
   a.style.color = 'green';
 });
@@ -103,11 +105,24 @@ contactEmail.textContent = siteContent['contact']['email'];
 copyright.innerText = siteContent['footer']['copyright'];
 
 
-// New Nav Items
+// New nav items
+
 let nav = document.querySelector('nav');
 let first = document.createElement('a'); 
 let last = document.createElement('a'); 
 first.textContent = 'Sleep';
 last.textContent = 'Extra';
-nav.appendChild(last);  
+nav.appendChild(last);
 nav.prepend(first);
+navLinks = document.querySelectorAll('nav a');
+
+
+// New styles
+
+first.style.color = 'green';
+last.style.color = 'green';
+
+ctaBtn.addEventListener('click', () => {
+  document.body.style.background = 'linear-gradient(#e66465, #9198e5)';
+  navLinks.forEach(a => a.style.color = 'rgb(198, 190, 100)');
+});
