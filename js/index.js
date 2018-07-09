@@ -41,4 +41,18 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let my mind explode
+let navItem1 = document.querySelector("nav a");
+navItem1.innerHTML = siteContent["nav"]["nav-item-1"]
+
+let navItem2 = document.getElementsByTagName("a");
+navItem2[1].innerHTML = siteContent["nav"]["nav-item-2"]
+
+let navItem3 = document.getElementsByTagName("a");
+navItem3[2].innerHTML = siteContent["nav"]["nav-item-3"]
+
+let navItem4 = document.getElementsByTagName("a");
+navItem4[3].innerHTML = siteContent["nav"]["nav-item-4"]
+
+let navItem5 = document.getElementsByTagName("a");
+navItem5[4].innerHTML = siteContent["nav"]["nav-item-5"]
+
