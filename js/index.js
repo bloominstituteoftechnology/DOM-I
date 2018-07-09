@@ -40,3 +40,42 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+let ctaImg=document.querySelector('#cta-img');
+ctaImg.setAttribute('src',siteContent['cta']['img-src']);
+let mainImg=document.querySelector('.middle-img');
+mainImg.setAttribute('src',siteContent['main-content']['middle-img-src']);
+
+const navKeys=Object.keys(siteContent["nav"]);
+let nav=document.querySelectorAll('nav a');
+for (let i=0; i<nav.length; i++) {
+  nav[i].innerHTML=siteContent['nav'][navKeys[i]];
+}
+document.querySelector('.cta h1').innerHTML=siteContent['cta']['h1'];
+document.querySelector('.cta button').innerHTML=siteContent['cta']['button'];
+document.querySelector('footer p').innerHTML=siteContent['footer']['copyright'];
+
+document.querySelector('.contact h4').innerHTML=siteContent['contact']['contact-h4'];
+let contactP=document.querySelectorAll('.contact p');
+let contactKeys=Object.keys(siteContent['contact']);
+contactKeys.splice(0,1);
+for (let i=0; i<contactP.length; i++) {
+    contactP[i].innerHTML=siteContent['contact'][contactKeys[i]];
+}
+let mainContenth4=document.querySelectorAll('.main-content h4');
+let mainContentp=document.querySelectorAll('.main-content p');
+const mainContentKeys=Object.keys(siteContent['main-content']);
+const mainContentHeadings=[];
+const mainContentInfo=[];
+for (let i=0; i<mainContentKeys.length; i++) {
+  if (mainContentKeys[i].includes('h4')){
+    mainContentHeadings.push(mainContentKeys[i]);
+  } else if (mainContentKeys[i]!== "middle-img-src") {
+    mainContentInfo.push(mainContentKeys[i]);
+  }
+}
+for (let i=0; i<mainContenth4.length; i++) {
+  mainContenth4[i].innerHTML=siteContent['main-content'][mainContentHeadings[i]];
+}
+for (let i=0; i<mainContentp.length; i++) {
+  mainContentp[i].innerHTML=siteContent['main-content'][mainContentInfo[i]];
+}
