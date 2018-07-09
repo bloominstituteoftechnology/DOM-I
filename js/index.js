@@ -60,5 +60,6 @@ header.setAttribute('src',siteContent["cta"]['img-src'])
 
 //main Content
 
-let mainh4 = document.querySelector(".maincontent .top-content .text-content h4")
-mainh4.innerHTML= siteContent["main-content"]["features-h4"];
+let mainh4 = document.querySelectorAll(".text-content h4")
+mainh4[0].innerHTML= siteContent["main-content"]["features-h4"];
+mainh4[1].innerHTML= siteContent["main-content"]["about-h4"];
