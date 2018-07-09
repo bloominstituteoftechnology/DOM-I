@@ -1,17 +1,54 @@
+html, body {
+  height: 100%;
+}
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  font-family:"Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  background-image: linear-gradient(hsla(0, 0%, 0%, 0.5), hsla(0,0%,0%,0.5)), url("background.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #f7f7f7;
+  margin-top: 8%;
 }
 
 .digit {
   display: inline-block;
   font-size: 80px;
   font-weight: 300;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+    0px 8px 13px rgba(0, 0, 0, 0.1),
+    0px 18px 23px rgba(0, 0, 0, 0.1);
 }
 
 .redDigit {
   color: red;
+}
+.buttons {
+  padding-top: 30px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background: #f1f1f1;
+  color: #353535;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  margin-right: 15px;
+  border: 1px solid #353535;
+}
+
+button:hover {
+  box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+  0px 8px 13px rgba(0, 0, 0, 0.1),
+  0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+button:active,
+button:focus {
+  outline: none;
 }
