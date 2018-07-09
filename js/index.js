@@ -74,3 +74,14 @@ mainText[4].innerHTML = siteContent["main-content"]["vision-content"];
 let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
+let contactHead = document.querySelector(".contact h4");
+contactHead.innerHTML = siteContent["contact"]["contact-h4"];
+
+let contactInfo = document.querySelectorAll(".contact p");
+contactInfo[0].innerHTML = siteContent["contact"]["address"];
+contactInfo[1].innerHTML = siteContent["contact"]["phone"];
+contactInfo[2].innerHTML = siteContent["contact"]["email"];
+
+let footer = document.querySelector("footer p");
+footer.innerHTML = siteContent["footer"]["copyright"];
+
