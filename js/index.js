@@ -54,6 +54,24 @@ siteHead[3].innerHTML = siteContent['nav']['nav-item-4']
 siteHead[4].innerHTML = siteContent['nav']['nav-item-5']
 siteHead[5].innerHTML = siteContent['nav']['nav-item-6']
 
+//Change Navigation Color to Green
+siteHead.forEach((item)=>{item.style.color = 'green'});
+
+//Playing with items individually
+siteHead[0].style.color = 'red';
+siteHead[1].style.color = 'orange';
+siteHead[2].style.color = 'yellow';
+siteHead[3].style.color = 'green';
+siteHead[4].style.color = 'blue';
+siteHead[5].style.color = 'purple';
+
+//adding items to navigation
+// let firstItem = document.createElement('a');
+// siteHead.appendChild(firstItem);
+
+
+
+
 //Add cta header and button
 let ctaHead = document.querySelector('h1')
 ctaHead.innerHTML = siteContent['cta']['h1']
