@@ -7,12 +7,19 @@ let msTensCount = 0;
 let msHundredsCount = 0;
 let onesCount = 0;
 let tensCount = 0;
+let body = document.querySelector("body");
+let startBtn = document.createElement('button');
+startBtn.appendChild(document.createTextNode("Start"));
+body.appendChild(startBtn)
+
+startBtn.addEventListener("click", timer);
 
 function increment() {
   if (tensCount === 1) {
     clearInterval(timer);
     [].forEach.call(digits, function(digit) {
       digit.style.color = "red";
+      startBtn.disabled = false;
     })
     
   } else {
@@ -22,7 +29,6 @@ function increment() {
       msTensCount = 0;
       msHundredsCount += 1;
     } else if (onesCount <= 8) {
-      msTensCount = 0;
       msHundredsCount = 0;
       onesCount += 1;
     } else {
@@ -37,5 +43,9 @@ function increment() {
     ones.innerHTML = onesCount;
     tens.innerHTML = tensCount;
   }
-}
-let timer = setInterval(increment, 10);
+};
+
+function timer() {
+  startBtn.disabled = true;
+  setInterval(increment, 10);
+} 
