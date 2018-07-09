@@ -52,3 +52,9 @@ navBar[2].innerHTML = siteContent["nav"]["nav-item-3"];
 navBar[3].innerHTML = siteContent["nav"]["nav-item-4"];
 navBar[4].innerHTML = siteContent["nav"]["nav-item-5"];
 navBar[5].innerHTML = siteContent["nav"]["nav-item-6"];
+
+let ctaH1 = document.querySelector(".cta-text h1");
+ctaH1.innerHTML = siteContent.cta.h1; 
+
+let ctaButton = document.querySelector(".cta-text button");
+ctaButton.innerHTML = siteContent.cta.button; 
