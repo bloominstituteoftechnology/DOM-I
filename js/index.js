@@ -99,4 +99,19 @@ contactInfo[2].innerHTML = siteContent.contact.email;
 
 //Footer section grab paragraph element
 let footerParagraph = document.querySelector("footer p");
+//Footer update
 footerParagraph.innerHTML = siteContent.footer.copyright;
+
+//Updating website content complete^^^ 
+
+//Making changes and adding to content 
+
+//Change the color of the navigation text to be green.
+//There is 6 elements within this so a ForEach method would be best to keep the code dry here. 
+
+navBar.forEach(function (element){
+  element.style.color = "green"; 
+});
+//^For each element in NavBar change the color of the text to green
+
+
