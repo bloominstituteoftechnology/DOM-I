@@ -82,3 +82,17 @@ contentParagraphs[1].innerHTML = siteContent["main-content"]["about-content"];
 contentParagraphs[2].innerHTML = siteContent["main-content"]["services-content"];
 contentParagraphs[3].innerHTML = siteContent["main-content"]["product-content"];
 contentParagraphs[4].innerHTML = siteContent["main-content"]["vision-content"];
+//End of content update. 
+
+//Contact section grab
+let contactHeader = document.querySelector(".contact h4");
+//^header grabbed 
+let contactInfo = document.querySelectorAll(".contact p");
+//^Paragraphs grabbed three in total  0-2 index. 
+
+//Updating the contact section 
+contactHeader.innerHTML = siteContent["contact"]["contact-h4"];
+
+contactInfo[0].innerHTML = siteContent.contact.address;
+contactInfo[1].innerHTML = siteContent.contact.phone;
+contactInfo[2].innerHTML = siteContent.contact.email;
