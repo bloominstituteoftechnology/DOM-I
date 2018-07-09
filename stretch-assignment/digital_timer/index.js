@@ -11,10 +11,7 @@ let startBtn = document.querySelector('.start-btn');
 let resetBtn = document.querySelector('.reset-btn');
 let timer = 0;
 
-displaySecTens.innerHTML = secondTens;
-displaySecOnes.innerHTML = secondOnes;
-displayMSTens.innerHTML = msTens;
-displayMSHundreds.innerHTML = msHundreds;
+displayTime();
 
 resetBtn.addEventListener('click', function () {
   clearInterval(timer);
@@ -25,10 +22,7 @@ resetBtn.addEventListener('click', function () {
   secondOnes = 0;
   secondTens = 0;
 
-  displaySecTens.innerHTML = secondTens;
-  displaySecOnes.innerHTML = secondOnes;
-  displayMSTens.innerHTML = msTens;
-  displayMSHundreds.innerHTML = msHundreds;
+  displayTime();
 
   displaySecTens.classList.remove('redDigit');
   displaySecOnes.classList.remove('redDigit');
@@ -70,8 +64,12 @@ function startTimer() {
     displayMSHundreds.classList.add('redDigit');
   }
 
+  displayTime();
+}
+
+function displayTime () {
   displaySecOnes.innerHTML = secondOnes;
   displaySecTens.innerHTML = secondTens;
-  displayMSHundreds.innerHTML = msHundreds;
   displayMSTens.innerHTML = msTens;
+  displayMSHundreds.innerHTML = msHundreds;
 }
