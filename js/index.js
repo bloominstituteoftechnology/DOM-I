@@ -93,3 +93,17 @@ bottomContentText[2].innerHTML = siteContent["main-content"]["vision-content"];
 
 // ========================= Bottom Content ============================
 
+let contactInfoTitle = document.querySelector(".contact h4");
+contactInfoTitle.innerHTML = siteContent["contact"]["contact-h4"];
+
+let contactInfo = document.querySelectorAll(".contact p");
+contactInfo[0].innerHTML = siteContent["contact"]["address"];
+contactInfo[1].innerHTML = siteContent["contact"]["phone"];
+contactInfo[2].innerHTML = siteContent["contact"]["email"];
+
+
+
+// ========================= Footer ==================================
+
+let footerInfo = document.querySelector("footer p");
+footerInfo.innerHTML = siteContent["footer"]["copyright"];
