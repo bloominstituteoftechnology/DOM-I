@@ -65,12 +65,14 @@ siteHead[3].style.color = 'green';
 siteHead[4].style.color = 'blue';
 siteHead[5].style.color = 'purple';
 
-//adding items to navigation
-// let firstItem = document.createElement('a');
-// siteHead.appendChild(firstItem);
+//Add items to navigation
+let lastItem = document.createElement('a');
+siteNav.appendChild(lastItem);
+lastItem.innerHTML = 'Last Item';
 
-
-
+let firstItem = document.createElement('a');
+siteNav.prepend(firstItem);
+firstItem.innerHTML = 'First Item';
 
 //Add cta header and button
 let ctaHead = document.querySelector('h1')
