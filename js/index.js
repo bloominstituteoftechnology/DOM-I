@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM<br> Is<br> Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -49,3 +49,12 @@ navBar[3].innerHTML = 'Features';
 navBar[4].innerHTML = 'About';
 navBar[5].innerHTML = 'Contact';
 
+let ctaText = document.querySelector('.cta-text h1');
+// ctaText.innerHTML = 'DOM is Awesome';
+ctaText.innerHTML = siteContent['cta']['h1'];
+
+let ctaButton = document.querySelector('.cta-text button');
+ctaButton.innerHTML = siteContent['cta']['button'];
+
+let ctaImg = document.getElementById('cta-img');
+ctaImg.setAttribute('src', siteContent['cta']['img-src'])
