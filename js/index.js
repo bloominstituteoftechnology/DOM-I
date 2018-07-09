@@ -41,6 +41,11 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let myNavBar = document.querySelectorAll(".class a");
+let myNavBar = document.querySelectorAll("nav a");
 myNavBar[1].innerHTML = "Services"
+myNavBar[2].innerHTML = "Product"
+myNavBar[3].innerHTML = "Vision"
+myNavBar[4].innerHTML = "Features"
+myNavBar[5].innerHTML = "About"
+myNavBar[6].innerHTML = "Contact"
 // test
