@@ -17,6 +17,9 @@ displayMSTens.innerHTML = msTens;
 displayMSHundreds.innerHTML = msHundreds;
 
 resetBtn.addEventListener('click', function () {
+  clearInterval(timer);
+  timer = 0;
+  startBtn.disabled = false;
   msTens = 0;
   msHundreds = 0;
   secondOnes = 0;
