@@ -38,14 +38,23 @@ const siteContent = {
 };
 
 let navBar = document.querySelectorAll('nav a');
-navBar[0].innerHTML = "Services";
-navBar[1].innerHTML = "Product"; 
-navBar[2].innerHTML = "Vision";
-navBar[3].innerHTML = "Features";
-navBar[4].innerHTML = "About"; 
-navBar[5].innerHTML = "Contact";
+navBar[0].innerHTML = siteContent['nav']['nav-item-1'];
+navBar[1].innerHTML = siteContent['nav']['nav-item-2'];
+navBar[2].innerHTML = siteContent['nav']['nav-item-3'];
+navBar[3].innerHTML = siteContent['nav']['nav-item-4'];
+navBar[4].innerHTML = siteContent['nav']['nav-item-5'];
+navBar[5].innerHTML = siteContent['nav']['nav-item-6'];
 
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent['nav']['img-src'])
 
+// ========== CTA ========== 
 
+let ctaHeading = document.querySelector('.cta h1');
+ctaHeading.innerHTML = siteContent['cta']['h1']
+
+let ctaButton = document.querySelector('.cta button');
+ctaButton.innerHTML = siteContent['cta']['button']
+
+let ctaImage = document.querySelector('#cta-img');
+ctaImage.setAttribute('src', siteContent['cta']['img-src'])
