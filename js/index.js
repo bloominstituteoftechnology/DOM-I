@@ -41,6 +41,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+let headerNavColor = document.querySelectorAll("nav a"); 
 let headerNav = document.querySelectorAll("nav a");
 let ctaContent = document.querySelector(".cta-text h1");
 let ctaContentButton = document.querySelector(".cta-text button");
@@ -88,3 +89,13 @@ contactP[1].innerText = siteContent["contact"]["phone"];
 contactP[2].innerText = siteContent["contact"]["email"];
 
 footer.innerText = siteContent["footer"]["copyright"];
+
+headerNavColor[0].style.color = "green";
+headerNavColor[1].style.color = "green";
+headerNavColor[2].style.color = "green";
+headerNavColor[3].style.color = "green";
+headerNavColor[4].style.color = "green";
+headerNavColor[5].style.color = "green";
+
+let appendedNav = document.createElement("nav");
+document.appendChild(appendedNav);
