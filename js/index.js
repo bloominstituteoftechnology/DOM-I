@@ -64,4 +64,20 @@ navStuff[3].innerHTML = siteContent["nav"]["nav-item-4"];
 navStuff[4].innerHTML = siteContent["nav"]["nav-item-5"];
 navStuff[5].innerHTML = siteContent["nav"]["nav-item-6"];
 
- 
+let bottomHead = document.querySelectorAll(".bottom-content h4"); 
+bottomHead[0].innerHTML = siteContent["main-content"]["services-h4"]
+bottomHead[1].innerHTML = siteContent["main-content"]["product-h4"]
+bottomHead[2].innerHTML = siteContent["main-content"]["vision-h4"]
+
+let bottomInfo = document.querySelectorAll(".bottom-content p")
+bottomInfo[0].innerHTML = siteContent["main-content"]["services-content"]
+bottomInfo[1].innerHTML = siteContent["main-content"]["product-content"]
+bottomInfo[2].innerHTML = siteContent["main-content"]["vision-content"]
+
+let topHead = document.querySelectorAll(".top-content h4"); 
+topHead[0].innerHTML = siteContent["main-content"]["features-h4"]
+topHead[1].innerHTML = siteContent["main-content"]["about-h4"]
+
+let topInfo = document.querySelectorAll(".top-content p"); 
+topInfo[0].innerHTML = siteContent["main-content"]["features-content"]
+topInfo[1].innerHTML = siteContent["main-content"]["about-content"]
