@@ -53,6 +53,25 @@ navItem.forEach((element,index) => element.style.color = "green");
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
+// new nav items..........................................................
+let nav = document.querySelector("nav");
+
+let newNavItem1 = document.createElement("a");
+let newNavItem2 = document.createElement("a");
+let t1 = document.createTextNode("Twitter");
+let t2 = document.createTextNode("Facebook");
+
+newNavItem1.appendChild(t1);
+newNavItem2.appendChild(t2);
+
+nav.appendChild(newNavItem1);
+nav.prepend(newNavItem2);
+
+newNavItem1.style.color = "green";
+newNavItem2.style.color = "green";
+
+newNavItem1.setAttribute("href", "#");
+newNavItem2.setAttribute("href", "#");
 // cta...................................................................
 
 let ctaImg = document.getElementById("cta-img");
