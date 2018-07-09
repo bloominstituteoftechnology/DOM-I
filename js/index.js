@@ -38,6 +38,7 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+const navigationBar = document.querySelector("header nav");
 const logo = document.getElementById("logo-img");
 const navLinks = document.querySelectorAll("nav a");
 const ctaHeading = document.querySelector(".cta-text h1");
@@ -51,20 +52,30 @@ const contactContent = document.querySelectorAll(".contact p");
 const footerContent = document.querySelector("footer p");
 
 
+navLinks.forEach(i => i.style.color = "green");
+
+let newLink1 = document.createElement("a");
+let newLink2 = document.createElement("a");
+
+let newLinkText1 = document.createTextNode("Is This The Beginning?");
+let newLinkText2 = document.createTextNode("Is This The End?");
+
+newLink1.appendChild(newLinkText1);
+newLink2.appendChild(newLinkText2);
+
+navigationBar.prepend(newLink1);
+navigationBar.appendChild(newLink2);
+
 
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
 navLinks[0].innerHTML = siteContent["nav"]["nav-item-1"];
-navLinks[0].style.color = "teal";
 navLinks[1].innerHTML = siteContent["nav"]["nav-item-2"];
-navLinks[1].style.color = "teal";
 navLinks[2].innerHTML = siteContent["nav"]["nav-item-3"];
-navLinks[2].style.color = "teal";
 navLinks[3].innerHTML = siteContent["nav"]["nav-item-4"];
-navLinks[3].style.color = "teal";
 navLinks[4].innerHTML = siteContent["nav"]["nav-item-5"];
-navLinks[4].style.color = "teal";
 navLinks[5].innerHTML = siteContent["nav"]["nav-item-6"];
-navLinks[5].style.color = "teal";
+
 
 
 ctaHeading.innerHTML = siteContent["cta"]["h1"];
