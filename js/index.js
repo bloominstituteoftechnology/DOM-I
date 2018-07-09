@@ -105,7 +105,10 @@ let footerItem = document.querySelectorAll("footer p");
 footerItem[0].innerHTML = siteContent["footer"]["copyright"];
 
 //new content
-let newTab = document.createElement("<a href='#'></a>"); 
-let newContent = 
-newTab.appendChild("nav")
+let newTab = document.createElement("<a href='#'>Social Media</a>"); 
+let newContent = document.createTextNode("Social Media"); 
+newTab.appendChild(newContent); 
+
+let currentTab = document.querySelectorAll("nav a"); 
+currentTab[5] = document.nav.insertBefore(newTab, currentTab); 
 
