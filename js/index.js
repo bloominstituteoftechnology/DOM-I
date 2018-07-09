@@ -50,4 +50,10 @@ document.querySelector('.cta button').innerHTML=siteContent['cta']['button'];
 document.querySelector('.cta h1').innerHTML=siteContent['cta']['h1'];
 document.querySelector('footer p').innerHTML=siteContent['footer']['copyright'];
 
+document.querySelector('.contact h4 ').innerHTML=siteContent['contact']['contact-h4'];
+let contactP=document.querySelectorAll('.contact p');
+contactP[0].innerHTML = siteContent["contact"]["address"];
+contactP[1].innerHTML = siteContent["contact"]["phone"];
+contactP[2].innerHTML = siteContent["contact"]["email"];
+
  
