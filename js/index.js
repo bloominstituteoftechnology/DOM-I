@@ -80,22 +80,39 @@ let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 // Services
-let servicesH4 = document.querySelectorAll(".top-content h4")[1];
+let servicesH4 = document.querySelectorAll(".bottom-content h4")[0];
 servicesH4.innerHTML = siteContent["main-content"]["services-h4"];
 
-let servicesP = document.querySelectorAll(".top-content p")[1];
+let servicesP = document.querySelectorAll(".bottom-content p")[0];
 servicesP.innerHTML = siteContent["main-content"]["services-content"];
 
 // Product
-let productH4 = document.querySelectorAll(".bottom-content h4")[0];
+let productH4 = document.querySelectorAll(".bottom-content h4")[1];
 productH4.innerHTML = siteContent["main-content"]["product-h4"];
 
-let productP = document.querySelectorAll(".bottom-content p")[0];
+let productP = document.querySelectorAll(".bottom-content p")[1];
 productP.innerHTML = siteContent["main-content"]["product-content"];
 
 // Vision
-let visionH4 = document.querySelectorAll(".bottom-content h4")[1];
+let visionH4 = document.querySelectorAll(".bottom-content h4")[2];
 visionH4.innerHTML = siteContent["main-content"]["vision-h4"];
 
-let visionP = document.querySelectorAll(".bottom-content p")[1];
+let visionP = document.querySelectorAll(".bottom-content p")[2];
 visionP.innerHTML = siteContent["main-content"]["vision-content"];
+// End Main Content
+
+// === Contact
+let contactH4 = document.querySelector(".contact h4");
+contactH4.innerHTML = siteContent["contact"]["contact-h4"];
+
+let contactPs = document.querySelectorAll(".contact p");
+let contactItems = ["address", "phone", "email"];
+
+for (i = 0; i < 3; i++) {
+  contactPs[i].innerHTML = siteContent["contact"][contactItems[i]];
+}
+// End contact
+
+// === Footer
+let footerCopyRight = document.querySelector("footer p");
+footerCopyRight.innerHTML = siteContent.footer.copyright;
