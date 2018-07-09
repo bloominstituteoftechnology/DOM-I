@@ -56,13 +56,20 @@ contactP[0].innerHTML = siteContent["contact"]["address"];
 contactP[1].innerHTML = siteContent["contact"]["phone"];
 contactP[2].innerHTML = siteContent["contact"]["email"];
 
+
 let navStuff=document.querySelectorAll('nav a');
 navStuff[0].innerHTML = siteContent["nav"]["nav-item-1"];
+navStuff[0].style.color = "green";
 navStuff[1].innerHTML = siteContent["nav"]["nav-item-2"];
+navStuff[1].style.color = "green";
 navStuff[2].innerHTML = siteContent["nav"]["nav-item-3"];
+navStuff[2].style.color = "green";
 navStuff[3].innerHTML = siteContent["nav"]["nav-item-4"];
+navStuff[3].style.color = "green";
 navStuff[4].innerHTML = siteContent["nav"]["nav-item-5"];
+navStuff[4].style.color = "green";
 navStuff[5].innerHTML = siteContent["nav"]["nav-item-6"];
+navStuff[5].style.color = "green";
 
 let bottomHead = document.querySelectorAll(".bottom-content h4"); 
 bottomHead[0].innerHTML = siteContent["main-content"]["services-h4"]
