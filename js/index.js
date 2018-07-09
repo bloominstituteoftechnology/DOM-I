@@ -41,8 +41,12 @@ const siteContent = {
 // let logo = document.getElementById("logo-img");
 // logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+
+// Selectors
+
 let logo = document.querySelector("#logo-img");
 let navItems = document.querySelectorAll("nav a");
+let navigation = document.querySelector("nav");
 let ctaH1 = document.querySelector(".cta-text h1");
 let ctaBtn = document.querySelector(".cta-text button");
 let ctaImg = document.querySelector("#cta-img");
@@ -56,6 +60,7 @@ let contactP = document.querySelectorAll(".contact p");
 let footerP = document.querySelector("footer p");
 
 
+// Manipulation
 
 logo.src = siteContent["nav"]["img-src"];
 
@@ -90,3 +95,32 @@ contactP[1].textContent = siteContent["contact"]["phone"];
 contactP[2].textContent = siteContent["contact"]["email"];
 
 footerP.textContent = siteContent["footer"]["copyright"];
+
+// Styles
+
+navItems[0].style.color = "green";
+navItems[1].style.color = "green";
+navItems[2].style.color = "green";
+navItems[3].style.color = "green";
+navItems[4].style.color = "green";
+navItems[5].style.color = "green";
+
+
+// .appendChild() and .prepend()
+
+let navFront = document.createElement("a");
+let navBack = document.createElement("a");
+
+let navFrontContent = document.createTextNode("Blog");
+let navBackContent = document.createTextNode("Courses");
+
+navFront.appendChild(navFrontContent);
+navFront.style.color = "green";
+navBack.appendChild(navBackContent);
+navBack.style.color = "green";
+
+document.querySelector("nav").prepend(navFront);
+document.querySelector("nav").appendChild(navBack);
+
+
+
