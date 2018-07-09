@@ -49,10 +49,16 @@ nav[3].innerHTML = siteContent["nav"]["nav-item-4"];
 nav[4].innerHTML = siteContent["nav"]["nav-item-5"];
 nav[5].innerHTML = siteContent["nav"]["nav-item-6"];
 
+nav[0].style.color = "green";
+nav[1].style.color = "green";
+nav[2].style.color = "green";
+nav[3].style.color = "green";
+nav[4].style.color = "green";
+nav[5].style.color = "green";
 
 
 let cta = document.querySelector(".cta .cta-text h1");
-cta.innerHTML = "DOM<br>Is<br>Awesome";
+cta.innerHTML = "dom<br>is<br>awesome";
 
 let button = document.querySelector(".cta button");
 button.innerHTML = siteContent["cta"]["button"];
@@ -62,11 +68,11 @@ headerImg.src = "img/header-img.png"
 
 let contentHeader = document.querySelectorAll(".text-content h4");
 
-contentHeader[0].innerHTML = siteContent["main-content"]["features-h4"]
-contentHeader[1].innerHTML = "About";
-contentHeader[2].innerHTML = "Services";
-contentHeader[3].innerHTML = "Product";
-contentHeader[4].innerHTML = "Vision";
+contentHeader[0].innerHTML = siteContent["main-content"]["features-h4"];
+contentHeader[1].innerHTML = siteContent["main-content"]["about-h4"];
+contentHeader[2].innerHTML = siteContent["main-content"]["services-h4"];
+contentHeader[3].innerHTML = siteContent["main-content"]["product-h4"]
+contentHeader[4].innerHTML = siteContent["main-content"]["vision-h4"]
 
 let contentP = document.querySelectorAll(".text-content p");
 
@@ -82,7 +88,14 @@ middleImg.src = "img/mid-page-accent.jpg";
 let infoHeader = document.querySelector(".contact h4");
 infoHeader.innerHTML = siteContent["contact"]["contact-h4"];
 
+let contact = document.querySelectorAll(".contact p");
 
+contact[0].innerHTML = siteContent["contact"]["address"];
+contact[1].innerHTML = siteContent["contact"]["phone"];
+contact[2].innerHTML = siteContent["contact"]["email"];
+
+let footer = document.querySelector("footer");
+footer.innerHTML = siteContent["footer"]["copyright"];
 
 
 
