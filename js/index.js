@@ -41,6 +41,35 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let navlink = document.querySelector("nav a");
-navLinks.innerHTML('')
+let navItem1 = document.querySelectorAll("nav a"); 
+navItem1[0].innerHTML = siteContent["nav"]["nav-item-1"]
 
+let navItem2 = document.querySelectorAll("nav a"); 
+navItem2[1].innerHTML = siteContent["nav"]["nav-item-2"]
+
+let navItem3 = document.querySelectorAll("nav a"); 
+navItem3[2].innerHTML = siteContent["nav"]["nav-item-3"]
+
+let navItem4 = document.querySelectorAll("nav a"); 
+navItem4[3].innerHTML = siteContent["nav"]["nav-item-4"]
+
+let navItem5 = document.querySelectorAll("nav a"); 
+navItem5[4].innerHTML = siteContent["nav"]["nav-item-5"]
+
+let navItem6 = document.querySelectorAll("nav a"); 
+navItem6[5].innerHTML = siteContent["nav"]["nav-item-6"];
+
+let ctaText = document.querySelector(".cta-text h1");
+ctaText.innerHTML = (siteContent["cta"]["h1"]);
+
+let ctaButton = document.querySelector(".cta-text button");
+ctaButton.innerHTML = (siteContent["cta"]["button"]);
+
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let topFeature = document.querySelector(".text-content h4");
+topFeature.innerHTML = siteContent["main-content"]["features-h4"];
+
+let featureContent = document.querySelector(".text-content p");
+featureContent.innerHTML = siteContent["main-content"]["features-content"];
