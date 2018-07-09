@@ -1,7 +1,7 @@
 // import siteContent from './siteContent.js';
 
 const container = document.querySelector('.container');
-const nav = document.querySelectorAll('nav');
+const nav = document.querySelector('nav');
 const navItem = document.querySelectorAll('nav a');
 const navImg = document.querySelector('#logo-img');
 
@@ -24,6 +24,23 @@ const contactPara = document.querySelectorAll('.contact p');
 const footerP = document.querySelector('footer p');
 
 console.log(bottomText);
+
+
+
+navItem.forEach((elem)=>{ elem.style.color = "green"})
+
+
+const newNavItem1 = document.createElement('a');
+newNavItem1.href="#"
+newNavItem1.innerHTML = "NeuroVibrations";
+nav.appendChild(newNavItem1);
+
+const newNavItem2 = document.createElement('a');
+newNavItem2.href = "#"
+newNavItem2.innerHTML = "CerebroSynchrony";
+nav.appendChild(newNavItem2);
+
+console.log("nav1 ",newNavItem1);
 
 
 footerP.innerHTML = siteContent.footer.copyright;
