@@ -88,3 +88,7 @@ contact[0].innerText=siteContent.contact["contact-h4"];
 contact[1].innerText=siteContent.contact["address"];
 contact[2].innerText=siteContent.contact["phone"];
 contact[3].innerText=siteContent.contact["email"];
+
+//footer
+
+document.querySelector("footer p").innerText = siteContent.footer.copyright;
