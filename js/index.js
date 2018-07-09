@@ -59,11 +59,14 @@ let ctaB = document.querySelector('.cta-text button');
 ctaB.innerHTML = siteContent.cta.button;
 
 let features = document.getElementsByTagName('h4');
+//contains "h4??"
 features[0].innerHTML = "Features";
-features[1].innerHTML = siteContent["main-content"]["about-h4"];
+features[1].innerHTML =  siteContent["main-content"]["about-h4"];
 features[2].innerHTML = "Services";
 features[3].innerHTML = siteContent["main-content"]["vision-h4"];
+features[4].innerHTML =  siteContent["main-content"]["product-h4"];
 
+features[5].innerHTML =  siteContent["contact"]["contact-h4"];
 
 
 let aTags = document.querySelectorAll("a");
@@ -76,4 +79,20 @@ const navFunction = function(){
 }
 navFunction();
 
-let
+// const results =siteContent.filter(word => word.includes('content'));
+// console.log(siteContent);
+
+
+
+let content = document.querySelectorAll("p");
+content[0].innerHTML = siteContent["main-content"]["features-content"];
+content[1].innerHTML = siteContent["main-content"]["about-content"];
+content[2].innerHTML = siteContent["main-content"]["services-content"];
+content[3].innerHTML = siteContent["main-content"]["product-content"];
+content[4].innerHTML = siteContent["main-content"]["vision-content"];
+
+content[5].innerHTML = siteContent["contact"]["address"];
+content[6].innerHTML = siteContent["contact"]["phone"];
+content[7].innerHTML = siteContent["contact"]["email"];
+
+content[8].innerHTML = siteContent["footer"]["copyright"];
