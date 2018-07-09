@@ -95,3 +95,8 @@ homeNav.appendChild(document.createTextNode("Home"));
 homeNav.style.color = "green";
 nav.prepend(homeNav);
 
+let blogNav = document.createElement('a');
+blogNav.appendChild(document.createTextNode("Blog"));
+blogNav.style.color = "green";
+nav.appendChild(blogNav);
+
