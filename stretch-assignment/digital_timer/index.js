@@ -15,7 +15,7 @@ const state = {
 };
 
 function updateDisplay() {
-  const { elapsed } = state;
+  const elapsed = state.elapsed;
   msTens.textContent = Math.floor(elapsed / 10) % 10;
   msHundreds.textContent = Math.floor(elapsed / 100) % 10;
   secondOnes.textContent = Math.floor(elapsed / 1000) % 10;
@@ -23,8 +23,9 @@ function updateDisplay() {
 }
 
 function kickOffTimer(duration) {
+  if (state.intervalHandle) clearInterval(state.intervalHandle);
   if (state.paused) {
-    state.paused = !state.paused;
+    state.paused = false;
     duration = duration - state.elapsed;
   }
   state.startTime = Date.now();
@@ -36,6 +37,7 @@ function kickOffTimer(duration) {
       clearInterval(state.intervalHandle);
       state.elapsed = 0;
       state.pausedAt = 0;
+      startBtn.textContent = 'Start';
       return;
     }
     state.elapsed = elapsed + state.pausedAt;
@@ -49,10 +51,12 @@ resetBtn.addEventListener('click', () => {
   clearInterval(state.intervalHandle);
   state.elapsed = 0;
   state.pausedAt = 0;
+  startBtn.textContent = 'Start';
   updateDisplay();
 });
 stopBtn.addEventListener('click', () => {
   clearInterval(state.intervalHandle);
   state.paused = true;
+  startBtn.textContent = 'Resume';
   state.pausedAt = state.elapsed;
 });
