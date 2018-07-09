@@ -40,3 +40,29 @@ const siteContent = {
 // Example: Update the img src for the logo
 // let logo = document.getElementById("logo-img");
 // logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let logo = document.querySelector("#logo-img");
+let navItems = document.querySelectorAll("nav a");
+let ctaH1 = document.querySelector(".cta-text h1");
+let ctaBtn = document.querySelector(".cta-text button");
+let ctaImg = document.querySelector("#cta-img");
+let TCTCH4 = document.querySelectorAll(".top-content .text-content h4");
+let TCTCP = document.querySelectorAll(".top-content .text-content p")
+
+
+
+logo.src = siteContent["nav"]["img-src"];
+
+navItems[0].textContent = siteContent["nav"]["nav-item-1"]
+navItems[1].textContent = siteContent["nav"]["nav-item-2"]
+navItems[2].textContent = siteContent["nav"]["nav-item-3"]
+navItems[3].textContent = siteContent["nav"]["nav-item-4"]
+navItems[4].textContent = siteContent["nav"]["nav-item-5"]
+navItems[5].textContent = siteContent["nav"]["nav-item-6"]
+
+ctaH1.textContent = siteContent["cta"]["h1"];
+ctaBtn.textContent = siteContent["cta"]["button"];
+ctaImg.src = siteContent["cta"]["img-src"];
+
+TCTCH4[0].textContent = siteContent["main-content"]["features-h4"];
+TCTCP[0].textContent = siteContent["main-content"]["features-content"];
