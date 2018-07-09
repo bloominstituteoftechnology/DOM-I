@@ -72,8 +72,8 @@ let newTextBoxPara = document.createElement('p');
 newTextBoxHeader.innerText = 'Sample';
 newTextBoxPara.innerText = 'Sample content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
 newTextBoxPara.style.paddingRight = '20px';
-newTextBox.append(newTextBoxHeader);
-newTextBox.append(newTextBoxPara);
+newTextBox.appendChild(newTextBoxHeader);
+newTextBox.appendChild(newTextBoxPara);
 document.querySelector('.main-content .top-content').prepend(newTextBox);
 
 //give the other text-content p's some padding as well.
