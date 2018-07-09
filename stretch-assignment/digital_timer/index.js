@@ -3,10 +3,14 @@ let msTens = document.getElementById("msTens");
 let msHundreds = document.getElementById("msHundreds");
 let ones = document.getElementById("secondOnes");
 let tens = document.getElementById("secondTens");
-let msTensCount = 0;
-let msHundredsCount = 0;
-let onesCount = 0;
-let tensCount = 0;
+// let msTensCount = 0;
+// let msHundredsCount = 0;
+// let onesCount = 0;
+// let tensCount = 0;
+msTens.innerHTML = 0;
+msHundreds.innerHTML = 0;
+ones.innerHTML = 0;
+tens.innerHTML = 0;
 let body = document.querySelector("body");
 let startBtn = document.createElement('button');
 startBtn.appendChild(document.createTextNode("Start"));
@@ -15,50 +19,52 @@ let resetBtn = document.createElement('button');
 resetBtn.appendChild(document.createTextNode("Reset"));
 body.appendChild(resetBtn);
 
+
 startBtn.addEventListener("click", timer);
 
 resetBtn.addEventListener("click", function () {
-  msTensCount = 0;
-  msHundredsCount = 0;
-  onesCount = 0;
-  tensCount = 0;
-  [].forEach.call(digits, function(digit) {
+  // msTensCount = 0;
+  // msHundredsCount = 0;
+  // onesCount = 0;
+  // tensCount = 0;
+  digits.forEach(function(digit) {
     digit.style.color = "black";
   })
-  msTens.innerHTML = msTensCount;
-  msHundreds.innerHTML = msHundredsCount;
-  ones.innerHTML = onesCount;
-  tens.innerHTML = tensCount;
+  msTens.innerHTML = 0;
+  msHundreds.innerHTML = 0;
+  ones.innerHTML = 0;
+  tens.innerHTML = 0;
 });
 
 function increment() {
-  if (tensCount === 1) {
+  if (Number(tens.innerHTML) === 1) {
     clearInterval(timer);
-    [].forEach.call(digits, function(digit) {
+    digits.forEach(function(digit) {
       digit.style.color = "red";  
     })
     startBtn.disabled = false;
     
   } else {
-    if (msTensCount <= 8) {
-      msTensCount += 1;
-    } else if (msHundredsCount <= 8) {
-      msTensCount = 0;
-      msHundredsCount += 1;
-    } else if (onesCount <= 8) {
-      msHundredsCount = 0;
-      onesCount += 1;
+    console.log(Number(msTens.innerHTML));
+    if (Number(msTens.innerHTML) <= 8) {
+      msTens.innerHTML = Number(msTens.innerHTML) + 1;
+    } else if (Number(msHundreds.innerHTML) <= 8) {
+      msTens.innerHTML = 0;
+      msHundreds.innerHTML = Number(msHundreds.innerHTML) + 1;
+    } else if (Number(ones.innerHTML) <= 8) {
+      msHundreds.innerHTML = 0;
+      ones.innerHTML = Number(ones.innerHTML) + 1;
     } else {
-      msTensCount = 0;
-      msHundredsCount = 0;
-      onesCount = 0;
-      tensCount = 1;
+      msTens.innerHTML = 0;
+      msHundreds.innerHTML = 0;
+      ones.innerHTML = 0;
+      tens.innerHTML = 1;
     }
 
-    msTens.innerHTML = msTensCount;
-    msHundreds.innerHTML = msHundredsCount;
-    ones.innerHTML = onesCount;
-    tens.innerHTML = tensCount;
+    // msTens.innerHTML = msTensCount;
+    // msHundreds.innerHTML = msHundredsCount;
+    // ones.innerHTML = onesCount;
+    // tens.innerHTML = tensCount;
   }
 };
 
