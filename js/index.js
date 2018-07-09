@@ -37,23 +37,8 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
+//======== selectors ========
 const navigationBar = document.querySelector("header nav");
-const logo = document.getElementById("logo-img");
-const navLinks = document.querySelectorAll("nav a");
-const ctaHeading = document.querySelector(".cta-text h1");
-const ctaBtn = document.querySelector(".cta-text button");
-const ctaImg = document.getElementById("cta-img");
-const textBoxHeadings = document.querySelectorAll(".text-content h4");
-const textBoxContent = document.querySelectorAll(".text-content p");
-const midImg = document.getElementById("middle-img");
-const contactHeading = document.querySelector(".contact h4");
-const contactContent = document.querySelectorAll(".contact p");
-const footerContent = document.querySelector("footer p");
-
-
-navLinks.forEach(i => i.style.color = "green");
-
 let newLink1 = document.createElement("a");
 let newLink2 = document.createElement("a");
 
@@ -66,15 +51,30 @@ newLink2.appendChild(newLinkText2);
 navigationBar.prepend(newLink1);
 navigationBar.appendChild(newLink2);
 
+const navLinks = document.querySelectorAll("nav a");
+const logo = document.getElementById("logo-img");
+const ctaHeading = document.querySelector(".cta-text h1");
+const ctaBtn = document.querySelector(".cta-text button");
+const ctaImg = document.getElementById("cta-img");
+const textBoxHeadings = document.querySelectorAll(".text-content h4");
+const textBoxContent = document.querySelectorAll(".text-content p");
+const midImg = document.getElementById("middle-img");
+const contactHeading = document.querySelector(".contact h4");
+const contactContent = document.querySelectorAll(".contact p");
+const footerContent = document.querySelector("footer p");
+
+// ======== Updating Nodes ========
+
+navLinks.forEach(i => i.style.color = "green");
 
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-navLinks[0].innerHTML = siteContent["nav"]["nav-item-1"];
-navLinks[1].innerHTML = siteContent["nav"]["nav-item-2"];
-navLinks[2].innerHTML = siteContent["nav"]["nav-item-3"];
-navLinks[3].innerHTML = siteContent["nav"]["nav-item-4"];
-navLinks[4].innerHTML = siteContent["nav"]["nav-item-5"];
-navLinks[5].innerHTML = siteContent["nav"]["nav-item-6"];
+navLinks[1].innerHTML = siteContent["nav"]["nav-item-1"];
+navLinks[2].innerHTML = siteContent["nav"]["nav-item-2"];
+navLinks[3].innerHTML = siteContent["nav"]["nav-item-3"];
+navLinks[4].innerHTML = siteContent["nav"]["nav-item-4"];
+navLinks[5].innerHTML = siteContent["nav"]["nav-item-5"];
+navLinks[6].innerHTML = siteContent["nav"]["nav-item-6"];
 
 
 
