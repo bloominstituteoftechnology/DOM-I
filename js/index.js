@@ -92,3 +92,11 @@ nav=document.querySelectorAll('nav a');
 for (let i=0; i<nav.length; i++) {
   nav[i].style.color='green';
 }
+
+let btn=document.createElement('BUTTON');
+let btnText=document.createTextNode('Press Me?');
+btn.appendChild(btnText);
+document.querySelector('.main-content').appendChild(btn);
+btn.addEventListener("click", function(){
+  document.querySelector('body').innerHTML = "<h1>Who told you to press that button?!!</h1>";
+});
