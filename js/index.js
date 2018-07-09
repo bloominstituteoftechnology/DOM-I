@@ -58,3 +58,17 @@ ctaH1.innerHTML = siteContent.cta.h1;
 
 let ctaButton = document.querySelector(".cta-text button");
 ctaButton.innerHTML = siteContent.cta.button; 
+//Middle image picture being added. 
+let middleImg = document.querySelector("#middle-img");
+middleImg.src = siteContent["main-content"]["middle-img-src"];//Just trying the lecture way out. 
+
+let contentTitles = document.querySelectorAll(".text-content h4");
+
+//This will put the titles on the page for the content. 
+contentTitles[0].innerHTML = siteContent["main-content"]["features-h4"];
+contentTitles[1].innerHTML = siteContent["main-content"]["about-h4"];
+contentTitles[2].innerHTML = siteContent["main-content"]["services-h4"];
+contentTitles[3].innerHTML = siteContent["main-content"]["product-h4"];
+contentTitles[4].innerHTML = siteContent["main-content"]["vision-h4"];
+//Titles completed
+
