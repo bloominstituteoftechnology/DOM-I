@@ -99,3 +99,16 @@ contactContent[2].innerText = siteContent['contact']['email'];
 // Footer
 let copyright = document.querySelector('footer p');
 copyright.innerText = siteContent.footer.copyright;
+
+let changeColor = () => {
+  document.querySelector('.container').style.backgroundColor = getRandomColor();
+}
+
+function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
