@@ -56,4 +56,12 @@ contactP[0].innerHTML = siteContent["contact"]["address"];
 contactP[1].innerHTML = siteContent["contact"]["phone"];
 contactP[2].innerHTML = siteContent["contact"]["email"];
 
+let navStuff=document.querySelectorAll('nav a');
+navStuff[0].innerHTML = siteContent["nav"]["nav-item-1"];
+navStuff[1].innerHTML = siteContent["nav"]["nav-item-2"];
+navStuff[2].innerHTML = siteContent["nav"]["nav-item-3"];
+navStuff[3].innerHTML = siteContent["nav"]["nav-item-4"];
+navStuff[4].innerHTML = siteContent["nav"]["nav-item-5"];
+navStuff[5].innerHTML = siteContent["nav"]["nav-item-6"];
+
  
