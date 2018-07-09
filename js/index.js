@@ -40,3 +40,38 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//Literal caveman Approach
+// Creating Selectors by defining variables:
+
+let nava = document.querySelector(".container header nav a")
+
+console.log(nava)
+nava.innerHTML = ""
+
+// And then adding the appropriate feature in this case text:
+
+
+/* Okay so I want to make:
+<div class="cta-text">
+    <h1></h1>
+    <button></button>
+</div>
+
+Into:
+
+<div class="cta-text">
+    <h1>DOM<br> Is<br> Awesome</h1>
+    <button>Get Started</button>
+</div>
+
+So all I need to do is add the h1 text. */
+document.querySelector(".cta-text h1").innerHTML("DOM")
+/*create a new text entry and
+So first I will create the temp text nodes:
+*/
+let node1 = document.createTextNode("DOM");
+let node2 = document.createTextNode("Awesome")
+/* and then create the actual new elements: */
+let h1cta = document.create("h1")
+let brcta = document.create("h1")
