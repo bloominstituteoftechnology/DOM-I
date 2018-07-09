@@ -1,12 +1,15 @@
 body {
   display: flex;
+  flex-direction: : column;
   justify-content: center;
   align-items: center;
+  font-family:"Open Sans", sans-serif;
 }
 
 .digit {
   display: inline-block;
   font-size: 80px;
+  font-weight: 300;
 }
 
 .redDigit {
