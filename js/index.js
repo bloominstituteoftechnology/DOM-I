@@ -58,3 +58,25 @@ ctaButton.innerHTML = siteContent['cta']['button']
 
 let ctaImage = document.querySelector('#cta-img');
 ctaImage.setAttribute('src', siteContent['cta']['img-src'])
+
+// ============ Main Content ============= 
+
+let mainHeadings = document.querySelectorAll('.text-content h4')
+mainHeadings[0].innerHTML = siteContent["main-content"]["features-h4"];
+mainHeadings[1].innerHTML = siteContent["main-content"]["about-h4"]
+mainHeadings[2].innerHTML = siteContent["main-content"]["services-h4"]
+mainHeadings[3].innerHTML = siteContent["main-content"]["product-h4"]
+mainHeadings[4].innerHTML = siteContent["main-content"]["vision-h4"]
+
+let mainImg = document.querySelector('#middle-img');
+mainImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+
+let mainParagraphs = document.querySelectorAll('.text-content p');
+mainParagraphs[0].innerHTML = siteContent['main-content']['features-content'];
+mainParagraphs[1].innerHTML = siteContent['main-content']['about-content'];
+mainParagraphs[2].innerHTML = siteContent['main-content']['services-content'];
+mainParagraphs[3].innerHTML = siteContent['main-content']['product-content'];
+mainParagraphs[4].innerHTML = siteContent['main-content']['vision-content'];
+
+
