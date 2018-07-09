@@ -39,7 +39,7 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 let navigation = document.querySelectorAll("header nav a");
 
@@ -53,13 +53,40 @@ navigation[5].innerHTML = siteContent["nav"]["nav-item-6"];
 let centerText = document.querySelector(".cta-text h1");
 centerText.innerHTML = siteContent["cta"]["h1"];
 
-let circleImage = document.getElementById("cta-img");
-circleImage.setAttribute('src', siteContent["cta"]["img-src"])
-
 let buttonText = document.querySelector(".cta .cta-text button");
 buttonText.innerHTML = siteContent["cta"]["button"];
 
+let circleImage = document.getElementById("cta-img");
+circleImage.setAttribute('src', siteContent["cta"]["img-src"]);
 
+let topContentHeader = document.querySelectorAll(".top-content h4");
+topContentHeader[0].innerHTML = siteContent["main-content"]["features-h4"];
+topContentHeader[1].innerHTML = siteContent["main-content"]["about-h4"];
+
+let topContent = document.querySelectorAll(".top-content p");
+topContent[0].innerHTML = siteContent["main-content"]["features-content"];
+topContent[1].innerHTML =  siteContent["main-content"]["about-content"];
 
 let middleImage = document.getElementById("middle-img");
-middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+let bottomContentHeader = document.querySelectorAll(".bottom-content h4");
+bottomContentHeader[0].innerHTML = siteContent["main-content"]["services-h4"];
+bottomContentHeader[1].innerHTML = siteContent["main-content"]["product-h4"];
+bottomContentHeader[2].innerHTML = siteContent["main-content"]["vision-h4"];
+
+let bottomContent = document.querySelectorAll(".bottom-content p");
+bottomContent[0].innerHTML = siteContent["main-content"]["services-content"];
+bottomContent[1].innerHTML = siteContent["main-content"]["product-content"];
+bottomContent[2].innerHTML = siteContent["main-content"]["vision-content"];
+
+let contactHeader = document.querySelectorAll(".contact h4");
+contactHeader[0].innerHTML = siteContent["contact"]["contact-h4"];
+
+let contactContent = document.querySelectorAll(".contact p");
+contactContent[0].innerHTML = siteContent["contact"]["address"];
+contactContent[1].innerHTML = siteContent["contact"]["phone"];
+contactContent[2].innerHTML = siteContent["contact"]["email"];
+
+let footerContent = document.querySelectorAll("footer p")
+footerContent[0].innerHTML = siteContent["footer"]["copyright"];
