@@ -297,3 +297,9 @@ footer {
         margin: 20px;
     }
 }
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+}

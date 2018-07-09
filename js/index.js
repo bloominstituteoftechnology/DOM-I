@@ -102,3 +102,17 @@ RandomA.innerText = 'RandomA';
 RandomB.innerText = 'RandomB';
 navigationText[0].parentNode.appendChild(RandomA);
 navigationText[0].parentNode.prepend(RandomB);
+
+let navbar = navigationText[0].parentNode.parentNode;
+navbar.style.background = 'green';
+navbar.addEventListener('click', function() {
+  if (navbar.style.background === 'green') {
+    navbar.style.background = 'red';
+  } else {
+    navbar.style.background = 'green';
+  }
+})
+
+// window.addEventListener('scroll', function(){
+//   navbar.classList.add('sticky');
+// })
