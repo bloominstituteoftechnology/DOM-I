@@ -58,10 +58,15 @@ const updateClock = () => {
 const startClock = () => {
   clock = setInterval(updateClock, 10);
   startButton.disabled = true;
+  pauseButton.innerText = 'Pause';
+  isPaused = false;
 }
 
 const reset = () => {
   clearInterval(clock);
+  count = 0;
+  isPaused = false;
+  pauseButton.innerText = 'Pause';
   digits.style.color = 'black';
 
   secondTens.textContent = '-';
