@@ -37,6 +37,70 @@ const siteContent = {
   },
 };
 
+const siteMap = {
+  'nav': populateNav,
+  'cta': populateCta,
+  'main-content': populateMainContent
+}
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+for (const tag in siteContent) {
+    const element = document.getElementsByTagName(tag)
+    siteMap[tag](element, siteContent[tag])
+
+}
+
+function populateNav (element, data){
+  const navElements = element[0].getElementsByTagName('a')
+  let counter = 0;
+
+  for (const title in data){
+    if (counter !== navElements.length)
+      navElements[counter++].text = data[title]
+  }
+}
+
+function populateCta(element, data) {
+  const cta_img = document.getElementById('cta-img')
+  element = document.getElementsByClassName('cta-text')[0].childNodes
+
+  element[1].text = data.h1
+  element[3].textContent = data.button
+  cta_img.setAttribute('src', data['img-src'])
+}
+
+function populateMainContent (element, data){
+  element = document.getElementsByClassName('main-content')[0]
+  const topContent = element.getElementsByClassName('top-content')[0].childNodes
+  const middle_img = element.getElementsByClassName('middle-img')[0]
+  const bottomContten = element.getElementsByClassName('bottom-content')[0].childNodes
+  let counter = 0;
+  const elements = []
+
+  topContent.forEach(e => {
+    if (e.childNodes.length > 0){
+      elements.push(e.childNodes[1])
+      elements.push(e.childNodes[3])
+    }
+  })
+
+  bottomContten.forEach(e => {
+    if (e.childNodes.length > 0){
+        elements.push(e.childNodes[1])
+        elements.push(e.childNodes[3])
+    }
+  })
+
+
+
+  for (const i in data){
+    console.log(elements[counter])
+    if (data[i] === 'middle-img')
+      middle_img.setAttribute('src', data['middle-img'])
+    else
+      elements[counter++].text = data[i]
+  }
+}
