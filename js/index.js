@@ -60,3 +60,31 @@ ctaText[1].innerText = siteContent.cta.button;
 
 let ctaIMG = document.querySelector("#cta-img");
 ctaIMG.setAttribute('src', siteContent.cta["img-src"]);
+
+
+//text-content (main-content)
+const contentTitles = ["features","about","services","product","vision"];
+
+
+let textContent = document.querySelectorAll(".text-content");
+
+for (let index = 0; index < textContent.length; index++) {
+  textContent[index].children[0].innerText =siteContent["main-content"][contentTitles[index] + "-h4"]
+
+  textContent[index].children[1].innerText =siteContent["main-content"][contentTitles[index] + "-content"]
+
+}
+
+
+//Main-content image
+document.querySelector("#middle-img").setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+
+//contact
+
+let contact = document.querySelector(".contact").children;
+
+contact[0].innerText=siteContent.contact["contact-h4"];
+contact[1].innerText=siteContent.contact["address"];
+contact[2].innerText=siteContent.contact["phone"];
+contact[3].innerText=siteContent.contact["email"];
