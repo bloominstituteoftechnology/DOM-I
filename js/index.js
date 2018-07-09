@@ -107,3 +107,7 @@ ctaBtn.style.backgroundColor = "lightGreen";
 middleImg.style.boxShadow = "10px 10px 20px lightBlue";
 ctaImg.style.borderRadius = "50%";
 ctaImg.style.boxShadow = "10px 10px 20px lightBlue";
+
+ctaBtn.addEventListener('click', function() {
+  alert("I've been clicked!");
+})
