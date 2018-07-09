@@ -10,17 +10,34 @@ let tensCount = 0;
 let body = document.querySelector("body");
 let startBtn = document.createElement('button');
 startBtn.appendChild(document.createTextNode("Start"));
-body.appendChild(startBtn)
+body.appendChild(startBtn);
+let resetBtn = document.createElement('button');
+resetBtn.appendChild(document.createTextNode("Reset"));
+body.appendChild(resetBtn);
 
 startBtn.addEventListener("click", timer);
+
+resetBtn.addEventListener("click", function () {
+  msTensCount = 0;
+  msHundredsCount = 0;
+  onesCount = 0;
+  tensCount = 0;
+  [].forEach.call(digits, function(digit) {
+    digit.style.color = "black";
+  })
+  msTens.innerHTML = msTensCount;
+  msHundreds.innerHTML = msHundredsCount;
+  ones.innerHTML = onesCount;
+  tens.innerHTML = tensCount;
+});
 
 function increment() {
   if (tensCount === 1) {
     clearInterval(timer);
     [].forEach.call(digits, function(digit) {
-      digit.style.color = "red";
-      startBtn.disabled = false;
+      digit.style.color = "red";  
     })
+    startBtn.disabled = false;
     
   } else {
     if (msTensCount <= 8) {
