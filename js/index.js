@@ -116,3 +116,17 @@ for (i = 0; i < 3; i++) {
 // === Footer
 let footerCopyRight = document.querySelector("footer p");
 footerCopyRight.innerHTML = siteContent.footer.copyright;
+
+// === Adding own content
+// Color
+let navColor = document.querySelector("a");
+navColor.style.color = "blue";
+
+// First element of Nav
+let navFirstAhref = document.createElement("a");
+navFirstAhref.innerHTML("Hey");
+document.nav.appendChild(navFirstAhref);
+
+// // Create a new paragraph element, and append it to the end of the document body
+// var p = document.createElement("p");
+// document.body.appendChild(p);
