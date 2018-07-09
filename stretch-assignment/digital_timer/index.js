@@ -57,6 +57,8 @@ resetBtn.addEventListener('click', () => {
 stopBtn.addEventListener('click', () => {
   clearInterval(state.intervalHandle);
   state.paused = true;
-  startBtn.textContent = 'Resume';
+  if (state.elapsed !== 0) {
+    startBtn.textContent = 'Resume';
+  }
   state.pausedAt = state.elapsed;
 });
