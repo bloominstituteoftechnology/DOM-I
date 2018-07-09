@@ -50,45 +50,45 @@ let contact = document.querySelector('.contact');
 let footer = document.querySelector("footer");
 
 // Question to explore later: is there a way I can iterate through siteContent["nav"]?
-nav.children[0].innerHTML = siteContent["nav"]["nav-item-1"];
-nav.children[1].innerHTML = siteContent["nav"]["nav-item-2"];
-nav.children[2].innerHTML = siteContent["nav"]["nav-item-3"];
-nav.children[3].innerHTML = siteContent["nav"]["nav-item-4"];
-nav.children[4].innerHTML = siteContent["nav"]["nav-item-5"];
-nav.children[5].innerHTML = siteContent["nav"]["nav-item-6"];
+nav.children[0].textContent = siteContent["nav"]["nav-item-1"];
+nav.children[1].textContent = siteContent["nav"]["nav-item-2"];
+nav.children[2].textContent = siteContent["nav"]["nav-item-3"];
+nav.children[3].textContent = siteContent["nav"]["nav-item-4"];
+nav.children[4].textContent = siteContent["nav"]["nav-item-5"];
+nav.children[5].textContent = siteContent["nav"]["nav-item-6"];
 
-cta.children[0].children[0].innerHTML = siteContent["cta"]["h1"];
-cta.children[0].children[1].innerHTML = siteContent["cta"]["button"];
+cta.children[0].children[0].textContent = siteContent["cta"]["h1"];
+cta.children[0].children[1].textContent = siteContent["cta"]["button"];
 ctaIMG.setAttribute('src', siteContent["cta"]["img-src"]);
 
 let mainContentHeaders = mainContent.querySelectorAll("div div h4");
-mainContentHeaders[0].innerHTML = siteContent["main-content"]["features-h4"];
-mainContentHeaders[1].innerHTML = siteContent["main-content"]["about-h4"];
-mainContentHeaders[2].innerHTML = siteContent["main-content"]["services-h4"];
-mainContentHeaders[3].innerHTML = siteContent["main-content"]["product-h4"];
-mainContentHeaders[4].innerHTML = siteContent["main-content"]["vision-h4"];
+mainContentHeaders[0].textContent = siteContent["main-content"]["features-h4"];
+mainContentHeaders[1].textContent = siteContent["main-content"]["about-h4"];
+mainContentHeaders[2].textContent = siteContent["main-content"]["services-h4"];
+mainContentHeaders[3].textContent = siteContent["main-content"]["product-h4"];
+mainContentHeaders[4].textContent = siteContent["main-content"]["vision-h4"];
 
 let mainContentText = mainContent.querySelectorAll("div div p");
-mainContentText[0].innerHTML = siteContent["main-content"]["features-content"];
-mainContentText[1].innerHTML = siteContent["main-content"]["about-content"];
-mainContentText[2].innerHTML = siteContent["main-content"]["services-content"];
-mainContentText[3].innerHTML = siteContent["main-content"]["product-content"];
-mainContentText[4].innerHTML = siteContent["main-content"]["vision-content"];
+mainContentText[0].textContent = siteContent["main-content"]["features-content"];
+mainContentText[1].textContent = siteContent["main-content"]["about-content"];
+mainContentText[2].textContent = siteContent["main-content"]["services-content"];
+mainContentText[3].textContent = siteContent["main-content"]["product-content"];
+mainContentText[4].textContent = siteContent["main-content"]["vision-content"];
 
 let midIMG = document.querySelector("#middle-img");
 midIMG.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
-contact.children[0].innerHTML = siteContent["contact"]["contact-h4"];
-contact.children[1].innerHTML = siteContent["contact"]["address"];
-contact.children[2].innerHTML = siteContent["contact"]["phone"];
-contact.children[3].innerHTML = siteContent["contact"]["email"];
+contact.children[0].textContent = siteContent["contact"]["contact-h4"];
+contact.children[1].textContent = siteContent["contact"]["address"];
+contact.children[2].textContent = siteContent["contact"]["phone"];
+contact.children[3].textContent = siteContent["contact"]["email"];
 
-footer.children[0].innerHTML = siteContent["footer"]["copyright"];
+footer.children[0].textContent = siteContent["footer"]["copyright"];
 
 nav.prepend(document.createElement('a'));
-nav.children[0].innerHTML = "Blog";
+nav.children[0].textContent = "Blog";
 nav.append(document.createElement('a'));
-nav.children[7].innerHTML = "Donate";
+nav.children[7].textContent = "Donate";
 
 for (let i = 0; i < nav.children.length; i++) {
   nav.children[i].style.color = "green";

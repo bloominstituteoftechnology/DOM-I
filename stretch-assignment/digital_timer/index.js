@@ -68,8 +68,8 @@ function startTimer() {
 }
 
 function displayTime () {
-  displaySecOnes.innerHTML = secondOnes;
-  displaySecTens.innerHTML = secondTens;
-  displayMSTens.innerHTML = msTens;
-  displayMSHundreds.innerHTML = msHundreds;
+  displaySecOnes.textContent = secondOnes;
+  displaySecTens.textContent = secondTens;
+  displayMSTens.textContent = msTens;
+  displayMSHundreds.textContent = msHundreds;
 }
