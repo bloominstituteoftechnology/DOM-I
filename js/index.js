@@ -41,3 +41,56 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 logo.setAttribute('alt', 'This is the logo for the Great Idea site')
+
+//Update the navigation
+let siteNav = document.querySelector('nav')
+let siteHead = document.querySelectorAll('a')
+
+//Add the navigation options
+siteHead[0].innerHTML = siteContent['nav']['nav-item-1']
+siteHead[1].innerHTML = siteContent['nav']['nav-item-2']
+siteHead[2].innerHTML = siteContent['nav']['nav-item-3']
+siteHead[3].innerHTML = siteContent['nav']['nav-item-4']
+siteHead[4].innerHTML = siteContent['nav']['nav-item-5']
+siteHead[5].innerHTML = siteContent['nav']['nav-item-6']
+
+//Add cta header and button
+let ctaHead = document.querySelector('h1')
+ctaHead.innerHTML = siteContent['cta']['h1']
+
+let ctaButton = document.querySelector('button')
+ctaButton.innerHTML = siteContent['cta']['button']
+
+//Add cta image with html id "cta-img"
+let ctaImg = document.getElementById('cta-img')
+ctaImg.setAttribute('src', siteContent['cta']['img-src'])
+ctaImg.setAttribute('alt', "This is an image of some code.")
+
+//Add headings for site content
+let textHeading = document.querySelectorAll('h4')
+textHeading[0].innerHTML = siteContent['main-content']['features-h4']
+textHeading[1].innerHTML = siteContent['main-content']['about-h4']
+textHeading[2].innerHTML = siteContent['main-content']['services-h4']
+textHeading[3].innerHTML = siteContent['main-content']['product-h4']
+textHeading[4].innerHTML = siteContent['main-content']['vision-h4']
+
+//site content Text
+let textContent = document.querySelectorAll('p')
+textContent[0].innerHTML = siteContent['main-content']['features-content']
+textContent[1].innerHTML = siteContent['main-content']['about-content']
+textContent[2].innerHTML = siteContent['main-content']['services-content']
+textContent[3].innerHTML = siteContent['main-content']['product-content']
+textContent[4].innerHTML = siteContent['main-content']['vision-content']
+
+//Add the middle image to the site
+let middleImg = document.getElementById("middle-img")
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+//Add the contact information: header (textHeading[5]) and content (textContent)
+textHeading[5].innerHTML = siteContent['contact']['contact-h4']
+textContent[5].innerHTML = siteContent['contact']['address']
+textContent[6].innerHTML = siteContent['contact']['phone']
+textContent[7].innerHTML = siteContent['contact']['email']
+
+//Add the footer information
+textContent[8].innerHTML = siteContent['footer']['copyright']
