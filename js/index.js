@@ -72,7 +72,10 @@ let copyright = document.querySelector('footer p');
 
 // Added content
 
-document.querySelectorAll('nav a').forEach((a, ind) => a.textContent = siteContent['nav'][`nav-item-${ind + 1}`]); // nav links
+document.querySelectorAll('nav a').forEach((a, ind) => {
+  a.textContent = siteContent['nav'][`nav-item-${ind + 1}`] // nav links
+  a.style.color = 'green';
+});
 
 ctaHdr.innerText = siteContent.cta.h1;
 ctaBtn.textContent = siteContent['cta']['button'];
@@ -98,3 +101,13 @@ contactNum.textContent = siteContent['contact']['phone'];
 contactEmail.textContent = siteContent['contact']['email'];
 
 copyright.innerText = siteContent['footer']['copyright'];
+
+
+// New Nav Items
+let nav = document.querySelector('nav');
+let first = document.createElement('a'); 
+let last = document.createElement('a'); 
+first.textContent = 'Sleep';
+last.textContent = 'Extra';
+nav.appendChild(last);  
+nav.prepend(first);
