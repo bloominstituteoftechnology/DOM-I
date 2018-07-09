@@ -41,3 +41,23 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+let nav = document.querySelectorAll("a");
+nav[0].innerText = siteContent["nav"]["nav-item-1"];
+nav[1].innerText = siteContent["nav"]["nav-item-2"];
+nav[2].innerText = siteContent["nav"]["nav-item-3"];
+nav[3].innerText = siteContent["nav"]["nav-item-4"];
+nav[4].innerText = siteContent["nav"]["nav-item-5"];
+nav[5].innerText = siteContent["nav"]["nav-item-6"];
+
+let ctaHeader = document.querySelector(".cta-text h1");
+ctaHeader.innerText = siteContent["cta"]["h1"];
+
+let ctaButton = document.querySelector(".cta-text button");
+ctaButton.innerText = siteContent["cta"]["button"];
+
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let topContentHeader = document.querySelectorAll(".top-content h4");
+topContentHeader[0].innerText = siteContent["main-content"]["features-h4"];
+topContentHeader[1].innerText = siteContent["main-content"]["about-h4"];
