@@ -39,19 +39,44 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 let logo2 = document.getElementById("cta-img");
-logo2.setAttribute('src', siteContent["cta"]["img-src"])
+logo2.setAttribute('src', siteContent["cta"]["img-src"]);
 
 let logo3 = document.getElementById("middle-img");
-logo3.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+logo3.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 let navLink =  document.querySelectorAll("nav a");
-navLink[0].innerHTML = siteContent["nav"]["nav-item-1"]
-navLink[1].innerHTML = siteContent["nav"]["nav-item-2"]
-navLink[2].innerHTML = siteContent["nav"]["nav-item-3"]
-navLink[3].innerHTML = siteContent["nav"]["nav-item-4"]
-navLink[4].innerHTML = siteContent["nav"]["nav-item-5"]
-navLink[5].innerHTML = siteContent["nav"]["nav-item-6"]
+navLink[0].innerHTML = siteContent["nav"]["nav-item-1"];
+navLink[1].innerHTML = siteContent["nav"]["nav-item-2"];
+navLink[2].innerHTML = siteContent["nav"]["nav-item-3"];
+navLink[3].innerHTML = siteContent["nav"]["nav-item-4"];
+navLink[4].innerHTML = siteContent["nav"]["nav-item-5"];
+navLink[5].innerHTML = siteContent["nav"]["nav-item-6"];
 
+
+let ctaHead = document.querySelector("h1");
+ctaHead.innerHTML = siteContent["cta"]["h1"]
+
+let ctaBtn = document.querySelector("button");
+ctaBtn.innerHTML = siteContent["cta"]["button"]
+
+let subHeader =  document.querySelectorAll("h4");
+subHeader[0].innerHTML = siteContent["main-content"]["features-h4"];
+subHeader[1].innerHTML = siteContent["main-content"]["about-h4"];
+subHeader[2].innerHTML = siteContent["main-content"]["services-h4"];
+subHeader[3].innerHTML = siteContent["main-content"]["product-h4"];
+subHeader[4].innerHTML = siteContent["main-content"]["vision-h4"];
+subHeader[5].innerHTML = siteContent["contact"]["contact-h4"];
+
+let content = document.querySelectorAll("p");
+content[0].innerHTML = siteContent["main-content"]["features-content"];
+content[1].innerHTML = siteContent["main-content"]["about-content"];
+content[2].innerHTML = siteContent["main-content"]["services-content"];
+content[3].innerHTML = siteContent["main-content"]["product-content"];
+content[4].innerHTML = siteContent["main-content"]["vision-content"];
+content[5].innerHTML = siteContent["contact"]["address"];
+content[6].innerHTML = siteContent["contact"]["phone"];
+content[7].innerHTML = siteContent["contact"]["email"];
+content[8].innerHTML = siteContent["footer"]["copyright"];
