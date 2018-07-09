@@ -50,11 +50,18 @@ navElements[3].innerHTML = siteContent["nav"]["nav-item-4"];
 navElements[4].innerHTML = siteContent["nav"]["nav-item-5"];
 navElements[5].innerHTML = siteContent["nav"]["nav-item-6"];
 
+let ctaH1 = document.getElementsByTagName("h1");
+
+ctaH1[0].innerHTML = siteContent["cta"]["h1"];
+
+let ctaButton = document.getElementsByTagName("button");
+
+ctaButton[0].innerHTML = siteContent["cta"]["button"];
+
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
 let customID = document.getElementById("custom-id");
-
-
-let customClass = document.getElementsByClassName("cta");
-customClass
 
 
 let customSelection = document.querySelector(".heading");
