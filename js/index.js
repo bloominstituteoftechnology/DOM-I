@@ -43,6 +43,17 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
 // NAVIGATION
+// appendChild to nav links
+// create new a element
+let newLink1 = document.createElement("a");
+newLink1.innerText = "Ideas";
+// create new a element
+let newLink2 = document.createElement("a");
+newLink2.innerText = "Shop";
+// find the position where the new element should be added
+let position = document.querySelector("header nav");
+// insert the new elements into their positions
+position.append(newLink1, newLink2);
 // Select nav links
 let navLink = document.querySelectorAll("header nav a");
 // Update content for each nav link
@@ -52,6 +63,10 @@ navLink[2].textContent = siteContent["nav"]["nav-item-3"];
 navLink[3].textContent = siteContent["nav"]["nav-item-4"];
 navLink[4].textContent = siteContent["nav"]["nav-item-5"];
 navLink[5].textContent = siteContent["nav"]["nav-item-6"];
+// Change the color of the navigation text to be green.
+for (let item of navLink) {
+  item.style.color = 'green';
+}
 
 
 // CTA SECTION
@@ -75,7 +90,7 @@ ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 // select all the .text-content h4 nodes
 let mainH4 = document.querySelectorAll(".text-content h4");
 // update the contents for h4's
-//top content
+// top content
 mainH4[0].textContent = siteContent["main-content"]["features-h4"];
 mainH4[1].textContent = siteContent["main-content"]["about-h4"];
 // bottom content
