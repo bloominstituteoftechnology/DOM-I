@@ -44,11 +44,26 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //nav-bar
 let nav = document.querySelector("nav").children;
+const aLink = document.createElement("a");
+const bLink = document.createElement("a");
+
+
+document.querySelector("nav").prepend(bLink);
+
+
+document.querySelector("nav").appendChild(aLink);
+
+siteContent.nav["nav-item-0"] ="Home";
+siteContent.nav["nav-item-7"] ="Webring";
 
 
 for (let index = 0; index < nav.length; index++) {
-  nav[index].innerHTML = siteContent.nav["nav-item-"+(index+1)]
+  nav[index].innerHTML = siteContent.nav["nav-item-"+(index)]
+  nav[index].style.color = "green";
+
 }
+
+
 
 //cta text
 let ctaText = document.querySelector(".cta-text").children;
