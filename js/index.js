@@ -96,3 +96,53 @@ contactP[2].textContent = siteContent["contact"]["email"];
 
 let footerP = document.querySelector("footer p");
 footerP.textContent = siteContent["footer"]["copyright"];
+
+logo.addEventListener('click', (event) => {
+	TweenMax.to(logo, 2, {x:200, opacity: 0, scale: 0.5});
+})
+
+let deg = 0;
+
+ctaimg.addEventListener('wheel', event => {
+	event.preventDefault();
+	deg += event.deltaY /10;
+	event.target.style.transform = `rotate(${deg}deg)`;
+});
+
+nav.addEventListener('mouseover', event => {
+	event.target.style.visibility = "hidden";
+})
+
+nav.addEventListener('mouseout', event => {
+	event.target.style.visibility = "visible";
+})
+
+ctaText.addEventListener('dblclick', event => {
+	event.target.style.color = "red";
+})
+
+ctaText.addEventListener('contextmenu', event => {
+	event.target.style.color = "black";
+})
+
+buttonText.addEventListener('auxclick', event => {
+	event.target.style.visibility = "hidden";
+	setTimeout(() => {
+	event.target.style.visibility = "visible";
+	}, 3000);
+})
+
+
+document.addEventListener('keydown', ()=> {
+	document.querySelector(".bottom-content .text-content").style.color = 'blue';
+})
+document.addEventListener('keypress', ()=> {
+	document.querySelectorAll(".bottom-content .text-content")[1].style.color = 'red';
+})
+document.addEventListener('keyup', ()=> {
+	document.querySelectorAll(".bottom-content .text-content")[2].style.color = 'yellow';
+})
+
+document.addEventListener('copy', () => {
+	alert("Copied to clipboard!");
+})
