@@ -83,6 +83,15 @@ ctaHeading.innerHTML = siteContent['cta']['h1']
 const ctaButton = document.querySelector('.cta button');
 ctaButton.innerHTML = siteContent['cta']['button']
 
+//Button Event Handler
+ctaButton.addEventListener('click', function(){
+  if (ctaButton.innerHTML != "What Happened??"){
+    ctaButton.innerHTML = "What Happened??"
+  }else {
+    ctaButton.innerHTML = siteContent['cta']['button']
+  }
+})
+
 const ctaImage = document.querySelector('#cta-img');
 ctaImage.setAttribute('src', siteContent['cta']['img-src'])
 
