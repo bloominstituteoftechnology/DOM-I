@@ -111,11 +111,22 @@ bottomP[2].innerHTML = siteContent['main-content']['vision-content']
 
 //contact
 contacth4.innerHTML = siteContent['contact']['contact-h4']
-contactP[0].innerHTML = siteContent['contact']['address']
+
 contactP[1].innerHTML = siteContent['contact']['phone']
 contactP[2].innerHTML = siteContent['contact']['email']
+let bottomup = siteContent['contact']['address']
+let splitbottom = bottomup.split("")
+splitbottom.splice(18, 0, "<br>")
+let red = splitbottom.join('')
+console.log(red)
+let splitIndex = splitbottom.lastIndexOf("t")
+console.log(splitIndex)
+console.log()
+
+contactP[0].innerHTML = red
 
 // footer
+
 footer.innerHTML = siteContent['footer']['copyright']
 
 /* Okay so I want to make:
