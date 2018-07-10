@@ -51,9 +51,25 @@ ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 let navLinks = document.querySelectorAll("nav a");
 navLinks.forEach((link,i)=> {
   link.innerHTML =siteContent.nav[`nav-item-${i+1}`];
-  document.getElementById("nav").style.color = "green";
+ 
 })
 
+//Added Content per Readme
+
+//change color of nav links
+navLinks.forEach((link,i) => {
+  link.style.color = "green";
+})
+
+//add two things to nav
+navLinks = document.getElementsByTagName("nav")[0];
+let createNewNode = (name)=> {
+let createNode = document.createElement("a");
+createNode.innerHTML = name;
+return createNode;
+}
+navLinks.prepend(createNewNode("Begin"));
+navLinks.append(CreateNewNode("End"));
 //end Nav
 
 //CTA text and button
