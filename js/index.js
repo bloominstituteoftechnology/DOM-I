@@ -43,32 +43,98 @@ let doc = document;
 let logo = doc.querySelector("#logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-let title = doc.querySelector("title");
-title.innerHTML = "Great Idea";
 
-let nav = doc.querySelector("nav");
+let nav = doc.querySelectorAll("nav a");
+nav[0].innerHTML = siteContent["nav"]["nav-item-1"];
+nav[1].innerHTML = siteContent["nav"]["nav-item-2"];
+nav[2].innerHTML = siteContent["nav"]["nav-item-3"];
+nav[3].innerHTML = siteContent["nav"]["nav-item-4"];
+nav[4].innerHTML = siteContent["nav"]["nav-item-5"];
+nav[5].innerHTML = siteContent["nav"]["nav-item-6"];
+
+nav[0].style.color = "green";
+nav[1].style.color = "green";
+nav[2].style.color = "green";
+nav[3].style.color = "green";
+nav[4].style.color = "green";
+nav[5].style.color = "green";
+
+// let navHello = doc.createElement("a");
+// let navHelloContent = doc.createTextNode("Hello");
+// navHello.appendChild(navHelloContent);
+// let changeNav = doc.querySelector("nav");
+// doc.body.insertBefore(navHello, changeNav);
+
+// let navGoodbye = doc.createElement("a");
+// let navGoodbyeContent = doc.createTextNode("Goodbye");
+// navHello.preChild(navGoodbyeContent);
+// let changeNav = doc.querySelector("nav");
+// doc.body.insertBefore (navHello, changeNav);
+
+// let startNAv = document.createElement("a");
+// let endNav = document.createElement("a");
+// nav[0].append(startNav);
+// nav.prepend(endNav);
+
+let node = doc.createElement("A");
+let textNode = doc.createTextNode("Goodbye");
+node.appendChild(textNode);
+doc.querySelector("nav").appendChild(node);
+
+
+// nav[0].appendChild(a);
+
+// navChange[0].appendChild("<a href="#">Hello</a>");
+
+
 let ctaText = doc.querySelector(".cta-text h1");
-let button = doc.querySelector(".cta-text button");
-let ctaIMG = doc.querySelector("#cta-img");
-let features = doc.querySelectorAll(".text-content h4");
-features[0].innerHTML = "Features";
-let featuresText = doc.querySelector(".text-content p");
-let about = features[1];
-about.innerHTML = "About";
-let services = doc.querySelector(".bottom-content h4");
-let servicesText = doc.querySelector(".bottom-content p");
-let product = doc.querySelector("text-content h4");
-let productText = doc.querySelector("text-content p");
-let vision = doc.querySelector("bottom-content h4");
-let visionText = doc.querySelector("bottom-content p");
-let contact = doc.querySelectorAll(".contact");
+ctaText.innerHTML = "DOM <br> Is<br> Awesome";
 
-contact[0] 
-contact[1] 
-contact[2]
-contact[3]
+let button = doc.querySelector(".cta-text button");
+button.innerHTML = siteContent["cta"]["button"]
+
+let ctaIMG = doc.querySelector("#cta-img");
+ctaIMG.src = siteContent["cta"]["img-src"]
+
+let features = doc.querySelectorAll(".text-content h4");
+features[0].innerHTML = siteContent["main-content"]["features-h4"]
+
+let featuresText = doc.querySelectorAll(".text-content p");
+featuresText[0].innerHTML = siteContent["main-content"]["features-content"]
+
+let about = features[1];
+about.innerHTML = siteContent["main-content"]["about-h4"];
+
+let aboutText = featuresText[1];
+aboutText.innerHTML = siteContent["main-content"]["about-content"];
+
+
+let bottomHeader = doc.querySelectorAll(".bottom-content .text-content h4");
+bottomHeader[0].innerHTML = siteContent["main-content"]["services-h4"];
+bottomHeader[1].innerHTML = siteContent["main-content"]["product-h4"];
+bottomHeader[2].innerHTML = siteContent["main-content"]["vision-h4"];
+
+let middleIMG = doc.querySelector(".middle-img");
+middleIMG.src = siteContent["main-content"]["middle-img-src"];
+
+let bottomText = doc.querySelectorAll(".bottom-content .text-content p");
+bottomText[0].innerHTML = siteContent["main-content"]["services-content"];
+bottomText[1].innerHTML = siteContent["main-content"]["product-content"];
+bottomText[2].innerHTML = siteContent["main-content"]["vision-content"];
+
+let contactH4 = doc.querySelector(".contact h4");
+contactH4.innerHTML = siteContent["contact"]["contact-h4"];
+
+let contact = doc.querySelectorAll(".contact p");
+contact[0].innerHTML = siteContent["contact"]["address"];
+contact[1].innerHTML = siteContent["contact"]["phone"];
+contact[2].innerHTML = siteContent["contact"]["email"];
+
 
 let footer = doc.querySelector("footer");
+footer.innerHTML = siteContent["footer"]["copyright"];
+
+
 
 
 
