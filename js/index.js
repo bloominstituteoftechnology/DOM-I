@@ -136,13 +136,19 @@ image.addEventListener("mousemove", (event)=> {
   console.log("move")
 })
 
-hCTA.addEventListener("focus",( event ) => {
-  event.target.style.background = "pink"; 
-  console.log("pink")   
+hCTA.addEventListener("mousedown", (event)=>{
+event.target.style.color = "pink"; 
+})
+
+imageMiddle.addEventListener("dblclick", (event)=> {
+  event.target.style.opacity = .5; 
+  console.log("move1")
+})
+
+logo.addEventListener("dragenter", ( event ) => {
+  // highlight potential drop target when the draggable element enters it
+  if ( event.target.className == "container" ) {
+      event.target.style.display = "none";
+  }
+
 }, true);
-hCTA.addEventListener("blur",( event ) => {
-  event.target.style.background = "red";    
-}, true);
-
-
-
