@@ -104,7 +104,7 @@ ctaButton.addEventListener('click', function (e) {
   let ranDom = Math.floor(Math.random() * (250 - 50)) + 50;
 
   document.querySelector('.container').style.backgroundColor = `rgb(${posX}, ${ranDom}, ${posY})`;
-  
+
   e.preventDefault();
 });
 
