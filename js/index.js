@@ -40,6 +40,10 @@ const siteContent = {
 // Example: Update the img src for the logo
 const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+//EVENT 1
+logo.addEventListener('click', (event) => {
+  event.target.setAttribute('src', 'img/logo_lit.png');
+});
 
 const navBar = document.querySelector("nav");
 
@@ -62,14 +66,34 @@ for( let i = 1; i < nav.length - 1; i++) {
 
 nav.forEach(i => i.style.color = "green");
 
+//EVENT 2
+nav.forEach(i => i.addEventListener('click', (event) => {
+  event.target.style.color = "blue";
+}));
+
 const ctaHeader = document.querySelector(".cta-text h1");
 ctaHeader.innerText = siteContent["cta"]["h1"];
+
+//EVENT 3
+ctaHeader.addEventListener('mouseover', (event) => {
+  event.target.innerText = 'CS12 Is Awesomer!';
+});
+//EVENT 4
+ctaHeader.addEventListener('mouseout', (event) => {
+  event.target.innerText = siteContent["cta"]["h1"];
+});
 
 const ctaButton = document.querySelector(".cta-text button");
 ctaButton.innerText = siteContent["cta"]["button"];
 
 const ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+//EVENT 5
+ctaImg.addEventListener('click', (event) => {
+  event.target.style.animation = "rotate 5s";
+  event.target.style.webkitAnimation = "rotate 5s";
+});
 
 const topContentHeader = document.querySelectorAll(".top-content h4");
 topContentHeader[0].innerText = siteContent["main-content"]["features-h4"];
@@ -100,5 +124,15 @@ contactContent[0].innerText = siteContent["contact"]["address"];
 contactContent[1].innerText = siteContent["contact"]["phone"];
 contactContent[2].innerText = siteContent["contact"]["email"];
 
+//EVENT
+contactContent.forEach(i => i.addEventListener('mouseover', (event) => {
+  event.target.style.opacity = 0;
+}));
+//EVENT
+contactContent.forEach(i => i.addEventListener('mouseout', (event) => {
+  event.target.style.opacity = 1;
+}));
+
 const footer = document.querySelector("footer p");
 footer.innerText = siteContent["footer"]["copyright"];
+
