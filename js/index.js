@@ -60,13 +60,13 @@ navItem5[4].innerHTML = siteContent["nav"]["nav-item-5"]
 
 
 let ctaText = document.querySelector(".cta-text h1");
-ctaText.innerHTML = (siteContent["cta"]["h1"]);
+ctaText.innerHTML = siteContent["cta"]["h1"];
 
 let ctaImg = document.getElementById("cta-img");
 ctaImg.src = siteContent["cta"]["img-src"];
 
 let ctaButton = document.querySelector(".cta-text button");
-ctaButton.innerHTML = (siteContent["cta"]["button"]);
+ctaButton.innerHTML = siteContent["cta"]["button"];
 
 // Main Content
 
@@ -107,3 +107,27 @@ contactParagraph[2].innerHTML = siteContent["contact"] ["email"];
 
 let footer = document.querySelector("footer");
 footer.innerHTML = siteContent["footer"]["copyright"];
+
+
+
+// Change color of Nav to green
+
+let navtoo = document.querySelectorAll('a');
+for(let a = 0; a < navtoo.length; a++) {
+  navtoo[a].setAttribute('style','color: green');
+}
+
+
+
+
+
+// Adding to Nav
+
+selectedNavLinks = document.getElementsByTagName("nav")[0];
+let createNewNode = (name) => {
+  let newNode = document.createElement("a");
+  newNode.innerHTML = name;
+  return newNode;
+}
+selectedNavLinks.prepend(createNewNode("Blog"));
+selectedNavLinks.append(createNewNode("Testimonials"));
