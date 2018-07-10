@@ -88,3 +88,21 @@ topHead[1].innerHTML = siteContent["main-content"]["about-h4"]
 let topInfo = document.querySelectorAll(".top-content p"); 
 topInfo[0].innerHTML = siteContent["main-content"]["features-content"]
 topInfo[1].innerHTML = siteContent["main-content"]["about-content"]
+
+let newA = document.createElement("a");
+let newAText = document.createTextNode("Home"); 
+
+
+let newA2 = document.createElement("a")
+let newAText2 = document.createTextNode("Partners")
+
+newA.appendChild(newAText);
+
+document.querySelector("nav").prepend(newA);
+
+newA2.appendChild(newAText2);
+
+document.querySelector("nav").appendChild(newA2); 
+
+newA2.style.color = "green";
+newA.style.color = "green";
