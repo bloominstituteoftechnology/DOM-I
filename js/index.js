@@ -47,6 +47,7 @@ ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
+
 let nav = document.querySelectorAll("nav a");
 nav[0].innerHTML = siteContent["nav"]["nav-item-1"];
 nav[1].innerHTML = siteContent["nav"]["nav-item-2"];
@@ -55,12 +56,19 @@ nav[3].innerHTML = siteContent["nav"]["nav-item-4"];
 nav[4].innerHTML = siteContent["nav"]["nav-item-5"];
 nav[5].innerHTML = siteContent["nav"]["nav-item-6"];
 
-nav[0].style.color = "green";
-nav[1].style.color = "green";
-nav[2].style.color = "green";
-nav[3].style.color = "green";
-nav[4].style.color = "green";
-nav[5].style.color = "green";
+let whateverA = document.createElement('a');
+let whateverText = document.createTextNode('Whatever');
+whateverA.appendChild(whateverText);
+document.querySelector('nav').appendChild(whateverA);
+
+let homeA = document.createElement('a');
+let homeText = document.createTextNode('Home');
+homeA.appendChild(homeText);
+document.querySelector('nav').prepend(homeA);
+
+let navigation = document.querySelectorAll('nav a');
+
+navigation.forEach(element => element.style.color = 'green');
 
 let callToAction = document.querySelector(".cta .cta-text h1");
 callToAction.innerHTML = "dom<br>is<br>awesome";
