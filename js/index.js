@@ -49,7 +49,7 @@ let imageMiddle = document.getElementById("middle-img");
 imageMiddle.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 //navBar
-let navItem = document.querySelectorAll("nav a"); 
+const navItem = document.querySelectorAll("nav a"); 
 navItem[0].innerHTML = siteContent["nav"]["nav-item-1"];
 navItem[1].innerHTML = siteContent["nav"]["nav-item-2"];
 navItem[2].innerHTML = siteContent["nav"]["nav-item-3"];
@@ -68,11 +68,11 @@ navItem[5].style.color ="green";
 
 
 //cta content
-let buttonCTA = document.querySelectorAll(".cta-text button"); 
-buttonCTA[0].innerHTML = siteContent["cta"]["button"]; 
+let buttonCTA = document.querySelector(".cta-text button"); 
+buttonCTA.innerHTML = siteContent["cta"]["button"]; 
 
-let hCTA = document.querySelectorAll(".cta-text h1"); 
-hCTA[0].innerHTML = siteContent["cta"]["h1"];
+let hCTA = document.querySelector(".cta-text h1"); 
+hCTA.innerHTML = siteContent["cta"]["h1"];
 
 //middle content
 let topHeader = document.querySelectorAll(".top-content h4"); 
@@ -118,6 +118,31 @@ navBar.appendChild(newTab2).appendChild(newContent2);
 newTab.style.color = "green"
 newTab2.style.color ="green"
 
+//Events 
+console.log(navItem); 
+
+navBar.addEventListener("click", () => {
+  console.log("Clicked")
+  event.target.style.color="red"; 
+}); 
+
+buttonCTA.addEventListener("mouseout",(event)=>{
+  event.target.style.color = "orange"
+  console.log("clicked 22 ")
+})
+
+image.addEventListener("mousemove", (event)=> {
+  event.target.style.display ="none"; 
+  console.log("move")
+})
+
+hCTA.addEventListener("focus",( event ) => {
+  event.target.style.background = "pink"; 
+  console.log("pink")   
+}, true);
+hCTA.addEventListener("blur",( event ) => {
+  event.target.style.background = "red";    
+}, true);
 
 
 
