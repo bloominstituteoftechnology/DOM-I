@@ -41,7 +41,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let navStuff = document.querySelector('nav a');
+let navStuff = document.querySelectorAll('nav a');
 navStuff[0].innerHTML = 'Services'
 navStuff[1].innerHTML = 'Product'
 navStuff[2].innerHTML = 'Vision'
@@ -58,23 +58,23 @@ ctaButton.innerHTML = 'Get Started'
 let headerImage = document.getElementById("cta-img");
 headerImage.setAttribute('src', siteContent["cta"]["img-src"])
 
-let topHeaders = document.querySelector('.top-content .text-content h4');
+let topHeaders = document.querySelectorAll('.top-content .text-content h4');
 topHeaders[0].innerHTML = 'Features'
 topHeaders[1].innerHTML = 'About'
 
-let topText = document.querySelector('.top-content .text-content p');
+let topText = document.querySelectorAll('.top-content .text-content p');
 topText[0].innerHTML = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
 topText[1].innerHTML = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
 
 let middleImage = document.getElementById("middle-img");
 middleImage.setAttribute('src', siteContent["main-content"]["img-src"])
 
-let bottomHeaders = document.querySelector('.bottom-content .text-content h4');
+let bottomHeaders = document.querySelectorAll('.bottom-content .text-content h4');
 bottomHeaders[0].innerHTML = 'Services'
 bottomHeaders[1].innerHTML = 'Product'
 bottomHeaders[2].innerHTML = 'Vision'
 
-let bottomText = document.querySelector('.bottom-content .text-content p');
+let bottomText = document.querySelectorAll('.bottom-content .text-content p');
 bottomText[0].innerHTML = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
 bottomText[1].innerHTML = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
 bottomText[2].innerHTML = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
@@ -82,10 +82,24 @@ bottomText[2].innerHTML = "Vision content elementum magna eros, ac posuere elvit
 let contactHeader = document.querySelector('.contact h4');
 contactHeader.innerHTML = 'Contact'
 
-let contactText = document.querySelector('.contact p');
+let contactText = document.querySelectorAll('.contact p');
 contactText[0].innerHTML = "123 Way 456 Street Somewhere, USA"
 contactText[1].innerHTML = "1 (888) 888-8888"
 contactText[2].innerHTML = "sales@greatidea.io"
 
 let copyrightInfo = document.querySelector('footer p');
 copyrightInfo.innerHTML = "Copyright Great Idea! 2018"
+
+let navFam = document.querySelector('nav');
+
+let newNavItem1 = document.createElement('a');
+let newNavItem1Text = document.createTextNode('Introduction');
+newNavItem1.appendChild(newNavItem1Text);
+navFam.prepend(newNavItem1);
+
+let newNavItem2 = document.createElement('a');
+let newNavItem2Text = document.createTextNode('Legal');
+navFam.appendChild(newNavItem2).appendChild(newNavItem2Text);
+
+let navSelection = document.querySelectorAll('a');
+navSelection.style.color = 'green'
