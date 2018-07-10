@@ -109,5 +109,19 @@ navBar.appendChild(secondNewNavItem);
 secondNewNavItem.setAttribute('href', '#');
 secondNewNavItem.style.color = 'green';
 
+// DOM II Assignment - 10 eventListeners
 
+ctaButton.addEventListener('click', (event) => {
+  console.log('CTA Button was clicked!');
+  event.stopPropagation();
+})
 
+ctaImg.addEventListener('mouseover', (event) => {
+  console.log('CTA Image was moused over!')
+  event.stopPropagation();
+})
+
+awesomeWords.addEventListener('mouseover', (evnet) => {
+  TweenMax.to(".cta-text", 1, {rotation:360});
+  event.stopPropagation();
+})
