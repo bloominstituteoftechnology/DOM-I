@@ -135,4 +135,3 @@ contactContent.forEach(i => i.addEventListener('mouseout', (event) => {
 
 const footer = document.querySelector("footer p");
 footer.innerText = siteContent["footer"]["copyright"];
-
