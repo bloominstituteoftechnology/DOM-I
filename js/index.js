@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM<br> Is<br> Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -54,8 +54,31 @@ for(let link of navigation) {
   link.style.color = 'green';
 }
 
+let navigationBar = document.querySelector("nav");
+
+let navYes = document.createElement("a");
+navYes.setAttribute("href", "#");
+navYes.style.color = 'green';
+
+let navYesText = document.createTextNode("Members");
+navYes.appendChild(navYesText);
+navigationBar.prepend(navYes);
+
+let navNo = document.createElement("a");
+navNo.setAttribute("href", "#");
+navNo.style.color = 'green';
+
+let navNoText = document.createTextNode("Locations");
+navigationBar.appendChild(navNo).appendChild(navNoText);
+
+/*Center Text Area Below*/
+
 let centerText = document.querySelector(".cta-text h1");
-centerText.innerHTML = siteContent["cta"]["h1"];
+centerText.innerHTML = "DOM<br> Is<br> Awesome";
+
+centerText.addEventListener('mouseover', (event) => {
+  event.target.innerHTML = "Okay";
+});
 
 let buttonText = document.querySelector(".cta .cta-text button");
 buttonText.innerHTML = siteContent["cta"]["button"];
