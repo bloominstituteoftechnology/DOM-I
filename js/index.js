@@ -8,6 +8,7 @@ const siteContent = {
     "nav-item-6": "Contact",
     "img-src": "img/logo.png"
   },
+
   "cta": {
     "h1": "DOM Is Awesome",
     "button": "Get Started",
@@ -70,24 +71,65 @@ features[5].innerHTML =  siteContent["contact"]["contact-h4"];
 
 
 
-let aTags = document.querySelectorAll("a");
+
 
 // aTags[0].innerHTML= siteContent.nav[`nav-item-1`];
 // aTags[1].innerHTML= siteContent.nav[`nav-item-2`];
 
 
-nav.append('newItem');
-nav.prepend('oldItem')
+let nav = document.querySelector(".container header nav");
+let newArr = Object.values(siteContent.nav)
+newArr.pop();
+
+let endItem = document.createElement("a");
+endItem.innerHTML = "End Item";
+
+let startItem = document.createElement("a");
+startItem.innerHTML = 'Start Item';
+
+nav.append(endItem);
+nav.prepend(startItem);
+
+newArr.push("endItem");
+newArr.unshift("startItem")
+
+
+
+
+console.log(newArr)
+console.log(nav)
+console.log( Object.values(siteContent.nav).length)
+let aTags = document.querySelectorAll("a");
 
 const navFunction = function(){
-  for(let i=1; i < Object.keys(siteContent.nav).length-1; i++) {
-      aTags[i].innerHTML = siteContent.nav[`nav-item-${i}`];
+  for(let i=0; i < Object.values(siteContent.nav).length +1; i++) {
+      aTags[i].innerHTML = newArr[i];
       aTags[i].style.color = "green";
   }
 }
+
 navFunction();
 
-let nav = document.querySelector(".container header nav");
+// console.log(Object.keys(siteContent.nav).length-1 + ' 1')
+// console.log(siteContent.nav[`nav-item-${6}`] + ' 2')
+//
+// nav = document.querySelector(".container header nav")
+//
+// let aTags = document.querySelectorAll("a");
+// const navFunction = function(){
+//   for(let i=1; i < Object.keys(siteContent.nav).length -1; i++) {
+//       console.log(i + ' 3');
+//       aTags[i].innerHTML = siteContent.nav[`nav-item-${i}`];
+//       aTags[i].style.color = "green";
+//       console.log(i + ' 4');
+//   }
+// }
+//
+// navFunction();
+
+// aTags[6].innerHTML = siteContent.nav[`nav-item-6`]
+// console.log(siteContent.nav[`nav-item-6`] + ' 4')
+
 
 // console.log(nav);
 // let childA = document.createElement("a");
