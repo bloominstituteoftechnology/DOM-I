@@ -41,6 +41,9 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+
+
+
 let navItem1 = document.querySelectorAll("nav a"); 
 navItem1[0].innerHTML = siteContent["nav"]["nav-item-1"]
 
@@ -58,6 +61,13 @@ navItem5[4].innerHTML = siteContent["nav"]["nav-item-5"]
 
 let navItem6 = document.querySelectorAll("nav a"); 
 navItem6[5].innerHTML = siteContent["nav"]["nav-item-6"];
+
+
+
+let navColor = document.querySelectorAll("nav a");
+for (let i = 0; i < 6; i++) {
+  navColor[i].style.color = "green";
+}
 
 let ctaText = document.querySelector(".cta-text h1");
 ctaText.innerHTML = (siteContent["cta"]["h1"]);
@@ -113,5 +123,10 @@ contactPhone[1].innerHTML = siteContent["contact"]["phone"]
 let contactEmail = document.querySelectorAll(".contact p");
 contactEmail[2].innerHTML = siteContent["contact"]["email"]
 
-let footerCr= document.querySelector("footer p");
+let footerCr= document.querySelectorAll("footer p");
 footerCr.innerHTML = siteContent["footer"]["copyright"]
+
+let navvy = document.querySelector("nav");
+let newChild = document.createElement("a");
+newChild.innerHTML = "blog";
+navvy.appendChild(newChild);
