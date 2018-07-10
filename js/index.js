@@ -115,6 +115,9 @@ const newTab2 = document.createElement("a");
 let newContent2 = document.createTextNode("Location");
 navBar.appendChild(newTab2).appendChild(newContent2);
 
+newTab.style.color = "green"
+newTab2.style.color ="green"
+
 
 
 
