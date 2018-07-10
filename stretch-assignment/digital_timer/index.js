@@ -3,14 +3,12 @@ let msTens = document.getElementById("msTens");
 let msHundreds = document.getElementById("msHundreds");
 let ones = document.getElementById("secondOnes");
 let tens = document.getElementById("secondTens");
-// let msTensCount = 0;
-// let msHundredsCount = 0;
-// let onesCount = 0;
-// let tensCount = 0;
+
 msTens.innerHTML = 0;
 msHundreds.innerHTML = 0;
 ones.innerHTML = 0;
 tens.innerHTML = 0;
+
 let body = document.querySelector("body");
 let startBtn = document.createElement('button');
 startBtn.appendChild(document.createTextNode("Start"));
@@ -23,10 +21,6 @@ body.appendChild(resetBtn);
 startBtn.addEventListener("click", timer);
 
 resetBtn.addEventListener("click", function () {
-  // msTensCount = 0;
-  // msHundredsCount = 0;
-  // onesCount = 0;
-  // tensCount = 0;
   digits.forEach(function(digit) {
     digit.style.color = "black";
   })
@@ -60,11 +54,6 @@ function increment() {
       ones.innerHTML = 0;
       tens.innerHTML = 1;
     }
-
-    // msTens.innerHTML = msTensCount;
-    // msHundreds.innerHTML = msHundredsCount;
-    // ones.innerHTML = onesCount;
-    // tens.innerHTML = tensCount;
   }
 };
 

@@ -41,18 +41,18 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+// add navs
 let navs = document.querySelectorAll("nav a");
-navs[0].innerHTML = siteContent["nav"]["nav-item-1"];
-navs[1].innerHTML = siteContent["nav"]["nav-item-2"];
-navs[2].innerHTML = siteContent["nav"]["nav-item-3"];
-navs[3].innerHTML = siteContent["nav"]["nav-item-4"];
-navs[4].innerHTML = siteContent["nav"]["nav-item-5"];
-navs[5].innerHTML = siteContent["nav"]["nav-item-6"];
+navs.forEach((item, i) => {
+  item.innerHTML = siteContent.nav[`nav-item-${i+1}`]
+})
 
-let ctaHeader = document.querySelector(".cta .cta-text h1");
-ctaHeader.innerHTML = siteContent["cta"]["h1"];
-let ctaBtn = document.querySelector(".cta .cta-text button");
-ctaBtn.innerHTML = siteContent["cta"]["button"];
+//add cta-text
+let cta = Array.from(document.getElementsByClassName("cta-text")[0].children);
+cta.forEach((child) => {
+  child.innerHTML = siteContent.cta[`${child.tagName.toLocaleLowerCase()}`];
+});
+
 
 let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
@@ -78,6 +78,7 @@ let contactHead = document.querySelector(".contact h4");
 contactHead.innerHTML = siteContent["contact"]["contact-h4"];
 
 let contactInfo = document.querySelectorAll(".contact p");
+
 contactInfo[0].innerHTML = siteContent["contact"]["address"];
 contactInfo[1].innerHTML = siteContent["contact"]["phone"];
 contactInfo[2].innerHTML = siteContent["contact"]["email"];
@@ -85,22 +86,23 @@ contactInfo[2].innerHTML = siteContent["contact"]["email"];
 let footer = document.querySelector("footer p");
 footer.innerHTML = siteContent["footer"]["copyright"];
 
-navs.forEach(function(nav) {
+navs.prepend(createNav("Home"));
+navs.append(createNav("Blog"));
+
+navs.forEach((nav) => {
   nav.style.color = "green";
 })
 
-let nav = document.querySelector('nav');
-let homeNav = document.createElement('a');
-homeNav.appendChild(document.createTextNode("Home"));
-homeNav.style.color = "green";
-nav.prepend(homeNav);
-
-let blogNav = document.createElement('a');
-blogNav.appendChild(document.createTextNode("Blog"));
-blogNav.style.color = "green";
-nav.appendChild(blogNav);
+navs = document.getElementsByTagName("nav")[0];
+let createNav = (name) => {
+  let newNav = document.createElement("a");
+  newNav.innerHTML = name;
+  newNav.style.color = "green";
+  return newNav;
+}
 
 let header = document.querySelector('header');
+let ctaBtn = document.querySelector('.cta-text button')
 
 header.style.backgroundColor = "lightGray";
 ctaBtn.style.backgroundColor = "lightGreen";
