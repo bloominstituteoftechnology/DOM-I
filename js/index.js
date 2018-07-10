@@ -100,3 +100,13 @@ document.querySelector('.main-content').appendChild(btn);
 btn.addEventListener("click", function(){
   document.querySelector('body').innerHTML = "<h1>Who told you to press that button?!!</h1>";
 });
+document.querySelector('.logo').addEventListener('mouseover', ()=>TweenMax.to(".logo", 1, {y:20,x:20}));
+document.body.addEventListener('keydown',(event)=>event.target.style.backgroundColor='#f88379');
+document.querySelector('#cta-img').addEventListener('dragstart',()=>TweenMax.to('#cta-img', 2, {width:"300px", height:"300px"}));
+document.querySelector('.cta-text').addEventListener('mousedown',()=>TweenMax.to(".cta-text", 1, {y:20,x:50}));
+document.body.addEventListener('keyup', (event)=>event.target.style.backgroundColor='#FFF');
+document.querySelector('.cta-text button').addEventListener('click',(event)=>{event.target.style.backgroundColor='#f88'; event.target.style.color='#FFF'});
+document.querySelector('.middle-img').addEventListener('dblclick',(event)=>event.target.style.visibility='hidden');
+document.querySelector('.main-content').addEventListener('mousemove',(event)=>event.target.style.color='blue');
+document.querySelector('.contact').addEventListener('mouseout',(event)=>event.target.style.fontFamily='arial');
+document.querySelector('footer p').addEventListener('mouseleave',(event)=>event.target.style.color='red')
