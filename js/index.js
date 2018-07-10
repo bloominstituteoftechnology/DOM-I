@@ -38,8 +38,10 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+
 let logo = document.getElementById("logo-img");
 logo.src = "img/logo.png";
+
 
 let nav = document.querySelectorAll("nav a");
 nav[0].innerHTML = siteContent["nav"]["nav-item-1"];
@@ -49,12 +51,24 @@ nav[3].innerHTML = siteContent["nav"]["nav-item-4"];
 nav[4].innerHTML = siteContent["nav"]["nav-item-5"];
 nav[5].innerHTML = siteContent["nav"]["nav-item-6"];
 
-nav[0].style.color = "green";
-nav[1].style.color = "green";
-nav[2].style.color = "green";
-nav[3].style.color = "green";
-nav[4].style.color = "green";
-nav[5].style.color = "green";
+for(i = 0; i < nav.length; i++) {
+  nav[i].style.color = "green";
+}
+//nav[0].style.color = "green";
+//nav[1].style.color = "green";
+//nav[2].style.color = "green";
+//nav[3].style.color = "green";
+//nav[4].style.color = "green";
+//nav[5].style.color = "green";
+
+selectedNavLinks = document.getElementsByTagName("nav")[0];
+let createNewNode = (name) => {
+  let newNode = document.createElement("a");
+  newNode.innerHTML = name;
+  return newNode;
+}
+selectedNavLinks.prepend(createNewNode("Extra Item 1"));
+selectedNavLinks.append(createNewNode("Extra Item 2"));
 
 
 let cta = document.querySelector(".cta .cta-text h1");
@@ -96,10 +110,6 @@ contact[2].innerHTML = siteContent["contact"]["email"];
 
 let footer = document.querySelector("footer");
 footer.innerHTML = siteContent["footer"]["copyright"];
-
-
-
-
 
 
 
