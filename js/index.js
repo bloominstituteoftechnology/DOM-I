@@ -41,6 +41,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+// Update navbar
 let navBar = document.querySelectorAll('nav a');
 navBar[0].innerHTML = 'Services';
 navBar[1].innerHTML = 'Product';
@@ -49,8 +50,8 @@ navBar[3].innerHTML = 'Features';
 navBar[4].innerHTML = 'About';
 navBar[5].innerHTML = 'Contact';
 
+// Update CTA section
 let ctaText = document.querySelector('.cta-text h1');
-// ctaText.innerHTML = 'DOM is Awesome';
 ctaText.innerHTML = siteContent['cta']['h1'];
 
 let ctaButton = document.querySelector('.cta-text button');
@@ -59,6 +60,7 @@ ctaButton.innerHTML = siteContent['cta']['button'];
 let ctaImg = document.getElementById('cta-img');
 ctaImg.setAttribute('src', siteContent['cta']['img-src'])
 
+// Update main content
 let topContentHead = document.querySelectorAll('.top-content .text-content h4');
 topContentHead[0].innerHTML = siteContent['main-content']['features-h4'];
 topContentHead[1].innerHTML = siteContent['main-content']['about-h4'];
@@ -86,28 +88,46 @@ contactBody[0].innerHTML = siteContent['contact']['address'];
 contactBody[1].innerHTML = siteContent['contact']['phone'];
 contactBody[2].innerHTML = siteContent['contact']['email'];
 
+// Footer
 let footer = document.querySelector('footer p');
 footer.innerHTML = siteContent['footer']['copyright']
 
-let navBarFull = document.querySelector('nav');
-navBarFull.appendChild(addNavElement1());
-navBarFull.prepend(addNavElement2());
+// New element creation
+let navPartner = document.createElement('a');
+navPartner.innerHTML = 'Partners';
 
-navBar.forEach(i => i.style.color = 'green');
+let navBlog = document.createElement('a');
+navBlog.innerHTML = 'Blog';
 
-function addNavElement1 () {
-  let newNav = document.createElement('a');
-  newNav.innerHTML = 'Blog';
-  newNav.style.color = 'green';
-  newNav.href = '#';
-  return newNav;
-}
+// adding new elements to Nav
+let navSelector = document.querySelector('nav');
+navSelector.appendChild(navPartner);
+navSelector.prepend(navBlog);
 
-function addNavElement2 () {
-  let newNav = document.createElement('a');
-  newNav.innerHTML = 'Partners';
-  newNav.style.color = 'green';
-  newNav.href = '#';
-  return newNav;
-}
+// assigning new color and giving new nav items the href
+let navBarColor = document.querySelectorAll('nav a');
+navBarColor.forEach(i => i.style.color = 'green');
+navBarColor.forEach(i => i.href = '#');
 
+//-------------- original implementation of new content-------
+// let navBarFull = document.querySelector('nav');
+// navBarFull.appendChild(addNavElement1());
+// navBarFull.prepend(addNavElement2());
+
+// navBar.forEach(i => i.style.color = 'green');
+
+// function addNavElement1 () {
+//   let newNav = document.createElement('a');
+//   newNav.innerHTML = 'Blog';
+//   newNav.style.color = 'green';
+//   newNav.href = '#';
+//   return newNav;
+// }
+
+// function addNavElement2 () {
+//   let newNav = document.createElement('a');
+//   newNav.innerHTML = 'Partners';
+//   newNav.style.color = 'green';
+//   newNav.href = '#';
+//   return newNav;
+// }
