@@ -110,6 +110,14 @@ const topContent = document.querySelectorAll(".top-content p");
 topContent[0].innerText = siteContent["main-content"]["features-content"];
 topContent[1].innerText = siteContent["main-content"]["about-content"];
 
+topContent.forEach(i => i.addEventListener('mouseover', (event) => {
+  event.target.style.fontFamily = 'Cabin Sketch';
+}));
+
+topContent.forEach(i => i.addEventListener('mouseout', (event) => {
+  event.target.style.fontFamily = 'Titillium Web';
+}));
+
 const middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
@@ -130,6 +138,14 @@ const bottomContent = document.querySelectorAll(".bottom-content p");
 bottomContent[0].innerText = siteContent["main-content"]["services-content"];
 bottomContent[1].innerText = siteContent["main-content"]["product-content"];
 bottomContent[2].innerText = siteContent["main-content"]["vision-content"];
+
+bottomContent.forEach(i => i.addEventListener('mouseover', (event) => {
+  event.target.style.fontFamily = 'Cabin Sketch';
+}));
+
+bottomContent.forEach(i => i.addEventListener('mouseout', (event) => {
+  event.target.style.fontFamily = 'Titillium Web';
+}));
 
 const contact = document.querySelector(".contact h4");
 contact.innerText = siteContent["contact"]["contact-h4"];
