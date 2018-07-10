@@ -41,7 +41,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-// Create selectors to point your data into elements
+// Create selectors to point your data into elements and update HTML with the JSON Data
 let navBar = document.querySelectorAll("nav a");
 navBar[0].innerHTML = siteContent["nav"]["nav-item-1"];
 navBar[1].innerHTML = siteContent["nav"]["nav-item-2"];
@@ -59,19 +59,19 @@ getStarted.innerHTML = siteContent["cta"]["button"];
 let greatIdeaLogo = document.querySelector("#cta-img");
 greatIdeaLogo.setAttribute('src', siteContent["cta"]["img-src"])
 
-let mainTopHeaders = document.querySelectorAll(".text-content h4");
-mainTopHeaders[0].innerHTML = siteContent["main-content"]["features-h4"];
-mainTopHeaders[1].innerHTML = siteContent["main-content"]["about-h4"];
-mainTopHeaders[2].innerHTML = siteContent["main-content"]["services-h4"];
-mainTopHeaders[3].innerHTML = siteContent["main-content"]["product-h4"];
-mainTopHeaders[4].innerHTML = siteContent["main-content"]["vision-h4"];
+let mainHeaders = document.querySelectorAll(".text-content h4");
+mainHeaders[0].innerHTML = siteContent["main-content"]["features-h4"];
+mainHeaders[1].innerHTML = siteContent["main-content"]["about-h4"];
+mainHeaders[2].innerHTML = siteContent["main-content"]["services-h4"];
+mainHeaders[3].innerHTML = siteContent["main-content"]["product-h4"];
+mainHeaders[4].innerHTML = siteContent["main-content"]["vision-h4"];
 
-let mainTopText = document.querySelectorAll(".text-content p");
-mainTopText[0].innerHTML = siteContent["main-content"]["features-content"];
-mainTopText[1].innerHTML = siteContent["main-content"]["about-content"];
-mainTopText[2].innerHTML = siteContent["main-content"]["services-content"];
-mainTopText[3].innerHTML = siteContent["main-content"]["product-content"];
-mainTopText[4].innerHTML = siteContent["main-content"]["vision-content"];
+let mainText = document.querySelectorAll(".text-content p");
+mainText[0].innerHTML = siteContent["main-content"]["features-content"];
+mainText[1].innerHTML = siteContent["main-content"]["about-content"];
+mainText[2].innerHTML = siteContent["main-content"]["services-content"];
+mainText[3].innerHTML = siteContent["main-content"]["product-content"];
+mainText[4].innerHTML = siteContent["main-content"]["vision-content"];
 
 let midImage = document.querySelector("#middle-img");
 midImage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
@@ -86,3 +86,30 @@ contactBody[2].innerHTML = siteContent["contact"]["email"];
 
 let footer = document.querySelector("footer");
 footer.innerHTML = siteContent["footer"]["copyright"];
+
+// Change the color of the navigation text to green
+// navBar[0].style.color = 'green';
+// navBar[1].style.color = 'green';
+// navBar[2].style.color = 'green';
+// navBar[3].style.color = 'green';
+// navBar[4].style.color = 'green';
+// navBar[5].style.color = 'green';
+let mainNav = document.querySelector("nav");
+for(let i = 0; i < navBar.length; i++){
+  navBar[i].style.color = 'green';
+}
+
+// Utilize .appendChild() and .prepend() to add two new items to the navigation 
+// system. You can call them whatever you want.
+let newAnchor = document.createElement("a");
+newAnchor.innerHTML = "Blahh";
+mainNav.appendChild(newAnchor);
+
+
+let secondAnchor = document.createElement("a");
+secondAnchor.innerHTML = "Yahh";
+mainNav.prepend(secondAnchor);
+
+for(let i = 0; i < mainNav.length; i++){
+  mainNav[i].style.color = 'green';
+}
