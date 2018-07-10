@@ -242,9 +242,64 @@ for(let i=0; i < allPText.length; i++) {
   })
 }
 
-// Seventh Event
+// Seventh Event changes CTA text if going up or down, respectively
 let ctaTextEvent = document.querySelector(".cta-text");
 
+// Have to set outside the event listener otherwise window.inner changes with event.width
+const windowWidth = window.innerWidth
+
 window.addEventListener("resize", (event) => {
-  ctaTextEvent.innerHTML = "You're changing the size of the screen!"
+  // Changes CTA text if bigger than orignal window size
+  if (event.target.innerWidth > windowWidth) {
+    ctaTextEvent.innerHTML = "You're going up!";
+  }
+  // Changes CTA text if smaller than orignal window size
+  else if (event.target.innerWidth < windowWidth) {
+    ctaTextEvent.innerHTML = "You're going down!";
+  }
+  else {
+    console.log('Nothing')
+  }
 })
+
+// // Eighth Event
+// const contactEvent = document.querySelectorAll('.contact p');
+
+// for (let i = 0 ; i < contactEvent.length; i++) {
+//   contactEvent[i].addEventListener('click' , (event) => {
+//     // Changes inner text of Nav to say Hey
+//     event.target.innerHTML = 'Hey'
+// })
+// }
+
+// Eighth Event changes contact header
+const contactHeaderEvent = document.querySelector(".contact h4");
+
+contactHeaderEvent.addEventListener('mousedown', (event) => {
+  // stops the bubbling of the event
+  event.stopPropagation();
+  
+  event.target.innerHTML = "Don't Contact"
+});
+
+// Ninth Event changes bottom content on alternate click
+const bottomContentEvent = document.querySelectorAll('.bottom-content .text-content');
+for(let i=0; i < bottomContentEvent.length; i++) {
+  bottomContentEvent[i].addEventListener('auxclick', (event) => {
+    // stops the bubbling of the event
+    event.stopPropagation();
+  
+    event.target.innerHTML = "Blah"
+  });
+}
+// Tenth Event changes on mousemoving over it
+const topContentEvent = document.querySelectorAll('.top-content .text-content');
+
+for(let i=0; i < bottomContentEvent.length; i++) {
+  topContentEvent[i].addEventListener('mousemove', (event) => {
+    // stops the bubbling of the event
+    event.stopPropagation();
+    
+    event.target.innerHTML = "Blugh"
+  })
+}
