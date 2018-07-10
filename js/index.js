@@ -18,13 +18,13 @@ const siteContent = {
     "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "about-h4":"About",
     "about-content": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "middle-img-src": "img/mid-page-accent.jpg",
     "services-h4":"Services",
     "services-content": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "product-h4":"Product",
     "product-content": "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "vision-h4":"Vision",
     "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+    "middle-img-src": "img/mid-page-accent.jpg"
   },
   "contact": {
     "contact-h4" : "Contact",
@@ -45,80 +45,94 @@ body.style.fontSize = "1.2rem"
 body.style.fontWeight = "bold"
 
 
-
 // appendChild method 
 let nav = document.querySelector('nav')
-let navBar = document.querySelectorAll('nav a');
+let navItems = Object.values(siteContent.nav);
+navItems.pop(); 
+
 
 let navSection1 = document.createElement("a")
 navSection1.innerHTML = "Random"
 nav.appendChild(navSection1); 
+navItems.push(navSection1.innerHTML)
 
 //prependChild method 
 let navSection2 = document.createElement("a"); 
 navSection2.innerHTML = "Random2"
 nav.prepend(navSection2);
+navItems.unshift(navSection2.innerHTML)
 
-navBar[0].innerHTML = siteContent['nav']['nav-item-1'];
-navBar[1].innerHTML = siteContent['nav']['nav-item-2'];
-navBar[2].innerHTML = siteContent['nav']['nav-item-3'];
-navBar[3].innerHTML = siteContent['nav']['nav-item-4'];
-navBar[4].innerHTML = siteContent['nav']['nav-item-5'];
-navBar[5].innerHTML = siteContent['nav']['nav-item-6'];
-
-for(let i = 0; i < navBar.length; i++){
-  navBar[i].style = "color:green"
-}
+let navBar = document.querySelectorAll('nav a');
 
 
+//looping through each nav item and pulling each array item from navItems array which was created from siteContent obj
+navBar.forEach((link, index) => {
+  link.innerHTML = navItems[index];
+  link.style = "color:green"
+});
 
-let logo = document.getElementById("logo-img");
+const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent['nav']['img-src'])
 
 // ========== CTA ========== 
 
-let ctaHeading = document.querySelector('.cta h1');
+
+const ctaHeading = document.querySelector('.cta h1');
 ctaHeading.innerHTML = siteContent['cta']['h1']
 
-let ctaButton = document.querySelector('.cta button');
+const ctaButton = document.querySelector('.cta button');
 ctaButton.innerHTML = siteContent['cta']['button']
 
-let ctaImage = document.querySelector('#cta-img');
+const ctaImage = document.querySelector('#cta-img');
 ctaImage.setAttribute('src', siteContent['cta']['img-src'])
+
 
 // ============ Main Content ============= 
 
-let mainHeadings = document.querySelectorAll('.text-content h4');
-mainHeadings[0].innerHTML = siteContent["main-content"]["features-h4"];
-mainHeadings[1].innerHTML = siteContent["main-content"]["about-h4"]
-mainHeadings[2].innerHTML = siteContent["main-content"]["services-h4"]
-mainHeadings[3].innerHTML = siteContent["main-content"]["product-h4"]
-mainHeadings[4].innerHTML = siteContent["main-content"]["vision-h4"]
+const mainHeadings = document.querySelectorAll('.text-content h4');
+const mainContentArray = Object.values(siteContent['main-content']);
+const mainHeadingsArray = [];
+for(let x = 0; x < mainContentArray.length; x = x + 2){
+  mainHeadingsArray.push(mainContentArray[x])
+}
+mainHeadingsArray.pop();
+mainHeadings.forEach((item, index)=> {
+  item.innerHTML = mainHeadingsArray[index];
+})
 
-let mainImg = document.querySelector('#middle-img');
+
+const mainImg = document.querySelector('#middle-img');
 mainImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
 
 
-let mainParagraphs = document.querySelectorAll('.text-content p');
-mainParagraphs[0].innerHTML = siteContent['main-content']['features-content'];
-mainParagraphs[1].innerHTML = siteContent['main-content']['about-content'];
-mainParagraphs[2].innerHTML = siteContent['main-content']['services-content'];
-mainParagraphs[3].innerHTML = siteContent['main-content']['product-content'];
-mainParagraphs[4].innerHTML = siteContent['main-content']['vision-content'];
+const mainParagraphs = document.querySelectorAll('.text-content p')
+const mainParagraphsArray = [];
+for(let x = 1; x < mainContentArray.length; x = x + 2){
+  mainParagraphsArray.push(mainContentArray[x]);
+}
+mainParagraphs.forEach((item, index) => {
+  item.innerHTML = mainParagraphsArray[index];
+})
 
 
 // ===== Contact ===== 
 
-let contactHeading = document.querySelector('.contact h4');
+const contactHeading = document.querySelector('.contact h4');
 contactHeading.innerHTML = siteContent['contact']['contact-h4']
 
-let contactInfo = document.querySelectorAll('.contact p')
-contactInfo[0].innerHTML = siteContent['contact']['address'];
-contactInfo[1].innerHTML = siteContent['contact']['phone'];
-contactInfo[2].innerHTML = siteContent['contact']['email'];
+const contactArray = Object.values(siteContent.contact)
+console.log(contactArray)
+const contactInfo = document.querySelectorAll('.contact p')
+contactInfo.forEach((item, i) => {
+    if (i === 0){
+      return undefined;
+    }else {
+      item.innerHTML = contactArray[i];
+    }
+})
 
 
 // ======== footer ========
 
-let footer = document.querySelector('footer p')
+const footer = document.querySelector('footer p')
 footer.innerHTML = siteContent['footer']['copyright']
