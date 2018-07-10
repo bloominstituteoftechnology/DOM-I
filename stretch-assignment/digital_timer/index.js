@@ -3,6 +3,7 @@ let msTens = document.getElementById("msTens");
 let msHundreds = document.getElementById("msHundreds");
 let ones = document.getElementById("secondOnes");
 let tens = document.getElementById("secondTens");
+let timer = 0;
 
 msTens.innerHTML = 0;
 msHundreds.innerHTML = 0;
@@ -18,9 +19,13 @@ resetBtn.appendChild(document.createTextNode("Reset"));
 body.appendChild(resetBtn);
 
 
-startBtn.addEventListener("click", timer);
+startBtn.addEventListener("click", () => {
+  startBtn.disabled = true;
+  timer = setInterval(increment, 10);
+});
 
 resetBtn.addEventListener("click", function () {
+  clearInterval(increment);
   digits.forEach(function(digit) {
     digit.style.color = "black";
   })
@@ -37,7 +42,6 @@ function increment() {
       digit.style.color = "red";  
     })
     startBtn.disabled = false;
-    
   } else {
     console.log(Number(msTens.innerHTML));
     if (Number(msTens.innerHTML) <= 8) {
@@ -56,8 +60,3 @@ function increment() {
     }
   }
 };
-
-function timer() {
-  startBtn.disabled = true;
-  setInterval(increment, 10);
-} 

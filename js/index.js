@@ -53,7 +53,6 @@ cta.forEach((child) => {
   child.innerHTML = siteContent.cta[`${child.tagName.toLocaleLowerCase()}`];
 });
 
-
 let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
 
