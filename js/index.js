@@ -45,13 +45,13 @@ let ctaHeader = document.querySelector("#cta-img");
 ctaHeader.setAttribute('src', siteContent["cta"]["img-src"]);
 
 let navBar = document.querySelectorAll("nav a");
+let indexSelect; 
 
-navBar[0].innerHTML = siteContent["nav"]["nav-item-1"];
-navBar[1].innerHTML = siteContent["nav"]["nav-item-2"];
-navBar[2].innerHTML = siteContent["nav"]["nav-item-3"];
-navBar[3].innerHTML = siteContent["nav"]["nav-item-4"];
-navBar[4].innerHTML = siteContent["nav"]["nav-item-5"];
-navBar[5].innerHTML = siteContent["nav"]["nav-item-6"];
+
+for(let i = 0; i<navBar.length; i++){
+  indexSelect = "nav-item-" + String(i+1);
+  navBar[i].innerHTML = siteContent["nav"][indexSelect];
+}
 
 let ctaH1 = document.querySelector(".cta-text h1");
 ctaH1.innerHTML = siteContent.cta.h1; 
@@ -62,26 +62,31 @@ ctaButton.innerHTML = siteContent.cta.button;
 let middleImg = document.querySelector("#middle-img");
 middleImg.src = siteContent["main-content"]["middle-img-src"];//Just trying the lecture way out. 
 
+let arraySections = ["features", "about", "services", "product", "vision"];
 //Grabbing all of the h4 titles  there is 5 in total. 
 let contentTitles = document.querySelectorAll(".text-content h4");
 
 //This will put the titles on the page for the content. 
-contentTitles[0].innerHTML = siteContent["main-content"]["features-h4"];
-contentTitles[1].innerHTML = siteContent["main-content"]["about-h4"];
-contentTitles[2].innerHTML = siteContent["main-content"]["services-h4"];
-contentTitles[3].innerHTML = siteContent["main-content"]["product-h4"];
-contentTitles[4].innerHTML = siteContent["main-content"]["vision-h4"];
+
+let mainSelect = "main-content";
+for(let i = 0; i< contentTitles.length; i++){
+  indexSelect = arraySections[i] +"-h4";
+  console.log(indexSelect); 
+  contentTitles[i].innerHTML = siteContent[mainSelect][indexSelect];
+}
+
 //Titles completed
 
 //Grabbing all of the content p elements 
 let contentParagraphs = document.querySelectorAll(".text-content p");
 
 //This will add the content in the form of paragraphs.
-contentParagraphs[0].innerHTML = siteContent["main-content"]["features-content"];
-contentParagraphs[1].innerHTML = siteContent["main-content"]["about-content"];
-contentParagraphs[2].innerHTML = siteContent["main-content"]["services-content"];
-contentParagraphs[3].innerHTML = siteContent["main-content"]["product-content"];
-contentParagraphs[4].innerHTML = siteContent["main-content"]["vision-content"];
+
+for(let i = 0; i< contentParagraphs.length; i++){
+  indexSelect = arraySections[i] + "-content";
+  console.log(indexSelect); 
+  contentParagraphs[i].innerHTML = siteContent[mainSelect][indexSelect];
+}
 //End of content update. 
 
 //Contact section grab
