@@ -80,3 +80,19 @@ content[5].innerHTML = siteContent["contact"]["address"];
 content[6].innerHTML = siteContent["contact"]["phone"];
 content[7].innerHTML = siteContent["contact"]["email"];
 content[8].innerHTML = siteContent["footer"]["copyright"];
+
+
+
+let node = document.createElement("a");                 
+let textnode = document.createTextNode("Home");         
+node.appendChild(textnode);                              
+document.getElementById("navbar").prepend(node);
+node.setAttribute('href', '#');     
+
+//document.getElementsByTagName("a")[0].style.color = "green";
+
+const navColor = document.querySelectorAll('a');
+
+navColor.forEach(a => {
+  a.style.color = "green";
+});
