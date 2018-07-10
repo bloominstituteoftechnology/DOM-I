@@ -1,21 +1,28 @@
 let clock = document.querySelector('.digits');
 
+const secondTens = document.querySelector('#secondTens');
+const secondOnes = document.querySelector('#secondOnes');
 const msTens = document.querySelector('#msTens');
 const msHundreds = document.querySelector('#msHundreds');
 
-// Button
+// view
+const div = document.createElement('div');
+document.body.appendChild(div);
+
 const startButton = document.createElement('button');
 startButton.innerText = 'start';
-document.body.prepend(startButton);
+div.appendChild(startButton);
 
 const resetButton = document.createElement('button');
 resetButton.innerText = 'reset';
-document.body.prepend(resetButton);
+div.appendChild(resetButton);
 
-// add counter to the button
+// handler
 startButton.addEventListener('click', startCounting, { once: true });
 
 resetButton.addEventListener('click', function() {
+  secondTens.innerHTML = '-';
+  secondOnes.innerHTML = '-';
   msTens.innerHTML = '-';
   msHundreds.innerHTML = '-';
   clock.classList.remove('redDigit');
@@ -24,25 +31,26 @@ resetButton.addEventListener('click', function() {
   startButton.addEventListener('click', startCounting, { once: true });
 })
 
-// functions
+// method
 function startCounting () {
-  msTensCounter = 0;
-  msHundredsCounter = 0;
+  counter = 0; 
 
   let countInterval = setInterval(count, 10);
 
   function count() {
-    msTensCounter += 1;
+    counter += 1;
   
-    if (msTensCounter % 1000 === 0) {
+    if (counter % 1000 === 0) {
       clock.classList.add('redDigit');
-      
-      msTensCounter = 0;
-      msHundredsCounter += 1;
       clearInterval(countInterval);
     }
 
-    msTens.innerHTML = msTensCounter;
-    msHundreds.innerHTML = msHundredsCounter;
+    let str = counter.toString();
+    let strLength = counter.toString().length;
+    
+    secondTens.innerHTML = counter % 1000 === 0 ? 1 : 0;
+    secondOnes.innerHTML = counter.toString().slice(strLength - 3, strLength - 2) || 0;;
+    msTens.innerHTML = counter.toString().slice(strLength - 2, strLength - 1) || 0;;
+    msHundreds.innerHTML = counter.toString().slice(strLength - 1, strLength) || 0;
   }
 }
