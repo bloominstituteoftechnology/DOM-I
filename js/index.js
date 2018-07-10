@@ -86,9 +86,6 @@ contactInfo[2].innerHTML = siteContent["contact"]["email"];
 let footer = document.querySelector("footer p");
 footer.innerHTML = siteContent["footer"]["copyright"];
 
-navs.prepend(createNav("Home"));
-navs.append(createNav("Blog"));
-
 navs.forEach((nav) => {
   nav.style.color = "green";
 })
@@ -100,6 +97,9 @@ let createNav = (name) => {
   newNav.style.color = "green";
   return newNav;
 }
+navs.prepend(createNav("Home"));
+navs.append(createNav("Blog"));
+
 
 let header = document.querySelector('header');
 let ctaBtn = document.querySelector('.cta-text button')
