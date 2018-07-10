@@ -26,7 +26,8 @@ resetButton.addEventListener('click', function() {
   msTens.innerHTML = '-';
   msHundreds.innerHTML = '-';
   clock.classList.remove('redDigit');
-
+  
+  // alternative approach: .disabled = true 
   startButton.removeEventListener('click', startCounting, { once: true });
   startButton.addEventListener('click', startCounting, { once: true });
 })
