@@ -86,10 +86,17 @@ ctaHeader.addEventListener('mouseout', (event) => {
 const ctaButton = document.querySelector(".cta-text button");
 ctaButton.innerText = siteContent["cta"]["button"];
 
+//EVENT 5
+ctaButton.addEventListener('click', (event) => {
+  ctaHeader.style.color = 'yellow';
+  ctaHeader.style.textShadow = '5px 5px 1px black';
+  ctaHeader.innerText = 'B000000000M!';
+});
+
 const ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 
-//EVENT 5
+//EVENT 6
 ctaImg.addEventListener('click', (event) => {
   event.target.style.animation = "rotate 5s";
   event.target.style.webkitAnimation = "rotate 5s";
@@ -105,6 +112,14 @@ topContent[1].innerText = siteContent["main-content"]["about-content"];
 
 const middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+middleImg.addEventListener('mouseover', (event) => {
+  event.target.style.opacity = .25;
+});
+
+middleImg.addEventListener('mouseout', (event) => {
+  event.target.style.opacity = 1;
+});
 
 const bottomContentHeader = document.querySelectorAll(".bottom-content h4");
 bottomContentHeader[0].innerText = siteContent["main-content"]["services-h4"];
@@ -124,11 +139,11 @@ contactContent[0].innerText = siteContent["contact"]["address"];
 contactContent[1].innerText = siteContent["contact"]["phone"];
 contactContent[2].innerText = siteContent["contact"]["email"];
 
-//EVENT
+//EVENT 7
 contactContent.forEach(i => i.addEventListener('mouseover', (event) => {
   event.target.style.opacity = 0;
 }));
-//EVENT
+//EVENT 8
 contactContent.forEach(i => i.addEventListener('mouseout', (event) => {
   event.target.style.opacity = 1;
 }));
