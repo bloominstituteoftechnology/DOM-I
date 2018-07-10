@@ -60,7 +60,6 @@ navItem[4].innerHTML = siteContent["nav"]["nav-item-5"];
 navItem[5].innerHTML = siteContent["nav"]["nav-item-6"];
 
 
-
 nav.append(anchor2.appendChild(learnMore));
 nav.prepend(anchor1.appendChild(home));
 
