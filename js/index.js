@@ -161,3 +161,17 @@ footerItem.addEventListener("mouseup", (event)=>{
 footerItem.addEventListener("mouseup", (event)=>{
   event.target.style.color ="yellow"; 
 }); 
+
+topHeader[0].addEventListener("wheel", (event)=>{
+event.target.style.fontSize = "xx-large"; 
+})
+
+topHeader[1].addEventListener("dblclick", (event)=>{
+  event.target.style.backgroundColor = "pink"; 
+  })
+topHeader[1].addEventListener("dblclick", (event)=>{
+    event.target.style.fontSize = "xx-large"; 
+    })
+ topHeader[1].addEventListener("dblclick", (event)=>{
+      event.target.style.float = "right"; 
+      })
