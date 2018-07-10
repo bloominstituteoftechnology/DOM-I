@@ -121,7 +121,33 @@ ctaImg.addEventListener('mouseover', (event) => {
   event.stopPropagation();
 })
 
-awesomeWords.addEventListener('mouseover', (evnet) => {
+awesomeWords.addEventListener('mouseover', (event) => {
   TweenMax.to(".cta-text", 1, {rotation:360});
   event.stopPropagation();
 })
+
+ctaButton.addEventListener('mousedown', (event) => {
+  TweenMax.to(".cta button", 4, {opacity:0});
+})
+
+middleImg.addEventListener('mouseleave', (event) => {
+  TweenMax.to(".middle-img", 4, {opacity: 0});
+  console.log("mouse left the middle image.")
+  event.stopPropagation();
+})
+
+ctaImg.addEventListener('drag', (event) => {
+  console.log("CTA image is being dragged!")
+})
+
+let body = document.querySelector("body");
+
+body.addEventListener('keydown', (event) => {
+  console.log("A key has been pressed down.")
+})
+
+body.addEventListener('copy', (event) => {
+  console.log("Something has been copied! Beware of plagiarism!")
+})
+
+
