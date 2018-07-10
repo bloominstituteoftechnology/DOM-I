@@ -180,29 +180,29 @@ topHeader[1].addEventListener("dblclick", (event)=>{
       var dragged;
 
       /* events fired on the draggable target */
-      document.addEventListener("drag", function( event ) {
+      document.addEventListener("drag",( event ) => {
     
       }, false);
     
-      document.addEventListener("dragstart", function( event ) {
+      document.addEventListener("dragstart", ( event ) => {
           // store a ref. on the dragged elem
           dragged = event.target;
           // make it half transparent
           event.target.style.opacity = .5;
       }, false);
     
-      document.addEventListener("dragend", function( event ) {
+      document.addEventListener("dragend",( event )=> {
           // reset the transparency
           event.target.style.opacity = "";
       }, false);
     
       /* events fired on the drop targets */
-      document.addEventListener("dragover", function( event ) {
+      document.addEventListener("dragover", ( event ) => {
           // prevent default to allow drop
           event.preventDefault();
       }, false);
     
-      document.addEventListener("dragenter", function( event ) {
+      document.addEventListener("dragenter", ( event ) => {
           // highlight potential drop target when the draggable element enters it
           if ( event.target.className == "dropzone" ) {
               event.target.style.background = "purple";
@@ -210,7 +210,7 @@ topHeader[1].addEventListener("dblclick", (event)=>{
     
       }, false);
     
-      document.addEventListener("dragleave", function( event ) {
+      document.addEventListener("dragleave", ( event ) => {
           // reset background of potential drop target when the draggable element leaves it
           if ( event.target.className == "dropzone" ) {
               event.target.style.background = "";
@@ -218,7 +218,7 @@ topHeader[1].addEventListener("dblclick", (event)=>{
     
       }, false);
     
-      document.addEventListener("drop", function( event ) {
+      document.addEventListener("drop", ( event ) => {
           // prevent default action (open as link for some elements)
           event.preventDefault();
           // move dragged elem to the selected drop target
