@@ -1,4 +1,6 @@
 let timerInt = 100000;
+startButton.addEventListener("click", runTimer, false);
+resetButton.addEventListener("click", resetTimer, false);
 
 function runTimer() {
     setInterval(function() { 
@@ -23,4 +25,9 @@ function runTimer() {
 
 function resetTimer() {
     timerInt = 100000;
+    clearInterval(countInterval);
+    document.querySelector("#secondTens").className = "digit";
+    document.querySelector("#secondOnes").className = "digit";
+    document.querySelector("#msTens").className = "digit";
+    document.querySelector("#msHundreds").className = "digit";
 }
