@@ -98,11 +98,16 @@ newNavItem.appendChild(newNavText);
 
 let navBar = document.querySelector("nav");
 navBar.prepend(newNavItem);
+newNavItem.setAttribute('href', '#');
+newNavItem.style.color = 'green';
 
 let secondNewNavItem = document.createElement("a");
 let secondNewNavItemText = document.createTextNode("New Item 2");
 
 secondNewNavItem.appendChild(secondNewNavItemText);
 navBar.appendChild(secondNewNavItem);
+secondNewNavItem.setAttribute('href', '#');
+secondNewNavItem.style.color = 'green';
+
 
 
