@@ -119,8 +119,10 @@ footerCopyRight.innerHTML = siteContent.footer.copyright;
 
 // === Adding own content
 // Color
-let navColor = document.querySelector("a");
-navColor.style.color = "blue";
+navLinks = document.querySelectorAll("nav a");
+navLinks.forEach( (link, i) => {
+  link.style.color = "green";
+})
 
 // First element of Nav
 let navBarATags = document.getElementsByTagName("nav")[0];
@@ -133,3 +135,29 @@ let navBarATags1 = document.getElementsByTagName("nav")[0];
 let navFirstAhref1 = document.createElement("a");
 navFirstAhref1.innerHTML = "startLink";
 navBarATags1.prepend(navFirstAhref1);
+
+// === Stretch
+let mouseOverAction = document.querySelectorAll("nav a");
+
+mouseOverAction.forEach( (link, i) => {
+  link.addEventListener("mouseenter", function( link ) {   
+    // highlight the mouseenter target
+    link.target.style.color = "red";
+
+    // reset the color after a short delay
+    setTimeout(function() {
+      link.target.style.color = "";
+    }, 500);
+  }, false);
+})
+
+// this handler will be executed every time the cursor is moved over a different list item
+// mouseOverAction.addEventListener("mouseover", function( event ) {   
+//   // highlight the mouseover target
+//   event.target.style.color = "orange";
+
+//   // reset the color after a short delay
+//   setTimeout(function() {
+//     event.target.style.color = "";
+//   }, 500);
+// }, false);
