@@ -118,46 +118,133 @@ let footerCopyRight = document.querySelector("footer p");
 footerCopyRight.innerHTML = siteContent.footer.copyright;
 
 // === Adding own content
+// First element of Nav
+// let navBarATags = document.getElementsByTagName("nav")[0];
+// let navFirstAhref = document.createElement("a");
+// navFirstAhref.innerHTML = "endLink";
+// navBarATags.appendChild(navFirstAhref);
+
+// // Second element of Nav
+// let navBarATags1 = document.getElementsByTagName("nav")[0];
+// let navFirstAhref1 = document.createElement("a");
+// navFirstAhref1.innerHTML = "startLink";
+// navBarATags1.prepend(navFirstAhref1);
+
 // Color
 navLinks = document.querySelectorAll("nav a");
-navLinks.forEach( (link, i) => {
+navLinks.forEach( (link) => {
   link.style.color = "green";
 })
 
-// First element of Nav
-let navBarATags = document.getElementsByTagName("nav")[0];
-let navFirstAhref = document.createElement("a");
-navFirstAhref.innerHTML = "endLink";
-navBarATags.appendChild(navFirstAhref);
-
-// Second element of Nav
-let navBarATags1 = document.getElementsByTagName("nav")[0];
-let navFirstAhref1 = document.createElement("a");
-navFirstAhref1.innerHTML = "startLink";
-navBarATags1.prepend(navFirstAhref1);
-
 // === Stretch
-let mouseOverAction = document.querySelectorAll("nav a");
+// let mouseOverAction = document.querySelectorAll("nav a");
 
-mouseOverAction.forEach( (link, i) => {
-  link.addEventListener("mouseenter", function( link ) {   
-    // highlight the mouseenter target
-    link.target.style.color = "red";
+// mouseOverAction.forEach( (link, i) => {
+//   link.addEventListener("mouseenter", function( link ) {   
+//     // highlight the mouseenter target
+//     link.target.style.color = "red";
 
-    // reset the color after a short delay
-    setTimeout(function() {
-      link.target.style.color = "";
-    }, 500);
-  }, false);
+//     // reset the color after a short delay
+//     setTimeout(function() {
+//       link.target.style.color = "";
+//     }, 500);
+//   }, false);
+// })
+
+// let mouseOverAction1 = document.querySelectorAll("nav a");
+// mouseOverAction1.forEach( (link, i) => {
+//   link.addEventListener("mouseover", (link) => {   
+//     // highlight the mouseenter target
+//     link.target.style.color = "white";
+
+//     // reset the color after a short delay
+//     setTimeout(() => {
+//       link.target.style.color = "";
+//     }, 500);
+//   }, false);
+// })
+
+// ===Today's Assignment
+
+// First Event Turns middle image into a fish
+const middleImage = document.querySelector('#middle-img');
+
+middleImage.addEventListener('click', (event) => {
+  // stops the bubbling of the event
+  event.stopPropagation();
+  // Makes a badass fish appear on middle image click
+  event.target.setAttribute('src', "https://fishtankweb.com/wp-content/uploads/2017/05/Saltwater-Aquarium-Fish-Name-Coral-Beauty-Angel-Fish.jpg");
+});
+
+// Second Event turns the middle imageback into original
+middleImage.addEventListener('dblclick', (event) => {
+  // stops the bubbling of the event
+  event.stopPropagation();
+  // Turn back into original
+  event.target.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+});
+
+// Third Event is Rainbow background for body
+// Random function for events
+const randomFunc = (number) => {
+  return Math.floor(Math.random()*(number+1));
+};
+
+
+const bodyBackground = document.querySelector('body');
+
+bodyBackground.addEventListener('keydown', (event) => {
+  // stopping bubbling
+  event.stopPropagation();
+  // Turns background random color on keydown
+  var rndCol = 'rgb(' + randomFunc(255) + ',' + randomFunc(255) + ',' + randomFunc(255) + ')';
+  event.target.style.backgroundColor = rndCol;
 })
 
-// this handler will be executed every time the cursor is moved over a different list item
-// mouseOverAction.addEventListener("mouseover", function( event ) {   
-//   // highlight the mouseover target
-//   event.target.style.color = "orange";
+// Fourth Event changes nav text to say Hey on Mouse over
+const navLinksEvent = document.querySelectorAll('nav a');
 
-//   // reset the color after a short delay
-//   setTimeout(function() {
-//     event.target.style.color = "";
-//   }, 500);
-// }, false);
+for (let i = 0 ; i < navLinksEvent.length; i++) {
+  navLinksEvent[i].addEventListener('mouseenter' , (event) => {
+    // stopping bubbling
+    event.stopPropagation();
+    // Changes inner text of Nav to say Hey
+    event.target.innerHTML = 'Hey'
+})
+}
+
+// Fifth Event changes nav text back to original text
+// Got to add event listentener to each ind item, use loop since query selector all
+for (let i = 0 ; i < navLinksEvent.length; i++) {
+  navLinksEvent[i].addEventListener('mouseover' , (event) => {
+    // stopping bubbling
+    event.stopPropagation();
+    // Changes inner text of Nav back to original
+    for (i = 1; i < navLinks.length; i++) {
+      navLinks[i].innerHTML = siteContent["nav"][navItems+i];
+    }
+})
+}
+
+// Fifth Event changes cta image to basketball on mouse wheel
+let ctaImgEvent = document.querySelector("#cta-img");
+
+ctaImgEvent.addEventListener('wheel', (event) => {
+  event.target.setAttribute('src', "http://wphs.ohio.k12.wv.us/wp-content/uploads/sites/7/2017/04/basketball-147794_960_720.png")
+})
+
+// Sixth Event calls you a thief if you try to copy any paragraph text
+let allPText = document.querySelectorAll("p");
+
+for(let i=0; i < allPText.length; i++) {
+  allPText[i].addEventListener('copy', (event) => {
+    alert("Thief!!!!")
+  })
+}
+
+// Seventh Event
+let ctaTextEvent = document.querySelector(".cta-text");
+
+window.addEventListener("resize", (event) => {
+  ctaTextEvent.innerHTML = "You're changing the size of the screen!"
+})
