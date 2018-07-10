@@ -53,3 +53,14 @@ menuNav[5].innerHTML = siteContent['nav']['nav-item-6']
 
 let ctaText = document.querySelector(".cta-text h1");
 ctaText.innerHTML = (siteContent["cta"]["h1"]);
+
+let ctaTxt1 = document.getElementsByClassName("cta-text")[0];
+
+ctaTxt1.getElementsByTagName("h1")[0].innerHTML = siteContent["cta"]["h1"];
+ctaTxt1.getElementsByTagName("button")[0].innerHTML = siteContent["cta"]["button"];
+
+let midImg = document.getElementById("middle-img");
+midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+let aboutContent = document.querySelector(".top-content .text-content"); 
+aboutContent.innerHTML = ("p", siteContent["main-content"]["about-content"])
