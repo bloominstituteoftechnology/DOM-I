@@ -123,10 +123,13 @@ let navColor = document.querySelector("a");
 navColor.style.color = "blue";
 
 // First element of Nav
+let navBarATags = document.getElementsByTagName("nav")[0];
 let navFirstAhref = document.createElement("a");
-navFirstAhref.innerHTML("Hey");
-document.nav.appendChild(navFirstAhref);
+navFirstAhref.innerHTML = "endLink";
+navBarATags.appendChild(navFirstAhref);
 
-// // Create a new paragraph element, and append it to the end of the document body
-// var p = document.createElement("p");
-// document.body.appendChild(p);
+// Second element of Nav
+let navBarATags1 = document.getElementsByTagName("nav")[0];
+let navFirstAhref1 = document.createElement("a");
+navFirstAhref1.innerHTML = "startLink";
+navBarATags1.prepend(navFirstAhref1);
