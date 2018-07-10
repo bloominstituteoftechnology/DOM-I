@@ -48,8 +48,8 @@ let newLinkText2 = document.createTextNode("Is This The End?");
 newLink1.appendChild(newLinkText1);
 newLink2.appendChild(newLinkText2);
 
-navigationBar.prepend(newLink1);
-navigationBar.appendChild(newLink2);
+navigationBar.prepend(newLink1); // Adding link to the beginning of navbar
+navigationBar.appendChild(newLink2); // Adding link to the end of the navbar
 
 const navLinks = document.querySelectorAll("nav a");
 const logo = document.getElementById("logo-img");
