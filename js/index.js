@@ -45,6 +45,13 @@ logo.src = siteContent["nav"]["img-src"];
 
 
 let navItem = document.querySelectorAll("nav a");
+
+let nav = document.querySelector("nav");
+let anchor1 = document.createElement("a");
+let anchor2 = document.createElement("a");
+let home = document.createTextNode("Home");
+let learnMore = document.createTextNode("Learn More");
+
 navItem[0].innerHTML = siteContent["nav"]["nav-item-1"];
 navItem[1].innerHTML = siteContent["nav"]["nav-item-2"];
 navItem[2].innerHTML = siteContent["nav"]["nav-item-3"];
@@ -53,15 +60,11 @@ navItem[4].innerHTML = siteContent["nav"]["nav-item-5"];
 navItem[5].innerHTML = siteContent["nav"]["nav-item-6"];
 
 
-let nav = document.querySelector("nav");
-let a = document.createElement("a");
 
-
-nav.prepend(document.createTextNode("Home"));
-nav.appendChild(document.createTextNode("Learn More"));
+nav.append(anchor2.appendChild(learnMore));
+nav.prepend(anchor1.appendChild(home));
 
 nav.style.color = "green";
-
 
 for (let i =0; i<navItem.length; i++){
   navItem[i].style.color = "green";
@@ -76,6 +79,9 @@ ctaH1.innerHTML = siteContent["cta"]["h1"];
 ctaButton.innerHTML = siteContent["cta"]["button"];
 ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
 
+ctaButton.addEventListener("click", function(){
+  alert("You've clicked me!");
+});
 
 // ======== Content ===========
 let topContent = document.querySelectorAll(".text-content h4");
