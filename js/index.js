@@ -41,6 +41,10 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
+// let navcolor = document.querySelectorAll("nav a");
+// for (let i = 0; i < 6; i++) {
+//   navcolor[i].style.color = "mediumspringgreen";
+// }
 
 let nav = document.querySelectorAll('nav a');
 nav[0].innerHTML = (siteContent["nav"]["nav-item-1"]);
@@ -104,3 +108,36 @@ mainText05[2].innerHTML = (siteContent["main-content"]["vision-h4"]);
 
 let mainText5 = document.querySelectorAll('.bottom-content .text-content p');
 mainText5[2].innerHTML = (siteContent["main-content"]["vision-content"]);
+
+
+let contact = document.querySelector(".contact h4");
+contact.innerHTML = (siteContent["contact"]["contact-h4"])
+
+let contact0 = document.querySelectorAll(".contact p");
+contact0[0].innerHTML = (siteContent["contact"]["address"])
+
+let contact1 = document.querySelectorAll(".contact p");
+contact1[1].innerHTML = (siteContent["contact"]["phone"])
+
+let contact2 = document.querySelectorAll(".contact p");
+contact2[2].innerHTML = (siteContent["contact"]["email"])
+
+
+let footer = document.querySelector("footer p");
+footer.innerHTML = (siteContent["footer"]["copyright"]);
+
+
+let oldNav = document.querySelector("nav");
+
+let newItem = document.createElement("a");
+newItem.innerHTML = "Blog";
+oldNav.appendChild(newItem);
+
+let newItem2 = document.createElement("a");
+newItem2.innerHTML = "Stuff";
+oldNav.prepend(newItem2);
+
+let navcolor = document.querySelectorAll("nav a");
+for (let i = 0; i < navcolor.length; i++) {
+  navcolor[i].style.color = "mediumspringgreen";
+}
