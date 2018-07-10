@@ -89,4 +89,25 @@ contactBody[2].innerHTML = siteContent['contact']['email'];
 let footer = document.querySelector('footer p');
 footer.innerHTML = siteContent['footer']['copyright']
 
+let navBarFull = document.querySelector('nav');
+navBarFull.appendChild(addNavElement1());
+navBarFull.prepend(addNavElement2());
+
 navBar.forEach(i => i.style.color = 'green');
+
+function addNavElement1 () {
+  let newNav = document.createElement('a');
+  newNav.innerHTML = 'Blog';
+  newNav.style.color = 'green';
+  newNav.href = '#';
+  return newNav;
+}
+
+function addNavElement2 () {
+  let newNav = document.createElement('a');
+  newNav.innerHTML = 'Partners';
+  newNav.style.color = 'green';
+  newNav.href = '#';
+  return newNav;
+}
+
