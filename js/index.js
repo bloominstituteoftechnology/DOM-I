@@ -93,16 +93,16 @@ bottomContent[0].innerHTML = siteContent["main-content"]["services-content"]
 bottomContent[1].innerHTML = siteContent["main-content"]["product-content"]
 bottomContent[2].innerHTML = siteContent["main-content"]["vision-content"]
 //contact
-let contactHeader = document.querySelectorAll(".contact h4"); 
-contactHeader[0].innerHTML = siteContent["contact"]["contact-h4"]
+let contactHeader = document.querySelector(".contact h4"); 
+contactHeader.innerHTML = siteContent["contact"]["contact-h4"]
 
 let contactItem = document.querySelectorAll(".contact p"); 
 contactItem[0].innerHTML = siteContent["contact"]["address"];
 contactItem[1].innerHTML = siteContent["contact"]["phone"];
 contactItem[2].innerHTML = siteContent["contact"]["email"];
 
-let footerItem = document.querySelectorAll("footer p"); 
-footerItem[0].innerHTML = siteContent["footer"]["copyright"];
+let footerItem = document.querySelector("footer p"); 
+footerItem.innerHTML = siteContent["footer"]["copyright"];
 
 //new content
 const navBar = document.querySelector("nav");
@@ -121,7 +121,7 @@ newTab2.style.color ="green"
 //Events 
 console.log(navItem); 
 
-navBar.addEventListener("click", () => {
+navBar.addEventListener("click", (event) => {
   console.log("Clicked")
   event.target.style.color="red"; 
 }); 
@@ -145,10 +145,19 @@ imageMiddle.addEventListener("dblclick", (event)=> {
   console.log("move1")
 })
 
-logo.addEventListener("dragenter", ( event ) => {
-  // highlight potential drop target when the draggable element enters it
-  if ( event.target.className == "container" ) {
-      event.target.style.display = "none";
-  }
+logo.addEventListener("contextmenu", (event)=>{
+  event.target.style.opacity = .1;
+})
 
-}, true);
+contactHeader.addEventListener("mouseenter", (event)=>{
+  event.target.style.fontSize = "xx-large"
+  console.log("mousey") 
+}); 
+
+footerItem.addEventListener("mouseup", (event)=>{
+  event.target.style.fontSize ="xx-large"; 
+}); 
+
+footerItem.addEventListener("mouseup", (event)=>{
+  event.target.style.color ="yellow"; 
+}); 
