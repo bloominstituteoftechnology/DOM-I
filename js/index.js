@@ -53,7 +53,8 @@ newLink2.innerText = "Shop";
 // find the position where the new element should be added
 let position = document.querySelector("header nav");
 // insert the new elements into their positions
-position.append(newLink1, newLink2);
+position.appendChild(newLink1);
+position.appendChild(newLink2);
 // Select nav links
 let navLink = document.querySelectorAll("header nav a");
 // Update content for each nav link
@@ -111,6 +112,7 @@ mainP[2].textContent = siteContent["main-content"]["services-content"];
 mainP[3].textContent = siteContent["main-content"]["product-content"];
 mainP[4].textContent = siteContent["main-content"]["vision-content"];
 
+
 // CONTACT
 // select .contact h4 
 let contactH4 = document.querySelector(".contact h4");
@@ -118,9 +120,10 @@ let contactH4 = document.querySelector(".contact h4");
 contactH4.textContent = siteContent["contact"]["contact-h4"];
 // select .contact p's
 let contactP = document.querySelectorAll(".contact p");
-contactP[0].textContent = siteContent["contact"]["address"];
-contactP[1].textContent = siteContent["contact"]["phone"];
-contactP[2].textContent = siteContent["contact"]["email"];
+let contactArray = ["address", "phone", "email"]
+for (let i = 0; i < contactArray.length; i++) {
+  contactP[i].textContent = siteContent["contact"][contactArray[i]];
+}
 
 // FOOTER
 //select footer p
