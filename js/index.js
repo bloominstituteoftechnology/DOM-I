@@ -45,6 +45,12 @@ body.style.fontSize = "1.2rem"
 body.style.fontWeight = "bold"
 
 
+//onload event handler 
+window.addEventListener('load', function(event){
+ alert("The page has loaded! Ready to go!")
+})
+
+
 // appendChild method 
 let nav = document.querySelector('nav')
 let navItems = Object.values(siteContent.nav);
@@ -69,6 +75,12 @@ let navBar = document.querySelectorAll('nav a');
 navBar.forEach((link, index) => {
   link.innerHTML = navItems[index];
   link.style = "color:green"
+  link.addEventListener('mouseenter', function(event){
+    TweenMax.to(event.target, 1, {y:-30})
+  })
+  link.addEventListener('mouseleave', function(event){
+    TweenMax.to(event.target, 1, {y:0})
+  })
 });
 
 const logo = document.getElementById("logo-img");
@@ -76,14 +88,26 @@ logo.setAttribute('src', siteContent['nav']['img-src'])
 
 // ========== CTA ========== 
 
-
 const ctaHeading = document.querySelector('.cta h1');
 ctaHeading.innerHTML = siteContent['cta']['h1']
+
+//Heading Mouseenter Event Handler
+ctaHeading.addEventListener('mouseenter', function(event){
+  event.target.style.color = "green";
+  TweenMax.to(event.target, 1, {scale: 1.2})
+})
+
+//Heading Mouseleave Event Handler
+ctaHeading.addEventListener('mouseleave', function(event){
+  event.target.style.color = "black";
+  TweenMax.to(event.target, 1, {scale: 1.0})  
+})
+
 
 const ctaButton = document.querySelector('.cta button');
 ctaButton.innerHTML = siteContent['cta']['button']
 
-//Button Event Handler
+//Button Click Event Handler
 ctaButton.addEventListener('click', function(){
   if (ctaButton.innerHTML != "What Happened??"){
     ctaButton.innerHTML = "What Happened??"
@@ -92,9 +116,18 @@ ctaButton.addEventListener('click', function(){
   }
 })
 
+// Change Event Handler, changes CTA heading to match input
+const input = document.querySelector('input');
+input.addEventListener('change', function(event){
+ ctaHeading.innerHTML = event.target.value;
+})
 const ctaImage = document.querySelector('#cta-img');
 ctaImage.setAttribute('src', siteContent['cta']['img-src'])
 
+//Double Click Event
+ctaImage.addEventListener('dblclick',function(){
+    TweenMax.to('#cta-img', 1, {x:-100})
+})
 
 // ============ Main Content ============= 
 
