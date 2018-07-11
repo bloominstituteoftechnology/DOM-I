@@ -1,28 +1,48 @@
-const countUp = () => {
-    let counter = 0;
-    if (counter === 10000) {
-        document.querySelector('#secondTens').innerText = 1;
-        document.querySelectorAll('.digits .digit').forEach((digit, index) => {
-            if (index !== 0) {
+/* index.js for stretch assignment */
+
+// Variables
+
+let sTens = document.querySelector("#secondTens");
+let sOnes = document.querySelector("#secondOnes");
+let msTens = document.querySelector("#msTens");
+let msHundreds = document.querySelector('#msHundreds');
+let digits = document.querySelectorAll('.digits .digit');
+let counter = 0;
+
+let startBtn = document.createElement('button');
+startBtn.innerText = 'Start';
+let resetBtn = document.createElement('button');
+resetBtn.innerText = 'Reset';
+
+document.body.prepend(startBtn);
+document.body.appendChild(resetBtn);
+
+
+// Timer implementation
+
+
+
+const count = setInterval(() => {
+    counter++;
+    let countStr = `${0000 + counter}`;
+    if (counter >= 1000) {
+        sTens.innerText = 1;
+        digits.forEach((digit, index) => {
+            if (index !== 0 && index !== 2) {
                 digit.innerText = 0;
             }
+            digit.style.color = 'red';
         });
-    } else if (counter >= 1000) {
-        document.querySelector('#secondTens').innerText = Math.floor(seconds / 100);
-        document.querySelector('#secondOnes')[1].innerText = Math.floor(seconds / 10);
-        document.querySelector('#msHundreds')[2].innerText = Math.floor(seconds);
-        document.querySelector('#msTens')[3].innerText = Math.floor(seconds * 10);
-    } else if (counter >= 100){
-        document.querySelector('#secondOnes')[1].innerText = Math.floor(seconds / 10);
-        document.querySelector('#msHundreds')[2].innerText = Math.floor(seconds);
-        document.querySelector('#msTens')[3].innerText = Math.floor(seconds * 10);
+        clearInterval(count);
+    } else if (counter >= 100) {
+        sTens.innerText = 0;
+        sOnes.innerText = countStr[0];
+        msTens.innerText = countStr[1];
+        msHundreds.innerText = countStr[2];
     } else if (counter >= 10) {
-        document.querySelector('#msHundreds')[2].innerText = Math.floor(seconds);
-        document.querySelector('#msTens')[3].innerText = Math.floor(seconds * 10);
+        msTens.innerText = countStr[0];
+        msHundreds.innerText = countStr[1];
     } else {
-        document.querySelector('#msTens')[3].innerText = Math.floor(seconds * 10);
+        msHundreds.innerText = countStr[0];
     }
-    return () => ++counter;
-};
-
-window.setInterval(countUp, 10);
+}, 10);
