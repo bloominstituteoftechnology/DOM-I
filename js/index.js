@@ -59,22 +59,7 @@ nav[3].style.color = "green";
 nav[4].style.color = "green";
 nav[5].style.color = "green";
 
-// let navHello = doc.createElement("a");
-// let navHelloContent = doc.createTextNode("Hello");
-// navHello.appendChild(navHelloContent);
-// let changeNav = doc.querySelector("nav");
-// doc.body.insertBefore(navHello, changeNav);
-
-// let navGoodbye = doc.createElement("a");
-// let navGoodbyeContent = doc.createTextNode("Goodbye");
-// navHello.preChild(navGoodbyeContent);
-// let changeNav = doc.querySelector("nav");
-// doc.body.insertBefore (navHello, changeNav);
-
-// let startNAv = document.createElement("a");
-// let endNav = document.createElement("a");
-// nav[0].append(startNav);
-// nav.prepend(endNav);
+// Append
 
 let node = doc.createElement("A");
 let textNode = doc.createTextNode("Goodbye");
@@ -82,11 +67,11 @@ node.appendChild(textNode);
 doc.querySelector("nav").appendChild(node);
 
 
-
-
-// nav[0].appendChild(a);
-
-// navChange[0].appendChild("<a href="#">Hello</a>");
+// Prepend
+let node2 = doc.createElement("A");
+let textNode2 = doc.createTextNode("Hello");
+node2.prepend(textNode2);
+doc.querySelector("nav").prepend(node2);
 
 
 let ctaText = doc.querySelector(".cta-text h1");
