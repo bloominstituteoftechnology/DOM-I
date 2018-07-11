@@ -42,25 +42,38 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
+let navItems = siteContent.nav;
+let keys = Object.keys(navItems);
+let values = Object.values(navItems);
+
+for (let i=0; i<keys.length; i++){
+  if (keys[i]!== "img-src") {
+    document.querySelectorAll("nav")[0].children[i].innerHTML = values [i];
+    document.querySelectorAll('nav')[0].children[i].className=keys[i];
+  }
+}
 
 
-let navItem1 = document.querySelectorAll("nav a"); 
-navItem1[0].innerHTML = siteContent["nav"]["nav-item-1"]
 
-let navItem2 = document.querySelectorAll("nav a"); 
-navItem2[1].innerHTML = siteContent["nav"]["nav-item-2"]
 
-let navItem3 = document.querySelectorAll("nav a"); 
-navItem3[2].innerHTML = siteContent["nav"]["nav-item-3"]
 
-let navItem4 = document.querySelectorAll("nav a"); 
-navItem4[3].innerHTML = siteContent["nav"]["nav-item-4"]
+// let navItem1 = document.querySelectorAll("nav a"); 
+// navItem1[0].innerHTML = siteContent["nav"]["nav-item-1"]
 
-let navItem5 = document.querySelectorAll("nav a"); 
-navItem5[4].innerHTML = siteContent["nav"]["nav-item-5"]
+// let navItem2 = document.querySelectorAll("nav a"); 
+// navItem2[1].innerHTML = siteContent["nav"]["nav-item-2"]
 
-let navItem6 = document.querySelectorAll("nav a"); 
-navItem6[5].innerHTML = siteContent["nav"]["nav-item-6"];
+// let navItem3 = document.querySelectorAll("nav a"); 
+// navItem3[2].innerHTML = siteContent["nav"]["nav-item-3"]
+
+// let navItem4 = document.querySelectorAll("nav a"); 
+// navItem4[3].innerHTML = siteContent["nav"]["nav-item-4"]
+
+// let navItem5 = document.querySelectorAll("nav a"); 
+// navItem5[4].innerHTML = siteContent["nav"]["nav-item-5"]
+
+// let navItem6 = document.querySelectorAll("nav a"); 
+// navItem6[5].innerHTML = siteContent["nav"]["nav-item-6"];
 
 
 
