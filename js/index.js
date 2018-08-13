@@ -84,7 +84,6 @@ let copyright = document.querySelector('footer p');
 copyright.innerHTML = siteContent.footer.copyright;
 
 //Task 4
-
 let nav = document.querySelector('nav');
 nav.appendChild(document.createElement('a'));
 nav.prepend(document.createElement('a'));
@@ -94,3 +93,14 @@ navList[0].innerHTML = 'Home';
 navList[6].innerHTML = 'Login';
 
 navList.forEach(item => item.style.color = 'green');
+
+//Stretch
+let counter = 1;
+
+const getStarted = () => {
+  alert(counter === 1 ? `Got started ${counter} time.` : `Got started ${counter} times.`);
+  counter++;
+  ctaH1.style.fontSize = `${counter}rem`;
+};
+
+ctaButton.setAttribute('onclick', 'getStarted()');
