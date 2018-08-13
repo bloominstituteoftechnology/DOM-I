@@ -38,5 +38,48 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+
+
+
+
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//Navigation links
+let nav = document.getElementsByTagName("nav");
+nav[0].children[0].innerHTML = siteContent["nav"]["nav-item-1"]
+nav[0].children[1].innerHTML = siteContent["nav"]["nav-item-2"]
+nav[0].children[2].innerHTML = siteContent["nav"]["nav-item-3"]
+nav[0].children[3].innerHTML = siteContent["nav"]["nav-item-4"]
+
+// Images & DIA text
+document.getElementById("cta-img").src = siteContent['cta']['img-src'];
+document.getElementById("middle-img").src = siteContent["main-content"]["middle-img-src"];
+document.querySelector('.cta-text').firstElementChild.innerHTML = siteContent.cta.h1;
+
+//Button
+document.querySelector('.cta-text').getElementsByTagName('button')[0].innerHTML = siteContent.cta.button;
+
+//Features&About Content
+document.querySelector('.top-content').getElementsByTagName('h4')[0].innerHTML = siteContent["main-content"]["features-h4"];
+document.querySelector('.top-content').getElementsByTagName('p')[0].innerHTML = siteContent["main-content"]["features-content"];
+document.querySelector('.top-content').getElementsByTagName('h4')[1].innerHTML = siteContent["main-content"]["about-h4"];
+document.querySelector('.top-content').getElementsByTagName('p')[1].innerHTML = siteContent["main-content"]["about-content"];
+
+//Services,Product,&Vision Content
+document.querySelector('.bottom-content').getElementsByTagName('h4')[0].innerHTML = siteContent["main-content"]["services-h4"];
+document.querySelector('.bottom-content').getElementsByTagName('p')[0].innerHTML = siteContent["main-content"]["services-content"];
+document.querySelector('.bottom-content').getElementsByTagName('h4')[1].innerHTML = siteContent["main-content"]["product-h4"];
+document.querySelector('.bottom-content').getElementsByTagName('p')[1].innerHTML = siteContent["main-content"]["product-content"];
+document.querySelector('.bottom-content').getElementsByTagName('h4')[2].innerHTML = siteContent["main-content"]["vision-h4"];
+document.querySelector('.bottom-content').getElementsByTagName('p')[2].innerHTML = siteContent["main-content"]["vision-content"];
+
+//Contact Content
+document.querySelector('.contact').getElementsByTagName('h4')[0].innerHTML = siteContent.contact["contact-h4"];
+document.querySelector('.contact').getElementsByTagName('p')[0].innerHTML = siteContent.contact["address"];
+document.querySelector('.contact').getElementsByTagName('p')[1].innerHTML = siteContent.contact["phone"];
+document.querySelector('.contact').getElementsByTagName('p')[2].innerHTML = siteContent.contact["email"];
+
+//Footer Content
+document.querySelector('footer').getElementsByTagName('p')[0].innerHTML = siteContent.footer.copyright;
+
