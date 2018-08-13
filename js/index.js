@@ -42,4 +42,8 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // selectors to point data into elements
-let navigation = document.querySelector()
+let navigation = document.querySelector('nav');
+let callToAction = document.querySelector('cta');
+let mainContent = document.querySelector('main-content');
+let contact = document.querySelector('contact');
+let foot = document.querySelector('footer');
