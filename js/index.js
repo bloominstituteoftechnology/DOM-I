@@ -46,6 +46,15 @@ nav1.forEach((value, index) => {
 value.innerHTML = siteContent.nav[`nav-item-${index + 1}`]
 });
 
+// const newElement = document.createElement('a');
+
+// const homeElement = document.querySelector('nav');
+
+// nav.prepend(newElement);
+
+// newElement.innerText = "Testing, 1,2,3";
+
+
 const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
@@ -89,9 +98,3 @@ topicContent[7].innerText = siteContent["footer"]["copyright"];
 
 //Text Green
 
-
-// const textMainSection = document.querySelector("main-content top-content text-content");
-// textMainSection.forEach((value, index) => {
-//   value.innerHTML = if ()
-// })
-// )
