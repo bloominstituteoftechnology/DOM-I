@@ -64,7 +64,14 @@ nav_bar[2].innerHTML = siteContent['nav']['nav-item-3'];
 nav_bar[3].innerHTML = siteContent['nav']['nav-item-4'];
 nav_bar[4].innerHTML = siteContent['nav']['nav-item-5'];
 nav_bar[5].innerHTML = siteContent['nav']['nav-item-6'];
+
+nav.appendChild(document.createTextNode('Merch'));
+nav.prepend(document.createTextNode('Bio'));
+nav_bar.forEach(element => {
+  element.style.color = 'Green';
+});
 nav.style.color = 'Green';
+
 // Call to action elements
 const cta_text_header = document.querySelector('.cta-text h1');
 cta_text_header.innerHTML = siteContent['cta']['h1'];
@@ -76,7 +83,10 @@ cta_button.innerHTML = siteContent['cta']['button'];
 // Top content headers
 const top_content_text_header = document.querySelectorAll('.top-content .text-content h4');
 top_content_text_header[0].innerHTML = siteContent['main-content']['features-h4'];
+top_content_text_header[0].style.color = 'green';
 top_content_text_header[1].innerHTML = siteContent['main-content']['about-h4'];
+top_content_text_header[1].style.color = 'green';
+
 
 // Top content text
 const top_content_text_content = document.querySelectorAll('.top-content .text-content p');
@@ -87,8 +97,11 @@ top_content_text_content[1].innerHTML = siteContent['main-content']['about-conte
 // Bottom content headers
 const bottom_content_text_header = document.querySelectorAll('.bottom-content .text-content h4');
 bottom_content_text_header[0].innerHTML = siteContent['main-content']['services-h4'];
+bottom_content_text_header[0].style.color = 'green';
 bottom_content_text_header[1].innerHTML = siteContent['main-content']['product-h4'];
+bottom_content_text_header[1].style.color = 'green';
 bottom_content_text_header[2].innerHTML = siteContent['main-content']['vision-h4'];
+bottom_content_text_header[2].style.color = 'green';
 
 // Bottom content text
 const bottom_content_text_content = document.querySelectorAll('.bottom-content .text-content p');
