@@ -46,7 +46,7 @@ newNavItem2.innerText = "Append";
 newNavItem1.style = "color:green; text-decoration: none; cursor: pointer;";
 newNavItem2.style = "color:green; text-decoration: none; cursor: pointer;";
 
-let navBarItems = document.querySelectorAll('a');
+let navBarItems = document.querySelectorAll('nav a');
 navBar.prepend(newNavItem1);
 navBarItems[0].innerText = siteContent["nav"]["nav-item-1"];
 navBarItems[1].innerText = siteContent["nav"]["nav-item-2"];
