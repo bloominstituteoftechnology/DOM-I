@@ -107,3 +107,9 @@ navElement.appendChild(newElement2);
 
 newElement1.innerText = "New 1";
 newElement2.innerText = "New 2";
+
+// CHANGES TO THE PAGE
+document.querySelector("body").style.backgroundColor = "goldenrod";
+document.querySelector(".container").style.backgroundColor = "yellow";
+document.querySelector("h1").style.color = "green";
+document.querySelectorAll("a").forEach(link => link.style.textDecoration = "overline");
