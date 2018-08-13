@@ -87,6 +87,9 @@ topicContent[7].innerText = siteContent['contact']['email'];
 //footer text
 topicContent[8].innerText = siteContent['footer']['copyright'];
 
+
+const navigation = document.querySelector('nav');
+
 const newElement = document.createElement('a');
 
 newElement.innerHTML = 'Blog';
@@ -96,6 +99,7 @@ const newElementTwo = document.createElement('a');
 newElementTwo.innerHTML = 'Store';
 
 
-mainNav.appendChild(newElement);
-mainNav.appendChild(newElementTwo);
+
+navigation.appendChild(newElement);
+navigation.appendChild(newElementTwo);
 
