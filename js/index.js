@@ -70,6 +70,7 @@ navItems.forEach(function(item) {
 });
 
 //Add text to Call to Action section + add correct img source
+
 let cta = document.querySelector(".cta-text").children;
 let h1 = cta[0];
 h1.innerHTML = siteContent.cta.h1;
@@ -84,6 +85,7 @@ ctaImg.setAttribute("src", siteContent.cta["img-src"]);
 let topContentHeaders = document.querySelectorAll(
   ".top-content .text-content h4"
 );
+console.log(topContentHeaders);
 topContentHeaders[0].innerHTML = siteContent["main-content"]["features-h4"];
 topContentHeaders[1].innerHTML = siteContent["main-content"]["about-h4"];
 
