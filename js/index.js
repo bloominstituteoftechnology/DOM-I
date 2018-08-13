@@ -9,7 +9,7 @@ const siteContent = {
     'img-src': 'img/logo.png',
   },
   cta: {
-    h1: 'DOM Is Awesome',
+    h1: 'DOM <br> Is <br> Awesome',
     button: 'Get Started',
     'img-src': 'img/header-img.png',
   },
@@ -33,7 +33,7 @@ const siteContent = {
   },
   contact: {
     'contact-h4': 'Contact',
-    address: '123 Way 456 Street Somewhere, USA',
+    address: '123 Way 456 Street <br> Somewhere, USA',
     phone: '1 (888) 888-8888',
     email: 'sales@greatidea.io',
   },
@@ -50,6 +50,22 @@ logo.setAttribute('src', siteContent['nav']['img-src']);
 const aNav = document.querySelectorAll('nav a');
 aNav.forEach(function(item, index) {
   return (item.innerHTML = siteContent.nav['nav-item-' + (index + 1)]);
+});
+
+// Create new Nav items
+const blogNav = document.createElement('a');
+const randomNav = document.createElement('a');
+const nav = document.getElementsByTagName('nav')[0];
+nav.append(blogNav);
+nav.prepend(randomNav);
+blogNav.innerText = 'Blog';
+randomNav.innerText = 'Random';
+
+// Change nav font color
+//// target all a and change color
+const attr = document.querySelectorAll('a');
+attr.forEach((item) => {
+  item.style.color = 'green';
 });
 
 // Set up CTA
