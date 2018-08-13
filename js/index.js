@@ -43,11 +43,46 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 const nav = document.querySelector("nav");
 const navElements = document.querySelectorAll("nav a");
+navElements[0].innerHTML = 'Services';
+navElements[1].innerHTML = 'Product';
+navElements[2].innerHTML = 'Vision';
+navElements[3].innerHTML = 'Features';
+navElements[4].innerHTML = 'About';
+navElements[5].innerHTML = 'Contact';
+
+
 const ctaHeading = document.querySelector(".cta-text h1");
+ctaHeading.innerHTML = siteContent["cta"]["h1"];
+
 const ctaButton = document.querySelector(".cta-text button");
-const ctaImg = document.getElementById(".cta-img");
+ctaButton.innerHTML = siteContent["cta"]["button"];
+
+const ctaImg = document.getElementById("cta-img");
+ctaImg.src = siteContent["cta"]["img-src"];
+
 const mainContentHeading = document.querySelectorAll(".main-content h4");
+mainContentHeading[0].innerHTML = siteContent["main-content"]["features-h4"];
+mainContentHeading[1].innerHTML = siteContent["main-content"]["about-h4"];
+
 const mainContenText = document.querySelectorAll(".main-content p");
+mainContenText[0].innerHTML = siteContent["main-content"]["features-content"];
+mainContenText[1].innerHTML = siteContent["main-content"]["about-content"];
+
 const midImg = document.getElementById("middle-img");
+midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+mainContentHeading[2].innerHTML = siteContent["main-content"]["services-h4"]
+mainContentHeading[3].innerHTML = siteContent["main-content"]["product-h4"]
+mainContentHeading[4].innerHTML = siteContent["main-content"]["vision-h4"]
+
+mainContenText[2].innerHTML = siteContent["main-content"]["services-content"];
+mainContenText[3].innerHTML = siteContent["main-content"]["product-content"];
+mainContenText[4].innerHTML = siteContent["main-content"]["vision-content"];
+
 const contactHeading = document.querySelector(".contact h4");
+contactHeading.innerHTML = siteContent["contact"]["contact-h4"]
+
 const contactText = document.querySelectorAll(".contact p");
+contactText[0].innerHTML = siteContent["contact"]["address"];
+contactText[1].innerHTML = siteContent["contact"]["phone"];
+contactText[2].innerHTML = siteContent["contact"]["email"];
