@@ -37,6 +37,12 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+
+// Start JSON Coding below
+const nav1 = document.querySelectorAll("nav a");
+nav1.forEach((value, index) => {
+value.innerHTML  = siteContent.nav[`nav-item-${index + 1}`]
+});
+
+const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
