@@ -43,6 +43,8 @@ nav1.forEach((value, index) => {
   value.innerHTML = siteContent.nav[`nav-item-${index + 1}`] 
 });
 
+nav1.forEach(param => param.style.color = 'green');
+
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
@@ -76,6 +78,15 @@ mainText[5].innerText = siteContent["contact"]["address"]
 mainText[6].innerText = siteContent["contact"]["phone"]
 mainText[7].innerText = siteContent["contact"]["email"]
 mainText[8].innerText = siteContent["footer"]["copyright"]
+
+const newElement1 = document.createElement('a');
+const homeElement = document.querySelector("nav");
+homeElement.prepend(newElement1);
+newElement1.innerText = "Blog";
+
+const newElement2 = document.createElement('a');
+homeElement.appendChild(newElement2);
+newElement2.innerText = "Shop";
 
 
 
