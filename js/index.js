@@ -92,4 +92,9 @@ mainContentContent[3].innerHTML = siteContent["main-content"]["product-content"]
 mainContentHeading[4].innerHTML = siteContent["main-content"]["vision-h4"];
 mainContentContent[4].innerHTML = siteContent["main-content"]["vision-content"];
 
+// Contact section
+contactHeading.innerHTML = siteContent["contact"]["contact-h4"];
+contactContent[0].innerHTML = siteContent["contact"]["address"];
+contactContent[1].innerHTML = siteContent["contact"]["phone"];
+contactContent[2].innerHTML = siteContent["contact"]["email"];
 
