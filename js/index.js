@@ -73,18 +73,47 @@ newH1.textContent = siteContent['cta']['h1'];
 const newButton = document.querySelector('button');
 newButton.textContent = siteContent['cta']['button'];
 
+
+
 // ================ MAIN SECTION =====================
+/// ============ h4 ============
 const featuresH4 = document.querySelectorAll('h4')[0];
 featuresH4.innerText = siteContent['main-content']['features-h4'];
-
 const aboutH4 = document.querySelectorAll('h4')[1];
 aboutH4.innerText = siteContent['main-content']['about-h4'];
-
 const servicesH4 = document.querySelectorAll('h4')[2];
 servicesH4.innerText = siteContent['main-content']['services-h4'];
-
 const productH4 = document.querySelectorAll('h4')[3];
 productH4.innerText = siteContent['main-content']['product-h4'];
-
 const visionH4 = document.querySelectorAll('h4')[4];
 visionH4.innerText = siteContent['main-content']['vision-h4'];
+
+// ========== p texts ===========
+const featuresP = document.querySelectorAll('p')[0];
+featuresP.innerText = siteContent['main-content']['features-content'];
+const aboutP = document.querySelectorAll('p')[1];
+aboutP.innerText = siteContent['main-content']['about-content'];
+const servicesP = document.querySelectorAll('p')[2];
+servicesP.innerText = siteContent['main-content']['services-content'];
+const productP = document.querySelectorAll('p')[3];
+productP.innerText = siteContent['main-content']['product-content'];
+const visionP = document.querySelectorAll('p')[4];
+visionP.innerText = siteContent['main-content']['vision-content'];
+
+
+
+// ============= CONTACT SECTION =====================
+const contactH4 = document.querySelectorAll('h4')[5];
+contactH4.innerText = siteContent['contact']['contact-h4'];
+const address = document.querySelectorAll('p')[5];
+address.innerText = siteContent['contact']['address'];
+const phone = document.querySelectorAll('p')[6];
+phone.innerText = siteContent['contact']['phone'];
+const email = document.querySelectorAll('p')[7];
+email.innerText = siteContent['contact']['email'];
+
+
+
+// ================= FOOTER ========================
+const footer = document.querySelectorAll('p')[8];
+footer.innerText = siteContent['footer']['copyright'];
