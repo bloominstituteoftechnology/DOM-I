@@ -39,4 +39,13 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+// Task2: Create selectors by using any of the DOM element's methods
+let images = document.querySelectorAll("img");
+const middleImage = document.querySelector("#middle-img");
+let ctaImage = document.getElementById("cta-img");
+// Task2: Note that IDs have been used on all images.  Use the IDs to update src path content
+middleImage.src = "img/mid-page-accent.jpg";
+// logoImage.src = "img/logo.png";
+ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
