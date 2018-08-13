@@ -99,3 +99,14 @@ homeLink.href = "#";
 navBar[0].prepend(homeLink);
 
 Array.from(navItems).forEach((a) => a.style.color = "green");
+
+// Stretch Goals: Update styles
+Array.from(document.getElementsByClassName("text-content")).forEach(item => item.style.border = "1px solid darkgray");
+Array.from(document.getElementsByClassName("text-content")).forEach(item => item.style.borderRadius = "10px");
+Array.from(document.getElementsByClassName("text-content")).forEach(item => item.style.padding = "10px");
+
+document.getElementsByClassName("contact")[0].style.textAlign = "center";
+
+document.getElementById("middle-img").style.borderRadius = "20px";
+
+// Stretch Goals: Integrate button
