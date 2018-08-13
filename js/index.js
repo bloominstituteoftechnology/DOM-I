@@ -107,13 +107,10 @@ paragraphs[8].innerHTML = siteContent["footer"]["copyright"];
 let logo3 = document.getElementById("middle-img");
 logo3.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
-
-
 const newElement = document.createElement('p');
 const homeElement = document.querySelector('nav');
 homeElement.appendChild(newElement);
 newElement.innerText = "People!";
-
 
 const newElementTwo = document.createElement('p');
 homeElement.prepend(newElementTwo);
