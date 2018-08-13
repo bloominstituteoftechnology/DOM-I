@@ -46,9 +46,16 @@ const siteContent = {
 const logo = document.getElementById('logo-img');
 logo.setAttribute('src', siteContent['nav']['img-src']);
 
+// Set up navigation
 const aNav = document.querySelectorAll('a');
-console.log(aNav);
 aNav.forEach(function(item, index) {
   return (item.innerHTML = siteContent.nav['nav-item-' + (index + 1)]);
 });
-console.log(siteContent.nav['nav-item-1']);
+
+// Set up CTA
+const ctaImg = document.getElementById('cta-img');
+ctaImg.setAttribute('src', siteContent.cta['img-src']);
+const ctaH1 = document.querySelector('h1');
+ctaH1.innerHTML = siteContent['cta']['h1'];
+const ctaButton = document.querySelector('button');
+ctaButton.innerHTML = siteContent['cta']['button'];
