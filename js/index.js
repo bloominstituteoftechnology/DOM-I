@@ -41,10 +41,10 @@ const siteContent = {
 let navBar = document.querySelector("nav");
 let newNavItem1 = document.createElement("a");
 let newNavItem2 = document.createElement("a");
-newNavItem1.innerText = "Element 1";
-newNavItem2.innerText = "Element 2";
-newNavItem1.style.color = "green";
-newNavItem2.style.color = "green";
+newNavItem1.innerText = "Prepend";
+newNavItem2.innerText = "Append";
+newNavItem1.style = "color:green; text-decoration: none; cursor: pointer;";
+newNavItem2.style = "color:green; text-decoration: none; cursor: pointer;";
 
 let navBarItems = document.querySelectorAll('a');
 navBar.prepend(newNavItem1);
@@ -107,3 +107,9 @@ pItems[7].innerText = siteContent["contact"]["email"];
 
 // Footer
 pItems[8].innerText = siteContent["footer"]["copyright"];
+
+function btnClick() {
+  ctaH1.innerText = "DOM IS THE BEST!";
+  pItems[5].innerText = "333 Wysteria Lane";
+  pItems[7].innerText = "wysteriasales@greatidea.io";
+}
