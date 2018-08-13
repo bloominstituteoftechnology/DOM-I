@@ -53,6 +53,10 @@ const welcome = document.querySelector('nav');
 welcome.prepend(nav7);
 nav7.innerText = "Welcome";
 
+const nav8 = document.createElement('a');
+const closing = document.querySelector('nav');
+closing.append(nav8);
+nav8.innerText = "Goodbye";
 
 //CTA
 const shout = document.querySelector('h1');
@@ -93,10 +97,7 @@ contents[7].innerText = siteContent.contact.email;
 //Footer
 contents[8].innerText = siteContent.footer.copyright;
 
-// const nav7 = document.createElement('a');
-// const welcome = document.querySelector('nav');
-// welcome.prepend(nav7);
-// nav7.innerText = "Welcome";
+
 
 
 const mainH4 = document.getElementsByTagName('h4');
