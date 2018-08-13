@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM<br> Is<br> Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -86,3 +86,22 @@ contactContent[2].innerHTML = siteContent['contact']['email'];
 
 const footerText = document.querySelector('footer p');
 footerText.innerHTML = siteContent['footer']['copyright'];
+
+//task 4 nav to green.
+navItem[0].style.color = 'green';
+navItem[1].style.color = 'green';
+navItem[2].style.color = 'green';
+navItem[3].style.color = 'green';
+navItem[4].style.color = 'green';
+navItem[5].style.color = 'green';
+
+const navBar = document.querySelector('nav');
+const newTag1 = document.createElement('a');
+const newTag2 = document.createElement('a');
+navBar.appendChild(newTag1);
+navBar.prepend(newTag2);
+
+newTag1.innerText = 'Blog';
+newTag1.setAttribute('href', '#');
+newTag2.innerText = 'Home';
+newTag2.setAttribute('href', '#');
