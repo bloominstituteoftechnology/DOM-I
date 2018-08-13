@@ -52,3 +52,27 @@ ctaButton.innerText = siteContent.cta.button;
 
 const ctaImg = document.getElementById("cta-img");
 ctaImg.src = siteContent.cta["img-src"];
+
+const featuresDiv = document.getElementsByClassName("text-content")[0];
+featuresDiv.children[0].innerText = siteContent["main-content"]["features-h4"];
+featuresDiv.children[1].innerText = siteContent["main-content"]["features-content"];
+
+const aboutDiv = document.getElementsByClassName("text-content")[1];
+aboutDiv.children[0].innerText = siteContent["main-content"]["about-h4"];
+aboutDiv.children[1].innerText = siteContent["main-content"]["about-content"];
+
+const middleImg = document.getElementById("middle-img");
+middleImg.src = siteContent["main-content"]["middle-img-src"];
+
+const servicesDiv = document.getElementsByClassName("text-content")[2];
+servicesDiv.children[0].innerText = siteContent["main-content"]["services-h4"];
+servicesDiv.children[1].innerText = siteContent["main-content"]["services-content"];
+
+const productDiv = document.getElementsByClassName("text-content")[3];
+productDiv.children[0].innerText = siteContent["main-content"]["product-h4"];
+productDiv.children[1].innerText = siteContent["main-content"]["product-content"];
+
+const visionDiv = document.getElementsByClassName("text-content")[4];
+visionDiv.children[0].innerText = siteContent["main-content"]["vision-h4"];
+visionDiv.children[1].innerText = siteContent["main-content"]["vision-content"];
+//console.log(textContentChildren[0]);
