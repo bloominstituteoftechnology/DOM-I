@@ -54,11 +54,15 @@ let ctaH1 = document.querySelector('h1');
 let ctaButton = document.querySelector('button');
 let mainImg = document.getElementById("middle-img");
 let topContent = document.getElementsByClassName("top-content");
-let leftTop = document.querySelector("h4");
+let leftTopH4 = document.querySelector("h4");
+// let rightTopH4 = document.querySelector() - work in progress
 
+//placeholder until I figure out the correct way to iterate through navigation items
 navigation.innerHTML = Object.values(siteContent.nav);
 
 ctaPic.setAttribute('src', siteContent["cta"]["img-src"]);
 ctaH1.textContent = siteContent["cta"]["h1"];
 ctaButton.textContent = siteContent["cta"]["button"];
 mainImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+leftTopH4.textContent = siteContent["main-content"]["features-h4"];
+console.log(document.querySelectorAll('top-content'));
