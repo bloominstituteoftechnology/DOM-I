@@ -24,10 +24,13 @@ function digitalTimer() {
      ms += 10;
 
      // if ms hits the end at 10000 ms the finalize the digital timer
-     if(ms === 10000) {finalize(timerInterval); } 
+     if(ms === 10000) { finalize(timerInterval); } 
      // update timer by ms ammount
      update(ms);
     }, 10); // tick every 10ms
   }
+
+  // incrementer function takes in a string then turns it in to a number adds 1 to it turns it back in to a string and returns the output
+  function inc(string) { return (Number(string) + 1).toString(); }
 
 }
