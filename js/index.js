@@ -44,7 +44,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 const navLinks = document.querySelectorAll('nav > a');
 navLinks.forEach((link, i) => link.innerText = siteContent.nav[`nav-item-${[i+1]}`]);
-navLinks.forEach((link) => link.style.color = "green");
+navLinks.forEach((link) => link.style.color = 'green');
 
 const navObj = document.querySelector('nav');
 
@@ -52,15 +52,18 @@ const newAppNav = document.createElement('a');
 navObj.appendChild(newAppNav);
 newAppNav.src = '#';
 newAppNav.innerText = 'Whistles';
+newAppNav.style.color = 'orange';
 
 const newPreNav = document.createElement('a');
 navObj.prepend(newPreNav);
 newPreNav.src = '#';
 newPreNav.innerText = 'Elephants';
+newPreNav.style.color = 'pink';
 
 // .cta
 const ctaTxt = document.querySelector('.cta-text > h1');
 ctaTxt.innerText = siteContent.cta.h1;
+ctaTxt.style.color = 'red';
 
 const ctaButton = document.querySelector('.cta-text > button');
 ctaButton.innerText = siteContent.cta.button;
@@ -72,6 +75,7 @@ ctaImg.src = siteContent.cta['img-src'];
 //// .main-content > .top-content
 const topMainHead1 = document.querySelectorAll('.top-content > div > h4')[0];
 topMainHead1.innerText = siteContent['main-content']['features-h4'];
+topMainHead1.style.backgroundColor = 'purple';
 
 const topMainPara1 = document.querySelectorAll('.top-content > div > p')[0];
 topMainPara1.innerText = siteContent['main-content']['features-content'];
@@ -106,6 +110,10 @@ const bottomMainPara3 = document.querySelectorAll('.bottom-content > div > p')[2
 bottomMainPara3.innerText = siteContent['main-content']['vision-content'];
 
 // .contact
+const cont = document.querySelector('.contact');
+cont.style.display = 'flex';
+cont.style.flexDirection = 'column';
+
 const pageContact = document.querySelector('.contact > h4');
 pageContact.innerText = siteContent.contact["contact-h4"];
 
