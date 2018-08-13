@@ -41,15 +41,28 @@ const siteContent = {
 // update the src for the nav a tags
 let aTags = document.getElementsByTagName("a");
 aTags[0].innerHTML = siteContent["nav"]["nav-item-1"];
+aTags[0].style.color = "green";
 aTags[1].innerHTML = siteContent["nav"]["nav-item-2"];
+aTags[1].style.color = "green";
 aTags[2].innerHTML = siteContent["nav"]["nav-item-3"];
+aTags[2].style.color = "green";
 aTags[3].innerHTML = siteContent["nav"]["nav-item-4"];
+aTags[3].style.color = "green";
 aTags[4].innerHTML = siteContent["nav"]["nav-item-5"];
+aTags[4].style.color = "green";
 aTags[5].innerHTML = siteContent["nav"]["nav-item-6"];
+aTags[5].style.color = "green";
 
+let appendChild = document.createElement("a");
+appendChild.innerHTML = "Big Memes";
+appendChild.style.color = "green";
+aTags[5].appendChild(appendChild);
 
+let prependChild = document.createElement("a");
+prependChild.innerHTML = "Small Memes";
+prependChild.style.color = "green";
+aTags[0].prepend(prependChild);
 
-// Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
@@ -57,7 +70,6 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 let ctaH1 = document.getElementsByTagName("h1");
 ctaH1[0].innerHTML = siteContent["cta"]["h1"];
 
-// update the src for the cta-button
 let button = document.getElementsByTagName("button");
 button[0].innerHTML = siteContent["cta"]["button"];
 
