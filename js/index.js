@@ -87,6 +87,15 @@ headings[3].innerHTML = siteContent["main-content"]["product-h4"]
 headings[4].innerHTML = siteContent["main-content"]["vision-h4"]
 headings[5].innerHTML = siteContent["contact"]["contact-h4"]
 
+//Font size for headings
+const headingsSize = document.getElementsByTagName("h4");
+headingsSize[0].style.fontSize = "2rem";
+headingsSize[1].style.fontSize = "2rem";
+headingsSize[2].style.fontSize = "2rem";
+headingsSize[3].style.fontSize = "2rem";
+headingsSize[4].style.fontSize = "2rem";
+headingsSize[5].style.fontSize = "2rem";
+
 //=============PARAGRAPH CONTENT============
 const paragraphContent = document.getElementsByTagName("p");
 paragraphContent[0].innerHTML = siteContent["main-content"]["features-content"]
