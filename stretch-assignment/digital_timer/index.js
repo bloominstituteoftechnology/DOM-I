@@ -78,3 +78,9 @@ resetButton.addEventListener("click", function() {
 buttonsDiv.appendChild(resetButton);
 
 // Styles for startButton and resetButton
+startButton.style.padding = "10px 30px";
+resetButton.style.padding = "10px 30px";
+startButton.style.border = "2px solid black";
+resetButton.style.border = "2px solid black";
+
+resetButton.style.marginLeft = "50px";
