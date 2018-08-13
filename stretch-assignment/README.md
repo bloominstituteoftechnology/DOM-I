@@ -1,4 +1,4 @@
-# DOM I
+# Stretch Assignment - Digital Timer
 
 Topics:
  * Interacting with the DOM
@@ -32,7 +32,7 @@ Topics:
 
  You will also need to look up and use `window.setInterval`. For this method, and any of those listed in the "Topics" section of this README, you are encouraged to use MDN as your resource for Documentation. MDN can be challenging to consume at first, so you may also use something like W3schools if the MDN documentation on a given subject is a bit too complicated.
 
- ## Stretch Goals
+ ## Stretch On The Stretch!
   If you compelete the timer with time to spare:
   * Self study and research DOM `events` and `event listeners`
   * SG1: Implement a start button. The digital timer should not start until the button is pressed.
