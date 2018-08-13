@@ -41,18 +41,20 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-// let navBox = document.querySelector('nav');
-let navLinks = document.querySelectorAll('nav a');
 
+let navLinks = document.querySelectorAll('nav a');
 navLinks.forEach((link, i) => {
   link.innerHTML = siteContent['nav'][`nav-item-${i+1}`];
 });
 
-let ctaText = document.getElementsByClassName('cta-text');
+let ctaText = document.getElementsByClassName('cta-text')[0];
 let ctaTextHead = ctaText.querySelector('h1');
-
-
 ctaTextHead.innerHTML = siteContent['cta']['h1'];
+let ctaTextBtn = ctaText.querySelector('button');
+ctaTextBtn.innerHTML = siteContent['cta']['button'];
+let ctaImg = document.getElementById('cta-img');
+ctaImg.setAttribute('src', siteContent['cta']['img-src']);
+
 
 
 
