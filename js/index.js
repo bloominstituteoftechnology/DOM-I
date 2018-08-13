@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM <br> Is <br> Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -39,10 +39,19 @@ const siteContent = {
 
 
 // Start JSON Coding below
+
+// Navigation 
 const nav1 = document.querySelectorAll("nav a");
 nav1.forEach((value, index) => {
 value.innerHTML  = siteContent.nav[`nav-item-${index + 1}`]
 });
 
+// IMG
 const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+const middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
