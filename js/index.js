@@ -121,3 +121,7 @@ const contactEmail = document
   .querySelector('.contact')
   .getElementsByTagName('p')[2];
 contactEmail.innerHTML = siteContent['contact']['email'];
+
+// Set up footer
+const footerInfo = document.querySelector('footer p');
+footerInfo.innerHTML = siteContent['footer']['copyright'];
