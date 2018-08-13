@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2f673e94-8385-40bd-8e8b-5378cd948938" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index.js" afterDir="false" />
-    </list>
+    <list default="true" id="2f673e94-8385-40bd-8e8b-5378cd948938" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -42,13 +40,13 @@
           <entry key="es6" value="13" />
           <entry key="gitignore" value="15" />
           <entry key="html" value="2" />
-          <entry key="js" value="5916" />
+          <entry key="js" value="5917" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="2" />
-          <entry key="JavaScript" value="5916" />
+          <entry key="JavaScript" value="5917" />
           <entry key="PLAIN_TEXT" value="15" />
           <entry key="Scratch" value="13" />
         </counts>
@@ -72,8 +70,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/js/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="748">
-                  <caret line="111" column="52" selection-start-line="111" selection-start-column="52" selection-end-line="111" selection-end-column="52" />
+                <state>
+                  <caret column="4" selection-start-column="4" selection-end-column="4" />
                 </state>
               </provider>
             </entry>
@@ -179,12 +177,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1534190602302</updated>
-      <workItem from="1534190604534" duration="9610000" />
+      <workItem from="1534190604534" duration="9805000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9610000" />
+    <option name="totallyTimeSpent" value="9805000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -256,8 +254,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="111" column="52" selection-start-line="111" selection-start-column="52" selection-end-line="111" selection-end-column="52" />
+        <state>
+          <caret column="4" selection-start-column="4" selection-end-column="4" />
         </state>
       </provider>
     </entry>

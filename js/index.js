@@ -105,8 +105,6 @@ function createElement(tag, text, parent){
   return parentElement.appendChild(newElement);
 }
 
-// new node Element using custom element with text builder function
-
-// *** append an element to the nav parent element ***
+// *** append an element to the nav parent element  using custom function that I made :)***
 let newATag = createElement('a', 'Career', 'nav');
 newATag.style.cssText = aTagsInNav[0].style.cssText;
