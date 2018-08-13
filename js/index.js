@@ -60,9 +60,24 @@ ctaBtn.innerHTML = siteContent.cta["button"]
 //Main Content
 
 const contentTitle = document.querySelectorAll(".text-content h4");
-contenTitle.forEach((hItem)=> {
-contentTitle.innerHTML = siteContent.mainContent[`${hItem}-h4`]
-});
+// contenTitle.forEach((hItem) => {
+// contentTitle.innerHTML = siteContent["main-content"][`${hItem}-h4`]
+// });
+contentTitle[0].innerHTML = siteContent["main-content"]["features-h4"]
+contentTitle[1].innerHTML = siteContent["main-content"]["about-h4"]
+contentTitle[2].innerHTML = siteContent["main-content"]["services-h4"]
+contentTitle[3].innerHTML = siteContent["main-content"]["product-h4"]
+contentTitle[4].innerHTML = siteContent["main-content"]["vision-h4"]
 
-// const middleImg = document.getElementById("middle-img");
-// middleImg.setAttribute('src', siteContent["main-content"], ["img-src"])
+const contentText= document.querySelectorAll(".text-content h4");
+// contenTitle.forEach((hItem) => {
+// contentTitle.innerHTML = siteContent["main-content"][`${hItem}-h4`]
+// });
+contentText[0].innerText = siteContent["main-content"]["features-content"]
+contentText[1].innerText= siteContent["main-content"]["about-content"]
+contentText[2].innerText = siteContent["main-content"]["services-content"]
+contentText[3].innerText = siteContent["main-content"]["product-content"]
+contentText[4].innerText= siteContent["main-content"]["vision-content"]
+
+const middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
