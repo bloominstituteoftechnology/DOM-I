@@ -9,13 +9,13 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 
 ## Task 1: Set Up The Project With Git
 
-* [ ] Fork the project into your GitHub user account
-* [ ] Clone the forked project into a directory on your machine
-* [ ] You are now ready to build this project with your preferred IDE
+* [x] Fork the project into your GitHub user account
+* [x] Clone the forked project into a directory on your machine
+* [x] You are now ready to build this project with your preferred IDE
 
 ## Task 2: Create selectors to point your data into elements
-* [ ] Create selectors by using any of the DOM element's methods
-* [ ] Note that IDs have been used on all images.  Use the IDs to update src path content
+* [x] Create selectors by using any of the DOM element's methods
+* [x] Note that IDs have been used on all images.  Use the IDs to update src path content
 
 ## Task 3: Update the HTML with the JSON data
 * [ ] Remember, NO direct updating of the HTML source is allowed.
