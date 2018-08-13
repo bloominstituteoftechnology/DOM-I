@@ -75,4 +75,12 @@ productDiv.children[1].innerText = siteContent["main-content"]["product-content"
 const visionDiv = document.getElementsByClassName("text-content")[4];
 visionDiv.children[0].innerText = siteContent["main-content"]["vision-h4"];
 visionDiv.children[1].innerText = siteContent["main-content"]["vision-content"];
-//console.log(textContentChildren[0]);
+
+const contactSection = document.querySelector(".contact");
+contactSection.children[0].innerText = siteContent.contact["contact-h4"];
+contactSection.children[1].innerHTML = siteContent.contact.address.replace(/Street /g, "Street<br>");
+contactSection.children[2].innerText = siteContent.contact.phone;
+contactSection.children[3].innerText = siteContent.contact.email;
+
+const footerSection = document.querySelector("footer");
+footerSection.children[0].innerText = siteContent.footer.copyright;
