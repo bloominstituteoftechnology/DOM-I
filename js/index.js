@@ -55,7 +55,7 @@ const ctaImg = document.querySelector('#cta-img')
 ctaImg.src = siteContent.cta['img-src'];
 
 // .main-content
-// .main-content > .top-content
+//// .main-content > .top-content
 const topMainHead1 = document.querySelectorAll('.top-content > div > h4')[0];
 topMainHead1.innerText = siteContent['main-content']['features-h4'];
 
@@ -68,11 +68,11 @@ topMainHead2.innerText = siteContent['main-content']['about-h4'];
 const topMainPara2 = document.querySelectorAll('.top-content > div > p')[1];
 topMainPara2.innerText = siteContent['main-content']['about-content'];
 
-// .main-content > .middle-img
+//// .main-content > .middle-img
 const midImg = document.querySelector('#middle-img');
 midImg.src = siteContent["main-content"]["middle-img-src"];
 
-// .main-content > .bottom-content
+//// .main-content > .bottom-content
 const bottomMainHead1 = document.querySelectorAll('.bottom-content > div > h4')[0];
 bottomMainHead1.innerText = siteContent['main-content']['services-h4'];
 
@@ -92,3 +92,18 @@ const bottomMainPara3 = document.querySelectorAll('.bottom-content > div > p')[2
 bottomMainPara3.innerText = siteContent['main-content']['vision-content'];
 
 // .contact
+const pageContact = document.querySelector('.contact > h4');
+pageContact.innerText = siteContent.contact["contact-h4"];
+
+const contact1 = document.querySelectorAll('.contact > p')[0];
+contact1.innerText = siteContent.contact.address;
+
+const contact2 = document.querySelectorAll('.contact > p')[1];
+contact2.innerText = siteContent.contact.phone;
+
+const contact3 = document.querySelectorAll('.contact > p')[2];
+contact3.innerText = siteContent.contact.email;
+
+// footer
+const foot = document.querySelector('footer > p');
+foot.innerText = siteContent.footer.copyright;
