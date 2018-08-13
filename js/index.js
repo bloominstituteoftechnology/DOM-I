@@ -38,20 +38,53 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
 
 // Selectors
 
-const logo = document.getElementById('logo-img');
-const nav = document.querySelector('nav');
+
+const logo = document.getElementById("logo-img");
+const nav = document.querySelector("nav");
 const navBar = document.querySelectorAll ('nav a');
-const ctaHeader = document.querySelector('.cta-text h1');
-const ctaButton = document.querySelector('.cta-text button');
-const ctaImage = document.geteElementById('.cta-img');
-const mainContentHeader = document.querySelectorAll('.main-content h4');
+const ctaHeader = document.querySelector(".cta-text h1");
+const ctaButton = document.querySelector(".cta-text button");
+const ctaImage = document.getElementById("cta-img");
+const mainContentHeader = document.querySelectorAll(".main-content h4");
 const mainContentBody = document.querySelectorAll(".main-content p");
-const middleImage = document.queryElementById('middle-img');
-const contactHeader = document.querySelector('.contact h4');
-const contactBody = document.querySelectorAll('.contact p');
+const middleImage = document.getElementById("middle-img");
+const contactHeader = document.querySelector(".contact h4");
+const contactBody = document.querySelectorAll(".contact p");
+
+// logo
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+logo.src =  siteContent["nav"]["img-src"];
+
+// nav
+for(let i = 0; i <6; i++) {
+  navBar[i].innerHTML = siteContent["nav"]["nav-item-" + (i + 1)];
+}
+
+// cta
+ctaHeader.innerHTML = siteContent["cta"]["h1"];
+ctaButton.innerHTML = siteContent["cta"]["button"];
+ctaImage.src = siteContent["cta"]["img-src"];
+
+
+// main content
+mainContentHeader[0].innerHTML = siteContent ["main-content"] ["features-h4"];
+mainContentBody[0].innerHTML = siteContent ["main-content"] ["features-content"];
+mainContentHeader[1].innerHTML = siteContent ["main-content"] ["about-h4"];
+mainContentBody[1].innerHTML = siteContent ["main-content"] ["about-content"];
+
+middleImage.src = siteContent["main-content"]["middle-img-src"];
+
+mainContentHeader[2].innerHTML = siteContent ["main-content"]["services-h4"];
+mainContentBody[2].innerHTML = siteContent ["main-content"]["services-content"];
+mainContentHeader[3].innerHTML = siteContent ["main-content"]["product-h4"];
+mainContentBody[3].innerHTML = siteContent ["main-content"]["product-content"];
+mainContentHeader[4].innerHTML = siteContent ["main-content"]["vision-h4"];
+mainContentBody[4].innerHTML = siteContent ["main-content"]["vision-content"];
+
+let footer = document.querySelector("footer");
 
