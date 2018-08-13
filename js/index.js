@@ -37,6 +37,15 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+// Task 2 - Lets grab all of the references
+const logo = document.getElementById("logo-img");
+const nav = document.querySelector("nav");
+const navItems = document.querySelectorAll("nav a");
+const ctaHeading = document.querySelector(".cta-text h1");
+const ctaButton = document.querySelector(".cta-text button");
+const ctaImage = document.getElementById("cta-img");
+const mainContentHeading = document.querySelectorAll(".main-content h4");
+const mainContentContent = document.querySelectorAll(".main-content p");
+const middleImg = document.getElementById("middle-img");
+const contactHeading = document.querySelector(".contact h4");
+const contactContent = document.querySelectorAll(".contact p");
