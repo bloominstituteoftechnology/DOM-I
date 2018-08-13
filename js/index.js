@@ -40,4 +40,44 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
-// commit
+
+let navBar = document.querySelectorAll('nav a');
+for (let i = 0; i < navBar.length; i++) {
+  navBar[i].innerHTML = siteContent.nav[`nav-item-${i + 1}`];
+}
+
+let ctaHead = document.querySelector('.cta h1');
+ctaH1.innerHTML = siteContent.cta.h1;
+
+let ctaImg = document.querySelector('#cta-img');
+ctaImg.setAttribute('src', siteContent.cta['img-src']);
+
+let mainContentHead = document.querySelectorAll('.main-content h4');
+mainContentHead[0].innerHTML = siteContent["main-content"]["features-h4"];
+mainContentHead[1].innerHTML = siteContent["main-content"]["about-h4"];
+mainContentHead[2].innerHTML = siteContent["main-content"]["services-h4"];
+mainContentHead[3].innerHTML = siteContent["main-content"]["product-h4"];
+mainContentHead[4].innerHTML = siteContent["main-content"]["vision-h4"];
+
+let mainText = document.querySelectorAll('.main-content p');
+mainText[0].innerHTML = siteContent["main-content"]["features-content"];
+mainText[1].innerHTML = siteContent["main-content"]["about-content"];
+mainText[2].innerHTML = siteContent["main-content"]["services-content"];
+mainText[3].innerHTML = siteContent["main-content"]["product-content"];
+mainText[4].innerHTML = siteContent["main-content"]["vision-content"];
+
+let middleImg = document.querySelector('#middle-img');
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+let contactHead = document.querySelector('.contact h4');
+contactHead.innerHTML = siteContent.contact["contact-h4"];
+
+let contactText = document.querySelectorAll('.contact p');
+contactText[0].innerHTML = siteContent.contact.address;
+contactText[1].innerHTML = siteContent.contact.phone;
+contactText[2].innerHTML = siteContent.contact.email;
+
+let copyright = document.querySelector('footer p');
+copyright.innerHTML = siteContent.footer.copyright;
+
+//document.querySelector('');
