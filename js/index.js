@@ -49,3 +49,15 @@ const mainContentContent = document.querySelectorAll(".main-content p");
 const middleImg = document.getElementById("middle-img");
 const contactHeading = document.querySelector(".contact h4");
 const contactContent = document.querySelectorAll(".contact p");
+
+
+// header
+
+// setup the logo image
+logo.src =  siteContent["nav"]["img-src"];
+
+// nav
+// itterate over the navItems and set the content from the JSON object
+for(let i = 0; i < 6; i++) {
+  navItems[i].innerHTML = siteContent["nav"]["nav-item-" + (i + 1)];
+}
