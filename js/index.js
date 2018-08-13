@@ -74,10 +74,17 @@ const newButton = document.querySelector('button');
 newButton.textContent = siteContent['cta']['button'];
 
 // ================ MAIN SECTION =====================
-const newH4 = topContent.querySelectorAll('h1');
+const featuresH4 = document.querySelectorAll('h4')[0];
+featuresH4.innerText = siteContent['main-content']['features-h4'];
 
+const aboutH4 = document.querySelectorAll('h4')[1];
+aboutH4.innerText = siteContent['main-content']['about-h4'];
 
+const servicesH4 = document.querySelectorAll('h4')[2];
+servicesH4.innerText = siteContent['main-content']['services-h4'];
 
+const productH4 = document.querySelectorAll('h4')[3];
+productH4.innerText = siteContent['main-content']['product-h4'];
 
-
-
+const visionH4 = document.querySelectorAll('h4')[4];
+visionH4.innerText = siteContent['main-content']['vision-h4'];
