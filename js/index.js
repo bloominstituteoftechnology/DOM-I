@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM <br> Is <br> Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -38,5 +38,70 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+//navigation
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const nav1 = document.querySelectorAll('nav a');
+nav1.forEach((value, index) => {
+  value.innerHTML = siteContent.nav[`nav-item-${index + 1}`]
+});
+nav1.forEach(param => param.style.color = 'green');
+
+const nav7 = document.createElement('a');
+const welcome = document.querySelector('nav');
+welcome.prepend(nav7);
+nav7.innerText = "Welcome";
+
+
+//CTA
+const shout = document.querySelector('h1');
+shout.innerHTML = siteContent['cta']['h1'] 
+
+const ctaBut = document.querySelector('button');
+ctaBut.innerHTML = siteContent['cta']['button'] 
+
+let ctaImg = document.getElementById('cta-img');
+ctaImg.setAttribute('src', siteContent['cta']['img-src'])
+
+//Main Content
+
+let midImg = document.getElementById('middle-img');
+midImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+const headers = document.querySelectorAll('h4');
+headers[0].innerText = siteContent["main-content"]["features-h4"];
+headers[1].innerText = siteContent["main-content"]["about-h4"];
+headers[2].innerText = siteContent["main-content"]["services-h4"];
+headers[3].innerText = siteContent["main-content"]["product-h4"];
+headers[4].innerText = siteContent["main-content"]["vision-h4"];
+
+const contents = document.querySelectorAll('p');
+contents[0].innerText = siteContent["main-content"]["features-content"];
+contents[1].innerText = siteContent["main-content"]["about-content"];
+contents[2].innerText = siteContent["main-content"]["services-content"];
+contents[3].innerText = siteContent["main-content"]["product-content"];
+contents[4].innerText = siteContent["main-content"]["vision-content"];
+
+//contact 
+headers[5].innerText = siteContent.contact["contact-h4"];
+
+contents[5].innerText = siteContent.contact.address;
+contents[6].innerText = siteContent.contact.phone;
+contents[7].innerText = siteContent.contact.email;
+
+//Footer
+contents[8].innerText = siteContent.footer.copyright;
+
+// const nav7 = document.createElement('a');
+// const welcome = document.querySelector('nav');
+// welcome.prepend(nav7);
+// nav7.innerText = "Welcome";
+
+
+const mainH4 = document.getElementsByTagName('h4');
+mainH4.forEach((value, index) => {
+  value.textContent = siteContent.main-content[`${index + 1}-h4`]
+});
+
+
