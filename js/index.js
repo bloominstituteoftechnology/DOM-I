@@ -59,9 +59,11 @@ navElements[5].style.color = "green";
 
 const home = document.createElement("a");
 home.innerText = "Home";
+home.style.color = "green";
 
 const projects = document.createElement("a");
 projects.innerText = "Projects";
+projects.style.color = "green";
 
 const homeElement = document.querySelector("nav");
 homeElement.prepend(home);
