@@ -64,7 +64,7 @@ ctaText.innerHTML = siteContent["cta"]["h1"]
 const ctaTextButton = document.querySelector("button");
 ctaTextButton.innerHTML = siteContent["cta"]["button"]
 
-// Main COntent
+// Main Content
 
 const topicHeaders = document.querySelectorAll("h4");
 topicHeaders[0].innerText = siteContent["main-content"]["features-h4"]
@@ -72,3 +72,20 @@ topicHeaders[1].innerText = siteContent["main-content"]["about-h4"]
 topicHeaders[2].innerText = siteContent["main-content"]["services-h4"]
 topicHeaders[3].innerText = siteContent["main-content"]["product-h4"]
 topicHeaders[4].innerText = siteContent["main-content"]["vision-h4"]
+
+let textContent = document.querySelectorAll("p");
+textContent[0].innerText = siteContent["main-content"]["features-content"]
+textContent[1].innerText = siteContent["main-content"]["about-content"]
+textContent[2].innerText = siteContent["main-content"]["services-content"]
+textContent[3].innerText = siteContent["main-content"]["product-content"]
+textContent[4].innerText = siteContent["main-content"]["vision-content"]
+
+// Contact Content
+topicHeaders[5].innerText = siteContent["contact"]["contact-h4"]
+textContent[5].innerText = siteContent["contact"]["address"]
+textContent[6].innerText = siteContent["contact"]["phone"]
+textContent[7].innerText = siteContent["contact"]["email"]
+
+// Footer
+textContent[8].innerText = siteContent["footer"]["copyright"]
+
