@@ -55,3 +55,11 @@ ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
 
 const middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+// CTA
+
+const ctaText = document.querySelector("h1");
+ctaText.innerHTML = siteContent["cta"]["h1"]
+
+const ctaTextButton = document.querySelector("button");
+ctaTextButton.innerHTML = siteContent["cta"]["button"]
