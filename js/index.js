@@ -50,7 +50,11 @@ let mainContent = document.querySelector('main-content');
 let contact = document.querySelector('contact');
 let foot = document.querySelector('footer');
 let ctaPic = document.getElementById('cta-img');
+let ctaH1 = document.querySelector('h1');
+let ctaButton = document.querySelector('button');
 
 navigation.innerHTML = Object.values(siteContent.nav);
 
 ctaPic.setAttribute('src', siteContent["cta"]["img-src"]);
+ctaH1.textContent = siteContent["cta"]["h1"];
+ctaButton.textContent = siteContent["cta"]["button"];
