@@ -44,14 +44,26 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 const navElements = document.querySelectorAll('a');
 
+for(let i = 0; i < navElements.length ; i++) {
+  navElements[0].innerHTML = 'Services';
+  navElements[1].innerHTML = 'Product';
+  navElements[2].innerHTML = 'Vision';
+  navElements[3].innerHTML = 'Feature';
+  navElements[4].innerHTML = 'About';
+  navElements[5].innerHTML = 'Contact';
+  
+}
+
 // console.log(navElements);
 
+
+//Add h1 text 'DOM IS AWESOME'
 const ctaFirstHeading = document.querySelector('h1');
-// console.log(firstHeading);
 ctaFirstHeading.innerHTML = 'DOM IS AWESOME';
 
+
+//Add button text 'Get Started'
 const btnText = document.querySelector('button');
-// console.log(firstHeading);
 btnText.innerHTML = 'Get Started';
 
 
