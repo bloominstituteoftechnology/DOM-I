@@ -117,6 +117,36 @@ footer.innerHTML = siteContent["footer"]["copyright"];
 
 
 
+// NIGHT MODE
 
+let body = document.querySelector("body");
+body.style.backgroundColor = "black";
 
+for (let i = 0; i < tagElements.length; i++) {
+  tagElements[i].style.color = "paleturquoise";  
+}
+
+ctaHeader.style.color = "paleturquoise";
+
+for (let i = 0; i < h4Elements.length; i++) {
+  h4Elements[i].style.color = "paleturquoise";  
+}
+
+for (let i = 0; i < textContent.length; i++) {
+  textContent[i].style.color = "white";  
+}
+
+for (let i = 0; i < contactStuff.length; i++) {
+  contactStuff[i].style.color = "white";  
+}
+
+let mainContent = document.querySelector(".main-content");
+mainContent.style.borderBottom = "2px solid palegoldenrod";
+mainContent.style.borderTop = "2px solid palegoldenrod";
+
+button.style.color = "white";
+button.style.backgroundColor = "black"
+button.style.border = "1px solid palegoldenrod";
+
+footer.style.color = "white";
 
