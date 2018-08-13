@@ -45,7 +45,10 @@ const nav = document.querySelectorAll("nav a");
 
 for (let i = 0; i < nav.length; i++) {
 nav[i].innerHTML = siteContent["nav"][`nav-item-${i+1}`];
+nav[i].style.color = "green";
 }
+
+
 
 const ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
