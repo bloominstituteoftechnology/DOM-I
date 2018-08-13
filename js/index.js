@@ -45,3 +45,13 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 const logo = document.getElementById('logo-img');
 const nav = document.querySelector('nav');
+const navBar = document.querySelectorAll ('nav a');
+const ctaHeader = document.querySelector('.cta-text h1');
+const ctaButton = document.querySelector('.cta-text button');
+const ctaImage = document.geteElementById('.cta-img');
+const mainContentHeader = document.querySelectorAll('.main-content h4');
+const mainContentBody = document.querySelectorAll(".main-content p");
+const middleImage = document.queryElementById('middle-img');
+const contactHeader = document.querySelector('.contact h4');
+const contactBody = document.querySelectorAll('.contact p');
+
