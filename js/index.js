@@ -102,14 +102,13 @@ let navItemsElement = document.querySelector('nav');
 
 //step 3: append or prepend the child to the parent
 navItemsElement.appendChild(newElement);
+navItemsElement.prepend(newElement);
 
 //step 4: update the value
 newElement.innerHTML = 'Location';
+newElement.innerHTML = 'Portfolio';
 newElement.style.color = 'green';
 newElement.style.textDecoration = 'none';
 newElement.style.cursor = 'pointer';
 
-// let newElement = document.createElement('a');
-// let navElement = document.querySelector('nav');
-// navElement.prepend(newElement);
-// newElement.innerHTML = 'Portfolio';
+
