@@ -8,6 +8,21 @@ const mH = document.getElementById("msHundreds");
 const mT = document.getElementById("msTens");
 const mO = document.getElementById("msOnes");
 
+var btn = document.createElement("BUTTON");   
+var text = document.createTextNode("START");    
+btn.appendChild(text);                     
+document.body.appendChild(btn);            
+
+btn.addEventListener("click", function(){
+  sT.style.color = "black";
+  sO.style.color = "black";
+  mH.style.color = "black";
+  mT.style.color = "black";
+  colon.style.color = "black";
+  digitalTimer();
+});
+
+
 // digital timer function
 function digitalTimer() {
 
