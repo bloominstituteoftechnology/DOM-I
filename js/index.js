@@ -123,13 +123,13 @@ let body = document.querySelector("body");
 body.style.backgroundColor = "black";
 
 for (let i = 0; i < tagElements.length; i++) {
-  tagElements[i].style.color = "paleturquoise";  
+  tagElements[i].style.color = "lightcyan";  
 }
 
-ctaHeader.style.color = "paleturquoise";
+ctaHeader.style.color = "white";
 
 for (let i = 0; i < h4Elements.length; i++) {
-  h4Elements[i].style.color = "paleturquoise";  
+  h4Elements[i].style.color = "lightcyan";  
 }
 
 for (let i = 0; i < textContent.length; i++) {
@@ -150,3 +150,4 @@ button.style.border = "1px solid palegoldenrod";
 
 footer.style.color = "white";
 
+logo.setAttribute("src", "img/logoInvert.png");
