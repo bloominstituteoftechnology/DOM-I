@@ -40,3 +40,39 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const nav = document.querySelectorAll("nav a");
+
+for (let i = 0; i < nav.length; i++) {
+nav[i].innerHTML = siteContent["nav"][i];
+}
+
+const ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+const ctaH1 = document.querySelector("h1");
+ctaH1.innerHTML = siteContent["cta"]["h1"];
+
+const button = document.querySelector("button");
+button.innerHTML = siteContent["cta"]["button"];
+
+const featuresH4 = document.querySelector(".top-content .text-content h4");
+featuresH4.innerHTML = siteContent["main-content"]["features-h4"];
+
+const featuresContent = document.querySelector(".top-content .text-content p");
+featuresContent.innerHTML = siteContent["main-content"]["features-content"];
+
+const middleImg = document.querySelector(".main-content .middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+const servicesH4 = document.querySelector(".bottom-content .text-content h4");
+servicesH4.innerHTML = siteContent["main-content"]["services-h4"];
+
+const servicesContent = document.querySelector(".bottom-content .text-content p");
+servicesContent.innerHTML = siteContent["main-content"]["services-content"];
+
+const contactH4 = document.querySelector(".contact h4");
+contactH4.innerHTML = siteContent["contact"]["contact-h4"];
+
+const footer = document.querySelector("footer p");
+footer.innerHTML = siteContent["footer"]["copyright"];
