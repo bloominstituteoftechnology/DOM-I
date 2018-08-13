@@ -52,11 +52,34 @@ const para = document.querySelectorAll("p");
 
 //navFirst.setAttribute("href", siteContent["nav"]["nav-item-1"]);
 nav1[0].innerHTML = siteContent["nav"]["nav-item-1"];
-nav1[1].innerHTML = siteContent["nav"]["nav-item-1"];
-nav1[2].innerHTML = siteContent["nav"]["nav-item-1"];
-nav1[3].innerHTML = siteContent["nav"]["nav-item-1"];
-nav1[4].innerHTML = siteContent["nav"]["nav-item-1"];
-nav1[5].innerHTML = siteContent["nav"]["nav-item-1"];
+nav1[1].innerHTML = siteContent["nav"]["nav-item-2"];
+nav1[2].innerHTML = siteContent["nav"]["nav-item-3"];
+nav1[3].innerHTML = siteContent["nav"]["nav-item-4"];
+nav1[4].innerHTML = siteContent["nav"]["nav-item-5"];
+nav1[5].innerHTML = siteContent["nav"]["nav-item-6"];
+
+const newNav = document.createElement('a');
+const homeElement = document.querySelector('nav');
+homeElement.prepend(newNav);
+newNav.innerHTML = "Awards";
+
+const newNav2 = document.createElement('a');
+const homeElement2 = document.querySelector('nav');
+homeElement2.appendChild(newNav2);
+newNav2.innerHTML = "Freebies";
+
+newNav2.style.color = "green";
+newNav.style.color = "green";
+nav1[1].style.color = "green";
+nav1[2].style.color = "green";
+nav1[3].style.color = "green";
+nav1[4].style.color = "green";
+nav1[5].style.color = "green";
+nav1[0].style.color = "green";
+
+
+// nav.prepend(newElement2);
+// newElement2.href = "Wassup";
 
 h1[0].innerHTML = siteContent["cta"]["h1"];
 button[0].innerHTML = siteContent["cta"]["button"];
