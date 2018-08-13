@@ -46,13 +46,39 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // Nav
 
+const navBar = document.querySelector('nav');
+
+
 const navLink = document.querySelectorAll('nav a');
+for (let i = 0; i < navLink.length; i++) {
+  navLink[i].innerHTML = siteContent['nav']['nav-item-' + (i + 1)];
+  navLink[i].style.color = 'green';
+}
+
+const portfolio = document.createElement('a');
+const portfolioText = document.createTextNode('Portfolio');
+const home = document.createElement('a');
+const homeText = document.createTextNode('Home');
+
+home.appendChild(homeText);
+home.style.cssText = 'color: green; cursor: pointer;';
+navBar.prepend(home);
+
+portfolio.appendChild(portfolioText);
+portfolio.style.cssText = 'color: green; cursor: pointer;';
+navBar.appendChild(portfolio);
+
+/*  Or
+
 navLink[0].innerHTML = (siteContent['nav']['nav-item-1']);
 navLink[1].innerHTML = (siteContent['nav']['nav-item-2']);
 navLink[2].innerHTML = (siteContent['nav']['nav-item-3']);
 navLink[3].innerHTML = (siteContent['nav']['nav-item-4']);
 navLink[4].innerHTML = (siteContent['nav']['nav-item-5']);
 navLink[5].innerHTML = (siteContent['nav']['nav-item-6']);
+
+
+*/
 
 // Cta
 
