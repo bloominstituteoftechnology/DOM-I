@@ -63,3 +63,12 @@ ctaText.innerHTML = siteContent["cta"]["h1"]
 
 const ctaTextButton = document.querySelector("button");
 ctaTextButton.innerHTML = siteContent["cta"]["button"]
+
+// Main COntent
+
+const topicHeaders = document.querySelectorAll("h4");
+topicHeaders[0].innerText = siteContent["main-content"]["features-h4"]
+topicHeaders[1].innerText = siteContent["main-content"]["about-h4"]
+topicHeaders[2].innerText = siteContent["main-content"]["services-h4"]
+topicHeaders[3].innerText = siteContent["main-content"]["product-h4"]
+topicHeaders[4].innerText = siteContent["main-content"]["vision-h4"]
