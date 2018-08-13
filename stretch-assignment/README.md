@@ -1,5 +1,7 @@
 # Stretch Assignment - Digital Timer
-
+## notes from me
+it was a bit buggy on my system so i tested and debugged the code in jsbin so here is the link to that
+in case you need it. [MY JS BIN SOURCE WORKING CODE](https://jsbin.com/wiwoqaw/1/edit?html,js,output)
 Topics:
  * Interacting with the DOM
  * Selectors
