@@ -84,4 +84,12 @@ mainContentContent[1].innerHTML = siteContent["main-content"]["about-content"];
 // set the middle-img source from the JSON Object
 middleImg.src = siteContent["main-content"]["middle-img-src"];
 
+// set the bottom-content from the JSON Object
+mainContentHeading[2].innerHTML = siteContent["main-content"]["services-h4"];
+mainContentContent[2].innerHTML = siteContent["main-content"]["services-content"];
+mainContentHeading[3].innerHTML = siteContent["main-content"]["product-h4"];
+mainContentContent[3].innerHTML = siteContent["main-content"]["product-content"];
+mainContentHeading[4].innerHTML = siteContent["main-content"]["vision-h4"];
+mainContentContent[4].innerHTML = siteContent["main-content"]["vision-content"];
+
 
