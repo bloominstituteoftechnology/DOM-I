@@ -38,5 +38,53 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+const navKeys = Object.keys(siteContent.nav);
+
+
+document.getElementById("logo-img").setAttribute('src', siteContent["nav"]["img-src"])
+document.getElementById("cta-img").setAttribute('src', siteContent["cta"]["img-src"]);
+document.getElementById("middle-img").setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+
+
+let aTags = document.getElementsByTagName('a');
+for(let i = 0; i < aTags.length; i++) {
+  aTags[i].innerText = siteContent.nav[navKeys[i]];
+}
+// aTags[0].innerText = 'Services';
+// aTags[1].innerHTML = 'Product';
+// aTags[2].innerHTML = 'Vision';
+// aTags[3].innerHTML = 'Features';
+// aTags[4].innerHTML = 'About';
+// aTags[5].innerHTML = 'Contact';
+
+
+
+document.querySelector('h1').appendChild(document.createTextNode("DOM"));
+document.querySelector('h1').appendChild(document.createElement("br"));
+document.querySelector('h1').appendChild(document.createTextNode("Is"));
+document.querySelector('h1').appendChild(document.createElement("br"));
+document.querySelector('h1').appendChild(document.createTextNode("Awesome"));
+
+document.querySelector('button').appendChild(document.createTextNode("Get Started"));
+
+pTags = document.getElementsByTagName('p');
+
+
+pTags[0].innerText = siteContent["main-content"]["features-content"];
+pTags[1].innerText = siteContent["main-content"]["about-content"];
+pTags[2].innerText = siteContent["main-content"]["services-content"];
+pTags[3].innerText = siteContent["main-content"]["product-content"];
+pTags[4].innerText = siteContent["main-content"]["vision-content"];
+pTags[5].innerText = siteContent["contact"]["address"];
+pTags[6].innerText = siteContent["contact"]["phone"];
+pTags[7].innerText = siteContent["contact"]["email"];
+pTags[8].innerText = siteContent["footer"]["copyright"];
+
+h4Tags = document.getElementsByTagName('h4');
+h4Tags[0].innerText = siteContent["main-content"]["features-h4"];
+h4Tags[1].innerText = siteContent["main-content"]["about-h4"];
+h4Tags[2].innerText = siteContent["main-content"]["services-h4"];
+h4Tags[3].innerText = siteContent["main-content"]["product-h4"];
+h4Tags[4].innerText = siteContent["main-content"]["vision-h4"];
+h4Tags[5].innerText = siteContent["contact"]["contact-h4"];
