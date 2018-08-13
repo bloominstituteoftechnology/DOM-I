@@ -52,9 +52,13 @@ let foot = document.querySelector('footer');
 let ctaPic = document.getElementById('cta-img');
 let ctaH1 = document.querySelector('h1');
 let ctaButton = document.querySelector('button');
+let mainImg = document.getElementById("middle-img");
+let topContent = document.getElementsByClassName("top-content");
+let leftTop = document.querySelector("h4");
 
 navigation.innerHTML = Object.values(siteContent.nav);
 
 ctaPic.setAttribute('src', siteContent["cta"]["img-src"]);
 ctaH1.textContent = siteContent["cta"]["h1"];
 ctaButton.textContent = siteContent["cta"]["button"];
+mainImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
