@@ -72,8 +72,8 @@ document.querySelector('.main-content').getElementsByTagName('h4')[1].innerText 
 document.querySelector('.main-content').getElementsByTagName('p')[1].innerText = siteContent["main-content"]["about-content"];
 
 // MAIN CONTENT: TOP
-document.querySelector('.main-content').getElementsByTagName('h4')[0].innerText = siteContent["main-content"]["features-h4"];
-document.querySelector('.main-content').getElementsByTagName('p')[0].innerText = siteContent["main-content"]["features-content"];
+document.querySelector('.top-content').getElementsByTagName('h4')[0].innerText = siteContent["main-content"]["features-h4"];
+document.querySelector('.top-content').getElementsByTagName('p')[0].innerText = siteContent["main-content"]["features-content"];
 
 // MAIN CONTENT: BOTTOM
 document.querySelector('.bottom-content').getElementsByTagName('h4')[0].innerText = siteContent["main-content"]["services-h4"];
