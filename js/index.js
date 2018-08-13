@@ -46,6 +46,28 @@ const navElements = document.querySelectorAll('a');
 
 // console.log(navElements);
 
+const ctaFirstHeading = document.querySelector('h1');
+// console.log(firstHeading);
+ctaFirstHeading.innerHTML = 'DOM IS AWESOME';
+
+const btnText = document.querySelector('button');
+// console.log(firstHeading);
+btnText.innerHTML = 'Get Started';
+
+
+// ctaFirstHeading.style.color = "black";
+// ctaFirstHeading.style.font-size = "72px";
+//  ctaFirstHeading.style.text-align = "center";
+
+// font-size: 72px;
+//     text-align: center;
+//     letter-spacing: 5px;
+//     display: flex;
+//     justify-content: center;
+//     flex-flow: column;
+//     align-items: center;
+//     margin: 0 82px 0 0;
+
 let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', 'img/header-img.png')
 
