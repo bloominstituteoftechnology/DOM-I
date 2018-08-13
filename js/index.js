@@ -95,10 +95,14 @@ footerText.innerHTML = siteContent["footer"]["copyright"];
 
 // ## Task 4
 // # Change the color of the navigation text to be green.
-navstyle.color='green';
+let navElement = document.querySelector("nav");
+navElement.style.color = 'green';
+
 // # Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
-const navElement = querySelector('nav');
-const appendee = document.createElement("a");
-document.navElement.appendChild(appendee);
-const prependee = document.createElement("a");
-document.navElement.prepend(prependee);
+const appendee = document.createElement("p");
+navElement.appendChild(appendee);
+const prependee = document.createElement("p");
+navElement.prepend(prependee);
+
+//## Stretch Goals
+nav.forEach(a => a.style.color="green");
