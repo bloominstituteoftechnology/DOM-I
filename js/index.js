@@ -92,6 +92,18 @@ ctaHeading.innerHTML = siteContent["cta"]["h1"];
 // set the content of the button in the cta from the JSON Object
 ctaButton.innerHTML = siteContent["cta"]["button"];
 
+// add an event listener to the get started button
+ctaButton.addEventListener("click", function(){
+  
+
+  logo.src = "https://image.ibb.co/dgtnFp/logo_sml.png";
+
+  ctaHeading.innerHTML = "JOSH IS <br> AWESOME";
+  
+  ctaImage.src = "https://avatars2.githubusercontent.com/u/1958368?s=400&v=4";
+  ctaImage.style.cssText = "margin-left: 100px; border-radius: 20px;"
+});
+
 // set the source of the cta image from the JSON Object
 ctaImage.src = siteContent["cta"]["img-src"];
 
