@@ -6,6 +6,8 @@ const siteContent = {
     "nav-item-4": "Features",
     "nav-item-5": "About",
     "nav-item-6": "Contact",
+    "nav-item-7": "Blog",
+    "nav-item-8": "Questions",
     "img-src": "img/logo.png"
   },
   cta: {
@@ -46,6 +48,16 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
+//Add new item to Nav bar
+let newNavItem = document.createElement("a");
+document.querySelector("nav").appendChild(newNavItem);
+newNavItem.innerHTML = "<a href='#'></a>";
+
+//Add second item to Nav bar - not working
+// let item = document.createElement("a");
+// document.querySelector("nav").appendChild(item);
+// item.innerHTML = "<a href='#'></a>";
+
 //Add content for Nav bar items by selecting Nav bar and looping through each <a> tag
 let navItems = document.querySelectorAll("a");
 
@@ -53,6 +65,8 @@ let n = 1;
 navItems.forEach(function(item) {
   item.innerHTML = siteContent.nav["nav-item-" + n];
   n++;
+  item.style.color = "#50c878";
+  //console.log(item)
 });
 
 //Add text to Call to Action section + add correct img source
