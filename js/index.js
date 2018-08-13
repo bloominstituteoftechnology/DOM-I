@@ -81,3 +81,14 @@ let copyright = document.querySelector('footer p');
 copyright.innerHTML = siteContent.footer.copyright;
 
 //document.querySelector('');
+
+// adjusting nav color and siteContent
+
+let nav = document.querySelector('nav');
+nav.appendChild(document.createElement('a'));
+nav.prepend(document.createElement('a'));
+
+navBar = document.querySelectorAll('nav a');
+navBar[0].innerHTML = 'Home';
+navBar[6].innerHTML = 'Login';
+ navBar.forEach(item => item.style.color = 'green');
