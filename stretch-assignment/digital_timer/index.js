@@ -67,5 +67,6 @@ function digitalTimer() {
     }
   }
   
-
+  // finalize function to stop the interval
+  function finalize(intervalId) { clearInterval(intervalId); }
 }
