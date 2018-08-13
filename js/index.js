@@ -92,3 +92,13 @@ contactLines[2].innerHTML = siteContent["contact"]["email"];
 // # footer
 let footerText = document.querySelector("footer p");
 footerText.innerHTML = siteContent["footer"]["copyright"];
+
+// ## Task 4
+// # Change the color of the navigation text to be green.
+navstyle.color='green';
+// # Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
+const navElement = querySelector('nav');
+const appendee = document.createElement("a");
+document.navElement.appendChild(appendee);
+const prependee = document.createElement("a");
+document.navElement.prepend(prependee);
