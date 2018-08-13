@@ -117,3 +117,11 @@ email.innerText = siteContent['contact']['email'];
 // ================= FOOTER ========================
 const footer = document.querySelectorAll('p')[8];
 footer.innerText = siteContent['footer']['copyright'];
+
+
+
+// ================ STYLE/CSS ===================
+document.querySelectorAll('a').forEach(e => e.style.color = "limegreen");
+
+
+
