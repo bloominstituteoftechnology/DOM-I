@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "123 Way 456 Street<br>Somewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -103,5 +103,8 @@ navBar.prepend(newTag2);
 
 newTag1.innerText = 'Blog';
 newTag1.setAttribute('href', '#');
+newTag1.style.color = 'green';
+
 newTag2.innerText = 'Home';
 newTag2.setAttribute('href', '#');
+newTag2.style.color = 'green';
