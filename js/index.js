@@ -42,3 +42,31 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // Commit 
+
+const navBar = document.querySelector('nav');
+
+const navLink = document.querySelectorAll('nav a');
+
+const logoImage = document.getElementById('#logo-img');
+
+const ctaHeader = document.querySelector('cta-text h1');
+
+const ctaButton = document.querySelector('cta-text button');
+
+const ctaImage = document.getElementById('#cta-img');
+
+const mainContentHeader = document.querySelectorAll('.main-content h4');
+
+const mainContentParagraph = document.querySelectorAll('.main-content p');
+
+const middleImage = document.getElementById('#middle-img');
+
+const bottomContentHeader = document.querySelectorAll('.bottom-content h4');
+
+const bottomContentParagraph = document.querySelectorAll('.bottom-content p');
+
+const contactHeader = document.querySelector('.contact h4');
+
+const contactParagraph = document.querySelector('.contact p');
+
+const footer = document.querySelector('footer p');
