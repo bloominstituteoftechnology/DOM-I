@@ -71,9 +71,9 @@ attr.forEach((item) => {
 // Set up CTA
 const ctaImg = document.getElementById('cta-img');
 ctaImg.setAttribute('src', siteContent.cta['img-src']);
-const ctaH1 = document.querySelector('h1');
+const ctaH1 = document.querySelector('.cta-text h1');
 ctaH1.innerHTML = siteContent['cta']['h1'];
-const ctaButton = document.querySelector('button');
+const ctaButton = document.querySelector('.cta-text button');
 ctaButton.innerHTML = siteContent['cta']['button'];
 
 // Set up top-content of main-content
@@ -141,3 +141,9 @@ contactEmail.innerHTML = siteContent['contact']['email'];
 // Set up footer
 const footerInfo = document.querySelector('footer p');
 footerInfo.innerHTML = siteContent['footer']['copyright'];
+
+// Update styles
+document.querySelector('header').style.borderBottom = '1px solid black';
+attr.forEach((item) => (item.style.background = 'lightgrey'));
+document.querySelector('.cta-text').style.cssText =
+  'color: red; background: yellow; border: 2px dashed black; border-radius: 50%';
