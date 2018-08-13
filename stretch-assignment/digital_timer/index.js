@@ -21,4 +21,12 @@ if (count < 10) {
     msT.innerHTML = ms;
   }
 
+  // if the count goes over 10 but then is still less than 100 update the msT and msH leaving the tens and units intact
+  if (count < 100 && count >= 10) {
+    secondT.innerHTML = "0";
+    secondO.innerHTML = "0";
+    msH.innerHTML = ms[0];
+    msT.innerHTML = ms[1];
+  }
+
 });
