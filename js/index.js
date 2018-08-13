@@ -33,10 +33,11 @@ const siteContent = {
     "email" : "sales@greatidea.io",
   },
   "footer": {
-    "copyright" : "Copyright Great Idea! 2018"
+    &copy: "Copyright Great Idea! 2018"
   },
 };
-
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+let logo = document.getElementById("#logo-img");
+//let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+// Task 2 - Lets grab all of the references
