@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM <br> Is <br> Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -38,5 +38,28 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+// const mainNav = document.getElementsByTagName("nav");
+// mainNav.setAttribute("nav", siteContent["nav"])
+
+const nav1 = document.querySelectorAll("nav a");
+nav1.forEach((value, index) => {
+value.innerHTML  = siteContent.nav[`nav-item-${index + 1}`]
+});
+
+const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const ctaSection = document.querySelector("h1");
+ctaSection.innerHTML = siteContent.cta["h1"]
+
+const ctaButton = document.querySelector("button");
+ctaButton.innerHTML = siteContent.cta["button"]
+
+const imgMid = document.getElementById("cta-img");
+imgMid.setAttribute('src', siteContent["cta"]["img-src"])
+
+// const textMainSection = document.querySelector("main-content top-content text-content");
+// textMainSection.forEach((value, index) => {
+//   value.innerHTML = if ()
+// })
+// )
