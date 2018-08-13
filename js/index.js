@@ -41,67 +41,56 @@ const siteContent = {
 const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-const navItem1 = document.getElementsByTagName("a")[0];
-navItem1.textContent = siteContent.nav["nav-item-1"];
-
-const navItem2 = document.getElementsByTagName("a")[1];
-navItem2.textContent = siteContent.nav["nav-item-2"];
-
-const navItem3 = document.getElementsByTagName("a")[2];
-navItem3.textContent = siteContent.nav["nav-item-3"];
-
-const navItem4 = document.getElementsByTagName("a")[3];
-navItem4.textContent = siteContent.nav["nav-item-4"];
-
-const navItem5 = document.getElementsByTagName("a")[4];
-navItem5.textContent = siteContent.nav["nav-item-5"];
-
-const navItem6 = document.getElementsByTagName("a")[5];
-navItem6.textContent = siteContent.nav["nav-item-6"];
+// Discussed this with Max Kajiwara as this would be the smallest
+// to be able to get this applicaiton to the nav items.
+const navList = document.querySelectorAll('nav a');
+for (let i = 0; i < navList.length; i++) {
+  navList[i].innerHTML = siteContent.nav[`nav-item-${i+1}`];
+}
 
 const ctaH1 = document.querySelector("h1");
 ctaH1.textContent = siteContent.cta["h1"];
 
-const ctaButton = document.querySelector("button");
+const ctaButton = document.querySelectorAll(".cta-text button")[0];
 ctaButton.textContent = siteContent.cta['button'];
 
 const ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent.cta["img-src"]);
 
-const mainFeaturesH4 = document.getElementsByTagName("h4")[0];
+const mainFeaturesH4 = document.querySelectorAll(".top-content h4")[0];
 mainFeaturesH4.textContent = siteContent["main-content"]["features-h4"];
 
-const mainFeaturesContent = document.getElementsByTagName("p")[0];
+const mainFeaturesContent = document.querySelectorAll(".top-content p")[0];
 mainFeaturesContent.textContent = siteContent["main-content"]["features-content"];
 
-const mainAboutH4 = document.getElementsByTagName("h4")[1];
+const mainAboutH4 = document.querySelectorAll(".top-content h4")[1];
 mainAboutH4.textContent = siteContent["main-content"]["about-h4"];
 
-const mainAboutContent = document.getElementsByTagName("p")[1];
+const mainAboutContent = document.querySelectorAll(".top-content p")[1];
 mainAboutContent.textContent = siteContent["main-content"]["about-content"];
 
 const middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
-const mainServicesH4 = document.getElementsByTagName("h4")[2];
+const mainServicesH4 = document.querySelectorAll(".bottom-content h4")[0];
 mainServicesH4.textContent = siteContent["main-content"]["services-h4"];
 
-const mainServicesContent = document.getElementsByTagName("p")[2];
+const mainServicesContent = document.querySelectorAll(".bottom-content p")[0];
 mainServicesContent.textContent = siteContent["main-content"]["services-content"];
 
-const mainProductH4 = document.getElementsByTagName("h4")[3];
+const mainProductH4 = document.querySelectorAll(".bottom-content h4")[1];
 mainProductH4.textContent = siteContent["main-content"]["product-h4"];
 
-const mainProductContent = document.getElementsByTagName("p")[3];
+const mainProductContent = document.querySelectorAll(".bottom-content p")[1];
 mainProductContent.textContent = siteContent["main-content"]["product-content"];
 
-const mainVisionH4 = document.getElementsByTagName("h4")[4];
+const mainVisionH4 = document.querySelectorAll(".bottom-content h4")[2];
 mainVisionH4.textContent = siteContent["main-content"]["vision-h4"];
 
-const mainVisionContent = document.getElementsByTagName("p")[4];
+const mainVisionContent = document.querySelectorAll(".bottom-content p")[2];
 mainVisionContent.textContent = siteContent["main-content"]["vision-content"];
 
-const contactH4 = document.getElementsByTagName("h4")[5];
+const contactH4 = document.querySelectorAll(".contact h4")[0];
 contactH4.textContent = siteContent["contact"]["contact-h4"];
 
 const contactAddress = document.querySelectorAll('.contact p')[0];
