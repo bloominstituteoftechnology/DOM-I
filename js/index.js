@@ -68,8 +68,35 @@ ctaButton.textContent = siteContent.cta['button'];
 const ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent.cta["img-src"]);
 
+const mainFeaturesH4 = document.getElementsByTagName("h4")[0];
+mainFeaturesH4.textContent = siteContent["main-content"]["features-h4"];
+
+const mainFeaturesContent = document.getElementsByTagName("p")[0];
+mainFeaturesContent.textContent = siteContent["main-content"]["features-content"];
+
+const mainAboutH4 = document.getElementsByTagName("h4")[1];
+mainAboutH4.textContent = siteContent["main-content"]["about-h4"];
+
+const mainAboutContent = document.getElementsByTagName("p")[1];
+mainAboutContent.textContent = siteContent["main-content"]["about-content"];
 
 const middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
-// const featuresH4 = document.getElementById
+const mainServicesH4 = document.getElementsByTagName("h4")[2];
+mainServicesH4.textContent = siteContent["main-content"]["services-h4"];
+
+const mainServicesContent = document.getElementsByTagName("p")[2];
+mainServicesContent.textContent = siteContent["main-content"]["services-content"];
+
+const mainProductH4 = document.getElementsByTagName("h4")[3];
+mainProductH4.textContent = siteContent["main-content"]["product-h4"];
+
+const mainProductContent = document.getElementsByTagName("p")[3];
+mainProductContent.textContent = siteContent["main-content"]["product-content"];
+
+const mainVisionH4 = document.getElementsByTagName("h4")[4];
+mainVisionH4.textContent = siteContent["main-content"]["vision-h4"];
+
+const mainVisionContent = document.getElementsByTagName("p")[4];
+mainVisionContent.textContent = siteContent["main-content"]["vision-content"];
