@@ -39,7 +39,7 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 //nav added, changed nav color to green 
 let nav = document.querySelectorAll("nav a");
@@ -57,22 +57,24 @@ nav[5].innerHTML = "Contact";
 nav[5].style.color = "green";
 
 // Step 1: Create a new tag
-const newElement = document.createElement("nav");
+const newElement = document.createElement("href"+"href");
 
 // Step 2: Set up the parent reference
-const containerElement = document.querySelector(".container");
+const containerElement = document.querySelector(".container nav");
 
 // Step 3: appendChild or prepend the child to the parent
 containerElement.prepend(newElement);
 
 // Step 4: Update the value
-newElement.innerText = "Gr8";
+newElement.innerText = "Gr8"+" "+ "" +"Gr7";
+newElement.style.color= "green";
+
 
 
 
 //.cta-img
 let ctaImg = document.getElementById("cta-img");
-ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 
 //DOM IS AWESOME
 let dom = document.querySelector(".cta-text h1");
@@ -118,7 +120,7 @@ contactInfo[2].innerHTML = "sales@greatidea.io";
 
 //footer
 let footer = document.querySelector("footer p");
-footer.innerHTML = "Copyright Great Idea! 2018"
+footer.innerHTML = "Copyright Great Idea! 2018";
 
 
 
