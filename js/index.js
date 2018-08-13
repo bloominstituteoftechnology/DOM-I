@@ -72,3 +72,11 @@ ctaButton.innerHTML = siteContent["cta"]["button"];
 
 // set the source of the cta image from the JSON Object
 ctaImage.src = siteContent["cta"]["img-src"];
+
+// main content section
+
+// set the top-content from the JSON Object
+mainContentHeading[0].innerHTML = siteContent["main-content"]["features-h4"];
+mainContentContent[0].innerHTML = siteContent["main-content"]["features-content"];
+mainContentHeading[1].innerHTML = siteContent["main-content"]["about-h4"];
+mainContentContent[1].innerHTML = siteContent["main-content"]["about-content"];
