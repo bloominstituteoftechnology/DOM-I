@@ -43,12 +43,31 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 const nav = document.querySelector("nav");
 const navElements = document.querySelectorAll("nav a");
-navElements[0].innerHTML = 'Services';
-navElements[1].innerHTML = 'Product';
-navElements[2].innerHTML = 'Vision';
-navElements[3].innerHTML = 'Features';
-navElements[4].innerHTML = 'About';
-navElements[5].innerHTML = 'Contact';
+navElements[0].innerHTML = siteContent["nav"]["nav-item-1"];
+navElements[1].innerHTML = siteContent["nav"]["nav-item-2"];
+navElements[2].innerHTML = siteContent["nav"]["nav-item-3"];
+navElements[3].innerHTML = siteContent["nav"]["nav-item-4"];
+navElements[4].innerHTML = siteContent["nav"]["nav-item-5"];
+navElements[5].innerHTML = siteContent["nav"]["nav-item-6"];
+
+navElements[0].style.color = "green";
+navElements[1].style.color = "green";
+navElements[2].style.color = "green";
+navElements[3].style.color = "green";
+navElements[4].style.color = "green";
+navElements[5].style.color = "green";
+
+const home = document.createElement("a");
+home.innerText = "Home";
+
+const projects = document.createElement("a");
+projects.innerText = "Projects";
+
+const homeElement = document.querySelector("nav");
+homeElement.prepend(home);
+homeElement.appendChild(projects);
+
+
 
 
 const ctaHeading = document.querySelector(".cta-text h1");
@@ -86,3 +105,6 @@ const contactText = document.querySelectorAll(".contact p");
 contactText[0].innerHTML = siteContent["contact"]["address"];
 contactText[1].innerHTML = siteContent["contact"]["phone"];
 contactText[2].innerHTML = siteContent["contact"]["email"];
+
+const footer = document.querySelector('footer p');
+footer.innerHTML = siteContent["footer"]["copyright"];
