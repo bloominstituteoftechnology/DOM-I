@@ -99,6 +99,8 @@ contact_text[1].innerHTML = siteContent['contact']['phone'];
 contact_text[2].innerHTML = siteContent['contact']['email'];
 
 // Footer
+const footer = document.querySelector('footer');
+footer.innerHTML = siteContent['footer']['copyright'];
 
 // "contact": {
 //   "contact-h4" : "Contact",
