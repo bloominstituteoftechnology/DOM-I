@@ -54,3 +54,7 @@ const tagElements = Array.from(document.getElementsByTagName('a'));
 for (let i = 0; i < tagElements.length; i++) {
   tagElements[i].innerText = siteContent["nav"][`nav-item-${i+1}`];
 }
+
+// CTA
+document.querySelector('.cta-text').getElementsByTagName('h1')[0].innerText = siteContent["cta"]["h1"];
+document.querySelector('.cta-text').getElementsByTagName('button')[0].innerText = siteContent["cta"]["button"];
