@@ -61,29 +61,29 @@ const navLinkSix = document.getElementsByTagName('a')[5];
 navLinkSix.className = 'nav-item-6';
 
 // Navigation Links
-const linkOne = (document.querySelector('.nav-item-1').innerText = 'Services');
-const linkTwo = (document.querySelector('.nav-item-2').innerText = 'Product');
-const linkThree = (document.querySelector('.nav-item-3').innerText = 'Vision');
-const linkFour = (document.querySelector('.nav-item-4').innerText = 'Features');
-const linkFive = (document.querySelector('.nav-item-5').innerText = 'About');
-const linkSix = (document.querySelector('.nav-item-6').innerText = 'Contact');
+navLinkOne.innerText = siteContent['nav']['nav-item-1'];
+navLinkTwo.innerText = siteContent['nav']['nav-item-2'];
+navLinkThree.innerText = siteContent['nav']['nav-item-3'];
+navLinkFour.innerText = siteContent['nav']['nav-item-4'];
+navLinkFive.innerText = siteContent['nav']['nav-item-5'];
+navLinkSix.innerText = siteContent['nav']['nav-item-6'];
 
 // CTA TEXT, IMAGE, & BUTTON
 const ctaHeader = document.querySelector('.cta .cta-text h1');
-ctaHeader.classList.add('.header-cta');
-ctaHeader.innerText = 'DOM Is Awesome';
+//ctaHeader.classList.add('.header-cta');
+ctaHeader.innerText = siteContent['cta']['h1'];
 
 // BUTTON
 const ctaButton = document.querySelector('.cta .cta-text button');
-ctaButton.innerText = 'Get Started';
+ctaButton.innerText = siteContent['cta']['button'];
 
 // HEADER IMAGE
 const headerImg = document.getElementById('cta-img');
-headerImg.src = 'img/header-img.png';
+headerImg.src = siteContent['cta']['img-src'];
 
 // MAIN CONTENT
 const mainDivH1 = document.querySelectorAll('.top-content .text-content h4')[0];
-console.log(mainDivH1);
+//console.log(mainDivH1);
 mainDivH1.innerText = siteContent['main-content']['features-h4'];
 const mainDivP1 = document.querySelectorAll('.top-content .text-content p')[0];
 //mainDivP1.className = 'features-content';
