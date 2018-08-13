@@ -56,7 +56,7 @@ let footer = document.querySelector("footer");
 logo.src = siteContent["nav"]["img-src"];
 
 for(let item in navItems) {
-  navItems[item].innerHTML = siteContent["nav"]["nav-item-" + toString(item + 1)];
+  navItems[item].innerHTML = siteContent["nav"]["nav-item-"  + (++item).toString()];
 }
 
 //Call To Action Stuff
