@@ -102,6 +102,12 @@ ctaButton.addEventListener("click", function(){
   
   ctaImage.src = "https://avatars2.githubusercontent.com/u/1958368?s=400&v=4";
   ctaImage.style.cssText = "margin-left: 100px; border-radius: 20px;"
+  ctaButton.innerText = "Click Again";
+  ctaButton.addEventListener("click", function() {
+   ctaImage.src = "https://avatars1.githubusercontent.com/u/29240650?s=400&v=4"
+   ctaHeading.innerHTML = "CHARLETTA <br> IS <br> AWESOME";
+   ctaButton.style.display = "none";
+  });
 });
 
 // set the source of the cta image from the JSON Object
