@@ -33,11 +33,16 @@ const siteContent = {
     "email" : "sales@greatidea.io",
   },
   "footer": {
-    &copy: "Copyright Great Idea! 2018"
+    "copyright" : "Copyright Great Idea! 2018"
   },
 };
+
 // Example: Update the img src for the logo
-let logo = document.getElementById("#logo-img");
 //let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
-// Task 2 - Lets grab all of the references
+//logo.setAttribute('src', siteContent["nav"]["img-src"])
+const logo = document.getElementById("logo-img");
+const nav = document.querySelector("nav");
+const navItems = document.querySelectorAll("nav a");
+const ctaHeading = document.querySelector(".cta-text h1");
+const ctaButton = document.querySelector(".cta-text button");
+const ctaImage = document.getElementById("cta-img");
