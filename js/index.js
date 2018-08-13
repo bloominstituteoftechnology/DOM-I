@@ -55,9 +55,16 @@ middle_img.alt = "Middle image!";
 //Text generation//
 
 //nav
-const nav_bar = document.querySelector('nav a');
-console.log(nav_bar);
-nav_bar.innerHTML = siteContent['nav'];
+const nav_bar = document.querySelectorAll('nav a');
+const nav = document.querySelector('nav');
+console.log(nav_bar[0]);
+nav_bar[0].innerHTML = siteContent['nav']['nav-item-1'];
+nav_bar[1].innerHTML = siteContent['nav']['nav-item-2'];
+nav_bar[2].innerHTML = siteContent['nav']['nav-item-3'];
+nav_bar[3].innerHTML = siteContent['nav']['nav-item-4'];
+nav_bar[4].innerHTML = siteContent['nav']['nav-item-5'];
+nav_bar[5].innerHTML = siteContent['nav']['nav-item-6'];
+nav.style.color = 'Green';
 // Call to action elements
 const cta_text_header = document.querySelector('.cta-text h1');
 cta_text_header.innerHTML = siteContent['cta']['h1'];
