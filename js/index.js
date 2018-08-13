@@ -127,10 +127,10 @@ let newNavEllast = document.createElement('a');
 let newNavElfirst = document.createElement('a');
 let homeNavElement = document.querySelector('nav');
 
-homeNavElement.appendChild(newNavElfirst);
-homeNavElement.prepend(newNavEllast);
-newNavEllast.innerHTML = "firstInLine";
-newNavElfirst.innerHTML = "Blog";
+homeNavElement.appendChild(newNavEllast);
+homeNavElement.prepend(newNavElfirst);
+newNavElfirst.innerHTML = "firstInLine";
+newNavEllast.innerHTML = "Blog";
 
 
 
