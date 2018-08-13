@@ -57,22 +57,16 @@ nav[5].innerHTML = "Contact";
 nav[5].style.color = "green";
 
 // Step 1: Create a new tag
-//const newElement = document.createElement("nav a");
+const newElement = document.createElement("nav");
 
 // Step 2: Set up the parent reference
-//const servicesElement = document.querySelector("nav a");
+const containerElement = document.querySelector(".container");
 
 // Step 3: appendChild or prepend the child to the parent
-//servicesElement.prepend(newElement);
+containerElement.prepend(newElement);
 
 // Step 4: Update the value
-//newElement.innerText = "Gr8";
-
-
-
-
-
-
+newElement.innerText = "Gr8";
 
 
 
