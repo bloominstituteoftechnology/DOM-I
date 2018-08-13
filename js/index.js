@@ -38,5 +38,46 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+// ================ IMAGES ===============================
+const logo = document.getElementById('logo-img');
+logo.setAttribute('src', siteContent['nav']['img-src'])
+
+const codeSnippet= document.getElementById('cta-img');
+codeSnippet.setAttribute('src', siteContent['cta']['img-src'])
+
+const midImg = document.getElementById('middle-img');
+midImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+
+
+// ================ NAVIGATION =======================
+const navItem1 = document.getElementsByTagName('a')[0];
+navItem1.textContent = siteContent.nav['nav-item-1'];
+const navItem2 = document.getElementsByTagName('a')[1];
+navItem2.textContent = siteContent.nav['nav-item-2'];
+const navItem3 = document.getElementsByTagName('a')[2];
+navItem3.textContent = siteContent.nav['nav-item-3'];
+const navItem4 = document.getElementsByTagName('a')[3];
+navItem4.textContent = siteContent.nav['nav-item-4'];
+const navItem5 = document.getElementsByTagName('a')[4];
+navItem5.textContent = siteContent.nav['nav-item-5'];
+const navItem6 = document.getElementsByTagName('a')[5];
+navItem6.textContent = siteContent.nav['nav-item-6'];
+
+
+
+// ================ CTA SECTION ======================
+const newH1 = document.querySelector('h1');
+newH1.textContent = siteContent['cta']['h1'];
+
+const newButton = document.querySelector('button');
+newButton.textContent = siteContent['cta']['button'];
+
+// ================ MAIN SECTION =====================
+const newH4 = topContent.querySelectorAll('h1');
+
+
+
+
+
+
