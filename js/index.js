@@ -90,3 +90,6 @@ document.querySelector('.contact').getElementsByTagName('h4')[0].innerText = sit
 document.querySelector('.contact').getElementsByTagName('p')[0].innerText = siteContent["contact"]["address"];
 document.querySelector('.contact').getElementsByTagName('p')[1].innerText = siteContent["contact"]["phone"];
 document.querySelector('.contact').getElementsByTagName('p')[2].innerText = siteContent["contact"]["email"];
+
+// FOOTER
+document.getElementsByTagName('footer')[0].getElementsByTagName('p')[0].innerText = siteContent["footer"]["copyright"];
