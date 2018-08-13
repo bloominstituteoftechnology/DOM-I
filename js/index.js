@@ -53,11 +53,26 @@ const siteContent = {
 
 // End of Examples
 
-let navBar = document.getElementsByTagName("nav");
-navBar.innerHTML("nav");
+const ATag = document.querySelectorAll('a');
+//undefined
+ATag[0].innerText = siteContent["nav"]["nav-item-1"];
+//"Services"
+
+ATag[1].innerText = siteContent["nav"]["nav-item-2"]
+
+ATag[2].innerText = siteContent["nav"]["nav-item-3"]
+
+ATag[3].innerText = siteContent["nav"]["nav-item-4"]
+
+ATag[4].innerText = siteContent["nav"]["nav-item-5"]
+
+ATag[5].innerText = siteContent["nav"]["nav-item-6"]
 
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let domIsGreat = document.querySelector('h1');
+domIsGreat.innerText = siteContent['cta']['h1']
 
 textContentList[0].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["features-h4"];
 
