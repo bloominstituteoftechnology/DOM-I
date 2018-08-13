@@ -1,6 +1,5 @@
 const siteContent = {
   "nav": {
-    "nav-item-0": "Item 0",
     "nav-item-1": "Services",
     "nav-item-2": "Product",
     "nav-item-3": "Vision",
@@ -44,6 +43,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 // Discussed this with Max Kajiwara as this would be the smallest
 // to be able to get this applicaiton to the nav items.
+
 const navList = document.querySelectorAll('nav a');
 for (let i = 0; i < navList.length; i++) {
   navList[i].innerHTML = siteContent.nav[`nav-item-${i+1}`];
@@ -112,7 +112,16 @@ footerCopyright.innerHTML = siteContent["footer"]["copyright"];
 // for (i = 0; 0 < navListColor.length)
 // console.log(navListColor);
 
+const a = document.createElement("a");
+a.innerHTML = 'Buttons';
+a.setAttribute('href', '#')
+const firstNav = document.getElementsByTagName('nav')[0];
+firstNav.prepend(a);
+
+const b = document.createElement("a");
+b.innerHTML = 'Gravy';
+b.setAttribute('href', '#')
+const lastNav = document.getElementsByTagName('nav')[0];
+lastNav.appendChild(b);
 document.querySelectorAll('nav a').forEach(param => param.style.color = "green");
 
-const menuItem1 = document.getElementsByTagName('nav a')
-menuItem1.prepend(siteContent.nav["nav-item-0"]);
