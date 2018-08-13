@@ -49,7 +49,7 @@ let callToAction = document.querySelector('cta');
 let mainContent = document.querySelector('main-content');
 let contact = document.querySelector('contact');
 let foot = document.querySelector('footer');
-let ctaPic = document.querySelector('cta-img');
+let ctaPic = document.getElementById('cta-img');
 
 navigation.innerHTML = Object.values(siteContent.nav);
 
