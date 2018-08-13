@@ -51,6 +51,12 @@ const contactHeading = document.querySelector(".contact h4");
 const contactContent = document.querySelectorAll(".contact p");
 let footer = document.querySelector("footer");
 
+// setup the elements to append and prepend
+let projects = document.createElement("a");
+let projectsText = document.createTextNode("Projects");
+let home = document.createElement("a");
+let homeText = document.createTextNode("Home");
+
 // header
 
 // setup the logo image
@@ -60,7 +66,23 @@ logo.src =  siteContent["nav"]["img-src"];
 // itterate over the navItems and set the content from the JSON object
 for(let i = 0; i < 6; i++) {
   navItems[i].innerHTML = siteContent["nav"]["nav-item-" + (i + 1)];
+  // change the nav items green
+  navItems[i].style.color = "green";
 }
+
+// add the text in to the a tag
+home.appendChild(homeText);
+//set the styles of the home element
+home.style.cssText = "color: green; cursor: pointer;";
+// prepend home to the start of the nav
+nav.prepend(home);
+
+// add text to the a tag
+projects.appendChild(projectsText);
+// set the styles of the projects element
+projects.style.cssText = "color: green; cursor: pointer;";
+// append the projects element to the nav
+nav.appendChild(projects);
 
 // cta section
 
