@@ -58,13 +58,52 @@ middle_img.alt = "Middle image!";
 const nav_bar = document.querySelector('nav a');
 console.log(nav_bar);
 nav_bar.innerHTML = siteContent['nav'];
-
 // Call to action elements
 const cta_text_header = document.querySelector('.cta-text h1');
 cta_text_header.innerHTML = siteContent['cta']['h1'];
-
 const cta_button = document.querySelector('.cta-text button');
 cta_button.innerHTML = siteContent['cta']['button'];
 //
 
+// Main content
+// Top content headers
+const top_content_text_header = document.querySelectorAll('.top-content .text-content h4');
+top_content_text_header[0].innerHTML = siteContent['main-content']['features-h4'];
+top_content_text_header[1].innerHTML = siteContent['main-content']['about-h4'];
 
+// Top content text
+const top_content_text_content = document.querySelectorAll('.top-content .text-content p');
+top_content_text_content[0].innerHTML = siteContent['main-content']['features-content'];
+top_content_text_content[1].innerHTML = siteContent['main-content']['about-content'];
+//
+
+// Bottom content headers
+const bottom_content_text_header = document.querySelectorAll('.bottom-content .text-content h4');
+bottom_content_text_header[0].innerHTML = siteContent['main-content']['services-h4'];
+bottom_content_text_header[1].innerHTML = siteContent['main-content']['product-h4'];
+bottom_content_text_header[2].innerHTML = siteContent['main-content']['vision-h4'];
+
+// Bottom content text
+const bottom_content_text_content = document.querySelectorAll('.bottom-content .text-content p');
+bottom_content_text_content[0].innerHTML = siteContent['main-content']['services-content'];
+bottom_content_text_content[1].innerHTML = siteContent['main-content']['product-content'];
+bottom_content_text_content[2].innerHTML = siteContent['main-content']['vision-content'];
+//
+
+
+
+
+
+// "main-content": {
+//   "features-h4":"Features",
+//   "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+//   "about-h4":"About",
+//   "about-content": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+//   "middle-img-src": "img/mid-page-accent.jpg",
+//   "services-h4":"Services",
+//   "services-content": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+//   "product-h4":"Product",
+//   "product-content": "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+//   "vision-h4":"Vision",
+//   "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+// },
