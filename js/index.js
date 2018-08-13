@@ -84,3 +84,18 @@ contactSection.children[3].innerText = siteContent.contact.email;
 
 const footerSection = document.querySelector("footer");
 footerSection.children[0].innerText = siteContent.footer.copyright;
+
+// Task 4
+const navBar = document.getElementsByTagName("nav");
+
+const blogLink = document.createElement("a");
+blogLink.innerText = "Blog";
+blogLink.href = "#";
+navBar[0].appendChild(blogLink);
+
+const homeLink = document.createElement("a");
+homeLink.innerText = "Home";
+homeLink.href = "#";
+navBar[0].prepend(homeLink);
+
+Array.from(navItems).forEach((a) => a.style.color = "green");
