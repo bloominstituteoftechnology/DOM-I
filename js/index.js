@@ -38,6 +38,7 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+// Img generation
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
@@ -50,3 +51,20 @@ const middle_img = document.querySelector('#middle-img');
 console.log(middle_img);
 middle_img.src = "img/mid-page-accent.jpg";
 middle_img.alt = "Middle image!";
+
+//Text generation//
+
+//nav
+const nav_bar = document.querySelector('nav a');
+console.log(nav_bar);
+nav_bar.innerHTML = siteContent['nav'];
+
+// Call to action elements
+const cta_text_header = document.querySelector('.cta-text h1');
+cta_text_header.innerHTML = siteContent['cta']['h1'];
+
+const cta_button = document.querySelector('.cta-text button');
+cta_button.innerHTML = siteContent['cta']['button'];
+//
+
+
