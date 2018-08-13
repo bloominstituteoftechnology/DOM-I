@@ -66,6 +66,7 @@ function digitalTimer() {
       mH.style.color = "red";
       mT.style.color = "red";
       colon.style.color = "red";
+      btn.innerText = "RESTART"; // set the buttons text to RESTART
       // else if the remainder of ms / 1000 = 0 then encrement sO
     } else if (ms % 1000 === 0) {
       sO.innerHTML = inc(sO.innerHTML);
