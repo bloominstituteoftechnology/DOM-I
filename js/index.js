@@ -93,18 +93,20 @@ middleImg.src = "img/mid-page-accent.jpg";
 aTagsInNav.map(e => e.style.color = "green");
 
 // *** appendChild() and prepend() items to the navigation items. ***
-
 const nav = $('nav');
-console.log(nav);
 
-function createElement(tagName, text){
-  let tag = document.createElement(tagName);
-  if(tag){
-    tag.innerText = text;
+// *** createElement function for shorthand of creating a node and setting text inside of it.
+function createElement(tag, text, parent){
+  let newElement = document.createElement(tag);
+  if(text){
+    newElement.innerText = text;
   }
-  return tag;
+  const parentElement = $(parent);
+  return parentElement.appendChild(newElement);
 }
 
+// new node Element using custom element with text builder function
 
-
-nav.appendChild(createElement('a', 'Career'));
+// *** append an element to the nav parent element ***
+let newATag = createElement('a', 'Career', 'nav');
+newATag.style.cssText = aTagsInNav[0].style.cssText;
