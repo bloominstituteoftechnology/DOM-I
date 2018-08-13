@@ -44,10 +44,12 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 let navItems = document.querySelectorAll('nav a');
 for (let i = 0; i < 6; i++) {
   navItems[i].innerHTML = siteContent['nav']['nav-item-' + (i + 1)];
+  navItems[i].style.color = 'green';
+  navItems[i].style.textDecoration = 'none';
 }
 
 let ctaText = document.querySelector('.cta-text h1');
-ctaText.innerHTML = siteContent['cta']['h1'];
+ctaText.innerHTML = 'DOM <br> IS <br> AWESOME';
 
 let ctaButton = document.querySelector('.cta-text button');
 ctaButton.innerHTML = siteContent['cta']['button'];
@@ -56,17 +58,21 @@ let ctaImg = document.getElementById('cta-img');
 ctaImg.setAttribute('src', siteContent['cta']['img-src']);
 
 let mainContentHeading = document.querySelectorAll(".main-content h4");
+//top content headers
 mainContentHeading[0].innerHTML = siteContent["main-content"]["features-h4"];
 mainContentHeading[1].innerHTML = siteContent["main-content"]["about-h4"];
 
+//bottom content headers
 mainContentHeading[2].innerHTML = siteContent["main-content"]["services-h4"];
 mainContentHeading[3].innerHTML = siteContent["main-content"]["product-h4"];
 mainContentHeading[4].innerHTML = siteContent["main-content"]["vision-h4"];
 
 let mainContentPara = document.querySelectorAll('.main-content p');
+//top content paragraph
 mainContentPara[0].innerHTML = siteContent["main-content"]["features-content"];
 mainContentPara[1].innerHTML = siteContent["main-content"]["about-content"];
 
+//bottom content paragraph
 mainContentPara[2].innerHTML = siteContent["main-content"]["services-content"];
 mainContentPara[3].innerHTML = siteContent["main-content"]["product-content"];
 mainContentPara[4].innerHTML = siteContent["main-content"]["vision-content"];
@@ -85,3 +91,25 @@ contactPara[2].innerHTML = siteContent["contact"]["email"];
 let footer = document.querySelector('footer p');
 footer.innerHTML = siteContent['footer']['copyright'];
 
+
+//Utilize .appendChild() and .prepend() to add two new items to the navigation system
+
+//step 1: create a new tag
+let newElement = document.createElement('a');
+
+//step 2: set up the parent reference
+let navItemsElement = document.querySelector('nav');
+
+//step 3: append or prepend the child to the parent
+navItemsElement.appendChild(newElement);
+
+//step 4: update the value
+newElement.innerHTML = 'Location';
+newElement.style.color = 'green';
+newElement.style.textDecoration = 'none';
+newElement.style.cursor = 'pointer';
+
+// let newElement = document.createElement('a');
+// let navElement = document.querySelector('nav');
+// navElement.prepend(newElement);
+// newElement.innerHTML = 'Portfolio';
