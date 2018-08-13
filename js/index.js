@@ -83,4 +83,14 @@ contactP[2].innerHTML = siteContent.contact.email;
 let copyright = document.querySelector('footer p');
 copyright.innerHTML = siteContent.footer.copyright;
 
-//document.querySelector('');
+//Task 4
+
+let nav = document.querySelector('nav');
+nav.appendChild(document.createElement('a'));
+nav.prepend(document.createElement('a'));
+
+navList = document.querySelectorAll('nav a');
+navList[0].innerHTML = 'Home';
+navList[6].innerHTML = 'Login';
+
+navList.forEach(item => item.style.color = 'green');
