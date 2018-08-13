@@ -110,3 +110,67 @@ document.getElementsByClassName("contact")[0].style.textAlign = "center";
 document.getElementById("middle-img").style.borderRadius = "20px";
 
 // Stretch Goals: Integrate button
+// Awesome button
+const buttonsDiv = document.createElement("DIV");
+buttonsDiv.className = "buttons-div";
+buttonsDiv.style.cssText = "margin: 20px; display: flex; justify-content: space-around;";
+document.getElementsByClassName("container")[0].prepend(buttonsDiv);
+
+const toggleAwesomeButton = document.createElement("BUTTON");
+toggleAwesomeButton.innerText = "Make DOM Terrible";
+toggleAwesomeButton.style.cssText = "border: 1px double black; font-size: 16px; background: white; width: 170px; height: 32px; margin-top: 10px; cursor: pointer;";
+
+toggleAwesomeButton.addEventListener("mouseenter", function() {
+  this.style.color = "white";
+  this.style.background = "black";
+});
+toggleAwesomeButton.addEventListener("mouseleave", function() {
+  this.style.color = "black";
+  this.style.background = "white";
+});
+
+let awesome = true;
+toggleAwesomeButton.addEventListener("click", function() {
+  if (awesome) {
+    ctaH1Tag.innerHTML = "DOM is Terrible";
+    ctaH1Tag.innerHTML = ctaH1Tag.innerHTML.replace(/ /g, "<br> ");
+    toggleAwesomeButton.innerText = "Make DOM Awesome";
+    awesome = false;
+  } else {
+    ctaH1Tag.innerHTML = "DOM is Awesome";
+    ctaH1Tag.innerHTML = ctaH1Tag.innerHTML.replace(/ /g, "<br> ");
+    toggleAwesomeButton.innerText = "Make DOM Terrible";
+    awesome = true;  
+  }
+});
+
+document.getElementsByClassName("buttons-div")[0].prepend(toggleAwesomeButton);
+
+// Links button
+const modifyLinksButton = document.createElement("BUTTON");
+modifyLinksButton.innerText = "Modify Links";
+modifyLinksButton.style.cssText = "border: 1px double black; font-size: 16px; background: white; width: 170px; height: 32px; margin-top: 10px; cursor: pointer;";
+
+document.getElementsByClassName("buttons-div")[0].appendChild(modifyLinksButton);
+
+modifyLinksButton.addEventListener("mouseenter", function() {
+  this.style.color = "white";
+  this.style.background = "black";
+});
+modifyLinksButton.addEventListener("mouseleave", function() {
+  this.style.color = "black";
+  this.style.background = "white";
+});
+
+let hideItemIndex = navItems.length - 1;
+modifyLinksButton.addEventListener("click", function() {
+  if (hideItemIndex === -1) {
+    Array.from(navItems).forEach(item => {
+      item.style.display = "block";
+    });
+    hideItemIndex = navItems.length - 1;
+  } else {
+    navItems[hideItemIndex].style.display = "none";
+    hideItemIndex--;  
+  }
+});
