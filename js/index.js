@@ -102,3 +102,13 @@ contactContent[2].innerHTML = siteContent["contact"]["email"];
 
 const footer = document.querySelector("footer p");
 footer.innerHTML = siteContent["footer"]["copyright"];
+
+let navA = document.createElement("a");
+let homeNav = document.querySelector("nav");
+
+homeNav.appendChild(navA);
+navA.innerHTML = "Help";
+
+let navB = document.createElement("a");
+homeNav.prepend(navB);
+navB.innerHTML = "IR";
