@@ -46,12 +46,36 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 const tagElements = document.getElementsByTagName('a');
 const navArray = Array.from(tagElements);
 
+//nav text update
 navArray[0].innerText = "Services";
 navArray[1].innerText = "Product";
 navArray[2].innerText = "Vision";
 navArray[3].innerText = "Features";
 navArray[4].innerText = "About";
 navArray[5].innerText = "Contact";
+
+//nav text color update
+navArray[0].style.color = "green";
+navArray[1].style.color = "green";
+navArray[2].style.color = "green";
+navArray[3].style.color = "green";
+navArray[4].style.color = "green";
+navArray[5].style.color = "green";
+
+//adding items to the nav
+const blog = document.createElement('a');
+const navElement = document.querySelector('nav');
+navElement.appendChild(blog);
+blog.innerText = "Blog";
+blog.style.color = "green";
+
+const signUp = document.createElement('a');
+navElement.prepend(signUp);
+signUp.innerText = "Sign Up";
+signUp.style.color = "green";
+
+
+
 
 //updating cta text
 const ctaText = document.getElementsByTagName('h1');
@@ -63,18 +87,14 @@ button[0].innerText = "Get Started";
 const ctaImg = document.getElementById('cta-img');
 ctaImg.src = "img/header-img.png";
 
-//updating main-content
+
 
 //main-content headings
 const hFours = document.getElementsByTagName('h4');
 hFours[0].innerText = "Features";
-
 hFours[1].innerText = "About";
-
 hFours[2].innerText = "Services";
-
 hFours[3].innerText = "Products";
-
 hFours[4].innerText = "Vision";
 
 //contact info h4
@@ -88,13 +108,14 @@ pText[1].innerText = "About content elementum magna eros, ac posuere elvit tempu
 pText[2].innerText = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 pText[3].innerText = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 pText[4].innerText = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
 //contact paragraph
 pText[5].innerText = "123 Way 456 Street Somewhere, USA"
 pText[6].innerText = "1 (888) 888-8888"
 pText[7].innerText = "sales@greatidea.io"
+
 //footer paragraph
 pText[8].innerText = "Copyright Great Idea! 2018"
-
 
 
 //updating middle image src
