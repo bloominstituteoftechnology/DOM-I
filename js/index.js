@@ -44,8 +44,22 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 //nav bar
 const navigation = document.querySelectorAll('a');
 for(let i = 0; i < navigation.length; i++) {
-    navigation[i].innerText = siteContent["nav"]["nav-item-" + (i+1)];
+  navigation[i].style.color = "green";
+  navigation[i].innerText = siteContent["nav"]["nav-item-" + (i+1)];
 }
+
+const newATag = document.createElement('a');
+const secondATag = document.createElement('a');
+const homeElement = document.querySelector('nav');
+
+homeElement.prepend(newATag);
+homeElement.appendChild(secondATag);
+
+newATag.innerText = "Home";
+secondATag.innerText = "Blog";
+
+
+
 
 //cta
 const jumboHeader = document.querySelector(".cta-text h1");
