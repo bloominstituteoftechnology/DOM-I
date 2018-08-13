@@ -61,3 +61,14 @@ logo.src =  siteContent["nav"]["img-src"];
 for(let i = 0; i < 6; i++) {
   navItems[i].innerHTML = siteContent["nav"]["nav-item-" + (i + 1)];
 }
+
+// cta section
+
+// set the content of the H1 in the cta from the JSON Object 
+ctaHeading.innerHTML = siteContent["cta"]["h1"];
+
+// set the content of the button in the cta from the JSON Object
+ctaButton.innerHTML = siteContent["cta"]["button"];
+
+// set the source of the cta image from the JSON Object
+ctaImage.src = siteContent["cta"]["img-src"];
