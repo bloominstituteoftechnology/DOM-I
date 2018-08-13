@@ -43,7 +43,7 @@ const siteContent = {
 
 const nav1 = document.querySelectorAll("nav a");
 nav1.forEach((value, index) => {
-value.innerHTML  = siteContent.nav[`nav-item-${index + 1}`]
+value.innerHTML = siteContent.nav[`nav-item-${index + 1}`]
 });
 
 const logo = document.getElementById("logo-img");
@@ -55,8 +55,40 @@ ctaSection.innerHTML = siteContent.cta["h1"]
 const ctaButton = document.querySelector("button");
 ctaButton.innerHTML = siteContent.cta["button"]
 
-const imgMid = document.getElementById("cta-img");
-imgMid.setAttribute('src', siteContent["cta"]["img-src"])
+const imgCode = document.getElementById("cta-img");
+imgCode.setAttribute('src', siteContent["cta"]["img-src"])
+
+const imgMid = document.getElementById("middle-img");
+imgMid.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+//Headers
+
+const topicHeaders = document.querySelectorAll('h4');
+topicHeaders[0].innerText = siteContent["main-content"]["features-h4"];
+topicHeaders[1].innerText = siteContent["main-content"]["about-h4"];
+topicHeaders[2].innerText = siteContent["main-content"]["services-h4"];
+topicHeaders[3].innerText = siteContent["main-content"]["product-h4"];
+topicHeaders[4].innerText = siteContent["main-content"]["vision-h4"];
+
+//Content
+
+const topicContent = document.querySelectorAll('p');
+topicContent[0].innerText = siteContent["main-content"]["features-content"];
+topicContent[1].innerText = siteContent["main-content"]["about-content"];
+topicContent[2].innerText = siteContent["main-content"]["services-content"];
+topicContent[3].innerText = siteContent["main-content"]["product-content"];
+topicContent[4].innerText = siteContent["main-content"]["vision-content"];
+
+//Contact
+topicContent[5].innerText = siteContent["contact"]["address"];
+topicContent[6].innerText = siteContent["contact"]["phone"];
+topicContent[7].innerText = siteContent["contact"]["email"];
+
+//Footer
+topicContent[7].innerText = siteContent["footer"]["copyright"];
+
+//Text Green
+
 
 // const textMainSection = document.querySelector("main-content top-content text-content");
 // textMainSection.forEach((value, index) => {
