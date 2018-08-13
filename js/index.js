@@ -64,5 +64,5 @@ contenTitle.forEach((hItem)=> {
 contentTitle.innerHTML = siteContent.mainContent[`${hItem}-h4`]
 });
 
-const middleImg = document.getElementById("middle-img");
-middleImg.setAttribute('src', siteContent["main-content"], ["img-src"])
+// const middleImg = document.getElementById("middle-img");
+// middleImg.setAttribute('src', siteContent["main-content"], ["img-src"])
