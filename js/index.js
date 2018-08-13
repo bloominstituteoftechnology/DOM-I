@@ -47,7 +47,7 @@ const logo = document.getElementById('logo-img');
 logo.setAttribute('src', siteContent['nav']['img-src']);
 
 // Set up navigation
-const aNav = document.querySelectorAll('a');
+const aNav = document.querySelectorAll('nav a');
 aNav.forEach(function(item, index) {
   return (item.innerHTML = siteContent.nav['nav-item-' + (index + 1)]);
 });
@@ -59,3 +59,65 @@ const ctaH1 = document.querySelector('h1');
 ctaH1.innerHTML = siteContent['cta']['h1'];
 const ctaButton = document.querySelector('button');
 ctaButton.innerHTML = siteContent['cta']['button'];
+
+// Set up top-content of main-content
+//// Target text-content in top-content class
+const topContentElements = document
+  .getElementsByClassName('top-content')[0]
+  .getElementsByClassName('text-content');
+
+const topContentFirstTextContent = topContentElements[0];
+topContentFirstTextContent.querySelector('h4').innerHTML =
+  siteContent['main-content']['features-h4'];
+topContentFirstTextContent.querySelector('p').innerHTML =
+  siteContent['main-content']['features-content'];
+
+const topContentSecondTextContent = topContentElements[1];
+topContentSecondTextContent.querySelector('h4').innerHTML =
+  siteContent['main-content']['about-h4'];
+topContentSecondTextContent.querySelector('p').innerHTML =
+  siteContent['main-content']['about-content'];
+
+// Set up img of main-content
+const midImg = document.getElementById('middle-img');
+midImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+// Set up bottom-content of main-content
+//// Target text-content in bot-content  class
+const botContentElements = document
+  .getElementsByClassName('bottom-content')[0]
+  .getElementsByClassName('text-content');
+
+const botContentFirstTextContent = botContentElements[0];
+botContentFirstTextContent.querySelector('h4').innerHTML =
+  siteContent['main-content']['services-h4'];
+botContentFirstTextContent.querySelector('p').innerHTML =
+  siteContent['main-content']['services-content'];
+
+const botContentSecondTextContent = botContentElements[1];
+botContentSecondTextContent.querySelector('h4').innerHTML =
+  siteContent['main-content']['product-h4'];
+botContentSecondTextContent.querySelector('p').innerHTML =
+  siteContent['main-content']['product-content'];
+
+const botContentThirdTextContent = botContentElements[2];
+botContentThirdTextContent.querySelector('h4').innerHTML =
+  siteContent['main-content']['vision-h4'];
+botContentThirdTextContent.querySelector('p').innerHTML =
+  siteContent['main-content']['vision-content'];
+
+// Set up contact section
+const contactH4 = document.querySelector('.contact h4');
+contactH4.innerHTML = siteContent['contact']['contact-h4'];
+const contactAddress = document
+  .querySelector('.contact')
+  .getElementsByTagName('p')[0];
+contactAddress.innerHTML = siteContent['contact']['address'];
+const contactPhone = document
+  .querySelector('.contact')
+  .getElementsByTagName('p')[1];
+contactPhone.innerHTML = siteContent['contact']['phone'];
+const contactEmail = document
+  .querySelector('.contact')
+  .getElementsByTagName('p')[2];
+contactEmail.innerHTML = siteContent['contact']['email'];
