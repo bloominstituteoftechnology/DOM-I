@@ -100,3 +100,18 @@ mainVisionH4.textContent = siteContent["main-content"]["vision-h4"];
 
 const mainVisionContent = document.getElementsByTagName("p")[4];
 mainVisionContent.textContent = siteContent["main-content"]["vision-content"];
+
+const contactH4 = document.getElementsByTagName("h4")[5];
+contactH4.textContent = siteContent["contact"]["contact-h4"];
+
+const contactAddress = document.querySelectorAll('.contact p')[0];
+contactAddress.textContent = siteContent["contact"]["address"];
+
+const contactPhone = document.querySelectorAll('.contact p')[1];
+contactPhone.textContent = siteContent["contact"]["phone"];
+
+const contactemail = document.querySelectorAll('.contact p')[2];
+contactemail.textContent = siteContent["contact"]["email"];
+
+const footerCopyright = document.querySelectorAll('footer p')[0];
+footerCopyright.textContent = siteContent["footer"]["copyright"];
