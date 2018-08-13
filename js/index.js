@@ -47,6 +47,8 @@ aTags[3].innerHTML = siteContent["nav"]["nav-item-4"];
 aTags[4].innerHTML = siteContent["nav"]["nav-item-5"];
 aTags[5].innerHTML = siteContent["nav"]["nav-item-6"];
 
+
+
 // Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
@@ -85,15 +87,15 @@ bottomTextContentP[0].innerHTML = siteContent["main-content"]["services-content"
 bottomTextContentP[1].innerHTML = siteContent["main-content"]["product-content"];
 bottomTextContentP[2].innerHTML = siteContent["main-content"]["vision-content"];
 
-/* 
-let contactH4 = document.getElementBy
 
-let address = document.getElementBy
+let contactH4 = document.querySelectorAll('.contact h4');
+contactH4[0].innerHTML = siteContent["contact"]["contact-h4"];
 
-let phone = document.getElementBy
+let contactP = document.querySelectorAll('.contact p');
+contactP[0].innerHTML = siteContent["contact"]["address"];
+contactP[1].innerHTML = siteContent["contact"]["phone"];
+contactP[2].innerHTML = siteContent["contact"]["email"];
 
-let email = document.getElementBy
 
-
-let copyright = document.getElementBy
-*/
+let copyright = document.getElementsByTagName("footer");
+copyright[0].innerHTML = siteContent["footer"]["copyright"];
