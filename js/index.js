@@ -49,7 +49,7 @@ const mainContentContent = document.querySelectorAll(".main-content p");
 const middleImg = document.getElementById("middle-img");
 const contactHeading = document.querySelector(".contact h4");
 const contactContent = document.querySelectorAll(".contact p");
-
+let footer = document.querySelector("footer");
 
 // header
 
@@ -98,3 +98,5 @@ contactContent[0].innerHTML = siteContent["contact"]["address"];
 contactContent[1].innerHTML = siteContent["contact"]["phone"];
 contactContent[2].innerHTML = siteContent["contact"]["email"];
 
+// footer section
+footer.innerHTML = siteContent["footer"]["copyright"];
