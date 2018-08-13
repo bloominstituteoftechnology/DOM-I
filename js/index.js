@@ -93,3 +93,17 @@ document.querySelector('.contact').getElementsByTagName('p')[2].innerText = site
 
 // FOOTER
 document.getElementsByTagName('footer')[0].getElementsByTagName('p')[0].innerText = siteContent["footer"]["copyright"];
+
+// CHANGE NAV COLOR
+Array.from(document.querySelector('nav').getElementsByTagName('a')).forEach(link => link.style.color = "green");
+
+// ADD 2 NEW NAV ITEMS
+const navElement = document.querySelector('nav');
+const newElement1 = document.createElement('a');
+const newElement2 = document.createElement('a');
+
+navElement.appendChild(newElement1);
+navElement.appendChild(newElement2);
+
+newElement1.innerText = "New 1";
+newElement2.innerText = "New 2";
