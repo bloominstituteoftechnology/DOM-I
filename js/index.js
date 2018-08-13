@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM<br> Is<br> Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "123 Way 456 Street<br> Somewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -43,17 +43,32 @@ const siteContent = {
 let logo = document.querySelector("#logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"])
 
+const homeLink = document.createElement("a");
+const faqsLink = document.createElement("a");
+
+const navElement = document.querySelector("nav")
+
+navElement.prepend(homeLink);
+navElement.append(faqsLink);
+
 let tagElements = document.querySelectorAll("a");
-tagElements[0].innerHTML = siteContent["nav"]["nav-item-1"];
-tagElements[1].innerHTML = siteContent["nav"]["nav-item-2"];
-tagElements[2].innerHTML = siteContent["nav"]["nav-item-3"];
-tagElements[3].innerHTML = siteContent["nav"]["nav-item-4"];
-tagElements[4].innerHTML = siteContent["nav"]["nav-item-5"];
+tagElements[0].innerHTML = "Home";
+tagElements[1].innerHTML = siteContent["nav"]["nav-item-1"];
+tagElements[2].innerHTML = siteContent["nav"]["nav-item-2"];
+tagElements[3].innerHTML = siteContent["nav"]["nav-item-3"];
+tagElements[4].innerHTML = siteContent["nav"]["nav-item-4"];
+tagElements[5].innerHTML = siteContent["nav"]["nav-item-5"];
+tagElements[6].innerHTML = "FAQs";
+
+
+
+
 
 for (let i = 0; i < tagElements.length; i++) {
-  tagElements[i].style.color = "green";
-    
+  tagElements[i].style.color = "green";  
 }
+
+
 
 // CTA
 let ctaImg = document.querySelector("#cta-img");
@@ -61,6 +76,7 @@ ctaImg.setAttribute("src", siteContent["cta"]["img-src"])
 
 let ctaHeader = document.querySelector("h1");
 ctaHeader.innerHTML = siteContent["cta"]["h1"];
+
 
 let button = document.querySelector("button");
 button.innerHTML = siteContent["cta"]["button"];
