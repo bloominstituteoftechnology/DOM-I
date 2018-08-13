@@ -74,12 +74,18 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 let domIsGreat = document.querySelector('h1');
 domIsGreat.innerText = siteContent['cta']['h1']
 
+let button = document.querySelector("button");
+button.innerText = siteContent["cta"]["button"]
+
+let codeSnippet = document.getElementById("cta-img");
+logo.setAttribute('src', siteContent["cta"]["img-src"])
+
 textContentList[0].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["features-h4"];
 
+let features = document.querySelector("main-content");
+features.innerText = siteContent["main-content"]["features-h4"]
 
 
-
-let cta = document.getElementsByTagName("cta");
 
 let mainContent = document.getElementsByTagName("main-content");
 
