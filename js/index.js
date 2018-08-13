@@ -41,9 +41,6 @@ const siteContent = {
 const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-const cta = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["cta"]["img-src"]);
-
 const navItem1 = document.getElementsByTagName("a")[0];
 navItem1.textContent = siteContent.nav["nav-item-1"];
 
@@ -62,3 +59,13 @@ navItem5.textContent = siteContent.nav["nav-item-5"];
 const navItem6 = document.getElementsByTagName("a")[5];
 navItem6.textContent = siteContent.nav["nav-item-6"];
 
+const ctaH1 = document.getElementsByTagName("h1");
+ctaH1.textContent = siteContent.cta["h1"];
+
+const ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+const middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+// const featuresH4 = document.getElementById
