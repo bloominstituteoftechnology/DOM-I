@@ -82,7 +82,7 @@ copyright.innerHTML = siteContent.footer.copyright;
 
 //document.querySelector('');
 
-// adjusting nav color and siteContent
+// adjusting nav color and content
 
 let nav = document.querySelector('nav');
 nav.appendChild(document.createElement('a'));
