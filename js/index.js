@@ -49,3 +49,46 @@ let ctaImage = document.getElementById("cta-img");
 middleImage.src = "img/mid-page-accent.jpg";
 // logoImage.src = "img/logo.png";
 ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
+
+// ##Task 3: Using your selectors, update the content to match the example file.
+// # header nav a
+let nav = document.querySelectorAll("nav a");
+nav[0].innerHTML = "Services";
+nav[1].innerHTML = "Product";
+nav[2].innerHTML = "Vision";
+nav[3].innerHTML = "Features";
+nav[4].innerHTML = "About";
+nav[5].innerHTML = "Contact";
+// # .cta-text
+let ctaH1 = document.querySelector(".cta-text h1");
+ctaH1.innerHTML = "DOM <br> Is <br> Awesome";
+let ctaButton = document.querySelector(".cta-text button");
+ctaButton.innerHTML = siteContent["cta"]["button"];
+// # .top-content
+// features
+let topHeaders = document.querySelectorAll(".top-content h4");
+topHeaders[0].innerHTML = siteContent["main-content"]["features-h4"];
+let topTexts = document.querySelectorAll(".top-content p");
+topTexts[0].innerHTML = siteContent["main-content"]["features-content"];
+// about
+topHeaders[1].innerHTML = siteContent["main-content"]["about-h4"];
+topTexts[1].innerHTML = siteContent["main-content"]["about-content"];
+// # .bottom-content
+let bottomHeaders = document.querySelectorAll(".bottom-content h4");
+let bottomTexts = document.querySelectorAll(".bottom-content p");
+bottomHeaders[0].innerHTML = siteContent["main-content"]["services-h4"];
+bottomHeaders[1].innerHTML = siteContent["main-content"]["product-h4"];
+bottomHeaders[2].innerHTML = siteContent["main-content"]["vision-h4"];
+bottomTexts[0].innerHTML = siteContent["main-content"]["services-content"];
+bottomTexts[1].innerHTML = siteContent["main-content"]["product-content"];
+bottomTexts[2].innerHTML = siteContent["main-content"]["vision-content"];
+// # .contact
+let contactHeader = document.querySelector(".contact h4");
+contactHeader.innerHTML = siteContent["contact"]["contact-h4"];
+let contactLines = document.querySelectorAll(".contact p");
+contactLines[0].innerHTML = siteContent["contact"]["address"];
+contactLines[1].innerHTML = siteContent["contact"]["phone"];
+contactLines[2].innerHTML = siteContent["contact"]["email"];
+// # footer
+let footerText = document.querySelector("footer p");
+footerText.innerHTML = siteContent["footer"]["copyright"];
