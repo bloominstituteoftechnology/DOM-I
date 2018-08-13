@@ -43,8 +43,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
 //Updating a elements in nav
-const tagElements = document.getElementsByTagName('a');
-const navArray = Array.from(tagElements);
+const navArray = document.getElementsByTagName('a');
 
 //nav text update
 navArray[0].innerText = "Services";
@@ -79,7 +78,7 @@ signUp.style.color = "green";
 
 //updating cta text
 const ctaText = document.getElementsByTagName('h1');
-ctaText[0].innerText = "Dom is Awesome";
+ctaText[0].innerHTML = "Dom <br> is <br> Awesome";
 
 const button = document.getElementsByTagName('button');
 button[0].innerText = "Get Started";
@@ -110,7 +109,7 @@ pText[3].innerText = "Product content elementum magna eros, ac posuere elvit tem
 pText[4].innerText = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
 //contact paragraph
-pText[5].innerText = "123 Way 456 Street Somewhere, USA"
+pText[5].innerHTML = "123 Way 456 Street <br> Somewhere, USA"
 pText[6].innerText = "1 (888) 888-8888"
 pText[7].innerText = "sales@greatidea.io"
 
