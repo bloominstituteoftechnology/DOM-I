@@ -39,4 +39,49 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+let navItems = document.querySelectorAll('nav a');
+for (let i = 0; i < 6; i++) {
+  navItems[i].innerHTML = siteContent['nav']['nav-item-' + (i + 1)];
+}
+
+let ctaText = document.querySelector('.cta-text h1');
+ctaText.innerHTML = siteContent['cta']['h1'];
+
+let ctaButton = document.querySelector('.cta-text button');
+ctaButton.innerHTML = siteContent['cta']['button'];
+
+let ctaImg = document.getElementById('cta-img');
+ctaImg.setAttribute('src', siteContent['cta']['img-src']);
+
+let mainContentHeading = document.querySelectorAll(".main-content h4");
+mainContentHeading[0].innerHTML = siteContent["main-content"]["features-h4"];
+mainContentHeading[1].innerHTML = siteContent["main-content"]["about-h4"];
+
+mainContentHeading[2].innerHTML = siteContent["main-content"]["services-h4"];
+mainContentHeading[3].innerHTML = siteContent["main-content"]["product-h4"];
+mainContentHeading[4].innerHTML = siteContent["main-content"]["vision-h4"];
+
+let mainContentPara = document.querySelectorAll('.main-content p');
+mainContentPara[0].innerHTML = siteContent["main-content"]["features-content"];
+mainContentPara[1].innerHTML = siteContent["main-content"]["about-content"];
+
+mainContentPara[2].innerHTML = siteContent["main-content"]["services-content"];
+mainContentPara[3].innerHTML = siteContent["main-content"]["product-content"];
+mainContentPara[4].innerHTML = siteContent["main-content"]["vision-content"];
+
+let middleImg = document.getElementById('middle-img');
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+let contactHeading = document.querySelector('.contact h4');
+contactHeading.innerHTML = siteContent['contact']['contact-h4'];
+
+let contactPara = document.querySelectorAll('.contact p');
+contactPara[0].innerHTML = siteContent["contact"]["address"];
+contactPara[1].innerHTML = siteContent["contact"]["phone"];
+contactPara[2].innerHTML = siteContent["contact"]["email"];
+
+let footer = document.querySelector('footer p');
+footer.innerHTML = siteContent['footer']['copyright'];
+
