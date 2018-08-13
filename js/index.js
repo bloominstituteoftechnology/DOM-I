@@ -88,3 +88,23 @@ p.map((e, i) => e.innerHTML = pText[i]);
 
 // *** set middle-img source ***
 middleImg.src = "img/mid-page-accent.jpg";
+
+// *** set nav text to be green ***
+aTagsInNav.map(e => e.style.color = "green");
+
+// *** appendChild() and prepend() items to the navigation items. ***
+
+const nav = $('nav');
+console.log(nav);
+
+function createElement(tagName, text){
+  let tag = document.createElement(tagName);
+  if(tag){
+    tag.innerText = text;
+  }
+  return tag;
+}
+
+
+
+nav.appendChild(createElement('a', 'Career'));
