@@ -58,6 +58,9 @@ homeElement.appendChild(secondATag);
 newATag.innerText = "Home";
 secondATag.innerText = "Blog";
 
+newATag.style.color = "green";
+secondATag.style.color = "green";
+
 
 
 
@@ -71,25 +74,67 @@ jumboButton.innerText = siteContent["cta"]["button"];
 const jumboImg = document.getElementById("cta-img");
 jumboImg.src = siteContent["cta"]["img-src"];
 
+
+
 //main-content
-const firstTextHeader = document.querySelectorAll(".top-content .text-content h4");
-firstTextHeader[0].innerText = siteContent["main-content"]["features-h4"];
-firstTextHeader[1].innerText = siteContent["main-content"]["about-h4"];
-const firstTextParagraph = document.querySelectorAll(".top-content .text-content p");
-firstTextParagraph[0].innerText = siteContent["main-content"]["features-content"];
-firstTextParagraph[1].innerText = siteContent["main-content"]["about-content"];
+// const firstTextHeader = document.querySelectorAll(".top-content .text-content h4");
+// firstTextHeader[0].innerText = siteContent["main-content"]["features-h4"];
+// firstTextHeader[1].innerText = siteContent["main-content"]["about-h4"];
+// const firstTextParagraph = document.querySelectorAll(".top-content .text-content p");
+// firstTextParagraph[0].innerText = siteContent["main-content"]["features-content"];
+// firstTextParagraph[1].innerText = siteContent["main-content"]["about-content"];
+
+
+// const secondTextHeader = document.querySelectorAll(".bottom-content .text-content h4");
+// secondTextHeader[0].innerText = siteContent["main-content"]["services-h4"];
+// secondTextHeader[1].innerText = siteContent["main-content"]["product-h4"];
+// secondTextHeader[2].innerText = siteContent["main-content"]["vision-h4"];
+// const secondTextParagraph = document.querySelectorAll(".bottom-content .text-content p");
+// secondTextParagraph[0].innerText = siteContent["main-content"]["services-content"];
+// secondTextParagraph[1].innerText = siteContent["main-content"]["product-content"];
+// secondTextParagraph[2].innerText = siteContent["main-content"]["vision-content"];
+
+const mainHeader = document.querySelectorAll(".main-content h4")
+
+for(let i = 0; i < mainHeader.length; i++) {
+  const keys = [];
+  for(x in siteContent["main-content"]) {
+    if(!!x.includes("h4")) {
+      keys.push(x);
+    }
+  }
+  mainHeader[i].innerText = siteContent["main-content"][keys[i]];
+}
 
 const middleImg = document.getElementById("middle-img");
 middleImg.src = siteContent["main-content"]["middle-img-src"];
 
-const secondTextHeader = document.querySelectorAll(".bottom-content .text-content h4");
-secondTextHeader[0].innerText = siteContent["main-content"]["services-h4"];
-secondTextHeader[1].innerText = siteContent["main-content"]["product-h4"];
-secondTextHeader[2].innerText = siteContent["main-content"]["vision-h4"];
-const secondTextParagraph = document.querySelectorAll(".bottom-content .text-content p");
-secondTextParagraph[0].innerText = siteContent["main-content"]["services-content"];
-secondTextParagraph[1].innerText = siteContent["main-content"]["product-content"];
-secondTextParagraph[2].innerText = siteContent["main-content"]["vision-content"];
+middleImg.style.borderRadius = "10px";
+
+
+const mainParagraph = document.querySelectorAll(".main-content p");
+
+for(let i = 0; i < mainParagraph.length; i++) {
+  const keys = [];
+  for(x in siteContent["main-content"]) {
+    if(!!x.includes("content")) {
+      keys.push(x);
+      console.log(keys);
+    }
+  }
+  mainParagraph[i].innerText = siteContent["main-content"][keys[i]];
+}
+
+
+for (let i = 0; i < mainParagraph.length; i++) {
+  mainParagraph[i].style.color = "blue";  
+}
+
+for(let i = 0; i < mainHeader.length; i++) {
+  mainHeader[i].style.color = "green";
+  mainHeader[i].style.fontSize = "2.0rem";
+}
+
 
 
 
@@ -98,9 +143,11 @@ const contactTitle = document.querySelector(".contact h4");
 contactTitle.innerText = siteContent["contact"]["contact-h4"];
 
 let contactParagraph = document.querySelectorAll(".contact p");
+
 for(let i = 0; i < contactParagraph.length; i++) {
   const values = Object.values(siteContent["contact"]);
   contactParagraph[i].innerText = values[i + 1];
+  contactParagraph[i].style.lineHeight = "1.3";
 }
 
 //footer
