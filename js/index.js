@@ -42,10 +42,18 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 let navItems = document.querySelectorAll('nav a');
-for (let i = 0; i < 6; i++) {
+for (let i = 0; i < navItems.length; i++) {
   navItems[i].innerHTML = siteContent['nav']['nav-item-' + (i + 1)];
   navItems[i].style.color = 'green';
   navItems[i].style.textDecoration = 'none';
+
+  navItems[i].addEventListener('mouseenter', function(event) {
+    event.target.style.color = 'lime';
+  })
+
+  navItems[i].addEventListener('mouseleave', function(event) {
+    event.target.style.color = 'green';
+  })
 }
 
 let ctaText = document.querySelector('.cta-text h1');
@@ -68,11 +76,11 @@ mainContentHeading[3].innerHTML = siteContent["main-content"]["product-h4"];
 mainContentHeading[4].innerHTML = siteContent["main-content"]["vision-h4"];
 
 let mainContentPara = document.querySelectorAll('.main-content p');
-//top content paragraph
+//top content paragraphs
 mainContentPara[0].innerHTML = siteContent["main-content"]["features-content"];
 mainContentPara[1].innerHTML = siteContent["main-content"]["about-content"];
 
-//bottom content paragraph
+//bottom content paragraphs
 mainContentPara[2].innerHTML = siteContent["main-content"]["services-content"];
 mainContentPara[3].innerHTML = siteContent["main-content"]["product-content"];
 mainContentPara[4].innerHTML = siteContent["main-content"]["vision-content"];
@@ -88,7 +96,7 @@ contactPara[0].innerHTML = siteContent["contact"]["address"];
 contactPara[1].innerHTML = siteContent["contact"]["phone"];
 contactPara[2].innerHTML = siteContent["contact"]["email"];
 
-let footer = document.querySelector('footer p');
+let footer = document.querySelector('footer');
 footer.innerHTML = siteContent['footer']['copyright'];
 
 
@@ -96,19 +104,44 @@ footer.innerHTML = siteContent['footer']['copyright'];
 
 //step 1: create a new tag
 let newElement = document.createElement('a');
+let newAElement = document.createElement('a');
 
 //step 2: set up the parent reference
 let navItemsElement = document.querySelector('nav');
 
 //step 3: append or prepend the child to the parent
 navItemsElement.appendChild(newElement);
-navItemsElement.prepend(newElement);
+navItemsElement.prepend(newAElement);
 
 //step 4: update the value
 newElement.innerHTML = 'Location';
-newElement.innerHTML = 'Portfolio';
+newAElement.innerHTML = 'Portfolio';
+
+//appendChild
 newElement.style.color = 'green';
 newElement.style.textDecoration = 'none';
 newElement.style.cursor = 'pointer';
+
+newElement.addEventListener('mouseenter', function(event) {
+  event.target.style.color = 'lime';
+})
+
+newElement.addEventListener('mouseleave', function(event) {
+  event.target.style.color = 'green';
+})
+
+//prepend
+newAElement.style.color = 'green';
+newAElement.style.textDecoration = 'none';
+newAElement.style.cursor = 'pointer';
+
+newAElement.addEventListener('mouseenter', function(event) {
+  event.target.style.color = 'lime';
+})
+
+newAElement.addEventListener('mouseleave', function(event) {
+  event.target.style.color = 'green';
+})
+
 
 
