@@ -39,19 +39,11 @@ const siteContent = {
 
 
 // update the src for the nav a tags
-let aTags = document.getElementsByTagName("a");
-aTags[0].innerHTML = siteContent["nav"]["nav-item-1"];
-aTags[0].style.color = "green";
-aTags[1].innerHTML = siteContent["nav"]["nav-item-2"];
-aTags[1].style.color = "green";
-aTags[2].innerHTML = siteContent["nav"]["nav-item-3"];
-aTags[2].style.color = "green";
-aTags[3].innerHTML = siteContent["nav"]["nav-item-4"];
-aTags[3].style.color = "green";
-aTags[4].innerHTML = siteContent["nav"]["nav-item-5"];
-aTags[4].style.color = "green";
-aTags[5].innerHTML = siteContent["nav"]["nav-item-6"];
-aTags[5].style.color = "green";
+let aTags = document.querySelectorAll("nav a");
+aTags.forEach((aTag, i) => {
+  aTag.innerHTML = siteContent.nav[`nav-item-${i + 1}`];
+  aTag.style.color = "green";
+})
 
 let appendChild = document.createElement("a");
 appendChild.innerHTML = "Big Memes";
@@ -67,11 +59,9 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 
-let ctaH1 = document.getElementsByTagName("h1");
-ctaH1[0].innerHTML = siteContent["cta"]["h1"];
-
-let button = document.getElementsByTagName("button");
-button[0].innerHTML = siteContent["cta"]["button"];
+let ctaTextContent = document.getElementsByClassName("cta-text")[0];
+ctaTextContent.getElementsByTagName("h1")[0].innerHTML = siteContent["cta"]["h1"];
+ctaTextContent.getElementsByTagName("button")[0].innerHTML = siteContent["cta"]["button"];
 
 let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
@@ -87,7 +77,6 @@ topTextContentP[1].innerHTML = siteContent["main-content"]["about-content"];
 
 let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
-
 
 let bottomTextContentH4 = document.querySelectorAll('.bottom-content .text-content h4');
 bottomTextContentH4[0].innerHTML = siteContent["main-content"]["services-h4"];
