@@ -87,6 +87,20 @@ let middleImg = document.getElementById('middle-img');
 //middleImg.setAttribute('src', 'img/mid-page-accent.jpg')
 middleImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
 
+//Contact 
+let contactTag = document.getElementsByClassName('contact');
+//console.log(contactTag);
+contactTag[0].getElementsByTagName('h4')[0].innerHTML = siteContent['contact']['contact-h4'];
+contactTag[0].getElementsByTagName('p')[0].innerHTML = siteContent['contact']['address'];
+contactTag[0].getElementsByTagName('p')[1].innerHTML = siteContent['contact']['phone'];
+contactTag[0].getElementsByTagName('p')[2].innerHTML = siteContent['contact']['email'];
+
+//Footer
+//let footerTag = document.getElementsByClassName('footer');
+let footerTag = document.querySelector('footer');
+//console.log(footerTag);
+footerTag.getElementsByTagName('p')[0].innerHTML = siteContent['footer']['copyright'];
+
 
 
 
