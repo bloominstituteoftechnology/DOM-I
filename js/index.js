@@ -41,12 +41,15 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
+//update navbar
 let navItems = document.querySelectorAll('nav a');
 for (let i = 0; i < navItems.length; i++) {
   navItems[i].innerHTML = siteContent['nav']['nav-item-' + (i + 1)];
+  //change nav text color
   navItems[i].style.color = 'green';
+  //change nav text-decoration
   navItems[i].style.textDecoration = 'none';
-
+  //add hover to nav
   navItems[i].addEventListener('mouseenter', function(event) {
     event.target.style.color = 'lime';
   })
@@ -56,6 +59,23 @@ for (let i = 0; i < navItems.length; i++) {
   })
 }
 
+//UPDATE NAVBAR SOLUTION WAY
+// let navItems = document.querySelectorAll('nav a');
+// navItems.forEach((item, i) => {
+//   item.innerHTML = siteContent.nav[`nav-item-${i+1}`];
+//   item.style.color = 'green';
+//   item.style.textDecoration = 'none';
+
+//   item.addEventListener('mouseenter', function(event) {
+//     event.target.style.color = 'lime';
+//   })
+    
+//   item.addEventListener('mouseleave', function(event) {
+//     event.target.style.color = 'green';
+//   })
+// })
+
+//update cta
 let ctaText = document.querySelector('.cta-text h1');
 ctaText.innerHTML = 'DOM <br> IS <br> AWESOME';
 
@@ -65,6 +85,7 @@ ctaButton.innerHTML = siteContent['cta']['button'];
 let ctaImg = document.getElementById('cta-img');
 ctaImg.setAttribute('src', siteContent['cta']['img-src']);
 
+//update mainContent
 let mainContentHeading = document.querySelectorAll(".main-content h4");
 //top content headers
 mainContentHeading[0].innerHTML = siteContent["main-content"]["features-h4"];
@@ -88,6 +109,7 @@ mainContentPara[4].innerHTML = siteContent["main-content"]["vision-content"];
 let middleImg = document.getElementById('middle-img');
 middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
+//update contact
 let contactHeading = document.querySelector('.contact h4');
 contactHeading.innerHTML = siteContent['contact']['contact-h4'];
 
@@ -96,6 +118,7 @@ contactPara[0].innerHTML = siteContent["contact"]["address"];
 contactPara[1].innerHTML = siteContent["contact"]["phone"];
 contactPara[2].innerHTML = siteContent["contact"]["email"];
 
+//update footer
 let footer = document.querySelector('footer');
 footer.innerHTML = siteContent['footer']['copyright'];
 
@@ -109,7 +132,7 @@ let newAElement = document.createElement('a');
 //step 2: set up the parent reference
 let navItemsElement = document.querySelector('nav');
 
-//step 3: append or prepend the child to the parent
+//step 3: appendChild or prepend the child to the parent
 navItemsElement.appendChild(newElement);
 navItemsElement.prepend(newAElement);
 
@@ -143,5 +166,15 @@ newAElement.addEventListener('mouseleave', function(event) {
   event.target.style.color = 'green';
 })
 
+
+//ADD TWO ITEMS TO NAV SOLUTION WAY
+// navItems = document.getElementsByTagName('nav')[0];
+// let createNewNode = (name) => {
+//   let newNode = document.createElement('a');
+//   newNode.innerHTML = name;
+//   return newNode;
+// }
+// navItems.appendChild(createNewNode('Location'));
+// navItems.prepend(createNewNode('Portfolio'));
 
 
