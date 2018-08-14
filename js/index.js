@@ -7,7 +7,6 @@ const siteContent = {
     "nav-item-5": "About",
     "nav-item-6": "Contact",
     "nav-item-7": "Blog",
-    "nav-item-8": "Questions",
     "img-src": "img/logo.png"
   },
   cta: {
@@ -53,11 +52,6 @@ let newNavItem = document.createElement("a");
 document.querySelector("nav").appendChild(newNavItem);
 newNavItem.innerHTML = "<a href='#'></a>";
 
-//Add second item to Nav bar - not working
-// let item = document.createElement("a");
-// document.querySelector("nav").appendChild(item);
-// item.innerHTML = "<a href='#'></a>";
-
 //Add content for Nav bar items by selecting Nav bar and looping through each <a> tag
 let navItems = document.querySelectorAll("a");
 
@@ -66,6 +60,7 @@ navItems.forEach(function(item) {
   item.innerHTML = siteContent.nav["nav-item-" + n];
   n++;
   item.style.color = "#50c878";
+
   //console.log(item)
 });
 
@@ -121,3 +116,9 @@ contact[2].innerHTML = siteContent.contact.email;
 
 // Add text for footer
 document.querySelector("footer p").innerHTML = siteContent.footer.copyright;
+
+// Add second item to Nav bar - not working
+let item = document.createElement("a");
+item.style.color = "#50c878";
+document.querySelector("nav").prepend(item);
+item.innerText = "Home";
