@@ -41,9 +41,8 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-
+//Selected all a's in nav and added text required 
 const navElements = document.querySelectorAll('a');
-
 for(let i = 0; i < navElements.length ; i++) {
   navElements[0].innerHTML = 'Services';
   navElements[1].innerHTML = 'Product';
@@ -54,39 +53,41 @@ for(let i = 0; i < navElements.length ; i++) {
   
 }
 
-// console.log(navElements);
-
-
-//Add h1 text 'DOM IS AWESOME'
+//Added h1 text 'DOM IS AWESOME'
 const ctaFirstHeading = document.querySelector('h1');
-ctaFirstHeading.innerHTML = 'DOM IS AWESOME';
+//ctaFirstHeading.innerHTML = 'DOM <br> IS <br> AWESOME';
+ctaFirstHeading.innerHTML = siteContent['cta']['h1'] //Not Centered
 
-
-//Add button text 'Get Started'
+//Added button text 'Get Started'
 const btnText = document.querySelector('button');
-btnText.innerHTML = 'Get Started';
+//btnText.innerHTML = 'Get Started';
+btnText.innerHTML = siteContent['cta']['button']
+
+//Added header-img.png in #cta-img
+let ctaImg = document.getElementById('cta-img');
+// ctaImg.setAttribute('src', 'img/header-img.png')
+ctaImg.setAttribute('src', siteContent['cta']['img-src'])
 
 
-// ctaFirstHeading.style.color = "black";
-// ctaFirstHeading.style.font-size = "72px";
-//  ctaFirstHeading.style.text-align = "center";
+let textContentList = document.querySelectorAll('.text-content');
+//console.log(textContentList);
+textContentList[0].getElementsByTagName('h4')[0].innerHTML = siteContent['main-content']['features-h4'];
+textContentList[0].getElementsByTagName('p')[0].innerHTML = siteContent['main-content']['features-content'];
+textContentList[1].getElementsByTagName('h4')[0].innerHTML = siteContent['main-content']['about-h4'];
+textContentList[1].getElementsByTagName('p')[0].innerHTML = siteContent['main-content']['about-content'];
+textContentList[2].getElementsByTagName('h4')[0].innerHTML = siteContent['main-content']['services-h4'];
+textContentList[2].getElementsByTagName('p')[0].innerHTML = siteContent['main-content']['services-content'];
+textContentList[3].getElementsByTagName('h4')[0].innerHTML = siteContent['main-content']['product-h4'];
+textContentList[3].getElementsByTagName('p')[0].innerHTML = siteContent['main-content']['product-content'];
+textContentList[4].getElementsByTagName('h4')[0].innerHTML = siteContent['main-content']['vision-h4'];
+textContentList[4].getElementsByTagName('p')[0].innerHTML = siteContent['main-content']['vision-content'];
 
-// font-size: 72px;
-//     text-align: center;
-//     letter-spacing: 5px;
-//     display: flex;
-//     justify-content: center;
-//     flex-flow: column;
-//     align-items: center;
-//     margin: 0 82px 0 0;
-
-let ctaImg = document.getElementById("cta-img");
-ctaImg.setAttribute('src', 'img/header-img.png')
+//Added mid-page-accent.jpg in #middle-img
+let middleImg = document.getElementById('middle-img');
+//middleImg.setAttribute('src', 'img/mid-page-accent.jpg')
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
 
 
-
-let middleImg = document.getElementById("middle-img");
-middleImg.setAttribute('src', 'img/mid-page-accent.jpg')
 
 
 
