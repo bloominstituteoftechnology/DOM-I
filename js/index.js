@@ -71,8 +71,39 @@ button1.textContent = siteContent.cta["button"];
 const imgHeader = document.getElementById("cta-img");
 imgHeader.setAttribute('src', siteContent["cta"]["img-src"]);
 
-const featHeader = document.querySelectorAll('text-content');
-featHeader.textContent  = siteContent.mainContent["features-h4"];
+
+let textContentList = document.querySelectorAll(".text-content"); //this is the div class name, we are going to grab 
+//this box and all that is in it, <p><h>
+
+textContentList[0].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["features-h4"]
+//varibaleName[index...each element has its own array].getBlahBlahTagName("tag name")[I don't know why this is 0, it's 0 for all of them].innerHTML is 
+//just getting to the guts of it. = siteContent is where its coming from[main-content is mroe of where it's coming from]
+//[feauter-h4 is it's name/key name]
+textContentList[0].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["features-content"];
+textContentList[1].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["about-h4"];
+textContentList[1].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["about-content"];
+
+const imgMid = document.getElementById("middle-img");
+imgMid.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+textContentList[2].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["services-h4"];
+textContentList[2].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["services-content"];
+textContentList[3].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["product-h4"];
+textContentList[3].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["product-content"];
+textContentList[4].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["vision-h4"];
+textContentList[4].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["vision-content"];
+
+let contactList = document.querySelectorAll(".contact");
+
+contactList[0].getElementsByTagName("h4")[0].innerHTML =siteContent["contact"]["contact-h4"];
+contactList[0].getElementsByTagName("p")[0].innerHTML = siteContent["contact"]["address"];
+contactList[0].getElementsByTagName("p")[1].innerHTML = siteContent["contact"]["phone"];
+contactList[0].getElementsByTagName("p")[2].innerHTML = siteContent["contact"]["email"];
+///why? does this have to be contactList[0] on all of them? Only way I got it to work...
+
+
+const footer = document.getElementsByTagName("footer")[0];
+footer.textContent = siteContent.footer["copyright"];
 
 
 
