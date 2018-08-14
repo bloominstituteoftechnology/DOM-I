@@ -39,22 +39,22 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 //Navigation
-const logo = document.getElementById("logo-img");
+let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-const navHeader = document.querySelectorAll("nav a");
+let navHeader = document.querySelectorAll("nav a");
 navHeader.forEach((navItem,index) => {
 navItem.innerHTML = siteContent.nav[`nav-item-${index+1}`]
 });
 
 //Call To Action
-const ctaImg = document.getElementById("cta-img");
+let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
 
-const ctaText = document.querySelector("h1");
+let ctaText = document.querySelector("h1");
 ctaText.innerHTML = siteContent.cta["h1"]
 
-const ctaBtn = document.querySelector("button");
+let ctaBtn = document.querySelector("button");
 ctaBtn.innerHTML = siteContent.cta["button"]
 
 //Main Content
@@ -65,12 +65,12 @@ contentTitle[0].getElementsByTagName("h4")[0].innerHTML = siteContent["main-cont
 contentTitle[1].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["about-h4"]
 contentTitle[2].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["services-h4"]
 contentTitle[3].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["product-h4"]
-contentTitle[4].innerHTML = siteContent["main-content"]["vision-h4"]
+contentTitle[4].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["vision-h4"]
 contentTitle[0].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["features-content"]
 contentTitle[1].getElementsByTagName("p")[0].innerHTML= siteContent["main-content"]["about-content"]
 contentTitle[2].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["services-content"]
 contentTitle[3].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["product-content"]
-contentTitle[4].innerHTML= siteContent["main-content"]["vision-content"]
+contentTitle[4].getElementsByTagName("p")[0].innerHTML= siteContent["main-content"]["vision-content"]
 
 const middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
@@ -82,5 +82,21 @@ contact.getElementsByTagName("p")[0].innerHTML = siteContent["contact"]["address
 contact.getElementsByTagName("p")[1].innerHTML = siteContent["contact"]["phone"]
 contact.getElementsByTagName("p")[2].innerHTML = siteContent["contact"]["email"]
 
+//Footer
 let footer = document.querySelector("footer");
 footer.getElementsByTagName("p")[0].innerHTML = siteContent["footer"]["copyright"]
+
+//Changing Navigation Color
+navHeader.forEach((navItem)=> {
+  navItem.style.color = "green"
+});
+
+//Adding Children to Navigation
+navHeader = document.getElementsByTagName("nav")[0];
+let createNewNav = (name) => {
+  let newNav = document.createElement("a");
+  newNav.innerHTML = name;
+  return newNav;
+}
+navHeader.prepend(createNewNav("Buy Now!"));
+navHeader.append(createNewNav("Meet the Staff"));
