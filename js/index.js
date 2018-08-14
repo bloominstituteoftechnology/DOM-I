@@ -44,25 +44,63 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 // selectors to point data into elements
 let header = document.querySelector('header')
 let navigation = document.querySelector('nav');
-let navA = document.querySelectorAll('nav a');
 let callToAction = document.querySelector('cta');
 let mainContent = document.querySelector('main-content');
-let contact = document.querySelector('contact');
-let foot = document.querySelector('footer');
+let contactSection = document.getElementsByClassName('contact')[0];
 let ctaPic = document.getElementById('cta-img');
 let ctaH1 = document.querySelector('h1');
 let ctaButton = document.querySelector('button');
 let mainImg = document.getElementById("middle-img");
 let topContent = document.getElementsByClassName("top-content");
 let leftTopH4 = document.querySelector("h4");
-// let rightTopH4 = document.querySelector() - work in progress
 
-//placeholder until I figure out the correct way to iterate through navigation items
-navigation.innerHTML = Object.values(siteContent.nav);
+
+let navA = document.querySelectorAll("nav a");
+navA.forEach((link, i) => {
+  link.innerHTML = siteContent.nav[`nav-item-${i+1}`];
+});
+navA.forEach((link, i) => {
+  link.style.color = "green";
+})
 
 ctaPic.setAttribute('src', siteContent["cta"]["img-src"]);
 ctaH1.textContent = siteContent["cta"]["h1"];
 ctaButton.textContent = siteContent["cta"]["button"];
+
+//main content
 mainImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 leftTopH4.textContent = siteContent["main-content"]["features-h4"];
-console.log(document.querySelectorAll('top-content'));
+
+let textContentList = document.querySelectorAll(".text-content");
+
+// used solution to follow example to populate middle text section
+textContentList[0].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["features-h4"];
+textContentList[0].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["features-content"];
+textContentList[1].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["about-h4"];
+textContentList[1].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["about-content"];
+textContentList[2].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["services-h4"];
+textContentList[2].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["services-content"];
+textContentList[3].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["product-h4"];
+textContentList[3].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["product-content"];
+textContentList[4].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["vision-h4"];
+textContentList[4].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["vision-content"];
+
+// contact and footer
+contactSection.getElementsByTagName("h4")[0].innerHTML = siteContent["contact"]["contact-h4"];
+contactSection.getElementsByTagName("p")[0].innerHTML = siteContent["contact"]["address"];
+contactSection.getElementsByTagName("p")[1].innerHTML = siteContent["contact"]["phone"];
+contactSection.getElementsByTagName("p")[2].innerHTML = siteContent["contact"]["email"];
+
+//used solution on this part
+let footer = document.querySelector("footer");
+footer.getElementsByTagName("p")[0].innerHTML = siteContent["footer"]["copyright"];
+
+// Add two items to navigation
+selectedNavLinks = document.getElementsByTagName("nav")[0];
+let createNewNode = (name) => {
+  let newNode = document.createElement("a");
+  newNode.innerHTML = name;
+  return newNode;
+}
+selectedNavLinks.prepend(createNewNode("Welcome!"));
+selectedNavLinks.append(createNewNode("Goodbye!"));
