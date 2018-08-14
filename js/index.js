@@ -39,23 +39,43 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"]);
+logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
 //Update Navigation Tab content
-let navTabs = document.querySelectorAll("a");
-
-// add
-for (let i=0;i<navTabs.length;i++){
-  let navTabSelectorName = "nav-item-"+(i+1);
-  navTabs[i].innerText = siteContent["nav"][navTabSelectorName];
-  //Change navigation bar text to green
-  navTabs.forEach(style.color = "green");
-}
+let navTabs = document.querySelectorAll(".container header nav a");
+navTabs.forEach((tabs,index) => {
+  tabs.innerText = siteContent.nav[`nav-item-${index+1}`];
+});
 
 //Add 2 new items to navigation
-let navigationSystem = document.querySelector(".container header nav");
-navigationSystem.appendChild(document.createElement("a"), document.createTextNode("Hello"));
-navigationSystem.prepend(document.createElement("a"), document.createTextNode("world"));
+let navigationSelector = document.getElementsByTagName("nav")[0];
+let createAnchorNode = (name) => {
+  let newAnchor = document.createElement("a");
+  newAnchor.innerHTML = name; 
+  return newAnchor;
+};
+navigationSelector.appendChild(createAnchorNode("World"));
+navigationSelector.prepend(createAnchorNode("Hello"));
+
+// Update navigation anchor color
+navigationSelector = Array.from(document.getElementsByTagName("a"));
+navigationSelector.forEach((tabs) => {
+  tabs.style.color = "green";
+});
+
+// navTabs.forEach()
+
+// for (let i=0;i<navTabs.length-1;i++){
+//   let navTabSelectorName = "nav-item-"+(i+1);
+//   navTabs[i].innerText = siteContent.nav[navTabSelectorName];   
+//   navTabs[i].style.color = "green";
+// }
+
+  //Change navigation bar text to green
+// navTabs.forEach(style.color = "green");
+
+
+
 
 //Update h1 contents of CTA
 let ctaText = document.querySelector("h1");
