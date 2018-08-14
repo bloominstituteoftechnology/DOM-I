@@ -95,16 +95,14 @@ aTagsInNav.map(e => e.style.color = "green");
 // *** appendChild() and prepend() items to the navigation items. ***
 const nav = $('nav');
 
-// *** createElement function for shorthand of creating a node and setting text inside of it.
-function createElement(tag, text, parent){
-  let newElement = document.createElement(tag);
-  if(text){
-    newElement.innerText = text;
-  }
-  const parentElement = $(parent);
-  return parentElement.appendChild(newElement);
-}
+// *** append ***
+let a1 = document.createElement('a');
+a1.style.color = "green";
+a1.innerText = "Careers";
+nav.appendChild(a1);
 
-// *** append an element to the nav parent element  using custom function that I made :)***
-let newATag = createElement('a', 'Career', 'nav');
-newATag.style.cssText = aTagsInNav[0].style.cssText;
+// *** prepend ***
+let a2 = document.createElement('a');
+a2.style.color = "green";
+a2.innerText = "Community";
+nav.prepend(a2);
