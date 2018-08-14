@@ -55,8 +55,8 @@ for(let i = 0; i < navElements.length ; i++) {
 
 //Added h1 text 'DOM IS AWESOME'
 const ctaFirstHeading = document.querySelector('h1');
-//ctaFirstHeading.innerHTML = 'DOM <br> IS <br> AWESOME';
-ctaFirstHeading.innerHTML = siteContent['cta']['h1'] //Not Centered
+ctaFirstHeading.innerHTML = 'DOM <br> IS <br> AWESOME';
+//ctaFirstHeading.innerHTML = siteContent['cta']['h1'] //Not Centered
 
 //Added button text 'Get Started'
 const btnText = document.querySelector('button');
