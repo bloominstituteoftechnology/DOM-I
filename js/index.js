@@ -92,17 +92,17 @@ middleImg.src = "img/mid-page-accent.jpg";
 // *** set nav text to be green ***
 aTagsInNav.map(e => e.style.color = "green");
 
-// *** appendChild() and prepend() items to the navigation items. ***
+// *** Select Nav Item ***
 const nav = $('nav');
 
 // *** append ***
-let a1 = document.createElement('a');
+const a1 = document.createElement('a');
 a1.style.color = "green";
 a1.innerText = "Careers";
 nav.appendChild(a1);
 
 // *** prepend ***
-let a2 = document.createElement('a');
+const a2 = document.createElement('a');
 a2.style.color = "green";
 a2.innerText = "Community";
 nav.prepend(a2);
