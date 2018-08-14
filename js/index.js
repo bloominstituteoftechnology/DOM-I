@@ -57,17 +57,20 @@ nav[5].innerHTML = "Contact";
 nav[5].style.color = "green";
 
 // Step 1: Create a new tag
-const newElement = document.createElement("href"+"href");
+const newElement = document.createElement("href" + "href");
 
 // Step 2: Set up the parent reference
-const containerElement = document.querySelector(".container nav");
-
+//const containerElement = document.querySelector(".container header nav");
+const navaElement = document.querySelector("nav a");
 // Step 3: appendChild or prepend the child to the parent
-containerElement.prepend(newElement);
-
+//containerElement.prepend(newElement);
+navaElement.prepend(newElement);
 // Step 4: Update the value
-newElement.innerText = "Gr8"+" "+ "" +"Gr7";
+newElement.innerText = "Gr8"+" "+ " " +"Gr7"+ "";
 newElement.style.color= "green";
+//newElement.style = "hover";
+//newElement.style.transitionProperty = ":hover";
+
 
 
 
