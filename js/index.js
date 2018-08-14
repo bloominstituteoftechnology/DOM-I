@@ -48,8 +48,20 @@ let midImg = document.getElementById('middle-img');
 midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 
+let textContentList = document.querySelectorAll(".text-content");
+textContentList[0].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["features-h4"];
+textContentList[0].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["features-content"];
+textContentList[1].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["about-h4"];
+textContentList[1].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["about-content"];
+textContentList[2].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["services-h4"];
+textContentList[2].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["services-content"];
+textContentList[3].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["product-h4"];
+textContentList[3].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["product-content"];
+textContentList[4].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["vision-h4"];
+textContentList[4].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["vision-content"];
 
-
-
-
-
+let contact = document.getElementsByClassName("contact")[0];
+contact.getElementsByTagName("h4")[0].innerHTML = siteContent["contact"]["contact-h4"]
+contact.getElementsByTagName("p")[0].innerHTML = siteContent["contact"]["address"]
+contact.getElementsByTagName("p")[1].innerHTML = siteContent["contact"]["phone"]
+contact.getElementsByTagName("p")[2].innerHTML = siteContent["contact"]["email"]
