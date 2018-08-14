@@ -54,6 +54,7 @@ document.querySelector('.reset-btn').addEventListener('click', function(){
     }, 20);
     isFinished = false;
     start.innerText = 'Start Clock';
+    start.style.background = 'green';
 });
 
 // Function that resets the timer
