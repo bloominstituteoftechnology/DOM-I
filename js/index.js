@@ -41,12 +41,13 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-
+// --- Nav bar ---
 let navLinks = document.querySelectorAll('nav a');
 navLinks.forEach((link, i) => {
   link.innerHTML = siteContent['nav'][`nav-item-${i+1}`];
 });
 
+// --- CTA ---
 let ctaText = document.getElementsByClassName('cta-text')[0];
 let ctaTextHead = ctaText.querySelector('h1');
 ctaTextHead.innerHTML = siteContent['cta']['h1'];
@@ -55,9 +56,32 @@ ctaTextBtn.innerHTML = siteContent['cta']['button'];
 let ctaImg = document.getElementById('cta-img');
 ctaImg.setAttribute('src', siteContent['cta']['img-src']);
 
+// --- Main Content Text---
+let textContent = document.querySelectorAll('.text-content'); //Node list (array-like) of all elements with class 'text-content'
 
+textContent[0].getElementsByTagName('h4')[0].innerHTML = siteContent['main-content']['features-h4'];
+textContent[0].getElementsByTagName('p')[0].innerHTML = siteContent['main-content']['features-content'];
+textContent[1].getElementsByTagName('h4')[0].innerHTML = siteContent['main-content']['about-h4'];
+textContent[1].getElementsByTagName('p')[0].innerHTML = siteContent['main-content']['about-content'];
+textContent[2].getElementsByTagName('h4')[0].innerHTML = siteContent['main-content']['services-h4'];
+textContent[2].getElementsByTagName('p')[0].innerHTML = siteContent['main-content']['features-content'];
+textContent[3].getElementsByTagName('h4')[0].innerHTML = siteContent['main-content']['product-h4'];
+textContent[3].getElementsByTagName('p')[0].innerHTML = siteContent['main-content']['product-content'];
+textContent[4].getElementsByTagName('h4')[0].innerHTML = siteContent['main-content']['vision-h4'];
+textContent[4].getElementsByTagName('p')[0].innerHTML = siteContent['main-content']['vision-content'];
 
+// --- Main Content Image ---
+let middleImg = document.getElementById('middle-img');
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
+// --- Contact ---
+let contact = document.getElementsByClassName('contact')[0];
 
+contact.getElementsByTagName('h4')[0].innerHTML = siteContent['contact']['contact-h4'];
+contact.getElementsByTagName('p')[0].innerHTML = siteContent['contact']['address'];
+contact.getElementsByTagName('p')[1].innerHTML = siteContent['contact']['phone'];
+contact.getElementsByTagName('p')[2].innerHTML = siteContent['contact']['email'];
 
-
+// --- Footer ---
+let footer = document.querySelector("footer");
+footer.getElementsByTagName("p")[0].innerHTML = siteContent["footer"]["copyright"];
