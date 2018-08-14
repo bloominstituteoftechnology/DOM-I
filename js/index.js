@@ -52,11 +52,13 @@ const nav7 = document.createElement('a');
 const welcome = document.querySelector('nav');
 welcome.prepend(nav7);
 nav7.innerText = "Welcome";
+nav7.style.color = 'green';
 
 const nav8 = document.createElement('a');
 const closing = document.querySelector('nav');
 closing.append(nav8);
 nav8.innerText = "Goodbye";
+nav8.style.color = 'green';
 
 //CTA
 const shout = document.querySelector('h1');
