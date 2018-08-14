@@ -108,7 +108,9 @@ let homeNav = document.querySelector("nav");
 
 homeNav.appendChild(navA);
 navA.innerHTML = "Help";
+navA.style.color = "green";
 
 let navB = document.createElement("a");
 homeNav.prepend(navB);
 navB.innerHTML = "IR";
+navB.style.color = "green";
