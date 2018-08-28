@@ -37,7 +37,31 @@ const siteContent = {
   },
 };
 
+
+//document.getElementById('idName');
+//document.getElementsByClassName('className');
+//document.querySelector('queryString');
+
+//Nav Bar
+const a = document.getElementsByTagName('a');
+a[0].innerHTML = "Services";
+a[1].innerHTML = "Product";
+a[2].innerHTML = "Vision";
+a[3].innerHTML = "Features";
+a[4].innerHTML = "About";
+a[5].innerHTML = "Contact";
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
-//
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+
+//cta
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"]) ;
+
+//Main
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent[""]["img-src"]);
+
+
+
