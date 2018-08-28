@@ -81,4 +81,9 @@ const anchorFAQ = document.createElement("A");
 const faqText = document.createTextNode("FAQ");
 anchorFAQ.appendChild(faqText);
 anchorFAQ.style.color = "green";
-document.getElementsByTagName("nav")[0].appendChild(anchorFAQ)
+document.getElementsByTagName("nav")[0].appendChild(anchorFAQ);
+const home = document.createElement("A");
+const homeText = document.createTextNode("Home");
+home.prepend(homeText)
+home.style.color = "green";
+document.getElementsByTagName("nav")[0].prepend(home);
