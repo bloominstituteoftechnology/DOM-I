@@ -1,3 +1,4 @@
+const cl = console.log;
 const siteContent = {
   "nav": {
     "nav-item-1": "Services",
@@ -38,5 +39,26 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+//This is the header section
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+let navBarA = document.querySelectorAll('nav a');
+navBarA.forEach(function(obj, i){
+  obj.innerHTML = siteContent.nav["nav-item-" + (i+1)]
+});
+//This beginsthe class cta section
+let hOneCta = document.querySelector(".cta-text h1");
+hOneCta.innerHTML = "DOM Is Awesome";
+let btnCta = document.querySelector(".cta-text button");
+btnCta.innerHTML ="Get Started";
+
+
+let ctaImg = document.getElementById("cta-img");
+ctaImg.src = "img/header-img.png";
+
+let midImg = document.getElementById("middle-img");
+midImg.src="img/mid-page-accent.jpg";
+
+
+
