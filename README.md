@@ -9,9 +9,9 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 
 ## Task 1: Set Up The Project With Git
 
-* [ ] Fork the project into your GitHub user account
-* [ ] Clone the forked project into a directory on your machine
-* [ ] You are now ready to build this project with your preferred IDE
+* [x] Fork the project into your GitHub user account
+* [x] Clone the forked project into a directory on your machine
+* [x] You are now ready to build this project with your preferred IDE
 
 ## Task 2: Create selectors to point your data into elements
 * [ ] Create selectors by using any of the DOM element's methods
@@ -20,7 +20,7 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 ## Task 3: Update the HTML with the JSON data
 * [ ] Remember, NO direct updating of the HTML source is allowed.
 * [ ] Using your selectors, update the content to match the example file.
-* [ ] Remember to update the src attributes on images
+* [x] Remember to update the src attributes on images
 
 ## Task 4: Add new content
 * [ ] Change the color of the navigation text to be green.
