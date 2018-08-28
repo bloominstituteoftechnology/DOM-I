@@ -50,3 +50,25 @@ const ctaImg = document.getElementById("cta-img");
 ctaH1.innerHTML = siteContent.cta.h1;
 ctaButton.innerHTML = siteContent.cta.button;
 ctaImg.src = siteContent.cta["img-src"];
+const addHtmlToSection = function(contentArea, arrayOfContentNames) {
+    const content = document.querySelectorAll(`.${contentArea} .text-content`);
+    content.forEach((item, index)    =>  {
+        let h4 = item.querySelector(`h4`)
+        let p = item.querySelector(`p`)
+        h4.innerHTML = siteContent["main-content"][`${arrayOfContentNames[index]}-h4`];
+        p.innerHTML = siteContent["main-content"][`${arrayOfContentNames[index]}-content`];
+    });
+}
+addHtmlToSection("top-content", ["features", "about"]);
+addHtmlToSection("bottom-content", ["services", "product", "vision"]);
+const middleImg = document.getElementById("middle-img")
+middleImg.src = siteContent["main-content"]["middle-img-src"];
+const contactH4 = document.querySelector(".contact h4");
+const contactP = document.querySelectorAll(".contact p");
+contactH4.innerHTML = siteContent.contact["contact-h4"];
+contactP.forEach((item, index) =>  {
+    const contactInfoArr = ["address", "phone", "email"];
+    return item.innerHTML = siteContent.contact[contactInfoArr[index]]
+})
+const footer = document.querySelector("footer p");
+footer.innerHTML = siteContent.footer.copyright;
