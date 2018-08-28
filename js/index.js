@@ -53,6 +53,25 @@ document.querySelector('.cta .cta-text button').innerText = siteContent["cta"]["
 let ctaImg = document.getElementById('cta-img');
 ctaImg.setAttribute( 'src', siteContent["cta"]["img-src"] );
 
-// main-content": {"features-h4", "features-content", "about-h4", "about-content",
-// "middle-img-src", "services-h4", "services-content", "product-h4", 
-// "product-content", "vision-h4", "vision-content"
+// main-content": "middle-img-src"
+
+let textContentH4 = document.querySelectorAll('.text-content h4');
+let textContentP = document.querySelectorAll('.text-content p');
+
+textContentH4[0].innerText  = siteContent['main-content']['features-h4'];
+textContentP[0].innerText   = siteContent['main-content']['features-content'];
+
+textContentH4[1].innerText  = siteContent['main-content']['about-h4'];
+textContentP[1].innerText   = siteContent['main-content']['about-content'];
+
+textContentH4[2].innerText  = siteContent['main-content']['services-h4'];
+textContentP[2].innerText   = siteContent['main-content']['services-content'];
+
+textContentH4[3].innerText  = siteContent['main-content']['product-h4'];
+textContentP[3].innerText   = siteContent['main-content']['product-content'];
+
+textContentH4[4].innerText  = siteContent['main-content']['vision-h4'];
+textContentP[4].innerText   = siteContent['main-content']['vision-content'];
+
+let textContentImg = document.getElementById('middle-img');
+textContentImg.setAttribute( 'src', siteContent["main-content"]["middle-img-src"] );
