@@ -94,3 +94,18 @@ for (i = 0; i < mainContentValuesTitles.length; i++) {
   h4[i].innerHTML = mainContentValuesTitles[i];
   p[i].innerHTML = mainContentValuesParagraphs[i];
 }
+
+let mainNav = document.getElementById('main-nav');
+
+let appender = document.createElement('a');
+appender.innerHTML = 'Help';
+mainNav.appendChild(appender);
+
+let prepender = document.createElement('a');
+prepender.innerHTML = 'FAQ';
+mainNav.prepend(prepender);
+
+let a = mainNav.querySelectorAll('a');
+for (i = 0; i < a.length; i++) {
+  a[i].style.color = 'green';
+}
