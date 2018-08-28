@@ -52,6 +52,7 @@ navItems[3].innerHTML = siteContent['nav']['nav-item-4'];
 navItems[4].innerHTML = siteContent['nav']['nav-item-5'];
 navItems[5].innerHTML = siteContent['nav']['nav-item-6'];
 
+
 let ctaHeader = document.querySelector('h1');
 ctaHeader.innerHTML = siteContent['cta']['h1'];
 
@@ -83,3 +84,15 @@ contactInfo[2].innerHTML = siteContent['contact']['email'];
 
 let copyright = document.querySelector('footer p');
 copyright.innerHTML = siteContent['footer']['copyright'];
+
+for (let i = 0; i < navItems.length; i++) {
+    navItems[i].style.color = 'green';
+};
+let newNavItem1 = document.createElement('A');
+let newNavItem2 = document.createElement('A');
+newNavItem1.innerHTML = 'Blog';
+newNavItem2.innerHTML = 'Home';
+document.querySelector('nav').appendChild(newNavItem1);
+document.querySelector('nav').prepend(newNavItem2);
+newNavItem1.style.color = 'green';
+newNavItem2.style.color = 'green';
