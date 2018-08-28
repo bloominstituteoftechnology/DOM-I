@@ -39,7 +39,7 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 
-//*****************Header *************** */
+//*****************Header / Navigation*************** */
 let navItems = document.querySelector('nav').children;
 navItems[0].textContent = siteContent["nav"]["nav-item-1"];
 navItems[1].textContent = siteContent["nav"]["nav-item-2"];
@@ -50,6 +50,11 @@ navItems[5].textContent = siteContent["nav"]["nav-item-6"];
 
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+//change color of navigation text to green
+Array.from(navItems).forEach((navItem) => {
+  navItem.style.color = 'green';
+});
 
 //***************Section - .cta *********************/
 let cta_h1 = document.querySelector(".cta-text h1");
