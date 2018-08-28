@@ -92,8 +92,11 @@ for (i = 0; i < mainContentValuesTitles.length; i++) {
   let h4 = document.querySelectorAll('h4');
   let p = document.querySelectorAll('p');
   h4[i].innerHTML = mainContentValuesTitles[i];
+  h4[i].style.color = '#154360';
+  h4[i].style.fontSize = '20px';
   p[i].innerHTML = mainContentValuesParagraphs[i];
 }
+
 
 let mainNav = document.getElementById('main-nav');
 
@@ -109,3 +112,16 @@ let a = mainNav.querySelectorAll('a');
 for (i = 0; i < a.length; i++) {
   a[i].style.color = 'green';
 }
+
+buttonClass = document.querySelector('button');
+buttonClass.setAttribute('class', 'button');
+
+buttonClass.addEventListener('click', () => {
+  h1 = document.querySelector('h1');
+  if (h1.innerHTML === "DOM<br>Is<br>Awesome") {
+  h1.innerHTML = "Innovation<br>On<br>Demand";
+} else {
+  h1.innerHTML = "DOM<br>Is<br>Awesome";
+}
+})
+
