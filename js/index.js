@@ -43,12 +43,12 @@ let navbar = document.querySelectorAll("nav a");
 // Update navigation text
 for (let i = 0; i < navbar.length; i++){
   navbar[i].innerHTML = siteContent["nav"]["nav-item-" + (i + 1)];
-}
+};
 
 // Update navigation color
 for (let i = 0; i < navbar.length; i++){
   navbar[i].style.color = "green";
-}
+};
 
 // Create new navigation elements
 let newNavElement1 = document.createElement("a");
@@ -59,7 +59,7 @@ newNavElement2.innerHTML = "Careers";
 
 // Add new navigation elements to nav
 let newNav = document.querySelector('nav');
-newNav.appendChild(newNavElement1);
+newNav.prepend(newNavElement1);
 newNav.appendChild(newNavElement2);
 
 // Logo image
@@ -73,6 +73,8 @@ ctaText.innerHTML = siteContent["cta"]["h1"];
 // CTA button
 let ctaButton = document.querySelector(".cta-text button");
 ctaButton.innerHTML = siteContent["cta"]["button"];
+ctaButton.style.background = "black";
+ctaButton.style.color = "white"
 
 // CTA image
 let ctaimg = document.getElementById("cta-img");
@@ -87,6 +89,16 @@ topContentHeader[1].innerHTML = siteContent["main-content"]["about-h4"];
 let topContentText = document.querySelectorAll(".main-content .top-content p");
 topContentText[0].innerHTML = siteContent["main-content"]["features-content"];
 topContentText[1].innerHTML = siteContent["main-content"]["about-content"];
+
+let mainContentHeaders = document.querySelectorAll(".main-content h4");
+for (let i = 0; i < mainContentHeaders.length; i++) {
+  mainContentHeaders[i].style.fontSize = "20px";
+};
+
+let mainContentText = document.querySelectorAll(".main-content p");
+for (let i = 0; i < mainContentText.length; i++) {
+  mainContentText[i].style.lineHeight = "20px";
+};
 
 // Middle image
 let midimg = document.getElementById("middle-img");
