@@ -46,6 +46,7 @@ nav.forEach((element, index)   =>  {
     return element.innerHTML = siteContent.nav[`nav-item-${index + 1}`];
 });
 const ctaH1 = document.querySelector(".cta .cta-text h1");
+siteContent.cta.h1 = siteContent.cta.h1.split(" ").join("<br>")
 const ctaButton = document.querySelector(".cta .cta-text button")
 const ctaImg = document.getElementById("cta-img");
 ctaH1.innerHTML = siteContent.cta.h1;
@@ -87,3 +88,29 @@ const homeText = document.createTextNode("Home");
 home.prepend(homeText)
 home.style.color = "green";
 document.getElementsByTagName("nav")[0].prepend(home);
+const youDontHaveTheGuts = document.createElement("DIV");
+youDontHaveTheGuts.style.display = "flex";
+youDontHaveTheGuts.style["justify-content"] = "center";
+youDontHaveTheGuts.style["align-items"] = "center";
+youDontHaveTheGuts.style.width = "200px";
+youDontHaveTheGuts.style.height = "50px";
+youDontHaveTheGuts.style.margin = "0 auto";
+youDontHaveTheGuts.style.border = "1px solid black"
+youDontHaveTheGuts.style["margin-bottom"] = "20px";
+const youDontHaveTheGutsText = document.createTextNode("You won't hover me");
+youDontHaveTheGuts.appendChild(youDontHaveTheGutsText);
+document.querySelector(".container").appendChild(youDontHaveTheGuts);
+const body = document.querySelector("body");
+youDontHaveTheGuts.addEventListener("mouseover", () =>  {
+
+    body.style.background = "purple";
+    body.style.color = "white";
+    youDontHaveTheGuts.style["border-color"] = "white";
+    youDontHaveTheGuts.style["border-radius"] = "45px"
+});
+youDontHaveTheGuts.addEventListener("mouseout", ()  =>  {
+    body.style.background = "white";
+    body.style.color = "black";
+    youDontHaveTheGuts.style["border-color"] = "black"
+    youDontHaveTheGuts.style["border-radius"] = "0";
+})
