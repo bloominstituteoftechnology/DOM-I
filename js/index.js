@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM<br>Is<br>Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "123 Way 456 Street<br>Somewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -40,3 +40,57 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const createID = (className, id) => {
+  document.querySelector(className).setAttribute('id', id);
+}
+
+createID('nav', 'main-nav');
+createID('.cta-text', 'ctaText');
+createID('.contact', 'contact');
+createID('footer', 'footer');
+
+const renderElements = (obj, id) => {
+  let ListValues = Object.values(obj);
+  let ListKeys = Object.keys(obj);
+  let curID = document.getElementById(id);
+  for (i = 0; i < curID.children.length; i++) {
+    curID.children[i].innerHTML = ListValues[i];
+  }
+}
+
+renderElements(siteContent.nav, 'main-nav');
+renderElements(siteContent.cta, 'ctaText');
+renderElements(siteContent.contact, 'contact');
+renderElements(siteContent.footer, 'footer');
+
+
+const ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+const middleImg = document.getElementById('middle-img');
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+const textContent = document.querySelectorAll('.text-content');
+
+let mainContent = siteContent['main-content'];
+delete mainContent['middle-img-src'];
+
+let mainContentValues = Object.values(mainContent);
+let mainContentValuesTitles = [];
+let mainContentValuesParagraphs = [];
+
+for (i = 0; i < mainContentValues.length; i++) {
+  if(i%2 === 0) {
+    mainContentValuesTitles.push(mainContentValues[i]);
+  }
+  else {
+    mainContentValuesParagraphs.push(mainContentValues[i]);
+  }
+}
+
+for (i = 0; i < mainContentValuesTitles.length; i++) {
+  let h4 = document.querySelectorAll('h4');
+  let p = document.querySelectorAll('p');
+  h4[i].innerHTML = mainContentValuesTitles[i];
+  p[i].innerHTML = mainContentValuesParagraphs[i];
+}
