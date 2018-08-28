@@ -53,7 +53,7 @@ document.querySelector('.cta .cta-text button').innerText = siteContent["cta"]["
 let ctaImg = document.getElementById('cta-img');
 ctaImg.setAttribute( 'src', siteContent["cta"]["img-src"] );
 
-// main-content": "middle-img-src"
+// main-content
 
 let textContentH4 = document.querySelectorAll('.text-content h4');
 let textContentP = document.querySelectorAll('.text-content p');
@@ -75,3 +75,16 @@ textContentP[4].innerText   = siteContent['main-content']['vision-content'];
 
 let textContentImg = document.getElementById('middle-img');
 textContentImg.setAttribute( 'src', siteContent["main-content"]["middle-img-src"] );
+
+
+// "contact"
+document.querySelector('.contact h4').innerText = siteContent['contact']['contact-h4'];
+
+let contactP = document.querySelectorAll('.contact p');
+contactP[0].innerText = siteContent['contact']['address'];
+contactP[1].innerText = siteContent['contact']['phone'];
+contactP[2].innerText = siteContent['contact']['email'];
+
+
+// "footer"
+document.querySelector('footer p').innerText = siteContent['footer']['copyright'];
