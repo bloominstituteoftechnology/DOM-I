@@ -49,13 +49,24 @@ midPageLogo.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
 //Navigation
 const navitems = ["Services", "Product", "Vision", "Features", "About", "Contact"];
-let nav = document.querySelectorAll("a");
+let navAnchor = document.querySelectorAll("a");
 for (let i = 0; i < navitems.length; i ++){
-  nav[i].innerText = navitems[i];
+  navAnchor[i].innerText = navitems[i];
   //green nav
-  nav[i].style.color = "green";
+  navAnchor[i].style.color = "green";
 }
 
+//add two new items
+//both items will not stay at same time...that's weird
+let nav = document.querySelector("nav");
+let navAdd = document.createElement("li");
+let secondNavAdd = document.createElement("li");
+navAdd.innerHTML = "Hey I just got added!"
+secondNavAdd.innerHTML = "me too!!"
+console.log(nav);
+console.log(navAdd);
+nav.prepend(navAdd);
+nav.appendChild(secondNavAdd);
 
 //Dom is Awesome heading
 let h1 = document.querySelector("h1");
