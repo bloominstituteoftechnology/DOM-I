@@ -40,3 +40,66 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// NAV  LINKS
+const aTag    = document.querySelectorAll('nav a'),
+      aTagArray   = Array.from(aTag);
+
+  for (let i=0; i<aTagArray.length; i++){
+    const string = `nav-item-${i+1}`;
+    aTagArray[i].innerHTML = siteContent['nav'][string] ;
+  };
+
+  // SECTION CLASS CTA
+
+  const h1Cta   = document.querySelector('.cta-text h1'),
+        btnCta  = document.querySelector('.cta-text button'),
+        imgCta  = document.querySelector('#cta-img');
+
+        h1Cta.innerHTML   = siteContent['cta']['h1'] ;
+        btnCta.innerHTML  = siteContent['cta']['button'] ;
+        imgCta.src        = siteContent['cta']['img-src'] ;
+
+
+// SECTION CLASS MAIN CONTENT
+   
+      const h4TopContent    = document.querySelectorAll('.main-content .top-content .text-content h4'),
+            pTopContent     = document.querySelectorAll('.main-content .top-content .text-content p'),
+            img             = document.querySelector('.main-content .middle-img');
+            h4BottomContent = document.querySelectorAll('.main-content .bottom-content .text-content h4'),
+            pBottomContent  = document.querySelectorAll('.main-content .bottom-content .text-content p');
+            let imge        = document.querySelector('.main-content .middle-img');
+
+            h4TopContent[0].innerHTML     = siteContent['main-content']['features-h4'];
+            pTopContent[0].innerHTML      = siteContent['main-content']['features-content'];
+            h4TopContent[1].innerHTML     = siteContent['main-content']['about-h4'];
+            pTopContent[1].innerHTML      = siteContent['main-content']['about-content'];
+            img.src                       = siteContent['main-content']['middle-img-src'];
+            h4BottomContent[0].innerHTML      = siteContent['main-content']['services-h4'];
+            pBottomContent [0].innerHTML      = siteContent['main-content']['services-content'];
+            h4BottomContent [1].innerHTML     = siteContent['main-content']['product-h4'];
+            pBottomContent [1].innerHTML      = siteContent['main-content']['product-content'];
+            h4BottomContent [2].innerHTML     = siteContent['main-content']['vision-h4'];
+            pBottomContent [2].innerHTML      = siteContent['main-content']['vision-content'];
+
+// SECTION CLASS  CONTACT
+
+const h4Contact    = document.querySelector('.contact h4'),
+      pContact     = document.querySelectorAll('.contact p');
+
+      h4Contact.innerHTML       = siteContent['contact']['contact-h4'];
+      pContact[0].innerHTML     = siteContent['contact']['address'];
+      pContact[1].innerHTML     = siteContent['contact']['phone'];
+      pContact[2].innerHTML     = siteContent['contact']['email'];
+
+// FOOTER
+
+const pFooter  = document.querySelector('footer');
+
+      pFooter.innerHTML = siteContent['footer']['copyright'];
+
+     
+   
+  
+
+
