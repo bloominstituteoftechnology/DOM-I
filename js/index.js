@@ -72,3 +72,6 @@ contactP.forEach((item, index) =>  {
 })
 const footer = document.querySelector("footer p");
 footer.innerHTML = siteContent.footer.copyright;
+nav.forEach((item)  =>  {
+    return item.style.color = "green";
+});
