@@ -25,11 +25,11 @@ const siteContent = {
     "main-top-content-2":
       "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "middle-img-src": "img/mid-page-accent.jpg",
-    "services-content":
+    "bottom-content-1":
       "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "product-content":
+    "bottom-content-2":
       "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "vision-content":
+    "bottom-content-3":
       "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
   },
   contact: {
@@ -82,7 +82,6 @@ const  navItem = document.querySelector('nav');
 ap.innerHTML = 'Pre-Order';
 ap.style.color = "limegreen";
 navItem.prepend(ap);
-console.log(ap)
 
 
 
@@ -126,10 +125,28 @@ const btmCtn = bottom.map((element, arr) => {
   element.innerHTML = siteContent['main-content'][`man-btm-${arr + 1}`]
 });
 
+const bottomCtn = Array.from(document.querySelectorAll(".main-content .bottom-content p"));
+const btmText = bottomCtn.map((element, arr ) => { element.innerHTML = siteContent['main-content'][`bottom-content-${arr +1}`]})
+
+
+
+// Tried out a suggestion for regex expression this time regarding chaining the contact information.
+const contactInfo = document.getElementsByClassName("contact")[0];
+contactInfo.children[0].innerHTML = siteContent.contact["contact-h4"];
+const breaks = /Street/gi;
+const addressText = siteContent.contact.address.replace(breaks, "Street<p>");
+contactInfo.children[1].innerHTML = addressText;
+contactInfo.children[2].innerHTML = siteContent.contact.phone;
+contactInfo.children[3].innerHTML = siteContent.contact.email;
+
+//Footer and its done
+const footer = document.querySelector("footer p");
+footer.innerHTML = siteContent.footer["copyright"];
+console.log(footer);
 
 // const navigation = nav.map((element, arr) => {
 //   element.innerHTML = siteContent.nav[`nav-item-${arr + 1}`];
 // });
 // let main2 = document.querySelector("h4");
 // main2.innerHTML = siteContent["main-content"]["about-h4"];
-console.log(content);
+
