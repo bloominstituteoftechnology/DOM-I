@@ -37,9 +37,50 @@ const siteContent = {
   },
 };
 
+console.log("Test");
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-// Task 2 Create Selectors
+// Task 2: Create Selectors
+
+
+// Container
+let Container = document.getElementsByClassName("container");
+console.log(Container);
+
+// Navigation
+let Nav = document.getElementsByTagName("nav");
+console.log(Nav);
+
+	// Anchor tags of Nav
+	let nAnchor = document.getElementsByTagName("a");
+	console.log(nAnchor);
+
+// CTA
+let CTA = document.getElementsByClassName("cta");
+console.log(CTA);
+
+// Main Content
+let MainContent = document.getElementsByClassName("main-content");
+console.log(MainContent);
+
+// Contact Info
+let Contact = document.getElementsByClassName("contact");
+console.log(Contact);
+
+// Task 3: Update HTML with JSON data
+
+// Get the Nav bar text-menu on the page
+for(let i=1;i<7;i++){
+	nAnchor[i-1].innerHTML = siteContent["nav"]["nav-item-"+i];
+	console.log(nAnchor[i-1]);
+}
+
+
+
+
+// Task 4: Add new content
+
 
