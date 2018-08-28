@@ -46,7 +46,22 @@ for(let item in siteContent.nav){
 for(let i = 0; i < nav.children.length; i++){
   const index = navItems[i];
   nav.children[i].innerHTML = siteContent.nav[index];
+  nav.children[i].style.color = 'green';
 }
+
+// Add Future nav anchor
+const futureAnchor = document.createElement('a');
+futureAnchor.setAttribute('href', '#');
+futureAnchor.innerHTML = 'Future';
+futureAnchor.style.color = 'green';
+nav.prepend(futureAnchor);
+
+// Add Past nav anchor
+const pastAnchor = document.createElement('a');
+pastAnchor.setAttribute('href', '#');
+pastAnchor.innerHTML = 'Past';
+pastAnchor.style.color = 'green';
+nav.appendChild(pastAnchor);
 
 // Great Idea logo
 let logo = document.getElementById("logo-img");
