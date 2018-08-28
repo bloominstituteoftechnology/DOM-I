@@ -37,7 +37,7 @@ const siteContent = {
   },
 };
 
-// Add nav text
+// Nav Anchors
 const nav = document.getElementsByTagName('nav')[0];
 const navItems = [];
 for(let item in siteContent.nav){
@@ -48,15 +48,49 @@ for(let i = 0; i < nav.children.length; i++){
   nav.children[i].innerHTML = siteContent.nav[index];
 }
 
-// Add Great Idea logo
+// Great Idea logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-// Add text to 'Dom Is Awesome' in header
+// 'Dom Is Awesome' Header
 const diaHeader = document.getElementsByClassName('cta-text')[0];
-diaHeader.children[0].innerHTML = siteContent.cta.h1;
+const regex1 = /DOM/g;
+const regex2 = /is/gi;
+const headerText = siteContent.cta.h1.replace(regex1, 'DOM<br>').replace(regex2, 'is<br>');
+diaHeader.children[0].innerHTML = headerText;
 diaHeader.children[1].innerHTML = siteContent.cta.button;
 
-// Add cta image
+// 'Dom Is Awesome' image
 const headerImage = document.getElementById('cta-img');
 headerImage.setAttribute('src', siteContent.cta["img-src"]);
+
+// Page Content
+const textContent = document.getElementsByClassName('text-content');
+textContent[0].children[0].innerHTML = siteContent["main-content"]["features-h4"];
+textContent[0].children[1].innerHTML = siteContent["main-content"]["features-content"];
+textContent[1].children[0].innerHTML = siteContent["main-content"]["about-h4"];
+textContent[1].children[1].innerHTML = siteContent["main-content"]["about-content"];
+textContent[2].children[0].innerHTML = siteContent["main-content"]["services-h4"];
+textContent[2].children[1].innerHTML = siteContent["main-content"]["services-content"];
+textContent[3].children[0].innerHTML = siteContent["main-content"]["product-h4"];
+textContent[3].children[1].innerHTML = siteContent["main-content"]["product-content"];
+textContent[4].children[0].innerHTML = siteContent["main-content"]["vision-h4"];
+textContent[4].children[1].innerHTML = siteContent["main-content"]["vision-content"];
+
+
+// Page Image
+const pageImage = document.getElementById('middle-img');
+pageImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+// Contact Information
+const contactInfo = document.getElementsByClassName('contact')[0];
+contactInfo.children[0].innerHTML = siteContent.contact["contact-h4"];
+const regex = /Street/gi;
+const addressText = siteContent.contact.address.replace(regex, 'Street<br>');
+contactInfo.children[1].innerHTML = addressText;
+contactInfo.children[2].innerHTML = siteContent.contact.phone;
+contactInfo.children[3].innerHTML = siteContent.contact.email;
+
+// Footer
+const footerContent = document.getElementsByTagName('footer')[0];
+footerContent.children[0].innerHTML = siteContent.footer.copyright;
