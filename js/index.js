@@ -39,12 +39,28 @@ const siteContent = {
 
 // Navigation
 let navbar = document.querySelectorAll("nav a");
-navbar[0].innerHTML = siteContent["nav"]["nav-item-1"];
-navbar[1].innerHTML = siteContent["nav"]["nav-item-2"];
-navbar[2].innerHTML = siteContent["nav"]["nav-item-3"];
-navbar[3].innerHTML = siteContent["nav"]["nav-item-4"];
-navbar[4].innerHTML = siteContent["nav"]["nav-item-5"];
-navbar[5].innerHTML = siteContent["nav"]["nav-item-6"];
+
+// Update navigation text
+for (let i = 0; i < navbar.length; i++){
+  navbar[i].innerHTML = siteContent["nav"]["nav-item-" + (i + 1)];
+}
+
+// Update navigation color
+for (let i = 0; i < navbar.length; i++){
+  navbar[i].style.color = "green";
+}
+
+// Create new navigation elements
+let newNavElement1 = document.createElement("a");
+newNavElement1.innerHTML = "Blog";
+
+let newNavElement2 = document.createElement("a");
+newNavElement2.innerHTML = "Careers";
+
+// Add new navigation elements to nav
+let newNav = document.querySelector('nav');
+newNav.appendChild(newNavElement1);
+newNav.appendChild(newNavElement2);
 
 // Logo image
 let logo = document.getElementById("logo-img");
