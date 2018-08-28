@@ -1,4 +1,4 @@
-# DOM I - JavaScript Content Management System
+# DOM I - JavaScript Content Management System - Joseph Thompson
 
 ## Project Description
 You are going to be emulating a content managment system by controlling the content in the JavaScript file instead of the HTML file. This project is an excercise pointed at selecting elements and then updating them without touching the HTML file using the DOM.
@@ -32,4 +32,4 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 * [ ] Study tomorrow's lesson on events and try to integrate a button that can update content on the site with a click of a button.  You could build a similar data object with new values to help you test the click event.
 
 ## Stretch Project: Digital Timer
-This project is heavier on logic but employs some DOM manipulation to achieve it's goals.  Go check it out here: [stretch assignment](stretch-assignment) and see how far you can get. 
+This project is heavier on logic but employs some DOM manipulation to achieve it's goals.  Go check it out here: [stretch assignment](stretch-assignment) and see how far you can get.
