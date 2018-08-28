@@ -52,7 +52,10 @@ const navitems = ["Services", "Product", "Vision", "Features", "About", "Contact
 let nav = document.querySelectorAll("a");
 for (let i = 0; i < navitems.length; i ++){
   nav[i].innerText = navitems[i];
+  //green nav
+  nav[i].style.color = "green";
 }
+
 
 //Dom is Awesome heading
 let h1 = document.querySelector("h1");
