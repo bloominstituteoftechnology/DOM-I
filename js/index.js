@@ -49,3 +49,15 @@ navbar[5].innerHTML = siteContent["nav"]["nav-item-6"];
 // Logo image
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+// CTA text
+let ctaText = document.querySelector(".cta-text h1");
+ctaText.innerHTML = siteContent["cta"]["h1"];
+
+// CTA button
+let ctaButton = document.querySelector(".cta-text button");
+ctaButton.innerHTML = siteContent["cta"]["button"];
+
+// CTA image
+let ctaimg = document.getElementById("cta-img");
+ctaimg.setAttribute('src', siteContent["cta"]["img-src"]);
