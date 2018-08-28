@@ -43,21 +43,27 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let nav1 = document.querySelectorAll('div header nav a')[0];
 nav1.innerHTML = 'Services';
+nav1.style.color = 'green';
 
 let nav2 = document.querySelectorAll('div header nav a')[1];
 nav2.innerHTML = 'Product';
+nav2.style.color = 'green';
 
 let nav3 = document.querySelectorAll('div header nav a')[2];
 nav3.innerHTML = 'Vision';
+nav3.style.color = 'green';
 
 let nav4 = document.querySelectorAll('div header nav a')[3];
 nav4.innerHTML = 'Features';
+nav4.style.color = 'green';
 
 let nav5 = document.querySelectorAll('div header nav a')[4];
 nav5.innerHTML = 'About';
+nav5.style.color = 'green';
 
 let nav6 = document.querySelectorAll('div header nav a')[5];
 nav6.innerHTML = 'Contact';
+nav6.style.color = 'green';
 
 let cta = document.querySelector('.cta');
 
