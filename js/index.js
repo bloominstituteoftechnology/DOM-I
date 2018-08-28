@@ -19,7 +19,6 @@ const siteContent = {
     "man-btm-1": "Services",
     "man-btm-2": "Product",
     "man-btm-3": "Vision",
-
     "main-top-content-1":
       "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "main-top-content-2":
@@ -33,7 +32,7 @@ const siteContent = {
       "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
   },
   contact: {
-    "contact-h4": "Contact",
+  "contact-h4": "Contact",
     address: "123 Way 456 Street Somewhere, USA",
     phone: "1 (888) 888-8888",
     email: "sales@greatidea.io"
@@ -72,6 +71,7 @@ let navigation = nav.map((element, arr) => {
 // Appending to the end of the Nav List
 var a = document.createElement("a");
 const contentDiv = document.querySelector('nav');
+a.setAttribute('href', '#');
 a.innerHTML = 'Stefan';
 a.style.color = "limegreen";
 contentDiv.appendChild(a)
@@ -79,6 +79,7 @@ contentDiv.appendChild(a)
 // Pre-pending items to the Nav List
 var ap = document.createElement("a");
 const  navItem = document.querySelector('nav');
+ap.setAttribute('href','#');
 ap.innerHTML = 'Pre-Order';
 ap.style.color = "limegreen";
 navItem.prepend(ap);
@@ -143,10 +144,4 @@ contactInfo.children[3].innerHTML = siteContent.contact.email;
 const footer = document.querySelector("footer p");
 footer.innerHTML = siteContent.footer["copyright"];
 console.log(footer);
-
-// const navigation = nav.map((element, arr) => {
-//   element.innerHTML = siteContent.nav[`nav-item-${arr + 1}`];
-// });
-// let main2 = document.querySelector("h4");
-// main2.innerHTML = siteContent["main-content"]["about-h4"];
 
