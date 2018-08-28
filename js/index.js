@@ -65,6 +65,8 @@ const renderElements = (obj, id) => {
     curID.children[i].innerHTML = ListValues[i];
   }
 }
+
+// render elements that are not nested
 renderElements(siteContent.nav,'main-nav');
 renderElements(siteContent.cta, 'cta-text');
 renderElements(siteContent.contact, 'contact');
@@ -80,3 +82,52 @@ cta_img.setAttribute('src', siteContent['cta']['img-src']);
 // middle-img
 const middle_img = document.getElementById('middle-img');
 middle_img.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+// get all of the text-content areas
+const textContentList = document.querySelectorAll('.text-content');
+
+// pull data from siteContent for text-content areas
+
+let mainContent = siteContent['main-content'];
+// remove middle img src from new content
+delete mainContent['middle-img-src'];
+
+// create a values array from mainContent
+let mainContentValues = Object.values(mainContent);
+let mainContentValuesTitles = [];
+let mainContentValuesPara = [];
+
+// add titles/paragraphs to own array
+for (let i = 0; i < mainContentValues.length; i++) {
+  if(i%2 === 0) {
+    mainContentValuesTitles.push(mainContentValues[i]);
+  }
+  else {
+    mainContentValuesPara.push(mainContentValues[i]);
+  }
+}
+// push titles and paragraphs to selected sections
+for (let i = 0; i < mainContentValuesTitles.length; i++) {
+  let h4 = document.querySelectorAll('h4');
+  let p = document.querySelectorAll('p');
+  h4[i].innerHTML = mainContentValuesTitles[i];
+  p[i].innerHTML = mainContentValuesPara[i];
+}
+
+let mainNav = document.getElementById('main-nav');
+
+// append a child to nav
+let createA = document.createElement('a');
+createA.innerHTML = 'Help';
+mainNav.appendChild(createA);
+
+// prepend a child to nav
+createA.innerHTML = 'Prepend';
+mainNav.prepend(createA);
+// change color of navigation text
+
+
+let a = mainNav.querySelectorAll('a');
+for (var i = 0; i < a.length; i++) {
+  a[i].style.color = 'green';
+}
