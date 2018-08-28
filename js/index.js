@@ -37,6 +37,26 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
+// Add nav text
+const nav = document.getElementsByTagName('nav')[0];
+const navItems = [];
+for(let item in siteContent.nav){
+  navItems.push(item);
+}
+for(let i = 0; i < nav.children.length; i++){
+  const index = navItems[i];
+  nav.children[i].innerHTML = siteContent.nav[index];
+}
+
+// Add Great Idea logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+// Add text to 'Dom Is Awesome' in header
+const diaHeader = document.getElementsByClassName('cta-text')[0];
+diaHeader.children[0].innerHTML = siteContent.cta.h1;
+diaHeader.children[1].innerHTML = siteContent.cta.button;
+
+// Add cta image
+const headerImage = document.getElementById('cta-img');
+headerImage.setAttribute('src', siteContent.cta["img-src"]);
