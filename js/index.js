@@ -128,6 +128,33 @@ let VisionH4 = BottomSel[2].querySelector("h4");
 let VisionP = BottomSel[2].querySelector("p");
 VisionH4.innerHTML = siteContent["main-content"]["vision-h4"];
 VisionP.innerHTML = siteContent["main-content"]["vision-content"];
+/* END OF MAIN CONTENT*/
+
+
+/* START OF CONTACT */
+let ContactSel = document.querySelectorAll(".contact");
+console.log(ContactSel);
+let ContactH = ContactSel[0].querySelector("h4");
+let ContactP = ContactSel[0].querySelectorAll("p");
+console.log(ContactH);
+console.log(ContactP);
+
+ContactH.innerHTML = siteContent["contact"]["contact-h4"];
+ContactP[0].innerHTML = siteContent["contact"]["address"];
+ContactP[1].innerHTML = siteContent["contact"]["phone"];
+ContactP[2].innerHTML = siteContent["contact"]["email"];
+/* END OF CONTACT */
+
+/* START OF FOOTER */
+let FooterSel = document.querySelector("footer");
+let FooterP = FooterSel.querySelector("p");
+console.log(FooterSel);
+console.log(FooterP);
+FooterP.innerHTML = siteContent["footer"]["copyright"];
+//FooterSel.innerHTML = siteContent["footer"]["copyright"];
+
+
+/* END OF FOOTER */
 
 
 // Task 4: Add new content
