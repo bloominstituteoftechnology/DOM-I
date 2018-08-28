@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM <br>Is <br> Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "123 Way 456 Street <br> Somewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -37,23 +37,60 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
+
+
+let nav = document.querySelectorAll('nav a');
+for (let i=0; i<nav.length; i++) {
+        nav[i].innerHTML = siteContent.nav[`nav-item-${i+1}`];
+      }
+
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+let h1 = document.querySelector(".cta-text h1");
+h1.innerHTML = siteContent["cta"]["h1"];
+
+let button = document.querySelector('button');
+button.innerHTML = siteContent.cta['button'];
+
 let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+
+
+let arrH4 = ["features", "about", "services", "product", "vision"];
+let h4 = document.querySelectorAll(".text-content h4");
+for (let i=0; i<h4.length; i++) {
+  h4[i].innerHTML = siteContent["main-content"][`${arrH4[i]}-h4`];
+}
+
+let p = document.querySelectorAll(".text-content p");
+for (let i=0; i<p.length; i++) {
+  p[i].innerHTML = siteContent["main-content"][`${arrH4[i]}-content`];
+}
+
 
 let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 
 
-let nav = document.querySelector("nav");
-nav.setAttribute('nav', siteContent["nav"]);
-
-let header = document.querySelectorAll("header");
 
 
-let cta = document.getElementsByClassName("cta");
-cta.setAttribute('section.cta', siteContent["cta"]);
+let contactH4 = document.querySelector(".contact h4");
+contactH4.innerHTML = siteContent["contact"]["contact-h4"];
+
+let address = document.querySelectorAll(".contact p")[0];
+address.innerHTML = siteContent["contact"]["address"];
+
+let phone = document.querySelectorAll(".contact p")[1];
+phone.innerHTML = siteContent["contact"]["phone"];
+
+let email = document.querySelectorAll(".contact p")[2];
+email.innerHTML = siteContent["contact"]["email"];
+
+
+
+
+let footer = document.querySelector("footer");
+footer.innerHTML = siteContent["footer"]["copyright"];
