@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM<br> Is<br> Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -38,5 +38,82 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//***Navigation***
+const logo = document.getElementById("logo-img");
+logo.src = siteContent.nav["img-src"];
+
+const navAnchors = document.querySelectorAll('a');
+navAnchors[0].innerText = siteContent.nav["nav-item-1"];
+navAnchors[1].innerText = siteContent.nav["nav-item-2"];
+navAnchors[2].innerText = siteContent.nav["nav-item-3"];
+navAnchors[3].innerText = siteContent.nav["nav-item-4"];
+navAnchors[4].innerText = siteContent.nav["nav-item-5"];
+navAnchors[5].innerText = siteContent.nav["nav-item-6"];
+
+//***CTA***
+
+const ctaHeader = document.querySelector('h1');
+ctaHeader.innerHTML = siteContent.cta['h1'];
+const button = document.querySelector('button');
+button.innerHTML = siteContent.cta.button;
+const circleImage = document.getElementById("cta-img");
+circleImage.src = siteContent.cta["img-src"];
+
+//***Main Content***
+
+//h4
+const siteH4 = document.querySelectorAll('h4');
+siteH4[0].innerText = siteContent["main-content"]["features-h4"];
+siteH4[1].innerText = siteContent["main-content"]["about-h4"];
+siteH4[2].innerText = siteContent["main-content"]["services-h4"];
+siteH4[3].innerText = siteContent["main-content"]["product-h4"];
+siteH4[4].innerText = siteContent["main-content"]["vision-h4"];
+
+//image
+
+const middleImage = document.getElementById('middle-img');
+middleImage.src = siteContent["main-content"]["middle-img-src"];
+
+//Paragraphs
+
+const paragraphs = document.querySelectorAll('p');
+paragraphs[0].innerText = siteContent["main-content"]["features-content"];
+paragraphs[1].innerText = siteContent["main-content"]["about-content"];
+paragraphs[2].innerText = siteContent["main-content"]["services-content"];
+paragraphs[3].innerText = siteContent["main-content"]["product-content"];
+paragraphs[4].innerText = siteContent["main-content"]["vision-content"];
+
+//***Contact***
+
+//h4
+
+siteH4[5].innerText = siteContent.contact["contact-h4"];
+
+//Paragraphs
+
+paragraphs[5].innerText = siteContent.contact.address;
+paragraphs[6].innerText = siteContent.contact.phone;
+paragraphs[7].innerText = siteContent.contact.email;
+
+//***Footer*** 
+
+//Paragraphs
+
+paragraphs[8].innerText = siteContent.footer.copyright;
+
+navAnchors.forEach(item => item.style.color = 'green');
+
+const newAnchor = document.createElement('a');
+newAnchor.innerText = 'Blog';
+newAnchor.style.color = 'green';
+newAnchor.href = '#';
+const navBar = document.querySelector('nav');
+navBar.appendChild(newAnchor);
+const firstAnchor = document.createElement('a');
+firstAnchor.innerText = 'GitHub';
+firstAnchor.style.color = 'green';
+firstAnchor.href = '#';
+navBar.prepend(firstAnchor);
+
+
