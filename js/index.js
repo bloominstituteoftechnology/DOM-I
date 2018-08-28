@@ -62,10 +62,58 @@ nav6.innerHTML = 'Contact';
 let cta = document.querySelector('.cta');
 
 let ctaH1 = document.querySelector('.cta .cta-text h1');
-ctaH1.innerHTML = 'DOM Is Awesome';
+ctaH1.innerHTML = 'DOM<br>Is<br>Awesome';
 
 let button = document.querySelector('.cta .cta-text button');
 button.innerHTML = 'Get Started';
 
 let ctaImage = document.querySelector('.cta img');
 ctaImage.setAttribute('src', 'img/header-img.png');
+
+let features = document.querySelectorAll('.main-content .top-content h4')[0];
+features.innerHTML = 'Features';
+
+let featuresText = document.querySelectorAll('.main-content .top-content p')[0];
+featuresText.innerHTML = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+let about = document.querySelectorAll('.main-content .top-content h4')[1];
+about.innerHTML = 'About';
+
+let aboutText = document.querySelectorAll('.main-content .top-content p')[1];
+aboutText.innerHTML = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+let middleImg = document.querySelector('.middle-img');
+middleImg.setAttribute('src', 'img/mid-page-accent.jpg');
+
+let services = document.querySelectorAll('.main-content .bottom-content h4')[0];
+services.innerHTML = 'Services';
+
+let servicesText = document.querySelectorAll('.main-content .bottom-content p')[0];
+servicesText.innerHTML = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+let product = document.querySelectorAll('.main-content .bottom-content h4')[1];
+product.innerHTML = 'Product';
+
+let productText = document.querySelectorAll('.main-content .bottom-content p')[1];
+productText.innerHTML = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+let vision = document.querySelectorAll('.main-content .bottom-content h4')[2];
+vision.innerHTML = 'Vision';
+
+let visionText = document.querySelectorAll('.main-content .bottom-content p')[2];
+visionText.innerHTML = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+let contact = document.querySelector('.contact h4');
+contact.innerHTML = 'Contact';
+
+let address = document.querySelectorAll('.contact p')[0];
+address.innerHTML = '123 Way 456 Street<br>Somewhere, USA'
+
+let phone = document.querySelectorAll('.contact p')[1];
+phone.innerHTML = '1 (888) 888-8888';
+
+let email = document.querySelectorAll('.contact p')[2];
+email.innerHTML = 'sales@greatidea.io';
+
+let footer = document.querySelector('footer p');
+footer.innerHTML = 'Copyright Great Idea! 2018';
