@@ -11,7 +11,8 @@ const siteContent = {
   "cta": {
     "h1": "DOM<br> Is<br> Awesome",
     "button": "Get Started",
-    "img-src": "img/header-img.png"
+    "img-src": "img/header-img.png",
+    "img-src-2": "img/new-logo.png"
   },
   "main-content": {
     "features-h4":"Features",
@@ -130,3 +131,8 @@ contactDetails[2].innerHTML = siteContent["contact"]["email"];
 // Footer
 let footer = document.querySelector("footer");
 footer.innerHTML = siteContent["footer"]["copyright"];
+
+document.querySelector(".cta button").addEventListener("click", function( event ) {
+  // display the current click count inside the clicked div
+  logo.setAttribute('src', siteContent["cta"]["img-src-2"]);
+}, false);
