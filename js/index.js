@@ -77,6 +77,11 @@ ctaButton.innerHTML = siteContent["cta"]["button"];
 ctaButton.style.background = "black";
 ctaButton.style.color = "white"
 
+document.querySelector(".cta button").addEventListener("click", function( event ) {
+  // display the current click count inside the clicked div
+  logo.setAttribute('src', siteContent["cta"]["img-src-2"]);
+}, false);
+
 // CTA image
 let ctaimg = document.getElementById("cta-img");
 ctaimg.setAttribute('src', siteContent["cta"]["img-src"]);
@@ -131,8 +136,3 @@ contactDetails[2].innerHTML = siteContent["contact"]["email"];
 // Footer
 let footer = document.querySelector("footer");
 footer.innerHTML = siteContent["footer"]["copyright"];
-
-document.querySelector(".cta button").addEventListener("click", function( event ) {
-  // display the current click count inside the clicked div
-  logo.setAttribute('src', siteContent["cta"]["img-src-2"]);
-}, false);
