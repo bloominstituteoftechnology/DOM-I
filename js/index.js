@@ -40,3 +40,43 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//create an id
+const createID = (className, id) => {
+  document.querySelector(className).setAttribute('id', id);
+}
+// create an id for nav
+createID('nav', 'main-nav');
+// create an id for contact
+createID('.contact', 'contact');
+//create an id for footer
+createID('footer', 'footer');
+// create an id for  cta-text
+createID('.cta-text', 'cta-text');
+
+// render elements that do not have nested children
+const renderElements = (obj, id) => {
+  let ListValues = Object.values(obj);
+  let ListKeys = Object.keys(obj);
+  let curID = document.getElementById(id);
+
+  for (var i = 0; i < curID.children.length; i++) {
+
+    curID.children[i].innerHTML = ListValues[i];
+  }
+}
+renderElements(siteContent.nav,'main-nav');
+renderElements(siteContent.cta, 'cta-text');
+renderElements(siteContent.contact, 'contact');
+renderElements(siteContent.footer, 'footer');
+
+
+// change the src files for each image
+
+// cta-img
+const cta_img = document.getElementById('cta-img');
+cta_img.setAttribute('src', siteContent['cta']['img-src']);
+
+// middle-img
+const middle_img = document.getElementById('middle-img');
+middle_img.setAttribute('src', siteContent['main-content']['middle-img-src']);
