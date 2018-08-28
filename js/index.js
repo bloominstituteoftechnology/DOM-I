@@ -47,6 +47,20 @@ navItem[2].innerHTML = siteContent["nav"]["nav-item-3"]
 navItem[3].innerHTML = siteContent["nav"]["nav-item-4"]
 navItem[4].innerHTML = siteContent["nav"]["nav-item-5"]
 navItem[5].innerHTML = siteContent["nav"]["nav-item-6"]
+for (i = 0; i < navItem.length; i++) {
+  navItem[i].style.color = "green";
+}
+let newA = document.createElement('a');
+newA.innerHTML = "History";
+let nav = document.querySelector("nav");
+nav.appendChild(newA);
+
+let newB = document.createElement('a');
+newB.innerHTML = "Advice";
+let nav2 = document.querySelector("nav");
+nav2.prepend(newB);
+
+
 
 let h1 = document.querySelector("h1");
 h1.innerHTML = siteContent["cta"]["h1"]
@@ -79,9 +93,36 @@ p[6].innerHTML = siteContent["contact"]["phone"]
 p[7].innerHTML = siteContent["contact"]["email"]
 p[8].innerHTML = siteContent["footer"]["copyright"]
 
+//********STRETCH EXERCISE*************/
+function updateContent() {
+  if (btn.innerHTML === "add Content") {
+    btn.innerHTML = "Look, new text"
+  } else {
+    btn.innerHTML = "add Content";
+  }
+}
 
-//button.innerHTML = siteContent["cta"]["button"]
+function updateContent2() {
+  if (btn2.innerHTML === "Cool Content") {
+    btn2.innerHTML = "Not Cool Content"
+  } else {
+    btn2.innerHTML = "Cool Content";
+  }
+}
+let btn = document.createElement('button');
+btn.className = "content-btn";
+btn.innerHTML = "add Content";
+btn.addEventListener("click", updateContent);
+
+let footer = document.querySelector("footer");
+footer.appendChild(btn);
+
+let btn2 = document.createElement('button');
+btn2.className = "content-btn2";
+btn2.innerHTML = "Cool Content";
+btn2.addEventListener("click", updateContent2);
+let contact = document.querySelector("section");
+//contact.appendChild(btn);
+contact.prepend(btn2);
 
 
-//navItem = document.querySelector("a");
-//navItem.innerHTML = siteContent["nav"]["nav-item-2"]
