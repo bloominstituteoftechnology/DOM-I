@@ -56,29 +56,54 @@ document.querySelectorAll
 let logoImg = document.getElementById("logo-img");
 let header = document.querySelector('header');
 let anchors = document.getElementsByTagName('a');
+let ctaImg = document.getElementById('cta-img');
 let button = document.getElementsByTagName('button');
+let buttonText = Array.from(button)[0] ;
 let paragraphs = document.getElementsByClassName('text-content');
+let pArr = Array.from(paragraphs);
+let midImg = document.getElementsByClassName('middle-img')
 
+/* Console logs for testing variable accuracy.
+
+console.log(logoImg);
+console.log(header)
+console.log(anchors)
+console.log(ctaImg)
+console.log(button)
+console.log(buttonText)
+console.log(paragraphs)
+console.log(pArr) // Array of the array like object logged above it.
+console.log(midImg)
+
+*/
 
 /* Changes registered via DOM manipulation. */
 
+
 logoImg.src = 'img/logo.png';
 logoImg.setAttribute('src', siteContent["nav"]["img-src"])
-header.className = 'header-class';
 
 
+header.className = 'header-class'; // How to add class name to element.
 
-let pArray = Array.from(paragraphs);
-console.log(pArray);
 
-for (let i = 0; i <= pArray.length -1; i++){
-  pArray[i].innerHTML = 'some text';
+ctaImg.src = 'img/header-img.png' ;
+
+
+buttonText.innerHTML = 'Get Started';
+
+// Potential for loop for applying repetitive paragraph content.
+for (let i = 0; i <= pArr.length -1; i++){
+  pArr[i].innerHTML = 'some text';
 }
 
-Array.from(button)[0].innerHTML = 'Get Started';
-console.log(button);
 
-// This added a class name to the element, that was visible in Dev Tools.
+
+
+
+
+
+
 
 
 /*
