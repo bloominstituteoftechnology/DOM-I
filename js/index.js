@@ -42,6 +42,24 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
+let navItemOne = document.getElementsByTagName('a')[0];
+navItemOne.innerHTML = "Services";
+
+let navItemTwo = document.getElementsByTagName('a')[1];
+navItemTwo.innerHTML = "Product";
+
+let navItemThree = document.getElementsByTagName('a')[2];
+navItemThree.innerHTML = "Vision";
+
+let navItemFour = document.getElementsByTagName('a')[3];
+navItemFour.innerHTML = "Features";
+
+let navItemFive = document.getElementsByTagName('a')[4];
+navItemFive.innerHTML = "About";
+
+let navItemSix = document.getElementsByTagName('a')[5];
+navItemSix.innerHTML = "Contact";
+
 
 let circle = document.getElementById("cta-img");
 circle.setAttribute('src', siteContent["cta"]["img-src"]);
@@ -49,6 +67,12 @@ circle.setAttribute('src', siteContent["cta"]["img-src"]);
 let title = document.querySelector('h1');
 title.innerHTML = "DOM Is Awesome";
 
+
+
+
+
+
 let middleImage = document.getElementById("middle-img");
 middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
 
