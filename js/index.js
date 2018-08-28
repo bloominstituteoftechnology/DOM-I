@@ -62,6 +62,7 @@ let buttonText = Array.from(button)[0] ;
 let paragraphs = document.getElementsByClassName('text-content');
 let pArr = Array.from(paragraphs);
 let midImg = document.getElementsByClassName('middle-img')
+let imgElement = Array.from(midImg)[0];
 
 /* Console logs for testing variable accuracy.
 
@@ -79,10 +80,12 @@ console.log(midImg)
 
 /* Changes registered via DOM manipulation. */
 
+/* LogoImg effects */
 
 logoImg.src = 'img/logo.png';
 logoImg.setAttribute('src', siteContent["nav"]["img-src"])
 
+/* Header effects */
 
 header.className = 'header-class'; // How to add class name to element.
 
@@ -91,6 +94,8 @@ ctaImg.src = 'img/header-img.png' ;
 
 
 buttonText.innerHTML = 'Get Started';
+
+imgElement.src = 'img/mid-page-accent.jpg' ;
 
 // Potential for loop for applying repetitive paragraph content.
 for (let i = 0; i <= pArr.length -1; i++){
