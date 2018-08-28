@@ -121,3 +121,17 @@ email.innerHTML = siteContent['contact']['email'];
 
 let footer = document.querySelector('footer p');
 footer.innerHTML = siteContent['footer']['copyright'];
+
+//appending and prepending children
+
+let research = document.createElement('a');
+research.setAttribute('href', '#');
+research.style.color = 'green';
+research.innerHTML = 'Research';
+document.querySelector('nav').appendChild(research);
+
+let visit = document.createElement('a');
+visit.setAttribute('href', '#');
+visit.style.color = 'green';
+visit.innerHTML = 'Visit';
+document.querySelector('nav').prepend(visit);
