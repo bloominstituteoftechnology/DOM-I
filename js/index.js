@@ -69,9 +69,17 @@ let featTxt = 'Features content elementum magna eros, ac posuere elvit tempus et
 
 let aboutTxt = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
 
-let servText = ''; 
-let prodText = '';
-let visText = '';
+let servText = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'; 
+
+let prodText = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+let visText = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'; 
+
+ pArr[0].innerHTML = featTxt ;
+ pArr[1].innerHTML = aboutTxt ;
+ pArr[2].innerHTML = servText ;
+ pArr[3].innerHTML = prodText;
+ pArr[4].innerHTML = visText ;
 /* Console logs for testing variable accuracy.
 
 console.log(logoImg);
@@ -97,30 +105,20 @@ logoImg.setAttribute('src', siteContent["nav"]["img-src"])
 
 header.className = 'header-class'; // How to add class name to element.
 
-
 ctaImg.src = 'img/header-img.png' ;
-
 
 buttonText.innerHTML = 'Get Started';
 
+/* Middle image effects */
+
 imgElement.src = 'img/mid-page-accent.jpg' ;
 
-// Potential for loop for applying repetitive paragraph content.
-// for (let i = 0 ; i < pArr.length -3; i++){
-//   if (i = 0){
-   
-//   }
-
-//   else if (i = 1) {
-//     pArr[1].innerHTML = aboutTxt ;
-//   }
-//   else {
-//     break ;
-//   }
-  
-// }
  pArr[0].innerHTML = featTxt ;
  pArr[1].innerHTML = aboutTxt ;
+ pArr[2].innerHTML = servText ;
+ pArr[3].innerHTML = prodText;
+ pArr[4].innerHTML = visText ;
+
  console.log(pArr);
 // ^ Puts all of the elements with the class 'text-content' in an Array like object. Used .from to turn that into an array. Set the for loop to iterate through the length of that array minus the number of paragraphs with different text values than the first two.
 
