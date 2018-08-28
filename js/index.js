@@ -37,6 +37,69 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//Navigation Bar
+  const navBar = document.getElementsByTagName('a');
+  const navBarArray = [];
+  for(let i = 0; i < navBar; i++);{
+  navBarArray.push(Array.from(navBar));
+  };
+  navBarArray[0][0].innerHTML = "Services"
+  navBarArray[0][1].innerHTML = "Product"
+  navBarArray[0][2].innerHTML = "Vision"
+  navBarArray[0][3].innerHTML = "Features"
+  navBarArray[0][4].innerHTML = "About"
+  navBarArray[0][5].innerHTML = "Contact"
+
+  let logo = document.getElementById("logo-img");
+  logo.src = "img/logo.png"
+
+
+//Top Content
+  const slogan = document.querySelectorAll("h1")[0];
+  slogan.innerHTML = "DOM IS AWSOME";
+
+  let middleCodeSnippit = document.getElementById("cta-img");
+  middleCodeSnippit.src = "img/header-img.png";
+
+  const getStartedButton = document.querySelectorAll("button")[0];
+  getStartedButton.innerHTML = "Get Started";
+
+
+//Main Content
+const headersh4 = document.querySelectorAll("h4");
+const headerh4Array = [];
+for(let i = 0; i < headersh4.length; i++){
+  headerh4Array.push(Array.from(headersh4));
+}
+const paragraphs = document.querySelectorAll("p");
+const paraArray = [];
+for(let i = 0; i < paragraphs.length; i++){
+  paraArray.push(Array.from(paragraphs));
+}
+
+paraArray[0][0].innerHTML = siteContent["main-content"]["features-content"];
+paraArray[0][1].innerHTML = siteContent["main-content"]["about-content"];
+paraArray[0][2].innerHTML = siteContent["main-content"]["services-content"];
+paraArray[0][3].innerHTML = siteContent["main-content"]["product-content"];
+paraArray[0][4].innerHTML = siteContent["main-content"]["vision-content"];
+
+headerh4Array[0][0].innerHTML = "Features";
+headerh4Array[0][1].innerHTML = "About";
+headerh4Array[0][2].innerHTML = "Services";
+headerh4Array[0][3].innerHTML = "Product";
+headerh4Array[0][4].innerHTML = "Vision";
+
+
+const middleIMG = document.getElementById("middle-img");
+middleIMG.src = "img/mid-page-accent.jpg";
+
+//Footer Content
+
+headerh4Array[0][5].innerHTML = "Contact";
+
+paraArray[0][5].innerHTML = siteContent["contact"]["address"];
+paraArray[0][6].innerHTML = siteContent["contact"]["phone"];
+paraArray[0][7].innerHTML = siteContent["contact"]["email"];
+
+paraArray[0][8].innerHTML = siteContent["footer"]["copyright"];
