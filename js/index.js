@@ -41,22 +41,25 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-let nav = document.querySelectorAll("nav a")[0];
-nav.innerHTML = siteContent.nav['nav-item-1'];
-let nav1 = document.querySelectorAll("nav a")[1];
-nav1.innerHTML = siteContent.nav['nav-item-2'];
-let nav2 = document.querySelectorAll("nav a")[2];
-nav2.innerHTML = siteContent.nav['nav-item-3'];
-let nav3 = document.querySelectorAll("nav a")[3];
-nav3.innerHTML = siteContent.nav['nav-item-4'];
-let nav4 = document.querySelectorAll("nav a")[4];
-nav4.innerHTML = siteContent.nav['nav-item-5'];
-let nav5 = document.querySelectorAll("nav a")[5];
-nav5.innerHTML = siteContent.nav['nav-item-6'];
+// let nav = document.querySelectorAll("nav a")[0];
+// nav.innerHTML = siteContent.nav['nav-item-1'];
+// let nav1 = document.querySelectorAll("nav a")[1];
+// nav1.innerHTML = siteContent.nav['nav-item-2'];
+// let nav2 = document.querySelectorAll("nav a")[2];
+// nav2.innerHTML = siteContent.nav['nav-item-3'];
+// let nav3 = document.querySelectorAll("nav a")[3];
+// nav3.innerHTML = siteContent.nav['nav-item-4'];
+// let nav4 = document.querySelectorAll("nav a")[4];
+// nav4.innerHTML = siteContent.nav['nav-item-5'];
+// let nav5 = document.querySelectorAll("nav a")[5];
+// nav5.innerHTML = siteContent.nav['nav-item-6'];
 
-
-// let nav = Array.from(document.querySelectorAll('nav a'));
-// nav.map(item => item.push(siteContent.nav));
+const nav = Array.from(document.querySelectorAll('nav a'));
+const navigation = nav.map((element => element.textContent {
+  navigation.push(siteContent.nav);
+})
+);
+console.log(navigation);
 
 
 
