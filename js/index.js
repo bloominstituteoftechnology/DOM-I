@@ -40,6 +40,7 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
 const nav = document.querySelectorAll("nav a");
 nav.forEach((element, index)   =>  {
     return element.innerHTML = siteContent.nav[`nav-item-${index + 1}`];
@@ -72,6 +73,12 @@ contactP.forEach((item, index) =>  {
 })
 const footer = document.querySelector("footer p");
 footer.innerHTML = siteContent.footer.copyright;
+
 nav.forEach((item)  =>  {
     return item.style.color = "green";
 });
+const anchorFAQ = document.createElement("A");
+const faqText = document.createTextNode("FAQ");
+anchorFAQ.appendChild(faqText);
+anchorFAQ.style.color = "green";
+document.getElementsByTagName("nav")[0].appendChild(anchorFAQ)
