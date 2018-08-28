@@ -54,17 +54,15 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 // let nav5 = document.querySelectorAll("nav a")[5];
 // nav5.innerHTML = siteContent.nav['nav-item-6'];
 
+//Mapped navigation
 const nav = Array.from(document.querySelectorAll('nav a'));
-const navigation = nav.map((element => element.textContent {
-  navigation.push(siteContent.nav);
-})
-);
+const navigation = nav.map((element, arr) => {element.innerHTML = siteContent.nav[`nav-item-${arr + 1}`]});
 console.log(navigation);
 
 
 
 // CTA Content 
-let ctaImage = document.getElementById("cta-img");
+const ctaImage = document.getElementById("cta-img");
 ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
 //Middle Content
 let midImg = document.getElementById("middle-img");
@@ -78,11 +76,8 @@ ctaH1.setAttribute('h1', siteContent['cta']['h1']);
 
 let ctaButton = document.querySelector("button");
 ctaButton.innerHTML = "Get Started";
-cta.setAttribute('button', siteContent['cta']['button'])
+ctaButton.setAttribute('button', siteContent['cta']['button']);
 
 
-
-//main-content
-
-let text1 = document.getElementsByClassName("text-content");
-console.log(text1);
+// let text1 = document.querySelectorAll("text-content h4")[0];
+// text1.innerHTML = siteContent.main-content['features-h4'];
