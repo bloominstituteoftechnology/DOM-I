@@ -62,8 +62,16 @@ h4[4].innerHTML = "Vision";
 
 let textContentPara = document.querySelectorAll('.text-content p');
 
-textContentPara[0].innerHTML = "Features";
-textContentPara[1].innerHTML = "About";
-textContentPara[2].innerHTML = "Services";
-textContentPara[3].innerHTML = "Product";
-textContentPara[4].innerHTML = "Vision";
+textContentPara[0].innerHTML = siteContent['main-content']['features-content'];
+textContentPara[1].innerHTML = siteContent['main-content']['about-content'];
+let middleImg = document.getElementById('middle-img').src = siteContent["main-content"]["middle-img-src"];
+textContentPara[2].innerHTML = siteContent['main-content']['services-content'];
+textContentPara[3].innerHTML = siteContent['main-content']['product-content'];
+textContentPara[4].innerHTML = siteContent['main-content']['vision-content'];
+
+h4[5].innerHTML = "Contact";
+let contactPara = document.querySelectorAll('.contact p');
+contactPara[0].innerHTML = siteContent['contact']['address'];
+contactPara[1].innerHTML = siteContent['contact']['phone'];
+contactPara[2].innerHTML = siteContent['contact']['email'];
+let footerPara = document.querySelector('footer p').innerHTML = siteContent['footer']['copyright'];
