@@ -46,6 +46,9 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 let CodeImg = document.getElementById("cta-img");
 CodeImg.setAttribute('src', siteContent["cta"]["img-src"]);
 
+let MidImg = document.getElementById("middle-img");
+MidImg.setAttribute('src',siteContent["main-content"]["middle-img-src"]);
+
 /* Task 2: Create Selectors */
 // Container
 let Container = document.getElementsByClassName("container");
@@ -67,8 +70,10 @@ console.log(MainContent);
 let Contact = document.getElementsByClassName("contact");
 console.log(Contact);
 
+// CTA h1
 let CTAtxt = document.getElementsByTagName("h1");
 
+// CTA button
 let CTAbtn = document.getElementsByTagName("button");
 /* Task 3: Update HTML with JSON data */
 // Get the Nav bar text-menu on the page
@@ -85,7 +90,44 @@ console.log(CTAtxt);
 CTAbtn[0].innerHTML = siteContent["cta"]["button"];
 console.log(CTAbtn);
 
+// Set up Main-Content stuffs
 
+let MainSel = document.querySelectorAll(".top-content .text-content ");
+console.log(MainSel);
+console.log(MainSel[0]);
+
+// Set up 'Features'
+let MainSelH41 = MainSel[0].querySelector("h4");
+let MainSelP1 = MainSel[0].querySelector("p");
+MainSelH41.innerHTML = siteContent["main-content"]["features-h4"];
+MainSelP1.innerHTML = siteContent["main-content"]["features-content"];
+//console.log(MainSelH41);
+//console.log(MainSelP1);
+
+// Set up 'About'
+let AboutH4 = MainSel[1].querySelector("h4");
+let AboutP = MainSel[1].querySelector("p");
+AboutH4.innerHTML = siteContent["main-content"]["about-h4"];
+AboutP.innerHTML = siteContent["main-content"]["about-content"];
+
+//* Set up Bottom Content for Main-Content *//
+let BottomSel = document.querySelectorAll(".bottom-content .text-content");
+console.log(BottomSel);
+
+let ServiceH4 = BottomSel[0].querySelector("h4");
+let ServiceP = BottomSel[0].querySelector("p");
+ServiceH4.innerHTML = siteContent["main-content"]["services-h4"];
+ServiceP.innerHTML = siteContent["main-content"]["services-content"];
+
+let ProductH4 = BottomSel[1].querySelector("h4");
+let ProductP = BottomSel[1].querySelector("p");
+ProductH4.innerHTML = siteContent["main-content"]["product-h4"];
+ProductP.innerHTML = siteContent["main-content"]["product-content"];
+
+let VisionH4 = BottomSel[2].querySelector("h4");
+let VisionP = BottomSel[2].querySelector("p");
+VisionH4.innerHTML = siteContent["main-content"]["vision-h4"];
+VisionP.innerHTML = siteContent["main-content"]["vision-content"];
 
 
 // Task 4: Add new content
