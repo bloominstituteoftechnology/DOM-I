@@ -158,5 +158,27 @@ FooterP.innerHTML = siteContent["footer"]["copyright"];
 
 
 // Task 4: Add new content
+let NavNode = document.querySelector("nav");
 
 
+// .appendChild();
+let AppendedAnchor = document.createElement("a");
+AppendedAnchor.innerHTML = "Appended";
+console.log(AppendedAnchor);
+NavNode.appendChild(AppendedAnchor);
+
+// .insertBefore();
+let PrependedAnchor = document.createElement("a");
+PrependedAnchor.innerHTML = "Prepended";
+console.log(PrependedAnchor);
+NavNode.insertBefore(PrependedAnchor,AppendedAnchor);
+
+// Change Color : green
+
+// Changes the first item to green color
+//let Anode = document.querySelector("a");
+//Anode.style.color = "green";
+
+for(let i=0;i<8;i++){
+	console.log(nAnchor[i].style.color = "green");
+}
