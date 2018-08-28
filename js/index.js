@@ -68,7 +68,7 @@ let button = document.querySelector("button");
 button.innerHTML = "Get Started";
 
 let title = document.querySelector('h1');
-title.innerHTML = "DOM Is Awesome";
+title.innerHTML = `DOM <br> Is <br> Awesome`;
 
 
 let features = document.getElementsByTagName('h4')[0];
@@ -109,6 +109,35 @@ visionPTag.innerText = "Vision content elementum magna eros, ac posuere elvit te
 let contact = document.getElementsByTagName('h4')[5];
 contact.innerText = "Contact";
 
+// document.getElementById("contact").getElementsByTagName("p").add("contactPTag");
+// querySelector("contact")
+// for each 'p' tag child of "contact" .add("contactPTag");
+// 
 
 
+// let circle = document.getElementById("cta-img");
+// circle.setAttribute('src', siteContent["cta"]["img-src"]);
 
+let address = document.getElementsByTagName('p')[5];
+address.innerText = "123 Way 456 Street Somewhere, USA";
+
+// let phone = document.getElementsByClassName("contact").getElementsByTagName('p');
+let phone = document.getElementsByTagName('p')[6];
+phone.innerText = "1 (888) 888-8888";
+// phone.innerText = setContent["contact"]["phone"];
+
+let email = document.getElementsByTagName('p')[7];
+email.innerText = "sales@greatidea.io";
+
+let copyright = document.getElementsByTagName('p')[8];
+copyright.innerText = "Copyright Great Idea! 2018";
+
+
+//Am I on the right track?
+// function beDry(str, i) {
+//   let str = document.getElementsByTagName('p')[i];
+//   str.innerText = "${str} content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+//   return str.innerText;
+// }
+
+// beDry(vision, 4);
