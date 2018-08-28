@@ -47,6 +47,16 @@ let navBarA = document.querySelectorAll('nav a');
 navBarA.forEach(function (obj, i) {
   obj.innerHTML = siteContent.nav["nav-item-" + (i + 1)]
 });
+newA = document.createElement('a');
+newAtwo = document.createElement('a');
+newA.innerHTML ="After Contact";
+newAtwo.innerHTML = "Before About";
+navBarA[5].appendChild(newA);
+navBarA[4].prepend(newAtwo);
+
+navBarA.forEach(function (obj) {
+  obj.style.color = "green"
+});
 //This beginsthe class cta section
 let hOneCta = document.querySelector(".cta-text h1");
 hOneCta.innerHTML = "DOM Is Awesome";
