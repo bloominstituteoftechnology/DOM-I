@@ -38,5 +38,52 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+
+
+/* Element selector methods
+document.getElementById
+document.getElementsByClassName
+document.getElementsByName
+document.getElementsByTagName
+document.querySelector
+document.querySelectorAll
+*/
+
+/* List of elements captured in variables. */
+
+let logoImg = document.getElementById("logo-img");
+let header = document.querySelector('header');
+let anchors = document.getElementsByTagName('a');
+let button = document.getElementsByTagName('button');
+let paragraphs = document.getElementsByClassName('text-content');
+
+
+/* Changes registered via DOM manipulation. */
+
+logoImg.src = 'img/logo.png';
+logoImg.setAttribute('src', siteContent["nav"]["img-src"])
+header.className = 'header-class';
+
+
+
+let pArray = Array.from(paragraphs);
+console.log(pArray);
+
+for (let i = 0; i <= pArray.length -1; i++){
+  pArray[i].innerHTML = 'some text';
+}
+
+Array.from(button)[0].innerHTML = 'Get Started';
+console.log(button);
+
+// This added a class name to the element, that was visible in Dev Tools.
+
+
+/*
+The :scope pseudo-class only matches selectors on descendants of the base element.
+*/
+
+
+
