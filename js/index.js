@@ -43,9 +43,10 @@ console.log("Test");
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-// Task 2: Create Selectors
+let CodeImg = document.getElementById("cta-img");
+CodeImg.setAttribute('src', siteContent["cta"]["img-src"]);
 
-
+/* Task 2: Create Selectors */
 // Container
 let Container = document.getElementsByClassName("container");
 console.log(Container);
@@ -54,13 +55,9 @@ console.log(Container);
 let Nav = document.getElementsByTagName("nav");
 console.log(Nav);
 
-	// Anchor tags of Nav
-	let nAnchor = document.getElementsByTagName("a");
-	console.log(nAnchor);
-
-// CTA
-let CTA = document.getElementsByClassName("cta");
-console.log(CTA);
+// Anchor tags of Nav
+let nAnchor = document.getElementsByTagName("a");
+console.log(nAnchor);
 
 // Main Content
 let MainContent = document.getElementsByClassName("main-content");
@@ -70,13 +67,23 @@ console.log(MainContent);
 let Contact = document.getElementsByClassName("contact");
 console.log(Contact);
 
-// Task 3: Update HTML with JSON data
+let CTAtxt = document.getElementsByTagName("h1");
 
+let CTAbtn = document.getElementsByTagName("button");
+/* Task 3: Update HTML with JSON data */
 // Get the Nav bar text-menu on the page
 for(let i=1;i<7;i++){
 	nAnchor[i-1].innerHTML = siteContent["nav"]["nav-item-"+i];
 	console.log(nAnchor[i-1]);
 }
+
+// Set up the CTA stuff
+// h1
+CTAtxt[0].innerHTML = siteContent["cta"]["h1"];
+console.log(CTAtxt);
+// button
+CTAbtn[0].innerHTML = siteContent["cta"]["button"];
+console.log(CTAbtn);
 
 
 
