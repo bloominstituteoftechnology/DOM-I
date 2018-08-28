@@ -41,13 +41,18 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+// Nav
 let nav = document.querySelectorAll('a');
 for( let i = 0; i < nav.length; i++ ) {
   nav[i].setAttribute('href', siteContent["nav"][`nav-item-${i+1}`] + '.html');
   nav[i].innerText = siteContent["nav"][`nav-item-${i+1}`];
 }
-
+// CTA
 document.querySelector('.cta .cta-text h1').innerText = siteContent["cta"]["h1"];
 document.querySelector('.cta .cta-text button').innerText = siteContent["cta"]["button"];
 let ctaImg = document.getElementById('cta-img');
 ctaImg.setAttribute( 'src', siteContent["cta"]["img-src"] );
+
+// main-content": {"features-h4", "features-content", "about-h4", "about-content",
+// "middle-img-src", "services-h4", "services-content", "product-h4", 
+// "product-content", "vision-h4", "vision-content"
