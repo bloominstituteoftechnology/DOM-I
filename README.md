@@ -9,9 +9,9 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 
 ## Task 1: Set Up The Project With Git
 
-* [ ] Fork the project into your GitHub user account
-* [ ] Clone the forked project into a directory on your machine
-* [ ] You are now ready to build this project with your preferred IDE
+* [x] Fork the project into your GitHub user account
+* [x] Clone the forked project into a directory on your machine
+* [x] You are now ready to build this project with your preferred IDE
 
 ## Task 2: Create selectors to point your data into elements
 * [ ] Create selectors by using any of the DOM element's methods
@@ -28,8 +28,8 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 * [ ] Check your work by looking at the [original html](original.html) in the browser
 
 ## Stretch Goals
-* [ ] Update styles throughout the page as you see fit.  Study what happens when you updated the DOM using style in JavaScript.  
+* [ ] Update styles throughout the page as you see fit.  Study what happens when you updated the DOM using style in JavaScript.
 * [ ] Study tomorrow's lesson on events and try to integrate a button that can update content on the site with a click of a button.  You could build a similar data object with new values to help you test the click event.
 
 ## Stretch Project: Digital Timer
-This project is heavier on logic but employs some DOM manipulation to achieve it's goals.  Go check it out here: [stretch assignment](stretch-assignment) and see how far you can get. 
+This project is heavier on logic but employs some DOM manipulation to achieve it's goals.  Go check it out here: [stretch assignment](stretch-assignment) and see how far you can get.
