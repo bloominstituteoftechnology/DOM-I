@@ -71,11 +71,24 @@ let title = document.querySelector('h1');
 title.innerHTML = "DOM Is Awesome";
 
 
+let features = document.getElementsByTagName('h4')[0];
+features.innerText = "Features";
 
-
+let about = document.getElementsByTagName('h4')[1];
+about.innerText = "About";
 
 
 let middleImage = document.getElementById("middle-img");
 middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
+let services = document.getElementsByTagName('h4')[2];
+services.innerText = "Services";
 
+let product = document.getElementsByTagName('h4')[3];
+product.innerText = "Product";
+
+let vision = document.getElementsByTagName('h4')[4];
+vision.innerText = "Vision";
+
+let contact = document.getElementsByTagName('h4')[5];
+contact.innerText = "Contact";
