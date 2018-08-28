@@ -38,8 +38,8 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"]);
+let logo = document.getElementById('logo-img');
+logo.setAttribute('src', siteContent['nav']['img-src']);
 
 let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent['cta']['img-src']);
@@ -96,3 +96,13 @@ document.querySelector('nav').appendChild(newNavItem1);
 document.querySelector('nav').prepend(newNavItem2);
 newNavItem1.style.color = 'green';
 newNavItem2.style.color = 'green';
+
+//STRETCH GOALS
+
+copyright.style.color = 'aqua';
+copyright.style.fontSize = '30px';
+ctaHeader.style.color = 'DarkViolet';
+
+for (let i = 0; i < contentHeadings.length; i++) {
+    contentHeadings[i].style.color = 'DarkViolet';
+}
