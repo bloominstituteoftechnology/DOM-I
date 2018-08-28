@@ -74,8 +74,15 @@ title.innerHTML = "DOM Is Awesome";
 let features = document.getElementsByTagName('h4')[0];
 features.innerText = "Features";
 
+let featuresPTag = document.getElementsByTagName('p')[0];
+featuresPTag.innerText = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+
 let about = document.getElementsByTagName('h4')[1];
 about.innerText = "About";
+
+let aboutPTag = document.getElementsByTagName('p')[1];
+aboutPTag.innerText = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
 
 let middleImage = document.getElementById("middle-img");
@@ -84,11 +91,24 @@ middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 let services = document.getElementsByTagName('h4')[2];
 services.innerText = "Services";
 
+let servicesPTag = document.getElementsByTagName('p')[2];
+servicesPTag.innerText = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
 let product = document.getElementsByTagName('h4')[3];
 product.innerText = "Product";
+
+let productPTag = document.getElementsByTagName('p')[3];
+productPTag.innerText = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
 let vision = document.getElementsByTagName('h4')[4];
 vision.innerText = "Vision";
 
+let visionPTag = document.getElementsByTagName('p')[4];
+visionPTag.innerText = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
 let contact = document.getElementsByTagName('h4')[5];
 contact.innerText = "Contact";
+
+
+
+
