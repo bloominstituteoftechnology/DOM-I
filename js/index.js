@@ -64,6 +64,9 @@ navItemSix.innerHTML = "Contact";
 let circle = document.getElementById("cta-img");
 circle.setAttribute('src', siteContent["cta"]["img-src"]);
 
+let button = document.querySelector("button");
+button.innerHTML = "Get Started";
+
 let title = document.querySelector('h1');
 title.innerHTML = "DOM Is Awesome";
 
