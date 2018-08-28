@@ -39,4 +39,51 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+let ctaimg = document.getElementById("cta-img");
+ctaimg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let midimg = document.getElementById("middle-img");
+midimg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+const nav = document.querySelectorAll("nav a");
+nav.forEach((value, index) => {
+  value.innerHTML = siteContent.nav[`nav-item-${index + 1}`]
+});
+
+nav.forEach(param => param.style.color = 'green');
+
+let ctaText = document.querySelector("h1");
+ctaText.innerHTML = siteContent.cta["h1"]
+
+let buttonText = document.querySelector("button");
+buttonText.innerHTML = siteContent.cta["button"]
+
+let header = document.querySelectorAll("h4");
+header[0].innerText = siteContent["main-content"]["features-h4"]
+header[1].innerText = siteContent["main-content"]["about-h4"]
+header[2].innerText = siteContent["main-content"]["services-h4"]
+header[3].innerText = siteContent["main-content"]["product-h4"]
+header[4].innerText = siteContent["main-content"]["vision-h4"]
+header[5].innerText = siteContent["contact"]["contact-h4"]
+
+let mainText = document.querySelectorAll("p");
+mainText[0].innerText = siteContent["main-content"]["features-content"]
+mainText[1].innerText = siteContent["main-content"]["about-content"]
+mainText[2].innerText = siteContent["main-content"]["services-content"]
+mainText[3].innerText = siteContent["main-content"]["product-content"]
+mainText[4].innerText = siteContent["main-content"]["vision-content"]
+mainText[5].innerText = siteContent["contact"]["address"]
+mainText[6].innerText = siteContent["contact"]["phone"]
+mainText[7].innerText = siteContent["contact"]["email"]
+mainText[8].innerText = siteContent["footer"]["copyright"]
+
+const newElement1 = document.createElement('a');
+const homeElement = document.querySelector("nav");
+homeElement.prepend(newElement1);
+newElement1.innerText = "Blog";
+
+const newElement2 = document.createElement('a');
+homeElement.appendChild(newElement2);
+newElement2.innerText = "Shop";
