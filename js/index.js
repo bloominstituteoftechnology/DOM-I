@@ -44,3 +44,9 @@ const nav = document.querySelectorAll("nav a");
 nav.forEach((element, index)   =>  {
     return element.innerHTML = siteContent.nav[`nav-item-${index + 1}`];
 });
+const ctaH1 = document.querySelector(".cta .cta-text h1");
+const ctaButton = document.querySelector(".cta .cta-text button")
+const ctaImg = document.getElementById("cta-img");
+ctaH1.innerHTML = siteContent.cta.h1;
+ctaButton.innerHTML = siteContent.cta.button;
+ctaImg.src = siteContent.cta["img-src"];
