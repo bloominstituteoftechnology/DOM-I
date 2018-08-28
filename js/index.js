@@ -49,6 +49,9 @@ navs[2].innerHTML = "Vision";
 navs[3].innerHTML = "Features";
 navs[4].innerHTML = "About";
 navs[5].innerHTML = "Contact";
+for(let i = 0; i < navs.length;i++ ){
+navs[i].style.color ='green'
+}
 
 let ClassH1 = document.querySelector('.cta-text h1').innerHTML = "DOM Is Awesome";
 let button = document.querySelector('button').innerHTML = "Get Started";
