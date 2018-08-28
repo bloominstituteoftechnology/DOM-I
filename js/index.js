@@ -64,6 +64,14 @@ let pArr = Array.from(paragraphs);
 let midImg = document.getElementsByClassName('middle-img')
 let imgElement = Array.from(midImg)[0];
 
+/* Text variables */
+let featTxt = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.' ;
+
+let aboutTxt = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+
+let servText = ''; 
+let prodText = '';
+let visText = '';
 /* Console logs for testing variable accuracy.
 
 console.log(logoImg);
@@ -98,14 +106,27 @@ buttonText.innerHTML = 'Get Started';
 imgElement.src = 'img/mid-page-accent.jpg' ;
 
 // Potential for loop for applying repetitive paragraph content.
-for (let i = 0; i <= pArr.length -1; i++){
-  pArr[i].innerHTML = 'some text';
-}
+// for (let i = 0 ; i < pArr.length -3; i++){
+//   if (i = 0){
+   
+//   }
+
+//   else if (i = 1) {
+//     pArr[1].innerHTML = aboutTxt ;
+//   }
+//   else {
+//     break ;
+//   }
+  
+// }
+ pArr[0].innerHTML = featTxt ;
+ pArr[1].innerHTML = aboutTxt ;
+ console.log(pArr);
+// ^ Puts all of the elements with the class 'text-content' in an Array like object. Used .from to turn that into an array. Set the for loop to iterate through the length of that array minus the number of paragraphs with different text values than the first two.
 
 
-
-
-
+let bottomContent = document.getElementsByClassName('bottom-content');
+console.log(bottomContent);
 
 
 
