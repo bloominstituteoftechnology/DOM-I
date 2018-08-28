@@ -86,3 +86,13 @@ const mainDivH1 = document.querySelectorAll('.top-content .text-content h4')[0];
 mainDivH1.innerText = siteContent['main-content']['features-h4'];
 const mainDivP1 = document.querySelectorAll('.top-content .text-content p')[0];
 mainDivP1.innerHTML = siteContent['main-content']['features-content'];
+
+const mainDivH2 = document.querySelectorAll('.top-content .text-content h4')[1];
+mainDivH2.innerText = siteContent['main-content']['about-h4'];
+const mainDivP2 = document.querySelectorAll('.top-content .text-content p')[1];
+mainDivP2.innerHTML = siteContent['main-content']['about-content'];
+
+// Middle Image
+
+const middleImg = document.getElementById('middle-img');
+middleImg.src = siteContent['main-content']['middle-img-src'];
