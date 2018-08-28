@@ -48,7 +48,7 @@ let midPageLogo = document.getElementById("middle-img");
 midPageLogo.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
 //Navigation
-let navitems = ["Services", "Product", "Vision", "Features", "About", "Contact"];
+const navitems = ["Services", "Product", "Vision", "Features", "About", "Contact"];
 let nav = document.querySelectorAll("a");
 for (let i = 0; i < navitems.length; i ++){
   nav[i].innerText = navitems[i];
@@ -62,8 +62,9 @@ let mainButton = document.querySelector("button");
 mainButton.innerText= "Get Started";
 
 //content sections
-let contentHeaders = ["Features", "About", "Services", "Product", "Vision", "Contact"];
-let paraContent = ["Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.", "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.", "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.", "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis", "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.", "123 Way 456 Street \n Somewhere, USA", "1 (888) 888-8888", "sales@greatidea.io", "Copyright Great Idea! 2018"];
+//I feel like this is cheating, but I did it anyway
+const contentHeaders = ["Features", "About", "Services", "Product", "Vision", "Contact"];
+const paraContent = ["Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.", "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.", "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.", "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis", "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.", "123 Way 456 Street \n Somewhere, USA", "1 (888) 888-8888", "sales@greatidea.io", "Copyright Great Idea! 2018"];
 
 let h4 = document.querySelectorAll("h4");
 let p = document.querySelectorAll("p");
