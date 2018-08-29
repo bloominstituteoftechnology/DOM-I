@@ -135,3 +135,6 @@ visit.setAttribute('href', '#');
 visit.style.color = 'green';
 visit.innerHTML = 'Visit';
 document.querySelector('nav').prepend(visit);
+
+button.addEventListener("click", function(){
+  ctaH1.innerHTML = "YOU<br>ARE<br>AWESOME";})
