@@ -109,3 +109,13 @@ newLink.setAttribute('style', 'color: green;');
 nav.appendChild(pizza).innerHTML = 'Pizza';
 pizza.setAttribute('href', '#');
 pizza.setAttribute('style', 'color: green;');
+
+let changeTextFont = document.querySelectorAll('.text-content');
+changeTextFont[0].setAttribute('style', 'color: red;');
+changeTextFont[1].setAttribute('style', 'color: MediumSeaGreen;');
+changeTextFont[2].setAttribute('style', 'color: slateblue;');
+changeTextFont[3].setAttribute('style', 'color: violet;');
+changeTextFont[4].setAttribute('style', 'color: tomato;');
+
+
+
