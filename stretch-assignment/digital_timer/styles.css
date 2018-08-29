@@ -2,6 +2,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .digit {
@@ -11,4 +12,23 @@ body {
 
 .redDigit {
   color: red;
+}
+
+h3 {
+  color: white;
+  background: rgb(37, 37, 37);
+  padding: 10px;
+  margin: 5px;
+}
+
+h3:hover {
+  border: 2px solid rgb(37, 37, 37);
+  color: rgb(37, 37, 37);
+  background: white;
+  cursor: pointer;
+}
+
+.btns {
+  display: flex;
+  flex-direction: row;
 }
