@@ -46,17 +46,21 @@ for (let i = 0; i < navbar.length; i++){
   navbar[i].innerHTML = siteContent["nav"]["nav-item-" + (i + 1)];
 };
 
-// Create new navigation elements
-let newNavElement1 = document.createElement("a");
-newNavElement1.innerHTML = "Blog";
-
-let newNavElement2 = document.createElement("a");
-newNavElement2.innerHTML = "Careers";
-
 // Update navigation color
 for (let i = 0; i < navbar.length; i++){
   navbar[i].style.color = "green";
 };
+
+// Create new navigation elements
+let newNavElement1 = document.createElement("a");
+newNavElement1.innerHTML = "Blog";
+newNavElement1.style.color = "green";
+newNavElement1.setAttribute("href", "index.html");
+
+let newNavElement2 = document.createElement("a");
+newNavElement2.innerHTML = "Careers";
+newNavElement2.style.color = "green";
+newNavElement2.setAttribute("href", "index.html");
 
 // Add new navigation elements to nav
 let newNav = document.querySelector('nav');
