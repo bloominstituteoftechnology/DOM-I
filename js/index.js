@@ -14,26 +14,26 @@ const siteContent = {
     "img-src": "img/header-img.png"
   },
   "main-content": {
-    "features-h4":"Features",
+    "features-h4": "Features",
     "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "about-h4":"About",
+    "about-h4": "About",
     "about-content": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "middle-img-src": "img/mid-page-accent.jpg",
-    "services-h4":"Services",
+    "services-h4": "Services",
     "services-content": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "product-h4":"Product",
+    "product-h4": "Product",
     "product-content": "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "vision-h4":"Vision",
+    "vision-h4": "Vision",
     "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
   },
   "contact": {
-    "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
-    "phone" : "1 (888) 888-8888",
-    "email" : "sales@greatidea.io",
+    "contact-h4": "Contact",
+    "address": "123 Way 456 Street Somewhere, USA",
+    "phone": "1 (888) 888-8888",
+    "email": "sales@greatidea.io",
   },
   "footer": {
-    "copyright" : "Copyright Great Idea! 2018"
+    "copyright": "Copyright Great Idea! 2018"
   },
 };
 
@@ -67,7 +67,7 @@ const renderElements = (obj, id) => {
 }
 
 // render elements that are not nested
-renderElements(siteContent.nav,'main-nav');
+renderElements(siteContent.nav, 'main-nav');
 renderElements(siteContent.cta, 'cta-text');
 renderElements(siteContent.contact, 'contact');
 renderElements(siteContent.footer, 'footer');
@@ -99,12 +99,7 @@ let mainContentValuesPara = [];
 
 // add titles/paragraphs to own array
 for (let i = 0; i < mainContentValues.length; i++) {
-  if(i%2 === 0) {
-    mainContentValuesTitles.push(mainContentValues[i]);
-  }
-  else {
-    mainContentValuesPara.push(mainContentValues[i]);
-  }
+  i % 2 === 0 ? mainContentValuesTitles.push(mainContentValues[i]) : mainContentValuesPara.push(mainContentValues[i]);
 }
 // push titles and paragraphs to selected sections
 for (let i = 0; i < mainContentValuesTitles.length; i++) {
@@ -121,9 +116,11 @@ let createA = document.createElement('a');
 createA.innerHTML = 'Help';
 mainNav.appendChild(createA);
 
+
 // prepend a child to nav
-createA.innerHTML = 'Prepend';
-mainNav.prepend(createA);
+let createB = document.createElement('a');
+createB.innerHTML = 'Prepend';
+mainNav.prepend(createB);
 // change color of navigation text
 
 
@@ -131,3 +128,12 @@ let a = mainNav.querySelectorAll('a');
 for (var i = 0; i < a.length; i++) {
   a[i].style.color = 'green';
 }
+
+
+// change color of background
+
+const changeStyle = (id, color) => {
+  this.id = id;
+  this.color = color;
+  return document.getElementById(`'${this.id}'`).style.background = color;
+};
