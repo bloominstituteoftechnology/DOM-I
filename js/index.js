@@ -41,28 +41,38 @@ const siteContent = {
 
 
 //nav 
-const nav = document.getElementsByTagName('a');
-nav[0].innerHTML = siteContent["nav"]["nav-item-1"];
-nav[1].innerHTML = siteContent["nav"]["nav-item-2"];
-nav[2].innerHTML = siteContent["nav"]["nav-item-3"];
-nav[3].innerHTML = siteContent["nav"]["nav-item-4"];
-nav[4].innerHTML = siteContent["nav"]["nav-item-5"];
-nav[5].innerHTML = siteContent["nav"]["nav-item-6"];
+const a = document.getElementsByTagName('a');
+a[0].innerHTML = siteContent["nav"]["nav-item-1"];
+a[1].innerHTML = siteContent["nav"]["nav-item-2"];
+a[2].innerHTML = siteContent["nav"]["nav-item-3"];
+a[3].innerHTML = siteContent["nav"]["nav-item-4"];
+a[4].innerHTML = siteContent["nav"]["nav-item-5"];
+a[5].innerHTML = siteContent["nav"]["nav-item-6"];
+
+//append
+const nav = document.querySelector('header nav')
+console.log(nav)
+let pre = document.createElement("a")
+pre.innerHTML = "Lead";
+nav.prepend(pre);
+var app = document.createElement("a");
+app.innerHTML = "Follow";
+nav.appendChild(app);
+
+// const node = document.createElement("a");
+// const textnode = document.createTextNode("Lead");
+// node.appendChild(textnode);
+// document.getElementsByTagName("a").appendChild(node);
 
 //color
-nav[0].setAttribute('style', 'color: green');
-nav[1].setAttribute('style', 'color: green');
-nav[2].setAttribute('style', 'color: green');
-nav[3].setAttribute('style', 'color: green');
-nav[4].setAttribute('style', 'color: green');
-nav[5].setAttribute('style', 'color: green');
-
-
-
-
-
-
-
+a[0].setAttribute("style", "color: green");
+a[1].setAttribute("style", "color: green");
+a[2].setAttribute('style', 'color: green');
+a[3].setAttribute("style", "color: green");
+a[4].setAttribute("style", "color: green");
+a[5].setAttribute("style", "color: green");
+a[6].setAttribute("style", "color: green");
+a[7].setAttribute("style", "color: green");
 
 // Example: Update the img src for the logo
 const logo = document.getElementById("logo-img");
