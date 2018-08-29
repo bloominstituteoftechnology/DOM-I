@@ -73,3 +73,14 @@ let bottomContentParagraphs = document.querySelectorAll(".bottom-content .text-c
 bottomContentParagraphs[0].innerText = siteContent["main-content"]["services-content"];
 bottomContentParagraphs[1].innerText = siteContent["main-content"]["product-content"];
 bottomContentParagraphs[2].innerText = siteContent["main-content"]["vision-content"];
+
+let contactHeader = document.querySelector(".contact h4");
+contactHeader.innerText =siteContent["contact"]["contact-h4"];
+
+let contactParagraphs = document.querySelectorAll(".contact p");
+contactParagraphs[0].innerText = siteContent["contact"]["address"];
+contactParagraphs[1].innerText = siteContent["contact"]["phone"];
+contactParagraphs[2].innerText = siteContent["contact"]["email"];
+
+let footer = document.querySelector("footer p");
+footer.innerText = siteContent["footer"]["copyright"];
