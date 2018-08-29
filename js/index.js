@@ -49,6 +49,23 @@ for( let i = 0; i < nav.length; i++ ) {
   nav[i].style.color = 'green';
 }
 
+//nav-bar appendages
+const navAppend = document.createElement('a');
+navAppend.setAttribute('href','Appendage.html');
+navAppend.innerHTML= 'Appendage';
+navAppend.style.color ='green';
+
+//nav-bar prependage
+const navPrep = document.createElement('a');
+navPrep.setAttribute('href', 'begin.html');
+navPrep.innerHTML = 'begin';
+navPrep.style.color ='green';
+
+// calling the nav-bar appendage and prependage.
+nav = document.querySelector('nav')
+nav.appendChild(navAppend);
+nav.prepend(navPrep);
+
 
 //IMGS
 const ctaImg = document.getElementById("cta-img");
