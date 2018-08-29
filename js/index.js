@@ -80,6 +80,16 @@ jumbotronButton.innerHTML = siteContent.cta.button;
 let jumbotronLogo = document.getElementById('cta-img');
 jumbotronLogo.setAttribute('src', siteContent.cta["img-src"]);
 
+jumbotronButton.onclick = changeContent;
+
+function changeContent() {
+  jumbotronH1.innerHTML = 'Anonymous <br> Headquarters <br> Website';
+  jumbotronH1.style.color = 'red';
+  jumbotronLogo.setAttribute('src', 'img/Anonymous_emblem.svg.png');
+  logo.setAttribute('src', 'img/anonymous-mask.png');
+  logo.style.width = '5%';
+}
+
 //Main
 let h4MainContent = document.querySelectorAll('.text-content > h4');
 let paragraphMainContent = document.querySelectorAll('.text-content > p');
