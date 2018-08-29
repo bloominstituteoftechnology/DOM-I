@@ -36,21 +36,21 @@ const siteContent = {
     "copyright" : "Copyright Great Idea! 2018"
   },
 };
-// let container = document.querySelector('body');
-// container.style.backgroundColor = '#f2f2f2';
-// container.style.padding = '0px 12px'
-// Example: Update the img src for the logo
+
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
 // Anchor Elements
 let anchor = document.querySelectorAll('a');
 
-anchor[0].innerHTML = siteContent["nav"]["nav-item-1"];
-anchor[1].innerHTML = siteContent["nav"]["nav-item-2"];
-anchor[2].innerHTML = siteContent["nav"]["nav-item-3"];
-anchor[3].innerHTML = siteContent["nav"]["nav-item-4"];
-anchor[4].innerHTML = siteContent["nav"]["nav-item-5"];
-anchor[5].innerHTML = siteContent["nav"]["nav-item-6"];
+function getAnchorElements(arr) {
+for(let i = 0; i< arr.length; i++) {
+     let navString = `nav-item-${i+1}`;
+     arr[i].innerHTML = siteContent["nav"]["nav-item-1"];
+     arr[i].style.color = 'green';
+  }
+}
+getAnchorElements(anchor);  
 
 let nav = document.querySelector('nav');
 let fa = document.createElement('a');
@@ -64,12 +64,6 @@ console.log(nav)
 nav.appendChild(la);
 nav.prepend(fa);
 
-function getColors(arr) {
-   arr.forEach(function(ele){
-         return ele.style.color = 'green';
-   });
-}
-getColors(anchor);
 
 
 // h1 element & Button
