@@ -38,18 +38,30 @@ const siteContent = {
 };
 
 
-//document.getElementById('idName');
-//document.getElementsByClassName('className');
-//document.querySelector('queryString');
+
 
 //nav 
-const a = document.getElementsByTagName('a');
-a[0].innerHTML = siteContent["nav"]["nav-item-1"];
-a[1].innerHTML = siteContent["nav"]["nav-item-2"];
-a[2].innerHTML = siteContent["nav"]["nav-item-3"];
-a[3].innerHTML = siteContent["nav"]["nav-item-4"];
-a[4].innerHTML = siteContent["nav"]["nav-item-5"];
-a[5].innerHTML = siteContent["nav"]["nav-item-6"];
+const nav = document.getElementsByTagName('a');
+nav[0].innerHTML = siteContent["nav"]["nav-item-1"];
+nav[1].innerHTML = siteContent["nav"]["nav-item-2"];
+nav[2].innerHTML = siteContent["nav"]["nav-item-3"];
+nav[3].innerHTML = siteContent["nav"]["nav-item-4"];
+nav[4].innerHTML = siteContent["nav"]["nav-item-5"];
+nav[5].innerHTML = siteContent["nav"]["nav-item-6"];
+
+//color
+nav[0].setAttribute('style', 'color: green');
+nav[1].setAttribute('style', 'color: green');
+nav[2].setAttribute('style', 'color: green');
+nav[3].setAttribute('style', 'color: green');
+nav[4].setAttribute('style', 'color: green');
+nav[5].setAttribute('style', 'color: green');
+
+
+
+
+
+
 
 
 // Example: Update the img src for the logo
@@ -89,9 +101,6 @@ h4[5].innerHTML = siteContent["contact"]["contact-h4"];
 p[5].innerHTML = "123 Way 456 Street<br>Somewhere, USA";
 p[6].innerHTML = siteContent.contact.phone;
 p[7].innerHTML = siteContent.contact.email;
-
-
-
 
 //footer
 const footer = document.querySelector("footer");
