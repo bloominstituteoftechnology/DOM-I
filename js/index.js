@@ -10,6 +10,7 @@ const siteContent = {
   },
   "cta": {
     "h1": "DOM Is Awesome",
+    "h1-click": "You Are Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -137,5 +138,5 @@ visit.innerHTML = 'Visit';
 document.querySelector('nav').prepend(visit);
 
 button.addEventListener("click", function(){
-    ctaH1.innerHTML = "YOU<br>ARE<br>AWESOME";
+    ctaH1.innerHTML = siteContent['cta']['h1-click'].replace(/ /g, '<br>');
 })
