@@ -60,13 +60,7 @@ navItemFive.innerHTML = "About";
 let navItemSix = document.getElementsByTagName('a')[5];
 navItemSix.innerHTML = "Contact";
 
-//Task 4: Add new content
 
-let navAllItems = document.querySelectorAll('a');
-for (let i = 0; i < navAllItems.length; i++) {
-  navAllItems[i].style.color = '#66ff66';
-  navAllItems[i].style.backgroundColor = 'black';
-}
 
 // Utilize .appendChild() to add two new items to the navigation system
 const navItemSeven = document.createElement('a');
@@ -78,6 +72,14 @@ const navItemEight = document.createElement('a');
 const homeElement2 = document.querySelector('nav');
 homeElement2.prepend(navItemEight);
 navItemEight.innerText = "Jobs";
+
+//Task 4: Add new content
+
+let navAllItems = document.querySelectorAll('a');
+for (let i = 0; i < navAllItems.length; i++) {
+  navAllItems[i].style.color = '#66ff66';
+  navAllItems[i].style.backgroundColor = 'ghostwhite';
+}
 
 
 
