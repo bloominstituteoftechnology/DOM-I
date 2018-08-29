@@ -44,12 +44,13 @@ const siteContent = {
 
 //Nav Bar
 const a = document.getElementsByTagName('a');
-a[0].innerHTML = "Services";
-a[1].innerHTML = "Product";
-a[2].innerHTML = "Vision";
-a[3].innerHTML = "Features";
-a[4].innerHTML = "About";
-a[5].innerHTML = "Contact";
+a[0].innerHTML = ["nav"]["nav-item-1"];
+a[1].innerHTML = ["nav"]["nav-item-2"];
+a[2].innerHTML = ["nav"]["nav-item-3"];
+a[3].innerHTML = ["nav"]["nav-item-4"];
+a[4].innerHTML = ["nav"]["nav-item-5"];
+a[5].innerHTML = ["nav"]["nav-item-6"];
+
 
 // Example: Update the img src for the logo
 const logo = document.getElementById("logo-img");
@@ -66,7 +67,20 @@ const ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 
 //Main
+const h4 = document.querySelectorAll("h4");
+h4[0].innerHTML = siteContent["main-content"]["features-h4"];
+h4[1].innerHTML = siteContent["main-content"]["about-h4"];
+h4[2].innerHTML = siteContent["main-content"]["services-h4"];
+h4[3].innerHTML = siteContent["main-content"]["product-h4"];
+h4[4].innerHTML = siteContent["main-content"]["vision-h4"];
 
+const p = document.querySelectorAll("p");
+p[0].innerHTML = siteContent["main-content"]["features-content"];
+p[1].innerHTML = siteContent["main-content"]["about-content"];
+p[2].innerHTML = siteContent["main-content"]["services-content"];
+p[3].innerHTML = siteContent["main-content"]["product-content"];
+p[4].innerHTML = siteContent["main-content"]["vision-content"];
 
-
+const midImg = document.getElementById("middle-img");
+midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
