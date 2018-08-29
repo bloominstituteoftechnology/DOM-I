@@ -87,5 +87,9 @@ paragraphMainContent[4].innerHTML = siteContent["main-content"]["vision-content"
 //Contact
 
 let h4Contact = document.querySelector('.contact > h4');
+let paragraphContact = document.querySelectorAll('.contact > p');
 
 h4Contact.innerHTML = siteContent.contact["contact-h4"];
+paragraphContact[0].innerHTML = siteContent.contact.address;
+paragraphContact[1].innerHTML = siteContent.contact.phone;
+paragraphContact[2].innerHTML = siteContent.contact.email;
