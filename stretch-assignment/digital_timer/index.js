@@ -88,10 +88,16 @@ window.onload = function() {
             addMsTens.innerHTML = `${msTens}`;
             addSecondOnes.innerHTML = `${secondOnes}`;
             addSecondTens.innerHTML = `${secondTens}`;
-            addMsHundreds.style.color = "red";
-            addMsTens.style.color = "red";
-            addSecondOnes.style.color = "red";
-            addSecondTens.style.color = "red";
+            addMsHundreds.className += " redDigit";
+            addMsTens.className += " redDigit";
+            addSecondOnes.className += " redDigit";
+            addSecondTens.className += " redDigit";
+            
+            // let newBackground = document.getElementsByClassName("body");
+            // newBackground.style.backgroundImage = "url(\"img/explosion.jpg\")";
+            // newBackground.style.backgroundPosition = "center";
+            // newBackground.style.backgroundRepeat = "no-repeat";
+            // newBackground.style.backgroundSize = "cover";
             return console.log("Finished! 🏁")
         }
     }

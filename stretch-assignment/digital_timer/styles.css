@@ -3,13 +3,46 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; 
 }
 
 .digit {
   display: inline-block;
-  font-size: 80px;
+  font-size: 150px;
 }
 
 .redDigit {
-  color: red;
+  color: rgb(251, 5, 26);
 }
+
+#msHundreds {
+  color: rgb(171, 254, 48);
+}
+
+#msTens {
+  color: rgb(252, 17, 169);
+}
+
+#secondOnes {
+  color: rgb(170, 30, 252);
+}
+
+button{
+  border-radius: 10px;
+  background:rgb(252, 169, 39);
+  color: white;
+  border: solid 1px rgb(252, 169, 39);
+  text-decoration:none;
+  cursor:pointer;
+  font-size: 18px;
+  padding: 10px 10px;
+  width: 100px;
+  margin: 10px;
+  }
+
+  button:hover {
+    transition: all 0.5s ease-in-out;
+    background: rgb(171, 254, 48);
+    border: solid 1px rgb(171, 254, 48);
+    color: white;
+  }
