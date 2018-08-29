@@ -53,3 +53,12 @@ navigationA[2].innerHTML = siteContent['nav']['nav-item-3'];
 navigationA[3].innerHTML = siteContent['nav']['nav-item-4'];
 navigationA[4].innerHTML = siteContent['nav']['nav-item-5'];
 navigationA[5].innerHTML = siteContent['nav']['nav-item-6'];
+
+navigationA.forEach (function(navItem) { 
+  navItem.style.color = 'green';
+});
+
+const newNavItem1 = document.createElement('a');
+newNavItem1.innerHTML = 'Foo';
+newNavItem1.style.color = 'green'
+navigation.appendChild(newNavItem1);
