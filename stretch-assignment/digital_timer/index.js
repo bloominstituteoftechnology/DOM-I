@@ -49,5 +49,14 @@ setDigitId(msTens);
 const digits = document.getElementsByClassName('digits')[0];
 const button = document.createElement('button');
 button.innerHTML = 'Start Timer';
-button.setAttribute('onClick', `countDown(seconds)`);
+button.setAttribute('onClick', `inputVal()`);
 digits.appendChild(button);
+
+// create input to add seconds to Timer
+const input = document.createElement('input');
+digits.appendChild(input);
+input.setAttribute('id','seconds');
+// create a function to take input in seconds and return countDown
+const inputVal = () => {
+  return countDown(input.value);
+}
