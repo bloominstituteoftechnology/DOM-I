@@ -118,6 +118,8 @@ imgElement.src = 'img/mid-page-accent.jpg' ;
  pArr[2].innerHTML = servText ;
  pArr[3].innerHTML = prodText;
  pArr[4].innerHTML = visText ;
+let h1 = document.createElement(h1) ;
+
 
  console.log(pArr);
 // ^ Puts all of the elements with the class 'text-content' in an Array like object. Used .from to turn that into an array. Set the for loop to iterate through the length of that array minus the number of paragraphs with different text values than the first two.
@@ -136,3 +138,17 @@ The :scope pseudo-class only matches selectors on descendants of the base elemen
 
 
 
+/*
+
+Add Text over button.
+
+Add header tags.
+
+resize bottom text paragraph widths.
+
+Add footer.
+
+
+
+
+*/
