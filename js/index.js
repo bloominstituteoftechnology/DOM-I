@@ -41,14 +41,34 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-const nav = document.querySelectorAll("nav a");
-nav[0].innerHTML = siteContent['nav']['nav-item-1'];
-nav[1].innerHTML = siteContent['nav']['nav-item-2'];
-nav[2].innerHTML = siteContent['nav']['nav-item-3'];
-nav[3].innerHTML = siteContent['nav']['nav-item-4'];
-nav[4].innerHTML = siteContent['nav']['nav-item-5'];
-nav[5].innerHTML = siteContent['nav']['nav-item-6'];
+// Created nav bar
+const nav = document.querySelector("nav");
+const navChildren = document.querySelectorAll("nav a");
+navChildren[0].innerHTML = siteContent['nav']['nav-item-1'];
+navChildren[1].innerHTML = siteContent['nav']['nav-item-2'];
+navChildren[2].innerHTML = siteContent['nav']['nav-item-3'];
+navChildren[3].innerHTML = siteContent['nav']['nav-item-4'];
+navChildren[4].innerHTML = siteContent['nav']['nav-item-5'];
+navChildren[5].innerHTML = siteContent['nav']['nav-item-6'];
 
+// Turned all nav items green
+navChildren.forEach(function (item) {
+  item.style.color = 'green';
+})
+
+// Added new item to the beginning of the nav bar
+const firstNavItem = document.createElement('a');
+firstNavItem.innerHTML = 'Stuff';
+firstNavItem.style.color = 'green';
+nav.prepend(firstNavItem);
+
+// Added new item to the end of the nav bar
+const lastNavItem = document.createElement('a');
+lastNavItem.innerHTML = 'Things';
+lastNavItem.style.color = 'green';
+nav.appendChild(lastNavItem);
+
+// Filled in all cta content
 const title = document.querySelector('.cta-text h1');
 title.innerHTML = siteContent['cta']['h1'];
   
@@ -58,6 +78,7 @@ cta.src = "img/header-img.png";
 const button = document.querySelector('button');
 button.innerHTML = 'Get Started';
 
+// Filled in top content
 const topContentTitle = document.querySelectorAll('.top-content h4');
 topContentTitle[0].innerHTML = siteContent['main-content']['features-h4'];
 topContentTitle[1].innerHTML = siteContent['main-content']['about-h4'];
@@ -66,9 +87,11 @@ const topContent = document.querySelectorAll('.top-content p');
 topContent[0].innerHTML = siteContent['main-content']['features-content'];
 topContent[1].innerHTML = siteContent['main-content']['about-content'];
 
+// Middle image
 const middleImg = document.getElementById('middle-img');
 middleImg.src = "img/mid-page-accent.jpg";
 
+// Filled in bottom content
 const bottomContentTitle = document.querySelectorAll('.bottom-content h4');
 bottomContentTitle[0].innerHTML = siteContent['main-content']['services-h4'];
 bottomContentTitle[1].innerHTML = siteContent['main-content']['product-h4'];
@@ -79,6 +102,7 @@ bottomContent[0].innerHTML = siteContent['main-content']['services-content'];
 bottomContent[1].innerHTML = siteContent['main-content']['product-content'];
 bottomContent[2].innerHTML = siteContent['main-content']['vision-content'];
 
+// Created contact info
 const contactTitle = document.querySelector('.contact h4');
 contactTitle.innerHTML = siteContent['contact']['contact-h4'];
 
@@ -87,5 +111,7 @@ contactInfo[0].innerHTML = siteContent['contact']['address'];
 contactInfo[1].innerHTML = siteContent['contact']['phone'];
 contactInfo[2].innerHTML = siteContent['contact']['email'];
 
+// Created footer
 const footer = document.querySelector('footer p');
 footer.innerHTML = siteContent['footer']['copyright'];
+
