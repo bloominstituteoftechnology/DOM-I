@@ -46,7 +46,24 @@ let nav = document.querySelectorAll('a');
 for( let i = 0; i < nav.length; i++ ) {
   nav[i].setAttribute('href', siteContent["nav"][`nav-item-${i+1}`] + '.html');
   nav[i].innerText = siteContent["nav"][`nav-item-${i+1}`];
+  nav[i].style.color = 'green';
 }
+
+// Create new nav element at the end of the nav list.
+const appendNav = document.createElement('a');
+appendNav.setAttribute('href', 'test.html');
+appendNav.innerText = 'Test';
+
+// Create new nav element at the beginning of the nav list.
+const prependNav = document.createElement('a');
+prependNav.setAttribute('href', 'home.html');
+prependNav.innerText = 'Home';
+
+// Add new elements to nav list.
+nav = document.querySelector('nav')
+nav.appendChild(appendNav);
+nav.prepend(prependNav);
+
 // CTA
 document.querySelector('.cta .cta-text h1').innerText = siteContent["cta"]["h1"];
 document.querySelector('.cta .cta-text button').innerText = siteContent["cta"]["button"];
