@@ -53,14 +53,14 @@ for (let i = 0; i < navbar.length; i++){
 
 // Create new navigation elements
 let newNavElement1 = document.createElement("a");
-newNavElement1.innerHTML = "Blog";
+newNavElement1.innerHTML = "Timer";
 newNavElement1.style.color = "green";
-newNavElement1.setAttribute("href", "index.html");
+newNavElement1.setAttribute("href", "stretch-assignment/digital_timer/index.html");
 
 let newNavElement2 = document.createElement("a");
 newNavElement2.innerHTML = "Careers";
 newNavElement2.style.color = "green";
-newNavElement2.setAttribute("href", "index.html");
+newNavElement2.setAttribute("href", "#");
 
 // Add new navigation elements to nav
 let newNav = document.querySelector('nav');
@@ -79,7 +79,7 @@ ctaText.innerHTML = siteContent["cta"]["h1"];
 let ctaButton = document.querySelector(".cta-text button");
 ctaButton.innerHTML = siteContent["cta"]["button"];
 ctaButton.style.background = "black";
-ctaButton.style.color = "white"
+ctaButton.style.color = "white";
 
 document.querySelector(".cta button").addEventListener("click", function(event) {
   // display the current click count inside the clicked div
