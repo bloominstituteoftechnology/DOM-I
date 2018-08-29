@@ -8,8 +8,6 @@ document.getElementById("msHundreds").innerHTML = 0;
 document.getElementById("secondOnes").innerHTML = 0;
 document.getElementById("secondTens").innerHTML = 0;
 
-
-
 function buttonStart() {
     document.getElementById("start").disabled = true;
     document.getElementById("start").innerHTML = "Press Reset";
@@ -38,7 +36,6 @@ document.getElementById('start').addEventListener("click", buttonStart);
 document.getElementById('reset').addEventListener("click", resetButton);
 
 function msTens() {
-
     if (countTensMS < 9) {
         countTensMS++;
         document.getElementById("msTens").innerHTML = countTensMS;
@@ -64,9 +61,7 @@ function msTens() {
                     redDigits[i].classList.add("redDigit");
                 }
                 clearInterval(buttonPush);
-
             }
-
         }
     }
 }
