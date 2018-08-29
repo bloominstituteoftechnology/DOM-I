@@ -55,7 +55,7 @@ document.querySelectorAll
 
 let logoImg = document.getElementById("logo-img");
 let header = document.querySelector('header');
-let anchors = document.getElementsByTagName('a');
+let anchors = Array.from(document.getElementsByTagName('a'));
 let ctaImg = document.getElementById('cta-img');
 let button = document.getElementsByTagName('button');
 let buttonText = Array.from(button)[0] ;
@@ -63,36 +63,43 @@ let paragraphs = document.getElementsByClassName('text-content');
 let pArr = Array.from(paragraphs);
 let midImg = document.getElementsByClassName('middle-img')
 let imgElement = Array.from(midImg)[0];
+let ctaText = Array.from(document.getElementsByClassName('cta-text'));
 
-/* Text variables */
-let featTxt = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.' ;
 
-let aboutTxt = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
 
-let servText = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'; 
+/* Header anchor tag variables */
 
-let prodText = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+anchors[0].innerHTML = 'Services';
+anchors[1].innerHTML = 'Product' ;
+anchors[2].innerHTML = 'Vision';
+anchors[3].innerHTML = 'About' ;
+anchors[4].innerHTML = 'Contact' ;
+anchors[5].remove();
+/* Text-content variables */
+let featTxt = siteContent["main-content"]["features-content"];
 
-let visText = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'; 
+let aboutTxt = siteContent["main-content"]["about-content"];
+
+let servText = siteContent["main-content"]["services-content"]; 
+
+let prodText = siteContent["main-content"]["product-content"];
+
+let visText = siteContent["main-content"]["vision-content"]; 
 
  pArr[0].innerHTML = featTxt ;
  pArr[1].innerHTML = aboutTxt ;
  pArr[2].innerHTML = servText ;
  pArr[3].innerHTML = prodText;
  pArr[4].innerHTML = visText ;
-/* Console logs for testing variable accuracy.
 
-console.log(logoImg);
-console.log(header)
-console.log(anchors)
-console.log(ctaImg)
-console.log(button)
-console.log(buttonText)
-console.log(paragraphs)
-console.log(pArr) // Array of the array like object logged above it.
-console.log(midImg)
+ /* For loop setting width on bottom three paragraphs. */
+ for (let i = 2 ; i <= pArr.length - 1; i++){
+   pArr[i].style.width = '27%' ; 
+ }
 
-*/
+ /****************************************************/
+
+
 
 /* Changes registered via DOM manipulation. */
 
@@ -113,42 +120,33 @@ buttonText.innerHTML = 'Get Started';
 
 imgElement.src = 'img/mid-page-accent.jpg' ;
 
- pArr[0].innerHTML = featTxt ;
- pArr[1].innerHTML = aboutTxt ;
- pArr[2].innerHTML = servText ;
- pArr[3].innerHTML = prodText;
- pArr[4].innerHTML = visText ;
-let h1 = document.createElement(h1) ;
 
-
- console.log(pArr);
-// ^ Puts all of the elements with the class 'text-content' in an Array like object. Used .from to turn that into an array. Set the for loop to iterate through the length of that array minus the number of paragraphs with different text values than the first two.
-
-
-let bottomContent = document.getElementsByClassName('bottom-content');
-console.log(bottomContent);
-
-
-
+ctaText[0].innerHTML = 'DOM Is Awesome' ;
 
 
 /*
 The :scope pseudo-class only matches selectors on descendants of the base element.
 */
 
+/* Console logs for testing variable accuracy.
+
+console.log(logoImg);
+console.log(header)
+console.log(anchors)
+console.log(ctaImg)
+console.log(button)
+console.log(buttonText)
+console.log(paragraphs)
+console.log(pArr) // Array of the array like object logged above it.
+console.log(midImg)
 
 
-/*
+/* To Do
 
-Add Text over button.
+Add dom is awesome text.
 
-Add header tags.
-
-resize bottom text paragraph widths.
 
 Add footer.
-
-
 
 
 */
