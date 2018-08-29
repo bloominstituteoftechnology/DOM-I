@@ -52,7 +52,7 @@ nav[4].innerHTML = siteContent.nav["nav-item-5"];
 nav[5].innerHTML = siteContent.nav["nav-item-6"];
 
 //Jumbotron
-let jumbotronH1 = document.querySelector('h1')
+let jumbotronH1 = document.querySelector('h1');
 jumbotronH1.innerHTML = siteContent.cta.h1;
 
 let jumbotronButton = document.querySelector('button');
@@ -60,3 +60,32 @@ jumbotronButton.innerHTML = siteContent.cta.button;
 
 let jumbotronLogo = document.getElementById('cta-img');
 jumbotronLogo.setAttribute('src', siteContent.cta["img-src"]);
+
+//Main
+let h4MainContent = document.querySelectorAll('.text-content > h4');
+let paragraphMainContent = document.querySelectorAll('.text-content > p');
+let banner = document.getElementById('middle-img');
+
+//top content
+h4MainContent[0].innerHTML = siteContent["main-content"]["features-h4"];
+paragraphMainContent[0].innerHTML = siteContent["main-content"]["features-content"];
+h4MainContent[1].innerHTML = siteContent["main-content"]["about-h4"];
+
+//Image
+
+banner.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+//bottom content
+paragraphMainContent[1].innerHTML = siteContent["main-content"]["about-content"];
+h4MainContent[2].innerHTML = siteContent["main-content"]["services-h4"];
+paragraphMainContent[2].innerHTML = siteContent["main-content"]["services-content"];
+h4MainContent[3].innerHTML = siteContent["main-content"]["product-h4"];
+paragraphMainContent[3].innerHTML = siteContent["main-content"]["product-content"];
+h4MainContent[4].innerHTML = siteContent["main-content"]["vision-h4"];
+paragraphMainContent[4].innerHTML = siteContent["main-content"]["vision-content"];
+
+//Contact
+
+let h4Contact = document.querySelector('.contact > h4');
+
+h4Contact.innerHTML = siteContent.contact["contact-h4"];
