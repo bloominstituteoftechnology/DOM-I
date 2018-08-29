@@ -49,7 +49,17 @@ nav.forEach((element, index) => {
   return element.style.color = "green";
 });
 
+const abi = document.createElement("a");
+const abiText = document.createTextNode("Abi");
+abi.prepend(abiText);
+abi.style.color = "green";
+document.querySelector("nav").prepend(abi);
 
+const franklin = document.createElement("a");
+const franklinText = document.createTextNode("Franklin");
+franklin.prepend(franklinText);
+franklin.style.color = "green";
+document.querySelector("nav").appendChild(franklin);
 
 const ctaH1 = document.querySelector(".cta-text h1");
 siteContent.cta.h1 = siteContent.cta.h1.split(" ").join("<br>")
