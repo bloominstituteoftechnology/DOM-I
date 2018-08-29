@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM \n Is \n Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "123 Way 456 Street \n Somewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -37,55 +37,58 @@ const siteContent = {
   },
 };
 
+//sets inner text
+function setText(siteContentText, createdElement){
+  for (let i = 0; i < siteContentText.length; i ++){
+    createdElement[i].innerText = siteContentText[i];
+  }
+}
 // Example: Update the img src for the Great Idea logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"]);
+const greatIdeaLogo = document.getElementById("logo-img");
+greatIdeaLogo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 //Update Logos
-let logo2 = document.getElementById("cta-img");
-logo2.setAttribute("src", siteContent["cta"]["img-src"]);
-let midPageLogo = document.getElementById("middle-img");
-midPageLogo.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+const circleLogo = document.getElementById("cta-img");
+circleLogo.setAttribute("src", siteContent["cta"]["img-src"]);
+const midPageBanner = document.getElementById("middle-img");
+midPageBanner.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
 //Navigation
-const navitems = ["Services", "Product", "Vision", "Features", "About", "Contact"];
-let navAnchor = document.querySelectorAll("a");
-for (let i = 0; i < navitems.length; i ++){
-  navAnchor[i].innerText = navitems[i];
-  //green nav
-  navAnchor[i].style.color = "green";
+// Long way: const navItems = [siteContent["nav"]["nav-item-1"], siteContent["nav"]["nav-item-2"], siteContent["nav"]["nav-item-2"], siteContent["nav"]["nav-item-3"], siteContent["nav"]["nav-item-4"], siteContent["nav"]["nav-item-5"]];
+//short way
+const navContent = Object.values(siteContent["nav"]).slice(0,6);
+let navAnchorElement = document.querySelectorAll("a");
+setText(navContent, navAnchorElement);
+
+//green nav
+for (let i = 0; i < navAnchorElement.length; i++){
+  navAnchorElement[i].style.color = "green";
 }
 
 //add two new items
-//both items will not stay at same time...that's weird
-let nav = document.querySelector("nav");
-let navAdd = document.createElement("li");
-let secondNavAdd = document.createElement("li");
-navAdd.innerHTML = "Hey I just got added!"
-secondNavAdd.innerHTML = "me too!!"
-console.log(nav);
-console.log(navAdd);
-nav.prepend(navAdd);
-nav.appendChild(secondNavAdd);
+//both items will not stay at same time unless they have different names...that's weird
+const navElement = document.querySelector("nav");
+const navAddLi = document.createElement("li");
+const secondNavAddLi = document.createElement("li");
+navAddLi.innerHTML = "Hey I just got added!"
+secondNavAddLi.innerHTML = "me too!!"
+navElement.prepend(navAddLi);
+navElement.appendChild(secondNavAddLi);
 
 //Dom is Awesome heading
-let h1 = document.querySelector("h1");
-h1.innerText = `Dom \n is \n Awesome`;
+const ctaH1Element = document.querySelector("h1");
+ctaH1Element.innerText = siteContent["cta"]["h1"];
 
-let mainButton = document.querySelector("button");
-mainButton.innerText= "Get Started";
+const ctaButton = document.querySelector("button");
+ctaButton.innerText = siteContent["cta"]["button"];
 
 //content sections
 //I feel like this is cheating, but I did it anyway
-const contentHeaders = ["Features", "About", "Services", "Product", "Vision", "Contact"];
-const paraContent = ["Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.", "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.", "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.", "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis", "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.", "123 Way 456 Street \n Somewhere, USA", "1 (888) 888-8888", "sales@greatidea.io", "Copyright Great Idea! 2018"];
+const h4Content = [siteContent["main-content"]["features-h4"], siteContent["main-content"]["about-h4"], siteContent["main-content"]["services-h4"], siteContent["main-content"]["product-h4"], siteContent["main-content"]["vision-h4"], siteContent["contact"]["contact-h4"]];
 
-let h4 = document.querySelectorAll("h4");
-let p = document.querySelectorAll("p");
-for (let i = 0; i < contentHeaders.length; i++){
-  h4[i].innerText = contentHeaders[i];
-}
+const paraContent = [siteContent["main-content"]["features-content"], siteContent["main-content"]["about-content"], siteContent["main-content"]["services-content"], siteContent["main-content"]["product-content"], siteContent["main-content"]["vision-content"], siteContent["contact"]["address"], siteContent["contact"]["phone"], siteContent["contact"]["email"], siteContent["footer"]["copyright"]];
 
-for (let i = 0; i < paraContent.length; i++){
-  p[i].innerText = paraContent[i];
-}
+const mainContentH4Element = document.querySelectorAll("h4");
+const mainContentPTextElement = document.querySelectorAll("p");
+setText(h4Content, mainContentH4Element);
+setText(paraContent, mainContentPTextElement);
