@@ -48,6 +48,7 @@ codeImg.setAttribute("src", siteContent["cta"]["img-src"]);
 let midImg = document.getElementById("middle-img");
 midImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
+// Navbar
 let navLinks = document.querySelectorAll("nav a");
 navLinks[0].innerHTML = siteContent.nav["nav-item-1"];
 navLinks[1].innerHTML = siteContent.nav["nav-item-2"];
@@ -56,12 +57,14 @@ navLinks[3].innerHTML = siteContent.nav["nav-item-4"];
 navLinks[4].innerHTML = siteContent.nav["nav-item-5"];
 navLinks[5].innerHTML = siteContent.nav["nav-item-6"];
 
+// Middle Section
 let ctaH1 = document.querySelector(".cta-text h1");
 ctaH1.innerHTML = siteContent.cta.h1;
 
 let ctaBtn = document.querySelector(".cta-text button");
 ctaBtn.innerHTML = siteContent.cta.button;
 
+// Main Content
 let contentH4s = document.querySelectorAll(".text-content h4");
 contentH4s[0].innerHTML = siteContent["main-content"]["features-h4"];
 contentH4s[1].innerHTML = siteContent["main-content"]["about-h4"];
@@ -76,6 +79,7 @@ contentPs[2].innerHTML = siteContent["main-content"]["services-content"];
 contentPs[3].innerHTML = siteContent["main-content"]["product-content"];
 contentPs[4].innerHTML = siteContent["main-content"]["vision-content"];
 
+// Contact Info
 let contactH4 = document.querySelector(".contact h4");
 contactH4.innerHTML = siteContent.contact["contact-h4"];
 
@@ -84,5 +88,28 @@ contactPs[0].innerHTML = siteContent.contact.address;
 contactPs[1].innerHTML = siteContent.contact.phone;
 contactPs[2].innerHTML = siteContent.contact.email;
 
+// Footer
 let footer = document.querySelector("footer p");
 footer.innerHTML = siteContent.footer.copyright;
+
+// Change Nav text to green
+navLinks.forEach(function(element) {
+  element.style.color = "green";
+});
+
+// Add new links to Nav
+let navbar = document.querySelector("nav");
+
+let storeNav = document.createElement("a");
+let signinNav = document.createElement("a");
+
+storeNav.setAttribute("href", "#");
+storeNav.innerHTML = "Store";
+storeNav.style.color = "green";
+
+signinNav.setAttribute("href", "#");
+signinNav.innerHTML = "Sign In";
+signinNav.style.color = "green";
+
+navbar.appendChild(storeNav);
+navbar.prepend(signinNav);
