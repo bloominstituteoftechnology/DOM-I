@@ -69,3 +69,45 @@ topPara[1].innerHTML = siteContent['main-content']['about-content'];
 
 const midImg = document.getElementById('middle-img');
 midImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+const botHeader = document.querySelectorAll('.main-content .bottom-content .text-content h4');
+botHeader[0].innerHTML = siteContent['main-content']['services-h4'];
+botHeader[1].innerHTML = siteContent['main-content']['product-h4'];
+botHeader[2].innerHTML = siteContent['main-content']['vision-h4'];
+
+const botPara = document.querySelectorAll('.main-content .bottom-content .text-content p');
+botPara[0].innerHTML = siteContent['main-content']['services-content'];
+botPara[1].innerHTML = siteContent['main-content']['product-content'];
+botPara[2].innerHTML = siteContent['main-content']['vision-content'];
+
+const contactHead = document.querySelector('.contact h4');
+contactHead.innerHTML = siteContent['contact']['contact-h4'];
+
+const contactPara = document.querySelectorAll('.contact p')
+contactPara[0].innerHTML = siteContent['contact']['address'];
+contactPara[1].innerHTML = siteContent['contact']['phone'];
+contactPara[2].innerHTML = siteContent['contact']['email'];
+
+const foot = document.querySelector('footer p');
+foot.innerHTML = siteContent['footer']['copyright'];
+
+const navFront = document.createElement('A');
+const text = document.createTextNode('Hello!');
+navFront.appendChild(text);
+
+document.querySelector('nav').prepend(navFront);
+
+const navBack = document.createElement('A');
+const backText = document.createTextNode('Bye!');
+navBack.appendChild(backText);
+
+document.querySelector('nav').append(navBack);
+anchorColor = document.querySelectorAll('nav a');
+anchorColor[0].style.color = 'green';
+anchorColor[1].style.color = 'green';
+anchorColor[2].style.color = 'green';
+anchorColor[3].style.color = 'green';
+anchorColor[4].style.color = 'green';
+anchorColor[5].style.color = 'green';
+anchorColor[6].style.color = 'green';
+anchorColor[7].style.color = 'green';
