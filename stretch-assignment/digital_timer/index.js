@@ -11,32 +11,39 @@ let secondTensCounter = 0;
 
 function msOnesIncrement(){
     msTensCounter++;
-    msTens.textContent = msTensCounter;
 
-    if(msTensCounter === 9){
+    if(msTensCounter > 9){
+        msTens.textContent = 0;
         msTensCounter = 0;
         hsHundredsIncrement();
+    }else{
+        msTens.textContent = msTensCounter;
     }
 }
 
 function hsHundredsIncrement(){
     msHundredsCounter++;
-    msHundreds.textContent = msHundredsCounter;
 
-    if(msHundredsCounter === 9){
+    if(msHundredsCounter > 9){
+        msHundreds.textContent = 0;
         msHundredsCounter = 0;
         sOnesIncrement();
+    }else{
+        msHundreds.textContent = msHundredsCounter;
     }
 }
 
 function sOnesIncrement(){
     secondOnesCounter++;
-    secondOnes.textContent = secondOnesCounter;
 
     if(secondOnesCounter > 9) {
+        secondOnes.textContent = 0;
         secondOnesCounter = 0;
         sTensIncrement();
+    }else{
+        secondOnes.textContent = secondOnesCounter;
     }
+
 }
 
 function sTensIncrement(){
@@ -49,9 +56,6 @@ function sTensIncrement(){
     const digits = document.querySelector('.digits').children;
     Array.from(digits).forEach((digitDiv) =>{
         digitDiv.classList.add('redDigit');
-        if(digitDiv.id !== 'secondTens' && digitDiv.id !== 'colon'){
-            digitDiv.textContent = 0;
-        }
     });
 }
 
