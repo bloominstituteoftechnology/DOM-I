@@ -38,27 +38,32 @@ const siteContent = {
 };
 
 
-
 let nav = document.querySelectorAll('nav a');
 
-nav.forEach(item => item.style.color = 'lawngreen');
+
+nav.forEach(item => item.style = 'color: #94BFA7');
 for (let i=0; i<nav.length; i++) {
         nav[i].innerHTML = siteContent.nav[`nav-item-${i+1}`];
       }
+//could nest the color change into the for loop too
+
+
+
+
 
  //appended anchor 
 var navParent = document.querySelector('nav');
 var newAnchor = document.createElement('a');
 newAnchor.innerHTML = 'FAQ';
-newAnchor.style.color = 'lawngreen';
+newAnchor.style = 'color: #94BFA7';
 navParent.appendChild(newAnchor);
 
 //prepended anchor
 var secondAnchor = document.createElement('a');
 secondAnchor.innerHTML = 'Welcome';
-secondAnchor.style.color = 'lawngreen';
-navParent.insertBefore(secondAnchor, navParent.firstChild);
-
+secondAnchor.style = 'color: #94BFA7';
+// navParent.insertBefore(secondAnchor, navParent.firstChild); //using .insertBefore
+navParent.prepend(secondAnchor);
 
 
 let logo = document.getElementById("logo-img");
@@ -66,9 +71,11 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let h1 = document.querySelector(".cta-text h1");
 h1.innerHTML = siteContent.cta.h1;
+h1.style = 'color: #F7A1C4';
 
 let button = document.querySelector('button');
 button.innerHTML = siteContent.cta.button;
+
 
 let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent.cta["img-src"]);
@@ -79,11 +86,13 @@ let arrH4 = ["features", "about", "services", "product", "vision"];
 let h4 = document.querySelectorAll(".text-content h4");
 for (let i=0; i<h4.length; i++) {
   h4[i].innerHTML = siteContent["main-content"][`${arrH4[i]}-h4`];
+  h4[i].style = 'color: #2F2F2F';
 }
 
 let p = document.querySelectorAll(".text-content p");
 for (let i=0; i<p.length; i++) {
   p[i].innerHTML = siteContent["main-content"][`${arrH4[i]}-content`];
+  p[i].style= 'color: #DC7F9B'
 }
 
 
@@ -96,18 +105,29 @@ middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 let contactH4 = document.querySelector(".contact h4");
 contactH4.innerHTML = siteContent.contact["contact-h4"];
+contactH4.style = 'color: #2F2F2F';
 
 let address = document.querySelectorAll(".contact p")[0];
 address.innerHTML = siteContent.contact["address"];
+address.style= 'color: #DC7F9B';
 
 let phone = document.querySelectorAll(".contact p")[1];
 phone.innerHTML = siteContent.contact["phone"];
+phone.style= 'color: #DC7F9B';
 
 let email = document.querySelectorAll(".contact p")[2];
 email.innerHTML = siteContent.contact["email"];
+email.style= 'color: #DC7F9B';
 
 
 
 
 let footer = document.querySelector("footer");
 footer.innerHTML = siteContent.footer.copyright;
+footer.style = 'color: #2F2F2F';
+
+
+// button.addEventListener('click', clickAction;
+// const clickAction = (event) => {
+//   button.innerHTML = 'Success!';
+// }
