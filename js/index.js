@@ -38,95 +38,100 @@ const siteContent = {
 };
 
 
-// header
-const nav = document.querySelector('nav');
-const navAnchors = nav.querySelectorAll('a');
+// Some helper functions to perform node selection and updating
 
-navAnchors[0].setAttribute('style', 'color: green');
-navAnchors[1].setAttribute('style', 'color: green');
-navAnchors[2].setAttribute('style', 'color: green');
-navAnchors[3].setAttribute('style', 'color: green');
-navAnchors[4].setAttribute('style', 'color: green');
-navAnchors[5].setAttribute('style', 'color: green');
+function setInnerHtml(base, selector, value) {
+  const node = base.querySelector(selector);
+  node.innerHTML = value;
+}
 
-navAnchors[0].innerHTML = siteContent['nav']['nav-item-1'];
-navAnchors[1].innerHTML = siteContent['nav']['nav-item-2'];
-navAnchors[2].innerHTML = siteContent['nav']['nav-item-3'];
-navAnchors[3].innerHTML = siteContent['nav']['nav-item-4'];
-navAnchors[4].innerHTML = siteContent['nav']['nav-item-5'];
-navAnchors[5].innerHTML = siteContent['nav']['nav-item-6'];
+function setAttr(base, selector, attr, value) {
+  const node = base.querySelector(selector);
+  node.setAttribute(attr, value);
+}
+
+function setAttrAll(base, selector, attr, value) {
+  const nodes = base.querySelectorAll(selector);
+  for (let i = 0; i < nodes.length; i++) {
+    nodes[i].setAttribute(attr, value);
+  }
+}
+
+
+// Now just call these functions for every element that needs filling in
+
+// navigation bar
+setInnerHtml(document, 'header nav a:nth-child(1)', siteContent['nav']['nav-item-1']);
+setInnerHtml(document, 'header nav a:nth-child(2)', siteContent['nav']['nav-item-2']);
+setInnerHtml(document, 'header nav a:nth-child(3)', siteContent['nav']['nav-item-3']);
+setInnerHtml(document, 'header nav a:nth-child(4)', siteContent['nav']['nav-item-4']);
+setInnerHtml(document, 'header nav a:nth-child(5)', siteContent['nav']['nav-item-5']);
+setInnerHtml(document, 'header nav a:nth-child(6)', siteContent['nav']['nav-item-6']);
+
+// This part I will still do manually :)
+// Add two additional navigation elements
+const nav = document.querySelector('header nav');
 
 const homeAnchor = document.createElement('a');
 homeAnchor.innerText = 'Home';
 homeAnchor.setAttribute('href', '#');
-homeAnchor.setAttribute('style', 'color: green');
 nav.prepend(homeAnchor);
 
 const blogAnchor = document.createElement('a');
 blogAnchor.innerText = 'Blog';
 blogAnchor.setAttribute('href', '#');
-blogAnchor.setAttribute('style', 'color: green');
 nav.appendChild(blogAnchor);
 
-const navLogo = document.getElementById('logo-img');
-navLogo.setAttribute('src', siteContent['nav']['img-src']);
+// make them all green!
+setAttrAll(document, 'header nav a', 'style', 'color: green');
+
+// don't forget the logo image!
+setAttr(document, '#logo-img', 'src', siteContent['nav']['img-src']);
+
 
 // cta
-const ctaText = document.querySelector('.cta-text');
-const ctaH1 = ctaText.querySelector('h1');
-const ctaButton = ctaText.querySelector('button');
+setInnerHtml(document, '.cta-text h1', siteContent['cta']['h1']);
+setInnerHtml(document, '.cta-text button', siteContent['cta']['button']);
+setAttr(document, '#cta-img', 'src', siteContent['cta']['img-src']);
 
-ctaH1.innerHTML = siteContent['cta']['h1'];
-ctaButton.innerHTML = siteContent['cta']['button'];
-
-const ctaImg = document.getElementById('cta-img');
-ctaImg.setAttribute('src', siteContent['cta']['img-src']);
 
 // top-content
-const topContent = document.querySelector('.top-content');
-const topTextContent = topContent.querySelectorAll('.text-content');
-const featuresH4 = topTextContent[0].querySelector('h4');
-const featuresP = topTextContent[0].querySelector('p');
-const aboutH4 = topTextContent[1].querySelector('h4');
-const aboutP = topTextContent[1].querySelector('p');
+setInnerHtml(document, '.top-content .text-content:nth-child(1) h4',
+              siteContent['main-content']['features-h4']);
+setInnerHtml(document, '.top-content .text-content:nth-child(1) p',
+              siteContent['main-content']['features-content']);
+setInnerHtml(document, '.top-content .text-content:nth-child(2) h4',
+              siteContent['main-content']['about-h4']);
+setInnerHtml(document, '.top-content .text-content:nth-child(2) p',
+              siteContent['main-content']['about-content']);
 
-featuresH4.innerHTML = siteContent['main-content']['features-h4'];
-featuresP.innerHTML = siteContent['main-content']['features-content'];
-aboutH4.innerHTML = siteContent['main-content']['about-h4'];
-aboutP.innerHTML = siteContent['main-content']['about-content'];
 
 // middle-img
-const middleImg = document.getElementById('middle-img');
-middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+setAttr(document, '#middle-img', 'src', siteContent['main-content']['middle-img-src']);
+
 
 // bottom-content
-const bottomContent = document.querySelector('.bottom-content');
-const bottomTextContent = bottomContent.querySelectorAll('.text-content');
-const servicesH4 = bottomTextContent[0].querySelector('h4');
-const servicesP = bottomTextContent[0].querySelector('p');
-const productH4 = bottomTextContent[1].querySelector('h4');
-const productP = bottomTextContent[1].querySelector('p');
-const visionH4 = bottomTextContent[2].querySelector('h4');
-const visionP = bottomTextContent[2].querySelector('p');
+setInnerHtml(document, '.bottom-content .text-content:nth-child(1) h4',
+              siteContent['main-content']['services-h4']);
+setInnerHtml(document, '.bottom-content .text-content:nth-child(1) p',
+              siteContent['main-content']['services-content']);
+setInnerHtml(document, '.bottom-content .text-content:nth-child(2) h4',
+              siteContent['main-content']['product-h4']);
+setInnerHtml(document, '.bottom-content .text-content:nth-child(2) p',
+              siteContent['main-content']['product-content']);
+setInnerHtml(document, '.bottom-content .text-content:nth-child(3) h4',
+              siteContent['main-content']['vision-h4']);
+setInnerHtml(document, '.bottom-content .text-content:nth-child(3) p',
+              siteContent['main-content']['vision-content']);
 
-servicesH4.innerHTML = siteContent['main-content']['services-h4'];
-servicesP.innerHTML = siteContent['main-content']['services-content'];
-productH4.innerHTML = siteContent['main-content']['product-h4'];
-productP.innerHTML = siteContent['main-content']['product-content'];
-visionH4.innerHTML = siteContent['main-content']['vision-h4'];
-visionP.innerHTML = siteContent['main-content']['vision-content'];
 
 // contact
-const contact = document.querySelector('.contact');
-const contactH4 = contact.querySelector('h4');
-const contactPs = contact.querySelectorAll('p');
+setInnerHtml(document, '.contact h4', siteContent['contact']['contact-h4']);
+// note that h4 is the first child of .contact, so <p>s are children 2, 3, 4
+setInnerHtml(document, '.contact p:nth-child(2)', siteContent['contact']['address']);
+setInnerHtml(document, '.contact p:nth-child(3)', siteContent['contact']['phone']);
+setInnerHtml(document, '.contact p:nth-child(4)', siteContent['contact']['email']);
 
-contactH4.innerHTML = siteContent['contact']['contact-h4'];
-contactPs[0].innerHTML = siteContent['contact']['address'];
-contactPs[1].innerHTML = siteContent['contact']['phone'];
-contactPs[2].innerHTML = siteContent['contact']['email'];
 
 // footer
-const footer = document.querySelector('footer');
-const footerP = footer.querySelector('p');
-footerP.innerHTML = siteContent['footer']['copyright'];
+setInnerHtml(document, 'footer p', siteContent['footer']['copyright']);
