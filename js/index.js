@@ -63,6 +63,16 @@ const topContent = document.querySelectorAll('.top-content p');
 topContent[0].innerHTML = siteContent['main-content']['features-content'];
 topContent[1].innerHTML = siteContent['main-content']['about-content'];
 
+const bottomContentTitle = document.querySelectorAll('.bottom-content h4');
+bottomContentTitle[0].innerHTML = siteContent['main-content']['services-h4'];
+bottomContentTitle[1].innerHTML = siteContent['main-content']['product-h4'];
+bottomContentTitle[2].innerHTML = siteContent['main-content']['vision-h4'];
+
+const bottomContent = document.querySelectorAll('.bottom-content p');
+bottomContent[0].innerHTML = siteContent['main-content']['services-content'];
+bottomContent[1].innerHTML = siteContent['main-content']['product-content'];
+bottomContent[2].innerHTML = siteContent['main-content']['vision-content'];
+
 const button = document.querySelector('button');
 button.innerHTML = 'Get Started';
 
