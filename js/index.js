@@ -42,16 +42,23 @@ let logo = document.getElementById("logo-img");
 // logo.setAttribute('src', siteContent["nav"]["img-src"])
 logo.src = siteContent["nav"]["img-src"]
 
-let navs = document.querySelectorAll('a');
-navs[0].innerHTML = "Services";
-navs[1].innerHTML = "Product";
-navs[2].innerHTML = "Vision";
-navs[3].innerHTML = "Features";
-navs[4].innerHTML = "About";
-navs[5].innerHTML = "Contact";
-for(let i = 0; i < navs.length;i++ ){
-navs[i].style.color ='green'
+let anchors = document.querySelectorAll('a');
+let navtextArray = ["Services", "Product", "Vision", "Features", "About", "Contact"]
+for(let i = 0; i < anchors.length;i++ ){
+  anchors[i].style.color ='green';
+  anchors[i].innerHTML = navtextArray[i];
 }
+
+let navigation = document.querySelector('.container nav');
+let newFirstAnchor = document.createElement('a');
+newFirstAnchor.innerHTML = "Blog";
+newFirstAnchor.style.color ='green';
+let newLastAnchor = document.createElement('a');
+newLastAnchor.innerHTML = 'Store';
+newLastAnchor.style.color = 'green';
+navigation.prepend(newFirstAnchor);
+navigation.appendChild(newLastAnchor);
+
 
 let ClassH1 = document.querySelector('.cta-text h1').innerHTML = "DOM Is Awesome";
 let button = document.querySelector('button').innerHTML = "Get Started";
@@ -64,7 +71,6 @@ h4[3].innerHTML = "Product";
 h4[4].innerHTML = "Vision";
 
 let textContentPara = document.querySelectorAll('.text-content p');
-
 textContentPara[0].innerHTML = siteContent['main-content']['features-content'];
 textContentPara[1].innerHTML = siteContent['main-content']['about-content'];
 let middleImg = document.getElementById('middle-img').src = siteContent["main-content"]["middle-img-src"];
