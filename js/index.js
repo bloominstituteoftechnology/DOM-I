@@ -40,3 +40,43 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
+// Anchor Elements
+let anchor = document.querySelectorAll('a');
+anchor[0].innerHTML = siteContent["nav"]["nav-item-1"];
+anchor[1].innerHTML = siteContent["nav"]["nav-item-2"];
+anchor[2].innerHTML = siteContent["nav"]["nav-item-3"];
+anchor[3].innerHTML = siteContent["nav"]["nav-item-4"];
+anchor[4].innerHTML = siteContent["nav"]["nav-item-5"];
+anchor[5].innerHTML = siteContent["nav"]["nav-item-6"];
+
+// h1 element & Button
+let cta = document.querySelector('.cta-text');
+let h1 = cta.getElementsByTagName('h1')[0];
+let button = cta.getElementsByTagName('button')[0];
+let image = document.querySelector('#cta-img');
+
+// cta.style.padding = '30px 40px';
+
+h1.innerHTML = siteContent['cta']['h1'];
+button.innerText = siteContent['cta']['button'];
+image.setAttribute('src', siteContent["cta"]["img-src"]);
+// image.style.width = '50%;'
+
+// MAIN CONTENT -- Top Content
+let topContent = document.querySelector('.top-content');
+let featuresContent = topContent.getElementsByTagName('div')[0];
+let aboutContent = topContent.getElementsByTagName('div')[1];
+console.log("My element: " + featuresContent);
+
+let featuresH4 = featuresContent.querySelector('h4');
+let featuresP = featuresContent.querySelector('p');
+featuresH4.innerText = siteContent['main-content']['features-h4'];
+featuresP.innerText = siteContent['main-content']['features-content']
+
+let aboutH4 = aboutContent.querySelector('h4');
+let aboutP = aboutContent.querySelector('p');
+aboutH4.innerText = siteContent['main-content']['about-h4'];
+aboutP.innerText = siteContent['main-content']['about-content'];
+
+let middleImage = document.getElementById('middle-img');
+middleImage.setAttribute('src', siteContent['main-content']['middle-img-src']);
