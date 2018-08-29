@@ -39,8 +39,10 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"]);
+// let logo = document.getElementById("logo-img");
+// logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+document.getElementById("logo-img").setAttribute('src', siteContent["nav"]["img-src"]);
 
 document.getElementsByTagName('a')[0].innerText = "Services";
 
@@ -93,53 +95,36 @@ for (let i = 0; i < navAllItems.length; i++) {
 
 
 
-let circle = document.getElementById("cta-img");
-circle.setAttribute('src', siteContent["cta"]["img-src"]);
+document.getElementById("cta-img").setAttribute('src', siteContent["cta"]["img-src"]);
 
-let button = document.querySelector("button");
-button.innerHTML = "Get Started";
+document.querySelector("button").innerHTML = "Get Started";
 
-let title = document.querySelector('h1');
-title.innerHTML = `DOM <br> Is <br> Awesome`;
+document.querySelector('h1').innerHTML = `DOM <br> Is <br> Awesome`;
 
+document.getElementsByTagName('h4')[0].innerText = "Features";
 
-let features = document.getElementsByTagName('h4')[0];
-features.innerText = "Features";
+document.getElementsByTagName('p')[0].innerText = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
-let featuresPTag = document.getElementsByTagName('p')[0];
-featuresPTag.innerText = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+document.getElementsByTagName('h4')[1].innerText = "About";
+
+document.getElementsByTagName('p')[1].innerText = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
 
-let about = document.getElementsByTagName('h4')[1];
-about.innerText = "About";
+document.getElementById("middle-img").setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
-let aboutPTag = document.getElementsByTagName('p')[1];
-aboutPTag.innerText = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+document.getElementsByTagName('h4')[2].innerText = "Services";
 
+document.getElementsByTagName('p')[2].innerText = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
-let middleImage = document.getElementById("middle-img");
-middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+document.getElementsByTagName('h4')[3].innerText = "Product";
 
-let services = document.getElementsByTagName('h4')[2];
-services.innerText = "Services";
+document.getElementsByTagName('p')[3].innerText = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
-let servicesPTag = document.getElementsByTagName('p')[2];
-servicesPTag.innerText = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+document.getElementsByTagName('h4')[4].innerText = "Vision";
 
-let product = document.getElementsByTagName('h4')[3];
-product.innerText = "Product";
+document.getElementsByTagName('p')[4].innerText = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
-let productPTag = document.getElementsByTagName('p')[3];
-productPTag.innerText = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
-
-let vision = document.getElementsByTagName('h4')[4];
-vision.innerText = "Vision";
-
-let visionPTag = document.getElementsByTagName('p')[4];
-visionPTag.innerText = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
-
-let contact = document.getElementsByTagName('h4')[5];
-contact.innerText = "Contact";
+document.getElementsByTagName('h4')[5].innerText = "Contact";
 
 // document.getElementById("contact").getElementsByTagName("p").add("contactPTag");
 // querySelector("contact")
@@ -150,19 +135,15 @@ contact.innerText = "Contact";
 // let circle = document.getElementById("cta-img");
 // circle.setAttribute('src', siteContent["cta"]["img-src"]);
 
-let address = document.getElementsByTagName('p')[5];
-address.innerText = "123 Way 456 Street Somewhere, USA";
+document.getElementsByTagName('p')[5].innerText = "123 Way 456 Street Somewhere, USA";
 
 // let phone = document.getElementsByClassName("contact").getElementsByTagName('p');
-let phone = document.getElementsByTagName('p')[6];
-phone.innerText = "1 (888) 888-8888";
+document.getElementsByTagName('p')[6].innerText = "1 (888) 888-8888";
 // phone.innerText = setContent["contact"]["phone"];
 
-let email = document.getElementsByTagName('p')[7];
-email.innerText = "sales@greatidea.io";
+document.getElementsByTagName('p')[7].innerText = "sales@greatidea.io";
 
-let copyright = document.getElementsByTagName('p')[8];
-copyright.innerText = "Copyright Great Idea! 2018";
+document.getElementsByTagName('p')[8].innerText = "Copyright Great Idea! 2018";
 
 
 //Am I on the right track?
