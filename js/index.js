@@ -50,6 +50,27 @@ navArr[3].innerHTML = siteContent['nav']['nav-item-4'];
 navArr[4].innerHTML = siteContent['nav']['nav-item-5'];
 navArr[5].innerHTML = siteContent['nav']['nav-item-6'];
 
+const navFront = document.createElement('A');
+const text = document.createTextNode('Hello!');
+navFront.appendChild(text);
+
+document.querySelector('nav').prepend(navFront);
+
+const navBack = document.createElement('A');
+const backText = document.createTextNode('Bye!');
+navBack.appendChild(backText);
+
+document.querySelector('nav').append(navBack);
+anchorColor = document.querySelectorAll('nav a');
+anchorColor[0].style.color = 'green';
+anchorColor[1].style.color = 'green';
+anchorColor[2].style.color = 'green';
+anchorColor[3].style.color = 'green';
+anchorColor[4].style.color = 'green';
+anchorColor[5].style.color = 'green';
+anchorColor[6].style.color = 'green';
+anchorColor[7].style.color = 'green';
+
 const ctaText = document.querySelector(".cta-text h1")
 ctaText.innerHTML = siteContent['cta']['h1'];
 
@@ -90,24 +111,3 @@ contactPara[2].innerHTML = siteContent['contact']['email'];
 
 const foot = document.querySelector('footer p');
 foot.innerHTML = siteContent['footer']['copyright'];
-
-const navFront = document.createElement('A');
-const text = document.createTextNode('Hello!');
-navFront.appendChild(text);
-
-document.querySelector('nav').prepend(navFront);
-
-const navBack = document.createElement('A');
-const backText = document.createTextNode('Bye!');
-navBack.appendChild(backText);
-
-document.querySelector('nav').append(navBack);
-anchorColor = document.querySelectorAll('nav a');
-anchorColor[0].style.color = 'green';
-anchorColor[1].style.color = 'green';
-anchorColor[2].style.color = 'green';
-anchorColor[3].style.color = 'green';
-anchorColor[4].style.color = 'green';
-anchorColor[5].style.color = 'green';
-anchorColor[6].style.color = 'green';
-anchorColor[7].style.color = 'green';
