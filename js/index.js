@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM <br> Is <br> Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -70,3 +70,9 @@ link4.innerHTML = siteContent["nav"]["nav-item-5"];
 
 let link5 = document.body.getElementsByTagName("a")[5];
 link5.innerHTML = siteContent["nav"]["nav-item-6"];
+
+let feets = document.body.getElementsByTagName("footer")[0];
+feets.innerHTML = siteContent["footer"]["copyright"];
+
+let topcontent = document.body.querySelectorAll('#text-content h4');
+topcontent.innerHTML = siteContent["main-content"]["features-h4"];
