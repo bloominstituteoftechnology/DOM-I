@@ -92,8 +92,3 @@ addedP.innerHTML = "History content elementum magna eros, ac posuere elvit tempu
 title.style.color = '#0055A8';
 bottomContent.forEach((obj,i) => {bottomContent[i].style.fontSize="12px"})
 
-
-// var navParent = document.querySelector('nav');
-// var newAnchor = document.createElement('a');
-// newAnchor.innerHTML = 'FAQ';
-// navParent.appendChild(newAnchor);
