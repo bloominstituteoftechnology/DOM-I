@@ -46,17 +46,17 @@ for (let i = 0; i < navbar.length; i++){
   navbar[i].innerHTML = siteContent["nav"]["nav-item-" + (i + 1)];
 };
 
-// Update navigation color
-for (let i = 0; i < navbar.length; i++){
-  navbar[i].style.color = "green";
-};
-
 // Create new navigation elements
 let newNavElement1 = document.createElement("a");
 newNavElement1.innerHTML = "Blog";
 
 let newNavElement2 = document.createElement("a");
 newNavElement2.innerHTML = "Careers";
+
+// Update navigation color
+for (let i = 0; i < navbar.length; i++){
+  navbar[i].style.color = "green";
+};
 
 // Add new navigation elements to nav
 let newNav = document.querySelector('nav');
@@ -77,7 +77,7 @@ ctaButton.innerHTML = siteContent["cta"]["button"];
 ctaButton.style.background = "black";
 ctaButton.style.color = "white"
 
-document.querySelector(".cta button").addEventListener("click", function( event ) {
+document.querySelector(".cta button").addEventListener("click", function(event) {
   // display the current click count inside the clicked div
   logo.setAttribute('src', siteContent["cta"]["img-src-2"]);
 }, false);
