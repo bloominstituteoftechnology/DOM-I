@@ -40,21 +40,35 @@ const siteContent = {
 
 // Navigation
 let navigation = document.querySelectorAll('header nav a');
-navigation[0].innerHTML = siteContent["nav"]["nav-item-1"];
-navigation[1].innerHTML = siteContent["nav"]["nav-item-2"];
-navigation[2].innerHTML = siteContent["nav"]["nav-item-3"];
-navigation[3].innerHTML = siteContent["nav"]["nav-item-4"];
-navigation[4].innerHTML = siteContent["nav"]["nav-item-5"];
-navigation[5].innerHTML = siteContent["nav"]["nav-item-6"];
-navigation[0].style.color = "green";
-navigation[1].style.color = "green";
-navigation[2].style.color = "green";
-navigation[3].style.color = "green";
-navigation[4].style.color = "green";
-navigation[5].style.color = "green";
+
+// New way of doing it!
+for (let i = 0; i < navigation.length; i++){
+  navigation[i].innerHTML = siteContent["nav"][`nav-item-${i+1}`];
+}
+
+// Old way of doing it!
+// navigation[0].innerHTML = siteContent["nav"]["nav-item-1"];
+// navigation[1].innerHTML = siteContent["nav"]["nav-item-2"];
+// navigation[2].innerHTML = siteContent["nav"]["nav-item-3"];
+// navigation[3].innerHTML = siteContent["nav"]["nav-item-4"];
+// navigation[4].innerHTML = siteContent["nav"]["nav-item-5"];
+// navigation[5].innerHTML = siteContent["nav"]["nav-item-6"];
+
+// New way of doing it!
+for (let i = 0; i < navigation.length; i++){
+  navigation[i].style.color = "green";
+}
+
+// Old way of doing it!
+// navigation[0].style.color = "green";
+// navigation[1].style.color = "green";
+// navigation[2].style.color = "green";
+// navigation[3].style.color = "green";
+// navigation[4].style.color = "green";
+// navigation[5].style.color = "green";
 
 const newNav1 = document.createElement('a');
-newNav1.innerHTML = 'Test';
+newNav1.innerHTML = 'End';
 const content = document.querySelector('header nav');
 content.appendChild(newNav1);
 newNav1.style.color = "green";
