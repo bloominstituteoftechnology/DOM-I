@@ -64,6 +64,7 @@ let mainContentClass = document.getElementsByClassName('main-content');
 let contactClass = document.getElementsByClassName('contact');
 
 let h1_Tags = document.getElementsByTagName('h1');
+h1_Tags[0].innerHTML = siteContent['cta']['h1'];
 
 let buttonTag = document.getElementsByTagName('button');
 buttonTag[0].innerHTML = siteContent['cta']['button'];
@@ -83,14 +84,56 @@ about_h4.innerHTML = siteContent['main-content']['about-h4'];
 let about_p = topContent[1].querySelector('p');
 about_p.innerHTML = siteContent['main-content']['about-content'];
 
+let bottomContent = document.querySelectorAll('.bottom-content .text-content');
+
+let services_h4 = bottomContent[0].querySelector('h4');
+services_h4.innerHTML = siteContent['main-content']['services-h4'];
+
+let services_p = bottomContent[0].querySelector('p');
+services_p.innerHTML = siteContent['main-content']['services-content'];
 
 
+let product_h4 = bottomContent[1].querySelector('h4');
+product_h4.innerHTML = siteContent['main-content']['product-h4'];
+
+let product_p = bottomContent[1].querySelector('p');
+product_p.innerHTML = siteContent['main-content']['services-content'];
 
 
+let vision_h4 = bottomContent[2].querySelector('h4');
+vision_h4.innerHTML = siteContent['main-content']['vision-h4'];
+
+let vision_p = bottomContent[2].querySelector('p');
+vision_p.innerHTML = siteContent['main-content']['vision-content'];
 
 
+let contactContent = document.querySelectorAll('.contact');
+
+let contact_h = contactContent[0].querySelector('h4');
+contact_h.innerHTML = siteContent['contact']['contact-h4'];
+
+let contact_p = contactContent[0].querySelectorAll('p');
+contact_p[0].innerHTML = siteContent['contact']['address'];
+contact_p[1].innerHTML = siteContent['contact']['phone'];
+contact_p[2].innerHTML = siteContent['contact']['email'];
 
 
+let footerContent = document.querySelector('footer');
+footer_p = footerContent.querySelector('p');
+footer_p.innerHTML = siteContent['footer']['copyright'];
+
+let navNodes = document.querySelector('nav');
+let appended_a = document.createElement('a');
+appended_a.innerHTML = 'Appended a';
+navNodes.appendChild(appended_a);
+
+let prepended_a = document.createElement('a');
+prepended_a.innerHTML = 'Prepended a';
+navNodes.insertBefore(prepended_a, appended_a);
 
 
-// let navData = document.getElementsByTagName('nav');
+for(let i = 0; i < aTag.length; i++){
+  aTag[i].style.color = 'green';
+}
+
+
