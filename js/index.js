@@ -38,12 +38,22 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+//navbar ---------------------------------------------------------
+
+let logo = document.getElementById("logo-img");
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 let links = document.querySelectorAll("nav a");
 links.forEach((elem, i) => elem.innerText = siteContent["nav"][`nav-item-${i+1}`]);
+
+let newLink1 = document.createElement('a');
+let newLink2 = document.createElement('a'); 
+let navTag = document.querySelector('nav'); 
+navTag.appendChild(newLink1).innerHTML = "Opportunities"; 
+navTag.appendChild(newLink2).innerHTML = "Quotes"; 
+
+//header----------------------------------------------------------
 
 let header = document.querySelector(".cta h1"); 
 header.innerHTML = siteContent["cta"]["h1"]; 
@@ -86,3 +96,5 @@ paraTag[6].innerText = siteContent["contact"]["phone"];
 paraTag[7].innerText = siteContent["contact"]["email"]; 
 
 //footer--------------------------------------------------------------------------
+
+paraTag[8].innerText = siteContent["footer"]["copyright"]; 
