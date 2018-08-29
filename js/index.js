@@ -42,24 +42,50 @@ const siteContent = {
   }
 };
 
+//NAV
+const topnav    = document.querySelectorAll('nav a'),
+      topnavArray   = Array.from(topnav);
+   for (let i=0; i<topnavArray.length; i++){
+    const string = `nav-item-${i+1}`;
+    topnavArray[i].innerHTML = siteContent['nav'][string] ;
+  };
+
+// h1 CONTENT
+(h1content = document.querySelector(".cta-text h1")),
+  (h1content.innerHTML = siteContent["cta"]["h1"]);
+
+// BUTTON
+
+const btn = document.querySelector(".cta-text button");
+btn.innerHTML = siteContent["cta"]["button"];
+
 //MAIN-CONTENT
 
-const h4TopContent    = document.querySelectorAll('.main-content .top-content .text-content h4'),
-pTopContent     = document.querySelectorAll('.main-content .top-content .text-content p'),
-h4BottomContent = document.querySelectorAll('.main-content .bottom-content .text-content h4'),
-pBottomContent  = document.querySelectorAll('.main-content .bottom-content .text-content p');
-h4TopContent[0].innerHTML     = siteContent['main-content']['features-h4'];
-pTopContent[0].innerHTML      = siteContent['main-content']['features-content'];
-h4TopContent[1].innerHTML     = siteContent['main-content']['about-h4'];
-pTopContent[1].innerHTML      = siteContent['main-content']['about-content'];
-h4BottomContent[0].innerHTML      = siteContent['main-content']['services-h4'];
-pBottomContent [0].innerHTML      = siteContent['main-content']['services-content'];
-h4BottomContent [1].innerHTML     = siteContent['main-content']['product-h4'];
-pBottomContent [1].innerHTML      = siteContent['main-content']['product-content'];
-h4BottomContent [2].innerHTML     = siteContent['main-content']['vision-h4'];
-pBottomContent [2].innerHTML      = siteContent['main-content']['vision-content'];
+const h4topcontent = document.querySelectorAll(
+    ".main-content .top-content .text-content h4"
+  ),
+  ptopcontent = document.querySelectorAll(
+    ".main-content .top-content .text-content p"
+  ),
+  h4bottomcontent = document.querySelectorAll(
+    ".main-content .bottom-content .text-content h4"
+  ),
+  pbottomcontent = document.querySelectorAll(
+    ".main-content .bottom-content .text-content p"
+  );
+h4topcontent[0].innerHTML = siteContent["main-content"]["features-h4"];
+ptopcontent[0].innerHTML = siteContent["main-content"]["features-content"];
+h4topcontent[1].innerHTML = siteContent["main-content"]["about-h4"];
+ptopcontent[1].innerHTML = siteContent["main-content"]["about-content"];
+h4bottomcontent[0].innerHTML = siteContent["main-content"]["services-h4"];
+pbottomcontent[0].innerHTML = siteContent["main-content"]["services-content"];
+h4bottomcontent[1].innerHTML = siteContent["main-content"]["product-h4"];
+pbottomcontent[1].innerHTML = siteContent["main-content"]["product-content"];
+h4bottomcontent[2].innerHTML = siteContent["main-content"]["vision-h4"];
+pbottomcontent[2].innerHTML = siteContent["main-content"]["vision-content"];
 
-            // IMAGES
+// IMAGES
+
 const logo = document.getElementById("logo-img"); //selects logo in HTML
 logo.setAttribute("src", siteContent["nav"]["img-src"]); //sets new logo
 
@@ -70,6 +96,7 @@ const midImg = document.getElementById("middle-img"); //selects logo in HTML
 midImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]); //sets new logo
 
 // CONTACT
+
 const contact0 = document.querySelectorAll(".contact h4")[0];
 contact0.innerText = siteContent["contact"]["contact-h4"];
 
@@ -79,7 +106,7 @@ contact1.innerHTML = siteContent["contact"]["address"];
 const contact2 = document.querySelectorAll(".contact p")[2];
 contact2.innerHTML = siteContent["contact"]["phone"];
 
-//const contact3 = document.querySelectorAll(".contact p")[3]; 
+//const contact3 = document.querySelectorAll(".contact p")[3];
 // contact3.innerHTML = siteContent["contact"]["email"];
 
 // FOOTER
