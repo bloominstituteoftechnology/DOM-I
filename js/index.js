@@ -66,7 +66,7 @@ image.setAttribute('src', siteContent["cta"]["img-src"]);
 let topContent = document.querySelector('.top-content');
 let featuresContent = topContent.getElementsByTagName('div')[0];
 let aboutContent = topContent.getElementsByTagName('div')[1];
-console.log("My element: " + featuresContent);
+
 
 let featuresH4 = featuresContent.querySelector('h4');
 let featuresP = featuresContent.querySelector('p');
@@ -80,3 +80,42 @@ aboutP.innerText = siteContent['main-content']['about-content'];
 
 let middleImage = document.getElementById('middle-img');
 middleImage.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+// MAIN CONTENT -- Bottom Content
+let bottomContent = document.querySelector('.bottom-content');
+let serviceContent = bottomContent.getElementsByTagName('div')[0];
+let productContent = bottomContent.getElementsByTagName('div')[1];
+let visionContent =  bottomContent.querySelectorAll('div')[2];
+// console.log("first" +serviceContent + "second " + productContent + "third" + visionContent+ " end");
+
+let serviceH4 = serviceContent.querySelector('h4');
+let serviceP = serviceContent.querySelector('p');
+serviceH4.innerText = siteContent['main-content']['services-h4'];
+serviceP.innerText =siteContent['main-content']['services-content'];
+
+let productH4 = productContent.querySelector('h4');
+let productP  = productContent.querySelector('p');
+productH4.innerText = siteContent['main-content']['product-h4'];
+productP.innerText =  siteContent['main-content']['product-content'];
+
+let visionH4 = visionContent.querySelector('h4');
+let visionP = visionContent.querySelector('p');
+visionH4.innerText = siteContent['main-content']['vision-h4'];
+visionP.innerText = siteContent['main-content']['vision-content'];
+
+//Section - contact
+let contact = document.querySelector('.contact');
+let contactH4 = contact.querySelector('h4');
+contactH4.innerText = siteContent['contact']['contact-h4'];
+let contactP = contact.querySelectorAll('p');
+contactP[0].innerText = siteContent['contact']['address'];
+contactP[0].style.paddingRight = '80%';
+contactP[1].innerText = siteContent['contact']['phone'];
+contactP[2].innerText = siteContent['contact']['email'];
+
+//SECTION - FOOTER
+let footer = document.querySelector('footer');
+let fp = footer.querySelector('p');
+fp.innerText = siteContent['footer']['copyright'];
+
+
