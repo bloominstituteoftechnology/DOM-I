@@ -115,13 +115,14 @@ header.className = 'header-class'; // How to add class name to element.
 ctaImg.src = 'img/header-img.png' ;
 
 buttonText.innerHTML = 'Get Started';
+ctaText[0].innerHTML = 'DOM Is Awesome' ;
+ctaText[0].style.fontFamily = 'Bangers' ;
 
 /* Middle image effects */
 
 imgElement.src = 'img/mid-page-accent.jpg' ;
 
 
-ctaText[0].innerHTML = 'DOM Is Awesome' ;
 
 
 /*
