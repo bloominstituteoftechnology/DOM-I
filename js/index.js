@@ -43,17 +43,19 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 const nav = document.querySelectorAll('a');
 nav[0].innerHTML = siteContent["nav"]["nav-item-1"];
-nav[0].style.color = 'green';
+// nav[0].style.color = 'green';
 nav[1].innerHTML = siteContent["nav"]["nav-item-2"];
-nav[1].style.color = 'green';
+// nav[1].style.color = 'green';
 nav[2].innerHTML = siteContent["nav"]["nav-item-3"];
-nav[2].style.color = 'green';
+// nav[2].style.color = 'green';
 nav[3].innerHTML = siteContent["nav"]["nav-item-4"];
-nav[3].style.color = 'green';
+// nav[3].style.color = 'green';
 nav[4].innerHTML = siteContent["nav"]["nav-item-5"];
-nav[4].style.color = 'green';
+// nav[4].style.color = 'green';
 nav[5].innerHTML = siteContent["nav"]["nav-item-6"];
-nav[5].style.color = 'green';
+// nav[5].style.color = 'green';
+
+nav.forEach(element => element.style.color = 'green');
 
 const title = document.querySelector("h1");
 title.innerHTML = siteContent["cta"]["h1"];
