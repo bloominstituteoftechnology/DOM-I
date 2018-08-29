@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM <br> Is <br> Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -50,3 +50,13 @@ nav[2].innerHTML = siteContent.nav["nav-item-3"];
 nav[3].innerHTML = siteContent.nav["nav-item-4"];
 nav[4].innerHTML = siteContent.nav["nav-item-5"];
 nav[5].innerHTML = siteContent.nav["nav-item-6"];
+
+//Jumbotron
+let jumbotronH1 = document.querySelector('h1')
+jumbotronH1.innerHTML = siteContent.cta.h1;
+
+let jumbotronButton = document.querySelector('button');
+jumbotronButton.innerHTML = siteContent.cta.button;
+
+let jumbotronLogo = document.getElementById('cta-img');
+jumbotronLogo.setAttribute('src', siteContent.cta["img-src"]);
