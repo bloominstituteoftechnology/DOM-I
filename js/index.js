@@ -43,6 +43,26 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+const ctaText = document.getElementsByClassName("cta-text")[0];
+ctaText.getElementsByTagName("h1")[0].innerHTML = siteContent["cta"]["h1"];
+ctaText.getElementsByTagName("button")[0].innerHTML = siteContent["cta"]["button"];
+
+const topContentP = document.querySelectorAll(".top-content p");
+topContentP[0].innerHTML = siteContent["main-content"]['features-content'];
+topContentP[1].innerHTML = siteContent["main-content"]['about-content'];
+
+const topContentH4 = document.querySelectorAll(".top-content h4");
+topContentH4[0].innerHTML = siteContent["main-content"]['features-h4'];
+topContentH4[1].innerHTML = siteContent["main-content"]['about-h4'];
+
+// const textContent = document.getElementsByClassName("text-content")[0];
+// ctaText.getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["about-h4"];
+// ctaText.getElementsByTagName("p")[0].innerHTML = siteContent["top-content"]["text-content"]["p"];
+
+
+// const textContent = document.getElementsByClassName("text-content")[0];
+// textContent.getElementsByTagName("h4")[0].innerHTML = siteContent["text-content"]["h4"];
+// topContent.getElementsByTagName("p")[0].innerHTML = siteContent["top-content"]["p"];
 
 const navigation = document.querySelector("nav")
 const navigationA = document.querySelectorAll("nav a")
