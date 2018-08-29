@@ -93,3 +93,8 @@ h4Contact.innerHTML = siteContent.contact["contact-h4"];
 paragraphContact[0].innerHTML = siteContent.contact.address;
 paragraphContact[1].innerHTML = siteContent.contact.phone;
 paragraphContact[2].innerHTML = siteContent.contact.email;
+
+//Footer 
+
+let paragraphFooter = document.querySelector('footer > p');
+paragraphFooter.innerHTML = site.content.footer.copyright;
