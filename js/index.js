@@ -88,7 +88,7 @@ navItemEight.innerText = "Jobs";
 
 let navAllItems = document.querySelectorAll('a');
 for (let i = 0; i < navAllItems.length; i++) {
-  navAllItems[i].style.color = '#66ff66';
+  navAllItems[i].style.color = 'goldenrod';  //'#66ff66'
   navAllItems[i].style.backgroundColor = 'ghostwhite';
 }
 
@@ -96,6 +96,21 @@ for (let i = 0; i < navAllItems.length; i++) {
 
 
 document.getElementById("cta-img").setAttribute('src', siteContent["cta"]["img-src"]);
+document.getElementById("cta-img").style.filter = "sepia(100%)";
+
+let circle = document.getElementById("cta-img");
+//this handler will be executed every time the cursor is moved over the circle
+circle.addEventListener("mouseover", function(event) {
+    // highlight the mouseover target
+    event.target.style.filter = "sepia(0%)";
+    
+    // reset the color after a short delay
+    setTimeout(function() {
+      event.target.style.filter = "sepia(100%)";
+    }, 500);
+});
+
+
 
 document.querySelector("button").innerHTML = "Get Started";
 
@@ -111,6 +126,16 @@ document.getElementsByTagName('p')[1].innerText = "About content elementum magna
 
 
 document.getElementById("middle-img").setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+document.getElementById("middle-img").style.filter = "sepia(100%)";
+
+let middlepic = document.getElementById("middle-img");
+middlepic.addEventListener("mouseover", function(event){
+  event.target.style.filter = "sepia(0%)";
+  setTimeout(function(){
+    event.target.style.filter = "sepia(100%)";
+  }, 500);
+});
+
 
 document.getElementsByTagName('h4')[2].innerText = "Services";
 
