@@ -55,6 +55,9 @@ title.innerHTML = siteContent['cta']['h1'];
 const cta = document.getElementById("cta-img");
 cta.src = "img/header-img.png";
 
+const button = document.querySelector('button');
+button.innerHTML = 'Get Started';
+
 const topContentTitle = document.querySelectorAll('.top-content h4');
 topContentTitle[0].innerHTML = siteContent['main-content']['features-h4'];
 topContentTitle[1].innerHTML = siteContent['main-content']['about-h4'];
@@ -62,6 +65,9 @@ topContentTitle[1].innerHTML = siteContent['main-content']['about-h4'];
 const topContent = document.querySelectorAll('.top-content p');
 topContent[0].innerHTML = siteContent['main-content']['features-content'];
 topContent[1].innerHTML = siteContent['main-content']['about-content'];
+
+const middleImg = document.getElementById('middle-img');
+middleImg.src = "img/mid-page-accent.jpg";
 
 const bottomContentTitle = document.querySelectorAll('.bottom-content h4');
 bottomContentTitle[0].innerHTML = siteContent['main-content']['services-h4'];
@@ -73,8 +79,13 @@ bottomContent[0].innerHTML = siteContent['main-content']['services-content'];
 bottomContent[1].innerHTML = siteContent['main-content']['product-content'];
 bottomContent[2].innerHTML = siteContent['main-content']['vision-content'];
 
-const button = document.querySelector('button');
-button.innerHTML = 'Get Started';
+const contactTitle = document.querySelector('.contact h4');
+contactTitle.innerHTML = siteContent['contact']['contact-h4'];
 
-const middleImg = document.getElementById('middle-img');
-middleImg.src = "img/mid-page-accent.jpg";
+const contactInfo = document.querySelectorAll('.contact p');
+contactInfo[0].innerHTML = siteContent['contact']['address'];
+contactInfo[1].innerHTML = siteContent['contact']['phone'];
+contactInfo[2].innerHTML = siteContent['contact']['email'];
+
+const footer = document.querySelector('footer p');
+footer.innerHTML = siteContent['footer']['copyright'];
