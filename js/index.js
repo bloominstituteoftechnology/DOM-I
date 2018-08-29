@@ -54,6 +54,10 @@ let navTag = document.querySelector('nav');
 navTag.appendChild(newLink1).innerHTML = "Opportunities"; 
 navTag.prepend(newLink2);
 
+links.forEach(function(x){
+  x.style.color = "green"; 
+});
+
 //header----------------------------------------------------------
 
 let header = document.querySelector(".cta h1"); 
