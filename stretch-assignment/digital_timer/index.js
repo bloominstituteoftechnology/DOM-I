@@ -36,8 +36,9 @@ function startTimer() {
         clearInterval(msHundredsInterval);
         clearInterval(secondOnesInterval);
         this.secondTens.innerText = 1;
-        for (let digit of document.getElementsByClassName("digit")) {
-            digit.style.color = "red";
+        let makeDigitRed = document.querySelectorAll(".digit");
+        for (let i = 0; i < makeDigitRed.length; i++) {
+          makeDigitRed[i].classList.add("redDigit");
         }
         resetButton.disabled = false;
     }, 10000);
