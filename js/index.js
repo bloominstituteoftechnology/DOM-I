@@ -44,26 +44,32 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 //beginning of nav
 const navItem1 = document.querySelectorAll('a')[0];
 navItem1.innerHTML = siteContent["nav"]['nav-item-1'];
+navItem1.style.color = 'green';
 
 const navItem2 = document.querySelectorAll('a')[1];
 navItem2.innerHTML = siteContent["nav"]['nav-item-2'];
+navItem2.style.color = 'green';
 
 const navItem3 = document.querySelectorAll('a')[2];
 navItem3.innerHTML = siteContent["nav"]['nav-item-3'];
+navItem3.style.color = 'green';
 
 const navItem4 = document.querySelectorAll('a')[3];
 navItem4.innerHTML = siteContent["nav"]['nav-item-4'];
+navItem4.style.color = 'green';
 
 const navItem5 = document.querySelectorAll('a')[4];
 navItem5.innerHTML = siteContent["nav"]['nav-item-5'];
+navItem5.style.color = 'green';
 
 const navItem6 = document.querySelectorAll('a')[5];
 navItem6.innerHTML = siteContent["nav"]['nav-item-6'];
+navItem6.style.color = 'green';
 
 //end of nav
 // beginning of cta
 const h1 = document.querySelector('h1');
-h1.innerHTML = siteContent["cta"]["h1"];
+h1.innerHTML = "DOM<br> Is<br> Awesome";
 
 const button = document.querySelector('button');
 button.innerHTML = siteContent["cta"]["button"];
@@ -113,7 +119,7 @@ const contactH4 = document.querySelectorAll('h4')[5];
 contactH4.innerHTML = siteContent["contact"]["contact-h4"];
 
 const address = document.querySelectorAll('p')[5];
-address.innerHTML = siteContent["contact"]["address"];
+address.innerHTML = "123 Way 456 Street<br> Somewhere, USA";
 
 const phone = document.querySelectorAll('p')[6];
 phone.innerHTML = siteContent["contact"]["phone"];
@@ -126,3 +132,19 @@ const footer = document.querySelectorAll('p')[8];
 footer.innerHTML = siteContent["footer"]["copyright"];
 // end of footer
 
+// Part 4
+const nav = document. querySelector('nav');
+
+const navItem7 = document.createElement('a');
+navItem7.innerHTML = "Cubs.com";
+navItem7.style.color = 'blue';
+navItem7.style.fontWeight = 'bold';
+navItem7.style.fontSize = '40px';
+
+const navItem0 = document.createElement('a');
+navItem0.innerHTML = "MLB.com";
+navItem0.style.color = 'red';
+navItem0.style.fontWeight = 'bold';
+navItem0.style.fontSize = '33px';
+nav.appendChild(navItem7);
+nav.prepend(navItem0);
