@@ -42,24 +42,33 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-let navItemOne = document.getElementsByTagName('a')[0];
-navItemOne.innerHTML = "Services";
+document.getElementsByTagName('a')[0].innerText = "Services";
 
-let navItemTwo = document.getElementsByTagName('a')[1];
-navItemTwo.innerHTML = "Product";
+document.getElementsByTagName('a')[1].innerText = "Product";
 
-let navItemThree = document.getElementsByTagName('a')[2];
-navItemThree.innerHTML = "Vision";
+document.getElementsByTagName('a')[2].innerText = "Vision";
 
-let navItemFour = document.getElementsByTagName('a')[3];
-navItemFour.innerHTML = "Features";
+document.getElementsByTagName('a')[3].innerText = "Features";
 
-let navItemFive = document.getElementsByTagName('a')[4];
-navItemFive.innerHTML = "About";
+document.getElementsByTagName('a')[4].innerText = "About";
 
-let navItemSix = document.getElementsByTagName('a')[5];
-navItemSix.innerHTML = "Contact";
+document.getElementsByTagName('a')[5].innerText = "Contact";
 
+
+// // add unique classes to 'a' tags
+// let navigationItems = document.querySelectorAll('a');
+// for (let i = 0; i < navigationItems.length; i++) {
+//   navigationItems[i].classList.add([i]);
+// }
+
+// document.getElementsByClassName([0]).innerHTML = "Services";
+
+
+// //assign different different object key-values to each unique class
+// let navigationLinks = document.getElementsByClassName(`i`);
+// for (let i = 0; i < navigationLinks.length; i++) {
+//   navigationLinks[i].innerText = siteContent["nav"][`nav-item-${i}`];
+// }
 
 
 // Utilize .appendChild() to add two new items to the navigation system
