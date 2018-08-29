@@ -45,10 +45,22 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 // navigation
 let navBar = document.querySelectorAll('nav a');
+let headerNav = document.querySelector('header nav');
+
+let newLink = document.createElement('a');
+newLink.innerHTML = 'Thor Ragnarok';
+let newLink2 = document.createElement('a');
+newLink2.innerHTML = 'The Meg';
+headerNav.appendChild(newLink);
+headerNav.insertBefore(newLink2, newLink);
+
 
 // navigation items
 for(let i = 0; i < navBar.length; i++){
   navBar[i].innerHTML = siteContent['nav'][`nav-item-${i + 1}`];
+  navBar[i].style.color = 'rgba(81, 219, 24, 0.69)';
+  newLink.style.color = 'rgba(81, 219, 24, 0.69)';
+  newLink2.style.color = 'rgba(81, 219, 24, 0.69)';
 }
 
 //cta
