@@ -1,4 +1,6 @@
 const countDown = (seconds) => {
+  start.setAttribute('disabled', true);
+  reset.setAttribute('disabled', true);
   let counter = seconds * 100;
 
   let count = setInterval(() => {
@@ -7,6 +9,12 @@ const countDown = (seconds) => {
   resArr = counter.toString().split('');
 
   // set each div id to a part in the array output
+  if (counter > 1000) {
+    secondTens.innerHTML = resArr[0];
+    secondOnes.innerHTML = resArr[1];
+    msHundreds.innerHTML = resArr[2];
+    msTens.innerHTML = resArr[3];
+  }
   if (counter < 1000) {
     secondTens.innerHTML = 0;
     secondOnes.innerHTML = resArr[0];
@@ -27,6 +35,7 @@ const countDown = (seconds) => {
     msHundreds.innerHTML = 0;
     msTens.innerHTML = 0;
     alert('Time is Up');
+    reset.removeAttribute('disabled');
     return clearInterval(count);
   }
 }, 10);
@@ -44,13 +53,26 @@ setDigitId(colon);
 setDigitId(msHundreds);
 setDigitId(msTens);
 
+const resetCounter = () => {
+  start.removeAttribute('disabled');
+}
 
 // create button
 const digits = document.getElementsByClassName('digits')[0];
 const button = document.createElement('button');
 button.innerHTML = 'Start Timer';
-button.setAttribute('onClick', `inputVal()`);
+button.setAttribute('onClick', `countDown(10)`);
+button.setAttribute('id', 'start');
 digits.appendChild(button);
+setDigitId(start);
+
+// create reset button
+const resetButton = document.createElement('button');
+resetButton.innerHTML = 'Reset Timer';
+resetButton.setAttribute('onClick', 'resetCounter()');
+resetButton.setAttribute('id', 'reset');
+digits.appendChild(resetButton);
+setDigitId(reset);
 
 // create input to add seconds to Timer
 const input = document.createElement('input');
@@ -58,5 +80,6 @@ digits.appendChild(input);
 input.setAttribute('id','seconds');
 // create a function to take input in seconds and return countDown
 const inputVal = () => {
+  console.log(input.value);
   return countDown(input.value);
 }
