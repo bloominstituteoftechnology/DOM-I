@@ -52,7 +52,6 @@ let contactTitle = document.querySelector('.contact h4');
 let contactDetails = document.querySelectorAll('.contact p');
 let footer = document.querySelector('footer p');
 
-
 for (let i = 0; i < navBar.length; i++) {
   navBar[i].innerHTML = siteContent.nav["nav-item-" + (i + 1)];
 }
@@ -77,3 +76,19 @@ contactDetails[0].innerHTML = siteContent.contact.address;
 contactDetails[1].innerHTML = siteContent.contact.phone;
 contactDetails[2].innerHTML = siteContent.contact.email;
 footer.innerHTML = siteContent.footer.copyright;
+
+let addedDiv = document.createElement('div.text-content');
+let topMainContent = document.querySelector('.top-content');
+topMainContent.prepend(addedDiv);
+let addedH4 = document.createElement('h4');
+let addedP = document.createElement('p');
+addedDiv.appendChild(addedH4);
+addedDiv.appendChild(addedP);
+addedH4.innerHTML = "History";
+addedP.innerHTML = "History content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+
+// var navParent = document.querySelector('nav');
+// var newAnchor = document.createElement('a');
+// newAnchor.innerHTML = 'FAQ';
+// navParent.appendChild(newAnchor);
