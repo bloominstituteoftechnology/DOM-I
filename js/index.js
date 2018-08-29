@@ -46,7 +46,6 @@ navigation[2].innerHTML = siteContent["nav"]["nav-item-3"];
 navigation[3].innerHTML = siteContent["nav"]["nav-item-4"];
 navigation[4].innerHTML = siteContent["nav"]["nav-item-5"];
 navigation[5].innerHTML = siteContent["nav"]["nav-item-6"];
-contentA.appendChild(navigation);
 
 
 
@@ -54,8 +53,10 @@ contentA.appendChild(navigation);
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-let title = document.getElementsByClassName("cta-text h1");
+
+let title = document.querySelector(".cta-text h1");
 title.innerHTML = siteContent["cta"]["h1"];
+
 
 let topButton = document.querySelector('button');
 topButton.innerHTML = siteContent["cta"]["button"];
