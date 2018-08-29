@@ -1,5 +1,6 @@
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -11,4 +12,35 @@ body {
 
 .redDigit {
   color: red;
+}
+
+.buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button{
+  margin: 10px 10px 0px 10px;
+  padding: 10px 20px; 
+  color: black;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 8px;
+}
+
+.button:focus{
+  outline: none;
+  box-shadow: none;
+}
+
+.button:hover{
+  color: white;
+  background-color: black;
+}
+
+.button:disabled{
+  color: #e8e8e8;
+  background-color: #b0b0b0;
+  border: 2px solid #b0b0b0;
 }
