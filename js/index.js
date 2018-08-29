@@ -57,18 +57,18 @@ navBar.children[4].style.color = 'green';
 navBar.children[5].style.color = 'green';
 
 //new nav item (front). line 62 could be either prepend OR appendChild since theres nothign in the element.
-var newNavBar1 = document.createElement('a');
-var newNavContent1 = document.createTextNode("asdf");
-newNavBar1.prepend(newNavContent1);
-navBar.prepend(newNavBar1);
+var newNavBar1 = document.createElement('a');//same as line 68
+var newNavContent1 = document.createTextNode("asdf");//same as line 69
+newNavBar1.prepend(newNavContent1);//same as line 70
+navBar.prepend(newNavBar1);//same as line 71
 newNavBar1.setAttribute('href', '#');
 newNavBar1.style.color = 'green';
 
 //new nav item (back). line 70 could be either prepend OR appendChild since theres nothign in the element.
-var newNavBar2 = document.createElement('a');
-var newNavContent2 = document.createTextNode("fdsa");
-newNavBar2.appendChild(newNavContent2);
-navBar.appendChild(newNavBar2);
+var newNavBar2 = document.createElement('a');// created new, anonymous element
+var newNavContent2 = document.createTextNode("fdsa");//created new text
+newNavBar2.appendChild(newNavContent2);//assigned new text to new element
+navBar.appendChild(newNavBar2);//assigned new element(w/ new text inside it) to my current nav bar
 newNavBar2.setAttribute('href', '#');
 newNavBar2.style.color = 'green';
 
