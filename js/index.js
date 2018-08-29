@@ -39,4 +39,32 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+const nav = document.querySelectorAll("nav a");
+nav[0].innerHTML = siteContent['nav']['nav-item-1'];
+nav[1].innerHTML = siteContent['nav']['nav-item-2'];
+nav[2].innerHTML = siteContent['nav']['nav-item-3'];
+nav[3].innerHTML = siteContent['nav']['nav-item-4'];
+nav[4].innerHTML = siteContent['nav']['nav-item-5'];
+nav[5].innerHTML = siteContent['nav']['nav-item-6'];
+
+const title = document.querySelector('.cta-text h1');
+title.innerHTML = siteContent['cta']['h1'];
+  
+const cta = document.getElementById("cta-img");
+cta.src = "img/header-img.png";
+
+const topContentTitle = document.querySelectorAll('.top-content h4');
+topContentTitle[0].innerHTML = siteContent['main-content']['features-h4'];
+topContentTitle[1].innerHTML = siteContent['main-content']['about-h4'];
+
+const topContent = document.querySelectorAll('.top-content p');
+topContent[0].innerHTML = siteContent['main-content']['features-content'];
+topContent[1].innerHTML = siteContent['main-content']['about-content'];
+
+const button = document.querySelector('button');
+button.innerHTML = 'Get Started';
+
+const middleImg = document.getElementById('middle-img');
+middleImg.src = "img/mid-page-accent.jpg";
