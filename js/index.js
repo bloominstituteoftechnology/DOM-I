@@ -64,11 +64,12 @@ let ClassH1 = document.querySelector('.cta-text h1').innerHTML = "DOM Is Awesome
 let button = document.querySelector('button').innerHTML = "Get Started";
 let imgCodeSnippet = document.getElementById('cta-img').src = siteContent["cta"]["img-src"];
 let h4 = document.querySelectorAll('h4');
-h4[0].innerHTML = "Features";
-h4[1].innerHTML = "About";
-h4[2].innerHTML = "Services";
-h4[3].innerHTML = "Product";
-h4[4].innerHTML = "Vision";
+let h4text = ["Features", "About", "Services", "Product", "Vision","Contact"]
+for(let i = 0; i < h4.length; i++){
+  h4[i].innerHTML = h4text[i];
+  h4[i].style.color = 'gold';
+  h4[i].style.textShadow ='2px 2px black'
+}
 
 let textContentPara = document.querySelectorAll('.text-content p');
 textContentPara[0].innerHTML = siteContent['main-content']['features-content'];
@@ -78,7 +79,6 @@ textContentPara[2].innerHTML = siteContent['main-content']['services-content'];
 textContentPara[3].innerHTML = siteContent['main-content']['product-content'];
 textContentPara[4].innerHTML = siteContent['main-content']['vision-content'];
 
-h4[5].innerHTML = "Contact";
 let contactPara = document.querySelectorAll('.contact p');
 contactPara[0].innerHTML = siteContent['contact']['address'];
 contactPara[1].innerHTML = siteContent['contact']['phone'];
