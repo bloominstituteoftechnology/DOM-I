@@ -6,10 +6,12 @@ const siteContent = {
     "nav-item-4": "Features",
     "nav-item-5": "About",
     "nav-item-6": "Contact",
+    "nav-item-7": "Register",
+    "nav-item-8": "Support",
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM<br> Is <br>Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -28,7 +30,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "123 Way 456 Street<br>Somewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -51,16 +53,30 @@ navItems[5].textContent = siteContent["nav"]["nav-item-6"];
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-//change color of navigation text to green
+//Change color of navigation text to green
 Array.from(navItems).forEach((navItem) => {
   navItem.style.color = 'green';
 });
+
+//Create and Add new items to navigation
+const navItemRegister = document.createElement('a');
+const navItemSupport = document.createElement('a');
+navItemRegister.textContent = siteContent["nav"]["nav-item-7"];
+navItemSupport.textContent = siteContent["nav"]["nav-item-8"];
+
+const headerNav = document.querySelector('nav');
+headerNav.appendChild(navItemSupport);
+headerNav.prepend(navItemRegister);
+navItemSupport.style.color = 'green';
+navItemRegister.style.color = 'green';
+
+
 
 //***************Section - .cta *********************/
 let cta_h1 = document.querySelector(".cta-text h1");
 let cta_button = document.querySelector(".cta-text button");
 let cta_image = document.getElementById("cta-img");
-cta_h1.innerHTML = 'DOM<br> Is <br> Awesome';
+cta_h1.innerHTML = siteContent['cta']['h1'];
 cta_button.textContent = siteContent['cta']['button'];
 cta_image.src = siteContent['cta']['img-src'];
 
@@ -90,8 +106,7 @@ bottom_p_list[2].textContent = siteContent['main-content']['vision-content'];
 let contact_h4 = document.querySelector('.contact h4');
 let contact_p_list = document.querySelectorAll('.contact p');
 contact_h4.textContent = siteContent['contact']['contact-h4'];
-// contact_p_list[0].textContent = siteContent['contact']['address'];
-contact_p_list[0].innerHTML = '123 Way 456 Street<br>Somewhere, USA</p >';
+contact_p_list[0].innerHTML = siteContent['contact']['address'];
 contact_p_list[1].textContent = siteContent['contact']['phone'];
 contact_p_list[2].textContent = siteContent['contact']['email'];
 
