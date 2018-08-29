@@ -45,9 +45,17 @@ logo.setAttribute('src', siteContent["nav"]["img-src"], )
 let anchors = document.querySelectorAll('a')
 for (let i = 0; i < anchors.length; i++) {
   anchors[i].innerHTML = siteContent.nav['nav-item-' + (i + 1)];
-  anchors[i].style= 'color: #26BF72'
+  anchors[i].style= 'color: #26BF72';
 }
-
+const navBar=document.querySelector('nav')
+const newNavItem1 = document.createElement('a')
+newNavItem1.innerHTML="Our Videos"
+newNavItem1.style= 'color: #26BF72'
+navBar.appendChild(newNavItem1)
+const newNavItem2 = document.createElement('a')
+newNavItem2.innerHTML='Locations'
+newNavItem2.style= 'color: #26BF72'
+navBar.prepend(newNavItem2)
 
 let callToText = document.querySelector(`.cta-text h1`)
 callToText.innerHTML = siteContent.cta.h1
