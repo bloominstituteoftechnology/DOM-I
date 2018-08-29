@@ -56,6 +56,7 @@ navTag.prepend(newLink2);
 
 links.forEach(function(x){
   x.style.color = "green"; 
+  newLink1.style.color = "green"; 
 });
 
 //header----------------------------------------------------------
@@ -69,10 +70,9 @@ button.innerHTML = siteContent["cta"]["button"];
 let headerImg = document.querySelector("#cta-img"); 
 headerImg.setAttribute("src", siteContent["cta"]["img-src"]); 
 
-
 // main content--------------------------------------------------//
 
-let h4Tag = document.getElementsByTagName('h4') 
+let h4Tag = document.getElementsByTagName('h4'); 
 let paraTag = document.getElementsByTagName('p');
 
 //top-content---------------------------------------------------------
@@ -83,9 +83,11 @@ h4Tag[1].innerText = siteContent["main-content"]["about-h4"];
 paraTag[1].innerText = siteContent["main-content"]["about-content"]; 
 
 //middle img------------------------------------------------------
+
 document.getElementById("middle-img").setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 //bottom-content------------------------------------------------------
+
 h4Tag[2].innerText = siteContent["main-content"]["services-h4"]; 
 paraTag[2].innerText = siteContent["main-content"]["services-content"]; 
 h4Tag[3].innerText = siteContent["main-content"]["product-h4"];
