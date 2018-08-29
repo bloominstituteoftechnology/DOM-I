@@ -37,12 +37,15 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
+/* header & nav*/
+
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let links = document.querySelectorAll("nav a");
 links.forEach((elem, i) => elem.innerText = siteContent["nav"][`nav-item-${i+1}`]);
+
+/* call to action */
 
 let ctaH1 = document.querySelector(".cta-text h1");
 ctaH1.innerText = siteContent["cta"]["h1"];
@@ -52,6 +55,8 @@ ctaButton.innerText = siteContent["cta"]["button"];
 
 let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+/* main content */
 
 let topContentHeaders = document.querySelectorAll(".top-content .text-content h4");
 topContentHeaders[0].innerText = siteContent["main-content"]["features-h4"];
@@ -74,6 +79,8 @@ bottomContentParagraphs[0].innerText = siteContent["main-content"]["services-con
 bottomContentParagraphs[1].innerText = siteContent["main-content"]["product-content"];
 bottomContentParagraphs[2].innerText = siteContent["main-content"]["vision-content"];
 
+/* contact */
+
 let contactHeader = document.querySelector(".contact h4");
 contactHeader.innerText =siteContent["contact"]["contact-h4"];
 
@@ -82,5 +89,15 @@ contactParagraphs[0].innerText = siteContent["contact"]["address"];
 contactParagraphs[1].innerText = siteContent["contact"]["phone"];
 contactParagraphs[2].innerText = siteContent["contact"]["email"];
 
+/* footer */
+
 let footer = document.querySelector("footer p");
 footer.innerText = siteContent["footer"]["copyright"];
+
+/* Prepend and appendChild */
+let nav = document.querySelector("header nav");
+nav.prepend(document.createElement('a').innerText = "Home");
+
+let link = document.createElement('a');
+link.innerText = "Shop";
+nav.appendChild(link);
