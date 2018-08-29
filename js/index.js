@@ -50,18 +50,23 @@ a[2].innerHTML = "Vision";
 a[3].innerHTML = "Features";
 a[4].innerHTML = "About";
 a[5].innerHTML = "Contact";
+
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-
 //cta
-let ctaImg = document.getElementById("cta-img");
-ctaImg.setAttribute('src', siteContent["cta"]["img-src"]) ;
+const h1 = document.querySelector("h1");
+h1.innerHTML = "DOM<br> Is<br> Awesome";
+
+const button = document.querySelector("button");
+button.innerHTML = "Get Started";
+
+const ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 
 //Main
-let middleImg = document.getElementById("middle-img");
-middleImg.setAttribute('src', siteContent[""]["img-src"]);
+
 
 
 
