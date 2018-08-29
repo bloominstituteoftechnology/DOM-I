@@ -33,7 +33,7 @@ function sOnesIncrement(){
     secondOnesCounter++;
     secondOnes.textContent = secondOnesCounter;
 
-    if(secondOnesCounter === 9) {
+    if(secondOnesCounter > 9) {
         secondOnesCounter = 0;
         sTensIncrement();
     }
