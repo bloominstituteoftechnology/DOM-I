@@ -46,7 +46,20 @@ let nav = document.querySelector('nav');
 
 for (i = 0; i < navItem.length; i++) {
     navItem[i].innerText = siteContent['nav'][Object.keys(siteContent['nav'])[i]];
+    navItem[i].style.color = 'green';  // green
 }
+
+    // add two items
+let newItem1 = document.createElement('a');
+let newItem2 = document.createElement('a');
+
+newItem1.href = '#';
+newItem1.innerText = 'Item1';
+newItem2.href = '#';
+newItem2.innerText = 'Item2';
+
+nav.prepend(newItem1);
+nav.appendChild(newItem2);
 
 // cta
 let cta = siteContent['cta'];
