@@ -1,3 +1,4 @@
+// https://www.youtube.com/watch?v=cbD6nYK6KAs&feature=youtu.be
 const siteContent = {
   "nav": {
     "nav-item-1": "Services",
@@ -46,7 +47,33 @@ ctaImg.src = siteContent["cta"]["img-src"];
 
 let midImg = document.getElementsByClassName("middle-img");
 midImg[0].src = siteContent["main-content"]["middle-img-src"];
-// TASK 2:
-let nav = document.querySelectorAll('nav');
 
+// TASK 3:
+let nav = document.querySelectorAll('nav a');
+// nav[0] = siteContent.nav["nav-item-1"]
+// nav[1] = siteContent.nav["nav-item-2"]
+// nav[2] = siteContent.nav["nav-item-3"]
+// nav[3] = siteContent.nav["nav-item-4"]
+// nav[4] = siteContent.nav["nav-item-5"]
+// nav[5] = siteContent.nav["nav-item-6"]
 
+nav[0].innerHTML = siteContent.nav["nav-item-1"]
+nav[1].innerHTML = siteContent.nav["nav-item-2"]
+nav[2].innerHTML = siteContent.nav["nav-item-3"]
+nav[3].innerHTML = siteContent.nav["nav-item-4"]
+nav[4].innerHTML = siteContent.nav["nav-item-5"]
+nav[5].innerHTML = siteContent.nav["nav-item-6"]
+// nav.forEach(item => item = siteContent.nav);
+
+let ctaH1 = document.querySelector(".cta-text h1");
+// console.log(ctaH1)
+// cta.querySelector("h1").innerHTML = siteContent.cta.h1;
+ctaH1.innerHTML = siteContent.cta.h1;
+
+document.querySelector(".cta-text button").innerHTML = siteContent.cta.button;
+
+//This part of testing is without variables
+let topConHeaders = document.querySelectorAll(".text-content h4");
+topConHeaders[0].innerHTML = siteContent["main-content"]["about-h4"];
+topConHeaders[1].innerHTML = siteContent["main-content"]["services-h4"];
+document.querySelector(".text-content h4").innerHTML = siteContent["main-content"]["about-h4"];
