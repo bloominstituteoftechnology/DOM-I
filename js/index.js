@@ -49,6 +49,7 @@ headerLinks[3].innerHTML = siteContent['nav']['nav-item-4'];
 headerLinks[4].innerHTML = siteContent['nav']['nav-item-5'];
 headerLinks[5].innerHTML = siteContent['nav']['nav-item-6'];
 
+
 let DOMisAwesome = document.querySelector('.cta-text h1');
 DOMisAwesome.innerHTML = siteContent['cta']['h1'];
 
@@ -91,12 +92,10 @@ let footer = document.querySelector('footer p');
 footer.innerHTML = siteContent['footer']['copyright'];
 
 let makeNavGreen = document.querySelectorAll('a');
-makeNavGreen[0].setAttribute('style', 'color: green;')
-makeNavGreen[1].setAttribute('style', 'color: green;')
-makeNavGreen[2].setAttribute('style', 'color: green;')
-makeNavGreen[3].setAttribute('style', 'color: green;')
-makeNavGreen[4].setAttribute('style', 'color: green;')
-makeNavGreen[5].setAttribute('style', 'color: green;')
+
+makeNavGreen.forEach(function(item) {
+  item.setAttribute('style', 'color: green;');
+});
 
 let nav = document.querySelector('nav');
 let newLink = document.createElement('a');
