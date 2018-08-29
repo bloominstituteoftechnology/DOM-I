@@ -42,14 +42,14 @@ const siteContent = {
 //document.getElementsByClassName('className');
 //document.querySelector('queryString');
 
-//Nav Bar
+//nav 
 const a = document.getElementsByTagName('a');
-a[0].innerHTML = ["nav"]["nav-item-1"];
-a[1].innerHTML = ["nav"]["nav-item-2"];
-a[2].innerHTML = ["nav"]["nav-item-3"];
-a[3].innerHTML = ["nav"]["nav-item-4"];
-a[4].innerHTML = ["nav"]["nav-item-5"];
-a[5].innerHTML = ["nav"]["nav-item-6"];
+a[0].innerHTML = siteContent["nav"]["nav-item-1"];
+a[1].innerHTML = siteContent["nav"]["nav-item-2"];
+a[2].innerHTML = siteContent["nav"]["nav-item-3"];
+a[3].innerHTML = siteContent["nav"]["nav-item-4"];
+a[4].innerHTML = siteContent["nav"]["nav-item-5"];
+a[5].innerHTML = siteContent["nav"]["nav-item-6"];
 
 
 // Example: Update the img src for the logo
@@ -61,12 +61,12 @@ const h1 = document.querySelector("h1");
 h1.innerHTML = "DOM<br> Is<br> Awesome";
 
 const button = document.querySelector("button");
-button.innerHTML = "Get Started";
+button.innerHTML = siteContent["cta"]["button"];
 
 const ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 
-//Main
+//main
 const h4 = document.querySelectorAll("h4");
 h4[0].innerHTML = siteContent["main-content"]["features-h4"];
 h4[1].innerHTML = siteContent["main-content"]["about-h4"];
@@ -83,4 +83,17 @@ p[4].innerHTML = siteContent["main-content"]["vision-content"];
 
 const midImg = document.getElementById("middle-img");
 midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+//contact
+h4[5].innerHTML = siteContent["contact"]["contact-h4"];
+p[5].innerHTML = "123 Way 456 Street<br>Somewhere, USA";
+p[6].innerHTML = siteContent.contact.phone;
+p[7].innerHTML = siteContent.contact.email;
+
+
+
+
+//footer
+const footer = document.querySelector("footer");
+footer.innerHTML = siteContent.footer.copyright;
 
