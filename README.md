@@ -9,9 +9,9 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 
 ## Task 1: Set Up The Project With Git
 
-* [ ] Fork the project into your GitHub user account
-* [ ] Clone the forked project into a directory on your machine
-* [ ] You are now ready to build this project with your preferred IDE
+* [x] Fork the project into your GitHub user account
+* [x] Clone the forked project into a directory on your machine
+* [x] You are now ready to build this project with your preferred IDE
 
 ## Task 2: Create selectors to point your data into elements
 * [ ] Create selectors by using any of the DOM element's methods
