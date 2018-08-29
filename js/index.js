@@ -68,12 +68,14 @@ for (let i = 0; i < navAnchorElement.length; i++){
 //add two new items
 //both items will not stay at same time unless they have different names...that's weird
 const navElement = document.querySelector("nav");
-const navAddLi = document.createElement("li");
-const secondNavAddLi = document.createElement("li");
-navAddLi.innerHTML = "Hey I just got added!"
-secondNavAddLi.innerHTML = "me too!!"
+const navAddLi = document.createElement("a");
+const secondNavAddLi = document.createElement("a");
+navAddLi.innerHTML = "Home"
+secondNavAddLi.innerHTML = "Blog"
 navElement.prepend(navAddLi);
 navElement.appendChild(secondNavAddLi);
+navAddLi.style.color = "green";
+secondNavAddLi.style.color = "green";
 
 //Dom is Awesome heading
 const ctaH1Element = document.querySelector("h1");
