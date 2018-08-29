@@ -56,14 +56,19 @@ setDigitId(msTens);
 const resetCounter = () => {
   start.removeAttribute('disabled');
 }
-
+// append a div to body ---container for buttons---
+const buttonDiv = document.createElement('div');
+buttonDiv.setAttribute('id', 'buttons');
+    // put body element in javascript variable
+    document.body.appendChild(buttonDiv);
 // create button
 const digits = document.getElementsByClassName('digits')[0];
 const button = document.createElement('button');
 button.innerHTML = 'Start Timer';
 button.setAttribute('onClick', `countDown(10)`);
 button.setAttribute('id', 'start');
-digits.appendChild(button);
+button.setAttribute('class', 'button');
+buttonDiv.appendChild(button);
 setDigitId(start);
 
 // create reset button
@@ -71,15 +76,27 @@ const resetButton = document.createElement('button');
 resetButton.innerHTML = 'Reset Timer';
 resetButton.setAttribute('onClick', 'resetCounter()');
 resetButton.setAttribute('id', 'reset');
-digits.appendChild(resetButton);
+resetButton.setAttribute('class', 'button');
+buttonDiv.appendChild(resetButton);
 setDigitId(reset);
 
 // create input to add seconds to Timer
 const input = document.createElement('input');
 digits.appendChild(input);
 input.setAttribute('id','seconds');
+// set to none to hide for now
+input.style.display = 'none';
 // create a function to take input in seconds and return countDown
 const inputVal = () => {
   console.log(input.value);
   return countDown(input.value);
 }
+
+
+// change styles
+document.body.style['flex-direction'] = 'column';
+digits.style.background = 'lightgray';
+digits.style.padding = '2% 1%';
+buttonDiv.style.margin = '2% 1%';
+buttonDiv.style.display = 'flex';
+buttonDiv.style['flex-direction'] = 'column';
