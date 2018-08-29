@@ -46,6 +46,24 @@ navigation[2].innerHTML = siteContent["nav"]["nav-item-3"];
 navigation[3].innerHTML = siteContent["nav"]["nav-item-4"];
 navigation[4].innerHTML = siteContent["nav"]["nav-item-5"];
 navigation[5].innerHTML = siteContent["nav"]["nav-item-6"];
+navigation[0].style.color = "green";
+navigation[1].style.color = "green";
+navigation[2].style.color = "green";
+navigation[3].style.color = "green";
+navigation[4].style.color = "green";
+navigation[5].style.color = "green";
+
+const newNav1 = document.createElement('a');
+newNav1.innerHTML = 'Test';
+const content = document.querySelector('header nav');
+content.appendChild(newNav1);
+newNav1.style.color = "green";
+
+const newNav2 = document.createElement('a');
+newNav2.innerHTML = 'Begin';
+const content2 = document.querySelector('header nav');
+content2.prepend(newNav2);
+newNav2.style.color = "green";
 
 
 
