@@ -37,7 +37,11 @@ const siteContent = {
   },
 };
 
+
 // Example: Update the img src for the logo
+// group h4 tags separately.
+
+
 
 
 
@@ -64,8 +68,22 @@ let pArr = Array.from(paragraphs);
 let midImg = document.getElementsByClassName('middle-img')
 let imgElement = Array.from(midImg)[0];
 let ctaText = Array.from(document.getElementsByClassName('cta-text'));
+let h4List = Array.from(document.getElementsByTagName('h4'));
+let footerH = document.querySelector('section.contact h4');
+let midH = Array.from(document.querySelectorAll('h4'));
+let footerText = Array.from(document.querySelectorAll('footer > p'));
+let infoSet = siteContent.footer.copyright ;
+let contactText = Array.from(document.querySelectorAll('section.contact > p'));
+let contactAddress = siteContent.contact.address ;
 
 
+
+ctaText[0].innerHTML = 'DOM Is Awesome' ;
+ctaText[0].style.fontFamily = 'Bangers' ;
+
+
+buttonText.innerHTML = 'Get Started.' ;
+buttonText.style.fontFamily = 'Bangers' ;
 
 /* Header anchor tag variables */
 
@@ -97,7 +115,6 @@ let visText = siteContent["main-content"]["vision-content"];
    pArr[i].style.width = '27%' ; 
  }
 
- /****************************************************/
 
 
 
@@ -114,23 +131,35 @@ header.className = 'header-class'; // How to add class name to element.
 
 ctaImg.src = 'img/header-img.png' ;
 
-buttonText.innerHTML = 'Get Started';
-ctaText[0].innerHTML = 'DOM Is Awesome' ;
-ctaText[0].style.fontFamily = 'Bangers' ;
+
 
 /* Middle image effects */
 
 imgElement.src = 'img/mid-page-accent.jpg' ;
 
 
+/* To Do
 
+Add paragraph headers.
 
-/*
-The :scope pseudo-class only matches selectors on descendants of the base element.
+Add footer.
+
 */
 
-/* Console logs for testing variable accuracy.
+// Experiment with .map/reduce/filter.
 
+
+footerH.innerHTML = 'Contact';
+footerText[0].innerHTML = infoSet ;
+contactText[0].innerHTML = contactAddress ;
+console.log(h4List);
+/* Console logs for testing variable accuracy.
+console.log(contactAddress);
+console.log(contactText);
+console.log(midH);
+console.log(footerH);
+console.log(infoSet);
+console.log(footerText);
 console.log(logoImg);
 console.log(header)
 console.log(anchors)
@@ -140,14 +169,6 @@ console.log(buttonText)
 console.log(paragraphs)
 console.log(pArr) // Array of the array like object logged above it.
 console.log(midImg)
-
-
-/* To Do
-
-Add dom is awesome text.
-
-
-Add footer.
-
-
 */
+h4List[0].innerHTML = `${siteContent["main-content"]["features-h4"]}`;
+h4List[0].style.fontFamily = 'Bangers';
