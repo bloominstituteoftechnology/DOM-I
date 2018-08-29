@@ -117,3 +117,8 @@ footer.textContent = siteContent['footer']['copyright'];
 
 
 //***********CHANGE STYLING OF WEBPAGE **************** */
+const body = document.querySelector('body');
+body.style.backgroundColor = '#bebebe';
+
+cta_button.style.backgroundColor = '#02C7FF';
+cta_button.style.color = '#FFF';
