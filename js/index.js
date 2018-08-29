@@ -6,6 +6,8 @@ const siteContent = {
     "nav-item-4": "Features",
     "nav-item-5": "About",
     "nav-item-6": "Contact",
+    "nav-item-7": "Blog",
+    "nav-item-8": "Sign Up",
     "img-src": "img/logo.png"
   },
   "cta": {
@@ -48,13 +50,42 @@ let middleimg = document.getElementById("middle-img");
 middleimg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 
+let aNode = document.createElement("a");
+let bNode = document.createElement("a");
+//let blog = document.textTextNode("Blog");
+let navBar = document.querySelector("nav");
+//aNode.innerHTML = "Blog";
+//bNode.innerHTML = "Sign Up";
+//nav.appendChild(aNode);
+navBar.appendChild(aNode);
+navBar.prepend(bNode);
+
 let navText = document.querySelectorAll("nav a");
-navText[0].innerHTML = siteContent["nav"]["nav-item-1"];
-navText[1].innerHTML = siteContent["nav"]["nav-item-2"];
-navText[2].innerHTML = siteContent["nav"]["nav-item-3"];
-navText[3].innerHTML = siteContent["nav"]["nav-item-4"];
-navText[4].innerHTML = siteContent["nav"]["nav-item-5"];
-navText[5].innerHTML = siteContent["nav"]["nav-item-6"];
+
+
+//navText[0].innerHTML = siteContent["nav"]["nav-item-1"];
+//navText[1].innerHTML = siteContent["nav"]["nav-item-2"];
+//navText[2].innerHTML = siteContent["nav"]["nav-item-3"];
+//navText[3].innerHTML = siteContent["nav"]["nav-item-4"];
+//navText[4].innerHTML = siteContent["nav"]["nav-item-5"];
+//navText[5].innerHTML = siteContent["nav"]["nav-item-6"];
+
+//changes color of all nav links to green.
+
+let count = 0;
+navText.forEach(function(e){
+  e.innerHTML = siteContent["nav"][`nav-item-${count+1}`];
+  e.style.color = 'green';
+  count++;
+});
+
+/*for(let i = 0; i < navText.length; i++){
+
+  navText[i].innerHTML = siteContent["nav"][`nav-item-${i+1}`];
+  navText[i].style.color = 'green';
+  
+}*/
+
 
 let ctaText = document.querySelector(".cta-text");
 ctaText.querySelector("h1").innerHTML = siteContent["cta"]["h1"];
@@ -82,3 +113,6 @@ contactText.querySelectorAll("p")[2].innerHTML = siteContent["contact"]["email"]
 
 let footerText = document.querySelector("footer p");
 footerText.innerHTML = siteContent["footer"]["copyright"];
+
+//added content
+
