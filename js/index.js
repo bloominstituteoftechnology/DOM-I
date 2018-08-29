@@ -41,5 +41,5 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let header1 = document.getElementsByClassName("cta-text");
-header1.setAttribute('src', siteContent["cta"]["h1"]);
+let header_1 = document.getElementsByTagName("h1");
+header_1.innerText = siteContent["cta"]["h1"];
