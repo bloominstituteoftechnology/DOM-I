@@ -51,6 +51,10 @@ nav[3].innerHTML = siteContent.nav["nav-item-4"];
 nav[4].innerHTML = siteContent.nav["nav-item-5"];
 nav[5].innerHTML = siteContent.nav["nav-item-6"];
 
+nav.forEach(function(element) {
+  element.style.color = 'green';
+});
+
 //Jumbotron
 let jumbotronH1 = document.querySelector('h1');
 jumbotronH1.innerHTML = siteContent.cta.h1;
