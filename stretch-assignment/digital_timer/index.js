@@ -38,6 +38,9 @@ let breakFunc = ()    =>  {
 }
 const start = function()    {
     let func = ()  =>  {
+        reset.addEventListener("click", ()  =>  {
+            return window.clearInterval(run);
+        })
         if(msTens.innerHTML == "-") {
             msTens.innerHTML = "1"
         }   else if(parseInt(msTens.innerHTML) < 9)  {
