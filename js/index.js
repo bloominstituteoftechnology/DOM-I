@@ -44,12 +44,33 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 // Anchor Elements
 let anchor = document.querySelectorAll('a');
+
 anchor[0].innerHTML = siteContent["nav"]["nav-item-1"];
 anchor[1].innerHTML = siteContent["nav"]["nav-item-2"];
 anchor[2].innerHTML = siteContent["nav"]["nav-item-3"];
 anchor[3].innerHTML = siteContent["nav"]["nav-item-4"];
 anchor[4].innerHTML = siteContent["nav"]["nav-item-5"];
 anchor[5].innerHTML = siteContent["nav"]["nav-item-6"];
+
+let nav = document.querySelector('nav');
+let fa = document.createElement('a');
+fa.style.color = 'green';
+let la = document.createElement('a');
+la.style.color = 'green';
+fa.innerText = 'Home';
+la.innerText = 'Bliz';
+nav.style.color = 'green';
+console.log(nav)
+nav.appendChild(la);
+nav.prepend(fa);
+
+function getColors(arr) {
+   arr.forEach(function(ele){
+         return ele.style.color = 'green';
+   });
+}
+getColors(anchor);
+
 
 // h1 element & Button
 let cta = document.querySelector('.cta-text');
@@ -64,6 +85,22 @@ h1.innerHTML = siteContent["cta"]["h1"].split(" ").join("<br>");
 button.innerText = siteContent['cta']['button'];
 image.setAttribute('src', siteContent["cta"]["img-src"]);
 // image.style.width = '50%;'
+
+//Stretch Goal -- Adding eventi listener to button
+button.addEventListener('click', function(){
+      let btn = event.target;
+      btn.innerText = 'Just Started..';
+      btn.style.backgroundColor = 'yellow';
+      btn.style.color = 'red';
+});
+
+button.addEventListener('mouseout', function() {
+     let btn = event.target;
+     btn.innerText = siteContent['cta']['button'];
+     btn.style.color = 'white';
+     btn.style.backgroundColor = 'black';
+
+})
 
 // MAIN CONTENT -- Top Content
 let topContent = document.querySelector('.top-content');
