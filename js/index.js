@@ -41,6 +41,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
+//nav
 let navBar = document.querySelector("nav");
 navBar.children[0].innerHTML = siteContent["nav"]["nav-item-1"];
 navBar.children[1].innerHTML = siteContent["nav"]["nav-item-2"];
@@ -55,13 +56,15 @@ navBar.children[3].style.color = 'green';
 navBar.children[4].style.color = 'green';
 navBar.children[5].style.color = 'green';
 
+//new nav item (front). line 62 could be either prepend OR appendChild since theres nothign in the element.
 var newNavBar1 = document.createElement('a');
 var newNavContent1 = document.createTextNode("asdf");
-newNavBar1.appendChild(newNavContent1);
+newNavBar1.prepend(newNavContent1);
 navBar.prepend(newNavBar1);
 newNavBar1.setAttribute('href', '#');
 newNavBar1.style.color = 'green';
 
+//new nav item (back). line 70 could be either prepend OR appendChild since theres nothign in the element.
 var newNavBar2 = document.createElement('a');
 var newNavContent2 = document.createTextNode("fdsa");
 newNavBar2.appendChild(newNavContent2);
@@ -69,13 +72,14 @@ navBar.appendChild(newNavBar2);
 newNavBar2.setAttribute('href', '#');
 newNavBar2.style.color = 'green';
 
+//title content
 let cta = document.querySelector(".cta-text");
 cta.children[0].innerHTML = siteContent["cta"]["h1"];
 cta.children[1].innerHTML = siteContent["cta"]["button"]
-
 let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 
+//main content 83-98
 let topContent = document.querySelectorAll(".top-content .text-content");
 topContent[0].children[0].innerHTML = siteContent["main-content"]["features-h4"];
 topContent[0].children[1].innerHTML = siteContent["main-content"]["features-content"];
@@ -93,11 +97,13 @@ bottomContent[1].children[1].innerHTML = siteContent["main-content"]["product-co
 bottomContent[2].children[0].innerHTML = siteContent["main-content"]["vision-h4"];
 bottomContent[2].children[1].innerHTML = siteContent["main-content"]["vision-content"];
 
+//contact info
 let contact = document.querySelector(".contact");
 contact.children[0].innerHTML = siteContent["contact"]["contact-h4"];
 contact.children[1].innerHTML = siteContent["contact"]["address"];
 contact.children[2].innerHTML = siteContent["contact"]["phone"];
 contact.children[3].innerHTML = siteContent["contact"]["email"];
 
+//footer
 let footer = document.querySelector("footer");
 footer.innerHTML = siteContent["footer"]["copyright"];
