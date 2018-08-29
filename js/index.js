@@ -60,8 +60,6 @@ newB.innerHTML = "Advice";
 let nav2 = document.querySelector("nav");
 nav2.prepend(newB);
 
-
-
 let h1 = document.querySelector("h1");
 h1.innerHTML = siteContent["cta"]["h1"]
 
@@ -109,6 +107,7 @@ function updateContent2() {
     btn2.innerHTML = "Cool Content";
   }
 }
+
 let btn = document.createElement('button');
 btn.className = "content-btn";
 btn.innerHTML = "add Content";
@@ -122,7 +121,6 @@ btn2.className = "content-btn2";
 btn2.innerHTML = "Cool Content";
 btn2.addEventListener("click", updateContent2);
 let contact = document.querySelector("section");
-//contact.appendChild(btn);
 contact.prepend(btn2);
 
 
