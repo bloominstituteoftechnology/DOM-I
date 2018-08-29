@@ -100,3 +100,10 @@ contactSection[2].innerHTML = siteContent["contact"]["email"]
 let footerPTag = document.querySelector("footer p");
 footerPTag.innerHTML = "Copyright Great Idea! 2018"
 
+//Stretch Goals
+let newColor = document.getElementsByClassName("cta")[0];
+newColor.style.color = "green";
+
+let newMidBG = document.querySelector(".top-content");
+newMidBG.style.background = "yellow"
+console.log(newMidColor);
