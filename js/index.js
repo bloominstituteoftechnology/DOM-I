@@ -55,6 +55,21 @@ nav.forEach(function(element) {
   element.style.color = 'green';
 });
 
+let lastNavItem = document.createElement('a');
+lastNavItem.innerHTML = 'Last Item';
+
+document.querySelector('nav').appendChild(lastNavItem);
+
+lastNavItem.style.color = 'green';
+
+let firstNavItem = document.createElement('a');
+firstNavItem.innerHTML = 'First Item';
+
+document.querySelector('nav').prepend(firstNavItem);
+
+firstNavItem.style.color = 'green';
+
+
 //Jumbotron
 let jumbotronH1 = document.querySelector('h1');
 jumbotronH1.innerHTML = siteContent.cta.h1;
