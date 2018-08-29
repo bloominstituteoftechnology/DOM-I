@@ -38,5 +38,59 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+//    IMG
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent['nav']['img-src']);
+
+let headerIMG = document.getElementById('cta-img');
+headerIMG.setAttribute('src', siteContent['cta']['img-src']);
+
+let middleIMG = document.getElementById('middle-img');
+middleIMG.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+//
+let containerClass = document.getElementsByClassName('container');
+
+let navTag = document.getElementsByTagName('nav');
+
+let aTag = document.getElementsByTagName('a');
+for(let i = 1; i < aTag.length + 1; i++) {
+  aTag[i-1].innerHTML = siteContent['nav']['nav-item-'+i];
+}
+
+
+let mainContentClass = document.getElementsByClassName('main-content');
+
+let contactClass = document.getElementsByClassName('contact');
+
+let h1_Tags = document.getElementsByTagName('h1');
+
+let buttonTag = document.getElementsByTagName('button');
+buttonTag[0].innerHTML = siteContent['cta']['button'];
+
+
+let topContent = document.querySelectorAll('.top-content .text-content');
+
+let topContent_h4 = topContent[0].querySelector('h4');
+topContent_h4.innerHTML = siteContent['main-content']['features-h4'];
+
+let topContent_p = topContent[0].querySelector('p');
+topContent_p.innerHTML = siteContent['main-content']['features-content'];
+
+let about_h4 = topContent[1].querySelector('h4');
+about_h4.innerHTML = siteContent['main-content']['about-h4'];
+
+let about_p = topContent[1].querySelector('p');
+about_p.innerHTML = siteContent['main-content']['about-content'];
+
+
+
+
+
+
+
+
+
+
+
+// let navData = document.getElementsByTagName('nav');
