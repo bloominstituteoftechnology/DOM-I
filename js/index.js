@@ -43,18 +43,15 @@ const siteContent = {
 const logo = document.getElementById("logo-img");
 logo.src = siteContent.nav["img-src"];
 
-const navAnchors = document.querySelectorAll('a');
-navAnchors[0].innerText = siteContent.nav["nav-item-1"];
-navAnchors[1].innerText = siteContent.nav["nav-item-2"];
-navAnchors[2].innerText = siteContent.nav["nav-item-3"];
-navAnchors[3].innerText = siteContent.nav["nav-item-4"];
-navAnchors[4].innerText = siteContent.nav["nav-item-5"];
-navAnchors[5].innerText = siteContent.nav["nav-item-6"];
+const navAnchors = document.querySelectorAll("nav a");
+navAnchors.forEach((item, index)   =>  {
+    return item.innerHTML = siteContent.nav[`nav-item-${index + 1}`];
+});
 
 //***CTA***
 
 const ctaHeader = document.querySelector('h1');
-ctaHeader.innerHTML = siteContent.cta['h1'];
+ctaHeader.innerHTML = siteContent.cta.h1;
 const button = document.querySelector('button');
 button.innerHTML = siteContent.cta.button;
 const circleImage = document.getElementById("cta-img");
