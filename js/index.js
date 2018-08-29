@@ -36,7 +36,9 @@ const siteContent = {
     "copyright" : "Copyright Great Idea! 2018"
   },
 };
-
+// let container = document.querySelector('body');
+// container.style.backgroundColor = '#f2f2f2';
+// container.style.padding = '0px 12px'
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
@@ -58,6 +60,7 @@ let image = document.querySelector('#cta-img');
 // cta.style.padding = '30px 40px';
 
 h1.innerHTML = siteContent['cta']['h1'];
+h1.innerHTML = siteContent["cta"]["h1"].split(" ").join("<br>");
 button.innerText = siteContent['cta']['button'];
 image.setAttribute('src', siteContent["cta"]["img-src"]);
 // image.style.width = '50%;'
