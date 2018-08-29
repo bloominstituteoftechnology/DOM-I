@@ -77,6 +77,7 @@ contactDetails[1].innerHTML = siteContent.contact.phone;
 contactDetails[2].innerHTML = siteContent.contact.email;
 footer.innerHTML = siteContent.footer.copyright;
 
+//adding a third paragraph to the middle section
 let addedDiv = document.createElement('div.text-content');
 let topMainContent = document.querySelector('.top-content');
 topMainContent.prepend(addedDiv);
@@ -86,6 +87,10 @@ addedDiv.appendChild(addedH4);
 addedDiv.appendChild(addedP);
 addedH4.innerHTML = "History";
 addedP.innerHTML = "History content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+//changing the color of the main tital and the text size of the bottom paragraphs
+title.style.color = '#0055A8';
+bottomContent.forEach((obj,i) => {bottomContent[i].style.fontSize="12px"})
 
 
 // var navParent = document.querySelector('nav');
