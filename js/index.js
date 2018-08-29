@@ -56,6 +56,7 @@ navLinkFive.className = 'nav-item-5';
 const navLinkSix = document.getElementsByTagName('a')[5];
 navLinkSix.className = 'nav-item-6';
 
+
 // Navigation Links
 
 navLinkOne.innerText = siteContent['nav']['nav-item-1'];
@@ -65,11 +66,41 @@ navLinkFour.innerText = siteContent['nav']['nav-item-4'];
 navLinkFive.innerText = siteContent['nav']['nav-item-5'];
 navLinkSix.innerText = siteContent['nav']['nav-item-6'];
 
+
+navLinkOne.style.color = "green";
+navLinkTwo.style.color = "green";
+navLinkThree.style.color = "green";
+navLinkFour.style.color = "green";
+navLinkFive.style.color = "green";
+navLinkSix.style.color = "green";
+
+// New Nav items <- Doesn't point to anywhere yet, unsure if they need to do so?
+
+const navAppending = document.getElementsByTagName('nav');
+
+const newNavItemHome = document.createElement('a');
+newNavItemHome.style.marginRight = "0px";
+newNavItemHome.innerText = "Home";
+newNavItemHome.setAttribute('href', "index.html");
+newNavItemHome.style.color = "green";
+
+
+const newNavItemBlog = document.createElement('a');
+newNavItemBlog.style.marginLeft = "0px";
+newNavItemBlog.innerText = "Blog";
+newNavItemBlog.setAttribute('href', "#");
+newNavItemBlog.style.color = "green";
+
+
+navAppending[0].prepend(newNavItemHome);
+navAppending[0].appendChild(newNavItemBlog);
+
 // CTA Text, Image & Button
 
 const ctaHeader = document.querySelector('.cta .cta-text h1');
 ctaHeader.classList.add('.header-cta');
-ctaHeader.innerText = siteContent['cta']['button'];
+ctaHeader.innerHTML = "Dom<br>is<br>Awesome";
+
 
 // Button
 
@@ -96,3 +127,52 @@ mainDivP2.innerHTML = siteContent['main-content']['about-content'];
 
 const middleImg = document.getElementById('middle-img');
 middleImg.src = siteContent['main-content']['middle-img-src'];
+
+// Bottom Content
+
+const bottomDivH1 = document.querySelectorAll(
+	'.bottom-content .text-content h4'
+)[0];
+bottomDivH1.innerText = siteContent['main-content']['services-h4'];
+const bottomDivP1 = document.querySelectorAll(
+	'.bottom-content .text-content p'
+)[0];
+bottomDivP1.innerHTML = siteContent['main-content']['services-content'];
+
+const bottomDivH2 = document.querySelectorAll(
+	'.bottom-content .text-content h4'
+)[1];
+bottomDivH2.innerText = siteContent['main-content']['product-h4'];
+const bottomDivP2 = document.querySelectorAll(
+	'.bottom-content .text-content p'
+)[1];
+bottomDivP2.innerHTML = siteContent['main-content']['product-content'];
+
+const bottomDivH3 = document.querySelectorAll(
+	'.bottom-content .text-content h4'
+)[2];
+bottomDivH3.innerText = siteContent['main-content']['vision-h4'];
+const bottomDivP3 = document.querySelectorAll(
+	'.bottom-content .text-content p'
+)[2];
+bottomDivP3.innerHTML = siteContent['main-content']['vision-content'];
+
+
+// Contact section
+
+const contactHdr = document.querySelectorAll('.contact h4');
+contactHdr.innerText = siteContent['contact']['contact-h4'];
+const contactP1 = document.querySelectorAll('.contact p')[0];
+contactP1.innerHTML = siteContent['contact']['address'];
+
+const contactP2 = document.querySelectorAll('.contact p')[1];
+contactP2.innerHTML = siteContent['contact']['email'];
+
+const contactP3 = document.querySelectorAll('.contact p')[2];
+contactP3.innerHTML = siteContent['contact']['phone'];
+
+
+// Footer section
+
+const footerCopyright = document.querySelector('footer p');
+footerCopyright.innerText = siteContent['footer']['copyright'];
