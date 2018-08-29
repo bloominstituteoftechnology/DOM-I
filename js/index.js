@@ -108,3 +108,17 @@ let copyright = document.querySelector('footer p');
 
 copyright.innerText = siteContent['footer']['copyright'];
 
+// stretch
+let bool = true;
+
+const updateButton = () => {
+    let color = '';
+    if (bool) {
+        color = 'purple';
+    }
+    bool = !bool;
+    document.querySelector('nav a:first-of-type').style.color = color;
+    document.querySelector('nav a:last-of-type').style.color = color;
+}
+
+ctaButton.onclick = updateButton;
