@@ -93,6 +93,15 @@ textContentP[4].innerText   = siteContent['main-content']['vision-content'];
 let textContentImg = document.getElementById('middle-img');
 textContentImg.setAttribute( 'src', siteContent["main-content"]["middle-img-src"] );
 
+for( let i = 0; i < textContentP.length; i++ ){
+  textContentP[i].addEventListener( "mouseover", function(event) {
+    event.target.style.fontSize = 'larger';
+  }, false );
+  textContentP[i].addEventListener( "mouseout", function(event) {
+    event.target.style.fontSize = 'initial';
+  }, false );
+
+}
 
 // "contact"
 document.querySelector('.contact h4').innerText = siteContent['contact']['contact-h4'];
@@ -105,3 +114,4 @@ contactP[2].innerText = siteContent['contact']['email'];
 
 // "footer"
 document.querySelector('footer p').innerText = siteContent['footer']['copyright'];
+document.querySelector('footer p').style.fontStyle = 'italic';
