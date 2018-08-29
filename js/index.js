@@ -107,6 +107,12 @@ ctaHeader.innerHTML = "Dom<br>is<br>Awesome";
 const ctaButton = document.querySelector('.cta .cta-text button');
 ctaButton.innerText = siteContent['cta']['button'];
 
+// Button refresh function
+
+ctaButton.onclick = function button() {
+  location.reload();
+}
+
 // Header Image
 
 const headerImg = document.getElementById('cta-img');
