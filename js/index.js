@@ -46,6 +46,18 @@ for (let i=0; i<nav.length; i++) {
         nav[i].innerHTML = siteContent.nav[`nav-item-${i+1}`];
       }
 
+ //appended anchor 
+var navParent = document.querySelector('nav');
+var newAnchor = document.createElement('a');
+newAnchor.innerHTML = 'FAQ';
+newAnchor.style.color = 'lawngreen';
+navParent.appendChild(newAnchor);
+
+//prepended anchor
+var secondAnchor = document.createElement('a');
+secondAnchor.innerHTML = 'Welcome';
+secondAnchor.style.color = 'lawngreen';
+navParent.insertBefore(secondAnchor, navParent.firstChild);
 
 
 
