@@ -57,6 +57,15 @@ function setAttrAll(base, selector, attr, value) {
   }
 }
 
+function makeNode(element, innerHtml, attributes) {
+  const node = document.createElement(element);
+  node.innerHTML = innerHtml;
+  for (let attr in attributes) {
+    node.setAttribute(attr, attributes[attr]);
+  }
+  return node;
+}
+
 
 // Now just call these functions for every element that needs filling in
 
@@ -68,19 +77,11 @@ setInnerHtml(document, 'header nav a:nth-child(4)', siteContent['nav']['nav-item
 setInnerHtml(document, 'header nav a:nth-child(5)', siteContent['nav']['nav-item-5']);
 setInnerHtml(document, 'header nav a:nth-child(6)', siteContent['nav']['nav-item-6']);
 
-// This part I will still do manually :)
 // Add two additional navigation elements
 const nav = document.querySelector('header nav');
 
-const homeAnchor = document.createElement('a');
-homeAnchor.innerText = 'Home';
-homeAnchor.setAttribute('href', '#');
-nav.prepend(homeAnchor);
-
-const blogAnchor = document.createElement('a');
-blogAnchor.innerText = 'Blog';
-blogAnchor.setAttribute('href', '#');
-nav.appendChild(blogAnchor);
+nav.prepend(makeNode('a', 'Home', {'href':'#'}));
+nav.appendChild(makeNode('a', 'Blog', {'href':'#'}));
 
 // make them all green!
 setAttrAll(document, 'header nav a', 'style', 'color: green');
