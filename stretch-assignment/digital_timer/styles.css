@@ -1,14 +1,29 @@
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    padding: 8px 20px;
+    text-align: center;
+    margin: 10px 0px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    border-color: red;
 }
 
 .digit {
-  display: inline-block;
-  font-size: 80px;
+    display: inline-block;
+    font-size: 80px;
 }
 
 .redDigit {
-  color: red;
+    color: red;
 }
