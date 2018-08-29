@@ -39,4 +39,62 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+let ctaImg = document.getElementById('cta-img');
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let middleImg = document.getElementById('middle-img');
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+//Add h1 text content
+let h1 = document.querySelector('h1');
+h1.innerHTML = siteContent["cta"]["h1"];
+
+//Add button text content
+let button = document.querySelector('button');
+button.innerHTML = siteContent["cta"]["button"];
+
+// Grab all anchors and insert text content and style green
+let index = 1;
+let anchors = document.querySelectorAll('a');
+anchors.forEach(element => {
+  element.innerHTML = siteContent['nav'][`nav-item-${index}`];
+  element.style.color = "green";
+  index++;
+});
+
+// Add 2 more anchor tags to nav with appendChild
+let nav = document.querySelector('nav'); // Grab parent
+
+let newAnchor1 = document.createElement('a'); // Create child element
+newAnchor1.innerHTML = "Blog"; // Add text
+newAnchor1.style.color = "green"; // Add style
+nav.appendChild(newAnchor1); // Append child to nav
+
+let newAnchor2 = document.createElement('a'); // Create child element
+newAnchor2.innerHTML = "Gallery"; // Add text
+newAnchor2.style.color = "green"; // Add style
+nav.appendChild(newAnchor2); // Append child to nav
+
+// Create an array for h4 and paragraph keys
+// Get nodelist containing all text-content classes
+// Add text content to h4s and paragraphs 
+let textContentArray = ['features', 'about', 'services', 'product', 'vision'];
+let text_content = document.getElementsByClassName('text-content');
+for (let i = 0; i < text_content.length; i++) {
+  text_content[i].firstElementChild.innerHTML = siteContent['main-content'][`${textContentArray[i]}-h4`];
+  text_content[i].lastElementChild.innerHTML = siteContent['main-content'][`${textContentArray[i]}-content`];
+}
+
+// Create an array for all contact keys
+// Get nodelist containing contact class
+// Add text content to all children of class contact
+let contactArray = ['contact-h4', 'address', 'phone', 'email'];
+let contact_content = document.getElementsByClassName('contact');
+for (let i = 0; i < contactArray.length; i++) {
+  contact_content[0].children[i].innerHTML = siteContent['contact'][`${contactArray[i]}`];
+}
+
+let footer = document.getElementsByTagName('footer');
+footer[0].children[0].innerHTML = siteContent['footer']['copyright'];
