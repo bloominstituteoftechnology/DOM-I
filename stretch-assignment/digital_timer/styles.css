@@ -19,7 +19,7 @@ body {
 }
 
 .redDigit {
-  color: rgb(251, 5, 26);
+  color: rgb(251, 5, 26) !important;
 }
 
 #msHundreds {

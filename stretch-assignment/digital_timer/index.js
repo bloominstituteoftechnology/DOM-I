@@ -34,7 +34,14 @@ window.onload = function() {
     // When the Reset button is clicked, clear the timer and set all the digits
     // to 0
     buttonReset.onclick = function() {
+        // Remove the redDigit class so that numbers go back to original colors
+        addMsHundreds.classList.remove("redDigit");
+        addMsTens.classList.remove("redDigit");
+        addSecondOnes.classList.remove("redDigit");
+        addSecondTens.classList.remove("redDigit");
+       
         clearInterval(Interval);
+
         msTens = "-"; msHundreds = "-"; secondOnes = "-"; secondTens = "-";
         addMsHundreds.innerHTML = `${msHundreds}`;
         addMsTens.innerHTML = `${msTens}`;
