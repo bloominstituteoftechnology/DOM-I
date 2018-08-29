@@ -47,5 +47,26 @@ midlogo.setAttribute('src', siteContent["cta"]["img-src"])
 let snippets = document.getElementById("middle-img");
 snippets.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
-var text = document.getElementById("cta-text").children;
-text.innerHTML = 'hiu';
+var mainTitle = document.querySelector("h1");
+mainTitle.innerHTML = siteContent["cta"]["h1"];
+
+var button = document.querySelector("button");
+button.innerHTML = siteContent["cta"]["button"];
+
+let link = document.body.getElementsByTagName("a")[0];
+link.innerHTML = siteContent["nav"]["nav-item-1"];
+
+let link1 = document.body.getElementsByTagName("a")[1];
+link1.innerHTML = siteContent["nav"]["nav-item-2"];
+
+let link2 = document.body.getElementsByTagName("a")[2];
+link2.innerHTML = siteContent["nav"]["nav-item-3"];
+
+let link3 = document.body.getElementsByTagName("a")[3];
+link3.innerHTML = siteContent["nav"]["nav-item-4"];
+
+let link4 = document.body.getElementsByTagName("a")[4];
+link4.innerHTML = siteContent["nav"]["nav-item-5"];
+
+let link5 = document.body.getElementsByTagName("a")[5];
+link5.innerHTML = siteContent["nav"]["nav-item-6"];
