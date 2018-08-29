@@ -74,7 +74,7 @@ a[7].style.color = 'green';
 
 //h1
 const h1 = document.querySelector('.cta-text h1');
-h1.innerHTML = siteContent["cta"]["h1"]
+h1.innerHTML = siteContent["cta"]["h1"].split(' ').join('<br>');
 
 //cta button
 const button = document.querySelector('.cta-text button');
