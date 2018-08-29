@@ -1,4 +1,5 @@
 const siteContent = {
+  
   "nav": {
     "nav-item-1": "Services",
     "nav-item-2": "Product",
@@ -8,6 +9,8 @@ const siteContent = {
     "nav-item-6": "Contact",
     "img-src": "img/logo.png"
   },
+  
+
   "cta": {
     "h1": "DOM Is Awesome",
     "button": "Get Started",
@@ -26,6 +29,7 @@ const siteContent = {
     "vision-h4":"Vision",
     "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
   },
+
   "contact": {
     "contact-h4" : "Contact",
     "address" : "123 Way 456 Street Somewhere, USA",
@@ -37,6 +41,50 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
+// // Example: Update the img src for the logo
+// Nav Section
+let nav = document.querySelectorAll('nav a');
+nav.forEach(item =>item.style.color = 'green')
+for(i=0; i < nav.length; i++){
+  nav[i].innerHTML=siteContent.nav[`nav-item-${i + 1}`];
+}
+// image section
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+let ctaImg = document.getElementById('cta-img')
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
+let middleImg = document.getElementById("middle-img")
+middleImg.setAttribute('src', siteContent['main-content']["middle-img-src"])
+
+// header section
+let h1 = document.querySelector(".cta-text h1");
+h1.innerHTML = siteContent.cta.h1;
+
+let button = document.querySelector("button");
+button.innerHTML = siteContent.cta.button;
+
+
+// body section 
+let arrH4 = ["features", "about", "services", "product", "vision"];
+let h4 = document.querySelectorAll(".text-content h4")
+for(i = 0; i < h4.length; i++){
+  h4[i].innerHTML = siteContent["main-content"][`${arrH4[i]}-h4`];
+};
+ let p = document.querySelectorAll(".text-content p")
+ for(i = 0; i < p.length; i++){
+   p[i].innerHTML=siteContent["main-content"][ `${arrH4[i]}-content`];
+ };
+
+
+// contact section
+const contactH4 = document.querySelector(".contact h4"),
+contactP=document.querySelectorAll(".contact p");
+contactH4.innerHTML = siteContent["contact"]["contact-h4"];
+contactP[0].innerHTML= siteContent["contact"]["address"];
+contactP[1].innerHTML= siteContent["contact"]["phone"];
+contactP[2].innerHTML= siteContent["contact"]["email"];
+
+// footer section
+let footer = document.querySelector("footer");
+footer.innerHTML = siteContent.footer.copyright;
+
