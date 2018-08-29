@@ -6,6 +6,7 @@ const siteContent = {
     "nav-item-4": "Features",
     "nav-item-5": "About",
     "nav-item-6": "Contact",
+    "nav-item-7" : '',
     "img-src": "img/logo.png"
   },
   "cta": {
@@ -75,6 +76,13 @@ let footerText = Array.from(document.querySelectorAll('footer > p'));
 let infoSet = siteContent.footer.copyright ;
 let contactText = Array.from(document.querySelectorAll('section.contact > p'));
 let contactAddress = siteContent.contact.address ;
+let contactPhone = siteContent.contact.phone ;
+let contactEmail = siteContent.contact.email ;
+let navBar = document.querySelectorAll('nav');
+let gitLink = document.createElement('a');
+gitLink.setAttribute('href', 'https://github.com/LorenzoEvans');
+gitLink.innerHTML = 'GitHub' ;
+
 
 
 
@@ -94,7 +102,9 @@ anchors[1].innerHTML = 'Product' ;
 anchors[2].innerHTML = 'Vision';
 anchors[3].innerHTML = 'About' ;
 anchors[4].innerHTML = 'Contact' ;
-anchors[5].remove();
+anchors[5].innerHTML = 'LinkedIn' ;
+anchors[5].setAttribute('href', 'https://www.linkedin.com/in/lorenzo-evans-887364a7/');
+
 /* Text-content variables */
 let featTxt = siteContent["main-content"]["features-content"];
 
@@ -142,9 +152,11 @@ imgElement.src = 'img/mid-page-accent.jpg' ;
 
 /* To Do
 
-Add paragraph headers.
+Add paragraph headers. 1 of 6 done.
 
-Add footer.
+Debug 'Get Started' button.
+
+Add new links to nav-bar. // one completed.
 
 */
 
@@ -154,8 +166,13 @@ Add footer.
 footerH.innerHTML = 'Contact';
 footerText[0].innerHTML = infoSet ;
 contactText[0].innerHTML = contactAddress ;
+contactText[1].innerHTML = contactPhone ;
+contactText[2].innerHTML = contactEmail ;
+
 console.log(h4List);
 /* Console logs for testing variable accuracy.
+console.log(gitLink);
+console.log(contactPhone);
 console.log(contactAddress);
 console.log(contactText);
 console.log(midH);
@@ -172,5 +189,3 @@ console.log(paragraphs)
 console.log(pArr) // Array of the array like object logged above it.
 console.log(midImg)
 */
-h4List[0].innerHTML = `${siteContent["main-content"]["features-h4"]}`;
-h4List[0].style.fontFamily = 'Bangers';
