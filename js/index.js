@@ -48,10 +48,11 @@ let links = document.querySelectorAll("nav a");
 links.forEach((elem, i) => elem.innerText = siteContent["nav"][`nav-item-${i+1}`]);
 
 let newLink1 = document.createElement('a');
-let newLink2 = document.createElement('a'); 
+let newLink2 = document.createElement('a').innerHTML = "Home"; 
 let navTag = document.querySelector('nav'); 
+
 navTag.appendChild(newLink1).innerHTML = "Opportunities"; 
-navTag.appendChild(newLink2).innerHTML = "Quotes"; 
+navTag.prepend(newLink2);
 
 //header----------------------------------------------------------
 
