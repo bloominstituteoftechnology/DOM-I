@@ -47,3 +47,42 @@ codeImg.setAttribute("src", siteContent["cta"]["img-src"]);
 
 let midImg = document.getElementById("middle-img");
 midImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+let navLinks = document.querySelectorAll("nav a");
+navLinks[0].innerHTML = siteContent.nav["nav-item-1"];
+navLinks[1].innerHTML = siteContent.nav["nav-item-2"];
+navLinks[2].innerHTML = siteContent.nav["nav-item-3"];
+navLinks[3].innerHTML = siteContent.nav["nav-item-4"];
+navLinks[4].innerHTML = siteContent.nav["nav-item-5"];
+navLinks[5].innerHTML = siteContent.nav["nav-item-6"];
+
+let ctaH1 = document.querySelector(".cta-text h1");
+ctaH1.innerHTML = siteContent.cta.h1;
+
+let ctaBtn = document.querySelector(".cta-text button");
+ctaBtn.innerHTML = siteContent.cta.button;
+
+let contentH4s = document.querySelectorAll(".text-content h4");
+contentH4s[0].innerHTML = siteContent["main-content"]["features-h4"];
+contentH4s[1].innerHTML = siteContent["main-content"]["about-h4"];
+contentH4s[2].innerHTML = siteContent["main-content"]["services-h4"];
+contentH4s[3].innerHTML = siteContent["main-content"]["product-h4"];
+contentH4s[4].innerHTML = siteContent["main-content"]["vision-h4"];
+
+let contentPs = document.querySelectorAll(".text-content p");
+contentPs[0].innerHTML = siteContent["main-content"]["features-content"];
+contentPs[1].innerHTML = siteContent["main-content"]["about-content"];
+contentPs[2].innerHTML = siteContent["main-content"]["services-content"];
+contentPs[3].innerHTML = siteContent["main-content"]["product-content"];
+contentPs[4].innerHTML = siteContent["main-content"]["vision-content"];
+
+let contactH4 = document.querySelector(".contact h4");
+contactH4.innerHTML = siteContent.contact["contact-h4"];
+
+let contactPs = document.querySelectorAll(".contact p");
+contactPs[0].innerHTML = siteContent.contact.address;
+contactPs[1].innerHTML = siteContent.contact.phone;
+contactPs[2].innerHTML = siteContent.contact.email;
+
+let footer = document.querySelector("footer p");
+footer.innerHTML = siteContent.footer.copyright;
