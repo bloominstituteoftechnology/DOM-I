@@ -42,3 +42,14 @@ const siteContent = {
 
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+const navigation = document.querySelector("nav")
+const navigationA = document.querySelectorAll("nav a")
+
+navigationA[0].innerHTML = siteContent['nav']['nav-item-1'];
+navigationA[1].innerHTML = siteContent['nav']['nav-item-2'];
+navigationA[2].innerHTML = siteContent['nav']['nav-item-3'];
+navigationA[3].innerHTML = siteContent['nav']['nav-item-4'];
+navigationA[4].innerHTML = siteContent['nav']['nav-item-5'];
+navigationA[5].innerHTML = siteContent['nav']['nav-item-6'];
