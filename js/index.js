@@ -60,6 +60,13 @@ navItemFive.innerHTML = "About";
 let navItemSix = document.getElementsByTagName('a')[5];
 navItemSix.innerHTML = "Contact";
 
+//Task 4: Add new content
+
+let navAllItems = document.querySelectorAll('a');
+for (let i = 0; i < navAllItems.length; i++) {
+  navAllItems[i].style.color = '#66ff66';
+}
+
 
 let circle = document.getElementById("cta-img");
 circle.setAttribute('src', siteContent["cta"]["img-src"]);
