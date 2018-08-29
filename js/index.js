@@ -78,3 +78,11 @@ paraTag[3].innerText = siteContent["main-content"]["product-content"];
 h4Tag[4].innerText = siteContent["main-content"]["vision-h4"]; 
 paraTag[4].innerText = siteContent["main-content"]["vision-content"]; 
 
+//contact----------------------------------------------------------------------------
+
+h4Tag[5].innerText = siteContent["contact"]["contact-h4"]; 
+paraTag[5].innerText = siteContent["contact"]["address"];
+paraTag[6].innerText = siteContent["contact"]["phone"];
+paraTag[7].innerText = siteContent["contact"]["email"]; 
+
+//footer--------------------------------------------------------------------------
