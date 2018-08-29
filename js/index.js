@@ -85,6 +85,8 @@ ctaText[0].style.fontFamily = 'Bangers' ;
 buttonText.innerHTML = 'Get Started.' ;
 buttonText.style.fontFamily = 'Bangers' ;
 
+/* ^ Not sure why the button isn't displaying, it was but something broke it, and I have no idea what. */
+
 /* Header anchor tag variables */
 
 anchors[0].innerHTML = 'Services';
