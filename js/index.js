@@ -86,7 +86,7 @@ const updateButton = () => {
 
 ctaButton.onclick = updateButton;
 
-// Main Content
+// main
 let mainContent = siteContent['main-content'];
 let mainContentH4 = document.querySelectorAll('.main-content h4');
 let mainContentImg = document.querySelector('#middle-img');
