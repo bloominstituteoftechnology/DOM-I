@@ -39,17 +39,17 @@ const siteContent = {
 
 // nav
 let logo = document.getElementById('logo-img');
-logo.setAttribute('src', siteContent['nav']['img-src']);
-
 let navItem = document.querySelectorAll('nav a');
 let nav = document.querySelector('nav');
+
+logo.setAttribute('src', siteContent['nav']['img-src']);
 
 for (i = 0; i < navItem.length; i++) {
     navItem[i].innerText = siteContent['nav'][Object.keys(siteContent['nav'])[i]];
     navItem[i].style.color = 'green';  // green
 }
 
-    // add two items
+// add two items
 let newItem1 = document.createElement('a');
 let newItem2 = document.createElement('a');
 
@@ -64,14 +64,14 @@ nav.appendChild(newItem2);
 // cta
 let cta = siteContent['cta'];
 let ctaH1 = document.querySelector('.cta-text h1');
-let ctaImage = document.querySelector('#cta-img');
 let ctaButton = document.querySelector('.cta-text button');
+let ctaImage = document.querySelector('#cta-img');
 
-ctaH1.innerHTML = cta['hl'].split(' ').join('<br>');
-ctaImage.src = cta['img-src'];
-ctaButton.innerText = cta['button'];
+ctaH1.innerHTML = cta['h1'].split(' ').join('<br>');
+ctaImage.src = cta['img-src']; 
+ctaButton.innerText = cta['button']; 
 
-// main
+// Main Content
 let mainContent = siteContent['main-content'];
 let mainContentH4 = document.querySelectorAll('.main-content h4');
 let mainContentImg = document.querySelector('#middle-img');
