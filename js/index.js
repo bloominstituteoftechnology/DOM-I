@@ -56,10 +56,13 @@ let button = document.querySelector('button');
 button.innerHTML = siteContent["cta"]["button"]
 
 //Nav items
-let nav = document.getElementsByTagName('a');
-for (let i =0; i < nav.length; i++) {
-  nav[i].innerHTML = siteContent["nav"][`nav-item-${i + 1}`]
-  nav[i].style.color = "Green"}
+
+let navItems = document.getElementsByTagName('a');
+for (let i =0; i < navItems.length; i++) {
+  navItems[i].innerHTML = siteContent["nav"][`nav-item-${i + 1}`]
+  navItems[i].style.color = "Green"}
+  
+let nav = document.querySelector('nav');
 
 //Top Content
 let topContentHeader = document.querySelectorAll('.top-content h4');
@@ -92,3 +95,15 @@ contactInfo[2].innerHTML = siteContent["contact"]["email"]
 
 let footer = document.querySelector('footer p');
 footer.innerHTML = siteContent["footer"]["copyright"]
+
+let newAnchor = document.createElement('a');
+newAnchor.innerText = "Home";
+newAnchor.setAttribute('href', '#');
+newAnchor.style.color = 'Green';
+nav.prepend(newAnchor);
+
+let newAnchor2 = document.createElement('a');
+newAnchor2.innerText = "Gallery";
+newAnchor2.setAttribute('href', '#');
+newAnchor2.style.color = 'Green';
+nav.appendChild(newAnchor2);
