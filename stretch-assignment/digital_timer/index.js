@@ -100,11 +100,9 @@ window.onload = function() {
             addSecondOnes.className += " redDigit";
             addSecondTens.className += " redDigit";
             
-            // let newBackground = document.getElementsByClassName("body");
-            // newBackground.style.backgroundImage = "url(\"img/explosion.jpg\")";
-            // newBackground.style.backgroundPosition = "center";
-            // newBackground.style.backgroundRepeat = "no-repeat";
-            // newBackground.style.backgroundSize = "cover";
+            document.body.style.backgroundImage = "url(\"img/explosion.jpg\")";
+            document.body.style.backgroundPosition = "center";
+            document.body.style.backgroundSize = "cover";
             return console.log("Finished! 🏁")
         }
     }
