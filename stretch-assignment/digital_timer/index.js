@@ -39,6 +39,7 @@ window.onload = function() {
         addMsTens.classList.remove("redDigit");
         addSecondOnes.classList.remove("redDigit");
         addSecondTens.classList.remove("redDigit");
+        document.body.style.backgroundImage = "none";
        
         clearInterval(Interval);
 

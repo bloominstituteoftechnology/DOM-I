@@ -34,11 +34,15 @@ body {
   color: rgb(170, 30, 252);
 }
 
+#secondTens {
+  color: rgb(252, 169, 39);
+}
+
 button{
   border-radius: 10px;
   background: white;
-  color: rgb(252, 169, 39);
-  border: solid 1px rgb(252, 169, 39);
+  color: black;
+  border: solid 1px black;
   text-decoration:none;
   cursor:pointer;
   font-size: 1.8rem;
