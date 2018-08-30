@@ -53,15 +53,17 @@ let containerClass = document.getElementsByClassName('container');
 
 let navTag = document.getElementsByTagName('nav');
 
+let mainContentClass = document.getElementsByClassName('main-content');
+
+let contactClass = document.getElementsByClassName('contact');
+
+
+
 let aTag = document.getElementsByTagName('a');
 for(let i = 1; i < aTag.length + 1; i++) {
   aTag[i-1].innerHTML = siteContent['nav']['nav-item-'+i];
 }
 
-
-let mainContentClass = document.getElementsByClassName('main-content');
-
-let contactClass = document.getElementsByClassName('contact');
 
 let h1_Tags = document.getElementsByTagName('h1');
 h1_Tags[0].innerHTML = siteContent['cta']['h1'];
@@ -84,6 +86,7 @@ about_h4.innerHTML = siteContent['main-content']['about-h4'];
 let about_p = topContent[1].querySelector('p');
 about_p.innerHTML = siteContent['main-content']['about-content'];
 
+
 let bottomContent = document.querySelectorAll('.bottom-content .text-content');
 
 let services_h4 = bottomContent[0].querySelector('h4');
@@ -91,7 +94,6 @@ services_h4.innerHTML = siteContent['main-content']['services-h4'];
 
 let services_p = bottomContent[0].querySelector('p');
 services_p.innerHTML = siteContent['main-content']['services-content'];
-
 
 let product_h4 = bottomContent[1].querySelector('h4');
 product_h4.innerHTML = siteContent['main-content']['product-h4'];
@@ -131,9 +133,13 @@ let prepended_a = document.createElement('a');
 prepended_a.innerHTML = 'Prepended a';
 navNodes.insertBefore(prepended_a, appended_a);
 
-
+/*
 for(let i = 0; i < aTag.length; i++){
   aTag[i].style.color = 'green';
 }
+*/
+
+let all_a = document.querySelectorAll('a');
+all_a.forEach( element => element.style.color = 'green');
 
 
