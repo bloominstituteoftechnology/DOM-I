@@ -61,6 +61,18 @@ topContentH4[1].innerHTML = siteContent["main-content"]['about-h4'];
 const middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
+
+const bottomContentP = document.querySelectorAll(".bottom-content p");
+bottomContentP[0].innerHTML = siteContent["main-content"]['services-content'];
+bottomContentP[1].innerHTML = siteContent["main-content"]['product-content'];
+bottomContentP[2].innerHTML = siteContent["main-content"]['vision-content'];
+
+const bottomContentH4 = document.querySelectorAll(".bottom-content h4");
+bottomContentH4[0].innerHTML = siteContent['main-content']['services-h4'];
+bottomContentH4[1].innerHTML = siteContent["main-content"]['product-h4'];
+bottomContentH4[2].innerHTML = siteContent["main-content"]['vision-h4'];
+
+
 const navigation = document.querySelector("nav")
 const navigationA = document.querySelectorAll("nav a")
 
