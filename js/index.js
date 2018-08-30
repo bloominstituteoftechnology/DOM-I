@@ -62,8 +62,10 @@ for (i = 0; i <= nav.length - 1; i++) {
 let fullNav = document.querySelector('nav');
 navitemOne = document.createElement('a');
 navitemOne.innerHTML = 'NEW ITEM';
+navitemOne.style.color = 'green';
 navitemTwo = document.createElement('a');
 navitemTwo.innerHTML = 'NEW ITEM';
+navitemTwo.style.color = 'green';
 fullNav.prepend(navitemOne);
 fullNav.appendChild(navitemTwo);
 
