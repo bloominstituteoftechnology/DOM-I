@@ -47,6 +47,9 @@ const ctaText = document.getElementsByClassName("cta-text")[0];
 ctaText.getElementsByTagName("h1")[0].innerHTML = siteContent["cta"]["h1"];
 ctaText.getElementsByTagName("button")[0].innerHTML = siteContent["cta"]["button"];
 
+const ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
 const topContentP = document.querySelectorAll(".top-content p");
 topContentP[0].innerHTML = siteContent["main-content"]['features-content'];
 topContentP[1].innerHTML = siteContent["main-content"]['about-content'];
@@ -54,6 +57,9 @@ topContentP[1].innerHTML = siteContent["main-content"]['about-content'];
 const topContentH4 = document.querySelectorAll(".top-content h4");
 topContentH4[0].innerHTML = siteContent["main-content"]['features-h4'];
 topContentH4[1].innerHTML = siteContent["main-content"]['about-h4'];
+
+const middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 const navigation = document.querySelector("nav")
 const navigationA = document.querySelectorAll("nav a")
