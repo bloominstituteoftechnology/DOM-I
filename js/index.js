@@ -49,9 +49,35 @@ navLinks[3].innerText = siteContent.nav['nav-item-4'];
 navLinks[4].innerText = siteContent.nav['nav-item-5'];
 navLinks[5].innerText = siteContent.nav['nav-item-6'];
 
-// .cta
 document.querySelector('.cta-text h1').innerText = siteContent.cta.h1;
 document.querySelector('.cta-text button').innerText = siteContent.cta.button;
-
 document.querySelector('#cta-img').src = siteContent.cta['img-src'];
+document.querySelector('.middle-img').src = siteContent['main-content']['middle-img-src'];
+
+
+const textContent = document.querySelectorAll('.text-content h4');
+const pElement = document.querySelectorAll('.text-content p');
+
+textContent[0].innerText = siteContent['main-content']['features-h4'];
+pElement[0].innerText = siteContent['main-content']['features-content'];
+
+textContent[1].innerText = siteContent['main-content']['about-h4'];
+pElement[1].innerText = siteContent['main-content']['about-content'];
+
+textContent[2].innerText = siteContent['main-content']['services-h4'];
+pElement[2].innerText = siteContent['main-content']['services-content'];
+
+textContent[3].innerText = siteContent['main-content']['product-h4'];
+pElement[3].innerText = siteContent['main-content']['product-content'];
+
+textContent[4].innerText = siteContent['main-content']['vision-h4'];
+pElement[4].innerText = siteContent['main-content']['vision-content'];
+
+document.querySelector('.contact h4').innerText = siteContent.contact['contact-h4'];
+const pContactElement = document.querySelectorAll('.contact p');
+pContactElement[0].innerText = siteContent.contact.address;
+pContactElement[1].innerText = siteContent.contact.phone;
+pContactElement[2].innerText = siteContent.contact.email;
+
+document.querySelector('footer p').innerText = siteContent.footer.copyright;
 
