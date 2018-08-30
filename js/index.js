@@ -41,12 +41,51 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-let navigation = document.getElementsByTagName("a");
-let navArr = [];
-navArr.from(navigation);
-console.log(navArr);
+let nav = document.getElementsByTagName("a");
+nav[0].style.color = "green";
+nav[1].style.color = "green";
+nav[2].style.color = "green";
+nav[3].style.color = "green";
+nav[4].style.color = "green";
+nav[5].style.color = "green";
+nav[0].innerHTML = siteContent["nav"]["nav-item-1"];
+nav[1].innerHTML = siteContent["nav"]["nav-item-2"];
+nav[2].innerHTML = siteContent["nav"]["nav-item-3"];
+nav[3].innerHTML = siteContent["nav"]["nav-item-4"];
+nav[4].innerHTML = siteContent["nav"]["nav-item-5"];
+nav[5].innerHTML = siteContent["nav"]["nav-item-6"];
+
 
 let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
 
+let ctaH1 = document.querySelector("h1");
+ctaH1.innerHTML = siteContent["cta"]["h1"];
 
+let ctabutn = document.querySelector("button");
+ctabutn.innerHTML = siteContent["cta"]["button"];
+
+let allH4 = document.querySelectorAll("h4");
+allH4[0].innerHTML = siteContent["main-content"]["features-h4"];
+allH4[1].innerHTML = siteContent["main-content"]["about-h4"];
+allH4[2].innerHTML = siteContent["main-content"]["services-h4"];
+allH4[3].innerHTML = siteContent["main-content"]["product-h4"];
+allH4[4].innerHTML = siteContent["main-content"]["vision-h4"];
+allH4[5].innerHTML = siteContent["contact"]["contact-h4"];
+
+let maincontentp = document.querySelectorAll(".text-content");
+maincontentp[0].innerHTML = siteContent["main-content"]["features-content"];
+maincontentp[1].innerHTML = siteContent["main-content"]["about-content"];
+maincontentp[2].innerHTML = siteContent["main-content"]["services-content"];
+maincontentp[3].innerHTML = siteContent["main-content"]["product-content"];
+maincontentp[4].innerHTML = siteContent["main-content"]["vision-content"];
+
+
+let middleimg = document.getElementById("middle-img");
+middleimg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+//let contPara = document.querySelectorAll(".contact");
+//contPara[1].innerHTML = siteContent["contact"]["address"];
+
+let footerPara = document.getElementsByTagName('p');
+footerPara[footerPara.length - 1].innerHTML = siteContent["footer"]["copyright"];
