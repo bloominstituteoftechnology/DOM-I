@@ -55,6 +55,18 @@ for (i = 0; i <= nav.length - 1; i++) {
 	currentItem.innerHTML = siteContent['nav']['nav-item-' + [i + 1]];
 }
 
+for (i = 0; i <= nav.length - 1; i++) {
+	nav[i].style.color = 'green';
+}
+
+let fullNav = document.querySelector('nav');
+navitemOne = document.createElement('a');
+navitemOne.innerHTML = 'NEW ITEM';
+navitemTwo = document.createElement('a');
+navitemTwo.innerHTML = 'NEW ITEM';
+fullNav.prepend(navitemOne);
+fullNav.appendChild(navitemTwo);
+
 let ctaHead = document.querySelector('.cta h1');
 
 ctaHead.innerHTML = siteContent.cta.h1;
