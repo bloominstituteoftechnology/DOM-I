@@ -44,27 +44,27 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let nav1 = document.querySelectorAll('div header nav a')[0];
 nav1.innerHTML = siteContent['nav']['nav-item-1'];
-nav1.style.color = 'green';
+// nav1.style.color = 'green';
 
 let nav2 = document.querySelectorAll('div header nav a')[1];
 nav2.innerHTML = siteContent['nav']['nav-item-2'];
-nav2.style.color = 'green';
+// nav2.style.color = 'green';
 
 let nav3 = document.querySelectorAll('div header nav a')[2];
 nav3.innerHTML = siteContent['nav']['nav-item-3'];
-nav3.style.color = 'green';
+// nav3.style.color = 'green';
 
 let nav4 = document.querySelectorAll('div header nav a')[3];
 nav4.innerHTML = siteContent['nav']['nav-item-4'];
-nav4.style.color = 'green';
+// nav4.style.color = 'green';
 
 let nav5 = document.querySelectorAll('div header nav a')[4];
 nav5.innerHTML = siteContent['nav']['nav-item-5'];
-nav5.style.color = 'green';
+// nav5.style.color = 'green';
 
 let nav6 = document.querySelectorAll('div header nav a')[5];
 nav6.innerHTML = siteContent['nav']['nav-item-6'];
-nav6.style.color = 'green';
+// nav6.style.color = 'green';
 
 let ctaH1 = document.querySelector('.cta .cta-text h1');
 ctaH1.innerHTML = siteContent['cta']['h1'].replace(/ /g, '<br>');
@@ -122,6 +122,14 @@ email.innerHTML = siteContent['contact']['email'];
 
 let footer = document.querySelector('footer p');
 footer.innerHTML = siteContent['footer']['copyright'];
+
+//turning nav links green
+
+let navLinks = document.querySelectorAll('div header nav a');
+let turnGreen = function(item) {
+  item.style.color = 'green';
+}
+navLinks.forEach(turnGreen);
 
 //appending and prepending children
 

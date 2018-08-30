@@ -1,15 +1,18 @@
-let tens = setInterval(addTens, 10);
 
-document.getElementById('msTens').innerHTML = 0
+// document.getElementById('msTens').innerHTML = 0
 
-function addTens() {
-    (document.getElementById('msTens').innerHTML)++;
+let counter = 0;
+let incrementTimer = function () {
+    counter++;
 }
+let timerString = 'test';
 
-let hundreds = setInterval(addHundreds, 100);
+let timerTest = document.querySelector('p');
+// timerTest.innerHTML = 'test';
+let timerFunction = window.setInterval(100, incrementTimer);
 
-document.getElementById('msHundreds').innerHTML = 0
 
-function addHundreds() {
-    (document.getElementById('msHundreds').innerHTML)++;
-}
+
+
+
+
