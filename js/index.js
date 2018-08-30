@@ -137,7 +137,6 @@ let research = document.createElement('a');
 // research.setAttribute('href', '#');
 // research.style.color = 'green';
 // research.innerHTML = 'Research';
-document.querySelector('nav').appendChild(research);
 
 let visit = document.createElement('a');
 // visit.setAttribute('href', '#');
