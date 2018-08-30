@@ -134,15 +134,26 @@ navLinks.forEach(turnGreen);
 //appending and prepending children
 
 let research = document.createElement('a');
-research.setAttribute('href', '#');
-research.style.color = 'green';
-research.innerHTML = 'Research';
+// research.setAttribute('href', '#');
+// research.style.color = 'green';
+// research.innerHTML = 'Research';
 document.querySelector('nav').appendChild(research);
 
 let visit = document.createElement('a');
-visit.setAttribute('href', '#');
-visit.style.color = 'green';
-visit.innerHTML = 'Visit';
+// visit.setAttribute('href', '#');
+// visit.style.color = 'green';
+// visit.innerHTML = 'Visit';
+
+function addLinkAttributes (element, string) {
+  element.setAttribute('href', '#');
+  element.style.color = 'green';
+  element.innerHTML = string;
+}
+
+addLinkAttributes(research, 'Research');
+addLinkAttributes(visit, 'Visit');
+
+document.querySelector('nav').appendChild(research);
 document.querySelector('nav').prepend(visit);
 
 button.addEventListener("click", function(){
