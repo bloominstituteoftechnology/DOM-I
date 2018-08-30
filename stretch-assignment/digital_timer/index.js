@@ -1,4 +1,5 @@
 let stop = false;
+let reset = false;
 let max = 10;
 let secondTens = 0;
 let secondOnes = 0;
@@ -51,15 +52,12 @@ function start() {
       document.getElementById('msTens').innerHTML = 0;
     }
   }
-  //   function stopT() {
-  //     clearInterval(seconds);
-  //     clearInterval(msH);
-  //     clearInterval(msT);
-  //     // started = false;
-  //   }
-  //   document.getElementById('stop-btn').addEventListener('click', stopT);
 }
 
-// start();
+function resetTimer() {
+  location.reload();
+}
+
+document.getElementById('reset-btn').addEventListener('click', resetTimer);
 
 document.getElementById('start-btn').addEventListener('click', start);
