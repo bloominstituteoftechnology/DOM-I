@@ -44,17 +44,21 @@ const siteContent = {
 
 document.getElementById("logo-img").setAttribute('src', siteContent["nav"]["img-src"]);
 
-document.getElementsByTagName('a')[0].innerText = "Services";
+// document.getElementsByTagName('a')[0].innerText = "Services";
 
-document.getElementsByTagName('a')[1].innerText = "Product";
+// document.getElementsByTagName('a')[1].innerText = "Product";
 
-document.getElementsByTagName('a')[2].innerText = "Vision";
+// document.getElementsByTagName('a')[2].innerText = "Vision";
 
-document.getElementsByTagName('a')[3].innerText = "Features";
+// document.getElementsByTagName('a')[3].innerText = "Features";
 
-document.getElementsByTagName('a')[4].innerText = "About";
+// document.getElementsByTagName('a')[4].innerText = "About";
 
-document.getElementsByTagName('a')[5].innerText = "Contact";
+// document.getElementsByTagName('a')[5].innerText = "Contact";
+
+//refactor
+let links = document.querySelectorAll("nav a");
+links.forEach((element, i) => element.innerText = siteContent["nav"][`nav-item-${i+1}`]);
 
 
 // // add unique classes to 'a' tags
