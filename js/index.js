@@ -38,23 +38,34 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-const logo = document.getElementById('logo-img');
-logo.src = siteContent.nav['img-src'];
+// const logo = document.getElementById('logo-img');
+// logo.src = siteContent.nav['img-src'];
 
+// header
 const navLinks = document.querySelectorAll('nav a');
-navLinks[0].innerText = siteContent.nav['nav-item-1'];
-navLinks[1].innerText = siteContent.nav['nav-item-2'];
-navLinks[2].innerText = siteContent.nav['nav-item-3'];
-navLinks[3].innerText = siteContent.nav['nav-item-4'];
-navLinks[4].innerText = siteContent.nav['nav-item-5'];
-navLinks[5].innerText = siteContent.nav['nav-item-6'];
+navLinks.forEach((element, index) => element.innerText = siteContent.nav[`nav-item-${index + 1}`]);
+navLinks.forEach(element => element.style = 'color: green');
 
-document.querySelector('.cta-text h1').innerText = siteContent.cta.h1;
+const preChild = document.createElement('a');
+preChild.innerText = 'Prepended';
+preChild.style.color = 'green';
+preChild.href = '#';
+document.querySelector('nav').prepend(preChild);
+
+const appChild = document.createElement('a');
+appChild.innerText = 'Appended';
+appChild.style.color = 'green';
+appChild.href = '#';
+document.querySelector('nav').appendChild(appChild);
+
+document.querySelector('.logo').src = siteContent.nav['img-src'];
+
+// cta
+document.querySelector('.cta-text h1').innerHTML = siteContent.cta.h1.split(' ').join('<br>');
 document.querySelector('.cta-text button').innerText = siteContent.cta.button;
 document.querySelector('#cta-img').src = siteContent.cta['img-src'];
-document.querySelector('.middle-img').src = siteContent['main-content']['middle-img-src'];
 
-
+// main content
 const textContent = document.querySelectorAll('.text-content h4');
 const pElement = document.querySelectorAll('.text-content p');
 
@@ -63,6 +74,8 @@ pElement[0].innerText = siteContent['main-content']['features-content'];
 
 textContent[1].innerText = siteContent['main-content']['about-h4'];
 pElement[1].innerText = siteContent['main-content']['about-content'];
+
+document.querySelector('.middle-img').src = siteContent['main-content']['middle-img-src'];
 
 textContent[2].innerText = siteContent['main-content']['services-h4'];
 pElement[2].innerText = siteContent['main-content']['services-content'];
@@ -73,11 +86,12 @@ pElement[3].innerText = siteContent['main-content']['product-content'];
 textContent[4].innerText = siteContent['main-content']['vision-h4'];
 pElement[4].innerText = siteContent['main-content']['vision-content'];
 
+// contact
 document.querySelector('.contact h4').innerText = siteContent.contact['contact-h4'];
 const pContactElement = document.querySelectorAll('.contact p');
-pContactElement[0].innerText = siteContent.contact.address;
+pContactElement[0].innerHTML = siteContent.contact.address.replace('Street', 'Street<br>');
 pContactElement[1].innerText = siteContent.contact.phone;
 pContactElement[2].innerText = siteContent.contact.email;
 
+// footer
 document.querySelector('footer p').innerText = siteContent.footer.copyright;
-
