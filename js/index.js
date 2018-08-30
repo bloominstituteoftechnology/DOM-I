@@ -87,7 +87,8 @@ ctaH1.title='DOM IS AWESOME';
 
 let ctaButton = document.querySelector("button");
 ctaButton.innerHTML = siteContent.cta['button'];
-ctaButton.setAttribute('onclick', 'getStarted()')
+//ctaButton.setAttribute('onclick', 'getStarted()')
+ctaButton.addEventListener('click', getStarted);
 
 // Action to the button to alert user.
 function getStarted (){
