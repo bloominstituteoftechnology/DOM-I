@@ -71,6 +71,21 @@ ctaH1.innerHTML = cta['h1'].split(' ').join('<br>');
 ctaImage.src = cta['img-src']; 
 ctaButton.innerText = cta['button']; 
 
+// stretch
+let bool = true;
+
+const updateButton = () => {
+    let color = '';
+    if (bool) {
+        color = 'purple';
+    }
+    bool = !bool;
+    document.querySelector('nav a:first-of-type').style.color = color;
+    document.querySelector('nav a:last-of-type').style.color = color;
+}
+
+ctaButton.onclick = updateButton;
+
 // Main Content
 let mainContent = siteContent['main-content'];
 let mainContentH4 = document.querySelectorAll('.main-content h4');
@@ -108,17 +123,3 @@ let copyright = document.querySelector('footer p');
 
 copyright.innerText = siteContent['footer']['copyright'];
 
-// stretch
-let bool = true;
-
-const updateButton = () => {
-    let color = '';
-    if (bool) {
-        color = 'purple';
-    }
-    bool = !bool;
-    document.querySelector('nav a:first-of-type').style.color = color;
-    document.querySelector('nav a:last-of-type').style.color = color;
-}
-
-ctaButton.onclick = updateButton;
