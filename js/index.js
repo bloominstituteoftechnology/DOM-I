@@ -73,6 +73,18 @@ bottomContentH4[1].innerHTML = siteContent["main-content"]['product-h4'];
 bottomContentH4[2].innerHTML = siteContent["main-content"]['vision-h4'];
 
 
+const contactH4 = document.querySelector('.contact h4');
+contactH4.innerHTML = siteContent['contact']['contact-h4'];
+
+
+const contactP = document.querySelectorAll('.contact p');
+contactP[0].innerHTML = siteContent['contact']['address'];
+contactP[1].innerHTML = siteContent['contact']['email'];
+contactP[2].innerHTML = siteContent['contact']['phone'];
+
+const footer = document.querySelector('footer');
+footer.innerHTML = siteContent['footer']['copyright'];
+
 const navigation = document.querySelector("nav")
 const navigationA = document.querySelectorAll("nav a")
 
