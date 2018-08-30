@@ -1,12 +1,12 @@
 const siteContent = {
   "nav": {
+    "nav-item-0": 'GitHub',
     "nav-item-1": "Services",
     "nav-item-2": "Product",
     "nav-item-3": "Vision",
     "nav-item-4": "Features",
     "nav-item-5": "About",
     "nav-item-6": "Contact",
-    "nav-item-7" : '',
     "img-src": "img/logo.png"
   },
   "cta": {
@@ -46,7 +46,6 @@ const siteContent = {
 
 
 
-
 /* Element selector methods
 document.getElementById
 document.getElementsByClassName
@@ -63,7 +62,7 @@ let header = document.querySelector('header');
 let anchors = Array.from(document.getElementsByTagName('a'));
 let ctaImg = document.getElementById('cta-img');
 let button = document.getElementsByTagName('button');
-let buttonText = Array.from(button)[0] ;
+let buttonText = Array.from(button);
 let paragraphs = document.getElementsByClassName('text-content');
 let pArr = Array.from(paragraphs);
 let midImg = document.getElementsByClassName('middle-img')
@@ -80,18 +79,13 @@ let contactPhone = siteContent.contact.phone ;
 let contactEmail = siteContent.contact.email ;
 let navBar = document.querySelectorAll('nav');
 let gitLink = document.createElement('a');
-gitLink.setAttribute('href', 'https://github.com/LorenzoEvans');
-gitLink.innerHTML = 'GitHub' ;
-
+let navItem = Array.from(document.querySelectorAll('div.container header nav'));
 
 
 
 ctaText[0].innerHTML = 'DOM Is Awesome' ;
 ctaText[0].style.fontFamily = 'Bangers' ;
 
-
-buttonText.innerHTML = 'Get Started.' ;
-buttonText.style.fontFamily = 'Bangers' ;
 
 /* ^ Not sure why the button isn't displaying, it was but something broke it, and I have no idea what. */
 
@@ -104,6 +98,10 @@ anchors[3].innerHTML = 'About' ;
 anchors[4].innerHTML = 'Contact' ;
 anchors[5].innerHTML = 'LinkedIn' ;
 anchors[5].setAttribute('href', 'https://www.linkedin.com/in/lorenzo-evans-887364a7/');
+gitLink.setAttribute('href', 'https://github.com/LorenzoEvans');
+gitLink.innerHTML = 'GitHub' ;
+navItem[0].prepend(gitLink);
+
 
 /* Text-content variables */
 let featTxt = siteContent["main-content"]["features-content"];
@@ -156,7 +154,6 @@ Add paragraph headers. 1 of 6 done.
 
 Debug 'Get Started' button.
 
-Add new links to nav-bar. // one completed.
 
 */
 
@@ -169,7 +166,6 @@ contactText[0].innerHTML = contactAddress ;
 contactText[1].innerHTML = contactPhone ;
 contactText[2].innerHTML = contactEmail ;
 
-console.log(h4List);
 /* Console logs for testing variable accuracy.
 console.log(gitLink);
 console.log(contactPhone);
@@ -183,9 +179,14 @@ console.log(logoImg);
 console.log(header)
 console.log(anchors)
 console.log(ctaImg)
-console.log(button)
-console.log(buttonText)
+
 console.log(paragraphs)
 console.log(pArr) // Array of the array like object logged above it.
 console.log(midImg)
 */
+
+buttonText[0].innerHTML = 'Get Started.' ;
+buttonText[0].style.fontFamily = 'Bangers' ;
+buttonText[0].style.border = '1px solid black';
+console.log(button)
+console.log(buttonText[0])
