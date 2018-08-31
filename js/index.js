@@ -61,7 +61,6 @@ topContentH4[1].innerHTML = siteContent["main-content"]['about-h4'];
 const middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
-
 const bottomContentP = document.querySelectorAll(".bottom-content p");
 bottomContentP[0].innerHTML = siteContent["main-content"]['services-content'];
 bottomContentP[1].innerHTML = siteContent["main-content"]['product-content'];
@@ -102,4 +101,9 @@ navigationA.forEach (function(navItem) {
 const newNavItem1 = document.createElement('a');
 newNavItem1.innerHTML = 'Foo';
 newNavItem1.style.color = 'green'
-navigation.appendChild(newNavItem1);
+navigation.prepend(newNavItem1);
+
+const newNavItem2 = document.createElement('a');
+newNavItem2.innerHTML = 'Bar';
+newNavItem2.style.color = 'green'
+navigation.appendChild(newNavItem2);
