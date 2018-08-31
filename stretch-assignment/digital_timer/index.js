@@ -11,7 +11,7 @@ let intervalTimer = function () {
 
 function countUp() {
     counter++;
-    if (counter < 10) {
+    if (counter > 0 && counter < 10) {
         msTens.innerHTML = (counter.toString())[0];
     }
     else if (counter < 100) {
@@ -23,20 +23,23 @@ function countUp() {
         msHundreds.innerHTML = (counter.toString())[1];
         secondOnes.innerHTML = (counter.toString())[0];
     } 
-    else if (counter < 10000) {
+    else if (counter < 1000) {
         msTens.innerHTML = (counter.toString())[3];
         msHundreds.innerHTML = (counter.toString())[2];
         secondOnes.innerHTML = (counter.toString())[1];
         secondTens.innerHTML = (counter.toString())[0];
     }
-    else {
+    else if (counter === 1000) {
+        alert('10000!')
         clearInterval(intervalTimer);
         msTens.innerHTML = '0';
         msHundreds.innerHTML = '0';
         secondOnes.innerHTML = '0';
-        secondTens.innerHTML = '1';  
+        secondTens.innerHTML = '1'; 
+        console.log(counter); 
     }
 }
+
 
 let startButton = document.querySelector('#start');
 
