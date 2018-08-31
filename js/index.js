@@ -109,7 +109,9 @@ document.querySelector("footer p").innerHTML = siteContent.footer.copyright;
 
 //TASK 4: Content Modification
 let navMain = document.querySelectorAll("nav a");
-navMain.forEach(item => item.setAttribute("style", "color: green;"))
+function megaNavCall() {
+  navMain.forEach(item => item.setAttribute("style", "color: green;"))
+};
 // console.log(navColor);
 // navColor.setAttribute("style", "color: green;");
 
@@ -129,6 +131,15 @@ const navMainLinks = document.querySelector("nav");
 
 newLinks(navMainLinks, "Press", "a", "append");
 newLinks(navMainLinks, "Home", "a", "");
+
+//It does not color to new elements because they are created after the initial function 
+// was created with the object.
+megaNavCall();
+
+
+
+
+
 // let newALink = document.createElement("a");
 // // let newAlinkText = document.createTextNode("Press");
 // // newALink = newALink.appendChild(newAlinkText);
