@@ -104,3 +104,36 @@ contactP.forEach((item) => item.innerHTML = addressP[--count]);
 
 //Footer
 document.querySelector("footer p").innerHTML = siteContent.footer.copyright;
+
+
+
+//TASK 4: Content Modification
+let navMain = document.querySelectorAll("nav a");
+navMain.forEach(item => item.setAttribute("style", "color: green;"))
+// console.log(navColor);
+// navColor.setAttribute("style", "color: green;");
+
+function newLinks(navObj, linkName, linkType, place){
+  const newALink = document.createElement(linkType);
+  newALink.href = "#";
+  newALink.innerHTML = linkName;
+  if (place === "append"){
+    navObj.appendChild(newALink);
+  }
+  else{
+    navObj.prepend(newALink);
+  }
+}
+
+const navMainLinks = document.querySelector("nav");
+
+newLinks(navMainLinks, "Press", "a", "append");
+newLinks(navMainLinks, "Home", "a", "");
+// let newALink = document.createElement("a");
+// // let newAlinkText = document.createTextNode("Press");
+// // newALink = newALink.appendChild(newAlinkText);
+// newALink.href = "#";
+// newALink.innerHTML = "Press";
+// document.querySelector("nav").appendChild(newALink);
+// newALink.innerHTML = "Again";
+// document.querySelector("nav").appendChild(newALink);
