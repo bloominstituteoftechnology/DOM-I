@@ -50,26 +50,15 @@ midImg[0].src = siteContent["main-content"]["middle-img-src"];
 
 // TASK 3:
 // A. cta
-let nav = document.querySelectorAll('nav a');
-// console.log(nav)
-// nav[0] = siteContent.nav["nav-item-1"]
-// nav[1] = siteContent.nav["nav-item-2"]
-// nav[2] = siteContent.nav["nav-item-3"]
-// nav[3] = siteContent.nav["nav-item-4"]
-// nav[4] = siteContent.nav["nav-item-5"]
-// nav[5] = siteContent.nav["nav-item-6"]
+let nav = Array.from(document.querySelectorAll('nav a')).reverse();
 
-nav[0].innerHTML = siteContent.nav["nav-item-1"]
-nav[1].innerHTML = siteContent.nav["nav-item-2"]
-nav[2].innerHTML = siteContent.nav["nav-item-3"]
-nav[3].innerHTML = siteContent.nav["nav-item-4"]
-nav[4].innerHTML = siteContent.nav["nav-item-5"]
-nav[5].innerHTML = siteContent.nav["nav-item-6"]
+//Get the nav object
+let siteNav = Object.values(siteContent.nav);
+//Remove the last element
+siteNav.pop();
 
-
-// let nav = Array.from(document.querySelectorAll('nav a'));
-// nav.forEach(item => item.innerHTML = "Yes");
-// console.log(Array.from(siteContent.nav).map(item => item));
+let siteNavCount = siteNav.length;
+nav.forEach(item => item.innerHTML = siteNav[--siteNavCount]);
 
 let ctaH1 = document.querySelector(".cta-text h1");
 ctaH1.innerHTML = siteContent.cta.h1;
@@ -79,18 +68,39 @@ document.querySelector(".cta-text button").innerHTML = siteContent.cta.button;
 // cta.querySelector("h1").innerHTML = siteContent.cta.h1;
 
 
-// B. main content - top content
-let topConHeaders = document.querySelectorAll(".text-content h4");
-topConHeaders[0].innerHTML = siteContent["main-content"]["about-h4"];
-topConHeaders[1].innerHTML = siteContent["main-content"]["services-h4"];
-// document.querySelector(".text-content h4").innerHTML = siteContent["main-content"]["about-h4"];
+// B. main content
+let textConHeaders = document.querySelectorAll(".text-content h4");
+// let textConHeaders = Array.from(document.querySelectorAll(".text-content h4")).reverse();
+// let siteConHeaders = Array.from(siteContent.nav).map(item => item);
+// console.log(siteConHeaders);
+//top content h4
+textConHeaders[0].innerHTML = siteContent["main-content"]["features-h4"]
+textConHeaders[1].innerHTML = siteContent["main-content"]["about-h4"]
+//bottom content h4
+textConHeaders[2].innerHTML = siteContent["main-content"]["services-h4"];
+textConHeaders[3].innerHTML = siteContent["main-content"]["product-h4"];
+textConHeaders[4].innerHTML = siteContent["main-content"]["vision-h4"];
 
-let topConPara = document.querySelectorAll(".text-content p");
-topConPara[0].innerHTML = siteContent["main-content"]["features-content"];
-topConPara[1].innerHTML = siteContent["main-content"]["about-content"];
+//top content para
+let textConPara = document.querySelectorAll(".text-content p");
+textConPara[0].innerHTML = siteContent["main-content"]["features-content"];
+textConPara[1].innerHTML = siteContent["main-content"]["about-content"];
+//bottom content para
+textConPara[2].innerHTML = siteContent["main-content"]["services-content"];
+textConPara[3].innerHTML = siteContent["main-content"]["product-content"];
+textConPara[4].innerHTML = siteContent["main-content"]["vision-content"];
 
 // C. Middle image
 // Completed in SRC section
 
-// C. bottom content
-let botto
+// C. contact - AWESOME!!
+// document.querySelector(".contact h4").innerHTML = siteContent.contact["contact-h4"];
+let contactP = Array.from(document.querySelectorAll(".contact")[0].children).reverse();
+let addressP = Object.values(siteContent.contact);
+console.log(addressP)
+let count = addressP.length;
+contactP.forEach((item) => item.innerHTML = addressP[--count]);
+// console.log(addressP.map((item, index, array) => item))
+
+//Footer
+document.querySelector("footer p").innerHTML = siteContent.footer.copyright;
