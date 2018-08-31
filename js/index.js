@@ -57,7 +57,7 @@ document.getElementById("logo-img").setAttribute('src', siteContent["nav"]["img-
 // document.getElementsByTagName('a')[5].innerText = "Contact";
 
 //refactor
-let links = document.querySelectorAll("nav a");
+let links = document.querySelectorAll("a");
 links.forEach((element, i) => element.innerText = siteContent["nav"][`nav-item-${i+1}`]);
 
 
@@ -120,11 +120,11 @@ document.querySelector("button").innerHTML = "Get Started";
 
 document.querySelector('h1').innerHTML = `DOM <br> Is <br> Awesome`;
 
-document.getElementsByTagName('h4')[0].innerText = "Features";
+// document.getElementsByTagName('h4')[0].innerText = "Features";
 
 document.getElementsByTagName('p')[0].innerText = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
-document.getElementsByTagName('h4')[1].innerText = "About";
+// document.getElementsByTagName('h4')[1].innerText = "About";
 
 document.getElementsByTagName('p')[1].innerText = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
@@ -141,31 +141,47 @@ middlepic.addEventListener("mouseover", function(event){
 });
 
 
-document.getElementsByTagName('h4')[2].innerText = "Services";
+// document.getElementsByTagName('h4')[2].innerText = "Services";
 
 document.getElementsByTagName('p')[2].innerText = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
-document.getElementsByTagName('h4')[3].innerText = "Product";
+// document.getElementsByTagName('h4')[3].innerText = "Product";
 
 document.getElementsByTagName('p')[3].innerText = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
-document.getElementsByTagName('h4')[4].innerText = "Vision";
+// document.getElementsByTagName('h4')[4].innerText = "Vision";
 
 document.getElementsByTagName('p')[4].innerText = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
 document.getElementsByTagName('h4')[5].innerText = "Contact";
 
-// let links = document.querySelectorAll("nav a");
+// let links = document.querySelectorAll("a");
 // links.forEach((element, i) => element.innerText = siteContent["nav"][`nav-item-${i+1}`]);
 
 let grabh4tags = document.querySelectorAll('h4');
 
-for (let i = 0; i < grabh4tags.length; i++) {
-  let arrayh4tags = [];
-  arrayh4tags.push(grabh4tags);   
+let newObj = Object.values(siteContent);
+
+function nextObj(arr, obj) {
+  for (let i = 0; i < arr.length; i++) {
+    let newArr = Object.keys(arr[2]);
+    return newArr;
+  }
 }
 
-arrayh4tags[0][1].innerText = "Features";
+let secondArrayInNewObj = nextObj(newObj);
+secondArrayInNewObj;
+
+let thirdArrayInNewObj = secondArrayInNewObj.filter((element,index) => {
+  if (element.includes('-h4')) {
+    return element;
+  }
+})
+
+grabh4tags.forEach((element, i) => element.innerText = siteContent["main-content"][thirdArrayInNewObj[i]]);
+// thirdArrayInNewObj;
+
+
 
 // get repl, 
 // loop through finalArr w/ traditional for-loop
@@ -173,10 +189,14 @@ arrayh4tags[0][1].innerText = "Features";
 // do a forEach on grabh4tags => element.innerText = finalArr[i]
 
 
-// document.getElementById("contact").getElementsByTagName("p").add("contactPTag");
-// querySelector("contact")
-// for each 'p' tag child of "contact" .add("contactPTag");
-// 
+
+
+// for (let i = 0; i < grabh4tags.length; i++) {
+//   let arrayh4tags = [];
+//   arrayh4tags.push(grabh4tags);   
+// }
+
+// arrayh4tags[0][1].innerText = "Features";
 
 
 // let circle = document.getElementById("cta-img");
