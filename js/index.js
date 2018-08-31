@@ -58,13 +58,6 @@ function renderNav(el, chProps) {
         el.children[i].innerHTML = siteContent.nav[chProps[i]];
         el.children[i].style.color = "mediumseagreen";
     }
-
-
-    // Append nav link
-    let newLink = document.createElement("a");
-    newLink.innerHTML = "New Link";
-    newLink.style.color = "mediumseagreen";
-    el.appendChild(newLink);
 }
 
 function renderImg(props) {
@@ -97,8 +90,15 @@ function renderEl(el, props) {
     } else if (el) {
         el.innerHTML = val
     }
+}
 
+function addLink(el, text) {
+    // Append nav link
 
+    let newLink = document.createElement("a");
+    newLink.innerHTML = text;
+    newLink.style.color = "mediumseagreen";
+    el.appendChild(newLink);
 }
 
 function getEl(parent, prop) {
@@ -115,14 +115,19 @@ function render() {
             el = getEl(document, contentProp)[0];
 
         if (contentProp === "nav") {
-            renderNav(el, chProps)
-        } else {
+            // Edit nav tag
 
+            renderNav(el, chProps);
+            addLink(el, "New Link");
+        } else {
+            // Not nav tag, img?
 
             for (let chProp of chProps) {
                 if (chProp.includes('img')) {
                     renderImg([contentProp, chProp])
                 } else {
+                    // Not img, children?
+
                     let child = getEl(el, chProp);
 
                     //    If there is a child of the child, get grandchild props
