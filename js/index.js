@@ -155,6 +155,24 @@ document.getElementsByTagName('p')[4].innerText = "Vision content elementum magn
 
 document.getElementsByTagName('h4')[5].innerText = "Contact";
 
+// let links = document.querySelectorAll("nav a");
+// links.forEach((element, i) => element.innerText = siteContent["nav"][`nav-item-${i+1}`]);
+
+let grabh4tags = document.querySelectorAll('h4');
+
+for (let i = 0; i < grabh4tags.length; i++) {
+  let arrayh4tags = [];
+  arrayh4tags.push(grabh4tags);   
+}
+
+arrayh4tags[0][1].innerText = "Features";
+
+// get repl, 
+// loop through finalArr w/ traditional for-loop
+// let grabh4tags = document.querySelectorAll('h4');
+// do a forEach on grabh4tags => element.innerText = finalArr[i]
+
+
 // document.getElementById("contact").getElementsByTagName("p").add("contactPTag");
 // querySelector("contact")
 // for each 'p' tag child of "contact" .add("contactPTag");
