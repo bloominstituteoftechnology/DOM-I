@@ -2,6 +2,12 @@ let secondTens = document.querySelector('#secondTens');
 let secondOnes = document.querySelector('#secondOnes');
 let msHundreds = document.querySelector('#msHundreds');
 let msTens = document.querySelector('#msTens');
+let digits = document.querySelectorAll('.digit');
+
+secondTens.innerHTML = '0';
+secondOnes.innerHTML = '0';
+msHundreds.innerHTML = '0';
+msTens.innerHTML = '0';
 
 let counter = 0;
 
@@ -23,20 +29,15 @@ function countUp() {
         msHundreds.innerHTML = (counter.toString())[1];
         secondOnes.innerHTML = (counter.toString())[0];
     } 
-    else if (counter < 1000) {
+    else if (counter === 1000) {
+        clearInterval(intervalTimer);
         msTens.innerHTML = (counter.toString())[3];
         msHundreds.innerHTML = (counter.toString())[2];
         secondOnes.innerHTML = (counter.toString())[1];
         secondTens.innerHTML = (counter.toString())[0];
-    }
-    else if (counter === 1000) {
-        alert('10000!')
-        clearInterval(intervalTimer);
-        msTens.innerHTML = '0';
-        msHundreds.innerHTML = '0';
-        secondOnes.innerHTML = '0';
-        secondTens.innerHTML = '1'; 
-        console.log(counter); 
+        digits.forEach(function (item) {
+            item.classList.add('redDigit')
+        });
     }
 }
 
