@@ -58,6 +58,13 @@ function renderNav(el, chProps) {
         el.children[i].innerHTML = siteContent.nav[chProps[i]];
         el.children[i].style.color = "mediumseagreen";
     }
+
+
+    // Append nav link
+    let newLink = document.createElement("a");
+    newLink.innerHTML = "New Link";
+    newLink.style.color = "mediumseagreen";
+    el.appendChild(newLink);
 }
 
 function renderImg(props) {
