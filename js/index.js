@@ -153,7 +153,7 @@ document.getElementsByTagName('p')[3].innerText = "Product content elementum mag
 
 document.getElementsByTagName('p')[4].innerText = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
-document.getElementsByTagName('h4')[5].innerText = "Contact";
+// document.getElementsByTagName('h4')[5].innerText = "Contact";
 
 // let links = document.querySelectorAll("a");
 // links.forEach((element, i) => element.innerText = siteContent["nav"][`nav-item-${i+1}`]);
@@ -164,7 +164,7 @@ let newObj = Object.values(siteContent);
 
 function nextObj(arr, obj) {
   for (let i = 0; i < arr.length; i++) {
-    let newArr = Object.keys(arr[2]);
+    let newArr = Object.keys(arr[2]);    //
     return newArr;
   }
 }
@@ -181,22 +181,31 @@ let thirdArrayInNewObj = secondArrayInNewObj.filter((element,index) => {
 grabh4tags.forEach((element, i) => element.innerText = siteContent["main-content"][thirdArrayInNewObj[i]]);
 // thirdArrayInNewObj;
 
+////////// Repeat Above for Contact
+
+let grabh4contact = document.getElementById('con');
 
 
-// get repl, 
-// loop through finalArr w/ traditional for-loop
-// let grabh4tags = document.querySelectorAll('h4');
-// do a forEach on grabh4tags => element.innerText = finalArr[i]
+function nextObjContact(arr, obj) {
+  for (let i = 0; i < arr.length; i++) {
+    let newArr = Object.keys(arr[3]);
+    return newArr;
+  }
+}
 
 
+let secondArrayInNewObjContact = nextObjContact(newObj);
+secondArrayInNewObjContact;
+
+let thirdArrayInNewObjContact = secondArrayInNewObjContact.filter((element,index) => {
+if (element.includes('-h4')) {
+  return element;
+}
+})
+
+grabh4contact.innerText = siteContent["contact"][thirdArrayInNewObjContact[0]];
 
 
-// for (let i = 0; i < grabh4tags.length; i++) {
-//   let arrayh4tags = [];
-//   arrayh4tags.push(grabh4tags);   
-// }
-
-// arrayh4tags[0][1].innerText = "Features";
 
 
 // let circle = document.getElementById("cta-img");
