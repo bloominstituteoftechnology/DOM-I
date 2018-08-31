@@ -55,7 +55,8 @@ function renderNav(el, chProps) {
     // For nav element
 
     for (let i in chProps) {
-        el.children[i].innerHTML = siteContent.nav[chProps[i]]
+        el.children[i].innerHTML = siteContent.nav[chProps[i]];
+        el.children[i].style.color = "mediumseagreen";
     }
 }
 
