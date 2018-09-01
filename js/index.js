@@ -203,7 +203,7 @@ if (element.includes('-h4')) {
 }
 })
 
-grabh4contact.innerText = siteContent["contact"][thirdArrayInNewObjContact[0]];
+grabh4contact.innerText = siteContent["contact"][thirdArrayInNewObjContact];
 
 
 
