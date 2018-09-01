@@ -155,36 +155,37 @@ document.getElementsByTagName('p')[4].innerText = "Vision content elementum magn
 
 // document.getElementsByTagName('h4')[5].innerText = "Contact";
 
-// let links = document.querySelectorAll("a");
-// links.forEach((element, i) => element.innerText = siteContent["nav"][`nav-item-${i+1}`]);
 
+// code to grab h4 tags
 let grabh4tags = document.querySelectorAll('h4');
-
+// grab all values of siteContent, set array to newObj; Object.keys(siteContent) --> [ 'nav', 'cta', 'main-content', 'contact', 'footer' ]
 let newObj = Object.values(siteContent);
-
+// loop through newObj array; N.B. this array has five objects, 
+// this loop goes through the five objects to grab the [2] index AND only the keys of the object in [2] index
 function nextObj(arr, obj) {
   for (let i = 0; i < arr.length; i++) {
-    let newArr = Object.keys(arr[2]);    //
+    let newArr = Object.keys(arr[2]);    // ---> [ 'features-h4', 'features-content', 'about-h4', 'about-content', 'middle-img-src', 'services-h4', 'services-content', 'product-h4','product-content','vision-h4','vision-content' ]
     return newArr;
   }
 }
 
-let secondArrayInNewObj = nextObj(newObj);
+let secondArrayInNewObj = nextObj(newObj); //nextObj function returns array, set it to secondArrayInNewObj variable
 secondArrayInNewObj;
 
-let thirdArrayInNewObj = secondArrayInNewObj.filter((element,index) => {
-  if (element.includes('-h4')) {
+let thirdArrayInNewObj = secondArrayInNewObj.filter((element,index) => {   //filter through secondArrayInNewObj variable 
+  if (element.includes('-h4')) {                                           //for string that includes '-h4'
     return element;
   }
 })
 
+// querySelectorAll return array-like element, use .forEach to loop through, set innerText of each h4 tag to = bracket notation
+// bracketnotation siteContent["main-content"][thirdArrayInNewObj[i]] <--- array containing Object KEYS that have 'h4'; 
 grabh4tags.forEach((element, i) => element.innerText = siteContent["main-content"][thirdArrayInNewObj[i]]);
-// thirdArrayInNewObj;
 
-////////// Repeat Above for Contact
 
-let grabh4contact = document.getElementById('con');
+////////// Repeat Above for Contact h4 tag only
 
+let grabh4contact = document.getElementById('con');    //use .getElementById - but add id="con" to h4 tag in contact section
 
 function nextObjContact(arr, obj) {
   for (let i = 0; i < arr.length; i++) {
@@ -192,7 +193,6 @@ function nextObjContact(arr, obj) {
     return newArr;
   }
 }
-
 
 let secondArrayInNewObjContact = nextObjContact(newObj);
 secondArrayInNewObjContact;
