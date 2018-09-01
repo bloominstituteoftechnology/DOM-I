@@ -122,11 +122,11 @@ document.querySelector('h1').innerHTML = `DOM <br> Is <br> Awesome`;
 
 // document.getElementsByTagName('h4')[0].innerText = "Features";
 
-document.getElementsByTagName('p')[0].innerText = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+// document.getElementsByTagName('p')[0].innerText = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
 // document.getElementsByTagName('h4')[1].innerText = "About";
 
-document.getElementsByTagName('p')[1].innerText = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+// document.getElementsByTagName('p')[1].innerText = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
 
 document.getElementById("middle-img").setAttribute('src', siteContent["main-content"]["middle-img-src"]);
@@ -143,15 +143,15 @@ middlepic.addEventListener("mouseover", function(event){
 
 // document.getElementsByTagName('h4')[2].innerText = "Services";
 
-document.getElementsByTagName('p')[2].innerText = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+// document.getElementsByTagName('p')[2].innerText = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
 // document.getElementsByTagName('h4')[3].innerText = "Product";
 
-document.getElementsByTagName('p')[3].innerText = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+// document.getElementsByTagName('p')[3].innerText = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
 // document.getElementsByTagName('h4')[4].innerText = "Vision";
 
-document.getElementsByTagName('p')[4].innerText = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+// document.getElementsByTagName('p')[4].innerText = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
 // document.getElementsByTagName('h4')[5].innerText = "Contact";
 
@@ -205,7 +205,32 @@ if (element.includes('-h4')) {
 
 grabh4contact.innerText = siteContent["contact"][thirdArrayInNewObjContact];
 
+///////// Repeat Above, but for ALL paragraph content in main-content
 
+let grabPTags = document.querySelectorAll('p');
+
+let anotherNewObj = Object.values(siteContent);
+
+function nextObjPTags(arr, obj) {
+    for (let i = 0; i < arr.length; i++) {
+      let newArr = Object.keys(arr[2]);
+      return newArr;
+    }
+}
+
+
+let pTagArray = nextObjPTags(anotherNewObj);
+pTagArray;
+
+let anotherPTagArray = pTagArray.filter((element,index) => {
+  if (element.includes('-content')) {
+    return element;
+  }
+})
+
+// console.log(anotherPTagArray);
+// console.log(grabPTags);
+grabPTags.forEach((element, i) => element.innerText = siteContent["main-content"][anotherPTagArray[i]]);  
 
 
 // let circle = document.getElementById("cta-img");
