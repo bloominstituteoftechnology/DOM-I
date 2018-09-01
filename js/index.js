@@ -162,7 +162,7 @@ let grabh4tags = document.querySelectorAll('h4');
 let newObj = Object.values(siteContent);
 // loop through newObj array; N.B. this array has five objects, 
 // this loop goes through the five objects to grab the [2] index AND only the keys of the object in [2] index
-function nextObj(arr, obj) {
+function nextObj(arr) {
   for (let i = 0; i < arr.length; i++) {
     let newArr = Object.keys(arr[2]);    // ---> [ 'features-h4', 'features-content', 'about-h4', 'about-content', 'middle-img-src', 'services-h4', 'services-content', 'product-h4','product-content','vision-h4','vision-content' ]
     return newArr;
