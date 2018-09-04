@@ -1,14 +1,53 @@
+html {
+  font-size: 62.5%;
+}
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.timer {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .digit {
   display: inline-block;
-  font-size: 80px;
+  font-size: 8rem;
 }
 
 .redDigit {
   color: red;
+}
+
+.timer {
+  background: #666666;
+  padding: 15px 50px;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
+.digits {
+  background: #cccccc;
+  padding: 0px 15px;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
+button {
+  margin: 20px 15px 0px 15px;
+  padding: 8px 20px;
+  border-radius: 10px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+button:disabled {
+  background: #cccccc;
+  color: #999999;
 }

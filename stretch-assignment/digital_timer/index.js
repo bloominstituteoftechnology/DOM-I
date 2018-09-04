@@ -1,48 +1,78 @@
-function createTimer(timerElement) {
-    const display = timerElement;
-    const secondTens = display.querySelector("#secondTens");
-    const secondOnes = display.querySelector("#secondOnes");
-    const msHundreds = display.querySelector("#msHundreds");
-    const msTens = display.querySelector("#msTens");
+class Timer {
+    constructor(htmlElement) {
+        this.display = htmlElement;
+    
+        this.secondTens = this.display.querySelector("#secondTens");
+        this.secondOnes = this.display.querySelector("#secondOnes");
+        this.msHundreds = this.display.querySelector("#msHundreds");
+        this.msTens = this.display.querySelector("#msTens");
 
-    secondTens.innerText = 0;
-    secondOnes.innerText = 0;
-    msHundreds.innerText = 0;
-    msTens.innerText = 0;
+        this.resetIncrements();
+        this.updateDisplay();
+    }
 
-    let incSecondTens = 0;
-    let incSecondOnes = 0;
-    let incMsHundreds = 0;
-    let incMsTens = 0;
+    resetIncrements() {
+        this.incSecondTens = 0;
+        this.incSecondOnes = 0;
+        this.incMsHundreds = 0;
+        this.incMsTens = 0;
+    }
 
-    return function() {
-        let interval = setInterval(function() {
-            incMsTens++;
-            if (incMsTens > 9) {
-                incMsHundreds++;
-                incMsTens = 0;
+    start() {
+        let _this = this;
+        _this.interval = setInterval(function() {
+            _this.incMsTens++;
+            if (_this.incMsTens > 9) {
+                _this.incMsHundreds++;
+                _this.incMsTens = 0;
             }
-            if (incMsHundreds > 9) {
-                incSecondOnes++;
-                incMsHundreds = 0;
+            if (_this.incMsHundreds > 9) {
+                _this.incSecondOnes++;
+                _this.incMsHundreds = 0;
             }
-            if (incSecondOnes > 9) {
-                incSecondTens++;
-                incSecondOnes = 0;
+            if (_this.incSecondOnes > 9) {
+                _this.incSecondTens++;
+                _this.incSecondOnes = 0;
             }
 
-            secondTens.innerText = incSecondTens;
-            secondOnes.innerText = incSecondOnes;
-            msHundreds.innerText = incMsHundreds;
-            msTens.innerText = incMsTens;
+            _this.updateDisplay();
 
-            if (incSecondTens === 1) {
-                display.classList.add("redDigit");
-                clearInterval(interval);
+            if (_this.incSecondTens === 1) {
+                clearInterval(_this.interval);
             }
         }, 10);
     }
+
+    stop() {
+        clearInterval(this.interval);
+        this.resetIncrements();
+        this.updateDisplay();
+    }
+
+    updateDisplay() {
+        this.secondTens.innerText = this.incSecondTens;
+        this.secondOnes.innerText = this.incSecondOnes;
+        this.msHundreds.innerText = this.incMsHundreds;
+        this.msTens.innerText = this.incMsTens;
+
+        if (this.incSecondTens === 1) {
+            this.display.classList.add("redDigit");
+        } else {
+            this.display.classList.remove("redDigit");
+        }
+    }
 }
 
-let timer = createTimer(document.querySelector(".digits"));
-timer();
+let timer = new Timer(document.querySelector(".digits"));
+
+let buttonStart = document.querySelector("button.start");
+buttonStart.addEventListener("click", function(e) {
+    timer.start();
+    buttonStart.disabled = true;
+});
+
+let buttonReset = document.querySelector("button.reset");
+buttonReset.addEventListener("click", function(e) {
+    timer.stop();
+    buttonStart.disabled = false;
+});
