@@ -101,3 +101,10 @@ nav.prepend(document.createElement('a').innerText = "Home");
 let link = document.createElement('a');
 link.innerText = "Shop";
 nav.appendChild(link);
+
+/* Stretch goals */
+let btn = document.querySelector(".cta .cta-text button");
+btn.addEventListener("click", function(e) {
+  console.log("You've clicked the button");
+  alert("You've clicked the button");
+});
