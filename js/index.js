@@ -104,7 +104,11 @@ nav.appendChild(link);
 
 /* Stretch goals */
 let btn = document.querySelector(".cta .cta-text button");
-btn.addEventListener("click", function(e) {
+btn.addEventListener("click", function(e) { // adding event handler
   console.log("You've clicked the button");
   alert("You've clicked the button");
+});
+
+contactParagraphs.forEach(function(p) { // changing a style
+  p.style.fontFamily = "Courier New";
 });
