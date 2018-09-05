@@ -41,12 +41,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let header = document.getElementById("cta-img");
-header.setAttribute('src', siteContent["cta"]["img-src"])
-
-let middleImg = document.getElementById("middle-img");
-middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
-
+//I know there is a more concise way to code this, will come back to make it "pretty" when time permits
 let nav = document.querySelectorAll("nav a");
 nav[0].innerHTML = siteContent.nav["nav-item-1"]
 nav[1].innerHTML = siteContent.nav["nav-item-2"]
@@ -56,4 +51,50 @@ nav[4].innerHTML = siteContent.nav["nav-item-5"]
 nav[5].innerHTML = siteContent.nav["nav-item-6"]
 
 
+//cta
+let h1 = document.querySelector("h1");
+h1.innerHTML = siteContent.cta["h1"]
 
+let button = document.querySelector("button");
+button.innerHTML = siteContent.cta["button"]
+
+let header = document.getElementById("cta-img");
+header.setAttribute('src', siteContent["cta"]["img-src"])
+
+
+//main-content
+let topHeader = document.querySelectorAll(".top-content h4");
+topHeader[0].innerHTML = siteContent["main-content"]["features-h4"]
+topHeader[1].innerHTML = siteContent["main-content"]["about-h4"]
+
+let topContent = document.querySelectorAll(".top-content p");
+topContent[0].innerHTML = siteContent["main-content"]["features-content"]
+topContent[1].innerHTML = siteContent["main-content"]["about-content"]
+
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+let bottomHeader = document.querySelectorAll(".bottom-content h4");
+bottomHeader[0].innerHTML = siteContent["main-content"]["services-h4"]
+bottomHeader[1].innerHTML = siteContent["main-content"]["product-h4"]
+bottomHeader[2].innerHTML = siteContent["main-content"]["vision-h4"]
+
+let bottomContent = document.querySelectorAll(".bottom-content p");
+bottomContent[0].innerHTML = siteContent["main-content"]["services-content"]
+bottomContent[1].innerHTML = siteContent["main-content"]["product-content"]
+bottomContent[2].innerHTML = siteContent["main-content"]["vision-content"]
+
+
+//contact
+let contactHeader = document.querySelector(".contact h4");
+contactHeader.innerHTML = siteContent["contact"]["contact-h4"]
+
+let contactContent = document.querySelectorAll(".contact p");
+contactContent[0].innerHTML = siteContent["contact"]["address"]
+contactContent[1].innerHTML = siteContent["contact"]["phone"]
+contactContent[2].innerHTML = siteContent["contact"]["email"]
+
+
+//footer
+let footer = document.querySelector("footer p")
+footer.innerHTML = siteContent["footer"]["copyright"]
