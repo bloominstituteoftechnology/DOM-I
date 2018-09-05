@@ -43,12 +43,16 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //I know there is a more concise way to code this, will come back to make it "pretty" when time permits
 let nav = document.querySelectorAll("nav a");
-nav[0].innerHTML = siteContent.nav["nav-item-1"]
-nav[1].innerHTML = siteContent.nav["nav-item-2"]
-nav[2].innerHTML = siteContent.nav["nav-item-3"]
-nav[3].innerHTML = siteContent.nav["nav-item-4"]
-nav[4].innerHTML = siteContent.nav["nav-item-5"]
-nav[5].innerHTML = siteContent.nav["nav-item-6"]
+for (let i = 0; i < nav.length; i++){
+  nav[i].innerHTML = siteContent["nav"][`nav-item-${i+1}`]
+  nav[i].style.color = "green"
+};
+// nav[0].innerHTML = siteContent.nav["nav-item-1"]
+// nav[1].innerHTML = siteContent.nav["nav-item-2"]
+// nav[2].innerHTML = siteContent.nav["nav-item-3"]
+// nav[3].innerHTML = siteContent.nav["nav-item-4"]
+// nav[4].innerHTML = siteContent.nav["nav-item-5"]
+// nav[5].innerHTML = siteContent.nav["nav-item-6"]
 
 
 //cta
