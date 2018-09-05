@@ -102,3 +102,23 @@ contactContent[2].innerHTML = siteContent["contact"]["email"]
 //footer
 let footer = document.querySelector("footer p")
 footer.innerHTML = siteContent["footer"]["copyright"]
+
+
+//.appendChild and .prepend
+const newNav = document.createElement('a');
+const text = document.createTextNode('Home');
+newNav.style.color = "purple";
+newNav.appendChild(text);
+
+document.querySelector('nav').prepend(newNav);
+// newNav.innerHTML = "Home";
+// newNav.setAttribute('href', 'newNav.html');
+// newNav.style.color = "purple";
+// nav[i].prepend(newNav);
+
+const newNav2 = document.createElement('a');
+const text2 = document.createTextNode('End');
+newNav2.style.color = "purple";
+newNav2.appendChild(text2);
+
+document.querySelector('nav').append(newNav2);
