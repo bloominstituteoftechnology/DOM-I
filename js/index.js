@@ -41,10 +41,50 @@ const siteContent = {
 
 // <-- (RE)CREATING THE LOGO SELECTOR--> //
 const logo = document.getElementById("logo-img");
-logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
 // <-- CREATING THE HEADER NAVIGATION SELECTOR --> //
 const headerNav = document.querySelectorAll("nav a");
+
+// <-- CREATING THE HEADER CTA H1 SELECTOR --> //
+const headerCTA = document.querySelector(".cta h1");
+
+// <-- CREATING THE HEADER CTA BUTTON SELECTOR --> //
+const ctaButton = document.querySelector(".cta button");
+
+// <-- CREATING THE HEADER CTA IMAGE SELECTOR --> //
+const ctaIMG = document.getElementById("cta-img");
+
+// <-- CREATING THE TOP CONTENT HEADING SELECTOR --> //
+const topHEADER = document.querySelectorAll(".main-content .text-content h4")
+
+// <-- CREATING THE TOP CONTENT PARAGRAPH SELECTOR --> //
+const topPARAGRAPH = document.querySelectorAll(".main-content .top-content .text-content p")
+
+// <-- CREATING THE MIDDLE IMAGE SELECTOR --> //
+const middleIMG = document.getElementById("middle-img");
+
+// <-- CREATING THE BOTTOM CONTENT HEADING SELECTOR --> //
+const bottomHEADER = document.querySelectorAll(".main-content .bottom-content .text-content h4");
+
+// <-- CREATING THE BOTTOM PARAGRAPH SELECTOR --> //
+const bottomPARAGRAPH = document.querySelectorAll(".main-content .bottom-content .text-content p")
+
+// <-- CREATING THE CONTACT HEADING SELECTOR --> //
+const contactHEADING = document.querySelector(".contact h4");
+
+// <-- CREATING THE CONTACT PARAGRAPH SELECTOR --> //
+const contactPARAGRAPH = document.querySelectorAll(".contact p");
+
+// <-- CREATING THE COPYRIGHT SELECTOR --> //
+const copyright = document.querySelector("footer p");
+
+
+// *** TASK 3: UPDATE THE HTML WITH THE JSON DATA *** //
+
+// <-- IMPORTING LOGO JSON --> //
+logo.setAttribute("src", siteContent["nav"]["img-src"]);
+
+// <-- IMPORTING HEADER NAVIGATION JSON --> //
 headerNav[0].innerHTML = siteContent["nav"]["nav-item-1"];
 headerNav[1].innerHTML = siteContent["nav"]["nav-item-2"];
 headerNav[2].innerHTML = siteContent["nav"]["nav-item-3"];
@@ -52,54 +92,52 @@ headerNav[3].innerHTML = siteContent["nav"]["nav-item-4"];
 headerNav[4].innerHTML = siteContent["nav"]["nav-item-5"];
 headerNav[5].innerHTML = siteContent["nav"]["nav-item-6"];
 
-// <-- CREATING THE HEADER CTA H1 SELECTOR --> //
-const headerCTA = document.querySelector(".cta h1");
+// <-- IMPORTING HEADER CTA H1 JSON --> //
 headerCTA.innerHTML = siteContent["cta"]["h1"];
 
-// <-- CREATING THE HEADER CTA BUTTON SELECTOR --> //
-const ctaButton = document.querySelector(".cta button");
+// <-- IMPORTING CTA BUTTON JSON --> //
 ctaButton.innerHTML = siteContent["cta"]["button"];
 
-// <-- CREATING THE HEADER CTA IMAGE SELECTOR --> //
-const ctaIMG = document.getElementById("cta-img");
+// <-- IMPORTING HEADER CTA IMAGE JSON --> //
 ctaIMG.setAttribute("src", siteContent["cta"]["img-src"]);
 
-// <-- CREATING THE TOP CONTENT HEADING SELECTOR --> //
-const topHEADER = document.querySelectorAll(".main-content .text-content h4")
+// <-- IMPORTING TOP CONTENT HEADING JSON --> //
 topHEADER[0].innerHTML = siteContent["main-content"]["features-h4"];
 topHEADER[1].innerHTML = siteContent["main-content"]["about-h4"];
 
-// <-- CREATING THE TOP CONTENT PARAGRAPH SELECTOR --> //
-const topPARAGRAPH = document.querySelectorAll(".main-content .top-content .text-content p")
+// <-- IMPORTING TOP CONTENT PARAGRAPH JSON --> //
 topPARAGRAPH[0].innerHTML = siteContent["main-content"]["features-content"];
 topPARAGRAPH[1].innerHTML = siteContent["main-content"]["about-content"];
 
-// <-- CREATING THE MIDDLE IMAGE SELECTOR --> //
-const middleIMG = document.getElementById("middle-img");
+// <-- IMPORTING MIDDLE IMAGE JSON --> //
 middleIMG.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
-// <-- CREATING THE BOTTOM CONTENT HEADING SELECTOR --> //
-const bottomHEADER = document.querySelectorAll(".main-content .bottom-content .text-content h4");
+// <-- IMPORTING BOTTOM CONTENT HEADING JSON --> //
 bottomHEADER[0].innerHTML = siteContent["main-content"]["services-h4"];
 bottomHEADER[1].innerHTML = siteContent["main-content"]["product-h4"];
 bottomHEADER[2].innerHTML = siteContent["main-content"]["vision-h4"];
 
-// <-- CREATING THE BOTTOM CONTENT HEADING SELECTOR --> //
-const bottomPARAGRAPH = document.querySelectorAll(".main-content .bottom-content .text-content p")
+// <-- IMPORTING BOTTOM PARAGRAPH JSON --> //
 bottomPARAGRAPH[0].innerHTML = siteContent["main-content"]["services-content"];
 bottomPARAGRAPH[1].innerHTML = siteContent["main-content"]["product-content"];
 bottomPARAGRAPH[2].innerHTML = siteContent["main-content"]["vision-content"];
 
-// <-- CREATING THE CONTACT HEADING SELECTOR --> //
-const contactHEADING = document.querySelector(".contact h4");
+// <-- IMPORTING CONTACT HEADING JSON --> //
 contactHEADING.innerHTML = siteContent["contact"]["contact-h4"];
 
-// <-- CREATING THE CONTACT PARAGRAPH SELECTOR --> //
-const contactPARAGRAPH = document.querySelectorAll(".contact p");
+// <-- IMPORTING CONTACT PARAGRAPH JSON --> //
 contactPARAGRAPH[0].innerHTML = siteContent["contact"]["address"];
 contactPARAGRAPH[1].innerHTML = siteContent["contact"]["phone"];
 contactPARAGRAPH[2].innerHTML = siteContent["contact"]["email"];
 
-// <-- CREATING THE COPYRIGHT SELECTOR --> //
-const copyright = document.querySelector("footer p");
+// <-- IMPORTING COPYRIGHT JSON --> //
 copyright.innerHTML = siteContent["footer"]["copyright"];
+
+
+// *** TASK 4: ADD NEW CONTENT *** //
+
+
+// <-- CHANGE THE COLOR OF THE NAVIGATION TEXT TO BE GREEN --> //
+
+// <-- UTILIZE `.appendChild()` AND `.prepend()` TO ADD TWO NEW ITEMS TO THE NAVIGATION BAR --> //
+
