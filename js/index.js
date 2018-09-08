@@ -37,6 +37,61 @@ const siteContent = {
   },
 };
 
+// Set Navigation Items
+document.querySelectorAll('[href="#"]').forEach((el, i)=>{
+  let navData = siteContent.nav[`nav-item-${i + 1}`];
+  el.innerHTML = navData;
+  el.setAttribute('href', `#${navData}`);
+  el.style.color = 'green';
+});
+
+const nav = document.querySelector('nav');
+
+const prepended = document.createElement('span');
+prepended.innerHTML = "Prepended";
+nav.prepend(prepended);
+
+const appended = document.createElement('span');
+appended.innerHTML = "Appended";
+nav.appendChild(appended);
+
+
+
+
+
+
+// Set CTA
+const ctaText = document.querySelector('.cta-text').children;
+ctaText[0].innerHTML = siteContent.cta.h1;
+ctaText[1].innerHTML = siteContent.cta.button;
+document.querySelector('#cta-img').src = siteContent.cta['img-src'];
+
+// Set Main Content
+const main = siteContent['main-content'];
+const sections = ['features', 'about', 'services', 'product', 'vision'];
+
+let i = 0;
+document.querySelectorAll('.text-content').forEach((el)=>{
+  el.children[0].innerHTML = main[`${sections[i]}-h4`];
+  el.children[1].innerHTML = main[`${sections[i]}-content`];
+  i++;
+});
+
+document.querySelector('#middle-img').setAttribute('src', main['middle-img-src']);
+
+// Set Contact
+const contact = document.querySelector('.contact');
+
+i = 0;
+for (let p in siteContent.contact) {
+  contact.children[i].innerHTML = siteContent.contact[p];
+  i++
+}
+
+// Set Footer
+document.querySelector('footer').querySelector('p').innerHTML = siteContent.footer.copyright;
+
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
