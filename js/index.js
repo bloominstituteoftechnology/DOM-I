@@ -136,8 +136,24 @@ copyright.innerHTML = siteContent["footer"]["copyright"];
 
 // *** TASK 4: ADD NEW CONTENT *** //
 
-
 // <-- CHANGE THE COLOR OF THE NAVIGATION TEXT TO BE GREEN --> //
+headerNav.forEach(item => {
+    item.style.color = "green"
+})
 
 // <-- UTILIZE `.appendChild()` AND `.prepend()` TO ADD TWO NEW ITEMS TO THE NAVIGATION BAR --> //
+// <-- PART 1: CREATE NEW NODE ELEMENTS (ANCHOR ELEMENTS) --> //
+const prependedNav = document.createElement("a");
+const appendedNav = document.createElement("a");
+
+// <-- PART 2: CREATE NEW SITE CONTENT (OPTIONAL ADD STYLING)-- //
+prependedNav.innerHTML = "<div style=\"color:green;\">Start</div>";
+appendedNav.innerHTML = "<div style=\"color:green;\">Help</div>";
+
+// <-- PART 3: REFERENCE NEW ELEMENTS --> //
+const FirstItemNav = document.querySelector("nav");
+FirstItemNav.prepend(prependedNav);
+
+const LastItemNav = document.querySelector("nav");
+LastItemNav.appendChild(appendedNav);
 
