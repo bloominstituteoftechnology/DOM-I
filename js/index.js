@@ -41,10 +41,21 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent['nav']['img-src'])
 
-let nav = document.querySelectorAll('nav a');
+// nav
+let nav = document.querySelector('nav');
+let navA = document.querySelectorAll('nav a');
 for (let i=0; i<6; i++) {
-  nav[i].innerText = siteContent.nav['nav-item-' + (i+1).toString()]
+  navA[i].innerText = siteContent.nav['nav-item-' + (i+1).toString()]
+  navA[i].style.color = 'green'
 }
+const newA1 = document.createElement('a')
+const newA2 = document.createElement('a')
+nav.prepend(newA1)
+nav.appendChild(newA2)
+newA1.innerText = 'Home'
+newA2.innerText = 'Log In'
+newA1.style.color = 'green'
+newA2.style.color = 'green'
 
 // header
 let headerH1 = document.querySelector('.cta-text h1');
