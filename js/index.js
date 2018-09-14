@@ -46,8 +46,22 @@ for (let i=0; i<6; i++) {
   nav[i].innerText = siteContent.nav['nav-item-' + (i+1).toString()]
 }
 
-let ctaImg = document.querySelector('#cta-img');
-ctaImg.setAttribute('src', siteContent.cta['img-src'])
+// header
+let headerH1 = document.querySelector('.cta-text h1');
+let headerButton = document.querySelector('.cta-text button');
+let headerImg = document.querySelector('#cta-img');
+headerH1.innerText = siteContent.cta.h1
+headerButton.innerText = siteContent.cta.button
+headerImg.setAttribute('src', siteContent.cta['img-src'])
+
+// main-content
 
 let midImg = document.querySelector('#middle-img');
 midImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+// contact
+
+
+// footer
+let footerP = document.querySelector('footer p');
+footerP.innerText = siteContent.footer.copyright
