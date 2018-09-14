@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM<br> Is<br> Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -50,14 +50,27 @@ for (let i=0; i<6; i++) {
 let headerH1 = document.querySelector('.cta-text h1');
 let headerButton = document.querySelector('.cta-text button');
 let headerImg = document.querySelector('#cta-img');
-headerH1.innerText = siteContent.cta.h1
+headerH1.innerHTML = siteContent.cta.h1
 headerButton.innerText = siteContent.cta.button
 headerImg.setAttribute('src', siteContent.cta['img-src'])
 
 // main-content
-
+let topContentH4 = document.querySelectorAll('.top-content h4');
+let topContentP = document.querySelectorAll('.top-content p');
 let midImg = document.querySelector('#middle-img');
+let bottomContentH4 = document.querySelectorAll('.bottom-content h4');
+let bottomContentP = document.querySelectorAll('.bottom-content p');
+topContentH4[0].innerText = siteContent['main-content']['features-h4']
+topContentP[0].innerText = siteContent['main-content']['features-content']
+topContentH4[1].innerText = siteContent['main-content']['about-h4']
+topContentP[1].innerText = siteContent['main-content']['about-content']
 midImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
+bottomContentH4[0].innerText = siteContent['main-content']['services-h4']
+bottomContentP[0].innerText = siteContent['main-content']['services-content']
+bottomContentH4[1].innerText = siteContent['main-content']['product-h4']
+bottomContentP[1].innerText = siteContent['main-content']['product-content']
+bottomContentH4[2].innerText = siteContent['main-content']['vision-h4']
+bottomContentP[2].innerText = siteContent['main-content']['vision-content']
 
 // contact
 let contactH4 = document.querySelector('.contact h4');
