@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM<br> Is<br> Awesome",
+    "h1": "DOM<br>Is<br>Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street<br> Somewhere, USA",
+    "address" : "123 Way 456 Street<br>Somewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -170,7 +170,7 @@ let mainContent = document.querySelector('.main-content');
 mainContent.prepend(baconButton);
 
 document.getElementById('bacon-button').addEventListener('click', function(){
-  
+
   topContentText[0].innerHTML = bacon["main-content"]["features-content"];
   topContentText[1].innerHTML = bacon["main-content"]["about-content"];
   bottomContentText[0].innerHTML = bacon["main-content"]["services-content"];
