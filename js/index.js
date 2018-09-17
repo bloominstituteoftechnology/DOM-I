@@ -61,7 +61,7 @@ ctaElementH1.innerHTML = siteContent["cta"]["h1"];
 //Button
 ctaElementBtn.innerText = siteContent["cta"]["button"];
 //Image
-ctaElementIMG.src = siteContent["cta"]["img-src"]
+ctaElementIMG.setAttribute("src", siteContent["cta"]["img-src"]);
 
 
 //main-content
@@ -76,5 +76,17 @@ textContent[0].childNodes[3].innerText = siteContent["main-content"]["features-c
 textContent[1].childNodes[1].innerText = siteContent["main-content"]["about-h4"]
 textContent[1].childNodes[3].innerText = siteContent["main-content"]["about-content"];
 
+contentIMG.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
-console.log(textContent);
+//services
+textContent[2].childNodes[1].innerText = siteContent["main-content"]["services-h4"]
+textContent[2].childNodes[3].innerText = siteContent["main-content"]["services-content"];
+//Product
+textContent[3].childNodes[1].innerText = siteContent["main-content"]["product-h4"]
+textContent[3].childNodes[3].innerText = siteContent["main-content"]["product-content"];
+//
+textContent[4].childNodes[1].innerText = siteContent["main-content"]["vision-h4"]
+textContent[4].childNodes[3].innerText = siteContent["main-content"]["vision-content"];
+
+
+console.log(contentIMG);
