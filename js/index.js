@@ -71,6 +71,10 @@ middleImg.src = siteContent["main-content"]["middle-img-src"];
 // Button
 let ctaButton = document.querySelector('button')
 ctaButton.innerHTML = siteContent.cta.button;
+ctaButton.addEventListener("click", function() {
+  alert("Hello");
+});
+
 
 // Header
 let topHead = document.querySelectorAll('.top-content .text-content h4');
