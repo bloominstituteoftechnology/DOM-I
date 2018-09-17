@@ -38,5 +38,51 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const container = document.querySelector(".container")
+console.log(container)
+
+const header = document.querySelector("header")
+console.log(header)
+
+const navTop = document.querySelector("header nav");
+console.log(navTop)
+
+const navItems = document.querySelectorAll ("header nav a")
+console.log(navItems)
+
+const Mainlogo = document.querySelector("header .logo");
+console.log(Mainlogo)
+
+const cta = document.querySelector(".cta");
+console.log (cta)
+
+const ctaText = document.querySelector (".cta .cta-text");
+console.log (ctaText)
+
+const ctaButton = document.querySelector (".cta .cta-text button")
+console.log(ctaButton)
+
+const CtaImg = document.getElementById("cta-img");
+console.log(CtaImg)
+
+const mainContent= document.querySelector(".main-content")
+console.log(mainContent)
+
+const topMainContent = document.querySelector(".main-content .top-content")
+console.log(topMainContent)
+
+const mainContentImg = document.querySelector(".main-content .middle-img")
+console.log (mainContentImg)
+
+const mainContentBottom = document.querySelector(".main-content .bottom-content")
+console.log(mainContentBottom)
+
+const mainContentBottomP = document.querySelector(".main-content .bottom-content p")
+console.log(mainContentBottomP)
+
+const contactP = document.querySelector(".contact p")
+console.log(contactP)
+
+const footer = document.querySelector("footer")
+console.log(footer)
