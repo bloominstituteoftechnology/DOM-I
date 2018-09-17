@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM <br>Is <br>Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
