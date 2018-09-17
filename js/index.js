@@ -52,12 +52,12 @@ const mainBody = document.querySelector('html');
 mainBody.style.backgroundColor = 'LightSteelBlue';
 
 const navBar = document.querySelectorAll('a');
-navBar[0].innerText = siteContent.nav['nav-item-1'];
-navBar[1].innerText = siteContent.nav['nav-item-2'];
-navBar[2].innerText = siteContent.nav['nav-item-3'];
-navBar[3].innerText = siteContent.nav['nav-item-4'];
-navBar[4].innerText = siteContent.nav['nav-item-5'];
-navBar[5].innerText = siteContent.nav['nav-item-6'];
+navBar[0].innerText = siteContent['nav'] ['nav-item-1'];
+navBar[1].innerText = siteContent['nav'] ['nav-item-2'];
+navBar[2].innerText = siteContent['nav'] ['nav-item-3'];
+navBar[3].innerText = siteContent['nav'] ['nav-item-4'];
+navBar[4].innerText = siteContent['nav'] ['nav-item-5'];
+navBar[5].innerText = siteContent['nav'] ['nav-item-6'];
 
 for (let i=0; i < navBar.length; i++) {
   navBar[i].style.color = 'green';
@@ -77,10 +77,10 @@ newItem1.style.color = 'green';
 
 
 const ctaText = document.getElementsByTagName('h1');
-ctaText[0].innerHTML = "Dom <br> is <br> Awesome";
+ctaText[0].innerHTML = siteContent['cta'] ['h1'];
 
 const button = document.getElementsByTagName('button');
-button[0].innerText = 'Get Started';
+button[0].innerText = siteContent['cta'] ['button'];
 
 const ctaImage = document.getElementById('cta-img');
 ctaImage.src = 'img/header-img.png';
@@ -89,23 +89,27 @@ ctaImage.src = 'img/header-img.png';
 const titleH4 = document.getElementsByTagName('h4');
 
 titleH4[0].innerText = siteContent['main-content'] ['features-h4'];
-titleH4[1].innerText = siteContent['main-content']["about-h4"];
-titleH4[2].innerText = siteContent['main-content']["services-h4"];
-titleH4[3].innerText = siteContent['main-content']["product-h4"];
-titleH4[4].innerText = siteContent['main-content']["vision-h4"];
+titleH4[1].innerText = siteContent['main-content'] ["about-h4"];
+titleH4[2].innerText = siteContent['main-content'] ["services-h4"];
+titleH4[3].innerText = siteContent['main-content'] ["product-h4"];
+titleH4[4].innerText = siteContent['main-content'] ["vision-h4"];
 
 
-const paraText =document.getElementsByTagName('p');
+const paraText = document.getElementsByTagName('p');
 
 paraText[0].innerText = siteContent['main-content'] ['features-content'];
 paraText[1].innerText = siteContent['main-content'] ['about-content'];
 paraText[2].innerText = siteContent['main-content'] ['services-content'];
 paraText[3].innerText = siteContent['main-content'] ['product-content'];
 paraText[4].innerText = siteContent['main-content'] ['vision-content'];
-paraText[5].innerHTML = "123 Way 456 Street <br> Somewhere, USA"
-paraText[6].innerText = "1 (888) 888-8888"
-paraText[7].innerText = "sales@greatidea.io"
-paraText[8].innerText = "Copyright Great Idea! 2018"
+paraText[5].innerText = siteContent['contact'] ['address'];
+paraText[6].innerText = siteContent['contact'] ['phone'];
+paraText[7].innerText = siteContent['contact'] ['email'];
+paraText[8].innerText = siteContent['footer'] ['copyright'];
+
+
+const contact = document.getElementsByTagName('h4');
+contact[5].innerHTML = siteContent['contact'] ['contact-h4'];
 
 const midImage = document.querySelector('.middle-img');
 midImage.src = "img/mid-page-accent.jpg";
