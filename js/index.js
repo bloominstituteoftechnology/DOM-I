@@ -88,5 +88,36 @@ textContent[3].childNodes[3].innerText = siteContent["main-content"]["product-co
 textContent[4].childNodes[1].innerText = siteContent["main-content"]["vision-h4"]
 textContent[4].childNodes[3].innerText = siteContent["main-content"]["vision-content"];
 
+let contact = document.getElementsByClassName("contact");
+contact[0].childNodes[1].innerText = siteContent["contact"]["contact-h4"];
+contact[0].childNodes[3].innerText = siteContent["contact"]["address"];
+contact[0].childNodes[5].innerText = siteContent["contact"]["phone"];
+contact[0].childNodes[7].innerText = siteContent["contact"]["email"];
 
-console.log(contentIMG);
+
+let footer = document.querySelector("footer p");
+footer.innerText = siteContent["footer"]["copyright"];
+
+
+///added to navigation
+//create new elements
+
+let homeLink = document.createElement("a");
+let blogLink = document.createElement("a");
+
+//find nav
+let newLinks = document.querySelector(".container header nav")
+
+//new elements styling/text
+homeLink.innerHTML = "Home";
+homeLink.style.color = "green";
+blogLink.innerHTML = "Blog";
+blogLink.style.color = "green";
+
+///add newly created elements to nav
+//front of nav
+newLinks.prepend(homeLink);
+//end of nav
+newLinks.appendChild(blogLink)
+
+
