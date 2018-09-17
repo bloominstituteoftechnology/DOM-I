@@ -22,3 +22,8 @@ body {
     border-radius: 10px;
     cursor: pointer;
 }
+
+.inactive-button {
+  background-color: grey;
+  color: black;
+}

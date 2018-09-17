@@ -1,12 +1,23 @@
-document.getElementById('start-timer').addEventListener("click", timer, {once: true});
-document.getElementById('reset-timer').addEventListener("click", reset, {once:true});
+let startButton = document.getElementById('start-timer');
+let resetButton = document.getElementById('reset-timer');
+let msTens = document.getElementById('msTens');
+let msHundreds = document.getElementById('msHundreds');
+let secondOnes = document.getElementById('secondOnes');
+let secondTens = document.getElementById('secondTens');
+
+startButton.addEventListener("click", timer, {once: true});
+
 
 
 let mTens = 0;
 let mHundreds = 0;
 let sOnes = 0;
 let sTens = 0;
+
+
+
 function timer() {
+  document.getElementById('start-timer').classList.add('inactive-button');
 
     let timer = setInterval(function(){
 
@@ -30,37 +41,41 @@ function timer() {
 
         if (sTens === 1){
             mTens = 0;
-            document.getElementById('reset-timer').addEventListener("click", reset, {once: true});
+            resetButton.addEventListener("click", reset, {once: true});
                 clearInterval(timer);
                 let redDigits = document.getElementsByClassName('digit');
                 for (let i = 0; i < redDigits.length; i++) {
                     redDigits[i].classList.add('redDigit');
                 };
-
+                resetButton.classList.remove('inactive-button'); 
         }
 
-        document.getElementById('msTens').innerText = mTens;
-        document.getElementById('msHundreds').innerText = mHundreds;
-        document.getElementById('secondOnes').innerText = sOnes;
-        document.getElementById('secondTens').innerText = sTens;
+        msTens.innerText = mTens;
+        msHundreds.innerText = mHundreds;
+        secondOnes.innerText = sOnes;
+        secondTens.innerText = sTens;
        },   10);
 }
 
 function reset(){
+  clearInterval(timer);
 mTens = 0;
 mHundreds = 0;
 sOnes = 0;
 sTens = 0;
 
-document.getElementById('msTens').innerText = mTens;
-document.getElementById('msHundreds').innerText = mHundreds;
-document.getElementById('secondOnes').innerText = sOnes;
-document.getElementById('secondTens').innerText = sTens;
+msTens.innerText = mTens;
+msHundreds.innerText = mHundreds;
+secondOnes.innerText = sOnes;
+secondTens.innerText = sTens;
 let blackDigits = document.getElementsByClassName('digit');
 
 for (let i = 0; i < blackDigits.length; i++) {
     blackDigits[i].classList.remove('redDigit');
 };
 
-document.getElementById('start-timer').addEventListener("click", timer, {once: true});
+startButton.addEventListener("click", timer, {once: true});
+startButton.classList.remove('inactive-button');
+resetButton.classList.add('inactive-button');
+
 }
