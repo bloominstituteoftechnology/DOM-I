@@ -121,24 +121,39 @@ goodbye.href='#';
     item.setAttribute('style', 'color: green');
   })
 
+  function blue() {
+    let allH4 = document.querySelectorAll('h4');
+    let allP = document.querySelectorAll('p');
+    allH4.forEach(item => {
+      item.setAttribute('style', 'color: blue');
+    });
+    allP.forEach(item => {
+      item.setAttribute('style', 'color: blue');
+    });
+    document.getElementById('color-button').addEventListener('click', black, {once: true});
+  }
+
+  function black() {
+    let allH4 = document.querySelectorAll('h4');
+    let allP = document.querySelectorAll('p');
+    allH4.forEach(item => {
+      item.setAttribute('style', 'color: black');
+    });
+    allP.forEach(item => {
+      item.setAttribute('style', 'color: black');
+    });
+    document.getElementById('color-button').addEventListener('click', blue, {once: true});
+  }
+
  const newButton = document.createElement('button');
  newButton.innerText = 'Blue Text';
  newButton.setAttribute('style', 'display: block; cursor: pointer; margin: 10px')
 footer.prepend(newButton);
-newButton.setAttribute('id', 'blue-color-button');
+newButton.setAttribute('id', 'color-button');
+
+document.getElementById('color-button').addEventListener('click', blue, {once: true});
 
 
-document.getElementById('blue-color-button').addEventListener('click', function(){
-  let allH4 = document.querySelectorAll('h4');
-  let allP = document.querySelectorAll('p');
-  allH4.forEach(item => {
-    item.setAttribute('style', 'color: blue');
-  });
-  allP.forEach(item => {
-    item.setAttribute('style', 'color: blue');
-  });
-
-  });
 
   const bacon = {
     "main-content": {
@@ -156,23 +171,7 @@ document.getElementById('blue-color-button').addEventListener('click', function(
     },
   }
 
-  const otherButton = document.createElement('button');
-  otherButton.innerText = 'Black Text';
-  otherButton.setAttribute('style', 'display: block; cursor: pointer');
-  footer.prepend(otherButton);
-  otherButton.setAttribute('id', 'black-color-button');
 
-  document.getElementById('black-color-button').addEventListener('click', function(){
-    let allH4 = document.querySelectorAll('h4');
-    let allP = document.querySelectorAll('p');
-    allH4.forEach(item => {
-      item.setAttribute('style', 'color: black');
-    });
-    allP.forEach(item => {
-      item.setAttribute('style', 'color: black');
-    });
-
-    });
 const baconButton = document.createElement('button');
 baconButton.innerText = 'Bacon Content';
 baconButton.setAttribute('style', 'cursor: pointer');
@@ -189,4 +188,4 @@ document.getElementById('bacon-button').addEventListener('click', function(){
   bottomContentText[2].innerText = bacon["main-content"]["vision-content"];
 
 
-  });
+});
