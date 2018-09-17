@@ -1,9 +1,4 @@
 {
-    this.secondTens = 0;
-    this.secondOnes = 0;
-    this.msHundreds = 0;
-    this.msTens = 0;
-
     this.duration = 10000
     this.time = 0;
 
@@ -17,7 +12,7 @@
         let seconds = time.getSeconds().toString();
 
         if(seconds === '10'){
-            clearInterval(this.timer);
+            this.reset();
             document.querySelector('.digits').style.color = 'red';
         }
 
@@ -49,15 +44,35 @@
         msTens.innerHTML = miliArr[1];
     }
 
-    this.timer = setInterval(iterate, 10);
+    function reset() {
+        this.time = 0;
+        secondTens.innerText = 0;
+        secondOnes.innerText = 0;
+        msHundreds.innerText = 0;
+        msTens.innerText = 0;
+        clearInterval(this.timer);
+        startButton.disabled = false;
+        document.querySelector('.digits').style.color = 'black';
+    }
 
     let secondTens = document.querySelector('#secondTens');
     let secondOnes = document.querySelector('#secondOnes');
     let msHundreds = document.querySelector('#msHundreds');
     let msTens = document.querySelector('#msTens');
+    let startButton = document.querySelector('.buttons > .start');
+    let resetButton = document.querySelector('.buttons > .reset');
 
-    secondTens.innerText = this.secondTens;
-    secondOnes.innerText = this.secondOnes;
-    msHundreds.innerText = this.msHundreds;
-    msTens.innerText = this.msTens;
+    startButton.addEventListener('click', () => {
+        reset();
+        this.timer = setInterval(iterate, 10);
+        startButton.disabled = true;
+    });
+
+    resetButton.addEventListener('click', () => {
+        clearInterval(this.timer);
+        reset();
+    });
+
+    reset();
+
 }
