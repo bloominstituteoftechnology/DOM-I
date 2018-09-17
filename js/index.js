@@ -41,8 +41,24 @@ const siteContent = {
 let logo = document.getElementById('logo-img');
 logo.setAttribute('src', siteContent['nav']['img-src']);
 
+let mainNav = document.querySelector('header nav');
 let navItems = document.querySelectorAll('header nav a');
 navItems.forEach((item, i) => item.innerText = siteContent['nav'][`nav-item-${i+1}`]);
+navItems.forEach(item => item.style.color = 'green');
+
+let home = document.createElement('a');
+home.innerText = 'Home';
+home.href = '#';
+mainNav.prepend(home);
+home.style.color = 'green';
+
+let dom = document.createElement('a');
+dom.innerText = 'DOM';
+dom.href = 'https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model';
+dom.target = '_blank';
+mainNav.appendChild(dom);
+dom.style.color = 'green';
+
 
 let ctaText = document.querySelector('.cta-text h1');
 let ctaBtn = document.querySelector('.cta-text button');
