@@ -13,3 +13,16 @@ body {
 .redDigit {
   color: red;
 }
+
+button {
+  padding: 10px 30px;
+  margin: 5px;
+  border: 1px solid black;
+  background: white;
+  border-radius: 0px;
+  font-size: 16px;
+}
+
+button:hover {
+  box-shadow: 5px 5px 5px grey;
+}

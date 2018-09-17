@@ -18,17 +18,23 @@ const setTimeRed = () => {
   allDigits.forEach(digit => digit.classList.add('redDigit'))
 }
 
+const removeTimeRed = () => {
+  allDigits.forEach(digit => digit.classList.remove('redDigit'))
+}
+
 let counter
 
 const startCounter = () =>
   counter = window.setInterval(() => {
     time += 10
     updateDOM()
-    if (time === 1000) {
+    if (time === 10000) {
       clearInterval(counter)
       setTimeRed()
     }
   }, 10)
+
+updateDOM()
 
 const button = document.querySelector('button')
 button.addEventListener('click', event => {
@@ -39,8 +45,10 @@ button.addEventListener('click', event => {
 const reset = document.createElement('button')
 reset.innerText = 'reset'
 reset.addEventListener('click', event => {
+  clearInterval(counter)
   button.removeAttribute('disabled')
   time = 0
+  removeTimeRed()
   updateDOM()
 })
 
