@@ -48,12 +48,12 @@ logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
 // =============== Header ===============
 let link = document.querySelectorAll("a");
-link[0].textContent = "Services";
-link[1].textContent = "Product";
-link[2].textContent = "Vision";
-link[3].textContent = "Features";
-link[4].textContent = "About";
-link[5].textContent = "Contact";
+link[0].textContent = siteContent["nav"]["nav-item-1"];
+link[1].textContent = siteContent["nav"]["nav-item-2"];
+link[2].textContent = siteContent["nav"]["nav-item-3"];
+link[3].textContent = siteContent["nav"]["nav-item-4"];
+link[4].textContent = siteContent["nav"]["nav-item-5"];
+link[5].textContent = siteContent["nav"]["nav-item-6"];
 
 let h1 = document.querySelector("h1");
 h1.innerHTML = "DOM<br> Is<br> Awesome";
