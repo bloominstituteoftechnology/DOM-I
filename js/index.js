@@ -68,25 +68,25 @@ navLinks[5].innerText = siteContent['nav']['nav-item-6'];
 
 
 let topContentHeaders = document.querySelectorAll('.top-content .text-content h4');
-topContentHeaders[0].innerHTML = siteContent["main-content"]["features-h4"];
-topContentHeaders[1].innerHTML = siteContent["main-content"]["about-h4"];
+topContentHeaders[0].innerText = siteContent["main-content"]["features-h4"];
+topContentHeaders[1].innerText = siteContent["main-content"]["about-h4"];
 
 let topContentText = document.querySelectorAll('.top-content .text-content p');
-topContentText[0].innerHTML = siteContent["main-content"]["features-content"];
-topContentText[1].innerHTML = siteContent["main-content"]["about-content"];
+topContentText[0].innerText = siteContent["main-content"]["features-content"];
+topContentText[1].innerText = siteContent["main-content"]["about-content"];
 
 let bottomContentHeaders = document.querySelectorAll('.bottom-content .text-content h4');
-bottomContentHeaders[0].innerHTML = siteContent["main-content"]["services-h4"];
-bottomContentHeaders[1].innerHTML = siteContent["main-content"]["product-h4"];
-bottomContentHeaders[2].innerHTML = siteContent["main-content"]["vision-h4"];
+bottomContentHeaders[0].innerText = siteContent["main-content"]["services-h4"];
+bottomContentHeaders[1].innerText = siteContent["main-content"]["product-h4"];
+bottomContentHeaders[2].innerText = siteContent["main-content"]["vision-h4"];
 
 let bottomContentText = document.querySelectorAll('.bottom-content .text-content p');
-bottomContentText[0].innerHTML = siteContent["main-content"]["services-content"];
-bottomContentText[1].innerHTML = siteContent["main-content"]["product-content"];
-bottomContentText[2].innerHTML = siteContent["main-content"]["vision-content"];
+bottomContentText[0].innerText = siteContent["main-content"]["services-content"];
+bottomContentText[1].innerText = siteContent["main-content"]["product-content"];
+bottomContentText[2].innerText = siteContent["main-content"]["vision-content"];
 
 let contactHeader = document.querySelector('.contact h4');
-contactHeader.innerHTML =
+contactHeader.innerText =
  siteContent["contact"]["contact-h4"];
 
  let contactInfo =
@@ -95,11 +95,11 @@ contactHeader.innerHTML =
  let contactAddress = siteContent.contact.address.replace('Street ', 'Street<br>')
 
  contactInfo[0].innerHTML =  contactAddress;
- contactInfo[1].innerHTML = siteContent.contact.phone;
- contactInfo[2].innerHTML = siteContent.contact.email;
+ contactInfo[1].innerText = siteContent.contact.phone;
+ contactInfo[2].innerText = siteContent.contact.email;
 
  let footer = document.querySelector('footer p');
- footer.innerHTML = siteContent.footer.copyright;
+ footer.innerText = siteContent.footer.copyright;
 
 
  navLinks.forEach(item => {
@@ -118,7 +118,7 @@ goodbye.href='#';
  nav.prepend(welcome);
 
  const newButton = document.createElement('button');
- newButton.innerHTML = 'Blue Text';
+ newButton.innerText = 'Blue Text';
  newButton.setAttribute('style', 'display: block; cursor: pointer; margin: 10px')
 footer.prepend(newButton);
 newButton.setAttribute('id', 'blue-color-button');
@@ -153,7 +153,7 @@ document.getElementById('blue-color-button').addEventListener('click', function(
   }
 
   const otherButton = document.createElement('button');
-  otherButton.innerHTML = 'Black Text';
+  otherButton.innerText = 'Black Text';
   otherButton.setAttribute('style', 'display: block; cursor: pointer');
   footer.prepend(otherButton);
   otherButton.setAttribute('id', 'black-color-button');
@@ -170,7 +170,7 @@ document.getElementById('blue-color-button').addEventListener('click', function(
 
     });
 const baconButton = document.createElement('button');
-baconButton.innerHTML = 'Bacon Content';
+baconButton.innerText = 'Bacon Content';
 baconButton.setAttribute('style', 'cursor: pointer');
 baconButton.setAttribute('id', 'bacon-button')
 let mainContent = document.querySelector('.main-content');
@@ -178,11 +178,11 @@ mainContent.prepend(baconButton);
 
 document.getElementById('bacon-button').addEventListener('click', function(){
 
-  topContentText[0].innerHTML = bacon["main-content"]["features-content"];
-  topContentText[1].innerHTML = bacon["main-content"]["about-content"];
-  bottomContentText[0].innerHTML = bacon["main-content"]["services-content"];
-  bottomContentText[1].innerHTML = bacon["main-content"]["product-content"];
-  bottomContentText[2].innerHTML = bacon["main-content"]["vision-content"];
+  topContentText[0].innerText = bacon["main-content"]["features-content"];
+  topContentText[1].innerText = bacon["main-content"]["about-content"];
+  bottomContentText[0].innerText = bacon["main-content"]["services-content"];
+  bottomContentText[1].innerText = bacon["main-content"]["product-content"];
+  bottomContentText[2].innerText = bacon["main-content"]["vision-content"];
 
 
   });
