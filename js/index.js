@@ -38,5 +38,74 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+// let logo = document.getElementById("logo-img");
+// logo.src = siteContent["nav"]["img-src"];
+
+
+let nav = document.querySelector('nav');
+console.log(nav);
+
+const newElement1 = document.createElement('a');
+newElement1.innerText = 'Welcome';
+newElement1.href = 'https://google.com';
+newElement1.style.color = "green";
+nav.prepend(newElement1);
+
+const newElement2 = document.createElement('a');
+newElement2.innerText = 'Shopping';
+newElement2.href = 'https://amazon.com';
+newElement2.style.color = "green";
+nav.appendChild(newElement2);
+
+
+let navA = document.querySelectorAll('nav a');
+console.log(navA.length);
+for(let i=1; i < navA.length-1; i++){
+  navA[i].innerText = siteContent["nav"]["nav-item-"+i];
+  navA[i].style.color = "green";
+}
+
+
+
+let headerImg = document.querySelector('#logo-img');
+ headerImg.src = siteContent["nav"]["img-src"];
+
+
+let ctaH1 = document.querySelector('.cta h1');
+ctaH1.innerText = siteContent["cta"]["h1"];
+
+let ctaBut = document.querySelector('.cta button');
+ctaBut.innerText = siteContent["cta"]["button"];
+
+let ctaImg = document.querySelector('#cta-img');
+ctaImg.src = siteContent["cta"]["img-src"];
+
+
+
+let mainH4 = document.querySelectorAll('.main-content h4');
+mainH4[0].innerText = siteContent["main-content"]["features-h4"];
+mainH4[1].innerText = siteContent["main-content"]["about-h4"];
+mainH4[2].innerText = siteContent["main-content"]["services-h4"];
+mainH4[3].innerText = siteContent["main-content"]["product-h4"];
+
+let mainCont = document.querySelectorAll('.main-content p');
+mainCont[0].innerText = siteContent["main-content"]["features-content"];
+mainCont[1].innerText = siteContent["main-content"]["about-content"];
+mainCont[2].innerText = siteContent["main-content"]["services-content"];
+mainCont[3].innerText = siteContent["main-content"]["product-content"];
+
+let mainImg = document.querySelector('#middle-img');
+mainImg.src = siteContent["main-content"]["img-src"];
+
+
+let contactH4 = document.querySelector('.contact h4');
+contactH4.innerText = siteContent["contact"]["contact-h4"];
+
+let contactP = document.querySelectorAll('.contact p');
+contactP[0].innerText = siteContent["contact"]["address"];
+contactP[1].innerText = siteContent["contact"]["phone"];
+contactP[2].innerText = siteContent["contact"]["email"];
+
+let footerP = document.querySelector('footer p');
+footerP.innerText = siteContent["footer"]["copyright"];
+
