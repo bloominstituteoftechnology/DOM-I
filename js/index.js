@@ -40,3 +40,102 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//Selectors 
+
+let nav = document.querySelector('nav');
+let navList = document.querySelectorAll('nav a');
+
+let navImg = document.querySelector('header img');
+
+let ctaH1 = document.querySelector('.cta h1 ');
+let ctaButton = document.querySelector('.cta button');
+let ctaImg = document.querySelector('.cta img');
+let middleImg = document.querySelector('#middle-img');
+
+//   NAV   \\
+for(let i = 0; i < navList.length; i++){
+  navList[i].innerText = siteContent['nav'][Object.keys(siteContent['nav'])[i]];
+  navList[i].style.color = 'green';
+}
+
+navImg.src = siteContent['nav']['img-src'];
+
+//Create and add children to nav
+let newItemA = document.createElement('a');
+let newItemB = document.createElement('a');
+newItemA.innerText = 'Blog';
+newItemB.innerText = 'News';
+newItemA.style.color = 'green';
+newItemB.style.color = 'green';
+
+
+nav.appendChild(newItemA);
+nav.prepend(newItemB);
+
+
+//    CTA    \\
+
+//Reset h1 text with breaks \\
+
+ctaH1.innerText = siteContent['cta']['h1'].split(' ').join('\n');;
+ctaButton.innerText = siteContent['cta']['button'];
+ctaImg.src = siteContent['cta']['img-src'];
+
+
+
+
+//   Text Content  \\
+
+// Grab h4 tags
+let h4ElemList = document.querySelectorAll('.text-content h4');
+
+//Set reference for h4 keys
+let h4ContentArray = ['features-h4',
+                      'about-h4', 
+                      'services-h4', 
+                      'product-h4', 
+                      'vision-h4'];
+
+//Give h4s an ID
+for(let i = 0; i < h4ElemList.length; i++){
+  h4ElemList[i].setAttribute('id', h4ContentArray[i]);
+
+}
+
+
+//Set innerText for h4s
+for(let i = 0; i < h4ElemList.length; i++){
+   h4ElemList[i].innerText = siteContent['main-content'][h4ElemList[i].id]
+}
+
+
+//Grab p tags 
+let pElemList = document.querySelectorAll('.text-content p');
+
+//Set reference for p content
+
+let pContentArray = ['features-content',
+                     'about-content',
+                     'services-content', 
+                     'product-content',
+                     'vision-content'];
+                     
+
+//Give ps an ID
+for(let i = 0; i < pElemList.length; i++){
+  pElemList[i].setAttribute('id', pContentArray[i]);
+}
+
+//Set innerText for paragraphs
+for(let i = 0; i < pElemList.length; i++){
+  pElemList[i].innerText = siteContent['main-content'][pElemList[i].id]
+}
+
+//middle img
+
+middleImg.src = siteContent['main-content']['middle-img-src'];
+
+
+
+
