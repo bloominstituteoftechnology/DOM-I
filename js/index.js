@@ -38,5 +38,56 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+let logo = document.getElementById("logo-img"); //
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let aTags = document.querySelectorAll("a");
+let aTagsArr = ["Services", "Product", "Vision", "Features", "About", "Contact"]
+for (let i = 0; i < aTags.length; i++) {
+  aTags[i].innerText = aTagsArr[i];
+}
+
+let ctaTextH1 = document.querySelector(".cta .cta-text h1");
+ctaTextH1.innerText = siteContent.cta.h1;
+
+let ctaTextButton = document.querySelector(".cta .cta-text button");
+ctaTextButton.innerText = siteContent.cta.button;
+
+let ctaImg = document.getElementById("cta-img"); //
+ctaImg.setAttribute('src', siteContent.cta["img-src"])
+
+let mainH4 = document.querySelectorAll(".main-content h4");
+mainH4[0].innerHTML = siteContent["main-content"]["features-h4"];
+
+let mainP = document.querySelectorAll(".main-content p");
+mainP[0].innerText = siteContent["main-content"] ["features-content"];
+
+mainH4[1].innerText = siteContent["main-content"]["about-h4"];
+
+mainP[1].innerText = siteContent["main-content"]["about-content"];
+
+let middleImg = document.getElementById("middle-img"); //
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+mainH4[2].innerText = siteContent["main-content"]["services-h4"];
+
+mainP[2].innerText = siteContent["main-content"]["services-content"];
+
+mainH4[3].innerText = siteContent["main-content"]["product-h4"];
+
+mainP[3].innerText = siteContent["main-content"]["product-content"];
+
+mainH4[4].innerText = siteContent["main-content"]["vision-h4"];
+
+mainP[4].innerText = siteContent["main-content"]["vision-content"];
+
+let contactH4 = document.querySelector(".container .contact h4");
+contactH4 = siteContent.contact["contact-h4"];
+
+let contactP = document.querySelectorAll(".container .contact p");
+contactP[0].innerText = siteContent.contact.address;
+contactP[1].innerText = siteContent.contact.phone;
+contactP[2].innerText = siteContent.contact.email;
+
+let footerP = document.querySelector("footer p");
+footerP.innerText = siteContent.footer.copyright;
