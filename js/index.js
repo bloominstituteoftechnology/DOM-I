@@ -105,3 +105,6 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
   const copyright = siteContent.footer.copyright;
   document.querySelector('footer > p').innerText = copyright;
 }
+
+
+document.querySelectorAll('nav> a').forEach(e => e.style.color = 'green');
