@@ -17,6 +17,16 @@ function timer() {
 }
 
 const startButton = document.querySelector('button');
+const resetButton = document.querySelectorAll('button')[1];
+let currentTime = 0;
+
+function displayTimer(displayTime) {
+  displayTime = currentTime.toString();
+  msTens.innerText = displayTime[displayTime.length -1];
+  msHundreds.innerText = displayTime[displayTime.length -2] || 0;
+  secondOnes.innerText = displayTime[displayTime.length -3] || 0;
+  secondTens.innerText = displayTime[displayTime.length -4] || 0;
+}
 
 function runTimer() {
   document.body.style.color = 'black';
@@ -26,15 +36,19 @@ function runTimer() {
     currentTime = newTimer();
     if (currentTime >= 1000) {
       document.body.style.color = 'red';
-      startButton.removeAttribute('disabled');
       clearInterval(interval);
     }
-    displayTime = currentTime.toString();
-    //console.log(displayTime);
-    msTens.innerText = displayTime[displayTime.length -1];
-    msHundreds.innerText = displayTime[displayTime.length -2] || 0;
-    secondOnes.innerText = displayTime[displayTime.length -3] || 0;
-    secondTens.innerText = displayTime[displayTime.length -4] || 0;
+    displayTimer(currentTime);
+
+    resetButton.addEventListener('click', resetTimer);
+
+    function resetTimer() {
+      document.body.style.color = 'black';
+      startButton.removeAttribute('disabled');
+      clearInterval(interval);
+      currentTime = 0;
+      displayTimer(currentTime);
+    }
   }, 10);
 }
 
