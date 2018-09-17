@@ -101,10 +101,9 @@ contactHeader.innerText =
  let footer = document.querySelector('footer p');
  footer.innerText = siteContent.footer.copyright;
 
-
- navLinks.forEach(item => {
-   item.setAttribute('style', 'color: green');
- })
+navLinks.forEach(item => {
+  item.setAttribute('style', 'color: green');
+})
 
 const welcome = document.createElement('a');
 welcome.innerText = 'Welcome';
@@ -116,6 +115,11 @@ goodbye.href='#';
  let nav = document.querySelector('nav');
  nav.append(goodbye);
  nav.prepend(welcome);
+
+ let newNavLinks = document.querySelectorAll('nav a');
+  newNavLinks.forEach(item => {
+    item.setAttribute('style', 'color: green');
+  })
 
  const newButton = document.createElement('button');
  newButton.innerText = 'Blue Text';
