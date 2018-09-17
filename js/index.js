@@ -95,6 +95,9 @@ contactHeader.innerHTML =
  footer.innerHTML = siteContent["footer"]["copyright"]
 
 
+ navLinks.forEach(item => {
+   item.setAttribute('style', 'color: green');
+ })
 
 const welcome = document.createElement('a');
 welcome.innerText = 'Welcome';
@@ -107,7 +110,15 @@ goodbye.href='#';
  nav.append(goodbye);
  nav.prepend(welcome);
 
- let navLinksArray = Array.from(document.querySelectorAll('nav a'));
- for (let i = 0; i < navLinksArray.length; i++) {
-   navLinksArray[i].setAttribute('style', 'color:green')
- }
+ const newButton = document.createElement('button');
+ newButton.innerHTML = 'Change Contact Color';
+ newButton.setAttribute('style', 'display: block; cursor: pointer')
+footer.prepend(newButton);
+newButton.setAttribute('id', 'color-button');
+
+
+document.getElementById('color-button').addEventListener('click', function(){
+  contactInfo.forEach(item => {
+    item.setAttribute('style', 'color: red');
+  });
+})
