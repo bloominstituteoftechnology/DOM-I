@@ -37,15 +37,45 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
-// let logo = document.getElementById("logo-img");
-// logo.setAttribute('src', siteContent["nav"]["img-src"]);
+let logo = document.getElementById("logo-img");
+logo.setAttribute('src', siteContent["nav"]["img-src"])
+ 
+ const navItems = document.querySelectorAll("a");
+//   for(let i= 0; i < [nav].length; i++) {
+//     navItems[i].innerHTML = siteContent[`nav`][`nav-item-${i}`];
+// } 
 
-// let anchors = document.querySelectorAll("nav a");
-// for (let i = 0; i < siteContent.nav.length; i++);
-// console.log(anchor);
 
-
-// console.log(anchors);
-
+navItems[0].innerHTML = siteContent["nav"]["nav-item-1"]
+navItems[1].innerHTML = siteContent["nav"]["nav-item-2"]
+navItems[2].innerHTML = siteContent["nav"]["nav-item-3"]
+navItems[3].innerHTML = siteContent["nav"]["nav-item-4"]
+navItems[4].innerHTML = siteContent["nav"]["nav-item-5"]
+navItems[5].innerHTML = siteContent["nav"]["nav-item-6"]
+ 
+ const mainHeading = document.querySelector("h1");
+mainHeading.innerHTML = siteContent["cta"]["h1"]
+ const mainBtn = document.querySelector("Button");
+mainBtn.innerHTML = siteContent["cta"]["button"]
+ const mainImg = document.getElementById("cta-img");
+mainImg.setAttribute('src', siteContent["cta"]["img-src"])
+ const allHeadings = document.getElementsByTagName("h4");
+allHeadings[0].innerHTML = siteContent["main-content"]["features-h4"]
+allHeadings[1].innerHTML = siteContent["main-content"]["about-h4"]
+allHeadings[2].innerHTML = siteContent["main-content"]["services-h4"]
+allHeadings[3].innerHTML = siteContent["main-content"]["product-h4"]
+allHeadings[4].innerHTML = siteContent["main-content"]["vision-h4"]
+allHeadings[5].innerHTML = siteContent["contact"]["contact-h4"]
+const middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+ const paragraphs = document.getElementsByTagName("p");
+paragraphs[0].innerHTML = siteContent["main-content"]["features-content"]
+paragraphs[1].innerHTML = siteContent["main-content"]["about-content"]
+paragraphs[2].innerHTML = siteContent["main-content"]["services-content"]
+paragraphs[3].innerHTML = siteContent["main-content"]["product-content"]
+paragraphs[4].innerHTML = siteContent["main-content"]["vision-content"]
+paragraphs[5].innerHTML = siteContent["contact"]["address"]
+paragraphs[6].innerHTML = siteContent["contact"]["phone"]
+paragraphs[7].innerHTML = siteContent["contact"]["email"]
+paragraphs[8].innerHTML = siteContent["footer"]["copyright"]
 
