@@ -46,4 +46,6 @@ for (i = 0; i < nav.length; i++) {
   nav[i].innerHTML = siteContent['nav'][`nav-item-${i+1}`];
 }
 
+const topHeading = document.querySelector('h1');
+topHeading.innerHTML = siteContent['cta']['h1'];
 
