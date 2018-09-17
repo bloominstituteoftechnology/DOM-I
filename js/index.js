@@ -95,3 +95,23 @@ contact.childNodes[7].innerText = siteContent["contact"]["email"];
 
 let footer = document.querySelector("footer");
 footer.childNodes[1].innerText = siteContent["footer"]["copyright"];
+
+cta.childNodes[3].addEventListener("click", reverse);
+function reverse() {
+  logo.style.order = "-1";
+  logo.style["margin-right"] = "91px";
+  
+  let navigation = document.querySelector("header nav");
+  navigation.style["flex-direction"] = "row-reverse";
+
+  ctaIMG.style["order"] = "-1";
+  ctaIMG.style["margin-right"] = "82px";
+
+  let topContent = document.querySelector(".top-content");
+  topContent.style["flex-direction"] = "row-reverse";
+
+  let bottomContent = document.querySelector(".bottom-content");
+  bottomContent.style["flex-direction"] = "row-reverse";
+
+  contact.style["text-align"] = "right";
+}
