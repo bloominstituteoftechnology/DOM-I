@@ -44,22 +44,36 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // Navigation
 let navService = document.querySelector('a');
-navService.innerHTML = 'Service';
+navService.innerHTML = siteContent["nav"]["nav-item-1"];
 
 let navProduct = document.querySelectorAll('a')[1];
-navProduct.innerHTML = 'Product';
+navProduct.innerHTML = siteContent["nav"]["nav-item-2"];
 
 let navVision = document.querySelectorAll('a')[2];
-navVision.innerHTML = 'Vision';
+navVision.innerHTML = siteContent["nav"]["nav-item-3"];
 
 let navFeatures = document.querySelectorAll('a')[3];
-navFeatures.innerHTML = 'Features';
+navFeatures.innerHTML = siteContent["nav"]["nav-item-4"];
 
 let navAbout = document.querySelectorAll('a')[4];
-navAbout.innerHTML = 'About';
+navAbout.innerHTML = siteContent["nav"]["nav-item-5"];
 
 let navContact = document.querySelectorAll('a')[5];
-navContact.innerHTML = 'Contact';
+navContact.innerHTML = siteContent["nav"]["nav-item-6"];
+
+let navBar = document.querySelector('.container header nav')
+
+let newNav = document.createElement('a');
+newNav.innerHTML = 'Support Us';
+navBar.appendChild(newNav);
+
+let newerNav = document.createElement('a');
+newerNav.innerHTML = 'Help!';
+navBar.prepend(newerNav);
+
+let navLinks = document.querySelectorAll('a');
+navLinks.forEach(item => item.style.color = 'green');
+
 
 // CTA
 let ctaTitle = document.querySelector('.cta .cta-text h1');
