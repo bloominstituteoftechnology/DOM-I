@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM<br> Is<br> Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -95,3 +95,19 @@ email.innerHTML =  siteContent["contact"]["email"];
 // Footer
 const footer= document.getElementsByTagName("p")[8];
 footer.innerHTML =  siteContent["footer"]["copyright"];
+
+//Task 4
+let aElements = document.getElementsByTagName('a');
+ for (let i = 0; i < aElements.length; i++) {
+  aElements[i].style.color = 'green';
+}
+//Task 4 Pt 2
+const Portfolio = document.createElement("a")
+Portfolio.innerHTML = "Portfolio";
+Portfolio.style.color = "green";
+const nav = document.querySelector("nav");
+nav.append(Portfolio);
+ const home = document.createElement("a")
+home.innerHTML = "Home";
+home.style.color = "green";
+nav.prepend(home);
