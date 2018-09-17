@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM<br> Is<br> Awesome",
+    "h1": "DOM \nIs \nAwesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -59,6 +59,12 @@ nav6.innerHTML = siteContent["nav"]["nav-item-6"]
 let ctaText = document.querySelector(".cta-text h1");
 // ctaText.innerText = ""
 ctaText.innerText = siteContent["cta"]["h1"];
+
+// let ctaWords = document.querySelector(".cta-text h1");
+// ctaWords.innerHTML = siteContent['cta']['h1'].split(' ');
+// ctaText.innerHTML += `${item}<br>`;
+
+
 // Img Round
 let ctaImg = document.querySelector('.cta img');
 ctaImg.src = siteContent["cta"]["img-src"];
