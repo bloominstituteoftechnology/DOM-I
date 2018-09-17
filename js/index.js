@@ -134,7 +134,7 @@ const placeholder = `We'll put some happy little leaves here and there. Let's ma
 
 
 link2.addEventListener('click', function() {
-  ctaText.innerHTML = 'This is <br> hero copy';
+  ctaText.innerHTML = 'Bob Ross <br> Takeover';
   link2.innerText = 'Site Changed!';
   link2.style.color = 'red';
   let paragraphs = document.querySelectorAll('.main-content p');
