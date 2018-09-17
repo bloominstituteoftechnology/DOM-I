@@ -74,3 +74,9 @@ mainP[2].innerText = siteContent["main-content"]["services-content"];
 mainP[3].innerText = siteContent["main-content"]["product-content"];
 mainP[4].innerText = siteContent["main-content"]["vision-content"];
 
+let topImage = document.getElementById("middle-img");
+topImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+let contactHeading = document.querySelectorAll('.contact h4');
+contactHeading[0].innerText = siteContent["contact"]["contact-h4"];
+
