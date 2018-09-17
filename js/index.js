@@ -62,3 +62,21 @@ let ctaImg = document.querySelector('#cta-img');
 ctaImg.setAttribute('src', siteContent['cta']['img-src']);
 
 //main content
+const contentHeaders = document.querySelectorAll('.text-content h4');
+const contentParagraphs = document.querySelectorAll('.text-content p');
+
+contentHeaders[0].innerHTML = siteContent['main-content']['features-h4'];
+contentHeaders[1].innerHTML = siteContent['main-content']['about-h4'];
+contentHeaders[2].innerHTML = siteContent['main-content']['services-h4'];
+contentHeaders[3].innerHTML = siteContent['main-content']['product-h4'];
+contentHeaders[4].innerHTML = siteContent['main-content']['vision-h4'];
+
+contentParagraphs[0].innerHTML = siteContent['main-content']['features-content'];
+contentParagraphs[1].innerHTML = siteContent['main-content']['about-content'];
+contentParagraphs[2].innerHTML = siteContent['main-content']['services-content'];
+contentParagraphs[3].innerHTML = siteContent['main-content']['product-content'];
+contentParagraphs[4].innerHTML = siteContent['main-content']['vision-content'];
+
+const middleImg = document.getElementById('#middle-img');
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
