@@ -88,3 +88,16 @@ let mainParagraphs = document.querySelectorAll(".main-content p")
 for (let i = 0; i < mainParagraphs.length; i++) {
     mainParagraphs[i].innerHTML = descriptionParagraphs[i];
 }
+
+//contact
+
+let contactCont = ["123 Way 456 Street<br>Somewhere USA", "1-888-888-8888", "sales@greatidea.io"];
+let contactInfo = document.querySelectorAll(".contact p");
+for (let i = 0; i < contactInfo.length; i++) {
+    contactInfo[i].innerHTML = contactCont[i];
+}
+
+//footer
+
+let footerText = document.querySelector("footer p");
+footerText.innerHTML = "Copyright Great Idea! 2018";
