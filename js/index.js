@@ -71,3 +71,20 @@ mainHeading.innerHTML = 'Dom<br>Is<br>Awesome';
 const ctaButton = document.querySelector('.cta-text button');
 ctaButton.innerHTML = 'Get Started';
 
+//====================================================================================
+//  MAIN CONTENT
+//====================================================================================
+// Features Heading and Paragraphs
+const featuresHeading = document.querySelector('.top-content .text-content:first-child h4');
+featuresHeading.innerHTML = siteContent['main-content']['features-h4'];
+
+const featuresContent = document.querySelector('.top-content .text-content:first-child p');
+featuresContent.innerHTML = siteContent['main-content']['features-content'];
+
+// About Heading and Paragraphs
+const aboutHeading = document.querySelector('.top-content .text-content:last-child h4');
+aboutHeading.innerHTML = siteContent['main-content']['about-h4'];
+
+const aboutContent = document.querySelector('.top-content .text-content:last-child p');
+aboutContent.innerHTML = siteContent['main-content']['about-content'];
+
