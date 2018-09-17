@@ -13,16 +13,12 @@ function timer() {
     secondOnes.innerHTML = 0;
     secondTens.innerHTML = 0;
 
-    const interval = window.setInterval(function () {
-        if (counter === 9) {
-            clearInterval(interval);
-            counter = counter + 1;
-            msHundreds.innerHTML = 1;
-            msTens.innerHTML = counter++;
-            return;
-        }
-        msTens.innerHTML = counter++;
-    }, 100);
+    window.onload = function () {
+        let i = 0;
+        setInterval(function () {
+            msTens.innerHTML = `${i++}`;
+        }, 100);
+    }
 
     /**
      * TODO: Timer counts to 10.
