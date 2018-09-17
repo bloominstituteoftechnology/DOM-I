@@ -55,3 +55,11 @@ topBtn.innerHTML = siteContent['cta']['button'];
 const topImg = document.getElementById('cta-img');
 topImg.setAttribute('src', siteContent['cta']['img-src']);
 
+const heading = document.getElementsByTagName('h4');
+heading[0].innerHTML = siteContent['main-content']['features-h4'];
+heading[1].innerHTML = siteContent['main-content']['about-h4'];
+heading[2].innerHTML = siteContent['main-content']['services-h4'];
+heading[3].innerHTML = siteContent['main-content']['product-h4'];
+heading[4].innerHTML = siteContent['main-content']['vision-h4'];
+heading[5].innerHTML = siteContent['contact']['contact-h4'];
+
