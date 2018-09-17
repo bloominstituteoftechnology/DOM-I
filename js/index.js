@@ -63,6 +63,18 @@ navLinks[5].innerText = siteContent.nav["nav-item-6"];
 const headerLogo = document.querySelector("#logo-img");
 headerLogo.setAttribute("src", siteContent["nav"]["img-src"]);
 
+const firstNav = document.createElement("a");
+firstNav.innerHTML = '<a href="#" style="color: green">First</a>';
+
+const lastNav = document.createElement("a");
+lastNav.innerHTML = "<a href='#' style='color: green'>Last</a>";
+
+const nav = document.querySelector("nav");
+nav.prepend(firstNav);
+nav.appendChild(lastNav);
+
+navLinks.forEach(link => (link.style.color = "green"));
+
 //cta (h1, button, img)
 const ctaText = document.querySelector(".cta-text h1");
 const ctaButton = document.querySelector(".cta-text button");
