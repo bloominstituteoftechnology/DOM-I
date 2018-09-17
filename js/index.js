@@ -60,6 +60,26 @@ navBar[3].innerHTML = siteContent['nav']['nav-item-4'];
 navBar[4].innerHTML = siteContent['nav']['nav-item-5'];
 navBar[5].innerHTML = siteContent['nav']['nav-item-6'];
 
+const newATag = document.createElement('a');
+const newATag2 = document.createElement('a');
+const mainNav = document.querySelector('nav');
+newATag.innerText = "Welcome";
+newATag2.innerText = "Don't Click";
+newATag.href = '#';
+newATag2.href = '#';
+mainNav.prepend(newATag);
+mainNav.appendChild(newATag2);
+
+const styling = document.querySelectorAll('a');
+navBar[0].style.color = 'green';
+navBar[1].style.color = 'green';
+navBar[2].style.color = 'green';
+navBar[3].style.color = 'green';
+navBar[4].style.color = 'green';
+navBar[5].style.color = 'green';
+// navBar[6].style.color = 'green';
+// navBar[7].style.color = 'green';
+
 //  CTA
 
 let domIs = document.querySelector('h1');
