@@ -95,7 +95,7 @@ mainCont[2].innerText = siteContent["main-content"]["services-content"];
 mainCont[3].innerText = siteContent["main-content"]["product-content"];
 
 let mainImg = document.querySelector('#middle-img');
-mainImg.src = siteContent["main-content"]["img-src"];
+mainImg.src = siteContent["main-content"]["middle-img-src"];
 
 
 let contactH4 = document.querySelector('.contact h4');
