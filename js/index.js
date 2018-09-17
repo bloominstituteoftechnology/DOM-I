@@ -59,10 +59,11 @@ nav6.innerHTML = siteContent["nav"]["nav-item-6"]
 let ctaText = document.querySelector(".cta-text h1");
 // ctaText.innerText = ""
 ctaText.innerText = siteContent["cta"]["h1"];
+// Img Round
 let ctaImg = document.querySelector('.cta img');
 ctaImg.src = siteContent["cta"]["img-src"];
 
-// Img
+// Img Snippet
 let middleImg = document.querySelector('.middle-img');
 middleImg.src = siteContent["main-content"]["middle-img-src"];
 
@@ -104,3 +105,13 @@ contactText[2].innerHTML = siteContent["contact"]["email"];
 // footer
 let footer = document.querySelector('footer p');
 footer.innerHTML = siteContent["footer"]["copyright"]
+
+
+// Add appendChild
+const newNavItem = document.createElement("a");
+const navNew = document.querySelector("nav");
+
+newNavItem.innerText = "Blog";
+newNavItem.href = "https://google.com"
+
+navNew.appendChild(newNavItem);
