@@ -56,7 +56,6 @@ middleImg.setAttribute('src', siteContent['main-content']["middle-img-src"]);
   //for loop so I don't have to write it all out?
 
   let topNavLinks = document.querySelectorAll('a');
-  console.log(topNavLinks);
   for(let i = 0;i<topNavLinks.length;i++){
     topNavLinks[i].innerText = siteContent["nav"][`nav-item-${i+1}`]
   }
@@ -69,9 +68,55 @@ middleImg.setAttribute('src', siteContent['main-content']["middle-img-src"]);
   getStartedBtn.innerText = `${siteContent["cta"]["button"]}`;
 }
 {//main-content
-  
-}
+  //h4 headings
+  let featuresHeading = document.querySelector('.text-content h4');
+  featuresHeading.innerText = `${siteContent["main-content"]["features-h4"]}`
 
+  let aboutHeading = document.querySelector('.text-content:nth-child(2) h4');
+  aboutHeading.innerText = `${siteContent["main-content"]["about-h4"]}`
+
+  let servicesHeading = document.querySelector('.bottom-content .text-content:nth-child(1) h4');
+  servicesHeading.innerText = `${siteContent["main-content"]["services-h4"]}`
+
+  let productHeading = document.querySelector('.bottom-content .text-content:nth-child(2) h4');
+  productHeading.innerText = `${siteContent["main-content"]["product-h4"]}`
+
+  let visionHeading = document.querySelector('.bottom-content .text-content:nth-child(3) h4');
+  visionHeading.innerText = `${siteContent["main-content"]["vision-h4"]}`
+  //End h4 headings
+
+  //Content
+  let featuresContent = document.querySelector('.text-content p');
+  featuresContent.innerText = `${siteContent["main-content"]["features-content"]}`
+
+  let aboutContent = document.querySelector('.text-content:nth-child(2) p');
+  aboutContent.innerText = `${siteContent["main-content"]["about-content"]}`
+
+  let servicesContent = document.querySelector('.bottom-content .text-content:nth-child(1) p');
+  servicesContent.innerText = `${siteContent["main-content"]["services-content"]}`
+
+  let productContent = document.querySelector('.bottom-content .text-content:nth-child(2) p');
+  productContent.innerText = `${siteContent["main-content"]["product-content"]}`
+
+  let visionContent = document.querySelector('.bottom-content .text-content:nth-child(3) p');
+  visionContent.innerText = `${siteContent["main-content"]["vision-content"]}`
+}
+{//Contact Section
+  let contactHeading = document.querySelector('.contact h4');
+  contactHeading.innerText = `${siteContent["contact"]["contact-h4"]}`;
+
+  //p tags
+  let addressTag = document.querySelector('.contact p:nth-child(2)');
+  let numberTag = document.querySelector('.contact p:nth-child(3)');
+  let emailTag = document.querySelector('.contact p:nth-child(4)');
+  addressTag.innerText = `${siteContent["contact"]["address"]}`;
+  numberTag.innerText = `${siteContent["contact"]["phone"]}`;
+  emailTag.innerText = `${siteContent["contact"]["email"]}`;
+}
+{//Footer
+  let footer = document.querySelector('footer p');
+  footer.innerText = `${siteContent["footer"]["copyright"]}`
+}
 
 
 
