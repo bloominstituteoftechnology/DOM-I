@@ -87,6 +87,13 @@ ctaHeader.innerHTML = siteContent['cta']['h1'];
 let ctaButton = document.querySelector('.cta button');
 ctaButton.innerText = siteContent['cta']['button'];
 
+ctaButton.style.cursor = 'pointer';
+ctaButton.addEventListener('click', function() {
+  ctaHeader.innerHTML = 'You clicked the Button!'
+})
+
+
+
 let ctaBanner = document.getElementById("cta-img");
 ctaBanner.setAttribute('src', siteContent['cta']['img-src']);
 
