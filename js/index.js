@@ -51,4 +51,11 @@ codeSnippet.src = siteContent['cta']['img-src'];
 const codeAcrossScreen  = document.getElementById('middle-img');
 codeAcrossScreen.src = siteContent['main-content']['middle-img-src'];
 
+//====================================================================================
+//  NAVIGATION
+//====================================================================================
+
+const linkKeys = Object.values(siteContent['nav']);
+const navItems = document.querySelectorAll('a');
+navItems.forEach((item, index) => item.innerHTML = linkKeys[index]);
 
