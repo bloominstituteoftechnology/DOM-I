@@ -2,6 +2,7 @@ const sTen = document.querySelector("#secondTens");
 const sOne = document.querySelector("#secondOnes");
 const msHun = document.querySelector("#msHundreds");
 const msTen = document.querySelector("#msTens");
+const allDigits = document.querySelectorAll("#digit");
 
 function counter() {
   let num = 0;
@@ -13,22 +14,14 @@ function counter() {
 }
 let newCounter = counter();
 
-var sTenCount = setInterval(sTenTimer, 1000);
 var sOneCount = setInterval(sOneTimer, 1000);
 function sOneTimer() {
+  sTen.innerHTML = 0;
   var sOneTime = newCounter();
   sOne.innerHTML = sOneTime;
   if (sOneTime === 10) {
     clearTimeout(sOneCount);
-    sOne.innerHTML = 0;
-  }
-}
-
-function sTenTimer() {
-  var sTenTime = newCounter();
-  sTen.innerHTML = sTenTime;
-  if (sTenTime === 10) {
-    clearTimeout(sTenCount);
-    sTenCount.innerHTML = 1;
+    sTen.style.display = "none";
+    sOne.style.color = "red";
   }
 }
