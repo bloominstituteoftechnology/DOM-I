@@ -56,10 +56,6 @@ newNavGuy.style.color = "mediumSpringGreen"
 newNavGuy.style.textShadow = "2px 2px 2px green"
 navBar.appendChild(newNavGuy);
 
-
-
-
-
 // navItems[0].innerText = siteContent["nav"]["nav-item-1"]
 // navItems[1].innerText = siteContent["nav"]["nav-item-2"]
 // navItems[2].innerText = siteContent["nav"]["nav-item-3"]
