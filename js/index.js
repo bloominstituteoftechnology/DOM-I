@@ -43,12 +43,19 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let navLinks = document.querySelectorAll('nav a'
 );
-navLinks[0].innerText = siteContent['nav']['nav-item-1']
+navLinks[0].innerText.style = siteContent['nav']['nav-item-1']
 navLinks[1].innerText = siteContent['nav']['nav-item-2']
 navLinks[2].innerText = siteContent['nav']['nav-item-3']
 navLinks[3].innerText = siteContent['nav']['nav-item-4']
 navLinks[4].innerText = siteContent['nav']['nav-item-5']
 navLinks[5].innerText = siteContent['nav']['nav-item-6']
+navLinks[0].style = 'color: green;';
+navLinks[1].style = 'color: green;';
+navLinks[2].style = 'color: green;';
+navLinks[3].style = 'color: green;';
+navLinks[4].style = 'color: green;';
+navLinks[5].style = 'color: green;';
+
 
 let ctaTitle = document.querySelector('.cta .cta-text h1');
 ctaTitle.innerText = siteContent['cta']['h1']
@@ -91,17 +98,20 @@ contactContent[2].innerText = siteContent['contact']['email']
 const copyFooter = document.querySelector('footer p');
 copyFooter.innerText = siteContent['footer']['copyright']
 
-navLinks.style.color = 'green';
+let blog = document.createElement('a');
+let mainNav = document.querySelector('header nav');
+blog.innerText = 'Blog';
+blog.href = '#';
+blog.style = 'color: green;';
+mainNav.appendChild(blog);
 
-const newElement1 = document.createElement('a');
-newElement1.innerText = 'Blog';
-newElement1.href - '#';
-navLinks.append(newElement1);
 
-const newElement2 = document.createElement('a');
-newElement1.innerText = 'Bookstore';
-newElement1.href - '#';
-navLinks.append(newElement2);
+
+let bookstore = document.createElement('a');
+bookstore.innerText = 'Bookstore';
+bookstore.href = '#';
+bookstore.style = 'color: green;';
+mainNav.prepend(bookstore);
 
 
 
