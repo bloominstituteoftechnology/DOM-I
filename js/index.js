@@ -14,26 +14,26 @@ const siteContent = {
     "img-src": "img/header-img.png"
   },
   "main-content": {
-    "features-h4":"Features",
+    "features-h4": "Features",
     "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "about-h4":"About",
+    "about-h4": "About",
     "about-content": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "middle-img-src": "img/mid-page-accent.jpg",
-    "services-h4":"Services",
+    "services-h4": "Services",
     "services-content": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "product-h4":"Product",
+    "product-h4": "Product",
     "product-content": "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "vision-h4":"Vision",
+    "vision-h4": "Vision",
     "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
   },
   "contact": {
-    "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
-    "phone" : "1 (888) 888-8888",
-    "email" : "sales@greatidea.io",
+    "contact-h4": "Contact",
+    "address": "123 Way 456 Street Somewhere, USA",
+    "phone": "1 (888) 888-8888",
+    "email": "sales@greatidea.io",
   },
   "footer": {
-    "copyright" : "Copyright Great Idea! 2018"
+    "copyright": "Copyright Great Idea! 2018"
   },
 };
 
@@ -50,15 +50,15 @@ for (let i = 0; i < navListArray.length; i++) {
 
 //Update cta
 
-  //Update cta h1
+//Update cta h1
 let ctaH1 = document.querySelector(".container .cta .cta-text h1");
 ctaH1.innerHTML = siteContent["cta"]["h1"];
 
-  //Update button
+//Update button
 let ctaButton = document.querySelector(".container .cta .cta-text button");
-  ctaButton.innerHTML = siteContent["cta"]["button"];
+ctaButton.innerHTML = siteContent["cta"]["button"];
 
-  //update img src for code snippet
+//update img src for code snippet
 let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
 
@@ -72,9 +72,9 @@ let tCPArray = Array.from(textContentP);
 //Grab all the keys from the sitecontent object
 let keysArr = Object.keys(siteContent["main-content"]);
 //Filter out the h4 related keys
-let keysH4 = keysArr.filter( item => item.includes("h4"));
+let keysH4 = keysArr.filter(item => item.includes("h4"));
 //Filter out the p related keys
-let keysP = keysArr.filter( item => item.includes("content")); 
+let keysP = keysArr.filter(item => item.includes("content"));
 //Loop over the h4 elements and set them equal to corresponding key in the h4 sitecontent keys array 
 //Also loop over the p elements and set them equal to their corresponding p keys from sitecontent
 for (let i = 0; i < tCH4Array.length; i++) {
@@ -84,3 +84,19 @@ for (let i = 0; i < tCH4Array.length; i++) {
 //main content middle img
 let mainImg = document.getElementById("middle-img");
 mainImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+//contact section
+//contact h4
+let contactH4 = document.querySelector(".contact h4");
+contactH4.innerHTML = siteContent["contact"]["contact-h4"];
+//contact p's
+let contactP = document.querySelectorAll(".contact p");
+let contactPArray = Array.from(contactP);
+let contactKeys = Object.keys(siteContent["contact"]);
+for (let i = 0; i < contactPArray.length; i++) {
+  contactPArray[i].innerHTML = siteContent["contact"][contactKeys[i + 1]];
+}
+
+//footer 
+let footerP = document.querySelector("footer p");
+footerP.innerHTML = siteContent["footer"]["copyright"];
