@@ -92,9 +92,9 @@ footerP[0].innerText = siteContent["footer"]["copyright"];
 
 //stretch styles
 //It works just wanted the page to look normal.
-let mainNav = document.querySelector('nav');
+/*let mainNav = document.querySelector('nav');
 mainNav.style.flexDirection = 'column';
-mainNav.style.alignItems = 'center';
+mainNav.style.alignItems = 'center';*/
 
 navItems.forEach(item => item.style.color = 'blue');
 
