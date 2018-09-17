@@ -50,6 +50,7 @@ navLinks[3].innerText = siteContent.nav["nav-item-4"]
 navLinks[4].innerText = siteContent.nav["nav-item-5"]
 navLinks[5].innerText = siteContent.nav["nav-item-6"]
 
+
 //change color to green
 navLinks[0].style.color = 'green'
 navLinks[1].style.color = 'green'
@@ -106,3 +107,11 @@ mainContentImg.src = siteContent["main-content"]["middle-img-src"]
 //footer
 let footer = document.querySelector('footer')
 footer.innerText = siteContent.footer.copyright;
+
+//stretch
+function changeCta() {
+  button.innerText = 'clicked!'
+}
+button.addEventListener('click', changeCta)
+
+navLinks[1].style.border = '1px solid red';
