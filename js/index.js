@@ -42,7 +42,14 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 
-
+//NAV SECTION
+let navMenu = document.querySelectorAll('header nav a ');
+navMenu[0].innerText = siteContent['nav']['nav-item-1'];
+navMenu[1].innerText = siteContent['nav']['nav-item-2'];
+navMenu[2].innerText = siteContent['nav']['nav-item-3'];
+navMenu[3].innerText = siteContent['nav']['nav-item-4'];
+navMenu[4].innerText = siteContent['nav']['nav-item-5'];
+navMenu[5].innerText = siteContent['nav']['nav-item-6'];
 
 
 
