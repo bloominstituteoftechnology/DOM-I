@@ -51,9 +51,8 @@ const navItems = document.querySelectorAll("nav a");
 
 for (let i = 0; i < navItems.length; i++) {
   navItems[i].id = `nav-item-${i + 1}`;
-  navItems[i].innerText = siteContent["nav"][`nav-item-${i}`];
+  navItems[i].innerText = siteContent["nav"][`nav-item-${i + 1}`];
 }
-
 
 /*
 /
@@ -131,3 +130,24 @@ contactContent[2].innerText = siteContent.contact.email;
 
 const footerItem = document.querySelector("footer p");
 footerItem.innerText = siteContent.footer.copyright;
+
+/*
+/
+/     Challenge 4
+/
+*/
+
+
+const navSelector = document.querySelector("nav");
+
+const firstNav = document.createElement("a");
+firstNav.setAttribute("href", "#");
+firstNav.innerText = "FIRST";
+navSelector.prepend(firstNav);
+const lastNav = document.createElement("a");
+lastNav.setAttribute("href", "#");
+lastNav.innerText = "LAST";
+navSelector.appendChild(lastNav);
+
+const coloringText = navSelector.querySelectorAll("a");
+coloringText.forEach(item => item.style.color = "red");
