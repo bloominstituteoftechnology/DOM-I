@@ -43,7 +43,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 
 //NAV SECTION
-let navMenu = document.querySelectorAll('header nav a ');
+const navMenu = document.querySelectorAll('header nav a ');
 navMenu[0].innerText = siteContent['nav']['nav-item-1'];
 navMenu[1].innerText = siteContent['nav']['nav-item-2'];
 navMenu[2].innerText = siteContent['nav']['nav-item-3'];
@@ -53,10 +53,32 @@ navMenu[5].innerText = siteContent['nav']['nav-item-6'];
 
 
 
+
+//adding to the nav
+const newLink = document.createElement('a');
+const nav = document.querySelector('header nav');
+newLink.innerText = ('Here');
+newLink.style.color = 'green';
+newLink.href = '#';
+nav.appendChild(newLink);
+
+const welcomeLink = document.createElement('a');
+welcomeLink.innerText = ('Welcome');
+welcomeLink.style.color = 'green';
+welcomeLink.href = "#"
+
+nav.prepend(welcomeLink);
+
+//add color to the nav
+
+navMenu.forEach(item => {
+  item.style.color = "green";
+});
 //CTA SECTION
 
 let ctaHead = document.querySelector('.cta-text h1');
 ctaHead.innerText = siteContent['cta']['h1'];
+
 
 let cta = document.getElementById("cta-img");
 cta.setAttribute("src", siteContent["cta"]["img-src"]);
