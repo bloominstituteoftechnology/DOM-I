@@ -41,5 +41,57 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+
+//Nav
+let  navLinks = document.querySelectorAll('nav a');
+navLinks[0].innerText = siteContent['nav']['nav-item-1'];
+navLinks[1].innerText = siteContent['nav']['nav-item-2'];
+navLinks[2].innerText = siteContent['nav']['nav-item-3'];
+navLinks[3].innerText = siteContent['nav']['nav-item-4'];
+navLinks[4].innerText = siteContent['nav']['nav-item-5'];
+navLinks[5].innerText = siteContent['nav']['nav-item-6'];
+
 //Images
-document.querySelectorAll("nav");
+let ctaImage = document.getElementById("cta-img");
+ctaImage.setAttribute('src', siteContent['cta']['img-src'])
+
+let middleImage = document.getElementById("middle-img");
+middleImage.setAttribute ('src', siteContent['main-content']['middle-img-src'])
+
+
+//CTA
+let cta = document.querySelectorAll("cta");
+cta.innerHTML = siteContent["cta"]["h1"];
+
+let ctaButton = document.querySelectorAll("button");
+ctaButton.innerHTML = siteContent['cta']['button'];
+
+//Main Content
+let topContentHeaders = document.querySelectorAll('.top-content .text-content h4');
+topContentHeaders[0].innerHTML = siteContent["main-content"]["features-h4"];
+topContentHeaders[1].innerHTML = siteContent["main-content"]["about-h4"];
+
+let topContentText = document.querySelectorAll('.top-content .text-content p' );
+topContentText[0].innerHTML = siteContent['main-content']['features-content'];
+topContentText[1].innerHTML = siteContent['main-content']['about-content'];
+
+let bottomContentHeader = document.querySelectorAll('.bottom-content .text-content h4' );
+bottomContentHeader[0].innerHTML = siteContent['main-content']['services-h4'];
+bottomContentHeader[1].innerHTML = siteContent['main-content']['product-h4'];
+bottomContentHeader[2].innerHTML = siteContent['main-content']['vision-h4'];
+
+let bottomContentText = document.querySelectorAll('.bottom-content .text-content p' );
+bottomContentText[0].innerHTML = siteContent['main-content']['services-content'];
+bottomContentText[1].innerHTML = siteContent['main-content']['product-content'];
+bottomContentText[2].innerHTML = siteContent['main-content']['vision-content'];
+
+
+
+//Contact
+
+
+
+
+
+
+
