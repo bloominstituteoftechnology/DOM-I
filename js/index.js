@@ -39,4 +39,21 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', 'https://mediaassets.kivitv.com/photo/2018/08/21/Indiana_bat_1534890864243_95371107_ver1.0_640_480.jpg');
+
+// logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+let allNavs = document.querySelectorAll('a');
+allNavs[0].innerText = 'Services'; 
+allNavs[1].innerText = 'Product';
+allNavs[2].innerText = 'Vision';
+allNavs[3].innerText = 'Features';
+allNavs[4].innerText = 'About';
+allNavs[5].innerText = 'Contact';
+// allNavs[0].style.border = '10px solid green'; ???
+
+
+// logo.src = 'http://www.imagsource.com/image.jpg';
+// logo.style.border = '10px solid red';
+
