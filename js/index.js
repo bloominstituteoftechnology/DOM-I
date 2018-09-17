@@ -43,6 +43,8 @@ const nav = document.querySelectorAll("nav a");
 const ctaImage = document.getElementById("cta-img");
 const domIsAwesome = document.querySelector(".cta .cta-text h1");
 const button = document.querySelector("button");
+const titles = document.querySelectorAll("h4");
+const paragraphs = document.querySelectorAll("p");
 const middleImage = document.getElementById("middle-img");
 
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
@@ -55,7 +57,14 @@ domIsAwesome.innerHTML = siteContent["cta"]["h1"];
 button.innerHTML = siteContent["cta"]["button"];
 ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
 
+titles[0].innerHTML = siteContent["main-content"]["features-h4"];
+titles[1].innerHTML = siteContent["main-content"]["about-h4"];
 
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+titles[2].innerHTML = siteContent["main-content"]["services-h4"];
+titles[3].innerHTML = siteContent["main-content"]["product-h4"];
+titles[4].innerHTML = siteContent["main-content"]["vision-h4"];
 
 
 
