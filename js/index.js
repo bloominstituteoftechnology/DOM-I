@@ -86,3 +86,15 @@ middleText[3].textContent = siteContent["main-content"]["product-content"];
 
 h4[4].textContent = siteContent["main-content"]["vision-h4"];
 middleText[4].textContent = siteContent["main-content"]["vision-content"];
+
+// =============== Contact & Footer ===============
+let contactInfo = document.querySelectorAll(".contact p");
+let footerText = document.querySelector("footer p");
+
+h4[5].textContent = siteContent["contact"]["contact-h4"];
+// contactInfo[0].textContent = siteContent["contact"]["address"];
+contactInfo[0].innerHTML = "123 Way 456 Street<br> Somewhere, USA";
+contactInfo[1].textContent = siteContent["contact"]["phone"];
+contactInfo[2].textContent = siteContent["contact"]["email"];
+
+footerText.textContent = siteContent["footer"]["copyright"];
