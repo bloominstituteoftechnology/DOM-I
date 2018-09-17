@@ -40,3 +40,79 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let links = document.querySelectorAll('nav a');
+links[0].innerHTML = siteContent['nav']['nav-item-1'];
+links[1].innerHTML = siteContent['nav']['nav-item-2'];
+links[2].innerHTML = siteContent['nav']['nav-item-3'];
+links[3].innerHTML = siteContent['nav']['nav-item-4'];
+links[4].innerHTML = siteContent['nav']['nav-item-5'];
+links[5].innerHTML = siteContent['nav']['nav-item-6'];
+
+//two new nav elements
+let nav = document.querySelector('header nav')
+console.log(nav)
+var link1 = document.createElement("a")
+link1.innerHTML = 'Home';
+nav.prepend(link1);
+var link2 = document.createElement("a");
+link2.innerHTML = 'Members Area';
+nav.appendChild(link2);
+
+
+
+
+
+links[0].style.color = 'purple';
+links[1].style.color = 'purple';
+links[2].style.color = 'purple';
+links[3].style.color = 'purple';
+links[4].style.color = 'purple';
+links[5].style.color = 'purple';
+link1.style.color = 'purple';
+link2.style.color = 'purple';
+
+
+let ctaText = document.querySelector('h1');
+ctaText.innerHTML = siteContent.cta.h1;
+
+const button = document.querySelector('button');
+button.innerHTML = siteContent.cta.button;
+
+const img1= document.getElementById('cta-img');
+img1.src= siteContent.cta ['img-src'];
+
+
+//headers
+const headerh4= document.querySelectorAll('div.text-content > h4');
+headerh4[0].innerHTML = siteContent ['main-content'] ['features-h4']
+headerh4[1].innerHTML = siteContent ['main-content'] ['about-h4']
+headerh4[2].innerHTML = siteContent ['main-content'] ['services-h4']
+headerh4[3].innerHTML = siteContent ['main-content'] ['product-h4']
+headerh4[4].innerHTML = siteContent ['main-content'] ['vision-h4']
+
+//content
+const content = document.querySelectorAll('div.text-content > p');
+console.log(content)
+content[0].innerHTML = siteContent ['main-content']['features-content'];
+content[1].innerHTML = siteContent ['main-content']['about-content'];
+content[2].innerHTML = siteContent ['main-content']['services-content'];
+content[3].innerHTML = siteContent ['main-content']['product-content'];
+content[4].innerHTML = siteContent ['main-content']['vision-content'];
+
+document.getElementById('middle-img').src = siteContent ['main-content']['middle-img-src']
+
+//contact 
+
+let footer = document.querySelector('section.contact h4');
+
+footer.innerHTML = siteContent.contact ['contact-h4']
+
+let contactInfo = document.querySelectorAll('section.contact > p')
+
+contactInfo[0].innerHTML= siteContent.contact.address;
+contactInfo[1].innerHTML= siteContent.contact.phone;
+contactInfo[2].innerHTML= siteContent.contact.email;
+
+
+// Angelo Deleon FSW14
