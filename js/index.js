@@ -51,5 +51,21 @@ navLinks[4].innerText = siteContent['nav']['nav-item-5']
 navLinks[5].innerText = siteContent['nav']['nav-item-6']
 
 const ctaTitle = document.querySelector('.cta .cta-text h1');
-ctaTitle.innerText = 
+ctaTitle.innerText = siteContent['cta']['h1']
 
+const ctaButton = document.querySelector('.cta .cta-text button');
+ctaButton.innerText = siteContent['cta']['button']
+
+const ctaImg = document.querySelector('.cta img');
+ctaImg.setAttribute('src', siteContent['cta']['img-src'])
+
+const topH4 = document.querySelectorAll('.main-content .top-content h4');
+topH4[0].innerText = siteContent['main-content']['features-h4']
+topH4[1].innerText = siteContent['main-content']['about-h4']
+
+const topContent = document.querySelectorAll('.main-content .top-content p');
+topContent[0].innerText = siteContent['main-content']['features-content']
+topContent[1].innerText = siteContent['main-content']['about-content']
+
+const middleImg = document.querySelector('.middle-img');
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
