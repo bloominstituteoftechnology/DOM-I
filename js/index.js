@@ -40,7 +40,17 @@ const siteContent = {
 // Example: Update the img src for the logo
 // ===================   NAV BAR ==================
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent['nav']['img-src'])
+logo.setAttribute('src', siteContent['nav']['img-src']);
+
+let logoClass = document.querySelector('img');
+logoClass.setAttribute('href', 'index.html');
+
+let headerBox = document.querySelector('header');
+headerBox.style.position = 'fixed';
+headerBox.style.top = '0';
+headerBox.style.backgroundColor = 'white';
+headerBox.style.borderBottom = '1px solid grey';
+headerBox.style.width = '66%';
 
 
 let navItems = document.querySelectorAll('a');
@@ -63,7 +73,7 @@ mainNav.appendChild(newNavItem1);
 
 const newNavItem2 = document.createElement('a');
 newNavItem2.innerText = 'Welcome'
-newNavItem2.href = '#'
+newNavItem2.href = 'index.html'
 newNavItem2.style.color = 'green'
 
 mainNav.prepend(newNavItem2);
@@ -71,7 +81,8 @@ mainNav.prepend(newNavItem2);
 
 // ===================  CTA  ==================
 let ctaHeader = document.querySelector('.cta h1');
-ctaHeader.innerHTML = '<h1>dom<br/>is<br/>awesome</h1>'
+ctaHeader.innerHTML = siteContent['cta']['h1'];
+
 
 let ctaButton = document.querySelector('.cta button');
 ctaButton.innerText = siteContent['cta']['button'];
