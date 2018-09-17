@@ -53,8 +53,22 @@ const contactInfo = document.querySelectorAll(".contact p");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 nav.forEach((link, i) => {
-  return link.innerHTML = siteContent.nav[`nav-item-${i+1}`];
+  link.innerHTML = siteContent.nav[`nav-item-${i+1}`];
+  link.style.color = "green";
 });
+newLink1 = document.createElement("a");
+newLink2 = document.createElement("a");
+newLink1.href = "#";
+newLink2.href = "#"
+newLink1Text = document.createTextNode("New Link 1");
+newLink2Text = document.createTextNode("New Link 2");
+newLink1.appendChild(newLink1Text);
+newLink2.appendChild(newLink2Text);
+newLink1.style.color = "green";
+newLink2.style.color = "green";
+document.getElementsByTagName("nav")[0].prepend(newLink1);
+document.getElementsByTagName("nav")[0].appendChild(newLink2);
+
 siteContent["cta"]["h1"] = siteContent["cta"]["h1"].split(" ").join("<br>");
 domIsAwesome.innerHTML = siteContent["cta"]["h1"];
 button.innerHTML = siteContent["cta"]["button"];
