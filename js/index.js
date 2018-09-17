@@ -60,5 +60,12 @@ navBar[3].innerHTML = siteContent['nav']['nav-item-4'];
 navBar[4].innerHTML = siteContent['nav']['nav-item-5'];
 navBar[5].innerHTML = siteContent['nav']['nav-item-6'];
 
-// const navBar = querySelectorAll('a');
-// navBar[0].setAttribute(innerText, siteContent['nav']["nav-item-1"])
+//  CTA
+
+let domIs = document.querySelector('h1');
+domIs.innerHTML = siteContent['cta']['h1'];
+
+let getStarted = document.querySelector('button');
+getStarted.innerHTML = siteContent['cta']['button'];
+
+// Main-Content
