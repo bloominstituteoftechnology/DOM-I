@@ -106,5 +106,16 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
   document.querySelector('footer > p').innerText = copyright;
 }
 
+let blog = document.createElement('a');
+blog.href = '#';
+blog.innerText = 'Blog'
+
+let welcome = document.createElement('a');
+welcome.href = '#';
+welcome.innerText = 'Welcome'
+
+let nav = document.querySelector('nav');
+nav.append(blog);
+nav.prepend(welcome);
 
 document.querySelectorAll('nav> a').forEach(e => e.style.color = 'green');
