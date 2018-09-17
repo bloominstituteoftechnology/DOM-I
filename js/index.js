@@ -42,9 +42,7 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 
-//images
-let middleImg = document.getElementById('middle-img');
-middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
 
 
 
@@ -73,6 +71,11 @@ let topPar = document.querySelectorAll('.main-content .top-content .text-content
 topPar[0].innerText = siteContent['main-content']['features-content'];
 topPar[1].innerText = siteContent['main-content']['about-content'];
 
+//Middle image
+
+let middleImg = document.getElementById('middle-img');
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
 
 //BOTTOM CONTENT
 
@@ -92,6 +95,13 @@ botPar[2].innerText = siteContent['main-content']['vision-content'];
 
 
 
-//let navMenu = document.getElementsByTagName('a');
+//CONTACT
 
-//let navItem1 = 
+let contactHead = document.querySelector('.contact h4');
+contactHead.innerText = siteContent['contact']['contact-h4'];
+
+let contactPar = document.querySelectorAll('.contact p');
+contactPar[0].innerText = siteContent['contact']['address'];
+contactPar[1].innerText = siteContent['contact']['phone'];
+contactPar[2].innerText = siteContent['contact']['email'];
+
