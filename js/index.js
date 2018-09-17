@@ -55,6 +55,25 @@ nav[3].textContent = siteContent.nav["nav-item-4"];
 nav[4].textContent = siteContent.nav["nav-item-5"];
 nav[5].textContent = siteContent.nav["nav-item-6"];
 
+// create new a tags and append them to nav
+const mainNav = document.querySelector("header nav");
+const blogElement = document.createElement("a");
+blogElement.textContent = "Blog";
+mainNav.appendChild(blogElement);
+blogElement.style.color = "green";
+blogElement.style.cursor = "pointer";
+
+const welcome = document.createElement("a");
+welcome.innerHTML = "Welcome";
+mainNav.prepend(welcome);
+welcome.style.color = "green";
+welcome.style.cursor = "pointer";
+
+// loop through a tags and change color
+nav.forEach(function(navTag) {
+  navTag.style.color = "green";
+});
+
 // header
 const headerImg = document.getElementById("cta-img");
 headerImg.src = siteContent.cta["img-src"];
