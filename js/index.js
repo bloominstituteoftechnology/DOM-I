@@ -130,6 +130,7 @@ goodbye.href='#';
     allP.forEach(item => {
       item.setAttribute('style', 'color: blue');
     });
+    document.getElementById('color-button').innerText = 'Black Text';
     document.getElementById('color-button').addEventListener('click', black, {once: true});
   }
 
@@ -142,6 +143,7 @@ goodbye.href='#';
     allP.forEach(item => {
       item.setAttribute('style', 'color: black');
     });
+    document.getElementById('color-button').innerText = 'Blue Text';
     document.getElementById('color-button').addEventListener('click', blue, {once: true});
   }
 
@@ -158,7 +160,7 @@ document.getElementById('color-button').addEventListener('click', blue, {once: t
   const bacon = {
     "main-content": {
       "features-h4":"Features",
-      "features-content": "Bacon ipsum dolor amet boudin cupim landjaeger, chicken corned beef shank swine beef short ribs turducken meatball t-bone shankle ham hock cow. Ground round meatloaf turkey venison drumstick t-bone shank brisket. Chuck tri-tip spare ribs swine. Salami pastrami jerky.",
+      "features-content": "Bacon ipsum dolor amet boudin cupim landjaeger, chicken corned beef shank swine beef short ribs turducken meatball t-bone shankle ham hock cow. Ground round meatloaf turkey venison drumstick t-bone shank brisket. Chuck tri-tip spare ribs swine. Salami pastrami.",
       "about-h4":"About",
       "about-content": "Pastrami turducken. T-bone porchetta pork chop rump, bacon kielbasa pig ball tip shoulder sausage ham leberkas spare ribs venison burgdoggen. Biltong tongue cow ribeye, tail beef ribs short ribs. Buffalo shank tri-tip ball tip pork chop biltong. ",
       "middle-img-src": "img/mid-page-accent.jpg",
@@ -176,16 +178,27 @@ const baconButton = document.createElement('button');
 baconButton.innerText = 'Bacon Content';
 baconButton.setAttribute('style', 'cursor: pointer');
 baconButton.setAttribute('id', 'bacon-button')
-let mainContent = document.querySelector('.main-content');
-mainContent.prepend(baconButton);
+let ctaContent = document.querySelector('.cta-text');
+ctaContent.append(baconButton);
 
-document.getElementById('bacon-button').addEventListener('click', function(){
-
+function baconContent() {
   topContentText[0].innerText = bacon["main-content"]["features-content"];
   topContentText[1].innerText = bacon["main-content"]["about-content"];
   bottomContentText[0].innerText = bacon["main-content"]["services-content"];
   bottomContentText[1].innerText = bacon["main-content"]["product-content"];
   bottomContentText[2].innerText = bacon["main-content"]["vision-content"];
+  baconButton.innerText = 'Normal Content'
+  baconButton.addEventListener('click', normalContent, {once: true});
+}
 
+function normalContent() {
+  topContentText[0].innerText = siteContent["main-content"]["features-content"];
+  topContentText[1].innerText = siteContent["main-content"]["about-content"];
+  bottomContentText[0].innerText = siteContent["main-content"]["services-content"];
+  bottomContentText[1].innerText = siteContent["main-content"]["product-content"];
+  bottomContentText[2].innerText = siteContent["main-content"]["vision-content"];
+  baconButton.innerText = 'Bacon Content';
+  baconButton.addEventListener('click', baconContent, {once: true});
 
-});
+}
+baconButton.addEventListener('click', baconContent, {once: true});
