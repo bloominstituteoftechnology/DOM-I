@@ -18,6 +18,7 @@ function timer() {
 
 const startButton = document.querySelector('button');
 const resetButton = document.querySelectorAll('button')[1];
+startButton.addEventListener('click', runTimer);
 let currentTime = 0;
 
 function displayTimer(displayTime) {
@@ -31,10 +32,12 @@ function displayTimer(displayTime) {
 function runTimer() {
   document.body.style.color = 'black';
   startButton.setAttribute('disabled', 'disabled');
+  startButton.classList.add('running');
   let newTimer = timer();
   let interval = setInterval(function(){
     currentTime = newTimer();
     if (currentTime >= 1000) {
+      startButton.classList.remove('running');
       document.body.style.color = 'red';
       clearInterval(interval);
     }
@@ -46,14 +49,9 @@ function runTimer() {
       document.body.style.color = 'black';
       startButton.removeAttribute('disabled');
       clearInterval(interval);
+      startButton.classList.remove('running');
       currentTime = 0;
       displayTimer(currentTime);
     }
   }, 10);
 }
-
-startButton.addEventListener('click', runTimer);
-
-
-
-
