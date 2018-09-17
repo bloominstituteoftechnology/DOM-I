@@ -41,5 +41,11 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-let navigation = document.querySelector('.container header nav');
+
+///NAVIGATION
+let navigation = document.querySelectorAll('.container header nav a');
+for(let i = 0; i < navigation.length; i++){
+  navigation[i].innerText = siteContent["nav"]["nav-item-" + [i+1]];
+}
+
 console.log(navigation);
