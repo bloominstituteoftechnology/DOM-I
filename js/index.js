@@ -74,6 +74,7 @@ ctaButton.innerHTML = 'Get Started';
 //====================================================================================
 //  MAIN CONTENT
 //====================================================================================
+
 // Features Heading and Paragraphs
 const featuresHeading = document.querySelector('.top-content .text-content:first-child h4');
 featuresHeading.innerHTML = siteContent['main-content']['features-h4'];
@@ -108,3 +109,10 @@ visionHeading.innerHTML = siteContent['main-content']['vision-h4'];
 
 const visionContent = document.querySelector('.bottom-content .text-content:nth-child(3) p');
 visionContent.innerHTML = siteContent['main-content']['vision-content'];
+
+//====================================================================================
+//  CONTACT SECTION
+//====================================================================================
+
+const contactHeading = document.querySelector('.contact h4');
+contactHeading.innerHTML = siteContent['contact']['contact-h4'];
