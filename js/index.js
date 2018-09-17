@@ -59,3 +59,15 @@ const linkKeys = Object.values(siteContent['nav']);
 const navItems = document.querySelectorAll('a');
 navItems.forEach((item, index) => item.innerHTML = linkKeys[index]);
 
+//====================================================================================
+//  CTA
+//====================================================================================
+
+// cta heading
+const mainHeading = document.querySelector('.cta-text h1');
+mainHeading.innerHTML = 'Dom<br>Is<br>Awesome';
+
+// cta button
+const ctaButton = document.querySelector('.cta-text button');
+ctaButton.innerHTML = 'Get Started';
+
