@@ -52,5 +52,13 @@ middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 // NavBar
 
-// let navBar = document getElementBy("a");
-// navBar.setAttribute()
+let navBar = document.querySelectorAll("a");
+navBar[0].innerHTML = siteContent['nav']['nav-item-1'];
+navBar[1].innerHTML = siteContent['nav']['nav-item-2'];
+navBar[2].innerHTML = siteContent['nav']['nav-item-3'];
+navBar[3].innerHTML = siteContent['nav']['nav-item-4'];
+navBar[4].innerHTML = siteContent['nav']['nav-item-5'];
+navBar[5].innerHTML = siteContent['nav']['nav-item-6'];
+
+// const navBar = querySelectorAll('a');
+// navBar[0].setAttribute(innerText, siteContent['nav']["nav-item-1"])
