@@ -120,3 +120,10 @@ contactHeading.innerHTML = siteContent['contact']['contact-h4'];
 const contactValues = Object.values(siteContent['contact']);
 const contactItems = document.querySelectorAll('.contact p');
 contactItems.forEach((item, index) => item.innerHTML = contactValues[index + 1]);
+
+//====================================================================================
+//  FOOTER SECTION
+//====================================================================================
+
+const copyRight = document.querySelector('footer p');
+copyRight.innerHTML = siteContent['footer']['copyright'];
