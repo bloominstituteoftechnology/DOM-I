@@ -52,7 +52,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
   });
 }
 
-//CTA
+// CTA
 {
   const cta = siteContent.cta;
   let ctaTitle = document.querySelector('.cta > .cta-text > h1');
@@ -84,7 +84,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
   contentIMG.src = mainContent["middle-img-src"];
 }
 
-//Contact
+// Contact
 {
   const contact = siteContent.contact;
 
@@ -100,22 +100,44 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
   info[2].innerText = contact.email;
 }
 
-//Footer
+// Footer
 {
   const copyright = siteContent.footer.copyright;
   document.querySelector('footer > p').innerText = copyright;
 }
 
-let blog = document.createElement('a');
-blog.href = '#';
-blog.innerText = 'Blog'
+// Add New Content
+{
+  let blog = document.createElement('a');
+  blog.href = '#';
+  blog.innerText = 'Blog'
 
-let welcome = document.createElement('a');
-welcome.href = '#';
-welcome.innerText = 'Welcome'
+  let welcome = document.createElement('a');
+  welcome.href = '#';
+  welcome.innerText = 'Welcome'
 
-let nav = document.querySelector('nav');
-nav.append(blog);
-nav.prepend(welcome);
+  let nav = document.querySelector('nav');
+  nav.append(blog);
+  nav.prepend(welcome);
 
-document.querySelectorAll('nav> a').forEach(e => e.style.color = 'green');
+  document.querySelectorAll('nav> a').forEach(e => e.style.color = 'green');
+}
+
+// Stretch
+{
+  // console.log(document.querySelectorAll('.container > *'));
+  let content = document.querySelectorAll('.container > *');
+
+  content.forEach((e, i) =>{
+    if(i === 0 ){ return };
+    e.style.transform = 'translateY(1000px)';
+  });
+
+  const cubic = 'cubic-bezier(0,1.02,1,1.1)'
+  setTimeout(() => {
+    content.forEach((e, i) =>{
+      e.style.transform = 'translateY(0px)';
+      e.style.transition = `all 1s ${cubic} ${i+1}00ms`;
+    });
+  }, 1)
+}
