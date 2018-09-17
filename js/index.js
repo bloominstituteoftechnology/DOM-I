@@ -59,12 +59,20 @@ ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
 
 titles[0].innerHTML = siteContent["main-content"]["features-h4"];
 titles[1].innerHTML = siteContent["main-content"]["about-h4"];
+paragraphs[0].innerHTML = siteContent["main-content"]["features-content"];
+paragraphs[1].innerHTML = siteContent["main-content"]["about-content"];
 
 middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 titles[2].innerHTML = siteContent["main-content"]["services-h4"];
 titles[3].innerHTML = siteContent["main-content"]["product-h4"];
 titles[4].innerHTML = siteContent["main-content"]["vision-h4"];
+paragraphs[2].innerHTML = siteContent["main-content"]["services-content"];
+paragraphs[3].innerHTML = siteContent["main-content"]["product-content"];
+paragraphs[4].innerHTML = siteContent["main-content"]["vision-content"];
+
+
+
 
 
 
