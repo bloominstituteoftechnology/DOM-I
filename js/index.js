@@ -105,7 +105,36 @@ blogLink.textContent = "Blog";
 learnLink.textContent = "Learn!";
 blogLink.href = "#";
 learnLink.href = "#";
-
 const mainNav = document.querySelector(".container > header nav");
 mainNav.appendChild(blogLink);
 mainNav.prepend(learnLink);
+
+const goEvil = document.createElement('button');
+goEvil.textContent = "Go Evil";
+const titleArea = document.querySelector(".cta-text");
+titleArea.appendChild(goEvil);
+
+goEvil.addEventListener("click", evilTransformation);
+
+function evilTransformation() {
+  document.querySelector("body").style.background = "#020202";
+  
+  const container = document.querySelector(".container");
+  container.style.color = "#ffa566";
+  container.style.backgroundImage = "linear-gradient(rgba(2, 2, 2, .9), rgba(2, 2, 2, .9)), url(\"img/hellfire.jpg\")";
+  container.style.backgroundRepeat = "no-repeat";
+  container.style.backgroundAttachment = "fixed";
+  container.style.backgroundPosition = "bottom";
+  
+  const mainContent = document.querySelector(".main-content");
+  mainContent.style.borderTop = "2px solid red";
+  mainContent.style.borderBottom = "2px solid red";
+
+  const newNavLinks = document.querySelectorAll(".container > header nav a");
+  newNavLinks.forEach(link => link.style.color = "red");
+
+  goEvil.textContent = "Irreversible!";
+
+  giLogo.style.boxShadow = "0 0 5px white";
+  giLogo.style.background = "#7f7f7f";
+}
