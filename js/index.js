@@ -89,5 +89,6 @@ contactParagraphs[0].innerHTML = siteContent['contact']['address'];
 contactParagraphs[1].innerHTML = siteContent['contact']['phone'];
 contactParagraphs[2].innerHTML = siteContent['contact']['email'];
 
-
-console.log(contactParagraphs);
+//footer section
+const daFoota = document.querySelector('footer p');
+daFoota.innerHTML = siteContent['footer']['copyright'];
