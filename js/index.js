@@ -50,6 +50,7 @@ navLinks[3].innerText = siteContent.nav["nav-item-4"]
 navLinks[4].innerText = siteContent.nav["nav-item-5"]
 navLinks[5].innerText = siteContent.nav["nav-item-6"]
 
+//change color to green
 navLinks[0].style.color = 'green'
 navLinks[1].style.color = 'green'
 navLinks[2].style.color = 'green'
@@ -58,6 +59,16 @@ navLinks[4].style.color = 'green'
 navLinks[5].style.color = 'green'
 
 
+//Utilize .appendChild() and .prepend() to add two new items to the navigation system.
+let nav = document.querySelector('nav')
+
+let nav1 = document.createElement('a')
+nav1.textContent = 'end of nav'
+nav.appendChild(nav1)
+
+let nav2 = document.createElement('a')
+nav2.textContent = 'beginning of nav'
+nav.prepend(nav2)
 
 let navImg = document.querySelector('header img')
 navImg.src = siteContent.nav["img-src"]
@@ -88,7 +99,6 @@ mainContent[1].innerText = siteContent["main-content"]["about-content"]
 mainContent[2].innerText = siteContent["main-content"]["services-content"]
 mainContent[3].innerText = siteContent["main-content"]["product-content"]
 mainContent[4].innerText = siteContent["main-content"]["vision-content"]
-console.log(mainContent)
 
 let mainContentImg = document.querySelector('.main-content img')
 mainContentImg.src = siteContent["main-content"]["middle-img-src"]
