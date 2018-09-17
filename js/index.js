@@ -70,3 +70,39 @@ ctaButton.innerHTML = 'Get Started';
 
 let ctaImg = document.querySelector('.cta img');
 ctaImg.src = 'img/header-img.png';
+
+// Top Content
+let featuresContentTitle = document.querySelector('.top-content .text-content h4');
+featuresContentTitle.innerHTML = 'Features';
+
+let featuresContentP = document.querySelector('.top-content .text-content p');
+featuresContentP.innerHTML = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+let aboutContentTitle = document.querySelectorAll('.top-content .text-content h4')[1];
+aboutContentTitle.innerHTML = 'About';
+
+let aboutContentP = document.querySelectorAll('.top-content .text-content p')[1];
+aboutContentP.innerHTML = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+// Middle Img
+let middleImg = document.querySelector('.main-content .middle-img');
+middleImg.src = 'img/mid-page-accent.jpg';
+
+// Bottom Content
+let serviceContentTitle = document.querySelector('.bottom-content .text-content h4');
+serviceContentTitle.innerHTML = 'Services';
+
+let serviceContentP = document.querySelector('.bottom-content .text-content p');
+serviceContentP.innerHTML = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+
+let productContentTitle = document.querySelectorAll('.bottom-content .text-content h4')[1];
+productContentTitle.innerHTML = 'Product';
+
+let productContentP = document.querySelectorAll('.bottom-content .text-content p')[1];
+productContentP.innerHTML = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+
+let visionContentTitle = document.querySelectorAll('.bottom-content .text-content h4')[2];
+visionContentTitle.innerHTML = 'Vision';
+
+let visionContentP = document.querySelectorAll('.bottom-content .text-content p')[2];
+visionContentP.innerHTML =  'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
