@@ -80,3 +80,8 @@ topImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 let contactHeading = document.querySelectorAll('.contact h4');
 contactHeading[0].innerText = siteContent["contact"]["contact-h4"];
 
+let contactP = document.querySelectorAll('.contact p');
+contactP[0].innerText = siteContent["contact"]["address"];
+contactP[1].innerText = siteContent["contact"]["phone"];
+contactP[2].innerText = siteContent["contact"]["email"];
+
