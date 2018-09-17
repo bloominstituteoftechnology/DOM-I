@@ -60,8 +60,8 @@ const ctaImage = document.querySelector('#cta-img');
 ctaImage.src = siteContent.cta['img-src'];
 
 // Main Content
-const topContentSections = document.querySelectorAll('.main-content .top-content .text-content');
-topContentSections.forEach(i => i.style.width = '50%');
+// const topContentSections = document.querySelectorAll('.main-content .top-content .text-content');
+// topContentSections.forEach(i => i.style.width = '50%');
 
 const featuresH4 = document.querySelector('.main-content .top-content .text-content h4');
 featuresH4.innerText = siteContent['main-content']['features-h4'];
@@ -79,8 +79,8 @@ aboutPara.innerText = siteContent['main-content']['about-content'];
 const middleImg = document.getElementById('middle-img');
 middleImg.src = siteContent['main-content']['middle-img-src'];
 
-const bottomContentSections = document.querySelectorAll('.main-content .bottom-content .text-content');
-bottomContentSections.forEach(section => section.style.width = '33%');
+// const bottomContentSections = document.querySelectorAll('.main-content .bottom-content .text-content');
+// bottomContentSections.forEach(section => section.style.width = '33%');
 
 const servicesH4 = document.querySelector('.main-content .bottom-content .text-content h4');
 servicesH4.innerText = siteContent['main-content']['services-h4'];
@@ -101,3 +101,20 @@ const visionPara = document.querySelectorAll('.main-content .bottom-content .tex
 visionPara.innerText = siteContent['main-content']['vision-content']
 
 // Contact
+
+const contactH4 = document.querySelector('.contact h4');
+contactH4.innerText = siteContent.contact['contact-h4'];
+
+const contactKeys = Object.keys(siteContent.contact);
+const contactParas = document.querySelectorAll('.contact p');
+
+for (let i = 0; i < contactParas.length; i++) {
+  contactParas[i].innerText = siteContent.contact[contactKeys[i + 1]];
+}
+
+// Footer
+
+document.querySelector('footer p').innerText = siteContent.footer.copyright;
+
+//Task 4: Add new content
+
