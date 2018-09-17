@@ -60,11 +60,6 @@ let ctaText = document.querySelector(".cta-text h1");
 // ctaText.innerText = ""
 ctaText.innerText = siteContent["cta"]["h1"];
 
-// let ctaWords = document.querySelector(".cta-text h1");
-// ctaWords.innerHTML = siteContent['cta']['h1'].split(' ');
-// ctaText.innerHTML += `${item}<br>`;
-
-
 // Img Round
 let ctaImg = document.querySelector('.cta img');
 ctaImg.src = siteContent["cta"]["img-src"];
