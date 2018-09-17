@@ -41,6 +41,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+// Navigation here --------------------------------------------------------------------
 let navigation = document.querySelectorAll('nav a');
 for (let i = 0; i < navigation.length; i++){
   navigation[i].innerText = siteContent["nav"][`nav-item-${i+1}`];
@@ -50,22 +51,21 @@ for (let i = 0; i < navigation.length; i++){
 let navbar = document.querySelector('nav');
 
 const link1 = document.createElement('a');
-link1.innerText = 'Pick-Me-Up';
-link1.href = 'http://www.placepuppy.net/1p/400/250';
-link1.style.color = 'green';
-link1.target = "_blank"
+  link1.innerText = 'Pick-Me-Up';
+  link1.href = 'http://www.placepuppy.net/1p/400/250';
+  link1.style.color = 'green';
+  link1.target = "_blank"
 navbar.appendChild(link1);
 
 const link2 = document.createElement('a');
-link2.innerText = 'Google';
-link2.href = 'https://www.google.com';
-link2.style.color = 'green';
-link2.target = "_blank"
+  link2.innerText = 'Alter Site';
+  link2.href = '#';
+  link2.style.color = 'green';
 navbar.prepend(link2);
+//---------------------------------------------------------------------------------------
+
 
 // CTA section here ---------------------------------------------------------------------
-// Remember to do CTA button and copy
-
 let ctaText = document.querySelector("h1")
 ctaText.innerHTML = siteContent["cta"]['h1'];
 
@@ -78,6 +78,7 @@ ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
 
 
 // Top Content Here ---------------------------------------------------------------------
+// I feel like there must be a way to loop through the below as well as the bottom content section. This feels a bit verbose.
 let topContent = document.querySelectorAll(".top-content .text-content");
 
 // top content left box
@@ -119,8 +120,27 @@ contact.childNodes[1].innerText = siteContent["contact"]['contact-h4'];
 contact.childNodes[3].innerHTML = siteContent["contact"]['address'];
 contact.childNodes[5].innerText = siteContent["contact"]['phone'];
 contact.childNodes[7].innerText = siteContent["contact"]['email'];
+//---------------------------------------------------------------------------------------
 
 
 // Footer Here --------------------------------------------------------------------------
 let footer = document.querySelector('footer p')
 footer.innerText = siteContent["footer"]['copyright'];
+//---------------------------------------------------------------------------------------
+
+// Stretch Work Here --------------------------------------------------------------------
+
+const placeholder = `We'll put some happy little leaves here and there. Let's make some happy little clouds in our world. Let's get wild today. We have a fantastic little sky! I will take some magic white, and a little bit of Vandyke brown and a little touch of yellow.`;
+
+
+link2.addEventListener('click', function() {
+  ctaText.innerHTML = 'This is <br> hero copy';
+  link2.innerText = 'Site Changed!';
+  link2.style.color = 'red';
+  let paragraphs = document.querySelectorAll('.main-content p');
+  paragraphs.forEach(x => x.innerHTML = placeholder);
+  let headers = document.querySelectorAll('.main-content h4');
+  headers.forEach(x => x.innerHTML = 'Bob Ross');
+  headers.forEach(x => x.style.fontFamily = 'Georgia, serif');
+});
+
