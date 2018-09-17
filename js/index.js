@@ -40,7 +40,7 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.src = 'img/logo.png'
-
+// NAV
 let nav1 = document.getElementsByTagName("a")[0];
 nav1.innerHTML = siteContent["nav"]["nav-item-1"]
  let nav2 = document.getElementsByTagName("a")[1];
@@ -53,3 +53,10 @@ nav4.innerHTML = siteContent["nav"]["nav-item-4"]
 nav5.innerHTML = siteContent["nav"]["nav-item-5"]
  let nav6 = document.getElementsByTagName("a")[5];
 nav6.innerHTML = siteContent["nav"]["nav-item-6"]
+
+// CTA
+let ctaText = document.querySelector(".cta-text h1");
+// ctaText.innerText = ""
+ctaText.innerText = siteContent["cta"]["h1"];
+let ctaImg = document.querySelector('.cta img');
+ctaImg.src = siteContent["cta"]["img-src"];
