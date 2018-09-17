@@ -37,6 +37,56 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let logo = document.getElementById('logo-img');
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+let navItems = document.getElementsByTagName('a');
+
+let key='';
+for(let i = 0; i<= navItems.length-1;i++)
+{
+  key = 'nav-item-'+(i+1);
+  navItems[i].innerText = siteContent.nav[key];
+}
+
+let h1 = document.getElementsByTagName('h1');
+h1[0].innerText=siteContent.cta.h1;
+
+let ctaBtn = document.getElementsByTagName('button');
+ctaBtn[0].innerText = siteContent.cta.button;
+
+ctaImg = document.getElementById('cta-img');
+ctaImg.src = siteContent.cta["img-src"];
+
+document.getElementById('middle-img').setAttribute('src',siteContent["main-content"]["middle-img-src"]);
+
+let topContent = document.getElementsByClassName('top-content');
+let textHeaders = topContent[0].getElementsByTagName('h4');
+textHeaders[0].innerText = siteContent["main-content"]["features-h4"];
+textHeaders[1].innerText = siteContent["main-content"]["about-h4"];
+let textBlocks = topContent[0].getElementsByTagName('p');
+textBlocks[0].innerText = siteContent["main-content"]["features-content"];
+textBlocks[1].innerText = siteContent["main-content"]["about-content"];
+
+let botContent = document.getElementsByClassName('bottom-content');   
+let btmTextHeaders = botContent[0].getElementsByTagName('h4');
+btmTextHeaders[0].innerText = siteContent["main-content"]["services-h4"];
+btmTextHeaders[1].innerText = siteContent["main-content"]["product-h4"];
+btmTextHeaders[2].innerText = siteContent["main-content"]["vision-h4"];
+let btmTextBlocks = botContent[0].getElementsByTagName('p');
+btmTextBlocks[0].innerText = siteContent["main-content"]["services-content"];
+btmTextBlocks[1].innerText = siteContent["main-content"]["product-content"];
+btmTextBlocks[2].innerText = siteContent["main-content"]["vision-content"];
+
+let contact = document.getElementsByClassName('contact');
+let cntHeader = contact[0].getElementsByTagName('h4');
+cntHeader[0].innerText = siteContent.contact["contact-h4"];
+let paras = contact[0].getElementsByTagName('p');
+paras[0].innerText = siteContent.contact.address;
+paras[1].innerText = siteContent.contact.phone;
+paras[2].innerText = siteContent.contact.email;
+
+let element = document.getElementsByTagName('footer');
+let p = element[0].getElementsByTagName('p');
+p[0].innerText = siteContent.footer.copyright;
