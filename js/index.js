@@ -43,83 +43,83 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // Update the nav links
 let navitem1 = document.getElementsByTagName("a")[0];
-navitem1.innertext = siteContent["nav"]["nav-item-1"]
+navitem1.innerHTML = siteContent["nav"]["nav-item-1"]
 
 let navitem2 = document.getElementsByTagName("a")[1];
-navitem2.innertext = siteContent["nav"]["nav-item-2"]
+navitem2.innerHTML = siteContent["nav"]["nav-item-2"]
 
 let navitem3 = document.getElementsByTagName("a")[2];
-navitem3.innertext = siteContent["nav"]["nav-item-3"]
+navitem3.innerHTML = siteContent["nav"]["nav-item-3"]
 
 let navitem4 = document.getElementsByTagName("a")[3];
-navitem4.innertext = siteContent["nav"]["nav-item-4"]
+navitem4.innerHTML = siteContent["nav"]["nav-item-4"]
 
 let navitem5 = document.getElementsByTagName("a")[4];
-navitem5.innertext = siteContent["nav"]["nav-item-5"]
+navitem5.innerHTML = siteContent["nav"]["nav-item-5"]
 
 let navitem6 = document.getElementsByTagName("a")[5];
-navitem6.innertext = siteContent["nav"]["nav-item-6"]
+navitem6.innerHTML = siteContent["nav"]["nav-item-6"]
 
 //CTA
 let ctatitle = document.getElementsByTagName("h1")[0];
-ctatitle.innertext = siteContent["cta"]["h1"];
+ctatitle.innerHTML = siteContent["cta"]["h1"];
 
 let buttontext = document.getElementsByTagName("button")[0];
-buttontext.innertext = siteContent["cta"]["button"];
+buttontext.innerHTML = siteContent["cta"]["button"];
 
 let headerimage = document.getElementById("cta-img");
 headerimage.setAttribute('src', siteContent["cta"]["img-src"]);
 
 //Main-Content
 let featurestitle = document.getElementsByTagName("h4")[0];
-featurestitle.innertext = siteContent["main-content"]["features-h4"];
+featurestitle.innerHTML = siteContent["main-content"]["features-h4"];
 
 let abouttitle = document.getElementsByTagName("h4")[1];
-abouttitle.innertext = siteContent["main-content"]["about-h4"];
+abouttitle.innerHTML = siteContent["main-content"]["about-h4"];
 
 let servicestitle = document.getElementsByTagName("h4")[2];
-servicestitle.innertext = siteContent["main-content"]["services-h4"];
+servicestitle.innerHTML = siteContent["main-content"]["services-h4"];
 
 let producttitle = document.getElementsByTagName("h4")[3];
-producttitle.innertext = siteContent["main-content"]["product-h4"];
+producttitle.innerHTML = siteContent["main-content"]["product-h4"];
 
 let visiontitle = document.getElementsByTagName("h4")[4];
-visiontitle.innertext = siteContent["main-content"]["vision-h4"];
+visiontitle.innerHTML = siteContent["main-content"]["vision-h4"];
 
 let featurescontent = document.getElementsByTagName("p")[0];
-featurescontent.innertext = siteContent["main-content"]["features-content"];
+featurescontent.innerHTML = siteContent["main-content"]["features-content"];
 
 let aboutcontent = document.getElementsByTagName("p")[1];
-aboutcontent.innertext = siteContent["main-content"]["about-content"];
+aboutcontent.innerHTML = siteContent["main-content"]["about-content"];
 
 let middleimage = document.getElementById("middle-img");
 middleimage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 let servicescontent = document.getElementsByTagName("p")[2];
-servicescontent.innertext = siteContent["main-content"]["services-content"];
+servicescontent.innerHTML = siteContent["main-content"]["services-content"];
 
 let productcontent = document.getElementsByTagName("p")[3];
-productcontent.innertext = siteContent["main-content"]["product-content"];
+productcontent.innerHTML = siteContent["main-content"]["product-content"];
 
 let visioncontent = document.getElementsByTagName("p")[4];
-visioncontent.innertext = siteContent["main-content"]["product-content"];
+visioncontent.innerHTML = siteContent["main-content"]["product-content"];
 
 // Contact
 let contacttitle = document.getElementsByTagName("h4")[5];
-contacttitle.innertext = siteContent["contact"]["contact-h4"];;
+contacttitle.innerHTML = siteContent["contact"]["contact-h4"];;
 
 let address = document.getElementsByTagName("p")[5];
-address.innertext = siteContent["contact"]["address"];
+address.innerHTML = siteContent["contact"]["address"];
 
 let phone = document.getElementsByTagName("p")[6];
-phone.innertext = siteContent["contact"]["phone"];
+phone.innerHTML = siteContent["contact"]["phone"];
 
 let email = document.getElementsByTagName("p")[7];
-email.innertext = siteContent["contact"]["email"];
+email.innerHTML = siteContent["contact"]["email"];
 
 // Footer
 let footer = document.getElementsByTagName("p")[8];
-footer.innertext = siteContent["footer"]["copyright"];
+footer.innerHTML = siteContent["footer"]["copyright"];
 
 // Task 4 - Add New Content
 //Append and Prepend a Nav item
@@ -134,8 +134,8 @@ const mainNav = document.querySelector('nav');
 mainNav.prepend(firstnav);
 mainNav.appendChild(lastnav);
 
-console.log(mainNav);
 
+console.log(mainNav);
 //Change Nav text to green
 var aElements = document.getElementsByTagName('a');
 
