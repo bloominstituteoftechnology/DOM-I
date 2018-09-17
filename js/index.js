@@ -50,6 +50,7 @@ navItems[3].innerText = siteContent["nav"]["nav-item-4"];
 navItems[4].innerText = siteContent["nav"]["nav-item-5"];
 navItems[5].innerText = siteContent["nav"]["nav-item-6"];
 
+
 let ctaHeading = document.querySelector('h1');
 ctaHeading.innerText = siteContent["cta"]["h1"];
 
@@ -87,3 +88,14 @@ contactP[2].innerText = siteContent["contact"]["email"];
 
 let footerP = document.querySelectorAll('footer');
 footerP[0].innerText = siteContent["footer"]["copyright"];
+
+
+//stretch styles
+//It works just wanted the page to look normal.
+let mainNav = document.querySelector('nav');
+mainNav.style.flexDirection = 'column';
+mainNav.style.alignItems = 'center';
+
+navItems.forEach(item => item.style.color = 'blue');
+
+mainHeadings.forEach(item => item.style.color = 'red');
