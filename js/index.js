@@ -48,6 +48,7 @@ const paragraphs = document.querySelectorAll("p");
 const middleImage = document.getElementById("middle-img");
 const contactH4 = document.querySelector(".contact h4");
 const contactInfo = document.querySelectorAll(".contact p");
+  const footer = document.querySelector("footer p");
 
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
@@ -78,9 +79,5 @@ contactInfo[0].innerHTML = siteContent["contact"]["address"];
 contactInfo[1].innerHTML = siteContent["contact"]["phone"];
 contactInfo[2].innerHTML = siteContent["contact"]["email"];
 
-
-
-
-
-
+footer.innerHTML = siteContent["footer"]["copyright"];
 
