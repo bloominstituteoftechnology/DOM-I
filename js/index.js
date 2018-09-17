@@ -61,12 +61,7 @@ let ctaImage = document.getElementById("cta-img");
 ctaImage.setAttribute('src', siteContent["cta"]["img-src"])
 
 // Main Content Updates - top content ----------------------
-//"features-h4":"Features",
-//"features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-//"about-h4":"About",
-//"about-content": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-//"middle-img-src": "img/mid-page-accent.jpg",
-// [text, h4, text, p, text]
+
 let topContentHeaders = document.querySelectorAll(".top-content .text-content h4"); 
 topContentHeaders[0].innerText = siteContent["main-content"]["features-h4"];
 topContentHeaders[1].innerText = siteContent["main-content"]["about-h4"];
@@ -77,3 +72,17 @@ topContentParagraphs[1].innerText = siteContent["main-content"]["about-content"]
 
 let middleImage = document.getElementById("middle-img");
 middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+// Main Content Updates - bottom content ----------------------
+let bottomContentHeaders = document.querySelectorAll(".bottom-content .text-content h4"); 
+bottomContentHeaders[0].innerText = siteContent["main-content"]["services-h4"];
+bottomContentHeaders[1].innerText = siteContent["main-content"]["product-h4"];
+bottomContentHeaders[2].innerText = siteContent["main-content"]["vision-h4"];
+
+let bottomContentParagraphs = document.querySelectorAll(".bottom-content .text-content p"); 
+bottomContentParagraphs[0].innerText = siteContent["main-content"]["services-content"];
+bottomContentParagraphs[1].innerText = siteContent["main-content"]["product-content"];
+bottomContentParagraphs[2].innerText = siteContent["main-content"]["vision-content"];
+
+// Contact Updates ----------------------
+// Footer Updates ----------------------
