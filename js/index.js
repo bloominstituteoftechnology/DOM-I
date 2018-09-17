@@ -79,8 +79,8 @@ navLinks.forEach(link => (link.style.color = "green"));
 const ctaText = document.querySelector(".cta-text h1");
 const ctaButton = document.querySelector(".cta-text button");
 const ctaImg = document.querySelector("#cta-img");
-
-ctaText.innerText = siteContent.cta["h1"];
+//changing innerHTML here to be able to include <br> tags
+ctaText.innerHTML = "<h1>DOM<br> Is<br> Awesome</h1>";
 ctaButton.innerText = siteContent.cta.button;
 ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
 
@@ -118,7 +118,7 @@ const contactHeader = document.querySelector(".contact h4");
 const contactParas = document.querySelectorAll(".contact p");
 
 contactHeader.innerText = siteContent.contact["contact-h4"];
-contactParas[0].innerText = siteContent.contact.address;
+contactParas[0].innerHTML = "<p>123 Way 456 Street<br>Somewhere, USA</p>";
 contactParas[1].innerText = siteContent.contact.phone;
 contactParas[2].innerText = siteContent.contact.email;
 //footer (1 p tag)
