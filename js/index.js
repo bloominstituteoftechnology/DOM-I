@@ -63,3 +63,7 @@ heading[3].innerHTML = siteContent['main-content']['product-h4'];
 heading[4].innerHTML = siteContent['main-content']['vision-h4'];
 heading[5].innerHTML = siteContent['contact']['contact-h4'];
 
+const centerImg = document.getElementById('middle-img');
+centerImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+
