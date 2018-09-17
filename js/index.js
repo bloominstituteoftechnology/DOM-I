@@ -89,6 +89,7 @@ topContentP2[1].innerText = 'About content elementum magna eros, ac posuere elvi
 
 let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+middleImg.style.borderRadius = '2rem'
 
 let bottomContentP1Header = document.querySelector('.bottom-content').querySelectorAll('h4');
 bottomContentP1Header[0].innerText = 'Services'
@@ -128,12 +129,16 @@ const newNavElement1 = document.createElement('a');
 const navNode = document.querySelector('nav')
 newNavElement1.innerText = 'Cookies'
 navNode.appendChild(newNavElement1)
+newNavElement1.setAttribute('href', '#')
+newNavElement1.style.color = 'red'
 
 const newNavElement2 = document.createElement('a');
 newNavElement2.innerText = 'Milk'
 newNavElement2.style.color = 'red'
 navNode.prepend(newNavElement2)
+newNavElement2.setAttribute('href', '#')
 
-
-
+const newHeader = document.querySelector('header')
+newHeader.style.animationName = 'style1'
+newHeader.style.animationDuration = '5s'
 

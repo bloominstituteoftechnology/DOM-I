@@ -297,3 +297,8 @@ footer {
         margin: 20px;
     }
 }
+
+@keyframes style1 {
+    from {background-color: cyan;}
+    to {background-color: purple;}
+}
