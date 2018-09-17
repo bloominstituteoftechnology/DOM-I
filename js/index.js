@@ -43,10 +43,24 @@ const siteContent = {
 }
 
 // nav
-const navLinks = document.querySelectorAll('nav a')
-navLinks.forEach(
-  (navLink, i) => (navLink.innerText = siteContent.nav[`nav-item-${i + 1}`])
-)
+const navLinks = document.querySelectorAll('header nav a')
+navLinks.forEach((navLink, i) => {
+  navLink.innerText = siteContent.nav[`nav-item-${i + 1}`]
+})
+
+// append and prepend new items to nav
+const nav = document.querySelector('header nav')
+navItemAppend = document.createElement('a')
+navItemAppend.innerText = 'Last'
+nav.appendChild(navItemAppend)
+
+navItemPrepend = document.createElement('a')
+navItemPrepend.innerText = 'First'
+nav.prepend(navItemPrepend)
+
+// turn all nav links green
+const navLinksIncludingNew = document.querySelectorAll('header nav a')
+navLinksIncludingNew.forEach(item => (item.style.color = 'green'))
 
 const logo = document.getElementById('logo-img')
 logo.setAttribute('src', siteContent['nav']['img-src'])
@@ -101,6 +115,6 @@ contactContent.forEach(
   (item, i) => (item.innerText = siteContent.contact[contactContentKeys[i]])
 )
 
-// footer 
+// footer
 const footerContent = document.querySelector('footer p')
 footerContent.innerText = siteContent.footer.copyright
