@@ -83,7 +83,7 @@ const img1= document.getElementById('cta-img');
 img1.src= siteContent.cta ['img-src'];
 
 
-//headers
+//header
 const headerh4= document.querySelectorAll('div.text-content > h4');
 headerh4[0].innerHTML = siteContent ['main-content'] ['features-h4']
 headerh4[1].innerHTML = siteContent ['main-content'] ['about-h4']
@@ -91,7 +91,7 @@ headerh4[2].innerHTML = siteContent ['main-content'] ['services-h4']
 headerh4[3].innerHTML = siteContent ['main-content'] ['product-h4']
 headerh4[4].innerHTML = siteContent ['main-content'] ['vision-h4']
 
-//content
+//Main content
 const content = document.querySelectorAll('div.text-content > p');
 console.log(content)
 content[0].innerHTML = siteContent ['main-content']['features-content'];
@@ -102,7 +102,7 @@ content[4].innerHTML = siteContent ['main-content']['vision-content'];
 
 document.getElementById('middle-img').src = siteContent ['main-content']['middle-img-src']
 
-//contact 
+//contact section
 
 let footer = document.querySelector('section.contact h4');
 
@@ -115,7 +115,7 @@ contactInfo[1].innerHTML= siteContent.contact.phone;
 contactInfo[2].innerHTML= siteContent.contact.email;
 
 
-// Footer
+// Footer section
 
 //"footer": {
   // "copyright" : "Copyright Great Idea! 2018"
