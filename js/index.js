@@ -44,31 +44,29 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // Nav Items
 
-const newElement = document.createElement('a')
-newElement.style.color = 'green';
+const navElements = document.querySelectorAll('a');
+navElements.forEach(item => item.style.color = 'green');
+navElements[0].innerText = "Services";
+navElements[1].innerText = "Product";
+navElements[2].innerText = "Vision";
+navElements[3].innerText = "Features";
+navElements[4].innerText = "About";
+navElements[5].innerText = "Contact";
 
-const evenNewerElement = document.createElement('a');
-evenNewerElement.style.color = 'green';
+const navigation = document.querySelector('nav');
+console.log(navigation);
 
-const navElements = document.querySelector('nav');
-navElements.style.color = 'green';
-navElements.innerText = "Services";
-navElements.style.display = 'flex';
-navElements.style.flexDirection = 'row';
-navElements.style.justifyContent = 'space-between';
-// navElements[1].innerText = "Product";
-// navElements[2].innerText = "Vision";
-// navElements[3].innerText = "Features";
-// navElements[4].innerText = "About";
-// navElements[5].innerText = "Contact";
+const newAnchor1 = document.createElement('a');
+newAnchor1.innerText = 'Beginning';
+newAnchor1.style.color = 'green';
+const newAnchor2 = document.createElement('a');
+newAnchor2.innerText = 'End';
+newAnchor2.style.color = 'green';
 
-newElement.innerText = 'Beginning';
-evenNewerElement.innerText = 'End';
-navElements.prepend(newElement);
-navElements.append(evenNewerElement);
+navigation.prepend(newAnchor1);
 
+navigation.append(newAnchor2);
 
-console.log(navElements);
 
 const headerElements = document.querySelector('h1');
 headerElements.innerText = 'DOM\n Is\n Awesome';
