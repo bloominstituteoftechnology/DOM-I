@@ -39,25 +39,66 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"]);
+logo.setAttribute('src', siteContent.nav["img-src"]);
 
 //nav links
-let navLinks = document.querySelectorAll('a')
+let navLinks = document.querySelectorAll('a');
 navLinks[0].innerText = siteContent.nav["nav-item-1"]
-console.log(navLinks[0])
 
 navLinks[1].innerText = siteContent.nav["nav-item-2"]
-console.log(navLinks[1])
 
 navLinks[2].innerText = siteContent.nav["nav-item-3"]
-console.log(navLinks[2])
 
 navLinks[3].innerText = siteContent.nav["nav-item-4"]
-console.log(navLinks[3])
 
 navLinks[4].innerText = siteContent.nav["nav-item-5"]
-console.log(navLinks[4])
 
 navLinks[5].innerText = siteContent.nav["nav-item-6"]
-console.log(navLinks[5])
 
+//navLinks styling
+
+
+//cta
+const ctaLogo = document.getElementById("cta-img")
+ctaLogo.setAttribute('src', siteContent.cta["img-src"])
+
+const ctaText = document.querySelector(".cta-text h1")
+ctaText.innerText = siteContent.cta['h1'];
+
+const ctaButton = document.querySelector(".cta-text button")
+ctaButton.innerText = siteContent.cta['button']
+
+//main-content
+const textContent = document.querySelectorAll('.text-content p')
+const textTitle = document.querySelectorAll('.text-content h4')
+
+textTitle[0].innerText = siteContent["main-content"]['features-h4']
+textContent[0].innerText = siteContent["main-content"]['features-content']
+
+textTitle[1].innerText = siteContent["main-content"]['about-h4']
+textContent[1].innerText = siteContent["main-content"]['about-content']
+
+const midImage = document.querySelector('.middle-img')
+midImage.setAttribute('src', siteContent['main-content']["middle-img-src"])
+
+textTitle[2].innerText = siteContent["main-content"]['services-h4']
+textContent[2].innerText = siteContent["main-content"]['services-content']
+
+textTitle[3].innerText = siteContent["main-content"]['product-h4']
+textContent[3].innerText = siteContent["main-content"]['product-content']
+
+textTitle[4].innerText = siteContent["main-content"]['vision-h4']
+textContent[4].innerText = siteContent["main-content"]['vision-content']
+
+//contact
+const contactH4 = document.querySelector(".contact h4")
+const contactInfo = document.querySelectorAll(".contact p")
+
+contactH4.innerText = siteContent["contact"]["contact-h4"]
+contactInfo[0].innerText = siteContent["contact"]["address"]
+contactInfo[1].innerText = siteContent["contact"]["phone"]
+contactInfo[2].innerText = siteContent["contact"]["email"]
+
+//footer
+const footerText = document.querySelector("footer p")
+footerText.innerHTML = siteContent.footer.copyright
