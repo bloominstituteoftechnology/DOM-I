@@ -61,3 +61,19 @@ let ctaImage = document.getElementById("cta-img");
 ctaImage.setAttribute('src', siteContent["cta"]["img-src"])
 
 // Main Content Updates - top content ----------------------
+//"features-h4":"Features",
+//"features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+//"about-h4":"About",
+//"about-content": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+//"middle-img-src": "img/mid-page-accent.jpg",
+// [text, h4, text, p, text]
+let topContentHeaders = document.querySelectorAll(".top-content .text-content h4"); 
+topContentHeaders[0].innerText = siteContent["main-content"]["features-h4"];
+topContentHeaders[1].innerText = siteContent["main-content"]["about-h4"];
+
+let topContentParagraphs = document.querySelectorAll(".top-content .text-content p"); 
+topContentParagraphs[0].innerText = siteContent["main-content"]["features-content"];
+topContentParagraphs[1].innerText = siteContent["main-content"]["about-content"];
+
+let middleImage = document.getElementById("middle-img");
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
