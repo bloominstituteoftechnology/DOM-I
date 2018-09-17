@@ -54,7 +54,7 @@ navLinks.forEach((element, index) => {
 });
 
 //-- Call To Action ------------------------------
-document.querySelector('.cta-text h1').innerHTML = 'Dom<br /> is<br /> Awesome';
+document.querySelector('.cta-text h1').innerHTML = siteContent["cta"]["h1"].split(' ').join('<br />');
 document.querySelector('.cta-text button').innerText = 'Get Started';
 
 //-- Text Content --------------------------------
@@ -78,6 +78,18 @@ document.querySelectorAll('.contact p').forEach((element, index) => {
 });
 document.querySelector('footer p').innerText = 'Copyright Great Idea! 2018';
 
+//-- Task 4 --------------------------------------
+let newAnchor = document.createElement('a');
+newAnchor.href = "#";
+newAnchor.innerText = "First";
+document.querySelector('header nav').prepend(newAnchor);
+newAnchor = document.createElement('a');
+newAnchor.href = "#";
+newAnchor.innerText = "Last";
+document.querySelector('header nav').append(newAnchor);
+document.querySelectorAll('header nav a').forEach(element => {
+  element.style.color = 'green';
+});
 
 //== Stretch - (Also, see stretch project) =======================================
 
