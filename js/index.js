@@ -52,6 +52,19 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
   });
 }
 
+//CTA
+{
+  const cta = siteContent.cta;
+  let ctaTitle = document.querySelector('.cta > .cta-text > h1');
+  let ctaButton = document.querySelector('.cta > .cta-text > button');
+  let ctaImg = document.querySelector('.cta > img');
+
+  ctaTitle.innerText = cta.h1;
+  ctaButton.innerText = cta.button;
+  ctaImg.src = cta['img-src'];
+  
+}
+
 
 
 
