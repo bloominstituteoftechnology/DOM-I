@@ -39,6 +39,12 @@ const siteContent = {
   },
 };
 
+function fill(items, values) {
+  [...items].map((item, index) => item.innerText = values[index]);
+}
+
+// Nav
+
 let nav = document.querySelector('nav');
 let firstNav = document.createElement('a')
 let lastNav = document.createElement('a')
@@ -48,13 +54,14 @@ nav.prepend(firstNav);
 
 let navItems = document.querySelectorAll('nav a');
 let navValues = Object.values(siteContent['nav']);
-for (let i = 0; i < navItems.length; i ++) {
-  navItems[i].innerText = navValues[i];
-  navItems[i].style.color = 'green';
-}
+
+fill(navItems, navValues);
+[...navItems].map((item) => item.style.color = "green")
 
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+// CTA
 
 let ctaText = document.querySelector('.cta-text h1');
 ctaText.innerHTML = siteContent['cta']['h1'];
@@ -65,43 +72,42 @@ ctaBtn.innerText = siteContent['cta']['button'];
 let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 
-let MainContentH4 = document.querySelectorAll('.text-content h4');
-let MainContentKeys = Object.keys(siteContent['main-content']);
-let H4Values = [];
-MainContentKeys.forEach((key) => {
+// Main Content
+
+let mainContentH4 = document.querySelectorAll('.text-content h4');
+let mainContentKeys = Object.keys(siteContent['main-content']);
+let h4Values = [];
+mainContentKeys.forEach((key) => {
   if (key.includes('h4')) {
-    H4Values.push(siteContent['main-content'][key]);
+    h4Values.push(siteContent['main-content'][key]);
   }
 });
 
-for (let i = 0; i < H4Values.length; i ++) {
-  MainContentH4[i].innerText = H4Values[i];
-}
+fill(mainContentH4, h4Values);
+
+let mainContentP = document.querySelectorAll('.text-content p');
+let pValues = [];
+mainContentKeys.forEach((key) => {
+  if (key.includes('content')) {
+    pValues.push(siteContent['main-content'][key]);
+  }
+});
+
+fill(mainContentP, pValues);
 
 let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
-let MainContentP = document.querySelectorAll('.text-content p');
-let PValues = [];
-MainContentKeys.forEach((key) => {
-  if (key.includes('content')) {
-    PValues.push(siteContent['main-content'][key]);
-  }
-});
-
-for (let i = 0; i < PValues.length; i ++) {
-  MainContentP[i].innerText = PValues[i];
-}
+// Contact
 
 let contactH4 = document.querySelector('.contact h4');
 contactH4.innerText = siteContent['contact']['contact-h4'];
 
 let contactItems = document.querySelectorAll('.contact p');
 let contactValues = Object.values(siteContent['contact']).splice(1, 3);
+fill(contactItems, contactValues);
 
-for (let i = 0; i < contactItems.length; i ++) {
-  contactItems[i].innerText = contactValues[i];
-}
+// Footer
 
 let footer = document.querySelector('footer p');
 footer.innerText = siteContent['footer']['copyright'];
