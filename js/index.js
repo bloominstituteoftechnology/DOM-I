@@ -43,7 +43,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let navLinks = document.querySelectorAll('nav a'
 );
-navLinks[0].innerText.style = siteContent['nav']['nav-item-1']
+navLinks[0].innerText = siteContent['nav']['nav-item-1']
 navLinks[1].innerText = siteContent['nav']['nav-item-2']
 navLinks[2].innerText = siteContent['nav']['nav-item-3']
 navLinks[3].innerText = siteContent['nav']['nav-item-4']
