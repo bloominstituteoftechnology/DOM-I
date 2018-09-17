@@ -50,6 +50,7 @@ aselect[1].innerText = siteContent["nav"]["nav-item-2"];
 aselect[2].innerText = siteContent["nav"]["nav-item-3"];
 aselect[3].innerText = siteContent["nav"]["nav-item-4"];
 aselect[4].innerText = siteContent["nav"]["nav-item-5"];
+let navBuild = document.appendChild('nav');
 
 ////////////////////////////////////
 
@@ -65,16 +66,30 @@ button.innerText = siteContent['cta']['button'];
 
 ///////////////////////////////////
 
+//MAIN CONTENT
 let middleimg = document.getElementById("middle-img");
 middleimg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+/// TOP
+let topClass = document.getElementsByClassName('top-content');
+topClass[0].children[0].children[0].innerText = siteContent['main-content']['features-h4'];
+topClass[0].children[0].children[1].innerText = siteContent['main-content']['features-content'];
+topClass[0].children[1].children[0].innerText = siteContent['main-content']['about-h4'];
+topClass[0].children[1].children[1].innerText = siteContent['main-content']['about-content'];
 
+/// BOTTOM
+let bottomClass = document.getElementsByClassName('bottom-content');
+bottomClass[0].children[0].children[0].innerText = siteContent['main-content']['services-h4'];
+bottomClass[0].children[0].children[1].innerText = siteContent['main-content']['services-content'];
+bottomClass[0].children[1].children[0].innerText = siteContent['main-content']['product-h4'];
+bottomClass[0].children[1].children[1].innerText = siteContent['main-content']['product-content'];
+bottomClass[0].children[2].children[0].innerText = siteContent['main-content']['vision-h4'];
+bottomClass[0].children[2].children[1].innerText = siteContent['main-content']['vision-content'];
 //CONTACT 
-
-h4[3].innerText = siteContent['contact']['contact-h4'];
 let contactClass = document.getElementsByClassName('contact');
-console.log(contactClass);
-
-
+contactClass[0].children[0].innerText = siteContent['contact']['contact-h4'];
+contactClass[0].children[1].innerText = siteContent['contact']['address'];
+contactClass[0].children[2].innerText = siteContent['contact']['phone'];
+contactClass[0].children[3].innerText = siteContent['contact']['email'];
 
 ///////////////////////////////////
 
