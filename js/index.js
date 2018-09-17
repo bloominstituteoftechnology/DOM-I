@@ -55,3 +55,16 @@ const ctaButton = document.querySelector('.cta-text button');
 ctaButton.innerText = siteContent['cta']['button'];
 let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+// features
+const textContent = document.querySelectorAll('.top-content .text-content h4');
+textContent[0].innerText = siteContent['main-content']['features-h4'];
+const textContentP = document.querySelectorAll('.text-content p');
+textContentP[0].innerText = siteContent['main-content']['features-content'];
+
+// about
+textContent[1].innerText = siteContent['main-content']['about-h4'];
+textContentP[1].innerText = siteContent['main-content']['about-content'];
+
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
