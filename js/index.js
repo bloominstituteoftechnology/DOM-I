@@ -41,6 +41,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
+// nav
 const links = document.querySelectorAll('a');
 links[0].innerText = siteContent["nav"]["nav-item-1"];
 links[1].innerText = siteContent["nav"]["nav-item-2"];
@@ -49,6 +50,30 @@ links[3].innerText = siteContent["nav"]["nav-item-4"];
 links[4].innerText = siteContent["nav"]["nav-item-5"];
 links[5].innerText = siteContent["nav"]["nav-item-6"];
 
+links[0].style.color = 'green';
+links[1].style.color = 'green';
+links[2].style.color = 'green';
+links[3].style.color = 'green';
+links[4].style.color = 'green';
+links[5].style.color = 'green';
+
+const aElement = document.createElement('a');
+links[0].prepend(aElement);
+
+aElement.innerText = "Blog";
+aElement.style.marginRight = "35px";
+aElement.href = 'https://google.com';
+
+const aElement2 = document.createElement('a');
+links[5].appendChild(aElement2);
+aElement2.innerText = "Forum";
+aElement2.style.marginLeft = "35px";
+aElement2.href = 'https://google.com';
+aElement.style.color = "green";
+aElement2.style.color = "green";
+
+
+// cta
 const ctah1 = document.querySelector('.cta-text h1');
 ctah1.innerText = siteContent['cta']['h1'];
 const ctaButton = document.querySelector('.cta-text button');
