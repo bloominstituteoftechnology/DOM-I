@@ -88,11 +88,14 @@ bottomContentParagraphs[2].innerText = siteContent["main-content"]["vision-conte
 
 let contactHeader = document.querySelectorAll(".contact h4");
 contactHeader[0].innerText = siteContent["contact"]["contact-h4"];
-console.log(contactHeader)
+
 
 let contactInfo = document.querySelectorAll(".contact p");
 contactInfo[0].innerText = siteContent["contact"]["address"];
 contactInfo[1].innerText = siteContent["contact"]["phone"];
 contactInfo[2].innerText = siteContent["contact"]["email"];
-console.log(contactInfo)
+
 // Footer Updates ----------------------
+
+let footerInfo = document.querySelectorAll("footer p");
+footerInfo[0].innerText = siteContent["footer"]["copyright"];
