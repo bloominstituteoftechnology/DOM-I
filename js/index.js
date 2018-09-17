@@ -39,9 +39,7 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', 'https://mediaassets.kivitv.com/photo/2018/08/21/Indiana_bat_1534890864243_95371107_ver1.0_640_480.jpg');
-
-// logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
 let allNavs = document.querySelectorAll('a');
@@ -54,6 +52,21 @@ allNavs[5].innerText = 'Contact';
 // allNavs[0].style.border = '10px solid green'; ???
 
 
-// logo.src = 'http://www.imagsource.com/image.jpg';
-// logo.style.border = '10px solid red';
+
+let ctaText = document.querySelector('h1');
+ctaText.innerText = 'DOM IS AWESOME';
+
+
+let ctaImg = document.getElementById('cta-img');
+ctaImg.setAttribute('src', '../img/header-img.png');
+
+
+let btn = document.querySelector('button');
+btn.innerText = 'Get Started'
+
+// let textContent = document.querySelectorAll('text-content');
+// textContent[1].innerText = 'bruh';
+
+let middleImg = document.getElementById('middle-img');
+middleImg.setAttribute('src', '../img/mid-page-accent.jpg');
 
