@@ -65,6 +65,23 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
   
 }
 
+// Main Content
+{
+  const mainContent = siteContent["main-content"];
+  const sections = ['features', 'about', 'services', 'product', 'vision'];
+  
+  let contentH4 = document.querySelectorAll('.text-content > h4')
+  let contentP = document.querySelectorAll('.text-content > P')
+  // console.log(contentH4);
 
+  contentH4.forEach((e, i) => {
+    e.innerText = mainContent[`${sections[i]}-h4`]
+  })
+  contentP.forEach((e, i) => {
+    e.innerText = mainContent[`${sections[i]}-content`]
+  })
 
+  let contentIMG = document.querySelector('.main-content > .middle-img');
+  contentIMG.src = mainContent["middle-img-src"];
 
+}
