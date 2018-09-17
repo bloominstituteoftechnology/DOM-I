@@ -10,7 +10,7 @@ function timer() {
 
   function increment() {
     time += 1
-   // console.log(time);
+    // console.log(time);
     return time;
   }
   return increment;
@@ -21,21 +21,21 @@ const startButton = document.querySelector('button');
 function runTimer() {
   document.body.style.color = 'black';
   startButton.setAttribute('disabled', 'disabled');
-let newTimer = timer();
-let interval = setInterval(function(){
-  currentTime = newTimer();
-  if (currentTime >= 1000) {
-    document.body.style.color = 'red';
-    startButton.removeAttribute('disabled');
-    clearInterval(interval);
-  }
-  displayTime = currentTime.toString();
-  //console.log(displayTime);
-  msTens.innerText = displayTime[displayTime.length -1];
-  msHundreds.innerText = displayTime[displayTime.length -2] || 0;
-  secondOnes.innerText = displayTime[displayTime.length -3] || 0;
-  secondTens.innerText = displayTime[displayTime.length -4] || 0;
-}, 10);
+  let newTimer = timer();
+  let interval = setInterval(function(){
+    currentTime = newTimer();
+    if (currentTime >= 1000) {
+      document.body.style.color = 'red';
+      startButton.removeAttribute('disabled');
+      clearInterval(interval);
+    }
+    displayTime = currentTime.toString();
+    //console.log(displayTime);
+    msTens.innerText = displayTime[displayTime.length -1];
+    msHundreds.innerText = displayTime[displayTime.length -2] || 0;
+    secondOnes.innerText = displayTime[displayTime.length -3] || 0;
+    secondTens.innerText = displayTime[displayTime.length -4] || 0;
+  }, 10);
 }
 
 startButton.addEventListener('click', runTimer);

@@ -2,6 +2,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .digit {
@@ -11,4 +12,14 @@ body {
 
 .redDigit {
   color: red;
+}
+
+button {
+    margin-top: 10px;
+    width: 20%;
+    padding: 20px;
+    background-color: blue;
+    font-size: 60px;
+    color: white;
+    font-family: 'Ruslan Display', cursive;
 }
