@@ -8,6 +8,7 @@ let msTens = document.querySelector("#msTens");
 let msHundreds = document.querySelector("#msHundreds");
 let secondOnes = document.querySelector("#secondOnes");
 let secondTens = document.querySelector("#secondTens");
+let startTime = 0;
 let msOnesCounter = 0;
 let msHundredsCounter = 0;
 let secondOnesCounter = 0;
@@ -17,14 +18,16 @@ let refresh = function() {
   msOnesCounter = 0;
 };
 
-init();
+// init();
 
 //  buttons
-let button = document.querySelector("button");
+let startBtn = document.querySelector("#start");
+startBtn.addEventListener("click", () => (startTime = 10));
 // start
 
 // pause button (temporary)
-button.addEventListener("click", () => clearInterval(timer));
+let stopBtn = document.querySelector("#stop");
+stopBtn.addEventListener("click", () => clearInterval(timer));
 
 msTens.textContent = msOnesCounter;
 msHundreds.textContent = msHundredsCounter;
@@ -45,14 +48,29 @@ function addTime() {
     msHundredsCounter++;
     // console.log(msHundredsCounter);
     refresh();
-  } else if (msHundredsCounter > 8) {
-    msHundredsCounter = 0;
-    console.log(msHundredsCounter);
-    secondOnesCounter++;
+    addSecond();
   }
 
   msTens.innerText = msOnesCounter;
   msHundreds.innerText = msHundredsCounter;
   secondOnes.textContent = secondOnesCounter;
   secondTens.textContent = secondTensCounter;
+}
+
+function addSecond() {
+  if (msHundredsCounter > 9) {
+    msHundredsCounter = 0;
+    secondOnesCounter++;
+    console.log(secondOnesCounter);
+  }
+
+  if (secondOnesCounter > 9) {
+    secondOnesCounter = 0;
+    secondTensCounter++;
+  }
+
+  if (secondTensCounter > 0) {
+    clearInterval(timer);
+    digit.classList.add("redDigit");
+  }
 }
