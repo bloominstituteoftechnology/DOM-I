@@ -138,7 +138,14 @@ newNavElement2.style.color = 'red'
 navNode.prepend(newNavElement2)
 newNavElement2.setAttribute('href', '#')
 
-const newHeader = document.querySelector('header')
+const newHeader = document.querySelector('header');
 newHeader.style.animationName = 'style1'
 newHeader.style.animationDuration = '5s'
 
+const newH4Colors = document.querySelectorAll('h4');
+// for (let i = 0; i<newH4Colors.length; i++) {
+//   newH4Colors[i].style.color = 'blue';
+// }
+[].forEach.call(newH4Colors, function(newColor) {
+  newColor.style.color = 'blue';
+})
