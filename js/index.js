@@ -80,8 +80,13 @@ contactP[1].innerText="1 (888) 888-8888";
 contactP[2].innerText="sales@greatidea.io";
 let footerP= document.querySelector("footer p");
 footerP.innerText="Copyright Great Idea! 2018";
-for(let i=0; i,nav.length;i++){
+const newElement = document.createElement('a');
+const mainNav = document.querySelector('header nav');
+newElement.innerText = 'Welcome';
+mainNav.prepend(newElement);
+const nav2=document.createElement('a');
+nav2.innerText="Blog";
+mainNav.appendChild(nav2);
+for(let i=0;i<nav.length;i++){
   nav[i].style.color="green";
 }
-
-
