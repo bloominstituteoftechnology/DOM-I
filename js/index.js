@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "123 Way 456 Street  Somewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -81,4 +81,4 @@ paragraph[6].innerHTML = siteContent["contact"]["phone"];
 paragraph[7].innerHTML = siteContent["contact"]["email"];
 paragraph[8].innerHTML = siteContent["footer"]["copyright"];
 
-cta.innerHTML = "DOM <br> is <br> Awesome";
+paragraph[5].innerHTML = "123 Way 456 Street <br> Somewhere, USA";
