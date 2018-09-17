@@ -1,11 +1,13 @@
 const siteContent = {
   "nav": {
+    "nav-item-0": "Prepended Item",
     "nav-item-1": "Services",
     "nav-item-2": "Product",
     "nav-item-3": "Vision",
     "nav-item-4": "Features",
     "nav-item-5": "About",
     "nav-item-6": "Contact",
+    "nav-item-7": "Appended Item",
     "img-src": "img/logo.png"
   },
   "cta": {
@@ -37,10 +39,18 @@ const siteContent = {
   },
 };
 
-let navItems = document.querySelectorAll('a');
+let nav = document.querySelector('nav');
+let firstNav = document.createElement('a')
+let lastNav = document.createElement('a')
+
+nav.appendChild(lastNav);
+nav.prepend(firstNav);
+
+let navItems = document.querySelectorAll('nav a');
 let navValues = Object.values(siteContent['nav']);
-for (let i = 0; i < navItems.length - 1; i ++) {
+for (let i = 0; i < navItems.length; i ++) {
   navItems[i].innerText = navValues[i];
+  navItems[i].style.color = 'green';
 }
 
 let logo = document.getElementById("logo-img");
@@ -95,3 +105,4 @@ for (let i = 0; i < contactItems.length; i ++) {
 
 let footer = document.querySelector('footer p');
 footer.innerText = siteContent['footer']['copyright'];
+
