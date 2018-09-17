@@ -9,7 +9,7 @@ const siteContent = {
         'img-src': 'img/logo.png'
     },
     'cta': {
-        'h1': 'DOM Is Awesome',
+        'h1': 'DOM\nIs\nAwesome',
         'button': 'Get Started',
         'img-src': 'img/header-img.png'
     },
@@ -39,7 +39,7 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById('logo-img');
-logo.setAttribute('src', siteContent['nav']['img-src'])
+logo.setAttribute('src', siteContent['nav']['img-src']);
 
 // nav
 
@@ -53,6 +53,8 @@ for (let i = 0; i < navBar.length; i++) {
 
 let ctaHeader = document.querySelector('.cta h1');
 ctaHeader.innerText = siteContent.cta.h1;
+ctaHeader.appendChild(document.createElement('a'));
+
 
 let ctaButton = document.querySelector('.cta button');
 ctaButton.innerText = siteContent.cta.button;
@@ -101,3 +103,15 @@ footerText.innerText = siteContent.footer.copyright;
 
 // Task 4: Add new content
 
+
+let appendVar = document.createElement('a');
+appendVar.innerText = 'Appended';
+appendVar.href = "#";
+let prependVar = document.createElement('a');
+prependVar.innerText = 'Prepended';
+prependVar.href = "#";
+
+document.querySelector('header nav').prepend(prependVar);
+document.querySelector('header nav').appendChild(appendVar);
+
+navBar.forEach(cb => cb.style.color = 'green')
