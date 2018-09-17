@@ -67,3 +67,13 @@ textContentNodes.forEach((element, index) => {
 });
 
 //------------------------------------------------
+document.querySelector('.contact h4').innerText = 'Contact';
+const contactLines = [
+  '123 Way 456 Street<br> \nSomewhere, USA',
+  '1 (888) 888-8888',
+  'sales@greatidea.io'
+];
+document.querySelectorAll('.contact p').forEach((element, index) => {
+  element.innerHTML = contactLines[index];
+});
+document.querySelector('footer p').innerText = 'Copyright Great Idea! 2018';
