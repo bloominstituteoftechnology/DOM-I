@@ -87,11 +87,15 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 //Contact
 {
   const contact = siteContent.contact;
+
+  let address = contact.address.split(' '); // "123 Way 456 Street Somewhere, USA"
+  address.splice(4, 0, '<br />')
+  const newAddress = address.join(' ');
   
   document.querySelector('.contact > h4').innerText = contact["contact-h4"];
   let info = document.querySelectorAll('.contact > p');
 
-  info[0].innerText = contact.address;
+  info[0].innerHTML = newAddress;
   info[1].innerText = contact.phone;
   info[2].innerText = contact.email;
 }
@@ -99,6 +103,5 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 //Footer
 {
   const copyright = siteContent.footer.copyright;
-
   document.querySelector('footer > p').innerText = copyright;
 }
