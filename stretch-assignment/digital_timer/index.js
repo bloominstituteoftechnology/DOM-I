@@ -16,6 +16,7 @@ function timer() {
   return increment;
 }
 
+function runTimer() {
 let newTimer = timer();
 let interval = setInterval(function(){
   currentTime = newTimer();
@@ -30,6 +31,11 @@ let interval = setInterval(function(){
   secondOnes.innerText = displayTime[displayTime.length -3] || 0;
   secondTens.innerText = displayTime[displayTime.length -4] || 0;
 }, 10);
+}
+
+const startButton = document.querySelector('button');
+startButton.addEventListener('click', runTimer);
+
 
 
 
