@@ -43,14 +43,28 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // Update nav items with text
 let navAs = document.querySelectorAll('nav a');
-console.log(navAs);
-navAs.style.color = 'green';
 navAs[0].innerText = siteContent.nav["nav-item-1"];
 navAs[1].innerText = siteContent.nav["nav-item-2"];
 navAs[2].innerText = siteContent.nav["nav-item-3"];
 navAs[3].innerText = siteContent.nav["nav-item-4"];
 navAs[4].innerText = siteContent.nav["nav-item-5"];
 navAs[5].innerText = siteContent.nav["nav-item-6"];
+
+// adding elements to nav
+const firstA = document.createElement('a');
+firstA.innerText = 'Boogie';
+document.querySelector('nav').prepend(firstA);
+
+const lastA = document.createElement('a');
+lastA.innerText = 'Turnpike';
+document.querySelector('nav').appendChild(lastA);
+
+// beast mode
+const updatedNavAs = document.querySelectorAll('nav a');
+for (let i = 0; i < updatedNavAs.length; i++) {
+  updatedNavAs[i].style.color = 'green';
+}
+
 
 // Update CTA
 document.querySelector('.cta-text h1').innerHTML = siteContent.cta.h1;
