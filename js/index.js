@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM <br> Is <br> Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -63,7 +63,7 @@ let mainNav = document.querySelector('nav');
     newNavItem1.href = '#'
     newNavItem1.style.color = 'green'
     mainNav.appendChild(newNavItem1);
-    
+
  const newNavItem2 = document.createElement('a');
     newNavItem2.innerText = 'Shop'
     newNavItem2.href = '#'
@@ -91,6 +91,7 @@ cta.innerHTML = siteContent["cta"]["h1"];
 let topContentHeaders = document.querySelectorAll('.top-content .text-content h4');
 topContentHeaders[0].innerHTML = siteContent["main-content"]["features-h4"];
 topContentHeaders[1].innerHTML = siteContent["main-content"]["about-h4"];
+
 
 
 let topContentText = document.querySelectorAll('.top-content .text-content p' );
