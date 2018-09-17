@@ -9,6 +9,8 @@ const siteContent = {
     "nav-item-4": "Features",
     "nav-item-5": "About",
     "nav-item-6": "Contact",
+    "nav-item-7": "Videos",
+    "nav-item-8": "Blog",
     "img-src": "img/logo.png"
   },
   "cta": {
@@ -40,22 +42,50 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
+// Header Updates ------------------
+
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+// Nav Updates -----------
+//* I'm taking a long way to the solution to complete exercise...
+// but would like to see how to do this looping through siteContent.nav */
+
 let nav = document.querySelectorAll("nav a"); 
-console.log(nav);
+nav[0].innerText = siteContent["nav"]["nav-item-1"];
+nav[1].innerText = siteContent["nav"]["nav-item-2"];
+nav[2].innerText = siteContent["nav"]["nav-item-3"];
+nav[3].innerText = siteContent["nav"]["nav-item-4"];
+nav[4].innerText = siteContent["nav"]["nav-item-5"];
+nav[5].innerText = siteContent["nav"]["nav-item-6"];
+
+//---added new items to nav -----
+
+let mainNav = document.querySelector("nav");
+let newItem = document.createElement('a');
+newItem.innerText = siteContent["nav"]["nav-item-7"];
+newItem.href = '#';
+
+let newItem2 = document.createElement('a');
+newItem2.innerText = siteContent["nav"]["nav-item-8"];
+newItem2.href = '#';
+
+mainNav.append(newItem);
+mainNav.append(newItem2);
+
+
+//!!font color not working!!
+
+let navLinks = document.querySelectorAll("header nav a");
+for (var i = 0; i < navLinks.length; i++) {navLinks[i].style.color = 'green';};
 
 // CTA Updates----------------------------
 
 let cta = document.querySelector(".cta-text h1"); 
 cta.innerText = siteContent.cta.h1;
-console.log(cta);
 
 let ctaButton = document.querySelector(".cta-text button"); 
 ctaButton.innerText = siteContent.cta.button;
-console.log(ctaButton);
 
 let ctaImage = document.getElementById("cta-img");
 ctaImage.setAttribute('src', siteContent["cta"]["img-src"])
@@ -74,6 +104,7 @@ let middleImage = document.getElementById("middle-img");
 middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 // Main Content Updates - bottom content ----------------------
+
 let bottomContentHeaders = document.querySelectorAll(".bottom-content .text-content h4"); 
 bottomContentHeaders[0].innerText = siteContent["main-content"]["services-h4"];
 bottomContentHeaders[1].innerText = siteContent["main-content"]["product-h4"];
@@ -88,7 +119,6 @@ bottomContentParagraphs[2].innerText = siteContent["main-content"]["vision-conte
 
 let contactHeader = document.querySelectorAll(".contact h4");
 contactHeader[0].innerText = siteContent["contact"]["contact-h4"];
-
 
 let contactInfo = document.querySelectorAll(".contact p");
 contactInfo[0].innerText = siteContent["contact"]["address"];
