@@ -60,8 +60,44 @@ const ctaImage = document.querySelector('#cta-img');
 ctaImage.src = siteContent.cta['img-src'];
 
 // Main Content
+const topContentSections = document.querySelectorAll('.main-content .top-content .text-content');
+topContentSections.forEach(i => i.style.width = '50%');
+
+const featuresH4 = document.querySelector('.main-content .top-content .text-content h4');
+featuresH4.innerText = siteContent['main-content']['features-h4'];
+
+const featuresPara = document.querySelector('.main-content .top-content .text-content p');
+featuresPara.innerText = siteContent['main-content']['features-content'];
+
+const aboutSection = document.querySelectorAll('.main-content .top-content .text-content')[1];
+const aboutH4 = aboutSection.querySelector('h4');
+aboutH4.innerText = siteContent['main-content']['about-h4'];
+const aboutPara = aboutSection.querySelector('p');
+aboutPara.innerText = siteContent['main-content']['about-content'];
 
 
+const middleImg = document.getElementById('middle-img');
+middleImg.src = siteContent['main-content']['middle-img-src'];
 
+const bottomContentSections = document.querySelectorAll('.main-content .bottom-content .text-content');
+bottomContentSections.forEach(section => section.style.width = '33%');
 
+const servicesH4 = document.querySelector('.main-content .bottom-content .text-content h4');
+servicesH4.innerText = siteContent['main-content']['services-h4'];
 
+const servicesPara = document.querySelector('.main-content .bottom-content .text-content p')
+servicesPara.innerText = siteContent['main-content']['services-content'];
+
+const productH4 = document.querySelectorAll('.main-content .bottom-content .text-content h4')[1];
+productH4.innerText = siteContent['main-content']['product-h4']
+
+const productPara = document.querySelectorAll('.main-content .bottom-content .text-content p')[1];
+productPara.innerText = siteContent['main-content']['product-content']
+
+const visionH4 = document.querySelectorAll('.main-content .bottom-content .text-content H4')[2];
+visionH4.innerText = siteContent['main-content']['vision-h4']
+
+const visionPara = document.querySelectorAll('.main-content .bottom-content .text-content p')[2];
+visionPara.innerText = siteContent['main-content']['vision-content']
+
+// Contact
