@@ -60,3 +60,13 @@ navAbout.innerHTML = 'About';
 
 let navContact = document.querySelectorAll('a')[5];
 navContact.innerHTML = 'Contact';
+
+// CTA
+let ctaTitle = document.querySelector('.cta .cta-text h1');
+ctaTitle.innerHTML = 'DOM <br> Is <br> Awesome';
+
+let ctaButton = document.querySelector('.cta .cta-text button');
+ctaButton.innerHTML = 'Get Started';
+
+let ctaImg = document.querySelector('.cta img');
+ctaImg.src = 'img/header-img.png';
