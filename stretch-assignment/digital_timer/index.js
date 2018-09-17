@@ -13,8 +13,8 @@ msTens.innerText=0;
 
 let initialZero = 0;
 let initialMsZero = 0;
-setInterval(()=>{
 
+setInterval(()=>{
     let currentDigit = secondOnes.innerText;
     let nextDigit = parseInt(secondOnes.innerText)+1
 
@@ -26,8 +26,6 @@ setInterval(()=>{
         msTens.innerText=0;
         initialZero=0;
     }
-
-
     if(nextDigit === 10)
     {
         currentDigit = 0;
@@ -36,13 +34,9 @@ setInterval(()=>{
     }
     secondOnes.innerText=nextDigit;
     secondTens.innerText=initialZero;
-
-
-  
 },1000);
 
 setInterval(()=>{
-
     let currentDigit = msTens.innerText;
     let nextDigit = parseInt(msTens.innerText)+1
 
@@ -56,9 +50,6 @@ setInterval(()=>{
     {
         initialMsZero = 0;
     }
-
     msTens.innerText = nextDigit;
     msHundreds.innerText=initialMsZero;
-
-  
 },10);
