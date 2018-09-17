@@ -37,6 +37,8 @@ const siteContent = {
   },
 };
 
+document.querySelector('header nav').style.justifyContent = 'space-around'
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent.nav["img-src"]);
@@ -91,10 +93,10 @@ textTitle[4].innerText = siteContent["main-content"]['vision-h4']
 textContent[4].innerText = siteContent["main-content"]['vision-content']
 
 //contact
-const contactH4 = document.querySelector(".contact h4")
+const contactTitle = document.querySelector(".contact h4")
 const contactInfo = document.querySelectorAll(".contact p")
 
-contactH4.innerText = siteContent["contact"]["contact-h4"]
+contactTitle.innerText = siteContent["contact"]["contact-h4"]
 contactInfo[0].innerText = siteContent["contact"]["address"]
 contactInfo[1].innerText = siteContent["contact"]["phone"]
 contactInfo[2].innerText = siteContent["contact"]["email"]
@@ -102,3 +104,23 @@ contactInfo[2].innerText = siteContent["contact"]["email"]
 //footer
 const footerText = document.querySelector("footer p")
 footerText.innerHTML = siteContent.footer.copyright
+
+//TASK 4
+navLinks.forEach( a => {
+  a.style.color = 'green'
+});
+
+const newLink1 = document.createElement('a');
+const theNav = document.querySelector('nav')
+newLink1.innerText = 'Link 1'
+newLink1.href = 'https://lambdaschool.com'
+newLink1.style.color = 'green'
+theNav.prepend(newLink1)
+
+const newLink2 = document.createElement('a');
+// const theNav = document.querySelector('nav')
+newLink2.innerText = 'Link 2'
+newLink2.href = 'https://lambdaschool.com'
+newLink2.style.color = 'green'
+theNav.append(newLink2)
+
