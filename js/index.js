@@ -40,10 +40,12 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
+
 const navItems = document.querySelectorAll("a");
   for(let i= 0; i < navItems.length; i++) {
     navItems[i].innerText = siteContent["nav"][`nav-item-${i+1}`];
     navItems[i].style.color = "mediumSpringGreen"
+    navItems[i].style.textShadow = "2px 2px 2px green"
 }; 
 
 const newNavGuy = document.createElement('a');
@@ -51,7 +53,9 @@ const navBar = document.querySelector('header nav');
 newNavGuy.innerText = 'Join the Party!';
 newNavGuy.href = 'https://party.com';
 newNavGuy.style.color = "mediumSpringGreen"
+newNavGuy.style.textShadow = "2px 2px 2px green"
 navBar.appendChild(newNavGuy);
+
 
 
 
@@ -64,12 +68,12 @@ navBar.appendChild(newNavGuy);
 // navItems[5].innerText = siteContent["nav"]["nav-item-6"]
  
  const mainHeading = document.querySelector("h1");
-mainHeading.innerText = siteContent["cta"]["h1"]
+mainHeading.innerText = siteContent["cta"]["h1"];
+mainHeading.style.textShadow = "3px 3px 3px pink"
  const mainBtn = document.querySelector("Button");
 mainBtn.innerText = siteContent["cta"]["button"];
  const mainImg = document.getElementById("cta-img");
 mainImg.setAttribute('src', siteContent["cta"]["img-src"]);
- 
 const allHeadings = document.querySelectorAll("h4");
 //  for(let i = 0; i < allHeadings.length; i++) {
 //   allHeadings[i].innerText = siteContent["main-content"][i];
@@ -92,4 +96,5 @@ paragraphs[5].innerText = siteContent["contact"]["address"];
 paragraphs[6].innerText = siteContent["contact"]["phone"];
 paragraphs[7].innerText = siteContent["contact"]["email"];
 paragraphs[8].innerText = siteContent["footer"]["copyright"];
+
 
