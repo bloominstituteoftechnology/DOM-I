@@ -41,17 +41,17 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
  
  const navItems = document.querySelectorAll("a");
-//   for(let i= 0; i < [nav].length; i++) {
-//     navItems[i].innerHTML = siteContent[`nav`][`nav-item-${i}`];
-// } 
+  for(let i= 0; i < 5; i++) {
+    navItems[i].innerHTML = siteContent["nav"][`nav-item-${i+1}`];
+} 
 
 
-navItems[0].innerHTML = siteContent["nav"]["nav-item-1"]
-navItems[1].innerHTML = siteContent["nav"]["nav-item-2"]
-navItems[2].innerHTML = siteContent["nav"]["nav-item-3"]
-navItems[3].innerHTML = siteContent["nav"]["nav-item-4"]
-navItems[4].innerHTML = siteContent["nav"]["nav-item-5"]
-navItems[5].innerHTML = siteContent["nav"]["nav-item-6"]
+// navItems[0].innerHTML = siteContent["nav"]["nav-item-1"]
+// navItems[1].innerHTML = siteContent["nav"]["nav-item-2"]
+// navItems[2].innerHTML = siteContent["nav"]["nav-item-3"]
+// navItems[3].innerHTML = siteContent["nav"]["nav-item-4"]
+// navItems[4].innerHTML = siteContent["nav"]["nav-item-5"]
+// navItems[5].innerHTML = siteContent["nav"]["nav-item-6"]
  
  const mainHeading = document.querySelector("h1");
 mainHeading.innerHTML = siteContent["cta"]["h1"]
@@ -59,7 +59,7 @@ mainHeading.innerHTML = siteContent["cta"]["h1"]
 mainBtn.innerHTML = siteContent["cta"]["button"]
  const mainImg = document.getElementById("cta-img");
 mainImg.setAttribute('src', siteContent["cta"]["img-src"])
- const allHeadings = document.getElementsByTagName("h4");
+ const allHeadings = document.querySelectorAll("h4");
 allHeadings[0].innerHTML = siteContent["main-content"]["features-h4"]
 allHeadings[1].innerHTML = siteContent["main-content"]["about-h4"]
 allHeadings[2].innerHTML = siteContent["main-content"]["services-h4"]
