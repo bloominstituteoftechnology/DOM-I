@@ -50,3 +50,12 @@ navItems[3].innerText = siteContent["nav"]["nav-item-4"];
 navItems[4].innerText = siteContent["nav"]["nav-item-5"];
 navItems[5].innerText = siteContent["nav"]["nav-item-6"];
 
+let ctaHeading = document.querySelector('h1');
+ctaHeading.innerText = siteContent["cta"]["h1"];
+
+let ctaButton = document.querySelector('button');
+ctaButton.innerText = siteContent["cta"]["button"];
+
+let ctaImage = document.getElementById("cta-img");
+ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
+
