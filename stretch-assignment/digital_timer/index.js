@@ -32,11 +32,14 @@ const timer = {
             this.iterate.bind(this),
             this.intervalDelay
         );
+        //
+        startButton.disabled = true;
     },
     stop () {
         if(this.intervalId){
             clearInterval(this.intervalId);
         }
+        startButton.disabled = false;
     },
     reset () {
         this.stop();
