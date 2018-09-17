@@ -71,7 +71,7 @@ newItem2.innerText = siteContent["nav"]["nav-item-8"];
 newItem2.href = '#';
 
 mainNav.append(newItem);
-mainNav.append(newItem2);
+mainNav.prepend(newItem2);
 
 
 //!!font color not working!!
