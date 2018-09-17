@@ -46,6 +46,8 @@ const button = document.querySelector("button");
 const titles = document.querySelectorAll("h4");
 const paragraphs = document.querySelectorAll("p");
 const middleImage = document.getElementById("middle-img");
+const contactH4 = document.querySelector(".contact h4");
+const contactInfo = document.querySelectorAll(".contact p");
 
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
@@ -71,6 +73,10 @@ paragraphs[2].innerHTML = siteContent["main-content"]["services-content"];
 paragraphs[3].innerHTML = siteContent["main-content"]["product-content"];
 paragraphs[4].innerHTML = siteContent["main-content"]["vision-content"];
 
+contactH4.innerHTML = siteContent["contact"]["contact-h4"];
+contactInfo[0].innerHTML = siteContent["contact"]["address"];
+contactInfo[1].innerHTML = siteContent["contact"]["phone"];
+contactInfo[2].innerHTML = siteContent["contact"]["email"];
 
 
 
