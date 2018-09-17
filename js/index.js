@@ -50,14 +50,27 @@ const siteContent = {
 
 // nav items (6 anchor tags and 1 image)
 const navLinks = document.querySelectorAll("a");
+// for (let i = 0; i < navLinks.length; i++) {
+//   navLinks[i].innerText = siteContent.nav[i];
+// }
+navLinks[0].innerText = siteContent.nav["nav-item-1"];
+navLinks[1].innerText = siteContent.nav["nav-item-2"];
+navLinks[2].innerText = siteContent.nav["nav-item-3"];
+navLinks[3].innerText = siteContent.nav["nav-item-4"];
+navLinks[4].innerText = siteContent.nav["nav-item-5"];
+navLinks[5].innerText = siteContent.nav["nav-item-6"];
 
 const headerLogo = document.querySelector("#logo-img");
 headerLogo.setAttribute("src", siteContent["nav"]["img-src"]);
 
 //cta (h1, button, img)
-const ctaText = document.querySelector(".ctaText h1");
-const ctaButton = document.querySelector(".ctaText button");
+const ctaText = document.querySelector(".cta-text h1");
+const ctaButton = document.querySelector(".cta-text button");
 const ctaImg = document.querySelector("#cta-img");
+
+ctaText.innerText = siteContent.cta["h1"];
+ctaButton.innerText = siteContent.cta.button;
+ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
 
 //main content (top content, middle img, bottom content)
 //top content, 2 divs each with h4 and p tags
@@ -67,6 +80,7 @@ const topParas = document.querySelectorAll(".top-content .text-content p");
 //middle img
 const middleImg = document.querySelector("#middle-img");
 
+middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 //bottom-content, same as top but 3 times each
 const bottomHeaders = document.querySelectorAll(
   ".bottom-content .text-content h4"
