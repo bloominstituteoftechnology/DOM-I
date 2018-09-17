@@ -65,6 +65,16 @@ ctaElementIMG.src = siteContent["cta"]["img-src"]
 
 
 //main-content
+let textContent = document.getElementsByClassName("text-content");
+let contentIMG = document.getElementById("middle-img");
 
 
+//Features
+textContent[0].childNodes[1].innerText = siteContent["main-content"]["features-h4"]
+textContent[0].childNodes[3].innerText = siteContent["main-content"]["features-content"];
+//About
+textContent[1].childNodes[1].innerText = siteContent["main-content"]["about-h4"]
+textContent[1].childNodes[3].innerText = siteContent["main-content"]["about-content"];
 
+
+console.log(textContent);
