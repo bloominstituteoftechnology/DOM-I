@@ -115,4 +115,12 @@ contactInfo[1].innerHTML= siteContent.contact.phone;
 contactInfo[2].innerHTML= siteContent.contact.email;
 
 
+// Footer
+
+//"footer": {
+  // "copyright" : "Copyright Great Idea! 2018"
+
+document.querySelector("footer p").innerHTML = siteContent.footer.copyright;
+
+
 // Angelo Deleon FSW14
