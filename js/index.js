@@ -85,3 +85,18 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
   contentIMG.src = mainContent["middle-img-src"];
 
 }
+
+//Contact
+{
+  const contact = siteContent.contact;
+  
+  document.querySelector('.contact > h4').innerText = contact["contact-h4"];
+  
+  let info = document.querySelectorAll('.contact > p');
+
+  info[0].innerText = contact.address;
+  info[1].innerText = contact.phone;
+  info[2].innerText = contact.email;
+}
+
+//Footer
