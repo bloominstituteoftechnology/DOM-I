@@ -65,6 +65,12 @@ headerH1.innerHTML = siteContent.cta.h1
 headerButton.innerText = siteContent.cta.button
 headerImg.setAttribute('src', siteContent.cta['img-src'])
 
+headerButton.addEventListener('click', () => {
+  headerH1.classList.toggle('btnPress');
+  headerH1.innerHTML = 'DOM<br> Is<br> Super-Awesome';
+  headerImg.classList.toggle('btnPress');
+})
+
 // main-content
 let topContentH4 = document.querySelectorAll('.top-content h4');
 let topContentP = document.querySelectorAll('.top-content p');
