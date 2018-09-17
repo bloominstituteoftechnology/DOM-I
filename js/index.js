@@ -55,9 +55,9 @@ codeAcrossScreen.src = siteContent['main-content']['middle-img-src'];
 //  NAVIGATION
 //====================================================================================
 
-const linkKeys = Object.values(siteContent['nav']);
+const linkValues = Object.values(siteContent['nav']);
 const navItems = document.querySelectorAll('a');
-navItems.forEach((item, index) => item.innerHTML = linkKeys[index]);
+navItems.forEach((item, index) => item.innerHTML = linkValues[index]);
 
 //====================================================================================
 //  CTA
@@ -116,3 +116,7 @@ visionContent.innerHTML = siteContent['main-content']['vision-content'];
 
 const contactHeading = document.querySelector('.contact h4');
 contactHeading.innerHTML = siteContent['contact']['contact-h4'];
+
+const contactValues = Object.values(siteContent['contact']);
+const contactItems = document.querySelectorAll('.contact p');
+contactItems.forEach((item, index) => item.innerHTML = contactValues[index + 1]);
