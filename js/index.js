@@ -37,6 +37,53 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
+// Example: Update the img src for the logopElements[0].innerHTML = siteContent["main-content"]["features-content"];
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+let navItems = document.getElementsByTagName("a");
+navItems[0].innerText = siteContent["nav"]["nav-item-1"];
+navItems[1].innerText = siteContent["nav"]["nav-item-2"];
+navItems[2].innerText = siteContent["nav"]["nav-item-3"];
+navItems[3].innerText = siteContent["nav"]["nav-item-4"];
+navItems[4].innerText = siteContent["nav"]["nav-item-5"];
+
+document.querySelector("h1").innerText = siteContent["cta"]["h1"];
+
+document.querySelector("button").innerHTML = siteContent ["cta"]["button"];
+
+document.getElementById("cta-img").setAttribute("src", siteContent["cta"]['img-src']);
+
+let h4Elements = document.querySelectorAll("h4");
+let pElements = document.querySelectorAll("p");
+let midLogo = document.getElementById("middle-img");
+
+
+//main content
+
+midLogo.src = siteContent["main-content"]["middle-img-src"];
+
+h4Elements[0].innerText = siteContent ["main-content"]["features-h4"];
+pElements[0].innerText = siteContent["main-content"]["features-content"];
+h4Elements[1].innerText = siteContent ["main-content"]["about-h4"];
+pElements[1].innerText = siteContent["main-content"]["about-content"];
+h4Elements[2].innerText = siteContent ["main-content"]["services-h4"];
+pElements[2].innerText = siteContent["main-content"]["services-content"];
+h4Elements[3].innerText = siteContent ["main-content"]["product-h4"];
+pElements[3].innerText = siteContent["main-content"]["product-content"];
+h4Elements[4].innerText = siteContent ["main-content"]["vision-h4"];
+pElements[4].innerText = siteContent["main-content"]["vision-content"];
+
+//! main content 
+
+//contact
+h4Elements[5].innerText = siteContent["contact"]["contact-h4"];
+pElements[5].innerText = siteContent["contact"]["address"];
+pElements[6].innerText = siteContent["contact"]["phone"];
+pElements[7].innerText = siteContent["contact"]["email"];
+
+//! contact
+
+
+//footer 
+pElements[8].innerText = siteContent["footer"]["copyright"];
