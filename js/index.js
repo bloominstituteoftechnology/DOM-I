@@ -41,17 +41,40 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+let nav = document.querySelector('nav');
 
-let allNavs = document.querySelectorAll('a');
-allNavs[0].innerText = 'Services'; 
-allNavs[1].innerText = 'Product';
-allNavs[2].innerText = 'Vision';
-allNavs[3].innerText = 'Features';
-allNavs[4].innerText = 'About';
-allNavs[5].innerText = 'Contact';
-// allNavs[0].style.border = '10px solid green'; ???
+let navLink = document.querySelectorAll('a');
+navLink[0].innerText = 'Services'; 
+navLink[0].style.color = 'green';
+
+navLink[1].innerText = 'Product';
+navLink[1].style.color = 'green';
+
+navLink[2].innerText = 'Vision';
+navLink[2].style.color = 'green';
+
+navLink[3].innerText = 'Features';
+navLink[3].style.color = 'green';
+
+navLink[4].innerText = 'About';
+navLink[4].style.color = 'green';
+
+navLink[5].innerText = 'Contact';
+navLink[5].style.color = 'green';
 
 
+let navAddition1 = document.createElement('a');
+nav.append('Bear Traps', navAddition1);
+
+let navAddition2 = document.createElement('a');
+nav.prepend('Pogosticks', navAddition2);
+
+
+
+
+// navLink.style.color = 'green';
+// let allNavs = document.querySelector('a');
+// allNavs.style.color = 'green';
 
 let ctaText = document.querySelector('h1');
 ctaText.innerText = 'DOM IS AWESOME';
@@ -64,9 +87,49 @@ ctaImg.setAttribute('src', '../img/header-img.png');
 let btn = document.querySelector('button');
 btn.innerText = 'Get Started'
 
-// let textContent = document.querySelectorAll('text-content');
-// textContent[1].innerText = 'bruh';
+// let topContent = document.querySelector('top-content');
+// topContent.style.display = 'flex';
+
+let headline = document.querySelectorAll('h4');
+let featureText = document.querySelectorAll('.text-content p');
+// let featureText = document.querySelectorAll('p');
+
+headline[0].innerText = 'Features';
+featureText[0].innerText = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+
+headline[1].innerText = 'About'
+featureText[1].innerText = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+
 
 let middleImg = document.getElementById('middle-img');
 middleImg.setAttribute('src', '../img/mid-page-accent.jpg');
+
+headline[2].innerText = 'Services';
+featureText[2].innerText = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+headline[3].innerText = 'Product';
+featureText[3].innerText = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+headline[4].innerText = 'Vision';
+featureText[4].innerText = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+
+
+
+headline[5].innerText = 'Contact';
+
+let contactText = document.querySelectorAll('.contact p');
+
+contactText[0].innerText = '123 Way 456 Street';
+contactText[1].innerText = '1 (888) 888-8888';
+contactText[2].innerText = 'sales@greatidea.io';
+
+
+let footerText = document.querySelector('footer p');
+footerText.innerText = 'Copyright Great Idea! 2018';
+
+// let testin = document.querySelector('.contact h4');
+// testin.style.border = '10px solid red';
+
 
