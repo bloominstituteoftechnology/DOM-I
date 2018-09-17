@@ -2,6 +2,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .digit {
@@ -11,4 +12,43 @@ body {
 
 .redDigit {
   color: red;
+}
+
+.buttons {
+  margin-top: 20px;
+  width: 250px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.button {
+  width: 100px;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.start {
+  background: green;
+  color: white;
+}
+
+.start:disabled {
+  background: rgba(0,150,0,0.8);
+  color: darkgray;
+}
+
+.start:disabled:hover {
+  cursor: not-allowed;
+}
+
+.reset { 
+  background: red;
+  color: white;
 }
