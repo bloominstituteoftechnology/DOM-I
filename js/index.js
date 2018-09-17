@@ -40,3 +40,59 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let titleDom = document.getElementsByTagName("title");
+const titleDomManipulate = document.querySelector('title')
+titleDomManipulate.innerText = "Great Idea!"
+
+let setNav = document.getElementsByTagName('a');
+setNav[0].innerText = siteContent["nav"]["nav-item-1"]
+setNav[1].innerText = siteContent["nav"]["nav-item-2"]
+setNav[2].innerText = siteContent["nav"]["nav-item-3"]
+setNav[3].innerText = siteContent["nav"]["nav-item-4"]
+setNav[4].innerText = siteContent["nav"]["nav-item-5"]
+setNav[5].innerText = siteContent["nav"]["nav-item-6"]
+
+document.getElementsByClassName('cta');
+document.getElementsByTagName('h1');
+let h1Update = document.querySelector('h1');
+h1Update.innerText = siteContent["cta"]["h1"];
+
+let buttonUpdate = document.querySelector('button');
+buttonUpdate.innerText = siteContent["cta"]["button"];
+
+let imgUpdateId2 = document.querySelector('#cta-img');
+imgUpdateId2.setAttribute('src', siteContent['cta']["img-src"]);
+
+let imgSnip = document.querySelector('#middle-img');
+imgSnip.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+// let featuresUpdateH4 = document.querySelector('.main-content .top-content .text-content[0]');
+// featuresUpdateH4.innerText = "Features";
+
+// let contentUpdateP = document.querySelector('.main-content .top-content .text-content p');
+// contentUpdateP.innerText = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+// let aboutUpdateH4 = document.querySelector('.main-content .top-content .text-content[1]');
+// aboutUpdateH4.innerText = "About";
+
+document.getElementsByTagName('h4');
+let getH4 = document.querySelectorAll('h4');
+getH4[0].innerText = siteContent["main-content"]["features-h4"];
+getH4[1].innerText = siteContent["main-content"]["about-h4"];
+getH4[2].innerText = siteContent["main-content"]["services-h4"];
+getH4[3].innerText = siteContent["main-content"]["product-h4"];
+getH4[4].innerText = siteContent["main-content"]["vision-h4"];
+getH4[5].innerText = siteContent["contact"]["contact-h4"];
+
+let getP = document.querySelectorAll('p');
+
+getP[0].innerText = siteContent["main-content"]["features-content"];
+getP[1].innerText = siteContent["main-content"]["about-content"];
+getP[2].innerText = siteContent["main-content"]["services-content"];
+getP[3].innerText = siteContent["main-content"]["product-content"];
+getP[4].innerText = siteContent["main-content"]["vision-content"];
+getP[5].innerText = siteContent["contact"]["address"];
+getP[6].innerText = siteContent["contact"]["phone"];
+getP[7].innerText = siteContent["contact"]["email"];
+getP[8].innerText = siteContent['footer']['copyright'];
