@@ -104,7 +104,7 @@ navListArray[0].addEventListener("click", function () {
   }
   (document.querySelector(".main-content")).style.backgroundColor = "black";
   (document.querySelector(".text-content h4")).style.color = "white";
-  middleImg.setAttribute("src", "./img/serviceslg.jpeg");
+  middleImg.setAttribute("src", "/Users/rboris/Documents/Projects/Lambda/week-four/DOM-I/img/serviceslg.jpeg");
   middleImg.style.width = "80%";
   middleImg.style.height = "200px";
 
