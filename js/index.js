@@ -78,7 +78,7 @@ navMenu.forEach(item => {
 
 let ctaHead = document.querySelector('.cta-text h1');
 ctaHead.innerText = siteContent['cta']['h1'];
-
+ctaHead.innerHTML = ('Dom <br> Is <br> Awesome')
 
 let cta = document.getElementById("cta-img");
 cta.setAttribute("src", siteContent["cta"]["img-src"]);
@@ -131,6 +131,7 @@ contactHead.innerText = siteContent['contact']['contact-h4'];
 
 let contactPar = document.querySelectorAll('.contact p');
 contactPar[0].innerText = siteContent['contact']['address'];
+contactPar[0].innerHTML = '123 Way 456 Street <br> Somewhere, USA';
 contactPar[1].innerText = siteContent['contact']['phone'];
 contactPar[2].innerText = siteContent['contact']['email'];
 
