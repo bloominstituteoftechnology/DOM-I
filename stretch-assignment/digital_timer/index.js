@@ -33,12 +33,9 @@ function timer() {
             document.getElementById('reset-timer').addEventListener("click", reset, {once: true});
                 clearInterval(timer);
                 let redDigits = document.getElementsByClassName('digit');
-                // for (let i = 0; i < redDigits.length; i++) {
-                //     redDigits[i].classList.add('redDigit');
-                // };
-                redDigits.forEach(item => {
-                  item.classList.add('redDigit');
-                })
+                for (let i = 0; i < redDigits.length; i++) {
+                    redDigits[i].classList.add('redDigit');
+                };
 
         }
 
@@ -60,8 +57,10 @@ document.getElementById('msHundreds').innerHTML = mHundreds;
 document.getElementById('secondOnes').innerHTML = sOnes;
 document.getElementById('secondTens').innerHTML = sTens;
 let blackDigits = document.getElementsByClassName('digit');
-blackDigits.forEach(item => {
-  item.classList.remove('redDigit'); 
-})
+
+for (let i = 0; i < blackDigits.length; i++) {
+    blackDigits[i].classList.remove('redDigit');
+};
+
 document.getElementById('start-timer').addEventListener("click", timer, {once: true});
 }
