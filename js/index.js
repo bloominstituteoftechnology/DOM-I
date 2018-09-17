@@ -52,7 +52,7 @@ ctaButton.innerHTML = siteContent.cta.button;
 
 
 let cta = document.querySelector('h1');
-cta.innerHTML = siteContent['cta']['h1'];
+cta.innerHTML = siteContent.cta.h1;
 
 let navLinks = document.querySelectorAll('nav a');
 navLinks[0].innerText = siteContent['nav']['nav-item-1'];
@@ -87,12 +87,12 @@ contactHeader.innerHTML =
 
  let contactInfo =
  document.querySelectorAll('.contact p');
- contactInfo[0].innerHTML =  siteContent["contact"]["address"];
- contactInfo[1].innerHTML = siteContent["contact"]["phone"];
- contactInfo[2].innerHTML = siteContent["contact"]["email"];
+ contactInfo[0].innerHTML =  siteContent.contact.address;
+ contactInfo[1].innerHTML = siteContent.contact.phone;
+ contactInfo[2].innerHTML = siteContent.contact.email;
 
  let footer = document.querySelector('footer p');
- footer.innerHTML = siteContent["footer"]["copyright"]
+ footer.innerHTML = siteContent.footer.copyright;
 
 
  navLinks.forEach(item => {
@@ -112,7 +112,7 @@ goodbye.href='#';
 
  const newButton = document.createElement('button');
  newButton.innerHTML = 'Blue Text';
- newButton.setAttribute('style', 'display: block; cursor: pointer')
+ newButton.setAttribute('style', 'display: block; cursor: pointer; margin: 10px')
 footer.prepend(newButton);
 newButton.setAttribute('id', 'blue-color-button');
 
@@ -128,3 +128,21 @@ document.getElementById('blue-color-button').addEventListener('click', function(
   });
 
   });
+
+  const otherButton = document.createElement('button');
+  otherButton.innerHTML = 'Black Text';
+  otherButton.setAttribute('style', 'display: block; cursor: pointer');
+  footer.prepend(otherButton);
+  otherButton.setAttribute('id', 'black-color-button');
+
+  document.getElementById('black-color-button').addEventListener('click', function(){
+    let allH4 = document.querySelectorAll('h4');
+    let allP = document.querySelectorAll('p');
+    allH4.forEach(item => {
+      item.setAttribute('style', 'color: black');
+    });
+    allP.forEach(item => {
+      item.setAttribute('style', 'color: black');
+    });
+
+    });
