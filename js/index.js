@@ -115,3 +115,35 @@ appendWithThis.innerText = 'Ultimate Warrior PSA'
 let navbar = document.querySelector('.container header nav')
 navbar.prepend(prependWithThis)
 navbar.appendChild(appendWithThis)
+
+
+//stretch
+function randomColor(){
+  let hexdec = "ABCDEF0123456789";
+  let color = "#";
+
+  while(color.length < 7){
+      color += hexdec[Math.floor((Math.random()*16)+1)];
+  }
+  return color;
+}
+
+let head = document.querySelector('header')
+head.style.padding = '30px 5px'
+head.style.backgroundColor = randomColor()
+
+
+navbar.style.backgroundColor = 'white'
+navItems.forEach(x => x.style.color = randomColor())
+
+let body = document.querySelector('body')
+body.style.backgroundColor = randomColor()
+
+let contain = document.querySelector('body .container')
+contain.style.backgroundColor = 'white'
+
+contactP.forEach(x => x.style.width = '100%')
+contactP.forEach(x => x.style.textAlign = 'center')
+contactH.style.width = '100%'
+contactH.style.textAlign = 'center'
+
