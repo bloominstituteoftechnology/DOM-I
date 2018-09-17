@@ -16,21 +16,13 @@ function timer() {
   return increment;
 }
 
-function displayTime(time) {
-  if (time < 10) {
-    msTens.innerText = time;
-  }
-
-  else {
-    msTens.innerText = 0;
-
-  }
-
-}
-
 let newTimer = timer();
-setInterval(function(){
+let interval = setInterval(function(){
   currentTime = newTimer();
+  if (currentTime >= 1000) {
+    document.body.style.color = 'red';
+    clearInterval(interval);
+  }
   displayTime = currentTime.toString();
   //console.log(displayTime);
   msTens.innerText = displayTime[displayTime.length -1];
@@ -38,4 +30,6 @@ setInterval(function(){
   secondOnes.innerText = displayTime[displayTime.length -3] || 0;
   secondTens.innerText = displayTime[displayTime.length -4] || 0;
 }, 10);
+
+
 
