@@ -41,7 +41,7 @@ const siteContent = {
 // let logo = document.getElementById("logo-img");
 // logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-const navLinks = document.querySelectorAll(".container > header nav a");
+let navLinks = document.querySelectorAll(".container > header nav a");
 refs = Object.keys(siteContent.nav).sort();
 refs.shift(); // deletes "img-src"
 navLinks.forEach(function(link, i) {
@@ -108,6 +108,8 @@ learnLink.href = "#";
 const mainNav = document.querySelector(".container > header nav");
 mainNav.appendChild(blogLink);
 mainNav.prepend(learnLink);
+navLinks = document.querySelectorAll(".container > header nav a");
+navLinks.forEach(link => link.style.color = "green");
 
 const goEvil = document.createElement('button');
 goEvil.textContent = "Go Evil";
