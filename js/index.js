@@ -94,3 +94,10 @@ servicesHeading.innerHTML = siteContent['main-content']['services-h4'];
 
 const servicesContent = document.querySelector('.bottom-content .text-content:nth-child(1) p');
 servicesContent.innerHTML = siteContent['main-content']['services-content'];
+
+// Products Heading and Paragraphs
+const productHeading = document.querySelector('.bottom-content .text-content:nth-child(2) h4');
+productHeading.innerHTML = siteContent['main-content']['product-h4'];
+
+const productContent = document.querySelector('.bottom-content .text-content:nth-child(2) p');
+productContent.innerHTML = siteContent['main-content']['product-content'];
