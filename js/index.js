@@ -38,6 +38,7 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+{//Image Links
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
@@ -46,3 +47,71 @@ ctaImg.setAttribute('src',siteContent["cta"]["img-src"]);
 
 let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent['main-content']["middle-img-src"]);
+}
+
+{//navigation bar
+  // get elements from index.html
+  // use innerText to change the text inside
+  // set the inner text to siteContent-whatever
+  //for loop so I don't have to write it all out?
+
+  let topNavLinks = document.querySelectorAll('a');
+  console.log(topNavLinks);
+  for(let i = 0;i<topNavLinks.length;i++){
+    topNavLinks[i].innerText = siteContent["nav"][`nav-item-${i+1}`]
+  }
+}
+{//cta
+  let mainHeading = document.querySelector('.cta .cta-text h1');
+  mainHeading.innerText = `${siteContent["cta"]["h1"]}`
+
+  let getStartedBtn = document.querySelector('.cta .cta-text button');
+  getStartedBtn.innerText = `${siteContent["cta"]["button"]}`;
+}
+{//main-content
+  
+}
+
+
+
+
+/*
+// ===== DOM Step 1: Get the DOM reference stored into JS
+
+const tagElements = document.getElementsByTagName('a');
+// console.log(tagElements[2]);
+
+const idExample = document.getElementById('home-tag');
+// console.log(idExample);
+
+const classElements = document.getElementsByClassName('nav-item');
+// console.log(classElements[2]);
+
+// Must provide the selector syntax inside the querySelector
+const headingSelection = document.querySelector('h2');
+// console.log(headingSelection);
+
+const selectAnythingAll = document.querySelectorAll('a');
+// console.log(selectAnythingAll[0]);
+
+// ===== DOM Step 2: Manipulate the DOM with
+
+// innerHTML for html tags
+headingSelection.innerText = 'This is being updated by the DOM!';
+
+// attributes
+const kitty = document.querySelector('.kitty');
+kitty.src = 'https://images.pexels.com/photos/20787/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350';
+kitty.alt = 'This is a kitty';
+
+// style
+const mainHeadingExample = document.querySelector('header h1');
+mainHeadingExample.style.color = 'red'; 
+
+const mainHeading = document.querySelector('.main-header');
+// mainHeading.className = 'testing';
+
+// classList
+console.log(mainHeading.classList.length)
+mainHeading.classList.add('e');
+*/
