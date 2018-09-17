@@ -83,3 +83,29 @@ sectionContent5.innerText = siteContent["main-content"]["vision-content"];
 
 const accent = document.querySelector("#middle-img");
 accent.src = siteContent["main-content"]["middle-img-src"];
+
+const contactHeader = document.querySelector(".contact h4");
+const contactContent = document.querySelectorAll(".contact p");
+const address = contactContent[0];
+const phone = contactContent[1];
+const email = contactContent[2];
+contactHeader.textContent = siteContent.contact["contact-h4"];
+address.textContent = siteContent.contact.address;
+phone.textContent = siteContent.contact.phone;
+email.textContent = siteContent.contact.email;
+
+const footerContent = document.querySelector("footer p");
+footerContent.textContent = siteContent.footer.copyright;
+
+navLinks.forEach(link => link.style.color = "green");
+
+const blogLink = document.createElement('a');
+const learnLink = document.createElement('a');
+blogLink.textContent = "Blog";
+learnLink.textContent = "Learn!";
+blogLink.href = "#";
+learnLink.href = "#";
+
+const mainNav = document.querySelector(".container > header nav");
+mainNav.appendChild(blogLink);
+mainNav.prepend(learnLink);
