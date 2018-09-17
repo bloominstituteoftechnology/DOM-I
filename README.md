@@ -19,8 +19,8 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 
 ## Task 3: Update the HTML with the JSON data
 * [x] Remember, NO direct updating of the HTML source is allowed.
-* [ ] Using your selectors, update the content to match the example file.
-* [ ] Remember to update the src attributes on images
+* [x] Using your selectors, update the content to match the example file.
+* [x] Remember to update the src attributes on images
 
 ## Task 4: Add new content
 * [ ] Change the color of the navigation text to be green.
