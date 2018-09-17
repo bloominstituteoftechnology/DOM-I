@@ -43,38 +43,31 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let nav = document.querySelector('nav');
 
+
 let navLink = document.querySelectorAll('a');
 navLink[0].innerText = 'Services'; 
-navLink[0].style.color = 'green';
-
 navLink[1].innerText = 'Product';
-navLink[1].style.color = 'green';
-
 navLink[2].innerText = 'Vision';
-navLink[2].style.color = 'green';
-
 navLink[3].innerText = 'Features';
-navLink[3].style.color = 'green';
-
 navLink[4].innerText = 'About';
-navLink[4].style.color = 'green';
-
 navLink[5].innerText = 'Contact';
-navLink[5].style.color = 'green';
 
+let navLinks = nav.childNodes;
 
 let navAddition1 = document.createElement('a');
-nav.append('Bear Traps', navAddition1);
+nav.append(navAddition1);
+navAddition1.innerText = 'Beartraps'
 
 let navAddition2 = document.createElement('a');
-nav.prepend('Pogosticks', navAddition2);
+nav.prepend(navAddition2);
+navAddition2.innerText = 'Pogosticks'
 
 
+for (i = 0; i < nav.length; i++) {
+  nav[i].style.color = 'red';
+}
 
 
-// navLink.style.color = 'green';
-// let allNavs = document.querySelector('a');
-// allNavs.style.color = 'green';
 
 let ctaText = document.querySelector('h1');
 ctaText.innerText = 'DOM IS AWESOME';
