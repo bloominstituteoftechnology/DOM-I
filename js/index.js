@@ -1,3 +1,6 @@
+// observations -
+//siteContent = an object with 5 properties, each holding 1 object. 
+
 const siteContent = {
   "nav": {
     "nav-item-1": "Services",
@@ -40,3 +43,21 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let nav = document.querySelectorAll("nav a"); 
+console.log(nav);
+
+// CTA Updates----------------------------
+
+let cta = document.querySelector(".cta-text h1"); 
+cta.innerText = siteContent.cta.h1;
+console.log(cta);
+
+let ctaButton = document.querySelector(".cta-text button"); 
+ctaButton.innerText = siteContent.cta.button;
+console.log(ctaButton);
+
+let ctaImage = document.getElementById("cta-img");
+ctaImage.setAttribute('src', siteContent["cta"]["img-src"])
+
+// Main Content Updates - top content ----------------------
