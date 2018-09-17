@@ -118,3 +118,10 @@ contactContent.forEach(
 // footer
 const footerContent = document.querySelector('footer p')
 footerContent.innerText = siteContent.footer.copyright
+
+// on click behavior
+const page = document.querySelector('.container')
+
+ctaButton.addEventListener('click', event => {
+  page.style.background = page.style.background === '' ? 'red' : ''
+})
