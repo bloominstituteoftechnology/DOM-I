@@ -60,7 +60,8 @@ const topButton = document.querySelector('button')
 topButton.innerText = 'Get Started';
 
 let code2 = document.getElementById("middle-img");
-code2.setAttribute('src', siteContent["main-content"]["img-src"]);
+code2.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
 
 const mainContent = document.querySelectorAll('h4')
 mainContent[0].innerText = 'Features';
