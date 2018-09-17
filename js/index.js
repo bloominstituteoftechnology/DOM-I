@@ -40,3 +40,31 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+// body selector
+
+
+let navLinks = document.querySelectorAll("nav a");
+let navItems = "nav-item-";
+
+
+for (i = 1; i < navLinks.length; i++) {
+  navLinks[i].innerHTML = siteContent["nav"][navItems+i];
+
+}
+// DOM Image Manipulation
+
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let bigCircle = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+
+let ctaButton = document.querySelector("button");
+ctaButton.innerHTML = siteContent.cta.button;
+
+
+let ctaH1 = document.querySelector("h1");
+ctaH1.innerHTML = siteContent.cta.h1;
