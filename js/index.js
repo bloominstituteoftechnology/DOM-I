@@ -104,6 +104,21 @@ productcontent.innerHTML =  siteContent["main-content"]["product-content"];
 let visioncontent= document.getElementsByTagName("p")[4];
 visioncontent.innerHTML =  siteContent["main-content"]["product-content"];
 
-//Contact
+// Contact
+let contacttitle= document.getElementsByTagName("h4")[5];
+contacttitle.innerHTML =  siteContent["contact"]["contact-h4"];;
+
+let address= document.getElementsByTagName("p")[5];
+address.innerHTML =  siteContent["contact"]["address"];
+ 
+let phone= document.getElementsByTagName("p")[6];
+phone.innerHTML =  siteContent["contact"]["phone"];
+
+let email= document.getElementsByTagName("p")[7];
+email.innerHTML =  siteContent["contact"]["email"];
+
+// Footer
+let footer= document.getElementsByTagName("p")[8];
+footer.innerHTML =  siteContent["footer"]["copyright"];
 
 
