@@ -66,14 +66,15 @@ const welcomeLink = document.createElement('a');
 welcomeLink.innerText = ('Welcome');
 welcomeLink.style.color = 'green';
 welcomeLink.href = "#"
-
 nav.prepend(welcomeLink);
 
 //add color to the nav
 
-navMenu.forEach(item => {
+navMenu.forEach((item, i) => {
   item.style.color = "green";
 });
+
+
 //CTA SECTION
 
 let ctaHead = document.querySelector('.cta-text h1');
@@ -85,6 +86,13 @@ cta.setAttribute("src", siteContent["cta"]["img-src"]);
 
 let ctaButton = document.querySelector('.cta-text button');
 ctaButton.innerText = siteContent['cta']['button'];
+ctaButton.addEventListener('click', () => {
+  document.body.style.backgroundColor = 'lightgray';
+  ctaButton.addEventListener('click', () => {
+    document.body.style.backgroundColor = 'white';
+  })
+})
+
 
 //TOP CONTENT
 
