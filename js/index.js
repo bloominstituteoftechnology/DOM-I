@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM<br>Is<br>Awesome",
+    "h1": "DOM Is Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -52,7 +52,11 @@ ctaButton.innerHTML = siteContent.cta.button;
 
 
 let cta = document.querySelector('h1');
-cta.innerHTML = siteContent.cta.h1;
+let onceMoreWithBreaks = siteContent.cta.h1
+for (let i = 0; i < onceMoreWithBreaks.length; i++){
+  onceMoreWithBreaks = onceMoreWithBreaks.replace(' ', '<br>')
+}
+cta.innerHTML = onceMoreWithBreaks;
 
 let navLinks = document.querySelectorAll('nav a');
 navLinks[0].innerText = siteContent['nav']['nav-item-1'];
