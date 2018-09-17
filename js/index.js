@@ -101,3 +101,10 @@ productHeading.innerHTML = siteContent['main-content']['product-h4'];
 
 const productContent = document.querySelector('.bottom-content .text-content:nth-child(2) p');
 productContent.innerHTML = siteContent['main-content']['product-content'];
+
+// Vision Heading and Paragraphs
+const visionHeading = document.querySelector('.bottom-content .text-content:nth-child(3) h4');
+visionHeading.innerHTML = siteContent['main-content']['vision-h4'];
+
+const visionContent = document.querySelector('.bottom-content .text-content:nth-child(3) p');
+visionContent.innerHTML = siteContent['main-content']['vision-content'];
