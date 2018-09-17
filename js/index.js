@@ -38,6 +38,8 @@ const siteContent = {
 };
 
 
+
+
 let logo = document.getElementById('logo-img');
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
@@ -90,3 +92,8 @@ paras[2].innerText = siteContent.contact.email;
 let element = document.getElementsByTagName('footer');
 let p = element[0].getElementsByTagName('p');
 p[0].innerText = siteContent.footer.copyright;
+
+let aCollection = document.querySelectorAll('a');
+aCollection.forEach(element=>{
+  element.style.color = 'green'
+})
