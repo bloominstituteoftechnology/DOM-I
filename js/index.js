@@ -88,10 +88,13 @@ let ctaButton = document.querySelector('.cta button');
 ctaButton.innerText = siteContent['cta']['button'];
 
 ctaButton.style.cursor = 'pointer';
-ctaButton.addEventListener('click', function() {
-  ctaHeader.innerHTML = 'You clicked the Button!'
-})
 
+ctaButton.addEventListener('click', function() {
+  if (ctaHeader.innerText === 'You clicked the Button!') {
+    return ctaHeader.innerText = 'Dom is awesome'
+  }
+  ctaHeader.innerText = 'You clicked the Button!'
+})
 
 
 let ctaBanner = document.getElementById("cta-img");
