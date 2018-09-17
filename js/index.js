@@ -111,14 +111,20 @@ goodbye.href='#';
  nav.prepend(welcome);
 
  const newButton = document.createElement('button');
- newButton.innerHTML = 'Change Contact Color';
+ newButton.innerHTML = 'Blue Text';
  newButton.setAttribute('style', 'display: block; cursor: pointer')
 footer.prepend(newButton);
-newButton.setAttribute('id', 'color-button');
+newButton.setAttribute('id', 'blue-color-button');
 
 
-document.getElementById('color-button').addEventListener('click', function(){
-  contactInfo.forEach(item => {
-    item.setAttribute('style', 'color: red');
+document.getElementById('blue-color-button').addEventListener('click', function(){
+  let allH4 = document.querySelectorAll('h4');
+  let allP = document.querySelectorAll('p');
+  allH4.forEach(item => {
+    item.setAttribute('style', 'color: blue');
   });
-})
+  allP.forEach(item => {
+    item.setAttribute('style', 'color: blue');
+  });
+
+  });
