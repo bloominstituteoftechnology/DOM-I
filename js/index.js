@@ -69,8 +69,8 @@ links[2].style.color = 'purple';
 links[3].style.color = 'purple';
 links[4].style.color = 'purple';
 links[5].style.color = 'purple';
-link1.style.color = 'purple';
-link2.style.color = 'purple';
+link1.style.color = 'teal';
+link2.style.color = 'teal';
 
 
 let ctaText = document.querySelector('h1');
