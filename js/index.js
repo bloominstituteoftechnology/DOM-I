@@ -58,6 +58,18 @@ codeAcrossScreen.src = siteContent['main-content']['middle-img-src'];
 const linkValues = Object.values(siteContent['nav']);
 const navItems = document.querySelectorAll('a');
 navItems.forEach((item, index) => item.innerHTML = linkValues[index]);
+navItems.forEach(item => item.style.color = 'green');
+const mainNav = document.querySelector('header nav');
+const blog = document.createElement('a');
+const signIn = document.createElement('a');
+mainNav.appendChild(blog);
+mainNav.appendChild(signIn);
+blog.innerHTML = 'Blog';
+signIn.innerHTML = 'Sign In'
+blog.style.color = 'green';
+signIn.style.color = 'green';
+blog.href = '#';
+signIn.href = '#';
 
 //====================================================================================
 //  CTA
