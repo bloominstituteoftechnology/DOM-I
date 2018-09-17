@@ -38,14 +38,33 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"]);
-
 
 ///NAVIGATION
-let navigation = document.querySelectorAll('.container header nav a');
-for(let i = 0; i < navigation.length; i++){
-  navigation[i].innerText = siteContent["nav"]["nav-item-" + [i+1]];
+let logo = document.getElementById("logo-img");
+let navLinks = document.querySelectorAll(".container header nav a");
+
+for(let i = 0; i < navLinks.length; i++){
+  navLinks[i].innerText = siteContent["nav"]["nav-item-" + [i+1]];
+  navLinks[i].style.color = "green";
 }
 
-console.log(navigation);
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+///CTA 
+let ctaElementH1 =  document.querySelector(".container .cta .cta-text h1");
+let ctaElementBtn =  document.querySelector(".container .cta .cta-text button");
+let ctaElementIMG = document.getElementById("cta-img");
+
+
+//H1
+ctaElementH1.innerHTML = siteContent["cta"]["h1"];
+//Button
+ctaElementBtn.innerText = siteContent["cta"]["button"];
+//Image
+ctaElementIMG.src = siteContent["cta"]["img-src"]
+
+
+//main-content
+
+
+
