@@ -38,8 +38,8 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-//let logo = document.getElementById("logo-img");
-//logo.setAttribute('src', siteContent["nav"]["img-src"]);
+let logo = document.getElementById("logo-img");
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 //Update the nav links
 let navList = document.querySelectorAll(".container header nav a");
@@ -47,3 +47,17 @@ let navListArray = Array.from(navList);
 for (let i = 0; i < navListArray.length; i++) {
   navListArray[i].innerHTML = siteContent["nav"][`nav-item-${i + 1}`];
 }
+
+//Update cta
+
+  //Update cta h1
+let ctaH1 = document.querySelector(".container .cta .cta-text h1");
+ctaH1.innerHTML = siteContent["cta"]["h1"];
+
+  //Update button
+let ctaButton = document.querySelector(".container .cta .cta-text button");
+  ctaButton.innerHTML = siteContent["cta"]["button"];
+
+  //update img src for code snippet
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
