@@ -102,12 +102,6 @@ let middleImg = document.querySelector('#middle-img');
 middleImg.src = siteContent['main-content']['middle-img-src']
 
 
-// Change color of nav text
-for (let i = 0; i < navItem.length; i++) {
-  navItem[i].style.color = 'green';
-}
-
-
 // Add two items to nav
 
 // 1. Create the element
@@ -120,15 +114,21 @@ const mainNav = document.querySelector('header nav');
 // 3. Add value to the element
 newNavItem1.innerText = 'Hello';
 newNavItem1.href = '#';
+newNavItem1.style.color = 'green';
 
 newNavItem2.innerText = 'Hola';
 newNavItem2.href = '#';
+newNavItem2.style.color = 'green';
 
 // 4. Append or prepend the new element to the parent reference
 mainNav.appendChild(newNavItem1);
 mainNav.prepend(newNavItem2);
 
 
-// 
+// Change color of nav text
+for (let i = 0; i < navItem.length; i++) {
+  navItem[i].style.color = 'green';
+}
+
 
 
