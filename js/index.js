@@ -61,3 +61,26 @@ let ctaButton = document.querySelector(".container .cta .cta-text button");
   //update img src for code snippet
 let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
+
+//update main content
+//First - Grab the array-like objects for all h4 and p child nodes
+let textContentH4 = document.querySelectorAll(".text-content h4");
+let textContentP = document.querySelectorAll(".text-content p");
+//Second - convert to arrays
+let tCH4Array = Array.from(textContentH4);
+let tCPArray = Array.from(textContentP);
+//Grab all the keys from the sitecontent object
+let keysArr = Object.keys(siteContent["main-content"]);
+//Filter out the h4 related keys
+let keysH4 = keysArr.filter( item => item.includes("h4"));
+//Filter out the p related keys
+let keysP = keysArr.filter( item => item.includes("content")); 
+//Loop over the h4 elements and set them equal to corresponding key in the h4 sitecontent keys array 
+//Also loop over the p elements and set them equal to their corresponding p keys from sitecontent
+for (let i = 0; i < tCH4Array.length; i++) {
+  tCH4Array[i].innerHTML = siteContent["main-content"][keysH4[i]];
+  tCPArray[i].innerHTML = siteContent["main-content"][keysP[i]];
+}
+//main content middle img
+let mainImg = document.getElementById("middle-img");
+mainImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
