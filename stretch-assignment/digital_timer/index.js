@@ -32,7 +32,7 @@ function timer() {
             mTens = 0;
             document.getElementById('reset-timer').addEventListener("click", reset, {once: true});
                 clearInterval(timer);
-                let redDigits = Array.from(document.getElementsByClassName('digit'));
+                let redDigits = document.getElementsByClassName('digit');
                 for (let i = 0; i < redDigits.length; i++) {
                     redDigits[i].classList.add('redDigit');
                 };
