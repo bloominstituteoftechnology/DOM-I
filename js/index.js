@@ -91,3 +91,12 @@ contactP[2].innerText = siteContent.contact.email;
 
 let footerP = document.querySelector("footer p");
 footerP.innerText = siteContent.footer.copyright;
+
+
+let nav = document.querySelector("header nav");
+nav.append("Blog");
+nav.prepend("Portfolio");
+
+aTags.forEach(tag => tag.style.color = 'green');
+nav.style.color = 'green';
+
