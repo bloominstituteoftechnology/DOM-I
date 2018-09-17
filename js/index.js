@@ -41,7 +41,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-const navigation = document.getElementsByTagName('a');
+const navigation = document.querySelectorAll('a');
 for (i = 0; i < navigation.length; i++) {
   navigation[i].innerHTML = siteContent['nav'][`nav-item-${i+1}`];
   navigation[i].style.color = 'green';
@@ -66,7 +66,7 @@ topBtn.innerHTML = siteContent['cta']['button'];
 const topImg = document.getElementById('cta-img');
 topImg.setAttribute('src', siteContent['cta']['img-src']);
 
-const heading = document.getElementsByTagName('h4');
+const heading = document.querySelectorAll('h4');
 heading[0].innerHTML = siteContent['main-content']['features-h4'];
 heading[1].innerHTML = siteContent['main-content']['about-h4'];
 heading[2].innerHTML = siteContent['main-content']['services-h4'];
@@ -77,7 +77,7 @@ heading[5].innerHTML = siteContent['contact']['contact-h4'];
 const centerImg = document.getElementById('middle-img');
 centerImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
-const content = document.getElementsByTagName('p');
+const content = document.querySelectorAll('p');
 content[0].innerHTML = siteContent['main-content']['features-content'];
 content[1].innerHTML = siteContent['main-content']['about-content'];
 content[2].innerHTML = siteContent['main-content']['services-content'];
