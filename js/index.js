@@ -41,11 +41,9 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-// console.log(logo);
 
+// Nav Items
 let navItem = document.querySelectorAll('nav a');
-
-// console.log(navItem);
 
 navItem[0].innerText = siteContent['nav']['nav-item-1'];
 navItem[1].innerText = siteContent['nav']['nav-item-2'];
@@ -53,6 +51,60 @@ navItem[2].innerText = siteContent['nav']['nav-item-3'];
 navItem[3].innerText = siteContent['nav']['nav-item-4'];
 navItem[4].innerText = siteContent['nav']['nav-item-5'];
 navItem[5].innerText = siteContent['nav']['nav-item-6'];
+
+
+// h1
+let h1 = document.querySelector('h1');
+
+h1.innerText = siteContent['cta']['h1'];
+
+
+// button
+let button = document.querySelector('button');
+
+button.innerText = siteContent['cta']['button'];
+
+
+// cta-img
+let ctaImg = document.querySelector('#cta-img');
+
+ctaImg.src = siteContent['cta']['img-src'];
+
+
+// h4
+let h4 = document.querySelectorAll('h4');
+
+h4[0].innerText = siteContent['main-content']['features-h4'];
+h4[1].innerText = siteContent['main-content']['about-h4'];
+h4[2].innerText = siteContent['main-content']['services-h4'];
+h4[3].innerText = siteContent['main-content']['product-h4'];
+h4[4].innerText = siteContent['main-content']['vision-h4'];
+h4[5].innerText = siteContent['contact']['contact-h4'];
+
+// p
+let p = document.querySelectorAll('p');
+
+p[0].innerText = siteContent['main-content']['features-content'];
+p[1].innerText = siteContent['main-content']['about-content'];
+p[2].innerText = siteContent['main-content']['services-content'];
+p[3].innerText = siteContent['main-content']['product-content'];
+p[4].innerText = siteContent['main-content']['vision-content'];
+p[5].innerText = siteContent['contact']['address'];
+p[6].innerText = siteContent['contact']['phone'];
+p[7].innerText = siteContent['contact']['email'];
+p[8].innerText = siteContent['footer']['copyright'];
+
+
+
+// middle-img
+let middleImg = document.querySelector('#middle-img');
+
+middleImg.src = siteContent['main-content']['middle-img-src']
+
+
+// 
+
+
 
 
 
