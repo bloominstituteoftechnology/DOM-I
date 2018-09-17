@@ -66,7 +66,7 @@ textContentNodes.forEach((element, index) => {
   element.getElementsByTagName('p' )[0].innerText = siteContent['main-content'][`${section}-content`];
 });
 
-//------------------------------------------------
+//-- Contact -------------------------------------
 document.querySelector('.contact h4').innerText = 'Contact';
 const contactLines = [
   '123 Way 456 Street<br> \nSomewhere, USA',
@@ -77,3 +77,32 @@ document.querySelectorAll('.contact p').forEach((element, index) => {
   element.innerHTML = contactLines[index];
 });
 document.querySelector('footer p').innerText = 'Copyright Great Idea! 2018';
+
+
+//== Stretch - (Also, see stretch project) =======================================
+
+const flipButton = document.createElement('button');
+flipButton.innerText = 'Flip it!'
+document.querySelector('.cta-text').appendChild(flipButton);
+flipButton.addEventListener('click', flipIt);
+function flipIt (clickEvent) {
+  flipButton.style.display = 'none';
+  let container = document.querySelector('.container');
+  container.style.display = 'flex';
+  container.style.flexDirection = 'column-reverse';
+  document.querySelector('.cta').style.flexDirection = 'row';
+  document.querySelector('.cta-text').style.margin = '0 0 0 82px';
+  document.querySelector('nav').style.flexDirection = 'row';
+  document.querySelector('header').style.flexDirection = 'row';
+  document.querySelector('.top-content').style.flexDirection = 'row';
+  document.querySelector('.bottom-content').style.flexDirection = 'row';
+  document.querySelector('#logo-img').style.margin = '28px 91px 0 0';
+  document.querySelector('.main-content').style.display = 'flex';
+  document.querySelector('.main-content').style.flexDirection = 'column-reverse';
+  document.body.style.direction = 'rtl';
+  document.body.style.color = 'white';
+  document.body.style.backgroundColor = 'black';
+  document.querySelectorAll('img').forEach(element => {
+    element.style.filter = 'invert(1)';
+  })
+}
