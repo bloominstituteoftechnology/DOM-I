@@ -46,6 +46,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
+// =============== Header ===============
 let link = document.querySelectorAll("a");
 link[0].textContent = "Services";
 link[1].textContent = "Product";
@@ -56,9 +57,32 @@ link[5].textContent = "Contact";
 
 let h1 = document.querySelector("h1");
 h1.innerHTML = "DOM<br> Is<br> Awesome";
+// h1.innerHTML = siteContent["cta"]["h1"];
 
 let headerImg = document.getElementById("cta-img");
 headerImg.src = siteContent["cta"]["img-src"];
 
 let button = document.querySelector("button");
-button.textContent = "Get Started";
+button.textContent = siteContent["cta"]["button"];
+
+// =============== Content ===============
+let h4 = document.querySelectorAll("h4");
+let middleImg = document.getElementById("middle-img");
+let middleText = document.querySelectorAll(".text-content p");
+
+h4[0].textContent = siteContent["main-content"]["features-h4"];
+middleText[0].textContent = siteContent["main-content"]["features-content"];
+
+h4[1].textContent = siteContent["main-content"]["about-h4"];
+middleText[1].textContent = siteContent["main-content"]["about-content"];
+
+middleImg.src = siteContent["main-content"]["middle-img-src"];
+
+h4[2].textContent = siteContent["main-content"]["services-h4"];
+middleText[2].textContent = siteContent["main-content"]["services-content"];
+
+h4[3].textContent = siteContent["main-content"]["product-h4"];
+middleText[3].textContent = siteContent["main-content"]["product-content"];
+
+h4[4].textContent = siteContent["main-content"]["vision-h4"];
+middleText[4].textContent = siteContent["main-content"]["vision-content"];
