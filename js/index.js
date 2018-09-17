@@ -37,6 +37,45 @@ const siteContent = {
   },
 };
 
+const siteContent1 = {
+  "nav": {
+    "nav-item-1": "Services",
+    "nav-item-2": "Product",
+    "nav-item-3": "Vision",
+    "nav-item-4": "Features",
+    "nav-item-5": "About",
+    "nav-item-6": "Contact",
+    "img-src": "img/logo.png"
+  },
+  "cta": {
+    "h1": "Services",
+    "button": "Get Started",
+    "img-src": "img/header-img.png"
+  },
+  "main-content": {
+    "features-h4": "Web",
+    "features-content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "about-h4": "Mobile",
+    "about-content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "middle-img-src": "img/mid-page-accent.jpg",
+    "services-h4": "Cybersec",
+    "services-content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "product-h4": "Quality Assurance",
+    "product-content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "vision-h4": "Education",
+    "vision-content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  },
+  "contact": {
+    "contact-h4": "Contact",
+    "address": "123 Way 456 Street Somewhere, USA",
+    "phone": "1 (888) 888-8888",
+    "email": "sales@greatidea.io",
+  },
+  "footer": {
+    "copyright": "Copyright Great Idea! 2018"
+  },
+};
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
@@ -51,6 +90,25 @@ for (let i = 0; i < navListArray.length; i++) {
 for (let link of navListArray) {
   link.style.color = "green";
 }
+
+//button stretch 
+
+navListArray[0].addEventListener("click", function () {
+  let middleImg = document.querySelector("#middle-img");
+  for (let i = 0; i < tCH4Array.length; i++) {
+
+    tCH4Array[i].innerHTML = siteContent1["main-content"][keysH4[i]];
+    tCPArray[i].innerHTML = siteContent1["main-content"][keysP[i]];
+    tCPArray[i].style.color = "darkgray";
+    tCH4Array[i].style.color = "white";
+  }
+  (document.querySelector(".main-content")).style.backgroundColor = "black";
+  (document.querySelector(".text-content h4")).style.color = "white";
+  middleImg.setAttribute("src", "/img/serviceslg.jpeg");
+  middleImg.style.width = "80%";
+  middleImg.style.height = "200px";
+
+});
 
 //add two new nav items
 
@@ -119,3 +177,14 @@ let footerP = document.querySelector("footer p");
 footerP.innerHTML = siteContent["footer"]["copyright"];
 
 
+
+//messing with page styles = stretch 1
+footerP.style.border = "1px solid black";
+
+let mainContent = document.querySelector(".main-content");
+mainContent.style.backgroundColor = "lightgray";
+
+let btn = document.querySelector("button");
+btn.style.backgroundColor = "lightblue";
+btn.style.color = "black";
+btn.style.borderRadius = "20px";
