@@ -57,6 +57,7 @@ nav[5].innerHTML = siteContent["nav"]["nav-item-6"];
 
 let cta = document.querySelector("h1");
 cta.innerHTML = siteContent["cta"]["h1"];
+cta.innerHTML = "DOM <br> is <br> Awesome";
 
 const mainButton = document.querySelector("Button");
 mainButton.innerHTML = siteContent["cta"]["button"];
@@ -80,3 +81,4 @@ paragraph[6].innerHTML = siteContent["contact"]["phone"];
 paragraph[7].innerHTML = siteContent["contact"]["email"];
 paragraph[8].innerHTML = siteContent["footer"]["copyright"];
 
+cta.innerHTML = "DOM <br> is <br> Awesome";
