@@ -49,3 +49,6 @@ for (i = 0; i < nav.length; i++) {
 const topHeading = document.querySelector('h1');
 topHeading.innerHTML = siteContent['cta']['h1'];
 
+const topBtn = document.querySelector('button');
+topBtn.innerHTML = siteContent['cta']['button'];
+
