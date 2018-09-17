@@ -129,6 +129,22 @@ document.getElementById('blue-color-button').addEventListener('click', function(
 
   });
 
+  const bacon = {
+    "main-content": {
+      "features-h4":"Features",
+      "features-content": "Bacon ipsum dolor amet boudin cupim landjaeger, chicken corned beef shank swine beef short ribs turducken meatball t-bone shankle ham hock cow. Ground round meatloaf turkey venison drumstick t-bone shank brisket. Chuck tri-tip spare ribs swine. Salami pastrami jerky.",
+      "about-h4":"About",
+      "about-content": "Pastrami turducken. T-bone porchetta pork chop rump, bacon kielbasa pig ball tip shoulder sausage ham leberkas spare ribs venison burgdoggen. Biltong tongue cow ribeye, tail beef ribs short ribs. Buffalo shank tri-tip ball tip pork chop biltong. ",
+      "middle-img-src": "img/mid-page-accent.jpg",
+      "services-h4":"Services",
+      "services-content": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+      "product-h4":"Product",
+      "product-content": "Tenderloin corned beef kielbasa, beef ribs pastrami buffalo porchetta meatloaf pork chop pancetta turkey. Rump burgdoggen alcatra ham hock short loin, spare ribs ham shoulder tongue meatloaf drumstick flank biltong pork chop.  ",
+      "vision-h4":"Vision",
+      "vision-content": "Brisket ham hock ham, jerky bacon fatback pig leberkas kielbasa meatloaf alcatra shank tongue. Chicken tongue prosciutto turkey corned beef pork loin sirloin bacon pig drumstick.",
+    },
+  }
+
   const otherButton = document.createElement('button');
   otherButton.innerHTML = 'Black Text';
   otherButton.setAttribute('style', 'display: block; cursor: pointer');
@@ -146,3 +162,20 @@ document.getElementById('blue-color-button').addEventListener('click', function(
     });
 
     });
+const baconButton = document.createElement('button');
+baconButton.innerHTML = 'Bacon Content';
+baconButton.setAttribute('style', 'cursor: pointer');
+baconButton.setAttribute('id', 'bacon-button')
+let mainContent = document.querySelector('.main-content');
+mainContent.prepend(baconButton);
+
+document.getElementById('bacon-button').addEventListener('click', function(){
+  
+  topContentText[0].innerHTML = bacon["main-content"]["features-content"];
+  topContentText[1].innerHTML = bacon["main-content"]["about-content"];
+  bottomContentText[0].innerHTML = bacon["main-content"]["services-content"];
+  bottomContentText[1].innerHTML = bacon["main-content"]["product-content"];
+  bottomContentText[2].innerHTML = bacon["main-content"]["vision-content"];
+
+
+  });
