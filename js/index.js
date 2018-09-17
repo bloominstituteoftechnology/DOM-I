@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "123 Way 456 Street<br>Somewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -80,3 +80,14 @@ contentParagraphs[4].innerHTML = siteContent['main-content']['vision-content'];
 const middleImg = document.querySelector("#middle-img");
 middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
+//contact section
+const contactHead = document.querySelector('.contact h4');
+contactHead.innerHTML = siteContent['contact']['contact-h4'];
+
+const contactParagraphs = document.querySelectorAll('.contact p');
+contactParagraphs[0].innerHTML = siteContent['contact']['address'];
+contactParagraphs[1].innerHTML = siteContent['contact']['phone'];
+contactParagraphs[2].innerHTML = siteContent['contact']['email'];
+
+
+console.log(contactParagraphs);
