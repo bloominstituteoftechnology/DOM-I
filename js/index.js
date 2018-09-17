@@ -45,16 +45,23 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 const navUl = document.querySelector("header nav");
 
 // function for adding links to navbar
-const newNavItem = function (element, text, attr) {
+const appendNavItem = function (element, text, attr) {
   const newListItem = document.createElement(element);
   newListItem.innerText = text;
   newListItem.href = attr;
-  navUl.appendChild(newListItem);
+  navUl.append(newListItem);
+  return newListItem;
+}
+const prependNavItem = function (element, text, attr) {
+  const newListItem = document.createElement(element);
+  newListItem.innerText = text;
+  newListItem.href = attr;
+  navUl.prepend(newListItem);
   return newListItem;
 }
 
-newNavItem('a', 'blog', '#');
-newNavItem('a', 'Article', '#');
+appendNavItem('a', 'blog', '#');
+prependNavItem('a', 'Article', '#');
 
 //Nav links
 let navLinks = document.querySelectorAll('header nav a');
