@@ -52,3 +52,6 @@ topHeading.innerHTML = siteContent['cta']['h1'];
 const topBtn = document.querySelector('button');
 topBtn.innerHTML = siteContent['cta']['button'];
 
+const topImg = document.getElementById('cta-img');
+topImg.setAttribute('src', siteContent['cta']['img-src']);
+
