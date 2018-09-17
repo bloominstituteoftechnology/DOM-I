@@ -1,4 +1,8 @@
 body {
+  box-sizing: border-box;
+}
+
+.digits {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,4 +15,28 @@ body {
 
 .redDigit {
   color: red;
+}
+.play-pause {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+img {
+  width: 50px;
+  padding: 0 20px;
+  cursor: pointer;
+}
+#play {
+  display: none;
+}
+
+.play-pause span {
+  border: 1px solid grey;
+  padding: 10px;
+  background: red;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
 }
