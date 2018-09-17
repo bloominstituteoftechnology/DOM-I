@@ -47,7 +47,24 @@ let navListArray = Array.from(navList);
 for (let i = 0; i < navListArray.length; i++) {
   navListArray[i].innerHTML = siteContent["nav"][`nav-item-${i + 1}`];
 }
+//Make nav links green
+for (let link of navListArray) {
+  link.style.color = "green";
+}
 
+//add two new nav items
+
+let blog = document.createElement("a");
+blog.setAttribute("href", "#");
+(document.querySelector("nav")).appendChild(blog);
+blog.innerHTML = "Blog";
+blog.style.color = "Green";
+
+let social = document.createElement("a");
+social.setAttribute("href", "#");
+(document.querySelector("nav")).prepend(social);
+social.innerHTML = "Social";
+social.style.color = "Green";
 //Update cta
 
 //Update cta h1
@@ -100,3 +117,5 @@ for (let i = 0; i < contactPArray.length; i++) {
 //footer 
 let footerP = document.querySelector("footer p");
 footerP.innerHTML = siteContent["footer"]["copyright"];
+
+
