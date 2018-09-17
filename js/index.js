@@ -51,6 +51,26 @@ navLinks[3].innerText = siteContent['nav']['nav-item-4'];
 navLinks[4].innerText = siteContent['nav']['nav-item-5'];
 navLinks[5].innerText = siteContent['nav']['nav-item-6'];
 
+
+//Color Change
+navLinks.forEach(item => item.style.color = 'green');
+
+
+//New Content
+let mainNav = document.querySelector('nav');
+  const newNavItem1 = document.createElement('a');
+    newNavItem1.innerText = 'Awesome'
+    newNavItem1.href = '#'
+    newNavItem1.style.color = 'green'
+    mainNav.appendChild(newNavItem1);
+    
+ const newNavItem2 = document.createElement('a');
+    newNavItem2.innerText = 'Shop'
+    newNavItem2.href = '#'
+    newNavItem2.style.color = 'green'
+    mainNav.prepend(newNavItem2);
+
+
 //Images
 let ctaImage = document.getElementById("cta-img");
 ctaImage.setAttribute('src', siteContent['cta']['img-src'])
@@ -108,7 +128,7 @@ let footerInfo = document.querySelector('footer p');
 footerInfo.innerHTML = siteContent['footer']['copyright'];
 
 
-//New Content
+
 
 
 
