@@ -129,7 +129,7 @@ firstnav.href = ('#');
 const lastnav = document.createElement("a");
 lastnav.innerText = ('Login');
 lastnav.href = ('#');
-const mainNav = document.querySelector('nav');  
+const mainNav = document.querySelector('nav');
 
 mainNav.prepend(firstnav);
 mainNav.appendChild(lastnav);
@@ -141,4 +141,21 @@ var aElements = document.getElementsByTagName('a');
 
 for (var i = 0; i < aElements.length; i++) {
   aElements[i].style.color = 'green';
+}
+
+//Stretch
+
+buttontext.onclick = function () {
+  for (var i = 0; i < aElements.length; i++) {
+    aElements[i].style.color = 'purple';
+  }
+  const mainHeading = document.querySelector('section h1');
+  mainHeading.style.color = 'red';
+
+  mainNav.style.border = 'solid blue';
+
+  const subheadings = document.querySelectorAll('section h4');
+  for (var i = 0; i < subheadings.length; i++) {
+    subheadings[i].style.color = 'green';
+  }
 }
