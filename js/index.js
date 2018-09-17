@@ -71,10 +71,11 @@ const logo = document.getElementById('logo-img');
 logo.src = siteContent['nav']['img-src'];
 
 // cta text
+const h1Arr = siteContent.cta.h1.split(' ');
 const ctaText = document.querySelector('.cta-text');
 ctaText.innerHTML = `
-  <h1>DOM<br> Is<br>
-  Awesome</h1>
+  <h1>${h1Arr[0]}<br> ${h1Arr[1]}<br>
+  ${h1Arr[2]}</h1>
   <button class="btn">Get Started</button>
 `;
 
