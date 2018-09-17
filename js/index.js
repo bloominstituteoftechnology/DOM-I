@@ -94,9 +94,47 @@ footerP.innerText = siteContent.footer.copyright;
 
 
 let nav = document.querySelector("header nav");
-nav.append("Blog");
-nav.prepend("Portfolio");
+// nav.prepend("Portfolio");
+
+let newA = document.createElement("a");
+nav.prepend(newA);
+// document.body.container.header.nav.appendChild(newA);
+newA.innerText = "Portfolio";
+newA.href = "#";
+newA.style.color = 'green';
+
+let myHeader = document.querySelector("header nav");
+let newA2 = document.createElement("a");
+myHeader.appendChild(newA2);
+newA2.innerText = "Blog";
+newA2.href = "#";
+newA2.style.color = 'green';
+// nav.appendChild("Blog");
+
+// var p = document.createElement("p");
+// document.body.appendChild(p);
+
 
 aTags.forEach(tag => tag.style.color = 'green');
 nav.style.color = 'green';
+
+{/* <button onclick="myFunction()">Click Me</button>
+
+<div id="myDIV">
+  This is my DIV element.
+</div>
+Step 2) Add JavaScript:
+Example
+function myFunction() {
+    var x = document.getElementById("myDIV");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+} */}
+
+// function buttonFunc () {
+//   ctaTextButton.style.["background-color"] === "black" ? 
+// }
 
