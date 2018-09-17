@@ -37,10 +37,6 @@ const siteContent = {
   },
 };
 
-// let domisawesome = siteContent['cta']['h1'].split(' ');
-// console.log(domisawesome);
-
-// Example: Update the img src for the logo
 function addNavItems(itemName, text, url, insertWhere) {
   itemName.innerText = text;
   itemName.href = url;
