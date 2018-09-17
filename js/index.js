@@ -102,6 +102,22 @@ bottomContentP1Header[2].innerText = 'Vision'
 let bottomContentP3 = document.querySelector('.bottom-content').querySelectorAll('p');
 bottomContentP3[2].innerText = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
 
+let contacth4 = document.querySelector('.contact').querySelector('h4');
+contacth4.innerText = 'Contact'
+
+let address = document.querySelector('.contact').querySelectorAll('p');
+address[0].innerText = '123 Way 456 Street Somewhere, USA'
+
+let phoneNumber = document.querySelector('.contact').querySelectorAll('p');
+phoneNumber[1].innerText = '1 (888) 888-8888'
+
+let emailAddress = document.querySelector('.contact').querySelectorAll('p');
+emailAddress[2].innerText = 'sales@greatidea.io'
+
+let footer1 = document.querySelector('footer');
+footer1.innerText = 'Copyright Great Idea! 2018'
+
+
 
 
 
