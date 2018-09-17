@@ -98,3 +98,18 @@ contactInfo[1].textContent = siteContent["contact"]["phone"];
 contactInfo[2].textContent = siteContent["contact"]["email"];
 
 footerText.textContent = siteContent["footer"]["copyright"];
+
+// =============== Task 4 ===============
+let nav = document.querySelector("nav");
+let socialMediaLink = document.createElement("a");
+let photosLink = document.createElement("a");
+
+socialMediaLink.textContent = "Social Media";
+socialMediaLink.style.color = "green";
+photosLink.textContent = "Photos";
+photosLink.style.color = "green";
+
+nav.append(socialMediaLink);
+nav.prepend(photosLink);
+// link.style.color = 'green'
+link.forEach(link => (link.style.color = "green"));
