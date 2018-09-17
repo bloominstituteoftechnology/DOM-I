@@ -53,6 +53,32 @@ setNav[3].innerText = siteContent["nav"]["nav-item-4"]
 setNav[4].innerText = siteContent["nav"]["nav-item-5"]
 setNav[5].innerText = siteContent["nav"]["nav-item-6"]
 
+for (let i = 0; i < setNav.length; i++){
+  let greenNav = setNav[i].style.color = "green";
+  greenNav;
+}
+
+let newNavItem = document.createElement('a');
+let newNavItem2 = document.createElement('a');
+
+let navigation = document.querySelector('header nav');
+
+newNavItem.innerText = 'Learn To Code Bro';
+newNavItem2.innerText = 'DOM Harder';
+
+newNavItem.href = 'https://learn.lambdaschool.com';
+newNavItem2.href = 'https://developer.mozilla.org/en-US/docs/Glossary/DOM';
+
+navigation.appendChild(newNavItem);
+navigation.prepend(newNavItem2);
+
+for (let i = 0; i < setNav.length; i++){
+  let greenNav = setNav[i].style.color = "green";
+  greenNav;
+}
+
+
+
 document.getElementsByClassName('cta');
 document.getElementsByTagName('h1');
 let h1Update = document.querySelector('h1');
@@ -61,11 +87,22 @@ h1Update.innerText = siteContent["cta"]["h1"];
 let buttonUpdate = document.querySelector('button');
 buttonUpdate.innerText = siteContent["cta"]["button"];
 
+
+
 let imgUpdateId2 = document.querySelector('#cta-img');
 imgUpdateId2.setAttribute('src', siteContent['cta']["img-src"]);
 
 let imgSnip = document.querySelector('#middle-img');
 imgSnip.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+
+
+let animation1 = function(){
+  imgUpdateId2.style.backgroundColor = "green";
+  
+}
+
+buttonUpdate.addEventListener('click', animation1);
 
 // let featuresUpdateH4 = document.querySelector('.main-content .top-content .text-content[0]');
 // featuresUpdateH4.innerText = "Features";
