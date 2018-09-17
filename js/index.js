@@ -43,6 +43,14 @@ const imageLogo   = document.getElementById('logo-img'  );
 const imageCta    = document.getElementById('cta-img'   );
 const imageMiddle = document.getElementById('middle-img');
 
-imageLogo.setAttribute       ('src', siteContent['nav'         ]['img-src'       ]);
-imageCta.setAttribute   ('src', siteContent['cta'         ]['img-src'       ]);
+imageLogo  .setAttribute('src', siteContent['nav'         ]['img-src'       ]);
+imageCta   .setAttribute('src', siteContent['cta'         ]['img-src'       ]);
 imageMiddle.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+//
+
+const navLinks = document.querySelectorAll('.container header nav a');
+navLinks.forEach((element, index) => {
+  var navProperty = `nav-item-${index+1}`;
+  element.innerText = siteContent.nav[navProperty];
+});
