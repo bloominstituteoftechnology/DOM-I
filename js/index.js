@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "123 Way 456 Street" + "\n" + "Somewhere,  USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -68,3 +68,29 @@ textContentP[1].innerText = siteContent['main-content']['about-content'];
 
 let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+// services
+const textContent2 = document.querySelectorAll('.bottom-content .text-content h4');
+textContent2[0].innerText = siteContent['main-content']['services-h4'];
+const textContentP2 = document.querySelectorAll('.bottom-content .text-content p');
+textContentP2[0].innerText = siteContent['main-content']['services-content'];
+
+// product
+textContent2[1].innerText = siteContent['main-content']['product-h4'];
+textContentP2[1].innerText = siteContent['main-content']['product-content'];
+
+// vision
+textContent2[2].innerText = siteContent['main-content']['vision-h4'];
+textContentP2[2].innerText = siteContent['main-content']['vision-content'];
+
+// contact
+const contact = document.querySelectorAll('.contact h4');
+contact[0].innerText = siteContent['contact']['contact-h4'];
+const contactP = document.querySelectorAll('.contact p');
+contactP[0].innerText = siteContent['contact']['address'];
+contactP[1].innerText = siteContent['contact']['phone'];
+contactP[2].innerText = siteContent['contact']['email'];
+
+// footer
+const footer = document.querySelector('footer p');
+footer.innerText = siteContent['footer']['copyright'];
