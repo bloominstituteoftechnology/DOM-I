@@ -69,3 +69,20 @@ let getStarted = document.querySelector('button');
 getStarted.innerHTML = siteContent['cta']['button'];
 
 // Main-Content
+
+let h4 = document.querySelectorAll("h4");
+h4[0].innerHTML = siteContent['main-content']['features-h4'];
+h4[1].innerHTML = siteContent['main-content']['about-h4'];
+h4[2].innerHTML = siteContent['main-content']['services-h4'];
+h4[3].innerHTML = siteContent['main-content']['product-h4'];
+h4[4].innerHTML = siteContent['main-content']['vision-h4'];
+
+let p = document.querySelectorAll("p");
+p[0].innerHTML = siteContent['main-content']['features-content'];
+p[1].innerHTML = siteContent['main-content']['about-content'];
+p[2].innerHTML = siteContent['main-content']['services-content'];
+p[3].innerHTML = siteContent['main-content']['product-content'];
+p[4].innerHTML = siteContent['main-content']['vision-content'];
+
+// Contact
+
