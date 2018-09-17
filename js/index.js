@@ -47,18 +47,32 @@ const navbar = document.querySelectorAll('nav a');
 let itemCount = 1;
 navbar.forEach((a, i, nav) => {
   a.innerHTML = siteContent['nav'][`nav-item-${itemCount}`];
+  a.style.color = 'green';
   itemCount++;
 })
 
+const newFirstElement = document.createElement('a');
+newFirstElement.innerHTML = 'First';
+newFirstElement.style.color = 'green';
+const newLastElement = document.createElement('a');
+newLastElement.innerHTML = 'Last';
+newLastElement.style.color = 'green';
+
+const navigationWrap = document.querySelector('nav');
+
+navigationWrap.prepend(newFirstElement);
+navigationWrap.append(newLastElement);
+
+
 
 //section - cta
-let ctaH1 = document.querySelector('.cta-text h1');
+const ctaH1 = document.querySelector('.cta-text h1');
 ctaH1.innerHTML = siteContent['cta']['h1'];
 
-let ctaButton = document.querySelector('.cta-text button');
+const ctaButton = document.querySelector('.cta-text button');
 ctaButton.innerHTML = siteContent['cta']['button'];
 
-let ctaImg = document.querySelector('#cta-img');
+const ctaImg = document.querySelector('#cta-img');
 ctaImg.setAttribute('src', siteContent['cta']['img-src']);
 
 //main content
