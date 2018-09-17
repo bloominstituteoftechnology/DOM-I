@@ -118,3 +118,15 @@ contactP[2].innerText = siteContent['contact']['email'];
 // footer
 const footer = document.querySelector('footer p');
 footer.innerText = siteContent['footer']['copyright'];
+
+const buttonElement = document.createElement('button');
+footer.appendChild(buttonElement);
+buttonElement.innerText = "Update";
+buttonElement.style.marginLeft = "20px";
+buttonElement.onclick = "refreshPage()";
+
+buttonElement.addEventListener('click', refreshPage);
+
+function refreshPage(){
+  window.location.reload();
+};
