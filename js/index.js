@@ -81,9 +81,19 @@ for (let i = 0; i < navLinks.length; i++) {
 // cta
 let cta = document.querySelector('.cta .cta-text h1');
 cta.innerText = siteContent.cta['h1'];
+let ctaDad = document.querySelector('.cta');
+ctaDad.style.backgroundColor = "black";
+cta.style.border = "1px solid white";
+cta.style.width = "300px"
+cta.style.borderRadius = "25px";
+cta.style.color = "white";
 // cta button
 let ctaButton = document.querySelector('.cta .cta-text button');
 ctaButton.innerText = siteContent.cta['button'];
+
+ctaButton.addEventListener('click', (e) => {
+  alert('You pressed the button!!');
+});
 // cta image
 let ctaImage = document.querySelector('.cta img');
 ctaImage.setAttribute('src', siteContent['cta']['img-src']);
@@ -103,19 +113,29 @@ midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 // Bottom Content
 let bottomH4 = document.querySelectorAll('.bottom-content .text-content h4');
 let bottomText = document.querySelectorAll('.bottom-content .text-content p');
-bottomH4[0].innerText = siteContent["main-content"]["services-h4"];
 bottomText[0].innerText = siteContent["main-content"]["services-content"];
-bottomH4[1].innerText = siteContent["main-content"]["product-h4"];
 bottomText[1].innerText = siteContent["main-content"]["product-content"];
-bottomH4[2].innerText = siteContent["main-content"]["vision-h4"];
 bottomText[2].innerText = siteContent["main-content"]["vision-content"];
+bottomH4[0].innerText = siteContent["main-content"]["services-h4"];
+bottomH4[1].innerText = siteContent["main-content"]["product-h4"];
+bottomH4[2].innerText = siteContent["main-content"]["vision-h4"];
+bottomH4[0].style.borderBottom = "1px solid black";
+bottomH4[0].style.borderLeft = "1px solid black";
+bottomH4[1].style.borderBottom = "1px solid black";
+bottomH4[2].style.borderBottom = "1px solid black";
 // Contact section
 let contactH4 = document.querySelector('.contact h4');
-contactH4.innerText = siteContent.contact["contact-h4"];
 let contact = document.querySelectorAll('.contact p');
+contactH4.innerText = siteContent.contact["contact-h4"];
 contact[0].innerText = siteContent['contact'].address;
 contact[1].innerText = siteContent.contact.phone;
 contact[2].innerText = siteContent.contact.email;
 // Footer
 let footerText = document.querySelector('footer p');
 footerText.innerText = siteContent.footer.copyright;
+// Section styles
+let getContactSection = document.querySelector('section.contact');
+getContactSection.style.backgroundColor = "black";
+getContactSection.style.color = "white";
+getContactSection.style.padding = "24px";
+getContactSection.style.textAlign = "center";
