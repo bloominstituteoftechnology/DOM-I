@@ -1,3 +1,4 @@
+
 const siteContent = {
   "nav": {
     "nav-item-1": "Services",
@@ -38,5 +39,24 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+//Logo starts here
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+// logo ends here
+// Nav starts here
+document.querySelectorAll("nav a ")[0].innerHTML = siteContent["nav"]["nav-item-1"];
+document.querySelectorAll("nav a ")[1].innerHTML = siteContent["nav"]["nav-item-2"];
+document.querySelectorAll("nav a ")[2].innerHTML = siteContent["nav"]["nav-item-3"];
+document.querySelectorAll("nav a ")[3].innerHTML = siteContent["nav"]["nav-item-4"];
+//nav ends here
+
+
+
+//Cta img 
+let codeimg = document.getElementById("cta-img");
+codeimg.setAttribute('src',siteContent["cta"]["img-src"]);
+//Cta img end
+
+
+
