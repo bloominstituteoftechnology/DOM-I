@@ -50,6 +50,21 @@ childNodes[7].innerText = siteContent["nav"]["nav-item-4"];
 childNodes[9].innerText = siteContent["nav"]["nav-item-5"];
 childNodes[11].innerText = siteContent["nav"]["nav-item-6"];
 
+const newLink = document.createElement("a");
+newLink.innerText = 'Hello';
+newLink.href = '#';
+nav.prepend(newLink);
+
+const newLink2 = document.createElement("a");
+newLink2.innerText = 'World';
+newLink2.href = '#';
+nav.appendChild(newLink2);
+
+let navLinks = document.querySelectorAll("a");
+for (let i = 0; i < navLinks.length; i++) {
+  navLinks[i].style.color = "green";
+}
+
 let ctaIMG = document.getElementById("cta-img");
 ctaIMG.src = siteContent["cta"]["img-src"];
 
