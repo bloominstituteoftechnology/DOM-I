@@ -46,22 +46,28 @@ let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
 
 let n1 = document.querySelectorAll('a');
-n1[0].innerText = 'Services'
+n1[0].innerText = siteContent['nav']['nav-item-1']
+n1[0].style.color = 'green'
 
 let n2 = document.querySelectorAll('a');
 n2[1].innerText = 'Product'
+n1[1].style.color = 'green'
 
 let n3 = document.querySelectorAll('a');
 n3[2].innerText = 'Vision'
+n1[2].style.color = 'green'
 
 let n4 = document.querySelectorAll('a');
 n4[3].innerText = 'Features'
+n1[3].style.color = 'green'
 
 let n5 = document.querySelectorAll('a');
 n5[4].innerText = 'About'
+n1[4].style.color = 'green'
 
 let n6 = document.querySelectorAll('a');
 n6[5].innerText = 'Contact'
+n1[5].style.color = 'green'
 
 let mainTitle = document.querySelector('.cta-text').querySelector('h1');
 mainTitle.innerHTML = 'DOM <br>IS <br>AWESOME';
@@ -117,6 +123,16 @@ emailAddress[2].innerText = 'sales@greatidea.io'
 let footer1 = document.querySelector('footer');
 footer1.innerText = 'Copyright Great Idea! 2018'
 
+//create new items for nav
+const newNavElement1 = document.createElement('a');
+const navNode = document.querySelector('nav')
+newNavElement1.innerText = 'Cookies'
+navNode.appendChild(newNavElement1)
+
+const newNavElement2 = document.createElement('a');
+newNavElement2.innerText = 'Milk'
+newNavElement2.style.color = 'red'
+navNode.prepend(newNavElement2)
 
 
 
