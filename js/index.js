@@ -41,9 +41,10 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let navItems = document.querySelectorAll('.container header nav a')
 
 //nav items
+let navItems = document.querySelectorAll('.container header nav a')
+
 for (let i = 0; i < navItems.length; i++){
   let curKey = 'nav-item-' + (i +1);
   navItems[i].innerText = siteContent.nav[curKey];
@@ -98,3 +99,19 @@ contactP[2].innerText = siteContent.contact.email
 let footerP = document.querySelector('.container footer p')
 
 footerP.innerText = siteContent.footer.copyright
+
+//adding nav items
+
+let prependWithThis = document.createElement('a')
+
+let appendWithThis = document.createElement('a')
+
+prependWithThis.href = 'http://theryanclausen.com'
+prependWithThis.innerText = 'TheRyanClausen.com'
+
+appendWithThis.href = 'https://www.youtube.com/watch?v=ebN17xoJbLg'
+appendWithThis.innerText = 'Ultimate Warrior PSA'
+
+let navbar = document.querySelector('.container header nav')
+navbar.prepend(prependWithThis)
+navbar.appendChild(appendWithThis)
