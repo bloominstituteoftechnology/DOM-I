@@ -8,12 +8,12 @@ const siteContent = {
     "nav-item-6": "Contact",
     "img-src": "img/logo.png"
   },
-  //done
   "cta": {
     "h1": "DOM Is Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
+  //done
   "main-content": {
     "features-h4":"Features",
     "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
@@ -68,3 +68,40 @@ mainTitle.innerHTML = 'DOM <br>IS <br>AWESOME';
 
 let mainButton = document.querySelector('.cta-text').querySelector('button');
 mainButton.innerText = 'Get Started'
+
+let topContentP1Header = document.querySelector('.top-content').querySelectorAll('h4');
+topContentP1Header[0].innerText = 'Features'
+
+let topContentP1 = document.querySelector('.top-content').querySelectorAll('p');
+topContentP1[0].innerText = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+
+let topContentP2Header = document.querySelector('.top-content').querySelectorAll('h4');
+topContentP2Header[1].innerText = 'About'
+
+let topContentP2 = document.querySelector('.top-content').querySelectorAll('p');
+topContentP2[1].innerText = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+let bottomContentP1Header = document.querySelector('.bottom-content').querySelectorAll('h4');
+bottomContentP1Header[0].innerText = 'Services'
+
+let bottomContentP1 = document.querySelector('.bottom-content').querySelectorAll('p');
+bottomContentP1[0].innerText = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+
+let bottomContentP2Header = document.querySelector('.bottom-content').querySelectorAll('h4');
+bottomContentP1Header[1].innerText = 'Product'
+
+let bottomContentP2 = document.querySelector('.bottom-content').querySelectorAll('p');
+bottomContentP2[1].innerText = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+
+let bottomContentP3Header = document.querySelector('.bottom-content').querySelectorAll('h4');
+bottomContentP1Header[2].innerText = 'Vision'
+
+let bottomContentP3 = document.querySelector('.bottom-content').querySelectorAll('p');
+bottomContentP3[2].innerText = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+
+
+
+
