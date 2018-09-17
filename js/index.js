@@ -51,13 +51,29 @@ bannerImg.src = "img/mid-page-accent.jpg";
 let header = document.querySelector('header');
 header.display = 'flex';
 //navigation
+
+
 let navItems = document.querySelectorAll('header nav a');
 
 const menuItems = ["Services", "Product", "Vision", "Features", "About", "Contact"];
 
 for (let i = 0; i < navItems.length; i++) {
     navItems[i].innerHTML = menuItems[i];
+    navItems[i].style.color = "green";
 }
+
+//appending and prepending nav items
+const blog = document.createElement("a")
+blog.innerHTML = "Blog";
+blog.style.color = "green";
+const nav = document.querySelector("nav");
+nav.append(blog);
+
+const home = document.createElement("a")
+home.innerHTML = "Home";
+home.style.color = "green";
+nav.prepend(home);
+
 
 //header
 let cta = document.querySelector(".cta h1");
