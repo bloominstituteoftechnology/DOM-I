@@ -62,11 +62,18 @@ middleImg.setAttribute('src', siteContent['main-content']["middle-img-src"]);
   //Creating extra nav links for task 4
   let extraNavLink1 = document.createElement('a');
   extraNavLink1.innerHTML = "Hello?";
+
   let extraNavLink2 = document.createElement('a');
   extraNavLink2.innerHTML = "Hi?";
+
   let topNav = document.querySelector('header nav');
   topNav.append(extraNavLink1,extraNavLink2);
-  console.log(topNav)
+
+  let topNavA = document.querySelectorAll('header nav a');
+  // Why would it not work with multiple elements?
+  for(let i = 0;i<topNavA.length;i++){
+    topNavA[i].style.color = 'green';
+  }
 }
 {//cta
   let mainHeading = document.querySelector('.cta .cta-text h1');
