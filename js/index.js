@@ -38,5 +38,52 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+// let logo = document.getElementById("logo-img");
+// logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// NAV
+let navLinks = document.querySelectorAll('a');
+navLinks[0].innerText = siteContent.nav["nav-item-1"]
+navLinks[1].innerText = siteContent.nav["nav-item-2"]
+navLinks[2].innerText = siteContent.nav["nav-item-3"]
+navLinks[3].innerText = siteContent.nav["nav-item-4"]
+navLinks[4].innerText = siteContent.nav["nav-item-5"]
+navLinks[5].innerText = siteContent.nav["nav-item-6"]
+
+let navImg = document.querySelector('header img')
+navImg.src = siteContent.nav["img-src"]
+
+//CTA
+let h1 = document.querySelector('h1')
+h1.innerText = siteContent.cta.h1;
+
+let button = document.querySelector('button')
+button.innerText = siteContent.cta.button;
+
+let ctaImg = document.querySelector('.cta img')
+ctaImg.src = siteContent.cta["img-src"];
+
+
+
+//main content
+let featuresH4 = document.querySelectorAll('.main-content h4')
+featuresH4[0].innerText = siteContent["main-content"]["features-h4"]
+featuresH4[1].innerText = siteContent["main-content"]["about-h4"]
+featuresH4[2].innerText = siteContent["main-content"]["services-h4"]
+featuresH4[3].innerText = siteContent["main-content"]["product-h4"]
+featuresH4[4].innerText = siteContent["main-content"]["vision-h4"]
+
+let mainContent = document.querySelectorAll('.main-content p')
+mainContent[0].innerText = siteContent["main-content"]["features-content"]
+mainContent[1].innerText = siteContent["main-content"]["about-content"]
+mainContent[2].innerText = siteContent["main-content"]["services-content"]
+mainContent[3].innerText = siteContent["main-content"]["product-content"]
+mainContent[4].innerText = siteContent["main-content"]["vision-content"]
+console.log(mainContent)
+
+let mainContentImg = document.querySelector('.main-content img')
+mainContentImg.src = siteContent["main-content"]["middle-img-src"]
+
+//footer
+let footer = document.querySelector('footer')
+footer.innerText = siteContent.footer.copyright;
