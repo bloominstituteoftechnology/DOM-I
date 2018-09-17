@@ -66,4 +66,13 @@ heading[5].innerHTML = siteContent['contact']['contact-h4'];
 const centerImg = document.getElementById('middle-img');
 centerImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
-
+const content = document.getElementsByTagName('p');
+content[0].innerHTML = siteContent['main-content']['features-content'];
+content[1].innerHTML = siteContent['main-content']['about-content'];
+content[2].innerHTML = siteContent['main-content']['services-content'];
+content[3].innerHTML = siteContent['main-content']['product-content'];
+content[4].innerHTML = siteContent['main-content']['vision-content'];
+content[5].innerHTML = siteContent['contact']['address'];
+content[6].innerHTML = siteContent['contact']['phone'];
+content[7].innerHTML = siteContent['contact']['email'];
+content[8].innerHTML = siteContent['footer']['copyright'];
