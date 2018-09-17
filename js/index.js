@@ -67,3 +67,10 @@ mainHeadings[3].innerText = siteContent["main-content"]["product-h4"];
 mainHeadings[4].innerText = siteContent["main-content"]["vision-h4"];
 
 
+let mainP = document.querySelectorAll('.text-content p');
+mainP[0].innerText = siteContent["main-content"]["features-content"];
+mainP[1].innerText = siteContent["main-content"]["about-content"];
+mainP[2].innerText = siteContent["main-content"]["services-content"];
+mainP[3].innerText = siteContent["main-content"]["product-content"];
+mainP[4].innerText = siteContent["main-content"]["vision-content"];
+
