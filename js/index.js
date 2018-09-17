@@ -42,3 +42,4 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // Initial commit 
+// Secondary test commit
