@@ -16,12 +16,17 @@ function timer() {
   return increment;
 }
 
+const startButton = document.querySelector('button');
+
 function runTimer() {
+  document.body.style.color = 'black';
+  startButton.setAttribute('disabled', 'disabled');
 let newTimer = timer();
 let interval = setInterval(function(){
   currentTime = newTimer();
   if (currentTime >= 1000) {
     document.body.style.color = 'red';
+    startButton.removeAttribute('disabled');
     clearInterval(interval);
   }
   displayTime = currentTime.toString();
@@ -33,7 +38,6 @@ let interval = setInterval(function(){
 }, 10);
 }
 
-const startButton = document.querySelector('button');
 startButton.addEventListener('click', runTimer);
 
 
