@@ -147,3 +147,9 @@ contactP.forEach(x => x.style.textAlign = 'center')
 contactH.style.width = '100%'
 contactH.style.textAlign = 'center'
 
+codeSnipImg.style.transform = 'rotate(45deg)'
+
+//event listener stretch
+
+
+ctaButton.addEventListener('click', ()=> ctaH.style.color = randomColor())
