@@ -70,9 +70,8 @@ navBar1.prepend(newItem);
 newItem.style.color = 'green';
 
 const newItem1 = document.createElement('a');
-const navBar2 = document.querySelector('nav');
 newItem1.innerText = 'GoodBye';
-navBar2.append(newItem1);
+navBar1.append(newItem1);
 newItem1.style.color = 'green';
 
 
