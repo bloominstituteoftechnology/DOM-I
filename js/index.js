@@ -58,3 +58,28 @@ const ctaButton = document.querySelector(".cta button");
 ctaButton.innerText = siteContent.cta.button;
 
 document.querySelector("#cta-img").src = siteContent.cta["img-src"];
+
+const sectionHeader1 = document.querySelector(".top-content h4");
+const sectionHeader2 = document.querySelector(".top-content div:nth-child(2) h4");
+const sectionHeader3 = document.querySelector(".bottom-content h4");
+const sectionHeader4 = document.querySelector(".bottom-content div:nth-child(2) h4");
+const sectionHeader5 = document.querySelector(".bottom-content div:nth-child(3) h4");
+sectionHeader1.innerText = siteContent["main-content"]["features-h4"];
+sectionHeader2.innerText = siteContent["main-content"]["about-h4"];
+sectionHeader3.innerText = siteContent["main-content"]["services-h4"];
+sectionHeader4.innerText = siteContent["main-content"]["product-h4"];
+sectionHeader5.innerText = siteContent["main-content"]["vision-h4"];
+
+const sectionContent1 = document.querySelector(".top-content p");
+const sectionContent2 = document.querySelector(".top-content div:nth-child(2) p");
+const sectionContent3 = document.querySelector(".bottom-content p");
+const sectionContent4 = document.querySelector(".bottom-content div:nth-child(2) p");
+const sectionContent5 = document.querySelector(".bottom-content div:nth-child(3) p");
+sectionContent1.innerText = siteContent["main-content"]["features-content"];
+sectionContent2.innerText = siteContent["main-content"]["about-content"];
+sectionContent3.innerText = siteContent["main-content"]["services-content"];
+sectionContent4.innerText = siteContent["main-content"]["product-content"];
+sectionContent5.innerText = siteContent["main-content"]["vision-content"];
+
+const accent = document.querySelector("#middle-img");
+accent.src = siteContent["main-content"]["middle-img-src"];
