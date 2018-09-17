@@ -47,6 +47,16 @@ for (i = 0; i < navigation.length; i++) {
   navigation[i].style.color = 'green';
 }
 
+const appendNewItem = document.createElement('a');
+const prependNewItem = document.createElement('a');
+const navi = document.querySelector('nav');
+appendNewItem.innerHTML = 'Last';
+appendNewItem.href = '#';
+prependNewItem.innerHTML = 'First';
+appendNewItem.href = '#';
+navi.append(appendNewItem);
+navi.prepend(prependNewItem);
+
 const topHeading = document.querySelector('h1');
 topHeading.innerHTML = siteContent['cta']['h1'];
 
