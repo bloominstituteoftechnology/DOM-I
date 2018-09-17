@@ -113,3 +113,12 @@ nav.append(socialMediaLink);
 nav.prepend(photosLink);
 // link.style.color = 'green'
 link.forEach(link => (link.style.color = "green"));
+
+// =============== Stretch ===============
+let mainContent = document.querySelector(".main-content");
+let cta = document.querySelector(".cta");
+
+mainContent.style.backgroundColor = "#f4f4f4";
+cta.style.backgroundColor = "forestgreen";
+cta.style.padding = "30px 10%";
+cta.style.border = "8px solid black";
