@@ -1,4 +1,5 @@
 const siteContent = {
+  
   "nav": {
     "nav-item-1": "Services",
     "nav-item-2": "Product",
@@ -40,3 +41,15 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// Nav Items
+
+const navElements = document.querySelectorAll('nav a');
+navElements[0].innerText = "Services";
+navElements[1].innerText = "Product";
+navElements[2].innerText = "Vision";
+navElements[3].innerText = "Features";
+navElements[4].innerText = "About";
+navElements[5].innerText = "Contact";
+
+
