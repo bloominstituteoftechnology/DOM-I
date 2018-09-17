@@ -55,8 +55,33 @@ for(let i = 0; i<= navItems.length-1;i++)
 let h1 = document.getElementsByTagName('h1');
 h1[0].innerText=siteContent.cta.h1;
 
-let ctaBtn = document.getElementsByTagName('button');
-ctaBtn[0].innerText = siteContent.cta.button;
+let ctaBtn = document.querySelector('button');
+ctaBtn.innerText = siteContent.cta.button;
+
+function wreckIt(){
+
+  let imgs = document.querySelectorAll('img')
+
+  console.log(imgs);
+  
+  //its even a fun game to see how many times you get to click the button.
+  let x = (Math.round(Math.random() * (2 - 0) + 0));
+  let y = (Math.round(Math.random() * (2 - 0) + 0));
+  let z = (Math.round(Math.random() * (2 - 0) + 0));
+  
+  imgs[0].src = imgs[x].src;
+  imgs[1].src = imgs[y].src;
+  imgs[2].src = imgs[z].src; 
+  
+}
+
+
+ctaBtn.addEventListener('click',wreckIt);
+
+
+
+
+
 
 ctaImg = document.getElementById('cta-img');
 ctaImg.src = siteContent.cta["img-src"];
@@ -93,7 +118,24 @@ let element = document.getElementsByTagName('footer');
 let p = element[0].getElementsByTagName('p');
 p[0].innerText = siteContent.footer.copyright;
 
+
+
+let navItem1 = document.createElement('a');
+navItem1.href = '#';
+navItem1.innerText = 'Coffee'
+let navItem2 = document.createElement('a');
+navItem2.href = '#';
+navItem2.innerText = 'RedBull'
+
+let myNav = document.querySelector('nav');
+myNav.appendChild(navItem1);
+myNav.prepend(navItem2)
+
+
+
 let aCollection = document.querySelectorAll('a');
 aCollection.forEach(element=>{
   element.style.color = 'green'
 })
+
+
