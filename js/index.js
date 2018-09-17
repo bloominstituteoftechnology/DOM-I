@@ -44,7 +44,9 @@ const siteContent = {
 
 // nav
 const navLinks = document.querySelectorAll('nav a')
-navLinks.forEach((navLink, i) => navLink.innerText = siteContent.nav[`nav-item-${i + 1}`])
+navLinks.forEach(
+  (navLink, i) => (navLink.innerText = siteContent.nav[`nav-item-${i + 1}`])
+)
 
 const logo = document.getElementById('logo-img')
 logo.setAttribute('src', siteContent['nav']['img-src'])
@@ -60,8 +62,45 @@ const ctaImg = document.querySelector('#cta-img')
 ctaImg.setAttribute('src', siteContent.cta['img-src'])
 
 // main-content
-const topContent = document.querySelectorAll('.main-content .top-content .text-content')
+const topContent = document.querySelectorAll(
+  '.main-content .top-content .text-content'
+)
 topContent[0].children[0].innerText = siteContent['main-content']['features-h4']
-topContent[0].children[1].innerText = siteContent['main-content']['features-content']
+topContent[0].children[1].innerText =
+  siteContent['main-content']['features-content']
 topContent[1].children[0].innerText = siteContent['main-content']['about-h4']
-topContent[1].children[1].innerText = siteContent['main-content']['about-content']
+topContent[1].children[1].innerText =
+  siteContent['main-content']['about-content']
+
+const middleImg = document.querySelector('.middle-img')
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+const bottomContent = document.querySelectorAll(
+  '.main-content .bottom-content .text-content'
+)
+bottomContent[0].children[0].innerText =
+  siteContent['main-content']['services-h4']
+bottomContent[0].children[1].innerText =
+  siteContent['main-content']['services-content']
+bottomContent[1].children[0].innerText =
+  siteContent['main-content']['product-h4']
+bottomContent[1].children[1].innerText =
+  siteContent['main-content']['product-content']
+bottomContent[2].children[0].innerText =
+  siteContent['main-content']['vision-h4']
+bottomContent[2].children[1].innerText =
+  siteContent['main-content']['vision-content']
+
+// contact
+const contactHeader = document.querySelector('.contact h4')
+contactHeader.innerText = siteContent.contact['contact-h4']
+
+const contactContent = document.querySelectorAll('.contact p')
+const contactContentKeys = Object.keys(siteContent.contact).slice(1)
+contactContent.forEach(
+  (item, i) => (item.innerText = siteContent.contact[contactContentKeys[i]])
+)
+
+// footer 
+const footerContent = document.querySelector('footer p')
+footerContent.innerText = siteContent.footer.copyright
