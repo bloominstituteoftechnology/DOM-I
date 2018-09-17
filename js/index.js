@@ -77,6 +77,6 @@ contentParagraphs[2].innerHTML = siteContent['main-content']['services-content']
 contentParagraphs[3].innerHTML = siteContent['main-content']['product-content'];
 contentParagraphs[4].innerHTML = siteContent['main-content']['vision-content'];
 
-const middleImg = document.getElementById('#middle-img');
+const middleImg = document.querySelector("#middle-img");
 middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
