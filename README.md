@@ -1,3 +1,4 @@
+#Chad Jemmett
 # DOM I - JavaScript Content Management System
 
 ## Project Description
