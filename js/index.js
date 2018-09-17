@@ -65,7 +65,7 @@ const signIn = document.createElement('a');
 mainNav.appendChild(blog);
 mainNav.appendChild(signIn);
 blog.innerHTML = 'Blog';
-signIn.innerHTML = 'Sign In'
+signIn.innerHTML = 'Sign In';
 blog.style.color = 'green';
 signIn.style.color = 'green';
 blog.href = '#';
