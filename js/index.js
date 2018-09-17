@@ -38,48 +38,58 @@ const siteContent = {
 };
 
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
- 
- const navItems = document.querySelectorAll("a");
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+const navItems = document.querySelectorAll("a");
   for(let i= 0; i < navItems.length; i++) {
-    navItems[i].innerHTML = siteContent["nav"][`nav-item-${i+1}`];
+    navItems[i].innerText = siteContent["nav"][`nav-item-${i+1}`];
+    navItems[i].style.color = "mediumSpringGreen"
 }; 
 
+const newNavGuy = document.createElement('a');
+const navBar = document.querySelector('header nav');
+newNavGuy.innerText = 'Join the Party!';
+newNavGuy.href = 'https://party.com';
+newNavGuy.style.color = "mediumSpringGreen"
+navBar.appendChild(newNavGuy);
 
-// navItems[0].innerHTML = siteContent["nav"]["nav-item-1"]
-// navItems[1].innerHTML = siteContent["nav"]["nav-item-2"]
-// navItems[2].innerHTML = siteContent["nav"]["nav-item-3"]
-// navItems[3].innerHTML = siteContent["nav"]["nav-item-4"]
-// navItems[4].innerHTML = siteContent["nav"]["nav-item-5"]
-// navItems[5].innerHTML = siteContent["nav"]["nav-item-6"]
+
+
+
+// navItems[0].innerText = siteContent["nav"]["nav-item-1"]
+// navItems[1].innerText = siteContent["nav"]["nav-item-2"]
+// navItems[2].innerText = siteContent["nav"]["nav-item-3"]
+// navItems[3].innerText = siteContent["nav"]["nav-item-4"]
+// navItems[4].innerText = siteContent["nav"]["nav-item-5"]
+// navItems[5].innerText = siteContent["nav"]["nav-item-6"]
  
  const mainHeading = document.querySelector("h1");
-mainHeading.innerHTML = siteContent["cta"]["h1"]
+mainHeading.innerText = siteContent["cta"]["h1"]
  const mainBtn = document.querySelector("Button");
-mainBtn.innerHTML = siteContent["cta"]["button"]
+mainBtn.innerText = siteContent["cta"]["button"];
  const mainImg = document.getElementById("cta-img");
-mainImg.setAttribute('src', siteContent["cta"]["img-src"])
+mainImg.setAttribute('src', siteContent["cta"]["img-src"]);
  
 const allHeadings = document.querySelectorAll("h4");
 //  for(let i = 0; i < allHeadings.length; i++) {
-//   allHeadings[i].innerHTML = siteContent["main-content"][i];
+//   allHeadings[i].innerText = siteContent["main-content"][i];
 // }; 
-allHeadings[0].innerHTML = siteContent["main-content"]["features-h4"]
-allHeadings[1].innerHTML = siteContent["main-content"]["about-h4"]
-allHeadings[2].innerHTML = siteContent["main-content"]["services-h4"]
-allHeadings[3].innerHTML = siteContent["main-content"]["product-h4"]
-allHeadings[4].innerHTML = siteContent["main-content"]["vision-h4"]
-allHeadings[5].innerHTML = siteContent["contact"]["contact-h4"]
+allHeadings[0].innerText = siteContent["main-content"]["features-h4"];
+allHeadings[1].innerText = siteContent["main-content"]["about-h4"];
+allHeadings[2].innerText = siteContent["main-content"]["services-h4"];
+allHeadings[3].innerText = siteContent["main-content"]["product-h4"];
+allHeadings[4].innerText = siteContent["main-content"]["vision-h4"];
+allHeadings[5].innerText = siteContent["contact"]["contact-h4"];
 const middleImg = document.getElementById("middle-img");
-middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
- const paragraphs = document.getElementsByTagName("p");
-paragraphs[0].innerHTML = siteContent["main-content"]["features-content"]
-paragraphs[1].innerHTML = siteContent["main-content"]["about-content"]
-paragraphs[2].innerHTML = siteContent["main-content"]["services-content"]
-paragraphs[3].innerHTML = siteContent["main-content"]["product-content"]
-paragraphs[4].innerHTML = siteContent["main-content"]["vision-content"]
-paragraphs[5].innerHTML = siteContent["contact"]["address"]
-paragraphs[6].innerHTML = siteContent["contact"]["phone"]
-paragraphs[7].innerHTML = siteContent["contact"]["email"]
-paragraphs[8].innerHTML = siteContent["footer"]["copyright"]
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+ const paragraphs = document.querySelectorAll("p");
+paragraphs[0].innerText = siteContent["main-content"]["features-content"];
+paragraphs[1].innerText = siteContent["main-content"]["about-content"];
+paragraphs[2].innerText = siteContent["main-content"]["services-content"];
+paragraphs[3].innerText = siteContent["main-content"]["product-content"];
+paragraphs[4].innerText = siteContent["main-content"]["vision-content"];
+paragraphs[5].innerText = siteContent["contact"]["address"];
+paragraphs[6].innerText = siteContent["contact"]["phone"];
+paragraphs[7].innerText = siteContent["contact"]["email"];
+paragraphs[8].innerText = siteContent["footer"]["copyright"];
 
