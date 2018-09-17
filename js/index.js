@@ -57,17 +57,16 @@ links[3].style.color = 'green';
 links[4].style.color = 'green';
 links[5].style.color = 'green';
 
+const nav = document.querySelector('nav');
 const aElement = document.createElement('a');
-links[0].prepend(aElement);
+nav.prepend(aElement);
 
 aElement.innerText = "Blog";
-aElement.style.marginRight = "35px";
 aElement.href = 'https://google.com';
 
 const aElement2 = document.createElement('a');
-links[5].appendChild(aElement2);
+nav.appendChild(aElement2);
 aElement2.innerText = "Forum";
-aElement2.style.marginLeft = "35px";
 aElement2.href = 'https://google.com';
 aElement.style.color = "green";
 aElement2.style.color = "green";
