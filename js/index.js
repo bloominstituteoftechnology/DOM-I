@@ -62,7 +62,6 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
   ctaTitle.innerText = cta.h1;
   ctaButton.innerText = cta.button;
   ctaImg.src = cta['img-src'];
-  
 }
 
 // Main Content
@@ -83,7 +82,6 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
   let contentIMG = document.querySelector('.main-content > .middle-img');
   contentIMG.src = mainContent["middle-img-src"];
-
 }
 
 //Contact
@@ -91,7 +89,6 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
   const contact = siteContent.contact;
   
   document.querySelector('.contact > h4').innerText = contact["contact-h4"];
-  
   let info = document.querySelectorAll('.contact > p');
 
   info[0].innerText = contact.address;
@@ -100,3 +97,8 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 }
 
 //Footer
+{
+  const copyright = siteContent.footer.copyright;
+
+  document.querySelector('footer > p').innerText = copyright;
+}
