@@ -50,6 +50,15 @@ navLinks[3].innerText = siteContent.nav["nav-item-4"]
 navLinks[4].innerText = siteContent.nav["nav-item-5"]
 navLinks[5].innerText = siteContent.nav["nav-item-6"]
 
+navLinks[0].style.color = 'green'
+navLinks[1].style.color = 'green'
+navLinks[2].style.color = 'green'
+navLinks[3].style.color = 'green'
+navLinks[4].style.color = 'green'
+navLinks[5].style.color = 'green'
+
+
+
 let navImg = document.querySelector('header img')
 navImg.src = siteContent.nav["img-src"]
 
