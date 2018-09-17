@@ -75,12 +75,27 @@ home.style.color = "green";
 nav.prepend(home);
 
 
+
+
 //header
 let cta = document.querySelector(".cta h1");
 cta.innerHTML = "DOM IS AWESOME"
+cta.style.color = "hotpink";
 
 let ctaButton = document.querySelector(".cta button");
 ctaButton.innerHTML = "Get Started";
+
+//event listener for Get Started button
+ctaButton.addEventListener('mouseover', function() {
+    ctaButton.style.backgroundColor = "hotpink";
+});
+ctaButton.addEventListener('mouseout', function() {
+    ctaButton.style.backgroundColor = "white";
+});
+
+ctaButton.addEventListener('click', function() {
+    headerImg.src = "img/ideaClick.png";
+});
 
 //section headers
 
@@ -88,6 +103,7 @@ const h4Content = ["Features", "About", "Services", "Product", "Vision", "Contac
 let h4Headers = document.querySelectorAll("h4");
 for (let i = 0; i < h4Headers.length; i++) {
     h4Headers[i].innerHTML = h4Content[i];
+    h4Headers[i].style.color = "Hotpink";
 }
 
 //main content
