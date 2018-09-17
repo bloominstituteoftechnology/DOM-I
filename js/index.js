@@ -88,3 +88,9 @@ aboutHeading.innerHTML = siteContent['main-content']['about-h4'];
 const aboutContent = document.querySelector('.top-content .text-content:last-child p');
 aboutContent.innerHTML = siteContent['main-content']['about-content'];
 
+// Services Heading and Paragraphs
+const servicesHeading = document.querySelector('.bottom-content .text-content:nth-child(1) h4');
+servicesHeading.innerHTML = siteContent['main-content']['services-h4'];
+
+const servicesContent = document.querySelector('.bottom-content .text-content:nth-child(1) p');
+servicesContent.innerHTML = siteContent['main-content']['services-content'];
