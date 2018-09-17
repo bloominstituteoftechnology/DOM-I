@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM<br> Is<br> Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -40,6 +40,7 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.src = 'img/logo.png'
+
 // NAV
 let nav1 = document.getElementsByTagName("a")[0];
 nav1.innerHTML = siteContent["nav"]["nav-item-1"]
@@ -65,6 +66,10 @@ ctaImg.src = siteContent["cta"]["img-src"];
 let middleImg = document.querySelector('.middle-img');
 middleImg.src = siteContent["main-content"]["middle-img-src"];
 
+// Button
+let ctaButton = document.querySelector('button')
+ctaButton.innerHTML = siteContent.cta.button;
+
 // Header
 let topHead = document.querySelectorAll('.top-content .text-content h4');
 topHead[0].innerHTML = siteContent["main-content"]["features-h4"];
@@ -84,3 +89,18 @@ let bottomText = document.querySelectorAll('.bottom-content .text-content p');
 bottomText[0].innerHTML = siteContent["main-content"]["services-content"];
 bottomText[1].innerHTML = siteContent["main-content"]["product-content"];
 bottomText[2].innerHTML = siteContent["main-content"]["vision-content"];
+
+
+// contact head
+let contactHead = document.querySelector('.contact h4');
+contactHead.innerHTML = siteContent["contact"]["contact-h4"];
+// contact content
+let contactText = document.querySelectorAll(".contact p");
+contactText[0].innerHTML = siteContent["contact"]["address"];
+contactText[1].innerHTML = siteContent["contact"]["phone"];
+contactText[2].innerHTML = siteContent["contact"]["email"];
+
+
+// footer
+let footer = document.querySelector('footer p');
+footer.innerHTML = siteContent["footer"]["copyright"]
