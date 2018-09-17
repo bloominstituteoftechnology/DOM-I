@@ -8,6 +8,7 @@ const siteContent = {
     "nav-item-6": "Contact",
     "img-src": "img/logo.png"
   },
+  //done
   "cta": {
     "h1": "DOM Is Awesome",
     "button": "Get Started",
@@ -40,3 +41,30 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+let n1 = document.querySelectorAll('a');
+n1[0].innerText = 'Services'
+
+let n2 = document.querySelectorAll('a');
+n2[1].innerText = 'Product'
+
+let n3 = document.querySelectorAll('a');
+n3[2].innerText = 'Vision'
+
+let n4 = document.querySelectorAll('a');
+n4[3].innerText = 'Features'
+
+let n5 = document.querySelectorAll('a');
+n5[4].innerText = 'About'
+
+let n6 = document.querySelectorAll('a');
+n6[5].innerText = 'Contact'
+
+let mainTitle = document.querySelector('.cta-text').querySelector('h1');
+mainTitle.innerHTML = 'DOM <br>IS <br>AWESOME';
+
+let mainButton = document.querySelector('.cta-text').querySelector('button');
+mainButton.innerText = 'Get Started'
