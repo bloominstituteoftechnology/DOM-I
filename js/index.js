@@ -56,3 +56,14 @@ navLinks.forEach((element, index) => {
 //-- Call To Action ------------------------------
 document.querySelector('.cta-text h1').innerHTML = 'Dom<br /> is<br /> Awesome';
 document.querySelector('.cta-text button').innerText = 'Get Started';
+
+//-- Text Content --------------------------------
+const textContentNodes = document.querySelectorAll('.text-content');
+const sections = ['features', 'about', 'services', 'product', 'vision'];
+textContentNodes.forEach((element, index) => {
+  const section = sections[index];
+  element.getElementsByTagName('h4')[0].innerText = siteContent['main-content'][`${section}-h4`     ];
+  element.getElementsByTagName('p' )[0].innerText = siteContent['main-content'][`${section}-content`];
+});
+
+//------------------------------------------------
