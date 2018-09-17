@@ -118,3 +118,14 @@ document.querySelector('footer p').innerText = siteContent.footer.copyright;
 
 //Task 4: Add new content
 
+links.forEach(l => l.style.color = 'green');
+
+const navBar = document.querySelector('header nav');
+const firstLink = document.createElement('a');
+const lastLink = document.createElement('a');
+
+firstLink.innerText = 'Justin';
+lastLink.innerText = 'Lowry';
+
+navBar.prepend(firstLink);
+navBar.appendChild(lastLink);
