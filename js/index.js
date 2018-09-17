@@ -41,9 +41,10 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-const nav = document.getElementsByTagName('a');
-for (i = 0; i < nav.length; i++) {
-  nav[i].innerHTML = siteContent['nav'][`nav-item-${i+1}`];
+const navigation = document.getElementsByTagName('a');
+for (i = 0; i < navigation.length; i++) {
+  navigation[i].innerHTML = siteContent['nav'][`nav-item-${i+1}`];
+  navigation[i].style.color = 'green';
 }
 
 const topHeading = document.querySelector('h1');
