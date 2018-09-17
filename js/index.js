@@ -69,3 +69,24 @@ topContent[1].innerText = siteContent['main-content']['about-content']
 
 const middleImg = document.querySelector('.middle-img');
 middleImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+const bottomH4 = document.querySelectorAll('.main-content .bottom-content h4')
+bottomH4[0].innerText = siteContent['main-content']['services-h4']
+bottomH4[1].innerText = siteContent['main-content']['product-h4']
+bottomH4[2].innerText = siteContent['main-content']['vision-h4']
+
+const bottomContent = document.querySelectorAll('.main-content .bottom-content p')
+bottomContent[0].innerText = siteContent['main-content']['services-content']
+bottomContent[1].innerText = siteContent['main-content']['product-content']
+bottomContent[2].innerText = siteContent['main-content']['vision-content']
+
+const contactH4 = document.querySelector('.contact h4');
+contactH4.innerText = siteContent['contact']['contact-h4']
+
+const contactContent = document.querySelectorAll('.contact p');
+contactContent[0].innerText = siteContent['contact']['address']
+contactContent[1].innerText = siteContent['contact']['phone']
+contactContent[2].innerText = siteContent['contact']['email']
+
+const copyFooter = document.querySelector('footer p');
+copyFooter.innerText = siteContent['footer']['copyright']
