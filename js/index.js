@@ -59,9 +59,12 @@ navLinks[5].style = 'color: green;';
 
 let ctaTitle = document.querySelector('.cta .cta-text h1');
 ctaTitle.innerText = siteContent['cta']['h1']
+ctaTitle.style = 'color: orange; border: 2px dashed blue; padding: 50px; background-color: gray;';
+
 
 let ctaButton = document.querySelector('.cta .cta-text button');
 ctaButton.innerText = siteContent['cta']['button']
+ctaButton.style = 'color: gray; background-color: orange;';
 
 let ctaImg = document.getElementById('cta-img');
 ctaImg.setAttribute('src', siteContent['cta']['img-src'])
