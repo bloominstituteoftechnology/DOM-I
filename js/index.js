@@ -37,7 +37,23 @@ const siteContent = {
   },
 };
 
+// let domisawesome = siteContent['cta']['h1'].split(' ');
+// console.log(domisawesome);
+
 // Example: Update the img src for the logo
+function addNavItems(itemName, text, url, insertWhere) {
+  itemName.innerText = text;
+  itemName.href = url;
+  itemName.style.color = 'green';
+  if (insertWhere.toLowerCase() === 'append') {
+    mainNav.append(itemName);
+  } else if (insertWhere.toLowerCase() === 'prepend') {
+    mainNav.prepend(itemName);
+  } else {
+    console.log('invalid input.');
+  }
+}
+
 let logo = document.getElementById('logo-img');
 logo.setAttribute('src', siteContent['nav']['img-src']);
 
@@ -47,25 +63,34 @@ navItems.forEach((item, i) => item.innerText = siteContent['nav'][`nav-item-${i+
 navItems.forEach(item => item.style.color = 'green');
 
 let home = document.createElement('a');
-home.innerText = 'Home';
-home.href = '#';
-mainNav.prepend(home);
-home.style.color = 'green';
+addNavItems(home, 'Home', '#', 'prepend');
 
 let dom = document.createElement('a');
-dom.innerText = 'DOM';
-dom.href = 'https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model';
+const domURL = 'https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model';
+addNavItems(dom, 'DOM', domURL, 'append');
 dom.target = '_blank';
-mainNav.appendChild(dom);
-dom.style.color = 'green';
 
-
+let cta = document.querySelector('.cta');
 let ctaText = document.querySelector('.cta-text h1');
 let ctaBtn = document.querySelector('.cta-text button');
 let ctaImg = document.getElementById('cta-img');
-ctaText.innerText = siteContent['cta']['h1'];
+let ctaWords = siteContent['cta']['h1'].split(' ');
+cta.style.alignItems = 'center';
+ctaWords.forEach(word => ctaText.innerHTML += `${word}<br>`);
 ctaBtn.innerText = siteContent['cta']['button'];
 ctaImg.src = siteContent['cta']['img-src'];
+
+let firstCTAImg = siteContent['cta']['img-src'];
+let secondCTAImg = 'https://upload.wikimedia.org/wikipedia/commons/f/fa/718smiley.png';
+ctaImg.addEventListener('click', function(){
+  if (ctaImg.src == secondCTAImg) {
+    ctaImg.src = firstCTAImg;
+  } else {
+    ctaImg.src = secondCTAImg;
+    ctaImg.style.width = '43%';
+  }
+});
+
 
 let topContent = document.querySelector('.main-content .top-content');
 let featuresH4 = topContent.children[0].children[0];
@@ -73,8 +98,24 @@ let featuresContent = topContent.children[0].children[1];
 featuresH4.innerText = siteContent['main-content']['features-h4'];
 featuresContent.innerText = siteContent['main-content']['features-content'];
 
+let aboutH4 = topContent.children[1].children[0];
+let aboutContent = topContent.children[1].children[1];
+aboutH4.innerText = siteContent['main-content']['about-h4'];
+aboutContent.innerText = siteContent['main-content']['about-content'];
+
 let middleImg = document.getElementById('middle-img');
 middleImg.src = siteContent['main-content']['middle-img-src'];
+
+let firstMidImg = siteContent['main-content']['middle-img-src'];
+let secondMidImg = 'https://cdn-images-1.medium.com/max/1600/1*OF0xEMkWBv-69zvmNs6RDQ.gif';
+middleImg.addEventListener('click', function() {
+  if (middleImg.src == secondMidImg) {
+    middleImg.src = firstMidImg;
+  } else {
+    middleImg.src = secondMidImg;
+    middleImg.style.width = '100%';
+  }
+});
 
 let bottomContent = document.querySelector('.main-content .bottom-content');
 let servicesH4 = bottomContent.children[0].children[0];
