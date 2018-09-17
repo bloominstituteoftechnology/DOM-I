@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM <br> Is <br> Awesome", // added the <br> tags here
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "123 Way 456 Street <br> Somewhere, USA", // added <br> tag here
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -40,3 +40,87 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let navigation = document.querySelectorAll('nav a');
+for (let i = 0; i < navigation.length; i++){
+  navigation[i].innerText = siteContent["nav"][`nav-item-${i+1}`];
+  navigation[i].style.color = 'green';
+}
+
+let navbar = document.querySelector('nav');
+
+const link1 = document.createElement('a');
+link1.innerText = 'Pick-Me-Up';
+link1.href = 'http://www.placepuppy.net/1p/400/250';
+link1.style.color = 'green';
+link1.target = "_blank"
+navbar.appendChild(link1);
+
+const link2 = document.createElement('a');
+link2.innerText = 'Google';
+link2.href = 'https://www.google.com';
+link2.style.color = 'green';
+link2.target = "_blank"
+navbar.prepend(link2);
+
+// CTA section here ---------------------------------------------------------------------
+// Remember to do CTA button and copy
+
+let ctaText = document.querySelector("h1")
+ctaText.innerHTML = siteContent["cta"]['h1'];
+
+let ctaBtn = document.querySelector("button")
+ctaBtn.innerText = siteContent["cta"]['button'];
+
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
+//---------------------------------------------------------------------------------------
+
+
+// Top Content Here ---------------------------------------------------------------------
+let topContent = document.querySelectorAll(".top-content .text-content");
+
+// top content left box
+topContent[0].childNodes[1].innerText = siteContent["main-content"]['features-h4'];
+topContent[0].childNodes[3].innerText = siteContent["main-content"]['features-content'];
+
+// top content right box
+topContent[1].childNodes[1].innerText = siteContent["main-content"]['about-h4'];
+topContent[1].childNodes[3].innerText = siteContent["main-content"]['about-content'];
+//---------------------------------------------------------------------------------------
+
+
+// Middle Image -------------------------------------------------------------------------
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+//---------------------------------------------------------------------------------------
+
+
+// Bottom Content Here ------------------------------------------------------------------
+let bottomContent = document.querySelectorAll(".bottom-content .text-content");
+
+// bottom content left box
+bottomContent[0].childNodes[1].innerText = siteContent["main-content"]['services-h4'];
+bottomContent[0].childNodes[3].innerText = siteContent["main-content"]['services-content'];
+
+// bottom content middle box
+bottomContent[1].childNodes[1].innerText = siteContent["main-content"]['product-h4'];
+bottomContent[1].childNodes[3].innerText = siteContent["main-content"]['product-content'];
+
+// bottom content right box
+bottomContent[2].childNodes[1].innerText = siteContent["main-content"]['vision-h4'];
+bottomContent[2].childNodes[3].innerText = siteContent["main-content"]['vision-content'];
+//---------------------------------------------------------------------------------------
+
+
+// Contact Section Here -----------------------------------------------------------------
+let contact = document.querySelector(".contact");
+contact.childNodes[1].innerText = siteContent["contact"]['contact-h4'];
+contact.childNodes[3].innerHTML = siteContent["contact"]['address'];
+contact.childNodes[5].innerText = siteContent["contact"]['phone'];
+contact.childNodes[7].innerText = siteContent["contact"]['email'];
+
+
+// Footer Here --------------------------------------------------------------------------
+let footer = document.querySelector('footer p')
+footer.innerText = siteContent["footer"]['copyright'];
