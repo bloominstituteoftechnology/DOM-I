@@ -82,4 +82,35 @@ bottomParag[1].innerText = siteContent['main-content']['product-content'];
 bottomInfo[2].innerText= siteContent['main-content']['vision-h4'];
 bottomParag[2].innerText = siteContent['main-content']['vision-content'];
 
+const contactUs = document.querySelector('.contact h4');
+const contactPar = document.querySelectorAll('.contact p');
 
+contactUs.innerText = siteContent['contact']['contact-h4'];
+contactPar[0].innerText = siteContent['contact']['address'];
+contactPar[1].innerText = siteContent['contact']['phone'];
+contactPar[2].innerText = siteContent['contact']['email'];
+
+const footerContent = document.querySelector('footer p');
+
+footerContent.innerText = siteContent['footer']['copyright'];
+
+
+navItems.forEach(item => item.style.color = 'green');
+
+const additionNav = document.createElement('a');
+
+const mainNav =
+document.querySelector ('nav');
+
+additionNav.innerText = 'Home';
+additionNav.href = 'http://www.readstorytime.com';
+mainNav.prepend(additionNav);
+
+additionNav.style.color ='green';
+
+const navBlog = document.createElement('a');
+
+navBlog.innerText ='Blog';
+navBlog.href = 'http://www.readstorytime.com';
+mainNav.appendChild(navBlog);
+navBlog.style.color = 'green';
