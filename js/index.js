@@ -75,7 +75,7 @@ const ctaText = document.querySelector('.cta-text');
 ctaText.innerHTML = `
   <h1>DOM<br> Is<br>
   Awesome</h1>
-  <button>Get Started</button>
+  <button class="btn">Get Started</button>
 `;
 
 // cta img
@@ -139,3 +139,25 @@ contactParagraphs[2].textContent = `${siteContent.contact.email}`;
 // footer
 const footerParagraph = document.querySelector('footer p');
 footerParagraph.textContent = `${siteContent.footer.copyright}`;
+
+// STRETCH change styles
+
+const headings = document.querySelectorAll('h4');
+headings.forEach(heading => (heading.style.fontFamily = 'sans-serif'));
+headings.forEach(heading => (heading.style.textTransform = 'uppercase'));
+ctaImg.style.borderRadius = '50%';
+ctaImg.style.border = '10px solid cadetblue';
+
+// STRETCH add event listener on cta button
+const btn = document.querySelector('.btn');
+const pageBody = document.querySelector('body');
+btn.addEventListener('click', () => {
+  ctaText.innerHTML = `
+  <h1>Kam<br> Is<br>
+  Awesome</h1>
+  <button class="btn">Heck yeah!</button>`;
+  pageBody.style.backgroundColor = 'black';
+  pageBody.style.color = 'white';
+  ctaImg.style.border = '10px solid white';
+  navItems.forEach(item => (item.style.color = 'white'));
+});
