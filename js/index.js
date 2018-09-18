@@ -65,9 +65,10 @@ navItems[3].innerText = siteContent['nav']['nav-item-3'];
 navItems[4].innerText = siteContent['nav']['nav-item-4'];
 navItems[5].innerText = siteContent['nav']['nav-item-5'];
 navItems[6].innerText = siteContent['nav']['nav-item-6'];
-for (i = 0; i < navItems.length; i++) {
-	navItems[i].style.color = 'green';
-}
+navItems.forEach(navItem => navItem.style.color = 'green');
+// for (i = 0; i < navItems.length; i++) {
+// 	navItems[i].style.color = 'green';
+// }
 
 /*-- cta section -------------------------------*/
 
