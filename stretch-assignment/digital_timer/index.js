@@ -13,7 +13,7 @@ let counter = 0;
 let seconds = 0;
 
 function timer() {
-  let time = setInterval(timeIt, 100);
+  let time = setInterval(timeIt, 10);
 
   function timeIt() {
     startBtn.disabled = true;
@@ -24,11 +24,17 @@ function timer() {
     msTens.innerText = counter;
 
     if (counter > 9) {
-      msHundreds.innerText = 1;
+      msHundreds.innerText = 0;
+    } else {
+      msHundreds.style.display = 'none';
+    }
+    if (counter > 59) {
+      // msHundreds.style.display = 'none';
       msTens.innerText = 0;
-      let milliseconds = Number(`${msHundreds.innerText}${msTens.innerText}`);
+      // let milliseconds = Number(`${msHundreds.innerText}${msTens.innerText}`);
+      let milliseconds = Number(`${msTens.innerText}`);
 
-      if (milliseconds === 10) {
+      if (milliseconds === 0) {
         seconds += 1;
         secondOnes.innerText = seconds;
 
@@ -38,7 +44,7 @@ function timer() {
           digits.forEach(digit => digit.classList.add('redDigit'));
 
           stopTime(time);
-
+          msHundreds.style.display = 'inline-block';
           resetBtn.disabled = false;
         }
       }
@@ -58,6 +64,7 @@ function timer() {
     seconds = 0;
     digits.forEach(digit => digit.classList.remove('redDigit'));
     startBtn.disabled = false;
+    msHundreds.style.display = 'inline-block';
   }
 }
 
