@@ -48,18 +48,25 @@ logo.setAttribute('src', siteContent['nav']['img-src']);
 
 /*-- header ------------------------------------*/
 
-const nav = document.querySelectorAll('a');
-nav[0].innerText = siteContent['nav']['nav-item-1'];
-nav[1].innerText = siteContent['nav']['nav-item-2'];
-nav[2].innerText = siteContent['nav']['nav-item-3'];
-nav[3].innerText = siteContent['nav']['nav-item-4'];
-nav[4].innerText = siteContent['nav']['nav-item-5'];
-nav[5].innerText = siteContent['nav']['nav-item-6'];
+const nav = document.querySelector('nav');
 const newNav1 = document.createElement('a');
-newNav1.innerText = 'Insta';
-nav.appendChild(newNav1);
-for (i = 0; i < nav.length; i++) {
-	nav[i].style.color = 'green';
+const newNav2 = document.createElement('a');
+newNav1.innerText = 'Bruh';
+newNav1.href = '#';
+newNav2.innerText = 'Insta';
+newNav2.href = '#';
+nav.prepend(newNav1);
+nav.appendChild(newNav2);
+
+const navItems = document.querySelectorAll('a');
+navItems[1].innerText = siteContent['nav']['nav-item-1'];
+navItems[2].innerText = siteContent['nav']['nav-item-2'];
+navItems[3].innerText = siteContent['nav']['nav-item-3'];
+navItems[4].innerText = siteContent['nav']['nav-item-4'];
+navItems[5].innerText = siteContent['nav']['nav-item-5'];
+navItems[6].innerText = siteContent['nav']['nav-item-6'];
+for (i = 0; i < navItems.length; i++) {
+	navItems[i].style.color = 'green';
 }
 
 /*-- cta section -------------------------------*/
