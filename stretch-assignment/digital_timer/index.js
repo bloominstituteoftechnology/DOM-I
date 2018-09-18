@@ -4,8 +4,8 @@ const sOne = document.querySelector("#secondOnes");
 const msHun = document.querySelector("#msHundreds");
 const msTen = document.querySelector("#msTens");
 const bod = document.querySelector("body");
-const digits = document.querySelector("#digits");
 const timeColon = document.querySelector("colon");
+const digits = document.querySelectorAll(".digit");
 
 //set initial state (hide tens and tenths)
 sTen.style.display = "none";
@@ -36,9 +36,7 @@ function setTime() {
     msTen.style.display = "initial";
     msTen.innerHTML = 0;
     sOne.innerHTML = 10;
-    msHun.style.color = "red";
-    msTen.style.color = "red";
-    sOne.style.color = "red";
+    digits.forEach(item => (item.style.color = "red"));
 
     //extra effects upon reaching 10s
     bod.style.backgroundImage =
