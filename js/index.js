@@ -50,6 +50,9 @@ navLinks[3].innerText = siteContent.nav["nav-item-4"]
 navLinks[4].innerText = siteContent.nav["nav-item-5"]
 navLinks[5].innerText = siteContent.nav["nav-item-6"]
 
+navLinks.forEach(function (navLinks) {
+
+})
 
 //change color to green
 navLinks[0].style.color = 'green'
@@ -94,6 +97,8 @@ featuresH4[2].innerText = siteContent["main-content"]["services-h4"]
 featuresH4[3].innerText = siteContent["main-content"]["product-h4"]
 featuresH4[4].innerText = siteContent["main-content"]["vision-h4"]
 
+
+
 let mainContent = document.querySelectorAll('.main-content p')
 mainContent[0].innerText = siteContent["main-content"]["features-content"]
 mainContent[1].innerText = siteContent["main-content"]["about-content"]
@@ -103,6 +108,15 @@ mainContent[4].innerText = siteContent["main-content"]["vision-content"]
 
 let mainContentImg = document.querySelector('.main-content img')
 mainContentImg.src = siteContent["main-content"]["middle-img-src"]
+
+//contact
+let contactH4 = document.querySelector('.contact h4')
+contactH4.innerText = siteContent.contact["contact-h4"]
+
+let contactValues = Object.values(siteContent.contact)
+let mainContact = document.querySelectorAll('.contact p')
+mainContact.forEach((item, index) => item.innerText = contactValues[index + 1])
+
 
 //footer
 let footer = document.querySelector('footer')
