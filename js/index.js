@@ -184,7 +184,7 @@ const buttonEvent = ctaButton.addEventListener('click', ()=> {
       topContH[1].innerText =  '💥';
       ctaH.innerText = '💥';
       ctaButton.style.height = '300px';
-      ctaButton.innerHTML = '<a href = "original.html"><h1>QUICK, FIX IT BEFORE MOM SEES!</h1></a> '
+      ctaButton.innerHTML = '<a href = "https://htmlpreview.github.io/?https://github.com/theryanclausen/DOM-I/blob/master/original.html"><h1>QUICK, FIX IT BEFORE MOM SEES!</h1></a> '
       ctaButton.style.width = '300px';
       ctaButton.style.fontSize = '70px';
       ctaButton.style.position = 'fixed';
