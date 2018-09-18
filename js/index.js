@@ -40,7 +40,7 @@ const siteContent = {
 };
 
 function fill(items, values) {
-  [...items].map((item, index) => item.innerText = values[index]);
+  items.forEach((item, index) => item.innerText = values[index]);
 }
 
 // Nav
@@ -56,7 +56,7 @@ let navItems = document.querySelectorAll('nav a');
 let navValues = Object.values(siteContent['nav']);
 
 fill(navItems, navValues);
-[...navItems].map((item) => item.style.color = "green")
+navItems.forEach((item) => item.style.color = "green")
 
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
