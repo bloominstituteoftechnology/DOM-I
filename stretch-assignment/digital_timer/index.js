@@ -17,6 +17,7 @@ function timer() {
 
   function timeIt() {
     startBtn.disabled = true;
+    resetBtn.disabled = true;
     counter += 1;
 
     msHundreds.innerText = 0;
@@ -37,14 +38,15 @@ function timer() {
           digits.forEach(digit => digit.classList.add('redDigit'));
 
           stopTime(time);
-          startBtn.disabled = false;
+
+          resetBtn.disabled = false;
         }
       }
       counter = 0;
     }
   }
 
-  resetTime();
+  resetBtn.addEventListener('click', resetTime);
 
   function stopTime(timer) {
     clearInterval(timer);
@@ -52,13 +54,14 @@ function timer() {
 
   function resetTime() {
     secondTens.innerText = 0;
+    msHundreds.innerText = 0;
     seconds = 0;
     digits.forEach(digit => digit.classList.remove('redDigit'));
-
+    startBtn.disabled = false;
   }
 }
 
-let startBtn = document.querySelector('button');
-startBtn.addEventListener('click', timer)
+let startBtn = document.getElementById('start');
+let resetBtn = document.getElementById('reset');
 
-// timer();
+startBtn.addEventListener('click', timer)
