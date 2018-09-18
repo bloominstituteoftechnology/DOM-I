@@ -20,8 +20,9 @@
 //redDigit
 
 let seconds = 0;
-
-let milliseconds = 0;
+let hundredths = 0;
+let tenths = 0;
+let tens = "";
 
 let getmsTens = document.getElementById('#msTens');
 
@@ -32,16 +33,44 @@ let getmsTens = document.getElementById('#msTens');
 
 
 
+let redDistribute = document.querySelectorAll('.digit');
 
 
 
 
 function incrementHundredths(){
-    seconds += 1;
-    setMsHundreds[4].innerText = seconds;
-    if (seconds === 9){
-        seconds = -1;
+
+    hundredths += 1;
+
+    setMsHundreds[5].innerText = hundredths;
+    setMsHundreds[4].innerText = tenths;
+    setMsHundreds[2].innerText = seconds;
+    setMsHundreds[1].innerText = tens;
+
+    if (hundredths === 9){
+        hundredths = -1;
+        tenths +=1;
     }
+
+    if (tenths === 10){
+        tenths = 0;
+        seconds += 1;
+        
+    }
+
+    else if (seconds === 10){
+        
+        seconds = 0;
+        tenths = 0;
+        hundredths = 0;
+        clearInterval(incrementTenz);
+        for(i = 0; i < redDistribute.length; i++){
+            redDistribute[i].classList.add('redDigit');
+            redDistribute[2].classList.remove('redDigit');
+        }
+    }
+    
+
 }
 
 function incrementTenths(){
@@ -57,6 +86,7 @@ function incrementOnesPlace(){
     setMsHundreds[1].innerText = seconds;
     if (seconds === 9){
         seconds = -1;
+
     }
 }
 
@@ -76,7 +106,7 @@ function incrementHundredsPlace(){
 
 // let increment = setInterval(incrementOnesPlace, 10000);
 
-let incrementTenz = setInterval(incrementTenths, 1000);
+let incrementTenz = setInterval(incrementHundredths, 10);
 
 // let incrementOnes = setInterval(incrementOnesPlace, 1000);
 
