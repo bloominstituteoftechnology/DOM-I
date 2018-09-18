@@ -22,7 +22,6 @@ secondOnes.textContent = secondOnesCounter;
 secondTens.textContent = secondTensCounter;
 
 function init() {
-  digits.style.color = "white";
   msOnesCounter = 0;
   msHundredsCounter = 0;
   secondOnesCounter = 0;
@@ -31,7 +30,6 @@ function init() {
   msHundreds.textContent = 0;
   secondOnes.textContent = 0;
   secondTens.textContent = 0;
-  body.style.color = "white";
 }
 
 function addTime() {
@@ -92,7 +90,10 @@ stopBtn.style.backgroundColor = "red";
 
 // RESET
 let resetBtn = document.querySelector("#reset");
-resetBtn.addEventListener("click", () => init());
+resetBtn.addEventListener("click", () => {
+  digits.classList.remove("redDigit");
+  init();
+});
 resetBtn.style.backgroundColor = "orange";
 
 // ==================== STYLING ===================== //
