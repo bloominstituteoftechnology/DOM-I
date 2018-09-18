@@ -39,8 +39,49 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"]);
-let img1 = document.getElementById( "cta-img" );
-img1.setAttribute( 'src', "img/mid-page-accent.jpg"  );
-let img2 = document.getElementById( "middle-img" );
-img2.setAttribute( 'src', "img/mid-page-accent.jpg")
+logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// REMEMBER, you can accomplish the assignment in many different ways. You could literally use getElementByTag name to accomplish everything if you wanted:
+
+// Update the nav links test
+let selectedNavLinks = document.querySelectorAll("nav a");
+selectedNavLinks.forEach((link, i) => {
+  link.innerHTML = siteContent.nav[`nav-item-${i+1}`];
+})
+
+// Update CTA
+let ctaText = document.getElementsByClassName("cta-text")[0];
+
+ctaText.getElementsByTagName("h1")[0].innerHTML = siteContent["cta"]["h1"];
+ctaText.getElementsByTagName("button")[0].innerHTML = siteContent["cta"]["button"];
+
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
+// console.log(document.getElementsByClassName("cta")[0])
+
+// Update MainContent
+let textContentList = document.querySelectorAll(".text-content");
+
+textContentList[0].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["features-h4"];
+textContentList[0].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["features-content"];
+textContentList[1].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["about-h4"];
+textContentList[1].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["about-content"];
+textContentList[2].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["services-h4"];
+
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+// Change navigation text color
+navLinks.forEach((link,i) => {
+  link.style.color = "green";
+})
+
+// Add two items to navigation
+navlinks = document.getElementsByTagName("nav")[0];
+let navInnerHTML = (name) => {
+  let newNode = document.createElement("a");
+  newNode.innerHTML = name;
+  return newNode;
+}
+navlinks.prepend(navInnerHTML("Extra Item 1"));
+navlinks.append(navInnerHTML("Extra Item 2"));
