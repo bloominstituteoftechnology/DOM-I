@@ -49,6 +49,9 @@ document.querySelectorAll("nav a ")[0].innerHTML = siteContent["nav"]["nav-item-
 document.querySelectorAll("nav a ")[1].innerHTML = siteContent["nav"]["nav-item-2"];
 document.querySelectorAll("nav a ")[2].innerHTML = siteContent["nav"]["nav-item-3"];
 document.querySelectorAll("nav a ")[3].innerHTML = siteContent["nav"]["nav-item-4"];
+
+
+document.querySelectorAll("nav a").forEach((link,i) => { link.style.color = "green";})
 //nav ends here
 // cta starts here
 document.querySelector("h1").innerText = siteContent["cta"]["h1"];
@@ -82,7 +85,28 @@ document.querySelectorAll(".main-content .text-content p")[3].innerHTML = siteCo
 
 
 let codeban = document.getElementById("middle-img");
-
-
 codeban.setAttribute('src',siteContent["main-content"]["middle-img-src"]);
 //middle section done here
+//contact starts here
+
+document.querySelector(".contact h4 ").textContent = siteContent["contact"]["contact-h4"];
+
+// document.querySelectorAll(".contact p")[0].textContent = siteContent["contact"]["address"];
+
+// document.querySelectorAll(".contact p")[1].textContent = siteContent["contact"]["phone"];
+
+// document.querySelectorAll(".contact p ")[2].textContent = siteContent["contact"]["email"];
+
+
+document.querySelectorAll('.contact p')[0].textContent = siteContent["contact"]["address"];
+
+document.querySelectorAll('.contact p')[1].textContent = siteContent["contact"]["phone"];
+
+document.querySelectorAll('.contact p')[2].textContent = siteContent["contact"]["email"];
+
+document.querySelector('footer p').textContent = siteContent["footer"]["copyright"];
+
+
+
+
+
