@@ -43,27 +43,36 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 
 // Nav Items
-let navItem = document.querySelectorAll('nav a');
+let navItems = document.querySelectorAll('nav a');
 
-navItem[0].innerText = siteContent['nav']['nav-item-1'];
-navItem[1].innerText = siteContent['nav']['nav-item-2'];
-navItem[2].innerText = siteContent['nav']['nav-item-3'];
-navItem[3].innerText = siteContent['nav']['nav-item-4'];
-navItem[4].innerText = siteContent['nav']['nav-item-5'];
-navItem[5].innerText = siteContent['nav']['nav-item-6'];
+navItems.forEach((item, i) => {
+  item.innerText = siteContent.nav[`nav-item-${i + 1}`];
+})
 
-
-// h1
-let h1 = document.querySelector('h1');
-
-h1.innerText = siteContent['cta']['h1'];
+// navItems[0].innerText = siteContent['nav']['nav-item-1'];
+// navItems[1].innerText = siteContent['nav']['nav-item-2'];
+// navItems[2].innerText = siteContent['nav']['nav-item-3'];
+// navItems[3].innerText = siteContent['nav']['nav-item-4'];
+// navItems[4].innerText = siteContent['nav']['nav-item-5'];
+// navItems[5].innerText = siteContent['nav']['nav-item-6'];
 
 
-// button
-let button = document.querySelector('button');
+let ctaText = document.querySelector('.cta-text');
 
-button.innerText = siteContent['cta']['button'];
+ctaText.querySelector('h1').innerText = siteContent['cta']['h1'];
+ctaText.querySelector('button').innerText = siteContent['cta']['button'];
 
+
+// // h1
+// let h1 = document.querySelector('h1');
+
+// h1.innerText = siteContent['cta']['h1'];
+
+
+// // button
+// let button = document.querySelector('button');
+
+// button.innerText = siteContent['cta']['button'];
 
 // cta-img
 let ctaImg = document.querySelector('#cta-img');
@@ -71,28 +80,57 @@ let ctaImg = document.querySelector('#cta-img');
 ctaImg.src = siteContent['cta']['img-src'];
 
 
+let textContentList = document.querySelectorAll('.text-content');
+
+textContentList[0].querySelector('h4').innerText = siteContent['main-content']['features-h4'];
+textContentList[0].querySelector('p').innerText = siteContent['main-content']['features-content'];
+textContentList[1].querySelector('h4').innerText = siteContent['main-content']['about-h4'];
+textContentList[1].querySelector('p').innerText = siteContent['main-content']['about-content'];
+textContentList[2].querySelector('h4').innerText = siteContent['main-content']['services-h4'];
+textContentList[2].querySelector('p').innerText = siteContent['main-content']['services-content'];
+textContentList[3].querySelector('h4').innerText = siteContent['main-content']['product-h4'];
+textContentList[3].querySelector('p').innerText = siteContent['main-content']['product-content'];
+textContentList[4].querySelector('h4').innerText = siteContent['main-content']['vision-h4'];
+textContentList[4].querySelector('p').innerText = siteContent['main-content']['vision-content'];
+
+
+let contact = document.querySelector('.contact');
+
+contact.querySelector('h4').innerText = siteContent["contact"]["contact-h4"];
+contact.querySelectorAll('p')[0].innerText = siteContent["contact"]["address"];
+contact.querySelectorAll('p')[1].innerText = siteContent["contact"]["phone"];
+contact.querySelectorAll('p')[2].innerText = siteContent["contact"]["email"];
+
+
+let footer = document.querySelector('footer');
+
+footer.querySelector('p').innerText = siteContent["footer"]["copyright"];
+
+
 // h4
-let h4 = document.querySelectorAll('h4');
+// let h4 = document.querySelectorAll('h4');
 
-h4[0].innerText = siteContent['main-content']['features-h4'];
-h4[1].innerText = siteContent['main-content']['about-h4'];
-h4[2].innerText = siteContent['main-content']['services-h4'];
-h4[3].innerText = siteContent['main-content']['product-h4'];
-h4[4].innerText = siteContent['main-content']['vision-h4'];
-h4[5].innerText = siteContent['contact']['contact-h4'];
+// h4[0].innerText = siteContent['main-content']['features-h4'];
+// h4[1].innerText = siteContent['main-content']['about-h4'];
+// h4[2].innerText = siteContent['main-content']['services-h4'];
+// h4[3].innerText = siteContent['main-content']['product-h4'];
+// h4[4].innerText = siteContent['main-content']['vision-h4'];
+// h4[5].innerText = siteContent['contact']['contact-h4'];
 
-// p
-let p = document.querySelectorAll('p');
+// // p
+// let p = document.querySelectorAll('p');
 
-p[0].innerText = siteContent['main-content']['features-content'];
-p[1].innerText = siteContent['main-content']['about-content'];
-p[2].innerText = siteContent['main-content']['services-content'];
-p[3].innerText = siteContent['main-content']['product-content'];
-p[4].innerText = siteContent['main-content']['vision-content'];
-p[5].innerText = siteContent['contact']['address'];
-p[6].innerText = siteContent['contact']['phone'];
-p[7].innerText = siteContent['contact']['email'];
-p[8].innerText = siteContent['footer']['copyright'];
+
+
+// p[0].innerText = siteContent['main-content']['features-content'];
+// p[1].innerText = siteContent['main-content']['about-content'];
+// p[2].innerText = siteContent['main-content']['services-content'];
+// p[3].innerText = siteContent['main-content']['product-content'];
+// p[4].innerText = siteContent['main-content']['vision-content'];
+// p[5].innerText = siteContent['contact']['address'];
+// p[6].innerText = siteContent['contact']['phone'];
+// p[7].innerText = siteContent['contact']['email'];
+// p[8].innerText = siteContent['footer']['copyright'];
 
 
 
@@ -104,31 +142,51 @@ middleImg.src = siteContent['main-content']['middle-img-src']
 
 // Add two items to nav
 
+
+navItems = document.querySelector('nav');
+
+let createNewLink = (name) => {
+  let newLink = document.createElement('a');
+  newLink.innerText = name;
+  return newLink;
+}
+
+navItems.prepend(createNewLink('Hola'));
+navItems.appendChild(createNewLink('Hello'));
+
+
 // 1. Create the element
-const newNavItem1 = document.createElement('a');
-const newNavItem2 = document.createElement('a');
+// const newNavItem1 = document.createElement('a');
+// const newNavItem2 = document.createElement('a');
 
 // 2. Create a reference where you want your element to go
-const mainNav = document.querySelector('header nav');
+// const mainNav = document.querySelector('header nav');
 
 // 3. Add value to the element
-newNavItem1.innerText = 'Hello';
-newNavItem1.href = '#';
-newNavItem1.style.color = 'green';
+// newNavItem1.innerText = 'Hello';
+// newNavItem1.href = '#';
+//newNavItem1.style.color = 'green';
 
-newNavItem2.innerText = 'Hola';
-newNavItem2.href = '#';
-newNavItem2.style.color = 'green';
+// newNavItem2.innerText = 'Hola';
+// newNavItem2.href = '#';
+//newNavItem2.style.color = 'green';
 
 // 4. Append or prepend the new element to the parent reference
-mainNav.appendChild(newNavItem1);
-mainNav.prepend(newNavItem2);
+// mainNav.appendChild(newNavItem1);
+// mainNav.prepend(newNavItem2);
 
 
 // Change color of nav text
-for (let i = 0; i < navItem.length; i++) {
-  navItem[i].style.color = 'green';
-}
+// for (let i = 0; i < navItem.length; i++) {
+//   navItem[i].style.color = 'green';
+// }
+
+
+let navItemsUpdate = document.querySelectorAll('nav a');
+
+navItemsUpdate.forEach(item => {
+  item.style.color = 'green';
+})
 
 
 
