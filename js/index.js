@@ -42,25 +42,14 @@ const siteContent = {
 // logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // NAV
+let navItems = Object.values(siteContent.nav)
+console.log(navItems)
 let navLinks = document.querySelectorAll('a');
-navLinks[0].innerText = siteContent.nav["nav-item-1"]
-navLinks[1].innerText = siteContent.nav["nav-item-2"]
-navLinks[2].innerText = siteContent.nav["nav-item-3"]
-navLinks[3].innerText = siteContent.nav["nav-item-4"]
-navLinks[4].innerText = siteContent.nav["nav-item-5"]
-navLinks[5].innerText = siteContent.nav["nav-item-6"]
-
-navLinks.forEach(function (navLinks) {
-
-})
+navLinks.forEach((item, index) => item.innerText = navItems[index])
 
 //change color to green
-navLinks[0].style.color = 'green'
-navLinks[1].style.color = 'green'
-navLinks[2].style.color = 'green'
-navLinks[3].style.color = 'green'
-navLinks[4].style.color = 'green'
-navLinks[5].style.color = 'green'
+navLinks.forEach((item) => item.style.color = 'green')
+
 
 
 //Utilize .appendChild() and .prepend() to add two new items to the navigation system.
@@ -98,7 +87,6 @@ featuresH4[3].innerText = siteContent["main-content"]["product-h4"]
 featuresH4[4].innerText = siteContent["main-content"]["vision-h4"]
 
 
-
 let mainContent = document.querySelectorAll('.main-content p')
 mainContent[0].innerText = siteContent["main-content"]["features-content"]
 mainContent[1].innerText = siteContent["main-content"]["about-content"]
@@ -123,9 +111,12 @@ let footer = document.querySelector('footer')
 footer.innerText = siteContent.footer.copyright;
 
 //stretch
-function changeCta() {
-  button.innerText = 'clicked!'
-}
-button.addEventListener('click', changeCta)
+button.addEventListener('click', function () {
+  if (button.innerText === 'Clicked!') {
+    button.innerText = 'Get Started'
+  } else {
+    button.innerText = 'Clicked!'
+  }
+})
 
 navLinks[1].style.border = '1px solid red';
