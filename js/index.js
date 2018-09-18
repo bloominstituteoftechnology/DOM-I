@@ -43,7 +43,8 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 
 //NAV SECTION
-const navMenu = document.querySelectorAll('header nav a ');
+const navMenu = document.querySelectorAll('header nav a');
+
 navMenu[0].innerText = siteContent['nav']['nav-item-1'];
 navMenu[1].innerText = siteContent['nav']['nav-item-2'];
 navMenu[2].innerText = siteContent['nav']['nav-item-3'];
@@ -81,15 +82,22 @@ let ctaHead = document.querySelector('.cta-text h1');
 ctaHead.innerText = siteContent['cta']['h1'];
 ctaHead.innerHTML = ('Dom <br> Is <br> Awesome')
 
+
 let cta = document.getElementById("cta-img");
 cta.setAttribute("src", siteContent["cta"]["img-src"]);
 
 let ctaButton = document.querySelector('.cta-text button');
 ctaButton.innerText = siteContent['cta']['button'];
 ctaButton.addEventListener('click', () => {
+  navMenu.forEach((item, i) => {
+    item.style.color = "white";
+  });
   document.body.style.backgroundColor = 'lightgray';
   ctaButton.addEventListener('click', () => {
     document.body.style.backgroundColor = 'white';
+    navMenu.forEach((item, i) => {
+      item.style.color = "green";
+    });
   })
 })
 
