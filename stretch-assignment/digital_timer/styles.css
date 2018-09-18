@@ -32,17 +32,16 @@ a {
   border-radius: 10px;
   font-size: 3rem;
   text-decoration: none;
-  border: 1px solid black;
-  background: black;
+  border: 1px solid crimson;
+  background: crimson;
   color: white;
-  transition: .3s;
   font-family: 'Montserrat', sans-serif;
   font-weight: bolder;
 }
 
 a:hover {
-  border: 1px solid black;
+  border: 1px solid crimson;
   background: white;
-  color: black;
+  color: crimson;
   transition: .3s;
 }
