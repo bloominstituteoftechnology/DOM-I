@@ -88,10 +88,6 @@ ctaImg.src = siteContent.cta['img-src'];
 // top content
 const topContent = document.querySelectorAll('.top-content .text-content');
 
-// topContent.forEach((text, index) => {
-//   `<h4>${siteContent['main-content']}</h4>`
-// })
-
 topContent[0].innerHTML = `
   <h4>${siteContent['main-content']['features-h4']}</h4>
   <p>${siteContent['main-content']['features-content']}</p>
@@ -126,16 +122,13 @@ bottomContent[2].innerHTML = `
   <p>${siteContent['main-content']['vision-content']}</p>
 `;
 
-// contact heading
-const contactHeading = document.querySelector('.contact h4');
-contactHeading.textContent = `${siteContent.contact['contact-h4']}`;
+// contact section
+const contactSection = document.querySelectorAll('.contact > *');
+const contactValues = Object.values(siteContent.contact);
 
-// contact paragraphs
-const contactParagraphs = document.querySelectorAll('.contact p');
-
-contactParagraphs[0].textContent = `${siteContent.contact.address}`;
-contactParagraphs[1].textContent = `${siteContent.contact.phone}`;
-contactParagraphs[2].textContent = `${siteContent.contact.email}`;
+contactSection.forEach(
+  (paragraph, index) => (paragraph.textContent = `${contactValues[index]}`)
+);
 
 // footer
 const footerParagraph = document.querySelector('footer p');
