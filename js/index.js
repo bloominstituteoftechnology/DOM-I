@@ -42,15 +42,27 @@ const siteContent = {
 let h4 = document.querySelectorAll("h4");
 
 //NAV
+
+
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 let aselect = document.getElementsByTagName("a");
-aselect[0].innerText = siteContent["nav"]["nav-item-1"];
-aselect[1].innerText = siteContent["nav"]["nav-item-2"];
-aselect[2].innerText = siteContent["nav"]["nav-item-3"];
-aselect[3].innerText = siteContent["nav"]["nav-item-4"];
-aselect[4].innerText = siteContent["nav"]["nav-item-5"];
-let navBuild = document.appendChild('nav');
+
+let navBuild = document.createElement('a');
+let navSelect = document.querySelector('nav');
+navSelect.appendChild(navBuild);
+navSelect.appendChild(navBuild);
+
+  [].forEach.call(aselect, function (curr, i) {
+    aselect[i].innerText = siteContent["nav"]["nav-item-" + (i+1)];
+    aselect[i].style.color = 'red';
+  });
+
+aselect[5].innerText = 'Woop';
+aselect[6].innerText = 'Loop';
+
+
+
 
 ////////////////////////////////////
 
