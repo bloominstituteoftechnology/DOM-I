@@ -52,7 +52,10 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 ///CTA 
 let ctaElementH1 =  document.querySelector(".container .cta .cta-text h1");
+ctaElementH1.style = "color: #96281b";
 let ctaElementBtn =  document.querySelector(".container .cta .cta-text button");
+ctaElementBtn.style = "background-color: #4ecdc4; color: #fff; border: #eee;";
+
 let ctaElementIMG = document.getElementById("cta-img");
 
 
@@ -88,6 +91,11 @@ textContent[3].childNodes[3].innerText = siteContent["main-content"]["product-co
 textContent[4].childNodes[1].innerText = siteContent["main-content"]["vision-h4"]
 textContent[4].childNodes[3].innerText = siteContent["main-content"]["vision-content"];
 
+for(let i = 0; i < textContent.length; i++){
+   textContent[i].childNodes[1].style = "color: #1f3a93; font-size:1.8rem";
+  
+}
+
 let contact = document.getElementsByClassName("contact");
 contact[0].childNodes[1].innerText = siteContent["contact"]["contact-h4"];
 contact[0].childNodes[3].innerText = siteContent["contact"]["address"];
@@ -95,8 +103,9 @@ contact[0].childNodes[5].innerText = siteContent["contact"]["phone"];
 contact[0].childNodes[7].innerText = siteContent["contact"]["email"];
 
 
-let footer = document.querySelector("footer p");
-footer.innerText = siteContent["footer"]["copyright"];
+let footer = document.querySelector("footer");
+footer.innerHTML="<p>" + siteContent["footer"]["copyright"] + "</p>";
+footer.style = " background-color: #000; color: #fff;"
 
 
 ///added to navigation
@@ -119,5 +128,7 @@ blogLink.style.color = "green";
 newLinks.prepend(homeLink);
 //end of nav
 newLinks.appendChild(blogLink)
+
+
 
 
