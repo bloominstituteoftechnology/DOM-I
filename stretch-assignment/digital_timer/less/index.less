@@ -17,6 +17,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  #split {
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    //border: 1px solid black;
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+  }
   #base {
     width: 400px;
     height: 400px;
@@ -40,8 +51,16 @@ body {
         height: 80px;
         border: 20px solid #5b5b5b;
         background: #52C5CC;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        #toggleText {
+          font-size: 1.6rem;
+          justify-self: center;
+          align-self: flex-end;
+        }
         .digits {
-          height: 80px;
+          height: 60px;
           width: 180px;
           display: flex;
           justify-content: center;
@@ -112,7 +131,7 @@ body {
     border-radius: 30px 30px 10px 10px;
     position: absolute;
     top: -100px;
-    z-index: -2;
+    //z-index: -2;
   }
   #left {
     position: absolute;
