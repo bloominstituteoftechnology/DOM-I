@@ -52,11 +52,8 @@ function timer() {
 
   function resetTime() {
     secondTens.innerText = 0;
-    // // secondOnes.innerText = 0;
-    // // msHundreds.innerText = 0;
-    // // msTens.innerText = 0;
     seconds = 0;
-    // digits.forEach(digit => digit.classList.add('blackDigit'));
+    digits.forEach(digit => digit.classList.remove('redDigit'));
 
   }
 }
