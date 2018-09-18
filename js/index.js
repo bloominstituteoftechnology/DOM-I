@@ -41,11 +41,40 @@ const siteContent = {
 let logo = document.getElementById("logo-img"); //
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let aTags = document.querySelectorAll("a");
-let aTagsArr = ["Services", "Product", "Vision", "Features", "About", "Contact"]
-for (let i = 0; i < aTags.length; i++) {
-  aTags[i].innerText = aTagsArr[i];
+function findTagNames (obj) {
+  console.log(Object.keys(obj));
+  let keyIndex = [];
+  let keyValues = [];
+  for (key in obj) {
+    if (key.includes("nav")) {
+      keyIndex.push(key.slice(-1) - 1);
+      keyValues.push(obj[key]);
+    }
+  }
+  return [keyIndex, keyValues];
 }
+let navTags = findTagNames (siteContent.nav);
+
+let aTags = document.querySelectorAll("a");
+
+function orderedTagNames (arrNumAndVal) {
+  let orderedTags = [];
+  for (let i = 0; i < arrNumAndVal[0].length; i++) {
+    if (arrNumAndVal[0][i] === i) {
+      orderedTags.push(arrNumAndVal[1][i]);
+    }
+  }
+  return orderedTags;
+}
+let aTagsArr = orderedTagNames(navTags);
+
+
+function createATags (arr) {
+  for (let i = 0; i < aTags.length; i++) {
+    aTags[i].innerText = arr[i];
+  }
+}
+let createdATags = createATags(aTagsArr);
 
 let ctaTextH1 = document.querySelector(".cta .cta-text h1");
 ctaTextH1.innerText = siteContent.cta.h1;
@@ -59,9 +88,14 @@ let ctaImg = document.getElementById("cta-img"); //
 ctaImg.setAttribute('src', siteContent.cta["img-src"])
 
 let mainH4 = document.querySelectorAll(".main-content h4");
+let mainP = document.querySelectorAll(".main-content p");
+
+console.log(mainH4);
+
+
 mainH4[0].innerHTML = siteContent["main-content"]["features-h4"];
 
-let mainP = document.querySelectorAll(".main-content p");
+
 mainP[0].innerText = siteContent["main-content"] ["features-content"];
 
 mainH4[1].innerText = siteContent["main-content"]["about-h4"];
@@ -126,7 +160,7 @@ ctaTextButton.setAttribute("style", "color: cornflowerBlue; font-weight: bold; b
 
 ctaTextButton.addEventListener("mouseover", function( event ) {   
   // highlight the mouseover target
-  event.target.style.display = "red";
+  event.target.style.color = "red";
   event.target.style.border = "1.5px solid red"
   event.target.style.backgroundColor = "white"
   event.target.innerText = "Don't Hover!";
@@ -165,9 +199,7 @@ nav.addEventListener("mouseover", function( event ) {
 let newButton = document.createElement("button");
 ctaTextBox.append(newButton);
 
-newButton.style.justifyContent = "center";
 newButton.innerHTML = "Click Here!";
-newButton.style.color = 'cornFlowerBlue';
 
 newButton.setAttribute("style", "color: cornflowerBlue; font-weight: bold; background-color: whitesmoke; border: 1px solid cornflowerBlue");
 
