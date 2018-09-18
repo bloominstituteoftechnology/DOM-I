@@ -37,6 +37,15 @@ const siteContent = {
   },
 };
 
+
+let navHeader = document.getElementsByTagName("nav")[0];
+let newATag2 = document.createElement("a");
+let newATag = document.createElement("a");
+
+navHeader.append(newATag);
+navHeader.prepend(newATag2);
+
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
@@ -47,13 +56,22 @@ ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
 let midLogo = document.getElementById("middle-img");
 midLogo.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
-let nav = document.getElementsByTagName("a");
+let nav = document.querySelectorAll("a");
 nav[0].innerHTML =siteContent["nav"]["nav-item-1"];
+nav[0].style.color = "green";
 nav[1].innerHTML = siteContent["nav"]["nav-item-2"];
+nav[1].style.color = "green";
 nav[2].innerHTML = siteContent["nav"]["nav-item-3"];
+nav[2].style.color = "green";
 nav[3].innerHTML =siteContent["nav"]["nav-item-4"];
+nav[3].style.color = "green";
 nav[4].innerHTML = siteContent["nav"]["nav-item-5"];
+nav[4].style.color = "green";
 nav[5].innerHTML = siteContent["nav"]["nav-item-6"];
+nav[5].style.color = "green";
+nav[6].innerHTML = "Home";
+nav[7].innerHTML = "Blog";
+
 
 let cta = document.querySelector("h1");
 cta.innerHTML = siteContent["cta"]["h1"];
@@ -82,3 +100,4 @@ paragraph[7].innerHTML = siteContent["contact"]["email"];
 paragraph[8].innerHTML = siteContent["footer"]["copyright"];
 
 paragraph[5].innerHTML = "123 Way 456 Street <br> Somewhere, USA";
+
