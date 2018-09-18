@@ -57,6 +57,7 @@ ctaH.innerText = siteContent.cta.h1;
 
 let ctaButton = document.querySelector('.container .cta button');
 ctaButton.innerText = siteContent.cta.button;
+ctaButton.style.zIndex = 5;
 
 let codeSnipImg = document.querySelector('.container .cta img');
 codeSnipImg.src = siteContent.cta["img-src"]
@@ -133,7 +134,7 @@ head.style.padding = '30px 5px'
 head.style.backgroundColor = randomColor()
 
 
-navbar.style.backgroundColor = 'white'
+navbar.style.backgroundColor = 'white';
 navItems.forEach(x => x.style.color = randomColor())
 
 let body = document.querySelector('body')
@@ -147,9 +148,47 @@ contactP.forEach(x => x.style.textAlign = 'center')
 contactH.style.width = '100%'
 contactH.style.textAlign = 'center'
 
-codeSnipImg.style.transform = 'rotate(45deg)'
+codeSnipImg.style.transform = 'rotate(45deg)';
+codeSnipImg.style.border = 'solid black 15px';
+codeSnipImg.style.borderRadius = '50%';
+let h4s = document.querySelectorAll('h4');
+let navNodes = navbar.childNodes;
+let allIMG = document.querySelectorAll('img')
 
 //event listener stretch
 
+let px = 18
+const buttonEvent = ctaButton.addEventListener('click', ()=> {
+    px+= 76;
+    ctaH.innerText = '3 more and you blow it up';
+    ctaH.style.color = randomColor();
+    body.style.backgroundColor = randomColor();
+    head.style.backgroundColor = randomColor();
+    codeSnipImg.style.borderColor = randomColor();
+    let rando = Math.floor(Math.random()*360);
+    codeSnipImg.style.transform = `rotate(${rando}deg)`;
+    h4s.forEach(x => {
+      x.style.color = randomColor()
+      x.style.fontSize = `${px}px`
+    })
 
-ctaButton.addEventListener('click', ()=> ctaH.style.color = randomColor())
+    if (/\d+/.exec(h4s[0].style.fontSize)[0] > 260){
+      h4s.forEach(x => x.innerText = '💥');
+      navNodes.forEach(x => {
+        x.innerText = '💥';
+        
+      });
+      topContTXT[0].innerText = '💥';
+      topContH[0].innerText =  '💥';
+      topContTXT[1].innerText = '💥';
+      topContH[1].innerText =  '💥';
+      ctaH.innerText = '💥';
+      ctaButton.style.height = '300px';
+      ctaButton.innerHTML = '<a href = "original.html"><h1>QUICK, FIX IT BEFORE MOM SEES!</h1></a> '
+      ctaButton.style.width = '300px';
+      ctaButton.style.fontSize = '70px';
+      ctaButton.style.position = 'fixed';
+      contain.style.backgroundColor = 'red';
+      allIMG.forEach(x=> x.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Operation_Upshot-Knothole_-_Badger_001.jpg/250px-Operation_Upshot-Knothole_-_Badger_001.jpg')
+    }
+})
