@@ -82,4 +82,16 @@ mainText[6].innerText = '1 (888) 888-8888';
 mainText[7].innerText = 'sales@greatidea.io';
 mainText[8].innerText = 'Copyright Great Idea! 2018';
 
+navLinks.forEach((link,i) => {
+  link.style.color = "green";
+})
 
+
+navLinks = document.getElementsByTagName("nav")[0];
+let createNewNode = (name) => {
+  let newNode = document.createElement("a");
+  newNode.innerHTML = name;
+  return newNode; }
+
+  navLinks.prepend(createNewNode("Extra Item 1"));
+  navLinks.append(createNewNode("Extra Item 2"));
