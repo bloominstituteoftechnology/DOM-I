@@ -2,13 +2,26 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .digit {
   display: inline-block;
   font-size: 80px;
+  width: 48px;
+  text-align: center;
 }
 
 .redDigit {
   color: red;
+}
+
+button {
+  padding: 20px 70px;
+  font-size: 30px;
+  letter-spacing: 2px;
+  border-radius: 9px;
+  background-color: #fe7c7c;
+  border: 2px solid #ff5454;
 }

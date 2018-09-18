@@ -4,10 +4,10 @@ let msHundreds = document.getElementById('msHundreds');
 let msTens = document.getElementById('msTens');
 let digits = document.querySelectorAll('.digit');
 
-secondTens.innerText = '0';
-secondOnes.innerText = '0';
-msHundreds.innerText = '0';
-msTens.innerText = '0';
+secondTens.innerText = 0;
+secondOnes.innerText = 0;
+msHundreds.innerText = 0;
+msTens.innerText = 0;
 
 let counter = 0;
 let seconds = 0;
@@ -16,6 +16,7 @@ function timer() {
   let time = setInterval(timeIt, 100);
 
   function timeIt() {
+    startBtn.disabled = true;
     counter += 1;
 
     msHundreds.innerText = 0;
@@ -33,18 +34,34 @@ function timer() {
         if (seconds === 10) {
           secondTens.innerText = 1;
           secondOnes.innerText = 0;
-          digits.forEach(digit => digit.style.color = 'red');
+          digits.forEach(digit => digit.classList.add('redDigit'));
 
           stopTime(time);
+          startBtn.disabled = false;
         }
       }
       counter = 0;
     }
   }
 
+  resetTime();
+
   function stopTime(timer) {
     clearInterval(timer);
   }
+
+  function resetTime() {
+    secondTens.innerText = 0;
+    // // secondOnes.innerText = 0;
+    // // msHundreds.innerText = 0;
+    // // msTens.innerText = 0;
+    seconds = 0;
+    // digits.forEach(digit => digit.classList.add('blackDigit'));
+
+  }
 }
 
-timer();
+let startBtn = document.querySelector('button');
+startBtn.addEventListener('click', timer)
+
+// timer();
