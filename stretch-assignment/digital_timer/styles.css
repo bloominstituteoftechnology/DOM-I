@@ -12,3 +12,7 @@ body {
 .redDigit {
   color: red;
 }
+
+button:active {
+  filter: brightness(80%);
+}
