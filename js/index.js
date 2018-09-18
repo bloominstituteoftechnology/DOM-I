@@ -54,8 +54,8 @@ navLinks.forEach((element, index) => {
 });
 
 //-- Call To Action ------------------------------
-document.querySelector('.cta-text h1').innerHTML = siteContent["cta"]["h1"].split(' ').join('<br />');
-document.querySelector('.cta-text button').innerText = 'Get Started';
+document.querySelector('.cta-text h1'    ).innerHTML = siteContent['cta']['h1'    ].replace(/ /g, '<br />');
+document.querySelector('.cta-text button').innerText = siteContent['cta']['button'];
 
 //-- Text Content --------------------------------
 const textContentNodes = document.querySelectorAll('.text-content');
@@ -68,25 +68,22 @@ textContentNodes.forEach((element, index) => {
 
 //-- Contact -------------------------------------
 document.querySelector('.contact h4').innerText = 'Contact';
-const contactLines = [
-  '123 Way 456 Street<br> \nSomewhere, USA',
-  '1 (888) 888-8888',
-  'sales@greatidea.io'
-];
-document.querySelectorAll('.contact p').forEach((element, index) => {
-  element.innerHTML = contactLines[index];
-});
-document.querySelector('footer p').innerText = 'Copyright Great Idea! 2018';
+const contactLines = document.querySelectorAll('.contact p');
+contactLines[0].innerHTML = siteContent['contact']['address'].replace('et So', 'et<br />\n So');
+contactLines[1].innerText = siteContent['contact']['phone'];
+contactLines[2].innerText = siteContent['contact']['email'];
+document.querySelector('footer p').innerText = siteContent['footer']['copyright'];
 
-//-- Task 4 --------------------------------------
-let newAnchor = document.createElement('a');
-newAnchor.href = "#";
-newAnchor.innerText = "First";
-document.querySelector('header nav').prepend(newAnchor);
-newAnchor = document.createElement('a');
-newAnchor.href = "#";
-newAnchor.innerText = "Last";
-document.querySelector('header nav').append(newAnchor);
+//-- Make Links Green / Prepend & Append ---------
+let firstAnchor = document.createElement('a');
+let lastAnchor  = document.createElement('a');
+firstAnchor.href = "#";
+lastAnchor.href  = "#";
+firstAnchor.innerText = "First";
+lastAnchor.innerText  = "Last";
+document.querySelector('header nav').prepend(firstAnchor);
+document.querySelector('header nav').append ( lastAnchor);
+
 document.querySelectorAll('header nav a').forEach(element => {
   element.style.color = 'green';
 });
@@ -97,6 +94,7 @@ const flipButton = document.createElement('button');
 flipButton.innerText = 'Flip it!'
 document.querySelector('.cta-text').appendChild(flipButton);
 flipButton.addEventListener('click', flipIt);
+
 function flipIt (clickEvent) {
   flipButton.style.display = 'none';
   let container = document.querySelector('.container');
