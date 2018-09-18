@@ -28,10 +28,8 @@ function timer() {
     } else {
       msHundreds.style.display = 'none';
     }
-    if (counter > 59) {
-      // msHundreds.style.display = 'none';
+    if (counter > 99) {
       msTens.innerText = 0;
-      // let milliseconds = Number(`${msHundreds.innerText}${msTens.innerText}`);
       let milliseconds = Number(`${msTens.innerText}`);
 
       if (milliseconds === 0) {
@@ -64,7 +62,7 @@ function timer() {
     seconds = 0;
     digits.forEach(digit => digit.classList.remove('redDigit'));
     startBtn.disabled = false;
-    msHundreds.style.display = 'inline-block';
+    // msHundreds.style.display = 'inline-block';
   }
 }
 
