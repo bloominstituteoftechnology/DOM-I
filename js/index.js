@@ -42,10 +42,12 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //nav content
-let navigation = document.querySelector('a');
-navigation.innerText = siteContent.forEach(item =>{
-    return item;
-});
+let navigation = document.querySelector('nav');
+navigation.innerText = siteContent.nav["nav-item-1"];
+navigation.append(siteContent.nav["nav-item-2"]);
+navigation.append(siteContent.nav["nav-item-3"]);
+navigation.append(siteContent.nav["nav-item-4"]);
+navigation.append(siteContent.nav["nav-item-5"]);
 
 //top content
 let topContentImg = document.getElementById("cta-img");
@@ -57,3 +59,14 @@ headingTop.innerText = siteContent.cta.h1;
 let buttonTop = document.querySelector('button');
 buttonTop.innerText = siteContent.cta.button;
 
+//Main content
+let mainContent = document.querySelector('p');
+let mainContentHeading = document.querySelector('h4');
+
+mainContentHeading.innerText = siteContent["main-content"]["features-h4"];
+mainContent.innerText = siteContent["main-content"]["features-content"];
+
+ 
+
+let middleImg = document.getElementById('middle-img');;
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
