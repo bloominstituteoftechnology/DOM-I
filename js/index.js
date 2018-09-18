@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM\n Is\n Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -36,7 +36,7 @@ const siteContent = {
     "copyright" : "Copyright Great Idea! 2018"
   },
 };
-
+//I put everything into blocks so I could minimize it all
 // Example: Update the img src for the logo
 {//Image Links
 let logo = document.getElementById("logo-img");
@@ -75,6 +75,7 @@ middleImg.setAttribute('src', siteContent['main-content']["middle-img-src"]);
     topNavA[i].style.color = 'green';
   }
 }
+
 {//cta
   let mainHeading = document.querySelector('.cta .cta-text h1');
   mainHeading.innerText = `${siteContent["cta"]["h1"]}`
@@ -82,6 +83,7 @@ middleImg.setAttribute('src', siteContent['main-content']["middle-img-src"]);
   let getStartedBtn = document.querySelector('.cta .cta-text button');
   getStartedBtn.innerText = `${siteContent["cta"]["button"]}`;
 }
+
 {//main-content
   //h4 headings
   let featuresHeading = document.querySelector('.text-content h4');
@@ -116,6 +118,7 @@ middleImg.setAttribute('src', siteContent['main-content']["middle-img-src"]);
   let visionContent = document.querySelector('.bottom-content .text-content:nth-child(3) p');
   visionContent.innerText = `${siteContent["main-content"]["vision-content"]}`
 }
+
 {//Contact Section
   let contactHeading = document.querySelector('.contact h4');
   contactHeading.innerText = `${siteContent["contact"]["contact-h4"]}`;
@@ -128,6 +131,7 @@ middleImg.setAttribute('src', siteContent['main-content']["middle-img-src"]);
   numberTag.innerText = `${siteContent["contact"]["phone"]}`;
   emailTag.innerText = `${siteContent["contact"]["email"]}`;
 }
+
 {//Footer
   let footer = document.querySelector('footer p');
   footer.innerText = `${siteContent["footer"]["copyright"]}`
