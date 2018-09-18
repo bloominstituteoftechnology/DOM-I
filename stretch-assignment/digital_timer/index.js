@@ -76,6 +76,8 @@ buttonClass.forEach(function(button) {
   button.style.minWidth = "150px";
   button.style.padding = "10px 20px";
   button.style.cursor = "pointer";
+  button.style.borderRadius = "20px";
+  button.style.margin = "0 5px";
 });
 
 // START
