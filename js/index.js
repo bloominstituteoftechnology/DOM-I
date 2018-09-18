@@ -41,31 +41,49 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let nav = document.querySelector('nav');
 
 
 let navLink = document.querySelectorAll('a');
 navLink[0].innerText = 'Services'; 
-navLink[1].innerText = 'Product';
-navLink[2].innerText = 'Vision';
-navLink[3].innerText = 'Features';
-navLink[4].innerText = 'About';
-navLink[5].innerText = 'Contact';
+navLink[0].style.color = 'green';
 
+navLink[1].innerText = 'Product';
+navLink[1].style.color = 'green';
+
+navLink[2].innerText = 'Vision';
+navLink[2].style.color = 'green';
+
+navLink[3].innerText = 'Features';
+navLink[3].style.color = 'green';
+
+navLink[4].innerText = 'About';
+navLink[4].style.color = 'green';
+
+navLink[5].innerText = 'Contact';
+navLink[5].style.color = 'green';
+
+
+let nav = document.querySelector('nav');
 let navLinks = nav.childNodes;
 
 let navAddition1 = document.createElement('a');
 nav.append(navAddition1);
 navAddition1.innerText = 'Beartraps'
+navAddition1.style.color = 'green';
 
 let navAddition2 = document.createElement('a');
 nav.prepend(navAddition2);
 navAddition2.innerText = 'Pogosticks'
+navAddition2.style.color = 'green';
 
 
-for (i = 0; i < nav.length; i++) {
-  nav[i].style.color = 'red';
+
+for (i = 0; i < navLink.length; i++){
+  console.log(navLink[i]);
+
 }
+
+
 
 
 
@@ -80,8 +98,6 @@ ctaImg.setAttribute('src', '../img/header-img.png');
 let btn = document.querySelector('button');
 btn.innerText = 'Get Started'
 
-// let topContent = document.querySelector('top-content');
-// topContent.style.display = 'flex';
 
 let headline = document.querySelectorAll('h4');
 let featureText = document.querySelectorAll('.text-content p');
