@@ -50,9 +50,9 @@ for (i = 0; i < navigation.length; i++) {
 const appendNewItem = document.createElement('a');
 const prependNewItem = document.createElement('a');
 const navi = document.querySelector('nav');
-appendNewItem.innerHTML = 'Last';
+appendNewItem.innerText = 'Last';
 appendNewItem.href = '#';
-prependNewItem.innerHTML = 'First';
+prependNewItem.innerText = 'First';
 appendNewItem.href = '#';
 navi.append(appendNewItem);
 navi.prepend(prependNewItem);
@@ -62,6 +62,8 @@ topHeading.innerHTML = siteContent['cta']['h1'];
 
 const topBtn = document.querySelector('button');
 topBtn.innerHTML = siteContent['cta']['button'];
+topBtn.style.color = 'red';
+topBtn.style.backgroundColor = 'yellow';
 
 const topImg = document.getElementById('cta-img');
 topImg.setAttribute('src', siteContent['cta']['img-src']);
