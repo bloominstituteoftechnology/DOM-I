@@ -55,6 +55,8 @@ navAnchorTags[3].innerText = "Features";
 navAnchorTags[4].innerText = "About";
 navAnchorTags[5].innerText = "Contact";
 
+/*let navBar = querySelector("nav");
+navBar.style.color = green;*/
 
 let mainHeader = document.querySelector("h1");
 mainHeader.innerText = "DOM Is Awesome";
