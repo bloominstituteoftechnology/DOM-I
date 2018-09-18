@@ -44,25 +44,24 @@ let headerBorder = document.querySelector('header');
 // console.log(document.querySelector('cta'));
 // headerBorder.style.border = 'dotted 8px green';
 // console.log(headerBorder.style.border);
+newLink = document.createElement('a');
 let links = document.querySelectorAll('nav a');
 // console.log(links[0].innerHTML = 'hello world');
 // console.log(siteContent['nav']['nav-item-1']);
+document.querySelector('nav').appendChild(newLink);
 links[0].innerHTML = siteContent['nav']['nav-item-1'];
 links[1].innerHTML = siteContent['nav']['nav-item-2'];
 links[2].innerHTML = siteContent['nav']['nav-item-3'];
 links[3].innerHTML = siteContent['nav']['nav-item-4'];
 links[4].innerHTML = siteContent['nav']['nav-item-5'];
 links[5].innerHTML = siteContent['nav']['nav-item-6'];
-newLink = document.createElement('a');
 newLink.innerHTML = 'blog';
 newLink.setAttribute('href', '#');
 
-console.log(links);
-document.querySelector('nav').appendChild(newLink);
-
-for(let i = 0; i<links.length;i++) {
-  links[i].style.color = 'green';
-}
+links.forEach(index => index.style.color = 'green');
+// for(let i = 0; i<links.length;i++) {
+//   links[i].style.color = 'green';
+// }
 
 let ctaImage = document.getElementById("cta-img");
 document.getElementById("middle-img").setAttribute('src', siteContent['main-content']['middle-img-src']);
