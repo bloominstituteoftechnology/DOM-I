@@ -116,10 +116,29 @@ nav.prepend("Home");
 nav.append("Portfolio");
 
 
+// Stretch - Digital Timer 
+// <!DOCTYPE html>
+// <html>
+//   <head>
+//     <title>DOM I</title>
+//     <link rel="stylesheet" href="./styles.css">
+//   </head>
+//   <body>
+//     <div class="digits">
+//       <div class="digit" id="secondTens">-</div>
+//       <div class="digit" id="secondOnes">-</div>
+//       <div class="digit" id="colon">:</div>
+//       <div class="digit" id="msHundreds">-</div>
+//       <div class="digit" id="msTens">-</div>
+//     </div>
+//   </body>
+// </html>
 
+// add button to start/stop
 
-
-
+let startButton = document.createElement("button");
+let digits = document.querySelector("digits");
+setInterval(function(){console.log("running")}, 500);
 
 
 

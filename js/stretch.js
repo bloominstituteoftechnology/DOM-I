@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>DOM I</title>
-    <link rel="stylesheet" href="./styles.css">
-  </head>
-  <body>
+
+
+/* <body>
     <div class="digits">
       <div class="digit" id="secondTens">-</div>
       <div class="digit" id="secondOnes">-</div>
@@ -12,6 +8,13 @@
       <div class="digit" id="msHundreds">-</div>
       <div class="digit" id="msTens">-</div>
     </div>
-    <script src="index.js"></script>
-  </body>
-</html>
+    <script src="\js\stretch.js"></script> */
+
+let digits = document.querySelector('digits');
+let h2 = document.createElement('h2');
+h2.innerText = "HEllo";
+
+
+setInterval(function(){
+    
+}, 500);
