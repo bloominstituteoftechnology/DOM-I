@@ -50,6 +50,8 @@ for (let i = 0; i < aTags.length; i++) {
 let ctaTextH1 = document.querySelector(".cta .cta-text h1");
 ctaTextH1.innerText = siteContent.cta.h1;
 
+let ctaTextBox = document.querySelector(".cta .cta-text");
+
 let ctaTextButton = document.querySelector(".cta .cta-text button");
 ctaTextButton.innerText = siteContent.cta.button;
 
@@ -82,7 +84,7 @@ mainH4[4].innerText = siteContent["main-content"]["vision-h4"];
 mainP[4].innerText = siteContent["main-content"]["vision-content"];
 
 let contactH4 = document.querySelector(".container .contact h4");
-contactH4 = siteContent.contact["contact-h4"];
+contactH4.innerText = siteContent.contact["contact-h4"];
 
 let contactP = document.querySelectorAll(".container .contact p");
 contactP[0].innerText = siteContent.contact.address;
@@ -109,6 +111,7 @@ myHeader.appendChild(newA2);
 newA2.innerText = "Blog";
 newA2.href = "#";
 newA2.style.color = 'green';
+
 // nav.appendChild("Blog");
 
 // var p = document.createElement("p");
@@ -116,25 +119,85 @@ newA2.style.color = 'green';
 
 
 aTags.forEach(tag => tag.style.color = 'green');
+nav.setAttribute("style", "color: green");
 nav.style.color = 'green';
 
-{/* <button onclick="myFunction()">Click Me</button>
+ctaTextButton.setAttribute("style", "color: cornflowerBlue; font-weight: bold; background-color: whitesmoke; border: 1px solid cornflowerBlue");
 
-<div id="myDIV">
-  This is my DIV element.
-</div>
-Step 2) Add JavaScript:
-Example
-function myFunction() {
-    var x = document.getElementById("myDIV");
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
-} */}
+ctaTextButton.addEventListener("mouseover", function( event ) {   
+  // highlight the mouseover target
+  event.target.style.display = "red";
+  event.target.style.border = "1.5px solid red"
+  event.target.style.backgroundColor = "white"
+  event.target.innerText = "Don't Hover!";
 
-// function buttonFunc () {
-//   ctaTextButton.style.["background-color"] === "black" ? 
-// }
+  // reset the color after a short delay
+  setTimeout(function() {
+    event.target.innerText = "Don't Hover!";
 
+  }, 500);
+
+
+  // reset the color after a short delay
+  setTimeout(function() {
+    event.target.style.display = "none";
+
+  }, 750);
+}, false);
+
+
+
+
+nav.addEventListener("mouseover", function( event ) {   
+  // highlight the mouseover target
+  event.target.style.color = "cornflowerBlue";
+  event.target.style.textDecoration = "none";
+
+  // reset the color after a short delay
+  setTimeout(function() {
+    event.target.style.color = "green";
+    event.target.style.textDecoration = "none";
+
+  }, 1000);
+}, false);
+
+
+let newButton = document.createElement("button");
+ctaTextBox.append(newButton);
+
+newButton.style.justifyContent = "center";
+newButton.innerHTML = "Click Here!";
+newButton.style.color = 'cornFlowerBlue';
+
+newButton.setAttribute("style", "color: cornflowerBlue; font-weight: bold; background-color: whitesmoke; border: 1px solid cornflowerBlue");
+
+newButton.addEventListener("mouseover", function( event ) {   
+  // highlight the mouseover target
+  event.target.style.color = "seaGreen";
+  event.target.style.border = "1.5px solid seaGreen"
+  event.target.style.backgroundColor = "white"
+
+  // reset the color after a short delay
+  setTimeout(function() {
+    event.target.style.color = "cornflowerBlue";
+    event.target.style.border = "1px solid cornflowerBlue";
+    event.target.style.backgroundColor = "whitesmoke"
+
+  }, 1000);
+}, false);
+
+newButton.addEventListener("click", function( event ) {   
+  // highlight the mouseover target
+  event.target.style.color = "white";
+  event.target.style.backgroundColor = "cornFlowerBlue";
+  event.target.innerText = "Click!";
+
+  // reset the color after a short delay
+
+  setTimeout(function() {
+    event.target.style.color = "red";
+    event.target.style.textDecoration = "none";
+    event.target.innerText = "Clicked!";
+
+  }, 2000);
+}, false);
