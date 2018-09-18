@@ -36,6 +36,42 @@ let getmsTens = document.getElementById('#msTens');
 let redDistribute = document.querySelectorAll('.digit');
 
 
+let myBtnOn = document.createElement('button');
+let myBtnOff = document.createElement('button');
+
+let buttonContainer = document.createElement('section');
+
+
+let bodyPointer = document.querySelector('body');
+bodyPointer.appendChild(buttonContainer);
+let insertButton = document.querySelector('section');
+insertButton.appendChild(myBtnOn);
+insertButton.appendChild(myBtnOff);
+
+myBtnOn.classList.add('button-style');
+myBtnOff.classList.add('button-style');
+
+let buttonStyle = document.querySelectorAll('button-style');
+
+myBtnOn.innerText = 'On';
+myBtnOn.style.backgroundColor = 'blue';
+myBtnOn.style.color = 'white';
+
+myBtnOn.addEventListener('click', clickOn)
+function clickOn() {
+incrementHundredths();
+setInterval(incrementHundredths, 10);
+}
+
+myBtnOff.innerText = 'Off';
+myBtnOff.style.backgroundColor = 'red';
+myBtnOff.style.color = 'white';
+
+myBtnOff.addEventListener('click', clickOff);
+function clickOff() {
+    clearInterval(incrementTenz);
+    
+}
 
 
 function incrementHundredths(){
@@ -64,13 +100,14 @@ function incrementHundredths(){
         tenths = 0;
         hundredths = 0;
         clearInterval(incrementTenz);
+        
         for(i = 0; i < redDistribute.length; i++){
             redDistribute[i].classList.add('redDigit');
             redDistribute[2].classList.remove('redDigit');
         }
     }
     
-
+   
 }
 
 function incrementTenths(){
@@ -99,26 +136,11 @@ function incrementHundredsPlace(){
 }
 
 
-
-
-
-
-
-// let increment = setInterval(incrementOnesPlace, 10000);
-
 let incrementTenz = setInterval(incrementHundredths, 10);
-
-// let incrementOnes = setInterval(incrementOnesPlace, 1000);
-
-// let incrementHundred = setInterval(incrementHundredsPlace, 1000);
-
-
 
 let getmsHundreds = document.getElementById('#msHundreds');
 
-
 let getSecondOnes = document.getElementById('#secondOnes');
-
 
 let getSecondTens = document.getElementById('#secondTens');
 
