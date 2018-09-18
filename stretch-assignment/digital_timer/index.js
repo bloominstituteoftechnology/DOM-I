@@ -17,11 +17,15 @@ function counter() {
     secondTens.style.display = "none";
     secondOnes.innerHTML = Math.floor(seconds / 100) + "s";
     msTens.innerHTML = Math.floor(miliSeconds * 1);
+    msTens.style.color = "white";
+    secondOnes.style.color = "white";
   }
 
-  if (miliSeconds >= 99) {
-    miliSeconds = 0;
-  }
+  // if (miliSeconds >= 100) {
+  //   miliSeconds = 0;
+  // }
+  miliSeconds >= 100 ? (miliSeconds = 0) : false;
+
   if (seconds >= 1000) {
     isPaused = true;
     pause.style.display = "none";
@@ -29,6 +33,8 @@ function counter() {
     miliSeconds = 0;
     seconds = 0;
     msTens.innerHTML = "0";
+    msTens.style.color = "red";
+    secondOnes.style.color = "red";
   }
 }
 
@@ -59,9 +65,11 @@ reset.addEventListener("click", resetCounter);
 function resetCounter() {
   seconds = 0;
   miliSeconds = 0;
-  secondOnes.innerHTML = 0 + "s";
-  msTens.innerHTML = 0;
+  secondOnes.innerHTML = "0" + "s";
+  msTens.innerHTML = "0";
   isPaused = true;
   play.style.display = "inline";
   pause.style.display = "none";
+  msTens.style.color = "white";
+  secondOnes.style.color = "white";
 }

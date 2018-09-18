@@ -1,6 +1,10 @@
 body {
   box-sizing: border-box;
 }
+* {
+  margin: 0;
+  padding: 0
+}
 
 .digits {
   display: flex;
@@ -33,10 +37,27 @@ img {
 }
 
 .play-pause span {
-  border: 1px solid grey;
+  border: 1px solid white;
   padding: 10px;
   background: red;
   color: white;
   border-radius: 6px;
   cursor: pointer;
+}
+
+#msTens {
+  font-size: 65px;
+  align-self: flex-end;
+}
+
+.digits-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.pexels.com/photos/313782/pexels-photo-313782.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-position: center;
+  background-size: cover;
 }
