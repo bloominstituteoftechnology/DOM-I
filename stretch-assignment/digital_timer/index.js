@@ -1,14 +1,22 @@
 const secondTens = document.getElementById('secondTens');
-console.log(secondTens);
 const secondOnes = document.getElementById('secondOnes');
 const msHundreds = document.getElementById('msHundreds');
 const msTens = document.getElementById('msTens');
 
-msTens.style.color = 'blue';
-msHundreds.style.color = 'green';
-secondOnes.style.color = 'purple';
+const startStopButton = document.getElementById('right');
+startStopButton.addEventListener('click', counterFunction);
 
 function counterFunction() {
+    startStopButton.style.top = '5px';
+    startStopButton.style.right = '5px';
+    startStopButton.style.height = '5px';
+
+    let buttonAnimation = setTimeout(function() {
+        startStopButton.style.top = '0';
+    startStopButton.style.right = '0';
+    startStopButton.style.height = '15px';
+    }, 100);
+
     let secondTensHolder = 0;
     let secondOnesHolder = 0;
     let msHundredsHolder = 0;
@@ -38,5 +46,3 @@ function counterFunction() {
         msTens.innerText = msTensHolder;
     }
 }
-
-counterFunction();
