@@ -40,3 +40,62 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//NAV
+
+
+let navItems = document.querySelectorAll('header nav a');
+navItems[0].innerText = siteContent['nav']['nav-item-1'];
+navItems[1].innerText = siteContent['nav']['nav-item-2'];
+navItems[2].innerText = siteContent['nav']['nav-item-3'];
+navItems[3].innerText = siteContent['nav']['nav-item-4'];
+navItems[4].innerText = siteContent['nav']['nav-item-5'];
+navItems[5].innerText = siteContent['nav']['nav-item-6'];
+
+
+//CTA
+
+
+let cta = document.querySelector('h1');
+cta.innerHTML = siteContent['cta']['h1'];
+
+let ctaButton = document.querySelector('button');
+ctaButton.innerText = siteContent['cta']['button'];
+
+let ctaImg = document.getElementById('cta-img');
+ctaImg.setAttribute('src', siteContent['cta']['img-src']);
+
+
+//Main-Content
+
+
+let allMainContent = document.querySelectorAll('.main-content *');
+allMainContent[0]
+allMainContent[1]
+allMainContent[2]
+allMainContent[3]
+allMainContent[4]
+allMainContent[5]
+allMainContent[6]
+allMainContent[7]
+allMainContent[8]
+allMainContent[9]
+allMainContent[10]
+allMainContent[11]
+allMainContent[12]
+allMainContent[13]
+allMainContent[14]
+allMainContent[15]
+allMainContent[16]
+allMainContent[17]
+console.log(allMainContent);
+// let mainMiddleContent = document.querySelector('')
+
+// let mainBottomContent = document.
+
+
+
+
+
+
+
