@@ -102,4 +102,4 @@ contactAddress[2].innerText = siteContent['contact']['email'];
 //footer
 
 let footer = document.querySelector('footer p');
-footer.innerHTML = siteContent['contact']['contact-h4'];
+footer.innerHTML = siteContent['footer']['copyright'];
