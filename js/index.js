@@ -55,3 +55,14 @@ navItems[5].innerText = siteContent['nav']['nav-item-6'];
 
 let cta = document.querySelector('h1');
 cta.innerHTML = siteContent['cta']['h1'];
+
+let ctaButton = document.querySelector('button');
+ctaButton.innerHTML = siteContent['cta']['button'];
+
+let ctaImage = document.getElementById("cta-img");
+ctaImage.setAttribute('src', siteContent["cta"]["img-src"])
+
+//main-content Section
+
+let mainContentImage = document.getElementById("middle-img");
+mainContentImage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
