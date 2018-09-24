@@ -44,12 +44,21 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 //Navigation Bar
 
 let navItems = document.querySelectorAll('header nav a');
-navItems[0].innerText = siteContent['nav']['nav-item-1'];
+navItems[0].innerHTML = siteContent['nav']['nav-item-1'];
 navItems[1].innerText = siteContent['nav']['nav-item-2'];
 navItems[2].innerText = siteContent['nav']['nav-item-3'];
 navItems[3].innerText = siteContent['nav']['nav-item-4'];
 navItems[4].innerText = siteContent['nav']['nav-item-5'];
 navItems[5].innerText = siteContent['nav']['nav-item-6'];
+
+//change nav text to green
+
+navItems[0].style.color = 'green';
+navItems[1].style.color = 'green';
+navItems[2].style.color = 'green';
+navItems[3].style.color = 'green';
+navItems[4].style.color = 'green';
+navItems[5].style.color = 'green';
 
 //cta Section
 
@@ -64,7 +73,7 @@ ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
 
 //main-content Section
 
-let topContentHeaders = document.querySelectorAll('.top-content h4');
+let topContentHeaders = document.querySelectorAll('.main-content h4');
 topContentHeaders[0].innerText = siteContent['main-content']['features-h4'];
 topContentHeaders[1].innerText = siteContent['main-content']['about-h4'];
 
@@ -103,3 +112,6 @@ contactAddress[2].innerText = siteContent['contact']['email'];
 
 let footer = document.querySelector('footer p');
 footer.innerHTML = siteContent['footer']['copyright'];
+
+//navigation text green
+
