@@ -40,3 +40,36 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let navItems = document.querySelectorAll('header nav a');
+
+navItems[0].innerText = siteContent['nav']['nav-item-1'];
+navItems[1].innerText = siteContent['nav']['nav-item-2'];
+navItems[2].innerText = siteContent['nav']['nav-item-3'];
+navItems[3].innerText = siteContent['nav']['nav-item-4'];
+navItems[4].innerText = siteContent['nav']['nav-item-5'];
+navItems[5].innerText = siteContent['nav']['nav-item-6'];
+
+let hElement = document.querySelector('h1');
+hElement.innerHTML = siteContent['cta']['h1'];
+
+let jumbotronButton = document.querySelector('button');
+jumbotronButton.innerHTML = siteContent ['cta']['button'];
+
+let snippitImg = document.querySelector('#cta-img');
+snippitImg.src = '/img/header-img.png';
+
+let hFourElements = document.querySelectorAll('.top-content .text-content h4');
+hFourElements[0].innerText = siteContent['main-content']['features-h4'];
+hFourElements[1].innerText = siteContent['main-content']['about-h4'];
+
+
+let pElements = document.querySelectorAll('.top-content .text-content p');
+pElements[0].innerText = siteContent['main-content'] ['features-content']
+pElements[1].innerText = siteContent['main-content'] ['about-content']
+
+
+// "middle-img-src": "img/mid-page-accent.jpg"
+
+let middleIMG = document.querySelector('#middle-img');
+middleIMG.src = siteContent ['main-content'] ['img/mid-page-accent.jpg']
