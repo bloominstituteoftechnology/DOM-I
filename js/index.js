@@ -40,3 +40,45 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//let navItems = document.querySelectorAll('a');
+
+//let cta = document.getElementsByClassName('.cta-text');
+let headingOne = document.querySelector('h1');
+headingOne.innerText = 'DOM IS Awesome';
+
+let codeSnippet = document.getElementById('cta-img');
+codeSnippet.src = 'img/header-img.png';
+
+let featuresHeading = document.querySelector('.top-content h4');
+featuresHeading.innerText = 'Features';
+
+let featuresContent = document.querySelector('.top-content p');
+featuresContent.innerText = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+let button = document.querySelector('button');
+button.innerText = 'Get Started';
+
+let servicesHeading = document.querySelector('.bottom-content h4');
+servicesHeading.innerText = 'Services';
+
+let servicesContent = document.querySelector('.bottom-content p');
+servicesContent.innerText = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+
+//let topContent = document.getElementsByClassName('.top-content');
+
+let middleImage = document.getElementById('middle-img');
+middleImage.src = 'img/mid-page-accent.jpg';
+
+//let bottomContent = document.getElementsByClassName('.bottom-content');
+
+let contact = document.querySelector('.contact h4');
+contact.innerText = 'Contact';
+
+let contactContent = document.querySelector('.contact p');
+contactContent.innerText = '123 Way 456 Street Somewhere, USA';
+
+let footer = document.querySelector('footer p');
+footer.innerText = 'Copyright Great Idea! 2018';
+
+
