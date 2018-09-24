@@ -89,3 +89,17 @@ bottomContent[0].innerText = siteContent['main-content']['features-content'];
 bottomContent[1].innerText = siteContent['main-content']['about-content'];
 bottomContent[2].innerText = siteContent['main-content']['about-content'];
 
+//contact info
+
+let contactHeader = document.querySelector('.contact h4');
+contactHeader.innerHTML = siteContent['contact']['contact-h4'];
+
+let contactAddress = document.querySelectorAll('.contact p');
+contactAddress[0].innerText = siteContent['contact']['address'];
+contactAddress[1].innerText = siteContent['contact']['phone'];
+contactAddress[2].innerText = siteContent['contact']['email'];
+
+//footer
+
+let footer = document.querySelector('footer p');
+footer.innerHTML = siteContent['contact']['contact-h4'];
