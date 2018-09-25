@@ -43,7 +43,7 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
-
+// nav content
 
 
 let navItems=document.querySelectorAll("header nav a")
@@ -54,46 +54,64 @@ let navItems=document.querySelectorAll("header nav a")
     navItems[4].innerText=siteContent["nav"]["nav-item-5"];
     navItems[5].innerText=siteContent["nav"]["nav-item-6"];
 
-    //cta
+    // <header>
+    //         <nav>
+    //             <a href="#"></a>
+    //             <a href="#"></a>
+    //             <a href="#"></a>
+    //             <a href="#"></a>
+    //             <a href="#"></a>
+    //             <a href="#"></a>
+    //         </nav>
 
-    let ctaB= document.querySelector('h1');
-    ctaB.innerHTML=siteContent['cta']['h1'];
+    //         <img id="logo-img" class="logo" src="" alt="Great Idea! Company logo.">
+    //     </header>
+   
+    //cta content
+
+    let cta= document.getElementsByClassName('cta-text');
+    cta.innerHTML = siteContent['cta']['h1'];
 
     let cta_Button = document.querySelector('button');
-    cta_Button.innerHTML=siteContent['cta']['button'];
+    cta_Button.innerHTML = siteContent['cta']['button'];
 
-    let ctaImage =document.getElementId('cta-img');
-    ctaImage.setAttributes('src'.siteContent['cta']['img-src']);
+    let ctaImage = document.getElementById('cta-img');
+    ctaImage.setAttribute('src',siteContent['cta']['img-src']);
 
-    //main
-    let topContentHeaders= document.querySelectorAll('.top-content-h4');
-    topContentHeaders[0].innerText=siteContent['main-content']['features-h4'];
-    topContentHeaders[1].innerText=siteContent['main-content']['about-h4'];
+//     <section class="cta">
+//     <div class="cta-text">
+//         <h1></h1>
+//         <button></button>
+//     </div>
+//     <img id="cta-img" src="" alt="Image of a code snippet.">
+// </section>
 
-let topContent=document.querySelectorAll('.top-content p');
-topContent[0].innerText=siteContent['main-content']['features-content'];
-topContent[1].innerText=siteContent['main-content']['about-content'];
 
-let mainContentImage=document.getElementId('middle-img');
-mainContentImage.setAttribute('src'.siteContent['main-content']['middle-img-src']);
+// main content
 
-let bottomContentHeaders=document.querySelectorAll('.bottom-content h4');
-bottomContent[0].innerText=siteContent['main-content']['services-h4'];
-bottomContent[1].innerText=siteContent['text-content']['product-h4'];
-bottomContent[2].innerText=siteContent['main-content']['vision-h4'];
+let textContentList = document.querySelectorAll(".text-content");
 
-let bottomContent=document.querySelectorAll(bottom-content);
-bottomContent[0].innerText=sitecontent['text-content']['features-content'];
-bottomContent[1].innerText=sitecontent['text-content']['about-content'];
-bottomContent[2].innerText=siteContent['text-content']['services-content'];
-bottomContent[3].innerText=siteContent['text-content']['product-content'];
-bottomContent[4].innerText=siteContent['text-content']['vision-content'];
+textContentList[0].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["features-h4"];
+textContentList[0].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["features-content"];
+textContentList[1].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["about-h4"];
+textContentList[1].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["about-content"];
+textContentList[2].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["services-h4"];
+textContentList[2].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["services-content"];
+textContentList[3].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["product-h4"];
+textContentList[3].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["product-content"];
+textContentList[4].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["vision-h4"];
+textContentList[4].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["vision-content"];
 
-let contactContent=document.querySelectorAll('.contact');
-contactContent[0].innerText=siteContent['main-content']['contact'];
-contactContent[1].innerText=siteContent['main-content']['contact-h4'];
-contactContent[2].innerText=siteContent['main-content']['contact-p'];
-contactContent[3].innerText=siteContent['main-content']['contact-p'];
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
-let footerContent=document.querySelectorAll('footer');
-footerContent[0].innerText=siteContent['main-content']['footer'];
+let contactContent=document.getElementsByClassName('.contact');
+contactContent[0].innerHTML=siteContent['contact']['contact-h4'];
+contactContent[1].innerHTML=siteContent['contact']['contact-p'];
+contactContent[2].innerHTML=siteContent['contact']['contact-p'];
+contactContent[3].innerHTML=siteContent['contact']['contact-p'];
+
+// footer content
+
+let footerContent=document.getElementsByClassName('footer');
+footerContent[0].innerText=siteContent['main-content']['footer-p'];
