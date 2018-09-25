@@ -68,8 +68,18 @@ let pElements = document.querySelectorAll('.top-content .text-content p');
 pElements[0].innerText = siteContent['main-content'] ['features-content']
 pElements[1].innerText = siteContent['main-content'] ['about-content']
 
-
-// "middle-img-src": "img/mid-page-accent.jpg"
-
 let middleIMG = document.querySelector('#middle-img');
-middleIMG.src = siteContent ['main-content'] ['img/mid-page-accent.jpg']
+middleIMG.src = 'img/mid-page-accent.jpg';
+
+let hFourElementsBottom = document.querySelectorAll('.bottom-content .text-content h4');
+hFourElementsBottom[0].innerText = siteContent['main-content']['services-h4'];
+hFourElementsBottom[1].innerText = siteContent['main-content']['product-h4'];
+hFourElementsBottom[2].innerText = siteContent['main-content']['vision-h4']
+
+let pElementsBottom = document.querySelectorAll('.bottom-content .text-content p');
+pElementsBottom[0].innerText = siteContent['main-content']['services-content'];
+pElementsBottom[1].innerText = siteContent['main-content']['product-content'];
+pElementsBottom[2].innerText = siteContent['main-content']['vision-content'];
+
+let contacth4 = document.querySelectorAll('.contact h4');
+contact[0].innerText = siteContent ['contact-h4'];
