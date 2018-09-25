@@ -72,26 +72,54 @@ ctaImg.setAttribute('src', siteContent['cta']['img-src']);
 let allMainContent = document.querySelectorAll('.main-content *');
 allMainContent[0]
 allMainContent[1]
-allMainContent[2]
-allMainContent[3]
+allMainContent[2].innerHTML = siteContent['main-content']['features-h4']
+allMainContent[3].innerText = siteContent['main-content']['features-content']
 allMainContent[4]
-allMainContent[5]
-allMainContent[6]
-allMainContent[7]
+allMainContent[5].innerHTML = siteContent['main-content']['about-h4']
+allMainContent[6].innerText = siteContent['main-content']['about-content']
+allMainContent[7].setAttribute('src', siteContent['main-content']['middle-img-src'])
 allMainContent[8]
 allMainContent[9]
-allMainContent[10]
-allMainContent[11]
+allMainContent[10].innerHTML = siteContent['main-content']['services-h4']
+allMainContent[11].innerText = siteContent['main-content']['services-content']
 allMainContent[12]
-allMainContent[13]
-allMainContent[14]
 allMainContent[15]
-allMainContent[16]
-allMainContent[17]
+allMainContent[13].innerHTML = siteContent['main-content']['product-h4']
+allMainContent[14].innerText = siteContent['main-content']['product-content']
+allMainContent[16].innerHTML = siteContent['main-content']['vision-h4']
+allMainContent[17].innerText = siteContent['main-content']['vision-content']
 console.log(allMainContent);
+//code bellow was for alternate solution its left so i dont forget initial idea
 // let mainMiddleContent = document.querySelector('')
-
 // let mainBottomContent = document.
+
+let contactTitle = document.querySelector('contact-h4');
+contactTitle.innerHTML = siteContent['contact']['contact-h4'];
+
+// let contactAddress = 
+
+// let contactPhone = 
+
+// let contactEmail = document
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
