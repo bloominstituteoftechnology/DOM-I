@@ -60,6 +60,10 @@ navItems[3].style.color = 'green';
 navItems[4].style.color = 'green';
 navItems[5].style.color = 'green';
 
+//append to Navigation
+
+navItems.append
+
 //cta Section
 
 let cta = document.querySelector('h1');
