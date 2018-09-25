@@ -60,9 +60,27 @@ navItems[3].style.color = 'green';
 navItems[4].style.color = 'green';
 navItems[5].style.color = 'green';
 
-//append to Navigation
+//change Navigation
 
-navItems.append
+let navMenu = document.querySelector('nav')
+
+// append Navigation
+
+const postNav = document.createElement('a');
+  postNav.innerText = 'After';
+  postNav.href = '#';
+  postNav.style = 'color: green;';
+  navMenu.append(postNav);
+
+
+//prepend to Navigation
+
+ 
+const preNav = document.createElement('a');
+  preNav.innerText = 'Before';
+  preNav.href = '#';
+  preNav.style = 'color: green;';
+  navMenu.prepend(preNav);
 
 //cta Section
 
