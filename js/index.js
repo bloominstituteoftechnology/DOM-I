@@ -69,8 +69,6 @@ let copyright = document.querySelector('footer p');
 
 // Step 2: Update HTML with JSON data
 
-console.log(h4Tags.length);
-
 for (let i = 0; i < navItems.length; i++) {
 
   navItems[i].textContent = siteContent['nav']['nav-item-' + (i + 1)];
@@ -130,5 +128,77 @@ navItems.push(testimonials);
 for (let i = 0; i < navItems.length; i++) {
 
   navItems[i].style.color = "green";
+
+}
+
+// Stretch
+
+button.addEventListener("click", toggleSite);
+
+let mode = false;
+
+function toggleSite() {
+
+  mode = !mode;
+
+  if (mode) { // weird mode
+
+    h1.style.color = "purple";
+
+    for (let i = 0; i < navItems.length; i++) {
+
+      navItems[i].style.color = "orange";
+
+    }
+
+    for (let i = 0; i < h4Tags.length; i++) {
+
+      h4Tags[i].style.color = "red";
+
+    }
+
+    for (let i = 0; i < textContentTags.length; i++) {
+
+      textContentTags[i].style.color = "blue";
+
+    }
+
+    for (let i = 0; i < contactPTags.length; i++) {
+
+      contactPTags[i].style.color = "blue";
+
+    }
+
+  }
+
+  else {
+
+    h1.style.color = "black";
+
+    for (let i = 0; i < navItems.length; i++) {
+
+      navItems[i].style.color = "green";
+
+    }
+
+    for (let i = 0; i < h4Tags.length; i++) {
+
+      h4Tags[i].style.color = "black";
+
+    }
+
+    for (let i = 0; i < textContentTags.length; i++) {
+
+      textContentTags[i].style.color = "black";
+
+    }
+
+    for (let i = 0; i < contactPTags.length; i++) {
+
+      contactPTags[i].style.color = "black";
+
+    }
+
+  }
 
 }
