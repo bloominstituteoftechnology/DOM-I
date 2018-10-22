@@ -40,3 +40,58 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let navAnchor = document.querySelectorAll("a");
+const navItems = ["Services", "Product", "Vision", "Features", "About", "Contact"];
+
+navAnchor.forEach((anchor, index) => anchor.textContent = navItems[index]);
+
+// end of header section
+
+// cta section
+let cta = document.querySelector(".cta");
+
+let ctaText = cta.querySelector("h1");
+ctaText.textContent = "DOM is Awesome!";
+
+let button = cta.querySelector("button");
+button.textContent = "Get Started";
+
+let ctaImg = document.querySelector("#cta-img");
+ctaImg.src = "img/header-img.png";
+// end of cta section
+
+// main content section
+let mainContent = document.querySelector(".main-content");
+
+
+
+// top content
+let topContent = document.querySelector(".top-content");
+
+// let topTextContent = topContent.querySelector(".text-content")
+
+// let topText = topTextContent.querySelector("p");
+// topText.textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+// let topHeading = topTextContent.querySelector("h4");
+// topHeading.textContent = "Features";
+
+
+// middle content
+let middleImg = document.querySelector(".middle-img");
+
+
+//bottom content
+let bottomContent = document.querySelector(".bottom-content");
+//end of main content
+
+
+// contact section
+let contact = document.querySelector(".contact");
+
+// end of contact
+
+// footer section
+let footer = document.querySelector("footer");
+// end of footer
