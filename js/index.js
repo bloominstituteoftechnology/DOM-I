@@ -43,7 +43,12 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 // Update the nav items text content
 const navItems = document.querySelectorAll('nav a');
-navItems.forEach((e,i) => e.textContent = siteContent.nav[`nav-item-${i+1}`]);
+navItems.forEach((e,i) => {
+  e.textContent = siteContent.nav[`nav-item-${i+1}`];
+
+  //Change the color of the navigation text to be green.
+  e.style.color = 'green';
+  });
 
 // Update the cta-text h1
 const h1Tag = document.querySelector('.cta-text h1');
