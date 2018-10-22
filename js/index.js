@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM<br> Is<br> Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "123 Way 456 Street <br>Somewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -44,10 +44,12 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 const selectEntireNav = document.querySelectorAll('a');
 for(let i = 0; i<selectEntireNav.length; i++){
   selectEntireNav[i].textContent = siteContent["nav"][`nav-item-${i+1}`];
+  selectEntireNav[i].style.color = "green";
 }
 
+
 const selectH1 = document.querySelector('h1');
-selectH1.textContent = siteContent["cta"]["h1"];
+selectH1.innerHTML = siteContent["cta"]["h1"];
 
 const selectButton = document.querySelector('button');
 selectButton.textContent = 'Get Started';
@@ -69,7 +71,7 @@ selectEntireContent[1].textContent = siteContent['main-content']['about-content'
 selectEntireContent[2].textContent = siteContent['main-content']['services-content'];
 selectEntireContent[3].textContent = siteContent['main-content']['product-content'];
 selectEntireContent[4].textContent = siteContent['main-content']['vision-content'];
-selectEntireContent[5].textContent = siteContent['contact']['address'];
+selectEntireContent[5].innerHTML = siteContent['contact']['address'];
 selectEntireContent[6].textContent = siteContent['contact']['phone'];
 selectEntireContent[7].textContent = siteContent['contact']['email'];
 selectEntireContent[8].textContent = siteContent['footer']['copyright'];
