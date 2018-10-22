@@ -39,4 +39,76 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+//nav bar
+
+let navLinks = document.querySelectorAll('a');
+navLinks.item(0).textContent = siteContent.nav["nav-item-1"];
+navLinks.item(1).textContent = siteContent.nav["nav-item-2"];
+navLinks.item(2).textContent = siteContent.nav["nav-item-3"];
+navLinks.item(3).textContent = siteContent.nav["nav-item-4"];
+navLinks.item(4).textContent = siteContent.nav["nav-item-5"];
+navLinks.item(5).textContent = siteContent.nav["nav-item-6"];
+
+
+
+
+//cta
+const ctaButton = document.querySelector('button');
+ctaButton.textContent = siteContent.cta.button;
+
+const ctaImg = document.querySelector('#cta-img');
+ctaImg.setAttribute('src', siteContent.cta["img-src"]);
+
+
+siteContent.cta.h1 = '<h1>DOM<br> Is<br> Awesome</h1>';
+
+const ctaText = document.querySelector('h1');
+ctaText.innerHTML = siteContent.cta.h1;
+
+
+
+//main conntent
+
+const midImg = document.querySelector('.middle-img');
+midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+const mainH4 = document.querySelectorAll('h4');
+
+ 
+mainH4.item(0).textContent = siteContent["main-content"]["features-h4"];
+mainH4.item(1).textContent = siteContent["main-content"]["about-h4"];
+mainH4.item(2).textContent = siteContent["main-content"]["services-h4"];
+mainH4.item(3).textContent = siteContent["main-content"]["product-h4"];
+mainH4.item(4).textContent = siteContent["main-content"]["vision-h4"];
+
+
+const para = document.querySelectorAll('p');
+
+para.item(0).textContent = siteContent["main-content"]["features-content"];
+para.item(1).textContent = siteContent["main-content"]["about-content"];
+para.item(2).textContent = siteContent["main-content"]["services-content"];
+para.item(3).textContent = siteContent["main-content"]["product-content"];
+para.item(4).textContent = siteContent["main-content"]["vision-content"];
+
+
+// contact
+const contact = document.querySelector('.contact');
+const contactChildren = contact.childNodes;
+
+
+siteContent.contact.address = '<p>123 Way 456 Street<br>Somewhere, USA</p>';
+
+contactChildren.item(1).textContent = siteContent.contact["contact-h4"];
+contactChildren.item(3).innerHTML = siteContent.contact.address;
+contactChildren.item(5).textContent = siteContent.contact.phone;
+contactChildren.item(7).textContent = siteContent.contact.email;
+
+
+//footer
+
+const footer = document.querySelector('footer');
+const footerChildren = footer.childNodes;
+footerChildren.item(1).textContent = siteContent.footer.copyright;
+console.log(footerChildren);
