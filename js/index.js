@@ -62,13 +62,13 @@ ctaImgElement.src = siteContent['cta']['img-src'];
 const mainCtnImg = document.getElementById('middle-img');
 mainCtnImg.src = siteContent['main-content']['middle-img-src'];
 
-const h4Elementa = document.querySelectorAll('h4');
-h4Elementa[0].textContent = siteContent['main-content']['features-h4'];
-h4Elementa[1].textContent = siteContent['main-content']['about-h4'];
-h4Elementa[2].textContent = siteContent['main-content']['services-h4'];
-h4Elementa[3].textContent = siteContent['main-content']['product-h4'];
-h4Elementa[4].textContent = siteContent['main-content']['vision-h4'];
-h4Elementa[5].textContent = siteContent['contact']['contact-h4'];
+const h4Elements = document.querySelectorAll('h4');
+h4Elements[0].textContent = siteContent['main-content']['features-h4'];
+h4Elements[1].textContent = siteContent['main-content']['about-h4'];
+h4Elements[2].textContent = siteContent['main-content']['services-h4'];
+h4Elements[3].textContent = siteContent['main-content']['product-h4'];
+h4Elements[4].textContent = siteContent['main-content']['vision-h4'];
+h4Elements[5].textContent = siteContent['contact']['contact-h4'];
 
 const pElements = document.querySelectorAll('p');
 pElements[0].textContent = siteContent['main-content']['features-content'];
@@ -102,3 +102,54 @@ newAelement2.style.color = 'green';
 const aNavLinkElements = document.querySelector('nav');
 aNavLinkElements.prepend(newAelement1);
 aNavLinkElements.append(newAelement2);
+
+
+
+// ======================= Stretch
+// STYLING
+const mainBGcolor = document.querySelector('.container');
+mainBGcolor.style.backgroundColor = "lightgray";
+
+const headerElement = document.querySelector('header');
+headerElement.style.backgroundColor = 'lightblue';
+
+aNavLinkElements.style.backgroundColor = 'black';
+aNavLinkElements.style.borderRadius = '5px';
+aNavLinkElements.style.marginLeft = '30px';
+
+pElements[0].style.color = 'blue';
+h4Elements[0].style.fontSize = '2rem';
+
+pElements[1].style.color = 'blue';
+h4Elements[1].style.fontSize = '2rem';
+
+const bottomCntElement = document.querySelector('.bottom-content');
+bottomCntElement.style.backgroundColor = 'pink';
+
+const footElement = document.querySelector('footer');
+footElement.style.backgroundColor = 'green';
+
+// EVENTLISTENER
+const ctaContentElement = document.querySelector('.cta');
+btnCtaElement.addEventListener('click', function(doSomething) {
+  ctaContentElement.style.backgroundColor = 'whitesmoke';
+
+  btnCtaElement.addEventListener('click', function(doSomething) {
+    ctaContentElement.style.backgroundColor = 'green';
+
+    btnCtaElement.addEventListener('click', function(doSomething) {
+      ctaContentElement.style.backgroundColor = 'gray';
+      h1CtaElement.textContent = "How many clicks does it take?";
+
+      btnCtaElement.addEventListener('click', function(doSomething) {
+        ctaContentElement.style.backgroundColor = 'lightgray';
+        h1CtaElement.textContent = siteContent['cta']['h1'];
+      });
+    });
+  });
+});
+
+const heroImg = document.querySelector('#cta-img');
+heroImg.addEventListener('dblclick', function(doAnother){
+  heroImg.style.backgroundColor = 'blue';
+});
