@@ -136,3 +136,4 @@ const myTitle = document.querySelector(".myTitle");
 myButton.addEventListener('click', () => {
   myTitle.style.color = "red";
 });
+
