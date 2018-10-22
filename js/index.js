@@ -72,6 +72,20 @@ ctaText.innerHTML = siteContent["cta"]["h1"];
 let button = cta.querySelector("button");
 button.textContent = siteContent["cta"]["button"];
 
+
+function changeText() {
+  const random = Math.random();
+
+  if (random < 0.5) {
+    return button.textContent = `Not Available`
+  } else {
+    return button.textContent = `Can't Start`
+  }
+}
+
+button.addEventListener("click", changeText);
+
+
 let ctaImg = document.querySelector("#cta-img");
 ctaImg.src = siteContent["cta"]["img-src"];
 // end of cta section
