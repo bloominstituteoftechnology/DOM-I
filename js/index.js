@@ -53,3 +53,7 @@ h1Words.forEach(e => {
   el.textContent = e;
   h1Tag.append(el);
 });
+
+// Update cta-text button
+const ctaButton = document.querySelector('.cta-text button');
+ctaButton.textContent = siteContent.cta.button;
