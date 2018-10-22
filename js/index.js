@@ -67,3 +67,8 @@ logo.setAttribute('src', siteContent['nav']['img-src']);
 let ctaHeader = document.querySelector('h1');
 
 ctaHeader.textContent = siteContent['cta']['h1'];
+
+// Button 
+let ctaButton = document.querySelector('button');
+
+ctaButton.textContent = siteContent['cta']['button'];
