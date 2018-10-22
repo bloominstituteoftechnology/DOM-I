@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM<br />Is<br />Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "123 Way 456 Street <br /> Somewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -44,14 +44,13 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 let navAnchor = document.querySelectorAll("a");
 
 navAnchor.forEach((anchor, index) => anchor.textContent = siteContent["nav"][`nav-item-${index + 1}`]);
-
 // end of header section
 
 // cta section
 let cta = document.querySelector(".cta");
 
 let ctaText = cta.querySelector("h1");
-ctaText.textContent = siteContent["cta"]["h1"];
+ctaText.innerHTML = siteContent["cta"]["h1"];
 
 let button = cta.querySelector("button");
 button.textContent = siteContent["cta"]["button"];
@@ -63,36 +62,56 @@ ctaImg.src = siteContent["cta"]["img-src"];
 // main content section
 let mainContent = document.querySelector(".main-content");
 
-
-
 // top content
 let topContent = document.querySelector(".top-content");
 
 let topHeadings = topContent.querySelectorAll("h4");
+
 topHeadings[0].textContent = siteContent["main-content"]["features-h4"];
 topHeadings[1].textContent = siteContent["main-content"]["about-h4"];
 
-
 let topText = topContent.querySelectorAll("p");
+
 topText[0].textContent = siteContent["main-content"]["features-content"];
 topText[1].textContent = siteContent["main-content"]["about-content"];
 
-
-
 // middle content
 let middleImg = document.querySelector(".middle-img");
+middleImg.src = siteContent["main-content"]["middle-img-src"];
 
-
-//bottom content
+// bottom content
 let bottomContent = document.querySelector(".bottom-content");
+
+let bottomHeadings = bottomContent.querySelectorAll("h4");
+
+bottomHeadings[0].textContent = siteContent["main-content"]["services-h4"];
+bottomHeadings[1].textContent = siteContent["main-content"]["product-h4"];
+bottomHeadings[2].textContent = siteContent["main-content"]["vision-h4"];
+
+let bottomText = bottomContent.querySelectorAll("p");
+
+bottomText[0].textContent = siteContent["main-content"]["services-content"];
+bottomText[1].textContent = siteContent["main-content"]["product-content"];
+bottomText[2].textContent = siteContent["main-content"]["vision-content"];
 //end of main content
 
 
 // contact section
 let contact = document.querySelector(".contact");
 
+let contactHeading = contact.querySelector("h4");
+contactHeading.textContent = siteContent["contact"]["contact-h4"];
+
+let contactText = contact.querySelectorAll("p");
+
+contactText[0].innerHTML = siteContent["contact"]["address"];
+contactText[1].textContent = siteContent["contact"]["phone"];
+contactText[2].textContent = siteContent["contact"]["email"];
 // end of contact
 
 // footer section
 let footer = document.querySelector("footer");
+
+let footerText = footer.querySelector("p");
+footerText.textContent = siteContent["footer"]["copyright"];
 // end of footer
