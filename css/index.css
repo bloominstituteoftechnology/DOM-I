@@ -105,6 +105,11 @@ header .logo {
     justify-content: flex-end;
 }
 
+.cta-none {
+    display: none;
+    margin-top: 0px;
+}
+
 .cta .cta-text {
     font-size: 72px;
     text-align: center;
