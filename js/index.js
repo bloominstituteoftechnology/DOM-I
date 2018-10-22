@@ -40,3 +40,29 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// Step 1: Point data into elements
+
+let navItems = Array.from(document.querySelectorAll('nav a'));
+let h1 = document.querySelector('h1');
+let button = document.querySelector('button');
+let headerImage = document.querySelector('#cta-img');
+let h4Tags = Array.from(document.querySelectorAll('h4'));
+let textContentTags = Array.from(document.querySelectorAll('.text-content p'));
+let featuresH4 = h4Tags[0];
+let featuresContent = textContentTags[0];
+let aboutH4 = h4Tags[1];
+let aboutContent = textContentTags[1];
+let middleImage = document.querySelector('#middle-img');
+let servicesH4 = h4Tags[2];
+let servicesContent = textContentTags[2];
+let productH4 = h4Tags[3];
+let productContent = textContentTags[3];
+let visionH4 = h4Tags[4];
+let visionContent = textContentTags[4];
+let contactH4 = h4Tags[5];
+let contactPTags = Array.from(document.querySelectorAll('.contact p'));
+let address = contactPTags[0];
+let phone = contactPTags[1];
+let email = contactPTags[2];
+let copyright = document.querySelector('footer p');
