@@ -105,3 +105,7 @@ document.querySelector('nav').appendChild(amazing);
 
 navBarElements = Array.from(document.querySelectorAll('a'));
 navBarElements.map(element => element.style.color = 'green');
+
+document.body.style.backgroundColor = '	#eaff80';
+document.querySelector('header').style.backgroundColor = 'rgba(255,0,255,0.34)';
+document.querySelector('#cta-img').style.border = '3px solid red';
