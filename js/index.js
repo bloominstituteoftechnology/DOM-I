@@ -53,10 +53,17 @@ navLinks = Array.from(navLinks);
 console.log(navLinks);
 
 navLinks.forEach((item, index) => {
-    item.textContent = siteContent['nav'][`nav-item-${index}`]
+    item.textContent = siteContent['nav'][`nav-item-${index + 1}`];
 });
 
 // Logo
 let logo = document.getElementById("logo-img");
 
 logo.setAttribute('src', siteContent['nav']['img-src']);
+
+// ** == Call to Action == **
+
+// H1
+let ctaHeader = document.querySelector('h1');
+
+ctaHeader.textContent = siteContent['cta']['h1'];
