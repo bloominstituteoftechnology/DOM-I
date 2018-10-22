@@ -38,12 +38,66 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-const headerNav = document.querySelectorAll('nav');
-headerNav[0].textContent = 'Services';
-headerNav[1].textContent = 'Product';
-headerNav[2].textContent = 'Vision';
-headerNav[3].textContent = 'Features';
-headerNav[4].textContent = 'About';
-headerNav[5].textContent = 'Contact';
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// ====== Variable Declaration
+// -- Header & Nav Vars
+const logo = document.getElementById('logo-img');
+const nav = document.querySelectorAll('nav a');
+// -- CTA Vars
+const cta = document.querySelector('.cta');
+const ctaH1 = document.querySelector('.cta-text h1');
+const ctaImg = document.querySelector('#cta-img');
+const button = document.querySelector('button');
+// -- Main Content Vars
+const mainContent = document.querySelector('main-content');
+const midImg = document.querySelector('.middle-img');
+const mainh4 = document.querySelectorAll('.main-content h4');
+const mainP = document.querySelectorAll('.main-content p');
+
+
+// ====== Header Nav
+nav[0].textContent = siteContent['nav']['nav-item-1'];
+nav[1].textContent = siteContent['nav']['nav-item-2'];
+nav[2].textContent = siteContent['nav']['nav-item-3'];
+nav[3].textContent = siteContent['nav']['nav-item-4'];
+nav[4].textContent = siteContent['nav']['nav-item-5'];
+nav[5].textContent = siteContent['nav']['nav-item-6'];
+logo.setAttribute('src', siteContent['nav']['img-src']);
+
+
+// ====== CTA 
+ctaH1.textContent = siteContent['cta']['h1'];
+ctaImg.setAttribute('src', siteContent['cta']['img-src']) 
+button.textContent = siteContent['cta']['button'];
+
+
+// ====== Main Content
+// h4.style.textAlign = 'left';
+mainh4[0].textContent = siteContent['main-content']['features-h4'];
+mainP[0].textContent = siteContent['main-content']['features-content'];
+
+mainh4[1].textContent = siteContent['main-content']['about-h4'];
+mainP[1].textContent = siteContent['main-content']['about-content'];
+
+midImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+mainh4[2].textContent = siteContent['main-content']['services-h4'];
+mainP[2].textContent = siteContent['main-content']['services-content'];
+
+mainh4[3].textContent = siteContent['main-content']['product-h4'];
+mainP[3].textContent = siteContent['main-content']['product-content'];
+
+mainh4[4].textContent = siteContent['main-content']['vision-h4'];
+mainP[4].textContent = siteContent['main-content']['vision-content'];
+
+
+
+// ====== Bottom Content
+
+
+
+// ====== Contact Section
+
+
+
+// ====== Footer
