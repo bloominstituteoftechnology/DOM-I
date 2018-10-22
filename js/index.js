@@ -123,3 +123,9 @@ contactEl.querySelectorAll('p').forEach((e,i) => {
 
 // Update Footer
 document.querySelector('footer p').textContent = siteContent.footer.copyright;
+
+// Stretch: add style
+document.querySelectorAll('h4').forEach(e => {
+  e.style.fontWeight = 'bold';
+  e.style.fontSize = '1.2rem';
+})
