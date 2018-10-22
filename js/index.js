@@ -41,16 +41,17 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let navBar = document.querySelector('nav');
-console.log(navBar.querySelectorAll('a'));
+let navBarElements = document.querySelectorAll('a');
+navBarElements = Array.from(navBarElements);
 
 // nav
-navBar.querySelectorAll('a')[0].textContent = siteContent.nav["nav-item-1"];
-navBar.querySelectorAll('a')[1].textContent = siteContent.nav["nav-item-2"];
-navBar.querySelectorAll('a')[2].textContent = siteContent.nav["nav-item-3"];
-navBar.querySelectorAll('a')[3].textContent = siteContent.nav["nav-item-4"];
-navBar.querySelectorAll('a')[4].textContent = siteContent.nav["nav-item-5"];
-navBar.querySelectorAll('a')[5].textContent = siteContent.nav["nav-item-6"];
+navBarElements.map((element, i) => element.textContent = siteContent.nav[`nav-item-${i}`]);
+// navBarElements[0].textContent = siteContent.nav["nav-item-1"];
+// navBarElements[1].textContent = siteContent.nav["nav-item-2"];
+// navBarElements[2].textContent = siteContent.nav["nav-item-3"];
+// navBarElements[3].textContent = siteContent.nav["nav-item-4"];
+// navBarElements[4].textContent = siteContent.nav["nav-item-5"];
+// navBarElements[5].textContent = siteContent.nav["nav-item-6"];
 
 // cta
 document.querySelector('#cta-img').src = siteContent.cta["img-src"];
@@ -90,3 +91,6 @@ contact.querySelectorAll('p')[2].textContent = siteContent.contact["email"];
 
 // footer
 document.querySelector('footer p').textContent = siteContent.footer.copyright;
+
+
+navBarElements.map(element => element.style.color = 'green');
