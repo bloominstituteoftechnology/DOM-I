@@ -53,8 +53,9 @@ middleImg.src = 'img/mid-page-accent.jpg';
 const navElements = document.querySelectorAll('a');
 console.log(navElements);
 
-for(i = 0; i < navElements.length; i++){
-  navElements[i].textContent = siteContent.nav[`nav-item-${i}`];
+for(i = 0; i <=5; i++){
+  let navNum = i+1;
+  navElements[i].textContent = siteContent.nav[`nav-item-${navNum}`];
 }
 
 
@@ -99,7 +100,7 @@ ctaP[8].textContent = siteContent['footer']['copyright'];
 
 //change nav color green
 
-for (i = 1; i < navElements.length; i++) {
+for (i = 0; i < navElements.length; i++) {
   navElements[i].style.color = 'green';
 }
 
@@ -107,7 +108,7 @@ let navigation = document.getElementsByTagName("nav")
 console.log(navigation)
 
 let newNode = document.createElement('a');
-let nodeText = document.createTextNode("Contact");
+let nodeText = document.createTextNode("Last");
 
 newNode.appendChild(nodeText);
 console.log(newNode)
@@ -120,5 +121,3 @@ firstNode.appendChild(firstNodetext);
 navigation[0].prepend(firstNode);
 
 
-// make Contact green
-newNode.style.color = "green";
