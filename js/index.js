@@ -42,14 +42,35 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 //nav bar
-
+let navBar = document.querySelector('nav');
 let navLinks = document.querySelectorAll('a');
+let newLink = document.createElement('a');
+let newLinkTwo = document.createElement('a');
+
 navLinks.item(0).textContent = siteContent.nav["nav-item-1"];
 navLinks.item(1).textContent = siteContent.nav["nav-item-2"];
 navLinks.item(2).textContent = siteContent.nav["nav-item-3"];
 navLinks.item(3).textContent = siteContent.nav["nav-item-4"];
 navLinks.item(4).textContent = siteContent.nav["nav-item-5"];
 navLinks.item(5).textContent = siteContent.nav["nav-item-6"];
+
+navLinks.item(0).style.color = 'green';
+navLinks.item(1).style.color = 'green';
+navLinks.item(2).style.color = 'green';
+navLinks.item(3).style.color = 'green';
+navLinks.item(4).style.color = 'green';
+navLinks.item(5).style.color = 'green';
+
+newLink.href = "#";
+newLink.textContent = "test";
+newLinkTwo.style.color = 'green';
+
+newLinkTwo.href = "#";
+newLinkTwo.textContent = "test 2";
+newLinkTwo.style.color = 'green';
+
+navBar.append(newLinkTwo);
+navBar.prepend(newLink);
 
 //cta
 const ctaButton = document.querySelector('button');
