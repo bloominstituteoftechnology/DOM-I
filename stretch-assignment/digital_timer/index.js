@@ -35,6 +35,7 @@ function timer() {
                 msHundrends.style.color = 'red';
                 secondTens.style.color = 'red';
                 secondOnes.style.color = 'red';
+                clearInterval(timerOff);
             }
             // if (secTen >= 10) clearInterval(timerOff)
 
