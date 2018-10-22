@@ -94,3 +94,8 @@ let aboutContent = topContent[0].children[1].children[1];
 
 aboutHeader.textContent = siteContent['main-content']['about-h4'];
 aboutContent.textContent = siteContent['main-content']['about-content'];
+
+// * = Middle Image = *
+let middleImage = document.getElementById('middle-img');
+
+middleImage.setAttribute('src', siteContent['main-content']['middle-img-src']);
