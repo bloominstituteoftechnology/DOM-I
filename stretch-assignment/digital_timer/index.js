@@ -2,6 +2,7 @@
 
 let seconds = 0;
 let milliseconds = 0;
+let timeout = 0;
 
 let all = document.querySelectorAll('.digit');
 let msTens = document.querySelector('#msTens');
@@ -12,9 +13,6 @@ let secondTens = document.querySelector('#secondTens');
 let startButton = document.querySelector('#startButton');
 
 function increment() {
-
-  startButton.removeEventListener("click", increment);
-  startButton.disabled = true;
 
   milliseconds += 10;
 
@@ -30,7 +28,7 @@ function increment() {
 
   if (seconds !== 10) {
 
-    window.setTimeout(increment, 10);
+    timeout = window.setTimeout(increment, 10);
 
   }
 
@@ -42,4 +40,24 @@ function increment() {
 
 }
 
-startButton.addEventListener("click", increment);
+function reset() {
+
+  clearTimeout(timeout);
+  startButton.disabled = false;
+  seconds = 0;
+  milliseconds = 0;
+
+  msTens.textContent = 0;
+  msHundreds.textContent = 0;
+  secondOnes.textContent = 0;
+  secondTens.textContent = 0;
+
+}
+
+startButton.addEventListener("click", () => {
+
+  startButton.disabled = true;
+  increment();
+
+});
+resetButton.addEventListener("click", reset);
