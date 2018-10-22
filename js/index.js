@@ -40,8 +40,11 @@ const siteContent = {
 
 // ====== Variable Declaration
 // -- Header & Nav Vars
+const nav = document.querySelector('nav');
 const logo = document.getElementById('logo-img');
-const nav = document.querySelectorAll('nav a');
+const navA = document.querySelectorAll('header nav a');
+const newNavA1 = document.createElement('a');
+const newNavA2 = document.createElement('a');
 // -- CTA Vars
 const cta = document.querySelector('.cta');
 const ctaH1 = document.querySelector('.cta-text h1');
@@ -53,6 +56,7 @@ const midImg = document.querySelector('.middle-img');
 const mainH4 = document.querySelectorAll('.main-content h4');
 const mainP = document.querySelectorAll('.main-content p');
 // -- Contact Vars
+const contact = document.querySelector('.contact');
 const contactH4 = document.querySelector('.contact h4');
 const contactP = document.querySelectorAll('.contact p');
 // -- Footer Vars
@@ -60,19 +64,32 @@ const footerP = document.querySelector('footer p');
 
 
 
-
 // ====== Header Nav
-nav[0].textContent = siteContent['nav']['nav-item-1'];
-nav[1].textContent = siteContent['nav']['nav-item-2'];
-nav[2].textContent = siteContent['nav']['nav-item-3'];
-nav[3].textContent = siteContent['nav']['nav-item-4'];
-nav[4].textContent = siteContent['nav']['nav-item-5'];
-nav[5].textContent = siteContent['nav']['nav-item-6'];
+navA[0].style.color = 'green';
+navA[0].textContent = siteContent['nav']['nav-item-1'];
+navA[1].style.color = 'green';
+navA[1].textContent = siteContent['nav']['nav-item-2'];
+navA[2].style.color = 'green';
+navA[2].textContent = siteContent['nav']['nav-item-3'];
+navA[3].style.color = 'green';
+navA[3].textContent = siteContent['nav']['nav-item-4'];
+navA[4].style.color = 'green';
+navA[4].textContent = siteContent['nav']['nav-item-5'];
+navA[5].style.color = 'green';
+navA[5].textContent = siteContent['nav']['nav-item-6'];
 logo.setAttribute('src', siteContent['nav']['img-src']);
+newNavA1.style.color = 'green';
+nav.appendChild(newNavA1);
+newNavA1.textContent = 'appendChild';
+newNavA2.style.color = 'green';
+nav.prepend(newNavA2);
+newNavA2.textContent = 'Prepend'
 
 
 // ====== CTA 
 ctaH1.textContent = siteContent['cta']['h1'];
+ctaH1.innerHTML = 'DOM <br> Is <br> Awesome' // I know we really shouldn't use this due to XSS concerns
+ctaH1.style.textAlign = 'center';
 ctaImg.setAttribute('src', siteContent['cta']['img-src']) 
 button.textContent = siteContent['cta']['button'];
 
@@ -99,7 +116,8 @@ mainP[4].textContent = siteContent['main-content']['vision-content'];
 
 
 // ====== Contact Section
-contactH4.textContent = siteContent['contact']['contact-h4'] ;
+contact.style.width = "20%";
+contactH4.textContent = siteContent['contact']['contact-h4'];
 contactP[0].textContent = siteContent['contact']['address'];
 contactP[1].textContent = siteContent['contact']['phone'];
 contactP[2].textContent = siteContent['contact']['email'];
