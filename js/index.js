@@ -38,5 +38,56 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+
+//images
+const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const ctaImg = document.getElementById('cta-img');
+ctaImg.src = 'img/header-img.png';
+
+const middleImg = document.getElementById("middle-img");
+middleImg.src = 'img/mid-page-accent.jpg';
+
+// nav elements
+const navElements = document.querySelectorAll('a');
+console.log(navElements);
+
+for(i = 1; i < navElements.length; i++){
+  navElements[i].textContent = siteContent.nav[`nav-item-${i}`];
+}
+
+// Top Text and Button
+const ctaH1 = document.querySelector('h1')
+const ctaButton = document.querySelector('button')
+
+ctaH1.textContent = siteContent.cta.h1;
+ctaButton.textContent =siteContent.cta.button;
+
+// Header text for text content
+const ctaH4 = document.querySelectorAll('h4')
+console.log(ctaH4)
+
+//main content headers 
+ctaH4[0].textContent = siteContent["main-content"]["features-h4"]
+ctaH4[1].textContent = siteContent['main-content']['about-h4'];
+ctaH4[2].textContent = siteContent['main-content']['services-h4'];
+ctaH4[3].textContent = siteContent['main-content']['product-h4'];
+ctaH4[4].textContent = siteContent['main-content']['vision-h4'];
+
+// main content text
+const ctaP = document.querySelectorAll('p');
+ctaP[0].textContent = siteContent['main-content']['features-content'];
+ctaP[1].textContent = siteContent['main-content']['about-content'];
+ctaP[2].textContent = siteContent['main-content']['services-content'];
+ctaP[3].textContent = siteContent['main-content']['product-content'];
+ctaP[4].textContent = siteContent['main-content']['vision-content'];
+
+//contact text-content
+ctaH4[5].textContent = siteContent['contact']['contact-h4'];
+ctaP[5].textContent = siteContent['contact']['address']
+ctaP[6].textContent = siteContent['contact']['phone'];
+ctaP[7].textContent = siteContent['contact']['email'];
+
+//footer
+ctaP[8].textContent = siteContent['footer']['copyright'];
