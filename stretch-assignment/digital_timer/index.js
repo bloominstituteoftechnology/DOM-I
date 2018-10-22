@@ -17,13 +17,34 @@ msTensElem.textContent = 0;
 
 // console.log(intervalTime);
 
-console.log(msTensElem.innerHTML);
+// console.log(msTensElem.innerHTML);
+
+const strBtn = document.querySelector('.start');
+const restBtn = document.querySelector('.restart');
+
+strBtn.addEventListener('click', function(startTimer){
+    bRunning = true;
+    timerCount();
+});
+
+restBtn.addEventListener('click', function(resetTimer){
+    bRunning = false;
+    secTenElem.textContent = 0;
+    secOneElem.textContent = 0;
+    msHundElem.textContent = 0;
+    msTensElem.textContent = 0;
+
+    secOneElem.style.color = 'black';
+    secTenElem.style.color = 'black';
+    msHundElem.style.color = 'black';
+    msTensElem.style.color = 'black';
+});
 
 let msTcount = 0;
 let msHcount = 0;
 let secOcount = 0;
 let secTcount = 0;
-let bRunning = true;
+let bRunning = false;
 const intervalTime = window.setInterval(timerCount, 10);
 
 function timerCount () {
@@ -73,4 +94,3 @@ function timerCount () {
     }
 }
 
-timerCount();
