@@ -130,4 +130,12 @@ visionContent.textContent = siteContent['main-content']['vision-content'];
 // ** == Contact == ** 
 let contact = document.getElementsByClassName('contact');
 
-console.log(contact);
+let contactHeader = contact[0].children[0];
+let contactAddress = contact[0].children[1];
+let contactPhone = contact[0].children[2];
+let contactEmail = contact[0].children[3]
+
+contactHeader.textContent = siteContent['contact']['contact-h4'];
+contactAddress.textContent = siteContent['contact']['address'];
+contactPhone.textContent = siteContent['contact']['phone'];
+contactEmail.textContent = siteContent['contact']['email'];
