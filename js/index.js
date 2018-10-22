@@ -1,3 +1,4 @@
+
 const siteContent = {
   nav: {
     'nav-item-1': 'Services',
@@ -9,8 +10,8 @@ const siteContent = {
     'img-src': 'img/logo.png'
   },
   cta: {
-    h1: `DOM Is Awesome`,
-    button: 'Get Started',
+    'h1': 'DOM is Awesome',
+    'button': 'Get Started',
     'img-src': 'img/header-img.png'
   },
   'main-content': {
@@ -59,6 +60,7 @@ const h4 = document.querySelectorAll('h4');
 const p = document.querySelectorAll('p');
 const navigation = document.getElementsByTagName('a');
 
+
 navigation[0].textContent = siteContent['nav']['nav-item-1'];
 navigation[1].textContent = siteContent['nav']['nav-item-2'];
 navigation[2].textContent = siteContent['nav']['nav-item-3'];
@@ -74,6 +76,9 @@ navigation[4].style.color = '#EAF4F4';
 navigation[5].style.color = '#EAF4F4';
 
 h1.textContent = siteContent['cta']['h1'];
+h1.style.width = '45.5%';
+h1.style.textAlign = 'center';
+
 
 h4[0].textContent = siteContent['main-content']['features-h4'];
 h4[1].textContent = siteContent['main-content']['about-h4'];
@@ -105,6 +110,10 @@ p[8].style.color = '#EAF4F4';
 const button = document.querySelector('button');
 
 button.textContent = siteContent['cta']['button'];
+button.style.width = '60%';
+button.style.marginLeft = '15%'
+button.style.borderRadius = "10px"
+
 
 const newElement1 = document.createElement('a');
 const newElement2 = document.createElement('a');
@@ -131,4 +140,7 @@ const main = document.querySelector('.container');
 main.style.backgroundColor = '#6B9080';
 
 main.style.padding = '1%';
-// siteContent.cta.h1.split(' ').join('<br>');
+
+const br = document.createElement('BR');
+
+
