@@ -2,7 +2,7 @@
   console.log('Digital Timer is Running');
 
   const timer = {
-    currentTime: 0
+    currentTime: 12450,
   }
 
   const controller = {
@@ -11,7 +11,16 @@
     },
 
     getTime() {
-      return [0,0,0,0];
+      let time = timer.currentTime;
+      let timeArr = [];
+
+      for (let i=4; i>=1; i--) {
+        let num = Math.floor(time/Math.pow(10,i));
+        time -= num * Math.pow(10,i);
+        timeArr.push(num);
+      }
+
+      return timeArr;
     }
   }
 
