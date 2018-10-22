@@ -42,19 +42,31 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // nav bar links
-const services = document.querySelector('a:nth-of-type(1)');
-const product = document.querySelector('a:nth-of-type(2)');
-const vision = document.querySelector('a:nth-of-type(3)');
-const features = document.querySelector('a:nth-of-type(4)');
-const about = document.querySelector('a:nth-of-type(5)');
-const contact = document.querySelector('a:nth-of-type(6)');
+const nav = document.querySelector('nav');
 
-services.textContent = siteContent.nav['nav-item-1'];
-product.textContent = siteContent.nav["nav-item-2"];
-vision.textContent = siteContent.nav["nav-item-3"];
-features.textContent = siteContent.nav["nav-item-4"];
-about.textContent = siteContent.nav["nav-item-5"];
-contact.textContent = siteContent.nav["nav-item-6"]
+nav.querySelector('a').textContent = siteContent.nav['nav-item-1'];
+nav.querySelector('a:nth-of-type(2)').textContent = siteContent.nav["nav-item-2"];
+nav.querySelector('a:nth-of-type(3)').textContent = siteContent.nav["nav-item-3"];
+nav.querySelector('a:nth-of-type(4)').textContent = siteContent.nav["nav-item-4"];
+nav.querySelector('a:nth-of-type(5)').textContent = siteContent.nav["nav-item-5"];
+nav.querySelector('a:nth-of-type(6)').textContent = siteContent.nav["nav-item-6"];
+let imvery = document.createElement('a');
+nav.prepend(imvery);
+let confused = document.createElement('a');
+nav.appendChild(confused);
+imvery.textContent = 'ImVery';
+confused.textContent = 'Confused';
+
+
+let navLinks = nav.querySelectorAll('a');
+navLinks.forEach(e => e.style.color = 'green');
+navLinks.forEach(e => e.href = '#');
+
+
+// Array.from(navLinks).forEach((e) => {
+//   return e.style.color = 'green';
+// })
+
 
 // cta 
 const ctaText = document.querySelector('.cta-text h1');
@@ -62,8 +74,7 @@ const ctaImg = document.querySelector('#cta-img');
 const lineBreak = document.createElement('br');
 const btn = document.querySelector('button');
 
-ctaText.textContent = siteContent.cta.h1;
-ctaText.appendChild(lineBreak);
+ctaText.innerHTML = '<h1>DOM<br> Is<br> Awesome</h1>';
 ctaImg.src = siteContent.cta["img-src"];
 btn.textContent = siteContent.cta.button;
 
@@ -105,3 +116,4 @@ contactInfo.querySelector('p:nth-of-type(3)').textContent = siteContent.contact.
 
 const footer = document.querySelector('footer');
 footer.querySelector('p').textContent = siteContent.footer.copyright;
+
