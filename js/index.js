@@ -40,3 +40,55 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+let nav = document.querySelectorAll('nav a');
+nav[0].innerText = 'Services';
+nav[1].innerText = 'Product';
+nav[2].innerText = 'Vision';
+nav[3].innerText = 'Features';
+nav[4].innerText = 'About';
+nav[5].innerText = 'Contact';
+
+let headingOne = document.querySelector('h1');
+headingOne.innerText = 'DOM IS Awesome';
+ let codeSnippet = document.getElementById('cta-img');
+codeSnippet.src = 'img/header-img.png';
+ let featuresHeading = document.querySelector('.top-content h4');
+featuresHeading.innerText = 'Features';
+ let featuresContent = document.querySelector('.top-content p');
+featuresContent.innerText = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+ let aboutHeading = document.querySelectorAll('.top-content h4');
+aboutHeading[1].innerText = 'About';
+ let aboutContent = document.querySelectorAll('.top-content p');
+aboutContent[1].innerText = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."';
+ let button = document.querySelector('button');
+button.innerText = 'Get Started';
+ let servicesHeading = document.querySelector('.bottom-content h4');
+servicesHeading.innerText = 'Services';
+ let servicesContent = document.querySelector('.bottom-content p');
+servicesContent.innerText = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+ let productHeading = document.querySelectorAll('.bottom-content h4');
+productHeading[1].innerText = 'Product';
+ let productContent = document.querySelectorAll('.bottom-content p');
+productContent[1].innerText = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+ let visionHeading = document.querySelectorAll('.bottom-content h4');
+visionHeading[2].innerText = 'Vision';
+ let visionContent = document.querySelectorAll('.bottom-content p');
+visionContent[2].innerText = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+
+ let middleImage = document.getElementById('middle-img');
+middleImage.src = 'img/mid-page-accent.jpg';
+ 
+
+ let contact = document.querySelector('.contact h4');
+contact.innerText = 'Contact';
+ let contactContent = document.querySelector('.contact p');
+contactContent.innerText = '123 Way 456 Street Somewhere, USA';
+ let contactPhone = document.querySelectorAll('.contact p');
+contactPhone[1].innerText = '1 (888) 888-8888';
+ let contactEmail = document.querySelectorAll('.contact p');
+contactEmail[2].innerText = 'sales@greatidea.io';
+ let footer = document.querySelector('footer p');
+footer.innerText = 'Copyright Great Idea! 2018';
