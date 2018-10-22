@@ -46,12 +46,6 @@ navBarElements = Array.from(navBarElements);
 
 // nav
 navBarElements.map((element, i) => element.textContent = siteContent.nav[`nav-item-${i}`]);
-// navBarElements[0].textContent = siteContent.nav["nav-item-1"];
-// navBarElements[1].textContent = siteContent.nav["nav-item-2"];
-// navBarElements[2].textContent = siteContent.nav["nav-item-3"];
-// navBarElements[3].textContent = siteContent.nav["nav-item-4"];
-// navBarElements[4].textContent = siteContent.nav["nav-item-5"];
-// navBarElements[5].textContent = siteContent.nav["nav-item-6"];
 
 // cta
 document.querySelector('#cta-img').src = siteContent.cta["img-src"];
@@ -59,28 +53,29 @@ document.querySelector('.cta .cta-text h1').textContent = siteContent.cta["h1"];
 document.querySelector('.cta .cta-text button').textContent = siteContent.cta["button"];
 
 let main = document.querySelector('.main-content');
-console.log(main.querySelector('.top-content .text-content'));
+let mainTop = main.querySelectorAll('.top-content .text-content');
+let mainBottom = main.querySelectorAll('.bottom-content .text-content')
 
 // h4 elements for top-content
-main.querySelectorAll('.top-content .text-content')[0].querySelector('h4').textContent = siteContent["main-content"]["features-h4"];
-main.querySelectorAll('.top-content .text-content')[1].querySelector('h4').textContent = siteContent["main-content"]["about-h4"];
+mainTop[0].querySelector('h4').textContent = siteContent["main-content"]["features-h4"];
+mainTop[1].querySelector('h4').textContent = siteContent["main-content"]["about-h4"];
 
 // p elements for top-content
-main.querySelectorAll('.top-content .text-content')[0].querySelector('p').textContent = siteContent["main-content"]["features-content"];
-main.querySelectorAll('.top-content .text-content')[1].querySelector('p').textContent = siteContent["main-content"]["about-content"];
+mainTop[0].querySelector('p').textContent = siteContent["main-content"]["features-content"];
+mainTop[1].querySelector('p').textContent = siteContent["main-content"]["about-content"];
 
 // main img
 main.querySelector('.middle-img').src = siteContent["main-content"]["middle-img-src"];
 
 // h4 elements for bottome-content
-main.querySelectorAll('.bottom-content .text-content')[0].querySelector('h4').textContent = siteContent["main-content"]["services-h4"];
-main.querySelectorAll('.bottom-content .text-content')[1].querySelector('h4').textContent = siteContent["main-content"]["product-h4"];
-main.querySelectorAll('.bottom-content .text-content')[2].querySelector('h4').textContent = siteContent["main-content"]["vision-h4"];
+mainBottom[0].querySelector('h4').textContent = siteContent["main-content"]["services-h4"];
+mainBottom[1].querySelector('h4').textContent = siteContent["main-content"]["product-h4"];
+mainBottom[2].querySelector('h4').textContent = siteContent["main-content"]["vision-h4"];
 
 // p elements for bottome-content
-main.querySelectorAll('.bottom-content .text-content')[0].querySelector('p').textContent = siteContent["main-content"]["services-content"];
-main.querySelectorAll('.bottom-content .text-content')[1].querySelector('p').textContent = siteContent["main-content"]["product-content"];
-main.querySelectorAll('.bottom-content .text-content')[2].querySelector('p').textContent = siteContent["main-content"]["vision-content"];
+mainBottom[0].querySelector('p').textContent = siteContent["main-content"]["services-content"];
+mainBottom[1].querySelector('p').textContent = siteContent["main-content"]["product-content"];
+mainBottom[2].querySelector('p').textContent = siteContent["main-content"]["vision-content"];
 
 // contact 
 const contact = document.querySelector('.contact');
@@ -92,5 +87,21 @@ contact.querySelectorAll('p')[2].textContent = siteContent.contact["email"];
 // footer
 document.querySelector('footer p').textContent = siteContent.footer.copyright;
 
+let awesome = document.createElement('a');
+let amazing = document.createElement('a');
+amazing.textContent = 'amazing';
+awesome.textContent = 'awesome';
+amazing.href = '#';
+awesome.href = '#';
 
+
+
+document.querySelectorAll('a')[0].prepend(awesome);
+//document.querySelector('nav').prepend(awesome);
+
+document.querySelector('nav').appendChild(amazing);
+//document.querySelectorAll('a').appendChild(amazing);
+//navBarElements[navBarElements.length - 1].appendChild(amazing);
+
+navBarElements = Array.from(document.querySelectorAll('a'));
 navBarElements.map(element => element.style.color = 'green');
