@@ -37,7 +37,8 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
+// Task 2/3: Update the HTML with the JSON data.
+
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
@@ -85,3 +86,28 @@ contactInfo[2].textContent = siteContent.contact["email"];
 
 const footer = document.querySelector('footer p');
 footer.textContent = siteContent.footer.copyright;
+
+
+// Task 4: Add new content
+
+// Change the color fo the navigation text to be green.
+navLinks.forEach(function(item){
+  item.style.color = "green";
+});
+
+// add two new items to the navigation system using .appendChild() and .prepend()
+
+// .prepend()
+const newNav1 = document.createElement('a');
+newNav1.href = "#";
+newNav1.textContent = "Testimonials";
+const mainNav = document.querySelector('nav');
+mainNav.prepend(newNav1);
+newNav1.style.color = "green";
+
+// .appendChild()
+const newNav2 = document.createElement('a');
+newNav2.href = "#";
+newNav2.textContent = "Feedback";
+mainNav.appendChild(newNav2);
+newNav2.style.color = "green";
