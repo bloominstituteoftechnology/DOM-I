@@ -50,6 +50,22 @@ navItems.forEach((e,i) => {
   e.style.color = 'green';
   });
 
+// Utilize .appendChild() and .prepend() to add two new items to the navigation system. You can call them whatever you want.
+const blogNav = document.createElement('a');
+blogNav.setAttribute('href', '#');
+blogNav.style.color = 'green';
+blogNav.textContent = 'Blog';
+
+const careerNav = document.createElement('a');
+careerNav.setAttribute('href', '#');
+careerNav.style.color = 'green';
+careerNav.textContent = 'Career';
+
+const headerNav = document.querySelector('header nav');
+headerNav.appendChild(blogNav);
+headerNav.prepend(careerNav);
+
+
 // Update the cta-text h1
 const h1Tag = document.querySelector('.cta-text h1');
 const h1Words = siteContent.cta.h1.split(' ');  // The words in h1 split into an array
