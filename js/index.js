@@ -63,7 +63,6 @@ ctaH1.forEach(function(ele,index){
   ele.textContent = siteContent["cta"]["h1"].split(" ")[index];
 })
 
-
 let gsButton = document.querySelector(".cta-text button");
 gsButton.textContent = siteContent["cta"]["button"];
 
@@ -76,16 +75,8 @@ topContent.forEach(function(ele,index){
     ele.textContent = siteContent["main-content"][mainContactKeys[index]];
 })
 
-
 let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
-
-
-/* <div class="bottom-content">
-<div class="text-content">
-    <h4></h4>
-    <p></p>
-</div> */
 
 ////////////// Contact
 let contactText = document.querySelectorAll(".contact *");
