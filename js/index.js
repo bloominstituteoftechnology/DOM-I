@@ -41,19 +41,42 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-let navigation = document.querySelectorAll('a');
-navigation[0].textContent = 'Services';
-navigation[1].textContent = 'Product';
-navigation[2].textContent = 'Vision';
-navigation[3].textContent = 'Features';
-navigation[4].textContent = 'About';
-navigation[5].textContent = 'Contact';
+let navigation = document.querySelectorAll('header nav a');
+navigation.forEach((element, index) => {
+  element.innerText = siteContent["nav"][`nav-item-${index+1}`];
+  element.style.color = 'green';
+});
+
+// navigation[0].textContent = 'Services';
+// navigation[0].style.color = 'green';
+// navigation[1].textContent = 'Product';
+// navigation[1].style.color = 'green';
+// navigation[2].textContent = 'Vision';
+// navigation[2].style.color = 'green';
+// navigation[3].textContent = 'Features';
+// navigation[3].style.color = 'green';
+// navigation[4].textContent = 'About';
+// navigation[4].style.color = 'green';
+// navigation[5].textContent = 'Contact';
+// navigation[5].style.color = 'green';
+
+let navChild = document.querySelector('nav');
+let start = document.createElement('a');
+let end = document.createElement('a');
+start.innerText = 'Home';
+start.href = '#';
+navChild.prepend(start);
+end.innerText = 'End';
+end.href = '#';
+navChild.appendChild(end);
+start.style.color = 'green';
+end.style.color = 'green';
 
 let circlePic = document.getElementById("cta-img");
 circlePic.setAttribute('src', siteContent["cta"]["img-src"]);
 
 let ctaText = document.querySelector('h1');
-ctaText.textContent = siteContent.cta.h1;
+ctaText.innerHTML = '<h1>DOM<br> Is<br> Awesome</h1>';
 
 let ctaButton = document.querySelector('button');
 ctaButton.textContent = siteContent.cta.button;
