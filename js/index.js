@@ -6,6 +6,8 @@ const siteContent = {
     "nav-item-4": "Features",
     "nav-item-5": "About",
     "nav-item-6": "Contact",
+    "nav-item-7": "Programmers",
+    "nav-item-8": "Projects",
     "img-src": "img/logo.png"
   },
   "cta": {
@@ -42,12 +44,17 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 ////////////// Navigation Links
+let navSelector = document.querySelector("nav");
+navSelector.appendChild(document.createElement("a"));
+navSelector.appendChild(document.createElement("a"));
+
 let navLinks = document.querySelectorAll("nav a");
 let navKeys = Object.keys(siteContent["nav"]);
-navKeys.pop();
 navLinks.forEach(function(ele,index){
   ele.textContent = siteContent["nav"][navKeys[index]];
+  ele.style.color = "green";
 })
+
 
 ////////////// CTA
 let ctaImg = document.getElementById("cta-img");

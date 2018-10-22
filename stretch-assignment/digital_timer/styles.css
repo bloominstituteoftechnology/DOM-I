@@ -4,6 +4,12 @@ body {
   align-items: center;
 }
 
+.timer-area {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .digit {
   display: inline-block;
   font-size: 80px;
@@ -11,4 +17,7 @@ body {
 
 .redDigit {
   color: red;
+}
+
+.button {
 }
