@@ -69,13 +69,14 @@ let mainContent = document.querySelector(".main-content");
 // top content
 let topContent = document.querySelector(".top-content");
 
-// let topTextContent = topContent.querySelector(".text-content")
+let topHeadings = topContent.querySelectorAll("h4");
+let topHeadingsText = ["Features", "About"];
+topHeadings.forEach((heading, index) => heading.textContent = topHeadingsText[index]);
 
-// let topText = topTextContent.querySelector("p");
-// topText.textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+let topText = topContent.querySelectorAll("p");
 
-// let topHeading = topTextContent.querySelector("h4");
-// topHeading.textContent = "Features";
+topText.forEach(p => p.textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.");
+
 
 
 // middle content
