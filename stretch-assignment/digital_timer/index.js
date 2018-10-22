@@ -2,12 +2,17 @@
   console.log('Digital Timer is Running');
 
   const timer = {
-    currentTime: 12450,
+    currentTime: 0,
+    timer: null,
+    stopTimer: function() {
+      clearInterval(this.timer);
+    }
   }
 
   const controller = {
     init: function() {
       timerView.init();
+      this.runTimer();
     },
 
     getTime() {
@@ -21,6 +26,20 @@
       }
 
       return timeArr;
+    },
+
+    runTimer: function() {
+      if (false) {
+        clearInterval(timer.timer);
+      } else {
+        timer.timer = setInterval(function() {
+          timer.currentTime += 10;
+          if (timer.currentTime >= 10000) {
+            timer.stopTimer();
+          }
+          timerView.render();
+        }, 10);
+      }
     }
   }
 
