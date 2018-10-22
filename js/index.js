@@ -93,8 +93,12 @@ selectEntireContent[6].textContent = siteContent['contact']['phone'];
 selectEntireContent[7].textContent = siteContent['contact']['email'];
 selectEntireContent[8].textContent = siteContent['footer']['copyright'];
 
+
+
 const selectMiddleIMG = document.querySelector('.middle-img');
 selectMiddleIMG.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
-
+for(let i = 0; selectEntireContent.length; i++){
+  selectEntireContent[i].style.backgroundColor = "red";
+}
 
