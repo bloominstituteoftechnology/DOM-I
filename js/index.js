@@ -39,6 +39,7 @@ const siteContent = {
 
 
 // ====== Variable Declaration
+const body = document.querySelector('body');
 // -- Header & Nav Vars
 const nav = document.querySelector('nav');
 const logo = document.getElementById('logo-img');
@@ -92,6 +93,12 @@ ctaH1.innerHTML = 'DOM <br> Is <br> Awesome' // I know we really shouldn't use t
 ctaH1.style.textAlign = 'center';
 ctaImg.setAttribute('src', siteContent['cta']['img-src']) 
 button.textContent = siteContent['cta']['button'];
+button.addEventListener('click', function(){
+  button.style.borderRadius = '30px';
+  button.style.backgroundColor = 'green';
+  button.style.color = 'white';
+  button.style.outline = '0';
+});
 
 
 // ====== Main Content
