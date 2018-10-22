@@ -36,7 +36,79 @@ const siteContent = {
     "copyright" : "Copyright Great Idea! 2018"
   },
 };
-
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// Step 1: Point data into elements
+let navItems = Array.from(document.querySelectorAll('nav a'));
+let h1 = document.querySelector('h1');
+let button = document.querySelector('button');
+let headerImage = document.querySelector('#cta-img');
+let h4Tags = Array.from(document.querySelectorAll('h4'));
+let textContentTags = Array.from(document.querySelectorAll('.text-content p'));
+let featuresH4 = h4Tags[0];
+let featuresContent = textContentTags[0];
+let aboutH4 = h4Tags[1];
+let aboutContent = textContentTags[1];
+let middleImage = document.querySelector('#middle-img');
+let servicesH4 = h4Tags[2];
+let servicesContent = textContentTags[2];
+let productH4 = h4Tags[3];
+let productContent = textContentTags[3];
+let visionH4 = h4Tags[4];
+let visionContent = textContentTags[4];
+let contactH4 = h4Tags[5];
+let contactPTags = Array.from(document.querySelectorAll('.contact p'));
+let address = contactPTags[0];
+let phone = contactPTags[1];
+let email = contactPTags[2];
+let copyright = document.querySelector('footer p');
+
+
+// Step 2: Update HTML with JSON 
+console.log(h4Tags.length);
+for (let i = 0; i < navItems.length; i++) {
+  navItems[i].textContent = siteContent['nav']['nav-item-' + (i + 1)];
+}
+let h1Words = siteContent['cta']['h1'].split(' ');
+console.log(h1Words);
+for (let i = 0; i < h1Words.length; i++) {
+  h1.innerHTML += h1Words[i] + '<br>';
+}
+button.textContent = siteContent['cta']['button'];
+headerImage.src = siteContent['cta']['img-src'];
+featuresH4.textContent = siteContent['main-content']['features-h4'];
+featuresContent.textContent = siteContent['main-content']['features-content'];
+aboutH4.textContent = siteContent['main-content']['about-h4'];
+aboutContent.textContent = siteContent['main-content']['about-content'];
+middleImage.src = siteContent['main-content']['middle-img-src'];
+servicesH4.textContent = siteContent['main-content']['services-h4'];
+servicesContent.textContent = siteContent['main-content']['services-content'];
+productH4.textContent = siteContent['main-content']['product-h4'];
+productContent.textContent = siteContent['main-content']['product-content'];
+visionH4.textContent = siteContent['main-content']['vision-h4'];
+visionContent.textContent = siteContent['main-content']['vision-content'];
+contactH4.textContent = siteContent['contact']['contact-h4'];
+let addressText = siteContent['contact']['address'];
+address.innerHTML = addressText.substring(0, 18) + '<br>' + addressText.substring(19);
+phone.textContent = siteContent['contact']['phone'];
+email.textContent = siteContent['contact']['email'];
+copyright.textContent = siteContent['footer']['copyright'];
+
+
+// Step 3: New content
+let nav = document.querySelector('nav');
+let help = document.createElement('a');
+help.textContent = "Help";
+help.href = "#";
+let main = document.createElement('a');
+main.textContent = "Main";
+main.href = "index.html";
+nav.prepend(main);
+nav.append(help);
+navItems.unshift(main);
+navItems.push(help);
+for (let i = 0; i < navItems.length; i++) {
+  navItems[i].style.color = "#1BB231";
+}
