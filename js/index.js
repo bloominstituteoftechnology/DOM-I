@@ -149,3 +149,19 @@ let footer = document.getElementsByTagName('footer');
 let copyright = footer[0].children[0];
 
 copyright.textContent = siteContent['footer']['copyright'];
+
+// Add Navigation Links
+let faqLink = document.createElement('a');
+
+let homeLink = document.createElement('a');
+
+faqLink.href = '#';
+faqLink.textContent = 'FAQs';
+
+homeLink.href = '#';
+homeLink.textContent = 'Home';
+
+let navLinkParent = document.querySelector('nav');
+
+navLinkParent.appendChild(faqLink);
+navLinkParent.prepend(homeLink);
