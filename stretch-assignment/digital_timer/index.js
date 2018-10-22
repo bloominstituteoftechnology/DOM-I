@@ -6,7 +6,14 @@ let secondOnes = document.querySelector('#secondOnes');
 let msHundrends = document.querySelector('#msHundreds');
 let msTens = document.querySelector('#msTens');
 const button = document.querySelector('button')
-button.addEventListener('click', () => timer());
+button.addEventListener('click', () => {
+    secondOnes.textContent = 0;
+    secondTens.textContent = 0;
+    msHundrends.textContent = 0;
+    msTens.textContent = 0;
+    button.style.display = 'none'
+    timer()
+});
 
 let secTen = 0;
 let secOne = 0;
@@ -14,6 +21,11 @@ let msT = 0;
 let msH = 0;
 
 function timer() {
+    secTen = 0;
+    msTens.style.color = 'black';
+    msHundrends.style.color = 'black';
+    secondTens.style.color = 'black';
+    secondOnes.style.color = 'black';
     if (msT <= 0) {
         let timerOff = setInterval(() => {
             msT++
@@ -37,6 +49,7 @@ function timer() {
                 msHundrends.style.color = 'red';
                 secondTens.style.color = 'red';
                 secondOnes.style.color = 'red';
+                button.style.display = 'block'
                 clearInterval(timerOff);
             }
             // if (secTen >= 10) clearInterval(timerOff)
