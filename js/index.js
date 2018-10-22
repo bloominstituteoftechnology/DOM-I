@@ -42,9 +42,8 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let navAnchor = document.querySelectorAll("a");
-const navItems = ["Services", "Product", "Vision", "Features", "About", "Contact"];
 
-navAnchor.forEach((anchor, index) => anchor.textContent = navItems[index]);
+navAnchor.forEach((anchor, index) => anchor.textContent = siteContent["nav"][`nav-item-${index + 1}`]);
 
 // end of header section
 
@@ -52,13 +51,13 @@ navAnchor.forEach((anchor, index) => anchor.textContent = navItems[index]);
 let cta = document.querySelector(".cta");
 
 let ctaText = cta.querySelector("h1");
-ctaText.textContent = "DOM is Awesome!";
+ctaText.textContent = siteContent["cta"]["h1"];
 
 let button = cta.querySelector("button");
-button.textContent = "Get Started";
+button.textContent = siteContent["cta"]["button"];
 
 let ctaImg = document.querySelector("#cta-img");
-ctaImg.src = "img/header-img.png";
+ctaImg.src = siteContent["cta"]["img-src"];
 // end of cta section
 
 // main content section
@@ -70,12 +69,13 @@ let mainContent = document.querySelector(".main-content");
 let topContent = document.querySelector(".top-content");
 
 let topHeadings = topContent.querySelectorAll("h4");
-let topHeadingsText = ["Features", "About"];
-topHeadings.forEach((heading, index) => heading.textContent = topHeadingsText[index]);
+topHeadings[0].textContent = siteContent["main-content"]["features-h4"];
+topHeadings[1].textContent = siteContent["main-content"]["about-h4"];
+
 
 let topText = topContent.querySelectorAll("p");
-
-topText.forEach(p => p.textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.");
+topText[0].textContent = siteContent["main-content"]["features-content"];
+topText[1].textContent = siteContent["main-content"]["about-content"];
 
 
 
