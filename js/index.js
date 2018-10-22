@@ -125,7 +125,19 @@ contactEl.querySelectorAll('p').forEach((e,i) => {
 document.querySelector('footer p').textContent = siteContent.footer.copyright;
 
 // Stretch: add style
+
+// change h4s font weight and font size
 document.querySelectorAll('h4').forEach(e => {
   e.style.fontWeight = 'bold';
   e.style.fontSize = '1.2rem';
+})
+
+// change nave items mouse over and mouse out font color (hover effect)
+document.querySelectorAll('nav a').forEach(e => {
+  e.addEventListener('mouseover', function() {
+    e.style.color = 'black';
+  });
+  e.addEventListener('mouseout', function() {
+    e.style.color = 'green';
+  })
 })
