@@ -41,21 +41,74 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+// Navbar
+const nav = document.querySelectorAll('a');
 
-const selectEntireNav = document.querySelectorAll('a');
-selectEntireNav[0].textContent = siteContent["nav"]["nav-item-1"];
-selectEntireNav[1].textContent = siteContent["nav"]["nav-item-2"];
-selectEntireNav[2].textContent = siteContent["nav"]["nav-item-3"];
-selectEntireNav[3].textContent = siteContent["nav"]["nav-item-4"];
-selectEntireNav[4].textContent = siteContent["nav"]["nav-item-5"];
-selectEntireNav[5].textContent = siteContent["nav"]["nav-item-6"];
+
+for(let i = 0; i < nav.length; i++){
+  nav[i].textContent = siteContent["nav"][`nav-item-${i+1}`];
+  nav[i].style.color = "green";
+}
+// Set new navbar attributes
+const newElement = document.createElement('a');
+newElement.href = "#";
+newElement.textContent = "Jasmine";
+
+const topNav = document.querySelector('nav');
+// Add new navbar element 
+topNav.prepend(newElement);
+
+const newElement2 = document.createElement('a');
+newElement2.href = "#";
+newElement2.textContent = "Anderson";
+
+topNav.appendChild(newElement2);
+
+
 const selectH1 = document.querySelector('h1');
-selectH1.textContent = siteContent["cta"]["h1"];
-const selectButton = document.querySelector('button');
-selectButton.textContent = 'Get Started';
+selectH1.innerHTML = siteContent["cta"]["h1"];
+
+const buttonText = document.querySelector('button');
+buttonText.textContent = 'Get Started';
+
 const ctaIMG = document.getElementById("cta-img");
 ctaIMG.setAttribute('src', siteContent["cta"]["img-src"]);
-const selectEntireTextContent = document.querySelectorAll('text-content');
+
+// Website content 
+const selectAllHeaderText = document.querySelectorAll('h4');
+selectAllHeaderText[0].textContent = siteContent['main-content']['features-h4'];
+selectAllHeaderText[1].textContent = siteContent['main-content']['about-h4'];
+selectAllHeaderText[2].textContent = siteContent['main-content']['services-h4'];
+selectAllHeaderText[3].textContent = siteContent['main-content']['product-h4'];
+selectAllHeaderText[4].textContent = siteContent['main-content']['vision-h4'];
+selectAllHeaderText[5].textContent = siteContent['contact']['contact-h4'];
+
+const selectAllContent = document.querySelectorAll('p');
+selectAllContent[0].textContent = siteContent['main-content']['features-content'];
+selectAllContent[1].textContent = siteContent['main-content']['about-content'];
+selectAllContent[2].textContent = siteContent['main-content']['services-content'];
+selectAllContent[3].textContent = siteContent['main-content']['product-content'];
+selectAllContent[4].textContent = siteContent['main-content']['vision-content'];
+selectAllContent[5].innerHTML = siteContent['contact']['address'];
+selectAllContent[6].textContent = siteContent['contact']['phone'];
+selectAllContent[7].textContent = siteContent['contact']['email'];
+selectAllContent[8].textContent = siteContent['footer']['copyright'];
+
+
+// Middle IMG
+const selectMiddleIMG = document.querySelector('.middle-img');
+selectMiddleIMG.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+// Stretch Goal 
+for(let i = 0; selectAllContent.length; i++){
+ selectAllContent[i].style.color = "lightblue";
+ }
+
+ 
+
+
+
+
  
 
 
