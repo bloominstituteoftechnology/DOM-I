@@ -49,6 +49,7 @@ function main(){
                           ];
   for(let i = 0; i < headerNavItems.length; i++){
     headerNavItems[i].textContent = headerNavTxtItems[i];
+    headerNavItems[i].style.color = "green";
   }
 
   //====================== Image ======================
