@@ -72,3 +72,8 @@ ctaHeader.textContent = siteContent['cta']['h1'];
 let ctaButton = document.querySelector('button');
 
 ctaButton.textContent = siteContent['cta']['button'];
+
+// Image 
+let ctaImage = document.getElementById('cta-img');
+
+ctaImage.setAttribute('src', siteContent['cta']['img-src']);
