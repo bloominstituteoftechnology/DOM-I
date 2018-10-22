@@ -48,7 +48,21 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 const nav = document.querySelector('nav');
 const navItems = Array.from(document.querySelectorAll('nav > a'));
-const navContent = siteContent.nav["nav-item-1"]
+const navContent = siteContent.nav["nav-item-1"];
+const newNavItem1 = document.createElement("a");
+const newNavItem2 = document.createElement("a");
+newNavItem1.textContent = "Sample";
+newNavItem2.textContent = "Check";
+newNavItem1.style.color = "green";
+newNavItem2.style.color = "green";
+nav.appendChild(newNavItem1);
+nav.prepend(newNavItem2);
+console.log(nav);
+const header = document.querySelector('header');
+header.style.backgroundColor="aqua";
+header.style.padding = "0 1rem 1.5rem";
+header.style.borderRadius = "0 0 10px 10px"
+
 
 navItems[0].textContent = siteContent.nav["nav-item-1"];
 navItems[1].textContent = siteContent.nav["nav-item-2"];
@@ -67,10 +81,7 @@ navItems[5].style.color = "green";
 // ****************CTA****************
 // ***********************************
 const ctaH1= document.querySelector('.cta-text > h1');
-const ctaArr = Array.from(siteContent.cta.h1).toString().split(" ");
-console.log(ctaArr);
 
-// const ctaH1_1 = cta 
 const ctaH1_2 = document.createElement("h1");
 const ctaH1_3 = document.createElement("h1");
 const ctaButton = document.querySelector('.cta-text > button');
@@ -137,7 +148,11 @@ contactEmail.textContent = siteContent["contact"]["email"];
 
 const footerP = document.querySelector('footer > p');
 footerP.textContent = siteContent["footer"]["copyright"];
-
+const footer = document.querySelector('footer');
+footer.style.backgroundColor = "aqua";
+footer.style.padding = "3rem 0 1rem";
+footer.style.marginBottom = '0';
+footer.style.borderRadius = '10px 10px 0 0';
 
 
 
