@@ -61,9 +61,21 @@ const ctaImage = document.getElementById('cta-img');
 ctaImage.src = (siteContent["cta"]["img-src"]);
 //main content main content main content
 const newMainContent = document.querySelector('.main-content');
-const newContact = document.querySelector('.contact');
-const NewContactP = document.querySelectorAll('.contact p')
-console.log(NewContactP);
+
+//contact contact contact contact
+const newContactH4 = document.querySelector('h4');
+newContactH4.textContent = siteContent.contact['contact-h4'];
+
+let NewContactP = document.querySelectorAll('.contact p');
+let newContactItems = ['address', 'phone', 'email'];
+for (let i = 0; i < 3; i++) {
+  NewContactP[i].innerHTML = siteContent['contact'][newContactItems[i]];
+}
+
+
+// console.log(NewContactP);
+
+//footer footer footer footer
 const newFooter = document.querySelector('footer');
 console.log(siteContent.contact);
 
