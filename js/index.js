@@ -44,6 +44,9 @@ const siteContent = {
 // *** === Add Content === ***
 
 // ** == Navigation == **
+let navigation = document.querySelector('header');
+
+navigation.style.backgroundColor = 'green';
 
 // Navigation Links
 let navLinks = document.querySelectorAll('a');
