@@ -53,5 +53,10 @@ navLinks = Array.from(navLinks);
 console.log(navLinks);
 
 navLinks.forEach((item, index) => {
-    item.textContent = siteContent.nav[`nav-item-${index}`]
+    item.textContent = siteContent['nav'][`nav-item-${index}`]
 });
+
+// Logo
+let logo = document.getElementById("logo-img");
+
+logo.setAttribute('src', siteContent['nav']['img-src']);
