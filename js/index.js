@@ -65,21 +65,18 @@ navItems[5].textContent = "Contact";
 // ****************CTA****************
 // ***********************************
 const ctaH1= document.querySelector('.cta-text > h1');
-ctaH1.textContent = "DOM";
 const ctaH1_2 = document.createElement("h1");
 const ctaH1_3 = document.createElement("h1");
+const ctaButton = document.querySelector('.cta-text > button');
+const ctaImg = document.querySelector('#cta-img');
+
+ctaH1.textContent = "DOM";
 ctaH1.appendChild(ctaH1_2);
 ctaH1.appendChild(ctaH1_3);
 ctaH1_2.textContent = "Is";
 ctaH1_3.textContent = "Awesome";
-// ctaH1.style.display = "flex", 'flex-direction: column';
-const ctaButton = document.querySelector('.cta-text > button');
 ctaButton.textContent = "Get Started";
-
-
-const ctaImg = document.querySelector('#cta-img');
 ctaImg.src = "img/header-img.png";
-
 
 // ***********************************
 // ****************MAIN***************
@@ -87,30 +84,25 @@ ctaImg.src = "img/header-img.png";
 
 const firstTopContentH4 = document.querySelector('.top-content > .text-content h4');
 const firstTopContentP = document.querySelector('.top-content > .text-content p');
-firstTopContentH4.textContent = 'Features';
-firstTopContentP.textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-
 const secondTopContentH4 = document.querySelector('.top-content > :last-child h4');
 const secondTopContentP = document.querySelector('.top-content > :last-child p');
-secondTopContentH4.textContent = 'About';
-secondTopContentP.textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-
 const mainImg = document.querySelector('#middle-img');
-mainImg.src = "img/mid-page-accent.jpg";
-
 const firstBottomContentH4 = document.querySelector('.bottom-content > .text-content h4');
 const firstBottomContentP = document.querySelector('.bottom-content > .text-content p');
-firstBottomContentH4.textContent = 'Services';
-firstBottomContentP.textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-
 const secondBottomContentH4 = document.querySelector('.bottom-content > :nth-child(2) h4');
 const secondBottomContentP = document.querySelector('.bottom-content > :nth-child(2) p');
-secondBottomContentH4.textContent = 'Product';
-secondBottomContentP.textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-
-
 const thirdBottomContentH4 = document.querySelector('.bottom-content > :last-child h4');
 const thirdBottomContentP = document.querySelector('.bottom-content > :last-child p');
+
+firstTopContentH4.textContent = 'Features';
+firstTopContentP.textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+secondTopContentH4.textContent = 'About';
+secondTopContentP.textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+mainImg.src = "img/mid-page-accent.jpg";
+firstBottomContentH4.textContent = 'Services';
+firstBottomContentP.textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+secondBottomContentH4.textContent = 'Product';
+secondBottomContentP.textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
 thirdBottomContentH4.textContent = 'Vision';
 thirdBottomContentP.textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
 
@@ -123,9 +115,8 @@ const contactAddress = document.querySelector('.contact > p');
 const contactPhone = document.querySelector('.contact > p:nth-child(3)');
 const addressLocations = document.createElement('p');
 const contactEmail = document.querySelector('.contact > p:last-child');
-contactH4.textContent = "Contact";
-console.log(contactAddress);
 
+contactH4.textContent = "Contact";
 contactAddress.textContent = "123 Way 456 Street";
 contactAddress.appendChild(addressLocations);
 addressLocations.textContent = " Somewhere, USA"
