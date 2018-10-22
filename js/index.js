@@ -50,8 +50,6 @@ let navLinks = document.querySelectorAll('a');
 
 navLinks = Array.from(navLinks);
 
-console.log(navLinks);
-
 navLinks.forEach((item, index) => {
     item.textContent = siteContent['nav'][`nav-item-${index + 1}`];
 });
@@ -77,3 +75,15 @@ ctaButton.textContent = siteContent['cta']['button'];
 let ctaImage = document.getElementById('cta-img');
 
 ctaImage.setAttribute('src', siteContent['cta']['img-src']);
+
+// ** == Main Content == ** 
+
+// * = Top Content = *
+let topContent = document.getElementsByClassName('top-content');
+
+// Features
+let featuresH4 = topContent[0].children[0].children[0];
+let featuresP = topContent[0].children[0].children[1];
+
+console.log(featuresH4);
+console.log(featuresP);
