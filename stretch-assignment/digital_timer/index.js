@@ -9,7 +9,12 @@ let msHundreds = document.querySelector('#msHundreds');
 let secondOnes = document.querySelector('#secondOnes');
 let secondTens = document.querySelector('#secondTens');
 
+let startButton = document.querySelector('#startButton');
+
 function increment() {
+
+  startButton.removeEventListener("click", increment);
+  startButton.disabled = true;
 
   milliseconds += 10;
 
@@ -36,7 +41,5 @@ function increment() {
   }
 
 }
-
-let startButton = document.querySelector('#startButton');
 
 startButton.addEventListener("click", increment);
