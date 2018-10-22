@@ -44,3 +44,12 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 // Update the nav items text content
 const navItems = document.querySelectorAll('nav a');
 navItems.forEach((e,i) => e.textContent = siteContent.nav[`nav-item-${i+1}`]);
+
+// Update the cta-text h1
+const h1Tag = document.querySelector('.cta-text h1');
+const h1Words = siteContent.cta.h1.split(' ');  // The words in h1 split into an array
+h1Words.forEach(e => {
+  const el = document.createElement('div');     // Create new div to allow new line for each word
+  el.textContent = e;
+  h1Tag.append(el);
+});
