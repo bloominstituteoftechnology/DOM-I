@@ -40,3 +40,32 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+////////////// Navigation Links
+let navLinks = document.querySelectorAll("nav a");
+let navKeys = Object.keys(siteContent["nav"]);
+navKeys.pop();
+navLinks.forEach(function(ele,index){
+  ele.textContent = siteContent["nav"][navKeys[index]];
+})
+
+////////////// CTA
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+// DOM is Awesome
+
+let gsButton = document.querySelector(".cta-text button");
+gsButton.textContent = siteContent["cta"]["button"];
+
+////////////// Main Content
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+
+////////////// Contact
+let contactText = document.querySelectorAll(".contact *");
+let contactKeys = Object.keys(siteContent["contact"]);
+contactText.forEach(function(ele,index){
+  ele.textContent = siteContent["contact"][contactKeys[index]];
+})
