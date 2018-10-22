@@ -40,3 +40,58 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+//Updating the <a> elements content of the nav bar
+const navBarLinks = document.querySelectorAll('header nav a');
+
+navBarLinks[0].textContent = 'Services';
+navBarLinks[1].textContent = 'Product';
+navBarLinks[2].textContent = 'Vision';
+navBarLinks[3].textContent = 'Features';
+navBarLinks[4].textContent = 'About';
+navBarLinks[5].textContent = 'Contact';
+
+
+//Updating .cta .cta-text, button, img content
+const ctaHeading = document.querySelector('.cta .cta-text h1');
+const ctaButton = document.querySelector('.cta button');
+const ctaImg = document.querySelector('#cta-img');
+
+ctaHeading.innerHTML = '<h1>DOM<br> Is<br> Awesome</h1>';
+ctaButton.textContent = 'Get Started';
+ctaImg.src = 'img/header-img.png';
+
+
+//Updating .main-content .top-content
+const topContentTextContentPara = document.querySelectorAll('.top-content .text-content p');
+const topContentTextContentHeading = document.querySelectorAll('.top-content .text-content h4');
+
+topContentTextContentHeading[0].textContent = 'Features';
+topContentTextContentHeading[1].textContent = 'About';
+
+topContentTextContentPara[0].textContent = `Features content elementum magna eros, 
+ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. 
+Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.`
+
+topContentTextContentPara[1].textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+
+//Updating main-content .middle-img
+const mainContentImg = document.querySelector('#middle-img');
+
+mainContentImg.src = 'img/mid-page-accent.jpg';
+
+
+//Updating the bottom-content
+const bottomContentTextContentPara = document.querySelectorAll('.bottom-content .text-content p');
+const bottomContentTextContentHeading = document.querySelectorAll('.bottom-content .text-content h4');
+
+bottomContentTextContentHeading[0].textContent = 'Services';
+bottomContentTextContentPara[0].textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+bottomContentTextContentHeading[1].textContent = 'Product';
+bottomContentTextContentPara[1].textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+bottomContentTextContentHeading[2].textContent = 'Vision';
+bottomContentTextContentPara[2].textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
