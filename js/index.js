@@ -80,3 +80,13 @@ mainSectionP[4].textContent = siteContent["main-content"]['vision-content'];
 const middleImg = document.querySelector('#middle-img');
 middleImg.src = siteContent["main-content"]['middle-img-src'];
 
+const contactH4 = document.querySelector('.contact h4');
+contactH4.textContent = siteContent.contact['contact-h4'];
+
+const contactInfo = document.querySelectorAll('.contact p');
+contactInfo[0].textContent = siteContent.contact['address'];
+contactInfo[1].textContent = siteContent.contact['phone'];
+contactInfo[2].textContent = siteContent.contact['email'];
+
+const footerP = document.querySelector('footer p');
+footerP.textContent = siteContent.footer['copyright'];
