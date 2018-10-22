@@ -7,8 +7,14 @@ const timer= {
     sect: 0,
 }
 
-let mything ;
+function displayTxt(){
+    document.querySelector("#msTens").textContent = timer.ms;
+    document.querySelector("#msHundreds").textContent = timer.mst;
+    document.querySelector("#secondOnes").textContent = timer.sec;
+    document.querySelector("#secondTens").textContent = timer.sect;
+}
 
+let mything ;
 function timing(){
     mything = setInterval(function(){ 
         if(timer.ms <9){
@@ -31,12 +37,22 @@ function timing(){
 
             clearInterval(mything);
         }
-        document.querySelector("#msTens").textContent = timer.ms;
-        document.querySelector("#msHundreds").textContent = timer.mst;
-        document.querySelector("#secondOnes").textContent = timer.sec;
-        document.querySelector("#secondTens").textContent = timer.sect;
+        displayTxt();
         
     }, 10);
 }
 
-timing();
+let startBtn = document.querySelector(".start");
+startBtn.onclick = function(){ timing(); }
+
+let resetBtn = document.querySelector(".reset");
+resetBtn.onclick = function(){
+    clearInterval(mything);
+    timer.ms = 0;
+    timer.mst = 0;
+    timer.sec = 0;
+    timer.sect = 0;
+    displayTxt();
+    let arr = Array.from(document.querySelectorAll("div"));
+        arr.forEach(function(item){item.classList.remove("redDigit");});
+    }

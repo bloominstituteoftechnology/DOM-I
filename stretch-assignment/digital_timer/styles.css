@@ -12,3 +12,13 @@ body {
 .redDigit {
   color: red;
 }
+
+body{
+  display: flex;
+ flex-direction: column;
+}
+button{
+  font-size: 2rem;
+  padding: 10px 50px;
+  margin-top: 30px;
+}
