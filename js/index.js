@@ -57,7 +57,7 @@ newNavItem1.style.color = "green";
 newNavItem2.style.color = "green";
 nav.appendChild(newNavItem1);
 nav.prepend(newNavItem2);
-console.log(nav);
+// console.log(nav);
 const header = document.querySelector('header');
 header.style.backgroundColor="aqua";
 header.style.padding = "0 1rem 1.5rem";
@@ -81,6 +81,9 @@ navItems[5].style.color = "green";
 // ****************CTA****************
 // ***********************************
 const ctaH1= document.querySelector('.cta-text > h1');
+let ctaArr = siteContent['cta']['h1'].toString().split(" ");
+console.log(ctaArr);
+
 
 const ctaH1_2 = document.createElement("h1");
 const ctaH1_3 = document.createElement("h1");
@@ -88,11 +91,11 @@ const ctaButton = document.querySelector('.cta-text > button');
 const ctaImg = document.querySelector('#cta-img');
 
 
-ctaH1.textContent = "DOM";
+ctaH1.textContent = ctaArr[0];
 ctaH1.appendChild(ctaH1_2);
 ctaH1.appendChild(ctaH1_3);
-ctaH1_2.textContent = "Is";
-ctaH1_3.textContent = "Awesome";
+ctaH1_2.textContent = ctaArr[1];
+ctaH1_3.textContent = ctaArr[2];
 ctaButton.textContent = siteContent.cta.button;
 ctaImg.setAttribute('src', siteContent['cta']['img-src']);
 
@@ -133,11 +136,20 @@ const contactAddress = document.querySelector('.contact > p');
 const contactPhone = document.querySelector('.contact > p:nth-child(3)');
 const addressLocations = document.createElement('p');
 const contactEmail = document.querySelector('.contact > p:last-child');
+const addressLines = siteContent['contact']['address'].toString().split(" ");
+console.log(addressLines);
+const addressLine1 = `${addressLines[0]} ${addressLines[1]} ${addressLines[2]} ${addressLines[3]}`;
+console.log(addressLine1);
+const addressLine2 = `${addressLines[4]} ${addressLines[5]}`;
+console.log(addressLine2);
+
+
+
 
 contactH4.textContent = siteContent["contact"]["contact-h4"];
-contactAddress.textContent = "123 Way 456 Street";
+contactAddress.textContent = addressLine1;
 contactAddress.appendChild(addressLocations);
-addressLocations.textContent = " Somewhere, USA"
+addressLocations.textContent = addressLine2;
 addressLocations.style.marginTop = "0";
 contactPhone.textContent = siteContent["contact"]["phone"];
 contactEmail.textContent = siteContent["contact"]["email"];
