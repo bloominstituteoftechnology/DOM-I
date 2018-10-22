@@ -95,3 +95,23 @@ bottomContentTextContentPara[1].textContent = 'Product content elementum magna e
 
 bottomContentTextContentHeading[2].textContent = 'Vision';
 bottomContentTextContentPara[2].textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+
+//Updating Contact section 
+const contactHeading = document.querySelector('.contact h4');
+const contactParagraphs = document.querySelectorAll('.contact p');
+
+contactHeading.textContent = 'Contact';
+contactParagraphs[0].textContent = siteContent.contact.address;
+contactParagraphs[1].textContent = siteContent.contact.phone;
+contactParagraphs[2].textContent = siteContent.contact.email;
+
+
+//Updating Footer
+const footer = document.querySelector('footer p');
+
+footer.textContent = siteContent.footer.copyright;
+
+
+
+
