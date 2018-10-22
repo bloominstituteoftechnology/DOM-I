@@ -44,13 +44,11 @@ function main(){
   const header = document.querySelector('header');
   //==================== Nav Items ====================
   let headerNavItems = header.querySelector('nav').querySelectorAll('a');
-  let headerNavTxtItems = [ siteContent["nav"]["nav-item-1"], siteContent["nav"]["nav-item-2"], siteContent["nav"]["nav-item-3"],
-                            siteContent["nav"]["nav-item-4"], siteContent["nav"]["nav-item-5"], siteContent["nav"]["nav-item-6"]
-                          ];
-  for(let i = 0; i < headerNavItems.length; i++){
-    headerNavItems[i].textContent = headerNavTxtItems[i];
-    headerNavItems[i].style.color = "green";
-  }
+
+  headerNavItems.forEach(function(item, i){
+    item.textContent = siteContent["nav"][`nav-item-${i+1}`];
+    item.style.color = "green";
+  });
 
   //====================== Image ======================
   let logo = header.querySelector("#logo-img");
