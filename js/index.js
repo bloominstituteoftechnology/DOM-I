@@ -99,3 +99,6 @@ contactEl.querySelectorAll('p').forEach((e,i) => {
 
   }
 });
+
+// Update Footer
+document.querySelector('footer p').textContent = siteContent.footer.copyright;
