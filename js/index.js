@@ -118,3 +118,11 @@ let productContent = bottomContent[0].children[1].children[1];
 
 productHeader.textContent = siteContent['main-content']['product-h4'];
 productContent.textContent = siteContent['main-content']['product-content'];
+
+// Vision
+
+let visionHeader = bottomContent[0].children[2].children[0];
+let visionContent = bottomContent[0].children[2].children[1];
+
+visionHeader.textContent = siteContent['main-content']['vision-h4'];
+visionContent.textContent = siteContent['main-content']['vision-content'];
