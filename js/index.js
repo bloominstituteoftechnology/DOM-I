@@ -43,6 +43,7 @@ logo.src = siteContent['nav']['img-src'];
 
 // Nav bar items
 const anchorItems = document.querySelectorAll('a');
+
 anchorItems[0].textContent = siteContent['nav']['nav-item-1'];
 anchorItems[1].textContent = siteContent['nav']['nav-item-2'];
 anchorItems[2].textContent = siteContent['nav']['nav-item-3'];
@@ -50,15 +51,37 @@ anchorItems[3].textContent = siteContent['nav']['nav-item-4'];
 anchorItems[4].textContent = siteContent['nav']['nav-item-5'];
 anchorItems[5].textContent = siteContent['nav']['nav-item-6'];
 
+anchorItems[0].style.color = 'green';
+anchorItems[1].style.color = 'green';
+anchorItems[2].style.color = 'green';
+anchorItems[3].style.color = 'green';
+anchorItems[4].style.color = 'green';
+anchorItems[5].style.color = 'green';
+
+const navBar = document.querySelector('nav');
+const firstItem = document.createElement('a');
+const lastItem = document.createElement('a');
+
+firstItem.href = '#';
+firstItem.textContent = 'First';
+firstItem.style.color = 'green';
+
+lastItem.href = '#';
+lastItem.textContent = 'Last';
+lastItem.style.color = 'green';
+
+navBar.prepend(firstItem);
+navBar.append(lastItem);
+
 // cta section
-const cta = document.querySelector('.cta .cta-text')
+const ctaText = document.querySelector('.cta .cta-text')
 const currentH1 = document.querySelector('h1');
 const h1Arr = siteContent['cta']['h1'].split(' ');
 const domH1 = document.createElement('h1');
 const isH1 = document.createElement('h1');
 
-cta.prepend(isH1);
-cta.prepend(domH1);
+ctaText.prepend(isH1);
+ctaText.prepend(domH1);
 
 domH1.textContent = h1Arr[0];
 isH1.textContent = h1Arr[1];
@@ -107,8 +130,13 @@ contactContent[2].textContent = siteContent['contact']['email'];
 const footerContent = document.querySelector('footer p');
 footerContent.textContent = siteContent['footer']['copyright'];
 
+// Stretch goals
+const header = document.querySelector('header');
+header.style.background = 'lightgrey'
 
+const ctaSection = document.querySelector('.cta');
+ctaSection.style.background = 'darkgrey';
 
-
-
-
+const mainSection = document.querySelector('.main-content');
+mainSection.style.background = 'black';
+mainSection.style.color = 'white';
