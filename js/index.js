@@ -110,3 +110,11 @@ let servicesContent = bottomContent[0].children[0].children[1];
 
 servicesHeader.textContent = siteContent['main-content']['services-h4'];
 servicesContent.textContent = siteContent['main-content']['services-content'];
+
+// Product
+
+let productHeader = bottomContent[0].children[1].children[0];
+let productContent = bottomContent[0].children[1].children[1];
+
+productHeader.textContent = siteContent['main-content']['product-h4'];
+productContent.textContent = siteContent['main-content']['product-content'];
