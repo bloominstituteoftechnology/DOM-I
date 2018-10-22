@@ -38,29 +38,70 @@ const siteContent = {
 };
 
 // Nav links
-const services = document.querySelectorAll('a');
-// const product = document.querySelector('a:nth-of-type(2)');
-// const vision = document.querySelector('a:nth-of-type(3)');
-// const features = document.querySelector('a:nth-of-type(4)');
-// const about = document.querySelector('a:nth-of-type(5)');
-// const contact = document.querySelector('a:nth-of-type(6)');
+const services = document.querySelector('a:nth-of-type(1)');
+const product = document.querySelector('a:nth-of-type(2)');
+const vision = document.querySelector('a:nth-of-type(3)');
+const features = document.querySelector('a:nth-of-type(4)');
+const about = document.querySelector('a:nth-of-type(5)');
+const contact = document.querySelector('a:nth-of-type(6)');
 
 services.textContent = siteContent.nav['nav-item-1'];
-// product.textContent = siteContent.nav['nav-item-2'];
-// vision.textContent = siteContent.nav['nav-item-3'];
-// features.textContent = siteContent.nav['nav-item-4'];
-// about.textContent = siteContent.nav['nav-item-5'];
-// contact.textContent = siteContent.nav['nav-item-6'];
+product.textContent = siteContent.nav['nav-item-2'];
+vision.textContent = siteContent.nav['nav-item-3'];
+features.textContent = siteContent.nav['nav-item-4'];
+about.textContent = siteContent.nav['nav-item-5'];
+contact.textContent = siteContent.nav['nav-item-6'];
 
 // // Example: Update the img src for the logo
-// let logo = document.getElementById("logo-img");
-// logo.setAttribute('src', siteContent["nav"]["img-src"]);
+let logo = document.getElementById("logo-img");
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-// let codeSnip = document.getElementById("cta-img");
-// codeSnip.setAttribute('src', siteContent["cta"]["img-src"]);
+let codeSnip = document.getElementById("cta-img");
+codeSnip.setAttribute('src', siteContent["cta"]["img-src"]);
 
 // Cta
 const textCta = document.querySelector('.cta-text h1');
 const imgCta = document.querySelector('#cta-img');
 const lineBreak = document.createElement('br');
 const btn = document.querySelector('button');
+
+textCta.textContent = siteContent.cta.h1;
+textCta.appendChild(lineBreak);
+btn.textContent = siteContent.cta.button;
+imgCta.src = siteContent.cta('img-src');
+// btn.textContent = siteContent.cta.button;
+
+
+// Main content
+const topContent = document.querySelector('.main-content');
+topContent.querySelector('.text-content h4').textContent = siteContent['main-content']['features-h4'];
+topContent.querySelector('.text-content p').textContent = siteContent['main-content']['features-content'];
+topContent.querySelector('.text-content:nth-of-type[2] h4').textContent = siteContent['main-content']['about-content'];
+topContent.querySelector('.text-content:nth-of-type[2] p').textContent = siteContent['main-content']['about-content'];
+
+
+// middle img
+
+const midImg = document.querySelector('.middle-img');
+midImg.src = 'img/mid-page-accent.jpg';
+
+// bottom content
+
+const bottomContent = document.querySelector('.bottom-content');
+
+bottomContent.querySelector('.text-content h4').textContent = siteContent["main-content"]["services-h4"];
+bottomContent.querySelector('.text-content p').textContent = siteContent["main-content"]["services-content"];
+
+bottomContent.querySelector('.text-content:nth-of-type(2) h4').textContent = siteContent["main-content"]["product-h4"];
+bottomContent.querySelector('.text-content:nth-of-type(2) p').textContent = siteContent["main-content"]["product-content"];
+
+bottomContent.querySelector('.text-content:nth-of-type(3) h4').textContent = siteContent["main-content"]["vision-h4"];
+bottomContent.querySelector('.text-content:nth-of-type(3) p').textContent = siteContent["main-content"]["vision-content"];
+
+
+// Contact 
+const contactInfo = document.querySelector('.contact');
+contactInfo.querySelector('h4').textContent = siteContent.contact['contact-h4'];
+contactInfo.querySelector('p').textContent = siteContent.address[ad];
+contactInfo.querySelector('p:nth-of-type(1)').textContent = siteContent.contact.phone;
+contactInfo.querySelector('p:nth-of-type(3)').textContent = siteContent.email;
