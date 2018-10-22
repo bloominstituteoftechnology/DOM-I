@@ -37,7 +37,6 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
 
 // ====== Variable Declaration
 // -- Header & Nav Vars
@@ -51,8 +50,15 @@ const button = document.querySelector('button');
 // -- Main Content Vars
 const mainContent = document.querySelector('main-content');
 const midImg = document.querySelector('.middle-img');
-const mainh4 = document.querySelectorAll('.main-content h4');
+const mainH4 = document.querySelectorAll('.main-content h4');
 const mainP = document.querySelectorAll('.main-content p');
+// -- Contact Vars
+const contactH4 = document.querySelector('.contact h4');
+const contactP = document.querySelectorAll('.contact p');
+// -- Footer Vars
+const footerP = document.querySelector('footer p');
+
+
 
 
 // ====== Header Nav
@@ -72,32 +78,32 @@ button.textContent = siteContent['cta']['button'];
 
 
 // ====== Main Content
-// h4.style.textAlign = 'left';
-mainh4[0].textContent = siteContent['main-content']['features-h4'];
+// --- Main-Top content
+mainH4[0].textContent = siteContent['main-content']['features-h4'];
 mainP[0].textContent = siteContent['main-content']['features-content'];
 
-mainh4[1].textContent = siteContent['main-content']['about-h4'];
+mainH4[1].textContent = siteContent['main-content']['about-h4'];
 mainP[1].textContent = siteContent['main-content']['about-content'];
 
 midImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
 
-mainh4[2].textContent = siteContent['main-content']['services-h4'];
+// -- Main-Bottom Content
+mainH4[2].textContent = siteContent['main-content']['services-h4'];
 mainP[2].textContent = siteContent['main-content']['services-content'];
 
-mainh4[3].textContent = siteContent['main-content']['product-h4'];
+mainH4[3].textContent = siteContent['main-content']['product-h4'];
 mainP[3].textContent = siteContent['main-content']['product-content'];
 
-mainh4[4].textContent = siteContent['main-content']['vision-h4'];
+mainH4[4].textContent = siteContent['main-content']['vision-h4'];
 mainP[4].textContent = siteContent['main-content']['vision-content'];
 
 
-
-// ====== Bottom Content
-
-
-
 // ====== Contact Section
-
+contactH4.textContent = siteContent['contact']['contact-h4'] ;
+contactP[0].textContent = siteContent['contact']['address'];
+contactP[1].textContent = siteContent['contact']['phone'];
+contactP[2].textContent = siteContent['contact']['email'];
 
 
 // ====== Footer
+footerP.textContent = siteContent['footer']['copyright'];
