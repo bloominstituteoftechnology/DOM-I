@@ -54,14 +54,38 @@ let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
 
 // DOM is Awesome
+let ctaH1 = document.querySelector(".cta-text");
+ctaH1.prepend(document.createElement("h1"));
+ctaH1.prepend(document.createElement("h1"));
+ctaH1 = document.querySelectorAll(".cta-text h1");
+
+ctaH1.forEach(function(ele,index){
+  ele.textContent = siteContent["cta"]["h1"].split(" ")[index];
+})
+
 
 let gsButton = document.querySelector(".cta-text button");
 gsButton.textContent = siteContent["cta"]["button"];
 
 ////////////// Main Content
-let middleImg = document.getElementById("middle-img");
-middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+let topContent = document.querySelectorAll(".main-content .text-content h4, .main-content .text-content p");
+let mainContactKeys = Object.keys(siteContent["main-content"]);
+mainContactKeys.splice(4,1);
 
+topContent.forEach(function(ele,index){
+    ele.textContent = siteContent["main-content"][mainContactKeys[index]];
+})
+
+
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+
+/* <div class="bottom-content">
+<div class="text-content">
+    <h4></h4>
+    <p></p>
+</div> */
 
 ////////////// Contact
 let contactText = document.querySelectorAll(".contact *");
@@ -69,3 +93,8 @@ let contactKeys = Object.keys(siteContent["contact"]);
 contactText.forEach(function(ele,index){
   ele.textContent = siteContent["contact"][contactKeys[index]];
 })
+
+////////////// Footer
+let footerText = document.querySelector("footer p");
+footerText.textContent = siteContent["footer"]["copyright"];
+
