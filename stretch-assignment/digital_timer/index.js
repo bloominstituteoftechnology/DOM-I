@@ -32,10 +32,16 @@ setInterval(function(){
 }, 1000);
 
 
-setInterval(function(){
+const lastInterval = setInterval(function(){
     secondsOnes.textContent = 0;
     secondsTens.textContent++;
+    secondsTens.style.color = 'red';
+    secondsOnes.style.color = 'red';
+    msHundreeds.style.color = 'red';
+    msTens.style.color = 'red';
+    
 }, 10000);
+
 
 
 
