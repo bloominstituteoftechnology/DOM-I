@@ -115,7 +115,7 @@ for (let i = 0; i < myNav.length; i++) {
 
 // Update styles
 
-secondElement.addEventListener("mouseover", function(){ 
+secondElement.addEventListener("mouseover", () => { 
   const curColour = document.body.style.backgroundColor;
 
   if (curColour != 'red') {
@@ -127,3 +127,12 @@ secondElement.addEventListener("mouseover", function(){
 });
 
 
+document.querySelector(".cta .cta-text button").classList.add("myButton");
+const myButton = document.querySelector(".myButton");
+
+document.querySelector(".cta .cta-text h1").classList.add("myTitle");
+const myTitle = document.querySelector(".myTitle");
+
+myButton.addEventListener('click', () => {
+  myTitle.style.color = "red";
+});
