@@ -126,3 +126,8 @@ let visionContent = bottomContent[0].children[2].children[1];
 
 visionHeader.textContent = siteContent['main-content']['vision-h4'];
 visionContent.textContent = siteContent['main-content']['vision-content'];
+
+// ** == Contact == ** 
+let contact = document.getElementsByClassName('contact');
+
+console.log(contact);
