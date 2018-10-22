@@ -88,8 +88,8 @@ document.querySelector("footer p").innerText =
   siteContent["footer"]["copyright"];
 
 //------Make Green and Apend and Prepend------------------------------------------------
-let firstAnchor = document.createElement("a");
-let lastAnchor = document.createElement("a");
+const firstAnchor = document.createElement("a");
+const lastAnchor = document.createElement("a");
 firstAnchor.href = "#";
 lastAnchor.href = "#";
 firstAnchor.innerText = "Gandolf";
@@ -102,32 +102,22 @@ document.querySelectorAll("header nav a").forEach(element => {
 });
 
 //--------Stretch-----------------------------------------------------------------------
-const changeButton = document.createElement('button');
-changeButton.innerText = 'Change!'
-document.querySelector('.cta-text').appendChild(changeButton);
-changeButton.addEventListener('click', change);
+const toggleButton = document.createElement("button");
+toggleButton.innerText = "Toggle";
+document.querySelector(".cta-text").appendChild(toggleButton);
+toggleButton.addEventListener("click", toggle);
 
-function change (clickEvent) {
-  changeButton.style.display = 'none';
-  let container = document.querySelector('.container');
-  container.style.display = 'flex';
-  container.style.flexDirection = 'column-reverse';
-  document.querySelector('.cta').style.flexDirection = 'row';
-  document.querySelector('.cta-text').style.margin = '0 0 0 82px';
-  document.querySelector('nav').style.flexDirection = 'row';
-  document.querySelector('header').style.flexDirection = 'row';
-  document.querySelector('.top-content').style.flexDirection = 'row';
-  document.querySelector('.bottom-content').style.flexDirection = 'row';
-  document.querySelector('#logo-img').style.margin = '28px 91px 0 0';
-  document.querySelector('.main-content').style.display = 'flex';
-  document.querySelector('.main-content').style.flexDirection = 'column-reverse';
-  document.body.style.direction = 'rtl';
-  document.body.style.color = 'white';
-  document.body.style.backgroundColor = 'blue';
-  document.querySelectorAll("header nav a").forEach(element => {
-    element.style.color = "white";
-  });
-  // document.querySelectorAll('img').forEach(element => {
-  //   element.style.filter = 'invert(1)';
-  // })
+function toggle(clickEvent) {
+  //const bg = document.body.style.backgroundColor;
+  if (document.body.style.backgroundColor === "white") {
+    document.body.style.backgroundColor = "blue";
+    document.querySelectorAll("header nav a").forEach(element => {
+      element.style.color = "white";
+    });
+  } else {
+    document.body.style.backgroundColor = "white";
+    document.querySelectorAll("header nav a").forEach(element => {
+      element.style.color = "green";
+    });
+  }
 }
