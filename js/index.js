@@ -108,3 +108,27 @@ address.innerHTML = addressText.substring(0, 18) + '<br>' + addressText.substrin
 phone.textContent = siteContent['contact']['phone'];
 email.textContent = siteContent['contact']['email'];
 copyright.textContent = siteContent['footer']['copyright'];
+
+// Step 3: New content
+
+let nav = document.querySelector('nav');
+
+let testimonials = document.createElement('a');
+testimonials.textContent = "Testimonials";
+testimonials.href = "#";
+
+let home = document.createElement('a');
+home.textContent = "Home";
+home.href = "index.html";
+
+nav.prepend(home);
+nav.append(testimonials);
+
+navItems.unshift(home);
+navItems.push(testimonials);
+
+for (let i = 0; i < navItems.length; i++) {
+
+  navItems[i].style.color = "green";
+
+}
