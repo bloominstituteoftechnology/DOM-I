@@ -42,9 +42,6 @@ const siteContent = {
 const logo = document.getElementById("logo-img");
 logo.src = (siteContent["nav"]["img-src"]);
 
-const ctaImage = document.getElementById('cta-img');
-ctaImage.src= (siteContent["cta"]["img-src"]);
-
 const middleImage = document.getElementById('middle-img');
 middleImage.src = (siteContent['main-content']['middle-img-src']);
 // middleImage.setAttribute('src', siteContent['main-content']['middle-img-src']);
@@ -53,8 +50,16 @@ middleImage.src = (siteContent['main-content']['middle-img-src']);
 // newNav.
 //  let newNav = document.querySelectorAll('.nav');
 //  let navItems = [nav]
+// CTA CTA CTA CTA CTA CTA
+const newH1 = document.querySelector('h1');
+newH1.textContent = siteContent.cta.h1;
 
-const newCta = document.querySelector('.cta');
+const newButton = document.querySelector('button');
+newButton.textContent = siteContent.cta.button;
+
+const ctaImage = document.getElementById('cta-img');
+ctaImage.src = (siteContent["cta"]["img-src"]);
+//main content main content main content
 const newMainContent = document.querySelector('.main-content');
 const newContact = document.querySelector('.contact');
 const NewContactP = document.querySelectorAll('.contact p')
