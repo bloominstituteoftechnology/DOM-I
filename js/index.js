@@ -142,3 +142,7 @@ contactEmail.textContent = siteContent['contact']['email'];
 
 // ** == Footer == **
 let footer = document.getElementsByTagName('footer');
+
+let copyright = footer[0].children[0];
+
+copyright.textContent = siteContent['footer']['copyright'];
