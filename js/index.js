@@ -72,3 +72,6 @@ contentEl.forEach((e, i) => {
   // Update the p text
   e.querySelector('p').textContent = siteContent["main-content"][`${contentArr[i]}-content`];
 });
+
+// Update middle-img
+document.querySelector('#middle-img').setAttribute('src', siteContent["main-content"]["middle-img-src"]);
