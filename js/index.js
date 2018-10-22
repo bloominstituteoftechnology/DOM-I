@@ -113,5 +113,28 @@ const footer = document.querySelector('footer p');
 footer.textContent = siteContent.footer.copyright;
 
 
+//Task 4: Adding new content
+
+navBarLinks.forEach(link => {
+  link.style.color = 'green';
+})
+
+//adding items to the nav bar
+const navBar = document.querySelector('header nav');
+
+//1.Creating new elements 
+const newElement1 = document.createElement('a');
+const newElement2 = document.createElement('a');
+
+// 2. Adding values / attributes
+newElement1.href = "#";
+newElement1.textContent = "First item";
+
+newElement2.href = "#";
+newElement2.textContent = "Last item";
+
+navBar.appendChild(newElement2);
+navBar.prepend(newElement1);
+
 
 
