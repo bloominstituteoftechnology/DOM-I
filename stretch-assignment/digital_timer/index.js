@@ -5,6 +5,8 @@ let secondTens = document.querySelector('#secondTens');
 let secondOnes = document.querySelector('#secondOnes');
 let msHundrends = document.querySelector('#msHundreds');
 let msTens = document.querySelector('#msTens');
+const button = document.querySelector('button')
+button.addEventListener('click', () => timer());
 
 let secTen = 0;
 let secOne = 0;
@@ -48,6 +50,8 @@ function timer() {
     }
 }
 
-timer();
+
+
+
 
 //console.log(secondTens);
