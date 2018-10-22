@@ -37,41 +37,56 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
-const logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"]);
+/* Nav */
+const nav = document.querySelector('header nav');
 
-const navLinks = document.querySelectorAll('header nav a');
+const navLinks = nav.querySelectorAll('a');
 navLinks.forEach((link, i) => {
   link.textContent = siteContent.nav[`nav-item-${i+1}`];
 });
 
+const logo = nav.querySelector('#logo-img');
+logo.src = siteContent.nav["img-src"];
+
+/* CTA */
 const cta = document.querySelector('.cta');
+
 const ctaText = cta.querySelector('.cta-text');
 ctaText.querySelector('h1').innerHTML = siteContent.cta.h1.split(' ').join('<br />');
 ctaText.querySelector('button').textContent = siteContent.cta.button;
+
 cta.querySelector('#cta-img').src = siteContent.cta['img-src'];
 
+/* Main content */
 const mainContent = document.querySelector('.main-content');
+
 const topTextContents = mainContent.querySelectorAll('.top-content .text-content');
-const bottomTextContents = mainContent.querySelectorAll('.bottom-content .text-content');
-topTextContents[0].querySelector('h4').textContent = siteContent['main-content']['features-h4'];
-topTextContents[0].querySelector('p').textContent = siteContent['main-content']['features-content'];
-topTextContents[1].querySelector('h4').textContent = siteContent['main-content']['about-h4'];
-topTextContents[1].querySelector('p').textContent = siteContent['main-content']['about-content'];
+const [ features, about ] = topTextContents;
+features.querySelector('h4').textContent = siteContent['main-content']['features-h4'];
+features.querySelector('p').textContent = siteContent['main-content']['features-content'];
+about.querySelector('h4').textContent = siteContent['main-content']['about-h4'];
+about.querySelector('p').textContent = siteContent['main-content']['about-content'];
+
 mainContent.querySelector('#middle-img').src = siteContent['main-content']['middle-img-src'];
-bottomTextContents[0].querySelector('h4').textContent = siteContent['main-content']['services-h4'];
-bottomTextContents[0].querySelector('p').textContent = siteContent['main-content']['services-content'];
-bottomTextContents[1].querySelector('h4').textContent = siteContent['main-content']['product-h4'];
-bottomTextContents[1].querySelector('p').textContent = siteContent['main-content']['product-content'];
-bottomTextContents[2].querySelector('h4').textContent = siteContent['main-content']['vision-h4'];
-bottomTextContents[2].querySelector('p').textContent = siteContent['main-content']['vision-content'];
 
+const bottomTextContents = mainContent.querySelectorAll('.bottom-content .text-content');
+const [ services, product, vision ] = bottomTextContents;
+services.querySelector('h4').textContent = siteContent['main-content']['services-h4'];
+services.querySelector('p').textContent = siteContent['main-content']['services-content'];
+product.querySelector('h4').textContent = siteContent['main-content']['product-h4'];
+product.querySelector('p').textContent = siteContent['main-content']['product-content'];
+vision.querySelector('h4').textContent = siteContent['main-content']['vision-h4'];
+vision.querySelector('p').textContent = siteContent['main-content']['vision-content'];
+
+/* Contact */
 const contact = document.querySelector('.contact');
-const contactParagraphs = contact.querySelectorAll('p');
 contact.querySelector('h4').textContent = siteContent.contact['contact-h4'];
-contactParagraphs[0].innerHTML = siteContent.contact.address.split('Street').join('Street <br />');
-contactParagraphs[1].textContent = siteContent.contact.phone;
-contactParagraphs[2].textContent = siteContent.contact.email;
 
+const contactParagraphs = contact.querySelectorAll('p');
+const [ address, phone, email ] = contactParagraphs;
+address.innerHTML = siteContent.contact.address.split('Street').join('Street <br />');
+phone.textContent = siteContent.contact.phone;
+email.textContent = siteContent.contact.email;
+
+/* Footer */
 document.querySelector('footer p').textContent = siteContent.footer.copyright;
