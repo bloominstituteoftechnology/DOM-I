@@ -40,3 +40,63 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+var mySelection = document.querySelectorAll('a');
+console.log(mySelection);
+for( var x = 0; x < mySelection.length; x++){
+  mySelection[x].textContent = siteContent["nav"]["nav-item-"+(x+1)];
+}
+//mySelection = document.querySelector('.cta-text');
+mySelection = document.querySelector('h1');
+mySelection.textContent = siteContent["cta"]["h1"];
+mySelection = document.querySelector('button');
+mySelection.textContent = siteContent["cta"]["button"];
+mySelection = document.querySelector('#cta-img');
+mySelection.setAttribute("src", siteContent["cta"]["img-src"]);
+
+//main content
+mySelection = document.querySelectorAll('h4');
+var prefix = ["features-", "about-", "services-", "product-", "vision-"];
+for( var x = 0; x < mySelection.length; x++){
+  mySelection[x].textContent = siteContent["main-content"][prefix[x] + "h4"];
+}
+
+mySelection = document.querySelectorAll('p');
+for( var x = 0; x < mySelection.length; x++){
+  mySelection[x].textContent = siteContent["main-content"][prefix[x] + "content"];
+}
+
+mySelection = document.querySelector('.middle-img');
+mySelection.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+mySelection = document.querySelectorAll('h4');
+mySelection[mySelection.length-1].textContent = siteContent["contact"]["contact-h4"];
+
+mySelection = document.querySelectorAll('p');
+mySelection[mySelection.length-4].textContent = siteContent["contact"]["address"];
+mySelection[mySelection.length-3].textContent = siteContent["contact"]["phone"];
+mySelection[mySelection.length-2].textContent = siteContent["contact"]["email"];
+mySelection[mySelection.length-1].textContent = siteContent["footer"]["copyright"];
+
+console.log(mySelection);
+
+//*****
+mySelection = document.querySelectorAll('a');
+for( var x = 0; x < mySelection.length; x++){
+  mySelection[x].style.color = 'green';
+}
+
+var node = document.createElement('a');  
+node.href = "#";        
+node.textContent = "Test";
+node.style.color = "green";        
+mySelection = document.querySelector('nav');
+mySelection.appendChild(node);
+
+node = document.createElement('a');  
+node.href = "#";        
+node.textContent = "Test2"; 
+node.style.color = "green";  
+mySelection.prepend(node); 
+
+
