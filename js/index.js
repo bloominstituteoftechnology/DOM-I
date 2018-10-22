@@ -139,3 +139,6 @@ contactHeader.textContent = siteContent['contact']['contact-h4'];
 contactAddress.textContent = siteContent['contact']['address'];
 contactPhone.textContent = siteContent['contact']['phone'];
 contactEmail.textContent = siteContent['contact']['email'];
+
+// ** == Footer == **
+let footer = document.getElementsByTagName('footer');
