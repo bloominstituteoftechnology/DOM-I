@@ -57,3 +57,7 @@ h1Words.forEach(e => {
 // Update cta-text button
 const ctaButton = document.querySelector('.cta-text button');
 ctaButton.textContent = siteContent.cta.button;
+
+// Update cta-image
+const ctaImage = document.querySelector('#cta-img');
+ctaImage.setAttribute('src', siteContent.cta["img-src"]);
