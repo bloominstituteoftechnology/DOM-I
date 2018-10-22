@@ -84,3 +84,21 @@ contactP[2].textContent = siteContent["contact"]["email"];
 let footer = document.querySelector('footer p');
 footer.textContent = siteContent["footer"]["copyright"];
 
+links.forEach((aTag) => {
+  aTag.style.color = 'green';
+});
+
+let navHome = document.createElement('a');
+navHome.href = "#";
+navHome.textContent = "Home";
+navHome.style.color = 'green';
+
+let navExamples = document.createElement('a');
+navExamples.href = "#";
+navExamples.textContent = "Examples";
+navExamples.style.color = 'green';
+
+let navBar = document.querySelector('nav');
+
+navBar.prepend(navHome);
+navBar.appendChild(navExamples);
