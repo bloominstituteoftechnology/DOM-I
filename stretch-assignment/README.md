@@ -17,10 +17,10 @@ Topics:
 
 ## Beginning Project
  * You'll be working in the `digital_timer` directory
- * Add your script tag into you index.html
+ * [X] Add your script tag into you index.html
  * You can open your `index.html` file in your browser to see your work, but you may also work in codepen.io first if you'd like
  * All your work will be done in `index.js`
- * Make sure to read both the `index.html` and `styles.css` files so that you know what you're working with
+ * [X]Make sure to read both the `index.html` and `styles.css` files so that you know what you're working with
  * Organization of your code in `index.js` will be up to you. There will be suggestions provided later in the day
 
 ## Project Description
@@ -35,7 +35,7 @@ Topics:
  ## Stretch On The Stretch!
   If you compelete the timer with time to spare:
   * Self study and research DOM `events` and `event listeners`
-  * SG1: Implement a start button. The digital timer should not start until the button is pressed.
-  * SG2: Once you have a start button working, configure it so that when a user presses the start button it is disabled and not enabled until the timer finishes.
-  * SG3: Once you have finished SG2, add new new button called `reset` that resets the timer to 0:00:00 and then pressing the start button again will start the timer from 0.
-  * SG4: Finally, if you have completed all the stretch goals, spend some time styling your timer and buttons.
+  *[X] SG1: Implement a start button. The digital timer should not start until the button is pressed.
+  *[X] SG2: Once you have a start button working, configure it so that when a user presses the start button it is disabled and not enabled until the timer finishes.
+  *[X] SG3: Once you have finished SG2, add new new button called `reset` that resets the timer to 0:00:00 and then pressing the start button again will start the timer from 0.
+  *[X] SG4: Finally, if you have completed all the stretch goals, spend some time styling your timer and buttons.
