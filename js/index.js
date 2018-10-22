@@ -53,4 +53,34 @@ links.forEach((aTag, index) => {
 let ctaHeader = document.querySelector('.cta-text h1');
 ctaHeader.innerHTML = siteContent.cta.h1.split(' ').join('<br />');
 
+let ctaButton = document.querySelector('.cta-text button');
+ctaButton.textContent = siteContent.cta.button;
+
+let topContentH4 = document.querySelectorAll('.text-content h4');
+
+topContentH4[0].innerHTML = siteContent["main-content"]["features-h4"];
+topContentH4[1].innerHTML = siteContent["main-content"]["about-h4"];
+topContentH4[2].innerHTML = siteContent["main-content"]["services-h4"];
+topContentH4[3].innerHTML = siteContent["main-content"]["product-h4"];
+topContentH4[4].innerHTML = siteContent["main-content"]["vision-h4"];
+
+let topContentP = document.querySelectorAll('.text-content p');
+
+topContentP[0].innerHTML = siteContent["main-content"]["features-content"];
+topContentP[1].innerHTML = siteContent["main-content"]["about-content"];
+topContentP[2].innerHTML = siteContent["main-content"]["services-content"];
+topContentP[3].innerHTML = siteContent["main-content"]["product-content"];
+topContentP[4].innerHTML = siteContent["main-content"]["vision-content"];
+
+let contactH4 = document.querySelector('.contact h4');
+contactH4.textContent = siteContent["contact"]["contact-h4"];
+
+let contactP = document.querySelectorAll('.contact p');
+
+contactP[0].textContent = siteContent["contact"]["address"];
+contactP[1].textContent = siteContent["contact"]["phone"];
+contactP[2].textContent = siteContent["contact"]["email"];
+
+let footer = document.querySelector('footer p');
+footer.textContent = siteContent["footer"]["copyright"];
 
