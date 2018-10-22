@@ -112,3 +112,10 @@ navItems.push(help);
 for (let i = 0; i < navItems.length; i++) {
   navItems[i].style.color = "#1BB231";
 }
+
+
+// Stretch
+let body = document.querySelector('body');
+body.style.backgroundColor = "#D3E1E9";
+body.style.backgroundColor = "color|transparent|initial|inherit"
+button.style.background = "#D3E1E9";
