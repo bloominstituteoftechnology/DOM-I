@@ -61,3 +61,14 @@ ctaButton.textContent = siteContent.cta.button;
 // Update cta-image
 const ctaImage = document.querySelector('#cta-img');
 ctaImage.setAttribute('src', siteContent.cta["img-src"]);
+
+// Update content
+const contentArr = ['features', 'about', 'services', 'product', 'vision'];
+
+const contentEl = document.querySelectorAll('.text-content');
+contentEl.forEach((e, i) => {
+  // Update the h4 text
+  e.querySelector('h4').textContent = siteContent["main-content"][`${contentArr[i]}-h4`];
+  // Update the p text
+  e.querySelector('p').textContent = siteContent["main-content"][`${contentArr[i]}-content`];
+});
