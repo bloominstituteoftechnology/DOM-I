@@ -4,8 +4,10 @@ const siteContent = {
     "nav-item-2": "Product",
     "nav-item-3": "Vision",
     "nav-item-4": "Features",
-    "nav-item-5": "About",
-    "nav-item-6": "Contact",
+    "nav-item-5": "New",
+    "nav-item-6": "Upcoming",
+    "nav-item-7": "About",
+    "nav-item-8": "Contact",
     "img-src": "img/logo.png"
   },
   "cta": {
@@ -41,9 +43,24 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let navAnchor = document.querySelectorAll("a");
+let nav = document.querySelector("nav");
 
-navAnchor.forEach((anchor, index) => anchor.textContent = siteContent["nav"][`nav-item-${index + 1}`]);
+let firstNewAnchor = document.createElement("a");
+let secondNewAnchor = document.createElement("a");
+
+firstNewAnchor.href = "#";
+secondNewAnchor.href = "#";
+
+nav.append(firstNewAnchor);
+nav.append(secondNewAnchor);
+
+
+let navAnchor = nav.querySelectorAll("a");
+
+navAnchor.forEach((anchor, index) => {
+  anchor.textContent = siteContent["nav"][`nav-item-${index + 1}`];
+  anchor.style.color = "green";
+});
 // end of header section
 
 // cta section
