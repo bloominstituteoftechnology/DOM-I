@@ -38,5 +38,32 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+//images for website
+const logo = document.getElementById("logo-img");
+logo.src = (siteContent["nav"]["img-src"]);
+
+const ctaImage = document.getElementById('cta-img');
+ctaImage.src= (siteContent["cta"]["img-src"]);
+
+const middleImage = document.getElementById('middle-img');
+middleImage.src = (siteContent['main-content']['middle-img-src']);
+// middleImage.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+//nav nav nav nav nav nav nav nav
+// newNav.
+//  let newNav = document.querySelectorAll('.nav');
+//  let navItems = [nav]
+
+const newCta = document.querySelector('.cta');
+const newMainContent = document.querySelector('.main-content');
+const newContact = document.querySelector('.contact');
+const NewContactP = document.querySelectorAll('.contact p')
+console.log(NewContactP);
+const newFooter = document.querySelector('footer');
+console.log(siteContent.contact);
+
+// newContact.textContent = siteContent.contact.array.forEach(element => {
+  
+// });;
+newFooter.textContent = siteContent.footer.copyright;
+
