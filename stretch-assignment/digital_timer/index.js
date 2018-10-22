@@ -30,7 +30,7 @@ function timer() {
                 secOne = 0;
 
             }
-            if (secTen >= 10) {
+            if (secTen >= 1) {
                 msTens.style.color = 'red';
                 msHundrends.style.color = 'red';
                 secondTens.style.color = 'red';
