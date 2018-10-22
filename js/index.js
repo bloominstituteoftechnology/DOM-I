@@ -68,16 +68,16 @@ const btn = document.querySelector('button');
 textCta.textContent = siteContent.cta.h1;
 textCta.appendChild(lineBreak);
 btn.textContent = siteContent.cta.button;
-imgCta.src = siteContent.cta('img-src');
-// btn.textContent = siteContent.cta.button;
+textCta.appendChild(lineBreak);
+// imgCta.src = siteContent.cta('img-src');
 
 
 // Main content
-const topContent = document.querySelector('.main-content');
+const topContent = document.querySelector('.top-content');
 topContent.querySelector('.text-content h4').textContent = siteContent['main-content']['features-h4'];
 topContent.querySelector('.text-content p').textContent = siteContent['main-content']['features-content'];
-topContent.querySelector('.text-content:nth-of-type[2] h4').textContent = siteContent['main-content']['about-content'];
-topContent.querySelector('.text-content:nth-of-type[2] p').textContent = siteContent['main-content']['about-content'];
+topContent.querySelector('.text-content:nth-of-type(2) h4').textContent = siteContent['main-content']['about-content'];
+topContent.querySelector('.text-content:nth-of-type(2) p').textContent = siteContent['main-content']['about-content'];
 
 
 // middle img
@@ -102,6 +102,10 @@ bottomContent.querySelector('.text-content:nth-of-type(3) p').textContent = site
 // Contact 
 const contactInfo = document.querySelector('.contact');
 contactInfo.querySelector('h4').textContent = siteContent.contact['contact-h4'];
-contactInfo.querySelector('p').textContent = siteContent.address[ad];
-contactInfo.querySelector('p:nth-of-type(1)').textContent = siteContent.contact.phone;
-contactInfo.querySelector('p:nth-of-type(3)').textContent = siteContent.email;
+contactInfo.querySelector('p').textContent = siteContent.contact.address;
+contactInfo.querySelector('p:nth-of-type(2)').textContent = siteContent.contact.phone;
+contactInfo.querySelector('p:nth-of-type(3)').textContent = siteContent.contact.email;
+
+// Footer
+const footerInfo = document.querySelector('.footer');
+footerInfo.querySelector('p').textContent = siteContent.footer.copyright;
