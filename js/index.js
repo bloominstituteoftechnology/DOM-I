@@ -50,13 +50,37 @@ navigation[3].textContent = "Features";
 navigation[4].textContent = "About";
 navigation[5].textContent = "Contact";
 
+navigation[0].style.color = "green";
+navigation[1].style.color = "green";
+navigation[2].style.color = "green";
+navigation[3].style.color = "green";
+navigation[4].style.color = "green";
+navigation[5].style.color = "green";
 
-const head = document.querySelector(".cta-text");
+
+const newNav1 = document.createElement('a')
+newNav1.href = "#";
+newNav1.textContent = "Portfolio";
+newNav1.style.color = "green";
+
+const mainNav = document.querySelector("nav");
+mainNav.appendChild(newNav1);
+
+const newNav2 = document.createElement('a')
+newNav2.href = "#";
+newNav2.textContent = "Welcome";
+newNav2.style.color = "green";
+
+mainNav.prepend(newNav2);
+
+const btn = document.querySelector("button");
+btn.textContent = siteContent['cta']['button']
+console.log(btn)
+
+const head = document.querySelector("h1");
 head.textContent = siteContent['cta']["h1"];
+console.log(head)
 
-const button = document.getElementsByName('button')
-button.value = siteContent["cta"]["button"];
-console.log(button)
 
 const mainimg = document.getElementById("cta-img");
 mainimg.setAttribute('src', siteContent["cta"]["img-src"]);
