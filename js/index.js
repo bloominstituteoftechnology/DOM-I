@@ -103,3 +103,10 @@ middleImage.setAttribute('src', siteContent['main-content']['middle-img-src']);
 // * = Bottom Content = *
 
 let bottomContent = document.getElementsByClassName('bottom-content');
+
+// Services
+let servicesHeader = bottomContent[0].children[0].children[0];
+let servicesContent = bottomContent[0].children[0].children[1];
+
+servicesHeader.textContent = siteContent['main-content']['services-h4'];
+servicesContent.textContent = siteContent['main-content']['services-content'];
