@@ -57,6 +57,8 @@ for(i = 1; i < navElements.length; i++){
   navElements[i].textContent = siteContent.nav[`nav-item-${i}`];
 }
 
+
+
 // Top Text and Button
 const ctaH1 = document.querySelector('h1')
 const ctaButton = document.querySelector('button')
@@ -91,3 +93,12 @@ ctaP[7].textContent = siteContent['contact']['email'];
 
 //footer
 ctaP[8].textContent = siteContent['footer']['copyright'];
+
+
+
+
+//change nav color green
+
+for (i = 1; i < navElements.length; i++) {
+  navElements[i].style.color = 'green';
+}
