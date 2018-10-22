@@ -102,3 +102,23 @@ ctaP[8].textContent = siteContent['footer']['copyright'];
 for (i = 1; i < navElements.length; i++) {
   navElements[i].style.color = 'green';
 }
+
+let navigation = document.getElementsByTagName("nav")
+console.log(navigation)
+
+let newNode = document.createElement('a');
+let nodeText = document.createTextNode("Contact");
+
+newNode.appendChild(nodeText);
+console.log(newNode)
+navigation[0].appendChild(newNode);
+
+//create first node with prepend
+let firstNode = document.createElement ('a');
+let firstNodetext = document.createTextNode ('first');
+firstNode.appendChild(firstNodetext);
+navigation[0].prepend(firstNode);
+
+
+// make Contact green
+newNode.style.color = "green";
