@@ -4,6 +4,7 @@
   const timer = {
     currentTime: 0,
     isFinish: false,
+    isRunning: false,
     timer: null,
     stopTimer: function() {
       clearInterval(this.timer);
@@ -30,17 +31,19 @@
     },
 
     runTimer: function() {
-      if (false) {
-        clearInterval(timer.timer);
-      } else {
+      if (timer.currentTime < 10000) {
+        timer.isRunning = true;
         timer.timer = setInterval(function() {
           timer.currentTime += 10;
           if (timer.currentTime >= 10000) {
+            timer.isRunning = false;
             timer.isFinish = true;
+            buttonView.render();
             timer.stopTimer();
           }
           timerView.render();
         }, 10);
+        buttonView.render();
       }
     },
 
@@ -52,6 +55,10 @@
       timer.currentTime = 0;
       timer.isFinish = false;
       timerView.render();
+    },
+
+    isRunning: function() {
+      return timer.isRunning;
     }
   }
 
@@ -87,16 +94,20 @@
   const buttonView = {
     init: function() {
       this.startButton = document.getElementById('startButton');
-      this.startButton.addEventListener('click', function(){
-        controller.runTimer();
-      });
 
       this.resetButton = document.getElementById('resetButton');
-      this.resetButton.addEventListener('click', function() {
-        controller.reset();
-      })
-    }
+      this.resetButton.addEventListener('click', controller.reset);
 
+      this.render();
+    },
+
+    render() {
+      if (controller.isRunning()) {
+        this.startButton.removeEventListener('click', controller.runTimer);
+      } else {
+        this.startButton.addEventListener('click', controller.runTimer);
+      }
+    }
   }
 
   controller.init();
