@@ -37,6 +37,19 @@ const siteContent = {
   },
 };
 
+const mainNav = document.querySelectorAll('nav a');
+mainNav[0].textContent = siteContent.nav['nav-item-1'];
+mainNav[1].textContent = siteContent.nav['nav-item-2'];
+mainNav[2].textContent = siteContent.nav['nav-item-3'];
+mainNav[3].textContent = siteContent.nav['nav-item-4'];
+mainNav[4].textContent = siteContent.nav['nav-item-5'];
+mainNav[5].textContent = siteContent.nav['nav-item-6'];
+
+
+console.log(mainNav);
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
