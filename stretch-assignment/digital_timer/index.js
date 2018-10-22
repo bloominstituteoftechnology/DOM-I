@@ -37,4 +37,6 @@ function increment() {
 
 }
 
-increment();
+let startButton = document.querySelector('#startButton');
+
+startButton.addEventListener("click", increment);
