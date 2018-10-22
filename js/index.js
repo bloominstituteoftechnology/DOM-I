@@ -50,23 +50,23 @@ navLinks[3].textContent = siteContent["nav"]["nav-item-4"];
 navLinks[4].textContent = siteContent["nav"]["nav-item-5"];
 navLinks[5].textContent = siteContent["nav"]["nav-item-6"];
 
-let mainHeading = document.querySelector('.cta-text h1');
+const mainHeading = document.querySelector('.cta-text h1');
 mainHeading.textContent = siteContent.cta.h1;
 
-let mainHeadingButton = document.querySelector('.cta-text button');
+const mainHeadingButton = document.querySelector('.cta-text button');
 mainHeadingButton.textContent = siteContent.cta.button;
 
-let ctaImg = document.querySelector('#cta-img');
+const ctaImg = document.querySelector('#cta-img');
 ctaImg.src = siteContent.cta["img-src"];
 
-let mainContentHeadings = document.querySelectorAll('.main-content h4');
+const mainContentHeadings = document.querySelectorAll('.main-content h4');
 mainContentHeadings[0].textContent = siteContent["main-content"]["features-h4"];
 mainContentHeadings[1].textContent = siteContent["main-content"]["about-h4"];
 mainContentHeadings[2].textContent = siteContent["main-content"]["services-h4"];
 mainContentHeadings[3].textContent = siteContent["main-content"]["product-h4"];
 mainContentHeadings[4].textContent = siteContent["main-content"]["vision-h4"];
 
-let mainContentp = document.querySelectorAll('.main-content p');
+const mainContentp = document.querySelectorAll('.main-content p');
 mainContentp[0].textContent = siteContent["main-content"]["features-content"];
 mainContentp[1].textContent = siteContent["main-content"]["about-content"];
 mainContentp[2].textContent = siteContent["main-content"]["services-content"];
@@ -111,3 +111,20 @@ newNav2.href = "#";
 newNav2.textContent = "Feedback";
 mainNav.appendChild(newNav2);
 newNav2.style.color = "green";
+
+// Stretch Goals
+
+// Update styles throughout the page as you see fit.  Study what happens when you updated the DOM using style in JavaScript.
+
+// const header = document.querySelector('header');
+// header.style.backgroundColor = "lightgray";
+
+const cta = document.querySelector('.cta');
+cta.style.backgroundColor = "black";
+
+mainHeading.style.color = "white";
+
+const body = document.querySelector('body');
+body.style.backgroundColor = "#faebd7";
+
+// Study tomorrow's lesson on events and try to integrate a button that can update content on the site with a click of a button.  You could build a similar data object with new values to help you test the click event.
