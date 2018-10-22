@@ -54,17 +54,14 @@ const newElement = document.createElement('a');
 newElement.href = "#";
 newElement.textContent = "Banana";
 
-// 3. Create a place for the element to land
 const mainNav = document.querySelector('nav');
 
-// 4. Append or prepend the newly created element
 mainNav.prepend(newElement);
 
 const newElement2 = document.createElement('a');
 newElement2.href = "#";
 newElement2.textContent = "Horse";
 
-// 4. Append or prepend the newly created element
 mainNav.appendChild(newElement2);
 
 
