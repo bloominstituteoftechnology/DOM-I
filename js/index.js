@@ -37,6 +37,107 @@ const siteContent = {
   },
 };
 
+
+
+// ***********************************
+// *****************NAV***************
+// ***********************************
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+// const logo = document.querySelector('#logo-img');
+// logo.src = "img/logo.png";
+
+const nav = document.querySelector('nav');
+// console.log(nav);
+const navItems = Array.from(document.querySelectorAll('nav > a'));
+// console.log(navItems[0]);
+
+navItems[0].textContent = "Services";
+navItems[1].textContent = "Product";
+navItems[2].textContent = "Vision";
+navItems[3].textContent = "Features";
+navItems[4].textContent = "About";
+navItems[5].textContent = "Contact";
+
+
+// ***********************************
+// ****************CTA****************
+// ***********************************
+const ctaH1= document.querySelector('.cta-text > h1');
+ctaH1.textContent = "DOM";
+const ctaH1_2 = document.createElement("h1");
+const ctaH1_3 = document.createElement("h1");
+ctaH1.appendChild(ctaH1_2);
+ctaH1.appendChild(ctaH1_3);
+ctaH1_2.textContent = "Is";
+ctaH1_3.textContent = "Awesome";
+// ctaH1.style.display = "flex", 'flex-direction: column';
+const ctaButton = document.querySelector('.cta-text > button');
+ctaButton.textContent = "Get Started";
+
+
+const ctaImg = document.querySelector('#cta-img');
+ctaImg.src = "img/header-img.png";
+
+
+// ***********************************
+// ****************MAIN***************
+// ***********************************
+
+const firstTopContentH4 = document.querySelector('.top-content > .text-content h4');
+const firstTopContentP = document.querySelector('.top-content > .text-content p');
+firstTopContentH4.textContent = 'Features';
+firstTopContentP.textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+const secondTopContentH4 = document.querySelector('.top-content > :last-child h4');
+const secondTopContentP = document.querySelector('.top-content > :last-child p');
+secondTopContentH4.textContent = 'About';
+secondTopContentP.textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+const mainImg = document.querySelector('#middle-img');
+mainImg.src = "img/mid-page-accent.jpg";
+
+const firstBottomContentH4 = document.querySelector('.bottom-content > .text-content h4');
+const firstBottomContentP = document.querySelector('.bottom-content > .text-content p');
+firstBottomContentH4.textContent = 'Services';
+firstBottomContentP.textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+const secondBottomContentH4 = document.querySelector('.bottom-content > :nth-child(2) h4');
+const secondBottomContentP = document.querySelector('.bottom-content > :nth-child(2) p');
+secondBottomContentH4.textContent = 'Product';
+secondBottomContentP.textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+
+const thirdBottomContentH4 = document.querySelector('.bottom-content > :last-child h4');
+const thirdBottomContentP = document.querySelector('.bottom-content > :last-child p');
+thirdBottomContentH4.textContent = 'Vision';
+thirdBottomContentP.textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+// ***********************************
+// *************CONTACT***************
+// ***********************************
+
+const contactH4 = document.querySelector('.contact > h4');
+const contactAddress = document.querySelector('.contact > p');
+const contactPhone = document.querySelector('.contact > p:nth-child(3)');
+const addressLocations = document.createElement('p');
+const contactEmail = document.querySelector('.contact > p:last-child');
+contactH4.textContent = "Contact";
+console.log(contactAddress);
+
+contactAddress.textContent = "123 Way 456 Street";
+contactAddress.appendChild(addressLocations);
+addressLocations.textContent = " Somewhere, USA"
+addressLocations.style.marginTop = "0";
+contactPhone.textContent = "1 (888) 888-8888";
+contactEmail.textContent = "sales@greatidea.io";
+
+// ***********************************
+// *************FOOTER****************
+// ***********************************
+
+const footerP = document.querySelector('footer > p');
+footerP.textContent = "Copyright Great Idea! 2018";
+
+
