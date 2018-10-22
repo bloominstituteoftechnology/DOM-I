@@ -40,3 +40,49 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const navigation = document.querySelectorAll("a")
+navigation.href = "#";
+navigation[0].textContent = "Services";
+navigation[1].textContent = "Product";
+navigation[2].textContent = "Vision";
+navigation[3].textContent = "Features";
+navigation[4].textContent = "About";
+navigation[5].textContent = "Contact";
+
+
+const head = document.querySelector(".cta-text");
+head.textContent = siteContent['cta']["h1"];
+
+const button = document.getElementsByName('button')
+button.value = siteContent["cta"]["button"];
+console.log(button)
+
+const mainimg = document.getElementById("cta-img");
+mainimg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+
+const h4s = document.querySelectorAll("h4");
+
+h4s[0].textContent = siteContent["main-content"]["features-h4"];
+h4s[1].textContent = siteContent["main-content"]["about-h4"];
+h4s[2].textContent = siteContent["main-content"]["services-h4"]
+h4s[3].textContent = siteContent["main-content"]["product-h4"]
+h4s[4].textContent = siteContent["main-content"]["vision-h4"]
+h4s[5].textContent = siteContent["contact"]["contact-h4"];
+
+const paragraph = document.querySelectorAll("p");
+
+paragraph[0].textContent = siteContent["main-content"]["features-content"];
+paragraph[1].textContent = siteContent["main-content"]["about-content"];
+paragraph[2].textContent = siteContent["main-content"]["services-content"];
+paragraph[3].textContent = siteContent["main-content"]["product-content"];
+paragraph[4].textContent = siteContent["main-content"]["vision-content"];
+paragraph[5].textContent = siteContent["contact"]["address"];
+paragraph[6].textContent = siteContent["contact"]["phone"];
+paragraph[7].textContent = siteContent["contact"]["email"];
+paragraph[8].textContent = siteContent["footer"]["copyright"];
+
+
+const midimg = document.getElementById("middle-img");
+midimg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
