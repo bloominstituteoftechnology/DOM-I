@@ -82,8 +82,15 @@ ctaImage.setAttribute('src', siteContent['cta']['img-src']);
 let topContent = document.getElementsByClassName('top-content');
 
 // Features
-let featuresH4 = topContent[0].children[0].children[0];
-let featuresP = topContent[0].children[0].children[1];
+let featuresHeader = topContent[0].children[0].children[0];
+let featuresContent = topContent[0].children[0].children[1];
 
-featuresH4.textContent = siteContent['main-content']['features-h4'];
-featuresP.textContent = siteContent['main-content']['features-content'];
+featuresHeader.textContent = siteContent['main-content']['features-h4'];
+featuresContent.textContent = siteContent['main-content']['features-content'];
+
+// About 
+let aboutHeader = topContent[0].children[1].children[0];
+let aboutContent = topContent[0].children[1].children[1];
+
+aboutHeader.textContent = siteContent['main-content']['about-h4'];
+aboutContent.textContent = siteContent['main-content']['about-content'];
