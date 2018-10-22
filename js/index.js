@@ -99,3 +99,7 @@ aboutContent.textContent = siteContent['main-content']['about-content'];
 let middleImage = document.getElementById('middle-img');
 
 middleImage.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+// * = Bottom Content = *
+
+let bottomContent = document.getElementsByClassName('bottom-content');
