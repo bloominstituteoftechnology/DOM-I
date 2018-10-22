@@ -41,32 +41,53 @@ function main(){
   /***********************************************************
   ************************** Header **************************
   ************************************************************/
+  const header = document.querySelector('header');
   //==================== Nav Items ====================
-  let headerNav = document.querySelectorAll('a');
+  let headerNavItems = header.querySelector('nav').querySelectorAll('a');
   let headerNavTxtItems = [ siteContent["nav"]["nav-item-1"], siteContent["nav"]["nav-item-2"], siteContent["nav"]["nav-item-3"],
                             siteContent["nav"]["nav-item-4"], siteContent["nav"]["nav-item-5"], siteContent["nav"]["nav-item-6"]
                           ];
-  for(let i = 0; i < headerNav.length; i++){
-    headerNav[i].textContent = headerNavTxtItems[i];
+  for(let i = 0; i < headerNavItems.length; i++){
+    headerNavItems[i].textContent = headerNavTxtItems[i];
   }
 
   //====================== Image ======================
-  let logo = document.querySelector("#logo-img");
+  let logo = header.querySelector("#logo-img");
   logo.src = siteContent["nav"]["img-src"];
 
   /***********************************************************
   **************************** CTA ***************************
   ************************************************************/
-  //====================== Header =====================
-  let cta = document.querySelector(".cta");
-  //====================== Title ======================
-  let ctaH1 = cta.querySelector('h1');
-  let ctaH1Words = siteContent["cta"]["h1"].split(" "); // Used to somehow insert <br> here???
+ let cta = document.querySelector(".cta");
+  //===================== CTA-Text ====================
+  let ctaText = cta.querySelector(".cta-text");
+  //------------------- Title -------------------
+  let ctaH1 = ctaText.querySelector('h1');
   ctaH1.textContent = siteContent["cta"]["h1"];
+  let ctaH1Words = siteContent["cta"]["h1"].split(" "); // Used to somehow insert <br> here???
+  let ctaH1s_Dom = ctaText.querySelector('h1');
+  ctaH1s_Dom.textContent = ctaH1Words[0];
+  let cta_nodeH1P_Is = document.createElement('h1');
+  let cta_textNodeH1P_Is = document.createTextNode(ctaH1Words[1]);
+  cta_nodeH1P_Is.appendChild(cta_textNodeH1P_Is);
+  let cta_nodeH1P_Awesome = document.createElement('h1');
+  let cta_textNodeH1P_Awesome = document.createTextNode(ctaH1Words[2]);
+  cta_nodeH1P_Awesome.appendChild(cta_textNodeH1P_Awesome);
+  ctaText.appendChild(cta_nodeH1P_Is);
+  ctaText.appendChild(cta_nodeH1P_Awesome);
 
-  //====================== Button =====================
-  let ctaButton = cta.querySelector('button');
+  // align content to pixel perfect
+  let ctaH1s = ctaText.querySelectorAll('h1');
+  ctaH1s.forEach(function(h1){
+    h1.style.margin = 0;
+  });
+  
+  //------------------- Button ------------------
+  let ctaButton = ctaText.querySelector('button');
   ctaButton.textContent = siteContent["cta"]["button"];
+  ctaButton.style.order = 1;
+  ctaButton.style.marginTop = "25px";
+  ctaButton.style.paddingTop = "2px";
 
   //====================== Image ======================
   let ctaImg = cta.querySelector("#cta-img");
@@ -116,13 +137,17 @@ function main(){
   ************************** Contact *************************
   ************************************************************/
   let contact = document.querySelector(".contact");
+  contact.style.width = "13rem";
+
+  //=================== Contact Title =================
   let contactTitle = contact.querySelector("h4");
+  contactTitle.textContent = siteContent["contact"]["contact-h4"];
+
+  //=================== Contact Info =================
   let contactText = contact.querySelectorAll("p");
   let contactText_Address = contactText[0];
   let contactText_Phone = contactText[1];
   let contactText_Email = contactText[2];
-
-  contactTitle.textContent = siteContent["contact"]["contact-h4"];
   contactText_Address.textContent = siteContent["contact"]["address"];
   contactText_Phone.textContent = siteContent["contact"]["phone"];
   contactText_Email.textContent = siteContent["contact"]["email"];
