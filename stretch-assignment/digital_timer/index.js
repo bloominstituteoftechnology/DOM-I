@@ -13,7 +13,7 @@
   const controller = {
     init: function() {
       timerView.init();
-      this.runTimer();
+      buttonView.init();
     },
 
     getTime() {
@@ -46,6 +46,12 @@
 
     isFinish: function() {
       return timer.isFinish;
+    },
+
+    reset: function() {
+      timer.currentTime = 0;
+      timer.isFinish = false;
+      timerView.render();
     }
   }
 
@@ -76,6 +82,21 @@
       this.msHundreds.textContent = currentTime[2];
       this.msTens.textContent = currentTime[3];
     }
+  }
+
+  const buttonView = {
+    init: function() {
+      this.startButton = document.getElementById('startButton');
+      this.startButton.addEventListener('click', function(){
+        controller.runTimer();
+      });
+
+      this.resetButton = document.getElementById('resetButton');
+      this.resetButton.addEventListener('click', function() {
+        controller.reset();
+      })
+    }
+
   }
 
   controller.init();

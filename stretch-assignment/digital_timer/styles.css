@@ -1,5 +1,6 @@
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -11,4 +12,25 @@ body {
 
 .redDigit {
   color: red;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button{
+  font-size: 20px;
+  padding: 20px;
+  background-color: lightgray;
+  border-radius: 10px;
+  margin: 0 10px;
+  text-align: center;
+}
+
+.button:hover{
+  cursor: pointer;
+  background-color: gray;
+  color: white;
 }
