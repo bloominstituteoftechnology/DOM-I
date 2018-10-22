@@ -1,5 +1,6 @@
 const siteContent = {
   "nav": {
+    
     "nav-item-1": "Services",
     "nav-item-2": "Product",
     "nav-item-3": "Vision",
@@ -36,7 +37,66 @@ const siteContent = {
     "copyright" : "Copyright Great Idea! 2018"
   },
 };
-
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent['nav']['img-src'])
+
+
+const navItem1 = document.querySelectorAll('a');
+navItem1[0].innerHTML = siteContent['nav']['nav-item-1'];
+navItem1[1].innerHTML = siteContent['nav']['nav-item-2'];
+navItem1[2].innerHTML = siteContent['nav']['nav-item-3'];
+navItem1[3].innerHTML = siteContent['nav']['nav-item-4'];
+navItem1[4].innerHTML = siteContent['nav']['nav-item-5'];
+navItem1[5].innerHTML = siteContent['nav']['nav-item-6'];
+
+
+
+
+// navItem1.href = '#';
+// navItem1.textContent = 'Services';
+
+// const nav = document.querySelector('nav');
+// nav.append(navItem1);
+
+// const navItem2 = document.createElement('a');
+// navItem2.href = '#';
+// navItem2.textContent = 'Product';
+
+// const nav2 = document.querySelector('nav');
+// nav.append(navItem2);
+
+// const navItem3 = document.createElement('a');
+// navItem3.href = '#';
+// navItem3.textContent = 'Vision';
+
+// const nav3 = document.querySelector('nav');
+// nav.append(navItem3);
+
+// const navItem4 = document.createElement('a');
+// navItem4.href = '#';
+// navItem4.textContent = 'Features';
+
+// const nav4 = document.querySelector('nav');
+// nav.append(navItem4);
+
+// const navItem5 = document.createElement('a');
+// navItem5.href = '#';
+// navItem5.textContent = 'About';
+
+// const nav5 = document.querySelector('nav');
+// nav.append(navItem5);
+
+// const navItem6 = document.createElement('a');
+// navItem6.href = '#';
+// navItem6.textContent = 'Contact';
+
+// const nav6 = document.querySelector('nav');
+// nav.append(navItem6);
+
+const mainHeader = document.querySelector('h1');
+
+mainHeader.textContent = 'DOM Is Awesome';
+
+const midImg = document.getElementById('cta-img');
+midImg.setAttribute('src', siteContent['cta']['img-src']);
