@@ -85,5 +85,5 @@ let topContent = document.getElementsByClassName('top-content');
 let featuresH4 = topContent[0].children[0].children[0];
 let featuresP = topContent[0].children[0].children[1];
 
-console.log(featuresH4);
-console.log(featuresP);
+featuresH4.textContent = siteContent['main-content']['features-h4'];
+featuresP.textContent = siteContent['main-content']['features-content'];
