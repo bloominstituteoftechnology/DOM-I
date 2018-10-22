@@ -137,4 +137,24 @@ navBar.appendChild(newElement2);
 navBar.prepend(newElement1);
 
 
+//Stretch goal: updating styles on the page 
+const containerDiv = document.querySelector('.container');
+const textContent = document.querySelectorAll('.main-content .text-content');
+
+containerDiv.style.backgroundColor = "#C2DAE9";
+
+textContent.forEach(div => {
+  div.style.backgroundColor = '#153069';
+  div.style.color = '#C2DAE9';
+  div.style.borderRadius = '10px';
+});
+
+
+//Stretch goal - adding an event listener to the button:
+
+ctaButton.addEventListener('click', function(){
+  ctaImg.src = 'img/thumbs-up.png';
+  ctaImg.style.width = '330px';
+  ctaImg.style.height = '250px';
+}); 
 
