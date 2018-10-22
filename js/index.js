@@ -63,7 +63,7 @@ header.style.backgroundColor="aqua";
 header.style.padding = "0 1rem 1.5rem";
 header.style.borderRadius = "0 0 10px 10px"
 
-navItems.forEach((i, index) => i.textContent = siteContent.nav[`nav-item-${index}`]);
+navItems.forEach((i, index) => i.textContent = siteContent.nav[`nav-item-${index + 1}`]);
 // navItems[0].textContent = siteContent.nav["nav-item-1"];
 // navItems[1].textContent = siteContent.nav["nav-item-2"];
 // navItems[2].textContent = siteContent.nav["nav-item-3"];
