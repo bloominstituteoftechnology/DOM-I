@@ -45,9 +45,6 @@ mainNav[3].textContent = siteContent.nav['nav-item-4'];
 mainNav[4].textContent = siteContent.nav['nav-item-5'];
 mainNav[5].textContent = siteContent.nav['nav-item-6'];
 
-
-console.log(mainNav);
-
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
@@ -90,3 +87,20 @@ contactInfo[2].textContent = siteContent.contact['email'];
 
 const footerP = document.querySelector('footer p');
 footerP.textContent = siteContent.footer['copyright'];
+
+// Change color of nav items
+for (let i = 0; i < mainNav.length; i++) {
+  mainNav[i].style.color = 'green';
+}
+
+const newNavElement = document.createElement('a');
+newNavElement.textContent = 'Welcome';
+
+const newNavElementTwo = document.createElement('a');
+newNavElementTwo.textContent = 'Home';
+
+
+const nav = document.querySelector('nav');
+
+nav.prepend(newNavElement);
+nav.prepend(newNavElementTwo);
