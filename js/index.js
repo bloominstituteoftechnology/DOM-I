@@ -53,7 +53,7 @@ middleImg.src = 'img/mid-page-accent.jpg';
 const navElements = document.querySelectorAll('a');
 console.log(navElements);
 
-for(i = 1; i < navElements.length; i++){
+for(i = 0; i < navElements.length; i++){
   navElements[i].textContent = siteContent.nav[`nav-item-${i}`];
 }
 
@@ -63,7 +63,7 @@ for(i = 1; i < navElements.length; i++){
 const ctaH1 = document.querySelector('h1')
 const ctaButton = document.querySelector('button')
 
-ctaH1.textContent = siteContent.cta.h1;
+ctaH1.innerHTML = '<h1>DOM<br> Is<br> Awesome</h1>';
 ctaButton.textContent =siteContent.cta.button;
 
 // Header text for text content
