@@ -42,10 +42,30 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 const selectEntireNav = document.querySelectorAll('a');
+
+
+
 for(let i = 0; i<selectEntireNav.length; i++){
   selectEntireNav[i].textContent = siteContent["nav"][`nav-item-${i+1}`];
   selectEntireNav[i].style.color = "green";
 }
+
+const newElement = document.createElement('a');
+newElement.href = "#";
+newElement.textContent = "Banana";
+
+// 3. Create a place for the element to land
+const mainNav = document.querySelector('nav');
+
+// 4. Append or prepend the newly created element
+mainNav.prepend(newElement);
+
+const newElement2 = document.createElement('a');
+newElement2.href = "#";
+newElement2.textContent = "Horse";
+
+// 4. Append or prepend the newly created element
+mainNav.appendChild(newElement2);
 
 
 const selectH1 = document.querySelector('h1');
