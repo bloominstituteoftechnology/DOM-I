@@ -82,14 +82,21 @@ navItems[5].style.color = "green";
 // ***********************************
 const ctaH1= document.querySelector('.cta-text > h1');
 let ctaArr = siteContent['cta']['h1'].toString().split(" ");
-console.log(ctaArr);
 
 
 const ctaH1_2 = document.createElement("h1");
 const ctaH1_3 = document.createElement("h1");
 const ctaButton = document.querySelector('.cta-text > button');
 const ctaImg = document.querySelector('#cta-img');
+console.log(ctaButton);
 
+ctaButton.addEventListener("click", function(){
+  let update = prompt("what do you want to add as an awesome thing?");
+  ctaH1.textContent = `${update} is Awesome!!!`;
+  ctaImg.src = "https://images.pexels.com/photos/360624/pexels-photo-360624.jpeg?auto=compress&cs=tinysrgb&h=350";
+  // e.preventDefault();
+});
+// const changeHeroImg = 
 
 ctaH1.textContent = ctaArr[0];
 ctaH1.appendChild(ctaH1_2);
@@ -137,11 +144,8 @@ const contactPhone = document.querySelector('.contact > p:nth-child(3)');
 const addressLocations = document.createElement('p');
 const contactEmail = document.querySelector('.contact > p:last-child');
 const addressLines = siteContent['contact']['address'].toString().split(" ");
-console.log(addressLines);
 const addressLine1 = `${addressLines[0]} ${addressLines[1]} ${addressLines[2]} ${addressLines[3]}`;
-console.log(addressLine1);
 const addressLine2 = `${addressLines[4]} ${addressLines[5]}`;
-console.log(addressLine2);
 
 
 
