@@ -63,7 +63,7 @@ navLinks.item(5).style.color = 'green';
 
 newLink.href = "#";
 newLink.textContent = "test";
-newLinkTwo.style.color = 'green';
+newLink.style.color = 'green';
 
 newLinkTwo.href = "#";
 newLinkTwo.textContent = "test 2";
