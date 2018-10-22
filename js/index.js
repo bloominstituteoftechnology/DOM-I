@@ -117,3 +117,8 @@ contactInfo.querySelector('p:nth-of-type(3)').textContent = siteContent.contact.
 const footer = document.querySelector('footer');
 footer.querySelector('p').textContent = siteContent.footer.copyright;
 
+
+// random doodles
+
+const greened = document.querySelectorAll('body');
+greened.forEach(e => e.style.color = 'green');
