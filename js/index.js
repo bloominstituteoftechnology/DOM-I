@@ -74,31 +74,35 @@ mainContentText[3].textContent = siteContent["main-content"]['product-h4'];
 mainContentText[4].textContent = siteContent["main-content"]['vision-h4'];
 
 
-const mainSectionP = document.querySelectorAll('.main-content p');
-mainSectionP[0].textContent = siteContent["main-content"]['features-content'];
-mainSectionP[1].textContent = siteContent["main-content"]['about-content'];
-mainSectionP[2].textContent = siteContent["main-content"]['services-content'];
-mainSectionP[3].textContent = siteContent["main-content"]['product-content'];
-mainSectionP[4].textContent = siteContent["main-content"]['vision-content'];
+const mainContentPara = document.querySelectorAll('.main-content p');
+mainContentPara[0].textContent = siteContent["main-content"]['features-content'];
+mainContentPara[1].textContent = siteContent["main-content"]['about-content'];
+mainContentPara[2].textContent = siteContent["main-content"]['services-content'];
+mainContentPara[3].textContent = siteContent["main-content"]['product-content'];
+mainContentPara[4].textContent = siteContent["main-content"]['vision-content'];
 
 const middleImg = document.querySelector('#middle-img');
 middleImg.src = siteContent["main-content"]['middle-img-src'];
 
-const contactH4 = document.querySelector('.contact h4');
-contactH4.textContent = siteContent.contact['contact-h4'];
+//contact info and other stuff
+const contactText = document.querySelector('.contact h4');
+contactText.textContent = siteContent.contact['contact-h4'];
 
 const contactInfo = document.querySelectorAll('.contact p');
 contactInfo[0].textContent = siteContent.contact['address'];
 contactInfo[1].textContent = siteContent.contact['phone'];
 contactInfo[2].textContent = siteContent.contact['email'];
 
-const footerP = document.querySelector('footer p');
-footerP.textContent = siteContent.footer['copyright'];
+//footer stuff
+document.querySelector('footer p').textContent = siteContent.footer.copyright; //lol i guess i dont need bracket notation
 
-// Change color of nav items
-for (let i = 0; i < nav.length; i++) {
-  nav[i].style.color = 'green';
-}
+// Try out a loop, worked but i want to use arrow syntax
+// for (let i = 0; i < nav.length; i++) {
+//   nav[i].style.color = 'green';
+// }
+
+navBarGreen = Array.from(document.querySelectorAll('nav a'));
+navBarGreen.map(element => element.style.color = 'green');
 
 const nE = document.createElement('a');
 nE.textContent = 'Chocolate is Life';
