@@ -75,3 +75,27 @@ contentEl.forEach((e, i) => {
 
 // Update middle-img
 document.querySelector('#middle-img').setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+// Update Contact
+const contactEl = document.querySelector('.contact');
+contactEl.querySelector('h4').textContent = siteContent.contact["contact-h4"]; // Updata Contact - h4
+
+const contactDetail = ['address', 'phone', 'email'];
+
+contactEl.querySelectorAll('p').forEach((e,i) => {
+  if (i !== 0) {
+    e.textContent = siteContent.contact[contactDetail[i]];  // Update Contact - phone and email
+  } else {
+    const address = siteContent.contact[contactDetail[i]].split(' ');
+    const stateInd = address.indexOf(address.find( e => e.includes(',')));
+    // the street address
+    const street = document.createElement('div');
+    street.textContent = address.slice(0, stateInd).join(' ');
+    e.append(street);
+    // the state address
+    const state = document.createElement('div');
+    state.textContent = address.slice(stateInd).join(' ');
+    e.append(state);
+
+  }
+});
