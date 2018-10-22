@@ -50,6 +50,7 @@ const middleImg = document.querySelector('.middle-img');
 logo.src = siteContent['nav']['img-src'];
 cta.src = siteContent['cta']['img-src'];
 middleImg.src = siteContent['main-content']['middle-img-src'];
+middleImg.style.width = '100%';
 
 //Content-------------------------------------------------------
 
@@ -58,8 +59,6 @@ const h4 = document.querySelectorAll('h4');
 const p = document.querySelectorAll('p');
 const navigation = document.getElementsByTagName('a');
 
-
-
 navigation[0].textContent = siteContent['nav']['nav-item-1'];
 navigation[1].textContent = siteContent['nav']['nav-item-2'];
 navigation[2].textContent = siteContent['nav']['nav-item-3'];
@@ -67,21 +66,14 @@ navigation[3].textContent = siteContent['nav']['nav-item-4'];
 navigation[4].textContent = siteContent['nav']['nav-item-5'];
 navigation[5].textContent = siteContent['nav']['nav-item-6'];
 
-navigation[0].style.color = 'green';
-navigation[1].style.color = 'green';
-navigation[2].style.color = 'green';
-navigation[3].style.color = 'green';
-navigation[4].style.color = 'green';
-navigation[5].style.color = 'green';
-
-
-
-
-
+navigation[0].style.color = '#EAF4F4';
+navigation[1].style.color = '#EAF4F4';
+navigation[2].style.color = '#EAF4F4';
+navigation[3].style.color = '#EAF4F4';
+navigation[4].style.color = '#EAF4F4';
+navigation[5].style.color = '#EAF4F4';
 
 h1.textContent = siteContent['cta']['h1'];
-
-
 
 h4[0].textContent = siteContent['main-content']['features-h4'];
 h4[1].textContent = siteContent['main-content']['about-h4'];
@@ -89,6 +81,13 @@ h4[2].textContent = siteContent['main-content']['services-h4'];
 h4[3].textContent = siteContent['main-content']['product-h4'];
 h4[4].textContent = siteContent['main-content']['vision-h4'];
 h4[5].textContent = siteContent['contact']['contact-h4'];
+
+h4[0].style.color = '#EAF4F4';
+h4[1].style.color = '#EAF4F4';
+h4[2].style.color = '#EAF4F4';
+h4[3].style.color = '#EAF4F4';
+h4[4].style.color = '#EAF4F4';
+h4[5].style.color = '#EAF4F4';
 
 p[0].textContent = siteContent['main-content']['features-content'];
 p[1].textContent = siteContent['main-content']['about-content'];
@@ -99,6 +98,8 @@ p[5].textContent = siteContent['contact']['address'];
 p[6].textContent = siteContent['contact']['phone'];
 p[7].textContent = siteContent['contact']['email'];
 p[8].textContent = siteContent['footer']['copyright'];
+
+p[8].style.color = '#EAF4F4';
 
 //Misc----------------------------------------------------------
 const button = document.querySelector('button');
@@ -111,16 +112,23 @@ const newElement2 = document.createElement('a');
 newElement1.href = '#';
 newElement2.href = '#';
 
-newElement1.textContent = "Home"
-newElement2.textContent = "Facebook"
+newElement1.textContent = 'Home';
+newElement2.textContent = 'Facebook';
 
 navMain = document.querySelectorAll('nav');
 navMain[0].prepend(newElement1);
 navMain[0].append(newElement2);
 
-navigation[0].style.color = 'green';
-navigation[7].style.color = 'green';
+navigation[0].style.color = '#EAF4F4';
+navigation[7].style.color = '#EAF4F4';
 
-const body
+const body = document.querySelector('body');
 
+body.style.backgroundColor = '#EAF4F4';
+
+const main = document.querySelector('.container');
+
+main.style.backgroundColor = '#6B9080';
+
+main.style.padding = '1%';
 // siteContent.cta.h1.split(' ').join('<br>');
