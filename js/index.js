@@ -37,6 +37,103 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+function main(){
+  /***********************************************************
+  ************************** Header **************************
+  ************************************************************/
+  //==================== Nav Items ====================
+  let headerNav = document.querySelectorAll('a');
+  let headerNavTxtItems = [ siteContent["nav"]["nav-item-1"], siteContent["nav"]["nav-item-2"], siteContent["nav"]["nav-item-3"],
+                            siteContent["nav"]["nav-item-4"], siteContent["nav"]["nav-item-5"], siteContent["nav"]["nav-item-6"]
+                          ];
+  for(let i = 0; i < headerNav.length; i++){
+    headerNav[i].textContent = headerNavTxtItems[i];
+  }
+
+  //====================== Image ======================
+  let logo = document.querySelector("#logo-img");
+  logo.src = siteContent["nav"]["img-src"];
+
+  /***********************************************************
+  **************************** CTA ***************************
+  ************************************************************/
+  //====================== Header =====================
+  let cta = document.querySelector(".cta");
+  //====================== Title ======================
+  let ctaH1 = cta.querySelector('h1');
+  let ctaH1Words = siteContent["cta"]["h1"].split(" "); // Used to somehow insert <br> here???
+  ctaH1.textContent = siteContent["cta"]["h1"];
+
+  //====================== Button =====================
+  let ctaButton = cta.querySelector('button');
+  ctaButton.textContent = siteContent["cta"]["button"];
+
+  //====================== Image ======================
+  let ctaImg = cta.querySelector("#cta-img");
+  ctaImg.src = siteContent["cta"]["img-src"];
+
+  /***********************************************************
+  *********************** Main Content ***********************
+  ************************************************************/
+  //=================== Top Content ===================
+  let topContent = document.querySelector(".top-content");
+  let topContentTextContent = topContent.querySelectorAll(".text-content");
+  let topContentTextContentH4_LeftBox = topContentTextContent[0].querySelector("h4");
+  let topContentTextContentP_LeftBox = topContentTextContent[0].querySelector("p");
+  let topContentTextContentH4_RightBox = topContentTextContent[1].querySelector("h4");
+  let topContentTextContentP_RightBox = topContentTextContent[1].querySelector("p");
+
+  topContentTextContentH4_LeftBox.textContent = siteContent["main-content"]["features-h4"];
+  topContentTextContentP_LeftBox.textContent = siteContent["main-content"]["features-content"];
+
+  topContentTextContentH4_RightBox.textContent = siteContent["main-content"]["about-h4"];
+  topContentTextContentP_RightBox.textContent = siteContent["main-content"]["about-content"];
+
+  //=================== Middle Image ==================
+  let middleImg = document.querySelector("#middle-img");
+  middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+  //================== Bottom Content =================
+  let bottomContent = document.querySelector(".bottom-content");
+  let bottomContentTextContent = bottomContent.querySelectorAll(".text-content");
+  let bottomContentTextContentH4_LeftBox = bottomContentTextContent[0].querySelector("h4");
+  let bottomContentTextContentP_LeftBox = bottomContentTextContent[0].querySelector("p");
+  let bottomContentTextContentH4_MiddleBox = bottomContentTextContent[1].querySelector("h4");
+  let bottomContentTextContentP_MiddleBox = bottomContentTextContent[1].querySelector("p");
+  let bottomContentTextContentH4_RightBox = bottomContentTextContent[2].querySelector("h4");
+  let bottomContentTextContentP_RightBox = bottomContentTextContent[2].querySelector("p");
+
+  bottomContentTextContentH4_LeftBox.textContent = siteContent["main-content"]["services-h4"];
+  bottomContentTextContentP_LeftBox.textContent = siteContent["main-content"]["services-content"];
+
+  bottomContentTextContentH4_MiddleBox.textContent = siteContent["main-content"]["product-h4"];
+  bottomContentTextContentP_MiddleBox.textContent = siteContent["main-content"]["product-content"];
+
+  bottomContentTextContentH4_RightBox.textContent = siteContent["main-content"]["vision-h4"];
+  bottomContentTextContentP_RightBox.textContent = siteContent["main-content"]["vision-content"];
+
+  /***********************************************************
+  ************************** Contact *************************
+  ************************************************************/
+  let contact = document.querySelector(".contact");
+  let contactTitle = contact.querySelector("h4");
+  let contactText = contact.querySelectorAll("p");
+  let contactText_Address = contactText[0];
+  let contactText_Phone = contactText[1];
+  let contactText_Email = contactText[2];
+
+  contactTitle.textContent = siteContent["contact"]["contact-h4"];
+  contactText_Address.textContent = siteContent["contact"]["address"];
+  contactText_Phone.textContent = siteContent["contact"]["phone"];
+  contactText_Email.textContent = siteContent["contact"]["email"];
+
+  /***********************************************************
+  ************************** Footer **************************
+  ************************************************************/
+  let footer = document.querySelector("footer");
+  let footerP = footer.querySelector("p");
+
+  footerP.textContent = siteContent["footer"]["copyright"];
+}
+
+main();
