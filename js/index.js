@@ -63,13 +63,13 @@ header.style.backgroundColor="aqua";
 header.style.padding = "0 1rem 1.5rem";
 header.style.borderRadius = "0 0 10px 10px"
 
-
-navItems[0].textContent = siteContent.nav["nav-item-1"];
-navItems[1].textContent = siteContent.nav["nav-item-2"];
-navItems[2].textContent = siteContent.nav["nav-item-3"];
-navItems[3].textContent = siteContent.nav["nav-item-4"];
-navItems[4].textContent = siteContent.nav["nav-item-5"];
-navItems[5].textContent = siteContent.nav["nav-item-6"];
+navItems.forEach((i, index) => i.textContent = siteContent.nav[`nav-item-${index}`]);
+// navItems[0].textContent = siteContent.nav["nav-item-1"];
+// navItems[1].textContent = siteContent.nav["nav-item-2"];
+// navItems[2].textContent = siteContent.nav["nav-item-3"];
+// navItems[3].textContent = siteContent.nav["nav-item-4"];
+// navItems[4].textContent = siteContent.nav["nav-item-5"];
+// navItems[5].textContent = siteContent.nav["nav-item-6"];
 // navItems[0].style.color = "green";
 // navItems[1].style.color = "green";
 // navItems[2].style.color = "green";
