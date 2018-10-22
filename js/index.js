@@ -42,12 +42,9 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 const selectEntireNav = document.querySelectorAll('a');
-selectEntireNav[0].textContent = siteContent["nav"]["nav-item-1"];
-selectEntireNav[1].textContent = siteContent["nav"]["nav-item-2"];
-selectEntireNav[2].textContent = siteContent["nav"]["nav-item-3"];
-selectEntireNav[3].textContent = siteContent["nav"]["nav-item-4"];
-selectEntireNav[4].textContent = siteContent["nav"]["nav-item-5"];
-selectEntireNav[5].textContent = siteContent["nav"]["nav-item-6"];
+for(let i = 0; i<selectEntireNav.length; i++){
+  selectEntireNav[i].textContent = siteContent["nav"][`nav-item-${i+1}`];
+}
 
 const selectH1 = document.querySelector('h1');
 selectH1.textContent = siteContent["cta"]["h1"];
@@ -58,5 +55,27 @@ selectButton.textContent = 'Get Started';
 const ctaIMG = document.getElementById("cta-img");
 ctaIMG.setAttribute('src', siteContent["cta"]["img-src"]);
 
-const selectEntireTextContent = document.querySelectorAll('text-content');
+const selectEntireTextContent = document.querySelectorAll('h4');
+selectEntireTextContent[0].textContent = siteContent['main-content']['features-h4'];
+selectEntireTextContent[1].textContent = siteContent['main-content']['about-h4'];
+selectEntireTextContent[2].textContent = siteContent['main-content']['services-h4'];
+selectEntireTextContent[3].textContent = siteContent['main-content']['product-h4'];
+selectEntireTextContent[4].textContent = siteContent['main-content']['vision-h4'];
+selectEntireTextContent[5].textContent = siteContent['contact']['contact-h4'];
+
+const selectEntireContent = document.querySelectorAll('p');
+selectEntireContent[0].textContent = siteContent['main-content']['features-content'];
+selectEntireContent[1].textContent = siteContent['main-content']['about-content'];
+selectEntireContent[2].textContent = siteContent['main-content']['services-content'];
+selectEntireContent[3].textContent = siteContent['main-content']['product-content'];
+selectEntireContent[4].textContent = siteContent['main-content']['vision-content'];
+selectEntireContent[5].textContent = siteContent['contact']['address'];
+selectEntireContent[6].textContent = siteContent['contact']['phone'];
+selectEntireContent[7].textContent = siteContent['contact']['email'];
+selectEntireContent[8].textContent = siteContent['footer']['copyright'];
+
+const selectMiddleIMG = document.querySelector('.middle-img');
+selectMiddleIMG.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+
 
