@@ -60,6 +60,7 @@ let codeSnip = document.getElementById("cta-img");
 codeSnip.setAttribute('src', siteContent["cta"]["img-src"]);
 
 // Cta
+// const lineBreak = document.createElement('br');
 const textCta = document.querySelector('.cta-text h1');
 const imgCta = document.querySelector('#cta-img');
 const lineBreak = document.createElement('br');
@@ -76,7 +77,7 @@ textCta.appendChild(lineBreak);
 const topContent = document.querySelector('.top-content');
 topContent.querySelector('.text-content h4').textContent = siteContent['main-content']['features-h4'];
 topContent.querySelector('.text-content p').textContent = siteContent['main-content']['features-content'];
-topContent.querySelector('.text-content:nth-of-type(2) h4').textContent = siteContent['main-content']['about-content'];
+topContent.querySelector('.text-content:nth-of-type(2) h4').textContent = siteContent['main-content']['about-h4'];
 topContent.querySelector('.text-content:nth-of-type(2) p').textContent = siteContent['main-content']['about-content'];
 
 
@@ -107,5 +108,5 @@ contactInfo.querySelector('p:nth-of-type(2)').textContent = siteContent.contact.
 contactInfo.querySelector('p:nth-of-type(3)').textContent = siteContent.contact.email;
 
 // Footer
-const footerInfo = document.querySelector('.footer');
+const footerInfo = document.querySelector('footer');
 footerInfo.querySelector('p').textContent = siteContent.footer.copyright;
