@@ -83,6 +83,8 @@ navItems.forEach(i=>i.style.color = "green");
 // ***********************************
 const ctaH1= document.querySelector('.cta-text > h1');
 let ctaArr = siteContent['cta']['h1'].toString().split(" ");
+console.log(ctaArr);
+
 
 
 const ctaH1_2 = document.createElement("h1");
