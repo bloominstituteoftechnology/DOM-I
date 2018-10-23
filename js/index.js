@@ -38,14 +38,14 @@ const siteContent = {
 };
 
 /* Nav */
-const nav = document.querySelector('header nav');
+const header = document.querySelector('header');
 
-const navLinks = nav.querySelectorAll('a');
+const navLinks = header.querySelectorAll('nav a');
 navLinks.forEach((link, i) => {
   link.textContent = siteContent.nav[`nav-item-${i+1}`];
 });
 
-const logo = nav.querySelector('#logo-img');
+const logo = header.querySelector('#logo-img');
 logo.src = siteContent.nav["img-src"];
 
 /* CTA */
@@ -62,21 +62,28 @@ const mainContent = document.querySelector('.main-content');
 
 const topTextContents = mainContent.querySelectorAll('.top-content .text-content');
 const [ features, about ] = topTextContents;
-features.querySelector('h4').textContent = siteContent['main-content']['features-h4'];
-features.querySelector('p').textContent = siteContent['main-content']['features-content'];
-about.querySelector('h4').textContent = siteContent['main-content']['about-h4'];
-about.querySelector('p').textContent = siteContent['main-content']['about-content'];
 
 mainContent.querySelector('#middle-img').src = siteContent['main-content']['middle-img-src'];
 
 const bottomTextContents = mainContent.querySelectorAll('.bottom-content .text-content');
 const [ services, product, vision ] = bottomTextContents;
-services.querySelector('h4').textContent = siteContent['main-content']['services-h4'];
-services.querySelector('p').textContent = siteContent['main-content']['services-content'];
-product.querySelector('h4').textContent = siteContent['main-content']['product-h4'];
-product.querySelector('p').textContent = siteContent['main-content']['product-content'];
-vision.querySelector('h4').textContent = siteContent['main-content']['vision-h4'];
-vision.querySelector('p').textContent = siteContent['main-content']['vision-content'];
+const sections = { features, about, services, product, vision };
+
+const setText = (name, tag) => {
+  let tagKey = tag;
+  if (tag == 'p') tagKey = 'content';
+  sections[name].querySelector(tag).textContent = siteContent['main-content'][`${name}-${tagKey}`];
+};
+
+const setMultiple = (names, tags) => {
+  for (const name of names) {
+    for (const tag of tags) {
+      setText(name, tag);
+    }
+  }
+};
+
+setMultiple(Object.keys(sections), [ 'h4', 'p' ]);
 
 /* Contact */
 const contact = document.querySelector('.contact');
