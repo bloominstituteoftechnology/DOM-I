@@ -128,3 +128,7 @@ const body = document.querySelector('body');
 body.style.backgroundColor = "#faebd7";
 
 // Study tomorrow's lesson on events and try to integrate a button that can update content on the site with a click of a button.  You could build a similar data object with new values to help you test the click event.
+
+mainHeadingButton.addEventListener('click', () => {
+  body.style.backgroundColor = "white";
+})
