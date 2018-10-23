@@ -47,6 +47,22 @@ const btn = document.querySelector('button');       //BUTTON
 const topImg = document.getElementById('cta-img');        //TOP CONTENT HEADER IMAGE
 const h4s = document.querySelectorAll('h4');        //MAIN CONTENT H4
 const mainImg = document.getElementById('middle-img');        //MAIN CONTENT
+const paras = document.querySelectorAll('p');       //MAIN CONTENT PARAGRAPHS
+
+
+const newNavItem = document.createElement('a');
+newNavItem.href = '#';
+newNavItem.textContent = 'Blog';
+
+const nav = document.querySelector('nav');
+nav.prepend(newNavItem);
+
+const newNavItem1 = document.createElement('a');
+newNavItem1.href = '#';
+newNavItem1.textContent = 'Sign Up';
+
+const nav1 = document.querySelector('nav');
+nav1.append(newNavItem1);
 
 //====NAV BAR====
 navItem1[0].innerHTML = siteContent['nav']['nav-item-1'];
@@ -56,7 +72,7 @@ navItem1[3].innerHTML = siteContent['nav']['nav-item-4'];
 navItem1[4].innerHTML = siteContent['nav']['nav-item-5'];
 navItem1[5].innerHTML = siteContent['nav']['nav-item-6'];   
 
-//====NAV BAR STYLE
+//====NAV BAR STYLE====
 navItem1[0].style.color = 'green';
 navItem1[1].style.color = 'green';
 navItem1[2].style.color = 'green';
@@ -70,6 +86,7 @@ btn.textContent = siteContent['cta']['button'];
 
 topImg.setAttribute('src', siteContent['cta']['img-src']);
 
+//====MAIN CONTENT====
 h4s[0].textContent = siteContent['main-content']['features-h4'];
 h4s[1].textContent = siteContent['main-content']['about-h4'];
 h4s[2].textContent = siteContent['main-content']['services-h4'];
@@ -79,12 +96,12 @@ h4s[4].textContent = siteContent['main-content']['vision-h4'];
 
 mainImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
 
-const paras = document.querySelectorAll('p');
 paras[0].textContent = siteContent['main-content']['features-content'];
 paras[1].textContent = siteContent['main-content']['about-content'];
 paras[2].textContent = siteContent['main-content']['services-content'];
 paras[3].textContent = siteContent['main-content']['product-content'];
 paras[4].textContent = siteContent['main-content']['vision-content'];
+
 //==========CONTACT=============
 h4s[5].textContent = siteContent['contact']['contact-h4'];
 paras[5].textContent = siteContent['contact']['contact-h4'];
