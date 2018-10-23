@@ -1,0 +1,4 @@
+{
+    "editor.tabCompletion": "onlySnippets",
+    "emmet.triggerExpansionOnTab": true
+}
