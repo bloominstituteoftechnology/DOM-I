@@ -59,8 +59,14 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 let codeSnip = document.getElementById("cta-img");
 codeSnip.setAttribute('src', siteContent["cta"]["img-src"]);
 
+
+// let ctaHeader = document.querySelector('cta-text h1');
+// ctaHeader.innerHTML = siteContent.cta.h1.split(' ').join('<br />');
+
+// let ctaBtn = document.querySelector('cta button');
+// ctaBtn.textContent = siteContent.cta.button;
 // Cta
-// const lineBreak = document.createElement('br');
+
 const textCta = document.querySelector('.cta-text h1');
 const imgCta = document.querySelector('#cta-img');
 const lineBreak = document.createElement('br');
@@ -70,7 +76,8 @@ textCta.textContent = siteContent.cta.h1;
 textCta.appendChild(lineBreak);
 btn.textContent = siteContent.cta.button;
 textCta.appendChild(lineBreak);
-// imgCta.src = siteContent.cta('img-src');
+
+
 
 
 // Main content
