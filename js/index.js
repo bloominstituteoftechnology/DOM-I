@@ -87,7 +87,7 @@ contactLines[2].innerText = siteContent.contact.email;
 document.querySelector("footer p").innerText =
     siteContent.footer.copyright;
 
-//------Make Green and Apend and Prepend------------------------------------------------
+//------Make Green and Append and Prepend------------------------------------------------
 const firstAnchor = document.createElement("a");
 const lastAnchor = document.createElement("a");
 firstAnchor.href = "#";
