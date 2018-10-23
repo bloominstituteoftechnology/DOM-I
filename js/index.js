@@ -41,7 +41,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-/* STEP 1 // Data allocation into elements. */
+/* STEP 2 // Data allocation into elements. */
 let navItems = Array.from(document.querySelectorAll('nav a'));
 let h1 = document.querySelector('h1');
 let button = document.querySelector('button');
@@ -65,7 +65,7 @@ let phone = contactPTags[1];
 let email = contactPTags[2];
 let copyright = document.querySelector('footer p');
 
-/* STEP 2 // Update HTML with JSON. */
+/* STEP 3 // Update HTML with JSON. */
 console.log(h4Tags.length);
 for (let i = 0; i < navItems.length; i++) {
   navItems[i].textContent = siteContent['nav']['nav-item-' + (i + 1)];
@@ -101,7 +101,7 @@ email.textContent = siteContent['contact']['email'];
 
 copyright.textContent = siteContent['footer']['copyright'];
 
-/* STEP 3 // Input new content. */
+/* STEP 4 // Input new content. */
 let nav = document.querySelector('nav');
 let help = document.createElement('a');
 help.textContent = "Help";
