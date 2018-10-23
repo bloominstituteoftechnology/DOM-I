@@ -46,7 +46,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
-let nav = document.querySelectorAll("header nav a");
+let nav = document.querySelectorAll("nav a");
 let ctaText = document.querySelectorAll(".cta-text *");
 let ctaImg = document.getElementById("cta-img");
 let mainContent = document.querySelectorAll(".text-content *");
@@ -70,6 +70,17 @@ function appendElement(parent, element, text, attributes) {
         }
     }
     document.querySelector(parent).appendChild(node);
+}
+
+document
+    .querySelector("button")
+    .addEventListener("click", event => (event.target.textContent = "clicked"));
+
+function reverseNav() {
+    let nav = document.querySelectorAll("nav a");
+    for (i = 0; i < nav.length; i++) {
+        nav[i].parentNode.prepend(nav[i]);
+    }
 }
 
 for (let i = 0; i < nav.length; i++) {
@@ -99,3 +110,5 @@ for (let i = 0; i < contact.length; i++) {
 
 appendElement("nav", "a", "lorem", [["href", "#"], ["style", "color: green"]]);
 appendElement("nav", "a", "ipsum", [["href", "#"], ["style", "color: green"]]);
+document.querySelector("body").style.backgroundColor = "RGB(30, 30 , 30)";
+document.querySelector(".container").style.backgroundColor = "white";
