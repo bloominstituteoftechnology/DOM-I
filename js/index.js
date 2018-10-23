@@ -1,45 +1,45 @@
 const siteContent = {
-  nav: {
-    "nav-item-1": "Services",
-    "nav-item-2": "Product",
-    "nav-item-3": "Vision",
-    "nav-item-4": "Features",
-    "nav-item-5": "About",
-    "nav-item-6": "Contact",
-    "img-src": "img/logo.png"
-  },
-  cta: {
-    h1: "DOM Is Awesome",
-    button: "Get Started",
-    "img-src": "img/header-img.png"
-  },
-  "main-content": {
-    "features-h4": "Features",
-    "features-content":
-      "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "about-h4": "About",
-    "about-content":
-      "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "middle-img-src": "img/mid-page-accent.jpg",
-    "services-h4": "Services",
-    "services-content":
-      "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "product-h4": "Product",
-    "product-content":
-      "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "vision-h4": "Vision",
-    "vision-content":
-      "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
-  },
-  contact: {
-    "contact-h4": "Contact",
-    address: "123 Way 456 Street Somewhere, USA",
-    phone: "1 (888) 888-8888",
-    email: "sales@greatidea.io"
-  },
-  footer: {
-    copyright: "Copyright Great Idea! 2018"
-  }
+    nav: {
+        "nav-item-1": "Services",
+        "nav-item-2": "Product",
+        "nav-item-3": "Vision",
+        "nav-item-4": "Features",
+        "nav-item-5": "About",
+        "nav-item-6": "Contact",
+        "img-src": "img/logo.png"
+    },
+    cta: {
+        h1: "DOM Is Awesome",
+        button: "Get Started",
+        "img-src": "img/header-img.png"
+    },
+    "main-content": {
+        "features-h4": "Features",
+        "features-content":
+            "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+        "about-h4": "About",
+        "about-content":
+            "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+        "middle-img-src": "img/mid-page-accent.jpg",
+        "services-h4": "Services",
+        "services-content":
+            "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+        "product-h4": "Product",
+        "product-content":
+            "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+        "vision-h4": "Vision",
+        "vision-content":
+            "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+    },
+    contact: {
+        "contact-h4": "Contact",
+        address: "123 Way 456 Street Somewhere, USA",
+        phone: "1 (888) 888-8888",
+        email: "sales@greatidea.io"
+    },
+    footer: {
+        copyright: "Copyright Great Idea! 2018"
+    }
 };
 
 //-------Images-------------------------------------------------------------------
@@ -52,40 +52,40 @@ imageCta.setAttribute("src", siteContent["cta"]["img-src"]);
 imageMiddle.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
 document.querySelector(".cta-text h1").innerHTML = siteContent["cta"][
-  "h1"
-].replace(/ /g, "<br />");
+    "h1"
+    ].replace(/ /g, "<br />");
 document.querySelector(".cta-text button").innerText =
-  siteContent["cta"]["button"];
+    siteContent["cta"]["button"];
 
 //------Nav-------------------------------------------------------------------------
 const navLinks = document.querySelectorAll(".container header nav a");
 navLinks.forEach((element, index) => {
-  var navProperty = `nav-item-${index + 1}`;
-  element.innerText = siteContent.nav[navProperty];
+    const navProperty = `nav-item-${index + 1}`;
+    element.innerText = siteContent.nav[navProperty];
 });
 
 //------Content-----------------------------------------------------------------------
 const textContentNodes = document.querySelectorAll(".text-content");
 const sections = ["features", "about", "services", "product", "vision"];
 textContentNodes.forEach((element, index) => {
-  const section = sections[index];
-  element.getElementsByTagName("h4")[0].innerText =
-    siteContent["main-content"][`${section}-h4`];
-  element.getElementsByTagName("p")[0].innerText =
-    siteContent["main-content"][`${section}-content`];
+    const section = sections[index];
+    element.getElementsByTagName("h4")[0].innerText =
+        siteContent["main-content"][`${section}-h4`];
+    element.getElementsByTagName("p")[0].innerText =
+        siteContent["main-content"][`${section}-content`];
 });
 
 //------Contact------------------------------------------------------------------------
 document.querySelector(".contact h4").innerText = "Contact";
 const contactLines = document.querySelectorAll(".contact p");
 contactLines[0].innerHTML = siteContent["contact"]["address"].replace(
-  "et So",
-  "et<br />\n So"
+    "et So",
+    "et<br />\n So"
 );
-contactLines[1].innerText = siteContent["contact"]["phone"];
-contactLines[2].innerText = siteContent["contact"]["email"];
+contactLines[1].innerText = siteContent.contact.phone;
+contactLines[2].innerText = siteContent.contact.email;
 document.querySelector("footer p").innerText =
-  siteContent["footer"]["copyright"];
+    siteContent.footer.copyright;
 
 //------Make Green and Apend and Prepend------------------------------------------------
 const firstAnchor = document.createElement("a");
@@ -98,7 +98,7 @@ document.querySelector("header nav").prepend(firstAnchor);
 document.querySelector("header nav").append(lastAnchor);
 
 document.querySelectorAll("header nav a").forEach(element => {
-  element.style.color = "green";
+    element.style.color = "green";
 });
 
 //--------Stretch-----------------------------------------------------------------------
@@ -108,16 +108,15 @@ document.querySelector(".cta-text").appendChild(toggleButton);
 toggleButton.addEventListener("click", toggle);
 
 function toggle(clickEvent) {
-  //const bg = document.body.style.backgroundColor;
-  if (document.body.style.backgroundColor === "white") {
-    document.body.style.backgroundColor = "blue";
-    document.querySelectorAll("header nav a").forEach(element => {
-      element.style.color = "white";
-    });
-  } else {
-    document.body.style.backgroundColor = "white";
-    document.querySelectorAll("header nav a").forEach(element => {
-      element.style.color = "green";
-    });
-  }
+    if (document.body.style.backgroundColor === "white") {
+        document.body.style.backgroundColor = "blue";
+        document.querySelectorAll("header nav a").forEach(element => {
+            element.style.color = "white";
+        });
+    } else {
+        document.body.style.backgroundColor = "white";
+        document.querySelectorAll("header nav a").forEach(element => {
+            element.style.color = "green";
+        });
+    }
 }
