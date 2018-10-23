@@ -58,8 +58,23 @@ ctaImg.setAttribute("src", siteContent.cta["img-src"]);
 middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 footer.textContent = siteContent.footer.copyright;
 
+function appendElement(parent, element, text, attributes) {
+    let node = document.createElement(element);
+    let textNode = document.createTextNode(text);
+    node.appendChild(textNode);
+    console.log(attributes);
+    if (typeof attributes !== "undefined") {
+        for (i = 0; attributes.length > i; i++) {
+            node.setAttribute(attributes[i][0], attributes[i][1]);
+            console.log("true");
+        }
+    }
+    document.querySelector(parent).appendChild(node);
+}
+
 for (let i = 0; i < nav.length; i++) {
     nav[i].textContent = Object.values(siteContent.nav)[i];
+    nav[i].style.color = "green";
 }
 
 for (let i = 0; i < ctaText.length; i++) {
@@ -76,9 +91,11 @@ for (let i = 0; i < mainContent.length; i++) {
             i
         ];
     }
-    console.log(i, Object.values(siteContent["main-content"])[i]);
 }
 
 for (let i = 0; i < contact.length; i++) {
     contact[i].textContent = Object.values(siteContent.contact)[i];
 }
+
+appendElement("nav", "a", "lorem", [["href", "#"], ["style", "color: green"]]);
+appendElement("nav", "a", "ipsum", [["href", "#"], ["style", "color: green"]]);
