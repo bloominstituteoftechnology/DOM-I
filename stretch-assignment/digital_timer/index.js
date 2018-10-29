@@ -79,3 +79,13 @@ function secondTens_func(){
         return secondTens.textContent = counter_secondTens;
     }
 }
+
+// ====Create function if/else for 'addTime'====
+
+function addTime(){
+    if(counter_secondTens === 1){
+        wipeClear(clearInterval);
+    } else {
+        msTens_func();
+    }
+}
