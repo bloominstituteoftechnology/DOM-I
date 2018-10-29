@@ -53,3 +53,8 @@ navLinks.forEach(function(_element,index){
   _element.textContent = siteContent["nav"][navKeys[index]];
   _element.style.color = "green";
 })
+
+/// ====CTA====
+
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
