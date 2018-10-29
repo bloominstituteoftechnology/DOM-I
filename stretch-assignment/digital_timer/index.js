@@ -68,3 +68,14 @@ function secondOnes_func(){
 
 
 // ====Create function if/else for 'secondTends'====
+
+
+function secondTens_func(){
+    if(counter_secondTens === 9){
+        counter_secondTens = 0;
+        return secondTens.textContent = counter_secondTens;
+    } else {
+        counter_secondTens += 1;
+        return secondTens.textContent = counter_secondTens;
+    }
+}
