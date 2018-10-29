@@ -36,3 +36,18 @@ function msTens_func(){
         return msTens.textContent = counter_msTens;
     }
 }
+
+
+// ====Create function if/else for 'hundreds'====
+
+
+function msHundreds_func(){
+    if(counter_msHundreds === 9){
+        counter_msHundreds = 0;
+        secondOnes_func();
+        return msHundreds.textContent = counter_msHundreds;
+    } else {
+        counter_msHundreds += 1;
+        return msHundreds.textContent = counter_msHundreds;
+    }
+}
