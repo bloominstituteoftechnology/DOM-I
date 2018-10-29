@@ -53,6 +53,20 @@ nav[5].textContent = siteContent.nav['nav-item-6'];
 
 nav.forEach(item => item.style.color = 'green');
 
+
+let newElement = document.createElement('a');
+newElement.href = '#';
+newElement.textContent = 'Community';
+const navigation = document.querySelector('nav');
+navigation.prepend(newElement);
+newElement.style.color = 'green';
+
+let newElement2 = document.createElement('a');
+newElement2.href = '#';
+newElement2.textContent = 'Software';
+navigation.append(newElement2);
+newElement2.style.color = 'green';
+
 // cta
 let header1 = document.querySelector('.cta-text h1');
 header1.textContent = siteContent.cta.h1;
