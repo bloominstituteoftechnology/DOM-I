@@ -51,3 +51,13 @@ nav[3].textContent = siteContent.nav['nav-item-4'];
 nav[4].textContent = siteContent.nav['nav-item-5'];
 nav[5].textContent = siteContent.nav['nav-item-6'];
 
+//cta
+let header1 = document.querySelector('.cta-text h1');
+header1.textContent = siteContent.cta.h1;
+
+let button = document.querySelector('.cta-text button');
+button.textContent = siteContent.cta.button;
+
+let headerImage = document.querySelector('#cta-img');
+headerImage.src = siteContent['cta']['img-src'];
+
