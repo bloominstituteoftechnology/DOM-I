@@ -84,8 +84,17 @@ function secondTens_func(){
 
 function addTime(){
     if(counter_secondTens === 1){
-        wipeClear(clearInterval);
+        wipeClear(interval);
     } else {
         msTens_func();
     }
+}
+
+
+// Create 'timeStarter====
+
+timeStarter = function(){
+    interval = window.setInterval(addTime, 10);
+    button.setAttribute('click', "reset()")
+    button.textContent = "Reset Timer";
 }
