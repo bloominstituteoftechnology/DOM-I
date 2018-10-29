@@ -89,3 +89,11 @@ bottomContent[0].textContent = siteContent['main-content']['services-content'];
 bottomContent[1].textContent = siteContent['main-content']['product-content'];
 bottomContent[2].textContent = siteContent['main-content']['vision-content'];
 
+// contact
+let contactHeader = document.querySelector('.contact h4');
+contactHeader.textContent = siteContent['contact']['contact-h4'];
+
+let contact = document.querySelectorAll('.contact p');
+contact[0].textContent = siteContent['contact']['address'];
+contact[1].textContent = siteContent['contact']['phone'];
+contact[2].textContent = siteContent['contact']['email'];
