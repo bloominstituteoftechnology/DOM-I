@@ -40,3 +40,36 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let nav = document.getElementsByTagName('nav');
+console.log(nav[0].children )
+
+// adding the NAV items
+// this might look  complex
+// but really all I'm doing is grabbing the parent nav item
+// and iterating through its children  with the help of i
+// to access the correct keys in the navigation object
+for(let i = 1; i <=  nav[0].children.length ;i++){
+  nav[0].children[i-1].textContent = siteContent['nav']['nav-item-'+i];
+}
+
+
+// CTA
+// updating  the first header
+let h1 = document.getElementsByTagName('h1')[0]
+h1.innerHTML = siteContent.cta.h1.split(" ").join("<br>");
+
+// updating the button
+let  button= document.getElementsByTagName('button')[0]
+button.textContent = siteContent.cta.button;
+
+//main content
+let h4s= document.getElementsByTagName('h4');
+console.log(h4s)
+let textContents= document.querySelectorAll(".text-content");
+console.log(textContents)
+
+//this is a pretty cool way to access  an object's properties with an index
+// however I think it's in a be easier to do this  with the way that I will do a below
+// console.log(siteContent["main-content"][Object.keys(siteContent["main-content"])[0]])
+
