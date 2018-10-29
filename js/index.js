@@ -40,3 +40,21 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+/* ## Task 2: Create selectors to point your data into elements
+* [ ] Create selectors by using any of the DOM element's methods
+* [ ] Note that IDs have been used on all images.  Use the IDs to update src path content */
+
+// let newElement = document.createElement ('a');
+// newElement.href = '#';
+// newElement.textContent = 'Services'
+// let navBar = document.querySelector("nav");
+
+
+// let navBarA = document.querySelector('a');
+// let navBarA = document.querySelector('header nav a');
+let navBar = document.nav.children
+
+navBarA[0].querySelector("nav-item-1").textContent = siteContent["nav"]["nav-item-1"];
+
+// navBarA[0].setAttribute("nav-item-1", ["nav"]["nav-item-1"])
