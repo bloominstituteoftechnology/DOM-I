@@ -43,19 +43,22 @@ let container = document.querySelectorAll('.container')
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let nav = document.querySelectorAll('a');
-nav[0].textContent = 'Services';
-nav[0].style.color = 'grey';
-nav[1].textContent = 'Product';
-nav[1].style.color = 'grey';
-nav[2].textContent = 'Vision';
-nav[2].style.color = 'grey';
-nav[3].textContent = 'Features';
-nav[3].style.color = 'grey';
-nav[4].textContent = 'About';
-nav[4].style.color = 'grey';
-nav[5].textContent = 'Contact';
-nav[5].style.color = 'grey';
+let nav = document.querySelectorAll('a')
+for(i = 0; i < nav.length; i++) {
+  nav[i].textContent = siteContent['nav'][`nav-item-${i+1}`]
+}
+// nav[0].textContent = 'Services';
+// nav[0].style.color = 'grey';
+// nav[1].textContent = 'Product';
+// nav[1].style.color = 'grey';
+// nav[2].textContent = 'Vision';
+// nav[2].style.color = 'grey';
+// nav[3].textContent = 'Features';
+// nav[3].style.color = 'grey';
+// nav[4].textContent = 'About';
+// nav[4].style.color = 'grey';
+// nav[5].textContent = 'Contact';
+// nav[5].style.color = 'grey';
 
 let ctaH1 = document.querySelector('h1').innerHTML = siteContent["cta"]["h1"];
 // ctaH1.textContent = 'DOM Is Awesome';
@@ -76,7 +79,6 @@ textContentDiv[3].querySelector('p').innerHTML = siteContent['main-content']['pr
 textContentDiv[4].querySelector('h4').innerHTML = siteContent['main-content']['vision-h4'];
 textContentDiv[4].querySelector('p').innerHTML = siteContent['main-content']['vision-content'];
 
-
 let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
@@ -90,8 +92,6 @@ let contactP = contact.querySelectorAll('p');
 contactP[0].innerHTML = siteContent["contact"]["address"];
 contactP[1].innerHTML = siteContent["contact"]["phone"];
 contactP[2].innerHTML = siteContent["contact"]["email"];
-
-
 
 let footer = document.querySelector("footer").innerHTML = siteContent["footer"]["copyright"];
 // footer.querySelector('p').innerHTML = siteContent["copyright"];
