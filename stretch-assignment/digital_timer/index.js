@@ -51,3 +51,20 @@ function msHundreds_func(){
         return msHundreds.textContent = counter_msHundreds;
     }
 }
+
+// ====Create function if/else for 'secondOnes'====
+
+
+function secondOnes_func(){
+    if(counter_secondOnes === 9){
+        counter_secondOnes = 0;
+        secondTens_func();
+        return secondOnes.textContent = counter_secondOnes;
+    } else {
+        counter_secondOnes += 1;
+        return secondOnes.textContent = counter_secondOnes;
+    }
+}
+
+
+// ====Create function if/else for 'secondTends'====
