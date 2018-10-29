@@ -66,3 +66,10 @@ const header1 = document.querySelector(".cta-text");
 header1.prepend(document.createElement("h1"));
 header1.prepend(document.createElement("h1"));
 header1 = document.querySelectorAll(".cta-text h1");
+
+header1.forEach(function(_element,index){
+  _element.textContent = siteContent["cta"]["h1"].split(" ")[index];
+})
+
+let getButton = document.querySelector(".cta-text button");
+getButton.textContent = siteContent["cta"]["button"];
