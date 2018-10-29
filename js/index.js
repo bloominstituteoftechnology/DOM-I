@@ -38,26 +38,60 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+let container = document.querySelectorAll('.container')
+
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let nav = document.querySelectorAll('a');
 nav[0].textContent = 'Services';
-nav[0].style.color = 'grey'
+nav[0].style.color = 'grey';
 nav[1].textContent = 'Product';
-nav[1].style.color = 'grey'
+nav[1].style.color = 'grey';
 nav[2].textContent = 'Vision';
-nav[2].style.color = 'grey'
+nav[2].style.color = 'grey';
 nav[3].textContent = 'Features';
-nav[3].style.color = 'grey'
+nav[3].style.color = 'grey';
 nav[4].textContent = 'About';
-nav[4].style.color = 'grey'
+nav[4].style.color = 'grey';
 nav[5].textContent = 'Contact';
-nav[5].style.color = 'grey'
+nav[5].style.color = 'grey';
 
-let h1 = document.querySelector('h1')
-h1.textContent = 'DOM Is Awesome';
-let button = document.querySelector('button')
-button.textContent = 'Get Started';
+let ctaH1 = document.querySelector('h1').innerHTML = siteContent["cta"]["h1"];
+// ctaH1.textContent = 'DOM Is Awesome';
+let ctaButton = document.querySelector('button').innerHTML = siteContent["cta"]["button"];
+// ctaButton.textContent = 'Get Started';
 let ctaLogo = document.getElementById("cta-img");
-ctaLogo.setAttribute('src', siteContent[".cta"]["img-src"])
+ctaLogo.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let textContentDiv = document.querySelectorAll(".text-content");
+textContentDiv[0].querySelector('h4').innerHTML = siteContent['main-content']['features-h4'];
+textContentDiv[0].querySelector('p').innerHTML = siteContent['main-content']['features-content'];
+textContentDiv[1].querySelector('h4').innerHTML = siteContent['main-content']['about-h4'];
+textContentDiv[1].querySelector('p').innerHTML = siteContent['main-content']['about-content'];
+textContentDiv[2].querySelector('h4').innerHTML = siteContent['main-content']['services-h4'];
+textContentDiv[2].querySelector('p').innerHTML = siteContent['main-content']['services-content'];
+textContentDiv[3].querySelector('h4').innerHTML = siteContent['main-content']['product-h4'];
+textContentDiv[3].querySelector('p').innerHTML = siteContent['main-content']['product-content'];
+textContentDiv[4].querySelector('h4').innerHTML = siteContent['main-content']['vision-h4'];
+textContentDiv[4].querySelector('p').innerHTML = siteContent['main-content']['vision-content'];
+
+
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+let contact = document.querySelector('.contact');
+contact.querySelector('h4').innerHTML = siteContent["contact"]["contact-h4"];
+
+let contactP = contact.querySelectorAll('p');
+
+// let contact = document.querySelectorAll('.contact');
+// contact[0].querySelector('h4').innerHTML = siteContent["contact"]["contact-h4"];
+contactP[0].innerHTML = siteContent["contact"]["address"];
+contactP[1].innerHTML = siteContent["contact"]["phone"];
+contactP[2].innerHTML = siteContent["contact"]["email"];
+
+
+
+let footer = document.querySelector("footer").innerHTML = siteContent["footer"]["copyright"];
+// footer.querySelector('p').innerHTML = siteContent["copyright"];
