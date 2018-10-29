@@ -44,12 +44,14 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 // nav
 let nav = document.querySelectorAll('nav a');
 
-nav[0].textContent = siteContent.nav['nav-item-1'];
-nav[1].textContent = siteContent.nav['nav-item-2'];
-nav[2].textContent = siteContent.nav['nav-item-3'];
-nav[3].textContent = siteContent.nav['nav-item-4'];
-nav[4].textContent = siteContent.nav['nav-item-5'];
-nav[5].textContent = siteContent.nav['nav-item-6'];
+// nav[0].textContent = siteContent.nav['nav-item-1'];
+// nav[1].textContent = siteContent.nav['nav-item-2'];
+// nav[2].textContent = siteContent.nav['nav-item-3'];
+// nav[3].textContent = siteContent.nav['nav-item-4'];
+// nav[4].textContent = siteContent.nav['nav-item-5'];
+// nav[5].textContent = siteContent.nav['nav-item-6'];
+
+nav.forEach((item, i) => nav[i].textContent = siteContent.nav[`nav-item-${++i}`]);
 
 nav.forEach(item => item.style.color = 'green');
 
