@@ -51,7 +51,7 @@ nav[3].textContent = siteContent.nav['nav-item-4'];
 nav[4].textContent = siteContent.nav['nav-item-5'];
 nav[5].textContent = siteContent.nav['nav-item-6'];
 
-//cta
+// cta
 let header1 = document.querySelector('.cta-text h1');
 header1.textContent = siteContent.cta.h1;
 
@@ -97,3 +97,7 @@ let contact = document.querySelectorAll('.contact p');
 contact[0].textContent = siteContent['contact']['address'];
 contact[1].textContent = siteContent['contact']['phone'];
 contact[2].textContent = siteContent['contact']['email'];
+
+// footer 
+let footer = document.querySelector('footer p');
+footer.textContent = siteContent['footer']['copyright'];
