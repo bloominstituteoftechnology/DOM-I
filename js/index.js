@@ -94,4 +94,19 @@ contactP[1].innerHTML = siteContent["contact"]["phone"];
 contactP[2].innerHTML = siteContent["contact"]["email"];
 
 let footer = document.querySelector("footer").innerHTML = siteContent["footer"]["copyright"];
-// footer.querySelector('p').innerHTML = siteContent["copyright"];
+
+let prepend = document.createElement('a');
+let appendChild = document.createElement('a');
+
+prepend.href = '#';
+prepend.textContent = "Prepend!";
+
+appendChild.href = '#';
+appendChild.textContent = "AppendChild!"
+
+let navBar = document.querySelector('nav');
+
+navBar.prepend(prepend);
+navBar.appendChild(appendChild);
+
+nav.forEach((e) => e.style.color = 'green');
