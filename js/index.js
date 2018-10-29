@@ -58,3 +58,11 @@ navLinks.forEach(function(_element,index){
 
 let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+
+// ====DOM-ish stuff====
+
+const header1 = document.querySelector(".cta-text");
+header1.prepend(document.createElement("h1"));
+header1.prepend(document.createElement("h1"));
+header1 = document.querySelectorAll(".cta-text h1");
