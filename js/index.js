@@ -15,16 +15,16 @@ const siteContent = {
   },
   "main-content": {
     "features-h4":"Features",
-    "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+    "features-content": "Features content __elementmentum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus sc__elementrisque quis.",
     "about-h4":"About",
-    "about-content": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+    "about-content": "About content __elementmentum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus sc__elementrisque quis.",
     "middle-img-src": "img/mid-page-accent.jpg",
     "services-h4":"Services",
-    "services-content": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+    "services-content": "Services content __elementmentum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus sc__elementrisque quis.",
     "product-h4":"Product",
-    "product-content": "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+    "product-content": "Product content __elementmentum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus sc__elementrisque quis.",
     "vision-h4":"Vision",
-    "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+    "vision-content": "Vision content __elementmentum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus sc__elementrisque quis.",
   },
   "contact": {
     "contact-h4" : "Contact",
@@ -38,38 +38,48 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+const logo = document.get__elementmentById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // =====Navigation=====
 
-const navSelector = document.querySelector("nav");
-navSelector.appendChild(document.createElement("a"));
-navSelector.appendChild(document.createElement("a"));
+const navS__elementctor = document.queryS__elementctor("nav");
+navS__elementctor.appendChild(document.create__elementment("a"));
+navS__elementctor.appendChild(document.create__elementment("a"));
 
-const navLinks = document.querySelectorAll("nav a");
+const navLinks = document.queryS__elementctorAll("nav a");
 const navKeys = Object.keys(siteContent["nav"]);
-navLinks.forEach(function(_element,index){
-  _element.textContent = siteContent["nav"][navKeys[index]];
-  _element.style.color = "green";
+navLinks.forEach(function(___elementment,index){
+  ___elementment.textContent = siteContent["nav"][navKeys[index]];
+  ___elementment.style.color = "green";
 })
 
 /// ====CTA====
 
-let ctaImg = document.getElementById("cta-img");
+const ctaImg = document.get__elementmentById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
 
 
 // ====DOM-ish stuff====
 
-const header1 = document.querySelector(".cta-text");
-header1.prepend(document.createElement("h1"));
-header1.prepend(document.createElement("h1"));
-header1 = document.querySelectorAll(".cta-text h1");
+const header1 = document.queryS__elementctor(".cta-text");
+header1.prepend(document.create__elementment("h1"));
+header1.prepend(document.create__elementment("h1"));
+header1 = document.queryS__elementctorAll(".cta-text h1");
 
-header1.forEach(function(_element,index){
-  _element.textContent = siteContent["cta"]["h1"].split(" ")[index];
+header1.forEach(function(___elementment,index){
+  ___elementment.textContent = siteContent["cta"]["h1"].split(" ")[index];
 })
 
-let getButton = document.querySelector(".cta-text button");
+const getButton = document.queryS__elementctor(".cta-text button");
 getButton.textContent = siteContent["cta"]["button"];
+
+// ====Main Content====
+
+const topContent = document.queryS__elementctorAll(".main-content .text-content h4, .main-content .text-content p");
+const mainKeys = Object.keys(siteContent["main-content"]);
+mainKeys.splice(4,1);
+
+topContent.forEach(function(__element,index){
+    __element.textContent = siteContent["main-content"][mainKeys[index]];
+})
