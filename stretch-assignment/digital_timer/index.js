@@ -1,30 +1,24 @@
-
-// ====Create Const variable for getElementById====
-
+// ====Add const variables====
 
 const msTens = document.getElementById("msTens");
 const msHundreds = document.getElementById("msHundreds");
 const secondOnes = document.getElementById("secondOnes");
 const secondTens = document.getElementById("secondTens");
 
-
-// ====Counter variables====
-
+// ====Add counter variables====
 let counter_msTens = 0;
 let counter_msHundreds = 0;
 let counter_secondOnes = 0;
 let counter_secondTens = 0;
 
-
-// ====textContent Counter====
+// ====Add counter textContent====
 
 msTens.textContent = counter_msTens;
 msHundreds.textContent = counter_msHundreds;
 secondOnes.textContent = counter_secondOnes;
 secondTens.textContent = counter_secondTens;
 
-
-// ====Create function if/else for 'tens'====
+// ====Add msTens Function====
 
 function msTens_func(){
     if(counter_msTens === 9){
@@ -37,10 +31,7 @@ function msTens_func(){
     }
 }
 
-
-// ====Create function if/else for 'hundreds'====
-
-
+// ====Add msHundred function====
 function msHundreds_func(){
     if(counter_msHundreds === 9){
         counter_msHundreds = 0;
@@ -52,7 +43,7 @@ function msHundreds_func(){
     }
 }
 
-// ====Create function if/else for 'secondOnes'====
+//====Add secondOnes function====
 
 
 function secondOnes_func(){
@@ -66,8 +57,7 @@ function secondOnes_func(){
     }
 }
 
-
-// ====Create function if/else for 'secondTends'====
+// ====Add secondTens function====
 
 
 function secondTens_func(){
@@ -80,21 +70,43 @@ function secondTens_func(){
     }
 }
 
-// ====Create function if/else for 'addTime'====
+
+// ====Add addTime====
 
 function addTime(){
     if(counter_secondTens === 1){
-        wipeClear(interval);
+        clearInterval(increment);
     } else {
         msTens_func();
     }
 }
 
 
-// Create 'timeStarter====
+// ====Initiate Timer function====
 
-timeStarter = function(){
-    interval = window.setInterval(addTime, 10);
-    button.setAttribute('click', "reset()")
-    button.textContent = "Reset Timer";
+
+startTimer = function(){
+    increment = window.setInterval(addTime, 10);
+    button.setAttribute('onclick', "resetTimer()")
+    button.textContent = "Change it back";
 }
+
+// ====Restart Timer====
+resetTimer = function(){
+    clearInterval(increment);
+    counter_msTens = 0;
+    counter_msHundreds = 0;
+    counter_secondOnes = 0;
+    counter_secondTens = 0;
+
+    msTens.textContent = counter_msTens;
+    msHundreds.textContent = counter_msHundreds;
+    secondOnes.textContent = counter_secondOnes;
+    secondTens.textContent = counter_secondTens;
+    button.setAttribute('onclick', "startTimer()")
+    button.textContent = "Boom Diggity Clack";
+}
+
+let button = document.querySelector(".button");
+button.setAttribute('onclick', "startTimer()")
+
