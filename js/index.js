@@ -101,16 +101,18 @@ const newFooter = document.querySelector('footer');
 newFooter.textContent = siteContent.footer.copyright;
 
 //Add new content nav text color to green
- newNav.forEach(e => e.style.color = 'green'); 
+    newNav.forEach(e => e.style.color = 'green'); 
 
 //Add two items to navigation
 newNav = document.getElementsByTagName('nav')[0];
 let addNewNav = (name) => {
   let addNode = document.createElement('a');
   addNode.innerHTML = name; 
+  addNode.style.color = 'green';
   return addNode; 
 }
 
 newNav.prepend(addNewNav('In Front'));
 newNav.append(addNewNav('Behind'));
-// newNav.forEach(e => e.style.color = 'green'); ???? why is this not a function here? Scope????????
+// newNav.style.color = 'green';
+//  newNav.forEach(e => e.style.color = 'green'); //???? why is this not a function here? Scope????????
