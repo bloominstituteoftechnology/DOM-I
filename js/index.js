@@ -68,6 +68,17 @@ button.textContent = siteContent.cta.button;
 let ctaIMG = document.getElementById('cta-img');
 ctaIMG.src = siteContent.cta["img-src"];
 
+let active = false;
+button.addEventListener('click', () => {
+  if (!active){
+    ctaIMG.style.opacity = '0.7';
+    active = true;
+  } else {
+    ctaIMG.style.opacity = '1.0';
+    active = false;
+  }
+});
+
 let mainHeadings = document.querySelectorAll('.text-content h4');
 mainHeadings[0].textContent = siteContent['main-content']['features-h4'];
 mainHeadings[1].textContent = siteContent['main-content']['about-h4'];
