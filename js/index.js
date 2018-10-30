@@ -42,7 +42,7 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let nav = document.getElementsByTagName('nav');
-console.log(nav[0].children )
+// console.log(nav[0].children )
 
 // adding the NAV items
 // this might look  complex
@@ -65,9 +65,34 @@ button.textContent = siteContent.cta.button;
 
 //main content
 let h4s= document.getElementsByTagName('h4');
-console.log(h4s)
-let textContents= document.querySelectorAll(".text-content");
-console.log(textContents)
+// console.log(h4s[0].textContent = "test")
+
+// OK this is the coolest thing I've seen all week!
+// nowhere on mdns documentation  or anywhere on query selector
+// have I seen the ability to use > for child selector
+// this seriously needs to be in the training kit
+// this is insanely powerful
+let pTextContents= document.querySelectorAll(".text-content > p");
+console.log(pTextContents)
+
+
+// I am iterating through the main content object
+// and then checking to see if the key = 
+// 'content' or 'h4'. when they'd do I am updating
+// their content and iterating with i,j to go through the 
+// arrays of h4s and text contents
+let i = 0, j = 0;
+for (item in siteContent["main-content"]){
+  let  keySuffix= item.toString().split('-')[1]
+  if(keySuffix==='h4'){
+    h4s[i].textContent = siteContent["main-content"][item]
+    i++;
+  }else if(keySuffix==="content"){
+    pTextContents[j].textContent = siteContent["main-content"][item]
+    j++;
+  }
+}
+
 
 //this is a pretty cool way to access  an object's properties with an index
 // however I think it's in a be easier to do this  with the way that I will do a below
