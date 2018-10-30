@@ -63,6 +63,11 @@ h1.innerHTML = siteContent.cta.h1.split(" ").join("<br>");
 let  button= document.getElementsByTagName('button')[0]
 button.textContent = siteContent.cta.button;
 
+// updating the the image inside CTA
+ let  jumboImage= document.getElementById('cta-img')
+ console.log(jumboImage)
+ jumboImage.src= siteContent.cta["img-src"];
+
 //main content
 let h4s= document.getElementsByTagName('h4');
 // console.log(h4s[0].textContent = "test")
@@ -75,26 +80,47 @@ let h4s= document.getElementsByTagName('h4');
 let pTextContents= document.querySelectorAll(".text-content > p");
 console.log(pTextContents)
 
+/*
+   main content
 
-// I am iterating through the main content object
-// and then checking to see if the key = 
-// 'content' or 'h4'. when they'd do I am updating
-// their content and iterating with i,j to go through the 
-// arrays of h4s and text contents
+  I am iterating through the main content object
+  and then checking to see if the key = 
+  'content' or 'h4'. when they'd do I am updating
+  their content and iterating with i,j to go through the 
+  arrays of h4s and text contents
+*/
 let i = 0, j = 0;
 for (item in siteContent["main-content"]){
   let  keySuffix= item.toString().split('-')[1]
   if(keySuffix==='h4'){
-    h4s[i].textContent = siteContent["main-content"][item]
-    i++;
+    h4s[i++].textContent = siteContent["main-content"][item]
+    //i++;
   }else if(keySuffix==="content"){
-    pTextContents[j].textContent = siteContent["main-content"][item]
-    j++;
+    pTextContents[j++].textContent = siteContent["main-content"][item]
+    //j++;
   }
 }
+
+//adding the middle image
+let  middleImage= document.getElementById('middle-img')
+middleImage.src= "img/mid-page-accent.jpg" 
 
 
 //this is a pretty cool way to access  an object's properties with an index
 // however I think it's in a be easier to do this  with the way that I will do a below
 // console.log(siteContent["main-content"][Object.keys(siteContent["main-content"])[0]])
 
+let  contactChildren= document.querySelectorAll(".contact > *");
+console.log(contactChildren)
+
+//you can chain selectors instead of only usng global
+
+//contact
+i = 0;
+for(item in siteContent["contact"] ){
+   contactChildren[i++].textContent = siteContent.contact[item]; 
+}
+
+//what are
+let  footerParagraph= document.querySelector("footer > p");
+footerParagraph.textContent =  siteContent.footer.copyright;
