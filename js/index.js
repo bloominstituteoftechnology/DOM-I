@@ -38,5 +38,39 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+let imgLogo = document.getElementById("logo-img");
+let imgCta = document.getElementById('cta-img');
+let imgMiddle = document.getElementById('middle-img');
+let links = document.querySelectorAll('a');
+let headTitle = document.querySelector('h1');
+let button = document.querySelector('button');
+let mainContentTitle = document.querySelectorAll('.main-content h4');
+let mainContentText = document.querySelectorAll('.main-content p');
+let contact = document.querySelector('.contact');
+let footer = document.querySelector('footer p');
+
+
+imgLogo.setAttribute('src', siteContent["nav"]["img-src"]);
+imgCta.setAttribute('src', siteContent['cta']['img-src']);
+imgMiddle.setAttribute('src', siteContent["main-content"]['middle-img-src']);
+
+for(let i  = 0; i < links.length; i++) {
+  links[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
+}
+
+headTitle.innerHTML = siteContent['cta']['h1'].split(' ').join('<br/>');
+button.textContent = siteContent['cta']['button'];
+
+let mcArray = ['features', 'about', 'services', 'product', 'vision'];
+for(let i = 0; i < mcArray.length; i++) {
+  mainContentTitle[i].textContent = siteContent['main-content'][`${mcArray[i]}-h4`];
+  mainContentText[i].textContent = siteContent['main-content'][`${mcArray[i]}-content`];
+}
+
+console.log(contact.children)
+let contactArray = ['contact-h4', 'address', 'phone', 'email'];
+for(let i = 0; i < contactArray.length; i ++) {
+  contact.children[i].textContent = siteContent['contact'][contactArray[i]];
+}
+
+footer.textContent = siteContent['footer']['copyright'];
