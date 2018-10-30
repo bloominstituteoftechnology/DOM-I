@@ -133,14 +133,20 @@ footer.getElementsByTagName("p")[0].innerHTML = siteContent["footer"]["copyright
 //Links Section
 newNavLinks = document.getElementsByTagName("nav")[0];
 
+/*  Refactored into arrow func
+
+let newLinks = function (linkName) {
+  let newLink = document.createElement("a");
+  newLink.textContent = linkName;
+  return newNode;
+}
+ */
 let newLinks = (linkName) => {
   let newLink = document.createElement("a");
   newLink.textContent = linkName;
   return newNode;
 
-}
-
-//remember parens
+}  //remember parens
 
 newLinks.prepend(createNewNode("Item 1"));
 newLinks.append(createNewNode("Item 2"));
