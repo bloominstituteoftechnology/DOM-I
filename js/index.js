@@ -109,4 +109,6 @@ let navBar = document.querySelector('nav');
 navBar.prepend(prepend);
 navBar.appendChild(appendChild);
 
+nav = document.querySelectorAll('a')
+
 nav.forEach((e) => e.style.color = 'green');
