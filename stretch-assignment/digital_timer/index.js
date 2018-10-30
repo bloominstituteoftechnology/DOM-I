@@ -28,7 +28,7 @@ window.addEventListener('load', () => {
         if (time >= 10000){
             clearInterval(timer);
             for (let i = 0; i < digits.length; i++)
-                digits[i].style.color = 'red';
+                digits[i].classList.add('redDigit');
         }
     }, 10);
 });
