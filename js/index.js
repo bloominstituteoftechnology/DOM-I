@@ -38,5 +38,20 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// Dynamic nav
+
+// Create html collection from element nav
+var nav = document.getElementsByTagName('nav');
+// Length of the html collection
+var navChildCount = nav[0].childElementCount + 1;
+
+for (let i=1; i < navChildCount; i++) {
+  // Assign textContent to nav link
+  nav[0].children[i-1].textContent = siteContent['nav']['nav-item-'+i];
+  // Assign url to nav link
+  nav[0].children[i-1].href = siteContent['nav']['nav-item-'+i] + '.html';
+}
