@@ -45,7 +45,19 @@ let navElements = document.querySelectorAll('nav a');
 for (let i = 0; i < navElements.length; i++){
   let child = Object.values(siteContent.nav)[i];
   navElements[i].textContent = child;
+  navElements[i].style.color = 'green'; // Changing text color to green
 }
+
+let nav = document.querySelector('nav');
+let newChild = document.createElement('a');
+newChild.textContent = 'End';
+newChild.style.color = 'green';
+let newChild2 = document.createElement('a');
+newChild2.textContent = 'Beginning';
+newChild2.style.color = 'green';
+
+nav.appendChild(newChild);
+nav.prepend(newChild2);
 
 let heading = document.querySelector('.cta-text h1');
 heading.textContent = siteContent.cta.h1;
