@@ -45,9 +45,9 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 // Dynamic nav
 
 // Create html collection from element nav
-var nav = document.getElementsByTagName('nav');
+const nav = document.getElementsByTagName('nav');
 // Length of the html collection
-var navChildCount = nav[0].childElementCount + 1;
+const navChildCount = nav[0].childElementCount + 1;
 
 for (let i=1; i < navChildCount; i++) {
   // Assign textContent to nav link
@@ -56,3 +56,9 @@ for (let i=1; i < navChildCount; i++) {
   nav[0].children[i-1].href = siteContent['nav']['nav-item-'+i] + '.html';
 }
 
+// Dynamic header
+
+// Assign header using a querySelector
+const header = document.querySelector('.cta h1');
+// Assign textContent to cta object's h1 value
+header.textContent = siteContent['cta']['h1'];
