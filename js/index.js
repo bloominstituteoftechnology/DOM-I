@@ -55,3 +55,4 @@ for (let i=1; i < navChildCount; i++) {
   // Assign url to nav link
   nav[0].children[i-1].href = siteContent['nav']['nav-item-'+i] + '.html';
 }
+
