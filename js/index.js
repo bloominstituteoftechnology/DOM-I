@@ -52,9 +52,17 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
 // let navBarA = document.querySelector('a');
-// let navBarA = document.querySelector('header nav a');
-let navBar = document.nav.children
+//query selector must be followed by ("CSS");
+let navBarA = document.querySelectorAll('header nav a');
+// let navBar = document.nav.children
 
-navBarA[0].querySelector("nav-item-1").textContent = siteContent["nav"]["nav-item-1"];
+//to set a specific element at index [x] see below
+navBarA[0].textContent = siteContent["nav"]["nav-item-1"];
 
 // navBarA[0].setAttribute("nav-item-1", ["nav"]["nav-item-1"])
+
+//query selector must be followed by ("CSS");
+let h1Var = document.querySelector(".cta .cta-text h1") 
+h1Var.textContent = "Rachel"
+
+
