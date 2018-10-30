@@ -45,7 +45,7 @@ logo.setAttribute('src', siteContent['nav']['img-src'])
 
 // =====Navigation=====
 
-const navSelector = document.querySelector("nav");
+/*const navSelector = document.querySelector("nav");
 navSelector.appendChild(document.createElement("a"));
 navSelector.appendChild(document.createElement("a"));
 
@@ -54,7 +54,20 @@ const navKeys = Object.keys(siteContent["nav"]);
 navLinks.forEach(function(_element,index){
   _element.textContent = siteContent["nav"][navKeys[index]];
   _element.style.color = "green";
-})
+})*/
+
+/* ====original nav code above that partially worked - refactored the code to below
+however, with 'element' and 'index' when i tried writing them out, it broke the code,
+when i tried writing _element and _index, it broke the code. When I wrote simplye 'e' and 'i',
+it works - I have no idea why but it does */
+
+const navItems = document.querySelectorAll('nav a');
+navItems.forEach((e, i) => {
+  e.textContent = siteContent.nav[`nav-item-${i+1}`];
+
+  //Change the color of the navigation text to be green.
+  e.style.color = 'green';
+  });
 
 /// ====CTA====
 
@@ -64,7 +77,7 @@ ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
 
 // ====DOM-ish stuff====
 
-const header1 = document.querySelector(".cta-text");
+let header1 = document.querySelector(".cta-text");
 header1.prepend(document.createElement("h1"));
 header1.prepend(document.createElement("h1"));
 header1 = document.querySelectorAll(".cta-text h1");
@@ -96,4 +109,3 @@ middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 const footerText = document.querySelector("footer p");
 footerText.textContent = siteContent["footer"]["copyright"];
 
-© 2018 Great Idea! Inc.
