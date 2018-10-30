@@ -45,9 +45,9 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 // Dynamic nav
 
 // Create html collection from element nav
-const nav = document.getElementsByTagName('nav');
+let nav = document.getElementsByTagName('nav');
 // Length of the html collection
-const navChildCount = nav[0].childElementCount + 1;
+let navChildCount = nav[0].childElementCount + 1;
 
 for (let i=1; i < navChildCount; i++) {
   // Assign textContent to nav link
@@ -59,6 +59,20 @@ for (let i=1; i < navChildCount; i++) {
 // Dynamic header
 
 // Assign header using a querySelector
-const header = document.querySelector('.cta h1');
+let header = document.querySelector('.cta h1');
 // Assign textContent to cta object's h1 value
 header.textContent = siteContent['cta']['h1'];
+
+// Dynamic header 
+
+// Assign header logo using a querySelector
+let headerLogo = document.querySelector('.cta img');
+// Assign header logo to cta object's img-src value
+headerLogo.setAttribute('src', siteContent['cta']['img-src']);
+
+// Dynamic button
+
+// Assign header logo using a querySelector
+let headerButton = document.querySelector('.cta button');
+headerButton.textContent = siteContent['cta']['button'];
+
