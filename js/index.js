@@ -45,8 +45,6 @@ logo.src = siteContent["nav"]["img-src"];
 
 // Navigation
 const NavItems = document.querySelectorAll('nav a');
-// NavItems.item(0).textContent = siteContent.nav["nav-item-1"];
-// NavItems.item(1).textContent = siteContent.nav["nav-item-2"];
 NavItems[0].textContent = siteContent.nav["nav-item-1"];
 NavItems[1].textContent = siteContent.nav["nav-item-2"];
 NavItems[2].textContent = siteContent.nav["nav-item-3"];
@@ -54,15 +52,27 @@ NavItems[3].textContent = siteContent.nav["nav-item-4"];
 NavItems[4].textContent = siteContent.nav["nav-item-5"];
 NavItems[5].textContent = siteContent.nav["nav-item-6"];
 
+// Add two new nav items - Blog and Home
+const index = document.createElement('a');
+index.href = '#';
+index.textContent = 'Home';
+const mainNav = document.querySelector('header nav');
+mainNav.prepend(index);
+
+const blog = document.createElement('a');
+blog.href = '#';
+blog.textContent = 'Blog';
+mainNav.appendChild(blog);
+
 // Make Navigation Items Green
-for(let i = 0; i < NavItems.length; i++) {
-  NavItems[i].style.color = 'green';
+const NewNavItems = document.querySelectorAll('nav a');
+for(let i = 0; i < NewNavItems.length; i++) {
+  NewNavItems[i].style.color = 'green';
 }
 
 // H1
 const ctaText = document.querySelector('.cta-text h1');
 siteContent.cta["h1"] = "DOM<br> Is<br> Awesome!";
-//siteContent["cta"]["h1"] = "DOM<br> Is<br> Awesome!";
 ctaText.innerHTML = siteContent.cta["h1"];
 
 // Button
@@ -101,9 +111,6 @@ contactParagraphs[0].textContent = siteContent["contact"]["address"];
 contactParagraphs[1].textContent = siteContent["contact"]["phone"];
 contactParagraphs[2].textContent = siteContent["contact"]["email"];
 
-
-
 // Footer
 const footer = document.querySelector('footer p');
 footer.textContent = siteContent["footer"]["copyright"];
-// paragraphs[8].textContent = siteContent["footer"]["copyright"];
