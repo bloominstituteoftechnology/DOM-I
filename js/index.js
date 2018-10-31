@@ -37,7 +37,7 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
+// Update the img src for all images
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
@@ -46,3 +46,11 @@ headerImg.src = siteContent['cta']['img-src'];
 
 const middleImg = document.querySelector('#middle-img');
 middleImg.src = siteContent['main-content']['middle-img-src'];
+
+// Update the a tag in the nav bar
+const aTags = document.querySelectorAll('header nav a');
+aTags.forEach((tag, index) => {
+  const element = 'nav-item-' + (index+1);
+  tag.textContent = siteContent['nav'][element];
+});
+
