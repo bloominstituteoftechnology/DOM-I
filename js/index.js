@@ -95,3 +95,7 @@ const contactText = document.querySelectorAll('.contact p');
 contactText[0].textContent = siteContent['contact']['address'];
 contactText[1].textContent = siteContent['contact']['phone'];
 contactText[2].textContent = siteContent['contact']['email'];
+
+// Update the footer section
+const footer = document.querySelector('footer p');
+footer.textContent = siteContent['footer']['copyright'];
