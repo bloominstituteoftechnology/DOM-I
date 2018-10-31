@@ -94,5 +94,22 @@ contentText[8].textContent = siteContent.footer.copyright;
 
 
 
+//Change nav-text color to green-----------------------------------------
+navBar.forEach((value) => value.style.color = 'green');
+
+
+//Adding new elements to navbar------------------------------------------
+let nav = document.querySelector('nav');
+
+let aElement = document.createElement('a');
+aElement.textContent = "I'm the first element";
+
+let bElement = document.createElement('a');
+bElement.textContent = "I'm the last element!";
+
+nav.prepend(aElement);
+nav.append(bElement);
+
+
 
 
