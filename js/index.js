@@ -55,4 +55,22 @@ button.innerText = siteContent.cta.button;
 
 let ctaImg = document.getElementById('cta-img');
 ctaImg.src = siteContent['cta']["img-src"];
-console.log(ctaHead);
+
+
+
+let mainContentH4List = document.querySelectorAll('.main-content h4');
+let mainContentPList = document.querySelectorAll('.text-content p');
+
+const arr = Object.values(siteContent["main-content"]);
+
+
+for(let i = 0; i < mainContentH4List.length; i++) {
+
+  const arrH4 = arr.filter(item => !item.includes('.'));
+  const arrP = arr.filter(item => item.includes(' '));
+
+  mainContentH4List[i].innerText = arrH4[i]
+  mainContentPList[i].innerText = arrP[i];
+}
+
+console.log(arrH4);
