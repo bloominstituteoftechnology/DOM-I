@@ -52,7 +52,10 @@ const aTags = document.querySelectorAll('header nav a');
 aTags.forEach((tag, index) => {
   const element = 'nav-item-' + (index+1);
   tag.textContent = siteContent['nav'][element];
+  //Changing the text color of the links to green
+  tag.style.color = 'green';
 });
+
 
 // Update the header title
 const  headerTitle = document.querySelector('.cta .cta-text h1');
@@ -99,3 +102,20 @@ contactText[2].textContent = siteContent['contact']['email'];
 // Update the footer section
 const footer = document.querySelector('footer p');
 footer.textContent = siteContent['footer']['copyright'];
+
+// Create two new links
+const newLink1 = document.createElement('a');
+newLink1.href = '#';
+newLink1.textContent = 'Login/Sign Up';
+newLink1.style.color = 'green';
+
+const newLink2 = document.createElement('a');
+newLink2.href = '#';
+newLink2.textContent = 'Home';
+newLink2.style.color = 'green';
+
+// Adding the two new links to the nav bar
+const nav = document.querySelector('nav');
+
+nav.appendChild(newLink1);
+nav.prepend(newLink2);
