@@ -86,3 +86,12 @@ const bottomContent = document.querySelectorAll('.main-content .bottom-content p
 bottomContent[0].textContent = siteContent['main-content']['services-content'];
 bottomContent[1].textContent = siteContent['main-content']['product-content'];
 bottomContent[2].textContent = siteContent['main-content']['vision-content'];
+
+// Update the contact section
+const contactH4 = document.querySelector('.contact h4');
+contactH4.textContent = siteContent['contact']['contact-h4'];
+
+const contactText = document.querySelectorAll('.contact p');
+contactText[0].textContent = siteContent['contact']['address'];
+contactText[1].textContent = siteContent['contact']['phone'];
+contactText[2].textContent = siteContent['contact']['email'];
