@@ -37,6 +37,7 @@ const siteContent = {
   },
 };
 
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
@@ -100,7 +101,7 @@ console.log(pTextContents)
 */
 let i = 0, j = 0;
 for (item in siteContent["main-content"]){
-  let  keySuffix= item.toString().split('-')[1]
+  let keySuffix= item.toString().split('-')[1]
   if(keySuffix==='h4'){
     h4s[i++].textContent = siteContent["main-content"][item]
     //i++;
@@ -133,3 +134,17 @@ for(item in siteContent["contact"] ){
 //what are
 let  footerParagraph= document.querySelector("footer > p");
 footerParagraph.textContent =  siteContent.footer.copyright;
+
+
+const obj={
+  "info":"thanks for clicking"
+}
+
+console.log(button)
+button.addEventListener('click',e=>{
+  console.log(e)
+  console.log(e.target)
+  let newP= document.createElement('p')
+  newP.textContent = obj.info;
+  e.target.parentNode.append(newP)
+})
