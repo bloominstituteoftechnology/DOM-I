@@ -54,6 +54,21 @@ const lineBreak = (node, string) => {
   });
 };
 
+// function for specificBreak in a string
+const specificBreak = (node, string, position) => {
+  const splitString = string.split(' ');
+  let newString = [];
+  const lBreak = document.createElement('br');
+  for (let i = 0; i < splitString.length; i++) {
+    const textNode = document.createTextNode(splitString[i] + ' ');
+    if (i === position) {
+      newString.push(node.appendChild(textNode) + node.appendChild(lBreak));
+    } else {
+      newString.push(node.appendChild(textNode));
+    }
+  }
+};
+
 // function to loop through the content arrays
 
 const loop = (arr, index, content) => {
@@ -94,7 +109,6 @@ worldImg.src = siteContent['cta']['img-src'];
 
 const headingsH4 = document.querySelectorAll('h4');
 const mainContentParagraphs = document.querySelectorAll('p');
-console.log(mainContentParagraphs);
 
 // accessing and setting the headings
 
@@ -103,6 +117,7 @@ loop(headingsH4, 1, siteContent['main-content']['about-h4']);
 loop(headingsH4, 2, siteContent['main-content']['services-h4']);
 loop(headingsH4, 3, siteContent['main-content']['product-h4']);
 loop(headingsH4, 4, siteContent['main-content']['vision-h4']);
+loop(headingsH4, 5, siteContent['contact']['contact-h4']);
 
 // accessing and setting the paragraph content
 
@@ -114,3 +129,12 @@ loop(mainContentParagraphs, 4, siteContent['main-content']['vision-content']);
 
 const midImg = document.getElementById('middle-img');
 midImg.src = 'img/mid-page-accent.jpg';
+
+const contactInfo = document.querySelectorAll('.contact p');
+const mainAddress = siteContent['contact']['address'];
+specificBreak(contactInfo[0], mainAddress, 3);
+loop(contactInfo, 1, siteContent['contact']['phone']);
+loop(contactInfo, 2, siteContent['contact']['email']);
+
+const copyright = document.querySelector('footer p');
+copyright.textContent = siteContent['footer']['copyright'];
