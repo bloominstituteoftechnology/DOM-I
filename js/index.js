@@ -93,6 +93,14 @@ for (let i = 0; i < nav.length; i++) {
   nav[i].textContent = siteContentNav[i];
 }
 
+const htmlNav = document.querySelector('nav');
+const news = document.createElement('a');
+news.textContent = 'News';
+const signUp = document.createElement('a');
+signUp.textContent = 'Sign Up Now';
+
+htmlNav.appendChild(signUp);
+htmlNav.prepend(news);
 // main heading
 
 let mainHeading = document.querySelector('h1');
