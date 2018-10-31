@@ -6,22 +6,32 @@ const msTens = document.querySelector('#msTens');
 
 //SETUP COUNTER VARIABLES-------------------------------
 let counter_secondTens = 0;
-let counter_secoundOnes = 0;
-let counter_msHunders = 0;
+let counter_secondOnes = 0;
+let counter_msHundreds = 0;
 let counter_msTens = 0;
 
 
 
 
-let testInterval = setInterval(tester, 1000);
-function tester() {
-    if(counter_secondTens===9) {
-        counter_secondTens=0;
+function secondOnesFunction(){
+    if(counter_secondOnes === 9){
+        counter_secondOnes = 0;
+    } else {
+        counter_secondOnes += 1;
     }
-    else {
-        counter_secondTens += 1;
-    }
-    console.log(counter_secondTens);
-    secondTens.textContent = counter_secondTens;
-
+    secondOnes.textContent = counter_secondOnes;
 }
+
+function msHundredsFunction(){
+    if(counter_msHundreds === 9){
+        counter_msHundreds = 0;
+    } else {
+        counter_msHundreds += 1;
+    }
+    msHundreds.textContent = counter_msHundreds;
+}
+
+setInterval(secondOnesFunction, 1000);
+setInterval(msHundredsFunction, 100);
+
+

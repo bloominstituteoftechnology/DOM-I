@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="461fb72d-4653-4303-a7ca-066dbacd073f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DOM-I/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DOM-I/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stretch-assignment/digital_timer/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/stretch-assignment/digital_timer/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stretch-assignment/digital_timer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/stretch-assignment/digital_timer/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stretch-assignment/digital_timer/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/stretch-assignment/digital_timer/styles.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,14 +42,14 @@
         <counts>
           <entry key="css" value="49" />
           <entry key="html" value="34" />
-          <entry key="js" value="3404" />
+          <entry key="js" value="3730" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="49" />
           <entry key="HTML" value="34" />
-          <entry key="JavaScript" value="3404" />
+          <entry key="JavaScript" value="3730" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -73,8 +70,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/stretch-assignment/digital_timer/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="48" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+            <state relative-caret-position="357">
+              <caret line="21" column="48" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -124,8 +121,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="996" />
-    <option name="width" value="933" />
+    <option name="x" value="851" />
+    <option name="width" value="1078" />
     <option name="height" value="1088" />
   </component>
   <component name="ProjectView">
@@ -198,12 +195,12 @@
       <option name="presentableId" value="Default" />
       <updated>1540996261955</updated>
       <workItem from="1540996266012" duration="4798000" />
-      <workItem from="1541014247079" duration="2148000" />
+      <workItem from="1541014247079" duration="3461000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6946000" />
+    <option name="totallyTimeSpent" value="8259000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -215,10 +212,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="797" y="0" width="746" height="870" extended-state="0" />
+    <frame x="681" y="0" width="862" height="870" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2419825" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20698254" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -321,8 +318,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/stretch-assignment/digital_timer/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="48" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+        <state relative-caret-position="357">
+          <caret line="21" column="48" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
         </state>
       </provider>
     </entry>
