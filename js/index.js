@@ -53,6 +53,15 @@ for(let i = 1; i <=  nav[0].children.length ;i++){
   nav[0].children[i-1].textContent = siteContent['nav']['nav-item-'+i];
 }
 
+//append child to NAV
+let aChild=document.createElement('a')
+aChild.textContent = 'appended child'
+nav[0].appendChild(aChild)
+
+//prepend the child to nav
+let preChild= document.createElement('a')
+preChild.textContent = 'prepended child'
+nav[0].prepend(preChild)
 
 // CTA
 // updating  the first header
