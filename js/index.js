@@ -76,3 +76,17 @@ for (let i in mainText) {
 
 const midImg = document.getElementById('middle-img');
 midImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+const contactHeadline = document.querySelector('.contact h4')
+console.log(contactHeadline);
+contactHeadline.textContent = siteContent['contact']['contact-h4'];
+
+const contactContent = document.querySelectorAll('.contact p');
+console.log(contactContent);
+
+contactContent[0].textContent = siteContent['contact']['address'];
+contactContent[1].textContent = siteContent['contact']['phone'];
+contactContent[2].textContent = siteContent['contact']['email'];
+
+const footer = document.querySelector('footer p');
+footer.textContent = siteContent['footer']['copyright'];
