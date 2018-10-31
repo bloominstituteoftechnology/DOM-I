@@ -128,7 +128,16 @@ console.log(contactChildren)
 //contact
 i = 0;
 for(item in siteContent["contact"] ){
-   contactChildren[i++].textContent = siteContent.contact[item]; 
+  if(item.toString()==='address'){
+    let str = siteContent.contact[item]
+    let str2 = str.substring(0,str.indexOf("Somewhere"))
+    str= str.substring(str.indexOf("Somewhere"))
+    str= `${str2} <br> ${str}`
+    contactChildren[i++].innerHTML= str
+  }else{
+    contactChildren[i++].textContent = siteContent.contact[item];
+  }
+   
 }
 
 //what are
