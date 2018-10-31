@@ -94,3 +94,8 @@ for(let i = 0; i < contactInfo.length; i++) {
 //Footer and Copyright
 let copyright = document.querySelector('footer p');
 copyright.innerText = siteContent["footer"]["copyright"];
+
+//Change navigation text green
+for(let i = 0; i < navigation.length; i++) {
+  navigation[i].style.color = 'green';  
+}
