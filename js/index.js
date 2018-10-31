@@ -44,7 +44,7 @@ logo.src = siteContent["nav"]["img-src"];
 //logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // Navigation
-const NavItems = document.querySelectorAll('a');
+const NavItems = document.querySelectorAll('nav a');
 // NavItems.item(0).textContent = siteContent.nav["nav-item-1"];
 // NavItems.item(1).textContent = siteContent.nav["nav-item-2"];
 NavItems[0].textContent = siteContent.nav["nav-item-1"];
@@ -53,6 +53,11 @@ NavItems[2].textContent = siteContent.nav["nav-item-3"];
 NavItems[3].textContent = siteContent.nav["nav-item-4"];
 NavItems[4].textContent = siteContent.nav["nav-item-5"];
 NavItems[5].textContent = siteContent.nav["nav-item-6"];
+
+// Make Navigation Items Green
+for(let i = 0; i < NavItems.length; i++) {
+  NavItems[i].style.color = 'green';
+}
 
 // H1
 const ctaText = document.querySelector('.cta-text h1');
