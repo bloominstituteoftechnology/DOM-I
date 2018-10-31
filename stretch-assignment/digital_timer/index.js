@@ -9,6 +9,8 @@ let second = document.querySelector('#secondOnes');
 let third = document.querySelector('#msHundreds');
 let last = document.querySelector('#msTens');
 
+const arr = [first, second, third, last];
+
 let countMsT = 0;
 let countMsH = 0;
 
@@ -62,5 +64,9 @@ let interval = setInterval(timer, 10);
 
 //Stop timer
 function timerStop() {
+  //adjust timer color
+  for(let i = 0; i < arr.length; i++) {
+    arr[i].style.color = 'red';
+  }
   clearInterval(interval)
 }
