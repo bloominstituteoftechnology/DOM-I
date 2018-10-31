@@ -97,5 +97,22 @@ copyright.innerText = siteContent["footer"]["copyright"];
 
 //Change navigation text green
 for(let i = 0; i < navigation.length; i++) {
-  navigation[i].style.color = 'green';  
+  navigation[i].style.color = 'green';
 }
+
+//prepend and appendChild
+let nav = document.querySelector('nav');
+
+//Prepend
+const privatePolicy = document.createElement('a');
+privatePolicy.href = '#';
+privatePolicy.innerText = 'Private Policy';
+privatePolicy.style.color = 'green';
+nav.prepend(privatePolicy);
+
+//appendChild
+const news = document.createElement('a');
+news.href = '#';
+news.innerText = 'News';
+news.style.color = 'green';
+nav.appendChild(news);
