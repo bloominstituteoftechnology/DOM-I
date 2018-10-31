@@ -88,14 +88,15 @@ const middleImg = document.querySelector('#middle-img');
 middleImg.src = siteContent["main-content"]["middle-img-src"];
 
 // Contact Info
-// paragraphs[5].textContent = siteContent["contact"]["address"];
-// paragraphs[6].textContent = siteContent["contact"]["phone"];
-// paragraphs[7].textContent = siteContent["contact"]["email"];
+const contactHeader = document.querySelector('.contact h4');
+contactHeader.textContent = siteContent["contact"]["contact-h4"];
 
-// // Contact
-// const contacts = document.querySelector('.container .contact h4');
-// //headings[5].textContent = siteContent["contact"]["contact-h4"];
-// contact.textContent = siteContent["contact"]["contact-h4"];
+const contactParagraphs = document.querySelectorAll('.contact p');
+contactParagraphs[0].textContent = siteContent["contact"]["address"];
+contactParagraphs[1].textContent = siteContent["contact"]["phone"];
+contactParagraphs[2].textContent = siteContent["contact"]["email"];
+
+
 
 // Footer
 const footer = document.querySelector('footer p');
