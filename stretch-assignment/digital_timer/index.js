@@ -51,6 +51,11 @@ function boxColorChange(color) {
 
 //Basic Timer Function
 function timer() {
+  if(first.innerText === '1') {
+    alert('Please Reset Timer')
+    timerStop();
+  }
+
   if(last.innerText === '9') {
     //milliseconds hundreds reset
     countMsT = -1;
