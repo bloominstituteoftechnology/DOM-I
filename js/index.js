@@ -83,8 +83,8 @@ ebut.addEventListener("click", someOtherFunction);
 function myFunction() {
     
     cont.style.backgroundColor = "black";
+    navCon.forEach((link,i)=>{link.style.color = "red";});
 }
-
 function someOtherFunction() {
     cont.style.color = "white";
 }
