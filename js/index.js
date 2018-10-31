@@ -51,12 +51,12 @@ let nav = document.querySelectorAll("a");
 nav.forEach((element) => {
   element.style.color = 'grey'
 });
-nav[0].textContent = "Services";
-nav[1].textContent = "Product";
-nav[2].textContent = "Vision";
-nav[3].textContent = "Features";
-nav[4].textContent = "About";
-nav[5].textContent = "Contact";
+nav[0].textContent = siteContent.nav["nav-item-1"]
+nav[1].textContent = siteContent.nav["nav-item-2"]
+nav[2].textContent = siteContent.nav["nav-item-3"]
+nav[3].textContent = siteContent.nav["nav-item-4"]
+nav[4].textContent = siteContent.nav["nav-item-5"]
+nav[5].textContent = siteContent.nav["nav-item-6"]
 
 //Cta Img///////////////////////////
 let ctaImg = document.getElementById("cta-img");
@@ -64,8 +64,20 @@ ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
 
 //Cta Button////////////////////////
 let ctaButton = document.querySelector("button");
-ctaButton.textContent = "Get Started";
+ctaButton.textContent = siteContent.cta.button
 
 //Cta Text////////////////////////////
 let ctaText = document.querySelector("h1");
-ctaText.textContent = "DOM Is Awesome";
+//let newElement = document.createElement("br");
+//headingText = "DOM" +  newElement + "Is" +  newElement + "Awesome";
+ctaText.textContent =  siteContent.cta.h1
+
+
+//Main Content////////////////
+let headings = document.querySelectorAll('.text-content h4');
+headings[0].textContent = siteContent["main-content"]["features-h4"]
+headings[1].textContent = siteContent["main-content"]["about-h4"]
+headings[2].textContent = siteContent["main-content"]["services-h4"]
+headings[3].textContent = siteContent["main-content"]["product-h4"]
+headings[4].textContent = siteContent["main-content"]["vision-h4"]
+
