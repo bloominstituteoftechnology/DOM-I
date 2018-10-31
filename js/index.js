@@ -42,6 +42,10 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
+const middleImg = document.getElementById("middle-img")
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+console.log(middleImg)
+
 // 1. Create selectors to point your data into elements
 //Create selectors by using any of the DOM element's methods
 //Note that IDs have been used on all images. Use the IDs to update src path content
@@ -58,14 +62,11 @@ navItems[5].textContent = siteContent["nav"]["nav-item-6"];
 
 
 // section class cta    "h1": "DOM Is Awesome",
-  //  "button": "Get Started",
-  //  "img-src": "img/header-img.png"
 const ctaH1 = document.getElementsByTagName('h1');
 ctaH1[0].textContent = siteContent.cta.h1;
 
 const ctaButton = document.querySelector('button')
 ctaButton.textContent = siteContent.cta.button;
-// ctaH1.setAttribute('cta', siteContent['cta']['h1'])
 console.log(ctaH1)
 
 // const ctaH2 = document.querySelector('h2');
@@ -73,6 +74,17 @@ console.log(ctaH1)
 // console.log(ctaH2);
 // image set 
 const ctaImg = document.getElementById('cta-img').src = siteContent['cta']["img-src"];
+
+// mainContent 
+
+const h4 = document.querySelectorAll('h4')
+h4[0].textContent = siteContent["main-content"]["features-h4"];
+h4[1].textContent = siteContent["main-content"]["about-h4"];
+h4[2].textContent = siteContent["main-content"]["services-h4"];
+h4[3].textContent = siteContent["main-content"]["product-h4"];
+h4[4].textContent = siteContent["main-content"]["vision-h4"];
+h4[5].textContent = siteContent["contact"]["contact-h4"];
+console.log(h4)
 
 
 // 2. Update the HTML with the JSON data
