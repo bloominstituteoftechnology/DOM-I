@@ -57,3 +57,15 @@ nav[2].textContent = "Vision";
 nav[3].textContent = "Features";
 nav[4].textContent = "About";
 nav[5].textContent = "Contact";
+
+//Cta Img///////////////////////////
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
+
+//Cta Button////////////////////////
+let ctaButton = document.querySelector("button");
+ctaButton.textContent = "Get Started";
+
+//Cta Text////////////////////////////
+let ctaText = document.querySelector("h1");
+ctaText.textContent = "DOM Is Awesome";
