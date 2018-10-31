@@ -58,7 +58,7 @@ imgMiddle.setAttribute('src', siteContent["main-content"]['middle-img-src']);
 
 
 links.forEach((link, index) => {
-  link.textContent = siteContent['nav'][`nav-item-${index +1}`];
+  link.textContent = siteContent['nav'][`nav-item-${index + 1}`];
   link.style.color = 'green';
 });
 
@@ -77,10 +77,10 @@ headTitle.innerHTML = siteContent['cta']['h1'].split(' ').join('<br/>');
 button.textContent = siteContent['cta']['button'];
 
 
-let mcArray = ['features', 'about', 'services', 'product', 'vision'];
-for(let i = 0; i < mcArray.length; i++) {
-  mainContentTitle[i].textContent = siteContent['main-content'][`${mcArray[i]}-h4`];
-  mainContentText[i].textContent = siteContent['main-content'][`${mcArray[i]}-content`];
+let mcArray = Object.keys(siteContent['main-content']).filter(key => key.includes('h4') || key.includes('content'));
+for(let i = 0; i < mcArray.length; i+=2) {
+  mainContentTitle[i/2].textContent = siteContent['main-content'][mcArray[i]];
+  mainContentText[i/2].textContent = siteContent['main-content'][mcArray[i+1]];
 }
 
 
