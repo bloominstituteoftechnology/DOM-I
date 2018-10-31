@@ -90,17 +90,11 @@ mconp[2].innerHTML = siteContent["main-content"]["services-content"];
 mconp[3].innerHTML = siteContent["main-content"]["product-content"];
 mconp[4].innerHTML = siteContent["main-content"]["vision-content"];
 // ------------------------End of main content--------------------
-// ------------------------footer content begins here-------------
+// ------------------------contact & footer content begins here----------
 document.querySelectorAll('.contact p')[0].textContent = siteContent["contact"]["address"]; 
 document.querySelectorAll('.contact p')[1].textContent = siteContent["contact"]["phone"];
 document.querySelectorAll('.contact p')[2].textContent = siteContent["contact"]["email"];
 document.querySelector('footer p').textContent = siteContent["footer"]["copyright"];
+let addre = document.querySelectorAll('.contact p')[0];
+addre.style.width = '25%';
 // -----------------------end of footer---------------------------
-
-
-
-
-
-
-
-
