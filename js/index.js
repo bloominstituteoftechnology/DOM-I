@@ -78,6 +78,7 @@ ctaText.innerHTML = siteContent.cta["h1"];
 // Button
 const ctaButton = document.querySelector('.cta-text button');
 ctaButton.textContent = siteContent.cta["button"];
+ctaButton.style.borderRadius = "10px";
 
 // Circular Image
 const ctaImg = document.querySelector('#cta-img');
