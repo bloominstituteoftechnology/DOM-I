@@ -43,7 +43,18 @@ for (let i = 0; i < anchors.length; i++) {
   anchors[i].style.color = 'green';
 }
 
+const headerNav = document.querySelector('nav');
 
+const newAnchor1 = document.createElement('a')
+newAnchor1.textContent = 'Privacy Policy';
+newAnchor1.style.color = 'green';
+
+const newAnchor2 = document.createElement('a')
+newAnchor2.textContent = 'Blog';
+newAnchor2.style.color = 'green';
+
+headerNav.appendChild(newAnchor1);
+headerNav.prepend(newAnchor2);
 
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
