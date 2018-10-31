@@ -61,3 +61,28 @@ headerTitle.textContent = siteContent['cta']['h1'];
 // Update button in header
 const button = document.querySelector('.cta .cta-text button');
 button.textContent = siteContent['cta']['button'];
+
+// Update the main content - Top content
+// Update headers h4
+const topH4 = document.querySelectorAll('.main-content .top-content h4');
+topH4[0].textContent = siteContent['main-content']['features-h4'];
+topH4[1].textContent = siteContent['main-content']['about-h4'];
+
+// update paragraphs p
+const topContent = document.querySelectorAll('.main-content .top-content p');
+topContent[0].textContent = siteContent['main-content']['features-content'];
+topContent[1].textContent = siteContent['main-content']['about-content'];
+
+// Update the main content - Bottom content
+// Update headers h4
+const bottomH4 = document.querySelectorAll('.main-content .bottom-content h4');
+bottomH4[0].textContent = siteContent['main-content']['services-h4'];
+bottomH4[1].textContent = siteContent['main-content']['product-h4'];
+bottomH4[2].textContent = siteContent['main-content']['vision-h4'];
+
+
+// update paragraphs p
+const bottomContent = document.querySelectorAll('.main-content .bottom-content p');
+bottomContent[0].textContent = siteContent['main-content']['services-content'];
+bottomContent[1].textContent = siteContent['main-content']['product-content'];
+bottomContent[2].textContent = siteContent['main-content']['vision-content'];
