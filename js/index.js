@@ -116,3 +116,18 @@ news.href = '#';
 news.innerText = 'News';
 news.style.color = 'green';
 nav.appendChild(news);
+
+//Adding event listener to get started button
+function darkTheme() {
+  let body = document.querySelector('body');
+  body.style.backgroundColor = 'rgba(0, 0, 0, 0.85)';
+  body.style.color = 'white';
+  for(let i = 0; i < navigation.length; i++) {
+    navigation[i].style.color = 'white';
+  }
+  privatePolicy.style.color = 'white';
+  news.style.color = 'white';
+  button.innerText = 'New Theme!'
+}
+
+button.addEventListener('click', darkTheme);

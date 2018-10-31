@@ -32,12 +32,12 @@ function timer() {
         //seconds reset
         countS1 = -1;
 
-
         //seconds tens counter and update
         countS10++;
 
         first.innerText = countS10;
-        console.log(first.innerText === '1')
+
+        //End timer <-----------------------------------------------------
         if(first.innerText === '1') {
           timerStop();
         }
@@ -56,8 +56,6 @@ function timer() {
   countMsT++;
   last.innerText = countMsT;
 }
-
-
 
 //Start timer
 let interval = setInterval(timer, 10);
