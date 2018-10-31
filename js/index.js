@@ -115,3 +115,7 @@ contactPhone.textContent = siteContent['contact']["phone"]
 
 let contactEmail = document.querySelectorAll(".contact p")[2];
 contactEmail.textContent = siteContent['contact']["email"]
+
+//Footer///////////////////////
+let footer = document.querySelector("footer p");
+footer.textContent = siteContent['footer']["copyright"]
