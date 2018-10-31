@@ -10,7 +10,6 @@ const siteContent = {
   },
   "cta": {
     "h1": "DOM Is Awesome",
-    "h2": "DOM Is Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -63,12 +62,15 @@ navItems[5].textContent = siteContent["nav"]["nav-item-6"];
   //  "img-src": "img/header-img.png"
 const ctaH1 = document.getElementsByTagName('h1');
 ctaH1[0].textContent = siteContent.cta.h1;
+
+const ctaButton = document.querySelector('button')
+ctaButton.textContent = siteContent.cta.button;
 // ctaH1.setAttribute('cta', siteContent['cta']['h1'])
 console.log(ctaH1)
 
-const ctaH2 = document.querySelector('h2');
-ctaH2.textContent = siteContent.cta.h2;
-console.log(ctaH2);
+// const ctaH2 = document.querySelector('h2');
+// ctaH2.textContent = siteContent.cta.h2;
+// console.log(ctaH2);
 // image set 
 const ctaImg = document.getElementById('cta-img').src = siteContent['cta']["img-src"];
 
