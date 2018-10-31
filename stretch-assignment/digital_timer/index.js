@@ -109,7 +109,7 @@ function timerReset() {
     arr[i].innerText = '-';
     arr[i].style.color = 'black';
   }
-  boxColorChange('#2b4909');
+  boxColorChange('green');
   countS10 = 0;
 }
 

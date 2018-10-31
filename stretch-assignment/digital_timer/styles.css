@@ -43,7 +43,7 @@ body {
 
 .timerBox {
   border: 5px ridge darkgreen;
-  box-shadow: 0px 0px 12px 6px #2b4909;
+  box-shadow: 0px 0px 12px 6px green;
   width: 40%;
   min-width: 300px;
   background-color: #dcd9e8;
@@ -55,7 +55,7 @@ body {
   flex-direction: column;
 
   padding: 40px;
-  margin: 17% auto;
+  margin: 13% auto;
 }
 
 .digit {
