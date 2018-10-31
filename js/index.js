@@ -45,13 +45,29 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+let nav = document.querySelector('nav');
+
+let home = document.createElement('a')
+home.href = '#';
+
+nav.prepend(home);
+
+let someOtherSite = document.createElement('a')
+someOtherSite.href = '#';
+
+nav.append(someOtherSite);
+
 let aInNav = document.querySelectorAll('a');
-aInNav[0].textContent = siteContent.nav["nav-item-1"];
-aInNav[1].textContent = siteContent.nav["nav-item-2"];
-aInNav[2].textContent = siteContent.nav["nav-item-3"];
-aInNav[3].textContent = siteContent.nav["nav-item-4"];
-aInNav[4].textContent = siteContent.nav["nav-item-5"];
-aInNav[5].textContent = siteContent.nav["nav-item-6"];
+aInNav[0].textContent = 'Home'
+aInNav[1].textContent = siteContent.nav["nav-item-1"];
+aInNav[2].textContent = siteContent.nav["nav-item-2"];
+aInNav[3].textContent = siteContent.nav["nav-item-3"];
+aInNav[4].textContent = siteContent.nav["nav-item-4"];
+aInNav[5].textContent = siteContent.nav["nav-item-5"];
+aInNav[6].textContent = siteContent.nav["nav-item-6"];
+aInNav[7].textContent = 'Some Link'
+
+aInNav.forEach(x => x.style.color = 'mediumspringgreen');
 
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
