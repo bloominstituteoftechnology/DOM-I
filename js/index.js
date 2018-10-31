@@ -54,6 +54,16 @@ const lineBreak = (node, string) => {
   });
 };
 
+// function to loop through the content arrays
+
+const loop = (arr, index, content) => {
+  for (let i = 0; i < arr.length; i++) {
+    if (i === index) {
+      return (arr[i].textContent = content);
+    }
+  }
+};
+
 let logo = document.getElementById('logo-img');
 logo.setAttribute('src', siteContent['nav']['img-src']);
 
@@ -81,3 +91,26 @@ button.textContent = siteContent.cta.button;
 
 let worldImg = document.querySelector('#cta-img');
 worldImg.src = siteContent['cta']['img-src'];
+
+const headingsH4 = document.querySelectorAll('h4');
+const mainContentParagraphs = document.querySelectorAll('p');
+console.log(mainContentParagraphs);
+
+// accessing and setting the headings
+
+loop(headingsH4, 0, siteContent['main-content']['features-h4']);
+loop(headingsH4, 1, siteContent['main-content']['about-h4']);
+loop(headingsH4, 2, siteContent['main-content']['services-h4']);
+loop(headingsH4, 3, siteContent['main-content']['product-h4']);
+loop(headingsH4, 4, siteContent['main-content']['vision-h4']);
+
+// accessing and setting the paragraph content
+
+loop(mainContentParagraphs, 0, siteContent['main-content']['features-content']);
+loop(mainContentParagraphs, 1, siteContent['main-content']['about-content']);
+loop(mainContentParagraphs, 2, siteContent['main-content']['services-content']);
+loop(mainContentParagraphs, 3, siteContent['main-content']['product-content']);
+loop(mainContentParagraphs, 4, siteContent['main-content']['vision-content']);
+
+const midImg = document.getElementById('middle-img');
+midImg.src = 'img/mid-page-accent.jpg';
