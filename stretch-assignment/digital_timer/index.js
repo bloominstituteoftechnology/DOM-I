@@ -1,6 +1,10 @@
 /*
 
   Timer Stretch
+  Bernard Johnson
+  10/30/2018
+
+  Variable and Data Set Up
 
 */
 //Reset Colon color
@@ -25,13 +29,21 @@ const countArr = [countMsT, countMsH, countS1, countS10];
 //timer box variable
 let timerBox = document.querySelector('.timerBox');
 
-//digit color change Function
+/*
+
+  Functions Set Up
+
+*/
+
+
+//changes timer digit color
 function colorChange(color, arr) {
   for(let i = 0; i < arr.length; i++) {
     arr[i].style.color = color;
   }
 }
 
+//changes box theme color
 function boxColorChange(color) {
   timerBox.style.border = `5px ridge ${color}`;
   timerBox.style.boxShadow = `0px 0px 12px 6px ${color}`;
@@ -40,11 +52,11 @@ function boxColorChange(color) {
 //Basic Timer Function
 function timer() {
   if(last.innerText === '9') {
-    //milliseconds tens reset
+    //milliseconds hundreds reset
     countMsT = -1;
 
     if(third.innerText === '9') {
-      //milliseconds hundreds reset
+      //milliseconds tens reset
       countMsH = -1;
 
       if(second.innerText === '9') {
@@ -58,6 +70,7 @@ function timer() {
 
         //End timer <-----------------------------------------------------
         if(first.innerText === '1') {
+          //Stop Timer and Change to Red Theme
           timerStop();
         }
       }
@@ -67,6 +80,7 @@ function timer() {
 
       //Yellow timer Warning
       if(countS1 === 7) {
+        //Change to Yellow Theme
         colorChange('GoldenRod', arr);
         boxColorChange('GoldenRod');
       }
@@ -83,7 +97,7 @@ function timer() {
 }
 
 
-//Stop timer at 10
+//Stop timer at 10s
 function timerStop() {
   //adjust timer color
   colorChange('red', arr);
