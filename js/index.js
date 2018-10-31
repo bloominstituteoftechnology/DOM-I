@@ -37,6 +37,9 @@ const siteContent = {
   },
 };
 
+// sets the entire body to a color for the background. 
+document.body.style.backgroundColor = 'lavender';
+
 // Example: Update the img src for the logo
 // images
 let logo = document.getElementById("logo-img");
@@ -51,8 +54,6 @@ const middleImg = document.getElementById("middle-img")
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 console.log(middleImg)
 
-// 1. Create selectors to point your data into elements Create selectors by using any of the DOM element's methods Note that IDs have been used on all images. Use the IDs to update src path content
-// 2. Update the HTML with the JSON data Remember, NO direct updating of the HTML source is allowed. Using your selectors, update the content to match the example file.  Remember to update the src attributes on images navigation and anchor elements from the header
 
 const navItems = document.querySelectorAll('nav a')
 console.log(navItems);
@@ -62,6 +63,13 @@ navItems[2].textContent = siteContent["nav"]["nav-item-3"];
 navItems[3].textContent = siteContent["nav"]["nav-item-4"];
 navItems[4].textContent = siteContent["nav"]["nav-item-5"];
 navItems[5].textContent = siteContent["nav"]["nav-item-6"];
+
+
+let newNavItem = document.createElement("a").createTextNode("Blog");
+console.log(newNavItem)
+
+// change the nav items to green
+navItems.forEach (navItems => navItems.style.color = 'green')
 
 
 // section class cta    "h1": "DOM Is Awesome",
@@ -88,6 +96,15 @@ h4[4].textContent = siteContent["main-content"]["vision-h4"];
 // contact section
 h4[5].textContent = siteContent["contact"]["contact-h4"];
 console.log(h4)
+
+// used for loop to set h4 elements to forestgreen. 
+for (let i =0; i <h4.length; i++){
+  //
+  if (h4[i] === (':last-child')) {
+   h4[i].style.color = 'black';
+  }
+  h4[i].style.color = 'forestgreen';
+}
 // p selectors
 const paragraphs = document.querySelectorAll('p')
 console.log(paragraphs)
@@ -106,6 +123,3 @@ paragraphs[7].textContent = siteContent["contact"]["email"];
 
 // footer section 
 paragraphs[8].textContent = siteContent["footer"]["copyright"];
-
-
-// 3. Add new content
