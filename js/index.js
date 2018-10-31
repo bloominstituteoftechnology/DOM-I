@@ -46,4 +46,7 @@ let navigation = document.querySelectorAll('a');
 for(let i = 0; i < navigation.length; i++) {
   navigation[i].innerText = siteContent["nav"][`nav-item-${i+1}`];
 }
-console.log(navigation);
+
+let ctaHead = document.querySelector('h1');
+ctaHead.innerText = siteContent.cta.h1;
+console.log(ctaHead);
