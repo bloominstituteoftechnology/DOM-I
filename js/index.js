@@ -58,3 +58,6 @@ aTags.forEach((tag, index) => {
 const  headerTitle = document.querySelector('.cta .cta-text h1');
 headerTitle.textContent = siteContent['cta']['h1'];
 
+// Update button in header
+const button = document.querySelector('.cta .cta-text button');
+button.textContent = siteContent['cta']['button'];
