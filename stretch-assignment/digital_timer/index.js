@@ -66,7 +66,7 @@ function timer() {
       second.innerText = countS1;
 
       //Yellow timer Warning
-      if(countS1 === 8) {
+      if(countS1 === 7) {
         colorChange('GoldenRod', arr);
         boxColorChange('GoldenRod');
       }

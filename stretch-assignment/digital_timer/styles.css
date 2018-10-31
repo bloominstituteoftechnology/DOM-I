@@ -14,9 +14,31 @@ body {
 }
 
 .buttons button {
-  width: 25%;
+  width: 35%;
   height: 40px;
+  margin-top: 15px;
+
   font-size: 1.6rem;
+
+  background-color: white;
+  border: none;
+}
+
+.buttons button:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.buttons button:nth-child(1):hover {
+  background-color: darkgreen;
+}
+
+.buttons button:nth-child(2):hover {
+  background-color: black;
+}
+
+.buttons button:focus {
+  outline: none;
 }
 
 .timerBox {
