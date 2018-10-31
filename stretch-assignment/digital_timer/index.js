@@ -4,18 +4,21 @@
 
 */
 
+//Digit selectors
 let first = document.querySelector('#secondTens');
 let second = document.querySelector('#secondOnes');
 let third = document.querySelector('#msHundreds');
 let last = document.querySelector('#msTens');
 
-const arr = [first, second, third, last];
-
+//Counter variables
 let countMsT = 0;
 let countMsH = 0;
-
 let countS1 = 0;
 let countS10 = 0;
+
+//Working arrays of variables
+const arr = [first, second, third, last];
+const countArr = [countMsT, countMsH, countS1, countS10];
 
 
 //Basic Timer Function
@@ -57,10 +60,8 @@ function timer() {
   last.innerText = countMsT;
 }
 
-//Start timer
-let interval = setInterval(timer, 10);
 
-//Stop timer
+//Stop timer at 10
 function timerStop() {
   //adjust timer color
   for(let i = 0; i < arr.length; i++) {
@@ -68,3 +69,25 @@ function timerStop() {
   }
   clearInterval(interval)
 }
+
+//Start timer button
+let interval;
+function timerStart() {
+  interval = setInterval(timer, 10);
+}
+
+let startBtn = document.querySelector('button');
+startBtn.addEventListener('click', timerStart)
+
+//Reset Timer button
+function timerReset() {
+  clearInterval(interval);
+  for(let i = 0; i < arr.length; i++) {
+    arr[i].innerText = '-';
+    arr[i].style.color = 'black';
+    countArr[i] = 0;
+  }
+}
+
+let resetBtn = document.querySelector('button:nth-child(2)');
+resetBtn.addEventListener('click', timerReset);
