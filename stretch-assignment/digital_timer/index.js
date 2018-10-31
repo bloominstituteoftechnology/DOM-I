@@ -31,7 +31,20 @@ function msHundredsFunction(){
     msHundreds.textContent = counter_msHundreds;
 }
 
+function msTensFunction(){
+    if(counter_msTens === 9){
+        counter_msTens = 0;
+    } else {
+        counter_msTens += 1;
+    }
+    msTens.textContent = counter_msTens;
+}
+
+
+
 setInterval(secondOnesFunction, 1000);
 setInterval(msHundredsFunction, 100);
+setInterval(msTensFunction, 1);
+
 
 
