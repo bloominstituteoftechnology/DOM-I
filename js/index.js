@@ -75,6 +75,19 @@ rndimg.setAttribute('src',siteContent["cta"]["img-src" ]);
 document.querySelector('h1').innerText = siteContent["cta"]["h1"];
 // Add button below the h1 text
 document.querySelector('.cta button').innerHTML = siteContent["cta"]['button'];
+let ebut = document.querySelector('.cta button');
+let cont = document.querySelector('.container');
+ebut.addEventListener("click", myFunction);
+ebut.addEventListener("click", someOtherFunction);
+
+function myFunction() {
+    
+    cont.style.backgroundColor = "black";
+}
+
+function someOtherFunction() {
+    cont.style.color = "white";
+}
 // -----------------Cta content ends here -------------------------------
 // -----------------main content starts here ----------------------------
 let mconh4 = document.querySelectorAll(".main-content .text-content h4");
