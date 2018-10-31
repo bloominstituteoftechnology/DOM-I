@@ -15,8 +15,9 @@ let countMsH = 0;
 let countS1 = 0;
 let countS10 = 0;
 
-function timer() {
 
+//Basic Timer Function
+function timer() {
   if(last.innerText === '9') {
     //milliseconds tens reset
     countMsT = -1;
@@ -28,10 +29,16 @@ function timer() {
       if(second.innerText === '9') {
         //seconds reset
         countS1 = -1;
+
+
         //seconds tens counter and update
         countS10++;
-        first.innerText = countS10;
 
+        first.innerText = countS10;
+        console.log(first.innerText === '1')
+        if(first.innerText === '1') {
+          timerStop();
+        }
       }
       //seconds counter and update
       countS1++;
@@ -48,4 +55,12 @@ function timer() {
   last.innerText = countMsT;
 }
 
-setInterval(timer, 10);
+
+
+//Start timer
+let interval = setInterval(timer, 10);
+
+//Stop timer
+function timerStop() {
+  clearInterval(interval)
+}
