@@ -3,6 +3,8 @@
   Timer Stretch
 
 */
+//Reset Colon color
+document.querySelector('#colon').style.color = 'black';
 
 //Digit selectors
 let first = document.querySelector('#secondTens');
@@ -20,6 +22,20 @@ let countS10 = 0;
 const arr = [first, second, third, last];
 const countArr = [countMsT, countMsH, countS1, countS10];
 
+//timer box variable
+let timerBox = document.querySelector('.timerBox');
+
+//digit color change Function
+function colorChange(color, arr) {
+  for(let i = 0; i < arr.length; i++) {
+    arr[i].style.color = color;
+  }
+}
+
+function boxColorChange(color) {
+  timerBox.style.border = `5px ridge ${color}`;
+  timerBox.style.boxShadow = `0px 0px 12px 6px ${color}`;
+}
 
 //Basic Timer Function
 function timer() {
@@ -48,6 +64,12 @@ function timer() {
       //seconds counter and update
       countS1++;
       second.innerText = countS1;
+
+      //Yellow timer Warning
+      if(countS1 === 8) {
+        colorChange('GoldenRod', arr);
+        boxColorChange('GoldenRod');
+      }
     }
 
     //milliseconds hundreds counter and update
@@ -64,15 +86,16 @@ function timer() {
 //Stop timer at 10
 function timerStop() {
   //adjust timer color
-  for(let i = 0; i < arr.length; i++) {
-    arr[i].style.color = 'red';
-  }
+  colorChange('red', arr);
+  boxColorChange('red');
   clearInterval(interval)
 }
 
 //Start timer button
 let interval;
+
 function timerStart() {
+  colorChange('green', arr);
   interval = setInterval(timer, 10);
 }
 
@@ -86,7 +109,7 @@ function timerReset() {
     arr[i].innerText = '-';
     arr[i].style.color = 'black';
   }
-
+  boxColorChange('#2b4909');
   countS10 = 0;
 }
 
