@@ -41,6 +41,7 @@ const siteContent = {
 let imgLogo = document.getElementById("logo-img");
 let imgCta = document.getElementById('cta-img');
 let imgMiddle = document.getElementById('middle-img');
+let nav = document.querySelector('nav');
 let links = document.querySelectorAll('a');
 let headTitle = document.querySelector('h1');
 let button = document.querySelector('button');
@@ -54,12 +55,27 @@ imgLogo.setAttribute('src', siteContent["nav"]["img-src"]);
 imgCta.setAttribute('src', siteContent['cta']['img-src']);
 imgMiddle.setAttribute('src', siteContent["main-content"]['middle-img-src']);
 
-for(let i  = 0; i < links.length; i++) {
-  links[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
-}
+
+
+links.forEach((link, index) => {
+  link.textContent = siteContent['nav'][`nav-item-${index +1}`];
+  link.style.color = 'green';
+});
+
+const newNav1 = document.createElement('a');
+const newNav2 = document.createElement('a');
+
+newNav1.textContent = 'Sign-up';
+newNav2.textContent = 'Sign-in';
+
+nav.prepend(newNav1);
+nav.appendChild(newNav2);
+
+button.addEventListener('click', () => headTitle.style.color = 'pink');
 
 headTitle.innerHTML = siteContent['cta']['h1'].split(' ').join('<br/>');
 button.textContent = siteContent['cta']['button'];
+
 
 let mcArray = ['features', 'about', 'services', 'product', 'vision'];
 for(let i = 0; i < mcArray.length; i++) {
@@ -67,8 +83,8 @@ for(let i = 0; i < mcArray.length; i++) {
   mainContentText[i].textContent = siteContent['main-content'][`${mcArray[i]}-content`];
 }
 
-console.log(contact.children)
-let contactArray = ['contact-h4', 'address', 'phone', 'email'];
+
+let contactArray = Object.keys(siteContent['contact']);
 for(let i = 0; i < contactArray.length; i ++) {
   contact.children[i].textContent = siteContent['contact'][contactArray[i]];
 }
