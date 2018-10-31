@@ -41,12 +41,14 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
+//pull and fill navigation text
 let navigation = document.querySelectorAll('a');
 
 for(let i = 0; i < navigation.length; i++) {
   navigation[i].innerText = siteContent["nav"][`nav-item-${i+1}`];
 };
 
+//pull and fill content head
 let ctaHead = document.querySelector('h1');
 ctaHead.innerText = siteContent.cta.h1;
 
@@ -57,12 +59,11 @@ let ctaImg = document.getElementById('cta-img');
 ctaImg.src = siteContent['cta']["img-src"];
 
 
-
+//Main Content H4 headings and paragraphs pulled and filled
 let mainContentH4List = document.querySelectorAll('.main-content h4');
 let mainContentPList = document.querySelectorAll('.text-content p');
 
 const arr = Object.values(siteContent["main-content"]);
-
 
 for(let i = 0; i < mainContentH4List.length; i++) {
 
@@ -73,4 +74,21 @@ for(let i = 0; i < mainContentH4List.length; i++) {
   mainContentPList[i].innerText = arrP[i];
 }
 
-console.log(arrH4);
+//Main Content image
+let middleImg = document.querySelector('#middle-img');
+middleImg.src = siteContent["main-content"]["middle-img-src"];
+
+//Contact Header
+let contactH4 = document.querySelector('.contact h4');
+contactH4.innerText = siteContent["contact"]["contact-h4"];
+
+//Pull and Fill Contact Information
+let contactInfo = document.querySelectorAll('.contact p');
+const contactArr = Object.values(siteContent["contact"]);
+contactArr.shift();
+
+for(let i = 0; i < contactInfo.length; i++) {
+  contactInfo[i].innerText = contactArr[i];
+}
+
+console.log(contactInfo);
