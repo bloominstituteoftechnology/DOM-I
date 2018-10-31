@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : `123 Way 456 Street Somewhere, USA`,
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -36,29 +36,35 @@ const siteContent = {
     "copyright" : "Copyright Great Idea! 2018"
   },
 };
-
 // Example: Update the img src for the logo
-
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
-
-
-
 // add banner type img to middle of page
-
 let midimg = document.getElementById("middle-img");
 midimg.setAttribute('src',siteContent["main-content"]["middle-img-src" ]);
-
 // -----------nav implementation starts here-----------------
 // add text content to the a tags in the nav.
-document.querySelectorAll('nav a')[0].textContent = siteContent['nav']["nav-item-1"];
-document.querySelectorAll('nav a')[1].textContent = siteContent['nav']["nav-item-2"];
-document.querySelectorAll('nav a')[2].textContent = siteContent['nav']["nav-item-3"];
-document.querySelectorAll('nav a')[3].textContent = siteContent['nav']["nav-item-4"];
-document.querySelectorAll('nav a')[4].textContent = siteContent['nav']["nav-item-5"];
-document.querySelectorAll('nav a')[5].textContent = siteContent['nav']["nav-item-6"];
+let navCon = document.querySelectorAll('nav a');
+navCon[0].textContent = siteContent['nav']["nav-item-1"];
+navCon[1].textContent = siteContent['nav']["nav-item-2"];
+navCon[2].textContent = siteContent['nav']["nav-item-3"];
+navCon[3].textContent = siteContent['nav']["nav-item-4"];
+navCon[4].textContent = siteContent['nav']["nav-item-5"];
+navCon[5].textContent = siteContent['nav']["nav-item-6"];
 // change the text in the nav to green using a foreach to iterate over each nav element.
-document.querySelectorAll('nav a').forEach((link,i)=>{link.style.color = "green";})
+navCon.forEach((link,i)=>{link.style.color = "green";});
+// append an item to the nav
+const blog = document.createElement('a');
+blog.style.color="green";
+blog.href = '#';
+blog.textContent = 'Blog';
+document.querySelector('nav').appendChild(blog);
+// prepend an item to the nav
+const forums = document.createElement('a');
+forums.style.color = "green";
+forums.href = '#';
+forums.textContent = 'Forums';
+document.querySelector('nav').prepend(forums);
 // ------------------nav implementation ends here ------------------------
 
 //-------------------Cta content begins here -----------------------------
@@ -71,24 +77,30 @@ document.querySelector('h1').innerText = siteContent["cta"]["h1"];
 document.querySelector('.cta button').innerHTML = siteContent["cta"]['button'];
 // -----------------Cta content ends here -------------------------------
 // -----------------main content starts here ----------------------------
-document.querySelectorAll(".main-content .text-content h4")[0].innerHTML = siteContent["main-content"]["features-h4"];
+let mconh4 = document.querySelectorAll(".main-content .text-content h4");
+mconh4[0].innerHTML = siteContent["main-content"]["features-h4"];
+mconh4[1].innerHTML = siteContent["main-content"]["about-h4"];
+mconh4[2].innerHTML = siteContent["main-content"]["services-h4"];
+mconh4[3].innerHTML = siteContent["main-content"]["product-h4"];
+mconh4[4].innerHTML = siteContent["main-content"]["vision-h4"];
+let mconp = document.querySelectorAll(".main-content .text-content p")
+mconp[0].innerHTML = siteContent["main-content"]["features-content"];
+mconp[1].innerHTML = siteContent["main-content"]["about-content"];
+mconp[2].innerHTML = siteContent["main-content"]["services-content"];
+mconp[3].innerHTML = siteContent["main-content"]["product-content"];
+mconp[4].innerHTML = siteContent["main-content"]["vision-content"];
+// ------------------------End of main content--------------------
+// ------------------------footer content begins here-------------
+document.querySelectorAll('.contact p')[0].textContent = siteContent["contact"]["address"]; 
+document.querySelectorAll('.contact p')[1].textContent = siteContent["contact"]["phone"];
+document.querySelectorAll('.contact p')[2].textContent = siteContent["contact"]["email"];
+document.querySelector('footer p').textContent = siteContent["footer"]["copyright"];
+// -----------------------end of footer---------------------------
 
-document.querySelectorAll(".main-content .text-content h4")[1].innerHTML = siteContent["main-content"]["about-h4"];
-
-document.querySelectorAll(".main-content .text-content h4")[2].innerHTML = siteContent["main-content"]["services-h4"];
-
-document.querySelectorAll(".main-content .text-content h4")[3].innerHTML = siteContent["main-content"]["product-h4"];
-
-document.querySelectorAll(".main-content .text-content h4")[4].innerHTML = siteContent["main-content"]["vision-h4"];
 
 
-document.querySelectorAll(".main-content .text-content p")[0].innerHTML = siteContent["main-content"]["features-content"];
 
-document.querySelectorAll(".main-content .text-content p")[1].innerHTML = siteContent["main-content"]["about-content"];
 
-document.querySelectorAll(".main-content .text-content p")[2].innerHTML = siteContent["main-content"]["services-content"];
 
-document.querySelectorAll(".main-content .text-content p")[3].innerHTML = siteContent["main-content"]["product-content"];
 
-document.querySelectorAll(".main-content .text-content p")[4].innerHTML = siteContent["main-content"]["vision-content"];
 
