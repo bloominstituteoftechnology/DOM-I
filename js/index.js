@@ -54,3 +54,7 @@ aTags.forEach((tag, index) => {
   tag.textContent = siteContent['nav'][element];
 });
 
+// Update the header title
+const  headerTitle = document.querySelector('.cta .cta-text h1');
+headerTitle.textContent = siteContent['cta']['h1'];
+
