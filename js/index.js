@@ -59,3 +59,11 @@ const ctaText = document.querySelector('.cta-text h1');
 siteContent.cta["h1"] = "DOM<br> Is<br> Awesome!";
 //siteContent["cta"]["h1"] = "DOM<br> Is<br> Awesome!";
 ctaText.innerHTML = siteContent.cta["h1"];
+
+// Button
+const ctaButton = document.querySelector('.cta-text button');
+ctaButton.textContent = siteContent.cta["button"];
+
+// Circular Image
+const ctaImg = document.querySelector('#cta-img');
+ctaImg.src = siteContent.cta["img-src"];
