@@ -47,9 +47,21 @@ let logo = document.getElementById("logo-img");
 logo.src = siteContent.nav["img-src"];
 
 let navigation = document.querySelectorAll("nav a");
+let nav = document.querySelector("nav");
+
 for (let i = 0; i < navigation.length; i++) {
   navigation[i].textContent = Object.values(siteContent.nav)[i];
+  navigation[i].style.color = "green";
 }
+
+let extra1 = document.createElement("a");
+let extra2 = document.createElement("a");
+let forum = document.createTextNode("Forum");
+let youtube = document.createTextNode("YouTube");
+extra1.appendChild(forum);
+extra2.appendChild(youtube);
+nav.appendChild(extra1).style.color = "green";
+nav.appendChild(extra2).style.color = "green";
 
 let ctaText = document.querySelector(".cta-text");
 for (let i = 0; i < Object.keys(siteContent.cta).length; i++) {
