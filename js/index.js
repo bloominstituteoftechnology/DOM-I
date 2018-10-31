@@ -91,4 +91,6 @@ for(let i = 0; i < contactInfo.length; i++) {
   contactInfo[i].innerText = contactArr[i];
 }
 
-console.log(contactInfo);
+//Footer and Copyright
+let copyright = document.querySelector('footer p');
+copyright.innerText = siteContent["footer"]["copyright"];
