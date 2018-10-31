@@ -48,6 +48,26 @@ nav.forEach(function(item, index) {
   item.textContent = siteContent['nav'][`nav-item-${index +1}`]
 });
 
+const navAdd1 = document.createElement('a');
+navAdd1.href = "#";
+navAdd1.textContent = "Custom";
+navAdd1.style.color = "green";
+console.log(navAdd1);
+
+const navAdd2 = document.createElement('a');
+navAdd2.href= "#";
+navAdd2.textContent = "Social";
+navAdd2.style.color = "green";
+
+
+const navBar = document.querySelector('nav');
+console.log(navBar);
+navBar.prepend(navAdd1);
+navBar.appendChild(navAdd2);
+
+nav.forEach(item => item.style.color = "green");
+
+
 const h1 = document.querySelector('h1');
 console.log(h1);
 h1.textContent = siteContent["cta"]["h1"];
