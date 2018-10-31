@@ -38,10 +38,11 @@ const siteContent = {
 };
 
 let anchors = document.querySelectorAll("a");
-// console.log(anchors);
 for (let i = 0; i < anchors.length; i++) {
   anchors[i].textContent = siteContent ["nav"][`nav-item-${i+1}`];
+  anchors[i].style.color = 'green';
 }
+
 
 
 let logo = document.getElementById("logo-img");
@@ -59,7 +60,6 @@ ctaImg.setAttribute('src',siteContent["cta"]["img-src"])
 let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src',siteContent["main-content"]["middle-img-src"])
 
-
 let mainHeader4 = document.querySelectorAll(".main-content h4");
 mainHeader4[0].textContent = siteContent["main-content"]["features-h4"];
 mainHeader4[1].textContent = siteContent["main-content"]["about-h4"];
@@ -73,7 +73,6 @@ mainContent[1].textContent = siteContent["main-content"]["about-content"];
 mainContent[2].textContent = siteContent["main-content"]["services-content"];
 mainContent[3].textContent = siteContent["main-content"]["product-content"];
 mainContent[4].textContent = siteContent["main-content"]["vision-content"];
-
 
 let contactHeader4 = document.querySelector(".contact h4");
 contactHeader4.textContent = siteContent["contact"]["contact-h4"];
