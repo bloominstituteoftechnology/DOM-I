@@ -42,24 +42,31 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-// Add round code img to page
 
-let rndimg = document.getElementById("cta-img");
-rndimg.setAttribute('src',siteContent["cta"]["img-src" ]);
 
 // add banner type img to middle of page
 
 let midimg = document.getElementById("middle-img");
 midimg.setAttribute('src',siteContent["main-content"]["middle-img-src" ]);
 
+// -----------nav implementation starts here-----------------
 // add text content to the a tags in the nav.
-
 document.querySelectorAll('nav a')[0].textContent = siteContent['nav']["nav-item-1"];
 document.querySelectorAll('nav a')[1].textContent = siteContent['nav']["nav-item-2"];
 document.querySelectorAll('nav a')[2].textContent = siteContent['nav']["nav-item-3"];
 document.querySelectorAll('nav a')[3].textContent = siteContent['nav']["nav-item-4"];
 document.querySelectorAll('nav a')[4].textContent = siteContent['nav']["nav-item-5"];
 document.querySelectorAll('nav a')[5].textContent = siteContent['nav']["nav-item-6"];
-
 // change the text in the nav to green using a foreach to iterate over each nav element.
 document.querySelectorAll('nav a').forEach((link,i)=>{link.style.color = "green";})
+// ------------------nav implementation ends here ------------------------
+
+//-------------------Cta content begins here -----------------------------
+// Add round code img to page
+let rndimg = document.getElementById("cta-img");
+rndimg.setAttribute('src',siteContent["cta"]["img-src" ]);
+// make the large text visible h1 
+document.querySelector('h1').innerText = siteContent["cta"]["h1"];
+// Add button below the h1 text
+document.querySelector('.cta button').innerHTML = siteContent["cta"]['button'];
+
