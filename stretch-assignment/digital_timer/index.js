@@ -85,8 +85,9 @@ function timerReset() {
   for(let i = 0; i < arr.length; i++) {
     arr[i].innerText = '-';
     arr[i].style.color = 'black';
-    countArr[i] = 0;
   }
+
+  countS10 = 0;
 }
 
 let resetBtn = document.querySelector('button:nth-child(2)');
