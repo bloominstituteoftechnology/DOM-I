@@ -58,16 +58,14 @@ someOtherSite.href = '#';
 nav.append(someOtherSite);
 
 let aInNav = document.querySelectorAll('a');
-aInNav.forEach((x, i) => {
-  
-    if (i === 0) {
-      aInNav[i].textContent = 'Home';
-    } else if (i === 7) {
-      aInNav[i].textContent = 'Some Link';
-    } else if (i > 0 && i < 7) {
-      aInNav[i].textContent = siteContent.nav[`nav-item-${i}`];
-    }
-})
+aInNav[0].textContent = 'Home'
+aInNav[1].textContent = siteContent.nav["nav-item-1"];
+aInNav[2].textContent = siteContent.nav["nav-item-2"];
+aInNav[3].textContent = siteContent.nav["nav-item-3"];
+aInNav[4].textContent = siteContent.nav["nav-item-4"];
+aInNav[5].textContent = siteContent.nav["nav-item-5"];
+aInNav[6].textContent = siteContent.nav["nav-item-6"];
+aInNav[7].textContent = 'Some Link'
 
 aInNav.forEach(x => x.style.color = 'mediumspringgreen');
 
@@ -82,8 +80,6 @@ let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 
 let h4NodeList = document.querySelectorAll('h4');
-
-
 h4NodeList[0].textContent = siteContent["main-content"]["features-h4"];
 h4NodeList[1].textContent = siteContent["main-content"]["about-h4"];
 h4NodeList[2].textContent = siteContent["main-content"]["services-h4"];
