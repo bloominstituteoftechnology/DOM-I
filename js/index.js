@@ -58,3 +58,30 @@ ctaText.innerHTML = siteContent.cta.h1;
 
 let ctaButton = document.querySelector('.cta-text button');
 ctaButton.innerHTML = siteContent.cta.button;
+
+let topContentH4 = document.querySelectorAll('.top-content .text-content h4');
+topContentH4[0].innerHTML = siteContent["main-content"]['features-h4']
+topContentH4[1].innerHTML = siteContent["main-content"]['about-h4']
+
+let topContentP = document.querySelectorAll('.top-content .text-content p');
+topContentP[0].innerHTML = siteContent["main-content"]['features-content'];
+topContentP[1].innerHTML = siteContent["main-content"]['about-content'];
+
+let bottomContentH4 =document.querySelectorAll('.bottom-content .text-content h4');
+bottomContentH4[0].innerHTML = siteContent["main-content"]['services-h4'];
+bottomContentH4[1].innerHTML = siteContent["main-content"]["product-h4"];
+bottomContentH4[2].innerHTML = siteContent["main-content"]["vision-h4"];
+
+let bottomContentP = document.querySelectorAll('.bottom-content .text-content p');
+bottomContentP[0].innerHTML = siteContent["main-content"]["services-content"];
+bottomContentP[1].innerHTML = siteContent["main-content"]["product-content"];
+bottomContentP[2].innerHTML =  siteContent["main-content"]["vision-content"];
+
+let contactH4 = document.querySelector('.contact h4');
+contactH4.innerHTML = siteContent.contact["contact-h4"];
+let contactArray = Object.values(siteContent.contact);
+
+let contactsP = document.querySelectorAll('.contact p');
+for (let i = 0; i < contactsP.length; i++){
+  contactsP[i].innerHTML = contactArray[i+1];
+}
