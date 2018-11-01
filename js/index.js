@@ -41,11 +41,13 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+//Anchors
 const anchors = document.querySelectorAll('a');
 for (let i = 0; i < anchors.length; i++) {
   anchors[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
   anchors[i].style.color = 'green';
 }
+
 //blog & news
 const anchorBlog = document.createElement('a');
 const anchorNews = document.createElement('a');
@@ -59,7 +61,7 @@ nav.appendChild(anchorBlog);
 anchorBlog.style.color = 'green';
 anchorNews.style.color = 'green';
 
-
+//cta
 const h1 = document.querySelector('h1');
 h1.textContent = siteContent.cta.h1;
 
@@ -69,8 +71,9 @@ button.textContent = siteContent.cta.button;
 const codeSnipImg = document.querySelector('#cta-img');
 codeSnipImg.src = siteContent.cta['img-src'];
 
+//main-content
 const paragraphs = document.querySelectorAll('.text-content');
-console.log(paragraphs)
+
 const paragraphsEntries = Object.entries(siteContent["main-content"]);
 
 paragraphsEntries.splice(4, 1);
@@ -88,6 +91,7 @@ const midPageImg = document.querySelector('.middle-img');
 
 midPageImg.src = 'img/mid-page-accent.jpg';
 
+//contact
 const contactInfo = document.querySelector('.contact').children;
 
 const contactEntries = Object.entries(siteContent.contact);
@@ -95,8 +99,8 @@ const contactEntries = Object.entries(siteContent.contact);
 for (let i = 0; i < contactInfo.length; i++) {
   let tempElement = contactInfo[i];
   tempElement.textContent = contactEntries[i][1];
-  // if(i === 1) tempElement.textContent = `123 Way 456 Street Somewhere, USA`;
 }
 
+//footer
 const footer = document.querySelector('footer p');
 footer.textContent = siteContent.footer.copyright;
