@@ -39,6 +39,8 @@ const siteContent = {
 
 // header
 //  header  nav
+//  the following lines were moved to the end in order to 
+//  get all a elements styled
 let aTags = document.querySelectorAll('a');
 aTags[0].textContent = siteContent["nav"]["nav-item-1"];
 aTags[1].textContent = siteContent["nav"]["nav-item-2"];
@@ -103,5 +105,35 @@ contactP[2].textContent = siteContent["contact"]["email"];
 // footer p
 const footerP = document.querySelector('footer p');
 footerP.textContent = siteContent["footer"]["copyright"];
+
+//  Utilize .appendChild() and .prepend() to add two new
+//  items to the navigation system. You can call them 
+//  whatever you want.
+
+//  create elements
+const nav_item_0 = document.createElement('a');
+const nav_item_7 = document.createElement('a');
+
+//  add features like href and text content
+nav_item_0.href = "#";
+nav_item_7.href = '#';
+nav_item_0.textContent = 'History';
+nav_item_7.textContent = 'Order Here'
+
+//  obtain element to which new element will be appended to
+const nav = document.querySelector('nav');
+
+//  append new elements
+nav.prepend(nav_item_0);
+nav.appendChild(nav_item_7); 
+
+//  getting a tags that were added afterwards
+aTags = document.querySelectorAll('a');
+
+//  Change the color of the navigation text to be green
+aTags.forEach(a => a.style.color = 'green');
+
+
+
 
 
