@@ -38,5 +38,47 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+// header
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//nav
+
+const pageNav = document.querySelectorAll('nav a')
+console.log(pageNav)
+pageNav[0].textContent = siteContent.nav["nav-item-1"]
+pageNav[1].textContent = siteContent.nav["nav-item-2"]
+pageNav[2].textContent = siteContent.nav["nav-item-3"]
+pageNav[3].textContent = siteContent.nav["nav-item-4"]
+pageNav[4].textContent = siteContent.nav["nav-item-5"]
+pageNav[5].textContent = siteContent.nav["nav-item-6"]
+
+const navColor = document.querySelectorAll('nav a')
+for (let i = 0; i < navColor.length; i++) {
+  const nave = navColor[i]
+  nave.style.color = 'green'
+}
+// cta 
+const butt = document.getElementsByTagName('button')
+butt.textContent =  siteContent["cta"]["button"]
+const imgId = document.getElementById("cta-img")
+
+const Top = document.getElementsByClassName('text-content')
+console.log(Top);
+// Top[0].
+// Top[1].
+// Top[2].
+// Top[3].
+// Top[4].
+
+imgId.setAttribute('src', siteContent.cta["img-src"])
+
+const middleImg = document.getElementById("middle-img")
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+// 
+const bottom = document.getElementByClassName('contact').querySelectorAll('p')
+bottom[0].textContent = siteContent["address"]
+
+
+
