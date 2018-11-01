@@ -38,5 +38,62 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+ 
+
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+//nav
+
+let navigation = document.querySelectorAll('nav a');
+navigation.forEach((link, index) => {
+   link.textContent = siteContent.nav[`nav-item-${index++}`];
+});
+
+//cta 
+
+let ctaImag = document.getElementById("cta-img");
+ctaImag.setAttribute('src', siteContent.cta["img-src"]);
+
+let hOne = document.querySelector('h1');
+hOne.textContent = siteContent.cta.h1;
+
+let button = document.querySelector('button');
+button.textContent = siteContent.cta.button;
+
+
+//main-content
+//headers h4
+let header = document.querySelectorAll('h4');
+
+header[0].textContent = siteContent["main-content"]['features-h4'];
+header[1].textContent = siteContent["main-content"]['about-h4'];
+header[2].textContent = siteContent["main-content"]['services-h4'];
+header[3].textContent = siteContent["main-content"]['product-h4'];
+header[4].textContent = siteContent["main-content"]['vision-h4'];
+
+//content p
+let content = document.querySelectorAll('p');
+content[0].textContent = siteContent["main-content"]['features-content'];
+content[1].textContent = siteContent["main-content"]['about-content'];
+content[2].textContent = siteContent["main-content"]['services-content'];
+content[3].textContent = siteContent["main-content"]['product-content'];
+content[4].textContent = siteContent["main-content"]['vision-content'];
+
+let middleImage = document.getElementById("middle-img");
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+//contact
+//headers h4
+
+header[5].textContent = siteContent.contact['contact-h4'];
+
+//content p
+
+content[5].textContent = siteContent.contact.address;
+content[6].textContent = siteContent.contact.phone;
+content[7].textContent = siteContent.contact.email;
+
+//footer
+
+content[8].textContent = siteContent.footer.copyright;
