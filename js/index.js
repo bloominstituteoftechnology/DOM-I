@@ -47,6 +47,28 @@ navigation.forEach((link, index) => {
   link.textContent = siteContent.nav[`nav-item-${index++}`];
 });
 
+// changing navigation text color
+for (let i = 0; i < navigation.length; i++) {
+  let navColor = navigation[i];
+  navColor.style.color = 'green';
+};
+
+// appendChild
+let newChild = document.createElement('a');
+newChild.href = '#';
+newChild.textContent = 'Contact';
+
+let navBar = document.querySelector('nav');
+navBar.appendChild(newChild);
+
+// prepend
+let anotherNewChild = document.createElement('a');
+anotherNewChild.href = '#';
+anotherNewChild.textContent = 'Home';
+
+navBar.prepend(anotherNewChild);
+
+
 // cta Section
 
 let ctaImag = document.getElementById('cta-img');
