@@ -37,6 +37,10 @@ const siteContent = {
   },
 };
 
+
+/* =======HEADER====== */
+
+
 // Example: Update the img src for the logo
 
 let logo = document.getElementById("logo-img");
@@ -47,32 +51,71 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 // Create html collection from element nav
 let nav = document.getElementsByTagName('nav');
 // Length of the html collection
-let navChildCount = nav[0].childElementCount + 1;
+let navChildCount = nav[0].childElementCount;
 
-for (let i=1; i < navChildCount; i++) {
+for (let i=1; i <= navChildCount; i++) {
   // Assign textContent to nav link
   nav[0].children[i-1].textContent = siteContent['nav']['nav-item-'+i];
   // Assign url to nav link
   nav[0].children[i-1].href = siteContent['nav']['nav-item-'+i] + '.html';
 }
 
-// Dynamic header
 
-// Assign header using a querySelector
-let header = document.querySelector('.cta h1');
+/* =======CTA SECTION====== */
+
+// Dynamic CTA SECTION
+
+// Assign h1 to cta using a querySelector
+let cta = document.querySelector('.cta h1');
 // Assign textContent to cta object's h1 value
-header.textContent = siteContent['cta']['h1'];
+cta.textContent = siteContent['cta']['h1'];
 
-// Dynamic header 
+// Dynamic cta 
 
-// Assign header logo using a querySelector
-let headerLogo = document.querySelector('.cta img');
-// Assign header logo to cta object's img-src value
-headerLogo.setAttribute('src', siteContent['cta']['img-src']);
+// Assign logo to ctaLogo using a querySelector
+let ctaLogo = document.querySelector('.cta img');
+// Assign logo to ctaLogo object's img-src value
+ctaLogo.setAttribute('src', siteContent['cta']['img-src']);
 
 // Dynamic button
 
-// Assign header logo using a querySelector
-let headerButton = document.querySelector('.cta button');
-headerButton.textContent = siteContent['cta']['button'];
+// Assign CTA SECTION button using a querySelector
+let ctaButton = document.querySelector('.cta button');
+ctaButton.textContent = siteContent['cta']['button'];
 
+
+/* =======MAIN SECTION====== */
+
+// Dynamic h4 and Paragraphs
+
+// Assign main content h4 and p to arrays a querySelector
+let mainContentHeaders = document.querySelectorAll('.main-content h4');
+let mainContentParagraphs = document.querySelectorAll('.main-content p');
+
+// Create arrays of keys and values from JSON .main-content object
+let mainContentKeys = Object.keys(siteContent['main-content']);
+let mainContentVals = Object.values(siteContent['main-content']);
+
+
+// Header counter
+let h = 0;
+// Paragrah counter
+let p = 0;
+
+// Loop through array of content keys
+for (let i=0; i < mainContentKeys.length; i++) {
+  // Check if keys contain string 'h4' & assign textContent from content
+  if (mainContentKeys[i].indexOf('h4') > -1) {
+      mainContentHeaders[h++].textContent = mainContentVals[i];
+  }
+  // Check if keys contain string 'content' & assign textContent from content
+  else if (mainContentKeys[i].indexOf('content') > -1) {
+      mainContentParagraphs[p++].textContent = mainContentVals[i];
+  }
+}
+
+// Dynamic main content image
+
+// Assign main content image through the element ID
+const mainContentImage = document.getElementById('middle-img');
+mainContentImage.setAttribute('src', siteContent['main-content']['middle-img-src']);
