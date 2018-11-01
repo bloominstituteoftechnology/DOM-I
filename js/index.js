@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM is Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -38,5 +38,69 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+const logo = document.getElementById("logo-img");
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+// Constants to access page elements
+const nav = document.getElementsByTagName(`nav`);
+const main = document.getElementsByClassName(`main-content`).item(0);
+
+// Function to fill out the nav
+(function(content){
+  let navItems = Array.from(nav.item(0).children);
+  let navContent = Object.values(content);
+  navItems.forEach(function(element, i){element.textContent = navContent[i]});
+})(siteContent.nav);
+
+// cta section
+// Function to fill in cta
+(function(content){
+  let ctaText = document.getElementsByClassName(`cta-text`);
+  ctaText = ctaText.item(0).children;
+  spaceToLineBreak(ctaText.item(0), content.h1);
+  ctaText.item(1).textContent = content.button;
+  let ctaImage = document.getElementById(`cta-img`);
+  ctaImage.setAttribute(`src`, content["img-src"]);
+})(siteContent.cta);
+
+// Function to split text elements into multiple lines
+function spaceToLineBreak(element, insertText){
+  element.innerHTML = ``;
+  let lines = insertText.split(` `);
+  for (let i in lines){
+    element.appendChild(document.createTextNode(lines[i]));
+    element.appendChild(document.createElement(`br`));
+  }
+}
+
+// Function to fill in text of 2 selectors at once
+function fillDoubleText(element, text1, text2, selector1, selector2){
+  let temp = element.getElementsByTagName(selector1).item(0);
+  temp.textContent = text1;
+  temp = element.getElementsByTagName(selector2).item(0);
+  temp.textContent = text2;
+}
+
+// Arrow function to fill in main-content
+const fillMain = content => {
+  let currentContent = main.getElementsByClassName(`top-content`);
+  let textContent = currentContent.item(0).getElementsByClassName(`text-content`);
+  fillDoubleText(textContent.item(0), content[`features-h4`], content[`features-content`], `h4`, `p`);
+  fillDoubleText(textContent.item(1), content[`about-h4`], content[`about-content`], `h4`, `p`);
+  main.getElementsByClassName(`middle-img`).item(0).setAttribute(`src`, content[`middle-img-src`]);
+  currentContent = main.getElementsByClassName(`bottom-content`);
+  textContent = currentContent.item(0).getElementsByClassName(`text-content`);
+  fillDoubleText(textContent.item(0), content[`services-h4`], content[`services-content`], `h4`, `p`);
+  fillDoubleText(textContent.item(1), content[`product-h4`], content[`product-content`], `h4`, `p`);
+  fillDoubleText(textContent.item(2), content[`vision-h4`], content[`vision-content`], `h4`, `p`);
+}
+
+// Function to fill contact
+(function(content){
+  let valueArray = Object.values(content);
+  let workArea = Array.from(document.getElementsByClassName(`contact`).item(0).children);
+  console.log(workArea);
+  for (let i in valueArray){workArea[i].textContent = valueArray[i];};
+})(siteContent.contact)
+
+// Function invocations
+fillMain(siteContent["main-content"]);
