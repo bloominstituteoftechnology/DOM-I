@@ -80,6 +80,16 @@ button.textContent = siteContent.cta.button;
 //main-content
 //headers h4
 let header = document.querySelectorAll('h4');
+// header.style.color = 'blue';
+
+const headerColor = document.querySelectorAll('.main-content h4');
+for (let i = 0; i < headerColor.length; i++){
+const headerColors= headerColor[i];
+headerColors.style.color = "blue";
+headerColors.style.background = "yellow";
+headerColors.style.width="20%"
+}
+
 
 header[0].textContent = siteContent["main-content"]['features-h4'];
 header[1].textContent = siteContent["main-content"]['about-h4'];
@@ -108,6 +118,9 @@ header[5].textContent = siteContent.contact['contact-h4'];
 content[5].textContent = siteContent.contact.address;
 content[6].textContent = siteContent.contact.phone;
 content[7].textContent = siteContent.contact.email;
+
+let addressOne = document.querySelector('.contact p')
+addressOne.style.width="25%"
 
 //footer
 
