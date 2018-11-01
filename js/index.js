@@ -49,9 +49,11 @@ ctaImage.setAttribute('src', siteContent["cta"]["img-src"])
 let middleImage = document.getElementById("middle-img");
 middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
-// Task 3: UPdate the HTML with the JSON data
+// Task 3: Update the HTML with the JSON data
 let allNavItems = document.querySelectorAll('nav a');
 for (let i=0; i < allNavItems.length; i++) {
   allNavItems[i].textContent = siteContent["nav"][`nav-item-${i +1}`]
-
 }
+
+let domIsAwesomeH1Text = document.getElementsByClassName('cta');
+domIsAwesomeH1Text.textContent = siteContent["cta"]["h1"];
