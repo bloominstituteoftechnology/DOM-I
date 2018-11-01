@@ -50,13 +50,7 @@ navLink[3].textContent = siteContent['nav']["nav-item-4"]
 navLink[4].textContent = siteContent['nav']["nav-item-5"]
 navLink[5].textContent = siteContent['nav']["nav-item-6"]
 
-// Turn Links Green
-for (let i = 0; i < navLink.length; i++) {
-  let navColor = navLink[i]
-  navColor.style.color = 'green'
-}
-
-// Add Child Element to Nav
+// Add Child Element to End of Nav
 let newChild = document.createElement("a")
 newChild.href = '#'
 newChild.textContent = 'Blog'
@@ -64,16 +58,24 @@ newChild.textContent = 'Blog'
 let navBar = document.querySelector("nav")
 navBar.appendChild(newChild);
 
-// Add Child Element to Nav
+// Add Child Element to Beginning of Nav
 let anotherNewChild = document.createElement("a")
 anotherNewChild.href = '#'
 anotherNewChild.textContent = 'My CV'
 
 navBar.prepend(anotherNewChild);
 
+// Turn Links Green
+for (let i = 0; i < navLink.length; i++) {
+  let navColor = navLink[i]
+  navColor.style.color = 'green'
+}
+
 // CTA Content
 let ctaH1 = document.querySelector('section.cta .cta-text h1');
-ctaH1.textContent = siteContent['cta']['h1']
+// ctaH1.textContent = siteContent['cta']['h1']
+
+ctaH1.innerHTML = "DOM<br> Is<br> Awesome";
 
 let ctaButton = document.querySelector('section.cta .cta-text button');
 ctaButton.textContent = siteContent['cta']['button']
@@ -101,6 +103,13 @@ bottomContent.children[1].querySelector('p').textContent = siteContent['main-con
 bottomContent.children[2].querySelector('h4').textContent = siteContent['main-content']['vision-h4']
 bottomContent.children[2].querySelector('p').textContent = siteContent['main-content']['vision-content']
 
+// Alter h4 Font and Text Decoration
+let sectionHeaders = document.querySelectorAll('h4');
+for (let i = 0; i < sectionHeaders.length; i++) {
+  sectionHeaders[i].style.fontFamily = "hobo std";
+  sectionHeaders[i].style.textDecoration = "underline";
+}
+
 // Contact Area
 let contactArea = document.querySelector('.contact');
 
@@ -111,3 +120,17 @@ contactArea.children[3].textContent = siteContent['contact']['email']
 
 // Footer
 let footerContent = document.querySelector('footer p').textContent = siteContent['footer']['copyright']
+
+// Mouseover Event
+var event = document.querySelector("button");
+  console.log(event)
+event.addEventListener("mouseenter", function(item) {   
+
+  item.target.style.backgroundColor = "orange";
+  item.target.style.borderColor = "skyblue"
+
+  setTimeout(function() {
+    item.target.style.backgroundColor = "";
+    item.target.style.borderColor = "";
+  }, 700);
+}, false);
