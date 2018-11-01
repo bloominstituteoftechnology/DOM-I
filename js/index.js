@@ -46,16 +46,22 @@ const faqsLink = document.createElement("a");
 
 const navElement = document.querySelector("nav");
 
+navElement.prepend(homeLink);
 
+navElement.append(faqsLink);
 
 let tagElements = document.querySelectorAll("a");
+tagElements[0].innerHTML = "Home";
 tagElements[1].innerHTML = siteContent["nav"]["nav-item-1"];
 tagElements[2].innerHTML = siteContent["nav"]["nav-item-2"];
 tagElements[3].innerHTML = siteContent["nav"]["nav-item-3"];
 tagElements[4].innerHTML = siteContent["nav"]["nav-item-4"];
 tagElements[5].innerHTML = siteContent["nav"]["nav-item-5"];
+tagElements[6].innerHTML = "FAQs";
 
-
+for (let i = 0; i < tagElements.length; i++) {
+  tagElements[i].style.color = "green";  
+}
 
 // call to action
 let ctaImg = document.querySelector("#cta-img");
@@ -93,7 +99,6 @@ let contactStuff = document.querySelectorAll(".contact p");
 contactStuff[0].innerHTML = siteContent["contact"]["address"];
 contactStuff[1].innerHTML = siteContent["contact"]["phone"];
 contactStuff[2].innerHTML = siteContent["contact"]["email"];
-
 
 // footer
 let footer = document.querySelector("footer p");
