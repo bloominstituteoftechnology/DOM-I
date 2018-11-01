@@ -46,3 +46,15 @@ const navigation = document.querySelectorAll('nav a');
 navigation.forEach((link, index) => {
   link.textContent = siteContent.nav[`nav-item-${index++}`];
 });
+
+// cta Section
+
+let ctaImag = document.getElementById('cta-img');
+ctaImag.setAttribute('src', siteContent.cta['img-src']);
+
+let firstHeader = document.querySelector('h1');
+firstHeader.textContent = siteContent.cta.h1;
+
+let button = document.querySelector('button');
+button.textContent = siteContent.cta.button;
+
