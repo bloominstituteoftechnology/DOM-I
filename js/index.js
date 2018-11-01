@@ -93,15 +93,23 @@ console.log(allMainContent);
 // let mainMiddleContent = document.querySelector('')
 // let mainBottomContent = document.
 
-let contactTitle = document.querySelector('contact-h4');
+let contactTitle = document.querySelector('.contact h4');
 contactTitle.innerHTML = siteContent['contact']['contact-h4'];
 
-// let contactAddress = 
+// contactAddress 
+//tried innerText which also didnt change anything
+let contactAddress = document.querySelector('contact address')
+contactAddress.innerHTML = siteContent['contact']['address']
 
 // let contactPhone = 
+//tried innerText which also didnt change anything
+let contactPhone = document.querySelector('contact phone')
+contactPhone.innerHTML = siteContent['contact']['phone']
 
 // let contactEmail = document
-
+//tried innerText which also didnt change anything
+let contactEmail = document.querySelector('contact email')
+contactEmail.innerHTML = siteContent['contact']['email']
 
 
 
