@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM<br> Is<br> Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -53,8 +53,16 @@ let newElement =document.createElement("a");
 newElement.href="#";
 newElement.textContent="Search";
 let nav =document.querySelector(".container header nav");
-nav.append(newElement );
-
+nav.appendChild(newElement );
+let anotherNewElement=document.createElement("a");
+anotherNewElement.href="#";
+anotherNewElement.textContent="Gallery";
+nav.prepend(anotherNewElement);
+let navElements=document.querySelectorAll(" nav a");
+console.log(navElements)
+for(let i=0;i<navElements.length;i++) {
+   navElements[i].style.color = "green";
+}
 
 
 let logo = document.getElementById("logo-img");
@@ -75,8 +83,7 @@ let headerLine= document.querySelector(".cta .cta-text h1");
 
 headerLine.textContent=siteContent["cta"]["h1"];
 //headerLine.style.fontWeight="bold";
-headerLine.style.width = "175px";
-headerLine.style.marginRight = "60px";
+headerLine.innerHTML=siteContent["cta"]["h1"];
 
 
 let btn=document.querySelector(".cta .cta-text button");

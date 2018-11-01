@@ -40,4 +40,5 @@ on the site with a click of a button.  You could build a similar data object wit
 you test the click event.
 
 ## Stretch Project: Digital Timer
-This project is heavier on logic but employs some DOM manipulation to achieve it's goals.  Go check it out here: [stretch assignment](stretch-assignment) and see how far you can get. 
+This project is heavier on logic but employs some DOM manipulation to achieve it's goals.
+  Go check it out here: [stretch assignment](stretch-assignment) and see how far you can get.
