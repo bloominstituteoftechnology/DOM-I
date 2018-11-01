@@ -36,6 +36,7 @@ const siteContent = {
     "copyright" : "Copyright Great Idea! 2018"
   },
 };
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
@@ -71,12 +72,15 @@ document.querySelector('nav').prepend(forums);
 // Add round code img to page
 let rndimg = document.getElementById("cta-img");
 rndimg.setAttribute('src',siteContent["cta"]["img-src" ]);
-// make the large text visible h1 
-document.querySelector('h1').innerText = siteContent["cta"]["h1"];
+// make the large text visible  and style with breaks h1 
+const ctaText = document.querySelector('.cta-text h1');
+siteContent.cta["h1"] = "DOM<br> Is<br> Awesome!";
+ctaText.innerHTML = siteContent.cta["h1"];
 // Add button below the h1 text
 document.querySelector('.cta button').innerHTML = siteContent["cta"]['button'];
 let ebut = document.querySelector('.cta button');
 let cont = document.querySelector('.container');
+cont.style.padding = "0 0 0 4px "
 ebut.addEventListener("click", myFunction);
 ebut.addEventListener("click", someOtherFunction);
 
