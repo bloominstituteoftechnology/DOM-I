@@ -1,14 +1,51 @@
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.digits {
+  background-color: #000;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid rgb(139, 137, 137);
+  border-radius: 10px;
 }
 
 .digit {
   display: inline-block;
   font-size: 80px;
+  color: yellow;
 }
 
 .redDigit {
   color: red;
+}
+
+button {
+  background: none;
+  border: 1px solid #000;
+  width: 100px;
+  height: 30px;
+  margin-top: 3px;
+  border-radius: 5px;
+  background-color: rgb(59, 102, 245);
+  font-size: 24px;
+  font-weight: bold;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.548);
+}
+
+button:active {
+  box-shadow: 0 0 0 #000;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:disabled {
+  background-color: rgba(143, 139, 139, 0.692);
 }

@@ -50,18 +50,20 @@ let mainContentText = document.querySelectorAll('.main-content p');
 let contact = document.querySelector('.contact');
 let footer = document.querySelector('footer p');
 
-
+// --Set images--
 imgLogo.setAttribute('src', siteContent["nav"]["img-src"]);
 imgCta.setAttribute('src', siteContent['cta']['img-src']);
 imgMiddle.setAttribute('src', siteContent["main-content"]['middle-img-src']);
+// --------------
 
-
-
+// --Set link content--
 links.forEach((link, index) => {
   link.textContent = siteContent['nav'][`nav-item-${index + 1}`];
   link.style.color = 'green';
 });
+// --------------------
 
+// --Add new a tags--
 const newNav1 = document.createElement('a');
 const newNav2 = document.createElement('a');
 
@@ -70,23 +72,29 @@ newNav2.textContent = 'Sign-in';
 
 nav.prepend(newNav1);
 nav.appendChild(newNav2);
+// ------------------
 
+// --Header content--
 button.addEventListener('click', () => headTitle.style.color = 'pink');
 
 headTitle.innerHTML = siteContent['cta']['h1'].split(' ').join('<br/>');
 button.textContent = siteContent['cta']['button'];
+// ------------------
 
-
+// --Set content in the Main Section--
 let mcArray = Object.keys(siteContent['main-content']).filter(key => key.includes('h4') || key.includes('content'));
 for(let i = 0; i < mcArray.length; i+=2) {
   mainContentTitle[i/2].textContent = siteContent['main-content'][mcArray[i]];
   mainContentText[i/2].textContent = siteContent['main-content'][mcArray[i+1]];
 }
+// -----------------------------------
 
-
+// --Set content for Contact Section--
 let contactArray = Object.keys(siteContent['contact']);
 for(let i = 0; i < contactArray.length; i ++) {
   contact.children[i].textContent = siteContent['contact'][contactArray[i]];
 }
+// -----------------------------------
 
+// --Footer--
 footer.textContent = siteContent['footer']['copyright'];
