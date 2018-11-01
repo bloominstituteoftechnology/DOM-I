@@ -69,7 +69,7 @@ mainNav.appendChild(blog);
 
 // Make Navigation Items Green
 const NewNavItems = document.querySelectorAll('nav a');
-NewNavItems.forEach(link => link.style.color = 'green');
+NewNavItems.forEach(link => link.style.color = 'green');""
 
 // H1
 const ctaText = document.querySelector('.cta-text h1');
