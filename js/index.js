@@ -63,7 +63,7 @@ for (let i=1; i <= navChildCount; i++) {
 
 /* =======CTA SECTION====== */
 
-// Dynamic CTA SECTION
+// Dynamic cta section
 
 // Assign h1 to cta using a querySelector
 let cta = document.querySelector('.cta h1');
@@ -119,3 +119,46 @@ for (let i=0; i < mainContentKeys.length; i++) {
 // Assign main content image through the element ID
 const mainContentImage = document.getElementById('middle-img');
 mainContentImage.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+
+/* =======CONTACT SECTION====== */
+
+// Dynamic Contect Section
+
+// "contact": {
+//   "contact-h4" : "Contact",
+//   "address" : "123 Way 456 Street Somewhere, USA",
+//   "phone" : "1 (888) 888-8888",
+//   "email" : "sales@greatidea.io",
+// }
+
+const contactHeader = document.querySelector('.contact h4');
+contactHeader.textContent = siteContent['contact']['contact-h4'];
+
+const contactAddress = document.querySelector('.contact p:nth-child(2)');
+contactAddress.textContent = siteContent['contact']['address'];
+
+const address = ['Street', 'Road', 'Ave'];
+let foo = siteContent['contact']['address'].toString();
+
+
+let firstpart = foo.substring(0, foo.indexOf(address[0]) + address[0].length);
+let secondpart = foo.substring(foo.indexOf(address[0]) + address[0].length, foo.length);
+
+contactAddress.innerHTML = firstpart + '</br>' + secondpart;
+
+const contactPhone = document.querySelector('.contact p:nth-child(3)');
+contactPhone.textContent = siteContent['contact']['phone'];
+
+const contactEmail = document.querySelector('.contact p:last-child');
+contactEmail.textContent = siteContent['contact']['email'];
+
+
+/* =======FOOTER SECTION====== */
+
+// Dynamic footer
+
+// Assign copyright to footer using a querySelector
+const footer = document.querySelector('footer p');
+// Assign textContent to cta object's h1 value
+footer.textContent = siteContent['footer']['copyright'];
