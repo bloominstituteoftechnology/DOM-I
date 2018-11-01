@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM<br> Is<br> Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -37,7 +37,8 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
+// images
+
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
@@ -46,6 +47,8 @@ headerImg.setAttribute('src', siteContent["cta"]["img-src"]);
 
 let mainContentImg = document.getElementById("middle-img");
 mainContentImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+// Nav
 
 let nav = document.querySelector("nav");
 
@@ -65,12 +68,57 @@ let navItems = document.querySelectorAll("a");
 
 navItems.forEach(x => x.style.color = "green")
 
-console.log(navItems)
-/*
-console.log(newLinks);
+// CTA
 
-console.log(navItem1);
-*/
+let cta = document.getElementsByTagName("h1")
+cta[0].innerHTML = siteContent["cta"]["h1"]
+
+let buttonText = document.getElementsByTagName("button")
+buttonText[0].innerHTML = siteContent["cta"]["button"]
+console.log(cta)
+
+// Main Content
+  // Top Content
+let features = document.getElementsByTagName("h4")
+let featuresP = document.getElementsByTagName("p")
+features[0].innerHTML = siteContent["main-content"]["features-h4"]
+featuresP[0].innerHTML = siteContent["main-content"]["features-content"]
+
+let about = document.getElementsByTagName("h4")
+let aboutP = document.getElementsByTagName("p")
+about[1].innerHTML = siteContent["main-content"]["about-h4"]
+aboutP[1].innerHTML = siteContent["main-content"]["about-content"]
+
+  // Bottom Content
+let service = document.getElementsByTagName("h4")
+let serviceP = document.getElementsByTagName("p")
+service[2].innerHTML = siteContent["main-content"]["services-h4"]
+serviceP[2].innerHTML = siteContent["main-content"]["services-content"]
+
+let product = document.getElementsByTagName("h4")
+let productP = document.getElementsByTagName("p")
+product[3].innerHTML = siteContent["main-content"]["product-h4"]
+productP[3].innerHTML = siteContent["main-content"]["product-content"]
+
+let vision = document.getElementsByTagName("h4")
+let visionP = document.getElementsByTagName("p")
+vision[4].innerHTML = siteContent["main-content"]["vision-h4"]
+visionP[4].innerHTML = siteContent["main-content"]["vision-content"]
+
+// Contact
+
+let contact = document.getElementsByTagName("h4")
+let address = document.getElementsByTagName("p")
+let phone = document.getElementsByTagName("p")
+let email = document.getElementsByTagName("p")
+contact[5].innerHTML = siteContent["contact"]["contact-h4"]
+address[5].innerHTML = siteContent["contact"]["address"]
+phone[6].innerHTML = siteContent["contact"]["phone"]
+email[7].innerHTML = siteContent["contact"]["email"]
+
+// Footer
+let copyRight = document.getElementsByTagName("p")
+copyRight[8].innerHTML = siteContent["footer"]["copyright"]
 
 
 
