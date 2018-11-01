@@ -49,17 +49,37 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 // Dynamic nav
 
 // Create html collection from element nav
-let nav = document.getElementsByTagName('nav');
-console.log(nav[0].children);
-// Length of the html collection
+let nav = document.querySelectorAll('nav');
+console.log(nav.children);
 let navChildCount = nav[0].childElementCount;
+
+
+
+let booksLink = document.createElement('a');
+booksLink.innerHTML = 'Books';
+booksLink.href = 'Books.html';
+
+let moviesLink = document.createElement('a');
+moviesLink.innerHTML = 'Movies';
+moviesLink.href = 'Movies.html';
 
 for (let i=1; i <= navChildCount; i++) {
   // Assign textContent to nav link
-  nav[0].children[i-1].textContent = siteContent['nav']['nav-item-'+i];
-  nav[0].children[i-1.].style.color = 'green';
+  nav[0].children[i-1].innerHTML = siteContent['nav']['nav-item-'+i];
   // Assign url to nav link
   nav[0].children[i-1].href = siteContent['nav']['nav-item-'+i] + '.html';
+
+}
+
+// Appen and Prepend Books Link and Movies Link
+nav[0].appendChild(booksLink);
+nav[0].prepend(moviesLink);
+
+let colorNav = document.querySelector('nav');
+
+for (let j=1; j <=colorNav.childElementCount; j++) {
+  // Asign color to all links
+  nav[0].children[j-1].style.color = 'green';
 }
 
 
