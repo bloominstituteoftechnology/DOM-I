@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM<br> Is<br> Awesome!",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -36,6 +36,15 @@ const siteContent = {
     "copyright" : "Copyright Great Idea! 2018"
   },
 };
+
+const container = document.getElementsByClassName('container')[0];
+container.style.fontFamily = "Roboto";
+
+const h4 = document.querySelectorAll('h4');
+for (let i = 0; i < h4.length; i++){
+  h4[i].style.fontFamily = "Playfair Display";
+  h4[i].style.textTransform = "uppercase";
+}
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
@@ -79,7 +88,12 @@ for (let i = 0; i < navLinks.length; i++) {
 
 // CTA Section
 const ctaTitle = document.querySelector('.cta-text h1');
-ctaTitle.textContent = siteContent.cta.h1;
+ctaTitle.h1 = "DOM <br> Is <br> Awesome!";
+ctaTitle.innerHTML = siteContent.cta["h1"];
+ctaTitle.style.color = "#194682";
+ctaTitle.style.fontFamily = "Playfair Display";
+ctaTitle.style.textTransform = "uppercase";
+ctaTitle.style.fontWeight = "600";
 
 const ctaButton = document.querySelector('.cta-text button');
 ctaButton.textContent = siteContent.cta.button;
@@ -127,12 +141,16 @@ contactTitle.textContent = siteContent.contact["contact-h4"];
 
 const address = document.querySelectorAll('.contact p')[0];
 address.textContent = siteContent.contact["address"];
+address.textContent = "123 Way 456 Street<br>Somewhere, USA";
+address.innerHTML = siteContent.contact.address;
 
 const phone = document.querySelectorAll('.contact p')[1];
 phone.textContent = siteContent.contact["phone"];
 
 const email = document.querySelectorAll('.contact p')[2];
 email.textContent = siteContent.contact["email"];
+
+// Extra Content
 
 //Footer
 const copyright = document.querySelector('footer p');
