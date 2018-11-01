@@ -91,3 +91,7 @@ content[5].textContent = siteContent.contact.address;
 content[6].textContent = siteContent.contact.phone;
 content[7].textContent = siteContent.contact.email;
 
+// footer
+
+content[8].textContent = siteContent.footer.copyright;
+
