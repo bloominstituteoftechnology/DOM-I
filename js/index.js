@@ -70,7 +70,8 @@ nav.forEach(item => item.style.color = "green");
 
 const h1 = document.querySelector('h1');
 console.log(h1);
-h1.textContent = siteContent["cta"]["h1"];
+h1.textContent = siteContent["cta"]["h1"]
+
 
 const button = document.getElementsByTagName('button')
 console.log(button[0]);
@@ -90,6 +91,7 @@ contentHeaders[4].textContent = siteContent["main-content"]["vision-h4"];
 const mainText = document.querySelectorAll('.text-content p');
 const paragraphs = ['features', 'about', 'services', 'product', 'vision'];
 console.log(mainText);
+
 for (let i in mainText) {
   mainText[i].textContent = siteContent["main-content"][`${paragraphs[i]}-content`]
 }
@@ -107,6 +109,7 @@ console.log(contactContent);
 contactContent[0].textContent = siteContent['contact']['address'];
 contactContent[1].textContent = siteContent['contact']['phone'];
 contactContent[2].textContent = siteContent['contact']['email'];
+
 
 const footer = document.querySelector('footer p');
 footer.textContent = siteContent['footer']['copyright'];
