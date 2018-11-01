@@ -88,3 +88,16 @@ mainConText[1].innerHTML = siteContent['main-content']['about-content'];
 mainConText[2].innerHTML = siteContent['main-content']['services-content'];
 mainConText[3].innerHTML = siteContent['main-content']['product-content'];
 mainConText[4].innerHTML = siteContent['main-content']['vision-content'];
+
+//contact
+const contactHead = document.querySelector('.contact h4');
+contactHead.innerHTML = siteContent['contact']['contact-h4'];
+
+const contactText = document.querySelectorAll('.contact p');
+contactText[0].innerHTML = siteContent['contact']['address'];
+contactText[1].innerHTML = siteContent['contact']['phone'];
+contactText[2].innerHTML = siteContent['contact']['email'];
+
+//footer
+const footerText = document.querySelector('footer p');
+footerText.innerHTML = siteContent['footer']['copyright'];
