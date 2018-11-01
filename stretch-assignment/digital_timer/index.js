@@ -40,6 +40,10 @@ function setTimer() {
         msHundreds.textContent = msHundredsCounter;
         secondOnes.textContent = secondOnesCounter;
         secondTens.textContent = secondTensCounter + 1;
+        msTens.style.color = 'red';
+        msHundreds.style.color = 'red';
+        secondOnes.style.color = 'red';
+        secondTens.style.color = 'red';
 
         stopTimer();
       }
