@@ -54,3 +54,27 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 
+//------------------------------------------------------CTA
+
+//"cta": {
+  // "h1": "DOM Is Awesome",     
+  // "button": "Get Started",    
+  // "img-src": "img/header-img.png"
+
+//--------H1
+const ctaH1 = document.querySelector('div.cta-text > h1');
+
+ctaH1.textContent = siteContent["cta"]["h1"];
+
+//--------button
+
+const ctaButton = document.querySelector('div.cta-text > button');
+
+ctaButton.textContent = siteContent["cta"]["button"];
+
+//-------CTA Image
+
+const ctaImage = document.getElementById('cta-img');
+
+ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
+
