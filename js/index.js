@@ -47,10 +47,24 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 const navBar = document.querySelectorAll('a');
 navBar.forEach((item, i) => item.innerHTML = siteContent['nav'][`nav-item-${i+1}`]);
 navBar.forEach((item) => item.style.color = "blue");
+
 const parentNav = document.querySelector('nav');
+
 const myPrepend = document.createElement('a');
 parentNav.prepend(myPrepend);
 myPrepend.innerText = "Company";
+
 const myAppend = document.createElement('a');
 parentNav.appendChild(myAppend);
 myAppend.innerText = "Privacy";
+
+
+//cta
+const cButton = document.querySelector('button');
+cButton.innerHTML = siteContent['cta']['button'];
+
+const cImg = document.getElementById('cta-img');
+cImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+const head = document.querySelector('h1');
+head.innerHTML = siteContent["cta"]["h1"];
