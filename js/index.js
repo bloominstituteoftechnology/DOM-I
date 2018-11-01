@@ -115,3 +115,16 @@ contactParagraphs[2].textContent = siteContent["contact"]["email"];
 // Footer
 const footer = document.querySelector('footer p');
 footer.textContent = siteContent["footer"]["copyright"];
+
+// Event Listener for Button
+ctaButton.addEventListener('click', event => {
+  for (let i=0; i<paragraphs.length; i++) {
+    paragraphs[i].style.color = 'green';
+  }
+});
+
+ctaButton.addEventListener('dblclick', event => {
+  for (let i=0; i<paragraphs.length; i++) {
+    paragraphs[i].style.color = 'black';
+  }
+});
