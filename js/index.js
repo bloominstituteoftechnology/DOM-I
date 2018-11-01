@@ -98,8 +98,12 @@ bottomContent[2].textContent = siteContent['main-content']['vision-content'];
 const contactH4 = document.querySelector('.contact h4');
 contactH4.textContent = siteContent['contact']['contact-h4'];
 
+// Insert line break in address string
+const newAddress = siteContent['contact']['address'].replace('Street', 'Street<br>');
+
 const contactText = document.querySelectorAll('.contact p');
-contactText[0].textContent = siteContent['contact']['address'];
+// contactText[0].textContent = siteContent['contact']['address'];
+contactText[0].innerHTML = newAddress;
 contactText[1].textContent = siteContent['contact']['phone'];
 contactText[2].textContent = siteContent['contact']['email'];
 
