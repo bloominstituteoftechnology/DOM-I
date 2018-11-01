@@ -60,7 +60,10 @@ nav.appendChild(newChild);
 nav.prepend(newChild2);
 
 let heading = document.querySelector('.cta-text h1');
-heading.textContent = siteContent.cta.h1;
+heading.style.whiteSpace = 'pre';
+heading.textContent = siteContent.cta.h1.substring(0, 3) + '\r\n' +
+siteContent.cta.h1.substring(4, 6) + '\r\n' +
+siteContent.cta.h1.substring(7);
 
 let button = document.querySelector('.cta-text button');
 button.textContent = siteContent.cta.button;
@@ -102,7 +105,11 @@ bottomContent[2].textContent = siteContent['main-content']['vision-content'];
 
 let contactSection = document.querySelector('.contact').children;
 for (let i = 0; i < contactSection.length; i++){
-  contactSection[i].textContent = Object.values(siteContent.contact)[i];
+  contactSection[i].style.whiteSpace = 'pre';
+  if (i === 1) contactSection[i].textContent = Object.values(siteContent.contact)[i].substring(0, 18) + 
+  '\r\n' + 
+  Object.values(siteContent.contact)[i].substring(19);
+  else contactSection[i].textContent = Object.values(siteContent.contact)[i];
 }
 
 let footer = document.querySelector('footer');
