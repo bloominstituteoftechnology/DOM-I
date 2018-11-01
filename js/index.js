@@ -45,12 +45,15 @@ logo.src = siteContent["nav"]["img-src"];
 
 // Navigation
 const NavItems = document.querySelectorAll('nav a');
-NavItems[0].textContent = siteContent.nav["nav-item-1"];
-NavItems[1].textContent = siteContent.nav["nav-item-2"];
-NavItems[2].textContent = siteContent.nav["nav-item-3"];
-NavItems[3].textContent = siteContent.nav["nav-item-4"];
-NavItems[4].textContent = siteContent.nav["nav-item-5"];
-NavItems[5].textContent = siteContent.nav["nav-item-6"];
+NavItems.forEach((link, i) => {
+  link.innerHTML = siteContent.nav[`nav-item-${i+1}`];
+})
+// NavItems[0].textContent = siteContent.nav["nav-item-1"];
+// NavItems[1].textContent = siteContent.nav["nav-item-2"];
+// NavItems[2].textContent = siteContent.nav["nav-item-3"];
+// NavItems[3].textContent = siteContent.nav["nav-item-4"];
+// NavItems[4].textContent = siteContent.nav["nav-item-5"];
+// NavItems[5].textContent = siteContent.nav["nav-item-6"];
 
 // Add two new nav items - Blog and Home
 const index = document.createElement('a');
@@ -66,9 +69,7 @@ mainNav.appendChild(blog);
 
 // Make Navigation Items Green
 const NewNavItems = document.querySelectorAll('nav a');
-for(let i = 0; i < NewNavItems.length; i++) {
-  NewNavItems[i].style.color = 'green';
-}
+NewNavItems.forEach(link => link.style.color = 'green');
 
 // H1
 const ctaText = document.querySelector('.cta-text h1');
