@@ -37,16 +37,24 @@ const siteContent = {
   },
 };
 
+// sets the entire body to a color for the background. 
+document.body.style.backgroundColor = 'lavender';
+
 // Example: Update the img src for the logo
+// images
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+// below done to purely impact the 
+logo.setAttribute('alt', textContent = "The Great Idea! Company logo!")
+// console.log(logo)
+
+const ctaImg = document.getElementById('cta-img').src = siteContent['cta']["img-src"]
+
+const middleImg = document.getElementById("middle-img")
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+console.log(middleImg)
 
 
-// 1. Create selectors to point your data into elements
-//Create selectors by using any of the DOM element's methods
-//Note that IDs have been used on all images. Use the IDs to update src path content
-
-// navigation and anchor elements from the header
 const navItems = document.querySelectorAll('nav a')
 console.log(navItems);
 navItems[0].textContent = siteContent["nav"]["nav-item-1"];
@@ -57,27 +65,61 @@ navItems[4].textContent = siteContent["nav"]["nav-item-5"];
 navItems[5].textContent = siteContent["nav"]["nav-item-6"];
 
 
+let newNavItem = document.createElement("a").createTextNode("Blog");
+console.log(newNavItem)
+
+// change the nav items to green
+navItems.forEach (navItems => navItems.style.color = 'green')
+
+
 // section class cta    "h1": "DOM Is Awesome",
-  //  "button": "Get Started",
-  //  "img-src": "img/header-img.png"
 const ctaH1 = document.getElementsByTagName('h1');
 ctaH1[0].textContent = siteContent.cta.h1;
 
 const ctaButton = document.querySelector('button')
 ctaButton.textContent = siteContent.cta.button;
-// ctaH1.setAttribute('cta', siteContent['cta']['h1'])
-console.log(ctaH1)
+console.log(ctaH1);
 
 // const ctaH2 = document.querySelector('h2');
 // ctaH2.textContent = siteContent.cta.h2;
 // console.log(ctaH2);
-// image set 
-const ctaImg = document.getElementById('cta-img').src = siteContent['cta']["img-src"];
 
+// h4 selectors
+const h4 = document.querySelectorAll('h4')
+// main-content section 
+h4[0].textContent = siteContent["main-content"]["features-h4"];
+h4[1].textContent = siteContent["main-content"]["about-h4"];
+h4[2].textContent = siteContent["main-content"]["services-h4"];
+h4[3].textContent = siteContent["main-content"]["product-h4"];
+h4[4].textContent = siteContent["main-content"]["vision-h4"];
 
-// 2. Update the HTML with the JSON data
-// Remember, NO direct updating of the HTML source is allowed.
-//  Using your selectors, update the content to match the example file.
-//  Remember to update the src attributes on images
+// contact section
+h4[5].textContent = siteContent["contact"]["contact-h4"];
+console.log(h4)
 
-// 3. Add new content
+// used for loop to set h4 elements to forestgreen. 
+for (let i =0; i <h4.length; i++){
+  //
+  if (h4[i] === (':last-child')) {
+   h4[i].style.color = 'black';
+  }
+  h4[i].style.color = 'forestgreen';
+}
+// p selectors
+const paragraphs = document.querySelectorAll('p')
+console.log(paragraphs)
+
+// main-content section 
+paragraphs[0].textContent = siteContent["main-content"]["features-content"];
+paragraphs[1].textContent = siteContent["main-content"]["about-content"];
+paragraphs[2].textContent = siteContent["main-content"]["features-content"];
+paragraphs[3].textContent = siteContent["main-content"]["features-content"];
+paragraphs[4].textContent = siteContent["main-content"]["features-content"];
+
+// contact section
+paragraphs[5].textContent = siteContent["contact"]["address"];
+paragraphs[6].textContent = siteContent["contact"]["phone"];
+paragraphs[7].textContent = siteContent["contact"]["email"];
+
+// footer section 
+paragraphs[8].textContent = siteContent["footer"]["copyright"];
