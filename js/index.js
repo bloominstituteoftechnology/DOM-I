@@ -46,6 +46,9 @@ const nav = document.querySelectorAll("a");
 const title = document.querySelector("h1");
 const btn = document.querySelector("button");
 const codePic = document.getElementById("cta-img");
+const h4Content = document.querySelectorAll("h4");
+const midPic = document.getElementById("middle-img");
+const textContent = document.querySelectorAll("p");
 
 //loop thru nav items to diplay them
 for (let i=1; i<7; i++){
@@ -56,3 +59,33 @@ for (let i=1; i<7; i++){
 //make nav items green
 nav.forEach(element => element.style.color = "green");
 
+//set content to title
+title.innerHTML = siteContent["cta"]["h1"];
+
+//set content to button
+btn.innerHTML = siteContent["cta"]["button"];
+
+//set content to picture
+codePic.setAttribute('src', siteContent["cta"]["img-src"]);
+
+//set h4 content
+h4Content[0].innerHTML = siteContent["main-content"]["features-h4"];
+h4Content[1].innerHTML = siteContent["main-content"]["about-h4"];
+h4Content[2].innerHTML = siteContent["main-content"]["services-h4"];
+h4Content[3].innerHTML = siteContent["main-content"]["product-h4"];
+h4Content[4].innerHTML = siteContent["main-content"]["vision-h4"];
+h4Content[5].innerHTML = siteContent["contact"]["contact-h4"];
+
+//set middle image content
+midPic.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+//set text content
+textContent[0].innerHTML = siteContent["main-content"]["features-content"];
+textContent[1].innerHTML = siteContent["main-content"]["about-content"];
+textContent[2].innerHTML = siteContent["main-content"]["services-content"];
+textContent[3].innerHTML = siteContent["main-content"]["product-content"];
+textContent[4].innerHTML = siteContent["main-content"]["vision-content"];
+textContent[5].innerHTML = siteContent["contact"]["address"];
+textContent[6].innerHTML = siteContent["contact"]["phone"];
+textContent[7].innerHTML = siteContent["contact"]["email"];
+textContent[8].innerHTML = siteContent["footer"]["copyright"];
