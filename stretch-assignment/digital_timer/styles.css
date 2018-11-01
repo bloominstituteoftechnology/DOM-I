@@ -1,14 +1,35 @@
-body {
+html {
+  font-size: 62.5%;
+}
+
+.container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .digit {
-  display: inline-block;
   font-size: 80px;
 }
 
 .redDigit {
   color: red;
+}
+
+.digits {
+  display: flex;
+}
+
+.timerBtn {
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 2rem;
+  border-radius: 10px;
+}
+
+.buttons {
+  display: flex;
+  width: 30%;
+  justify-content: space-evenly;
 }
