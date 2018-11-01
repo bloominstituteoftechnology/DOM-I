@@ -53,7 +53,7 @@ for (let i = 0; i < navBar.length; i++) {
 
 // h1
 let h1 = document.querySelector('.cta-text h1');
-h1.textContent = 'Dom Is Awesome';
+h1.innerHTML = 'Dom <br>Is<br> Awesome';
 
 
 // Button
