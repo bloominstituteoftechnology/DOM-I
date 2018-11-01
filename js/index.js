@@ -176,3 +176,37 @@ visionCont.textContent = siteContent["main-content"]["vision-content"];
 // },
 
 
+//--------Contact-h4
+
+const contactTitle = document.querySelector('section.contact > h4');
+
+contactTitle.textContent = siteContent["contact"]["contact-h4"];
+
+//--------address
+//NEED TO FIGURE OUT HOW TO ADD THE BREAK IN THE ADDRESS
+const contAddress = document.querySelector('section.contact > p');
+
+contAddress.textContent = siteContent["contact"]["address"];
+
+//-------phone
+
+const contPhone = document.querySelector('section.contact > p:nth-child(3)');
+
+contPhone.textContent = siteContent["contact"]["phone"];
+
+//-------email
+
+const contEmail = document.querySelector('section.contact > p:nth-child(4)');
+
+contEmail.textContent = siteContent["contact"]["email"];
+
+//--------------------------------------------------------footer
+// "footer": {
+//   "copyright" : "Copyright Great Idea! 2018"
+// },
+
+//------copyright
+
+const fCopyright = document.querySelector('footer > p');
+
+fCopyright.textContent = siteContent["footer"]["copyright"];
