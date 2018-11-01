@@ -44,6 +44,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 const anchors = document.querySelectorAll('a');
 for (let i = 0; i < anchors.length; i++) {
   anchors[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
+  anchors[i].style.color = 'green';
 }
 
 const h1 = document.querySelector('h1');
