@@ -64,25 +64,39 @@ navItems[3].textContent = siteContent["nav"]["nav-item-4"];
 navItems[4].textContent = siteContent["nav"]["nav-item-5"];
 navItems[5].textContent = siteContent["nav"]["nav-item-6"];
 
+// querySelect nav
+let newNavItem = document.querySelector("nav");
+// create a new anchor tag
+let newAnchorTag = document.createElement("a")
+// give the new anchor tag text
+newAnchorTag.textContent = "Life Outside of Code";
+// give the anchor tag color since it is not apart of the navItems nodeList
+newAnchorTag.style.color = 'green';
+// append the new anchor tag to the end of the query selector of nav
+newNavItem.appendChild(newAnchorTag)
 
-let newNavItem = document.createElement("a").createTextNode("Blog");
+// create another new anchor tag but prepend it
+let newAnchorTag2 = document.createElement("a")
+// give it text
+newAnchorTag2.textContent = 'Blog'
+// prepend the new anchor tag
+newNavItem.prepend(newAnchorTag2);
+// give it some color
+newAnchorTag2.style.color = 'green';
 console.log(newNavItem)
+
 
 // change the nav items to green
 navItems.forEach (navItems => navItems.style.color = 'green')
 
-
 // section class cta    "h1": "DOM Is Awesome",
 const ctaH1 = document.getElementsByTagName('h1');
 ctaH1[0].textContent = siteContent.cta.h1;
+console.log(ctaH1);
 
 const ctaButton = document.querySelector('button')
 ctaButton.textContent = siteContent.cta.button;
-console.log(ctaH1);
-
-// const ctaH2 = document.querySelector('h2');
-// ctaH2.textContent = siteContent.cta.h2;
-// console.log(ctaH2);
+console.log(ctaButton);
 
 // h4 selectors
 const h4 = document.querySelectorAll('h4')
@@ -99,7 +113,7 @@ console.log(h4)
 
 // used for loop to set h4 elements to forestgreen. 
 for (let i =0; i <h4.length; i++){
-  //
+  // trying to set last child to black text
   if (h4[i] === (':last-child')) {
    h4[i].style.color = 'black';
   }
@@ -112,9 +126,9 @@ console.log(paragraphs)
 // main-content section 
 paragraphs[0].textContent = siteContent["main-content"]["features-content"];
 paragraphs[1].textContent = siteContent["main-content"]["about-content"];
-paragraphs[2].textContent = siteContent["main-content"]["features-content"];
-paragraphs[3].textContent = siteContent["main-content"]["features-content"];
-paragraphs[4].textContent = siteContent["main-content"]["features-content"];
+paragraphs[2].textContent = siteContent["main-content"]["services-content"];
+paragraphs[3].textContent = siteContent["main-content"]["product-content"];
+paragraphs[4].textContent = siteContent["main-content"]["vision-content"];
 
 // contact section
 paragraphs[5].textContent = siteContent["contact"]["address"];
