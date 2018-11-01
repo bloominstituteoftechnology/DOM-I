@@ -46,7 +46,8 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 const navBar = document.querySelectorAll('a');
 navBar.forEach((item, i) => item.innerHTML = siteContent['nav'][`nav-item-${i+1}`]);
-navBar.forEach((item) => item.style.color = "blue");
+navBar.forEach((item) => item.style.color = "gray");
+
 
 const parentNav = document.querySelector('nav');
 
@@ -57,6 +58,7 @@ myPrepend.innerText = "Company";
 const myAppend = document.createElement('a');
 parentNav.appendChild(myAppend);
 myAppend.innerText = "Privacy";
+
 
 
 //cta
