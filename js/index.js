@@ -35,6 +35,9 @@ const siteContent = {
   "footer": {
     "copyright" : "Copyright Great Idea! 2018"
   },
+  "clickButton": {
+    "buttonText": "click Me"
+  }
 };
 
 // Update the img src for all images
@@ -119,3 +122,18 @@ const nav = document.querySelector('nav');
 
 nav.appendChild(newLink1);
 nav.prepend(newLink2);
+
+//Stretch question
+
+// Create new button
+const newbutton = document.createElement('button');
+newbutton.textContent = siteContent['clickButton']['buttonText'];
+
+// Add the new button to cta-text
+const  headerText = document.querySelector('.cta .cta-text');
+headerText.appendChild(newbutton);
+
+// Set a click event: toggle the background color of header text section from white to #01FAFF
+newbutton.addEventListener('click', function() {
+  headerText.classList.toggle('buttonClick');
+});
