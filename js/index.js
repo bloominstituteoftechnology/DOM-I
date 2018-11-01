@@ -1,20 +1,20 @@
 const siteContent = {
   "nav": {
-    "nav-item-1": "Services",
-    "nav-item-2": "Product",
-    "nav-item-3": "Vision",
-    "nav-item-4": "Features",
-    "nav-item-5": "About",
-    "nav-item-6": "Contact",
-    "img-src": "img/logo.png"
+    "nav-item-1": "Services",   //header nav a
+    "nav-item-2": "Product",    //header nav a
+    "nav-item-3": "Vision",     //header nav a
+    "nav-item-4": "Features",   //header nav a
+    "nav-item-5": "About",      //header nav a
+    "nav-item-6": "Contact",    //header nav a
+    "img-src": "img/logo.png"   //ID = logo-img
   },
   "cta": {
-    "h1": "DOM Is Awesome",
-    "button": "Get Started",
-    "img-src": "img/header-img.png"
+    "h1": "DOM Is Awesome",     //section class cts; div class cta-text h1
+    "button": "Get Started",    //section class cts; div class cta-text button
+    "img-src": "img/header-img.png"   //section class cts; 
   },
   "main-content": {
-    "features-h4":"Features",
+    "features-h4":"Features",   //section class main-content; div class top-content;
     "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "about-h4":"About",
     "about-content": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
@@ -37,6 +37,20 @@ const siteContent = {
   },
 };
 
+// --------------------------------------------------------NAV
+    // need to push object values to an array.. done
+    //need to push the nav items to an array..
+    //then set those equal to the array for nav
+    const navA = document.querySelectorAll('a');
+    const values = Object.values(siteContent.nav);
+
+    for (let i = 0; i < navA.length; i++) {
+      navA[i].textContent = values[i];
+    }
+
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+
