@@ -50,12 +50,14 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // Create html collection from element nav
 let nav = document.getElementsByTagName('nav');
+console.log(nav[0].children);
 // Length of the html collection
 let navChildCount = nav[0].childElementCount;
 
 for (let i=1; i <= navChildCount; i++) {
   // Assign textContent to nav link
   nav[0].children[i-1].textContent = siteContent['nav']['nav-item-'+i];
+  nav[0].children[i-1.].style.color = 'green';
   // Assign url to nav link
   nav[0].children[i-1].href = siteContent['nav']['nav-item-'+i] + '.html';
 }
@@ -162,3 +164,5 @@ contactEmail.textContent = siteContent['contact']['email'];
 const footer = document.querySelector('footer p');
 // Assign textContent to cta object's h1 value
 footer.textContent = siteContent['footer']['copyright'];
+
+
