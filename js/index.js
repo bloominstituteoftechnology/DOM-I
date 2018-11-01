@@ -58,18 +58,18 @@ navigation[3].textContent = siteContent.nav["nav-item-4"]
 navigation[4].textContent = siteContent.nav["nav-item-5"]
 navigation[5].textContent = siteContent.nav["nav-item-6"]
 
-let newLink1 = document.createElement('a');
-newLink1.href = '#';
-newLink1.textContent = 'New One';
-newLink1.style.color = 'green';
- let newLink2 = document.createElement('a');
-newLink2.href = '#';
-newLink2.textContent = 'New Two';
-newLink2.style.color = 'green';
- let nav = document.querySelector('nav');
-nav.appendChild(newLink2);
-nav.prepend(newLink1);
+let nav = document.querySelector('nav');
 
+let newThing1 = document.createElement('a');
+newThing1.textContent = "A new Thing!";
+newThing1.style.color = 'green';
+
+
+let newThing2 = document.createElement('a');
+newThing2.textContent = "Another new Thing!";
+newThing2.style.color = 'green';
+nav.appendChild(newThing2);
+nav.prepend(newThing1);
 
 //Cta Img///////////////////////////
 let ctaImg = document.querySelectorAll("img")[1];
