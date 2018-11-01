@@ -46,6 +46,19 @@ for (let i = 0; i < anchors.length; i++) {
   anchors[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
   anchors[i].style.color = 'green';
 }
+//blog & news
+const anchorBlog = document.createElement('a');
+const anchorNews = document.createElement('a');
+anchorBlog.href = '#';
+anchorBlog.textContent = 'Blog';
+anchorNews.href = '#';
+anchorNews.textContent = 'News';
+const nav = document.querySelector('header nav');
+nav.prepend(anchorNews);
+nav.appendChild(anchorBlog);
+anchorBlog.style.color = 'green';
+anchorNews.style.color = 'green';
+
 
 const h1 = document.querySelector('h1');
 h1.textContent = siteContent.cta.h1;
@@ -81,7 +94,8 @@ const contactEntries = Object.entries(siteContent.contact);
 
 for (let i = 0; i < contactInfo.length; i++) {
   let tempElement = contactInfo[i];
-  tempElement.textContent = contactEntries[i][1]
+  tempElement.textContent = contactEntries[i][1];
+  // if(i === 1) tempElement.textContent = `123 Way 456 Street Somewhere, USA`;
 }
 
 const footer = document.querySelector('footer p');
