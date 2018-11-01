@@ -50,8 +50,22 @@ for(let i = 0; i < navigation.length; i++) {
 
 //pull and fill content head
 let ctaHead = document.querySelector('h1');
-ctaHead.innerText = siteContent.cta.h1;
 
+let h1str = siteContent.cta.h1
+
+const h1StrArr = h1str.split(' ');
+
+for(let i = 0; i < h1StrArr.length; i++) {
+  h1StrArr[i] = `${h1StrArr[i]} \n`
+  console.log(h1StrArr[i])
+}
+
+h1str = h1StrArr.join(' ');
+
+ctaHead.innerText = h1str;
+
+
+//button and content image
 let button = document.querySelector('button');
 button.innerText = siteContent.cta.button;
 
