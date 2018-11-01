@@ -56,7 +56,21 @@ button.textContent = siteContent["cta"]["button"];
 let anchors = document.querySelectorAll("a");
 for(let i = 0; i < anchors.length; i++){
   anchors[i].textContent = siteContent["nav"]["nav-item-"+(i+1)];
+  anchors[i].style.color = "green";
 }
+
+const aChildAppend = document.createElement("a");
+aChildAppend.href = "#";
+aChildAppend.textContent = "Child Append";
+aChildAppend.style.color = "green";
+const nav = document.querySelector("nav");
+nav.appendChild(aChildAppend);
+
+const aPrepend = document.createElement("a");
+aPrepend.href = "#";
+aPrepend.textContent = "Prepend";
+aPrepend.style.color = "green";
+nav.prepend(aPrepend);
 
 let h4 = document.querySelectorAll("h4");
 h4[0].textContent = siteContent["main-content"]["features-h4"];
@@ -70,7 +84,7 @@ let p = document.querySelectorAll("p");
 p[0].textContent = siteContent["main-content"]["features-content"];
 p[1].textContent = siteContent["main-content"]["about-content"];
 p[2].textContent = siteContent["main-content"]["services-content"];
-p[3].textContent = siteContent["main-content"]["producet-content"];
+p[3].textContent = siteContent["main-content"]["product-content"];
 p[4].textContent = siteContent["main-content"]["vision-content"];
 p[5].textContent = siteContent["contact"]["address"];
 p[6].textContent = siteContent["contact"]["phone"];
