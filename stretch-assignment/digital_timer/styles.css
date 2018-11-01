@@ -1,14 +1,27 @@
 body {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
 
 .digit {
+  width: 80px;
   display: inline-block;
+  text-align: center;
+  padding: 20px;
   font-size: 80px;
 }
 
 .redDigit {
   color: red;
+}
+
+.vis {
+  display: none;
+}
+
+.buttons {
+  width: 100%;
+  text-align: center;
 }
