@@ -46,21 +46,39 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 //nav 
 let navItem1 = document.querySelector('a:nth-child(1)');
 navItem1.innerHTML = siteContent["nav"]["nav-item-1"]
+navItem1.style.color = "green"
 
 let navItem2 = document.querySelector('a:nth-child(2)');
 navItem2.innerHTML = siteContent["nav"]["nav-item-2"]
+navItem2.style.color = "green"
 
 let navItem3 = document.querySelector('a:nth-child(3)');
 navItem3.innerHTML = siteContent["nav"]["nav-item-3"]
+navItem3.style.color = "green"
 
 let navItem4 = document.querySelector('a:nth-child(4)');
 navItem4.innerHTML = siteContent["nav"]["nav-item-4"]
+navItem4.style.color = "green"
 
 let navItem5 = document.querySelector('a:nth-child(5)');
 navItem5.innerHTML = siteContent["nav"]["nav-item-5"]
+navItem5.style.color = "green"
 
 let navItem6 = document.querySelector('a:nth-child(6)');
 navItem6.innerHTML = siteContent["nav"]["nav-item-6"]
+navItem6.style.color = "green"
+
+let navAll = document.querySelector('nav a')
+
+let nav = document.querySelector('nav')
+const backItem = document.createElement('a')
+backItem.textContent = "Hello"
+nav.appendChild(backItem)
+
+const frontItem = document.createElement('a')
+frontItem.textContent = "Hi again"
+nav.prepend(frontItem)
+
 
 
 //dom is awesome
