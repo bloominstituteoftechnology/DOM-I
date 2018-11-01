@@ -40,3 +40,19 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//grab elements and assign them to a variable
+const nav = document.querySelectorAll("a");
+const title = document.querySelector("h1");
+const btn = document.querySelector("button");
+const codePic = document.getElementById("cta-img");
+
+//loop thru nav items to diplay them
+for (let i=1; i<7; i++){
+  let prop = "nav-item-" +i;
+  nav[i-1].innerHTML = siteContent["nav"][prop];
+}
+
+//make nav items green
+nav.forEach(element => element.style.color = "green");
+
