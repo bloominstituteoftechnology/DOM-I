@@ -45,10 +45,25 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 //nav
 
-let navigation = document.querySelectorAll('nav a');
+let navigation = document.querySelectorAll('a');
 navigation.forEach((link, index) => {
    link.textContent = siteContent.nav[`nav-item-${index++}`];
+   link.style.color = 'green';
 });
+
+let homeNav = document.createElement('a');
+homeNav.href = '#';
+homeNav.textContent = 'Home';
+
+let blog = document.createElement('a');
+blog.href = '#';
+blog.textContent = 'Blog';
+
+const nav = document.querySelector ('nav');
+nav.prepend(homeNav);
+
+const navBlog = document.querySelector ('nav');
+navBlog.appendChild(blog);
 
 //cta 
 
