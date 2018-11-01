@@ -98,9 +98,23 @@ const fillMain = content => {
 (function(content){
   let valueArray = Object.values(content);
   let workArea = Array.from(document.getElementsByClassName(`contact`).item(0).children);
-  console.log(workArea);
   for (let i in valueArray){workArea[i].textContent = valueArray[i];};
-})(siteContent.contact)
+})(siteContent.contact);
 
 // Function invocations
 fillMain(siteContent["main-content"]);
+
+// Function to change the color of the header text and append new items
+(function(content){
+  let workArea = document.getElementsByTagName(`nav`).item(0);
+  workArea.appendChild(document.createElement(`a`)).setAttribute(`href`, `#`);
+  workArea.lastChild.textContent = `Forum`;
+  let preElem = document.createElement(`a`);
+  preElem.textContent = `Corporate`;
+  preElem.setAttribute(`href`, `#`);
+  workArea.prepend(preElem);
+  workArea = workArea.getElementsByTagName(`a`);
+  for (let i = 0; i < workArea.length; i++){
+    workArea.item(i).style.color = `green`;
+  };
+})(siteContent.nav);
