@@ -89,3 +89,20 @@ textContent[5].innerHTML = siteContent["contact"]["address"];
 textContent[6].innerHTML = siteContent["contact"]["phone"];
 textContent[7].innerHTML = siteContent["contact"]["email"];
 textContent[8].innerHTML = siteContent["footer"]["copyright"];
+
+//create new elements and assign them to variables
+const prependA = document.createElement("a");
+const appendA = document.createElement("a");
+
+//set content and style to new elements
+prependA.href = "#";
+prependA.innerHTML = "Prepend";
+prependA.style.color = "red";
+appendA.href = "#";
+appendA.innerHTML = "Append";
+appendA.style.color = "red";
+
+//grab elements and prepend/append them
+const newElements = document.querySelector("nav");
+newElements.prepend(prependA);
+newElements.appendChild(appendA);
