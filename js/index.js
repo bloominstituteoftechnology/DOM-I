@@ -47,16 +47,29 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
 //Nav Bar ///////////////////////////
-let nav = document.querySelectorAll("a");
-nav.forEach((element) => {
-  element.style.color = 'grey'
+let navigation = document.querySelectorAll("a");
+navigation.forEach((element) => {
+  element.style.color = 'green'
 });
-nav[0].textContent = siteContent.nav["nav-item-1"]
-nav[1].textContent = siteContent.nav["nav-item-2"]
-nav[2].textContent = siteContent.nav["nav-item-3"]
-nav[3].textContent = siteContent.nav["nav-item-4"]
-nav[4].textContent = siteContent.nav["nav-item-5"]
-nav[5].textContent = siteContent.nav["nav-item-6"]
+navigation[0].textContent = siteContent.nav["nav-item-1"]
+navigation[1].textContent = siteContent.nav["nav-item-2"]
+navigation[2].textContent = siteContent.nav["nav-item-3"]
+navigation[3].textContent = siteContent.nav["nav-item-4"]
+navigation[4].textContent = siteContent.nav["nav-item-5"]
+navigation[5].textContent = siteContent.nav["nav-item-6"]
+
+let newLink1 = document.createElement('a');
+newLink1.href = '#';
+newLink1.textContent = 'New One';
+newLink1.style.color = 'green';
+ let newLink2 = document.createElement('a');
+newLink2.href = '#';
+newLink2.textContent = 'New Two';
+newLink2.style.color = 'green';
+ let nav = document.querySelector('nav');
+nav.appendChild(newLink2);
+nav.prepend(newLink1);
+
 
 //Cta Img///////////////////////////
 let ctaImg = document.querySelectorAll("img")[1];
@@ -68,10 +81,7 @@ ctaButton.textContent = siteContent.cta.button
 
 //Cta Text////////////////////////////
 let ctaText = document.querySelector("h1");
-//let newElement = document.createElement("br");
-//headingText = "DOM" +  newElement + "Is" +  newElement + "Awesome";
 ctaText.textContent =  siteContent.cta.h1
-
 
 //Main Content Headings ////////////////
 let headings = document.querySelectorAll('.text-content h4');
