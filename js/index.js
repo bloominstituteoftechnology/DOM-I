@@ -52,3 +52,8 @@ h1.textContent = siteContent["cta"]["h1"];
 
 let button = document.querySelector("button");
 button.textContent = siteContent["cta"]["button"];
+
+let anchors = document.querySelectorAll("a");
+for(let i = 0; i < anchors.length; i++){
+  anchors[i].textContent = siteContent["nav"]["nav-item-"+(i+1)];
+}
