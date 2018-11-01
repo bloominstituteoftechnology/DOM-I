@@ -58,3 +58,27 @@ firstHeader.textContent = siteContent.cta.h1;
 let button = document.querySelector('button');
 button.textContent = siteContent.cta.button;
 
+// Main content section
+// header
+let header = document.querySelectorAll('h4'); 
+
+header[0].textContent = siteContent['main-content']['features-h4'];
+header[1].textContent = siteContent['main-content']['about-h4'];
+header[2].textContent = siteContent['main-content']['services-h4'];
+header[3].textContent = siteContent['main-content']['product-h4'];
+header[4].textContent = siteContent['main-content']['vision-h4'];
+
+// paragraphs
+let content = document.querySelectorAll('p');
+
+content[0].textContent = siteContent['main-content']['features-content'];
+content[1].textContent = siteContent['main-content']['about-content'];
+content[2].textContent = siteContent['main-content']['services-content'];
+content[3].textContent = siteContent['main-content']['product-content'];
+content[4].textContent = siteContent['main-content']['vision-content'];
+
+// image
+let middleImage = document.getElementById('middle-img');
+
+middleImage.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
