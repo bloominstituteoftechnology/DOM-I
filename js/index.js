@@ -75,7 +75,7 @@ nav.appendChild(newNav2);
 // ------------------
 
 // --Header content--
-button.addEventListener('click', () => headTitle.style.color = 'pink');
+button.addEventListener('click', () => headTitle.style.color = 'pink'); //Stretch click listener
 
 headTitle.innerHTML = siteContent['cta']['h1'].split(' ').join('<br/>');
 button.textContent = siteContent['cta']['button'];
@@ -91,8 +91,9 @@ for(let i = 0; i < mcArray.length; i+=2) {
 
 // --Set content for Contact Section--
 let contactArray = Object.keys(siteContent['contact']);
+siteContent['contact'][contactArray[1]] = siteContent['contact'][contactArray[1]].split('6 ').join('6<br>');
 for(let i = 0; i < contactArray.length; i ++) {
-  contact.children[i].textContent = siteContent['contact'][contactArray[i]];
+  contact.children[i].innerHTML = siteContent['contact'][contactArray[i]];
 }
 // -----------------------------------
 
