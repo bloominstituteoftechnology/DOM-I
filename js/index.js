@@ -60,7 +60,8 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let header1 = document.querySelector("h1");
-header1.textContent = siteContent["cta"]["h1"];
+siteContent.cta["h1"] = "DOM<br> Is<br> Awesome";
+header1.innerHTML = siteContent.cta["h1"];
 
 let button = document.querySelector("button");
 button.textContent = siteContent["cta"]["button"];
@@ -89,9 +90,14 @@ let contactHeader4 = document.querySelector(".contact h4");
 contactHeader4.textContent = siteContent["contact"]["contact-h4"];
 
 let contactContent = document.querySelectorAll(".contact p");
-contactContent[0].textContent = siteContent["contact"]["address"];
+siteContent.contact["address"] = "123 Way 456 Street <br> Somewhere, USA";
+contactContent[0].innerHTML = siteContent.contact["address"];
 contactContent[1].textContent = siteContent["contact"]["phone"];
 contactContent[2].textContent = siteContent["contact"]["email"];
 
+
+
 let footer = document.querySelector("footer");
 footer.textContent = siteContent["footer"]["copyright"];
+
+
