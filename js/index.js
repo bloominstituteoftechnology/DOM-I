@@ -51,7 +51,17 @@ middleImage.setAttribute('src', siteContent['main-content']["middle-img-src"])
 let navigate = document.querySelectorAll("nav a");
 navigate.forEach((navItem, index) => {
   navItem.innerHTML = siteContent.nav[`nav-item-${index + 1}`];
+  navItem.style.color = 'green';
+
 });
+
+let navChild = document.createElement('a');
+navChild.innerHTML = 'Andrew';
+navigate[5].appendChild(navChild);
+
+let navPreChild = document.createElement('a');
+navPreChild.innerHTML = 'awesome';
+navigate[0].prepend(navPreChild);
 
 let ctaText = document.querySelector('.cta-text h1');
 ctaText.innerHTML = siteContent.cta.h1;
@@ -85,3 +95,6 @@ let contactsP = document.querySelectorAll('.contact p');
 for (let i = 0; i < contactsP.length; i++){
   contactsP[i].innerHTML = contactArray[i+1];
 }
+
+let footer = document.querySelector('footer p');
+footer.innerHTML = siteContent['footer']['copyright']
