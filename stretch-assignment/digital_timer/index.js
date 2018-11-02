@@ -1,9 +1,5 @@
 let clock = document.querySelectorAll('.digit');
 let digits = document.querySelectorAll('.digit:not(#colon)');
-let tensPlace = document.querySelector('#secondTens');
-let onesPlace = document.querySelector('#secondOnes');
-let tenthsPlace = document.querySelector('#msTens');
-let hundredthsPlace = document.querySelector('#msHundreds');
 let startBtn = document.querySelector('.start');
 let resetBtn = document.querySelector('.reset');
 
@@ -11,7 +7,7 @@ let resetBtn = document.querySelector('.reset');
 var counter = 0;
 
 // Array with the selectors so they can be iterated upon
-const digitVariables = [hundredthsPlace, tenthsPlace, onesPlace, tensPlace];
+const digitVariables = Array.from(digits).reverse();
 
 function timerDisplay() {
   let numerator = counter;
