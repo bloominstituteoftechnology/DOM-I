@@ -5,7 +5,7 @@ You are going to be emulating a content managment system by controlling the cont
 
 You have been provided a [JSON object](js/index.js) with all the necessary data to accomplish this task.  Use dot or bracket notation to traverse the data provided.
 
-**ONE RULE: You cannot update the HTML or CSS files directly.  You must use JavaScript and the DOM only for your tasks today.**
+**ONE RULE: You cannot update the HTML or CSS files directly.  You must use JavaScript and the DOM only for your tasks today.** 
 
 ## Task 1: Set Up The Project With Git
 
