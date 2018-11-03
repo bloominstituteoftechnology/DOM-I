@@ -80,4 +80,11 @@ sectionContent[3].textContent = siteContent["main-content"]["product-content"];
 sectionContent[4].textContent = siteContent["main-content"]["vision-content"];
 
 
+// Contact
+const contactHeader = document.querySelector(".contact h4");
+contactHeader.textContent = siteContent.contact["contact-h4"];
 
+const contactContent = document.querySelectorAll(".contact p");
+contactContent[0].textContent = siteContent.contact["address"];
+contactContent[1].textContent = siteContent.contact["phone"];
+contactContent[2].textContent = siteContent.contact["email"];
