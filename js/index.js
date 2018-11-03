@@ -49,10 +49,22 @@ nav[5].textContent = siteContent.nav["nav-item-6"];
 const logo = document.querySelector("#logo-img");
 logo.src = siteContent.nav["img-src"];
 
+// const newElement1 = document.createElement("a");
+// const newElement2 = document.createElement("a");
+
+// newElement1.href = "#";
+// newElement2.href = "#";
+
+// newElement1.textContent = "Home";
+// newElement2.textContent = "Blog";
+
+// nav.prepend(newElement1);
+// nav.appendChild(newElement2);
+
 
 // Call to Action
 const ctaText = document.querySelector(".cta-text h1");
-ctaText.textContent = siteContent.cta["h1"];
+ctaText.innerHTML = siteContent['cta']['h1'].replace(/\s/g, "</br>");
 
 const ctaBtn = document.querySelector(".cta-text button");
 ctaBtn.textContent = siteContent.cta["button"];
