@@ -37,7 +37,9 @@ const siteContent = {
   },
 };
 
-// Navigation
+/***********************************************
+                  Navigation
+***********************************************/
 const nav = document.querySelectorAll("nav a");
 
 nav.forEach(element => element.style.color = "green");
@@ -52,20 +54,27 @@ nav[5].textContent = siteContent.nav["nav-item-6"];
 const logo = document.querySelector("#logo-img");
 logo.src = siteContent.nav["img-src"];
 
-// const newElement1 = document.createElement("a");
-// const newElement2 = document.createElement("a");
+// Create two new elements
+let newNav = document.querySelector("nav");
 
-// newElement1.href = "#";
-// newElement2.href = "#";
+const newElement1 = document.createElement('a');
+newElement1.textContent = "Home";
+newElement1.href = "#";
+newElement1.style.color = "green";
 
-// newElement1.textContent = "Home";
-// newElement2.textContent = "Blog";
+let newElement2 = document.createElement('a');
+newElement2.textContent = "Blog";
+newElement2.href = "#";
+newElement2.style.color = "green";
 
-// nav.prepend(newElement1);
-// nav.appendChild(newElement2);
+// Prepend and Apend the two new elements
+newNav.prepend(newElement1);
+newNav.appendChild(newElement2);
 
 
-// Call to Action
+/***********************************************
+                Call to Action
+***********************************************/
 const ctaText = document.querySelector(".cta-text h1");
 ctaText.innerHTML = siteContent['cta']['h1'].replace(/\s/g, "</br>");
 
@@ -76,7 +85,9 @@ const ctaImg = document.querySelector("#cta-img");
 ctaImg.src = siteContent.cta["img-src"];
 
 
-// Middle Content
+/***********************************************
+                Middle Content
+***********************************************/
 const middleImg = document.querySelector("#middle-img");
 middleImg.src = siteContent["main-content"]["middle-img-src"];
 
@@ -95,7 +106,9 @@ sectionContent[3].textContent = siteContent["main-content"]["product-content"];
 sectionContent[4].textContent = siteContent["main-content"]["vision-content"];
 
 
-// Contact
+/***********************************************
+                   Contact
+***********************************************/
 const contactHeader = document.querySelector(".contact h4");
 contactHeader.textContent = siteContent.contact["contact-h4"];
 
@@ -105,6 +118,8 @@ contactContent[1].textContent = siteContent.contact["phone"];
 contactContent[2].textContent = siteContent.contact["email"];
 
 
-// Footer
+/***********************************************
+                    Footer
+***********************************************/
 const footer = document.querySelector("footer p");
 footer.textContent = siteContent.footer["copyright"];
