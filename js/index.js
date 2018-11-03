@@ -39,6 +39,9 @@ const siteContent = {
 
 // Navigation
 const nav = document.querySelectorAll("nav a");
+
+nav.forEach(element => element.style.color = "green");
+
 nav[0].textContent = siteContent.nav["nav-item-1"];
 nav[1].textContent = siteContent.nav["nav-item-2"];
 nav[2].textContent = siteContent.nav["nav-item-3"];
