@@ -55,19 +55,19 @@ const logo = document.querySelector("#logo-img");
 logo.src = siteContent.nav["img-src"];
 
 // Create two new elements
-let newNav = document.querySelector("nav");
+const newNav = document.querySelector("nav");
 
 const newElement1 = document.createElement('a');
 newElement1.textContent = "Home";
 newElement1.href = "#";
 newElement1.style.color = "green";
 
-let newElement2 = document.createElement('a');
+const newElement2 = document.createElement('a');
 newElement2.textContent = "Blog";
 newElement2.href = "#";
 newElement2.style.color = "green";
 
-// Prepend and Apend the two new elements
+// Prepend and Append the two new elements
 newNav.prepend(newElement1);
 newNav.appendChild(newElement2);
 
