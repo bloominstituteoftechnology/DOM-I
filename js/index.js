@@ -39,29 +39,45 @@ const siteContent = {
 
 // Navigation
 const nav = document.querySelectorAll("nav a");
-nav[0].textContent = siteContent["nav"]["nav-item-1"];
-nav[1].textContent = siteContent["nav"]["nav-item-2"];
-nav[2].textContent = siteContent["nav"]["nav-item-3"];
-nav[3].textContent = siteContent["nav"]["nav-item-4"];
-nav[4].textContent = siteContent["nav"]["nav-item-5"];
-nav[5].textContent = siteContent["nav"]["nav-item-6"];
+nav[0].textContent = siteContent.nav["nav-item-1"];
+nav[1].textContent = siteContent.nav["nav-item-2"];
+nav[2].textContent = siteContent.nav["nav-item-3"];
+nav[3].textContent = siteContent.nav["nav-item-4"];
+nav[4].textContent = siteContent.nav["nav-item-5"];
+nav[5].textContent = siteContent.nav["nav-item-6"];
 
 const logo = document.querySelector("#logo-img");
-logo.src = siteContent["nav"]["img-src"];
+logo.src = siteContent.nav["img-src"];
 
 
 // Call to Action
 const ctaText = document.querySelector(".cta-text h1");
-ctaText.textContent = siteContent["cta"]["h1"];
+ctaText.textContent = siteContent.cta["h1"];
 
 const ctaBtn = document.querySelector(".cta-text button");
-ctaBtn.textContent = siteContent["cta"]["button"];
+ctaBtn.textContent = siteContent.cta["button"];
 
 const ctaImg = document.querySelector("#cta-img");
-ctaImg.src = siteContent["cta"]["img-src"];
+ctaImg.src = siteContent.cta["img-src"];
 
 
 // Middle Content
 const middleImg = document.querySelector("#middle-img");
 middleImg.src = siteContent["main-content"]["middle-img-src"];
+
+const sectionHeaders = document.querySelectorAll(".main-content h4");
+sectionHeaders[0].textContent = siteContent["main-content"]["features-h4"]
+sectionHeaders[1].textContent = siteContent["main-content"]["about-h4"]
+sectionHeaders[2].textContent = siteContent["main-content"]["services-h4"]
+sectionHeaders[3].textContent = siteContent["main-content"]["product-h4"]
+sectionHeaders[4].textContent = siteContent["main-content"]["vision-h4"]
+
+const sectionContent = document.querySelectorAll(".main-content p");
+sectionContent[0].textContent = siteContent["main-content"]["features-content"];
+sectionContent[1].textContent = siteContent["main-content"]["about-content"];
+sectionContent[2].textContent = siteContent["main-content"]["services-content"];
+sectionContent[3].textContent = siteContent["main-content"]["product-content"];
+sectionContent[4].textContent = siteContent["main-content"]["vision-content"];
+
+
 
