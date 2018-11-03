@@ -210,3 +210,33 @@ contEmail.textContent = siteContent["contact"]["email"];
 const fCopyright = document.querySelector('footer > p');
 
 fCopyright.textContent = siteContent["footer"]["copyright"];
+
+
+//----------------------------------------------------ADD NEW CONTENT TO NAV
+
+//-------------Append
+
+let navB = document.createElement('a');
+let newText = document.createTextNode('Idea');
+navB.appendChild(newText);
+
+let element = document.querySelector('nav');
+element.appendChild(navB);
+
+
+//-------------Prepend
+
+let navC = document.createElement('a');
+let newTextTwo = document.createTextNode('Great');
+navC.appendChild(newTextTwo);
+
+let elementTwo = document.querySelector('nav');
+elementTwo.prepend(navC);
+
+//----------------------------------------------Make NAV text Green
+
+const navSelect = document.getElementsByTagName('a');
+
+for (let i = 0; i < navSelect.length; i++) {
+  navSelect[i].style.color = 'green';
+}
