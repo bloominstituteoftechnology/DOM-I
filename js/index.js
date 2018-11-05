@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM <br>Is<br> Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -59,26 +59,55 @@ for (let i = 0; i < navColor.length; i++) {
   nave.style.color = 'green'
 }
 // cta 
-const butt = document.getElementsByTagName('button')
-butt.textContent =  siteContent["cta"]["button"]
-const imgId = document.getElementById("cta-img")
+let ctaClass = document.getElementsByClassName("cta-text")[0]
+ctaClass.getElementsByTagName("h1")[0].innerHTML = siteContent["cta"]["h1"];
+ctaClass.getElementsByTagName("button")[0].innerHTML = siteContent["cta"]["button"];
 
-const Top = document.getElementsByClassName('text-content')
-console.log(Top);
-// Top[0].
-// Top[1].
-// Top[2].
-// Top[3].
-// Top[4].
+let imgId = document.getElementById("cta-img")
+imgId.setAttribute('src', siteContent.cta["img-src"]);
 
-imgId.setAttribute('src', siteContent.cta["img-src"])
-
-const middleImg = document.getElementById("middle-img")
+let middleImg = document.getElementById("middle-img")
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
-// 
-const bottom = document.getElementByClassName('contact').querySelectorAll('p')
-bottom[0].textContent = siteContent["address"]
+// main content
+let textContentClass = document.getElementsByClassName("text-content")[0]
+textContentClass.getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["features-h4"]
+textContentClass.getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["features-content"]
+
+let textContentClassSecond = document.getElementsByClassName("text-content")[1]
+textContentClassSecond.getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["about-h4"]
+textContentClassSecond.getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["about-content"]
+
+// bottom contnent
+let textContentClassThird = document.getElementsByClassName("text-content")[2]
+textContentClassThird.getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["services-h4"]
+textContentClassThird.getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["services-content"]
+
+let textContentClassForth = document.getElementsByClassName("text-content")[3]
+textContentClassForth.getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["product-h4"]
+textContentClassForth.getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["product-content"]
+
+let textContentClassFifth = document.getElementsByClassName("text-content")[4]
+textContentClassFifth.getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["vision-h4"]
+textContentClassFifth.getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["vision-content"]
+
+// contact 
+let contactClass = document.getElementsByClassName("contact")[0]
+contactClass.getElementsByTagName("h4")[0].innerHTML = siteContent["contact"]["contact-h4"]
+contactClass.getElementsByTagName("p")[0].innerHTML = siteContent["contact"]["address"]
+contactClass.getElementsByTagName("p")[1].innerHTML = siteContent["contact"]["phone"]
+contactClass.getElementsByTagName("p")[2].innerHTML = siteContent["contact"]["email"]
+
+// footer 
+let footerClass = document.getElementsByTagName("footer")[0]
+footerClass.getElementsByTagName("p")[0].innerHTML = siteContent["footer"]["copyright"]
 
 
 
+// adding anchors 
+let newA = document.createElement("a")
+newA.href = "any"
+newA.textContent = "sign in"
+
+let navSign = document.querySelector("nav a")
+navSign.prepend(newA)
