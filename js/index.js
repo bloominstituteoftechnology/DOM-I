@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "123 Way 456 Street<br> Somewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -57,12 +57,17 @@ let navigation = document.querySelectorAll("a");
 for(let i = 0;i < navigation.length;i++){
   navigation[i].textContent = siteContent['nav'][`nav-item-${i}`]
 }
-
+let newLinksPrepended = document.createElement("a"
+)
 let newLinks = document.createElement("a");
 
 newLinks.textContent = "Shop"
 
+newLinksPrepended.textContent = "Blog"
+
 nav.appendChild(newLinks);
+
+nav.prepend(newLinksPrepended);
 
 let navItems = document.querySelectorAll("a");
 
@@ -119,6 +124,23 @@ email[7].innerHTML = siteContent["contact"]["email"]
 // Footer
 let copyRight = document.getElementsByTagName("p")
 copyRight[8].innerHTML = siteContent["footer"]["copyright"]
+
+
+// Stretch Goals
+
+let btn = document.querySelectorAll("button")
+btn.forEach(x => x.addEventListener('mousedown',function(){
+  x.style.width = "250px"
+  x.style.backgroundColor = "white"
+}));
+
+btn.forEach(x => x.addEventListener('mouseup', function(){
+  x.style.width = "170px"
+}))
+
+btn.forEach(x => x.addEventListener('mouseenter', function(){
+  x.style.color = "black"
+}));
 
 
 
