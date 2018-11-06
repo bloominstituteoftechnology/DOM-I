@@ -154,3 +154,4 @@ contacta3.textContent = siteContent["contact"]["email"]
 
  let footer = document.querySelector('footer p');
 footer.textContent = siteContent["footer"]["copyright"]
+//finished
