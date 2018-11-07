@@ -46,3 +46,13 @@ const anchors = document.querySelectorAll('a');
 for (let i = 0; i < anchors.length; i++) {
   anchors[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
 }
+
+const h1 = document.querySelector('h1');
+h1.textContent = siteContent.cta.h1;
+
+const button = document.querySelector('button');
+button.textContent = siteContent.cta.button;
+
+const codeImg = document.querySelector('#cta-img');
+codeSnipImg.src = siteContent.cta['img-src'];
+
