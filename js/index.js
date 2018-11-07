@@ -56,3 +56,16 @@ button.textContent = siteContent.cta.button;
 const codeImg = document.querySelector('#cta-img');
 codeSnipImg.src = siteContent.cta['img-src'];
 
+ const midImg = document.querySelector('.middle-img');
+ midImg.src = 'img/mid-page-accent.jpg';
+
+ const contactInfo = document.querySelector('.contact').children;
+
+
+ const footer = document.querySelector('footer p');
+footer.textContent = siteContent.footer.copyright;
+
+const paragraph = document.querySelectorAll('.text-content');
+console.log(paragraph)
+
+const paragraphs = 
