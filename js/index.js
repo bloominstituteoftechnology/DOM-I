@@ -47,25 +47,38 @@ for (let i = 0; i < anchors.length; i++) {
   anchors[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
 }
 
-const h1 = document.querySelector('h1');
-h1.textContent = siteContent.cta.h1;
+let h1 = document.querySelector('.cta-text h1');
+h1.textContent = 'Dom Is Awesome';
 
-const button = document.querySelector('button');
-button.textContent = siteContent.cta.button;
+let getStartedButton = document.querySelector('.cta-text button');
+getStartedButton.textContent = 'Get Started';
+ 
+let cta_img = document.querySelector('#cta-img');
+cta_img.setAttribute('src', siteContent.cta['img-src']);
 
-const codeImg = document.querySelector('#cta-img');
-codeSnipImg.src = siteContent.cta['img-src'];
+let top_Content = document.querySelectorAll(".top-content .text-content");
+top_Content[0].childNodes[1].innerText = siteContent["main-content"]['features-h4'];
+top_Content[0].childNodes[3].innerText = siteContent["main-content"]['features-content'];
+top_Content[1].childNodes[1].innerText = siteContent["main-content"]['about-h4'];
+top_Content[1].childNodes[3].innerText = siteContent["main-content"]['about-content'];
 
- const midImg = document.querySelector('.middle-img');
- midImg.src = 'img/mid-page-accent.jpg';
+let middle_Image = document.querySelector('#middle-img');
+middle_Image.setAttribute('src', siteContent['main-content']['middle-img-src'])
 
- const contactInfo = document.querySelector('.contact').children;
+let bottom_Content = document.querySelectorAll(".bottom-content .text-content");
+bottom_Content[0].childNodes[1].innerText = siteContent["main-content"]['services-h4'];
+bottom_Content[0].childNodes[3].innerText = siteContent["main-content"]['services-content'];
+bottom_Content[1].childNodes[1].innerText = siteContent["main-content"]['product-h4'];
+bottom_Content[1].childNodes[3].innerText = siteContent["main-content"]['product-content'];
+bottom_Content[2].childNodes[1].innerText = siteContent["main-content"]['vision-h4'];
+bottom_Content[2].childNodes[3].innerText = siteContent["main-content"]['vision-content'];
 
+let contact_h4 = document.querySelector('.contact h4');
+let contact_p = document.querySelectorAll('.contact p');
+contact_h4.innerText = siteContent.contact['contact-h4']
+contact_p[0].innerHTML = siteContent.contact.address
+contact_p[1].innerText = siteContent.contact.phone
+contact_p[2].innerText = siteContent.contact.email
 
- const footer = document.querySelector('footer p');
-footer.textContent = siteContent.footer.copyright;
-
-const paragraph = document.querySelectorAll('.text-content');
-console.log(paragraph)
-
-const paragraphs = 
+let footer = document.querySelector("footer");
+footer.children[0].textContent = siteContent.footer.copyright;
