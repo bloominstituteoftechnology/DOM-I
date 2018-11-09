@@ -40,52 +40,56 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
-logo.src = 'img/logo.png';
-//navigation
-let navigation = document.querySelectorAll('nav a');
-navigation.innerhtml[0] = siteContent.nav['nav-item-1']
-navigation.innerhtml = siteContent.nav['nav-item-2']
-navigation.innerhtml = siteContent.nav['nav-item-3']
-navigation.innerhtml = siteContent.nav['nav-item-4']
-navigation.innerhtml = siteContent.nav['nav-item-5']
-navigation.innerhtml = siteContent.nav['nav-item-6']
 
-//cta
-let ctahead = document.querySelector('.cta-text h1');
-ctahead.innerhtml = siteContent.cta["h1"];
-let ctabutton = document.querySelector('cta.text button');
-ctabutton.innerhtml = siteContent.cta["button"]
-let ctaimage = document.getElementById("cta-img");
-ctaimage.src = 'img/header-img.png';
+const ctaimage = document.querySelector('#cta-img');
+ctaimage.src = siteContent['cta']['img-src'];
+
+const mainimage = document.querySelector('#middle-img');
+mainimage.src = siteContent('src',siteContent['main-content']['middle-img-src']);
+//navigation
+
+// let navigation = document.querySelectorAll('nav a');
+// navigation[0].innerHTML = siteContent.nav['nav-item-1'];
+// navigation[1].innerHTML = siteContent.nav['nav-item-2'];
+// navigation[2].innerHTML = siteContent.nav['nav-item-3'];
+// navigation[3].innerHTML = siteContent.nav['nav-item-4'];
+// navigation[4].innerHTML = siteContent.nav['nav-item-5'];
+// navigation[5].innerHTML = siteContent.nav['nav-item-6'];
+
+// const navcontainer = document.querySelector('nav');
+// navcontainer.style.color = 'green';
+// //cta
+// let ctahead = document.querySelector('.cta-text h1');
+// ctahead.innerHTML = siteContent.cta["h1"];
+// let ctabutton = document.querySelector('cta.text button');
+// ctabutton.innerHTML = siteContent.cta["button"]
 
 //main content
-let mainimage = document.getElementsByClassName(".middle-img");
-mainimage.src = 'img/mid-page-accent.jpg';
-let mainheader = document.querySelectorAll('.main-content h4');
-let maintext = document.querySelectorAll('.main-content p');
-mainheader.innerhtml = siteContent.main-content["features-h4"];
-mainheader.innerhtml = siteContent.main-content["about-h4"];
-mainheader.innerhtml = siteContent.main-content["services-h4"];
-mainheader.innerhtml = siteContent.main-content["product-h4"];
-mainheader.innerhtml = siteContent.main-content["vision-h4"];
+// let mainheader = document.querySelectorAll('.main-content h4');
+// let maintext = document.querySelectorAll('.main-content p');
+// mainheader.innerHTML = siteContent.main-content["features-h4"];
+// mainheader.innerHTML = siteContent.main-content["about-h4"];
+// mainheader.innerHTML = siteContent.main-content["services-h4"];
+// mainheader.innerHTML = siteContent.main-content["product-h4"];
+// mainheader.innerHTML = siteContent.main-content["vision-h4"];
 
-maintext.innerhtml = siteContent[".main-content"]["features-content"]
-maintext.innerhtml = siteContent[".main-content"]["about-content"]
-maintext.innerhtml = siteContent[".main-content"]["services-content"]
-maintext.innerhtml = siteContent[".main-content"]["product-content"]
-maintext.innerhtml = siteContent[".main-content"]["vision-content"]
+// maintext.innerHTML = siteContent[".main-content"]["features-content"]
+// maintext.innerHTML = siteContent[".main-content"]["about-content"]
+// maintext.innerHTML = siteContent[".main-content"]["services-content"]
+// maintext.innerHTML = siteContent[".main-content"]["product-content"]
+// maintext.innerHTML = siteContent[".main-content"]["vision-content"]
 
 //contact
-let contactheader = document.querySelector('h4');
-contactheader.innerhtml - siteContent.contact["contact-h4"];
-contactparagraph.innerhtml = document.querySelectorAll('p');
-contact.innerhtml = siteContent.contact["address"];
-contact.innerhtml = siteContent.contact["phone"];
-contact.innerhtml = siteContent.contact["email"];
+// let contactheader = document.querySelector('h4');
+// contactheader.innerhtml - siteContent.contact["contact-h4"];
+// contactparagraph.innerhtml = document.querySelectorAll('p');
+// contact.innerhtml = siteContent.contact["address"];
+// contact.innerhtml = siteContent.contact["phone"];
+// contact.innerhtml = siteContent.contact["email"];
 
 //footer
-let foot = document.querySelector('p');
-foot.innerhtml = siteContent.contact["copyright"];
+// let foot = document.querySelector('p');
+// foot.innerhtml = siteContent.contact["copyright"];
 
 
 
