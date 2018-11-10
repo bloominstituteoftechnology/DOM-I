@@ -38,31 +38,30 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+let logo = document.getElementById('logo-img');
+logo.src = siteContent['nav']['img-src'];
 
-const ctaimage = document.querySelector('#cta-img');
+let ctaimage = document.querySelector('#cta-img');
 ctaimage.src = siteContent['cta']['img-src'];
 
-const mainimage = document.querySelector('#middle-img');
-mainimage.src = siteContent('src',siteContent['main-content']['middle-img-src']);
+let mainimage = document.querySelector('#middle-img');
+mainimage.src = siteContent['main-content']['middle-img-src'];
+
 //navigation
+let navigation = document.querySelectorAll('nav a');
+navigation[0].innerHTML = siteContent.nav['nav-item-1'];
+navigation[1].innerHTML = siteContent.nav['nav-item-2'];
+navigation[2].innerHTML = siteContent.nav['nav-item-3'];
+navigation[3].innerHTML = siteContent.nav['nav-item-4'];
+navigation[4].innerHTML = siteContent.nav['nav-item-5'];
+navigation[5].innerHTML = siteContent.nav['nav-item-6'];
+navigation.forEach(link => link.style.color = "green")
 
-// let navigation = document.querySelectorAll('nav a');
-// navigation[0].innerHTML = siteContent.nav['nav-item-1'];
-// navigation[1].innerHTML = siteContent.nav['nav-item-2'];
-// navigation[2].innerHTML = siteContent.nav['nav-item-3'];
-// navigation[3].innerHTML = siteContent.nav['nav-item-4'];
-// navigation[4].innerHTML = siteContent.nav['nav-item-5'];
-// navigation[5].innerHTML = siteContent.nav['nav-item-6'];
-
-// const navcontainer = document.querySelector('nav');
-// navcontainer.style.color = 'green';
 // //cta
-// let ctahead = document.querySelector('.cta-text h1');
-// ctahead.innerHTML = siteContent.cta["h1"];
-// let ctabutton = document.querySelector('cta.text button');
-// ctabutton.innerHTML = siteContent.cta["button"]
+// let ctaHead = document.querySelector('.cta-text h1');
+// ctaHead.innerHTML = siteContent.cta["h1"];
+// let ctaButton = document.querySelector('.cta-text button');
+// ctaButton.innerHTML = siteContent.cta["button"]
 
 //main content
 // let mainheader = document.querySelectorAll('.main-content h4');
