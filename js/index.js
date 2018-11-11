@@ -37,9 +37,7 @@ const siteContent = {
     "copyright" : "Copyright Great Idea! 2018"
   },
 };
-//sec 1
-// const services = document.querySelector('a');
-// const servicesSec = document.querySelectorAll('a' );
+
 
 // navbar content
 const aHref = document.querySelectorAll('header nav a');
@@ -49,11 +47,13 @@ for (let i = 0; i < aHref.length; i++) {
   aHref[i].innerHTML = navMenuValues[i];  
 }
   
-
 // Great Idea image
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+
 
 // h1 content
 const ctaH1 = document.querySelector('h1');
@@ -67,11 +67,14 @@ const btn = document.querySelector('button');
 let cta = document.getElementById("cta-img");
 cta.setAttribute('src', siteContent["cta"]["img-src"]);
 
+
+
+
 //middle content features h4
-const featuresC = document.querySelector('.text-content h4');
+const featuresC = document.querySelector('.text-content:first-child h4');
   featuresC.textContent = "Features";
 
-const featuresContent = document.querySelector('.text-content p');
+const featuresContent = document.querySelector('.text-content:first-child p');
   featuresContent.textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
 //middle content about h4
@@ -85,11 +88,52 @@ const aboutP = document.querySelector('.text-content:last-child p');
   let middleImg = document.getElementById("middle-img");
   middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
+
+
+
 //bottom content services
-const services = document.querySelector('.bottom-content h4');
+const services = document.querySelector('.bottom-content .text-content:nth-child(1) h4');
   services.textContent = "Services";
 
-const servicesH4 = document.querySelector('.bottom-content p');
+const servicesH4 = document.querySelector('.bottom-content .text-content:nth-child(1) p');
   servicesH4.textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
-  
+//bottom content product
+const product = document.querySelector('.bottom-content .text-content:nth-child(2) h4');
+  product.textContent = "product";
+ 
+const productP = document.querySelector('.bottom-content .text-content:nth-child(2) p');
+  productP.textContent = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+//bottom content vision
+const vision = document.querySelector('.bottom-content .text-content:nth-child(3) h4');
+  vision.textContent = "Vision";
+
+const visionP = document.querySelector('.bottom-content .text-content:nth-child(3) p');
+  visionP.textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+
+
+//Contact info
+const contact = document.querySelector('.contact h4');
+  contact.textContent = "Contact";
+
+const address = document.querySelector('.contact p:nth-child(2)')
+  address.textContent = "123 Way 456 Street Somewhere, USA";
+
+const phone = document.querySelector('.contact p:nth-child(3)'); 
+  phone.textContent = "1 (888) 888-8888";
+
+const email = document.querySelector('.contact p:nth-child(4)');
+  email.textContent = "sales@greatidea.io";
+
+
+
+//footer
+const footer = document.querySelector('footer p');
+  footer.textContent = "Copyright Great Idea! 2018";
+
+//   "footer": {
+//     "copyright" : "Copyright Great Idea! 2018"
+//   },
+// };
