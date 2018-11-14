@@ -107,6 +107,13 @@ h4[2].textContent = siteContent["main-content"]["services-h4"];
 h4[3].textContent = siteContent["main-content"]["product-h4"];
 h4[4].textContent = siteContent["main-content"]["vision-h4"];
 
+// h4.addEventListener('hover', function(){
+//   if (this.style.backgroundColor === 'forestgreen'){
+//     this.style.backgroundColor === 'purple';
+//   } else {
+//     this.style.backgroundColor = 'blue';
+//   }
+// })
 // contact section
 h4[5].textContent = siteContent["contact"]["contact-h4"];
 console.log(h4)
@@ -122,7 +129,6 @@ for (let i =0; i <h4.length; i++){
 // p selectors
 const paragraphs = document.querySelectorAll('p')
 console.log(paragraphs)
-
 // main-content section 
 paragraphs[0].textContent = siteContent["main-content"]["features-content"];
 paragraphs[1].textContent = siteContent["main-content"]["about-content"];
