@@ -40,14 +40,31 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
-
+//header image
 let headerImg  = document.getElementById("cta-img");
 headerImg.setAttribute('src', siteContent["cta"]["img-src"])
-
+// middle image
 let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+//nav items
+let aTags = document.querySelectorAll('a')
+aTags[0].setAttribute('class', '.nav-item-1')
+aTags[0].innerText = "Service"
+aTags[1].setAttribute('class', '.nav-item-2')
+aTags[1].innerText = "Product"
+aTags[2].setAttribute('class', '.nav-item-3')
+aTags[2].innerText = "Vision"
+aTags[3].setAttribute('class', '.nav-item-4')
+aTags[3].innerText = "Features"
+aTags[4].setAttribute('class', '.nav-item-5')
+aTags[4].innerText = "About"
+aTags[5].setAttribute('class', '.nav-item-6')
+aTags[5].innerText = "Product"
 
-let mainContent = document.querySelectorAll("h4")
-mainContent.setAttribute('src', sitecontent["main-content"][for (let i = 0; i < mainContent.length; i++
-console.log(i) ])
+//main content items
+let h1 = document.getElementsByTagName("h1");
+
+
+
+
 
