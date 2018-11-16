@@ -1,18 +1,18 @@
 const siteContent = {
   "nav": {
-    "nav-item-1": "Services",
-    "nav-item-2": "Product",
-    "nav-item-3": "Vision",
-    "nav-item-4": "Features",
-    "nav-item-5": "About",
-    "nav-item-6": "Contact",
-    "img-src": "img/logo.png"
-  },
+          "nav-item-1": "Services",
+          "nav-item-2": "Product",
+          "nav-item-3": "Vision",
+          "nav-item-4": "Features",
+          "nav-item-5": "About",
+          "nav-item-6": "Contact",
+          "img-src": "img/logo.png"
+        },
   "cta": {
-    "h1": "DOM Is Awesome",
-    "button": "Get Started",
-    "img-src": "img/header-img.png"
-  },
+          "h1": "DOM Is Awesome",
+          "button": "Get Started",
+          "img-src": "img/header-img.png"
+        },
   "main-content": {
     "features-h4":"Features",
     "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
@@ -37,30 +37,38 @@ const siteContent = {
   },
 };
 
+
+
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // nav bar links
 const nav = document.querySelector('nav');
+nav.querySelector('a').textContent = siteContent.nav["nav-item-1"];
+nav.childNodes[3].textContent = siteContent.nav["nav-item-2"];
+nav.childNodes[5].textContent = siteContent.nav["nav-item-3"];
+nav.childNodes[7].textContent = siteContent.nav["nav-item-4"];
+nav.childNodes[9].textContent = siteContent.nav["nav-item-5"];
+nav.childNodes[11].textContent = siteContent.nav["nav-item-6"];
+// nav.querySelector('a').textContent = siteContent.nav['nav-item-1'];
+// nav.querySelector('a:nth-of-type(2)').textContent = siteContent.nav["nav-item-2"];
+// nav.querySelector('a:nth-of-type(3)').textContent = siteContent.nav["nav-item-3"];
+// nav.querySelector('a:nth-of-type(4)').textContent = siteContent.nav["nav-item-4"];
+// nav.querySelector('a:nth-of-type(5)').textContent = siteContent.nav["nav-item-5"];
+// nav.querySelector('a:nth-of-type(6)').textContent = siteContent.nav["nav-item-6"];
+// let imvery = document.createElement('a');
+// nav.prepend(imvery);
+// let confused = document.createElement('a');
+// nav.appendChild(confused);
+// imvery.textContent = 'ImVery';
+// confused.textContent = 'Confused';
 
-nav.querySelector('a').textContent = siteContent.nav['nav-item-1'];
-nav.querySelector('a:nth-of-type(2)').textContent = siteContent.nav["nav-item-2"];
-nav.querySelector('a:nth-of-type(3)').textContent = siteContent.nav["nav-item-3"];
-nav.querySelector('a:nth-of-type(4)').textContent = siteContent.nav["nav-item-4"];
-nav.querySelector('a:nth-of-type(5)').textContent = siteContent.nav["nav-item-5"];
-nav.querySelector('a:nth-of-type(6)').textContent = siteContent.nav["nav-item-6"];
-let imvery = document.createElement('a');
-nav.prepend(imvery);
-let confused = document.createElement('a');
-nav.appendChild(confused);
-imvery.textContent = 'ImVery';
-confused.textContent = 'Confused';
 
-
-let navLinks = nav.querySelectorAll('a');
-navLinks.forEach(e => e.style.color = 'green');
-navLinks.forEach(e => e.href = '#');
+// let navLinks = nav.querySelectorAll('a');
+// navLinks.forEach(e => e.style.color = 'green');
+// navLinks.forEach(e => e.href = '#');
 
 
 // Array.from(navLinks).forEach((e) => {
@@ -68,7 +76,17 @@ navLinks.forEach(e => e.href = '#');
 // })
 
 
-// cta 
+// // cta 
+// const ctaText = document.querySelector('.cta-text');
+// ctaText.children[0].textContent = siteContent.cta.h1;
+// ctaText.children[1].textContent = siteContent.cta.button;
+// document.querySelector('#cta-img').src = siteContent.cta["img-src"];
+// document.querySelector('#middle-img').src = siteContent["main-content"]["middle-img-src"];
+// document.querySelector('.text-content h4').textContent = siteContent["main-content"]["features-h4"];
+// document.querySelector('.text-content:nth-of-type(2) h4').textContent = siteContent["main-content"]["about-h4"];
+// document.querySelector('.text-content p').textContent = siteContent["main-content"]["features-content"];
+// document.querySelector('.text-content:nth-of-type(2) p').textContent = siteContent["main-content"]["about-content"];
+
 const ctaText = document.querySelector('.cta-text h1');
 const ctaImg = document.querySelector('#cta-img');
 const lineBreak = document.createElement('br');
