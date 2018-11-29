@@ -53,7 +53,14 @@ const vision = product.nextElementSibling;
 const features = vision.nextElementSibling;
 const about = features.nextElementSibling;
 const contact = about.nextElementSibling;
+const blog = document.createElement("a");
+const learnMore = document.createElement("a");
 
+blog.textContent = "Blog";
+learnMore.textContent = "Learn More";
+
+navigation.prepend(blog);
+navigation.appendChild(learnMore);
 services.textContent = "Services";
 product.textContent = "Product";
 vision.textContent = "Vision";
@@ -61,6 +68,8 @@ features.textContent = "Features";
 about.textContent = "About";
 contact.textContent = "Contact";
 
+const aTags = document.querySelectorAll("nav a");
+aTags.forEach(a => (a.style.color = "green"));
 //=========================== Call To Action ==============
 const ctaText = document.querySelector(".cta").firstElementChild
   .firstElementChild;
