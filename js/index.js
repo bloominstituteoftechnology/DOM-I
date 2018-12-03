@@ -50,11 +50,26 @@ midImg.src = siteContent["main-content"]["middle-img-src"];
 
 
 // ===== NAV =====
-const navAnchors = Array.from(document.querySelectorAll("a"));
+const mainNav = document.querySelector("nav");
 
-for (let i=0; i<navAnchors.length; i++){
-  navAnchors[i].textContent = siteContent["nav"][`nav-item-${i+1}`];
-};
+const navAnchors = document.querySelectorAll("a");
+
+navAnchors.forEach((navAnchor, i) => navAnchors[i].textContent = siteContent["nav"][`nav-item-${i+1}`]);
+
+const firstAnchor = document.createElement("a");
+firstAnchor.href = "#";
+firstAnchor.textContent = "Get Started";
+firstAnchor.style.color = "green";
+
+const lastAnchor = document.createElement("a");
+lastAnchor.href = "#";
+lastAnchor.textContent = "Blog";
+lastAnchor.style.color = "green";
+
+mainNav.prepend(firstAnchor);
+mainNav.appendChild(lastAnchor);
+
+navAnchors.forEach(navAnchor => navAnchor.style.color = "green");
 
 // ===== CTA =====
 
@@ -66,7 +81,7 @@ ctaButton.textContent = siteContent["cta"]["button"];
 
 // ===== MAIN CONTENT =====
 
-const contentHeaders = Array.from(document.querySelectorAll("h4"));
+const contentHeaders = document.querySelectorAll("h4");
 
 contentHeaders[0].textContent = siteContent["main-content"]["features-h4"];
 contentHeaders[1].textContent = siteContent["main-content"]["about-h4"];
@@ -77,7 +92,7 @@ contentHeaders[4].textContent = siteContent["main-content"]["vision-h4"];
 contentHeaders[5].textContent = siteContent["contact"]["contact-h4"];
 
 
-const contentParas = Array.from(document.querySelectorAll("p"));
+const contentParas = document.querySelectorAll("p");
 
 contentParas[0].textContent = siteContent["main-content"]["features-content"];
 contentParas[1].textContent = siteContent["main-content"]["about-content"];
