@@ -57,7 +57,7 @@ const button = document.querySelector(".cta-text button");
 const textContentList = document.querySelectorAll(".text-content");
 const contactText = document.querySelector(".contact")
 const footerText = document.querySelector("footer")
-console.log(allNavItems);
+
 
 //fill in nav:
 allNavItems[0].innerHTML = siteContent["nav"]["nav-item-1"];
@@ -67,6 +67,8 @@ allNavItems[3].innerHTML = siteContent["nav"]["nav-item-4"];
 allNavItems[4].innerHTML = siteContent["nav"]["nav-item-5"];
 allNavItems[5].innerHTML = siteContent["nav"]["nav-item-6"];
 
+h1.innerHTML = "DOM <br> is <br> awesome";
+button.innerHTML = siteContent["cta"]["button"];
 
 //fill in h4 and p content:
 textContentList[0].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["features-h4"];
@@ -90,3 +92,14 @@ contactText.getElementsByTagName("p")[1].innerHTML = siteContent["contact"]["pho
 contactText.getElementsByTagName("p")[2].innerHTML = siteContent["contact"]["email"];
 
 footerText.getElementsByTagName("p")[0].innerHTML = siteContent["footer"]["copyright"];
+
+//styles: 
+allNavItems[0].style.color = "green";
+allNavItems[1].style.color = "green";
+allNavItems[2].style.color = "green";
+allNavItems[3].style.color = "green";
+allNavItems[4].style.color = "green";
+allNavItems[5].style.color = "green";
+
+
+
