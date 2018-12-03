@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   cta: {
-    h1: "DOM Is Awesome",
+    h1: "DOM<br> Is<br> Awesome",
     button: "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -48,7 +48,7 @@ logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
 // Header Title Text
 let h1 = document.getElementsByTagName("h1");
-h1[0].textContent = siteContent.cta.h1;
+h1[0].innerHTML = siteContent.cta.h1;
 
 // Call to Action Button
 let button = document.getElementsByTagName("button");
@@ -74,6 +74,11 @@ headerLink1[2].textContent = siteContent.nav["nav-item-3"];
 headerLink1[3].textContent = siteContent.nav["nav-item-4"];
 headerLink1[4].textContent = siteContent.nav["nav-item-5"];
 headerLink1[5].textContent = siteContent.nav["nav-item-6"];
+
+// Changing color to GREEN
+headerLink1.forEach(a => {
+  a.style.color = "green";
+});
 
 // Paragraph Text
 let featuresPTags = document.querySelectorAll("p");
@@ -103,3 +108,20 @@ contact[2].textContent = siteContent.contact.email;
 // Footer Section
 let footerText = document.querySelector("footer").querySelector("p");
 footerText.innerText = siteContent.footer.copyright;
+
+let nav = document.querySelector("nav");
+
+// Append Child to NAV
+let aNode = document.createElement("a");
+aNode.style.color = "green";
+let textNode = document.createTextNode("Portfolio");
+
+// Prepend Child to NAV
+let aNode1 = document.createElement("a");
+aNode1.style.color = "green";
+let textNode1 = document.createTextNode("About Me");
+
+aNode.appendChild(textNode);
+aNode1.prepend(textNode1);
+nav.appendChild(aNode);
+nav.prepend(aNode1);
