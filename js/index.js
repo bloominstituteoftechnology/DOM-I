@@ -39,8 +39,32 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-let nav = document.querySelector('nav')
+//Nav
 
-let ctaH1 = document.querySelector('h1')
+let nav = document.querySelectorAll('a');
+nav[0].textContent = 'Services';
+nav[0].style.color = 'grey'
+nav[1].textContent = 'Product';
+nav[1].style.color = 'grey'
+nav[2].textContent = 'Vision';
+nav[2].style.color = 'grey'
+nav[3].textContent = 'Features';
+nav[3].style.color = 'grey'
+nav[4].textContent = 'About';
+nav[4].style.color = 'grey'
+nav[5].textContent = 'Contact';
+nav[5].style.color = 'grey'
+
+
+//CTA
+
+let ctaH1 = document.querySelector('.cta-text h1');
+  ctaH1.innerHTML = 'DOM<br> Is<br> Awesome<br>';
+
+let ctaIMG = document.getElementById('cta-img');
+  ctaIMG.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let ctaButton = document.querySelector('.cta-text button');
+  ctaButton.innerHTML = 'Get Started'; 
