@@ -46,15 +46,7 @@ ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 let midImg = document.getElementById("middle-img");
 midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
-// function navPop(){
-//   let base = document.querySelectorAll('a');
-//   let counter = Array.from(base).length;
-//   let fillerText = Object.values(siteContent.nav);
-//   for (let i = 0; i < counter; i++){
-//     base[i].textContent = fillerText[i];
-//   };
-// };
-// navPop();
+
 
 function populate(section, elem, value){
   let base = document.querySelectorAll('.'+section+' '+elem);
@@ -95,3 +87,14 @@ populate('contact', 'h4', 'h4');
 populate('contact', 'p', 'e');
 populate2('footer', 'p', 'c');
 
+let appKid = document.createElement('a');
+appKid.textContent = 'Extras';
+document.querySelector('nav').appendChild(appKid);
+let prepKid = document.createElement('a');
+prepKid.textContent = 'Our Team';
+document.querySelector('nav').prepend(prepKid);
+
+let anchors = document.getElementsByTagName('a');
+for (let i = 0; i < anchors.length; i++){
+  anchors[i].style.color = 'green';
+}
