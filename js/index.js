@@ -77,7 +77,7 @@ let navItems = document.querySelectorAll('a');
 let navItemsArr = Array.from(navItems);
 navItemsArr.map((item, index)=>item.textContent = Object.values(siteContent.nav)[index])
 
-//====== section cta
+//====== cta section
 
 // json content h1 will always add newline when space is used
 // i'll come back to this when i finish mvp
@@ -145,7 +145,19 @@ botContentH4[2].textContent = siteContent["main-content"]["vision-h4"];
 
 botContentP[2].textContent = siteContent["main-content"]["vision-content"];
 
+//====== contact section
 
+let contactH4 = document.querySelector(".contact > h4");
+let contactP = document.querySelectorAll(".contact > p");
 
-// let headerImg = document.getElementById("cta-img");
-// headerImg.setAttribute('src', siteContent["cta"]["img-src"])
+contactH4.textContent = siteContent["contact"]["contact-h4"];
+
+contactP[0].textContent = siteContent["contact"]["address"];
+contactP[1].textContent = siteContent["contact"]["phone"];
+contactP[2].textContent = siteContent["contact"]["email"];
+
+//====== footer
+
+let footerP = document.querySelector("footer > p");
+
+footerP.textContent = siteContent["footer"]["copyright"]
