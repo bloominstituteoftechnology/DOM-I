@@ -37,6 +37,31 @@ const siteContent = {
   },
 };
 
+//================= Nav Bar Elements and Methods Here ===========//
+
+const navBar = document.querySelector('nav');
+const navTextOne = document.querySelector('a');
+// need navTextTwo, navTextThree, navTextFour, and navTextFive
+
+//=================  CTA Elements and Methods Here  ==============//
+const ctaHeader = document.querySelector(".cta-text h1");
+ctaHeader.text = "DOM Is Awesome";
+const ctaButton = document.querySelector("button");
+ctaButton.textContent = "Get Started";
+const ctaImg = document.querySelector(".cta-img");
+ctaImg.src = "img/header-img.png"
+ctaImg.alt = "Image of a code snippet";
+
+//=================  Main Content Elements and Methods  ============//
+const featuresHeading = document.querySelector("")
+//=================  Contact Elements and Methods  ===============//
+
+//=================  Footer Elements and Methods  ===============//
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+
+
+
