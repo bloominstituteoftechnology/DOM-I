@@ -105,3 +105,16 @@ contentParas[6].textContent = siteContent["contact"]["phone"];
 contentParas[7].textContent = siteContent["contact"]["email"];
 
 contentParas[8].textContent = siteContent["footer"]["copyright"];
+
+// ===== Stretch =====
+ctaHeader.style.color = "blue";
+
+ctaButton.style.border = "2px dashed green";
+
+contentHeaders.forEach(item => item.style.color = "green");
+contentHeaders.forEach(item => item.style.textDecoration = "underline");
+
+const contact = document.querySelector(".contact");
+contact.style.textAlign = "center";
+contact.style.fontSize = "1.6em";
+contact.style.color = "blue";
