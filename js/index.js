@@ -117,6 +117,12 @@ contactEmail.textContent = siteContent.contact.email;
 
 //Footer content
 let footerContent = document.querySelector('footer');
+//Selecting specific element inside? document.querySelector('footer p') to select p tag inside footer
 let footerText = footerContent.children[0];
 
 footerText.textContent = siteContent.footer.copyright;
+
+//Change navigation text to be green
+navLinks.forEach(a => {
+  a.style.color = 'green';
+});
