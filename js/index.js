@@ -38,6 +38,92 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+const logo = document.getElementById("logo-img");
+//console.log(logo);
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
 //
+// Navigation //
+
+const navLinks = document.querySelectorAll('a');
+navLinks.forEach((a, i) => {
+  let navItemAttribute = `nav-item-${i+1}`;
+  a.textContent = siteContent.nav[navItemAttribute];
+});
+
+// CTA //
+
+const ctaCont = document.querySelector('.cta-text');
+//console.log(ctaCont);
+
+const ctaH1 = ctaCont.children[0];
+ctaH1.textContent = `${siteContent.cta.h1}`;
+
+const ctaButton = ctaCont.children[1];
+ctaButton.textContent = `${siteContent.cta.button}`
+
+const ctaImg = document.getElementById('cta-img');
+ctaImg.setAttribute('src', siteContent.cta["img-src"]);
+
+// Main-Content //
+
+const topCont = document.querySelector('.top-content');
+//console.log(topCont)
+const textTCont1 = topCont.children[0];
+const textTCont2 = topCont.children[1];
+//console.log(textCont1)
+
+const featuresTitle = textTCont1.children[0];
+featuresTitle.textContent = `${siteContent["main-content"]["features-h4"]}`;
+
+const featuresCont = textTCont1.children[1];
+featuresCont.textContent = `${siteContent["main-content"]["features-content"]}`;
+
+const aboutTitle = textTCont2.children[0];
+aboutTitle.textContent = `${siteContent["main-content"]["about-h4"]}`;
+
+const aboutCont = textTCont2.children[1];
+aboutCont.textContent = `${siteContent["main-content"]["about-content"]}`;
+
+const bottomCont = document.querySelector('.bottom-content');
+//console.log(bottomCont);
+const textBCont1 = bottomCont.children[0];
+const textBCont2 = bottomCont.children[1];
+const textBCont3 = bottomCont.children[2];
+//console.log(textBCont3);
+
+const servicesTitle = textBCont1.children[0];
+servicesTitle.textContent = `${siteContent["main-content"]["services-h4"]}`;
+const servicesCont = textBCont1.children[1];
+servicesCont.textContent = `${siteContent["main-content"]["services-content"]}`;
+const productTitle = textBCont2.children[0];
+productTitle.textContent = `${siteContent["main-content"]["product-h4"]}`;
+const productCont = textBCont2.children[1];
+productCont.textContent = `${siteContent["main-content"]["product-content"]}`;
+const visionTitle = textBCont3.children[0];
+visionTitle.textContent = `${siteContent["main-content"]["vision-h4"]}`;
+const visionCont = textBCont3.children[1];
+visionCont.textContent = `${siteContent["main-content"]["vision-content"]}`;
+
+const middleImg = document.getElementById('middle-img');
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+// Contact //
+
+const contactCont = document.querySelector('.contact');
+//console.log(contactCont);
+const contact1 = contactCont.children[0];
+contact1.textContent = `${siteContent.contact["contact-h4"]}`;
+const contact2 = contactCont.children[1];
+contact2.textContent = `${siteContent.contact.address}`;
+const contact3 = contactCont.children[2];
+contact3.textContent = `${siteContent.contact.phone}`;
+const contact4 = contactCont.children[3];
+contact4.textContent = `${siteContent.contact.email}`;
+
+// Footer //
+
+
+const footer = document.querySelector('footer');
+//console.log(footer);
+const footCont = footer.children[0];
+footCont.textContent = `${siteContent.footer.copyright}`;
