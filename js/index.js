@@ -38,11 +38,22 @@ const siteContent = {
 };
 
 // Navigation Content
-
 const navItems = document.querySelectorAll("a");
 for (let i = 0; i < navItems.length; i++) {
   navItems[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
 }
+
+const newAnchorTag = document.createElement('a');
+newAnchorTag.href = "#";
+newAnchorTag.textContent = "Blog";
+
+const mainNav = document.querySelector('nav');
+mainNav.appendChild(newAnchorTag);
+
+const newTagTwo = document.createElement('a');
+newTagTwo.href = "#";
+newTagTwo.textContent = "Portfolio";
+mainNav.prepend(newTagTwo);
 
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
