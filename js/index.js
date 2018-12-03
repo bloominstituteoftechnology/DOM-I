@@ -59,7 +59,7 @@ midImg.alt = "Image of code snippets across the screen";
 
 //Update the nav Items
 
-const navItems = document.getElementsByTagName('a');
+const navItems = document.querySelectorAll('a');
 navArray=Array.from(navItems);
 console.log(navArray);
 
@@ -115,9 +115,11 @@ hFourTags[1].textContent = "About";
 hFourTags[2].textContent = "Services";
 hFourTags[3].textContent = "Product";
 hFourTags[4].textContent = "Vision";
+
 //hFourTags[5].textContent = "Contact";
 // Think I figured out how to be specific for contact
 document.querySelector('.contact h4').textContent = "Contact";
+// OK, that worked, but I'm not going to change the rest because it works fine as is
 
 
 
