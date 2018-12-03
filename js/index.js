@@ -37,6 +37,7 @@ const siteContent = {"nav": {
 };
 
 //navigation:
+
 let a = document.createElement("a");
 a.textContent =siteContent["nav"]["nav-item-1"];
 let header = document.querySelector("nav");
@@ -49,11 +50,11 @@ let c = document.createElement("a");
 let secondB = document.querySelector("nav a:nth-child(3)");
 c.textContent =siteContent["nav"]["nav-item-3"];
 secondB.prepend(c); 
+
 let nav = document.querySelectorAll("a");
 nav.forEach(function(element){
-  element.style.color="green";
+  element.style.color = "green";
 })
-
 
 //Header
 let logo = document.getElementById("logo-img");
