@@ -52,3 +52,20 @@ ctaButton.textContent = siteContent.cta.button;
 
 const ctaImg = document.querySelector('#cta-img');
 ctaImg.src = siteContent.cta["img-src"];
+
+const allH4 = document.querySelectorAll('.main-content h4');
+allH4[0].textContent = siteContent["main-content"]["features-h4"];
+allH4[1].textContent = siteContent["main-content"]["about-h4"];
+allH4[2].textContent = siteContent["main-content"]["services-h4"];
+allH4[3].textContent = siteContent["main-content"]["product-h4"];
+allH4[4].textContent = siteContent["main-content"]["vision-h4"];
+
+const allMainP = document.querySelectorAll('.main-content p');
+allMainP[0].textContent = siteContent["main-content"]["features-content"];
+allMainP[1].textContent = siteContent["main-content"]["about-content"];
+allMainP[2].textContent = siteContent["main-content"]["services-content"];
+allMainP[3].textContent = siteContent["main-content"]["product-content"];
+allMainP[4].textContent = siteContent["main-content"]["vision-content"];
+
+const mainMiddleImg = document.querySelector('#middle-img');
+mainMiddleImg.src = siteContent["main-content"]["middle-img-src"];
