@@ -53,3 +53,10 @@ navLinks.forEach((a, index) => { //NodeLists aren't actual arrays, but we can st
   let navItemProperty = `nav-item-${index + 1}`;
   a.textContent =siteContent.nav[navItemProperty];
 });
+
+//CTA text and button
+let ctaContent = document.querySelector('.cta-text');
+let ctaHeader = ctaContent.children[0];
+let ctaButton = ctaContent.children[1];
+ctaHeader.textContent = siteContent.cta.h1;
+ctaButton.textContent = siteContent.cta.button;
