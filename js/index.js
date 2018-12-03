@@ -91,7 +91,19 @@ mainContentKeys.forEach((key) => {
 
 fill(mainContentP, pValues);
 
-
-
 let midPagePic = document.getElementById("middle-img");
 midPagePic.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+let contactH4 = document.querySelector('.contact h4');
+contactH4.innerText = siteContent['contact']['contact-h4'];
+
+let contactItems = document.querySelectorAll('.contact p');
+let contactValues = Object.values(siteContent['contact']).splice(1,3);
+
+fill(contactItems, contactValues);
+
+let footer = document.querySelector('footer p');
+footer.innerText = siteContent['footer']['copyright']
+
+let footerItems = document.querySelector('footer p');
+let footerValues = Object.values['footer'];
