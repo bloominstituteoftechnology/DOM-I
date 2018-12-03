@@ -42,6 +42,8 @@ const siteContent = {
 const header = document.querySelector('header');
 //Navigation
 const navigation = document.querySelector('nav');
+const navLinks = Array.from(document.querySelectorAll('a'));
+
 const navigationLinkA = navigation.children[0];
 const navigationLinkB = navigation.children[1];
 const navigationLinkC = navigation.children[2];
@@ -102,6 +104,11 @@ const footerP = footer.children[0]
 // UPDATING HTML
 
 //Navigation
+// navLinks.forEach(function (a, i) {
+//   console.log(a);
+//   console.log(i);
+//   console.log(siteContent[`nav[${i}]`]);
+// })
 navigationLinkA.textContent= siteContent['nav']['nav-item-1'];
 navigationLinkB.textContent= siteContent['nav']['nav-item-2'];
 navigationLinkC.textContent= siteContent['nav']['nav-item-3'];
@@ -110,3 +117,13 @@ navigationLinkE.textContent= siteContent['nav']['nav-item-5'];
 navigationLinkF.textContent= siteContent['nav']['nav-item-6'];
 // Nav Logo
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// Call to Action
+// const cta = document.querySelector('.cta');
+// const ctaText = document.querySelector('.cta-text');
+// const ctaH1 = ctaText.children[0];
+// const ctaBTN = ctaText.children[1];
+// const ctaImg = document.querySelector('#cta-img');
+ctaH1.innerHTML="<h1>DOM<br>is<br>Awesome</h1>";
+ctaBTN.textContent="GetStarted";
+ctaImg.src="img/header-img.png";
