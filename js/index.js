@@ -42,18 +42,37 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 
+
+// Anchor Declaration
 const allAnchors = document.querySelectorAll('a');
+
+
+
+// CTA Declarations
 const ctaTextChilds = document.querySelector('.cta-text').childNodes;
 let ctaimg = document.getElementById('cta-img')
 ctaimg.setAttribute('src', Object.values(siteContent.cta)[2])
 
+
+
+// Main Content Declarations
 const allTextClasses = document.querySelectorAll('.text-content');
 const mcValues = Object.values(siteContent['main-content']);
+
 let middleimg = document.getElementById("middle-img");
 middleimg.setAttribute('src', mcValues.splice(4, 1))
 
+
+
+// Contact Declarations
 const contactChilds = document.querySelector('.contact').childNodes;
 const contactValues = Object.values(siteContent.contact);
+
+
+
+// Footer Declarations
+const footerChilds = document.querySelector('footer').childNodes;
+const footerValues = Object.values(siteContent.footer)
 
 
 
@@ -61,6 +80,7 @@ const contactValues = Object.values(siteContent.contact);
 for (let i = 0; i < allAnchors.length; i++) {
   allAnchors[i].textContent = Object.values(siteContent.nav)[i];
 }
+
 
 // CTA H1 and Button Loop
 for (let i = 0; i < ctaTextChilds.length; i++) {
@@ -70,6 +90,7 @@ for (let i = 0; i < ctaTextChilds.length; i++) {
     ctaTextChilds[i].textContent = Object.values(siteContent.cta)[matchfound];
   }
 }
+
 
 // text-content class loop
 for (let i = 0; i < allTextClasses.length; i++) {
@@ -82,6 +103,7 @@ for (let i = 0; i < allTextClasses.length; i++) {
   }
 }
 
+
 // Contact class loop
 for (let i = 0; i < contactChilds.length; i++) {
   if (contactChilds[i].nodeName !== '#text') {
@@ -89,3 +111,10 @@ for (let i = 0; i < contactChilds.length; i++) {
   contactChilds[i].textContent = newText
 }}
 
+
+// Footer loop
+for (let i = 0; i < footerChilds.length; i++) {
+  if (footerChilds[i].nodeName !== '#text') {
+  let newText = footerValues.shift();
+  footerChilds[i].textContent = newText
+}}
