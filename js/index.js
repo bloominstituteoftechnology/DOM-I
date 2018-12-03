@@ -101,3 +101,16 @@ productText.textContent = siteContent["main-content"]["product-content"];
 
 visionHeader.textContent = siteContent["main-content"]["vision-h4"];
 visionText.textContent = siteContent["main-content"]["vision-content"];
+
+//Contact Content
+let contactContent = document.querySelector('.contact');
+
+let contactHeader = contactContent.children[0];
+let contactAddress = contactContent.children[1];
+let contactPhone = contactContent.children[2];
+let contactEmail = contactContent.children[3];
+
+contactHeader.textContent = siteContent.contact["contact-h4"];
+contactAddress.textContent = siteContent.contact.address;
+contactPhone.textContent = siteContent.contact.phone;
+contactEmail.textContent = siteContent.contact.email;
