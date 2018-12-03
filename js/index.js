@@ -56,12 +56,12 @@ document.querySelectorAll('nav a').forEach(
 /*For Task 4,  two new nav links, with .appendChild() and .prepend(). This is done first, even though
 this task is listed second, because if we don't put it first in the file, the newly created a nodes will
 not be styled green*/
-var node1 = document.createElement("a");
-var textnode1 = document.createTextNode("History");
+const node1 = document.createElement("a");
+const textnode1 = document.createTextNode("History");
 node1.appendChild(textnode1);
 document.querySelector('nav').prepend(node1);
-var node2 = document.createElement("a");
-var textnode2 = document.createTextNode("Great Ideas");
+const node2 = document.createElement("a");
+const textnode2 = document.createTextNode("Great Ideas");
 node2.appendChild(textnode2);
 document.querySelector('nav').appendChild(node2);
 
@@ -74,6 +74,27 @@ document.querySelectorAll('nav a').forEach(link => link.style.color = "green");
 document.querySelector('.cta-text h1').textContent = siteContent.cta.h1;
 document.querySelector('.cta-text button').textContent = siteContent.cta.button;
 document.querySelector('#cta-img').setAttribute('src', siteContent.cta["img-src"]);
+
+//For first stretch goal, change color of h1 to red.
+
+document.querySelector('.cta-text h1').style.color = "red";
+
+//For second stretch goal, add button that will toggle color of h1
+const buttonNode = document.createElement('button');
+const buttonTextNode = document.createTextNode('Click to Change H1');
+buttonNode.appendChild(buttonTextNode);
+document.querySelector('.cta-text').appendChild(buttonNode);
+
+buttonNode.onclick = function(){
+  h1Color = document.querySelector('.cta-text h1').style.color;
+  console.log("Here's the color" + h1Color);
+  if(h1Color === "green"){
+    document.querySelector('.cta-text h1').style.color ="red";
+  }
+  else{
+    document.querySelector('.cta-text h1').style.color ="green";
+  }
+};
 
 //Update main section
 
