@@ -38,5 +38,31 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+let logo = document.querySelector(".logo");
+// old-school syntax 
+logo.src = siteContent["nav"]["img-src"];
+
+// ============================== my code starts here 
+
+let ctaImg = document.querySelector("#cta-img")
+ctaImg.src = siteContent["cta"]["img-src"];
+
+let midImg = document.querySelector(".middle-img")
+midImg.src = siteContent["main-content"]["middle-img-src"];
+
+// ============================== end images code 
+
+let navItems = document.querySelectorAll("a");
+navItems[0].textContent = siteContent["nav"]["nav-item-1"];
+navItems[1].textContent = siteContent["nav"]["nav-item-2"];
+navItems[2].textContent = siteContent["nav"]["nav-item-3"];
+navItems[3].textContent = siteContent["nav"]["nav-item-4"];
+navItems[4].textContent = siteContent["nav"]["nav-item-5"];
+navItems[5].textContent = siteContent["nav"]["nav-item-6"];
+
+let ctaH1 = document.querySelector("h1");
+ctaH1.textContent = siteContent["cta"]["h1"];
+
+let button = document.querySelector("button");
+button.textContent = siteContent["cta"]["button"];
+
