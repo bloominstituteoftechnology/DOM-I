@@ -72,6 +72,19 @@ document.querySelector(".secondH4+p").textContent = siteContent["main-content"][
 document.querySelector(".thirdH4").textContent = siteContent["main-content"]["vision-h4"];
 document.querySelector(".thirdH4+p").textContent = siteContent["main-content"]["vision-content"];
 
+//content section 
+document.querySelector(".contact h4").textContent = siteContent["contact"]["contact-h4"];
+document.querySelector(".first-p").textContent = siteContent["contact"]["address"];
+document.querySelector(".second-p").textContent = siteContent["contact"]["phone"];
+document.querySelector(".third-p").textContent = siteContent["contact"]["email"];
+
+//footer
+document.querySelector("footer p").textContent = siteContent["footer"]["copyright"];
+
+
+
+
+
 
 
 
