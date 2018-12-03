@@ -103,3 +103,5 @@ for(let each in siteContent.contact){
   i += 2;
 };
 
+const footer = document.querySelector("footer");
+footer.firstChild.textContent = siteContent.footer.copyright;
