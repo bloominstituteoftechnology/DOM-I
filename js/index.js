@@ -115,3 +115,15 @@ contPara[2].textContent = siteContent.contact["email"];
 
 const footer = document.querySelector('footer p');
 footer.textContent = siteContent.footer["copyright"];
+
+
+//=============================================== Event listener stretch goal
+
+const eventHandler = () => {
+  const newButton = document.createElement('button');
+  newButton.textContent = "Wow!";
+
+  const cta = document.querySelector('.cta-text');
+  cta.appendChild(newButton);
+};
+ctaButton.addEventListener('click', eventHandler);
