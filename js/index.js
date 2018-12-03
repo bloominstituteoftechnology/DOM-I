@@ -58,7 +58,7 @@ navLinks.forEach((link, index) => {
 // TODO - Refactor
 
 const nav = document.querySelector("nav");
-nav.style.order = 1;
+nav.style.alignItems = "baseline";
 
 newLink1 = document.createElement('a');
 newLink1.innerHTML = "Blog";
@@ -74,12 +74,25 @@ nav.prepend(newLink2);
 const logo = document.getElementById("logo-img");
 // logo.setAttribute("src", siteContent.nav["img-src"]);
 logo.src = siteContent.nav["img-src"];
-logo.style.order = 0;
-logo.style.alignSelf = "flexStart";
-logo.style.margin = "28px 91px 0 0";
 
-swapButton = document.querySelector(".swap-nav");
-console.log(swapButton);
+// Swap Button
+
+swapBtn = document.createElement('button')
+swapBtn.innerHTML = "Swap";
+swapBtn.className = "swapBtn";
+nav.appendChild(swapBtn);
+
+swapBtn.addEventListener('click', toggleSwap);
+
+function toggleSwap() {
+  nav.style.order = 1;
+  logo.style.order = 0;
+  logo.style.alignSelf = "flexStart";
+  logo.style.margin = "28px 91px 0 0";
+  setTimeout(function(){
+    document.body.style.transform = "scaleX(-1)";
+  }, 1500);
+};
 
 // CTA Section
 
