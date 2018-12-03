@@ -81,6 +81,21 @@ ctaH1.textContent = `${siteContent.cta.h1}`;
 const ctaButton = ctaCont.children[1];
 ctaButton.textContent = `${siteContent.cta.button}`
 
+const myButton = ctaCont.children[1];
+myButton.addEventListener('mouseenter', event => {
+  console.log('I see you.');
+});
+myButton.addEventListener('mouseleave', event => {
+  console.log('Smart choice.');
+});
+myButton.addEventListener('mousedown', event => {
+  console.log('Don\'t let go of that button!');
+});
+myButton.addEventListener('click', event => {
+  console.log('And now I\'m dead.');
+});
+
+
 const ctaImg = document.getElementById('cta-img');
 ctaImg.setAttribute('src', siteContent.cta["img-src"]);
 
