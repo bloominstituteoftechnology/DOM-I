@@ -92,7 +92,7 @@ githubNav.textContent = 'GitHub';
 
 const homeNav = document.createElement('a')
 homeNav.href = "#";
-githubNav.style.color = "green";
+homeNav.style.color = "green";
 homeNav.textContent = 'Home'
 
 // place them somewhere
