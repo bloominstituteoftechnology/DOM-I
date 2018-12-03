@@ -37,8 +37,32 @@ const siteContent = {
   },
 };
 
+console.log('Code me, Disney!');
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-console.log('Hello World!');
+let navBar = document.querySelectorAll('a');
+for (let i = 0; i < navBar.length; i++) {
+  navBar[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
+}
+
+
+const mainHeader = document.querySelector('h1');
+mainHeader.textContent = siteContent.cta.h1;
+
+const headerButton = document.querySelector('button');
+headerButton.textContent = siteContent.cta.button;
+
+const headerImg = document.getElementById('cta-img');
+headerImg.setAttribute('src', siteContent['cta']['img-src']);
+
+
+const topContent = document.querySelector('.top-content');
+for (let i = 0; i < topContent.length; i++) {
+  topContent[i].textContent = siteContent["main-content"][i];
+}
+
+const contentImg = document.getElementById('middle-img');
+contentImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
