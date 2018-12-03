@@ -58,6 +58,9 @@ mainNav.prepend(newTagTwo);
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+const navTextColor = document.querySelector("nav");
+navTextColor.style.color = "green";
+
 // CTA Content
 const ctaText = document.querySelector('.cta-text h1');
 ctaText.textContent = siteContent["cta"]["h1"]
