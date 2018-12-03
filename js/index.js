@@ -72,3 +72,20 @@ roundCs.setAttribute('src', siteContent["cta"]["img-src"]);
 
 let button = document.querySelector('button');
 button.textContent = siteContent["cta"]["button"];
+
+let features = document.querySelectorAll('h4')[0];
+features.textContent = siteContent["main-content"]["features-h4"];
+
+let feaCon = document.querySelectorAll('p')[0];
+feaCon.textContent = siteContent['main-content']['features-content'];
+
+let about = document.querySelectorAll('h4')[1];
+about.textContent = siteContent["main-content"]["about-h4"];
+
+let aboCon = document.querySelectorAll('p')[1];
+aboCon.textContent = siteContent['main-content']['about-content'];
+
+let midImg = document.getElementById('middle-img');
+midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+
