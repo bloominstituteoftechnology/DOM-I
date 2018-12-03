@@ -57,6 +57,21 @@ nav[4].style.color = 'green'
 nav[5].textContent = 'Contact';
 nav[5].style.color = 'green'
 
+const navBar= document.querySelector("nav");
+const goodBye = document.createElement("a");
+const hellO = document.createElement("a");
+
+goodBye.href = '#';
+goodBye.textContent = 'Good Bye';
+goodBye.style.color = 'green';
+
+hellO.href = '#';
+hellO.textContent = 'Hello';
+hellO.style.color = 'green';
+
+navBar.append(goodBye);
+navBar.prepend(hellO);
+
 
 //CTA
 
