@@ -66,3 +66,15 @@ ctaH1.textContent = siteContent["cta"]["h1"];
 let button = document.querySelector("button");
 button.textContent = siteContent["cta"]["button"];
 
+let mainHeaders = document.querySelectorAll("h4");
+console.log(mainHeaders)
+mainHeaders[0].textContent = siteContent["main-content"]["features-h4"];
+mainHeaders[1].textContent = siteContent["main-content"]["about-h4"];
+mainHeaders[2].textContent = siteContent["main-content"]["services-h4"];
+mainHeaders[3].textContent = siteContent["main-content"]["product-h4"];
+mainHeaders[4].textContent = siteContent["main-content"]["vision-h4"];
+mainHeaders[5].textContent = siteContent["main-content"]["contact-h4"];
+
+
+
+
