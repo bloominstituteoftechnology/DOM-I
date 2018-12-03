@@ -57,8 +57,9 @@ for (let i=0; i<navAnchors.length; i++){
 };
 
 // ===== CTA =====
-// const mainHeader = document.getElementsByTagName("h1");
-// mainHeader.textContent = siteContent["cta"]["h1"];
-// // mainHeader.style.color = "black";
 
-// console.log(mainHeader.textContent);
+const ctaHeader = document.querySelector("h1");
+ctaHeader.innerHTML = siteContent["cta"]["h1"].split(' ').join(`<br>`);
+
+const ctaButton = document.querySelector("button");
+ctaButton.textContent = siteContent["cta"]["button"];
