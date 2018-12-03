@@ -88,6 +88,29 @@ aboutHeader.textContent = siteContent["main-content"]["about-h4"];
 const aboutContent = topContent[1].querySelector('p');
 aboutContent.textContent = siteContent["main-content"]["about-content"];
 
-const middleImg = document.querySelector('.middle-img');
+const middleImg = document.querySelector('#middle-img');
 middleImg.src = siteContent["main-content"]["middle-img-src"];
 
+
+// Bottom Content
+
+const bottomContent = document.querySelector('.bottom-content').querySelectorAll('.text-content');
+console.log(topContent);
+
+const servicesHeader = bottomContent[0].querySelector('h4');
+servicesHeader.textContent = siteContent["main-content"]["services-h4"];
+
+const servicesContent = bottomContent[0].querySelector('p');
+servicesContent.textContent = siteContent["main-content"]["services-content"];
+
+const productHeader = bottomContent[1].querySelector('h4');
+productHeader.textContent = siteContent["main-content"]["product-h4"];
+
+const productContent = bottomContent[1].querySelector('p');
+productContent.textContent = siteContent["main-content"]["product-content"];
+
+const visionHeader = bottomContent[2].querySelector('h4');
+visionHeader.textContent = siteContent["main-content"]["vision-h4"];
+
+const visionContent = bottomContent[2].querySelector('p');
+visionContent.textContent = siteContent["main-content"]["vision-content"];
