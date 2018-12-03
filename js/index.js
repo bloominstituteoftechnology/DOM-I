@@ -1,5 +1,4 @@
-const siteContent = {
-  "nav": {
+const siteContent = {"nav": {
     "nav-item-1": "Services",
     "nav-item-2": "Product",
     "nav-item-3": "Vision",
@@ -37,6 +36,31 @@ const siteContent = {
   },
 };
 
+
+
+
 // Example: Update the img src for the logo
+
+//Header
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+
+let mainTitle = document.querySelector(".cta .cta-text h1");
+mainTitle.innerHTML ="DOM <br> IS<br>AWESOME"; 
+document.querySelector(".cta .cta-text button").textContent = siteContent["cta"]["button"];
+let mainImage = document.getElementById("cta-img");
+mainImage.setAttribute('src', siteContent["cta"]["img-src"]);
+
+//Main-Content
+//top-content
+document.querySelector(".text-content h4").textContent  = siteContent["main-content"] ["features-h4"];
+document.querySelector(".text-content p").textContent = siteContent["main-content"]["features-content"];
+document.querySelector(".second-hr").textContent = siteContent["main-content"]["about-h4"];
+document.querySelector(".second-hr+p").textContent=siteContent["main-content"]["about-content"];
+let middleImage = document.querySelector(".middle-img");
+middleImage.setAttribute('src',siteContent["main-content"]["middle-img-src"]);
+
+//Main-content
+//botton-content
