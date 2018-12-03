@@ -38,5 +38,44 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// General Selectors
+
+const container = document.getElementsByClassName("container");
+
+// Header
+
+const header = document.getElementsByTagName("header");
+const nav = document.getElementsByTagName("nav");
+const navLinks = document.querySelectorAll("nav>a");
+const logo = document.getElementById("logo-img");
+
+// CTA Section
+
+const ctaSection = document.getElementsByClassName("cta");
+const ctaTextDiv = document.getElementsByClassName("cta-text");
+const ctaH1 = document.querySelector(".cta>h1");
+const ctaButton = document.querySelector(".cta>button");
+const ctaImg = document.getElementById("cta-img");
+
+// Main-Content Section
+const mainContentH4 = document.querySelector(".main-content>h4");
+const mainContentP = document.querySelector(".main-content>p");
+
+const mainContentSection = document.getElementsByClassName("main-content");
+const topContentDiv = document.getElementsByClassName("top-content");
+const textContentDiv = document.getElementsByTagName("text-content");
+const middleImg = document.getElementById("middle-img");
+const bottomContentDiv = document.getElementsByClassName("bottom-content");
+
+// Contact Section
+const contactSection = document.getElementsByClassName("contact");
+const contactH4 = document.querySelector(".contact>h4");
+const contactP = document.querySelector(".contact>p");
+
+// Footer 
+const footer = document.getElementsByTagName("footer");
+const footerP = document.querySelector(".footer>p");
+
+// Modifiers
+// logo.setAttribute('src', siteContent["nav"]["img-src"])
