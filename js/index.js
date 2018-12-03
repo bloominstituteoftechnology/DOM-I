@@ -43,13 +43,6 @@ const header = document.querySelector('header');
 //Navigation
 const navigation = document.querySelector('nav');
 const navLinks = document.querySelectorAll('a');
-console.log(navLinks);
-const navigationLinkA = navigation.children[0];
-const navigationLinkB = navigation.children[1];
-const navigationLinkC = navigation.children[2];
-const navigationLinkD = navigation.children[3];
-const navigationLinkE = navigation.children[4];
-const navigationLinkF = navigation.children[5];
 // Logo
 const logo = document.querySelector("#logo-img");
 //Call to Action
@@ -103,13 +96,6 @@ const footerP = footer.children[0]
 for (let i = 0; i < navLinks.length; i++) {
   navLinks[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
 }
-
-// navigationLinkA.textContent= siteContent['nav']['nav-item-1'];
-// navigationLinkB.textContent= siteContent['nav']['nav-item-2'];
-// navigationLinkC.textContent= siteContent['nav']['nav-item-3'];
-// navigationLinkD.textContent= siteContent['nav']['nav-item-4'];
-// navigationLinkE.textContent= siteContent['nav']['nav-item-5'];
-// navigationLinkF.textContent= siteContent['nav']['nav-item-6'];
 // Nav Logo
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
