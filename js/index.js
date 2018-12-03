@@ -147,11 +147,23 @@ navLinks.forEach(a => {
 //Update styles for some elements.
 ctaButton.style.boxShadow = '0px 2px 4px black';
 ctaButton.style.transition = 'all .4s';
+
 ctaButton.onmouseover = (e => {
   e.target.style.boxShadow = '0px 6px 6px black';
   e.target.style.backgroundColor = 'grey';
 });
+//Equivalent way to add event listeners, as these eventListeners are actually properties of elements/DOM Nodes.
+// ctaButton.addEventListener("mouseover", (e) => {
+//   e.target.style.boxShadow = '0px 6px 6px black';
+//   e.target.style.backgroundColor = 'grey';
+// });
+
 ctaButton.onmouseleave = (e => {
   e.target.style.boxShadow = '0px 2px 4px black';
   e.target.style.backgroundColor = 'white';
+});
+
+//Click listener to change an elements content.
+ctaHeader.onclick = (e => {
+  e.target.textContent = `Please don't click on me...`;
 });
