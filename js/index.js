@@ -89,9 +89,7 @@ const botTextContentThreeH4= botTextContentThree.children[0];
 const botTextContentThreeP= botTextContentThree.children[1];
 // Contact
 const contact = document.querySelector('.contact');
-console.log(contact);
 const contactH4 = contact.children[0];
-
 const contactP1 = contact.children[1];
 const contactP2 = contact.children[2];
 const contactP3 = contact.children[3];
@@ -137,3 +135,19 @@ topContentTwoP.textContent=`${siteContent["main-content"]["about-content"]}`;
 botTextContentOneP.textContent=`${siteContent["main-content"]["services-content"]}`;
 botTextContentTwoP.textContent=`${siteContent["main-content"]["product-content"]}`;
 botTextContentThreeP.textContent=`${siteContent["main-content"]["vision-content"]}`;
+
+// Contact
+// const contact = document.querySelector('.contact');
+// const contactH4 = contact.children[0];
+// const contactP1 = contact.children[1];
+// const contactP2 = contact.children[2];
+// const contactP3 = contact.children[3];
+// //Footer
+// const footer = document.querySelector('footer');
+// const footerP = footer.children[0]
+contactH4.textContent=`${siteContent["contact"]["contact-h4"]}`;
+contactP1.textContent=`${siteContent["contact"]["address"]}`;
+contactP2.textContent=`${siteContent["contact"]["phone"]}`;
+contactP3.textContent=`${siteContent["contact"]["email"]}`;
+// Footer
+footerP.textContent= `${siteContent["footer"]["copyright"]}`;
