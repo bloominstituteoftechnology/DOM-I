@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
 * {
   box-sizing: border-box;
 }
@@ -7,7 +9,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
 }
 
 .digits {
@@ -28,6 +30,7 @@ body {
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+/Edge */
   user-select: none; /* Standard */
+  line-height: 21px;
   padding: 13px 55px;
   font-size: 20px;
   border-radius: 4px;
@@ -48,6 +51,7 @@ body {
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+/Edge */
   user-select: none; /* Standard */
+  line-height: 21px;
   padding: 13px 55px;
   font-size: 20px;
   border-radius: 4px;
@@ -81,4 +85,9 @@ body {
 
 .current .time{
   font-weight: bold;
+}
+
+.push-down{
+  position: relative;
+  top: 4px;
 }

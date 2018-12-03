@@ -22,6 +22,7 @@ startBtn.addEventListener('click', _ => {
 
 function timer(){
   going = true;
+  digits.forEach(item => item.classList.toggle('push-down'));
   startBtn.classList.remove('start-btn');
   startBtn.classList.add('start-btn-lock');
   window.setInterval( _ => {
