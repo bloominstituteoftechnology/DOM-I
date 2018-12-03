@@ -74,3 +74,19 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let navItemsArr = Array.from(navItems);
 navItemsArr.map((item, index)=>item.textContent= siteContent["nav"][`nav-item-${1 + index}`])
+
+//====== section cta
+
+let cta = document.querySelector('.cta-text');
+
+// "cta": {
+//   "h1": "DOM Is Awesome",
+//   "button": "Get Started",
+//   "img-src": "img/header-img.png"
+// },
+
+let headerImg = document.getElementById("cta-img");
+headerImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+//====== main content
+
