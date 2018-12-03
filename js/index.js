@@ -114,3 +114,9 @@ contactHeader.textContent = siteContent.contact["contact-h4"];
 contactAddress.textContent = siteContent.contact.address;
 contactPhone.textContent = siteContent.contact.phone;
 contactEmail.textContent = siteContent.contact.email;
+
+//Footer content
+let footerContent = document.querySelector('footer');
+let footerText = footerContent.children[0];
+
+footerText.textContent = siteContent.footer.copyright;
