@@ -4,20 +4,43 @@ let msHundreds = document.querySelector("#msHundreds");
 let secondOnes = document.querySelector("#secondOnes");
 let secondTens = document.querySelector("#secondTens");
 let semicolon = document.querySelector("#colon");
+let button = document.querySelector("button");
 
 msTens.textContent = 0;
 msHundreds.textContent = 0;
 secondOnes.textContent = 0;
 secondTens.textContent = 0;
 
+let timer;
+
+function start() {
+    timer = setInterval(msTen, 10);
+    button.disabled = "disabled";
+}
+
+function restart() {
+    clearInterval(timer);
+    msTens.textContent = 0;
+    msHundreds.textContent = 0;
+    secondOnes.textContent = 0;
+    secondTens.textContent = 0;
+    msTens.classList.remove("redDigit");
+    msHundreds.classList.remove("redDigit");
+    secondOnes.classList.remove("redDigit");
+    secondTens.classList.remove("redDigit");
+    colon.classList.remove("redDigit");
+    button.disabled = false;
+    
+}
+
 function secTens() {
     if (secondTens.textContent === "0") {
         secondTens.textContent = 1;
-        msTens.style.color = "red";
-        msHundreds.style.color = "red";
-        secondOnes.style.color = "red";
-        secondTens.style.color = "red";
-        colon.style.color = "red";
+        msTens.classList.add("redDigit");
+        msHundreds.classList.add("redDigit");
+        secondOnes.classList.add("redDigit");
+        secondTens.classList.add("redDigit");
+        colon.classList.add("redDigit");
         clearInterval(timer);
     } 
     else{
@@ -26,10 +49,7 @@ function secTens() {
 }
 
 function secOnes() {
-    if (secondOnes.textContent === "-") {
-        secondOnes.textContent = 1;
-    } 
-    else if (secondOnes.textContent === "9") {
+    if (secondOnes.textContent === "9") {
         secondOnes.textContent = 0;
         secTens();
     }
@@ -39,10 +59,7 @@ function secOnes() {
 }
 
 function msHund() {
-    if (msHundreds.textContent === "-") {
-        msHundreds.textContent = 0;
-    } 
-    else if (msHundreds.textContent === "6") {
+    if (msHundreds.textContent === "6") {
         msHundreds.textContent = 0;
         secOnes();
     }
@@ -52,10 +69,7 @@ function msHund() {
 }
 
 function msTen() {
-    if (msTens.textContent === "-") {
-        msTens.textContent = 0;
-    } 
-    else if (msTens.textContent === "9") {
+    if (msTens.textContent === "9") {
         msTens.textContent = 0;
         msHund();
     }
@@ -64,4 +78,4 @@ function msTen() {
     }
 }
 
-let timer = setInterval(msTen, 10);
+
