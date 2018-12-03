@@ -63,11 +63,22 @@ nlist.forEach(
   }
 );
 
-// var linknode = document.createElement('a');
-// var textnode = document.createTextNode('Link');
-// linknode.appendChild(textnode);
-// document.getElementById("nav").appendChild(node);
 
+
+const navlink1 = document.createElement('a');
+const navlink2 = document.createElement('a');
+
+navlink1.textContent = 'Staff';
+navlink1.setAttribute('style', 'color:green')
+navlink1.href = "#";
+
+navlink2.textContent = 'Etc';
+navlink2.setAttribute('style', 'color:green')
+navlink2.href = "#";
+
+document.querySelector("nav").prepend(navlink1);
+
+document.querySelector("nav").appendChild(navlink2);
 
 
 document.querySelector('.cta-text h1').textContent = siteContent.cta.h1;
