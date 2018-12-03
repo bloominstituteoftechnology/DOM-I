@@ -2,8 +2,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+  flex-direction: column;
 
+}
 .digit {
   display: inline-block;
   font-size: 80px;
