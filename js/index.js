@@ -121,7 +121,7 @@ headerLink1.forEach(a => {
 });
 
 // Paragraph Text
-let featuresPTags = document.querySelectorAll("p");
+let featuresPTags = document.querySelectorAll(".main-content p");
 let contentArray = [
   siteContent["main-content"]["features-content"],
   siteContent["main-content"]["about-content"],
