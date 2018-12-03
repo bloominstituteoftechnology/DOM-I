@@ -68,30 +68,80 @@ ctaImg.src = siteContent.cta["img-src"];
 
 // ========================== Main Content Code
 
-// Top Content Code
+// ================= Top Content Code
+
+// Features
 
 const topContentFeaturesTitle = Array.from(Array.from(document.querySelector(".top-content").childNodes)[1].childNodes)[1];
-console.log(topContentFeaturesTitle);
 
 topContentFeaturesTitle.textContent = siteContent["main-content"]["features-h4"];
 
 const topContentFeaturesContent = Array.from(Array.from(document.querySelector(".top-content").childNodes)[1].childNodes)[3];
-console.log(topContentFeaturesContent);
 
 topContentFeaturesContent.textContent = siteContent["main-content"]["features-content"];
 
+// About
+
 const topContentAboutTitle = Array.from(Array.from(document.querySelector(".top-content").childNodes)[3].childNodes)[1];
-console.log(topContentAboutTitle);
 
 topContentAboutTitle.textContent = siteContent["main-content"]["about-h4"];
 
 const topContentAboutContent = Array.from(Array.from(document.querySelector(".top-content").childNodes)[3].childNodes)[3];
-console.log(topContentAboutContent);
 
 topContentAboutContent.textContent = siteContent["main-content"]["about-content"];
+
+// Middle Img
 
 const middleImg = document.querySelector(".middle-img");
 
 middleImg.src = siteContent["main-content"]["middle-img-src"];
 
-// 
+// ================= Bottom Content Code
+
+// Services
+
+const bottomContentServicesTitle = Array.from(Array.from(document.querySelector(".bottom-content").childNodes)[1].childNodes)[1];
+
+bottomContentServicesTitle.textContent = siteContent["main-content"]["services-h4"];
+
+const bottomContentServicesContent = Array.from(Array.from(document.querySelector(".bottom-content").childNodes)[1].childNodes)[3];
+
+bottomContentServicesContent.textContent = siteContent["main-content"]["services-content"];
+
+// Product
+
+const bottomContentProductTitle = Array.from(Array.from(document.querySelector(".bottom-content").childNodes)[3].childNodes)[1];
+
+bottomContentProductTitle.textContent = siteContent["main-content"]["product-h4"];
+
+const bottomContentProductContent = Array.from(Array.from(document.querySelector(".bottom-content").childNodes)[3].childNodes)[3];
+
+bottomContentProductContent.textContent = siteContent["main-content"]["product-content"];
+
+// Vision
+
+const bottomContentVisionTitle = Array.from(Array.from(document.querySelector(".bottom-content").childNodes)[5].childNodes)[1];
+
+bottomContentVisionTitle.textContent = siteContent["main-content"]["vision-h4"];
+
+const bottomContentVisionContent = Array.from(Array.from(document.querySelector(".bottom-content").childNodes)[5].childNodes)[3];
+
+bottomContentVisionContent.textContent = siteContent["main-content"]["vision-content"];
+
+// ========================== Contact
+
+const contactNodes = Array.from(document.querySelector(".contact").childNodes);
+
+contactNodes[1].textContent = siteContent.contact["contact-h4"];
+
+contactNodes[3].textContent = siteContent.contact["address"];
+
+contactNodes[5].textContent = siteContent.contact["phone"];
+
+contactNodes[7].textContent = siteContent.contact["email"];
+
+// ========================== Footer
+
+const pageFooter = Array.from(document.querySelector("footer").childNodes);
+
+pageFooter[1].textContent = siteContent.footer["copyright"];
