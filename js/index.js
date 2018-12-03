@@ -128,6 +128,18 @@ mainHeader.textContent = siteContent["cta"]["h1"];
 // console.log(search.test(mainHeader.textContent));
 
 ctaBtn.textContent = siteContent.cta.button;
+
+// Stretch -- Event Listener
+const mainContent = document.querySelector(".main-content");
+
+ctaBtn.addEventListener('click', function(e) {
+  e.target.textContent = "Aaaand start!";
+  mainContent.innerHTML = "<h1>Let's go!</h1>";
+  mainContent.style.fontSize = "100px";
+  mainContent.style.textAlign = "center";
+  mainContent.style.padding = "50px";
+});
+
 ctaImg.src = siteContent.cta["img-src"];
 
 
