@@ -79,7 +79,12 @@ navItemsArr.map((item, index)=>item.textContent = Object.values(siteContent.nav)
 
 //====== section cta
 
+// json content h1 will always add newline when space is used
+// i'll come back to this when i finish mvp
+
 let h1 = document.querySelector('h1');
+let h1Arr = Array.from(h1);
+// console.log(h1)
 h1.textContent = siteContent["cta"]["h1"];
 
 let button = document.querySelector('button')
@@ -91,3 +96,41 @@ headerImg.setAttribute('src', siteContent["cta"]["img-src"])
 
 //====== main content
 
+// top content
+let topContentH4 = document.querySelectorAll(".top-content > .text-content > h4");
+let topContentP = document.querySelectorAll(".top-content > .text-content > p");
+
+topContentH4[0].textContent = siteContent["main-content"]["features-h4"];
+
+topContentP[0].textContent = siteContent["main-content"]["features-content"];
+
+topContentH4[1].textContent = siteContent["main-content"]["about-h4"];
+
+topContentP[1].textContent = siteContent["main-content"]["about-content"];
+
+// middle image 
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+
+
+
+// let topH4 = topTextContent.querySelectorAll("h4");
+// topH4[0].textContent = siteContent["main-content"]["features-h4"];
+// let topP = topTextContent.querySelectorAll("p");
+// topP[0].textContent = siteContent["main-content"]["features-content"];
+
+
+
+
+//   "services-h4":"Services",
+//   "services-content": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+//   "product-h4":"Product",
+//   "product-content": "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+//   "vision-h4":"Vision",
+//   "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+
+
+
+// let headerImg = document.getElementById("cta-img");
+// headerImg.setAttribute('src', siteContent["cta"]["img-src"])
