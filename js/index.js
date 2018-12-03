@@ -66,7 +66,8 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // CTA Content
 const ctaText = document.querySelector('.cta-text h1');
-ctaText.textContent = siteContent["cta"]["h1"]
+ctaText.textContent = "Dom\r\n " + "Is\r\n " + "Awesome";
+// siteContent["cta"]["h1"]
 ctaText.setAttribute('style', 'white-space: pre-line');
 
 const ctaButton = document.querySelector('.cta-text button');
