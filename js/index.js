@@ -43,3 +43,12 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 const navItems = document.querySelectorAll('a');
 navItems.forEach((item, index) => item.textContent = siteContent.nav[`nav-item-${index+1}`]);
+
+const ctaH1 = document.querySelector('h1');
+ctaH1.textContent = siteContent.cta.h1;
+
+const ctaButton = document.querySelector('button');
+ctaButton.textContent = siteContent.cta.button;
+
+const ctaImg = document.querySelector('#cta-img');
+ctaImg.src = siteContent.cta["img-src"];
