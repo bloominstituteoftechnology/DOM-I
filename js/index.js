@@ -99,6 +99,7 @@ button[0].textContent = siteContent.cta.button;
 
 // Paragraph Titles
 let h4 = document.getElementsByTagName("h4");
+
 h4[0].textContent = siteContent["main-content"]["features-h4"];
 h4[1].textContent = siteContent["main-content"]["about-h4"];
 h4[2].textContent = siteContent["main-content"]["services-h4"];
@@ -111,12 +112,11 @@ snippet.setAttribute("src", siteContent["cta"]["img-src"]);
 
 // Header Links
 let headerLink1 = document.querySelectorAll("a");
-headerLink1[0].textContent = siteContent.nav["nav-item-1"];
-headerLink1[1].textContent = siteContent.nav["nav-item-2"];
-headerLink1[2].textContent = siteContent.nav["nav-item-3"];
-headerLink1[3].textContent = siteContent.nav["nav-item-4"];
-headerLink1[4].textContent = siteContent.nav["nav-item-5"];
-headerLink1[5].textContent = siteContent.nav["nav-item-6"];
+let navArray = Array.from(headerLink1);
+
+for (let i = 0; i < headerLink1.length; ++i) {
+  navArray[i].textContent = siteContent.nav[`nav-item-${i}`];
+}
 
 // Changing color to GREEN
 headerLink1.forEach(a => {
@@ -164,9 +164,9 @@ let aNode1 = document.createElement("a");
 aNode1.style.color = "green";
 let textNode1 = document.createTextNode("About Me");
 
-aNode.appendChild(textNode);
+aNode.appendChild(textNode); // <a>Portfolio</a>
 aNode1.prepend(textNode1);
-nav.appendChild(aNode);
+nav.appendChild(aNode); // <nav> ... <a>Portfolio</a> </nav>
 nav.prepend(aNode1);
 
 // STRETCH GOALS
