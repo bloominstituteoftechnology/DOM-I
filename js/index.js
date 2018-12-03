@@ -39,4 +39,36 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+let nav1 = document.querySelectorAll('a')[0];
+nav1.textContent = siteContent['nav']['nav-item-1'];
+
+let nav2 = document.querySelectorAll('a')[1];
+nav2.textContent = siteContent['nav']['nav-item-2'];
+
+let nav3 = document.querySelectorAll('a')[2];
+nav3.textContent = siteContent['nav']['nav-item-3'];
+
+let nav4 = document.querySelectorAll('a')[3];
+nav4.textContent = siteContent['nav']['nav-item-4'];
+
+let nav5 = document.querySelectorAll('a')[4];
+nav5.textContent = siteContent['nav']['nav-item-5'];
+
+let nav6 = document.querySelectorAll('a')[5];
+nav6.textContent = siteContent['nav']['nav-item-6'];
+
+
+// let body = document.querySelector('body');
+// body.style.backgroundColor = "green";
+
+let header1 = document.querySelector('h1');
+header1.innerHTML = "<h1>Dom</br>is</br>Awesome</h1>";
+// "<h1>Dom</br>is</br>Awesome</h1>";
+
+let roundCs = document.getElementById("cta-img");
+roundCs.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let button = document.querySelector('button');
+button.textContent = siteContent["cta"]["button"];
