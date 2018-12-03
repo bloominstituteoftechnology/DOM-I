@@ -45,18 +45,32 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // nav anchor tags
 
-let navItems = document.querySelectorAll('a');
+// old method
 
-let servicesNav = navItems[0];
-let productNav = navItems[1];
-let visionNav = navItems[2];
-let featuresNav = navItems[3];
-let aboutNav = navItems[4];
-let contactNav = navItems[5];
+// let servicesNav = navItems[0];
+// let productNav = navItems[1];
+// let visionNav = navItems[2];
+// let featuresNav = navItems[3];
+// let aboutNav = navItems[4];
+// let contactNav = navItems[5];
 
-servicesNav.textContent = siteContent["nav"]["nav-item-1"];
-productNav.textContent = siteContent["nav"]["nav-item-2"];
-visionNav.textContent = siteContent["nav"]["nav-item-3"];
-featuresNav.textContent = siteContent["nav"]["nav-item-4"];
-aboutNav.textContent = siteContent["nav"]["nav-item-5"];
-contactNav.textContent = siteContent["nav"]["nav-item-6"];
+// servicesNav.textContent = siteContent["nav"]["nav-item-1"];
+// productNav.textContent = siteContent["nav"]["nav-item-2"];
+// visionNav.textContent = siteContent["nav"]["nav-item-3"];
+// featuresNav.textContent = siteContent["nav"]["nav-item-4"];
+// aboutNav.textContent = siteContent["nav"]["nav-item-5"];
+// contactNav.textContent = siteContent["nav"]["nav-item-6"];
+
+// DRY attempt
+
+// for loop
+
+// let navItemsArr = Array.from(navItems);
+// for (let i = 0; i <= navItemsArr.length ; i++) {
+//   navItemsArr[i].textContent = siteContent["nav"][`nav-item-${1 + i}`];
+// }
+
+// map method
+
+let navItemsArr = Array.from(navItems);
+navItemsArr.map((item, index)=>item.textContent= siteContent["nav"][`nav-item-${1 + index}`])
