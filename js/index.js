@@ -44,24 +44,42 @@ const siteContent = {
 const container = document.getElementsByClassName("container");
 
 // Header
-
-const navLinks = Array.from(document.querySelectorAll("nav>a"));
-// navLinks[0].innerHTML = siteContent.nav["nav-item-1"];
-// navLinks[1].innerHTML = siteContent.nav["nav-item-2"];
-// navLinks[2].innerHTML = siteContent.nav["nav-item-3"];
-// navLinks[3].innerHTML = siteContent.nav["nav-item-4"];
-// navLinks[4].innerHTML = siteContent.nav["nav-item-5"];
-// navLinks[5].innerHTML = siteContent.nav["nav-item-6"];
+const navLinks = document.querySelectorAll("nav>a");
 
 // for(let i = 0; i < navLinks.length; i++) {
 //   navLinks[i].innerHTML = siteContent.nav[`nav-item-${i + 1}`];
 // };
 
-navLinks.forEach((link, index) => link.innerHTML = siteContent.nav[`nav-item-${index + 1}`])
+navLinks.forEach((link, index) => {
+  link.innerHTML = siteContent.nav[`nav-item-${index + 1}`];
+  link.style.color = "green";
+});
+
+// TODO - Refactor
+
+const nav = document.querySelector("nav");
+nav.style.order = 1;
+
+newLink1 = document.createElement('a');
+newLink1.innerHTML = "Blog";
+newLink1.style.color = "green";
+
+newLink2 = document.createElement('a');
+newLink2.innerHTML = "Home";
+newLink2.style.color = "green";
+
+nav.appendChild(newLink1);
+nav.prepend(newLink2);
 
 const logo = document.getElementById("logo-img");
 // logo.setAttribute("src", siteContent.nav["img-src"]);
 logo.src = siteContent.nav["img-src"];
+logo.style.order = 0;
+logo.style.alignSelf = "flexStart";
+logo.style.margin = "28px 91px 0 0";
+
+swapButton = document.querySelector(".swap-nav");
+console.log(swapButton);
 
 // CTA Section
 
