@@ -47,7 +47,7 @@ let navLinks = document.querySelectorAll("nav a");
 let nav = document.querySelector("nav");
   //cta
 let ctaText = document.querySelector(".cta-text h1");
-let ctaButton = document.querySelector(".cta-text button");
+let ctaButton = document.querySelector(".cta .cta-text button");
 let ctaImage = document.querySelector("#cta-img");
   //main-content
 let h4 = document.querySelectorAll(".main-content h4");
@@ -94,3 +94,8 @@ for (let i = 0; i < contactP.length; i++) {
   contactP[i].textContent = siteContent["contact"][contactText[i]];
 }
 footer.textContent = siteContent["footer"]["copyright"];
+
+//stretch
+ctaButton.addEventListener("click", () => {
+  ctaButton.classList.toggle("buttonClick");
+})

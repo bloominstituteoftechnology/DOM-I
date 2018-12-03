@@ -130,6 +130,9 @@ header .logo {
     background: black;
     color: white;
 }
+.cta .cta-text .buttonClick{
+    background-color: red;
+}
 
 /* Main Content Styles */
 
@@ -297,3 +300,4 @@ footer {
         margin: 20px;
     }
 }
+
