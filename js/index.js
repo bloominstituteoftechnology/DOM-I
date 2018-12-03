@@ -41,7 +41,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-
+// Nav Bar Code
 const anchors = document.querySelectorAll("a");
 const anchorsArray = Array.from(anchors);
 anchorsArray[0].textContent = siteContent.nav["nav-item-1"];
@@ -51,3 +51,19 @@ anchorsArray[3].textContent = siteContent.nav["nav-item-4"];
 anchorsArray[4].textContent = siteContent.nav["nav-item-5"];
 anchorsArray[5].textContent = siteContent.nav["nav-item-6"];
 
+const logoImg = document.querySelector(".logo");
+logoImg.src = siteContent.nav["img-src"]; 
+
+// CTA Code
+
+const ctaH1 = document.querySelector("h1");
+ctaH1.textContent = siteContent.cta["h1"];
+// ctah1.style.display = "flex";
+// ctah1.style.flexDirection = "column";
+const ctaButton = document.querySelector("button");
+ctaButton.textContent = siteContent.cta["button"];
+
+const ctaImg = document.querySelector("#cta-img");
+ctaImg.src = siteContent.cta["img-src"];
+
+// Main Content Code
