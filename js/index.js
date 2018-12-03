@@ -138,12 +138,10 @@ footer.style.paddingTop = "20px";
 // event listener stretch goals
 ctaButton.addEventListener('click', function () {
   paragraphs.forEach(items => items.style.color = "red");
-
 });
 
 ctaButton.addEventListener('dblclick', function () {
   paragraphs.forEach(items => items.style.color = "#383838");
-
 });
 
 newNav1.addEventListener('click', function () {
