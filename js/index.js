@@ -99,11 +99,10 @@ button[0].textContent = siteContent.cta.button;
 
 // Paragraph Titles
 let h4 = document.getElementsByTagName("h4");
-h4[0].textContent = siteContent["main-content"]["features-h4"];
-h4[1].textContent = siteContent["main-content"]["about-h4"];
-h4[2].textContent = siteContent["main-content"]["services-h4"];
-h4[3].textContent = siteContent["main-content"]["product-h4"];
-h4[4].textContent = siteContent["main-content"]["vision-h4"];
+let mainContentArray = ["features", "about", "services", "product", "vision"];
+for (let i = 0; i < mainContentArray.length; i++) {
+  h4[i].textContent = siteContent["main-content"][`${mainContentArray[i]}-h4`];
+}
 
 // Code snippet image
 let snippet = document.getElementById("cta-img");
@@ -172,18 +171,14 @@ const handleClick = () => {
   h1[0].innerHTML = newSiteContent.cta.h1;
   button[0].textContent = newSiteContent.cta.button;
 
-  h4[0].textContent = newSiteContent["main-content"]["features-h4"];
-  h4[1].textContent = newSiteContent["main-content"]["about-h4"];
-  h4[2].textContent = newSiteContent["main-content"]["services-h4"];
-  h4[3].textContent = newSiteContent["main-content"]["product-h4"];
-  h4[4].textContent = newSiteContent["main-content"]["vision-h4"];
+  for (let i = 0; i < mainContentArray.length; i++) {
+    h4[i].textContent =
+      newSiteContent["main-content"][`${mainContentArray[i]}-h4`];
+  }
 
-  headerLink1[0].textContent = newSiteContent.nav["nav-item-1"];
-  headerLink1[1].textContent = newSiteContent.nav["nav-item-2"];
-  headerLink1[2].textContent = newSiteContent.nav["nav-item-3"];
-  headerLink1[3].textContent = newSiteContent.nav["nav-item-4"];
-  headerLink1[4].textContent = newSiteContent.nav["nav-item-5"];
-  headerLink1[5].textContent = newSiteContent.nav["nav-item-6"];
+  for (let i = 0; i < headerLink1.length; i++) {
+    headerLink1[i].textContent = newSiteContent.nav[`nav-item-${i + 1}`];
+  }
 
   let newContentArray = [
     newSiteContent["main-content"]["features-content"],
