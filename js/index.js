@@ -40,7 +40,8 @@ const siteContent = {
 // Example: Update the img src for the logo
 const nav = document.querySelector("nav");
 const navContent = nav.querySelectorAll('a');
-console.log(navContent);
+
+// ============== NAV ===============//
 
 navContent [0].textContent = siteContent.nav["nav-item-1"];
 navContent [1].textContent = siteContent.nav["nav-item-2"];
@@ -49,9 +50,46 @@ navContent [3].textContent = siteContent.nav["nav-item-4"];
 navContent [4].textContent = siteContent.nav["nav-item-5"];
 navContent [5].textContent = siteContent.nav["nav-item-6"];
 
+//============== LOGO =============//
 
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-const ctaContent = document.querySelectorAll("cta");
-console.log(ctaContent);
+
+//============ H1 ============//
+const cta = document.querySelector(".cta");
+const ctaH1 = cta.querySelector("h1");
+ctaH1.textContent = siteContent.cta.h1;
+
+// =========BUTTON========//
+const ctaButton = cta.querySelector("button");
+ctaButton.textContent = siteContent.cta.button;
+
+// =======IMG===========//
+const ctaImage  = cta.querySelector("#cta-img");
+ctaImage.src = siteContent.cta["img-src"];
+
+// ========MAIN CONT.============//
+
+const mainContentTitles = document.querySelectorAll(".main-content h4" );
+const mainContentPars = document.querySelectorAll(".main-content p");
+
+mainContentTitles[0].textContent = siteContent["main-content"]["features-h4"];
+mainContentTitles[1].textContent = siteContent["main-content"]["about-h4"];
+mainContentTitles[2].textContent = siteContent["main-content"]["services-h4"];
+mainContentTitles[3].textContent = siteContent["main-content"]["product-h4"];
+mainContentTitles[4].textContent = siteContent["main-content"]["vision-h4"];
+
+
+mainContentPars[0].textContent = siteContent["main-content"]["features-content"];
+mainContentPars[1].textContent = siteContent["main-content"]["about-content"];
+mainContentPars[2].textContent = siteContent["main-content"]["services-content"];
+mainContentPars[3].textContent = siteContent["main-content"]["product-content"];
+mainContentPars[4].textContent = siteContent["main-content"]["vision-content"];
+
+
+// ================= MIDDLE IMG ===========//
+
+const mConMiddleImg = document.getElementById("middle-img");
+mConMiddleImg.src = siteContent["main-content"]["middle-img-src"];
+
