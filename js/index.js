@@ -97,13 +97,23 @@ headerImg.setAttribute('src', siteContent["cta"]["img-src"])
 //====== main content
 
 // top content
+
+// legacy code. I tried to make this work
+
+// let topH4 = topTextContent.querySelectorAll("h4");
+// topH4[0].textContent = siteContent["main-content"]["features-h4"];
+// let topP = topTextContent.querySelectorAll("p");
+// topP[0].textContent = siteContent["main-content"]["features-content"];
+
 let topContentH4 = document.querySelectorAll(".top-content > .text-content > h4");
 let topContentP = document.querySelectorAll(".top-content > .text-content > p");
 
+// features
 topContentH4[0].textContent = siteContent["main-content"]["features-h4"];
 
 topContentP[0].textContent = siteContent["main-content"]["features-content"];
 
+// about
 topContentH4[1].textContent = siteContent["main-content"]["about-h4"];
 
 topContentP[1].textContent = siteContent["main-content"]["about-content"];
@@ -112,23 +122,28 @@ topContentP[1].textContent = siteContent["main-content"]["about-content"];
 let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
+// botton content
 
+let botContentH4 = document.querySelectorAll(".bottom-content > .text-content > h4");
+let botContentP = document.querySelectorAll(".bottom-content > .text-content > p");
 
+// services
 
-// let topH4 = topTextContent.querySelectorAll("h4");
-// topH4[0].textContent = siteContent["main-content"]["features-h4"];
-// let topP = topTextContent.querySelectorAll("p");
-// topP[0].textContent = siteContent["main-content"]["features-content"];
+botContentH4[0].textContent = siteContent["main-content"]["services-h4"];
 
+botContentP[0].textContent = siteContent["main-content"]["services-content"];
 
+// product 
 
+botContentH4[1].textContent = siteContent["main-content"]["product-h4"];
 
-//   "services-h4":"Services",
-//   "services-content": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-//   "product-h4":"Product",
-//   "product-content": "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-//   "vision-h4":"Vision",
-//   "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+botContentP[1].textContent = siteContent["main-content"]["product-content"];
+
+// vision
+
+botContentH4[2].textContent = siteContent["main-content"]["vision-h4"];
+
+botContentP[2].textContent = siteContent["main-content"]["vision-content"];
 
 
 
