@@ -39,28 +39,55 @@ const siteContent = {
 
 //================= Nav Bar Elements and Methods Here ===========//
 
-const navBar = document.querySelector('nav');
-const navTextOne = document.querySelector('a');
+const navItems = document.querySelectorAll("a");
+for (let i = 0; i < navItems.length; i++) {
+  navItems[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
+}
+let logo = document.getElementById("logo-img");
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
 // need navTextTwo, navTextThree, navTextFour, and navTextFive
 
 //=================  CTA Elements and Methods Here  ==============//
 const ctaHeader = document.querySelector(".cta-text h1");
-ctaHeader.text = "DOM Is Awesome";
+ctaHeader.setAttribute('style', 'white-space: pre;');
+ctaHeader.textContent = "DOM \r\n";
+ctaHeader.textContent += "IS \r\n";
+ctaHeader.textContent += "AWESOME";
 const ctaButton = document.querySelector("button");
-ctaButton.textContent = "Get Started";
-const ctaImg = document.querySelector(".cta-img");
-ctaImg.src = "img/header-img.png"
-ctaImg.alt = "Image of a code snippet";
+ctaButton.textContent = siteContent.cta.button;
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+
 
 //=================  Main Content Elements and Methods  ============//
-const featuresHeading = document.querySelector("")
+const h4 = document.getElementsByTagName("h4");
+let mainContentArray = ["features", "about", "services", "product", "vision"];
+for (let i = 0; i < mainContentArray.length; i++) {
+  h4[i].textContent = siteContent["main-content"][`${mainContentArray[i]}-h4`];
+}
+
+let midImg = document.getElementById("middle-img");
+midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+
+const midContentP = document.querySelectorAll(".main-content p");
+let midContentArray = mainContentArray;
+for (let i = 0; i < midContentArray.length; i++) {
+  midContentP[i].textContent = siteContent["main-content"][`${midContentArray[i]}-content`];
+}
 //=================  Contact Elements and Methods  ===============//
 
-//=================  Footer Elements and Methods  ===============//
+const contactHeader = document.querySelector(".contact h4");
+const contactText = document.querySelectorAll("section.contact > p");
+contactHeader.textContent = "Contact";
+contactText = "Howdy Yall";
 
-// Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"]);
+//=================  Footer Elements and Methods  ===============//
+const footerContent = document.querySelector("footer");
+footerContent.textContent = "Copyright Great Idea! 2018";
+
+
 
 
 
