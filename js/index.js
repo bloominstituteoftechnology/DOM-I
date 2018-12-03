@@ -46,25 +46,25 @@ const siteContent = {
 
 // ========== Nav
 const navAnchors = document.querySelectorAll('a');
-navAnchors[0].textContent = 'Services';
-navAnchors[1].textContent = 'Product';
-navAnchors[2].textContent = 'Vision';
-navAnchors[3].textContent = 'Features';
-navAnchors[4].textContent = 'About';
-navAnchors[0].textContent = 'Contact';
+navAnchors[0].textContent = siteContent.nav["nav-item-1"];
+navAnchors[1].textContent = siteContent.nav["nav-item-2"];
+navAnchors[2].textContent = siteContent.nav["nav-item-3"];
+navAnchors[3].textContent = siteContent.nav["nav-item-4"];
+navAnchors[4].textContent = siteContent.nav["nav-item-5"];
+navAnchors[0].textContent = siteContent.nav["nav-item-6"];
 
 const logoImg = document.querySelector('#logo-img');
-logoImg.src = 'img/logo.png'
+logoImg.src = siteContent.nav["img-src"];
 
 
 
 // ========== Header Content
 
 const headerTitle = document.querySelector('.cta-text').querySelector('h1');
-headerTitle.textContent = 'DOM Is Awesome'
+headerTitle.textContent = siteContent.cta.h1
 
 const headerButton = document.querySelector('.cta-text').querySelector('button');
-headerButton.textContent = 'Get Started';
+headerButton.textContent = siteContent.cta.button;
 
 const headerImg = document.querySelector('#cta-img');
-headerImg.src = 'img/header-img.png';
+headerImg.src = siteContent.cta["img-src"];
