@@ -48,7 +48,8 @@ let midImg = document.getElementById("middle-img");
 midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 //Nav Link content
-let navLinks = document.querySelectorAll('a');
+let navBar = document.querySelector('nav');
+let navLinks = document.querySelectorAll('nav a');
 navLinks.forEach((a, index) => { //NodeLists aren't actual arrays, but we can still use forEach on them!
   let navItemProperty = `nav-item-${index + 1}`;
   a.textContent =siteContent.nav[navItemProperty];
@@ -122,7 +123,23 @@ let footerText = footerContent.children[0];
 
 footerText.textContent = siteContent.footer.copyright;
 
-//Change navigation text to be green
+//Change navigation text to be green (Moved below prepend and append child so new links are also green!)
+// navLinks.forEach(a => {
+//   a.style.color = 'green';
+// });
+
+//Prepend and Append new children to Navigation links.
+let newChild1 = document.createElement('a');
+newChild1.textContent = "Home";
+let newChild2 = document.createElement('a');
+newChild2.textContent = "FAQ";
+
+navBar.prepend(newChild1);
+navBar.appendChild(newChild2);
+
+//Update navlinks NodeList now that we added two more, so we can change their color to green as well.
+navLinks = document.querySelectorAll('nav a');
+//Change navigation text to be green (Moved below prepend and append child so new links are also green!)
 navLinks.forEach(a => {
   a.style.color = 'green';
 });
