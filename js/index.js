@@ -46,16 +46,6 @@ const siteContent = {
 let logo = document.getElementById('logo-img');
 logo.setAttribute('src', siteContent['nav']['img-src']);
 
-// const navItem = document.querySelectorAll('a');
-// navItem.forEach(function(elem) {
-// 	// elem.classList.add(siteContent[0]);
-// 	elem.textContent = siteContent.nav[`nav-item-${elem}`];
-// });
-
-// console.log(navItem);
-
-// Header
-// Nav Items
 let navItems = document.querySelectorAll('a');
 for (let i = 0; i < navItems.length; i++) {
 	navItems[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
@@ -69,4 +59,27 @@ CtaButton.textContent = siteContent.cta['button'];
 const ctaImg = document.querySelector('#cta-img');
 ctaImg.src = siteContent.cta['img-src'];
 
-console.log(navItems);
+// Main Content Section
+const features = document.querySelector('.top-content').firstChild;
+features.textContent = siteContent['main-content']['features-h4'];
+const featuresContent = document.querySelector('.top-content .text-content p');
+featuresContent.textContent = siteContent['main-content']['features-content'];
+
+const about = document.querySelector('.top-content').lastChild;
+about.textContent = siteContent['main-content']['about-h4'];
+const aboutContent = document.querySelector('.top-content .text-content p');
+aboutContent.textContent = siteContent['main-content']['about-content'];
+
+const middleImg = document.querySelector('.middle-img');
+middleImg.src = siteContent['main-content']['middle-img-src'];
+
+const services = document.querySelector('.bottom-content').firstChild;
+services.textContent = siteContent['main-content']['services-h4'];
+const servicesContent = document.querySelector('.bottom-content .text-content p');
+aboutContent.textContent = siteContent['main-content']['services-content'];
+
+const product = document.querySelector('.bottom-content').nextElementSibling;
+product.textContent = siteContent['main-content']['services-h4'];
+
+const vision = document.querySelector('.bottom-content').nextElementSibling;
+vision.textContent = siteContent['main-content']['services-h4'];
