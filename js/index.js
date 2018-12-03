@@ -37,17 +37,19 @@ const siteContent = {
   },
 };
 
-// Variable definitions
+// ============================================= Variable definitions
 const navigation = document.querySelectorAll('a');
-const logo = document.getElementById("logo-img");
-const ctaTextSection = document.getElementsByClassName('cta-text');
+const logo = document.getElementById('logo-img');
+const ctaText = document.querySelector('.cta-text h1');
+const ctaButton = document.querySelector('.cta-text button')
 const ctaImg = document.querySelector('#cta-img');
-const middleImage = document.getElementById("middle-img");
-// const contact = document.querySelector('.contact');
+const textContentHeaders = document.querySelectorAll('h4');
+const textContentParagraphs = document.querySelectorAll('p')
+const middleImage = document.getElementById('middle-img')
 const footer = document.querySelector('footer');
 
 
-// Navigation and Logo
+// ============================================= Navigation and Logo
 navigation[0].textContent = siteContent.nav["nav-item-1"];
 navigation[1].textContent = siteContent.nav["nav-item-2"];
 navigation[2].textContent = siteContent.nav["nav-item-3"];
@@ -58,23 +60,40 @@ navigation[5].textContent = siteContent.nav["nav-item-6"];
 logo.src = siteContent["nav"]["img-src"];
 
 
-// CTA section
-
-// ctaTextSection.textContent = siteContent['cta']['h1']
+// ============================================= CTA section
+ctaText.textContent = siteContent['cta']['h1']
+ctaButton.textContent = siteContent['cta']['button']
 ctaImg.src = siteContent['cta']['img-src'];
 
-console.log(ctaTextSection[0])
+// ============================================= main content headers
+console.log(textContentHeaders);
+
+textContentHeaders[0].textContent = siteContent['main-content']['features-h4'];
+textContentHeaders[1].textContent = siteContent['main-content']['about-h4'];
+textContentHeaders[2].textContent = siteContent['main-content']['services-h4'];
+textContentHeaders[3].textContent = siteContent['main-content']['product-h4'];
+textContentHeaders[4].textContent = siteContent['main-content']['vision-h4'];
+
+// ============================================= main content paragraphs
+
+textContentParagraphs[0].textContent = siteContent['main-content']['features-content'];
+textContentParagraphs[1].textContent = siteContent['main-content']['about-content'];
+textContentParagraphs[2].textContent = siteContent['main-content']['services-content'];
+textContentParagraphs[3].textContent = siteContent['main-content']['product-content'];
+textContentParagraphs[4].textContent = siteContent['main-content']['vision-content'];
 
 
-// middle image
-
+// ============================================= middle image
 middleImage.src = siteContent['main-content']['middle-img-src'];
 
-// contact
 
 
-// console.log(contact);
+// ============================================= contact
+textContentHeaders[5].textContent = siteContent['contact']['contact-h4'];
+textContentParagraphs[5].textContent = siteContent['contact']['address'];
+textContentParagraphs[6].textContent = siteContent['contact']['phone'];
+textContentParagraphs[7].textContent = siteContent['contact']['email'];
 
-// footer
 
+// ============================================= footer
 footer.textContent = siteContent.footer.copyright;
