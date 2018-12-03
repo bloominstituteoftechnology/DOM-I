@@ -40,6 +40,7 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.src = "img/logo.png";
+logo.alt = "Great Idea! Company logo.";
 
 // let logo = document.getElementById("logo-img");
 // logo.setAttribute('src', siteContent["nav"]["img-src"])
@@ -83,7 +84,7 @@ navArray[5].style.color = "green";
 //JSON items. Start with cta
 
 const ctaText = document.getElementsByTagName('h1');
-ctaText.style = "white-space: pre";
+//ctaText.style = "white-space: pre";
 ctaText[0].innerText = "DOM \r\n";
 ctaText[0].innerText += "is \r\n";
 ctaText[0].innerText += "Awesome";
@@ -127,3 +128,16 @@ pTags[5].innerText = "123 Way 456 Street\r\n"
 pTags[5].innerText += "Somewhere, USA";
 pTags[6].innerText = "1 (888) 888-8888";
 pTags[7].innerText = "sales@greatidea.io";
+
+// Have a couple of kids. Oops, I mean add two children
+
+const faq = document.createElement('a');
+const addNavItem = document.querySelector('nav');
+addNavItem.appendChild(faq);
+faq.innerText = "FAQ";
+faq.style.color = "green";
+
+const login = document.createElement('a');
+addNavItem.prepend(login);
+login.innerText = "Log In";
+login.style.color = "green";
