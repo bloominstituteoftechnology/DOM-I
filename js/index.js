@@ -38,6 +38,8 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+
+
 // Navigation 
 
 let logo = document.getElementById("logo-img");
@@ -46,12 +48,29 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 let nav = document.querySelector('nav');
 let navItems = nav.querySelectorAll('a');
 
-navItems[0].textContent = siteContent.nav["nav-item-1"];
-navItems[1].textContent = siteContent.nav["nav-item-2"];
-navItems[2].textContent = siteContent.nav["nav-item-3"];
-navItems[3].textContent = siteContent.nav["nav-item-4"];
-navItems[4].textContent = siteContent.nav["nav-item-5"];
-navItems[5].textContent = siteContent.nav["nav-item-6"];
+for (let i = 0; i < navItems.length; i++) {
+  navItems[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
+  navItems[i].style.color = "green";
+  navItems[i].style.backgroundColor = "LightBlue";
+
+}
+
+
+  let newNavItem1 = document.createElement("a");
+  newNavItem1.textContent = "Team";
+  newNavItem1.style.color = "green";
+  newNavItem1.style.backgroundColor = "LightBlue";
+  nav.appendChild(newNavItem1);
+
+  let newNavItem2 = document.createElement("a");
+  newNavItem2.textContent = "Blog";
+  newNavItem2.style.color = "green";
+  newNavItem2.style.backgroundColor = "LightBlue";
+  nav.prepend(newNavItem2);
+
+  
+
+
 // CTA
 let ctaImg = document.getElementById("cta-img");
 ctaImg.src = siteContent["cta"]["img-src"];
