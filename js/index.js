@@ -40,12 +40,16 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
+logo.setAttribute('src', `img/logo.png`);
+
 
 let logoCta = document.getElementById("cta-img");
-logo.setAttribute('src', siteContent["cta"]["img-src"]);
+logoCta.setAttribute('src', siteContent["cta"]["img-src"]);
+logoCta.setAttribute('src', `img/header-img.png`);
 
 let mainContentimg = document.getElementById("middle-img");
-logo.setAttribute(`src`, siteContent["middle-img"["img-src"]]);
+mainContentimg.setAttribute(`src`, siteContent["middle-img"["img-src"]]);
+mainContentimg.setAttribute('src', `img/mid-page-accent.jpg`);
 
 
 
@@ -53,10 +57,24 @@ let nav = document.getElementById(`nav`);
 
 let cta = document.getElementById(`cta`);
 
-const mainNav =document.querySelectorAll(`a`);
-const ctaHeader= document.querySelectorAll('h1');
-const button =document.querySelectorAll(`button`);
-const paragraph =document.querySelectorAll(`p`);
-const otherHeader= document.querySelectorAll(`h4`);
-console.log(otherHeader);
+let mainNav =document.querySelectorAll("a");
+for (let i=0; i<mainNav.length; i++){
+  mainNav[i].textContent = siteContent.nav[`nav-item-${i+1}`];
+}
+let ctaHeader= document.querySelector("h1");
+ctaHeader.innerText = siteContent["cta"]["h1"]
+
+
+let button =document.querySelector("button");
+button.innerText = siteContent["cta"]["button"]
+
+let otherHeader= document.querySelectorAll(`h4`);
+
+let paragraph =document.querySelectorAll(`p`);
+
+
+
+
+
+
 
