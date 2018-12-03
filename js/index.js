@@ -36,23 +36,34 @@ const siteContent = {"nav": {
   },
 };
 
+//navigation:
+let a = document.createElement("a");
+a.textContent =siteContent["nav"]["nav-item-1"];
+let header = document.querySelector("nav");
+header.prepend(a);
+let b = document.createElement("a");
+let secondA = document.querySelector("nav a:nth-child(2)");
+b.textContent =siteContent["nav"]["nav-item-2"];
+secondA.prepend(b);
+let c = document.createElement("a");
+let secondB = document.querySelector("nav a:nth-child(3)");
+c.textContent =siteContent["nav"]["nav-item-3"];
+secondB.prepend(c); 
+let nav = document.querySelectorAll("a");
+nav.forEach(function(element){
+  element.style.color="green";
+})
 
-
-
-// Example: Update the img src for the logo
 
 //Header
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
-
-
 
 let mainTitle = document.querySelector(".cta .cta-text h1");
 mainTitle.innerHTML ="DOM <br> IS<br>AWESOME"; 
 document.querySelector(".cta .cta-text button").textContent = siteContent["cta"]["button"];
 let mainImage = document.getElementById("cta-img");
 mainImage.setAttribute('src', siteContent["cta"]["img-src"]);
-
 //Main-Content
 //top-content
 document.querySelector(".text-content h4").textContent  = siteContent["main-content"] ["features-h4"];
