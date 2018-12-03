@@ -51,39 +51,44 @@ const ctaTextArr = Array.from(ctaText);
 const ctaImg = document.querySelector("#cta-img");
 const topContent = document.querySelector(".top-content").childNodes;
 const topContFeatures = topContent[1].childNodes;
-const featuresH4 = topContFeatures[1];
-const featuresPara = topContFeatures[3];
 const topContAbout = topContent[3].childNodes;
-const aboutH4 = topContAbout[1];
-const aboutPara = topContAbout[3];
 const middleImg = document.querySelector("#middle-img");
 const bottomContent = document.querySelector(".bottom-content").childNodes;
 const bottomServices = bottomContent[1].childNodes;
 const bottomProduct = bottomContent[3].childNodes;
 const bottomVision = bottomContent[5].childNodes;
+const contact = document.querySelector(".contact").childNodes;
 
 // ============= DOM Creation/Insertion
-for (let i = 0; i < navArr.length; i++) {
-  navArr[i].textContent = siteContent["nav"]["nav-item-" + (i + 1)];
-}
-logo.setAttribute("src", siteContent["nav"]["img-src"]);
-for (let i = 1; i < ctaTextArr.length; i++) {
-  if (i === 1) {
-    ctaTextArr[i].textContent = siteContent["cta"]["h1"];
+(function() {
+  for (let i = 0; i < navArr.length; i++) {
+    navArr[i].textContent = siteContent["nav"]["nav-item-" + (i + 1)];
   }
-  if (i === 3) {
-    ctaTextArr[i].textContent = siteContent["cta"]["button"];
+  logo.setAttribute("src", siteContent["nav"]["img-src"]);
+  for (let i = 1; i < ctaTextArr.length; i++) {
+    if (i === 1) {
+      ctaTextArr[i].textContent = siteContent["cta"]["h1"];
+    }
+    if (i === 3) {
+      ctaTextArr[i].textContent = siteContent["cta"]["button"];
+    }
   }
-}
-ctaImg.src = siteContent["cta"]["img-src"];
-featuresH4.textContent = siteContent["main-content"]["features-h4"];
-featuresPara.textContent = siteContent["main-content"]["features-content"];
-aboutH4.textContent = siteContent["main-content"]["about-h4"];
-aboutPara.textContent = siteContent["main-content"]["about-content"];
-middleImg.src = siteContent["main-content"]["middle-img-src"];
-bottomServices[1].textContent = siteContent["main-content"]["services-h4"];
-bottomServices[3].textContent = siteContent["main-content"]["services-content"];
-bottomProduct[1].textContent = siteContent["main-content"]["product-h4"];
-bottomProduct[3].textContent = siteContent["main-content"]["product-content"];
-bottomVision[1].textContent = siteContent["main-content"]["vision-h4"];
-bottomVision[3].textContent = siteContent["main-content"]["vision-content"];
+  ctaImg.src = siteContent["cta"]["img-src"];
+  topContFeatures[1].textContent = siteContent["main-content"]["features-h4"];
+  topContFeatures[3].textContent =
+    siteContent["main-content"]["features-content"];
+  topContAbout[1].textContent = siteContent["main-content"]["about-h4"];
+  topContAbout[3].textContent = siteContent["main-content"]["about-content"];
+  middleImg.src = siteContent["main-content"]["middle-img-src"];
+  bottomServices[1].textContent = siteContent["main-content"]["services-h4"];
+  bottomServices[3].textContent =
+    siteContent["main-content"]["services-content"];
+  bottomProduct[1].textContent = siteContent["main-content"]["product-h4"];
+  bottomProduct[3].textContent = siteContent["main-content"]["product-content"];
+  bottomVision[1].textContent = siteContent["main-content"]["vision-h4"];
+  bottomVision[3].textContent = siteContent["main-content"]["vision-content"];
+  contact[1].textContent = siteContent["contact"]["contact-h4"];
+  contact[3].textContent = siteContent["contact"]["address"];
+  contact[5].textContent = siteContent["contact"]["phone"];
+  contact[6].textContent = siteContent["contact"]["email"];
+})();
