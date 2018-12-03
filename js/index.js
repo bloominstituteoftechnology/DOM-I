@@ -43,17 +43,41 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute("src", siteContent["nav"]["img-src"]);
+// let logo = document.getElementById("logo-img");
+// logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
 // ================================ navigation
 const anchor = document.querySelectorAll("nav a");
 anchor[0].textContent = siteContent["nav"]["nav-item-1"];
+anchor[0].style.color = "green";
 anchor[1].textContent = siteContent["nav"]["nav-item-2"];
+anchor[1].style.color = "green";
 anchor[2].textContent = siteContent["nav"]["nav-item-3"];
+anchor[2].style.color = "green";
 anchor[3].textContent = siteContent["nav"]["nav-item-4"];
+anchor[3].style.color = "green";
 anchor[4].textContent = siteContent["nav"]["nav-item-5"];
+anchor[4].style.color = "green";
 anchor[5].textContent = siteContent["nav"]["nav-item-6"];
+anchor[5].style.color = "green";
+
+const logo = document.getElementById("logo-img");
+logo.setAttribute("src", siteContent["nav"]["img-src"]);
+
+//============================== created two new nav
+const newAnchor1 = document.createElement("a");
+newAnchor1.href = "#";
+newAnchor1.textContent = "About US";
+newAnchor1.style.color = "green";
+
+const newAnchor2 = document.createElement("a");
+newAnchor2.href = "#";
+newAnchor2.textContent = "Blog";
+newAnchor2.style.color = "green";
+
+const newNav = document.querySelector("nav");
+newNav.prepend(newAnchor1);
+newNav.appendChild(newAnchor2);
 
 // ================================ cta
 const ctaH1 = document.querySelector("h1");
