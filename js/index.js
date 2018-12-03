@@ -49,9 +49,18 @@ const logo = document.querySelector("#logo-img");
 const ctaText = document.querySelector(".cta-text").childNodes;
 const ctaTextArr = Array.from(ctaText);
 const ctaImg = document.querySelector("#cta-img");
+const topContent = document.querySelector(".top-content").childNodes;
+const topContFeatures = topContent[1].childNodes;
+const featuresH4 = topContFeatures[1];
+const featuresPara = topContFeatures[3];
+const topContAbout = topContent[3].childNodes;
+const aboutH4 = topContAbout[1];
+const aboutPara = topContAbout[3];
+const middleImg = document.querySelector("#middle-img");
 
+// ============= DOM Creation/Insertion
 for (let i = 0; i < navArr.length; i++) {
-  navArr[i].textContent = siteContent["nav"]["nav-item-" + i];
+  navArr[i].textContent = siteContent["nav"]["nav-item-" + (i + 1)];
 }
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 for (let i = 1; i < ctaTextArr.length; i++) {
@@ -63,3 +72,8 @@ for (let i = 1; i < ctaTextArr.length; i++) {
   }
 }
 ctaImg.src = siteContent["cta"]["img-src"];
+featuresH4.textContent = siteContent["main-content"]["features-h4"];
+featuresPara.textContent = siteContent["main-content"]["features-content"];
+aboutH4.textContent = siteContent["main-content"]["about-h4"];
+aboutPara.textContent = siteContent["main-content"]["about-content"];
+middleImg.src = siteContent["main-content"]["middle-img-src"];
