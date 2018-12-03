@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM Is Awesome ",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -51,6 +51,11 @@ const contactContentParagraphs = document.querySelectorAll('.contact p')
 const middleImage = document.getElementById('middle-img')
 const footer = document.querySelector('footer');
 
+// stretch variables
+const paragraphs = document.querySelectorAll('p');
+const cta = document.querySelector('.cta');
+const mainContent = document.querySelector('.main-content');
+
 
 // ============================================= Navigation and Logo
 navigation[0].textContent = siteContent.nav["nav-item-1"];
@@ -64,17 +69,16 @@ logo.src = siteContent["nav"]["img-src"];
 
 
 // ============================================= Navigation Color Change and Additional Nav Items
+
 // add class to navigation to make color green
 navigation.forEach(item => item.style.color = 'green');
 
 // additional navigation elements
-
 const newNav1 = document.createElement('a');
 const newNav2 = document.createElement('a');
 
-
 newNav1.href = '#';
-newNav1.textContent = 'Awesomeness';
+newNav1.textContent = 'Awesome';
 newNav1.style.color = 'green';
 
 newNav2.href = '#';
@@ -84,13 +88,12 @@ newNav2.style.color = 'green';
 navAdditions.append(newNav1);
 navAdditions.append(newNav2);
 
-newNav1.style.color = 'green';
-
 
 // ============================================= CTA section
 ctaText.textContent = siteContent['cta']['h1']
 ctaButton.textContent = siteContent['cta']['button']
 ctaImg.src = siteContent['cta']['img-src'];
+
 
 // ============================================= main content
 mainContentHeaders[0].textContent = siteContent['main-content']['features-h4'];
@@ -109,6 +112,7 @@ mainContentParagraphs[4].textContent = siteContent['main-content']['vision-conte
 // ============================================= middle image
 middleImage.src = siteContent['main-content']['middle-img-src'];
 
+
 // ============================================= contact
 contactContentHeaders[0].textContent = siteContent['contact']['contact-h4'];
 contactContentParagraphs[0].textContent = siteContent['contact']['address'];
@@ -118,3 +122,34 @@ contactContentParagraphs[2].textContent = siteContent['contact']['email'];
 
 // ============================================= footer
 footer.textContent = siteContent.footer.copyright;
+
+
+// ============================================= stretch goals
+
+// general style changes using JS
+ctaButton.style.width = "200px";
+ctaButton.style.height = "60px";
+
+paragraphs.forEach(items => items.style.color = "#383838");
+
+footer.style.borderTop = "2px solid black";
+footer.style.paddingTop = "20px";
+
+// event listener stretch goals
+ctaButton.addEventListener('click', function () {
+  paragraphs.forEach(items => items.style.color = "red");
+
+});
+
+ctaButton.addEventListener('dblclick', function () {
+  paragraphs.forEach(items => items.style.color = "#383838");
+
+});
+
+newNav1.addEventListener('click', function () {
+  cta.style.display = "none";
+});
+
+newNav2.addEventListener('click', function () {
+  cta.style.display = "flex";
+});
