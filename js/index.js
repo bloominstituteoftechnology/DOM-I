@@ -86,6 +86,23 @@ contactP[2].textContent = siteContent.contact.email;
 let footer = document.querySelector('footer');
 footer.textContent = siteContent.footer.copyright;
 
+let navBarA = document.querySelectorAll('header nav a');
+for (i = 0; i < navBarA.length; i++) {
+  navBarA[i].style.color = "red";
+}
+
+let navBar = document.querySelector('nav');
+let newItem = document.createElement('a');
+newItem.href = "#";
+newItem.textContent = "Test";
+navBar.prepend(newItem);
+let newItem2 = document.createElement('a');
+newItem2.href = "#";
+newItem2.textContent = "Test2";
+navBar.append(newItem2);
+
+
+
 
 
 
