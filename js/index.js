@@ -97,4 +97,5 @@ contactP[2].textContent = siteContent["contact"]["email"];
 
 //===========footer=============
 
-console.log(featuresH4);
+const footer = document.querySelector("footer p");
+footer.textContent = siteContent["footer"]["copyright"];
