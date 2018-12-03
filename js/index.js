@@ -42,24 +42,18 @@ const siteContent = {
 
 
 let nav = document.querySelectorAll('a');
-//for (let i = 0; i < navLink1.length; i++) {
-  //navLink1[i].textContent = siteContent.nav['nav-item-${i + 1}'];
 nav[0].textContent = 'Services';
-nav[0].style.color = 'grey'
+nav[0].style.color = 'green'
 nav[1].textContent = 'Product';
-nav[1].style.color = 'grey'
+nav[1].style.color = 'green'
 nav[2].textContent = 'Vision';
-nav[2].style.color = 'grey'
+nav[2].style.color = 'green'
 nav[3].textContent = 'Features';
-nav[3].style.color = 'grey'
+nav[3].style.color = 'green'
 nav[4].textContent = 'About';
-nav[4].style.color = 'grey'
+nav[4].style.color = 'green'
 nav[5].textContent = 'Contact';
-nav[5].style.color = 'grey'
-
-
-
-
+nav[5].style.color = 'green'
 
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
@@ -71,6 +65,33 @@ let headerPic = document.getElementById("cta-img");
 headerPic.setAttribute('src', siteContent["cta"]["img-src"])
 
 const ctaButton = document.querySelector(".cta-text button").textContent = "Get Started";
+
+function fill(items, values) {
+  items.forEach((item, index) => item.innerText = values[index]);
+}
+
+let mainContentH4 = document.querySelectorAll('.text-content h4');
+let mainContentKeys = Object.keys(siteContent['main-content']);
+let h4Values = [];
+mainContentKeys.forEach((key) => {
+  if (key.includes('h4')) {
+    h4Values.push(siteContent['main-content'][key]);
+  }
+});
+
+fill(mainContentH4, h4Values);
+
+let mainContentP = document.querySelectorAll('.text-content p');
+let pValues = [];
+mainContentKeys.forEach((key) => {
+  if (key.includes('content')) {
+    pValues.push(siteContent['main-content'][key]);
+  }
+});
+
+fill(mainContentP, pValues);
+
+
 
 let midPagePic = document.getElementById("middle-img");
 midPagePic.setAttribute('src', siteContent["main-content"]["middle-img-src"])
