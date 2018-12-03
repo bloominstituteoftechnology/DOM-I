@@ -38,5 +38,60 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+let midImg = document.getElementById("middle-img");
+midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+// function navPop(){
+//   let base = document.querySelectorAll('a');
+//   let counter = Array.from(base).length;
+//   let fillerText = Object.values(siteContent.nav);
+//   for (let i = 0; i < counter; i++){
+//     base[i].textContent = fillerText[i];
+//   };
+// };
+// navPop();
+
+function populate(section, elem, value){
+  let base = document.querySelectorAll('.'+section+' '+elem);
+  let counter = Array.from(base).length;
+  let baseText = Object.values(siteContent[section]);
+  let fillerText = [];
+  for (let i = 0; i < baseText.length; i++){
+    if (Object.keys(siteContent[section])[i].includes(value) == true){
+      fillerText.push(Object.values(siteContent[section])[i]);
+    }
+  };
+  for (let i = 0; i < counter; i++){
+    base[i].textContent = fillerText[i];
+  };
+};
+
+function populate2(section, elem, value){
+  let base = document.querySelectorAll(section+' '+elem);
+  let counter = Array.from(base).length;
+  let baseText = Object.values(siteContent[section]);
+  let fillerText = [];
+  for (let i = 0; i < baseText.length; i++){
+    if (Object.keys(siteContent[section])[i].includes(value) == true){
+      fillerText.push(Object.values(siteContent[section])[i]);
+    }
+  };
+  for (let i = 0; i < counter; i++){
+    base[i].textContent = fillerText[i];
+  };
+};
+
+populate2('nav', 'a', 'item');
+populate('cta', 'h1', 'h1');
+populate('cta', 'button', 'button');
+populate('main-content', 'h4', 'h4');
+populate('main-content', 'p', 'content');
+populate('contact', 'h4', 'h4');
+populate('contact', 'p', 'e');
+populate2('footer', 'p', 'c');
+
