@@ -42,7 +42,12 @@ const siteContent = {
 const header = document.querySelector('header');
 //Navigation
 const navigation = document.querySelector('nav');
-const navigationLinks = Array.from(document.querySelectorAll('a'));
+const navigationLinkA = navigation.children[0];
+const navigationLinkB = navigation.children[1];
+const navigationLinkC = navigation.children[2];
+const navigationLinkD = navigation.children[3];
+const navigationLinkE = navigation.children[4];
+const navigationLinkF = navigation.children[5];
 // Logo
 const logo = document.querySelector("#logo-img");
 //Call to Action
@@ -68,20 +73,23 @@ const midImg = document.querySelector('#middle-img');
 // Bottom Content
 const bottomContent = document.querySelector('.bottom-content');
 // Bottom Text Content One
-const botTextCotentOne = topContent.children[0];
-const botTextCotentOneH4= botTextCotentOne.children[0];
-const botTextCotentOneP= botTextCotentOne.children[1];
+console.log(bottomContent.children);
+const botTextContentOne = bottomContent.children[0];
+const botTextContentOneH4= botTextContentOne.children[0];
+const botTextContentOneP= botTextContentOne.children[1];
 // Bottom Text Content Two
-const botTextCotentTwo = topContent.children[1];
-const botTextCotentTwoH4= botTextCotentTwo.children[0];
-const botTextCotentTwoP= botTextCotentTwo.children[1];
+const botTextContentTwo = bottomContent.children[1];
+const botTextContentTwoH4= botTextContentTwo.children[0];
+const botTextContentTwoP= botTextContentTwo.children[1];
 // Bottom Text Content Three
-const botTextCotentThree = topContent.children[2];
-const botTextCotentThreeH4= botTextCotentThree.children[0];
-const botTextCotentThreeP= botTextCotentThree.children[1];
+const botTextContentThree = bottomContent.children[2];
+const botTextContentThreeH4= botTextContentThree.children[0];
+const botTextContentThreeP= botTextContentThree.children[1];
 // Contact
 const contact = document.querySelector('.contact');
+console.log(contact);
 const contactH4 = contact.children[0];
+
 const contactP1 = contact.children[1];
 const contactP2 = contact.children[2];
 const contactP3 = contact.children[3];
@@ -89,4 +97,16 @@ const contactP3 = contact.children[3];
 const footer = document.querySelector('footer');
 const footerP = footer.children[0]
 
-// logo.setAttribute('src', siteContent["nav"]["img-src"])
+ 
+
+// UPDATING HTML
+
+//Navigation
+navigationLinkA.textContent= siteContent['nav']['nav-item-1'];
+navigationLinkB.textContent= siteContent['nav']['nav-item-2'];
+navigationLinkC.textContent= siteContent['nav']['nav-item-3'];
+navigationLinkD.textContent= siteContent['nav']['nav-item-4'];
+navigationLinkE.textContent= siteContent['nav']['nav-item-5'];
+navigationLinkF.textContent= siteContent['nav']['nav-item-6'];
+// Nav Logo
+logo.setAttribute('src', siteContent["nav"]["img-src"])
