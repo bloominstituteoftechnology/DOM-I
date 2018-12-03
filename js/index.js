@@ -69,8 +69,9 @@ headerImage.src = 'img/header-img.png';
 
 
 
-//================== Paragraph Headers - H4
+//================== Paragraphs & Headers
 
+//================== H4
 const h4 = document.querySelectorAll(".main-content h4");
 h4[0].textContent = siteContent[`main-content`]["features-h4"];
 h4[1].textContent = siteContent[`main-content`]["about-h4"];
@@ -78,14 +79,20 @@ h4[2].textContent = siteContent[`main-content`]["services-h4"];
 h4[3].textContent = siteContent[`main-content`]["product-h4"];
 h4[4].textContent = siteContent[`main-content`]["vision-h4"];
 
+//================== Paragraphs
+const paragraphs = document.querySelectorAll(".main-content p");
+paragraphs[0].textContent = siteContent[`main-content`]["features-content"];
+paragraphs[1].textContent = siteContent[`main-content`]["about-content"];
+paragraphs[2].textContent = siteContent[`main-content`]["services-content"];
+paragraphs[3].textContent = siteContent[`main-content`]["fproduct-content"];
+paragraphs[4].textContent = siteContent[`main-content`]["vision-content"];
 
 
 
 const topContent = document.querySelectorAll(".top-content");
-const text = document.querySelectorAll(".text-content");
 
+//================== Middle Image
 const middleImg = document.querySelector("#middle-img");
-
 middleImg = 'img/mid-page-accent.jpg';
 
 const bottomContent = document.querySelectorAll(".bottom-content");
