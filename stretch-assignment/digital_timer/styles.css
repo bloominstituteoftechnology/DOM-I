@@ -1,14 +1,59 @@
-body {
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  background: #eee0c7;
+}
+
+h1 {
+  font-size: 4rem;
+  padding: 60px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  background: #6c1814;
+  color: white;
+}
+
+.container {
+  margin: 0 auto;
   display: flex;
-  justify-content: center;
+  max-width: 880px;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+  border: 3px solid black;
 }
 
 .digit {
   display: inline-block;
   font-size: 80px;
+  margin: 100px 0;
 }
 
 .redDigit {
   color: red;
+}
+
+.btn {
+  padding: 10px 50px;
+  border: 1px solid black;
+  border-radius: 13px;
+  -moz-border-radius: 13px;
+  -webkit-border-radius: 13px;
+  font-size: 2rem;
+  margin-bottom: 50px;
+}
+
+.btn:hover {
+  background: #6c1814;
+  color: white;
+}
+
+.btn:focus {
+  outline: none;
 }
