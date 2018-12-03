@@ -65,4 +65,33 @@ ctaButton.textContent = siteContent.cta["button"];
 const ctaLogo = document.getElementById("cta-img");
 ctaLogo.setAttribute('src', siteContent.cta["img-src"]);
 
-//=============================================== CTA
+//=============================================== Main Content
+
+const subTitles = document.querySelectorAll('h4');
+subTitles[0].textContent = siteContent["main-content"]["features-h4"];
+subTitles[1].textContent = siteContent["main-content"]["about-h4"];
+subTitles[2].textContent = siteContent["main-content"]["services-h4"];
+subTitles[3].textContent = siteContent["main-content"]["product-h4"];
+subTitles[4].textContent = siteContent["main-content"]["vision-h4"];
+
+const para = document.querySelectorAll('p');
+para[0].textContent = siteContent["main-content"]["features-content"];
+para[1].textContent = siteContent["main-content"]["about-content"];
+para[2].textContent = siteContent["main-content"]["services-content"];
+para[3].textContent = siteContent["main-content"]["product-content"];
+para[4].textContent = siteContent["main-content"]["vision-content"];
+
+const middleLogo = document.getElementById("middle-img");
+middleLogo.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+//=============================================== Contact
+
+subTitles[5].textContent = siteContent.contact["contact-h4"];
+para[5].textContent = siteContent.contact["address"];
+para[6].textContent = siteContent.contact["phone"];
+para[7].textContent = siteContent.contact["email"];
+
+
+//=============================================== footer
+
+para[8].textContent = siteContent.footer["copyright"];
