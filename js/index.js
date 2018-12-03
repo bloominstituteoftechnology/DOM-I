@@ -94,7 +94,7 @@ document.querySelectorAll('.main-content .text-content p').forEach(
 
 const contactContent = Object.values(siteContent.contact);
 const contactNodes = document.getElementsByClassName("contact")[0].children;
-console.log(document.querySelector('.contact p').style["white-space"] = 'pre');
+document.querySelector('.contact p').style["white-space"] = 'pre';
 
 Array.from(contactNodes).forEach(function(node, index){
   node.textContent = contactContent[index];
