@@ -76,6 +76,9 @@ let navItems = document.querySelectorAll('a');
 // map method
 
 let navItemsArr = Array.from(navItems);
+
+// navItems.style.color = "green";
+
 navItemsArr.map((item, index)=>item.textContent = Object.values(siteContent.nav)[index])
 
 //====== cta section
@@ -84,9 +87,9 @@ navItemsArr.map((item, index)=>item.textContent = Object.values(siteContent.nav)
 // i'll come back to this when i finish mvp
 
 let h1 = document.querySelector('h1');
-let h1Arr = Array.from(h1);
-// console.log(h1)
-h1.textContent = siteContent["cta"]["h1"];
+// let ctaH1 = Object.values(siteContent["cta"]["h1"].split(" ").join("\r\n"));
+h1.style.whiteSpace = "pre-line";
+h1.textContent = siteContent["cta"]["h1"].split(" ").join("\r\n");
 
 let button = document.querySelector('button')
 button.textContent = siteContent["cta"]["button"];
