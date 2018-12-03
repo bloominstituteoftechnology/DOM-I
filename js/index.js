@@ -42,15 +42,22 @@ const siteContent = {
 // logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //========================Nav Bar
-let header = document.querySelector("header");
+let navBar = document.querySelector("nav");
 const navLogoImage = document.querySelector("#logo-img");
 const links = document.querySelectorAll("a");
 
-for (let i = 0; i < links.length; i++) {
-  links[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
-}
+links[0].textContent = siteContent[`nav`]["nav-item-1"];
+links[1].textContent = siteContent[`nav`]["nav-item-2"];
+links[2].textContent = siteContent[`nav`]["nav-item-3"];
+links[3].textContent = siteContent[`nav`]["nav-item-4"];
+links[4].textContent = siteContent[`nav`]["nav-item-5"];
+links[5].textContent = siteContent[`nav`]["nav-item-6"];
 
-//header.style.color = "green";
+// for (let i = 0; i < links.length; i++) {
+//   links[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
+// }
+
+navBar.style.color = "green";
 
 navLogoImage.src = 'img/logo.png';
 
@@ -89,7 +96,7 @@ paragraphs[3].textContent = siteContent[`main-content`]["product-content"];
 paragraphs[4].textContent = siteContent[`main-content`]["vision-content"];
 
 
-//=================== Top Content Flex
+//=================== Top Content Display Flex
 const topContent = document.querySelectorAll(".top-content");
 topContent.style.display = flex;
 
@@ -97,16 +104,20 @@ topContent.style.display = flex;
 const middleImg = document.querySelector("#middle-img");
 middleImg = 'img/mid-page-accent.jpg';
 
-//=================== Bottom Content Flex
+//=================== Bottom Content Display Flex
 const bottomContent = document.querySelectorAll(".bottom-content");
 bottomContent.style.display = flex;
 
 
 //=================== Contact Section
 const contactSection = document.querySelectorAll(".contact");
+const contactHeader = document.querySelector(".contact h4");
+//contactHeader.textContent = siteContent[`main-content`]["contact-h4"];
+contactSection[0].textContent = siteContent[`contact`]["h4"];
+contactSection[1].textContent = siteContent[`contact`]["address"];
 
 //=================== Footer
-const footer = document.querySelector(footer);
+const footer = document.querySelector("footer p");
 footer.textContent = siteContent[`main-content`]["footer"];
 
 
