@@ -63,3 +63,30 @@ ctaHeader.innerHTML = siteContent["cta"]["h1"].split(' ').join(`<br>`);
 
 const ctaButton = document.querySelector("button");
 ctaButton.textContent = siteContent["cta"]["button"];
+
+// ===== MAIN CONTENT =====
+
+const contentHeaders = Array.from(document.querySelectorAll("h4"));
+
+contentHeaders[0].textContent = siteContent["main-content"]["features-h4"];
+contentHeaders[1].textContent = siteContent["main-content"]["about-h4"];
+contentHeaders[2].textContent = siteContent["main-content"]["services-h4"];
+contentHeaders[3].textContent = siteContent["main-content"]["product-h4"];
+contentHeaders[4].textContent = siteContent["main-content"]["vision-h4"];
+
+contentHeaders[5].textContent = siteContent["contact"]["contact-h4"];
+
+
+const contentParas = Array.from(document.querySelectorAll("p"));
+
+contentParas[0].textContent = siteContent["main-content"]["features-content"];
+contentParas[1].textContent = siteContent["main-content"]["about-content"];
+contentParas[2].textContent = siteContent["main-content"]["services-content"];
+contentParas[3].textContent = siteContent["main-content"]["product-content"];
+contentParas[4].textContent = siteContent["main-content"]["vision-content"];
+
+contentParas[5].innerHTML = siteContent["contact"]["address"].split('Street ').join(`Street <br>`);
+contentParas[6].textContent = siteContent["contact"]["phone"];
+contentParas[7].textContent = siteContent["contact"]["email"];
+
+contentParas[8].textContent = siteContent["footer"]["copyright"];
