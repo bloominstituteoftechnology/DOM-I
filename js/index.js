@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "123 Way 456 Street\r\nSomewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -39,16 +39,55 @@ const siteContent = {
 
 // Element selectors
 // -----------------
-let navItems = document.querySelectorAll("nav > a");
+
+let navItems = document.querySelectorAll("nav > a, nav ~ img");
 let logoImg = document.querySelector("#logo-img");
 
-let ctaTextItems = document.querySelectorAll(".cta-text > *");
+let ctaTextItems = document.querySelectorAll(".cta-text > *, .cta-text ~ img");
 let ctaImg = document.querySelector("#cta-img");
 
-let mainContentItems = document.querySelectorAll(".main-content h4, p");
-console.log(mainContentItems);
+let mainContentItems = document.querySelectorAll(".main-content h4, .main-content p, .main-content img");
 let middleImg = document.querySelector("#middle-img");
 
 let contactItems = document.querySelectorAll(".contact > *");
 
 let copyrightItem = document.querySelector("footer > p:last-child");
+
+// HTML updates using JSON data
+// ----------------------------
+
+Array.prototype.forEach.call(navItems, (item, i) => {
+  if (Object.keys(siteContent["nav"])[i].includes("img")) {
+    item.src = Object.values(siteContent["nav"])[i];
+  } else {
+    item.textContent = Object.values(siteContent["nav"])[i];
+  }
+});
+
+Array.prototype.forEach.call(ctaTextItems, (item, i) => {
+  if (Object.keys(siteContent["cta"])[i].includes("img")) {
+    item.src = Object.values(siteContent["cta"])[i];
+  } else if (item.tagName === "H1") {
+    item.style.whiteSpace = "pre-line";
+    item.textContent = Object.values(siteContent["cta"])[i].split(" ").join("\r\n");
+  }
+  else {
+    item.textContent = Object.values(siteContent["cta"])[i];
+  }
+});
+ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
+
+Array.prototype.forEach.call(mainContentItems, (item, i) => {
+  if (Object.keys(siteContent["main-content"])[i].includes("img")) {
+    item.src = Object.values(siteContent["main-content"])[i];
+  } else {
+    item.textContent = Object.values(siteContent["main-content"])[i];
+  }
+});
+
+Array.prototype.forEach.call(contactItems, (item, i) => {
+  item.style.whiteSpace = "pre-line";
+  item.textContent = Object.values(siteContent["contact"])[i]
+});
+
+copyrightItem.textContent = siteContent["footer"]["copyright"];
