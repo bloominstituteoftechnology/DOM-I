@@ -61,10 +61,15 @@ const anchor = document.querySelectorAll("nav a");
 // anchor[5].textContent = siteContent["nav"]["nav-item-6"];
 // anchor[5].style.color = "green";
 
-for (let i = 0; i < anchor.length; i++) {
-  anchor[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
-  anchor[i].style.color = "green";
-}
+// for (let i = 0; i < anchor.length; i++) {
+//   anchor[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
+//   anchor[i].style.color = "green";
+// }
+
+anchor.forEach((item, i) => {
+  item.textContent = siteContent.nav[`nav-item-${i + 1}`];
+  item.style.color = "green";
+});
 
 const logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
@@ -84,9 +89,7 @@ const newNav = document.querySelector("nav");
 newNav.prepend(newAnchor1);
 newNav.appendChild(newAnchor2);
 
-//=============================== stretch creating
-
-// ================================ cta
+// ================================== cta
 const ctaH1 = document.querySelector("h1");
 ctaH1.textContent = siteContent.cta.h1;
 const ctaButton = document.querySelector("button");
@@ -94,7 +97,8 @@ ctaButton.textContent = siteContent.cta.button;
 const ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
 
-//================================= main content
+//================================= main content top section
+
 const topSection = document.querySelectorAll(".top-content .text-content");
 
 const feature = topSection[0];
@@ -109,9 +113,11 @@ aboutHeading.textContent = siteContent["main-content"]["about-h4"];
 const aboutContent = about.querySelector("p");
 aboutContent.textContent = siteContent["main-content"]["about-content"];
 
+//================================= main content middle section
 const middleImg = document.getElementById("middle-img");
 middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
+//================================= main content bottom section
 const bottomSection = document.querySelectorAll(
   ".bottom-content .text-content"
 );
@@ -150,3 +156,16 @@ contactEmail.textContent = siteContent["contact"]["email"];
 // =========================== footer
 const footer = document.querySelector("footer p");
 footer.textContent = siteContent.footer.copyright;
+
+//============================= Stretch Tasks ==================
+
+ctaH1.style.fontFamily = "cursive";
+ctaH1.style.fontSize = "90px";
+ctaButton.style.backgroundColor = "lightblue";
+ctaButton.style.borderRadius = "10px";
+
+const heading4 = document.querySelectorAll("h4");
+heading4.forEach(item => {
+  item.style.fontSize = "30px";
+  item.style.fontFamily = "cursive";
+});
