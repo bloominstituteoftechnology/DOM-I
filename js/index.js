@@ -39,4 +39,50 @@ const siteContent = {
 
 // Example: Update the img src for the logo 
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+//Create selectors for each image
+let ctaImg = document.getElementById("cta-img");
+let middleImg = document.getElementById("middle-img");
+
+//Create selectors for all nav links
+let navLinks = Array.from(document.querySelectorAll("header nav a"));
+
+//Create selector for h1
+let mainHeader = document.querySelector(".cta-text h1");
+
+//Create selector for button
+let button = document.querySelector(".cta-text button");
+
+//Create array with all text-content divs
+let textContentDivs = Array.from(document.querySelectorAll(".text-content"));
+
+//Create selectors for features section
+let featuresH4 = textContentDivs[0].querySelector("h4");
+let featuresP = textContentDivs[0].querySelector("p");
+
+//Create selectors for about section
+let aboutH4 = textContentDivs[1].querySelector("h4");
+let aboutP = textContentDivs[1].querySelector("p");
+
+//Create selectors for services section
+let servicesH4 = textContentDivs[2].querySelector("h4");
+let servicesP = textContentDivs[2].querySelector("p");
+
+//create selectors for product section
+let productH4 = textContentDivs[3].querySelector("h4");
+let productP = textContentDivs[3].querySelector("p");
+
+//create selectors for vision section
+let visionH4 = textContentDivs[1].querySelector("h4");
+let visionP = textContentDivs[1].querySelector("p");
+
+//create selectors for contact section
+let contactH4 = document.querySelector(".contact h4");
+let contactParagraphs = Array.from(document.querySelectorAll(".contact p"));
+let contactAddress = contactParagraphs[0];
+let contactPhone = contactParagraphs[1];
+let contactEmail = contactParagraphs[2];
+
+//create selector for footer section
+let footerSection = document.querySelector("footer p");
