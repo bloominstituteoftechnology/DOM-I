@@ -75,12 +75,31 @@ let navItems = document.querySelectorAll('a');
 
 // map method
 
+
+
 let navItemsArr = Array.from(navItems);
 
 navItemsArr.map((item, index)=>{
-  item.textContent = Object.values(siteContent.nav)[index] 
-  item.style.color = "green"
+  item.textContent = Object.values(siteContent.nav)[index]; 
+  item.style.color = "green";
 })
+
+// new nav items
+const githubNav = document.createElement('a');
+githubNav.href = '#';
+githubNav.style.color = "green";
+githubNav.textContent = 'GitHub';
+
+const homeNav = document.createElement('a')
+homeNav.href = "#";
+githubNav.style.color = "green";
+homeNav.textContent = 'Home'
+
+// place them somewhere
+
+let nav = document.querySelector('nav');
+nav.appendChild(githubNav);
+nav.prepend(homeNav);
 
 //====== cta section
 
