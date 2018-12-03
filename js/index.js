@@ -58,19 +58,24 @@ const mainContent = document.querySelector('.main-content');
 
 
 // ============================================= Navigation and Logo
-navigation[0].textContent = siteContent.nav["nav-item-1"];
-navigation[1].textContent = siteContent.nav["nav-item-2"];
-navigation[2].textContent = siteContent.nav["nav-item-3"];
-navigation[3].textContent = siteContent.nav["nav-item-4"];
-navigation[4].textContent = siteContent.nav["nav-item-5"];
-navigation[5].textContent = siteContent.nav["nav-item-6"];
+// individually targeting nav items
+// navigation[0].textContent = siteContent.nav["nav-item-1"];
+// navigation[1].textContent = siteContent.nav["nav-item-2"];
+// navigation[2].textContent = siteContent.nav["nav-item-3"];
+// navigation[3].textContent = siteContent.nav["nav-item-4"];
+// navigation[4].textContent = siteContent.nav["nav-item-5"];
+// navigation[5].textContent = siteContent.nav["nav-item-6"];
 
 logo.src = siteContent["nav"]["img-src"];
+
+// assign object nav keys to array and loop through to apply to DOM
+const navLinks = Object.values(siteContent.nav);
+navigation.forEach((item, index) => item.textContent = navLinks[index]);
 
 
 // ============================================= Navigation Color Change and Additional Nav Items
 
-// add class to navigation to make color green
+// loop to add class to navigation
 navigation.forEach(item => item.style.color = 'green');
 
 // additional navigation elements
