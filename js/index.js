@@ -118,6 +118,33 @@ contactParagraphs[2].textContent = siteContent.contact.email;
 const footer = document.querySelector('footer p');
 footer.textContent = siteContent.footer.copyright;
 
+// Adding a button to change nav color
+
+const container = document.querySelector('.container');
+const topButton = document.createElement('button')
+topButton.textContent = 'Click me to change the nav colors!!!';
+container.prepend(topButton);
+topButton.onclick = function() {
+  navItems.forEach(item => item.style.color = getRandomColor());
+}
+topButton.style.display = 'block';
+topButton.style.marginTop = '20px';
+topButton.style.borderRadius = '5px';
+topButton.style.padding = '10px 5px';
+topButton.style.fontSize = '20px';
+topButton.style.background = 'black';
+topButton.style.color = 'white';
+
+function getRandomColor() {
+  const letters = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+
 
 
 
