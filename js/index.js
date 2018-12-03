@@ -75,7 +75,7 @@ let navItems = document.querySelectorAll('a');
 // map method
 
 let navItemsArr = Array.from(navItems);
-navItemsArr.map((item, index)=>item.textContent= siteContent["nav"][`nav-item-${1 + index}`])
+navItemsArr.map((item, index)=>item.textContent = Object.values(siteContent.nav)[index])
 
 //====== section cta
 
