@@ -4,7 +4,8 @@ let msHundreds = document.querySelector("#msHundreds");
 let secondOnes = document.querySelector("#secondOnes");
 let secondTens = document.querySelector("#secondTens");
 let semicolon = document.querySelector("#colon");
-let button = document.querySelector("button");
+let startButton = document.querySelector("#start");
+let restartButton = document.querySelector("#restart");
 
 msTens.textContent = 0;
 msHundreds.textContent = 0;
@@ -12,10 +13,18 @@ secondOnes.textContent = 0;
 secondTens.textContent = 0;
 
 let timer;
+let timerIsGoing = false;
 
 function start() {
-    timer = setInterval(msTen, 10);
-    button.disabled = "disabled";
+    if (timerIsGoing === false) {
+        timer = setInterval(msTen, 10);
+        timerIsGoing = true;
+        startButton.textContent = "Pause Timer"
+    } else {
+        timer = clearInterval(timer);
+        startButton.textContent = "Start Timer"
+        timerIsGoing = false;
+    }
 }
 
 function restart() {
@@ -29,8 +38,9 @@ function restart() {
     secondOnes.classList.remove("redDigit");
     secondTens.classList.remove("redDigit");
     colon.classList.remove("redDigit");
-    button.disabled = false;
-    
+    startButton.disabled = false;
+    startButton.textContent = "Start Timer"
+    timerIsGoing = false;   
 }
 
 function secTens() {
@@ -42,6 +52,8 @@ function secTens() {
         secondTens.classList.add("redDigit");
         colon.classList.add("redDigit");
         clearInterval(timer);
+        startButton.textContent = "Timer Done"
+        startButton.disabled = true;
     } 
     else{
         secondTens.textContent = parseInt(secondTens.textContent) + 1;
