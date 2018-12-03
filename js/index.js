@@ -43,7 +43,17 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 const headerLinks = document.querySelectorAll("header nav a");
-console.log(headerLinks);
+const headerNav = document.querySelector("header nav");
+const newLink1 = document.createElement("a");
+newLink1.href = "#";
+newLink1.textContent = "History";
+
+headerNav.appendChild(newLink1);
+
+headerLinks.forEach((link) => {
+  link.style.color = "green";
+})
+
 headerLinks[0].textContent = siteContent["nav"]["nav-item-1"];
 headerLinks[1].textContent = siteContent["nav"]["nav-item-2"];
 headerLinks[2].textContent = siteContent["nav"]["nav-item-3"];
@@ -51,11 +61,6 @@ headerLinks[3].textContent = siteContent["nav"]["nav-item-4"];
 headerLinks[4].textContent = siteContent["nav"]["nav-item-5"];
 headerLinks[5].textContent = siteContent["nav"]["nav-item-6"];
 
-// const selectA = document.querySelectorAll("header nav a");
-// const a = Array.from(selectA);
-
-// console.log(a);
-// a.forEach((link) => {link.textContent = ["nav"]})
 
 
 // --------------- CTA
