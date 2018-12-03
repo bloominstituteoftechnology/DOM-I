@@ -12,6 +12,6 @@ setInterval(() => {
 
 setInterval(() => {
   const date = new Date();
-  msTens.textContent = date.getMilliseconds().toString();
-  msTens.textContent = date.getMilliseconds().toString();
+  msTens.textContent = date.getMilliseconds().toString()[2];
+  msHundreds.textContent = date.getMilliseconds().toString()[1];
 }, 1);
