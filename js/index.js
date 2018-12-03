@@ -50,6 +50,29 @@ navigation[3].textContent = siteContent.nav["nav-item-4"];
 navigation[4].textContent = siteContent.nav["nav-item-5"];
 navigation[5].textContent = siteContent.nav["nav-item-6"];
 
+
+// nav text to green
+for(let i = 0; i < navigation.length; i ++){
+  navigation[i].style.color = "green";
+}
+
+// aditional nav elements
+const navAdditions = document.querySelector('nav')
+ const newNav1 = document.createElement('a');
+ const newNav2 = document.createElement('a');
+ 
+ newNav1.href = '#';
+ newNav1.textContent = 'Awesome';
+ newNav1.style.color = 'green';
+ 
+ newNav2.href = '#';
+ newNav2.textContent = 'Secrets';
+ newNav2.style.color = 'green';
+ 
+ navAdditions.append(newNav1);
+ navAdditions.append(newNav2);
+
+
 // image header
 let himage = document.getElementById("cta-img");
 himage.src = siteContent['cta']['img-src'];
@@ -93,3 +116,5 @@ cPar[2].textContent = siteContent.contact["email"];
 // Footer
 const footer = document.querySelector('footer p');
 footer.textContent = siteContent.footer["copyright"]; 
+
+
