@@ -57,6 +57,12 @@ nlist.forEach(
   }
 );
 
+// var linknode = document.createElement('a');
+// var textnode = document.createTextNode('Link');
+// linknode.appendChild(textnode);
+// document.getElementById("nav").appendChild(node);
+
+
 
 document.querySelector('.cta-text h1').textContent = siteContent.cta.h1;
 document.querySelector('.cta-text button').textContent = siteContent.cta.h1;
