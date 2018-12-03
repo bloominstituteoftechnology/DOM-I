@@ -119,11 +119,21 @@ navigationLinkF.textContent= siteContent['nav']['nav-item-6'];
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // Call to Action
-// const cta = document.querySelector('.cta');
-// const ctaText = document.querySelector('.cta-text');
-// const ctaH1 = ctaText.children[0];
-// const ctaBTN = ctaText.children[1];
-// const ctaImg = document.querySelector('#cta-img');
-ctaH1.innerHTML="<h1>DOM<br>is<br>Awesome</h1>";
-ctaBTN.textContent="GetStarted";
-ctaImg.src="img/header-img.png";
+ctaH1.textContent=`${siteContent["cta"]["h1"]}`;
+ctaBTN.textContent=`${siteContent["cta"]["button"]}`;
+ctaImg.src= `${siteContent["cta"]["img-src"]}`;
+// Main Content
+// Headers
+topContentOneH4.textContent=`${siteContent["main-content"]["features-h4"]}`;
+topContentTwoH4.textContent=`${siteContent["main-content"]["about-h4"]}`;
+botTextContentOneH4.textContent=`${siteContent["main-content"]["services-h4"]}`;
+botTextContentTwoH4.textContent=`${siteContent["main-content"]["product-h4"]}`;
+botTextContentThreeH4.textContent=`${siteContent["main-content"]["vision-h4"]}`;
+// IMAGE
+midImg.src="img/mid-page-accent.jpg"
+// Paragraphs
+topContentOneP.textContent=`${siteContent["main-content"]["features-content"]}`;
+topContentTwoP.textContent=`${siteContent["main-content"]["about-content"]}`;
+botTextContentOneP.textContent=`${siteContent["main-content"]["services-content"]}`;
+botTextContentTwoP.textContent=`${siteContent["main-content"]["product-content"]}`;
+botTextContentThreeP.textContent=`${siteContent["main-content"]["vision-content"]}`;
