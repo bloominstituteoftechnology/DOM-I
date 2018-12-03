@@ -56,9 +56,11 @@ const mainHeaderText = document.querySelector('h1');
 const button = document.querySelector('button');
 const headerImage = document.querySelector('#cta-img');
 
+
 mainHeaderText.textContent = `${siteContent.cta.h1.slice(0,3)} \r\n`;
 mainHeaderText.textContent += `${siteContent.cta.h1.slice(4,6)} \r\n`;
 mainHeaderText.textContent += `${siteContent.cta.h1.slice(7)}`;
+mainHeaderText.style.whiteSpace = 'pre-line';
 button.textContent = siteContent.cta.button;
 headerImage.src = siteContent.cta["img-src"];
 
@@ -85,7 +87,9 @@ bottomContent[2].textContent =  siteContent["main-content"]["vision-content"];
 const contactH4 = document.querySelector('.contact h4');
 const contactParagraphs = document.querySelectorAll('.contact p');
 contactH4.textContent = siteContent.contact["contact-h4"];
-contactParagraphs[0].textContent = siteContent.contact.address;
+contactParagraphs[0].textContent = `${siteContent.contact.address.slice(0,18)} \r\n`;
+contactParagraphs[0].textContent += `${siteContent.contact.address.slice(19)} \r\n`;
+contactParagraphs[0].style.whiteSpace = 'pre-line';
 contactParagraphs[1].textContent = siteContent.contact.phone;
 contactParagraphs[2].textContent = siteContent.contact.email;
 
