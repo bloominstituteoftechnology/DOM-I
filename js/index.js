@@ -57,10 +57,16 @@ const button = document.querySelector(".cta-text button");
 const textContentList = document.querySelectorAll(".text-content");
 const contactText = document.querySelector(".contact")
 const footerText = document.querySelector("footer")
-
+console.log(allNavItems);
 
 //fill in nav:
-allNavItems[0].get
+allNavItems[0].innerHTML = siteContent["nav"]["nav-item-1"];
+allNavItems[1].innerHTML = siteContent["nav"]["nav-item-2"];
+allNavItems[2].innerHTML = siteContent["nav"]["nav-item-3"];
+allNavItems[3].innerHTML = siteContent["nav"]["nav-item-4"];
+allNavItems[4].innerHTML = siteContent["nav"]["nav-item-5"];
+allNavItems[5].innerHTML = siteContent["nav"]["nav-item-6"];
+
 
 //fill in h4 and p content:
 textContentList[0].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["features-h4"];
@@ -78,11 +84,7 @@ textContentList[3].getElementsByTagName("p")[0].innerHTML = siteContent["main-co
 textContentList[4].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["vision-h4"];
 textContentList[4].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["vision-content"];
 
-
-// contactHeader.textContent = "Contact";
-
 contactText.getElementsByTagName("h4")[0].innerHTML = siteContent["contact"]["contact-h4"];
-
 contactText.getElementsByTagName("p")[0].innerHTML = siteContent["contact"]["address"];
 contactText.getElementsByTagName("p")[1].innerHTML = siteContent["contact"]["phone"];
 contactText.getElementsByTagName("p")[2].innerHTML = siteContent["contact"]["email"];
