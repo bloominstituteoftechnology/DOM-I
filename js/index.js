@@ -39,28 +39,46 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 // HTML ELEMENTS STORAGE
-let header = document.querySelector('header');
+const header = document.querySelector('header');
 //Navigation
-let navigation = document.querySelector('nav');
-let navigationLinks = Array.from(document.querySelectorAll('a'));
+const navigation = document.querySelector('nav');
+const navigationLinks = Array.from(document.querySelectorAll('a'));
 // Logo
-let logo = document.querySelector("#logo-img");
+const logo = document.querySelector("#logo-img");
 //Call to Action
-let cta = document.querySelector('.cta');
-let ctaText = document.querySelector('.cta-text');
-let ctaH1 = ctaText.children[0];
-let ctaBTN = ctaText.children[1];
-let ctaImg = document.querySelector('#cta-img');
+const cta = document.querySelector('.cta');
+const ctaText = document.querySelector('.cta-text');
+const ctaH1 = ctaText.children[0];
+const ctaBTN = ctaText.children[1];
+const ctaImg = document.querySelector('#cta-img');
 // Main Content
-let mainContent = document.querySelector('.main-content');
-let topContent = document.querySelector('.top-content');
-// Text Content One
-let textContentOne = topContent.children[0];
-let contentOneH4= textContentOne.children[0];
-let contentOneP= textContentOne.children[1];
-// Text Content One
-let textContentTwo = topContent.children[1];
-let contentTwoH4= textContentTwo.children[0];
-let contentTwoP= textContentTwo.children[1];
+const mainContent = document.querySelector('.main-content');
+const topContent = document.querySelector('.top-content');
+// Top Content
+// Top Text Content One
+const topTextContentOne = topContent.children[0];
+const topContentOneH4= topTextContentOne.children[0];
+const topContentOneP= topTextContentOne.children[1];
+// Top Text Content Two
+const topTextContentTwo = topContent.children[1];
+const topContentTwoH4= topTextContentTwo.children[0];
+const topContentTwoP= topTextContentTwo.children[1];
+// Middle Image 
+const midImg = document.querySelector('#middle-img');
+// Bottom Content
+const bottomContent = document.querySelector('.bottom-content');
+// Bottom Text Content One
+const botTextCotentOne = topContent.children[0];
+const botTextCotentOneH4= botTextCotentOne.children[0];
+const botTextCotentOneP= botTextCotentOne.children[1];
+// Bottom Text Content Two
+const botTextCotentTwo = topContent.children[1];
+const botTextCotentTwoH4= botTextCotentTwo.children[0];
+const botTextCotentTwoP= botTextCotentTwo.children[1];
+// Bottom Text Content Three
+const botTextCotentThree = topContent.children[2];
+const botTextCotentThreeH4= botTextCotentThree.children[0];
+const botTextCotentThreeP= botTextCotentThree.children[1];
+
 
 // logo.setAttribute('src', siteContent["nav"]["img-src"])
