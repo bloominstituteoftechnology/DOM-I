@@ -55,7 +55,7 @@ navLogoImage.src = 'img/logo.png';
 
 //========================Header Content
 
-//const topContent = document.querySelectorAll(".cta");
+
 const headerText = document.querySelector(".cta-text h1");
 const headerButton = document.querySelector("button");
 const headerImage = document.querySelector("#cta-img");
@@ -67,11 +67,17 @@ headerImage.src = 'img/header-img.png';
 
 //========================Main Content
 
-const mainContent = document.querySelectorAll(".main-content");
+
 
 //================== Paragraph Headers - H4
-const h4 = document.querySelectorAll("main-content h4");
-// Paragraph Titles
+
+const h4 = document.querySelectorAll(".main-content h4");
+h4[0].textContent = siteContent[`main-content`]["features-h4"];
+h4[1].textContent = siteContent[`main-content`]["about-h4"];
+h4[2].textContent = siteContent[`main-content`]["services-h4"];
+h4[3].textContent = siteContent[`main-content`]["product-h4"];
+h4[4].textContent = siteContent[`main-content`]["vision-h4"];
+
 
 
 
