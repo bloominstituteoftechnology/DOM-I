@@ -37,12 +37,70 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-const navItem1 = document.createElement('a');
-navItem1.href = "#";
-navItem1.textContent = siteContent["nav"]["nav-item-1"];
-const nav = document.querySelector("nav");
-nav.prepend(navItem1);
+let aTags = document.querySelectorAll("a");
+for (let i = 0; i < aTags.length; i++) {
+  aTags[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
+}
+
+let header1 = document.querySelector("h1");
+header1.textContent = siteContent.cta.h1;
+
+let button = document.querySelector("button");
+button.textContent = siteContent.cta.button;
+
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let mainContentHeader = document.querySelectorAll(".main-content .top-content .text-content h4");
+mainContentHeader[0].textContent = siteContent['main-content']['features-h4'];
+mainContentHeader[1].textContent = siteContent['main-content']['about-h4'];
+
+let bottomContentHeader = document.querySelectorAll(".main-content .bottom-content .text-content h4");
+bottomContentHeader[0].textContent = siteContent['main-content']['services-h4'];
+bottomContentHeader[1].textContent = siteContent['main-content']['product-h4'];
+bottomContentHeader[2].textContent = siteContent['main-content']['vision-h4'];
+
+let mainContentP = document.querySelectorAll(".main-content .top-content .text-content p");
+mainContentP[0].textContent = siteContent['main-content']['features-content'];
+mainContentP[1].textContent = siteContent['main-content']['about-content'];
+
+let bottomContentP = document.querySelectorAll(".main-content .bottom-content .text-content p");
+bottomContentP[0].textContent = siteContent['main-content']['services-content'];
+bottomContentP[1].textContent = siteContent['main-content']['product-content'];
+bottomContentP[2].textContent = siteContent['main-content']['vision-content'];
+
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+let contactHeader = document.querySelector(".contact h4");
+contactHeader.textContent = siteContent['contact']['contact-h4'];
+
+let contactP = document.querySelectorAll('.contact p');
+contactP[0].textContent = siteContent.contact.address;
+contactP[1].textContent = siteContent.contact.phone;
+contactP[2].textContent = siteContent.contact.email;
+
+let footer = document.querySelector('footer');
+footer.textContent = siteContent.footer.copyright;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
