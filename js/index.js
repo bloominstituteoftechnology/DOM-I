@@ -57,6 +57,10 @@ const topContAbout = topContent[3].childNodes;
 const aboutH4 = topContAbout[1];
 const aboutPara = topContAbout[3];
 const middleImg = document.querySelector("#middle-img");
+const bottomContent = document.querySelector(".bottom-content").childNodes;
+const bottomServices = bottomContent[1].childNodes;
+const bottomProduct = bottomContent[3].childNodes;
+const bottomVision = bottomContent[5].childNodes;
 
 // ============= DOM Creation/Insertion
 for (let i = 0; i < navArr.length; i++) {
@@ -77,3 +81,9 @@ featuresPara.textContent = siteContent["main-content"]["features-content"];
 aboutH4.textContent = siteContent["main-content"]["about-h4"];
 aboutPara.textContent = siteContent["main-content"]["about-content"];
 middleImg.src = siteContent["main-content"]["middle-img-src"];
+bottomServices[1].textContent = siteContent["main-content"]["services-h4"];
+bottomServices[3].textContent = siteContent["main-content"]["services-content"];
+bottomProduct[1].textContent = siteContent["main-content"]["product-h4"];
+bottomProduct[3].textContent = siteContent["main-content"]["product-content"];
+bottomVision[1].textContent = siteContent["main-content"]["vision-h4"];
+bottomVision[3].textContent = siteContent["main-content"]["vision-content"];
