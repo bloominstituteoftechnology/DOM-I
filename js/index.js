@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM \r\nIs \r\n Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -38,12 +38,12 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-// HTML ELEMENTS STORAGE
+// ==================================== HTML/DOM STORAGE =======================================
 const header = document.querySelector('header');
 //Navigation
 const navigation = document.querySelector('nav');
-const navLinks = Array.from(document.querySelectorAll('a'));
-
+const navLinks = document.querySelectorAll('a');
+console.log(navLinks);
 const navigationLinkA = navigation.children[0];
 const navigationLinkB = navigation.children[1];
 const navigationLinkC = navigation.children[2];
@@ -97,27 +97,26 @@ const contactP3 = contact.children[3];
 const footer = document.querySelector('footer');
 const footerP = footer.children[0]
 
- 
 
-// UPDATING HTML
-
+// ====================================== UPDATING TEXT =========================================
 //Navigation
-// navLinks.forEach(function (a, i) {
-//   console.log(a);
-//   console.log(i);
-//   console.log(siteContent[`nav[${i}]`]);
-// })
-navigationLinkA.textContent= siteContent['nav']['nav-item-1'];
-navigationLinkB.textContent= siteContent['nav']['nav-item-2'];
-navigationLinkC.textContent= siteContent['nav']['nav-item-3'];
-navigationLinkD.textContent= siteContent['nav']['nav-item-4'];
-navigationLinkE.textContent= siteContent['nav']['nav-item-5'];
-navigationLinkF.textContent= siteContent['nav']['nav-item-6'];
+for (let i = 0; i < navLinks.length; i++) {
+  navLinks[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
+}
+
+// navigationLinkA.textContent= siteContent['nav']['nav-item-1'];
+// navigationLinkB.textContent= siteContent['nav']['nav-item-2'];
+// navigationLinkC.textContent= siteContent['nav']['nav-item-3'];
+// navigationLinkD.textContent= siteContent['nav']['nav-item-4'];
+// navigationLinkE.textContent= siteContent['nav']['nav-item-5'];
+// navigationLinkF.textContent= siteContent['nav']['nav-item-6'];
 // Nav Logo
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // Call to Action
 ctaH1.textContent=`${siteContent["cta"]["h1"]}`;
+ctaH1.setAttribute('style', 'white-space: pre;');
+ctaH1.style.textAlign="center";
 ctaBTN.textContent=`${siteContent["cta"]["button"]}`;
 ctaImg.src= `${siteContent["cta"]["img-src"]}`;
 // Main Content
@@ -137,17 +136,25 @@ botTextContentTwoP.textContent=`${siteContent["main-content"]["product-content"]
 botTextContentThreeP.textContent=`${siteContent["main-content"]["vision-content"]}`;
 
 // Contact
-// const contact = document.querySelector('.contact');
-// const contactH4 = contact.children[0];
-// const contactP1 = contact.children[1];
-// const contactP2 = contact.children[2];
-// const contactP3 = contact.children[3];
-// //Footer
-// const footer = document.querySelector('footer');
-// const footerP = footer.children[0]
 contactH4.textContent=`${siteContent["contact"]["contact-h4"]}`;
 contactP1.textContent=`${siteContent["contact"]["address"]}`;
+contactP1.style.width="25%";
 contactP2.textContent=`${siteContent["contact"]["phone"]}`;
 contactP3.textContent=`${siteContent["contact"]["email"]}`;
 // Footer
 footerP.textContent= `${siteContent["footer"]["copyright"]}`;
+
+// ====================================== ADDING STYLES =======================================
+// // Green Nav
+// navLinks.forEach(function(a){
+//   a.style.color="green";
+// });
+// // Append & Prepend
+// var aTown = document.createElement("a");
+// aTown.textContent="Atlanta";
+// aTown.style.color="green";
+// var hTown = document.createElement("a");
+// hTown.textContent="Houston";
+// hTown.style.color="green";
+// navigation.appendChild(aTown);
+// navigation.prepend(hTown);
