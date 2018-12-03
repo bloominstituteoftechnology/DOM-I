@@ -120,3 +120,30 @@ for(let each in siteContent.contact){
 
 const footer = document.querySelector("footer");
 footer.firstChild.textContent = siteContent.footer.copyright;
+
+// Stretch:
+const header = document.querySelector("header");
+header.style.backgroundColor = "red";
+const cta = document.querySelector(".cta");
+cta.style.backgroundColor = "orange";
+const mainContent = document.querySelector(".main-content");
+mainContent.style.backgroundColor = "yellow";
+const contactSection = document.querySelector(".contact");
+contactSection.style.backgroundColor = "green";
+
+const rotateElements = [header, cta, mainContent, contactSection];
+const colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+let colorIndex = 0;
+
+const button = document.querySelector("button");
+button.addEventListener('click', () => {
+  for(element of rotateElements) {
+    if (colorIndex === colors.length) {
+      colorIndex = 0;
+    }
+    console.log(colorIndex);
+    element.style.backgroundColor = colors[colorIndex];
+    colorIndex ++;
+  }
+  console.log("done");
+});
