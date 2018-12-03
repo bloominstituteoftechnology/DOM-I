@@ -51,7 +51,7 @@ function buildNav() {
   shop.href = "#";
   shop.textContent = "Shop";
   shop.style.color = "green";
-  nav.append(shop);
+  nav.appendChild(shop);
   home.href = "index.html";
   home.textContent = "Home";
   home.style.color = "green";
@@ -66,6 +66,10 @@ function buildCTA() {
   const ctaText = document.querySelector(".cta-text").childNodes;
   const ctaTextArr = Array.from(ctaText);
   const ctaImg = document.querySelector("#cta-img");
+  const button = document.querySelector("button"); // Stretch goal code
+  button.style.background = "lightgrey"; // Stretch goal code
+  ctaImg.style.border = "10px solid green"; // Stretch goal code
+  ctaImg.style.borderRadius = "15px"; // Stretch goal code
   for (let i = 1; i < ctaTextArr.length; i++) {
     if (i === 1) {
       const ctaH1Text = siteContent["cta"]["h1"].split(" ");
@@ -92,6 +96,7 @@ function buildContent() {
   topContAbout[1].textContent = siteContent["main-content"]["about-h4"];
   topContAbout[3].textContent = siteContent["main-content"]["about-content"];
   middleImg.src = siteContent["main-content"]["middle-img-src"];
+  middleImg.style.opacity = 0.6; // Stretch goal code
   bottomServices[1].textContent = siteContent["main-content"]["services-h4"];
   bottomServices[3].textContent =
     siteContent["main-content"]["services-content"];
