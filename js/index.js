@@ -99,3 +99,7 @@ console.log(document.querySelector('.contact p').style["white-space"] = 'pre');
 Array.from(contactNodes).forEach(function(node, index){
   node.textContent = contactContent[index];
 });
+
+//Update footer
+
+document.querySelector('footer p').textContent = siteContent.footer.copyright;
