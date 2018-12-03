@@ -38,5 +38,11 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+// let logo = document.getElementById("logo-img");
+// logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+const navBar = document.querySelectorAll("nav");
+const hdrImage = document.querySelector("#logo-img");
+
+hdrImage.src = 'img/logo.png';
