@@ -67,14 +67,20 @@ let button = document.querySelector("button");
 button.textContent = siteContent["cta"]["button"];
 
 let mainHeaders = document.querySelectorAll("h4");
-console.log(mainHeaders)
 mainHeaders[0].textContent = siteContent["main-content"]["features-h4"];
 mainHeaders[1].textContent = siteContent["main-content"]["about-h4"];
 mainHeaders[2].textContent = siteContent["main-content"]["services-h4"];
 mainHeaders[3].textContent = siteContent["main-content"]["product-h4"];
 mainHeaders[4].textContent = siteContent["main-content"]["vision-h4"];
-mainHeaders[5].textContent = siteContent["main-content"]["contact-h4"];
+mainHeaders[5].textContent = siteContent["contact"]["contact-h4"];
 
-
-
-
+let mainPars = document.querySelectorAll("p");
+mainPars[0].textContent = siteContent["main-content"]["features-content"];
+mainPars[1].textContent = siteContent["main-content"]["about-content"];
+mainPars[2].textContent = siteContent["main-content"]["services-content"];
+mainPars[3].textContent = siteContent["main-content"]["product-content"];
+mainPars[4].textContent = siteContent["main-content"]["vision-content"];
+mainPars[5].textContent = siteContent["contact"]["address"];
+mainPars[6].textContent = siteContent["contact"]["phone"];
+mainPars[7].textContent = siteContent["contact"]["email"];
+mainPars[8].textContent = siteContent["footer"]["copyright"];
