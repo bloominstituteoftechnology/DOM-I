@@ -37,6 +37,49 @@ const siteContent = {
   },
 };
 
+//images
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let headerImg = document.getElementById("cta-img");
+headerImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+let midImg= document.getElementById("middle-img");
+midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+//create selectors: 
+const allNavItems = document.querySelectorAll('a');
+const cta = document.querySelector(".cta");
+const ctaText = document.querySelector(".cta-text");
+const h1 = document.querySelector(".cta-text h1");
+const button = document.querySelector(".cta-text button");
+const textContentList = document.querySelectorAll(".text-content");
+const contactText = document.querySelectorAll(".contact")
+const footerText = document.querySelector("footer")
+
+//fill in nav:
+allNavItems[0].get
+
+//fill in h4 and p content:
+textContentList[0].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["features-h4"];
+textContentList[0].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["features-content"];
+
+textContentList[1].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["about-h4"];
+textContentList[1].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["about-content"];
+
+textContentList[2].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["services-h4"];
+textContentList[2].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["services-content"];
+
+textContentList[3].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["product-h4"];
+textContentList[3].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["product-content"];
+
+textContentList[4].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["vision-h4"];
+textContentList[4].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["vision-content"];
+
+contactText[0].getElementsByTagName("h4")[0].innerHTML = siteContent["contact"]["contact-h4"];
+contactText[1].getElementsByTagName("p")[0].innerHTML = siteContent["contact"]["address"];
+contactText[2].getElementsByTagName("p")[0].innerHTML = siteContent["contact"]["phone"];
+contactText[3].getElementsByTagName("p")[0].innerHTML = siteContent["contact"]["email"];
+
+textContentList[0].getElementsByTagName("p")[0].innerHTML = siteContent["footer"]["copyright"];
