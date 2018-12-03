@@ -38,14 +38,6 @@ const siteContent = {
 };
 
 
-// Attempted alteration of Main Heading to include newline (to make project more like original)
-
-// let search = /\s/g;
-// let domIsAwesome = siteContent["cta"]["h1"];
-// console.log(domIsAwesome);
-// console.log(search.test(domIsAwesome));
-// domIsAwesome.replace(/\s/g, /\r/);
-// console.log(domIsAwesome);
 
 // ====================================== SELECTIONS ======================================
 
@@ -66,7 +58,8 @@ const ctaImg = document.querySelector("#cta-img");
 
 
 // --------------- Main Content
-
+const allH4 = document.querySelectorAll('h4');
+const allP = document.querySelectorAll(".main-content p")
 const topContentH4 = document.querySelectorAll(".top-content .text-content h4");
 const topContentP = document.querySelectorAll(".top-content .text-content p");
 const mainContentImg = document.getElementById("middle-img");
@@ -114,12 +107,41 @@ headerLinks.forEach((link) => {
 
 // --------------- CTA
 
-mainHeader.textContent = siteContent.cta.h1;
+// Attempted alteration of Main Heading to include newline (to make project more like original)
+
+let search = /\s/g;
+// let domIsAwesome = siteContent["cta"]["h1"];
+// console.log(domIsAwesome);
+// console.log(search.test(domIsAwesome));
+// console.log(domIsAwesome);
+
+
+
+mainHeader.textContent = siteContent["cta"]["h1"];
+
+// Another attempt
+
+// mainHeader.style.whiteSpace = "pre-line";
+
+// mainHeader.textContent.replace(/\s/g, /\n/g);
+// console.log(mainHeader.textContent);
+// console.log(search.test(mainHeader.textContent));
+
 ctaBtn.textContent = siteContent.cta.button;
 ctaImg.src = siteContent.cta["img-src"];
 
 
 // --------------- Main Content
+
+// All Content
+
+allH4.forEach((header) => {
+  header.style.fontSize = "2rem";
+})
+
+allP.forEach((p) => {
+  p.style.lineHeight = "1.8rem";
+})
 
 // Top Content
 
@@ -131,6 +153,7 @@ topContentP[1].textContent = siteContent["main-content"]["about-content"];
 // Img
 
 mainContentImg.src = siteContent["main-content"]["middle-img-src"];
+mainContentImg.style.padding = "40px 0";
 
 // Bottom Content
 
@@ -150,7 +173,9 @@ contactPs[0].textContent = siteContent["contact"]["address"];
 contactPs[1].textContent = siteContent["contact"]["phone"];
 contactPs[2].textContent = siteContent["contact"]["email"];
 
-
+contactPs.forEach((p) => {
+  p.style.fontFamily = 'Bangers';
+})
 // --------------- Footer
 
 footerP.textContent = siteContent["footer"]["copyright"];
