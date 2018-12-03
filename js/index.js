@@ -44,10 +44,30 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 //
 // Navigation //
 
-const navLinks = document.querySelectorAll('a');
+const navCont = document.querySelector('nav');
+let navLinks = document.querySelectorAll('a');
+
+const home = document.createElement('a');
+home.href = '#';
+home.textContent = 'Home';
+navCont.prepend(home);
+
+const signIn = document.createElement('a');
+signIn.href = '#';
+signIn.textContent = 'Sign In';
+navCont.append(signIn);
+
 navLinks.forEach((a, i) => {
   let navItemAttribute = `nav-item-${i+1}`;
   a.textContent = siteContent.nav[navItemAttribute];
+  a.style.color = 'green'; //Task 4
+});
+
+// Node list update
+navLinks = document.querySelectorAll('nav a');
+
+navLinks.forEach(a => {
+  a.style.color = 'green';
 });
 
 // CTA //
