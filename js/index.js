@@ -57,6 +57,7 @@ const button = document.querySelector(".cta-text button");
 const textContentList = document.querySelectorAll(".text-content");
 const contactText = document.querySelector(".contact")
 const footerText = document.querySelector("footer")
+const nav = document.querySelector("nav");
 
 
 //fill in nav:
@@ -93,6 +94,20 @@ contactText.getElementsByTagName("p")[2].innerHTML = siteContent["contact"]["ema
 
 footerText.getElementsByTagName("p")[0].innerHTML = siteContent["footer"]["copyright"];
 
+
+// * [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
+
+const shop = document.createElement("a")
+shop.href = "#";
+shop.textContent = "Shop";
+
+const blog = document.createElement("a")
+blog.href = "#";
+blog.textContent = "Blog";
+
+nav.prepend(shop)
+nav.appendChild(blog)
+
 //styles: 
 allNavItems[0].style.color = "green";
 allNavItems[1].style.color = "green";
@@ -100,6 +115,8 @@ allNavItems[2].style.color = "green";
 allNavItems[3].style.color = "green";
 allNavItems[4].style.color = "green";
 allNavItems[5].style.color = "green";
+allNavItems[6].style.color = "green";
+allNavItems[7].style.color = "green";
 
 
 
