@@ -38,26 +38,69 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+
+///images
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let ctalogo = document.getElementById("cta-img");
-ctalogo.setAttribute('src', siteContent["cta"]["img-src"])
+let ctaLogo = document.getElementById("cta-img");
+ctaLogo.setAttribute('src', siteContent["cta"]["img-src"])
 
-let midlogo = document.getElementById("middle-img");
-ctalogo.setAttribute('src', siteContent["main-content"]["img-src"])
+let midLogo = document.getElementById("middle-img");
+midLogo.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
-const newElement = document.createElement('a');
-newElement.href = "#";
-newElement.textContent = "Services";
-const mainNav = document.querySelector('.container');
-mainNav.prepend(newElement);
+let text = document.getElementsByClassName('cta-text')
 
-const anotherElement = document.createElement('a');
-anotherElement.href = "#";
-anotherElement.textContent = "Products";
-const newNav = document.querySelector('.container');
-newNav.append(anotherElement);
+
+const navItems = siteContent.nav;
+const navItemsKeys = Object.keys(navItems); //array with seven items
+const navItemsValues = Object.values(navItems); //array with seven items including value items
+
+for(let i = 0; i < navItemsKeys.length; i++) {
+  if(navItemsKeys[i] !== "img-src") {
+    document.getElementsByTagName('nav')[0].children[i].textContent = navItemsValues[i];
+    // console.log(document.getElementsByTagName('nav')[0].children[i]);
+  }
+}
+
+//cta
+const ctaHeader = document.querySelector('.cta-text h1');
+ctaHeader.textContent = 'Dom Is Awesome!'
+
+const ctaButton = document.querySelector('.cta-text button');
+ctaButton.textContent = 'Get Started'
+
+//headers
+const Header = document.querySelectorAll('.text-content h4');
+Header[0].textContent = siteContent['main-content']['features-h4'];
+Header[1].textContent = siteContent['main-content']['about-h4'];
+Header[2].textContent = siteContent['main-content']['services-h4'];
+Header[3].textContent = siteContent['main-content']['product-h4'];
+Header[4].textContent = siteContent['main-content']['vision-h4'];
+
+//headerText
+const headerText = document.querySelectorAll('.text-content p');
+headerText[0].textContent = siteContent['main-content']['features-content'];
+headerText[1].textContent = siteContent['main-content']['about-content'];
+headerText[2].textContent = siteContent['main-content']['services-content'];
+headerText[3].textContent = siteContent['main-content']['product-content'];
+headerText[4].textContent = siteContent['main-content']['vision-content'];
+
+//contact
+const contactInfo = document.querySelectorAll('.contact h4');
+contactInfo[0].textContent = siteContent['contact']['contact-h4'];
+
+const contactInfoText = document.querySelectorAll('.contact p');
+contactInfoText[0].textContent = siteContent['contact']['address'];
+contactInfoText[1].textContent = siteContent['contact']['phone'];
+contactInfoText[2].textContent = siteContent['contact']['email'];
+
+//footer
+const myFooter = document.querySelectorAll('footer');
+myFooter[0].textContent = siteContent['footer']['copyright']
+
+
+
 
 
 
