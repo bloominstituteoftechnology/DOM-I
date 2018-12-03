@@ -1,8 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .digit {
@@ -22,6 +27,8 @@ body {
   color: white;
   cursor: pointer;
   transition: background-color 0.2s ease;
+  width: 286px;
+  text-align: center;
 }
 
 .start-btn:hover{
@@ -32,8 +39,34 @@ body {
   padding: 13px 55px;
   font-size: 20px;
   border-radius: 4px;
-  background-color: gray;
+  width: 286px;
+  text-align: center;
+  background-color: #e53935;
   color: white;
-  cursor: not-allowed;
+  cursor: pointer;
   transition: background-color 0.2s ease;
+}
+
+.start-btn-lock:hover{
+  background-color: #ef5350;
+}
+
+.lap-cont{
+  width: 286px;
+  margin-top: 20px;
+  border-top: 1px solid lightgray;
+}
+
+.lap{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid lightgray;
+}
+
+.current .the-lap{
+  font-weight: bold;
+}
+
+.current .time{
+  font-weight: bold;
 }
