@@ -34,7 +34,7 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 ## Stretch Goals
 
 - [x] Update styles throughout the page as you see fit. Study what happens when you updated the DOM using style in JavaScript.
-- [ ] Study tomorrow's lesson on events and try to integrate a button that can update content on the site with a click of a button. You could build a similar data object with new values to help you test the click event.
+- [x] Study tomorrow's lesson on events and try to integrate a button that can update content on the site with a click of a button. You could build a similar data object with new values to help you test the click event.
 
 ## Stretch Project: Digital Timer
 
