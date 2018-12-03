@@ -41,11 +41,24 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-// Start with nav
-const nav = document.querySelectorAll("a");
-nav.forEach((element, index) => {
+const navA = document.querySelectorAll("a");
+navA.forEach((element, index) => {
   element.textContent = siteContent.nav[`nav-item-${index + 1}`];
+  element.style.color = "green";
 });
+
+const newNavItem1 = document.createElement("a");
+newNavItem1.href = "#";
+newNavItem1.textContent = "First Nav Item";
+newNavItem1.style.color = "green";
+const nav = document.querySelector("nav");
+nav.prepend(newNavItem1);
+
+const newNavItem2 = document.createElement("a");
+newNavItem2.href = "#";
+newNavItem2.textContent = "Last Nav Item";
+newNavItem2.style.color = "green";
+nav.append(newNavItem2);
 
 const ctaText = document.querySelector(".cta-text");
 // console.log(ctaText);
@@ -96,7 +109,7 @@ const middleImg = document.querySelector("#middle-img");
 middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
 const contact = document.querySelector(".contact").childNodes;
-console.log(contact);
+// console.log(contact);
 let i = 1;
 for(let each in siteContent.contact){
   contact[i].textContent = siteContent.contact[`${each}`];
