@@ -47,8 +47,14 @@ let ctaText = document.querySelector(".cta-text h1");
 let ctaButton = document.querySelector(".cta-text button");
 let ctaImage = document.querySelector("#cta-img");
   //main-content
-let mainContentH4 = document.querySelectorAll(".main-content h4");
-let mainContentP = document.querySelectorAll(".main-content p");
+let h4 = document.querySelectorAll(".main-content h4");
+let p = document.querySelectorAll(".main-content p");
+let mainContentImage = document.querySelector(".middle-img");
+  //contact
+let contacth4 = document.querySelector(".contact h4");
+let contactP = document.querySelectorAll(".contact p");
+  //footer
+let footer = document.querySelector("footer p");
 
 // Example: Update the img src for the logo
 logo.setAttribute('src', siteContent["nav"]["img-src"])
@@ -63,5 +69,17 @@ for (let i = 0; i < navLinks.length; i++) {
  ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
 
  //Main content
- const content = siteContent["main-content"];
- console.log(content);
+ const mainContentArray = ["features", "about", "services", "product", "vision"];
+ for (let i = 0; i < mainContentArray.length; i++) {
+   h4[i].textContent = siteContent["main-content"][`${mainContentArray[i]}-h4`];
+   p[i].textContent = siteContent["main-content"][`${mainContentArray[i]}-content`];
+ }
+mainContentImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+contacth4.textContent = siteContent["contact"]["contact-h4"];
+const contactText = ["address", "phone", "email"];
+for (let i = 0; i < contactP.length; i++) {
+  contactP[i].textContent = siteContent["contact"][contactText[i]];
+}
+
+footer.textContent = siteContent["footer"]["copyright"];
