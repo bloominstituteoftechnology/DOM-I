@@ -46,3 +46,10 @@ ctaImg.setAttribute('src', siteContent.cta["img-src"]);
 
 let midImg = document.getElementById("middle-img");
 midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+//Nav Link content
+let navLinks = document.querySelectorAll('a');
+navLinks.forEach((a, index) => { //NodeLists aren't actual arrays, but we can still use forEach on them!
+  let navItemProperty = `nav-item-${index + 1}`;
+  a.textContent =siteContent.nav[navItemProperty];
+});
