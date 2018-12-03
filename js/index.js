@@ -41,30 +41,19 @@ const siteContent = {
     copyright: "Copyright Great Idea! 2018"
   }
 };
-
-// ============= Variables
-const navLinks = document.querySelectorAll("a");
-const navArr = Array.from(navLinks);
-const logo = document.querySelector("#logo-img");
-const ctaText = document.querySelector(".cta-text").childNodes;
-const ctaTextArr = Array.from(ctaText);
-const ctaImg = document.querySelector("#cta-img");
-const topContent = document.querySelector(".top-content").childNodes;
-const topContFeatures = topContent[1].childNodes;
-const topContAbout = topContent[3].childNodes;
-const middleImg = document.querySelector("#middle-img");
-const bottomContent = document.querySelector(".bottom-content").childNodes;
-const bottomServices = bottomContent[1].childNodes;
-const bottomProduct = bottomContent[3].childNodes;
-const bottomVision = bottomContent[5].childNodes;
-const contact = document.querySelector(".contact").childNodes;
-
-// ============= DOM Creation/Insertion
-(function() {
+function buildNav() {
+  const navLinks = document.querySelectorAll("a");
+  const navArr = Array.from(navLinks);
+  const logo = document.querySelector("#logo-img");
   for (let i = 0; i < navArr.length; i++) {
     navArr[i].textContent = siteContent["nav"]["nav-item-" + (i + 1)];
   }
   logo.setAttribute("src", siteContent["nav"]["img-src"]);
+}
+function buildCTA() {
+  const ctaText = document.querySelector(".cta-text").childNodes;
+  const ctaTextArr = Array.from(ctaText);
+  const ctaImg = document.querySelector("#cta-img");
   for (let i = 1; i < ctaTextArr.length; i++) {
     if (i === 1) {
       ctaTextArr[i].textContent = siteContent["cta"]["h1"];
@@ -74,6 +63,16 @@ const contact = document.querySelector(".contact").childNodes;
     }
   }
   ctaImg.src = siteContent["cta"]["img-src"];
+}
+function buildContent() {
+  const topContent = document.querySelector(".top-content").childNodes;
+  const topContFeatures = topContent[1].childNodes;
+  const topContAbout = topContent[3].childNodes;
+  const middleImg = document.querySelector("#middle-img");
+  const bottomContent = document.querySelector(".bottom-content").childNodes;
+  const bottomServices = bottomContent[1].childNodes;
+  const bottomProduct = bottomContent[3].childNodes;
+  const bottomVision = bottomContent[5].childNodes;
   topContFeatures[1].textContent = siteContent["main-content"]["features-h4"];
   topContFeatures[3].textContent =
     siteContent["main-content"]["features-content"];
@@ -87,8 +86,22 @@ const contact = document.querySelector(".contact").childNodes;
   bottomProduct[3].textContent = siteContent["main-content"]["product-content"];
   bottomVision[1].textContent = siteContent["main-content"]["vision-h4"];
   bottomVision[3].textContent = siteContent["main-content"]["vision-content"];
+}
+function buildContact() {
+  const contact = document.querySelector(".contact").childNodes;
   contact[1].textContent = siteContent["contact"]["contact-h4"];
   contact[3].textContent = siteContent["contact"]["address"];
   contact[5].textContent = siteContent["contact"]["phone"];
   contact[6].textContent = siteContent["contact"]["email"];
+}
+function buildFooter() {
+  const footer = document.querySelector("footer").childNodes;
+  footer[1].textContent = siteContent["footer"]["copyright"];
+}
+(function buildPage() {
+  buildNav();
+  buildCTA();
+  buildContent();
+  buildContact();
+  buildFooter();
 })();
