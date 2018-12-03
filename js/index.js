@@ -85,3 +85,6 @@ const contactP = document.querySelectorAll('.contact p');
 contactP[0].textContent = "123 Way 456 Street Somewhere, USA";
 contactP[1].textContent = "1 (888) 888-8888";
 contactP[2].textContent = "sales@greatidea.io";
+
+const footerTxt = document.querySelector('footer');
+footerTxt.textContent = 'Copyright Great Idea! 2018';
