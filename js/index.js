@@ -41,26 +41,37 @@ const siteContent = {
 // let logo = document.getElementById("logo-img");
 // logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-
+//========================Nav Bar
 const navBar = document.querySelectorAll("nav");
 const navLogoImage = document.querySelector("#logo-img");
 const links = document.querySelectorAll("a");
 
+for (let i = 0; i < links.length; i++) {
+  links[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
+}
+//links.style.color = "green";
+
 navLogoImage.src = 'img/logo.png';
 
+//========================Header Content
+
 //const topContent = document.querySelectorAll(".cta");
-const headerText = document.querySelectorAll(".cta-text h1");
+const headerText = document.querySelector(".cta-text h1");
 const headerButton = document.querySelector("button");
 const headerImage = document.querySelector("#cta-img");
 
-headerText.textContent = siteContent.cta.h1;
+headerText.textContent = siteContent.cta['h1'];
 headerButton.textContent = "Get Started";
 headerImage.src = 'img/header-img.png';
+
+
+//========================Main Content
 
 const mainContent = document.querySelectorAll(".main-content");
 
 //================== Paragraph Headers - H4
 const h4 = document.querySelectorAll("main-content h4");
+// Paragraph Titles
 
 
 
@@ -76,5 +87,6 @@ const bottomContent = document.querySelectorAll(".bottom-content");
 const contactSection = document.querySelectorAll(".contact");
 
 const footer = document.querySelectorAll(footer);
+footer.textContent = siteContent["footer"];
 
 
