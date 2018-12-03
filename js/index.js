@@ -65,7 +65,9 @@ const topContentP = document.querySelectorAll(".top-content .text-content p");
 const mainContentImg = document.getElementById("middle-img");
 const bottomContentH4 = document.querySelectorAll(".bottom-content .text-content h4");
 const bottomContentP = document.querySelectorAll(".bottom-content .text-content p");
+const mainContentH4 = Array.from(document.querySelectorAll(".main-content .text-content h4"));
 
+const mainHeadingArray = Object.values(siteContent["nav"]);
 
 // --------------- Contact
 
@@ -91,7 +93,7 @@ newLink1.textContent = "History";
 newLink2.textContent = "Shareholders";
 
 headerLinks.forEach((link, index) => {
-  link.textContent = siteContent["nav"]["nav-item-" + (index+1)];
+  link.textContent = mainHeadingArray[index];
 })
 
 headerNav.appendChild(newLink1);
@@ -154,6 +156,8 @@ allH4.forEach((header) => {
 allP.forEach((p) => {
   p.style.lineHeight = "1.8rem";
 })
+
+
 
 // Top Content
 
