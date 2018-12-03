@@ -43,19 +43,12 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 //Nav
 
-let nav = document.querySelectorAll('a');
-nav[0].textContent = 'Services';
-nav[0].style.color = 'green'
-nav[1].textContent = 'Product';
-nav[1].style.color = 'green'
-nav[2].textContent = 'Vision';
-nav[2].style.color = 'green'
-nav[3].textContent = 'Features';
-nav[3].style.color = 'green'
-nav[4].textContent = 'About';
-nav[4].style.color = 'green'
-nav[5].textContent = 'Contact';
-nav[5].style.color = 'green'
+let nav = document.querySelectorAll("a");
+
+for (let i = 0; i < nav.length; i++) {
+  nav[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
+  nav[i].style.color = "green";
+}
 
 const navBar= document.querySelector("nav");
 const goodBye = document.createElement("a");
