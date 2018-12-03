@@ -16,9 +16,6 @@ pageBody.style.textAlign = 'center';
 let startButton = document.createElement('button');
 startButton.textContent = 'Start Timer';
 pageBody.appendChild(startButton);
-let stopButton = document.createElement('button');
-stopButton.textContent = 'Pause Timer';
-pageBody.appendChild(stopButton);
 let restartButton = document.createElement('button');
 restartButton.textContent = 'Reset Timer';
 pageBody.appendChild(restartButton);
@@ -31,7 +28,8 @@ let active = false;
 
 function startTimer() {
     if(!active){
-        startButton.disabled = 'true';
+        startButton.onclick = stopTimer;
+        startButton.textContent = 'Pause Timer';
         active = true;
         tickInterval = setInterval(() => { //Stores interval in object property so it can be used in every method
             if(elapsed >= 10000) {
@@ -53,6 +51,8 @@ function stopTimer() {
     active = false;
     startButton.disabled = '';
     clearInterval(tickInterval); //Stops the interval from looping/deletes it
+    startButton.onclick = startTimer;
+    startButton.textContent = 'Start Timer';
 }
 
 function setDisplay() {
@@ -78,10 +78,11 @@ function resetTimer() {
     clearInterval(tickInterval);
     setDisplay();
     digits.style.color = 'black';
+    startButton.onclick = startTimer;
+    startButton.textContent = 'Start Timer';
 }
 
 startButton.onclick = startTimer;
-stopButton.onclick = stopTimer;
 restartButton.onclick = resetTimer;
 
 //Styling
