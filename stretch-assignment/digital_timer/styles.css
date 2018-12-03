@@ -1,5 +1,6 @@
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -11,4 +12,28 @@ body {
 
 .redDigit {
   color: red;
+}
+
+.start-btn{
+  padding: 13px 55px;
+  font-size: 20px;
+  border-radius: 4px;
+  background-color: #00E676;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.start-btn:hover{
+  background-color: #45EC9B;
+}
+
+.start-btn-lock{
+  padding: 13px 55px;
+  font-size: 20px;
+  border-radius: 4px;
+  background-color: gray;
+  color: white;
+  cursor: not-allowed;
+  transition: background-color 0.2s ease;
 }
