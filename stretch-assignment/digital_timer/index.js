@@ -3,6 +3,9 @@ let secondTens = document.getElementById('secondTens');
 let secondOnes = document.getElementById('secondOnes');
 let msHundreds = document.getElementById('msHundreds');
 let msTens = document.getElementById('msTens');
+let digits = document.querySelector('.digits');
+
+// digits.style.fontFamily = "Orbitron, sans-serif"; //Headache to look at...
 
 let pageBody = document.querySelector('body');
 pageBody.style.display = 'block';
@@ -34,6 +37,7 @@ function startTimer() {
             if(elapsed >= 10000) {
                 stopTimer();
                 elapsed = 10000;
+                digits.style.color = 'red';
                 setDisplay();
             } else {
                 elapsed += 10;
@@ -73,8 +77,32 @@ function resetTimer() {
     active = false;
     clearInterval(tickInterval);
     setDisplay();
+    digits.style.color = 'black';
 }
 
 startButton.onclick = startTimer;
 stopButton.onclick = stopTimer;
 restartButton.onclick = resetTimer;
+
+//Styling
+let buttons = document.querySelectorAll('button');
+buttons.forEach(b => {
+    b.style.padding = '12px';
+    b.style.display = 'block';
+    b.style.margin = '12px auto';
+    b.style.width = '200px';
+    b.style.boxShadow = '0px 2px 3px black';
+    b.style.backgroundColor = 'white';
+    b.style.outline = 'none';
+    b.style.border = '1px solid black';
+    b.style.borderRadius = '4px';
+    b.style.transition = 'all .3s';
+    b.onmouseover = function() {
+        b.style.backgroundColor = 'silver';
+    }
+    b.onmouseleave = function() {
+        b.style.backgroundColor = 'white';
+    }
+});
+
+pageBody.style.backgroundColor = 'grey';
