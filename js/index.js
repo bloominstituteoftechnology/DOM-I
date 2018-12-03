@@ -42,11 +42,23 @@ const siteContent = {
   }
 };
 function buildNav() {
+  const nav = document.querySelector("nav");
   const navLinks = document.querySelectorAll("a");
   const navArr = Array.from(navLinks);
   const logo = document.querySelector("#logo-img");
+  const shop = document.createElement("a");
+  const home = document.createElement("a");
+  shop.href = "#";
+  shop.textContent = "Shop";
+  shop.style.color = "green";
+  nav.append(shop);
+  home.href = "index.html";
+  home.textContent = "Home";
+  home.style.color = "green";
+  nav.prepend(home);
   for (let i = 0; i < navArr.length; i++) {
-    navArr[i].textContent = siteContent["nav"]["nav-item-" + (i + 1)];
+    navArr[i].textContent = siteContent["nav"][`nav-item-${i + 1}`];
+    navArr[i].style.color = "green";
   }
   logo.setAttribute("src", siteContent["nav"]["img-src"]);
 }
@@ -56,7 +68,8 @@ function buildCTA() {
   const ctaImg = document.querySelector("#cta-img");
   for (let i = 1; i < ctaTextArr.length; i++) {
     if (i === 1) {
-      ctaTextArr[i].textContent = siteContent["cta"]["h1"];
+      const ctaH1Text = siteContent["cta"]["h1"].split(" ");
+      ctaTextArr[i].innerHTML = ctaH1Text.join("<br>");
     }
     if (i === 3) {
       ctaTextArr[i].textContent = siteContent["cta"]["button"];
@@ -90,9 +103,11 @@ function buildContent() {
 function buildContact() {
   const contact = document.querySelector(".contact").childNodes;
   contact[1].textContent = siteContent["contact"]["contact-h4"];
-  contact[3].textContent = siteContent["contact"]["address"];
+  const addressText = siteContent["contact"]["address"].split(" ");
+  addressText[3] = "Street<br>";
+  contact[3].innerHTML = addressText.join(" ");
   contact[5].textContent = siteContent["contact"]["phone"];
-  contact[6].textContent = siteContent["contact"]["email"];
+  contact[7].textContent = siteContent["contact"]["email"];
 }
 function buildFooter() {
   const footer = document.querySelector("footer").childNodes;
