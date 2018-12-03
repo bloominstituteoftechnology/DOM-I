@@ -50,8 +50,7 @@ articles[4].textContent = "About";
 articles[5].textContent = "Contact";
 
 const title = document.querySelector('h1');
-title.textContent = "Dom is awesome";
-
+title.textContent = 'DOM Is Awesome';
 const button = document.querySelector('button');
 button.textContent = "Get Started";
 
