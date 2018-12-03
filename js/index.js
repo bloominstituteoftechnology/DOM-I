@@ -75,12 +75,33 @@ const ctaText = document.querySelector(".cta").firstElementChild
   .firstElementChild;
 
 const ctaImg = document.querySelector("#cta-img");
+ctaImg.addEventListener("mouseover", () => ctaImg.classList.add("circleImg"));
+ctaImg.addEventListener("click", () =>
+  ctaImg.classList.add("circleImgClicked")
+);
 
-ctaText.textContent = "DOM Is Awesome";
+ctaImg.addEventListener("mouseout", () => {
+  ctaImg.classList.remove("circleImgClicked");
+  ctaImg.classList.remove("circleImg");
+});
+
+ctaText.textContent = `DOM Is Awesome`;
 const ctaBtn = ctaText.nextElementSibling;
 ctaBtn.textContent = "Get Started";
 ctaImg.src = "img/header-img.png";
 
+ctaBtn.addEventListener("click", () => {
+  let random = Math.floor(Math.random() * 4) + 1;
+  random === 1
+    ? (ctaText.style.color = "red")
+    : random === 2
+    ? (ctaText.style.color = "purple")
+    : random === 3
+    ? (ctaText.style.color = "lime")
+    : random === 4
+    ? (ctaText.style.color = "blue")
+    : console.log("did not work");
+});
 //========================== Main Content =================
 
 const mainContent = document.querySelector(".main-content");
@@ -118,13 +139,13 @@ secondH4.textContent = "About";
 secondPtag.textContent =
   "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
-fourthH4.textContent = "Product";
-fourthPtag.textContent =
-  "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
-
 thirdH4.textContent = "Services";
 thirdPtag.textContent =
   "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+fourthH4.textContent = "Product";
+fourthPtag.textContent =
+  "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
 fithH4.textContent = "Vision";
 fithPtag.textContent =

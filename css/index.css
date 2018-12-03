@@ -217,6 +217,34 @@ header .logo {
   color: white;
 }
 
+.circleImg {
+  transform: rotate(-720deg);
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+@keyframes shake {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(-60px);
+  }
+  60% {
+    transform: translateX(-40px);
+  }
+}
+
+.circleImgClicked {
+  animation-name: shake;
+  animation-iteration-count: infinite;
+  animation-duration: 1.5s;
+}
+
 /* Main Content Styles */
 
 .main-content {
