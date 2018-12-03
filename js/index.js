@@ -66,4 +66,32 @@ ctaButton.textContent = siteContent.cta["button"];
 const ctaImg = document.querySelector("#cta-img");
 ctaImg.src = siteContent.cta["img-src"];
 
-// Main Content Code
+// ========================== Main Content Code
+
+// Top Content Code
+
+const topContentFeaturesTitle = Array.from(Array.from(document.querySelector(".top-content").childNodes)[1].childNodes)[1];
+console.log(topContentFeaturesTitle);
+
+topContentFeaturesTitle.textContent = siteContent["main-content"]["features-h4"];
+
+const topContentFeaturesContent = Array.from(Array.from(document.querySelector(".top-content").childNodes)[1].childNodes)[3];
+console.log(topContentFeaturesContent);
+
+topContentFeaturesContent.textContent = siteContent["main-content"]["features-content"];
+
+const topContentAboutTitle = Array.from(Array.from(document.querySelector(".top-content").childNodes)[3].childNodes)[1];
+console.log(topContentAboutTitle);
+
+topContentAboutTitle.textContent = siteContent["main-content"]["about-h4"];
+
+const topContentAboutContent = Array.from(Array.from(document.querySelector(".top-content").childNodes)[3].childNodes)[3];
+console.log(topContentAboutContent);
+
+topContentAboutContent.textContent = siteContent["main-content"]["about-content"];
+
+const middleImg = document.querySelector(".middle-img");
+
+middleImg.src = siteContent["main-content"]["middle-img-src"];
+
+// 
