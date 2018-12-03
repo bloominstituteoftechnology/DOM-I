@@ -60,6 +60,28 @@ navItems[3].textContent = siteContent["nav"]["nav-item-4"];
 navItems[4].textContent = siteContent["nav"]["nav-item-5"];
 navItems[5].textContent = siteContent["nav"]["nav-item-6"];
 
+ navItems[0].style.color = "green";
+navItems[1].style.color = "green";
+navItems[2].style.color = "green";
+navItems[3].style.color = "green";
+navItems[4].style.color = "green";
+navItems[5].style.color = "green"; 
+
+const newElement = document.createElement("a");
+newElement.textContent = "Blog";
+const mainNav = document.querySelector("nav");
+mainNav.prepend(newElement);
+newElement.style.color = "green";
+
+const newElement1 = document.createElement("a");
+newElement1.textContent = "News";
+mainNav.append(newElement1);
+newElement1.style.color = "green";
+
+console.log(navItems)
+
+
+
 let ctaH1 = document.querySelector("h1");
 ctaH1.textContent = siteContent["cta"]["h1"];
 
@@ -73,6 +95,7 @@ mainHeaders[2].textContent = siteContent["main-content"]["services-h4"];
 mainHeaders[3].textContent = siteContent["main-content"]["product-h4"];
 mainHeaders[4].textContent = siteContent["main-content"]["vision-h4"];
 mainHeaders[5].textContent = siteContent["contact"]["contact-h4"];
+
 
 let mainPars = document.querySelectorAll("p");
 mainPars[0].textContent = siteContent["main-content"]["features-content"];
