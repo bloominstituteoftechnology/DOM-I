@@ -39,13 +39,54 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 
-const navItems = document.querySelectorAll('nav');
-console.log(navItems);
+// GREAT IDEA LOGO
 
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-const topContent = document.querySelectorAll("cta");
-console.log(topContent);
+//////////  NAV
+const nav = document.querySelector('nav');
+const navItems = document.querySelectorAll('a');
+
+
+navItems[0].textContent = siteContent.nav["nav-item-1"];
+navItems[1].textContent = siteContent.nav["nav-item-2"];
+navItems[2].textContent = siteContent.nav["nav-item-3"];
+navItems[3].textContent = siteContent.nav["nav-item-4"];
+navItems[4].textContent = siteContent.nav["nav-item-5"];
+navItems[5].textContent = siteContent.nav["nav-item-6"];
+
+
+/////////  TOP CONTENT 
+
+const topContent = document.querySelector('.cta');
+const heading = document.querySelector('h1');
+heading.textContent = siteContent.cta.h1;
+
+const contentButton = document.querySelector('button');
+contentButton.textContent = siteContent.cta.button;
+
+const contentImg = document.querySelector('#cta-img');
+contentImg.src = siteContent.cta["img-src"];
+
+///////// MAIN-CONTENT
+
+
+const mainContents = document.querySelector('.main-content h4');
+const textContents = document.querySelectorAll('.text-content p');
+
+
+mainContents[0].textContent = siteContent.textContents["features-h4"];
+// navItems[1].textContent = siteContent.nav["nav-item-2"];
+// navItems[2].textContent = siteContent.nav["nav-item-3"];
+// navItems[3].textContent = siteContent.nav["nav-item-4"];
+// navItems[4].textContent = siteContent.nav["nav-item-5"];
+// navItems[5].textContent = siteContent.nav["nav-item-6"];
+
+
+
+
+
+
 
 
