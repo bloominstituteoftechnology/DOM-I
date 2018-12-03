@@ -51,8 +51,6 @@ document.querySelectorAll('nav a').forEach(
   }
 );
 
-
-
 /*For Task 4,  two new nav links, with .appendChild() and .prepend(). This is done first, even though
 this task is listed second, because if we don't put it first in the file, the newly created a nodes will
 not be styled green*/
@@ -87,7 +85,6 @@ document.querySelector('.cta-text').appendChild(buttonNode);
 
 buttonNode.onclick = function(){
   h1Color = document.querySelector('.cta-text h1').style.color;
-  console.log("Here's the color" + h1Color);
   if(h1Color === "green"){
     document.querySelector('.cta-text h1').style.color ="red";
   }
@@ -101,7 +98,6 @@ buttonNode.onclick = function(){
 const mainContentKeys = Object.keys(siteContent["main-content"]);
 const headingsTextArray = [];
 const contentTextArray = [];
-
 
 mainContentKeys.forEach(function(key, index){
   if(key.includes('-h4')){
