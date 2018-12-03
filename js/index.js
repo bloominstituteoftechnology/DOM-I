@@ -60,26 +60,46 @@ const ctaImg = document.querySelector('#cta-img');
 ctaImg.src = siteContent.cta['img-src'];
 
 // Main Content Section
-const features = document.querySelector('.top-content').firstChild;
-features.textContent = siteContent['main-content']['features-h4'];
-const featuresContent = document.querySelector('.top-content .text-content p');
-featuresContent.textContent = siteContent['main-content']['features-content'];
 
-const about = document.querySelector('.top-content').lastChild;
+// const mainContent = document.querySelector('.main-content');
+
+const topContent = document.querySelector('.top-content').children;
+const fisrstTopContent = topContent[0].children;
+const secondTopContent = topContent[1].children;
+
+const features = fisrstTopContent[0];
+const featuresContent = fisrstTopContent[1];
+features.textContent = siteContent['main-content']['features-h4'];
+featuresContent.textContent = siteContent['main-content']['features-content'];
+console.log(features);
+
+const about = secondTopContent[0];
+const aboutContent = secondTopContent[1];
 about.textContent = siteContent['main-content']['about-h4'];
-const aboutContent = document.querySelector('.top-content .text-content p');
 aboutContent.textContent = siteContent['main-content']['about-content'];
 
 const middleImg = document.querySelector('.middle-img');
 middleImg.src = siteContent['main-content']['middle-img-src'];
 
-const services = document.querySelector('.bottom-content').firstChild;
-services.textContent = siteContent['main-content']['services-h4'];
-const servicesContent = document.querySelector('.bottom-content .text-content p');
-aboutContent.textContent = siteContent['main-content']['services-content'];
+const bottomContent = document.querySelector('.bottom-content').children;
 
-const product = document.querySelector('.bottom-content').nextElementSibling;
-product.textContent = siteContent['main-content']['services-h4'];
+// features.textContent = siteContent['main-content']['features-h4'];
+// const featuresContent = document.querySelector('.top-content .text-content p');
+// featuresContent.textContent = siteContent['main-content']['features-content'];
 
-const vision = document.querySelector('.bottom-content').nextElementSibling;
-vision.textContent = siteContent['main-content']['services-h4'];
+// const about = document.querySelector('.main-content').lastChild;
+// about.textContent = siteContent['main-content']['about-h4'];
+// const aboutContent = document.querySelector('.top-content .text-content p').nextSibling;
+// aboutContent.textContent = siteContent['main-content']['about-content'];
+
+// console.log(mainContent);
+// const services = document.querySelector('.bottom-content .text-content h4');
+// services.textContent = siteContent['main-content']['services-h4'];
+// const servicesContent = document.querySelector('.bottom-content .text-content p');
+// servicesContent.textContent = siteContent['main-content']['services-content'];
+
+// const product = document.querySelector('.bottom-content').nextElementSibling;
+// product.textContent = siteContent['main-content']['services-h4'];
+
+// const vision = document.querySelector('.bottom-content').nextElementSibling;
+// vision.textContent = siteContent['main-content']['services-h4'];
