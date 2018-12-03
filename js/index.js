@@ -64,3 +64,15 @@ middleImage.setAttribute('src',siteContent["main-content"]["middle-img-src"]);
 
 //Main-content
 //botton-content
+
+document.querySelector(".bottom-content .text-content h4").textContent = siteContent["main-content"]["services-h4"];
+document.querySelector(".bottom-content .text-content p").textContent = siteContent["main-content"]["services-content"];
+document.querySelector(".secondH4").textContent = siteContent["main-content"]["product-h4"];
+document.querySelector(".secondH4+p").textContent = siteContent["main-content"]["product-content"];
+document.querySelector(".thirdH4").textContent = siteContent["main-content"]["vision-h4"];
+document.querySelector(".thirdH4+p").textContent = siteContent["main-content"]["vision-content"];
+
+
+
+
+
