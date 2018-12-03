@@ -39,27 +39,66 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
-const allAnchors = document.querySelectorAll('a')
-const ctaTextchilds = document.querySelector('.cta-text').childNodes
-// const finderFunc(htmlClass, searchnode) = 
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+
+const allAnchors = document.querySelectorAll('a');
+const ctaTextChilds = document.querySelector('.cta-text').childNodes;
+
+
+const allTextClasses = document.querySelectorAll('.text-content');
+const mcValues = Object.values(siteContent['main-content']);
+
+const contactChilds = document.querySelector('.contact').childNodes;
+const contactValues = Object.values(siteContent.contact);
+
+
 
 for (let i = 0; i < allAnchors.length; i++) {
   allAnchors[i].textContent = Object.values(siteContent.nav)[i];
 }
-for (let i = 0; i < ctaTextchilds.length; i++) {
-  if (Object.keys(siteContent.cta).
-  indexOf(ctaTextchilds[i].nodeName.toLowerCase()) >= 0) {
-    ctaTextchilds[i].textContent = Object.values(siteContent.cta)[Object.keys(siteContent.cta).
-      indexOf(ctaTextchilds[i].nodeName.toLowerCase())];
-  }
-  
-  
-  {
-    ;
-  }
 
+for (let i = 0; i < ctaTextChilds.length; i++) {
+  let matchfound = Object.keys(siteContent.cta).indexOf(ctaTextChilds[i].nodeName.toLowerCase());
+  console.log(matchfound);
+  if (matchfound >= 0) {
+    ctaTextChilds[i].textContent = Object.values(siteContent.cta)[matchfound];
+  }
 }
 
 
+
+
+
+
+for (let i = 0; i < allTextClasses.length; i++) {
+  let processClass = allTextClasses[i].childNodes;
+  for (let i = 0; i < processClass.length; i++) {
+    if (processclass[i].nodeName == '#text') {
+      let newText = mcValues.shift();
+      
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+for (let i = 0; i < contactChilds.length; i++) {
+  if (contactChilds[i].nodeName !== '#text') {
+  let newText = contactValues.shift();
+  contactChilds[i].textContent = newText
+}}
 
