@@ -1,11 +1,13 @@
 const siteContent = {
   "nav": {
+    "nav-item-0": "Portfolio",
     "nav-item-1": "Services",
     "nav-item-2": "Product",
     "nav-item-3": "Vision",
     "nav-item-4": "Features",
     "nav-item-5": "About",
     "nav-item-6": "Contact",
+    "nav-item-8": "Corporate",
     "img-src": "img/logo.png"
   },
   "cta": {
@@ -42,6 +44,7 @@ const siteContent = {
   //header
 let logo = document.getElementById("logo-img");
 let navLinks = document.querySelectorAll("nav a");
+let nav = document.querySelector("nav");
   //cta
 let ctaText = document.querySelector(".cta-text h1");
 let ctaButton = document.querySelector(".cta-text button");
@@ -58,10 +61,19 @@ let footer = document.querySelector("footer p");
 
 // Example: Update the img src for the logo
 logo.setAttribute('src', siteContent["nav"]["img-src"])
-
+let child1 = document.createElement("a");
+nav.appendChild(child1);
+let child2 = document.createElement("a");
+nav.prepend(child2);
+child1.textContent = siteContent['nav'][`nav-item-0`];
+child1.style.color = "green";
+child2.textContent = siteContent['nav'][`nav-item-8`];
+child2.style.color = "green";
 //Go through all the nav links and create one for contact
 for (let i = 0; i < navLinks.length; i++) {
   navLinks[i].textContent = siteContent['nav'][`nav-item-${i + 1}`];
+  navLinks[i].style.color = 'green';
+
 }
 
  ctaText.textContent = siteContent["cta"]["h1"];
@@ -81,5 +93,4 @@ const contactText = ["address", "phone", "email"];
 for (let i = 0; i < contactP.length; i++) {
   contactP[i].textContent = siteContent["contact"][contactText[i]];
 }
-
 footer.textContent = siteContent["footer"]["copyright"];
