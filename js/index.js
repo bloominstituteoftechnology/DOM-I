@@ -42,15 +42,24 @@ const siteContent = {
   }
 };
 
-//
-
-// Example: Update the img src for the logo
-const logo = document.querySelector("#logo-img");
-
+// ============= Variables
 const navLinks = document.querySelectorAll("a");
-const navArray = Array.from(navLinks);
-for (let i = 0; i < navArray.length; i++) {
-  navArray[i].textContent = siteContent["nav"]["nav-item-" + i];
-}
+const navArr = Array.from(navLinks);
+const logo = document.querySelector("#logo-img");
+const ctaText = document.querySelector(".cta-text").childNodes;
+const ctaTextArr = Array.from(ctaText);
+const ctaImg = document.querySelector("#cta-img");
 
+for (let i = 0; i < navArr.length; i++) {
+  navArr[i].textContent = siteContent["nav"]["nav-item-" + i];
+}
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
+for (let i = 1; i < ctaTextArr.length; i++) {
+  if (i === 1) {
+    ctaTextArr[i].textContent = siteContent["cta"]["h1"];
+  }
+  if (i === 3) {
+    ctaTextArr[i].textContent = siteContent["cta"]["button"];
+  }
+}
+ctaImg.src = siteContent["cta"]["img-src"];
