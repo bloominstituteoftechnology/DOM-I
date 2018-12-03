@@ -54,18 +54,21 @@ const ctaImg = document.querySelector('#cta-img');
 ctaImg.src = siteContent.cta["img-src"];
 
 const allH4 = document.querySelectorAll('.main-content h4');
-allH4[0].textContent = siteContent["main-content"]["features-h4"];
-allH4[1].textContent = siteContent["main-content"]["about-h4"];
-allH4[2].textContent = siteContent["main-content"]["services-h4"];
-allH4[3].textContent = siteContent["main-content"]["product-h4"];
-allH4[4].textContent = siteContent["main-content"]["vision-h4"];
+allH4.forEach((item, index) => item.textContent = siteContent["main-content"][Object.keys(siteContent["main-content"]).filter(anotherItem => anotherItem.includes('h4'))[index]]);
+// allH4[0].textContent = siteContent["main-content"]["features-h4"];
+// allH4[1].textContent = siteContent["main-content"]["about-h4"];
+// allH4[2].textContent = siteContent["main-content"]["services-h4"];
+// allH4[3].textContent = siteContent["main-content"]["product-h4"];
+// allH4[4].textContent = siteContent["main-content"]["vision-h4"];
 
 const allMainP = document.querySelectorAll('.main-content p');
-allMainP[0].textContent = siteContent["main-content"]["features-content"];
-allMainP[1].textContent = siteContent["main-content"]["about-content"];
-allMainP[2].textContent = siteContent["main-content"]["services-content"];
-allMainP[3].textContent = siteContent["main-content"]["product-content"];
-allMainP[4].textContent = siteContent["main-content"]["vision-content"];
+allMainP.forEach((item, index) => item.textContent = siteContent["main-content"][Object.keys(siteContent["main-content"]).filter(anotherItem => anotherItem.includes('content'))[index]]);
 
 const mainMiddleImg = document.querySelector('#middle-img');
 mainMiddleImg.src = siteContent["main-content"]["middle-img-src"];
+
+const contH4 = document.querySelector('.contact h4');
+contH4.textContent = siteContent.contact["contact-h4"];
+
+const contP = document.querySelectorAll('.contact p');
+contP.forEach((item, index) => item.textContent = siteContent.contact[Object.keys(siteContent.contact)[index]]);
