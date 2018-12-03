@@ -297,3 +297,9 @@ footer {
         margin: 20px;
     }
 }
+
+.shadow {
+    background: rgb(59, 59, 59);
+    color: rgba(0,0,0,0.6);
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
+}

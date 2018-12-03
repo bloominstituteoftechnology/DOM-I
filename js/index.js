@@ -10,7 +10,7 @@ const siteContent = {
   },
   "cta": {
     "h1": "DOM Is Awesome",
-    "button": "Get Started",
+    "button": "Dark Mode",
     "img-src": "img/header-img.png"
   },
   "main-content": {
@@ -107,3 +107,8 @@ contactPs[2].textContent = siteContent.contact.email;
 let footer = document.querySelector('footer');
 let footerP = footer.querySelector('p');
 footerP.textContent = siteContent.footer.copyright;
+
+let container = document.querySelector('.container');
+ctaBtn.addEventListener('click', function(){
+  container.classList.toggle('shadow')
+})
