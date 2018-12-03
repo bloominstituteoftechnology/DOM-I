@@ -37,17 +37,31 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
+
+//selectors
+  //header
 let logo = document.getElementById("logo-img");
+let navLinks = document.querySelectorAll("nav a");
+  //cta
+let ctaText = document.querySelector(".cta-text h1");
+let ctaButton = document.querySelector(".cta-text button");
+let ctaImage = document.querySelector("#cta-img");
+  //main-content
+let mainContentH4 = document.querySelectorAll(".main-content h4");
+let mainContentP = document.querySelectorAll(".main-content p");
+
+// Example: Update the img src for the logo
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let nav = document.querySelector('nav');
-
-console.log(nav);
-//Go through all the nav links 
-let navLinks = document.querySelectorAll("nav a");
+//Go through all the nav links and create one for contact
 for (let i = 0; i < navLinks.length; i++) {
   navLinks[i].textContent = siteContent['nav'][`nav-item-${i + 1}`];
 }
 
+ ctaText.textContent = siteContent["cta"]["h1"];
+ ctaButton.textContent = siteContent["cta"]["button"];
+ ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
 
+ //Main content
+ const content = siteContent["main-content"];
+ console.log(content);
