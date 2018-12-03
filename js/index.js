@@ -40,3 +40,26 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+const allAnchors = document.querySelectorAll('a')
+const ctaTextchilds = document.querySelector('.cta-text').childNodes
+// const finderFunc(htmlClass, searchnode) = 
+
+for (let i = 0; i < allAnchors.length; i++) {
+  allAnchors[i].textContent = Object.values(siteContent.nav)[i];
+}
+for (let i = 0; i < ctaTextchilds.length; i++) {
+  if (Object.keys(siteContent.cta).
+  indexOf(ctaTextchilds[i].nodeName.toLowerCase()) >= 0) {
+    ctaTextchilds[i].textContent = Object.values(siteContent.cta)[Object.keys(siteContent.cta).
+      indexOf(ctaTextchilds[i].nodeName.toLowerCase())];
+  }
+  
+  
+  {
+    ;
+  }
+
+}
+
+
+
