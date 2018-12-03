@@ -39,7 +39,8 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+// logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.src = siteContent["nav"]["img-src"];
 
 //====== header
 
@@ -91,7 +92,8 @@ let button = document.querySelector('button')
 button.textContent = siteContent["cta"]["button"];
 
 let headerImg = document.getElementById("cta-img");
-headerImg.setAttribute('src', siteContent["cta"]["img-src"])
+// headerImg.setAttribute('src', siteContent["cta"]["img-src"])
+headerImg.src = siteContent["cta"]["img-src"];
 
 
 //====== main content
@@ -120,7 +122,8 @@ topContentP[1].textContent = siteContent["main-content"]["about-content"];
 
 // middle image 
 let middleImg = document.getElementById("middle-img");
-middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+// middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+middleImg.src = siteContent["main-content"]["middle-img-src"];
 
 // botton content
 
@@ -160,4 +163,4 @@ contactP[2].textContent = siteContent["contact"]["email"];
 
 let footerP = document.querySelector("footer > p");
 
-footerP.textContent = siteContent["footer"]["copyright"]
+footerP.textContent = siteContent["footer"]["copyright"];
