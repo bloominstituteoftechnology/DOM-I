@@ -38,7 +38,8 @@ const siteContent = {
 };
 
 // ============================================= Variable definitions
-const navigation = document.querySelectorAll('a');
+const navigation = document.querySelectorAll('header a');
+const navAdditions = document.querySelector('nav')
 const logo = document.getElementById('logo-img');
 const ctaText = document.querySelector('.cta-text h1');
 const ctaButton = document.querySelector('.cta-text button')
@@ -62,6 +63,30 @@ navigation[5].textContent = siteContent.nav["nav-item-6"];
 logo.src = siteContent["nav"]["img-src"];
 
 
+// ============================================= Navigation Color Change and Additional Nav Items
+// add class to navigation to make color green
+navigation.forEach(item => item.style.color = 'green');
+
+// additional navigation elements
+
+const newNav1 = document.createElement('a');
+const newNav2 = document.createElement('a');
+
+
+newNav1.href = '#';
+newNav1.textContent = 'Awesomeness';
+newNav1.style.color = 'green';
+
+newNav2.href = '#';
+newNav2.textContent = 'Secrets';
+newNav2.style.color = 'green';
+
+navAdditions.append(newNav1);
+navAdditions.append(newNav2);
+
+newNav1.style.color = 'green';
+
+
 // ============================================= CTA section
 ctaText.textContent = siteContent['cta']['h1']
 ctaButton.textContent = siteContent['cta']['button']
@@ -83,8 +108,6 @@ mainContentParagraphs[4].textContent = siteContent['main-content']['vision-conte
 
 // ============================================= middle image
 middleImage.src = siteContent['main-content']['middle-img-src'];
-
-
 
 // ============================================= contact
 contactContentHeaders[0].textContent = siteContent['contact']['contact-h4'];
