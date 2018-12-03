@@ -44,7 +44,18 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 let nav = document.querySelectorAll("a");
 for (let i = 0; i<nav.length; i++) {
   nav[i].textContent = Object.values(siteContent.nav)[i]
+  nav[i].style.color = 'green';
 }
+
+let navtag = document.querySelector("nav");
+let newChild = document.createElement("a");
+newChild.textContent = "Best Of";
+newChild.style.color = "green";
+navtag.appendChild(newChild);
+let newChild2 = document.createElement("a");
+newChild2.textContent = "Don't Click!";
+newChild2.style.color = "green";
+navtag.prepend(newChild2);
 
 let ctaText = document.querySelector("h1");
 ctaText.textContent = siteContent.cta.h1;
