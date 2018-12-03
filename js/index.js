@@ -43,8 +43,10 @@ const logo = document.getElementById('logo-img');
 const ctaText = document.querySelector('.cta-text h1');
 const ctaButton = document.querySelector('.cta-text button')
 const ctaImg = document.querySelector('#cta-img');
-const textContentHeaders = document.querySelectorAll('h4');
-const textContentParagraphs = document.querySelectorAll('p')
+const mainContentHeaders = document.querySelectorAll('.main-content h4');
+const mainContentParagraphs = document.querySelectorAll('.main-content p')
+const contactContentHeaders = document.querySelectorAll('.contact h4');
+const contactContentParagraphs = document.querySelectorAll('.contact p')
 const middleImage = document.getElementById('middle-img')
 const footer = document.querySelector('footer');
 
@@ -65,22 +67,18 @@ ctaText.textContent = siteContent['cta']['h1']
 ctaButton.textContent = siteContent['cta']['button']
 ctaImg.src = siteContent['cta']['img-src'];
 
-// ============================================= main content headers
-console.log(textContentHeaders);
+// ============================================= main content
+mainContentHeaders[0].textContent = siteContent['main-content']['features-h4'];
+mainContentHeaders[1].textContent = siteContent['main-content']['about-h4'];
+mainContentHeaders[2].textContent = siteContent['main-content']['services-h4'];
+mainContentHeaders[3].textContent = siteContent['main-content']['product-h4'];
+mainContentHeaders[4].textContent = siteContent['main-content']['vision-h4'];
 
-textContentHeaders[0].textContent = siteContent['main-content']['features-h4'];
-textContentHeaders[1].textContent = siteContent['main-content']['about-h4'];
-textContentHeaders[2].textContent = siteContent['main-content']['services-h4'];
-textContentHeaders[3].textContent = siteContent['main-content']['product-h4'];
-textContentHeaders[4].textContent = siteContent['main-content']['vision-h4'];
-
-// ============================================= main content paragraphs
-
-textContentParagraphs[0].textContent = siteContent['main-content']['features-content'];
-textContentParagraphs[1].textContent = siteContent['main-content']['about-content'];
-textContentParagraphs[2].textContent = siteContent['main-content']['services-content'];
-textContentParagraphs[3].textContent = siteContent['main-content']['product-content'];
-textContentParagraphs[4].textContent = siteContent['main-content']['vision-content'];
+mainContentParagraphs[0].textContent = siteContent['main-content']['features-content'];
+mainContentParagraphs[1].textContent = siteContent['main-content']['about-content'];
+mainContentParagraphs[2].textContent = siteContent['main-content']['services-content'];
+mainContentParagraphs[3].textContent = siteContent['main-content']['product-content'];
+mainContentParagraphs[4].textContent = siteContent['main-content']['vision-content'];
 
 
 // ============================================= middle image
@@ -89,10 +87,10 @@ middleImage.src = siteContent['main-content']['middle-img-src'];
 
 
 // ============================================= contact
-textContentHeaders[5].textContent = siteContent['contact']['contact-h4'];
-textContentParagraphs[5].textContent = siteContent['contact']['address'];
-textContentParagraphs[6].textContent = siteContent['contact']['phone'];
-textContentParagraphs[7].textContent = siteContent['contact']['email'];
+contactContentHeaders[0].textContent = siteContent['contact']['contact-h4'];
+contactContentParagraphs[0].textContent = siteContent['contact']['address'];
+contactContentParagraphs[1].textContent = siteContent['contact']['phone'];
+contactContentParagraphs[2].textContent = siteContent['contact']['email'];
 
 
 // ============================================= footer
