@@ -42,7 +42,6 @@ const siteContent = {
 const logo = document.querySelector("#logo-img");
 logo.src = siteContent["nav"]["img-src"];
 
-document.querySelectorAll("header nav a");
 const headerLinks = Array.from(document.querySelectorAll("header nav a"));
 console.log(headerLinks);
 
@@ -57,7 +56,7 @@ newLink1.textContent = "History";
 newLink2.textContent = "Shareholders";
 
 headerNav.appendChild(newLink1);
-headerNav.appendChild(newLink2);
+headerNav.prepend(newLink2);
 
 headerLinks.push(newLink1);
 headerLinks.push(newLink2);
@@ -66,6 +65,7 @@ console.log(headerLinks);
 headerLinks.forEach((link) => {
   link.style.color = "green";
 })
+
 headerLinks[0].textContent = siteContent["nav"]["nav-item-1"];
 headerLinks[1].textContent = siteContent["nav"]["nav-item-2"];
 headerLinks[2].textContent = siteContent["nav"]["nav-item-3"];
