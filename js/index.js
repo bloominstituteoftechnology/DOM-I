@@ -37,23 +37,44 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
+// Variable definitions
+const navigation = document.querySelectorAll('a');
 const logo = document.getElementById("logo-img");
-// logo.setAttribute('src', siteContent["nav"]["img-src"])
+const ctaTextSection = document.getElementsByClassName('cta-text');
+const ctaImg = document.querySelector('#cta-img');
+const middleImage = document.getElementById("middle-img");
+// const contact = document.querySelector('.contact');
+const footer = document.querySelector('footer');
+
+
+// Navigation and Logo
+navigation[0].textContent = siteContent.nav["nav-item-1"];
+navigation[1].textContent = siteContent.nav["nav-item-2"];
+navigation[2].textContent = siteContent.nav["nav-item-3"];
+navigation[3].textContent = siteContent.nav["nav-item-4"];
+navigation[4].textContent = siteContent.nav["nav-item-5"];
+navigation[5].textContent = siteContent.nav["nav-item-6"];
+
 logo.src = siteContent["nav"]["img-src"];
 
 
+// CTA section
+
+// ctaTextSection.textContent = siteContent['cta']['h1']
+ctaImg.src = siteContent['cta']['img-src'];
+
+console.log(ctaTextSection[0])
 
 
 // middle image
-const middleImage = document.getElementById("middle-img");
+
 middleImage.src = siteContent['main-content']['middle-img-src'];
 
 // contact
-const contact = document.querySelector('.contact');
 
-console.log(contact);
+
+// console.log(contact);
 
 // footer
-const footer = document.querySelector('footer');
+
 footer.textContent = siteContent.footer.copyright;
