@@ -60,3 +60,20 @@ let ctaHeader = ctaContent.children[0];
 let ctaButton = ctaContent.children[1];
 ctaHeader.textContent = siteContent.cta.h1;
 ctaButton.textContent = siteContent.cta.button;
+
+//Top Content
+let topContent = document.querySelector('.top-content');
+
+let featuresContent = topContent.children[0];
+let featuresHeader = featuresContent.children[0];
+let featuresText = featuresContent.children[1];
+
+let aboutContent = topContent.children[1];
+let aboutHeader = aboutContent.children[0];
+let aboutText = aboutContent.children[1];
+
+featuresHeader.textContent = siteContent["main-content"]["features-h4"];
+featuresText.textContent = siteContent["main-content"]["features-content"];
+
+aboutHeader.textContent = siteContent["main-content"]["about-h4"];
+aboutText.textContent = siteContent["main-content"]["about-content"];
