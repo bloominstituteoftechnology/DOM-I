@@ -54,7 +54,7 @@ const mainNav = document.querySelector("nav");
 
 const navAnchors = document.querySelectorAll("a");
 
-navAnchors.forEach((navAnchor, i) => navAnchors[i].textContent = siteContent["nav"][`nav-item-${i+1}`]);
+navAnchors.forEach((index, i) => navAnchors[i].textContent = siteContent["nav"][`${Object.keys(siteContent["nav"])[i]}`]);
 
 const firstAnchor = document.createElement("a");
 firstAnchor.href = "#";
