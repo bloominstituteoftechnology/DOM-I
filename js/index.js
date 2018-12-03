@@ -43,7 +43,6 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let nav = document.querySelector('nav');
 let navItems = nav.querySelectorAll('a');
-console.log(navItems);
 
 navItems[0].textContent = siteContent.nav["nav-item-1"];
 navItems[1].textContent = siteContent.nav["nav-item-2"];
@@ -51,6 +50,19 @@ navItems[2].textContent = siteContent.nav["nav-item-3"];
 navItems[3].textContent = siteContent.nav["nav-item-4"];
 navItems[4].textContent = siteContent.nav["nav-item-5"];
 navItems[5].textContent = siteContent.nav["nav-item-6"];
+
+let newNavItemNode = document.createElement('A');
+newNavItemNode.href = "#"
+newNavItemNode.textContent = "What"
+nav.appendChild(newNavItemNode);
+
+let newNavItemNode2 = document.createElement('A');
+newNavItemNode2.href = "#"
+newNavItemNode2.textContent = "Yo"
+nav.prepend(newNavItemNode2);
+
+navItems = nav.querySelectorAll('a');
+navItems.forEach(x => x.style.color = 'green');
 
 let cta = document.querySelector('.cta');
 let ctaH1 = cta.querySelector('h1');
