@@ -1,11 +1,11 @@
 const siteContent = {
   "nav": {
-    "nav-item-1": "Services",
-    "nav-item-2": "Product",
-    "nav-item-3": "Vision",
-    "nav-item-4": "Features",
-    "nav-item-5": "About",
-    "nav-item-6": "Contact",
+    "nav-item-0": "Services",
+    "nav-item-1": "Product",
+    "nav-item-2": "Vision",
+    "nav-item-3": "Features",
+    "nav-item-4": "About",
+    "nav-item-5": "Contact",
     "img-src": "img/logo.png"
   },
   "cta": {
@@ -39,4 +39,25 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', "img/logo.png")
+
+const codeImg = document.querySelector('#cta-img');
+
+codeImg.src = "img/header-img.png";
+
+const middleImg = document.querySelector('#middle-img')
+middleImg.src = 'img/mid-page-accent.jpg';
+
+//nav
+
+const nav = document.querySelector("nav");
+
+const navArray = Array.from(document.querySelectorAll('a'))
+
+for(let i in navArray){
+  navArray[i].textContent = siteContent.nav[`nav-item-${i}`];
+}
+
+//navend
+
+const cta = document.query
