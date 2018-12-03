@@ -71,5 +71,13 @@ let ctaButton = document.querySelector('.cta-text button');
 
   // Main content
 
+let topContentHead = document.querySelectorAll(".top-content .text-content h4");
+    topContentHead[0].textContent = "Features";
+    topContentHead[1].textContent = "About";
+
+  let topContent = document.querySelectorAll(".top-content .text-content p");
+    topContent[0].textContent = siteContent["main-content"]["features-content"];
+    topContent[1].textContent = siteContent["main-content"]["about-content"];
+
   let midImg = document.getElementById("middle-img");
     midImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
