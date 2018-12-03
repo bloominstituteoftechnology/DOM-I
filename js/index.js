@@ -117,3 +117,11 @@ newNavElement2.setAttribute('style', 'color:green')
 newNavElement2.href = "#";
 
 nav.appendChild(newNavElement2)
+
+//button listener
+
+const button = cta.querySelector('button');
+
+button.addEventListener("click", () => {
+  cta.querySelector('h1').textContent = 'Wow, The button works';
+});
