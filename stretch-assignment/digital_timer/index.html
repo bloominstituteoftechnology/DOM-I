@@ -3,9 +3,14 @@
   <head>
     <title>DOM I</title>
     <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen+Mono" rel="stylesheet">
     <script src="index.js" async></script>
   </head>
   <body>
+    <header>
+    <h1>Ten Second Timer</h1>
+    <h2>How do you perceive ten seconds?</h2>
+  </header>
     <div class="digits">
       <div class="digit" id="secondTens">-</div>
       <div class="digit" id="secondOnes">-</div>
@@ -15,5 +20,15 @@
     </div>
     <button id="start" onClick="start()">Start Timer</button>
     <button id="restart" onClick="restart()">Restart Timer</button>
+    <div class="text">
+        <h3>Time Perception</h3>
+        <p>Perception of time varies based on mental state. 
+          For example, some studies suggest that low doses of caffeine improve prospective time estimation 
+          in people who typically consume caffeine, but in people who do not, caffeine produces shorter time estimates 
+          (e.g., thinking 3 seconds have passed when in actuality 5 have). This is contrary to the hypothesis that 
+          caffeine would "increase the internal clock rate" and cause longer estimates. 
+        </p>
+        <p>Try starting the timer, closing your eyes, and counting to ten before opening your eyes. Do you overestimate, or underestimate the passage of time?</p>
+    </div>
   </body>
 </html>

@@ -1,15 +1,62 @@
+* {
+  box-sizing: border-box;
+}
+
+
 body {
+  background-color: rgb(243, 232, 211);
+  color: rgb(24, 22, 22);
   display: flex;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;  
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: "Oxygen Mono", sans-serif;
+  border: 3px solid rgb(6, 21, 95);
+}
+
+.digits {
+  border: 3px solid rgb(6, 21, 95);
+  border-radius: 3px;
+  padding: 15px 0 15px 0;
+  width: 40%;
+  text-align: center;
+  margin: 20px 0 20px 0;
 }
 
 .digit {
   display: inline-block;
   font-size: 80px;
+  color: rgb(2, 28, 31);
+
+}
+
+header {
+  text-align: center;
+  width: 100%;
+  background-color: rgb(209, 183, 131);
+  margin: 0 0 50px 0;
 }
 
 .redDigit {
   color: red;
+}
+
+button {
+  font-size: 1.5rem;
+  padding: 10px 2% 10px 2%;
+  margin: 20px 0 20px 0;
+  width: 30%;
+  border-radius: 5px;
+  color: rgb(214, 228, 228);
+  background-color: rgb(126, 90, 23);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.text {
+  margin: 20px 5% 100px 5%;
+  line-height: 2;
+  font-size: 1.5rem;
 }
