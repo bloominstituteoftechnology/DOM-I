@@ -57,6 +57,12 @@ nlist.forEach(
   }
 );
 
+nlist.forEach(
+  (curval, i) => {
+    document.querySelectorAll('nav a')[i].setAttribute('style', 'color: green');
+  }
+);
+
 // var linknode = document.createElement('a');
 // var textnode = document.createTextNode('Link');
 // linknode.appendChild(textnode);
