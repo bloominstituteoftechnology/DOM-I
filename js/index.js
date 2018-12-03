@@ -49,13 +49,21 @@ const links = document.querySelectorAll("a");
 navLogoImage.src = 'img/logo.png';
 
 //const topContent = document.querySelectorAll(".cta");
-const headerText = document.querySelectorAll(".cta=text");
+const headerText = document.querySelectorAll(".cta-text h1");
 const headerButton = document.querySelector("button");
 const headerImage = document.querySelector("#cta-img");
 
+headerText.textContent = siteContent.cta.h1;
+headerButton.textContent = "Get Started";
 headerImage.src = 'img/header-img.png';
 
 const mainContent = document.querySelectorAll(".main-content");
+
+//================== Paragraph Headers - H4
+const h4 = document.querySelectorAll("main-content h4");
+
+
+
 const topContent = document.querySelectorAll(".top-content");
 const text = document.querySelectorAll(".text-content");
 
