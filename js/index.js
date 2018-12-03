@@ -45,17 +45,17 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 let nav = document.querySelectorAll('a');
 nav[0].textContent = 'Services';
-nav[0].style.color = 'grey'
+nav[0].style.color = 'green'
 nav[1].textContent = 'Product';
-nav[1].style.color = 'grey'
+nav[1].style.color = 'green'
 nav[2].textContent = 'Vision';
-nav[2].style.color = 'grey'
+nav[2].style.color = 'green'
 nav[3].textContent = 'Features';
-nav[3].style.color = 'grey'
+nav[3].style.color = 'green'
 nav[4].textContent = 'About';
-nav[4].style.color = 'grey'
+nav[4].style.color = 'green'
 nav[5].textContent = 'Contact';
-nav[5].style.color = 'grey'
+nav[5].style.color = 'green'
 
 
 //CTA
