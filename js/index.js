@@ -143,3 +143,15 @@ navLinks = document.querySelectorAll('nav a');
 navLinks.forEach(a => {
   a.style.color = 'green';
 });
+
+//Update styles for some elements.
+ctaButton.style.boxShadow = '0px 2px 4px black';
+ctaButton.style.transition = 'all .4s';
+ctaButton.onmouseover = (e => {
+  e.target.style.boxShadow = '0px 6px 6px black';
+  e.target.style.backgroundColor = 'grey';
+});
+ctaButton.onmouseleave = (e => {
+  e.target.style.boxShadow = '0px 2px 4px black';
+  e.target.style.backgroundColor = 'white';
+});
