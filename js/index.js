@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM\r\nIs\r\nAwesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "123 Way 456 Street\r\nSomewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -65,6 +65,7 @@ const ctaText = document.querySelector(".cta-text");
 ctaText.childNodes.forEach(element => {
   if (element.localName === "h1") {
     element.textContent = siteContent.cta.h1;
+    element.style.whiteSpace = "pre-line";
   } else if (element.localName === "button") {
     element.textContent = siteContent.cta.button;
   }
@@ -113,6 +114,7 @@ const contact = document.querySelector(".contact").childNodes;
 let i = 1;
 for(let each in siteContent.contact){
   contact[i].textContent = siteContent.contact[`${each}`];
+  contact[i].style.whiteSpace = "pre";
   i += 2;
 };
 
