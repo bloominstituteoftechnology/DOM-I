@@ -44,5 +44,15 @@ const siteContent = {
 
 const navBar = document.querySelectorAll("nav");
 const hdrImage = document.querySelector("#logo-img");
+const links = document.querySelectorAll("a");
 
 hdrImage.src = 'img/logo.png';
+
+//const topContent = document.querySelectorAll(".cta");
+const topText = document.querySelectorAll(".cta=text");
+const topButton = document.querySelector("button");
+const topImage = document.querySelector("#cta-img");
+
+topImage.src = 'img/header-img.png';
+
+
