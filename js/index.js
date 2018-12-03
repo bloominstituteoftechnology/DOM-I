@@ -98,3 +98,22 @@ contact.querySelectorAll('p')[2].textContent = siteContent.contact.email;
 const footer = document.querySelector('footer');
 
 footer.querySelector('p').textContent = siteContent.footer.copyright
+
+// New Content
+for (let i in navArray){
+  nav.querySelectorAll('a')[i].setAttribute('style', 'color:green')
+}
+
+const newNavElement1 = document.createElement('a');
+newNavElement1.textContent = 'Sign In';
+newNavElement1.setAttribute('style', 'color:green')
+newNavElement1.href = "#";
+
+nav.prepend(newNavElement1)
+
+const newNavElement2 = document.createElement('a');
+newNavElement2.textContent = 'User';
+newNavElement2.setAttribute('style', 'color:green')
+newNavElement2.href = "#";
+
+nav.appendChild(newNavElement2)
