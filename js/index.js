@@ -38,14 +38,19 @@ const siteContent = {
 };
 
 // Navigation Content
-const navItems = document.querySelectorAll("a");
+let navItems = document.querySelectorAll("a");
 for (let i = 0; i < navItems.length; i++) {
   navItems[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
+}
+
+for (let i = 0; i <navItems.length; i++){
+  navItems[i].style.color = "green";
 }
 
 const newAnchorTag = document.createElement('a');
 newAnchorTag.href = "#";
 newAnchorTag.textContent = "Blog";
+newAnchorTag.style.color = "green";
 
 const mainNav = document.querySelector('nav');
 mainNav.appendChild(newAnchorTag);
@@ -54,12 +59,10 @@ const newTagTwo = document.createElement('a');
 newTagTwo.href = "#";
 newTagTwo.textContent = "Portfolio";
 mainNav.prepend(newTagTwo);
+newTagTwo.style.color = "green";
 
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
-
-const navTextColor = document.querySelector("nav");
-navTextColor.style.color = "green";
 
 // CTA Content
 const ctaText = document.querySelector('.cta-text h1');
