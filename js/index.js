@@ -87,7 +87,26 @@ Array.prototype.forEach.call(mainContentItems, (item, i) => {
 
 Array.prototype.forEach.call(contactItems, (item, i) => {
   item.style.whiteSpace = "pre-line";
-  item.textContent = Object.values(siteContent["contact"])[i]
+  item.textContent = Object.values(siteContent["contact"])[i];
 });
 
 copyrightItem.textContent = siteContent["footer"]["copyright"];
+
+// Adding new content
+// ------------------
+
+Array.prototype.forEach.call(navItems, (item, i) => {
+  item.style.color = "green";
+});
+
+let navHome = document.createElement("a");
+navHome.href = "#";
+navHome.textContent = "Home";
+navHome.style.color = "green";
+document.querySelector("nav").prepend(navHome);
+
+let navLegal = document.createElement("a");
+navLegal.href = "#";
+navLegal.textContent = "Legal";
+navLegal.style.color = "green";
+document.querySelector("nav").appendChild(navLegal);
