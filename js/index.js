@@ -50,6 +50,17 @@ let cta = document.querySelector('.cta');
 let ctaText = document.querySelector('.cta-text');
 let ctaH1 = ctaText.children[0];
 let ctaBTN = ctaText.children[1];
-
+let ctaImg = document.querySelector('#cta-img');
+// Main Content
+let mainContent = document.querySelector('.main-content');
+let topContent = document.querySelector('.top-content');
+// Text Content One
+let textContentOne = topContent.children[0];
+let contentOneH4= textContentOne.children[0];
+let contentOneP= textContentOne.children[1];
+// Text Content One
+let textContentTwo = topContent.children[1];
+let contentTwoH4= textContentTwo.children[0];
+let contentTwoP= textContentTwo.children[1];
 
 // logo.setAttribute('src', siteContent["nav"]["img-src"])
