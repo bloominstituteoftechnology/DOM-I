@@ -51,6 +51,24 @@ document.querySelectorAll('nav a').forEach(
   }
 );
 
+
+
+/*For Task 4,  two new nav links, with .appendChild() and .prepend(). This is done first, even though
+this task is listed second, because if we don't put it first in the file, the newly created a nodes will
+not be styled green*/
+var node1 = document.createElement("a");
+var textnode1 = document.createTextNode("History");
+node1.appendChild(textnode1);
+document.querySelector('nav').prepend(node1);
+var node2 = document.createElement("a");
+var textnode2 = document.createTextNode("Great Ideas");
+node2.appendChild(textnode2);
+document.querySelector('nav').appendChild(node2);
+
+//For Task 4, change color of navigation text to be green
+
+document.querySelectorAll('nav a').forEach(link => link.style.color = "green");
+
 //Add content to cta
 
 document.querySelector('.cta-text h1').textContent = siteContent.cta.h1;
