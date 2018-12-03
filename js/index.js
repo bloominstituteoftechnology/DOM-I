@@ -67,6 +67,8 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 // CTA Content
 const ctaText = document.querySelector('.cta-text h1');
 ctaText.textContent = siteContent["cta"]["h1"]
+ctaText.setAttribute('style', 'white-space: pre-line');
+
 const ctaButton = document.querySelector('.cta-text button');
 ctaButton.textContent = siteContent["cta"]["button"]
 
@@ -81,6 +83,10 @@ mainContentH4[2].textContent = siteContent["main-content"]["services-h4"];
 mainContentH4[3].textContent = siteContent["main-content"]["product-h4"];
 mainContentH4[4].textContent = siteContent["main-content"]["vision-h4"];
 
+for (let i = 0; i < mainContentH4.length; i++){
+  mainContentH4[i].style.color = "lightblue";
+}
+
 mainContentText = Array.from(document.querySelectorAll(".main-content .text-content p"));
 mainContentText[0].textContent = siteContent["main-content"]["features-content"];
 mainContentText[1].textContent = siteContent["main-content"]["about-content"];
@@ -91,7 +97,6 @@ mainContentText[4].textContent = siteContent["main-content"]["vision-content"];
 let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
 
-
 // Contact
 const contactHeader = document.querySelector(".contact h4");
 contactHeader.textContent = siteContent["contact"]["contact-h4"]
@@ -101,6 +106,11 @@ contactText[0].textContent = siteContent["contact"]["address"];
 contactText[1].textContent = siteContent["contact"]["phone"];
 contactText[2].textContent = siteContent["contact"]["email"];
 
+for (let i = 0; i < contactText.length; i++){
+  contactText[i].style.color = "green";
+}
+
+contactHeader.style.color = "green";
 // Footer
 const footerText = document.querySelector("footer");
 footerText.textContent = siteContent["footer"]["copyright"];
