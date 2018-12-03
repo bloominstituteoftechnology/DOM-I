@@ -40,3 +40,66 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// Start with nav
+const nav = document.querySelectorAll("a");
+nav.forEach((element, index) => {
+  element.textContent = siteContent.nav[`nav-item-${index + 1}`];
+});
+
+const ctaText = document.querySelector(".cta-text");
+// console.log(ctaText);
+ctaText.childNodes.forEach(element => {
+  if (element.localName === "h1") {
+    element.textContent = siteContent.cta.h1;
+  } else if (element.localName === "button") {
+    element.textContent = siteContent.cta.button;
+  }
+});
+
+const ctaImg = document.querySelector("#cta-img");
+// console.log(ctaImg);
+ctaImg.setAttribute("src", siteContent.cta["img-src"]);
+
+// having trouble thinking of a clever way to loop on siteContent.main-content... do brute force for now:
+const textContent = document.querySelectorAll(".text-content");
+// console.log(textContent)
+for (let i = 0; i < 5; i ++) {
+  let topic = "";
+  switch (i) {
+    case 0:
+      topic = "features";
+      break;
+    case 1:
+      topic = "about";
+      break;
+    case 2:
+      topic = "services";
+      break;
+    case 3:
+      topic = "product";
+      break;
+    case 4:
+      topic = "vision";
+      break;
+  }
+  textContent[i].childNodes.forEach(element => {
+    if (element.localName === "h4") {
+      element.textContent = siteContent["main-content"][`${topic}-h4`];
+    } else if (element.localName === "p") {
+      element.textContent = siteContent["main-content"][`${topic}-content`];
+    }
+  });
+}
+
+const middleImg = document.querySelector("#middle-img");
+middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+const contact = document.querySelector(".contact").childNodes;
+console.log(contact);
+let i = 1;
+for(let each in siteContent.contact){
+  contact[i].textContent = siteContent.contact[`${each}`];
+  i += 2;
+};
+
