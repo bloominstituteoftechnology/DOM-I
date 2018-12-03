@@ -44,20 +44,25 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 const allAnchors = document.querySelectorAll('a');
 const ctaTextChilds = document.querySelector('.cta-text').childNodes;
-
+let ctaimg = document.getElementById('cta-img')
+ctaimg.setAttribute('src', Object.values(siteContent.cta)[2])
 
 const allTextClasses = document.querySelectorAll('.text-content');
 const mcValues = Object.values(siteContent['main-content']);
+let middleimg = document.getElementById("middle-img");
+middleimg.setAttribute('src', mcValues.splice(4, 1))
 
 const contactChilds = document.querySelector('.contact').childNodes;
 const contactValues = Object.values(siteContent.contact);
 
 
 
+// Nav Bar Anchors Loop
 for (let i = 0; i < allAnchors.length; i++) {
   allAnchors[i].textContent = Object.values(siteContent.nav)[i];
 }
 
+// CTA H1 and Button Loop
 for (let i = 0; i < ctaTextChilds.length; i++) {
   let matchfound = Object.keys(siteContent.cta).indexOf(ctaTextChilds[i].nodeName.toLowerCase());
   console.log(matchfound);
@@ -66,36 +71,18 @@ for (let i = 0; i < ctaTextChilds.length; i++) {
   }
 }
 
-
-
-
-
-
+// text-content class loop
 for (let i = 0; i < allTextClasses.length; i++) {
   let processClass = allTextClasses[i].childNodes;
   for (let i = 0; i < processClass.length; i++) {
-    if (processclass[i].nodeName == '#text') {
+    if (processClass[i].nodeName !== '#text') {
       let newText = mcValues.shift();
-      
+      processClass[i].textContent = newText;
     }
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Contact class loop
 for (let i = 0; i < contactChilds.length; i++) {
   if (contactChilds[i].nodeName !== '#text') {
   let newText = contactValues.shift();
