@@ -42,14 +42,15 @@ const siteContent = {
 // logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //========================Nav Bar
-const navBar = document.querySelectorAll("nav");
+let header = document.querySelector("header");
 const navLogoImage = document.querySelector("#logo-img");
 const links = document.querySelectorAll("a");
 
 for (let i = 0; i < links.length; i++) {
   links[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
 }
-//links.style.color = "green";
+
+//header.style.color = "green";
 
 navLogoImage.src = 'img/logo.png';
 
@@ -84,22 +85,28 @@ const paragraphs = document.querySelectorAll(".main-content p");
 paragraphs[0].textContent = siteContent[`main-content`]["features-content"];
 paragraphs[1].textContent = siteContent[`main-content`]["about-content"];
 paragraphs[2].textContent = siteContent[`main-content`]["services-content"];
-paragraphs[3].textContent = siteContent[`main-content`]["fproduct-content"];
+paragraphs[3].textContent = siteContent[`main-content`]["product-content"];
 paragraphs[4].textContent = siteContent[`main-content`]["vision-content"];
 
 
-
+//=================== Top Content Flex
 const topContent = document.querySelectorAll(".top-content");
+topContent.style.display = flex;
 
 //================== Middle Image
 const middleImg = document.querySelector("#middle-img");
 middleImg = 'img/mid-page-accent.jpg';
 
+//=================== Bottom Content Flex
 const bottomContent = document.querySelectorAll(".bottom-content");
+bottomContent.style.display = flex;
 
+
+//=================== Contact Section
 const contactSection = document.querySelectorAll(".contact");
 
-const footer = document.querySelectorAll(footer);
-footer.textContent = siteContent["footer"];
+//=================== Footer
+const footer = document.querySelector(footer);
+footer.textContent = siteContent[`main-content`]["footer"];
 
 
