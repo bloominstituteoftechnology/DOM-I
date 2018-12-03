@@ -99,7 +99,6 @@ button[0].textContent = siteContent.cta.button;
 
 // Paragraph Titles
 let h4 = document.getElementsByTagName("h4");
-
 h4[0].textContent = siteContent["main-content"]["features-h4"];
 h4[1].textContent = siteContent["main-content"]["about-h4"];
 h4[2].textContent = siteContent["main-content"]["services-h4"];
@@ -112,10 +111,9 @@ snippet.setAttribute("src", siteContent["cta"]["img-src"]);
 
 // Header Links
 let headerLink1 = document.querySelectorAll("a");
-let navArray = Array.from(headerLink1);
 
-for (let i = 0; i < headerLink1.length; ++i) {
-  navArray[i].textContent = siteContent.nav[`nav-item-${i}`];
+for (let i = 0; i < headerLink1.length; i++) {
+  headerLink1[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
 }
 
 // Changing color to GREEN
