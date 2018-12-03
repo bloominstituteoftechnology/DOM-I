@@ -42,7 +42,6 @@ const siteContent = {
 // logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
-// HEADER
 
 // ========== Nav
 const navAnchors = document.querySelectorAll('a');
@@ -68,3 +67,27 @@ headerButton.textContent = siteContent.cta.button;
 
 const headerImg = document.querySelector('#cta-img');
 headerImg.src = siteContent.cta["img-src"];
+
+
+
+// ========== Main Content ======== //
+
+// Top Content
+const topContent = document.querySelector('.top-content').querySelectorAll('.text-content');
+console.log(topContent);
+
+const featuresHeader = topContent[0].querySelector('h4');
+featuresHeader.textContent = siteContent["main-content"]["features-h4"];
+
+const featuresContent = topContent[0].querySelector('p');
+featuresContent.textContent = siteContent["main-content"]["features-content"];
+
+const aboutHeader = topContent[1].querySelector('h4');
+aboutHeader.textContent = siteContent["main-content"]["about-h4"];
+
+const aboutContent = topContent[1].querySelector('p');
+aboutContent.textContent = siteContent["main-content"]["about-content"];
+
+const middleImg = document.querySelector('.middle-img');
+middleImg.src = siteContent["main-content"]["middle-img-src"];
+
