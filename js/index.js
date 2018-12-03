@@ -79,6 +79,14 @@ const botTextCotentTwoP= botTextCotentTwo.children[1];
 const botTextCotentThree = topContent.children[2];
 const botTextCotentThreeH4= botTextCotentThree.children[0];
 const botTextCotentThreeP= botTextCotentThree.children[1];
-
+// Contact
+const contact = document.querySelector('.contact');
+const contactH4 = contact.children[0];
+const contactP1 = contact.children[1];
+const contactP2 = contact.children[2];
+const contactP3 = contact.children[3];
+//Footer
+const footer = document.querySelector('footer');
+const footerP = footer.children[0]
 
 // logo.setAttribute('src', siteContent["nav"]["img-src"])
