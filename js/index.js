@@ -42,4 +42,12 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
-console.log(document)
+const anchors = document.querySelectorAll("a");
+const anchorsArray = Array.from(anchors);
+anchorsArray[0].textContent = siteContent.nav["nav-item-1"];
+anchorsArray[1].textContent = siteContent.nav["nav-item-2"];
+anchorsArray[2].textContent = siteContent.nav["nav-item-3"];
+anchorsArray[3].textContent = siteContent.nav["nav-item-4"];
+anchorsArray[4].textContent = siteContent.nav["nav-item-5"];
+anchorsArray[5].textContent = siteContent.nav["nav-item-6"];
+
