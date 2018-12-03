@@ -38,13 +38,47 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+let logo = document.querySelector("#logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let ctaImg = document.getElementById("cta-img");
+let ctaImg = document.querySelector("#cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
 
-let middleImg = document.getElementById("middle-img");
+let middleImg = document.querySelector("#middle-img");
 middleImg.setAttribute('src',siteContent["main-content"]["middle-img-src"]);
 
+let navItems = document.querySelectorAll("a");
 
+for (let i = 0; i < navItems.length; i++) {
+  navItems[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
+}
+
+let ctaHeading = document.querySelector("h1");
+
+ctaHeading.textContent = siteContent.cta.h1;
+
+let ctaButton = document.querySelector("button");
+
+ctaButton.textContent = siteContent.cta.button;
+// let nav = document.querySelector("nav");
+// nav.textContent = "Navi nav";console.log(nav);
+
+
+
+// let navItems = document.querySelector("nav-item-1");
+// navItems.setAttribute('href',siteContent["nav"]["nav-item-1"])
+// console.log(navItems)
+
+// let navItems = document.querySelector("a");
+// for (let i = 0; i < navItems.length; i++) {
+//   navItems[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
+// }
+// console.log(navItems)
+
+// let headerLink1 = document.querySelectorAll("a");
+
+// for (let i = 0; i < headerLink1.length; i++) {
+//   headerLink1[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
+// }
+
+// console.log(headerLink1)
