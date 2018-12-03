@@ -145,3 +145,19 @@ contactNodes[7].textContent = siteContent.contact["email"];
 const pageFooter = Array.from(document.querySelector("footer").childNodes);
 
 pageFooter[1].textContent = siteContent.footer["copyright"];
+
+// ========================== Adding New Content
+
+const blog = document.createElement("a");
+const gallery = document.createElement("a");
+
+blog.appendChild(document.createTextNode("Blog"));
+gallery.appendChild(document.createTextNode("Gallery"));
+
+const navBar = document.querySelector("nav");
+navBar.appendChild(blog);
+navBar.prepend(gallery);
+
+
+
+
