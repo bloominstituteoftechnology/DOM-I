@@ -68,3 +68,8 @@ let ctaIMG = document.getElementById('cta-img');
 
 let ctaButton = document.querySelector('.cta-text button');
   ctaButton.innerHTML = 'Get Started'; 
+
+  // Main content
+
+  let midImg = document.getElementById("middle-img");
+    midImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
