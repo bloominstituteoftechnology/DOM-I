@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "123 Way 456 Street \r\n Somewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -39,4 +39,63 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+//Add text to nav links
+
+const linkNames = Object.values(siteContent.nav);
+
+document.querySelectorAll('nav a').forEach(
+  function(link, index){
+    link.textContent = linkNames[index];
+  }
+);
+
+//Add content to cta
+
+document.querySelector('.cta-text h1').textContent = siteContent.cta.h1;
+document.querySelector('.cta-text button').textContent = siteContent.cta.button;
+document.querySelector('#cta-img').setAttribute('src', siteContent.cta["img-src"]);
+
+//Update main section
+
+const mainContentKeys = Object.keys(siteContent["main-content"]);
+const headingsTextArray = [];
+const contentTextArray = [];
+
+
+mainContentKeys.forEach(function(key, index){
+  if(key.includes('-h4')){
+    headingsTextArray.push(siteContent["main-content"][key]);
+  }
+});
+
+mainContentKeys.forEach(function(key, index){
+  if(key.includes('-content')){
+    contentTextArray.push(siteContent["main-content"][key]);
+  }
+});
+
+document.querySelectorAll('.main-content h4').forEach(
+  function(header, index){
+    header.textContent = headingsTextArray[index];
+  }
+);
+
+document.querySelector('#middle-img').setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+document.querySelectorAll('.main-content .text-content p').forEach(
+  function(textBlock, index){
+    textBlock.textContent = contentTextArray[index];
+  }
+);
+
+//Update contact section
+
+const contactContent = Object.values(siteContent.contact);
+const contactNodes = document.getElementsByClassName("contact")[0].children;
+console.log(document.querySelector('.contact p').style["white-space"] = 'pre');
+
+Array.from(contactNodes).forEach(function(node, index){
+  node.textContent = contactContent[index];
+});
