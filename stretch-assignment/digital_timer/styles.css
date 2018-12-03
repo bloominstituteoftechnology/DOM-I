@@ -1,14 +1,37 @@
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 330px;
+  background: #f2eccb;
 }
 
 .digit {
   display: inline-block;
-  font-size: 80px;
+  font-size: 200px;
 }
 
 .redDigit {
   color: red;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  margin: 20px 10px;
+  border: 1px solid white;
+  border-radius: 8px;
+  font-size: 25px;
+  background: black;
+  color: white;
+  padding: 10px 10px;
+}
+
+h1 {
+  font-size: 50px;
+  color: coral;
 }
