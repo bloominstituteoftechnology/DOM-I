@@ -45,6 +45,8 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // nav anchor tags
 
+let navItems = document.querySelectorAll('a');
+
 // old method
 
 // let servicesNav = navItems[0];
@@ -77,16 +79,15 @@ navItemsArr.map((item, index)=>item.textContent= siteContent["nav"][`nav-item-${
 
 //====== section cta
 
-let cta = document.querySelector('.cta-text');
+let h1 = document.querySelector('h1');
+h1.textContent = siteContent["cta"]["h1"];
 
-// "cta": {
-//   "h1": "DOM Is Awesome",
-//   "button": "Get Started",
-//   "img-src": "img/header-img.png"
-// },
+let button = document.querySelector('button')
+button.textContent = siteContent["cta"]["button"];
 
 let headerImg = document.getElementById("cta-img");
 headerImg.setAttribute('src', siteContent["cta"]["img-src"])
+
 
 //====== main content
 
