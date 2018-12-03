@@ -14,18 +14,18 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 * [x] You are now ready to build this project with your preferred IDE
 
 ## Task 2: Create selectors to point your data into elements
-* [ ] Create selectors by using any of the DOM element's methods
-* [ ] Note that IDs have been used on all images.  Use the IDs to update src path content
+* [x] Create selectors by using any of the DOM element's methods
+* [x] Note that IDs have been used on all images.  Use the IDs to update src path content
 
 ## Task 3: Update the HTML with the JSON data
-* [ ] Remember, NO direct updating of the HTML source is allowed.
-* [ ] Using your selectors, update the content to match the example file.
-* [ ] Remember to update the src attributes on images
+* [x] Remember, NO direct updating of the HTML source is allowed.
+* [x] Using your selectors, update the content to match the example file.
+* [x] Remember to update the src attributes on images
 
 ## Task 4: Add new content
-* [ ] Change the color of the navigation text to be green.
-* [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
-* [ ] Check your work by looking at the [original html](original.html) in the browser
+* [x] Change the color of the navigation text to be green.
+* [x] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
+* [x] Check your work by looking at the [original html](original.html) in the browser
 
 ## Stretch Goals
 * [ ] Update styles throughout the page as you see fit.  Study what happens when you updated the DOM using style in JavaScript.  
