@@ -49,7 +49,7 @@ function timer(){
       reset = true;
       startBtn.classList.add('start-btn');
       startBtn.classList.remove('start-btn-lock');
-      startBtn.textContent = 'Reset & Start Again';
+      startBtn.textContent = 'Reset';
     }
   }, 10);
 
