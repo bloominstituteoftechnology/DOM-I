@@ -43,10 +43,10 @@ logo.setAttribute('src', "img/logo.png")
 
 const codeImg = document.querySelector('#cta-img');
 
-codeImg.src = "img/header-img.png";
+codeImg.src = siteContent.cta["img-src"];
 
 const middleImg = document.querySelector('#middle-img')
-middleImg.src = 'img/mid-page-accent.jpg';
+middleImg.src = siteContent[`main-content`]["middle-img-src"];
 
 //nav
 
@@ -60,4 +60,41 @@ for(let i in navArray){
 
 //navend
 
-const cta = document.query
+const cta = document.querySelector(".cta");
+
+cta.querySelector('h1').textContent = siteContent.cta.h1;
+cta.querySelector('button').textContent = siteContent.cta.button;
+
+//cta end
+
+const main = document.querySelector('.main-content');
+
+main.querySelectorAll('h4')[0].textContent = siteContent[`main-content`]["features-h4"];
+main.querySelectorAll('p')[0].textContent = siteContent[`main-content`]["features-content"];
+
+main.querySelectorAll('h4')[1].textContent = siteContent[`main-content`]["about-h4"];
+main.querySelectorAll('p')[1].textContent = siteContent[`main-content`]["about-content"];
+
+main.querySelectorAll('h4')[2].textContent = siteContent[`main-content`]["services-h4"];
+main.querySelectorAll('p')[2].textContent = siteContent[`main-content`]["services-content"];
+
+main.querySelectorAll('h4')[3].textContent = siteContent[`main-content`]["product-h4"];
+main.querySelectorAll('p')[3].textContent = siteContent[`main-content`]["product-content"];
+
+main.querySelectorAll('h4')[4].textContent = siteContent[`main-content`]["vision-h4"];
+main.querySelectorAll('p')[4].textContent = siteContent[`main-content`]["vision-content"];
+
+//main end
+
+const contact = document.querySelector('.contact');
+
+contact.querySelector('h4').textContent = siteContent.contact["contact-h4"];
+contact.querySelectorAll('p')[0].textContent = siteContent.contact.address;
+contact.querySelectorAll('p')[1].textContent = siteContent.contact.phone;
+contact.querySelectorAll('p')[2].textContent = siteContent.contact.email;
+
+//contact end
+
+const footer = document.querySelector('footer');
+
+footer.querySelector('p').textContent = siteContent.footer.copyright
