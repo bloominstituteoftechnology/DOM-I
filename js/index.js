@@ -38,18 +38,25 @@ const siteContent = {"nav": {
 
 //navigation:
 
+
+let navA = document.querySelectorAll("a");
+let i = 0;
+
+while(i < navA.length){
+  navA[i].textContent=siteContent.nav[`nav-item-${i + 1}`];
+   i++;
+}
+
+//creation of two new a tags in the header 
 let a = document.createElement("a");
-a.textContent =siteContent["nav"]["nav-item-1"];
+a.textContent ="Chat with us ";
 let header = document.querySelector("nav");
 header.prepend(a);
 let b = document.createElement("a");
 let secondA = document.querySelector("nav a:nth-child(2)");
-b.textContent =siteContent["nav"]["nav-item-2"];
-secondA.prepend(b);
-let c = document.createElement("a");
-let secondB = document.querySelector("nav a:nth-child(3)");
-c.textContent =siteContent["nav"]["nav-item-3"];
-secondB.prepend(c); 
+b.textContent ="share with us";
+header.prepend(b);
+
 
 let nav = document.querySelectorAll("a");
 nav.forEach(function(element){
