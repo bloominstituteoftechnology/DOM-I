@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM \r\nIs \r\nAwesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -109,11 +109,6 @@ const contPara = document.querySelectorAll('.contact p');
 contPara[0].textContent = siteContent.contact["address"];
 contPara[1].textContent = siteContent.contact["phone"];
 contPara[2].textContent = siteContent.contact["email"];
-
-// for (let i = 0; i < contPara.length; i ++){
-//   contPara[i].textContent = siteContent.contact[1+1];
-// }
-console.log(contPara);
 
 
 //=============================================== footer
