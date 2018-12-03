@@ -43,6 +43,8 @@ const siteContent = {
 
 
 // HEADER
+
+// ========== Nav
 const navAnchors = document.querySelectorAll('a');
 navAnchors[0].textContent = 'Services';
 navAnchors[1].textContent = 'Product';
@@ -54,4 +56,15 @@ navAnchors[0].textContent = 'Contact';
 const logoImg = document.querySelector('#logo-img');
 logoImg.src = 'img/logo.png'
 
-// console.log(navAnchors[0].textContent);
+
+
+// ========== Header Content
+
+const headerTitle = document.querySelector('.cta-text').querySelector('h1');
+headerTitle.textContent = 'DOM Is Awesome'
+
+const headerButton = document.querySelector('.cta-text').querySelector('button');
+headerButton.textContent = 'Get Started';
+
+const headerImg = document.querySelector('#cta-img');
+headerImg.src = 'img/header-img.png';
