@@ -114,3 +114,14 @@ let navB = document.createElement("a");
 homeNav.prepend(navB);
 navB.innerHTML = "IR";
 navB.style.color = "green";
+
+button.addEventListener('click', function(){
+  console.log(button.innerHTML);
+
+  if(button.innerHTML === 'Started') {
+    button.innerHTML = 'Get Started';
+  } else {
+    button.innerHTML = 'Started';
+  }
+  
+});
