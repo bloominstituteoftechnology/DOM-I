@@ -86,5 +86,23 @@ contactP[0].textContent = "123 Way 456 Street Somewhere, USA";
 contactP[1].textContent = "1 (888) 888-8888";
 contactP[2].textContent = "sales@greatidea.io";
 
+const helpElement = document.createElement('a');
+helpElement.href = '#';
+helpElement.textContent = 'Help';
+
+const staffElement = document.createElement('a');
+staffElement.href = '#';
+staffElement.textContent = 'Staff';
+
+ const mainNav = document.querySelector('nav');
+ mainNav.append(helpElement);
+ mainNav.append(staffElement);
+
 const footerTxt = document.querySelector('footer');
 footerTxt.textContent = 'Copyright Great Idea! 2018';
+const navigation = document.querySelectorAll('nav a');
+navigation.forEach(function(element){
+  element.style.color = "green"
+
+})
+
