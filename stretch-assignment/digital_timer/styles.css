@@ -10,6 +10,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.digits {
+  margin: 45px 0;
+}
+
 .digit {
   display: inline-block;
   font-size: 80px;
@@ -20,6 +24,10 @@ body {
 }
 
 .start-btn{
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
   padding: 13px 55px;
   font-size: 20px;
   border-radius: 4px;
@@ -36,6 +44,10 @@ body {
 }
 
 .start-btn-lock{
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
   padding: 13px 55px;
   font-size: 20px;
   border-radius: 4px;
