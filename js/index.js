@@ -63,6 +63,10 @@ const middleImg = document.querySelector("#middle-img");
 
 middleImg = 'img/mid-page-accent.jpg';
 
+const bottomContent = document.querySelectorAll(".bottom-content");
 
+const contactSection = document.querySelectorAll(".contact");
+
+const footer = document.querySelectorAll(footer);
 
 
