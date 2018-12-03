@@ -79,6 +79,7 @@ const footerValues = Object.values(siteContent.footer)
 // Nav Bar Anchors Loop
 for (let i = 0; i < allAnchors.length; i++) {
   allAnchors[i].textContent = Object.values(siteContent.nav)[i];
+  allAnchors[i].style.color = 'green'
 }
 
 
@@ -118,3 +119,20 @@ for (let i = 0; i < footerChilds.length; i++) {
   let newText = footerValues.shift();
   footerChilds[i].textContent = newText
 }}
+
+// Navbar Additions
+const navbar = document.querySelector('nav');
+
+const navPrepend = document.createElement('a');
+const navAppend = document.createElement('a');
+
+navPrepend.href = "#";
+navPrepend.style.color = 'green';
+navPrepend.textContent= 'Prepend';
+
+navAppend.href = "#";
+navAppend.style.color = 'green';
+navAppend.textContent= 'Append';
+
+navbar.prepend(navPrepend);
+navbar.appendChild(navAppend);
