@@ -55,10 +55,11 @@ nav[3].textContent = siteContent.nav["nav-item-4"];
 nav[4].textContent = siteContent.nav["nav-item-5"];
 nav[5].textContent = siteContent.nav["nav-item-6"];
 
-const ctaH1 = document.querySelector(".cta-text > h1");
+const ctaH1 = document.querySelector(".cta-text h1");
 ctaH1.textContent = siteContent.cta["h1"];
 
 const ctaButton = document.querySelector(".cta-text > button");
 ctaButton.textContent = siteContent.cta["button"];
 
-
+const featuresH4 = document.querySelector("text-content h4");
+featuresH4.textContent = siteContent.mainContent["features-h4"];
