@@ -41,11 +41,42 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-const headerImage = document.getElementById("header-img");
-headerImage.setAttribute("src", siteContent["cta"]["img-src"])
-
-const mainContent = document.getElementById("main-img");
-headerImage.setAttribute("src", siteContent["main-content"]["middle-img-src"])
+let headerImage = document.getElementById("cta-img");
+headerImage.src = "img/header-img.png";
+headerImage.alt = "Header image";
 
 
+let mainContent = document.getElementById("middle-img");
+mainContent.src = "img/mid-page-accent.jpg";
+mainContent.alt = "Middle image";
 
+
+
+const nav = document.getElementsByTagName("a");
+console.log(nav);
+nav[0].textContent = siteContent.nav["nav-item-1"];
+nav[1].textContent = siteContent.nav["nav-item-2"];
+nav[2].textContent = siteContent.nav["nav-item-3"];
+nav[3].textContent = siteContent.nav["nav-item-4"];
+nav[4].textContent = siteContent.nav["nav-item-5"];
+nav[5].textContent = siteContent.nav["nav-item-6"];
+
+
+const ctaHeader = document.getElementsByTagName("h1");
+ctaHeader.style = "white-space: pre";
+ctaHeader[0].textContent ="DOM \r\n";
+ctaHeader[0].textContent +="is \r\n";
+ctaHeader[0].textContent += "Awesome";
+
+const ctaButton = document.getElementsByTagName("button");
+ctaButton[0].textContent = "Get Started";
+
+const htags = document.getElementsByTagName("h4");
+
+htags[0].innerText = "Features";
+htags[1].innerText = "About";
+htags[2].innerText = "Services";
+htags[3].innerText = "Product";
+htags[4].innerText = "Vision";
+htags[5].innerText = "Contact";
+const pTags = document.getElementsByTagName("p");
