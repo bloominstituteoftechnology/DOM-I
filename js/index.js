@@ -55,6 +55,7 @@ snippets.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 const navItems = document.querySelectorAll("nav a");
 for (let i = 0; i < navItems.length; i++) {
   navItems[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
+  navItems[i].style.color = "green";
 }
 
 const ctaText = document.querySelector(".cta .cta-text h1");
