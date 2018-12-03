@@ -41,15 +41,36 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-// nav DOM manipulation
+
+// Adding new elements to nav
+
+
+const newFirst = document.createElement('a');
+const newLast = document.createElement('a');
+
+newFirst.href = '#';
+newFirst.textContent = `I'm First`;
+newLast.href = '#';
+newLast.textContent = `I'm Last`;
+
+const navBar = document.querySelector('nav');
+navBar.prepend(newFirst);
+navBar.appendChild(newLast);
+
 const navItems = document.querySelectorAll('a');
 
-navItems[0].textContent = siteContent.nav["nav-item-1"];
-navItems[1].textContent = siteContent.nav["nav-item-2"];
-navItems[2].textContent = siteContent.nav["nav-item-3"];
-navItems[3].textContent = siteContent.nav["nav-item-4"];
-navItems[4].textContent = siteContent.nav["nav-item-5"];
-navItems[5].textContent = siteContent.nav["nav-item-6"];
+navItems.forEach(item => item.style.color = 'green');
+
+// nav DOM manipulation
+
+navItems[1].textContent = siteContent.nav["nav-item-1"];
+navItems[2].textContent = siteContent.nav["nav-item-2"];
+navItems[3].textContent = siteContent.nav["nav-item-3"];
+navItems[4].textContent = siteContent.nav["nav-item-4"];
+navItems[5].textContent = siteContent.nav["nav-item-5"];
+navItems[6].textContent = siteContent.nav["nav-item-6"];
+
+
 
 // CTA DOM manipulation
 const mainHeaderText = document.querySelector('h1');
@@ -96,6 +117,12 @@ contactParagraphs[2].textContent = siteContent.contact.email;
 // Footer DOM manipulation
 const footer = document.querySelector('footer p');
 footer.textContent = siteContent.footer.copyright;
+
+
+
+
+
+
 
 
 
