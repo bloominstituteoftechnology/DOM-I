@@ -39,41 +39,58 @@ const siteContent = {
 
 console.log('Code me, Disney!');
 
-// Example: Update the img src for the logo
+//============================================================== Images
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+const headerImg = document.getElementById('cta-img');
+headerImg.setAttribute('src', siteContent['cta']['img-src']);
+
+const contentImg = document.getElementById('middle-img');
+contentImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+
+//============================================================== Nav Bar
 let navBar = document.querySelectorAll('a');
 for (let i = 0; i < navBar.length; i++) {
   navBar[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
 }
 
 
+//============================================================== Header
 const mainHeader = document.querySelector('h1');
 mainHeader.textContent = siteContent.cta.h1;
 
-const headerButton = document.querySelector('button');
-headerButton.textContent = siteContent.cta.button;
-
-const headerImg = document.getElementById('cta-img');
-headerImg.setAttribute('src', siteContent['cta']['img-src']);
+let headerButton = document.querySelectorAll('.cta-text');
+headerButton[0].getElementsByTagName('button')[0].textContent = siteContent.cta.button;
 
 
+//============================================================== Main Content
 let txtContent = document.querySelectorAll('.text-content');
-txtContent[0].getElementsByTagName('h4')[0].textContent = siteContent["main-content"]["features-h4"];
-txtContent[0].getElementsByTagName('p')[0].textContent = siteContent["main-content"]["features-content"];
+txtContent[0].getElementsByTagName('h4')[0].textContent = siteContent['main-content']['features-h4'];
+txtContent[0].getElementsByTagName('p')[0].textContent = siteContent['main-content']['features-content'];
 
-txtContent[1].getElementsByTagName('h4')[0].textContent = siteContent["main-content"]["about-h4"];
-txtContent[1].getElementsByTagName('p')[0].textContent = siteContent["main-content"]["about-content"];
+txtContent[1].getElementsByTagName('h4')[0].textContent = siteContent['main-content']['about-h4'];
+txtContent[1].getElementsByTagName('p')[0].textContent = siteContent['main-content']['about-content'];
 
-const contentImg = document.getElementById('middle-img');
-contentImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+txtContent[2].getElementsByTagName('h4')[0].textContent = siteContent['main-content']['services-h4'];
+txtContent[2].getElementsByTagName('p')[0].textContent = siteContent['main-content']['services-content'];
 
-txtContent[2].getElementsByTagName('h4')[0].textContent = siteContent["main-content"]["services-h4"];
-txtContent[2].getElementsByTagName('p')[0].textContent = siteContent["main-content"]["services-content"];
+txtContent[3].getElementsByTagName('h4')[0].textContent = siteContent['main-content']['product-h4'];
+txtContent[3].getElementsByTagName('p')[0].textContent = siteContent['main-content']['product-content'];
 
-txtContent[3].getElementsByTagName('h4')[0].textContent = siteContent["main-content"]["product-h4"];
-txtContent[3].getElementsByTagName('p')[0].textContent = siteContent["main-content"]["product-content"];
+txtContent[4].getElementsByTagName('h4')[0].textContent = siteContent['main-content']['vision-h4'];
+txtContent[4].getElementsByTagName('p')[0].textContent = siteContent['main-content']['vision-content'];
 
-txtContent[4].getElementsByTagName('h4')[0].textContent = siteContent["main-content"]["vision-h4"];
-txtContent[4].getElementsByTagName('p')[0].textContent = siteContent["main-content"]["vision-content"];
+
+//============================================================== Contact
+let contact  = document.querySelectorAll('.contact');
+contact[0].getElementsByTagName('h4')[0].textContent = siteContent['contact']['contact-h4'];
+contact[0].getElementsByTagName('p')[0].textContent = siteContent['contact']['address'];
+contact[0].getElementsByTagName('p')[1].textContent = siteContent['contact']['phone'];
+contact[0].getElementsByTagName('p')[2].textContent = siteContent['contact']['email'];
+
+
+//============================================================== Footer
+let footer = document.querySelectorAll('footer');
+footer[0].getElementsByTagName('p')[0].textContent = siteContent['footer']['copyright'];
