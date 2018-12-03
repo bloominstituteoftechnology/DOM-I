@@ -65,12 +65,12 @@ console.log(navArray);
 
 //not sure if I needed to create an array or not. Seemed to work either way. Alexandra if you read this, what do you advise?
 
-navArray[0].innerText = "Services";
-navArray[1].innerText = "Product";
-navArray[2].innerText = "Vision";
-navArray[3].innerText = "Features";
-navArray[4].innerText = "About";
-navArray[5].innerText = "Contact";
+navArray[0].textContent = "Services";
+navArray[1].textContent = "Product";
+navArray[2].textContent = "Vision";
+navArray[3].textContent = "Features";
+navArray[4].textContent = "About";
+navArray[5].textContent = "Contact";
 
 // make nav items green - changed one to blue just to make sure it was working as an experiment per instructions 
 
@@ -85,17 +85,17 @@ navArray[5].style.color = "green";
 
 const ctaText = document.getElementsByTagName('h1');
 //ctaText.style = "white-space: pre";
-ctaText[0].innerText = "DOM \r\n";
-ctaText[0].innerText += "is \r\n";
-ctaText[0].innerText += "Awesome";
+ctaText[0].textContent = "DOM \r\n";
+ctaText[0].textContent += "is \r\n";
+ctaText[0].textContent += "Awesome";
 
 const ctaButton = document.getElementsByTagName('button');
-ctaButton[0].innerText = "Get Started";
+ctaButton[0].textContent = "Get Started";
 
 // doing footer next because I want to leave main-content for last
 
 const footsie = document.getElementsByTagName('footer');
-footsie[0].innerText = "Copyright Great Idea! 2018";
+footsie[0].textContent = "Copyright Great Idea! 2018";
 
 // doing contact to leave main-content for last. Have to figure out how to incorporate H4 when there are lots of H4s in the main-content.
 // Specificty?
@@ -110,34 +110,38 @@ const pTags = document.getElementsByTagName('p');
 //console.log(hFourTags.length); // 6
 //console.log(pTags.length);  // 9 but one is from footer. I've already done footer. Should I change it?
 
-hFourTags[0].innerText = "Features";
-hFourTags[1].innerText = "About";
-hFourTags[2].innerText = "Services";
-hFourTags[3].innerText = "Product";
-hFourTags[4].innerText = "Vision";
-hFourTags[5].innerText = "Contact";
+hFourTags[0].textContent = "Features";
+hFourTags[1].textContent = "About";
+hFourTags[2].textContent = "Services";
+hFourTags[3].textContent = "Product";
+hFourTags[4].textContent = "Vision";
+//hFourTags[5].textContent = "Contact";
+// Think I figured out how to be specific for contact
+document.querySelector('.contact h4').textContent = "Contact";
+
+
 
 // Copy and paste 8 p tags
 
-pTags[0].innerText = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
-pTags[1].innerText = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
-pTags[2].innerText = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
-pTags[3].innerText = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
-pTags[4].innerText = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
-pTags[5].innerText = "123 Way 456 Street\r\n"
-pTags[5].innerText += "Somewhere, USA";
-pTags[6].innerText = "1 (888) 888-8888";
-pTags[7].innerText = "sales@greatidea.io";
+pTags[0].textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+pTags[1].textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+pTags[2].textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+pTags[3].textContent = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+pTags[4].textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+pTags[5].textContent = "123 Way 456 Street\r\n"
+pTags[5].textContent += "Somewhere, USA";
+pTags[6].textContent = "1 (888) 888-8888";
+pTags[7].textContent = "sales@greatidea.io";
 
 // Have a couple of kids. Oops, I mean add two children
 
 const faq = document.createElement('a');
 const addNavItem = document.querySelector('nav');
 addNavItem.appendChild(faq);
-faq.innerText = "FAQ";
+faq.textContent = "FAQ";
 faq.style.color = "green";
 
 const login = document.createElement('a');
 addNavItem.prepend(login);
-login.innerText = "Log In";
+login.textContent = "Log In";
 login.style.color = "green";
