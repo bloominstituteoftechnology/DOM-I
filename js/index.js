@@ -18,7 +18,7 @@ const siteContent = {
     "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "about-h4":"About",
     "about-content": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "middle-img-src": "img/mid-page-accent.jpg",
+    "middle-img-src": "https://github.com/RaineBeauDubs/DOM-I/blob/master/img/mid-page-accent.jpg?raw=true",
     "services-h4":"Services",
     "services-content": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "product-h4":"Product",
@@ -39,4 +39,10 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
