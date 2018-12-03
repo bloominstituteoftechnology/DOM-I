@@ -107,9 +107,8 @@ contentParas[7].textContent = siteContent["contact"]["email"];
 contentParas[8].textContent = siteContent["footer"]["copyright"];
 
 // ===== Stretch =====
+// === Adding styles
 ctaHeader.style.color = "blue";
-
-ctaButton.style.border = "2px dashed green";
 
 contentHeaders.forEach(item => item.style.color = "green");
 contentHeaders.forEach(item => item.style.textDecoration = "underline");
@@ -118,3 +117,16 @@ const contact = document.querySelector(".contact");
 contact.style.textAlign = "center";
 contact.style.fontSize = "1.6em";
 contact.style.color = "blue";
+
+ctaButton.style.border = "2px dashed green";
+
+// === Adding events
+
+ctaButton.addEventListener("click", update);
+
+function update () {
+  contentHeaders.forEach(item => item.style.textAlign = "center");
+  contentHeaders.forEach(item => item.style.fontSize = "1.8em");
+  contentParas.forEach(item => item.style.color = "white");
+  contentParas.forEach(item => item.style.backgroundColor = "black");
+};
