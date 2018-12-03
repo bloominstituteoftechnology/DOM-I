@@ -42,17 +42,32 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 //=============================================== Header 
-const mainNav = document.querySelectorAll('a');
-mainNav[0].textContent = siteContent.nav["nav-item-1"];
-mainNav[1].textContent = siteContent.nav["nav-item-2"];
-mainNav[2].textContent = siteContent.nav["nav-item-3"];
-mainNav[3].textContent = siteContent.nav["nav-item-4"];
-mainNav[4].textContent = siteContent.nav["nav-item-5"];
-mainNav[5].textContent = siteContent.nav["nav-item-6"];
-// Array.from(mainNav);
-// siteContent.nav.forEach((currentvalue) => {
-//   mainNav.push(currentvalue["nav-item"]);
-// });
+
+const mainNav = document.querySelectorAll("a");
+
+//For loop used to add each object from the array into the new array like dom object for the Nav bar
+for (let i = 0; i < mainNav.length; i++) {
+  mainNav[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
+}
+
+const newNav1 = document.createElement('a');
+  newNav1.href = "#";
+  newNav1.textContent = "test1";
+
+const newNav2 = document.createElement('a');
+  newNav2.href = "#";
+  newNav2.textContent = "test2";
+
+const nav = document.querySelector('nav');
+
+nav.appendChild(newNav1);
+nav.appendChild(newNav2);
+
+const navColor = document.querySelectorAll('a');
+
+for(let i = 0; i < navColor.length; i ++){
+  navColor[i].style.color = "green";
+}
 
 //=============================================== CTA
 
@@ -67,31 +82,41 @@ ctaLogo.setAttribute('src', siteContent.cta["img-src"]);
 
 //=============================================== Main Content
 
-const subTitles = document.querySelectorAll('h4');
-subTitles[0].textContent = siteContent["main-content"]["features-h4"];
-subTitles[1].textContent = siteContent["main-content"]["about-h4"];
-subTitles[2].textContent = siteContent["main-content"]["services-h4"];
-subTitles[3].textContent = siteContent["main-content"]["product-h4"];
-subTitles[4].textContent = siteContent["main-content"]["vision-h4"];
+const mainTitles = document.querySelectorAll('.main-content h4');
+mainTitles[0].textContent = siteContent["main-content"]["features-h4"];
+mainTitles[1].textContent = siteContent["main-content"]["about-h4"];
+mainTitles[2].textContent = siteContent["main-content"]["services-h4"];
+mainTitles[3].textContent = siteContent["main-content"]["product-h4"];
+mainTitles[4].textContent = siteContent["main-content"]["vision-h4"];
 
-const para = document.querySelectorAll('p');
-para[0].textContent = siteContent["main-content"]["features-content"];
-para[1].textContent = siteContent["main-content"]["about-content"];
-para[2].textContent = siteContent["main-content"]["services-content"];
-para[3].textContent = siteContent["main-content"]["product-content"];
-para[4].textContent = siteContent["main-content"]["vision-content"];
+
+const mainPara = document.querySelectorAll('.main-content p');
+mainPara[0].textContent = siteContent["main-content"]["features-content"];
+mainPara[1].textContent = siteContent["main-content"]["about-content"];
+mainPara[2].textContent = siteContent["main-content"]["services-content"];
+mainPara[3].textContent = siteContent["main-content"]["product-content"];
+mainPara[4].textContent = siteContent["main-content"]["vision-content"];
 
 const middleLogo = document.getElementById("middle-img");
 middleLogo.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 //=============================================== Contact
 
-subTitles[5].textContent = siteContent.contact["contact-h4"];
-para[5].textContent = siteContent.contact["address"];
-para[6].textContent = siteContent.contact["phone"];
-para[7].textContent = siteContent.contact["email"];
+const contTitle = document.querySelector('.contact h4');
+contTitle.textContent = siteContent.contact["contact-h4"];
+
+const contPara = document.querySelectorAll('.contact p');
+contPara[0].textContent = siteContent.contact["address"];
+contPara[1].textContent = siteContent.contact["phone"];
+contPara[2].textContent = siteContent.contact["email"];
+
+// for (let i = 0; i < contPara.length; i ++){
+//   contPara[i].textContent = siteContent.contact[1+1];
+// }
+console.log(contPara);
 
 
 //=============================================== footer
 
-para[8].textContent = siteContent.footer["copyright"];
+const footer = document.querySelector('footer p');
+footer.textContent = siteContent.footer["copyright"];
