@@ -77,3 +77,27 @@ featuresText.textContent = siteContent["main-content"]["features-content"];
 
 aboutHeader.textContent = siteContent["main-content"]["about-h4"];
 aboutText.textContent = siteContent["main-content"]["about-content"];
+
+//Bottom Content
+let bottomContent = document.querySelector('.bottom-content');
+
+let servicesContent = bottomContent.children[0];
+let servicesHeader = servicesContent.children[0];
+let servicesText = servicesContent.children[1];
+
+let productContent = bottomContent.children[1];
+let productHeader = productContent.children[0];
+let productText = productContent.children[1];
+
+let visionContent = bottomContent.children[2];
+let visionHeader = visionContent.children[0];
+let visionText = visionContent.children[1];
+
+servicesHeader.textContent = siteContent["main-content"]["services-h4"];
+servicesText.textContent = siteContent["main-content"]["services-content"];
+
+productHeader.textContent = siteContent["main-content"]["product-h4"];
+productText.textContent = siteContent["main-content"]["product-content"];
+
+visionHeader.textContent = siteContent["main-content"]["vision-h4"];
+visionText.textContent = siteContent["main-content"]["vision-content"];
