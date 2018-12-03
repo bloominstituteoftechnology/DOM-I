@@ -43,16 +43,26 @@ const siteContent = {
 
 
 const navBar = document.querySelectorAll("nav");
-const hdrImage = document.querySelector("#logo-img");
+const navLogoImage = document.querySelector("#logo-img");
 const links = document.querySelectorAll("a");
 
-hdrImage.src = 'img/logo.png';
+navLogoImage.src = 'img/logo.png';
 
 //const topContent = document.querySelectorAll(".cta");
-const topText = document.querySelectorAll(".cta=text");
-const topButton = document.querySelector("button");
-const topImage = document.querySelector("#cta-img");
+const headerText = document.querySelectorAll(".cta=text");
+const headerButton = document.querySelector("button");
+const headerImage = document.querySelector("#cta-img");
 
-topImage.src = 'img/header-img.png';
+headerImage.src = 'img/header-img.png';
+
+const mainContent = document.querySelectorAll(".main-content");
+const topContent = document.querySelectorAll(".top-content");
+const text = document.querySelectorAll(".text-content");
+
+const middleImg = document.querySelector("#middle-img");
+
+middleImg = 'img/mid-page-accent.jpg';
+
+
 
 
