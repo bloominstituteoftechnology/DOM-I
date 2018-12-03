@@ -84,6 +84,9 @@ mainHeaderText.textContent += `${siteContent.cta.h1.slice(7)}`;
 mainHeaderText.style.whiteSpace = 'pre-line';
 button.textContent = siteContent.cta.button;
 headerImage.src = siteContent.cta["img-src"];
+button.onclick = function() {
+  mainHeaderText.style.color = getRandomColor();
+}
 
 // Main Content DOM Manipulation
 const topH4 = document.querySelectorAll('.main-content .top-content .text-content h4');
@@ -120,20 +123,20 @@ footer.textContent = siteContent.footer.copyright;
 
 // Adding a button to change nav color
 
-const container = document.querySelector('.container');
-const topButton = document.createElement('button')
-topButton.textContent = 'Click me to change the nav colors!!!';
-container.prepend(topButton);
-topButton.onclick = function() {
-  navItems.forEach(item => item.style.color = getRandomColor());
-}
-topButton.style.display = 'block';
-topButton.style.marginTop = '20px';
-topButton.style.borderRadius = '5px';
-topButton.style.padding = '10px 5px';
-topButton.style.fontSize = '20px';
-topButton.style.background = 'black';
-topButton.style.color = 'white';
+// const container = document.querySelector('.container');
+// const topButton = document.createElement('button')
+// topButton.textContent = 'Click me to change the nav colors!!!';
+// container.prepend(topButton);
+// topButton.onclick = function() {
+//   navItems.forEach(item => item.style.color = getRandomColor());
+// }
+// topButton.style.display = 'block';
+// topButton.style.marginTop = '20px';
+// topButton.style.borderRadius = '5px';
+// topButton.style.padding = '10px 5px';
+// topButton.style.fontSize = '20px';
+// topButton.style.background = 'black';
+// topButton.style.color = 'white';
 
 function getRandomColor() {
   const letters = '0123456789ABCDEF';
