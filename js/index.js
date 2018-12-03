@@ -45,21 +45,45 @@ const siteContent = {
 
 // ========== Nav
 const navAnchors = document.querySelectorAll('a');
+const nav = document.querySelector('nav');
+
 navAnchors[0].textContent = siteContent.nav["nav-item-1"];
 navAnchors[1].textContent = siteContent.nav["nav-item-2"];
 navAnchors[2].textContent = siteContent.nav["nav-item-3"];
 navAnchors[3].textContent = siteContent.nav["nav-item-4"];
 navAnchors[4].textContent = siteContent.nav["nav-item-5"];
-navAnchors[0].textContent = siteContent.nav["nav-item-6"];
+navAnchors[5].textContent = siteContent.nav["nav-item-6"];
+
+console.log(navAnchors);
+
+const portfolio = document.createElement('a');
+portfolio.href = '#';
+portfolio.textContent = 'Portfolio';
+portfolio.style.color = 'green';
+
+const home = document.createElement('a');
+home.href = '#';
+home.textContent = 'Home';
+home.style.color = 'green';
+
+nav.prepend(home);
+nav.appendChild(portfolio);
+
+
 
 const logoImg = document.querySelector('#logo-img');
 logoImg.src = siteContent.nav["img-src"];
 
 
+navAnchors.forEach((anchor) => {
+  anchor.style.color = 'green';
+})
+
+
 
 // ========== Header Content
 
-const headerTitle = document.querySelector('.cta-text').querySelector('h1');
+const headerTitle = document.querySelector('.cta-text h1')
 headerTitle.textContent = siteContent.cta.h1
 
 const headerButton = document.querySelector('.cta-text').querySelector('button');
@@ -74,7 +98,7 @@ headerImg.src = siteContent.cta["img-src"];
 
 // Top Content
 const topContent = document.querySelector('.top-content').querySelectorAll('.text-content');
-console.log(topContent);
+// console.log(topContent);
 
 const featuresHeader = topContent[0].querySelector('h4');
 featuresHeader.textContent = siteContent["main-content"]["features-h4"];
@@ -135,4 +159,8 @@ contactP[2].textContent = siteContent.contact.email;
 
 const footerContent = document.querySelector('footer').querySelector('p');
 footerContent.textContent = siteContent.footer.copyright;
+
+
+
+
 
