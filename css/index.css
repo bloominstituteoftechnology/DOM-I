@@ -298,6 +298,11 @@ footer {
     }
 }
 
+.scary {
+    text-shadow: 4px 4px 1px #300000,
+4px 6px 1px #400000, 4px 8px 1px #500000, 4px 10px 1px #600000;
+}
+
 .shadow {
     background: rgb(59, 59, 59);
     color: rgba(0,0,0,0.6);

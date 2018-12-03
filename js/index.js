@@ -110,5 +110,19 @@ footerP.textContent = siteContent.footer.copyright;
 
 let container = document.querySelector('.container');
 ctaBtn.addEventListener('click', function(){
-  container.classList.toggle('shadow')
+  container.classList.toggle('shadow');
+})
+
+container.addEventListener('copy', function(){
+  ctaH1.classList.toggle('scary');
+})
+
+let i = 1.0;
+let j = -0.1
+container.addEventListener('wheel', function(){
+  if(i <= 0 || i > 1){
+    j *= -1;
+  }
+  i += j;
+  container.style.opacity = i;
 })
