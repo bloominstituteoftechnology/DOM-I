@@ -77,9 +77,10 @@ let navItems = document.querySelectorAll('a');
 
 let navItemsArr = Array.from(navItems);
 
-// navItems.style.color = "green";
-
-navItemsArr.map((item, index)=>item.textContent = Object.values(siteContent.nav)[index])
+navItemsArr.map((item, index)=>{
+  item.textContent = Object.values(siteContent.nav)[index] 
+  item.style.color = "green"
+})
 
 //====== cta section
 
