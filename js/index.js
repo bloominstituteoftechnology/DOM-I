@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM<br> Is<br> Awesome",
+    "h1": "DOM Is Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -49,8 +49,12 @@ ctaImg.src = siteContent.cta["img-src"];
 middleImg.src = siteContent["main-content"]["middle-img-src"];
 
 //Create selectors for all nav links
-let navLinks = Array.from(document.querySelectorAll("header nav a"));
-navLinks.forEach((link, index) => link.textContent = siteContent["nav"]["nav-item-" + index]);
+let navLinks = document.querySelectorAll("header nav a");
+navLinks.forEach((link, index) => link.textContent = siteContent.nav[`nav-item-${index+1}`]);
+
+
+navLinks.forEach((link, index) => link.style.color = "green");
+
 
 //Create selector for h1
 let mainHeader = document.querySelector(".cta-text h1");
