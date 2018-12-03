@@ -62,7 +62,8 @@ const navItems = document.getElementsByTagName('a');
 navArray=Array.from(navItems);
 console.log(navArray);
 
-//nav text update
+//not sure if I needed to create an array or not. Seemed to work either way. Alexandra if you read this, what do you advise?
+
 navArray[0].innerText = "Services";
 navArray[1].innerText = "Product";
 navArray[2].innerText = "Vision";
@@ -70,10 +71,59 @@ navArray[3].innerText = "Features";
 navArray[4].innerText = "About";
 navArray[5].innerText = "Contact";
 
-//nav text color update
+// make nav items green - changed one to blue just to make sure it was working as an experiment per instructions 
+
 navArray[0].style.color = "green";
 navArray[1].style.color = "green";
 navArray[2].style.color = "green";
-navArray[3].style.color = "green";
-navArray[4].style.color = "blue";
+navArray[3].style.color = "blue"; //changed this Change back if done testing
+navArray[4].style.color = "green";
 navArray[5].style.color = "green";
+
+//JSON items. Start with cta
+
+const ctaText = document.getElementsByTagName('h1');
+ctaText.style = "white-space: pre";
+ctaText[0].innerText = "DOM \r\n";
+ctaText[0].innerText += "is \r\n";
+ctaText[0].innerText += "Awesome";
+
+const ctaButton = document.getElementsByTagName('button');
+ctaButton[0].innerText = "Get Started";
+
+// doing footer next because I want to leave main-content for last
+
+const footsie = document.getElementsByTagName('footer');
+footsie[0].innerText = "Copyright Great Idea! 2018";
+
+// doing contact to leave main-content for last. Have to figure out how to incorporate H4 when there are lots of H4s in the main-content.
+// Specificty?
+// update I guess I have to read all h4s into an array. I can't seem to get specifically the h4 for contact without getting the
+// main-content h4s as well
+// so let's get all the h4s and work on both at the same time. Then we'll do the p tags
+
+const hFourTags = document.getElementsByTagName('h4');
+const pTags = document.getElementsByTagName('p');
+
+// How many are there?
+//console.log(hFourTags.length); // 6
+//console.log(pTags.length);  // 9 but one is from footer. I've already done footer. Should I change it?
+
+hFourTags[0].innerText = "Features";
+hFourTags[1].innerText = "About";
+hFourTags[2].innerText = "Services";
+hFourTags[3].innerText = "Product";
+hFourTags[4].innerText = "Vision";
+hFourTags[5].innerText = "Contact";
+
+// Copy and paste 8 p tags
+
+pTags[0].innerText = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+pTags[1].innerText = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+pTags[2].innerText = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+pTags[3].innerText = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+pTags[4].innerText = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+pTags[5].innerText = "123 Way 456 Street\r\n"
+pTags[5].innerText += "Somewhere, USA";
+pTags[6].innerText = "1 (888) 888-8888";
+pTags[7].innerText = "sales@greatidea.io";
