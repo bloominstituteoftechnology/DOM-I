@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "123 Way 456 Street \r\n Somewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -96,6 +96,27 @@ bottomContentP[0].textContent = siteContent['main-content']['services-content']
 bottomContentP[1].textContent = siteContent['main-content']['product-content']
 bottomContentP[2].textContent = siteContent['main-content']['vision-content']
 
+//Contact
+let contactH4 = document.querySelector('.contact h4')
+contactH4.textContent = siteContent['contact']['contact-h4']
+
+let contactP = document.querySelectorAll('.contact p')
+contactP[0].textContent = siteContent['contact']['address']
+contactP[1].textContent = siteContent['contact']['phone']
+contactP[2].textContent = siteContent['contact']['email']
+contactP[0].setAttribute('style', 'white-space: pre;')
+
+
 //Footer
 let foot = document.querySelector('footer p');
 foot.textContent = siteContent['footer']['copyright']
+
+
+// Stretch
+const myButton = document.querySelector('.btn');
+
+myButton.addEventListener('click', cb);
+
+function cb(){
+  alert (`You've contacted us!`)
+}
