@@ -41,43 +41,47 @@ const siteContent = {
 // const logo = document.getElementById("logo-img");
 // logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-
+const newElement = (tag, attr, attrVal, textContent) => {
+  let newEl = document.createElement(tag);
+  newEl[`${attr}`] = `${attrVal}`;
+  newEl.textContent = `${textContent}`;
+  return newEl
+}
 
 // ========== Nav
-const navAnchors = document.querySelectorAll('a');
+
+// Hook into nav
 const nav = document.querySelector('nav');
 
-navAnchors[0].textContent = siteContent.nav["nav-item-1"];
-navAnchors[1].textContent = siteContent.nav["nav-item-2"];
-navAnchors[2].textContent = siteContent.nav["nav-item-3"];
-navAnchors[3].textContent = siteContent.nav["nav-item-4"];
-navAnchors[4].textContent = siteContent.nav["nav-item-5"];
-navAnchors[5].textContent = siteContent.nav["nav-item-6"];
 
-console.log(navAnchors);
+// JSON nav Keys into Array then filter for only nav keys
+const keys = Object.keys(siteContent.nav);
+const navKeys = keys.filter((item) => {
+    return item.includes('nav');
+})
 
-const portfolio = document.createElement('a');
-portfolio.href = '#';
-portfolio.textContent = 'Portfolio';
-portfolio.style.color = 'green';
-
-const home = document.createElement('a');
-home.href = '#';
-home.textContent = 'Home';
-home.style.color = 'green';
-
-nav.prepend(home);
+// New nav item created and appended to Nav
+const portfolio = newElement('a', 'href', '#', 'Portfolio');
 nav.appendChild(portfolio);
 
+// Hood into a tags
+const navAnchors = document.querySelectorAll('a');
+console.log(navAnchors);
+
+// Iterate of navKeys array and apply text content to nav items
+// turn nav items green
+navAnchors.forEach((item, index) => {
+  if (item.textContent === undefined || item.textContent === "") {
+    item.textContent = siteContent.nav[navKeys[index]];
+  }
+  item.style.color = 'green';
+});
 
 
 const logoImg = document.querySelector('#logo-img');
 logoImg.src = siteContent.nav["img-src"];
 
 
-navAnchors.forEach((anchor) => {
-  anchor.style.color = 'green';
-})
 
 
 
