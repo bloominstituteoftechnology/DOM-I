@@ -113,35 +113,17 @@ nav[5].style.color = "green";
 const newBlogElement = document.createElement("a");
 newBlogElement.href = "#";
 newBlogElement.textContent = "Blog";
+newBlogElement.style.color = "green";
 
 const mainNav = document.querySelector("nav");
 
 mainNav.appendChild(newBlogElement);
 
 
+
 const newAElement = document.createElement("a");
 newAElement.href = "#";
 newAElement.textContent = "Home";
-
-
+newAElement.style.color = "green";
 
 mainNav.prepend(newAElement);
-
-
-
-
-
-// // 1. Create Element
-// const newElement = document.createElement('a');
-// // <a></a>
-
-// // 2. Add values / attributes
-// newElement.href = "#";
-// newElement.textContent = "Testing";
-// // <a href="#">Testing</a>
-
-// // 3. Create a place for the element to land
-// const mainNav = document.querySelector('.main-nav');
-
-// // 4. Append or prepend the newly created element
-// mainNav.prepend(newElement);
