@@ -83,11 +83,9 @@ ctaButton.textContent = siteContent["cta"]["button"];
 
 const contentHeaders = document.querySelectorAll("h4");
 
-contentHeaders[0].textContent = siteContent["main-content"]["features-h4"];
-contentHeaders[1].textContent = siteContent["main-content"]["about-h4"];
-contentHeaders[2].textContent = siteContent["main-content"]["services-h4"];
-contentHeaders[3].textContent = siteContent["main-content"]["product-h4"];
-contentHeaders[4].textContent = siteContent["main-content"]["vision-h4"];
+const h4Keys = Object.keys(siteContent["main-content"]).filter((key) => key.includes("h4"));
+
+contentHeaders.forEach((index, i) => contentHeaders[i].textContent = siteContent["main-content"][`${h4Keys[i]}`]);
 
 contentHeaders[5].textContent = siteContent["contact"]["contact-h4"];
 
