@@ -52,9 +52,24 @@ contentImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
 //============================================================== Nav Bar
 let navBar = document.querySelectorAll('a');
+
 for (let i = 0; i < navBar.length; i++) {
   navBar[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
+  navBar[i].style.color = 'green';
 }
+
+const navItems = document.querySelector('a');
+
+const home = document.createElement('a');
+home.href ='#';
+home.textContent = 'Home';
+navItems.prepend(home);
+
+// const blog = document.createElement('a');
+// blog.href ='#';
+// blog.textContent = 'Blog';
+// navBar.appendChild(blog);
+
 
 
 //============================================================== Header
