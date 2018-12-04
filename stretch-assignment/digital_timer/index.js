@@ -1,7 +1,7 @@
 
 function setup () {
   const digits = document.querySelectorAll(".digits");
-  console.log(digits[0].childNodes);
+  console.log(digits[0]);
   let count = 0;
   const stop = 100 * 10; // ms/s * s -- set stop time
 
@@ -17,10 +17,11 @@ function setup () {
         element.textContent = Math.floor(count / 1000) % 10;
       }
     });
-    if (count < 1000) {
+    if (count < stop) {
       count ++;
     } else {
       window.clearInterval(delay);
+      digits[0].className = "redDigit";
     }
   }, 10); // execute every 10 ms
 }
