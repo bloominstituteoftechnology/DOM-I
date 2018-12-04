@@ -42,7 +42,7 @@ const siteContent = {
 // logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //========================Nav Bar
-let navBar = document.querySelector("nav");
+let navBar = document.querySelector("header nav a");
 const navLogoImage = document.querySelector("#logo-img");
 const links = document.querySelectorAll("a");
 
@@ -57,7 +57,10 @@ links[5].textContent = siteContent[`nav`]["nav-item-6"];
 //   links[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
 // }
 
-navBar.style.color = "green";
+// navBar.style.color = "green";
+// for (let i = 0; i < links.length; i++) {
+//   navBar[i].style.color = 'green';
+// }
 
 navLogoImage.src = 'img/logo.png';
 
@@ -74,8 +77,6 @@ headerImage.src = 'img/header-img.png';
 
 
 //========================Main Content
-
-
 
 //================== Paragraphs & Headers
 
@@ -96,28 +97,31 @@ paragraphs[3].textContent = siteContent[`main-content`]["product-content"];
 paragraphs[4].textContent = siteContent[`main-content`]["vision-content"];
 
 
-//=================== Top Content Display Flex
-const topContent = document.querySelectorAll(".top-content");
-topContent.style.display = flex;
-
 //================== Middle Image
 const middleImg = document.querySelector("#middle-img");
-middleImg = 'img/mid-page-accent.jpg';
+middleImg.src = "img/mid-page-accent.jpg"
+
+//=================== Top Content Display Flex
+const topContent = document.querySelector(".top-content");
+topContent.style.display = "flex";
+
 
 //=================== Bottom Content Display Flex
-const bottomContent = document.querySelectorAll(".bottom-content");
-bottomContent.style.display = flex;
+const bottomContent = document.querySelector(".bottom-content");
+bottomContent.style.display = "flex";
 
 
 //=================== Contact Section
 const contactSection = document.querySelectorAll(".contact");
 const contactHeader = document.querySelector(".contact h4");
-//contactHeader.textContent = siteContent[`main-content`]["contact-h4"];
-contactSection[0].textContent = siteContent[`contact`]["h4"];
-contactSection[1].textContent = siteContent[`contact`]["address"];
+contactHeader.textContent = siteContent[`contact`]["contact-h4"];
+
+const contactPs = document.querySelectorAll(".contact p");
+contactPs[0].textContent = siteContent[`contact`]["address"];
+contactPs[1].textContent = siteContent[`contact`]["phone"];
+contactPs[2].textContent = siteContent[`contact`]["email"];
 
 //=================== Footer
 const footer = document.querySelector("footer p");
-footer.textContent = siteContent[`main-content`]["footer"];
-
+footer.textContent = siteContent[`footer`]["copyright"];
 
