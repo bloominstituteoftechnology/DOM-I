@@ -71,7 +71,7 @@ const applyText = (prop, filterItem, query) => {
 
 
 
-// Images
+// ======= Images
 
 const logoImg = document.querySelector('#logo-img');
 logoImg.src = siteContent.nav["img-src"];
@@ -89,15 +89,18 @@ middleImg.src = siteContent["main-content"]["middle-img-src"];
 // Hook into nav
 const nav = document.querySelector('nav');
 
-
 // JSON nav Keys into Array then filter for only nav keys
 const keys = Object.keys(siteContent.nav);
 const navKeys = keys.filter((item) => {
     return item.includes('nav');
 })
+console.log(navKeys);
 
 // New nav item created and appended to Nav
 const portfolio = newElement('a', 'href', '#', 'Portfolio');
+const home = newElement('a', 'href', '#', 'Home')
+
+nav.prepend(home);
 nav.appendChild(portfolio);
 
 // Hood into a tags
@@ -107,7 +110,7 @@ const navAnchors = document.querySelectorAll('a');
 // turn nav items green
 navAnchors.forEach((item, index) => {
   if (item.textContent === undefined || item.textContent === "") {
-    item.textContent = siteContent.nav[navKeys[index]];
+    item.textContent = siteContent.nav[navKeys[index - 1]];
   }
   item.style.color = 'green';
 });
