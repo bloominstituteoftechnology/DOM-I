@@ -71,7 +71,7 @@ function secOnes() {
 }
 
 function msHund() {
-    if (msHundreds.textContent === "6") {
+    if (msHundreds.textContent === "9") {
         msHundreds.textContent = 0;
         secOnes();
     }
