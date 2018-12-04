@@ -56,16 +56,16 @@ let copyrightItem = document.querySelector("footer > p:last-child");
 // HTML updates using JSON data
 // ----------------------------
 
-Array.prototype.forEach.call(navItems, (item, i) => {
-  if (Object.keys(siteContent["nav"])[i].includes("img")) {
+navItems.forEach((item, i) => {
+  if (item.tagName === "IMG") {
     item.src = Object.values(siteContent["nav"])[i];
   } else {
     item.textContent = Object.values(siteContent["nav"])[i];
   }
 });
 
-Array.prototype.forEach.call(ctaTextItems, (item, i) => {
-  if (Object.keys(siteContent["cta"])[i].includes("img")) {
+ctaTextItems.forEach((item, i) => {
+  if (item.tagName === "IMG") {
     item.src = Object.values(siteContent["cta"])[i];
   } else if (item.tagName === "H1") {
     item.style.whiteSpace = "pre-line";
@@ -77,15 +77,15 @@ Array.prototype.forEach.call(ctaTextItems, (item, i) => {
 });
 ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
 
-Array.prototype.forEach.call(mainContentItems, (item, i) => {
-  if (Object.keys(siteContent["main-content"])[i].includes("img")) {
+mainContentItems.forEach((item, i) => {
+  if (item.tagName === "IMG") {
     item.src = Object.values(siteContent["main-content"])[i];
   } else {
     item.textContent = Object.values(siteContent["main-content"])[i];
   }
 });
 
-Array.prototype.forEach.call(contactItems, (item, i) => {
+contactItems.forEach((item, i) => {
   item.style.whiteSpace = "pre-line";
   item.textContent = Object.values(siteContent["contact"])[i];
 });
@@ -95,7 +95,7 @@ copyrightItem.textContent = siteContent["footer"]["copyright"];
 // Adding new content
 // ------------------
 
-Array.prototype.forEach.call(navItems, (item, i) => {
+navItems.forEach((item, i) => {
   item.style.color = "green";
 });
 
