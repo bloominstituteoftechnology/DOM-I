@@ -55,22 +55,30 @@ document.querySelector(".cta-text button").textContent = siteContent.cta.button;
 document
   .querySelector("#cta-img")
   .setAttribute("src", siteContent.cta["img-src"]);
-h4TextMain = document.querySelectorAll(".text-content h4");
-h4TextMain[0].textContent = siteContent["main-content"]["features-h4"];
-h4TextMain[1].textContent = siteContent["main-content"]["about-h4"];
-h4TextMain[2].textContent = siteContent["main-content"]["services-h4"];
-h4TextMain[3].textContent = siteContent["main-content"]["product-h4"];
-h4TextMain[4].textContent = siteContent["main-content"]["vision-h4"];
+mainContentText = document.querySelectorAll(".text-content");
+console.log(mainContentText);
+console.log(Object.keys(siteContent["main-content"]));
 
-contentTextMain = document.querySelectorAll(".text-content p");
-contentTextMain[0].textContent =
-  siteContent["main-content"]["features-content"];
-contentTextMain[1].textContent = siteContent["main-content"]["about-content"];
-contentTextMain[2].textContent =
-  siteContent["main-content"]["services-content"];
-contentTextMain[3].textContent = siteContent["main-content"]["product-content"];
-contentTextMain[4].textContent = siteContent["main-content"]["vision-content"];
-
-document
-  .querySelector("#middle-img")
-  .setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+for (let i = 0; i < Object.keys(siteContent["main-content"]).length; i++) {
+  const element = Object.keys(siteContent["main-content"]);
+  let text = element[i];
+  if (text === "middle-img-src") {
+    i++;
+  }
+  if (0 < text.search("-h4")) {
+    mainContentText[i].childNodes[1].textContent =
+      siteContent["main-content"][text];
+    console.log(text);
+    i--;
+  }
+  if (0 < text.search("-content")) {
+    console.log(mainContentText);
+    mainContentText[i + 1].childNodes[3].textContent =
+      siteContent["main-content"][text];
+    console.log(text);
+  }
+}
+// Object.keys(siteContent["main-content"]).forEach(element => {
+//   mainContentText[i].childNodes[3].textContent =
+//     siteContent["main-content"][element];
+// });
