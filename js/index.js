@@ -50,6 +50,7 @@ midImg.src = siteContent["main-content"]["middle-img-src"];
 
 
 // ===== NAV =====
+
 const mainNav = document.querySelector("nav");
 
 const navAnchors = document.querySelectorAll("a");
@@ -71,6 +72,7 @@ mainNav.appendChild(lastAnchor);
 
 navAnchors.forEach(navAnchor => navAnchor.style.color = "green");
 
+
 // ===== CTA =====
 
 const ctaHeader = document.querySelector("h1");
@@ -79,28 +81,35 @@ ctaHeader.innerHTML = siteContent["cta"]["h1"].split(' ').join(`<br>`);
 const ctaButton = document.querySelector("button");
 ctaButton.textContent = siteContent["cta"]["button"];
 
+
 // ===== MAIN CONTENT =====
 
 const contentHeaders = document.querySelectorAll("h4");
 
-const h4Keys = Object.keys(siteContent["main-content"]).filter((key) => key.includes("h4"));
+const mainH4Keys = Object.keys(siteContent["main-content"]).filter((key) => key.includes("h4"));
 
-contentHeaders.forEach((index, i) => contentHeaders[i].textContent = siteContent["main-content"][`${h4Keys[i]}`]);
-
-contentHeaders[5].textContent = siteContent["contact"]["contact-h4"];
+contentHeaders.forEach((index, i) => contentHeaders[i].textContent = siteContent["main-content"][`${mainH4Keys[i]}`]);
 
 
 const contentParas = document.querySelectorAll("p");
 
-const paraKeys = Object.keys(siteContent["main-content"]).filter((key) => key.includes("content"));
+const mainParaKeys = Object.keys(siteContent["main-content"]).filter((key) => key.includes("content"));
 
-contentParas.forEach((index, i) => contentParas[i].textContent = siteContent["main-content"][`${paraKeys[i]}`]);
+contentParas.forEach((index, i) => contentParas[i].textContent = siteContent["main-content"][`${mainParaKeys[i]}`]);
+
+
+// ===== CONTACT =====
+
+contentHeaders[5].textContent = siteContent["contact"]["contact-h4"];
 
 contentParas[5].innerHTML = siteContent["contact"]["address"].split('Street ').join(`Street <br>`);
 contentParas[6].textContent = siteContent["contact"]["phone"];
 contentParas[7].textContent = siteContent["contact"]["email"];
 
+// ===== FOOTER =====
+
 contentParas[8].textContent = siteContent["footer"]["copyright"];
+
 
 // ===== Stretch =====
 // === Adding styles
