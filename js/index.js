@@ -41,6 +41,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
+/*=====Images=====*/
 //Create selectors for each image
 let ctaImg = document.getElementById("cta-img");
 let middleImg = document.getElementById("middle-img");
@@ -48,6 +49,8 @@ let middleImg = document.getElementById("middle-img");
 ctaImg.src = siteContent.cta["img-src"];
 middleImg.src = siteContent["main-content"]["middle-img-src"];
 
+
+/*=====Navigation=====*/
 //Create selectors for all nav links
 let navLinks = document.querySelectorAll("header nav a");
 navLinks.forEach((link, index) => link.textContent = siteContent.nav[`nav-item-${index+1}`]);
@@ -68,9 +71,9 @@ mainNav.append(newLink1);
 mainNav.prepend(newLink2);
 
 navLinks = document.querySelectorAll("header nav a");
-navLinks.forEach((link, index) => link.style.color = "green");
+navLinks.forEach((link) => link.style.color = "green");
 
-
+/*======CTA======*/
 //Create selector for h1
 let mainHeader = document.querySelector(".cta-text h1");
 mainHeader.textContent = siteContent.cta.h1;
@@ -79,6 +82,7 @@ mainHeader.textContent = siteContent.cta.h1;
 let button = document.querySelector(".cta-text button");
 button.textContent = siteContent.cta.button;
 
+/*=====Main Content=====*/
 //Create array with all text-content divs
 let textContentDivs = Array.from(document.querySelectorAll(".text-content"));
 
@@ -117,6 +121,7 @@ let visionP = textContentDivs[4].querySelector("p");
 visionH4.textContent = siteContent["main-content"]["vision-h4"];
 visionP.textContent = siteContent["main-content"]["vision-content"];
 
+/*=====Contact=====*/
 //create selectors for contact section
 let contactH4 = document.querySelector(".contact h4");
 contactH4.textContent = siteContent.contact["contact-h4"];
@@ -130,6 +135,7 @@ contactAddress.textContent = siteContent.contact.address;
 contactPhone.textContent = siteContent.contact.phone;
 contactEmail.textContent = siteContent.contact.email;
 
+/*=====Footer=====*/
 //create selector for footer section
 let footerSection = document.querySelector("footer p");
 footerSection.textContent = siteContent.footer.copyright;
