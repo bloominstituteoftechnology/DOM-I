@@ -8,7 +8,7 @@ let toTenms = 0;
 let toHundredms = 0;
 let toTens = 0;
 let toHundreds = 0;
-let time = setInterval(timer, 10);
+let time;
 
 function timer(){
     if(toTenms >= 9){
@@ -36,3 +36,14 @@ function timer(){
         tensMs.textContent = toTenms;
     }
 }
+const newButton = document.createElement('button');
+    newButton.textContent = "Start";
+  
+const start = document.querySelector('.digits');
+    start.appendChild(newButton);
+
+const eventHandler = () => {
+    time = setInterval(timer, 10);
+};
+
+start.addEventListener('click', eventHandler);
