@@ -1,4 +1,8 @@
 .container {
+  width: 95%;
+}
+
+.container .timer-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,11 +13,12 @@
   display: block;
 }
 
-.timer-display {
+.container .timer-content > .timer-display > * {
   display: inline-block;
-  font-size: 80px;
-}
-
-.redDigit {
-  color: red;
+  font-family: "Orbitron";
+  font-size: 100px;
+  text-align: center;
+  width: 150px;
+  height: 150px;
+  margin: 20px 0;
 }

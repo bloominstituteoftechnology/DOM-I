@@ -1,7 +1,7 @@
 const resetTimerButton = document.querySelector("#reset-timer-button");
 const startTimerButton = document.querySelector("#start-timer-button");
 
-const timerDisplayElements = document.querySelectorAll(".timer-display");
+const timerDisplay = document.querySelector(".timer-display");
 const secondsDisplay = document.querySelector("#sec");
 const millisecondsDisplay = document.querySelector("#ms");
 
@@ -9,8 +9,7 @@ let secondsCount = 0;
 let millisecondsCount = 0;
 
 function resetTimer() {
-    timerDisplayElements.forEach(element =>
-        element.classList.remove("redDigit"));
+    timerDisplay.removeAttribute("style");
     resetTimerButton.disabled  = true;
     startTimerButton.removeAttribute("disabled");
     secondsDisplay.textContent = millisecondsDisplay.textContent = "--";
@@ -27,8 +26,7 @@ function startTimer() {
     
             if (secondsCount === 10) {
                 window.clearInterval(timer);
-                timerDisplayElements.forEach(element =>
-                    element.classList.add("redDigit"));
+                timerDisplay.style.color = "red";
                 resetTimerButton.removeAttribute("disabled");
             }
         } else {

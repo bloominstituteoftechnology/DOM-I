@@ -2,18 +2,21 @@
 <html>
   <head>
     <title>DOM I</title>
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
     <script src="index.js" async></script>
   </head>
   <body>
     <div class="container">
+      <section class="timer-content">
         <button id="reset-timer-button" disabled>Reset Timer</button>
-      <div class="digits">
-        <div class="timer-display" id="sec">--</div>
-        <div class="timer-display" id="colon">:</div>
-        <div class="timer-display" id="ms">--</div>
-      </div>
-      <button id="start-timer-button">Start Timer</button>
+        <div class="timer-display">
+          <div id="sec">--</div>
+          <div>.</div>
+          <div id="ms">--</div>
+        </div>
+        <button id="start-timer-button">Start Timer</button>
+      </section>
     </div>
   </body>
 </html>
