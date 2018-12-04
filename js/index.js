@@ -40,19 +40,28 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
-// SETTING THE TEXT OF THE A TAGS
+// SETTING THE TEXT AND COLOR OF THE A TAGS
 const links = document.querySelectorAll('a');
 // console.log(links);
 // console.log(links[0]);
 // console.log(siteContent.nav[`nav-item-${1}`]);
+const newLink = document.createElement('a');
+newLink.href = "#";
+newLink.textContent = 'Policies';
+
+const nav = document.querySelector('nav');
+nav.append(newLink);
+
 
 for (let i = 0; i < links.length; i++) {
   links[i].textContent = siteContent.nav[`nav-item-${i}`];
+  links[i].style.color = 'green';
 }
 
 // SET H1 TEXT
 const h1 = document.querySelector('h1');
 h1.textContent = siteContent['cta']['h1'];
+
 // SET BUTTON TEXT 
 const button = document.querySelector('button');
 button.textContent = siteContent['cta']['button'];
