@@ -41,6 +41,9 @@ const siteContent = {
 
 // GREAT IDEA LOGO
 
+//STRETCH
+document.body.style.backgroundColor = "lightgray";
+
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
@@ -70,19 +73,19 @@ navItems[5].style.color ='green';
 
 //////// NAV ADDITIONS + COLOR CHANGE 
 
-const navNew = document.createElement('a');
+// const navNew = document.createElement('a');
 // navNew.href ='#';
-navNew.textContent = 'Portfolio';
-nevNew.style.color = 'green';
+// navNew.textContent = 'Portfolio';
+// nevNew.style.color = 'green';
 
-const newNavs = document.querySelector('nav');
-newNavs.prepend(navNew);
-newNavs.appendChild(navNew2);
+// const newNavs = document.querySelector('nav');
+// newNavs.prepend(navNew);
+// newNavs.appendChild(navNew2);
 
-const navNew2 = document.createElement('a');
+// const navNew2 = document.createElement('a');
 // navNew2.href ='#';
-navNew2.textContent = 'Blog';
-nevNew2.style.color = 'green';
+// navNew2.textContent = 'Blog';
+// nevNew2.style.color = 'green'
 
 
 
@@ -111,6 +114,7 @@ middleImg.src = siteContent['main-content']['middle-img-src'];
 
 mainContents[0].textContent = siteContent['main-content']['features-h4'];
 textContents[0].textContent = siteContent['main-content']['features-content'];
+
 
 mainContents[1].textContent = siteContent['main-content']['about-h4'];
 textContents[1].textContent = siteContent['main-content']['about-content'];
