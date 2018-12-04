@@ -50,8 +50,8 @@ for (let i = 0; i < links.length; i++) {
   links[i].textContent = siteContent.nav[`nav-item-${i}`];
 }
 // SET LOGO IMAGE SOURCE
-const logoImg = document.getElementById('logo-img');
-logoImg.src = "img/logo.png";
+const ctaImg = document.getElementById("cta-img");
+ctaImg.src = siteContent['cta']['img-src'];
 
 
 
