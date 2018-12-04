@@ -2,13 +2,38 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Text Me One', sans-serif;
+  background-image: linear-gradient(to right, rgba(6,66,6, .4), rgba(6,6,6, .5)) ,url('https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80')
 }
 
+.digits{
+  display: flex;
+  align-content: center;
+  align-items: center; 
+  width: 15%;
+  height: auto;
+  text-align: center;
+  /* border: white dashed 3px; */
+  color: white;
+  
+  
+}
 .digit {
   display: inline-block;
-  font-size: 80px;
+  font-size: 120px;
+
 }
 
 .redDigit {
-  color: red;
+  color: coral;
+}
+
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
 }
