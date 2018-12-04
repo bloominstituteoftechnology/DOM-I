@@ -3,14 +3,17 @@
   <head>
     <title>DOM I</title>
     <link rel="stylesheet" href="./styles.css">
+    <script src="index.js" async></script>
   </head>
   <body>
-    <div class="digits">
-      <div class="digit" id="secondTens">-</div>
-      <div class="digit" id="secondOnes">-</div>
-      <div class="digit" id="colon">:</div>
-      <div class="digit" id="msHundreds">-</div>
-      <div class="digit" id="msTens">-</div>
+    <div class="container">
+        <button id="reset-timer-button" disabled>Reset Timer</button>
+      <div class="digits">
+        <div class="timer-display" id="sec">--</div>
+        <div class="timer-display" id="colon">:</div>
+        <div class="timer-display" id="ms">--</div>
+      </div>
+      <button id="start-timer-button">Start Timer</button>
     </div>
   </body>
 </html>

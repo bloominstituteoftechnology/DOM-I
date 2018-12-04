@@ -1,10 +1,15 @@
-body {
+.container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.digit {
+#start-timer-button {
+  display: block;
+}
+
+.timer-display {
   display: inline-block;
   font-size: 80px;
 }
