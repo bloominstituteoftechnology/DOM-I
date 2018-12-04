@@ -91,4 +91,7 @@ contactSectionP[1].textContent = siteContent.contact['phone'];
 contactSectionP[2].textContent = siteContent.contact['email'];
 
 // Footer Section
-console.log(contactSectionP);
+const footer = document.querySelector('footer p');
+footer.textContent = siteContent.footer['copyright'];
+
+console.log(footer);
