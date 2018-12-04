@@ -163,6 +163,9 @@ ctaH1.style.fontFamily = "cursive";
 ctaH1.style.fontSize = "90px";
 ctaButton.style.backgroundColor = "lightblue";
 ctaButton.style.borderRadius = "10px";
+ctaButton.style.padding = "20px";
+ctaButton.style.height = "auto";
+ctaButton.style.fontSize = "20px";
 
 const heading4 = document.querySelectorAll("h4");
 heading4.forEach(item => {
