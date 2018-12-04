@@ -12,6 +12,8 @@ msTens.textContent = 0;
 
 
 function addTime() {
+    startButton.disabled = true;
+    startButton.style.background = 'gray';
     msTens.textContent++
     if (msTens.textContent > 9) {
         msTens.textContent = 0;
@@ -27,7 +29,6 @@ function addTime() {
                 msTens.style.color = 'red';
                 msHundreds.style.color = 'red';
                 clearInterval(run);
-                startButton.disabled = true;
                 }
             }
         }
@@ -56,7 +57,7 @@ resetButton.onclick = function() {
     msHundreds.style.color = 'black';
     clearInterval(run);
     startButton.disabled = false;
-
+    startButton.style.background = 'black';
 }
 
 

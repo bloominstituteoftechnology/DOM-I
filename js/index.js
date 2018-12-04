@@ -10,7 +10,7 @@ const siteContent = {
   },
   "cta": {
     "h1": "DOM Is Awesome",
-    "button": "Get Started",
+    "button": "Randomize Color",
     "img-src": "img/header-img.png"
   },
   "main-content": {
@@ -59,7 +59,7 @@ navBar.appendChild(newLast);
 
 const navItems = document.querySelectorAll('a');
 
-navItems.forEach(item => item.style.color = 'green');
+navItems.forEach(item => item.style.color = getRandomColor());
 
 // nav DOM manipulation
 
@@ -86,6 +86,7 @@ button.textContent = siteContent.cta.button;
 headerImage.src = siteContent.cta["img-src"];
 button.onclick = function() {
   mainHeaderText.style.color = getRandomColor();
+  navItems.forEach(item => item.style.color = getRandomColor());
 }
 
 // Main Content DOM Manipulation
