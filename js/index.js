@@ -50,7 +50,7 @@ articles[4].textContent = "About";
 articles[5].textContent = "Contact";
 
 const title = document.querySelector('h1');
-title.textContent = 'DOM Is Awesome';
+title.innerHTML = 'DOM <br />Is <br />Awesome';
 const button = document.querySelector('button');
 button.textContent = "Get Started";
 
@@ -81,7 +81,7 @@ const contactH = document.querySelector('.contact h4');
 contactH.textContent = "Contact";
 
 const contactP = document.querySelectorAll('.contact p');
-contactP[0].textContent = "123 Way 456 Street Somewhere, USA";
+contactP[0].innerHTML = "123 Way 456 Street <br /> Somewhere, USA";
 contactP[1].textContent = "1 (888) 888-8888";
 contactP[2].textContent = "sales@greatidea.io";
 
@@ -99,6 +99,7 @@ staffElement.textContent = 'Staff';
 
 const footerTxt = document.querySelector('footer');
 footerTxt.textContent = 'Copyright Great Idea! 2018';
+
 const navigation = document.querySelectorAll('nav a');
 navigation.forEach(function(element){
   element.style.color = "green"
