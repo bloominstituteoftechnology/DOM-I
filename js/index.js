@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": 'DOM Is Awesome',
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -80,7 +80,8 @@ for (let i = 0; i< aTagColor.length; i++) {
 
 //============================================================== Header
 const mainHeader = document.querySelector('h1');
-mainHeader.textContent = siteContent.cta.h1;
+// mainHeader.textContent = siteContent.cta.h1;
+mainHeader.innerHTML = siteContent.cta.h1.split(' ').join('<br>');
 
 const headerButton = document.querySelectorAll('.cta-text');
 headerButton[0].getElementsByTagName('button')[0].textContent = siteContent.cta.button;
