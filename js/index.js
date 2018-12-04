@@ -52,25 +52,33 @@ contentImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
 //============================================================== Nav Bar
 let navBar = document.querySelectorAll('a');
+const navItems = document.querySelector('a');
+const headerNav = document.querySelector('header nav');
+const aTagColor = Array.from(document.querySelectorAll('header nav a'));
 
 for (let i = 0; i < navBar.length; i++) {
   navBar[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
-  navBar[i].style.color = 'green';
+  // navBar[i].style.color = 'green';
 }
-
-const navItems = document.querySelector('a');
 
 const home = document.createElement('a');
 home.href ='#';
 home.textContent = 'Home';
-navItems.prepend(home);
+headerNav.prepend(home);
 
-// const blog = document.createElement('a');
-// blog.href ='#';
-// blog.textContent = 'Blog';
-// navBar.appendChild(blog);
+const blog = document.createElement('a');
+blog.href ='#';
+blog.textContent = 'Blog';
+headerNav.appendChild(blog);
 
+aTagColor.push(home);
+aTagColor.push(blog);
 
+for (let i = 0; i< aTagColor.length; i++) {
+  aTagColor[i].style.color = 'green';
+}
+
+// headerNav.style.color = 'green';
 
 //============================================================== Header
 const mainHeader = document.querySelector('h1');
