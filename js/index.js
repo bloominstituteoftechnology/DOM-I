@@ -42,7 +42,7 @@ const siteContent = {
 // logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //========================Nav Bar
-let navBar = document.querySelector("header nav a");
+let navBar = document.querySelectorAll("header nav a");
 const navLogoImage = document.querySelector("#logo-img");
 const links = document.querySelectorAll("a");
 
@@ -57,12 +57,33 @@ links[5].textContent = siteContent[`nav`]["nav-item-6"];
 //   links[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
 // }
 
-// navBar.style.color = "green";
-// for (let i = 0; i < links.length; i++) {
-//   navBar[i].style.color = 'green';
-// }
-
 navLogoImage.src = 'img/logo.png';
+
+
+//=========================Turn the navigation green
+for (let i = 0; i < navBar.length; i++) {
+  navBar[i].style.color = "green";
+}
+
+
+//===============Appending and Prepending
+const Portfolio = document.createElement('a');
+Portfolio.href = "#";
+Portfolio.textContent = "Portfolio";
+const mainNav = document.querySelector('nav');
+mainNav.append(Portfolio);
+Portfolio.style.color = "green";
+
+const News = document.createElement('a');
+News.href="#";
+News.textContent = "News";
+const topNav = document.querySelector('nav');
+topNav.prepend(News);
+News.style.color = "green";
+
+
+
+
 
 //========================Header Content
 
