@@ -78,7 +78,7 @@ ctaImg.setAttribute("src", siteContent.cta["img-src"]);
 // having trouble thinking of a clever way to loop on siteContent.main-content... do brute force for now:
 const textContent = document.querySelectorAll(".text-content");
 // console.log(textContent)
-for (let i = 0; i < 5; i ++) {
+for (let i = 0; i < textContent.length; i ++) {
   let topic = "";
   switch (i) {
     case 0:
@@ -134,6 +134,9 @@ contactSection.style.backgroundColor = "green";
 const rotateElements = [header, cta, mainContent, contactSection];
 const colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
 let colorIndex = 0;
+const topics = ["features", "about", "services", "product", "vision"];
+//                0             1         2          3         4
+let topicIndex = 0;
 
 const button = document.querySelector("button");
 button.addEventListener('click', () => {
@@ -141,9 +144,27 @@ button.addEventListener('click', () => {
     if (colorIndex === colors.length) {
       colorIndex = 0;
     }
-    console.log(colorIndex);
+    // console.log(colorIndex);
     element.style.backgroundColor = colors[colorIndex];
     colorIndex ++;
   }
   console.log("done");
+  if (topicIndex === topics.length) {
+    topicIndex = 0;
+  }
+  topicIndex ++;
+  for (let i = 0; i < textContent.length; i ++) {
+    if (topicIndex === topics.length) {
+      topicIndex = 0;
+    }
+    console.log(topicIndex);
+    textContent[i].childNodes.forEach(element => {
+      if (element.localName === "h4") {
+        element.textContent = siteContent["main-content"][`${topics[topicIndex]}-h4`];
+      } else if (element.localName === "p") {
+        element.textContent = siteContent["main-content"][`${topics[topicIndex]}-content`];
+      }
+    });
+    topicIndex ++;
+  }
 });
