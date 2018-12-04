@@ -5,12 +5,20 @@ const secondTens = document.querySelector('#secondTens')
 const start = document.querySelector('.start')
 const stop = document.querySelector('.stop')
 
+console.log(start);
+let time = 0;
 
-// let time = ''
-let time = setInterval(function timer(){
-//    for(let i = 0; i < 60; i++){
-//     time = i;
-    msTens.textContent = `${time}`;
-   },1000)
-// }
-start.addEventListener('click', time)
+const startTimer = setInterval(function startTimer (){
+    if(time <= 60){
+        msTens.textContent = time
+        time++
+    }else{
+        time = 0;
+    }},100);
+
+    function stopTimer(){
+        msTens = 0;
+    }
+
+start.addEventListener('click', startTimer)
+stop.addEventListener('click', stopTimer)
