@@ -15,6 +15,11 @@ function updateSecTens() {
   secTens.textContent = parseInt(secTens.textContent) + 1;
   timer = clearInterval(timer);
   timerGoing = false;
+  msTens.classList.toggle("redDigit");
+  msHundreds.classList.toggle("redDigit");
+  secOnes.classList.toggle("redDigit");
+  secTens.classList.toggle("redDigit");
+  semicolon.classList.toggle("redDigit");
 }
 
 function updateSecOnes() {
