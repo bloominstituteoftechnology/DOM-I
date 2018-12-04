@@ -55,7 +55,7 @@ header.prepend(a);
 let b = document.createElement("a");
 let secondA = document.querySelector("nav a:nth-child(2)");
 b.textContent ="share with us";
-header.prepend(b);
+header.appendChild(b);
 
 
 let nav = document.querySelectorAll("a");
@@ -101,7 +101,14 @@ document.querySelector(".third-p").textContent = siteContent["contact"]["email"]
 document.querySelector("footer p").textContent = siteContent["footer"]["copyright"];
 
 
+// Stretches
 
+document.querySelector(".top-content").style.backgroundColor = "#ecf2f8";
+
+let changeFont = document.querySelector(".change-color");
+changeFont.addEventListener("click",function(e){
+e.target.style.backgroundColor = "#ffe6ff";
+})
 
 
 
