@@ -41,14 +41,21 @@ const siteContent = {
 const nav = document.querySelector("nav");
 const navContent = nav.querySelectorAll('a');
 
+
 // ============== NAV ===============//
 
 navContent [0].textContent = siteContent.nav["nav-item-1"];
+navContent[0].style.color = "green";
 navContent [1].textContent = siteContent.nav["nav-item-2"];
+navContent [1].style.color = "red";
 navContent [2].textContent = siteContent.nav["nav-item-3"];
+navContent [2].style.color = "green";
 navContent [3].textContent = siteContent.nav["nav-item-4"];
+navContent [3].style.color = "red";
 navContent [4].textContent = siteContent.nav["nav-item-5"];
+navContent [4].style.color = "green";
 navContent [5].textContent = siteContent.nav["nav-item-6"];
+navContent [5].style.color = "red";
 
 //============== LOGO =============//
 
@@ -92,4 +99,36 @@ mainContentPars[4].textContent = siteContent["main-content"]["vision-content"];
 
 const mConMiddleImg = document.getElementById("middle-img");
 mConMiddleImg.src = siteContent["main-content"]["middle-img-src"];
+
+
+
+// ================== CONTACT =============== //
+
+const contactInfo = document.querySelectorAll(".contact h4");
+const addlcontactInfo = document.querySelectorAll(".contact p")
+
+contactInfo[0].textContent = siteContent["contact"]["contact-h4"];
+
+
+addlcontactInfo[0].textContent = siteContent["contact"]["address"];
+addlcontactInfo[1].textContent = siteContent["contact"]["phone"];
+addlcontactInfo[2].textContent = siteContent["contact"]["email"];
+
+
+
+// ======= FOOTER ========== //
+
+// const footerEnd = document.querySelector("footer");
+// const footerContent = document.querySelector("footer p");
+
+// footerEnd[0].textContent = siteContent["footer"];
+// footerContent[1].textContent = siteContent["footer"]["copyright"];
+
+const footerEnd = document.querySelector("footer p");
+footerEnd.textContent = siteContent.footer.copyright;
+
+
+
+
+
 
