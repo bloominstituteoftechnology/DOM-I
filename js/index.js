@@ -54,14 +54,15 @@ const nlist = document.querySelectorAll('nav a');
 nlist.forEach(
   function(aspot, i) {
     aspot.textContent = links[i];
-  }
-);
-
-nlist.forEach(
-  (curval, i) => {
     document.querySelectorAll('nav a')[i].setAttribute('style', 'color: green');
   }
 );
+
+// nlist.forEach(
+//   (curval, i) => {
+//     document.querySelectorAll('nav a')[i].setAttribute('style', 'color: green');
+//   }
+// );
 
 
 
@@ -143,3 +144,10 @@ let footerContent = document.querySelector('footer');
 let footerText = footerContent.children[0];
 
 footerText.textContent = siteContent.footer.copyright;
+
+document.querySelector("button").setAttribute('style', 'background-color: green; color: white; border-radius: 3px;');
+document.querySelector("button").setAttribute('style', 'background-color: green; color: white; border-radius: 3px;');
+
+document.querySelector("footer").setAttribute('style', 'font-size: 6em;');
+
+// const buttonlisten = document.querySelector("button").addEventListener('mouseenter', event =>)
