@@ -1,7 +1,7 @@
 
 function startTimer () {
   let count = 0;
-  const stop = 100 * 10; // ms/s * s -- set stop time
+  const stop = 100 * 1; // ms/s * s -- set stop time
   const delay = window.setInterval(() => {
     const msTens = count % 10;
     const msHundreds = Math.floor(count / 10) % 10;
@@ -10,6 +10,8 @@ function startTimer () {
     setDigits (msTens, msHundreds, secondOnes, secondTens);
     if (count < stop) {
       count ++;
+    } else if (stop === true) {
+      window.clearInterval(delay);
     } else {
       const digits = document.querySelectorAll(".digits");
       window.clearInterval(delay);
@@ -20,9 +22,14 @@ function startTimer () {
   }, 10); // execute every 10 ms
 }
 
+function stopTimer () {
+  
+}
+
 function resetTimer () {
   setDigits ("-", "-", "-", "-");
 }
+
 
 function setDigits (msTens, msHundreds, secondOnes, secondTens) {
   const digits = document.querySelectorAll(".digits");
@@ -40,7 +47,8 @@ function setDigits (msTens, msHundreds, secondOnes, secondTens) {
 }
 
 const startButton = document.querySelector("#startButton");
-console.log(startButton);
 startButton.addEventListener("click", startTimer);
+const stopButton = document.querySelector("#stopButton");
+stopButton.addEventListener("click", stopTimer);
 const resetButton = document.querySelector("#resetButton");
 resetButton.addEventListener("click", resetTimer);
