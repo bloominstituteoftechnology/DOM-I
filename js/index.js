@@ -51,10 +51,15 @@ const contactContentParagraphs = document.querySelectorAll('.contact p')
 const middleImage = document.getElementById('middle-img')
 const footer = document.querySelector('footer');
 
-// stretch variables
+// ============================================= stretch variables
 const paragraphs = document.querySelectorAll('p');
 const cta = document.querySelector('.cta');
 const mainContent = document.querySelector('.main-content');
+const ctaBlock = document.querySelector('.cta-text');
+// additional navigation elements
+const newNav1 = document.createElement('a');
+const newNav2 = document.createElement('a');
+
 
 
 // ============================================= Navigation and Logo
@@ -77,10 +82,6 @@ navigation.forEach((item, index) => item.textContent = navLinks[index]);
 
 // loop to add class to navigation
 navigation.forEach(item => item.style.color = 'green');
-
-// additional navigation elements
-const newNav1 = document.createElement('a');
-const newNav2 = document.createElement('a');
 
 newNav1.href = '#';
 newNav1.textContent = 'Awesome';
@@ -134,25 +135,19 @@ footer.textContent = siteContent.footer.copyright;
 // general style changes using JS
 ctaButton.style.width = "200px";
 ctaButton.style.height = "60px";
-
-paragraphs.forEach(items => items.style.color = "#383838");
+ctaButton.textContent = "Safe to Click";
 
 footer.style.borderTop = "2px solid black";
 footer.style.paddingTop = "20px";
 
-// event listener stretch goals
 ctaButton.addEventListener('click', function () {
-  paragraphs.forEach(items => items.style.color = "red");
-});
-
-ctaButton.addEventListener('dblclick', function () {
-  paragraphs.forEach(items => items.style.color = "#383838");
+  cta.classList.toggle('toggleMeRed');
 });
 
 newNav1.addEventListener('click', function () {
-  cta.style.display = "none";
+  ctaBlock.classList.toggle('toggleBorder');
 });
 
 newNav2.addEventListener('click', function () {
-  cta.style.display = "flex";
+  cta.classList.toggle('toggleMe');
 });
