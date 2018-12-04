@@ -49,7 +49,14 @@ console.log(siteContent.nav[`nav-item-${1}`]);
 for (let i = 0; i < links.length; i++) {
   links[i].textContent = siteContent.nav[`nav-item-${i}`];
 }
-// SET LOGO IMAGE SOURCE
+
+// SET H1 TEXT
+const h1 = document.querySelector('h1');
+h1.textContent = siteContent['cta']['h1'];
+// SET BUTTON TEXT 
+const button = document.querySelector('button');
+button.textContent = siteContent['cta']['button'];
+// SET CTA IMAGE SOURCE
 const ctaImg = document.getElementById("cta-img");
 ctaImg.src = siteContent['cta']['img-src'];
 
