@@ -58,12 +58,10 @@ signIn.textContent = 'Sign In';
 navCont.append(signIn);
 
 navLinks.forEach((a, i) => {
-  let navItemAttribute = `nav-item-${i+1}`;
-  a.textContent = siteContent.nav[navItemAttribute];
+  a.textContent = siteContent.nav[`nav-item-${i+1}`];
   a.style.color = 'green'; //Task 4
 });
 
-// Node list update
 navLinks = document.querySelectorAll('nav a');
 
 navLinks.forEach(a => {
