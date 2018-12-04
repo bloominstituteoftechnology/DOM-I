@@ -40,3 +40,31 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+// SETTING THE TEXT OF THE A TAGS
+const links = document.querySelectorAll('a');
+console.log(links);
+console.log(links[0]);
+console.log(siteContent.nav[`nav-item-${1}`]);
+
+for (let i = 0; i < links.length; i++) {
+  links[i].textContent = siteContent.nav[`nav-item-${i}`];
+}
+// SET LOGO IMAGE SOURCE
+const logoImg = document.getElementById('logo-img');
+logoImg.src = "img/logo.png";
+
+
+
+// SET H4 TAGS
+
+let h4 = document.querySelectorAll(".main-content h4");
+let mainContentArray = ["features", "about", "services", "product", "vision"];
+for (let i = 0; i < mainContentArray.length; i++) {
+  h4[i].textContent = siteContent["main-content"][`${mainContentArray[i]}-h4`];
+}
+
+// SET MAIN CONTENT TAGS
+let mainParagraphs = document.querySelectorAll('.main-content p');
+for (let i = 0; i < mainContentArray.length; i++) {
+  mainParagraphs[i].textContent = siteContent["main-content"][`${mainContentArray[i]}-content`];
+}
