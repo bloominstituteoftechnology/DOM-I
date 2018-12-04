@@ -42,6 +42,7 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // Nav Bar Code
+const anchor = document.querySelector("a");
 const anchors = document.querySelectorAll("a");
 const anchorsArray = Array.from(anchors);
 anchorsArray[0].textContent = siteContent.nav["nav-item-1"];
@@ -53,6 +54,26 @@ anchorsArray[5].textContent = siteContent.nav["nav-item-6"];
 
 const logoImg = document.querySelector(".logo");
 logoImg.src = siteContent.nav["img-src"]; 
+
+
+const blog = document.createElement("a");
+const gallery = document.createElement("a");
+
+blog.appendChild(document.createTextNode("Blog"));
+gallery.appendChild(document.createTextNode("Gallery"));
+
+const navBar = document.querySelector("nav");
+navBar.appendChild(blog);
+navBar.prepend(gallery);
+
+anchorsArray[0].style.color = "red";
+anchorsArray[1].style.color = "red";
+anchorsArray[2].style.color = "red";
+anchorsArray[3].style.color = "red";
+anchorsArray[4].style.color = "red";
+anchorsArray[5].style.color = "red";
+blog.style.color = "red";
+gallery.style.color = "red";
 
 // CTA Code
 
@@ -148,16 +169,6 @@ pageFooter[1].textContent = siteContent.footer["copyright"];
 
 // ========================== Adding New Content
 
-const blog = document.createElement("a");
-const gallery = document.createElement("a");
-
-blog.appendChild(document.createTextNode("Blog"));
-gallery.appendChild(document.createTextNode("Gallery"));
-
-const navBar = document.querySelector("nav");
-navBar.appendChild(blog);
-navBar.prepend(gallery);
 
 
-
-
+                                                                                                                           
