@@ -102,7 +102,7 @@ nav.prepend(homeNav);
 
 let navItems2 = document.querySelectorAll('nav a') 
 
-navItemsArr.map(item => item.style.color = "green")
+navItems2.forEach(item => item.style.color = "green")
 
 //====== cta section
 
