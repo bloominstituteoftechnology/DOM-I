@@ -41,44 +41,78 @@ const siteContent = {
 let logo = document.querySelector("#logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let ctaImg = document.querySelector("#cta-img");
-ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
-
-let middleImg = document.querySelector("#middle-img");
-middleImg.setAttribute('src',siteContent["main-content"]["middle-img-src"]);
-
+//Nav
 let navItems = document.querySelectorAll("a");
-
 for (let i = 0; i < navItems.length; i++) {
   navItems[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
 }
 
-let ctaHeading = document.querySelector("h1");
-
+//CTA
+let ctaHeading = document.querySelector(".cta-text h1");
 ctaHeading.textContent = siteContent.cta.h1;
 
 let ctaButton = document.querySelector("button");
-
 ctaButton.textContent = siteContent.cta.button;
-// let nav = document.querySelector("nav");
-// nav.textContent = "Navi nav";console.log(nav);
+
+let ctaImg = document.querySelector("#cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+//MainContent
+let textContentList = document.querySelectorAll(".text-content");
+
+textContentList[0].querySelector("h4").textContent = siteContent["main-content"]["features-h4"];
+textContentList[0].querySelector("p").textContent = siteContent["main-content"]["features-content"];
+textContentList[1].querySelector("h4").textContent = siteContent["main-content"]["about-h4"];
+textContentList[1].querySelector("p").textContent = siteContent["main-content"]["about-content"];
+textContentList[2].querySelector("h4").textContent = siteContent["main-content"]["services-h4"];
+textContentList[2].querySelector("p").textContent = siteContent["main-content"]["services-content"];
+textContentList[3].querySelector("h4").textContent = siteContent["main-content"]["product-h4"];
+textContentList[3].querySelector("p").textContent = siteContent["main-content"]["product-content"];
+textContentList[4].querySelector("h4").textContent = siteContent["main-content"]["vision-h4"];
+textContentList[4].querySelector("p").textContent = siteContent["main-content"]["vision-content"];
+
+let middleImg = document.querySelector("#middle-img");
+middleImg.setAttribute('src',siteContent["main-content"]["middle-img-src"]);
+
+//Contact
+let contact = document.querySelector(".contact h4");
+
+contact.textContent = siteContent["contact"]["contact-h4"];
+
+let contactP = document.querySelectorAll(".contact p");
+
+contactP[0].textContent = siteContent.contact["address"];
+contactP[1].textContent = siteContent.contact["phone"];
+contactP[2].textContent = siteContent.contact["email"];
+
+//Footer 
+let footer = document.querySelector("footer");
+footer.textContent = siteContent["footer"]["copyright"]
+
+//New nav color
+navItems.forEach((item, i) => {
+  item.style.color = "green"
+})
+
+
+//New nav links 
+const newAtag = document.createElement('a');
+newAtag.href = "#";
+newAtag.textContent = "Affiliates"
+
+const mainNav = document.querySelector("nav");
+
+mainNav.append(newAtag);
+
+const newAtag2 = document.createElement('a');
+newAtag2.href = "#";
+newAtag2.textContent = "History";
+
+const mainNav2 = document.querySelector("nav");
+
+mainNav2.prepend(newAtag2);
 
 
 
-// let navItems = document.querySelector("nav-item-1");
-// navItems.setAttribute('href',siteContent["nav"]["nav-item-1"])
-// console.log(navItems)
 
-// let navItems = document.querySelector("a");
-// for (let i = 0; i < navItems.length; i++) {
-//   navItems[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
-// }
-// console.log(navItems)
 
-// let headerLink1 = document.querySelectorAll("a");
-
-// for (let i = 0; i < headerLink1.length; i++) {
-//   headerLink1[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
-// }
-
-// console.log(headerLink1)
