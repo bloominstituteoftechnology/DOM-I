@@ -68,13 +68,41 @@ ctaHeader.innerText = siteContent["cta"]["h1"]
 let button =document.querySelector("button");
 button.innerText = siteContent["cta"]["button"]
 
-let otherHeader= document.querySelectorAll(`h4`);
+let h4 =document.querySelectorAll("h4");
+h4[0].innerText= siteContent["main-content"]["features-h4"];
+h4[1].innerText= siteContent["main-content"]["about-h4"];
+h4[2].innerText= siteContent["main-content"]["services-h4"];
+h4[3].innerText= siteContent["main-content"]["product-h4"];
+h4[4].innerText= siteContent["main-content"]["vision-h4"];
 
-let paragraph =document.querySelectorAll(`p`);
+h4[5].innerText = siteContent["contact"]["contact-h4"];
+
+let paragraph =document.querySelectorAll("p");
+paragraph[0].innerText= siteContent["main-content"]["features-content"];
+paragraph[1].innerText= siteContent["main-content"]["about-content"];
+paragraph[2].innerText= siteContent["main-content"]["services-content"];
+paragraph[3].innerText= siteContent["main-content"]["product-content"];
+paragraph[4].innerText= siteContent["main-content"]["vision-content"];
 
 
+paragraph[5].innerText= siteContent["contact"]["address"];
+paragraph[6].innerText= siteContent["contact"]["phone"];
+paragraph[7].innerText= siteContent["contact"]["email"];
 
+paragraph[8].innerText= siteContent["footer"]["copyright"];
 
+mainNav.forEach((link,i) => {
+  link.style.color = "green";
+})
 
+mainNav = document.getElementsByTagName("nav")[0];
+let createNewNode = (name) => {
+  let newNode = document.createElement("a");
+  newNode.innerHTML = name;
+  return newNode;
+}
+mainNav.prepend(createNewNode("Lilly"));
+mainNav.append(createNewNode("Brutus"));
+paragraph.display(flex);
 
-
+mainNav.style.display(flex);
