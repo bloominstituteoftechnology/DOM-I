@@ -52,7 +52,22 @@ middleImg.src = siteContent["main-content"]["middle-img-src"];
 let navLinks = document.querySelectorAll("header nav a");
 navLinks.forEach((link, index) => link.textContent = siteContent.nav[`nav-item-${index+1}`]);
 
+//Create 2 new items to add to the navigation system
+const newLink1 = document.createElement('a');
+newLink1.href = "#";
+newLink1.textContent = "Blog";
 
+const newLink2 = document.createElement('a');
+newLink2.href = "#";
+newLink2.textContent = "Mission";
+
+//Create a selector for the nav element
+const mainNav = document.querySelector('header nav');
+
+mainNav.append(newLink1);
+mainNav.prepend(newLink2);
+
+navLinks = document.querySelectorAll("header nav a");
 navLinks.forEach((link, index) => link.style.color = "green");
 
 
