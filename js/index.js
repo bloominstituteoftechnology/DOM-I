@@ -61,13 +61,26 @@ const applyText = (prop, filterItem, query) => {
   const contentKeys = mainKeys.filter((item) => {
     return item.includes(filterItem);
   });
-  console.log(contentKeys);
 
   query.forEach((element, index) => {
     element.textContent = siteContent[prop][contentKeys[index]];
   })
 }
 
+
+
+
+
+// Images
+
+const logoImg = document.querySelector('#logo-img');
+logoImg.src = siteContent.nav["img-src"];
+
+const headerImg = document.querySelector('#cta-img');
+headerImg.src = siteContent.cta["img-src"];
+
+const middleImg = document.querySelector('#middle-img');
+middleImg.src = siteContent["main-content"]["middle-img-src"];
 
 
 
@@ -89,7 +102,6 @@ nav.appendChild(portfolio);
 
 // Hood into a tags
 const navAnchors = document.querySelectorAll('a');
-console.log(navAnchors);
 
 // Iterate of navKeys array and apply text content to nav items
 // turn nav items green
@@ -101,8 +113,8 @@ navAnchors.forEach((item, index) => {
 });
 
 
-const logoImg = document.querySelector('#logo-img');
-logoImg.src = siteContent.nav["img-src"];
+
+
 
 
 
@@ -116,8 +128,7 @@ headerTitle.textContent = siteContent.cta.h1
 const headerButton = document.querySelector('.cta-text').querySelector('button');
 headerButton.textContent = siteContent.cta.button;
 
-const headerImg = document.querySelector('#cta-img');
-headerImg.src = siteContent.cta["img-src"];
+
 
 
 
@@ -132,9 +143,7 @@ const content = document.querySelectorAll('.text-content p');
 applyText('main-content', 'h4', headers);
 applyText('main-content', 'content', content);
 
-// apply src to midddle img
-const middleImg = document.querySelector('#middle-img');
-middleImg.src = siteContent["main-content"]["middle-img-src"];
+
 
 
 
