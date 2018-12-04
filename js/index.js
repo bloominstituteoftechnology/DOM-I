@@ -46,10 +46,25 @@ const siteContent = {
 let logo = document.getElementById('logo-img');
 logo.setAttribute('src', siteContent['nav']['img-src']);
 
-let navItems = document.querySelectorAll('a');
+let navItems = document.querySelectorAll('nav a');
 for (let i = 0; i < navItems.length; i++) {
 	navItems[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
+	navItems[i].style.color = 'green';
 }
+
+// Add 2 elements to nav
+const nav = document.getElementsByTagName('nav')[0];
+
+const navItem1 = document.createElement('a');
+navItem1.textContent = 'Manipulate';
+navItem1.style.color = 'green';
+
+const navItem2 = document.createElement('a');
+navItem2.textContent = 'DOM';
+navItem2.style.color = 'green';
+
+nav.prepend(navItem1);
+nav.append(navItem2);
 
 // CTA Section
 const CtaH1 = (document.querySelector('.cta .cta-text h1').textContent = siteContent.cta['h1']);
@@ -93,5 +108,3 @@ contactSectionP[2].textContent = siteContent.contact['email'];
 // Footer Section
 const footer = document.querySelector('footer p');
 footer.textContent = siteContent.footer['copyright'];
-
-console.log(footer);
