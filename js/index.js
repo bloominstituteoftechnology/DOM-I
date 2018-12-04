@@ -68,7 +68,19 @@ nav[4].style.color = "green";
 nav[5].textContent = siteContent["nav"]["nav-item-6"];
 nav[5].style.color = "green";
 
+const newNav1 = document.createElement("a");
+newNav1.href = "#";
+newNav1.textContent = "Blog";
+newNav1.style.color = "green";
 
+const newNav2 = document.createElement("a");
+newNav2.href = "#";
+newNav2.textContent = "YouTube";
+newNav2.style.color = "green";
+
+const newNav = document.querySelector("nav");
+newNav.append(newNav1);
+newNav.prepend(newNav2);
 
 
 const ctaHeader = document.getElementsByTagName("h1");
