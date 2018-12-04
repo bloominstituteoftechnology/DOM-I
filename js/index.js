@@ -50,11 +50,40 @@ const navItems = document.querySelectorAll('a');
 
 
 navItems[0].textContent = siteContent.nav["nav-item-1"];
+navItems[0].style.color ='green';
+
 navItems[1].textContent = siteContent.nav["nav-item-2"];
+navItems[1].style.color ='green';
+
 navItems[2].textContent = siteContent.nav["nav-item-3"];
+navItems[2].style.color ='green';
+
 navItems[3].textContent = siteContent.nav["nav-item-4"];
+navItems[3].style.color ='green';
+
 navItems[4].textContent = siteContent.nav["nav-item-5"];
+navItems[4].style.color ='green';
+
 navItems[5].textContent = siteContent.nav["nav-item-6"];
+navItems[5].style.color ='green';
+
+
+//////// NAV ADDITIONS + COLOR CHANGE 
+
+// const navNew = document.createElement('a');
+// // navNew.href ='#';
+// navNew.textContent = 'Portfolio';
+// nevNew.style.color = 'green';
+
+// const newNavs = document.querySelector('nav');
+// newNavs.prepend(navNew);
+// newNavs.appendChild(navNew2);
+
+// const navNew2 = document.createElement('a');
+// // navNew2.href ='#';
+// navNew2.textContent = 'Blog';
+// nevNew2.style.color = 'green';
+
 
 
 /////////  TOP CONTENT 
@@ -71,19 +100,45 @@ contentImg.src = siteContent.cta["img-src"];
 
 ///////// MAIN-CONTENT
 
+const mainContent = document.querySelectorAll('.main-content');
+const mainContents = document.querySelectorAll('.main-content h4');
+const textContents = document.querySelectorAll('.main-content p');
 
-const mainContents = document.querySelector('.main-content h4');
-const textContents = document.querySelectorAll('.text-content p');
-
-
-mainContents[0].textContent = siteContent.textContents["features-h4"];
-// navItems[1].textContent = siteContent.nav["nav-item-2"];
-// navItems[2].textContent = siteContent.nav["nav-item-3"];
-// navItems[3].textContent = siteContent.nav["nav-item-4"];
-// navItems[4].textContent = siteContent.nav["nav-item-5"];
-// navItems[5].textContent = siteContent.nav["nav-item-6"];
+const middleImg = document.getElementById('middle-img');
+middleImg.src = siteContent['main-content']['middle-img-src'];
 
 
+
+mainContents[0].textContent = siteContent['main-content']['features-h4'];
+textContents[0].textContent = siteContent['main-content']['features-content'];
+
+mainContents[1].textContent = siteContent['main-content']['about-h4'];
+textContents[1].textContent = siteContent['main-content']['about-content'];
+
+mainContents[2].textContent = siteContent['main-content']['services-h4'];
+textContents[2].textContent = siteContent['main-content']['services-content'];
+
+mainContents[3].textContent = siteContent['main-content']['product-h4'];
+textContents[3].textContent = siteContent['main-content']['product-content'];
+
+mainContents[4].textContent = siteContent['main-content']['vision-h4'];
+textContents[4].textContent = siteContent['main-content']['vision-content'];
+
+///////// BOTTOM-CONTENT
+
+const contactHeading = document.querySelectorAll('.contact h4');
+const contact = document.querySelectorAll('.contact p');
+
+
+contactHeading[0].textContent = siteContent['contact']['contact-h4'];
+contact[1].textContent = siteContent['contact']['address'];
+contact[2].textContent = siteContent['contact']['phone'];
+contact[3].textContent = siteContent['contact']['email'];
+
+///////// FOOTER 
+
+const footer = document.querySelector('footer p');
+footer.textContent = siteContent.footer.copyright;
 
 
 
