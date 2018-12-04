@@ -42,9 +42,9 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 // SETTING THE TEXT OF THE A TAGS
 const links = document.querySelectorAll('a');
-console.log(links);
-console.log(links[0]);
-console.log(siteContent.nav[`nav-item-${1}`]);
+// console.log(links);
+// console.log(links[0]);
+// console.log(siteContent.nav[`nav-item-${1}`]);
 
 for (let i = 0; i < links.length; i++) {
   links[i].textContent = siteContent.nav[`nav-item-${i}`];
@@ -70,8 +70,28 @@ for (let i = 0; i < mainContentArray.length; i++) {
   h4[i].textContent = siteContent["main-content"][`${mainContentArray[i]}-h4`];
 }
 
-// SET MAIN CONTENT TAGS
+// SET MAIN CONTENT PARAGRAPHS
 let mainParagraphs = document.querySelectorAll('.main-content p');
 for (let i = 0; i < mainContentArray.length; i++) {
   mainParagraphs[i].textContent = siteContent["main-content"][`${mainContentArray[i]}-content`];
 }
+
+// SET MIDDLE-IMG SOURCE 
+const middleImg = document.getElementById("middle-img");
+middleImg.src = siteContent['main-content']['middle-img-src'];
+
+// SET CONTACT H4 TAG
+const contactHeading = document.querySelector('.contact h4');
+contactHeading.textContent = siteContent['contact']['contact-h4'];
+
+// SET CONTACT P TAGS
+const contactParagraphs = document.querySelectorAll('.contact p');
+console.log(contactParagraphs);
+let contactSections = ['address', 'phone', 'email'];
+for (let i = 0; i < contactParagraphs.length; i++) {
+  contactParagraphs[i].textContent = siteContent['contact'][`${contactSections[i]}`];
+}
+
+// SET FOOTER P TAG
+const footer = document.querySelector('footer p');
+footer.textContent = siteContent['footer']['copyright'];
