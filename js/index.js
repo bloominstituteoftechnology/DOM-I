@@ -46,7 +46,9 @@ logo.src = siteContent["nav"]["img-src"];
 
 // nav anchor tags
 
-let navItems = document.querySelectorAll('a');
+let navItems = document.querySelectorAll('nav a');
+
+
 
 // old method
 
@@ -81,18 +83,15 @@ let navItemsArr = Array.from(navItems);
 
 navItemsArr.map((item, index)=>{
   item.textContent = Object.values(siteContent.nav)[index]; 
-  item.style.color = "green";
 })
 
 // new nav items
 const githubNav = document.createElement('a');
 githubNav.href = '#';
-githubNav.style.color = "green";
 githubNav.textContent = 'GitHub';
 
 const homeNav = document.createElement('a')
 homeNav.href = "#";
-homeNav.style.color = "green";
 homeNav.textContent = 'Home'
 
 // place them somewhere
@@ -100,6 +99,10 @@ homeNav.textContent = 'Home'
 let nav = document.querySelector('nav');
 nav.appendChild(githubNav);
 nav.prepend(homeNav);
+
+let navItems2 = document.querySelectorAll('nav a') 
+
+navItemsArr.map(item => item.style.color = "green")
 
 //====== cta section
 
@@ -109,7 +112,7 @@ nav.prepend(homeNav);
 let h1 = document.querySelector('h1');
 // let ctaH1 = Object.values(siteContent["cta"]["h1"].split(" ").join("\r\n"));
 h1.style.whiteSpace = "pre-line";
-h1.textContent = siteContent["cta"]["h1"].split(" ").join("\r\n");
+h1.textContent = siteContent["cta"]["h1"].split(" ").join("\n");
 
 let button = document.querySelector('button')
 button.textContent = siteContent["cta"]["button"];
@@ -117,6 +120,8 @@ button.textContent = siteContent["cta"]["button"];
 let headerImg = document.getElementById("cta-img");
 // headerImg.setAttribute('src', siteContent["cta"]["img-src"])
 headerImg.src = siteContent["cta"]["img-src"];
+
+
 
 
 //====== main content
