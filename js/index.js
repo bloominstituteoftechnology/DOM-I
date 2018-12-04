@@ -70,19 +70,19 @@ navItems[5].style.color ='green';
 
 //////// NAV ADDITIONS + COLOR CHANGE 
 
-// const navNew = document.createElement('a');
-// // navNew.href ='#';
-// navNew.textContent = 'Portfolio';
-// nevNew.style.color = 'green';
+const navNew = document.createElement('a');
+// navNew.href ='#';
+navNew.textContent = 'Portfolio';
+nevNew.style.color = 'green';
 
-// const newNavs = document.querySelector('nav');
-// newNavs.prepend(navNew);
-// newNavs.appendChild(navNew2);
+const newNavs = document.querySelector('nav');
+newNavs.prepend(navNew);
+newNavs.appendChild(navNew2);
 
-// const navNew2 = document.createElement('a');
-// // navNew2.href ='#';
-// navNew2.textContent = 'Blog';
-// nevNew2.style.color = 'green';
+const navNew2 = document.createElement('a');
+// navNew2.href ='#';
+navNew2.textContent = 'Blog';
+nevNew2.style.color = 'green';
 
 
 
