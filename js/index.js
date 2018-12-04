@@ -99,6 +99,7 @@ button[0].textContent = siteContent.cta.button;
 
 // Paragraph Titles
 let h4 = document.querySelectorAll(".main-content h4");
+
 let mainContentArray = ["features", "about", "services", "product", "vision"];
 for (let i = 0; i < mainContentArray.length; i++) {
   h4[i].textContent = siteContent["main-content"][`${mainContentArray[i]}-h4`];
