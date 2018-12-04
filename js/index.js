@@ -40,13 +40,17 @@ const siteContent = {
 //================= Nav Bar Elements and Methods Here ===========//
 
 const navItems = document.querySelectorAll("a");
-for (let i = 0; i < navItems.length; i++) {
+navItems.forEach((link, i) => {
   navItems[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
-}
+})
+
+navItems.forEach((link, i) => {
+navItems[i].style.color = "darkgreen";
+})
 
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
-// need navTextTwo, navTextThree, navTextFour, and navTextFive
+
 
 //=================  CTA Elements and Methods Here  ==============//
 const ctaHeader = document.querySelector(".cta-text h1");
@@ -64,13 +68,13 @@ ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 //=================  Main Content Elements and Methods  ============//
 const h4 = document.getElementsByTagName("h4");
 let mainContentArray = ["features", "about", "services", "product", "vision"];
+
 for (let i = 0; i < mainContentArray.length; i++) {
-  h4[i].textContent = siteContent["main-content"][`${mainContentArray[i]}-h4`];
+  h4[i].textContent = siteContent["main-content"][`${mainContentArray[i]}-h4`]; 
 }
 
 let midImg = document.getElementById("middle-img");
 midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
-
 
 const midContentP = document.querySelectorAll(".main-content p");
 let midContentArray = mainContentArray;
@@ -90,7 +94,7 @@ for (let i = 0; i < contactArray.length; i++) {
 const footerContent = document.querySelector('footer p');
 footerContent.textContent = siteContent.footer.copyright;
 
-navItems[i].style.color = "green";
+
 
 
 
