@@ -109,5 +109,6 @@ contactSectionP[2].textContent = siteContent.contact['email'];
 const footer = document.querySelector('footer p');
 footer.textContent = siteContent.footer['copyright'];
 
+// Animations
 TweenMax.from('nav a', 2, { x: -600, y: -50, scale: 0, rotation: 360, ease: SlowMo.ease.config(0.6, 0.8, false) });
 TweenMax.to('nav a', { x: 0, y: 0 });
