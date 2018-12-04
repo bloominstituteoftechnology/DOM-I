@@ -38,13 +38,13 @@ const siteContent = {
 };
 
 // Images
-let logo = document.getElementById("logo-img");
+const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let ctaImg = document.querySelector("#cta-img");
+const ctaImg = document.querySelector("#cta-img");
 ctaImg.src = siteContent['cta']['img-src'];
 
-let middleImg = document.querySelector("#middle-img");
+const middleImg = document.querySelector("#middle-img");
 middleImg.src = siteContent['main-content']['middle-img-src']
 
 // Navigation
