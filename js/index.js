@@ -41,12 +41,35 @@ const siteContent = {
 // const logo = document.getElementById("logo-img");
 // logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+
+
+// ==== FUNCTIONS ======
+
+// Creates a new element
 const newElement = (tag, attr, attrVal, textContent) => {
   let newEl = document.createElement(tag);
   newEl[`${attr}`] = `${attrVal}`;
   newEl.textContent = `${textContent}`;
   return newEl
 }
+
+// Creates keys out of object props then applys to text content
+// to elements
+const applyText = (prop, filterItem, query) => {
+  const mainKeys = Object.keys(siteContent[prop]);
+
+  const contentKeys = mainKeys.filter((item) => {
+    return item.includes(filterItem);
+  });
+  console.log(contentKeys);
+
+  query.forEach((element, index) => {
+    element.textContent = siteContent[prop][contentKeys[index]];
+  })
+}
+
+
+
 
 // ========== Nav
 
@@ -100,48 +123,18 @@ headerImg.src = siteContent.cta["img-src"];
 
 // ========== Main Content ======== //
 
-// Top Content
-const topContent = document.querySelector('.top-content').querySelectorAll('.text-content');
-// console.log(topContent);
 
-const featuresHeader = topContent[0].querySelector('h4');
-featuresHeader.textContent = siteContent["main-content"]["features-h4"];
+// hook into top h4 and p tags
+const headers = document.querySelectorAll('.text-content h4');
+const content = document.querySelectorAll('.text-content p');
 
-const featuresContent = topContent[0].querySelector('p');
-featuresContent.textContent = siteContent["main-content"]["features-content"];
+// Functions apply text content to Main Content headers and p tags
+applyText('main-content', 'h4', headers);
+applyText('main-content', 'content', content);
 
-const aboutHeader = topContent[1].querySelector('h4');
-aboutHeader.textContent = siteContent["main-content"]["about-h4"];
-
-const aboutContent = topContent[1].querySelector('p');
-aboutContent.textContent = siteContent["main-content"]["about-content"];
-
+// apply src to midddle img
 const middleImg = document.querySelector('#middle-img');
 middleImg.src = siteContent["main-content"]["middle-img-src"];
-
-
-// Bottom Content
-
-const bottomContent = document.querySelector('.bottom-content').querySelectorAll('.text-content');
-console.log(topContent);
-
-const servicesHeader = bottomContent[0].querySelector('h4');
-servicesHeader.textContent = siteContent["main-content"]["services-h4"];
-
-const servicesContent = bottomContent[0].querySelector('p');
-servicesContent.textContent = siteContent["main-content"]["services-content"];
-
-const productHeader = bottomContent[1].querySelector('h4');
-productHeader.textContent = siteContent["main-content"]["product-h4"];
-
-const productContent = bottomContent[1].querySelector('p');
-productContent.textContent = siteContent["main-content"]["product-content"];
-
-const visionHeader = bottomContent[2].querySelector('h4');
-visionHeader.textContent = siteContent["main-content"]["vision-h4"];
-
-const visionContent = bottomContent[2].querySelector('p');
-visionContent.textContent = siteContent["main-content"]["vision-content"];
 
 
 
