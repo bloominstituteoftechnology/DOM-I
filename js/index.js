@@ -57,18 +57,31 @@ const CtaButton = (document.querySelector('.cta .cta-text button').textContent =
 const ctaImg = (document.querySelector('#cta-img').src = siteContent.cta['img-src']);
 
 // Main Content Section
-const content = document.querySelectorAll('.text-content');
+const topContent = document.querySelectorAll('.top-content .text-content');
 
-content[0].querySelector('h4').textContent = siteContent['main-content']['features-h4'];
-content[0].querySelector('p').textContent = siteContent['main-content']['features-content'];
+topContent[0].querySelector('h4').textContent = siteContent['main-content']['features-h4'];
+topContent[0].querySelector('p').textContent = siteContent['main-content']['features-content'];
 
-content[1].querySelector('h4').textContent = siteContent['main-content']['about-h4'];
-content[1].querySelector('p').textContent = siteContent['main-content']['about-content'];
+topContent[1].querySelector('h4').textContent = siteContent['main-content']['about-h4'];
+topContent[1].querySelector('p').textContent = siteContent['main-content']['about-content'];
 
+// Middle Image Section
 const middleImg = document.querySelector('.middle-img');
 middleImg.src = siteContent['main-content']['middle-img-src'];
+
+// Bottom Main Section
+const bottomContent = document.querySelectorAll('.bottom-content .text-content');
+
+bottomContent[0].querySelector('h4').textContent = siteContent['main-content']['services-h4'];
+bottomContent[0].querySelector('p').textContent = siteContent['main-content']['services-content'];
+
+bottomContent[1].querySelector('h4').textContent = siteContent['main-content']['product-h4'];
+bottomContent[1].querySelector('p').textContent = siteContent['main-content']['product-content'];
+
+bottomContent[2].querySelector('h4').textContent = siteContent['main-content']['vision-h4'];
+bottomContent[2].querySelector('p').textContent = siteContent['main-content']['vision-content'];
 
 // Contact Section
 const contactSection = document.querySelector('.contact');
 
-console.log(content[0]);
+console.log(topContent[0]);
