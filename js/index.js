@@ -43,6 +43,7 @@ const navItems = document.querySelectorAll("a");
 for (let i = 0; i < navItems.length; i++) {
   navItems[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
 }
+
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 // need navTextTwo, navTextThree, navTextFour, and navTextFive
@@ -79,15 +80,17 @@ for (let i = 0; i < midContentArray.length; i++) {
 //=================  Contact Elements and Methods  ===============//
 
 const contactHeader = document.querySelector(".contact h4");
-const contactText = document.querySelectorAll("section.contact > p");
 contactHeader.textContent = "Contact";
-contactText = "Howdy Yall";
-
+const contactText = document.querySelectorAll(".contact p");
+let contactArray = ["address", "phone", "email"];
+for (let i = 0; i < contactArray.length; i++) {
+  contactText[i].textContent = siteContent["contact"][`${contactArray[i]}`];
+};
 //=================  Footer Elements and Methods  ===============//
-const footerContent = document.querySelector("footer");
-footerContent.textContent = "Copyright Great Idea! 2018";
+const footerContent = document.querySelector('footer p');
+footerContent.textContent = siteContent.footer.copyright;
 
-
+navItems[i].style.color = "green";
 
 
 
