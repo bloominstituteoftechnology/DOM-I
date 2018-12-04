@@ -166,6 +166,7 @@ header .logo {
 
 .contact p {
     margin: 15px 0;
+    white-space: pre-line;
 }
 
 /* Footer Styles */
