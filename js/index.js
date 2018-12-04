@@ -41,8 +41,24 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-const navItems = document.querySelectorAll('a');
+let navItems = document.querySelectorAll('a');
 navItems.forEach((item, index) => item.textContent = siteContent.nav[`nav-item-${index+1}`]);
+
+
+const nav = document.querySelector('nav');
+const newNav = document.createElement('a');
+const newNav2 = document.createElement('a');
+
+newNav.textContent = 'Other home';
+newNav2.textContent = 'More';
+newNav.href = '#';
+newNav2.href = '#';
+nav.prepend(newNav);
+nav.append(newNav2);
+
+navItems = document.querySelectorAll('a');
+navItems.forEach(item => item.style.color = 'green');
+
 
 const ctaH1 = document.querySelector('h1');
 ctaH1.textContent = siteContent.cta.h1;
