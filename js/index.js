@@ -25,6 +25,12 @@ const siteContent = {
     "product-content": "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "vision-h4":"Vision",
     "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+    "new-h4":"New Content",
+    "new-content": "New content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+    "rabbit-h4":"Rabbit Content",
+    "rabbit-content": "Rabbit content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+    "alligator-h4":"Alligator Content",
+    "alligator-content": "Alligator content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
   },
   "contact": {
     "contact-h4" : "Contact",
@@ -134,9 +140,9 @@ contactSection.style.backgroundColor = "green";
 const rotateElements = [header, cta, mainContent, contactSection];
 const colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
 let colorIndex = 0;
-const topics = ["features", "about", "services", "product", "vision"];
+const topics = ["features", "about", "services", "product", "vision", "new", "rabbit", "alligator"];
 //                0             1         2          3         4
-let topicIndex = 0;
+let topicIndex = 4;
 
 const button = document.querySelector("button");
 button.addEventListener('click', () => {
@@ -148,7 +154,7 @@ button.addEventListener('click', () => {
     element.style.backgroundColor = colors[colorIndex];
     colorIndex ++;
   }
-  console.log("done");
+  // console.log("done");
   if (topicIndex === topics.length) {
     topicIndex = 0;
   }
