@@ -51,14 +51,12 @@ contentImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
 
 //============================================================== Nav Bar
-let navBar = document.querySelectorAll('a');
-const navItems = document.querySelector('a');
+const navBar = document.querySelectorAll('a');
 const headerNav = document.querySelector('header nav');
 const aTagColor = Array.from(document.querySelectorAll('header nav a'));
 
 for (let i = 0; i < navBar.length; i++) {
   navBar[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
-  // navBar[i].style.color = 'green';
 }
 
 const home = document.createElement('a');
@@ -84,12 +82,12 @@ for (let i = 0; i< aTagColor.length; i++) {
 const mainHeader = document.querySelector('h1');
 mainHeader.textContent = siteContent.cta.h1;
 
-let headerButton = document.querySelectorAll('.cta-text');
+const headerButton = document.querySelectorAll('.cta-text');
 headerButton[0].getElementsByTagName('button')[0].textContent = siteContent.cta.button;
 
 
 //============================================================== Main Content
-let txtContent = document.querySelectorAll('.text-content');
+const txtContent = document.querySelectorAll('.text-content');
 txtContent[0].getElementsByTagName('h4')[0].textContent = siteContent['main-content']['features-h4'];
 txtContent[0].getElementsByTagName('p')[0].textContent = siteContent['main-content']['features-content'];
 
@@ -107,7 +105,7 @@ txtContent[4].getElementsByTagName('p')[0].textContent = siteContent['main-conte
 
 
 //============================================================== Contact
-let contact  = document.querySelectorAll('.contact');
+const contact  = document.querySelectorAll('.contact');
 contact[0].getElementsByTagName('h4')[0].textContent = siteContent['contact']['contact-h4'];
 contact[0].getElementsByTagName('p')[0].textContent = siteContent['contact']['address'];
 contact[0].getElementsByTagName('p')[1].textContent = siteContent['contact']['phone'];
@@ -115,5 +113,5 @@ contact[0].getElementsByTagName('p')[2].textContent = siteContent['contact']['em
 
 
 //============================================================== Footer
-let footer = document.querySelectorAll('footer');
+const footer = document.querySelectorAll('footer');
 footer[0].getElementsByTagName('p')[0].textContent = siteContent['footer']['copyright'];
