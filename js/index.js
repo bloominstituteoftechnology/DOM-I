@@ -74,3 +74,13 @@ contentTextMain[4].textContent = siteContent["main-content"]["vision-content"];
 document
   .querySelector("#middle-img")
   .setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+document.querySelector(".contact h4").textContent =
+  siteContent.contact["contact-h4"];
+
+contactInfo = document.querySelectorAll(".contact p");
+contactInfo[0].textContent = siteContent.contact.address;
+contactInfo[1].textContent = siteContent.contact.email;
+contactInfo[2].textContent = siteContent.contact.phone;
+
+document.querySelector("footer p").textContent = siteContent.footer.copyright;
