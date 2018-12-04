@@ -57,33 +57,18 @@ const CtaButton = (document.querySelector('.cta .cta-text button').textContent =
 const ctaImg = (document.querySelector('#cta-img').src = siteContent.cta['img-src']);
 
 // Main Content Section
+const content = document.querySelectorAll('.text-content');
 
-const mainContent = document.querySelector('.main-content');
+content[0].querySelector('h4').textContent = siteContent['main-content']['features-h4'];
+content[0].querySelector('p').textContent = siteContent['main-content']['features-content'];
 
-const topContent = document.querySelector('.top-content').children;
-const fisrstTopContent = topContent[0].children;
-const secondTopContent = topContent[1].children;
-
-const features = fisrstTopContent[0];
-const featuresContent = fisrstTopContent[1];
-features.textContent = siteContent['main-content']['features-h4'];
-featuresContent.textContent = siteContent['main-content']['features-content'];
-
-const about = secondTopContent[0];
-const aboutContent = secondTopContent[1];
-about.textContent = siteContent['main-content']['about-h4'];
-aboutContent.textContent = siteContent['main-content']['about-content'];
+content[1].querySelector('h4').textContent = siteContent['main-content']['about-h4'];
+content[1].querySelector('p').textContent = siteContent['main-content']['about-content'];
 
 const middleImg = document.querySelector('.middle-img');
 middleImg.src = siteContent['main-content']['middle-img-src'];
 
-const bottomContent = document.querySelector('.bottom-content').children;
-
-const topBottom = bottomContent[0];
-const middleBottom = bottomContent[1];
-const lastBottom = bottomContent[2];
-
 // Contact Section
 const contactSection = document.querySelector('.contact');
 
-console.log(contactSection);
+console.log(content[0]);
