@@ -49,9 +49,9 @@ const headerNav = document.querySelector("header nav");
 const newLink1 = document.createElement("a");
 const newLink2 = document.createElement("a");
 
-
 // --------------- CTA
 
+const ctaDiv = document.querySelector(".cta .cta-text");
 const mainHeader = document.querySelector(".cta .cta-text h1");
 const ctaBtn = document.querySelector(".cta .cta-text button");
 const ctaImg = document.querySelector("#cta-img");
@@ -128,6 +128,13 @@ mainHeader.textContent = siteContent["cta"]["h1"];
 // mainHeader.textContent.replace(/\s/g, /\n/g);
 // console.log(mainHeader.textContent);
 // console.log(search.test(mainHeader.textContent));
+
+// And another -- the updated object key at least worked
+
+// let changeHeading = siteContent.cta.h1;
+// changeHeading = "Dom\nIs\nAwesome";
+// ctaDiv.style.whiteSpace = "pre-line";
+
 
 ctaBtn.textContent = siteContent.cta.button;
 
