@@ -82,6 +82,13 @@ bottomContent[2].querySelector('h4').textContent = siteContent['main-content']['
 bottomContent[2].querySelector('p').textContent = siteContent['main-content']['vision-content'];
 
 // Contact Section
-const contactSection = document.querySelector('.contact');
+const contactSection = document.querySelectorAll('.contact');
+const contactSectionP = document.querySelectorAll('.contact p');
 
-console.log(topContent[0]);
+contactSection[0].querySelector('h4').textContent = siteContent.contact['contact-h4'];
+contactSectionP[0].textContent = siteContent.contact['address'];
+contactSectionP[1].textContent = siteContent.contact['phone'];
+contactSectionP[2].textContent = siteContent.contact['email'];
+
+// Footer Section
+console.log(contactSectionP);
