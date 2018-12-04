@@ -96,6 +96,7 @@ const footerP = footer.children[0]
 for (let i = 0; i < navLinks.length; i++) {
   navLinks[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
 }
+
 // Nav Logo
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
