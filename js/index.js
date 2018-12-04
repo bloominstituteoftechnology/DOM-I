@@ -50,21 +50,26 @@ for (let i = 0; i < mainNav.length; i++) {
   mainNav[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
 }
 
+// New Anchor element
 const newNav1 = document.createElement('a');
   newNav1.href = "#";
   newNav1.textContent = "test1";
 
+// New Anchor element
 const newNav2 = document.createElement('a');
   newNav2.href = "#";
   newNav2.textContent = "test2";
 
+//Area that the new anchor elements will be put into
 const nav = document.querySelector('nav');
 
+//puts the new elements in the last position in the nav object
 nav.appendChild(newNav1);
 nav.appendChild(newNav2);
 
-const navColor = document.querySelectorAll('a');
+const navColor = document.querySelectorAll('a');//grabs all the Anchor tags
 
+//goes through the array of Anchor tags and applies the color green to them
 for(let i = 0; i < navColor.length; i ++){
   navColor[i].style.color = "green";
 }
@@ -119,6 +124,8 @@ footer.textContent = siteContent.footer["copyright"];
 
 //=============================================== Event listener stretch goal
 
+
+//creates a new button that is placed under the original button that triggers the event
 const eventHandler = () => {
   const newButton = document.createElement('button');
   newButton.textContent = "Wow!";
