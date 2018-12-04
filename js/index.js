@@ -69,13 +69,13 @@ navBar.prepend(hellO);
 //CTA
 
 let ctaH1 = document.querySelector('.cta-text h1');
-  ctaH1.innerHTML = 'DOM<br> Is<br> Awesome<br>';
+  ctaH1.textContent = siteContent['cta']['h1'];
 
 let ctaIMG = document.getElementById('cta-img');
   ctaIMG.setAttribute('src', siteContent["cta"]["img-src"]);
 
 let ctaButton = document.querySelector('.cta-text button');
-  ctaButton.innerHTML = 'Get Started'; 
+  ctaButton.textContent = siteContent['cta']['button']; 
 
   // Main content
 
@@ -110,7 +110,7 @@ let contactContent = document.querySelectorAll(".contact p");
   contactContent[1].textContent = siteContent["contact"]["phone"];
   contactContent[2].textContent = siteContent["contact"]["email"];
 
-  //Footer
+  //Footer  
 
 let footer = document.querySelector("footer p");
   footer.textContent = siteContent["footer"]["copyright"];
