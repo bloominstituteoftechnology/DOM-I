@@ -92,11 +92,9 @@ contentHeaders[5].textContent = siteContent["contact"]["contact-h4"];
 
 const contentParas = document.querySelectorAll("p");
 
-contentParas[0].textContent = siteContent["main-content"]["features-content"];
-contentParas[1].textContent = siteContent["main-content"]["about-content"];
-contentParas[2].textContent = siteContent["main-content"]["services-content"];
-contentParas[3].textContent = siteContent["main-content"]["product-content"];
-contentParas[4].textContent = siteContent["main-content"]["vision-content"];
+const paraKeys = Object.keys(siteContent["main-content"]).filter((key) => key.includes("content"));
+
+contentParas.forEach((index, i) => contentParas[i].textContent = siteContent["main-content"][`${paraKeys[i]}`]);
 
 contentParas[5].innerHTML = siteContent["contact"]["address"].split('Street ').join(`Street <br>`);
 contentParas[6].textContent = siteContent["contact"]["phone"];
