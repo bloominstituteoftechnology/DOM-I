@@ -57,6 +57,22 @@ navContent [4].style.color = "green";
 navContent [5].textContent = siteContent.nav["nav-item-6"];
 navContent [5].style.color = "red";
 
+
+
+// ==================== NAV MODS ===============//
+
+const newNav = document.createElement("a");
+newNav.href = "#";
+newNav.querySelector.textContent = "Explore More";
+
+const mainNav = document.querySelector("nav");
+mainNav.prepend(newNav);
+
+
+
+
+
+
 //============== LOGO =============//
 
 let logo = document.getElementById("logo-img");
