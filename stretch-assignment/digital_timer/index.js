@@ -2,19 +2,37 @@ let tensMs = document.getElementById("msTens");
 let hundredsMs = document.getElementById("msHundreds");
 let oneSeconds = document.getElementById("secondOnes");
 let tenSeconds = document.getElementById("secondTens");
+const digits = document.querySelector(".digits");
 
-let toTen = 0;
-let toHundred = 0;
+let toTenms = 0;
+let toHundredms = 0;
+let toTens = 0;
+let toHundreds = 0;
 let time = setInterval(timer, 10);
 
 function timer(){
-    if(toTen >= 60){
-        toTen = 0;
-        toHundred ++;
-        tensMs.textContent = toTen;
-        hundredsMs.textContent = toHundred;
+    if(toTenms >= 9){
+        toTenms = 0;
+        toHundredms ++;
+        tensMs.textContent = toTenms;
+        hundredsMs.textContent = toHundredms;
+        if(toHundredms >= 10){
+            toHundredms = 0;
+            toTens++;
+            oneSeconds.textContent = toTens;
+            if(toTens >= 10){
+                toTens = 0;
+                toHundredms = 0;
+                toHundreds++;
+                hundredsMs.textContent = toHundredms;
+                oneSeconds.textContent = toTens;
+                tenSeconds.textContent = toHundreds;                
+                clearInterval(time);
+                digits.style.color = "red";
+            }
+        }
     } else {
-        toTen++;
-        tensMs.textContent = toTen;
+        toTenms++;
+        tensMs.textContent = toTenms;
     }
 }
