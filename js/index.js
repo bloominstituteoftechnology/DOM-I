@@ -99,3 +99,49 @@ contactP[2].textContent = siteContent["contact"]["email"];
 
 const footer = document.querySelector("footer p");
 footer.textContent = siteContent["footer"]["copyright"];
+
+//===========Add New Content=============
+
+nav[0].style.color = "green";
+nav[1].style.color = "green";
+nav[2].style.color = "green";
+nav[3].style.color = "green";
+nav[4].style.color = "green";
+nav[5].style.color = "green";
+
+
+const newBlogElement = document.createElement("a");
+newBlogElement.href = "#";
+newBlogElement.textContent = "Blog";
+
+const mainNav = document.querySelector("nav");
+
+mainNav.appendChild(newBlogElement);
+
+
+const newAElement = document.createElement("a");
+newAElement.href = "#";
+newAElement.textContent = "Home";
+
+
+
+mainNav.prepend(newAElement);
+
+
+
+
+
+// // 1. Create Element
+// const newElement = document.createElement('a');
+// // <a></a>
+
+// // 2. Add values / attributes
+// newElement.href = "#";
+// newElement.textContent = "Testing";
+// // <a href="#">Testing</a>
+
+// // 3. Create a place for the element to land
+// const mainNav = document.querySelector('.main-nav');
+
+// // 4. Append or prepend the newly created element
+// mainNav.prepend(newElement);
