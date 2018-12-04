@@ -60,7 +60,7 @@ navItem1.textContent = 'Manipulate';
 navItem1.style.color = 'green';
 
 const navItem2 = document.createElement('a');
-navItem2.textContent = 'DOM';
+navItem2.textContent = 'Dom';
 navItem2.style.color = 'green';
 
 nav.prepend(navItem1);
