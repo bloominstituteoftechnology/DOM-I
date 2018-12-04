@@ -28,7 +28,8 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "123 Way 456 Street",
+    "addressL2" : "Somewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -88,4 +89,46 @@ aboCon.textContent = siteContent['main-content']['about-content'];
 let midImg = document.getElementById('middle-img');
 midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
+let services = document.querySelectorAll('h4')[2];
+services.textContent = siteContent['main-content']['services-h4'];
 
+let serCon = document.querySelectorAll('p')[2];
+serCon.textContent = siteContent['main-content']['services-content'];
+
+let product = document.querySelectorAll('h4')[3];
+product.textContent = siteContent['main-content']['product-h4'];
+
+let proCon = document.querySelectorAll('p')[3];
+proCon.textContent = siteContent['main-content']['product-content'];
+
+let vision = document.querySelectorAll('h4')[4];
+vision.textContent = siteContent['main-content']['vision-h4'];
+
+let visCon = document.querySelectorAll('p')[4];
+visCon.textContent = siteContent['main-content']['vision-content'];
+
+let contact = document.querySelectorAll('h4')[5];
+contact.textContent = siteContent['contact']['contact-h4'];
+
+let address = document.querySelectorAll('p')[5];
+address.textContent = siteContent['contact']['address'];
+
+// let newPel = document.createElement('p');
+// newPel.textContent = siteContent['contact']['addressL2'];
+// let addAdd = document.querySelector('siteContent['contact');
+// addAdd.prepend(newPel);
+
+
+// let selectedNavLinks = document.querySelectorAll("nav a");
+// selectedNavLinks.forEach((link, i) => {
+//   link.innerHTML = siteContent.nav[`nav-item-${i+1}`];
+// })
+
+let phone = document.querySelectorAll('p')[6];
+phone.textContent = siteContent['contact']['phone'];
+
+let email = document.querySelectorAll('p')[7];
+email.textContent = siteContent['contact']['email'];
+
+let footer = document.querySelectorAll('p')[8];
+footer.textContent = siteContent['footer']['copyright'];
