@@ -39,7 +39,7 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 const nav = document.querySelector("nav");
-const navContent = nav.querySelectorAll('a');
+const navContent = nav.querySelectorAll("a");
 
 
 // ============== NAV ===============//
@@ -47,15 +47,15 @@ const navContent = nav.querySelectorAll('a');
 navContent [0].textContent = siteContent.nav["nav-item-1"];
 navContent[0].style.color = "green";
 navContent [1].textContent = siteContent.nav["nav-item-2"];
-navContent [1].style.color = "red";
+navContent [1].style.color = "#a3000e";
 navContent [2].textContent = siteContent.nav["nav-item-3"];
 navContent [2].style.color = "green";
 navContent [3].textContent = siteContent.nav["nav-item-4"];
-navContent [3].style.color = "red";
+navContent [3].style.color = "#a3000e";
 navContent [4].textContent = siteContent.nav["nav-item-5"];
 navContent [4].style.color = "green";
 navContent [5].textContent = siteContent.nav["nav-item-6"];
-navContent [5].style.color = "red";
+navContent [5].style.color = "#a3000e";
 
 
 
@@ -63,10 +63,21 @@ navContent [5].style.color = "red";
 
 const newNav = document.createElement("a");
 newNav.href = "#";
-newNav.querySelector.textContent = "Explore More";
+newNav.textContent = "Explore More";
+newNav.style.color = "#a3000e";
 
-const mainNav = document.querySelector("nav");
-mainNav.prepend(newNav);
+const newNav2 = document.createElement("a");
+newNav2.href = "#";
+newNav2.textContent = "Schedule";
+newNav2.style.color = "green";
+
+const addNav = document.querySelector("nav");
+
+addNav.prepend(newNav);
+addNav.appendChild(newNav2);
+
+
+
 
 
 
@@ -87,6 +98,7 @@ ctaH1.textContent = siteContent.cta.h1;
 // =========BUTTON========//
 const ctaButton = cta.querySelector("button");
 ctaButton.textContent = siteContent.cta.button;
+ctaButton.style.backgroundColor = "#800000";
 
 // =======IMG===========//
 const ctaImage  = cta.querySelector("#cta-img");
@@ -111,7 +123,7 @@ mainContentPars[3].textContent = siteContent["main-content"]["product-content"];
 mainContentPars[4].textContent = siteContent["main-content"]["vision-content"];
 
 
-// ================= MIDDLE IMG ===========//
+// ================= MIDDLE IMG =========== //
 
 const mConMiddleImg = document.getElementById("middle-img");
 mConMiddleImg.src = siteContent["main-content"]["middle-img-src"];
@@ -134,16 +146,12 @@ addlcontactInfo[2].textContent = siteContent["contact"]["email"];
 
 // ======= FOOTER ========== //
 
-// const footerEnd = document.querySelector("footer");
-// const footerContent = document.querySelector("footer p");
-
-// footerEnd[0].textContent = siteContent["footer"];
-// footerContent[1].textContent = siteContent["footer"]["copyright"];
-
-const footerEnd = document.querySelector("footer p");
+const footerEnd = document.querySelector("footer");
 footerEnd.textContent = siteContent.footer.copyright;
 
+// ====== STRETCH === //
 
+document.body.style.backgroundColor = "#96ab3a";
 
 
 
