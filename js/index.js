@@ -47,12 +47,15 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 // ====================== Nav ===========================
 const navigation = document.querySelector("nav");
-const services = navigation.firstElementChild;
-const product = services.nextElementSibling;
-const vision = product.nextElementSibling;
-const features = vision.nextElementSibling;
-const about = features.nextElementSibling;
-const contact = about.nextElementSibling;
+const navLinks = document.querySelectorAll("nav a");
+
+const navLink1 = navLinks[0];
+const navLink2 = navLinks[1];
+const navLink3 = navLinks[2];
+const navLink4 = navLinks[3];
+const navLink5 = navLinks[4];
+const navLink6 = navLinks[5];
+
 const blog = document.createElement("a");
 const learnMore = document.createElement("a");
 
@@ -61,18 +64,17 @@ learnMore.textContent = "Learn More";
 
 navigation.prepend(blog);
 navigation.appendChild(learnMore);
-services.textContent = "Services";
-product.textContent = "Product";
-vision.textContent = "Vision";
-features.textContent = "Features";
-about.textContent = "About";
-contact.textContent = "Contact";
+navLink1.textContent = siteContent["nav"]["nav-item-1"];
+navLink2.textContent = siteContent["nav"]["nav-item-2"];
+navLink3.textContent = siteContent["nav"]["nav-item-3"];
+navLink4.textContent = siteContent["nav"]["nav-item-4"];
+navLink5.textContent = siteContent["nav"]["nav-item-5"];
+navLink6.textContent = siteContent["nav"]["nav-item-6"];
 
 const aTags = document.querySelectorAll("nav a");
 aTags.forEach(a => (a.style.color = "green"));
 //=========================== Call To Action ==============
-const ctaText = document.querySelector(".cta").firstElementChild
-  .firstElementChild;
+const ctaText = document.querySelector(".cta-text h1");
 
 const ctaImg = document.querySelector("#cta-img");
 ctaImg.addEventListener("mouseover", () => ctaImg.classList.add("circleImg"));
@@ -85,10 +87,10 @@ ctaImg.addEventListener("mouseout", () => {
   ctaImg.classList.remove("circleImg");
 });
 
-ctaText.textContent = `DOM Is Awesome`;
-const ctaBtn = ctaText.nextElementSibling;
-ctaBtn.textContent = "Get Started";
-ctaImg.src = "img/header-img.png";
+ctaText.textContent = siteContent["cta"]["h1"];
+const ctaBtn = document.querySelector(".cta-text button");
+ctaBtn.textContent = siteContent["cta"]["button"];
+ctaImg.src = siteContent["cta"]["img-src"];
 
 ctaBtn.addEventListener("click", () => {
   let random = Math.floor(Math.random() * 4) + 1;
@@ -108,67 +110,57 @@ const mainContent = document.querySelector(".main-content");
 const topContent = document.querySelector(".top-content");
 const mainTextDiv = document.querySelectorAll(".text-content");
 const middleImg = document.querySelector("#middle-img");
-const secondTopDiv = topContent.nextElementSibling;
 
-Array.from(mainTextDiv);
 mainTextDiv[0].classList.add("first-text-content");
 mainTextDiv[1].classList.add("second-text-content");
 mainTextDiv[2].classList.add("third-text-content");
 mainTextDiv[3].classList.add("fourth-text-content");
 mainTextDiv[4].classList.add("fith-text-content");
 
-const mainH4 = document.querySelector(".first-text-content").firstElementChild;
-const secondH4 = document.querySelector(".second-text-content")
-  .firstElementChild;
-const thirdH4 = document.querySelector(".third-text-content").firstElementChild;
-const fourthH4 = document.querySelector(".fourth-text-content")
-  .firstElementChild;
-const fithH4 = document.querySelector(".fith-text-content").firstElementChild;
+const mainH4 = document.querySelector(".first-text-content h4");
+const secondH4 = document.querySelector(".second-text-content h4");
+const thirdH4 = document.querySelector(".third-text-content h4");
+const fourthH4 = document.querySelector(".fourth-text-content h4");
+const fithH4 = document.querySelector(".fith-text-content h4");
 
-const mainPtag = mainH4.nextElementSibling;
-const secondPtag = secondH4.nextElementSibling;
-const thirdPtag = thirdH4.nextElementSibling;
-const fourthPtag = fourthH4.nextElementSibling;
-const fithPtag = fithH4.nextElementSibling;
+const mainPtag = document.querySelector(".first-text-content p");
+const secondPtag = document.querySelector(".second-text-content p");
+const thirdPtag = document.querySelector(".third-text-content p");
+const fourthPtag = document.querySelector(".fourth-text-content p");
+const fithPtag = document.querySelector(".fith-text-content p");
 
-mainH4.textContent = "Features";
-mainPtag.textContent =
-  "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+mainH4.textContent = siteContent["main-content"]["features-h4"];
+mainPtag.textContent = siteContent["main-content"]["features-content"];
 
-secondH4.textContent = "About";
-secondPtag.textContent =
-  "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+secondH4.textContent = siteContent["main-content"]["about-h4"];
+secondPtag.textContent = siteContent["main-content"]["about-content"];
 
-thirdH4.textContent = "Services";
-thirdPtag.textContent =
-  "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+thirdH4.textContent = siteContent["main-content"]["services-h4"];
+thirdPtag.textContent = siteContent["main-content"]["services-content"];
 
-fourthH4.textContent = "Product";
-fourthPtag.textContent =
-  "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+fourthH4.textContent = siteContent["main-content"]["product-h4"];
+fourthPtag.textContent = siteContent["main-content"]["product-content"];
 
-fithH4.textContent = "Vision";
-fithPtag.textContent =
-  "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+fithH4.textContent = siteContent["main-content"]["vision-h4"];
+fithPtag.textContent = siteContent["main-content"]["vision-content"];
 
-middleImg.src = "img/mid-page-accent.jpg";
+middleImg.src = siteContent["main-content"]["middle-img-src"];
 
 //===================================== Contact =======================================
 
-const contactSection = document.querySelector(".contact");
-const contactH4 = contactSection.firstElementChild;
-const contactP1 = contactH4.nextElementSibling;
-const contactP2 = contactP1.nextElementSibling;
-const contactP3 = contactP2.nextElementSibling;
+const contactH4 = document.querySelector(".contact h4");
+const contactPTags = document.querySelectorAll(".contact p");
+const contactP1 = contactPTags[0];
+const contactP2 = contactPTags[1];
+const contactP3 = contactPTags[2];
 
-contactH4.textContent = "Contact";
-contactP1.textContent = "123 Way 456 Street Somewhere, USA";
-contactP2.textContent = "1 (888) 888-8888";
-contactP3.textContent = "sales@greatidea.io";
+contactH4.textContent = siteContent["contact"]["Contact-h4"];
+contactP1.textContent = siteContent["contact"]["address"];
+contactP2.textContent = siteContent["contact"]["phone"];
+contactP3.textContent = siteContent["contact"]["email"];
 
 //===================================== Footer =========================================
 
-const footer = document.querySelector("footer");
-const footerPtag = footer.firstElementChild;
+const footerPtag = document.querySelector("footer p");
 
-footerPtag.textContent = "Copyright Great Idea! 2018";
+footerPtag.textContent = siteContent["footer"]["copyright"];
