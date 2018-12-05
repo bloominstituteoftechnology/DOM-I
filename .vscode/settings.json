@@ -1,0 +1,73 @@
+{
+  "workbench.iconTheme": "vscode-icons",
+  "editor.fontSize": 16,
+  "editor.tabSize": 2,
+  "files.autoSave": "afterDelay",
+  "editor.tabCompletion": "off",
+  "editor.formatOnPaste": false,
+  "workbench.colorTheme": "One Dark Pro",
+  "workbench.view.alwaysShowHeaderActions": true,
+  "cSpell.allowCompoundWords": true,
+  "cSpell.diagnosticLevel": "Hint",
+  "css.lint.boxModel": "warning",
+  "css.lint.duplicateProperties": "warning",
+  "css.lint.float": "error",
+  "css.lint.idSelector": "warning",
+  "css.lint.important": "error",
+  "css.lint.universalSelector": "warning",
+  "html-css-class-completion.enableEmmetSupport": true,
+  "html.format.indentInnerHtml": true,
+  "less.lint.argumentsInColorFunction": "warning",
+  "less.lint.boxModel": "warning",
+  "less.lint.duplicateProperties": "warning",
+  "less.lint.float": "warning",
+  "less.lint.idSelector": "warning",
+  "less.lint.important": "error",
+  "less.lint.universalSelector": "warning",
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
+  "prettier.useTabs": true,
+  "vsicons.presets.angular": true,
+  "vsicons.projectDetection.autoReload": true,
+  "vsicons.presets.hideExplorerArrows": true,
+  "vsicons.dontShowConfigManuallyChangedMessage": true,
+  "editor.autoClosingBrackets": "always",
+  "editor.autoClosingQuotes": "always",
+  "editor.formatOnSave": true,
+  "files.autoSaveDelay": 100,
+  "editor.snippetSuggestions": "top",
+  "html.autoClosingTags": true,
+  "window.zoomLevel": 1,
+  "editor.wordWrap": "bounded",
+  "prettier.jsxBracketSameLine": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "emmet.showSuggestionsAsSnippets": true,
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "editor.parameterHints.cycle": true,
+  "editor.suggest.localityBonus": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "vue-html": "html",
+    "razor": "html",
+    "plaintext": "jade"
+  },
+  "emmet.variables": {
+    "lang": "de",
+    "charset": "UTF-16"
+  },
+  "emmet.syntaxProfiles": {
+    "html": {
+      "attr_quotes": "single"
+    },
+    "jsx": {
+      "self_closing_tag": true
+    }
+  },
+
+}
