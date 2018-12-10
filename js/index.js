@@ -57,25 +57,38 @@ middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 // =========================================== NAV
 
-// let navItem = document.querySelectorAll("a");
+//textContent is the one Josh used.
 
-let navItem1 = document.getElementsByTagName("a")
-navItem1[0].innerHTML = "Services";
+// Emily's example:
+const nav = document.querySelectorAll("a");
+nav[0].textContent = siteContent['nav']['nav-item-1'];
+nav[1].textContent = siteContent['nav']['nav-item-2'];
+nav[2].textContent = siteContent['nav']['nav-item-3'];
+nav[3].textContent = siteContent['nav']['nav-item-4'];
+nav[4].textContent = siteContent['nav']['nav-item-5'];
+nav[5].textContent = siteContent['nav']['nav-item-6'];
 
-let navItem2 = document.getElementsByTagName("a")
-navItem2[1].innerHTML = "Product";
+// What I originally did:
 
-let navItem3 = document.getElementsByTagName("a")
-navItem3[2].innerHTML = "Vision";
+// const nav = document.querySelectorAll("a");
 
-let navItem4 = document.getElementsByTagName("a")
-navItem4[3].innerHTML = "Features";
+// let navItem1 = document.getElementsByTagName("a")
+// navItem1[0].innerHTML = "Services";
 
-let navItem5 = document.getElementsByTagName("a")
-navItem5[4].innerHTML = "About";
+// let navItem2 = document.getElementsByTagName("a")
+// navItem2[1].innerHTML = "Product";
 
-let navItem6 = document.getElementsByTagName("a")
-navItem6[5].innerHTML = "Contact";
+// let navItem3 = document.getElementsByTagName("a")
+// navItem3[2].innerHTML = "Vision";
+
+// let navItem4 = document.getElementsByTagName("a")
+// navItem4[3].innerHTML = "Features";
+
+// let navItem5 = document.getElementsByTagName("a")
+// navItem5[4].innerHTML = "About";
+
+// let navItem6 = document.getElementsByTagName("a")
+// navItem6[5].innerHTML = "Contact";
 
 
 // ========================================= CTA
