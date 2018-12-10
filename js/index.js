@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM <br> Is <br> Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -42,14 +42,19 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-// const nav = document.querySelectorAll('nav a');
-// for(i = 0; i < nav.length; i ++) {
-//   nav.textContent = siteContent.nav[i];
-// }
+const nav = document.querySelectorAll('nav a');
+nav.forEach((link, i) => {
+  link.textContent = siteContent.nav[`nav-item-${i+1}`]
+});
+
+const changeColor = document.querySelectorAll('nav a');
+changeColor.forEach((link) => {
+  link.style.color = 'hotpink';
+});
 // console.log(nav);
 
 const bigHeading = document.querySelector('h1');
-bigHeading.textContent = siteContent.cta.h1;
+bigHeading.innerHTML = siteContent.cta.h1;
 
 const roundImg = document.getElementById('cta-img');
 roundImg.src = siteContent['cta']['img-src'];
