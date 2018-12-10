@@ -23,8 +23,8 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 * [x] Remember to update the src attributes on images
 
 ## Task 4: Add new content
-* [c] Change the color of the navigation text to be green.
-* [c] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
+* [x] Change the color of the navigation text to be green.
+* [x] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
 * [x] Check your work by looking at the [original html](original.html) in the browser
 
 ## Stretch Goals
