@@ -51,4 +51,13 @@ let headerImage = document.getElementById("cta-img");
 headerImage.setAttribute('src', siteContent["cta"]["img-src"])
 
 let middleImage = document.getElementById("middle-img");
-middleImage.setAttribute('src', siteContent["main-content"]["img-src"])
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+
+
+// ================== NAV
+
+
+
+
+// ================== CTA
