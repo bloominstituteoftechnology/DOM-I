@@ -42,10 +42,11 @@ const siteContent = {
   },
 };
 
-//=================================IMAGES
+//==========================================IMAGES
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+// ============ End example image.
 
 let headerImage = document.getElementById("cta-img");
 headerImage.setAttribute('src', siteContent["cta"]["img-src"])
@@ -54,10 +55,61 @@ let middleImage = document.getElementById("middle-img");
 middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 
+// =========================================== NAV
 
-// ================== NAV
+// let navItem = document.querySelectorAll("a");
+
+let navItem1 = document.getElementsByTagName("a")
+navItem1[0].innerHTML = "Services";
+
+let navItem2 = document.getElementsByTagName("a")
+navItem2[1].innerHTML = "Product";
+
+let navItem3 = document.getElementsByTagName("a")
+navItem3[2].innerHTML = "Vision";
+
+let navItem4 = document.getElementsByTagName("a")
+navItem4[3].innerHTML = "Features";
+
+let navItem5 = document.getElementsByTagName("a")
+navItem5[4].innerHTML = "About";
+
+let navItem6 = document.getElementsByTagName("a")
+navItem6[5].innerHTML = "Contact";
+
+
+// ========================================= CTA
 
 
 
 
-// ================== CTA
+
+
+
+
+
+
+
+// ========================================== MAIN CONTENT
+
+
+
+
+
+
+
+
+
+// =========================================== CONTACT
+
+
+
+
+
+
+
+
+
+
+
+// =========================================== FOOTER 
