@@ -1,3 +1,8 @@
+// ## Task 2: Create selectors to point your data into elements
+// * [ ] Create selectors by using any of the DOM element's methods
+// * [ ] Note that IDs have been used on all images.  
+//Use the IDs to update src path content
+
 const siteContent = {
   "nav": {
     "nav-item-1": "Services",
@@ -37,6 +42,13 @@ const siteContent = {
   },
 };
 
+//=================================IMAGES
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let headerImage = document.getElementById("cta-img");
+headerImage.setAttribute('src', siteContent["cta"]["img-src"])
+
+let middleImage = document.getElementById("middle-img");
+middleImage.setAttribute('src', siteContent["main-content"]["img-src"])
