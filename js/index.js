@@ -112,3 +112,34 @@ let contactP = document.querySelectorAll('.contact p');
 let footerP = document.querySelector ('footer p');
 
   footerP.textContent = siteContent["footer"]["copyright"];
+
+//Task 4 Items:
+//change nav text to green
+
+navItems[0].style.color = 'green';
+navItems[1].style.color = 'green';
+navItems[2].style.color = 'green';
+navItems[3].style.color = 'green';
+navItems[4].style.color = 'green';
+navItems[5].style.color = 'green';
+
+//Select Navigation to Change
+
+let navMenu = document.querySelector('nav');
+
+//append Navigation 
+
+const postNav = document.createElement('a');
+  postNav.innerText = 'After';
+  postNav.href = '#';
+  postNav.style = 'color: green;';
+  navMenu.append(postNav);
+
+//prepend Navigation
+
+const preNav = document.createElement('a');
+  preNav.innerText = 'Before';
+  preNav.href = '#';
+  preNav.style = 'color: green;';
+  navMenu.prepend(preNav);
+
