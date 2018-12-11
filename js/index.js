@@ -48,9 +48,13 @@ nav.forEach((link, i) => {
 });
 
 const changeColor = document.querySelectorAll('nav a');
-changeColor.forEach((link) => {
-  link.style.color = 'hotpink';
-});
+for(let i = 0; i < changeColor.length; i++){
+  const changeColors = changeColor[i];
+  changeColors.style.color = 'hotpink';
+}
+// changeColor.forEach((link) => {
+//   link.style.color = 'hotpink';
+// });
 // console.log(nav);
 
 const bigHeading = document.querySelector('h1');
