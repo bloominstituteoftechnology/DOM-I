@@ -6,7 +6,8 @@ const siteContent = {
     "nav-item-4": "Features",
     "nav-item-5": "About",
     "nav-item-6": "Contact",
-    "img-src": "img/logo.png"
+    "img-src": "img/logo.png",
+    "nav-item-7": "whatup"
   },
   "cta": {
     "h1": "DOM Is Awesome",
@@ -85,6 +86,10 @@ contact_p[2].textContent = siteContent['contact']['email']
 const footer = document.querySelector('footer p');
 footer.textContent = siteContent['footer']['copyright']
 
-nav.style.color = 'green';
+// nav.style.color = 'green';
+nav.forEach(nav => nav.style.color = 'green')
 
-nav.prepend('a');
+// const navKid = document.querySelector('a'),
+// navKid = document.createElement('a');
+// navKid.textContent = document['nav']['nav-item-7']
+// navChild.appendChild(navKid);
