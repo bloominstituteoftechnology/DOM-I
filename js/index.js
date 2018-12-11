@@ -115,6 +115,12 @@ mainContent[0].textContent = siteContent['main-content']['features-h4'];
 
 
 
+const mainContentP = document.querySelectorAll("p");
+mainContentP[0].textContent = siteContent['main-content']['features-content'];
+
+
+
+
 // =========================================== CONTACT
 
 
