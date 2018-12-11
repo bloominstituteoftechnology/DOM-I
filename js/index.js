@@ -110,15 +110,23 @@ ctaButton.textContent = siteContent["cta"]["button"];
 
 // ================================================== MAIN CONTENT
 
+// ========= h4
+
 const mainContent = document.querySelectorAll("h4");
 mainContent[0].textContent = siteContent['main-content']['features-h4'];
+mainContent[1].textContent = siteContent['main-content']['about-h4'];
+mainContent[2].textContent = siteContent['main-content']['services-h4'];
+mainContent[3].textContent = siteContent['main-content']['product-h4'];
+mainContent[4].textContent = siteContent['main-content']['vision-h4'];
 
-
+// ======== P 
 
 const mainContentP = document.querySelectorAll("p");
 mainContentP[0].textContent = siteContent['main-content']['features-content'];
-
-
+mainContentP[1].textContent = siteContent['main-content']['about-content'];
+mainContentP[2].textContent = siteContent['main-content']['services-content'];
+mainContentP[3].textContent = siteContent['main-content']['product-content'];
+mainContentP[4].textContent = siteContent['main-content']['vision-content'];
 
 
 // =========================================== CONTACT
