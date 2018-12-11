@@ -14,7 +14,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM <br> Is <br> Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -75,17 +75,19 @@ nav[3].style.color = "green";
 nav[4].style.color = "green";
 nav[5].style.color = "green";
 
+// const mainNav = document.querySelector('.nav');
+
 // const newElement = document.createElement("a");
 // newElement.href = "#";
 // newElement.textContent = "Portfolio";
-// const mainNav = document.querySelector('.main-nav');
+
 // mainNav.append(newElement);
 // newElement.style.color = "green";
 
 // const newElement2 = document.createElement("a");
 // newElement2.href = "#";
 // newElement2.textContent = "Inquiries";
-// const mainNav = document.querySelector('.main-nav');
+// // const mainNav = document.querySelector('nav');
 // mainNav.prepend(newElement2);
 // newElement2.style.color = "green";
 
@@ -141,7 +143,8 @@ nav[5].style.color = "green";
 // =================================================== CTA
 
 let ctaH1 = document.querySelector("h1");
-ctaH1.textContent = siteContent["cta"]["h1"];
+// ctaH1.textContent = siteContent["cta"]["h1"];
+ctaH1.innerHTML = siteContent["cta"]["h1"];
 
 let ctaButton = document.querySelector("button");
 ctaButton.textContent = siteContent["cta"]["button"];
@@ -166,6 +169,8 @@ mainContentP[2].textContent = siteContent['main-content']['services-content'];
 mainContentP[3].textContent = siteContent['main-content']['product-content'];
 mainContentP[4].textContent = siteContent['main-content']['vision-content'];
 
+// mainContentP[4].textContent = siteContent['main-content']['.vision-content, p'];
+// could do this ^
 
 // =========================================== CONTACT
 
