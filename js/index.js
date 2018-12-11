@@ -131,14 +131,13 @@ mainContentP[4].textContent = siteContent['main-content']['vision-content'];
 
 // =========================================== CONTACT
 
+const contact = document.querySelectorAll("h4");
+contact[5].textContent = siteContent['contact']['contact-h4'];
 
-
-
-
-
-
-
-
+const contactP = document.querySelectorAll("p");
+contactP[5].textContent = siteContent['contact']['address'];
+contactP[6].textContent = siteContent['contact']['phone'];
+contactP[7].textContent = siteContent['contact']['email'];
 
 
 // =========================================== FOOTER 
