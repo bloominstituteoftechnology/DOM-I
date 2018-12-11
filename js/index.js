@@ -71,6 +71,9 @@ main_content_p[2].textContent = siteContent['main-content']['services-content']
 main_content_p[3].textContent = siteContent['main-content']['product-content']
 main_content_p[4].textContent = siteContent['main-content']['vision-content']
 
+const main_content_img = document.getElementById('middle-img')
+main_content_img.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
 const contact_h4 = document.querySelector('.contact h4');
 contact_h4.textContent = siteContent['contact']['contact-h4']
 
