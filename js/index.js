@@ -51,13 +51,56 @@ nav[3].textContent = siteContent['nav']['nav-item-4'];
 nav[4].textContent = siteContent['nav']['nav-item-5'];
 nav[5].textContent = siteContent['nav']['nav-item-6'];
 
-
+//------------------------------------------------------
 
 const ctaText = document.querySelector('h1');
 h1.textContent = siteContent['cta']['h1'];
 
-const footer = document.querySelector('.copyright');
-copyright.textContent = siteContent['footer'][".copyright"];
+const ctaButton = document.querySelector('button');
+ctaButton.textContent = siteContent['cta']['button'];
 
-const mainTop = document.querySelector('.top-content');
-mainTop.textContent = siteContent['.top-content']['h4'];
+
+const ctaImage = getElementById('cta-img');
+ctaImage.setAttribute('src', siteContent['cta']['img-src']);
+//--------------------------------------------------------
+
+// "main-content": {
+
+//   "services-content": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+//   "product-h4":"Product",
+//   "product-content": "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+//   "vision-h4":"Vision",
+//   "vision-content": "Vision 
+
+const mainH4 = document.querySelector('main-content');
+mainH4.textContent = siteContent['main-content']['features-h4'];
+
+const mainContent = document.querySelector('main-content');
+mainContent.textContent = siteContent['main-content']['features-content'];
+
+const aboutH4 = document.querySelector('main-content');
+aboutH4.textContent = siteContent['main-content']['about'];
+
+const middleImage = getElementById('middle-img');
+middleImage.setAttribute('src', siteContent['main-content']['img-src']);
+
+const servicesH4 = document.querySelector('main-content');
+servicesH4.textContent = siteContent['main-content']['services-content'];
+
+const servicesContent = document.querySelector('main-content');
+servicesContent.textContent = siteContent['main-content']['services-content'];
+
+const productH4 = document.querySelector('main-content');
+productH4.tetContent = siteContent['main-content']['product-h4'];
+
+const productContent = document.querySelector('main-content');
+productContent.textContent = siteContent['main-content']['product-content'];
+
+const visionH4 = document.querySelector('main-content');
+
+
+
+
+
+const footer = document.querySelector('copyright');
+copyright.textContent = siteContent['footer']["copyright"];
