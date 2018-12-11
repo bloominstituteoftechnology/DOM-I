@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM <br> Is <br> Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -61,27 +61,29 @@ ctaText.textContent = "DOM Is Awesome";
 const ctaButton = document.querySelector('button');
 ctaButton.textContent = siteContent['cta']['button'];
 
-
-const ctaImage = getElementById('cta-img');
+const ctaImage = document.getElementById('cta-img');
 ctaImage.setAttribute('src', siteContent['cta']['img-src']);
 //--------------------------------------------------------
 
 //main-content
 
-const mainH4 = document.querySelector('features-h4');
-mainH4.textContent - "Features";
-const mainContent = document.querySelector('features-content');
-mainContent.textContent = siteContent['main-content']['features-content'];
+const mainContentH4 = document.querySelectorAll(".main-content .top-content h4");
+ mainContent[0].textContent = siteContent['main-content']['features-h4'];
+ mainContent[1].textContent = siteContent['main-content']['features-content'];
+ mainContent[2].textContent = siteContent['main-content']['about-h4'];
+ mainContent[3].textContent = siteContent['main-content']['about-content']; 
+ 
+ const mainContentPara = document.querySelectorAll(".main-content .top-content p");
 
-const aboutH4 = document.querySelector('about-h4');
-aboutH4.textContent = "About";
-const aboutContent = document.querySelector('about-content');
-abouContent.textContent = siteContent['main-content']['about-content'];
+ mainContent[5].textContent = siteContent['main-content']['services-h4'];
+ mainContent[6].textContent = siteContent['main-content']['services-content'];
+ mainContent[7].textContent = siteContent['main-content']['product-h4'];
+ mainContent[8].textContent = siteContent['main-content']['product-content'];
+ mainContent[9].textContent = siteContent['main-content']['vision-h4'];
+ mainContent[10].textContent = siteContent['main-content']['vision-content'];
+ 
+//services
 
-const middleImage = getElementById('middle-img');
-middleImage.setAttribute('src', siteContent['main-content']['img-src']);
-
-const servicesH4 = document.querySelector('main-content');
 servicesH4.textContent = "Services";
 
 const servicesContent = document.querySelector('main-content');
@@ -102,7 +104,7 @@ visionContent = siteContent['main-content']['vision-content'];
 
 
 const contactH4 = document.querySelector('contact');
-contactH4.textContent = siteContent['contact']['contact-h4'];
+contactH4.textContent = "Contact";
 
 const address = document.querySelector('contact');
 address.textContent = siteContent['contact']['address'];
