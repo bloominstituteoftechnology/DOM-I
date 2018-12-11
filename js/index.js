@@ -141,3 +141,6 @@ contactP[7].textContent = siteContent['contact']['email'];
 
 
 // =========================================== FOOTER 
+
+const footerP = document.querySelectorAll("p");
+footerP[8].textContent = siteContent['footer']['copyright'];
