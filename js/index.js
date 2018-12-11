@@ -100,25 +100,18 @@ nav[5].textContent = siteContent['nav']['nav-item-6'];
 // navItem6[5].innerHTML = "Contact";
 
 
-// ========================================= CTA
+// =================================================== CTA
 
-let ctaH1 = document.querySelector("cta");
+let ctaH1 = document.querySelector("h1");
+ctaH1.textContent = siteContent["cta"]["h1"];
 
+let ctaButton = document.querySelector("button");
+ctaButton.textContent = siteContent["cta"]["button"];
 
+// ================================================== MAIN CONTENT
 
-
-
-
-
-
-
-// ========================================== MAIN CONTENT
-
-
-
-
-
-
+const mainContent = document.querySelectorAll("h4");
+mainContent[0].textContent = siteContent['main-content']['features-h4'];
 
 
 
