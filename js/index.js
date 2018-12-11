@@ -75,21 +75,20 @@ nav[3].style.color = "green";
 nav[4].style.color = "green";
 nav[5].style.color = "green";
 
-// const mainNav = document.querySelector('.nav');
+const mainNav = document.querySelector("nav");
 
-// const newElement = document.createElement("a");
-// newElement.href = "#";
-// newElement.textContent = "Portfolio";
+const newElement = document.createElement("a");
+newElement.href = "#";
+newElement.textContent = "Portfolio";
+mainNav.append(newElement);
+newElement.style.color = "green";
 
-// mainNav.append(newElement);
-// newElement.style.color = "green";
-
-// const newElement2 = document.createElement("a");
-// newElement2.href = "#";
-// newElement2.textContent = "Inquiries";
-// // const mainNav = document.querySelector('nav');
-// mainNav.prepend(newElement2);
-// newElement2.style.color = "green";
+const newElement2 = document.createElement("a");
+newElement2.href = "#";
+newElement2.textContent = "Inquiries";
+// const mainNav = document.querySelector('nav');
+mainNav.prepend(newElement2);
+newElement2.style.color = "green";
 
 // // 1. Create Element
 // const newElement = document.createElement('a');
