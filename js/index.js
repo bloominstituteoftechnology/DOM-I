@@ -68,6 +68,44 @@ nav[3].textContent = siteContent['nav']['nav-item-4'];
 nav[4].textContent = siteContent['nav']['nav-item-5'];
 nav[5].textContent = siteContent['nav']['nav-item-6'];
 
+nav[0].style.color = "green";
+nav[1].style.color = "green";
+nav[2].style.color = "green";
+nav[3].style.color = "green";
+nav[4].style.color = "green";
+nav[5].style.color = "green";
+
+// const newElement = document.createElement("a");
+// newElement.href = "#";
+// newElement.textContent = "Portfolio";
+// const mainNav = document.querySelector('.main-nav');
+// mainNav.append(newElement);
+// newElement.style.color = "green";
+
+// const newElement2 = document.createElement("a");
+// newElement2.href = "#";
+// newElement2.textContent = "Inquiries";
+// const mainNav = document.querySelector('.main-nav');
+// mainNav.prepend(newElement2);
+// newElement2.style.color = "green";
+
+// // 1. Create Element
+// const newElement = document.createElement('a');
+// // <a></a>
+
+// // 2. Add values / attributes
+// newElement.href = "#";
+// newElement.textContent = "Testing";
+// // <a href="#">Testing</a>
+
+// // 3. Create a place for the element to land
+// const mainNav = document.querySelector('.main-nav');
+
+// // 4. Append or prepend the newly created element
+// mainNav.prepend(newElement);
+
+
+
 // ============ A different way to do this:
 
 // const nav1 = document.querySelectorAll('nav a');
