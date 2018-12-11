@@ -86,7 +86,6 @@ newElement.style.color = "green";
 const newElement2 = document.createElement("a");
 newElement2.href = "#";
 newElement2.textContent = "Inquiries";
-// const mainNav = document.querySelector('nav');
 mainNav.prepend(newElement2);
 newElement2.style.color = "green";
 
