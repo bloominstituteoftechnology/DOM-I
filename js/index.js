@@ -68,7 +68,16 @@ nav[3].textContent = siteContent['nav']['nav-item-4'];
 nav[4].textContent = siteContent['nav']['nav-item-5'];
 nav[5].textContent = siteContent['nav']['nav-item-6'];
 
-// What I originally did:
+// ============ A different way to do this:
+
+// const nav1 = document.querySelectorAll('nav a');
+// nav1.forEach((a, index) => {
+// a.textContent= siteContent.nav['nav-item-${index + 1}']
+// });
+
+// nav1.forEach(param, => param.style.color = 'green');
+
+// =========== What I originally did:
 
 // const nav = document.querySelectorAll("a");
 
@@ -93,7 +102,7 @@ nav[5].textContent = siteContent['nav']['nav-item-6'];
 
 // ========================================= CTA
 
-
+let ctaH1 = document.querySelector("cta");
 
 
 
