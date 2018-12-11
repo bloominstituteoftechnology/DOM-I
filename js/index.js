@@ -40,7 +40,7 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
-
+ 
 // nav
 
 const nav = document.querySelectorAll('a');
@@ -56,7 +56,7 @@ nav[5].textContent = siteContent['nav']['nav-item-6'];
 //cta
 
 const ctaText = document.querySelector('h1');
-h1.textContent = siteContent['cta']['h1'];
+ctaText.textContent = "DOM Is Awesome";
 
 const ctaButton = document.querySelector('button');
 ctaButton.textContent = siteContent['cta']['button'];
@@ -68,45 +68,38 @@ ctaImage.setAttribute('src', siteContent['cta']['img-src']);
 
 //main-content
 
-const mainH4 = document.querySelector('main-content');
-mainH4.textContent = siteContent['main-content']['features-h4'];
-
-const mainContent = document.querySelector('main-content');
+const mainH4 = document.querySelector('features-h4');
+mainH4.textContent - "Features";
+const mainContent = document.querySelector('features-content');
 mainContent.textContent = siteContent['main-content']['features-content'];
 
-const aboutH4 = document.querySelector('main-content');
-aboutH4.textContent = siteContent['main-content']['about'];
+const aboutH4 = document.querySelector('about-h4');
+aboutH4.textContent = "About";
+const aboutContent = document.querySelector('about-content');
+abouContent.textContent = siteContent['main-content']['about-content'];
 
 const middleImage = getElementById('middle-img');
 middleImage.setAttribute('src', siteContent['main-content']['img-src']);
 
 const servicesH4 = document.querySelector('main-content');
-servicesH4.textContent = siteContent['main-content']['services-content'];
+servicesH4.textContent = "Services";
 
 const servicesContent = document.querySelector('main-content');
 servicesContent.textContent = siteContent['main-content']['services-content'];
 
 const productH4 = document.querySelector('main-content');
-productH4.textContent = siteContent['main-content']['product-h4'];
+productH4.textContent = "Products";
 
 const productContent = document.querySelector('main-content');
 productContent.textContent = siteContent['main-content']['product-content'];
 
 const visionH4 = document.querySelector('main-content');
-visionH4.textContent = siteContent['main-content']['vision-h4'];
+visionH4.textContent = "Vision";
 
 const visionContent = document.querySelector('main-content');
 visionContent = siteContent['main-content']['vision-content'];
 //------------------------------------------------------
 
-//contact
-
-// "contact": {
-//   "contact-h4" : "Contact",
-//   "address" : "123 Way 456 Street Somewhere, USA",
-//   "phone" : "1 (888) 888-8888",
-//   "email" : "sales@greatidea.io",
-// },
 
 const contactH4 = document.querySelector('contact');
 contactH4.textContent = siteContent['contact']['contact-h4'];
