@@ -41,11 +41,31 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+let header = document.getElementById("header-img");
+header.setAttribute("src", siteContent["cta"]["img-src"])
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Task 2
 
-document.getElementsByTagName("h2");
+document.getElementsByTagName("h1");
+document.getElementsByTagName("h4");
 document.getElementById("img-src");
+document.getElementsByClassName("contact");
+document.getElementsByClassName("main-content");
+document.getElementsByClassName("cta");
+document.getElementsByClassName("nav");
 
 
-
+let nav1 = document.getElementByTagName("nav-item-1");
+nav.textContent(0) = "services";
