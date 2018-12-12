@@ -38,55 +38,21 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
  
-// nav
 
-// const nav = document.querySelectorAll('a');
-// nav[0].textContent = siteContent['nav']['nav-item-1'];
-// nav[1].textContent = siteContent['nav']['nav-item-2'];
-// nav[2].textContent = siteContent['nav']['nav-item-3'];
-
-// nav[3].textContent = siteContent['nav']['nav-item-4'];
-// nav[4].textContent = siteContent['nav']['nav-item-5'];
-// nav[5].textContent = siteContent['nav']['nav-item-6'];
-
-let navItems = siteContent.nav //object with 7 children
-let navItemsKeys = Object.keys(navItems)
-let navItemsValues = Object.values(navItems)
+const navItems = siteContent.nav //object with 7 children
+const navItemsKeys = Object.keys(navItems)
+const navItemsValues = Object.values(navItems)
 
 for(let i=0; i<navItemsKeys.length; i++) {
   if(navItemsKeys[i]!== "img-src") {
     document.getElementsByTagName("nav")[0].children[i].textContent = navItemsValues[i]
-  }
-  // console.log(document.getElementsByTagName("nav")) It gives you one item, which is a key/value pair : 0:nav 
-}
-//------------------------------------------------------
+    } 
+ }
 
-//main-content
-
-let mainContentKeys = Object.keys(siteContent["main-content"])
-let h4Keys = mainContentKeys.filter(item => item.includes("h4"))
-let mainContentPs = mainContentKeys.filter(item => item.includes("content"))
-let textContentDivs = document.getElementsByClassName("text-content")
-
-for(let i=0; i<h4Keys.length; i++) { 
-  textContentDivs[i].getElementsByTagName("h4")[0].textContent = siteContent["main-content"][h4Keys[i]]
-  textContentDivs[i].getElementsByTagName("p")[0].textContent = siteContent["main-content"][mainContentPs[i]]
-
-}
-
-
-
-
-
-
-
-
-
-
-
+//--------------------------------------------------------
 
 //cta
 
@@ -97,30 +63,31 @@ const ctaButton = document.querySelector('button');
 ctaButton.textContent = siteContent['cta']['button'];
 
 const ctaImage = document.getElementById('cta-img');
-ctaImage.setAttribute('src', siteContent['cta']['img-src']);
+ctaImage.setAttribute("src", siteContent["cta"]["img-src"])
+
 //--------------------------------------------------------
 
 //main-content
 
-const featureH4 = document.getElementsByTagName("h4")[0];
-featureH4.innerHTML = "Features";
-const featuresContent = document.getElementsByTagName("p")[0]
+const mainContentKeys = Object.keys(siteContent["main-content"])
+const h4Keys = mainContentKeys.filter(item => item.includes("h4"))
+const mainContentPs = mainContentKeys.filter(item => item.includes("content"))
+const textContentDivs = document.getElementsByClassName("text-content")
+
+for(let i=0; i<h4Keys.length; i++) { 
+  textContentDivs[i].getElementsByTagName("h4")[0].textContent = siteContent["main-content"][h4Keys[i]]
+  textContentDivs[i].getElementsByTagName("p")[0].textContent = siteContent["main-content"][mainContentPs[i]]
+}
+
+const mainContentImage = document.getElementById("middle-img")
+mainContentImage.setAttribute("src", siteContent["main-content"]["middle-img-src"])
 
 
-// const contactH4 = document.querySelector('contact');
-// contactH4.textContent = "Contact";
-
-const address = document.querySelector('contact');
-
-// const phone = document.querySelector('contact');
-// phone.textContent = siteContent['contact']['phone'];
-
-// const email = document.querySelector('contact');
-// email.textContent = siteContent['contact']['email'];
-// //---------------------------------------------------
-
-// //footer
+//--------------------------------------------------------
 
 
-// const footer = document.querySelector('copyright');
-// copyright.textContent = siteContent['footer']["copyright"];
+//contact
+
+
+
+
