@@ -89,7 +89,7 @@ footer.textContent = siteContent['footer']['copyright']
 // nav.style.color = 'green';
 nav.forEach(nav => nav.style.color = 'green')
 
-// const navKid = document.querySelector('a'),
-// navKid = document.createElement('a');
-// navKid.textContent = document['nav']['nav-item-7']
-// navChild.appendChild(navKid);
+
+navKid = document.createElement('a');
+navKid.textContent = 'what';
+nav[5].appendChild(navKid);
