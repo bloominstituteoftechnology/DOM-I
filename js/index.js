@@ -88,6 +88,28 @@ mainContentImage.setAttribute("src", siteContent["main-content"]["middle-img-src
 
 //contact
 
+const contactH4 = document.getElementsByTagName("h4")[5]
+contactH4.textContent = siteContent["contact"]["contact-h4"]
+
+const contactAddress = document.getElementsByTagName("p")[5]
+contactAddress.textContent = siteContent["contact"]["address"]
+
+const contactPhone = document.getElementsByTagName("p")[6]
+contactPhone.textContent = siteContent["contact"]["phone"]
+
+
+const contactEmail = document.getElementsByTagName("p")[7]
+contactEmail.textContent = siteContent["contact"]["email"]
+
+//******************************************** */
+
+//footer
+
+const footer = document.querySelector("footer")
+footer.textContent = siteContent["footer"]["copyright"]
+//************************************************* */
 
 
 
+//Change Color
+navItemsValues[0].style.color = "green"
