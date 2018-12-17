@@ -41,16 +41,22 @@ const siteContent = {
 const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
  
+//Erinc Version;
+// const navItems = siteContent.nav //object with 7 children
+// const navItemsKeys = Object.keys(navItems)
+// const navItemsValues = Object.values(navItems)
 
-const navItems = siteContent.nav //object with 7 children
-const navItemsKeys = Object.keys(navItems)
-const navItemsValues = Object.values(navItems)
+// for(let i=0; i<navItemsKeys.length; i++) {
+//   if(navItemsKeys[i]!== "img-src") {
+//     document.getElementsByTagName("nav")[0].children[i].textContent = navItemsValues[i]
+//     } 
+//  }
 
-for(let i=0; i<navItemsKeys.length; i++) {
-  if(navItemsKeys[i]!== "img-src") {
-    document.getElementsByTagName("nav")[0].children[i].textContent = navItemsValues[i]
-    } 
- }
+let selectedNavLinks = document.querySelectorAll("nav a");
+selectedNavLinks.forEach((link, i) => {
+  link.innerHTML = siteContent.nav[`nav-item-${i+1}`];
+})
+
 
 //--------------------------------------------------------
 
@@ -69,19 +75,35 @@ ctaImage.setAttribute("src", siteContent["cta"]["img-src"])
 
 //main-content
 
-const mainContentKeys = Object.keys(siteContent["main-content"])
-const h4Keys = mainContentKeys.filter(item => item.includes("h4"))
-const mainContentPs = mainContentKeys.filter(item => item.includes("content"))
-const textContentDivs = document.getElementsByClassName("text-content")
+//Erinc Version
+// const mainContentKeys = Object.keys(siteContent["main-content"])
+// const h4Keys = mainContentKeys.filter(item => item.includes("h4"))
+// const mainContentPs = mainContentKeys.filter(item => item.includes("content"))
+// const textContentDivs = document.getElementsByClassName("text-content")
 
-for(let i=0; i<h4Keys.length; i++) { 
-  textContentDivs[i].getElementsByTagName("h4")[0].textContent = siteContent["main-content"][h4Keys[i]]
-  textContentDivs[i].getElementsByTagName("p")[0].textContent = siteContent["main-content"][mainContentPs[i]]
-}
+// for(let i=0; i<h4Keys.length; i++) { 
+//   textContentDivs[i].getElementsByTagName("h4")[0].textContent = siteContent["main-content"][h4Keys[i]]
+//   textContentDivs[i].getElementsByTagName("p")[0].textContent = siteContent["main-content"][mainContentPs[i]]
+// }
 
-const mainContentImage = document.getElementById("middle-img")
-mainContentImage.setAttribute("src", siteContent["main-content"]["middle-img-src"])
+// const mainContentImage = document.getElementById("middle-img")
+// mainContentImage.setAttribute("src", siteContent["main-content"]["middle-img-src"])
 
+let textContentList = document.querySelectorAll(".text-content");
+
+textContentList[0].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["features-h4"];
+textContentList[0].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["features-content"];
+textContentList[1].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["about-h4"];
+textContentList[1].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["about-content"];
+textContentList[2].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["services-h4"];
+textContentList[2].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["services-content"];
+textContentList[3].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["product-h4"];
+textContentList[3].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["product-content"];
+textContentList[4].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["vision-h4"];
+textContentList[4].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["vision-content"];
+
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 //--------------------------------------------------------
 
@@ -109,7 +131,19 @@ const footer = document.querySelector("footer")
 footer.textContent = siteContent["footer"]["copyright"]
 //************************************************* */
 
+// Add New Content
+// Change navigation text color
+selectedNavLinks.forEach((link,i) => {
+  link.style.color = "green";
+})
 
+// Add two items to navigation
+selectedNavLinks = document.getElementsByTagName("nav")[0];
+let createNewNode = (name) => {
+  let newNode = document.createElement("a");
+  newNode.innerHTML = name;
+  return newNode;
+}
+selectedNavLinks.prepend(createNewNode("Extra Item 1"));
+selectedNavLinks.append(createNewNode("Extra Item 2"));
 
-//Change Color
-navItemsValues[0].style.color = "green"
