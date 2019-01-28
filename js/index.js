@@ -41,7 +41,6 @@ const siteContent = {
 let logo = document.getElementById("logo-img").setAttribute('src', siteContent["nav"]["img-src"])
 
 let nav = document.querySelectorAll("a")
-console.log(nav);
 
 nav[0].textContent = siteContent.nav["nav-item-1"]
 nav[1].textContent = siteContent.nav["nav-item-2"]
@@ -50,7 +49,26 @@ nav[3].textContent = siteContent.nav["nav-item-4"]
 nav[4].textContent = siteContent.nav["nav-item-5"]
 nav[5].textContent = siteContent.nav["nav-item-6"]
 
+let mainNav = document.querySelector("nav");
+
+let firstAnchor = document.createElement("a");
+firstAnchor.href = "#";	firstAnchor.href = "#";
+firstAnchor.textContent = "Get Started";
+firstAnchor.style.color = "green";
+
+let lastAnchor = document.createElement("a");
+lastAnchor.href = "#";	lastAnchor.href = "#";
+lastAnchor.textContent = "Blog";
+lastAnchor.style.color = "green";
+
+mainNav.prepend(firstAnchor);
+mainNav.appendChild(lastAnchor);	
+
+
+nav.forEach(nav => nav.style.color = 'green')
+
 let contentHeader = document.querySelectorAll("h4")
+
 contentHeader[0].textContent = siteContent["main-content"]["features-h4"]
 contentHeader[1].textContent = siteContent["main-content"]["about-h4"]
 contentHeader[2].textContent = siteContent["main-content"]["services-h4"]
@@ -75,7 +93,8 @@ mainText[8].textContent = siteContent["footer"]["copyright"]
 console.log(mainText)
 
 
-let h1 = document.querySelector("h1").textContent = siteContent.cta.h1
+let h1 = document.querySelector("h1").innerHTML = "Dom<br>is<br>Awesome"
+// siteContent.cta.h1
 
 let mainImg = document.getElementById("cta-img").setAttribute('src', siteContent["cta"]["img-src"])
 
