@@ -38,10 +38,10 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+let logo = document.getElementById("logo-img").setAttribute('src', siteContent["nav"]["img-src"])
 
-let nav = document.getElementsByTagName("a")
+let nav = document.querySelectorAll("a")
+console.log(nav);
 
 nav[0].textContent = siteContent.nav["nav-item-1"]
 nav[1].textContent = siteContent.nav["nav-item-2"]
@@ -50,13 +50,36 @@ nav[3].textContent = siteContent.nav["nav-item-4"]
 nav[4].textContent = siteContent.nav["nav-item-5"]
 nav[5].textContent = siteContent.nav["nav-item-6"]
 
+let contentHeader = document.querySelectorAll("h4")
+contentHeader[0].textContent = siteContent["main-content"]["features-h4"]
+contentHeader[1].textContent = siteContent["main-content"]["about-h4"]
+contentHeader[2].textContent = siteContent["main-content"]["services-h4"]
+contentHeader[3].textContent = siteContent["main-content"]["product-h4"]
+contentHeader[4].textContent = siteContent["main-content"]["vision-h4"]
+contentHeader[5].textContent = siteContent["contact"]["contact-h4"]
+
+console.log(contentHeader)
+
+let mainText = document.querySelectorAll("p")
+
+mainText[0].textContent = siteContent["main-content"]["features-content"]
+mainText[1].textContent = siteContent["main-content"]["about-content"]
+mainText[2].textContent = siteContent["main-content"]["services-content"]
+mainText[3].textContent = siteContent["main-content"]["product-content"]
+mainText[4].textContent = siteContent["main-content"]["vision-content"]
+mainText[5].textContent = siteContent["contact"]["address"]
+mainText[6].textContent = siteContent["contact"]["phone"]
+mainText[7].textContent = siteContent["contact"]["email"]
+mainText[8].textContent = siteContent["footer"]["copyright"]
+
+console.log(mainText)
+
+
 let h1 = document.querySelector("h1").textContent = siteContent.cta.h1
 
-let mainImg = document.getElementById("cta-img");
-mainImg.setAttribute('src', siteContent["cta"]["img-src"])
+let mainImg = document.getElementById("cta-img").setAttribute('src', siteContent["cta"]["img-src"])
 
-let mainBtn = document.getElementsByTagName("button")
-mainBtn.textContent = siteContent.cta.button
+let mainBtn = document.querySelector("button").textContent = siteContent.cta.button
 
-const scrollImg = document.getElementById("middle-img").setAttribute('src', siteContent["main-content"]["middle-img-src"])
+let scrollImg = document.getElementById("middle-img").setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
