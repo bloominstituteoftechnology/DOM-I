@@ -39,4 +39,13 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', './img/logo.png')
+
+let snippet = document.getElementById("cta-img");
+snippet.setAttribute('src', './img/header-img.png')
+
+let middle = document.getElementById("middle-img");
+middle.setAttribute('src', './img/mid-page-accent.jpg')
+
+//let nav = document.querySelectorAll('a');
+// for each loop iteration to populate content
