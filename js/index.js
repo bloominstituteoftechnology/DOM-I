@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM <br>Is <br>Awesome",
+    "h1": "DOM Is Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -38,7 +38,6 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-// Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
@@ -53,6 +52,7 @@ button[0].textContent = siteContent.cta.button;
 // Paragraph Titles
 let h4 = document.querySelectorAll(".main-content h4");
 let mainContentArray = ["features", "about", "services", "product", "vision"];
+
 for (let i = 0; i < mainContentArray.length; i++) {
   h4[i].textContent = siteContent["main-content"][`${mainContentArray[i]}-h4`];
 }
@@ -112,11 +112,11 @@ let textNode = document.createTextNode("Portfolio");
 // Prepend Child to NAV
 let aNode1 = document.createElement("a");
 aNode1.style.color = "green";
-let textNode1 = document.createTextNode("About Me");
+let textNode0 = document.createTextNode("About Me");
 
-aNode.appendChild(textNode); // <a>Portfolio</a>
-aNode1.prepend(textNode1);
-nav.appendChild(aNode); // <nav> ... <a>Portfolio</a> </nav>
+aNode.appendChild(textNode); 
+aNode1.prepend(textNode0);
+nav.appendChild(aNode); 
 nav.prepend(aNode1);
 
 // STRETCH GOALS
@@ -133,17 +133,9 @@ const handleClick = () => {
     headerLink1[i].textContent = newSiteContent.nav[`nav-item-${i + 1}`];
   }
 
-  let newContentArray = [
-    newSiteContent["main-content"]["features-content"],
-    newSiteContent["main-content"]["about-content"],
-    newSiteContent["main-content"]["services-content"],
-    newSiteContent["main-content"]["product-content"],
-    newSiteContent["main-content"]["vision-content"]
-  ];
-
-  for (let i = 0; i < featuresPTags.length; i++) {
-    featuresPTags[i].textContent = newContentArray[i];
-  }
+  featuresPTags.forEach(element => {
+    featuresPTags.textContent = newContentArray;
+  });  
 
   contacth4[0].textContent = newSiteContent.contact["contact-h4"];
   contact[0].textContent = newSiteContent.contact.address;
