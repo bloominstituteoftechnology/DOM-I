@@ -47,16 +47,27 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 /// NavBar
 
-let navAnchorTags = document.querySelectorAll("a");
-navAnchorTags[0].innerText = "Services";
-navAnchorTags[1].innerText = "Product";
-navAnchorTags[2].innerText = "Vision";
-navAnchorTags[3].innerText = "Features";
-navAnchorTags[4].innerText = "About";
-navAnchorTags[5].innerText = "Contact";
+// let navAnchorTags = document.querySelectorAll("nav a");
+// navAnchorTags[0].innerText = "Services";
+// navAnchorTags[1].innerText = "Product";
+// navAnchorTags[2].innerText = "Vision";
+// navAnchorTags[3].innerText = "Features";
+// navAnchorTags[4].innerText = "About";
+// navAnchorTags[5].innerText = "Contact";
 
-/*let navBar = querySelector("nav");
-navBar.style.color = green;*/
+// navAnchorTags.forEach(tag => {
+//   tag.style.color = green;
+// });
+
+let selectedNavLinks = document.querySelectorAll("nav a");
+selectedNavLinks.forEach((link, i) => {
+  link.innerHTML = siteContent.nav[`nav-item-${i+1}`];
+})
+
+selectedNavLinks.forEach(link => {
+  link.style.color = "green";
+})
+
 
 let mainHeader = document.querySelector("h1");
 mainHeader.innerText = "DOM Is Awesome";
