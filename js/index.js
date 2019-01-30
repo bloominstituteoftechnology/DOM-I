@@ -85,8 +85,14 @@ nav.append(backNav);
 let ctaH = document.querySelector('h1');
 ctaH.innerHTML = siteContent['cta']['h1'].split(' ').join(`<br>`);
 
+//stretch add h1 style
+ctaH.style.color = 'green';
+
 let ctaButton = document.querySelector('button');
 ctaButton.textContent = siteContent['cta']['button'];
+
+//stretch style to button
+ctaButton.style.boxShadow = '5px 5px 10px grey';
 
 ///main-content
 let headerFours = document.querySelectorAll('h4');
@@ -94,6 +100,11 @@ let headerFours = document.querySelectorAll('h4');
 let mainHFours = Object.keys(siteContent['main-content']).filter((key) => key.includes('h4'));
 
 headerFours.forEach((index, i) => headerFours[i].textContent = siteContent['main-content'][`${mainHFours[i]}`]);
+
+//stretch style h4s
+headerFours.forEach(item => item.style.color = "darkgreen");
+
+headerFours.forEach(item => item.style.textDecoration = 'underline');
 
 // main content p's
 let mainP = document.querySelectorAll('p');
@@ -114,3 +125,16 @@ mainP[7].innerHTML = siteContent['contact']['email'];
 
 /// footer
 mainP[8].innerHTML = siteContent['footer']['copyright'];
+
+// Stretch events
+
+ctaH.addEventListener("click", update);
+
+function update() {
+  headerFours.forEach(item => item.style.fontSize = '1.8em');
+
+  headerFours.forEach(item => item.style.color = 'black');
+
+  mainP.forEach(item => item.style.color = 'darkgreen');
+
+};
