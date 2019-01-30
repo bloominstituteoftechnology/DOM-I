@@ -97,3 +97,4 @@ mainP[6].innerHTML = siteContent['contact']['phone'];
 mainP[7].innerHTML = siteContent['contact']['email'];
 
 /// footer
+mainP[8].innerHTML = siteContent['footer']['copyright'];
