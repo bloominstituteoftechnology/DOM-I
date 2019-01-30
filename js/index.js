@@ -41,5 +41,18 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-const cta =document.getElementById( 'cta-img')
-cta.setAttribute('src', 'img/mid-page-accent.jpg')
+let navText = document.querySelectorAll('nav a');
+navText[0].textContent = siteContent["nav"]["nav-item-1"];
+navText[1].textContent = siteContent["nav"]["nav-item-2"];
+navText[2].textContent = siteContent["nav"]["nav-item-3"];
+navText[3].textContent = siteContent["nav"]["nav-item-4"];
+navText[4].textContent = siteContent["nav"]["nav-item-5"];
+navText[5].textContent = siteContent["nav"]["nav-item-6"];
+
+
+// const headerDoc =document.getElementById('cta-img')
+// headerDoc.setAttribute('src', 'img/header-img')
+
+// let headText = document.getElementsByTagName('h1'); 
+// headText.style.textContent = 'Dom is awesome'
+// headText.style.color = 'black'
