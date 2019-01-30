@@ -65,6 +65,22 @@ navA.forEach((index, i) => navA[i].textContent = siteContent["nav"][`${
   Object.keys(siteContent["nav"])[i]
 }`]);
 
+///navigation task 4 add new
+navA.forEach(navA => navA.style.color = 'green');
+
+const frontNav = document.createElement('a');
+frontNav.href = '#';
+frontNav.textContent = 'Ideas';
+frontNav.style.color = 'green';
+
+nav.prepend(frontNav);
+
+const backNav = document.createElement('a');
+backNav.href = '#';
+backNav.textContent = 'DOM';
+backNav.style.color = 'green';
+
+nav.append(backNav);
 ///CTA content
 let ctaH = document.querySelector('h1');
 ctaH.innerHTML = siteContent['cta']['h1'].split(' ').join(`<br>`);
