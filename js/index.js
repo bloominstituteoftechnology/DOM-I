@@ -79,6 +79,7 @@ let mainHFours = Object.keys(siteContent['main-content']).filter((key) => key.in
 
 headerFours.forEach((index, i) => headerFours[i].textContent = siteContent['main-content'][`${mainHFours[i]}`]);
 
+// main content p's
 let mainP = document.querySelectorAll('p');
 
 let mainPContent = Object.keys(siteContent['main-content']).filter((key) => key.includes('content'));
@@ -86,3 +87,13 @@ let mainPContent = Object.keys(siteContent['main-content']).filter((key) => key.
 mainP.forEach((index, i) => mainP[i].textContent = siteContent['main-content'][`${mainPContent[i]}`]);
 
 
+/// Contact
+headerFours[5].textContent = siteContent['contact']['contact-h4'];
+
+mainP[5].innerHTML = siteContent['contact']['address'].split('Street ').join(`Street <br>`);
+
+mainP[6].innerHTML = siteContent['contact']['phone'];
+
+mainP[7].innerHTML = siteContent['contact']['email'];
+
+/// footer
