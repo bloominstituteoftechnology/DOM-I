@@ -61,7 +61,7 @@ navItems[5].textContent = siteContent.nav["nav-item-6"];
 // cta
 
 const ctaHeader = document.querySelector("h1");
-ctaHeader.innerHTML = siteContent["cta"]["h1"];
+ctaHeader.innerHTML = siteContent["cta"]["h1"].split(' ').join(`<br>`);
 
 let ctaBtn = document.querySelector("button");
 ctaBtn.textContent = siteContent["cta"]["button"]
@@ -89,7 +89,7 @@ let contactHeader = document.querySelectorAll("section.contact > h4")
 contactHeader[0].textContent = siteContent["contact"]["contact-h4"];
 
 let contactText = document.querySelectorAll("section.contact > p")
-contactText[0].textContent = siteContent["contact"]["address"];
+contactText[0].innerHTML = siteContent["contact"]["address"].split('Street ').join(`Street <br>`);
 contactText[1].textContent = siteContent["contact"]["phone"];
 contactText[2].textContent = siteContent["contact"]["email"];
 
