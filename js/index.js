@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM \n Is \n Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street  Somewhere, USA",
+    "address" : "123 Way 456 Street  \n Somewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -37,27 +37,31 @@ const siteContent = {
   },
 };
 
-
 // Example: Update the img src for the logo
 const logoImg = document.getElementById("logo-img");
 logoImg.setAttribute('src', siteContent["nav"]["img-src"])
 
-
-
-let links = document.querySelectorAll("a");
-//console.log(links);
+let links = document.querySelectorAll("nav a");
 links[0].textContent = siteContent["nav"]["nav-item-1"];
+links[0].style.color = "green";
 links[1].textContent = siteContent["nav"]["nav-item-2"];
+links[1].style.color = "green";
 links[2].textContent = siteContent["nav"]["nav-item-3"];
+links[2].style.color = "green";
 links[3].textContent = siteContent["nav"]["nav-item-4"];
+links[3].style.color = "green";
 links[4].textContent = siteContent["nav"]["nav-item-5"];
+links[4].style.color = "green";
 links[5].textContent = siteContent["nav"]["nav-item-6"];
-
+links[5].style.color = "green";
 
 //class cta-----cta-text
-document.querySelector(".cta-text h1").textContent = siteContent["cta"]["h1"];
-document.querySelector(".cta-text button").textContent = siteContent["cta"]["button"];
-document.querySelector("#cta-img").setAttribute("src", siteContent["cta"]["img-src"])
+let h1Cta = document.querySelector("h1");
+h1Cta.textContent = siteContent["cta"]["h1"];
+let ctaButton = document.querySelector("button");
+ctaButton.textContent = siteContent["cta"]["button"];
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
 
 //class main-content-------text-content
 let h4Main = document.querySelectorAll(".text-content h4");
@@ -75,8 +79,8 @@ p[2].textContent = siteContent["main-content"]["services-content"];
 p[3].textContent = siteContent["main-content"]["product-content"];
 p[4].textContent = siteContent["main-content"]["vision-content"];
 //class main-content---id middl-img
-document.querySelector("#middle-img").setAttribute("src", siteContent["main-content"]["middle-img-src"])
-
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
 //class=contact
 document.querySelector(".contact p").textContent = siteContent["contact"]["contact-h4"];
@@ -85,12 +89,21 @@ pContact[0].textContent = siteContent["contact"]["address"];
 pContact[1].textContent = siteContent["contact"]["phone"];
 pContact[2].textContent = siteContent["contact"]["email"];
 
-
 //footer
-document.querySelector("footer p").textContent = siteContent["footer"]["copyright"];
-
+let footer = document.querySelector("footer p");
+footer.textContent = siteContent["footer"]["copyright"];
 
 // Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
-//parentElement.appendChild(childElement)
-// Change the color of the navigation text to be green.
-// nav.style.color= "green";
+let firstNav = document.createElement("a");
+firstNav.href = "#";
+firstNav.textContent = "Home";
+firstNav.style.color = "green";
+
+let lastNav = document.createElement("a");
+lastNav.href = "#";
+lastNav.textContent = "FAQ";
+lastNav.style.color = "green";
+
+const newNav = document.querySelector("nav");
+newNav.prepend(firstNav);
+newNav.append(lastNav);
