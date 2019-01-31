@@ -82,11 +82,15 @@ navItems[5].textContent = siteContent.nav["nav-item-6"];
 //ES6 arrow function
 navItems.forEach(navItem => navItem.style.color = "green")
 
+
+//Nav items using append & prepend
 let prepend = document.createElement("a");
+prepend.href = "#";
 prepend.textContent = "prepend";
 prepend.style.color = "green";
 
 let append = document.createElement("a");
+append.href = "#";
 append.textContent = "append";
 append.style.color = "green";
 
