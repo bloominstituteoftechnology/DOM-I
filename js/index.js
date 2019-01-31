@@ -40,3 +40,39 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+let headerImg = document.getElementById("cta-img");
+headerImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent ["main-content"]["middle-img-src"]);
+
+// Nav Items 
+let nav = document.querySelectorAll('a');
+
+nav[0].textContent = siteContent['nav']['nav-item-1'];
+nav[1].textContent = siteContent['nav']['nav-item-2'];
+nav[2].textContent = siteContent['nav']['nav-item-3'];
+nav[3].textContent = siteContent['nav']['nav-item-4'];
+nav[4].textContent = siteContent['nav']['nav-item-5'];
+nav[5].textContent = siteContent['nav']['nav-item-6'];
+
+let navA = document.querySelectorAll("a");
+navA.forEach((index, i) => navA[i].textContent = siteContent["nav"][`${Object.keys(siteContent["nav"])[i]}`]);
+
+// CTA 
+let ctah = document.querySelectorAll("a");
+ctah.innerHTML = siteContent['cta']['h1'].split(' ').join(`<br>`);
+
+let ctaButton = document.querySelectorAll('button');
+ctaButton.textContent = siteContent['cta']['button'];
+
+
+let headerFour = document.querySelectorAll('h4');
+
+let mainFour = Object.keys(siteContent['main-content']).filter((key) => key.includes('h4'));
+
+headerFour.forEach((index, i) => headerFour[i].textContent = siteContent['main-content'][`${mainFour[i]}`]);
+
+
