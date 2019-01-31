@@ -40,3 +40,36 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const anchors = document.querySelectorAll("a")
+for(let i = 0; i < anchors.length; i++) {
+  anchors[i].innerHTML = Object.values(siteContent["nav"])[i]
+} 
+
+const queryhtml = (query, index) => {
+  return document.querySelector(query).innerHTML = siteContent[index][query]
+}
+
+queryhtml('h1', 'cta');
+queryhtml('button', 'cta');
+
+const h4main = document.querySelector(".main-content").querySelectorAll('h4');
+const p = document.querySelector(".main-content").querySelectorAll("p");
+const objMain = siteContent["main-content"];
+const mainImg = siteContent["main-content"]["middle-img-src"];
+delete siteContent["main-content"]["middle-img-src"];
+
+for(let i = 0; i < h4main.length; i++) {
+  for(let n = 0; n < Object.values(objMain).length; n++) {
+    n % 2 == 0 ? h4main[i].innerHTML = Object.values(objMain)[n] : p[i].innerHTML = Object.values(objMain)[n]
+  }
+}
+
+document.getElementById("middle-img").setAttribute('src', mainImg);
+
+const contact = document.querySelector('.contact')
+contact.querySelector("h4").innerHTML = siteContent["contact"]["contact-h4"];
+
+contact.querySelectorAll("p").forEach((a, b) => {return a.innerHTML = Object.values(siteContent["contact"])[b + 1]})
+
+document.querySelectorAll("p")[document.querySelectorAll("p").length - 1].innerHTML = siteContent["footer"]["copyright"];
