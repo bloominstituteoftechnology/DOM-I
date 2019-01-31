@@ -37,10 +37,13 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+// Example: Update the img src for the logo
+// let logo = document.getElementById("logo-img");
+// logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+//NAV BAR 
 const navItems = siteContent.nav
 // console.log(navItems);
 
@@ -48,4 +51,67 @@ const navItems = siteContent.nav
 
  const navItemsValues = Object.values(navItems)
 // console.log(navItemsValues)
+for (let i=0; i < navItemsKeys.length; i++) {
+  if (navItemsKeys[i] !== "img-src") {
+    document.querySelector("nav").children[i].textContent = navItemsValues[i];
+    document.querySelector("nav").children[i].style.color = "green";
+  }
+}
+let mainHeading = document.querySelector('h1');
+mainHeading.style.whiteSpace = 'pre';
+mainHeading.textContent = "DOM \r\n";
+mainHeading.textContent += "Is \r\n";
+mainHeading.textContent += "Awesome";
 
+ let domButton = document.querySelector('button');
+domButton.textContent = siteContent.cta.button;
+
+ let headerImg = document.getElementById('cta-img');
+headerImg.src = siteContent.cta["img-src"];
+
+
+ let smallHeadings = document.querySelectorAll('h4');
+let headingsArray = [].slice.call(smallHeadings);
+headingsArray[0].textContent = `${siteContent["main-content"]["features-h4"]}`
+headingsArray[1].textContent = `${siteContent["main-content"]["about-h4"]}`
+headingsArray[2].textContent = `${siteContent["main-content"]["services-h4"]}`
+headingsArray[3].textContent = `${siteContent["main-content"]["product-h4"]}`
+headingsArray[4].textContent = `${siteContent["main-content"]["vision-h4"]}`
+headingsArray[5].textContent = `${siteContent["contact"]["contact-h4"]}`
+
+ let webContent = document.querySelectorAll('p');
+let paragraphArray = [].slice.call(webContent);
+paragraphArray[0].textContent = `${siteContent["main-content"]["features-content"]}`
+paragraphArray[1].textContent = `${siteContent["main-content"]["about-content"]}`
+paragraphArray[2].textContent = `${siteContent["main-content"]["services-content"]}`
+paragraphArray[3].textContent = `${siteContent["main-content"]["product-content"]}`
+paragraphArray[4].textContent = `${siteContent["main-content"]["vision-content"]}`
+paragraphArray[5].textContent = `${siteContent["contact"]["address"]}`
+paragraphArray[6].textContent = `${siteContent["contact"]["phone"]}`
+paragraphArray[7].textContent = `${siteContent["contact"]["email"]}`
+paragraphArray[8].textContent = `${siteContent["footer"]["copyright"]}`
+
+ let mdlImg = document.getElementById("middle-img");
+mdlImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+ // 1. Create Element
+const newElement = document.createElement('a');
+
+
+ // 2. Add attributes
+newElement.href = "#";
+newElement.textContent = "Home";
+newElement.style.color = "green";
+
+
+ // 3. Create a place for the element
+const mainNav = document.querySelector('nav');
+
+ // 4. Append or prepend the newly created element
+mainNav.prepend(newElement);
+
+const newElement2 = document.createElement('a');
+newElement2.href = "#";
+newElement2.textContent = "New";
+newElement2.style.color ="green";
+mainNav.append(newElement2);
