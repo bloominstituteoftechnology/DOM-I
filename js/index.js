@@ -81,7 +81,21 @@ middleText[4].textContent = siteContent["main-content"]["vision-content"]
 let sectionImg = document.querySelector(".main-content img")
 sectionImg.setAttribute("src", siteContent["main-content"]["middle-img-src"])
 
-//Bottom Content//
+//Contact Content//
 
-let bottomHeader = document.querySelector(".contact h4")
-bottomHeader.textContent = siteContent["contact"]["contact-h4"]
+let contactHeader = document.querySelector(".contact h4")
+contactHeader.textContent = siteContent["contact"]["contact-h4"]
+
+let contactText = document.querySelectorAll(".contact p")
+contactText[0].textContent = siteContent ["contact"]["address"]
+contactText[1].textContent = siteContent["contact"]["phone"]
+contactText[2].textContent = siteContent["contact"]["email"]
+
+
+
+//Footer//
+
+let copyR = document.querySelector("footer p")
+copyR.textContent = siteContent["copyright"]
+
+//Change Text//
