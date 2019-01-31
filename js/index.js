@@ -71,5 +71,9 @@ sectionHeaders[2].textContent = siteContent["main-content"]["services-h4"]
 sectionHeaders[3].textContent = siteContent["main-content"]["product-h4"]
 sectionHeaders[4].textContent = siteContent["main-content"]["vision-h4"]
 
-
-
+let sectionText = document.querySelectorAll(".main-content p")
+sectionText[0].textContent = siteContent["main-content"]["features-content"]
+sectionText[1].textContent = siteContent["main-content"]["about-content"]
+sectionText[2].textContent = siteContent["main-content"]["services-content"]
+sectionText[3].textContent = siteContent["main-content"]["product-content"]
+sectionText[4].textContent = siteContent["main-content"]["vision-content"]
