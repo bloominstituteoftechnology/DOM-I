@@ -55,6 +55,8 @@ nav.getElementsByTagName("a").innerHTML = siteContent["nav"]["nav-item-6"];
 nav.style.color= "green";
 
 
+
+
 //class cta-----cta-text
 const ctaText = document.getElementsByClassName("cta-text");
 ctaText.getElementsByTagName("h1").innerHTML = siteContent["cta"]["h1"];
@@ -81,12 +83,16 @@ textContent.getElementsByTagName("p").innerHTML = siteContent["main-content"]["v
 const middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["middle-content"]["middle-img-src"])
 
+
+
 //class=contact
 const contact = document.getElementsByClassName("contact");
 contact.getElementsByTagName("h4").innerHTML =siteContent["contact"]["contact-h4"];
 contact.getElementsByTagName("p").innerHTML =siteContent["contact"]["address"];
 contact.getElementsByTagName("p").innerHTML =siteContent["contact"]["phone"];
 contact.getElementsByTagName("p").innerHTML =siteContent["contact"]["email"];
+
+
 
 //footer
 const footer = document.querySelector("footer");
