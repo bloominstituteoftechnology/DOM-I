@@ -77,3 +77,6 @@ sectionText[1].textContent = siteContent["main-content"]["about-content"]
 sectionText[2].textContent = siteContent["main-content"]["services-content"]
 sectionText[3].textContent = siteContent["main-content"]["product-content"]
 sectionText[4].textContent = siteContent["main-content"]["vision-content"]
+
+let sectionImg = document.querySelector(".main-content img")
+sectionImg.setAttribute("src", siteContent["main-content"]["middle-img-src"])
