@@ -64,19 +64,24 @@ ctaButton.textContent = siteContent["cta"]["button"]
 
 //Main Content//
 
-let sectionHeaders = document.querySelectorAll(".main-content h4");
-sectionHeaders[0].textContent = siteContent["main-content"]["features-h4"]
-sectionHeaders[1].textContent = siteContent["main-content"]["about-h4"]
-sectionHeaders[2].textContent = siteContent["main-content"]["services-h4"]
-sectionHeaders[3].textContent = siteContent["main-content"]["product-h4"]
-sectionHeaders[4].textContent = siteContent["main-content"]["vision-h4"]
+let middleHeaders = document.querySelectorAll(".main-content h4");
+middleHeaders[0].textContent = siteContent["main-content"]["features-h4"]
+middleHeaders[1].textContent = siteContent["main-content"]["about-h4"]
+middleHeaders[2].textContent = siteContent["main-content"]["services-h4"]
+middleHeaders[3].textContent = siteContent["main-content"]["product-h4"]
+middleHeaders[4].textContent = siteContent["main-content"]["vision-h4"]
 
-let sectionText = document.querySelectorAll(".main-content p")
-sectionText[0].textContent = siteContent["main-content"]["features-content"]
-sectionText[1].textContent = siteContent["main-content"]["about-content"]
-sectionText[2].textContent = siteContent["main-content"]["services-content"]
-sectionText[3].textContent = siteContent["main-content"]["product-content"]
-sectionText[4].textContent = siteContent["main-content"]["vision-content"]
+let middleText = document.querySelectorAll(".main-content p")
+middleText[0].textContent = siteContent["main-content"]["features-content"]
+middleText[1].textContent = siteContent["main-content"]["about-content"]
+middleText[2].textContent = siteContent["main-content"]["services-content"]
+middleText[3].textContent = siteContent["main-content"]["product-content"]
+middleText[4].textContent = siteContent["main-content"]["vision-content"]
 
 let sectionImg = document.querySelector(".main-content img")
 sectionImg.setAttribute("src", siteContent["main-content"]["middle-img-src"])
+
+//Bottom Content//
+
+let bottomHeader = document.querySelector(".contact h4")
+bottomHeader.textContent = siteContent["contact"]["contact-h4"]
