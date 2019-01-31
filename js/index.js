@@ -64,6 +64,14 @@ selectedNavLinks.forEach((link, i) => {
   link.innerHTML = siteContent.nav[`nav-item-${i+1}`];
 })
 
+let nav = document.querySelector('nav');
+let aTag = document.createElement('a');
+let bTag = document.createElement('a');
+aTag.innerText = ('Sports');
+bTag.innerText = ('Hang Gliders');
+nav.prepend(aTag);
+nav.append(bTag);
+
 selectedNavLinks.forEach(link => {
   link.style.color = "green";
 })
@@ -87,6 +95,7 @@ paragraphHeadings[2].innerText = "Vision";
 paragraphHeadings[3].innerText = "Features";
 paragraphHeadings[4].innerText = "About";
 paragraphHeadings[5].innerText = "Contact";
+paragraphHeadings.append('Sports');
 
 let midImg = document.getElementById ("middle-img");
 midImg.setAttribute("src", "img/mid-page-accent.jpg");
