@@ -38,6 +38,61 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+
+// IMG ///////////////////////////////
+
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
-// .
+
+let headerImg = document.getElementById("cta-img");
+headerImg.setAttribute('src', siteContent["cta"] ["img-src"])
+
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"] ["middle-img-src"])
+
+// NAV ///////////////////////////////
+
+const navAnchors = document.querySelectorAll('a');
+// const navContent = Object.keys(siteContent.nav).filter((keys) => key.includes('nav'))
+// navContent.forEach((index, i) => )  
+
+navAnchors[0].textContent = siteContent.nav["nav-item-1"]; 
+navAnchors[1].textContent = siteContent.nav["nav-item-2"];
+navAnchors[2].textContent = siteContent.nav["nav-item-3"];
+navAnchors[3].textContent = siteContent.nav["nav-item-4"];
+navAnchors[4].textContent = siteContent.nav["nav-item-5"];
+navAnchors[5].textContent = siteContent.nav["nav-item-6"];
+
+// CTA ///////////////////////////////
+
+const h1 = document.querySelector('h1');
+console.log(h1);
+h1.innerHTML = siteContent.cta.h1.replace(new RegExp(" ", 'g'), '<br>');
+
+const button = document.querySelector('button')
+button.textContent = siteContent.cta.button;
+
+// MAIN ///////////////////////////////
+
+const h4 = document.querySelectorAll('h4')
+
+const h4content = Object.keys(siteContent['main-content']).filter((key) => key.includes('h4'))
+console.log(h4content); 
+h4content.forEach((index, i) => h4[i].textContent = siteContent['main-content'][`${h4content[i]}`])
+
+// h4[0].textContent = siteContent["main-content"]["features-h4"];
+// h4[1].textContent = siteContent["main-content"]["about-h4"];
+// h4[2].textContent = siteContent["main-content"]["services-h4"];
+// h4[3].textContent = siteContent["main-content"]["product-h4"]
+// h4[4].textContent = siteContent["main-content"]["vision-h4"]
+
+const mainP = document.querySelectorAll('p');
+
+let mainPContent = Object.keys(siteContent['main-content']).filter((key) => key.includes('content'));
+// console.log(mainPContent);
+mainP.forEach((index, i) => mainP[i].textContent = siteContent['main-content'][`${mainPContent[i]}`]);
+
+// CONTACT ///////////////////////////////
+
+
+
