@@ -39,7 +39,7 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 
 let headerImg = document.getElementById("cta-img");
@@ -47,6 +47,7 @@ headerImg.setAttribute('src', siteContent["cta"]["img-src"]);
 
 let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent ["main-content"]["middle-img-src"]);
+
 
 // Nav Items 
 let nav = document.querySelectorAll('a');
@@ -61,11 +62,26 @@ nav[5].textContent = siteContent['nav']['nav-item-6'];
 let navA = document.querySelectorAll("a");
 navA.forEach((index, i) => navA[i].textContent = siteContent["nav"][`${Object.keys(siteContent["nav"])[i]}`]);
 
+// Two New Navs
+
+// let newNav1 = document.createElement('a');
+// newNav1.appendChild(document.createTextNobe('Support'));
+// nav.appendChild(newNav1);
+
+// let newNav2 = document.createElement('a');
+// newNav2.appendChild(document.createTextNobe('Home'));
+// nav.appendChild(newNav2);
+
+
+
+// navA.forEach(navA => navA.style.color = 'green');
+
+
 // CTA 
-let ctah = document.querySelectorAll("a");
+let ctah = document.querySelector("h1");
 ctah.innerHTML = siteContent['cta']['h1'].split(' ').join(`<br>`);
 
-let ctaButton = document.querySelectorAll('button');
+let ctaButton = document.querySelector('button');
 ctaButton.textContent = siteContent['cta']['button'];
 
 
@@ -75,4 +91,25 @@ let mainFour = Object.keys(siteContent['main-content']).filter((key) => key.incl
 
 headerFour.forEach((index, i) => headerFour[i].textContent = siteContent['main-content'][`${mainFour[i]}`]);
 
+headerFour.forEach(item => item.style.color = "darkgreen");
+
+
+let mainParagraph = document.querySelectorAll('p');
+
+let mainParagraphContent = Object.keys(siteContent['main-content']).filter((key) => key.includes('content'));
+
+mainParagraph.forEach((index, i) => mainParagraph[i].textContent = siteContent['main-content'][`${mainParagraphContent[i]}`]);
+
+
+// Contact 
+
+headerFour[5].textContent = siteContent['contact']['contact-h4'];
+
+mainParagraph[5].innerHTML = siteContent['contact']['address'].split('Street ').join(`Street <br>`);
+
+mainParagraph[6].innerHTML = siteContent['contact']['phone'];
+
+mainParagraph[7].innerHTML = siteContent['contact']['email'];
+
+mainParagraph[8].innerHTML = siteContent['footer']['copyright'];
 
