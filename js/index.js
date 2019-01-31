@@ -43,7 +43,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //Navigation//
 
-let navText = document.querySelectorAll('nav a');
+let navText = document.querySelectorAll("nav a")
 navText[0].textContent = siteContent["nav"]["nav-item-1"];
 navText[1].textContent = siteContent["nav"]["nav-item-2"];
 navText[2].textContent = siteContent["nav"]["nav-item-3"];
@@ -51,8 +51,27 @@ navText[3].textContent = siteContent["nav"]["nav-item-4"];
 navText[4].textContent = siteContent["nav"]["nav-item-5"];
 navText[5].textContent = siteContent["nav"]["nav-item-6"];
 
+
+
 //Change Text to Green//
 navText.forEach(anchor => anchor.style.color = "green")
+
+// Add New Items 
+
+let navAdd = document.querySelector('nav');
+
+let home = document.createElement("a")
+home.textContent = "Home"
+home.href = "#"
+home.style.color = "green"
+
+let testimonials = document.createElement("a")
+testimonials.textContent = "Testimonials"
+testimonials.href = "#"
+testimonials.style.color = "green"
+
+navAdd.prepend(home)
+navAdd.append(testimonials)
 
 //CTA//
 
