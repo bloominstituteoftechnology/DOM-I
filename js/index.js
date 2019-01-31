@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM </br>Is </br>Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "123 Way 456 Street </br> Somewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -44,63 +44,53 @@ logoImg.setAttribute('src', siteContent["nav"]["img-src"])
 
 
 
-let nav = document.querySelector("nav");
-nav.getElementsByTagName("a").innerHTML = siteContent["nav"]["nav-item-1"];
-nav.getElementsByTagName("a").innerHTML = siteContent["nav"]["nav-item-2"];
-nav.getElementsByTagName("a").innerHTML = siteContent["nav"]["nav-item-3"];
-nav.getElementsByTagName("a").innerHTML = siteContent["nav"]["nav-item-4"];
-nav.getElementsByTagName("a").innerHTML = siteContent["nav"]["nav-item-5"];
-nav.getElementsByTagName("a").innerHTML = siteContent["nav"]["nav-item-6"];
-// Change the color of the navigation text to be green.
-nav.style.color= "green";
-
-
+let links = document.querySelectorAll("a");
+//console.log(links);
+links[0].textContent = siteContent["nav"]["nav-item-1"];
+links[1].textContent = siteContent["nav"]["nav-item-2"];
+links[2].textContent = siteContent["nav"]["nav-item-3"];
+links[3].textContent = siteContent["nav"]["nav-item-4"];
+links[4].textContent = siteContent["nav"]["nav-item-5"];
+links[5].textContent = siteContent["nav"]["nav-item-6"];
 
 
 //class cta-----cta-text
-const ctaText = document.getElementsByClassName("cta-text");
-ctaText.getElementsByTagName("h1").innerHTML = siteContent["cta"]["h1"];
-ctaText.getElementsByTagName("button").innerHTML = siteContent["cta"]["button"];
-//class cta----id=cta.img
-let ctaImg = document.getElementById("cta-img");
-ctaImg.setAttribute("src", siteContent["cta"]["img-src"])
+document.querySelector(".cta-text h1").textContent = siteContent["cta"]["h1"];
+document.querySelector(".cta-text button").textContent = siteContent["cta"]["button"];
+document.querySelector("#cta-img").setAttribute("src", siteContent["cta"]["img-src"])
 
-//class main-content----top-content----text-content
-const textContent = document.getElementsByClassName("text-content");
-textContent.getElementsByTagName("h4").innerHTML = siteContent["main-content"]["features-h4"];
-textContent.getElementsByTagName("p").innerHTML = siteContent["main-content"]["features-content"];
-textContent.getElementsByTagName("h4").innerHTML = siteContent["main-content"]["about-h4"];
-textContent.getElementsByTagName("p").innerHTML = siteContent["main-content"]["about-content"];
-//class main-content----bottom-content----text-content
-textContent.getElementsByTagName("h4").innerHTML = siteContent["main-content"][ "services-h4"];
-textContent.getElementsByTagName("p").innerHTML = siteContent["main-content"]["services-content"];
-textContent.getElementsByTagName("h4").innerHTML = siteContent["main-content"]["product-h4"];
-textContent.getElementsByTagName("p").innerHTML = siteContent["main-content"]["product-content"];
-textContent.getElementsByTagName("h4").innerHTML = siteContent["main-content"]["vision-h4"];
-textContent.getElementsByTagName("p").innerHTML = siteContent["main-content"]["vision-content"];
+//class main-content-------text-content
+let h4Main = document.querySelectorAll(".text-content h4");
+h4Main[0].textContent = siteContent["main-content"]["features-h4"];
+h4Main[1].textContent = siteContent["main-content"]["about-h4"];
+h4Main[2].textContent = siteContent["main-content"]["services-h4"];
+h4Main[3].textContent = siteContent["main-content"]["product-h4"];
+h4Main[4].textContent = siteContent["main-content"]["vision-h4"];
 
-//class main-content---id middle img
-const middleImg = document.getElementById("middle-img");
-middleImg.setAttribute('src', siteContent["middle-content"]["middle-img-src"])
-
+//class main-content------text-content
+let p = document.querySelectorAll(".text-content p");
+p[0].textContent = siteContent["main-content"]["features-content"];
+p[1].textContent = siteContent["main-content"]["about-content"];
+p[2].textContent = siteContent["main-content"]["services-content"];
+p[3].textContent = siteContent["main-content"]["product-content"];
+p[4].textContent = siteContent["main-content"]["vision-content"];
+//class main-content---id middl-img
+document.querySelector("#middle-img").setAttribute("src", siteContent["main-content"]["middle-img-src"])
 
 
 //class=contact
-const contact = document.getElementsByClassName("contact");
-contact.getElementsByTagName("h4").innerHTML =siteContent["contact"]["contact-h4"];
-contact.getElementsByTagName("p").innerHTML =siteContent["contact"]["address"];
-contact.getElementsByTagName("p").innerHTML =siteContent["contact"]["phone"];
-contact.getElementsByTagName("p").innerHTML =siteContent["contact"]["email"];
-
+document.querySelector(".contact p").textContent = siteContent["contact"]["contact-h4"];
+let pContact = document.querySelectorAll(".contact p");
+pContact[0].textContent = siteContent["contact"]["address"];
+pContact[1].textContent = siteContent["contact"]["phone"];
+pContact[2].textContent = siteContent["contact"]["email"];
 
 
 //footer
-const footer = document.querySelector("footer");
-footer.getElementsByTagName("p").innerHTML = siteContent["footer"]["copyright"];
+document.querySelector("footer p").textContent = siteContent["footer"]["copyright"];
 
 
 // Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
 //parentElement.appendChild(childElement)
-
-
-
+// Change the color of the navigation text to be green.
+// nav.style.color= "green";
