@@ -50,6 +50,8 @@ middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 //Navigation bar
 
+let mainNav = document.querySelector("nav");
+
 let navItems = document.querySelectorAll('a')
 navItems[0].textContent = siteContent.nav["nav-item-1"];
 navItems[1].textContent = siteContent.nav["nav-item-2"];
@@ -80,7 +82,16 @@ navItems[5].textContent = siteContent.nav["nav-item-6"];
 //ES6 arrow function
 navItems.forEach(navItem => navItem.style.color = "green")
 
+let prepend = document.createElement("a");
+prepend.textContent = "prepend";
+prepend.style.color = "green";
 
+let append = document.createElement("a");
+append.textContent = "append";
+append.style.color = "green";
+
+mainNav.prepend(prepend);
+mainNav.appendChild(append);
 
 
 // cta
