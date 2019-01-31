@@ -51,6 +51,9 @@ navText[3].textContent = siteContent["nav"]["nav-item-4"];
 navText[4].textContent = siteContent["nav"]["nav-item-5"];
 navText[5].textContent = siteContent["nav"]["nav-item-6"];
 
+//Change Text to Green//
+navText.forEach(anchor => anchor.style.color = "green")
+
 //CTA//
 
 let headText = document.querySelector("h1")
@@ -98,4 +101,4 @@ contactText[2].textContent = siteContent["contact"]["email"]
 let copyR = document.querySelector("footer p")
 copyR.textContent = siteContent["copyright"]
 
-//Change Text//
+
