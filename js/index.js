@@ -38,5 +38,45 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+
+// NavBar
+
+  // Anchor Tags
+let theNav = document.querySelectorAll('a');
+theNav[0].textContent = 'Services';
+theNav[1].textContent = 'Products';
+theNav[2].textContent = 'Vision';
+theNav[3].textContent = 'Features';
+theNav[4].textContent = 'About';
+theNav[5].textContent = 'Contact';
+
+  // Logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+
+
+// CTA 
+
+  // H1 Tag
+let theDomHeader = document.querySelector('h1');
+theDomHeader.textContent = 'Dom Is Awesome';
+
+  // Button 
+let button = document.querySelector('button');
+button.textContent = "Get Started!";
+
+  // CTA Pic
+let logoPic = document.getElementById('cta-img');
+logoPic.src = './img/header-img.png'
+
+
+
+// Main Content
+ 
+  // Features Section
+  
+
+// Middle Image
+let midImg = document.getElementById('middle-img');
+midImg.src = './img/mid-page-accent.jpg'
