@@ -39,7 +39,6 @@ const siteContent = {
 
 
 // Example: Update the img src for the logo
-console.log("sdfa;kfjad;ljfl");
 const logoImg = document.getElementById("logo-img");
 logoImg.setAttribute('src', siteContent["nav"]["img-src"])
 
