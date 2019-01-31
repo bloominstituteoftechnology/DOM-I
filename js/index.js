@@ -43,12 +43,12 @@ const siteContent = {
 
   // Anchor Tags
 let theNav = document.querySelectorAll('a');
-theNav[0].textContent = 'Services';
-theNav[1].textContent = 'Products';
-theNav[2].textContent = 'Vision';
-theNav[3].textContent = 'Features';
-theNav[4].textContent = 'About';
-theNav[5].textContent = 'Contact';
+theNav[0].textContent = siteContent['nav']['nav-item-1'];
+theNav[1].textContent = siteContent['nav']['nav-item-2'];;
+theNav[2].textContent = siteContent['nav']['nav-item-3'];;
+theNav[3].textContent = siteContent['nav']['nav-item-4'];;
+theNav[4].textContent = siteContent['nav']['nav-item-5'];
+theNav[5].textContent = siteContent['nav']['nav-item-6'];;
 
   // Logo
 let logo = document.getElementById("logo-img");
@@ -60,23 +60,71 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
   // H1 Tag
 let theDomHeader = document.querySelector('h1');
-theDomHeader.textContent = 'Dom Is Awesome';
+theDomHeader.textContent = siteContent ['cta'] ['h1'];
 
   // Button 
 let button = document.querySelector('button');
-button.textContent = "Get Started!";
+button.textContent = siteContent ['cta'] ['button'];
 
   // CTA Pic
 let logoPic = document.getElementById('cta-img');
-logoPic.src = './img/header-img.png'
+logoPic.setAttribute('src', siteContent["cta"]["img-src"]);
 
 
 
 // Main Content
  
-  // Features Section
-  
+  // Text Content - h4
 
-// Middle Image
-let midImg = document.getElementById('middle-img');
-midImg.src = './img/mid-page-accent.jpg'
+  let sectionTitles = [];
+  sectionTitles.push(siteContent['main-content']['features-h4']);
+  sectionTitles.push(siteContent['main-content']['about-h4']);
+  sectionTitles.push(siteContent['main-content']['services-h4']);
+  sectionTitles.push(siteContent['main-content']['product-h4']);
+  sectionTitles.push(siteContent['main-content']['vision-h4']);
+
+  let mainContentH4s = document.querySelectorAll('.main-content .text-content h4');
+
+  sectionTitles.forEach((e, i) => mainContentH4s[i].textContent = e);
+
+  // Middle Image
+  let midImg = document.getElementById('middle-img');
+  midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+  // Text Content - p
+ 
+  let theParagraph = [];
+  theParagraph.push(siteContent['main-content']['features-content']);
+  theParagraph.push(siteContent['main-content']['about-content']);
+  theParagraph.push(siteContent['main-content']['services-content']);
+  theParagraph.push(siteContent['main-content']['product-content']);
+  theParagraph.push(siteContent['main-content']['vision-content']);
+
+  let mainContentP = document.querySelectorAll('.main-content .text-content p');
+
+  theParagraph.forEach((e, i) => mainContentP[i].textContent = e);
+
+  // Contact Form - h4
+
+  let contactH4 = document.querySelector('.contact h4');
+
+  contactH4.textContent = siteContent ['contact'] ['contact-h4'];
+
+  // Contact Form - P
+  let contactForm = [];
+  contactForm.push(siteContent['contact']['address']);
+  contactForm.push(siteContent['contact']['phone']);
+  contactForm.push(siteContent['contact']['email']);
+
+  let theContentInContactForm = document.querySelectorAll('.contact p');
+
+  contactForm.forEach((e, i) => theContentInContactForm[i].textContent = e);
+
+  // Contact Form - h4
+
+  let footerNote = document.querySelector('footer p');
+
+  footerNote.textContent = siteContent ['footer'] ['copyright'];
+
+
+
