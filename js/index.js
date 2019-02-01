@@ -37,15 +37,17 @@ const siteContent = {
   },
 };
 
+document.addEventListener("DOMContentLoaded", function() {
+
 
 // Example: Update the img src for the logo
-// let logo = document.getElementById("logo-img");
-// logo.setAttribute('src', siteContent["nav"]["img-src"])
+let logo = document.getElementById("logo-img")
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 
 //NAV BAR 
 const navItems = siteContent.nav
-// console.log(navItems);
+console.log(navItems);
 
  const navItemsKeys = Object.keys(navItems)
 
@@ -53,8 +55,8 @@ const navItems = siteContent.nav
 // console.log(navItemsValues)
 for (let i=0; i < navItemsKeys.length; i++) {
   if (navItemsKeys[i] !== "img-src") {
-    document.querySelector("nav").children[i].textContent = navItemsValues[i];
-    document.querySelector("nav").children[i].style.color = "green";
+    navItems.children[i].textContent = navItemsValues[i];
+    navItems.children[i].style.color = "green";
   }
 }
 let mainHeading = document.querySelector('h1');
@@ -115,3 +117,5 @@ newElement2.href = "#";
 newElement2.textContent = "New";
 newElement2.style.color ="green";
 mainNav.append(newElement2);
+
+});
