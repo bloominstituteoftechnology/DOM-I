@@ -78,6 +78,13 @@ newNav.textContent = "Store";
 newNav.style.color = "green";
 nav.prepend(newNav);
 
+
+const moreNav = document.createElement('a');
+moreNav.href = '#';
+moreNav.textContent = 'Links';
+moreNav.style.color = 'green';
+nav.appendChild (moreNav);
+
 // navAnchors[0].textContent = siteContent.nav["nav-item-1"];
 // navAnchors[1].textContent = siteContent.nav["nav-item-2"];
 // navAnchors[2].textContent = siteContent.nav["nav-item-3"];
