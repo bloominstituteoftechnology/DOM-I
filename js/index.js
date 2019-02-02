@@ -37,85 +37,85 @@ const siteContent = {
   },
 };
 
-document.addEventListener("DOMContentLoaded", function() {
+//added event Listener so that the function won't fire until the DOM has loaded it 
+// document.addEventListener("DOMContentLoaded", function() {
 
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img")
+let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 
-//NAV BAR 
-const navItems = siteContent.nav
-console.log(navItems);
+//my code: 
 
- const navItemsKeys = Object.keys(navItems)
+let headerImg = document.getElementById('cta-img');
+headerImg.setAttribute('src', siteContent['cta']['img-src']);
 
- const navItemsValues = Object.values(navItems)
-// console.log(navItemsValues)
-for (let i=0; i < navItemsKeys.length; i++) {
-  if (navItemsKeys[i] !== "img-src") {
-    navItems.children[i].textContent = navItemsValues[i];
-    navItems.children[i].style.color = "green";
+let middleImg = document.getElementById('middle-img');
+middleImg.setAttribute('src', siteContent ['main-content']['middle-img-src']);
+
+  const anchors = document.querySelectorAll("a");
+  for(let i = 0; i < anchors.length; i++) {
+  anchors[i].innerHTML = Object.values(siteContent["nav"])[i]
   }
-}
-let mainHeading = document.querySelector('h1');
-mainHeading.style.whiteSpace = 'pre';
-mainHeading.textContent = "DOM \r\n";
-mainHeading.textContent += "Is \r\n";
-mainHeading.textContent += "Awesome";
 
- let domButton = document.querySelector('button');
-domButton.textContent = siteContent.cta.button;
+  let nav = document.querySelector("nav");
 
- let headerImg = document.getElementById('cta-img');
-headerImg.src = siteContent.cta["img-src"];
+let navA = document.querySelectorAll("a");
+navA.forEach((index, i) => navA[i].textContent = siteContent["nav"][`${
+  Object.keys(siteContent["nav"])[i]
+}`]);
 
+///navigation task 4 add new
+navA.forEach(navA => navA.style.color = 'green');
 
- let smallHeadings = document.querySelectorAll('h4');
-let headingsArray = [].slice.call(smallHeadings);
-headingsArray[0].textContent = `${siteContent["main-content"]["features-h4"]}`
-headingsArray[1].textContent = `${siteContent["main-content"]["about-h4"]}`
-headingsArray[2].textContent = `${siteContent["main-content"]["services-h4"]}`
-headingsArray[3].textContent = `${siteContent["main-content"]["product-h4"]}`
-headingsArray[4].textContent = `${siteContent["main-content"]["vision-h4"]}`
-headingsArray[5].textContent = `${siteContent["contact"]["contact-h4"]}`
+const frontNav = document.createElement('a');
+frontNav.href = '#';
+frontNav.textContent = 'Ideas';
+frontNav.style.color = 'green';
 
- let webContent = document.querySelectorAll('p');
-let paragraphArray = [].slice.call(webContent);
-paragraphArray[0].textContent = `${siteContent["main-content"]["features-content"]}`
-paragraphArray[1].textContent = `${siteContent["main-content"]["about-content"]}`
-paragraphArray[2].textContent = `${siteContent["main-content"]["services-content"]}`
-paragraphArray[3].textContent = `${siteContent["main-content"]["product-content"]}`
-paragraphArray[4].textContent = `${siteContent["main-content"]["vision-content"]}`
-paragraphArray[5].textContent = `${siteContent["contact"]["address"]}`
-paragraphArray[6].textContent = `${siteContent["contact"]["phone"]}`
-paragraphArray[7].textContent = `${siteContent["contact"]["email"]}`
-paragraphArray[8].textContent = `${siteContent["footer"]["copyright"]}`
+nav.prepend(frontNav);
 
- let mdlImg = document.getElementById("middle-img");
-mdlImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+const backNav = document.createElement('a');
+backNav.href = '#';
+backNav.textContent = 'DOM';
+backNav.style.color = 'green';
 
- // 1. Create Element
-const newElement = document.createElement('a');
+nav.append(backNav);
+///CTA content
+let ctaH = document.querySelector('h1');
+ctaH.innerHTML = siteContent['cta']['h1'].split(' ').join(`<br>`);
 
+let ctaButton = document.querySelector('button');
+ctaButton.textContent = siteContent['cta']['button'];
 
- // 2. Add attributes
-newElement.href = "#";
-newElement.textContent = "Home";
-newElement.style.color = "green";
+///main-content
+let headerFours = document.querySelectorAll('h4');
+
+let mainHFours = Object.keys(siteContent['main-content']).filter((key) => key.includes('h4'));
+
+headerFours.forEach((index, i) => headerFours[i].textContent = siteContent['main-content'][`${mainHFours[i]}`]);
+
+// main content p's
+let mainP = document.querySelectorAll('p');
+
+let mainPContent = Object.keys(siteContent['main-content']).filter((key) => key.includes('content'));
+
+mainP.forEach((index, i) => mainP[i].textContent = siteContent['main-content'][`${mainPContent[i]}`]);
 
 
- // 3. Create a place for the element
-const mainNav = document.querySelector('nav');
+/// Contact
+headerFours[5].textContent = siteContent['contact']['contact-h4'];
 
- // 4. Append or prepend the newly created element
-mainNav.prepend(newElement);
+mainP[5].innerHTML = siteContent['contact']['address'].split('Street ').join(`Street <br>`);
 
-const newElement2 = document.createElement('a');
-newElement2.href = "#";
-newElement2.textContent = "New";
-newElement2.style.color ="green";
-mainNav.append(newElement2);
+mainP[6].innerHTML = siteContent['contact']['phone'];
 
-});
+mainP[7].innerHTML = siteContent['contact']['email'];
+
+/// footer
+mainP[8].innerHTML = siteContent['footer']['copyright'];
+  
+
+
+// });
