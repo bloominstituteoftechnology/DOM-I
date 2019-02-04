@@ -1,5 +1,5 @@
 const siteContent = {
-  "nav": {
+  "nav": { 
     "nav-item-1": "Services",
     "nav-item-2": "Product",
     "nav-item-3": "Vision",
