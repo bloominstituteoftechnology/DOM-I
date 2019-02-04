@@ -65,6 +65,8 @@ for(let i = 0; i < h4main.length; i++) {
   }
 }
 
+document.getElementById("cta-img").setAttribute('src', mainImg);
+
 document.getElementById("middle-img").setAttribute('src', mainImg);
 
 const contact = document.querySelector('.contact')
