@@ -56,6 +56,11 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+// let nav =
+// let cta =
+// let main-content =
+// let contact = 
+// let footer =
 
 
 /*  querySelector()
@@ -63,41 +68,34 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 - returns an element
 */
 // const btnQuery = document.querySelector('button');
-const btnQuery = document.querySelector('button');
+// let btnQuery = document.querySelector('button');
 
 
 
-// Multiple Element Selections
-// HTMLCollection 
-const tagNameTest = document.getElementsByTagName('p');
-const classNameTest = document.getElementsByClassName('main-area');
+// // Multiple Element Selections
+// // HTMLCollection 
+// let tagNameTest = document.getElementsByTagName('p');
+// let classNameTest = document.getElementsByClassName('main-area');
 
 
-// Change alt attribute of middle-img
-{/* <img class="middle-img" id="middle-img" src="img/mid-page-accent.jpg" alt="Image of code snippets across the screen"></img> */}
+// // Change alt attribute of middle-img
+// /* <img class="middle-img" id="middle-img" src="img/mid-page-accent.jpg" alt="Image of code snippets across the screen"></img> */
 
-const middle = document.querySelector('.middle-img');
+// let middle = document.querySelector('.middle-img');
 
-middle-img-src = 'https://img/mid-page-accent.jpg';
+// middle-img-src = 'https://img/mid-page-accent.jpg';
 
-middle-img-src.alt = "This is a picture of the middle image";
-
-
-//Change the color of the navigation text to be green.
-// DOM style
-// anything with a - needs to be camel cased.  eg: background-color = backgroundColor
-
-navQuery.forEach( element => {
-  //console.log(element);
-  element.style.color = "green"; 
-});
+// middle-img-src.alt = "This is a picture of the middle image";
 
 
+// //Change the color of the navigation text to be green.
+// // DOM style
+// // anything with a - needs to be camel cased.  eg: background-color = backgroundColor
 
-// Creating a new element, adding content, and adding it to browser
-const newDiv = document.createElement("div");
-newDiv.textContent = "Yo, whatup!";
-servicesHeader.prepend(newDiv);
+// navQuery.forEach( element => {
+//   //console.log(element);
+//   element.style.color = "green"; 
+// });
 
 
-console.log(newDiv);
+
