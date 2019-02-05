@@ -59,3 +59,27 @@ nav[3].textContent = siteContent['nav']['nav-item-4'];
 nav[4].textContent = siteContent['nav']['nav-item-5'];
 nav[5].textContent = siteContent['nav']['nav-item-6'];
 console.log(nav)
+
+// Cta Adds
+let headerOne = document.querySelector('h1');
+headerOne.textContent = siteContent['cta']['h1'];
+
+let ctaButton = document.querySelector('button');
+ctaButton.textContent = siteContent['cta']['button'];
+
+// Main Content Adds
+let headerFour = document.querySelector('h4');
+
+headerFour[0].textContent = siteContent['main-content']['features-h4'];
+headerFour[1].textContent = siteContent['main-content']['about-h4'];
+headerFour[2].textContent = siteContent['main-content']['services-h4'];
+headerFour[3].textContent = siteContent['main-content']['product-h4'];
+headerFour[4].textContent = siteContent['main-content']['vision-h4'];
+
+let para = document.querySelectorAll('p');
+
+para[0].textContent = siteContent['main-content']['features-content'];
+para[0].textContent = siteContent['main-content']['about-content'];
+para[0].textContent = siteContent['main-content']['services-content'];
+para[0].textContent = siteContent['main-content']['product-content'];
+para[0].textContent = siteContent['main-content']['vision-content'];
