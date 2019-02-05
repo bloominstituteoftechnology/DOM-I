@@ -52,6 +52,9 @@ midImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
 // Nav Adds
 let nav = document.querySelectorAll('a');
 
+nav.forEach( element => {
+  element.style.color = 'green';
+} )
 nav[0].textContent = siteContent['nav']['nav-item-1'];
 nav[1].textContent = siteContent['nav']['nav-item-2'];
 nav[2].textContent = siteContent['nav']['nav-item-3'];
@@ -93,3 +96,18 @@ para[7].textContent = siteContent['contact']['email'];
 
 // footer
 para[8].textContent = siteContent['footer']['copyright'];
+
+// Append Prepend
+let newNav = createElemet('a');
+
+newNav.href = '#';
+newNav.textContent = 'Sales';
+newNav.style.color = 'green';
+nav.append(newNav);
+
+let twoNav = createElemet('a');
+
+twoNav.href = '#';
+twoNav.textContent = 'Help';
+twoNav.style.color = 'green';
+nav.prepend(twoNav);
