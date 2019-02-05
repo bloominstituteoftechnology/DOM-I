@@ -39,4 +39,39 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+// logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.src = siteContent["nav"]["img-src"];
+logo.alt = "Great Idea! Company logo.";
+
+
+
+
+//cta
+let cta = document.getElementById("cta-img");
+cta.src = siteContent["cta"]["img-src"];
+cta.alt = "Image of a code snippet.";
+
+//main-content
+let middleImg = document.getElementById("middle-img");
+middleImg.src = siteContent["main-content"]["middle-img-src"];
+middleImg.alt = "Image of code snippets across the screen";
+
+// nav
+const newNav = document.createElement("nav");
+newNav.textContent = "Home";
+nav.prepend(newNav);
+let nav = document.getElementsByTagName("nav, a")
+  console.log(nav);
+  nav.style.color = "green";
+navA = siteContent[nav];
+
+classQuery.forEach(element => {
+  console.log(element);
+  element.style.color = "green";
+});
+
+
+//contact
+
+
+//footer
