@@ -45,11 +45,9 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 // let headerImg = document.getElementById("cta-img");
 // headerImg.setAttribute("src", "img/header-img.png");
 
-let headerImg = document.getElementById("cta-img");
-headerImg.setAttribute("src", siteContent["cta"]["img-src"]);
 
-let button = document.getElementsByTagName("button")[0];
-button.innerHTML = "Get Started";
+
+
 
 //nav
 let services = document.getElementsByTagName('a')[0];
@@ -70,3 +68,21 @@ about.innerHTML = 'About';
 let contact = document.getElementsByTagName('a')[5];
 contact.innerHTML = 'Contact';
 
+// cta
+
+let h1_ = document.getElementsByTagName('h1')[0];
+h1_.innerHTML = "DOM Is Awesome";
+
+let button = document.getElementsByTagName("button")[0];
+button.innerHTML = "Get Started";
+
+let headerImg = document.getElementById("cta-img");
+headerImg.setAttribute("src", siteContent["cta"]["img-src"]);
+
+// main-content
+
+let featuresH4 = document.getElementsByTagName('h4')[0];
+featuresH4.innerHTML = 'Features';
+
+let featuresContent = document.getElementsByTagName('p')[0];
+featuresContent.innerHTML = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
