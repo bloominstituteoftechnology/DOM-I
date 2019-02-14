@@ -129,12 +129,12 @@ email.innerHTML = "sales@greatidea.io";
 let footer = document.getElementsByTagName('p')[8];
 footer.innerHTML = "Copyright Great Idea! 2018"
 
- let aTags = document.querySelectorAll("a");
+ //let aTags = document.querySelectorAll("a");
 // let i;
 // for (i = 0; i < aTags.length; i++) {
 //   aTags[i].style.color = "red";
 // }
 
-aTags.forEach(element => {
-  element.style.color = 'blue';
-});
+// aTags.forEach(element => {
+//   element.style.color = 'blue';
+// });
