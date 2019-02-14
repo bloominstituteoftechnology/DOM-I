@@ -79,6 +79,9 @@ button.innerHTML = "Get Started";
 let headerImg = document.getElementById("cta-img");
 headerImg.setAttribute("src", siteContent["cta"]["img-src"]);
 
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute("src", "img/mid-page-accent.jpg")
+
 // main-content
 
 let featuresH4 = document.getElementsByTagName('h4')[0];
@@ -88,25 +91,46 @@ let featuresContent = document.getElementsByTagName('p')[0];
 featuresContent.innerHTML = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
 
 let about_H4 = document.getElementsByTagName('h4')[1];
-about_H4.innerHTML = "About";
+about_H4.innerHTML = 'About';
 
-let aboutContent_1 = document.getElementsByTagName('h4')[2];
-aboutContent1.innerHTML = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+let aboutContent_1 = document.getElementsByTagName('p')[1];
+aboutContent_1.innerHTML = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
 
 let services_H4 = document.getElementsByTagName('h4')[2];
-servicesH4.innerHTML = "Services";
+services_H4.innerHTML = 'Services';
 
 let servicesContent = document.getElementsByTagName('p')[2];
 servicesContent.innerHTML = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
 
 let product_H4 = document.getElementsByTagName('h4')[3];
-productH4.innerHTML = "Product"
+product_H4.innerHTML = "Product"
 
 let productContent = document.getElementsByTagName('p')[3];
 productContent.innerHTML = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
 
 let vision_H4 = document.getElementsByTagName('h4')[4];
-visionH4.innerHTML = "Vision";
+vision_H4.innerHTML = "Vision";
 
 let visionContent = document.getElementsByTagName('p')[4];
 visionContent.innerHTML = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+// Contact
+
+let contact_H4 = document.getElementsByTagName('h4')[5];
+contact_H4.innerHTML = "Contact";
+let address = document.getElementsByTagName('p')[5];
+address.innerHTML = "123 Way 456 Street Somewhere, USA";
+let phone = document.getElementsByTagName('p')[6];
+phone.innerHTML = "1 (888) 888-8888";
+let email = document.getElementsByTagName('p')[7];
+email.innerHTML = "sales@greatidea.io";
+
+//footer
+let footer = document.getElementsByTagName('p')[8];
+footer.innerHTML = "Copyright Great Idea! 2018"
+
+// let aTags = document.querySelectorAll("a");
+// let i;
+// for (i = 0; i < aTags.length; i++) {
+//   aTags[i].style.color = "red";
+// }
