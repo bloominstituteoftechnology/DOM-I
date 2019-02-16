@@ -51,7 +51,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //nav
 let services = document.getElementsByTagName('a')[0];
-services.innerHTML = siteContent['nav']['nav-item-1'];
+services.innerText = siteContent['nav']['nav-item-1'];
 
 //===================== Both ways below worked==================================
 
@@ -81,10 +81,10 @@ contact.innerText = siteContent['nav']['nav-item-6'];
 // cta
 
 let h1_ = document.getElementsByTagName('h1')[0];
-h1_.innerText = "DOM Is Awesome";
+h1_.innerText = siteContent['cta']['h1'];
 
 let button = document.getElementsByTagName("button")[0];
-button.innerText = "Get Started";
+button.innerText = siteContent['cta']['button'];
 
 let headerImg = document.getElementById("cta-img");
 headerImg.setAttribute("src", siteContent["cta"]["img-src"]);
@@ -95,49 +95,49 @@ middleImg.setAttribute("src", "img/mid-page-accent.jpg")
 // main-content
 
 let featuresH4 = document.getElementsByTagName('h4')[0];
-featuresH4.innerText = 'Features';
+featuresH4.innerText = siteContent['main-content']['features-h4'];
 
 let featuresContent = document.getElementsByTagName('p')[0];
-featuresContent.innerText = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+featuresContent.innerText = siteContent['main-content']['features-content'];
 
 let about_H4 = document.getElementsByTagName('h4')[1];
-about_H4.innerText = 'About';
+about_H4.innerText = siteContent['main-content']['about-h4'];
 
 let aboutContent_1 = document.getElementsByTagName('p')[1];
-aboutContent_1.innerText = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+aboutContent_1.innerText = siteContent['main-content']['about-content'];
 
 let services_H4 = document.getElementsByTagName('h4')[2];
-services_H4.innerText = 'Services';
+services_H4.innerText = siteContent['main-content']['services-h4'];
 
 let servicesContent = document.getElementsByTagName('p')[2];
-servicesContent.innerText = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+servicesContent.innerText = siteContent['main-content']['services-content'];
 
 let product_H4 = document.getElementsByTagName('h4')[3];
-product_H4.innerText = "Product"
+product_H4.innerText = siteContent['main-content']['product-h4'];
 
 let productContent = document.getElementsByTagName('p')[3];
-productContent.innerText = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+productContent.innerText = siteContent['main-content']['product-content'];
 
 let vision_H4 = document.getElementsByTagName('h4')[4];
-vision_H4.innerText = "Vision";
+vision_H4.innerText = siteContent['main-content']['vision-h4'];
 
 let visionContent = document.getElementsByTagName('p')[4];
-visionContent.innerText = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+visionContent.innerText = siteContent['main-content']['vision-content'];
 
 // Contact
 
 let contact_H4 = document.getElementsByTagName('h4')[5];
-contact_H4.innerText = "Contact";
+contact_H4.innerText = siteContent['contact']['contact-h4'];
 let address = document.getElementsByTagName('p')[5];
-address.innerText = "123 Way 456 Street Somewhere, USA";
+address.innerText = siteContent['contact']['address'];
 let phone = document.getElementsByTagName('p')[6];
-phone.innerText = "1 (888) 888-8888";
+phone.innerText = siteContent['contact']['phone'];
 let email = document.getElementsByTagName('p')[7];
-email.innerText = "sales@greatidea.io";
+email.innerText = siteContent['contact']['email'];
 
 //footer
 let footer = document.getElementsByTagName('p')[8];
-footer.innerText = "Copyright Great Idea! 2018"
+footer.innerText = siteContent['footer']['copyright'];
 
  //let aTags = document.querySelectorAll("a");
 // let i;
