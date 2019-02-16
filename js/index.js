@@ -53,28 +53,38 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 let services = document.getElementsByTagName('a')[0];
 services.innerHTML = siteContent['nav']['nav-item-1'];
 
+//===================== Both ways below worked==================================
+
+//let product = document.getElementsByTagName('a')[1];
+//product.innerHTML = 'Product';
+
+//let product = document.getElementsByTagName('a')[1];
+//product.innerText = siteContent['nav']['nav-item-2'];
+
+//===============================================================================
+
 let product = document.getElementsByTagName('a')[1];
-product.innerHTML = 'Product';
+product.innerText = siteContent['nav']['nav-item-2'];
 
 let vision = document.getElementsByTagName('a')[2];
-vision.innerHTML = 'Vision';
+vision.innerText = siteContent['nav']['nav-item-3'];
 
 let features = document.getElementsByTagName('a')[3];
-features.innerHTML = 'Features';
+features.innerText = siteContent['nav']['nav-item-4'];
 
 let about = document.getElementsByTagName('a')[4];
-about.innerHTML = 'About';
+about.innerText = siteContent['nav']['nav-item-5'];
 
 let contact = document.getElementsByTagName('a')[5];
-contact.innerHTML = 'Contact';
+contact.innerText = siteContent['nav']['nav-item-6'];
 
 // cta
 
 let h1_ = document.getElementsByTagName('h1')[0];
-h1_.innerHTML = "DOM Is Awesome";
+h1_.innerText = "DOM Is Awesome";
 
 let button = document.getElementsByTagName("button")[0];
-button.innerHTML = "Get Started";
+button.innerText = "Get Started";
 
 let headerImg = document.getElementById("cta-img");
 headerImg.setAttribute("src", siteContent["cta"]["img-src"]);
@@ -85,49 +95,49 @@ middleImg.setAttribute("src", "img/mid-page-accent.jpg")
 // main-content
 
 let featuresH4 = document.getElementsByTagName('h4')[0];
-featuresH4.innerHTML = 'Features';
+featuresH4.innerText = 'Features';
 
 let featuresContent = document.getElementsByTagName('p')[0];
-featuresContent.innerHTML = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+featuresContent.innerText = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
 
 let about_H4 = document.getElementsByTagName('h4')[1];
-about_H4.innerHTML = 'About';
+about_H4.innerText = 'About';
 
 let aboutContent_1 = document.getElementsByTagName('p')[1];
-aboutContent_1.innerHTML = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+aboutContent_1.innerText = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
 
 let services_H4 = document.getElementsByTagName('h4')[2];
-services_H4.innerHTML = 'Services';
+services_H4.innerText = 'Services';
 
 let servicesContent = document.getElementsByTagName('p')[2];
-servicesContent.innerHTML = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+servicesContent.innerText = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
 
 let product_H4 = document.getElementsByTagName('h4')[3];
-product_H4.innerHTML = "Product"
+product_H4.innerText = "Product"
 
 let productContent = document.getElementsByTagName('p')[3];
-productContent.innerHTML = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+productContent.innerText = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
 
 let vision_H4 = document.getElementsByTagName('h4')[4];
-vision_H4.innerHTML = "Vision";
+vision_H4.innerText = "Vision";
 
 let visionContent = document.getElementsByTagName('p')[4];
-visionContent.innerHTML = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+visionContent.innerText = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
 
 // Contact
 
 let contact_H4 = document.getElementsByTagName('h4')[5];
-contact_H4.innerHTML = "Contact";
+contact_H4.innerText = "Contact";
 let address = document.getElementsByTagName('p')[5];
-address.innerHTML = "123 Way 456 Street Somewhere, USA";
+address.innerText = "123 Way 456 Street Somewhere, USA";
 let phone = document.getElementsByTagName('p')[6];
-phone.innerHTML = "1 (888) 888-8888";
+phone.innerText = "1 (888) 888-8888";
 let email = document.getElementsByTagName('p')[7];
-email.innerHTML = "sales@greatidea.io";
+email.innerText = "sales@greatidea.io";
 
 //footer
 let footer = document.getElementsByTagName('p')[8];
-footer.innerHTML = "Copyright Great Idea! 2018"
+footer.innerText = "Copyright Great Idea! 2018"
 
  //let aTags = document.querySelectorAll("a");
 // let i;
