@@ -7,22 +7,33 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 
 **ONE RULE: You cannot update the HTML or CSS files directly.  You must use JavaScript and the DOM only for your tasks today.**
 
-## Task 1: Set Up The Project With Git
+## Set Up The Project With Git
 
-* [ ] Fork the project into your GitHub user account
-* [ ] Clone the forked project into a directory on your machine
-* [ ] You are now ready to build this project with your preferred IDE
+**Follow these steps to set up and work on your project:**
 
-## Task 2: Create selectors to point your data into elements
+* [ ] Create a forked copy of this project.
+* [ ] Add your project manager as collaborator on Github.
+* [ ] Clone your OWN version of the repository (Not Lambda's by mistake!).
+* [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
+* [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+* [ ] Push commits: git push origin `<firstName-lastName>`.
+
+**Follow these steps for completing your project.**
+
+* [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo). **Please don't merge your own pull request**
+* [ ] Add your project manager as a reviewer on the pull-request
+* [ ] Your project manager will count the project as complete by merging the branch back into master.
+
+## Task 1: Create selectors to point your data into elements
 * [ ] Create selectors by using any of the DOM element's methods
 * [ ] Note that IDs have been used on all images.  Use the IDs to update src path content
 
-## Task 3: Update the HTML with the JSON data
+## Task 2: Update the HTML with the JSON data
 * [ ] Remember, NO direct updating of the HTML source is allowed.
 * [ ] Using your selectors, update the content to match the example file.
 * [ ] Remember to update the src attributes on images
 
-## Task 4: Add new content
+## Task 3: Add new content
 * [ ] Change the color of the navigation text to be green.
 * [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
 * [ ] Check your work by looking at the [original html](original.html) in the browser
