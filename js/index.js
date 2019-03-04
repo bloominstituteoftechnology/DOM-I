@@ -41,6 +41,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+let Nav = document.querySelector("nav");
 let navAnchors= document.querySelectorAll('a');
 let mainHeader = document.querySelector('h1');
 let headerButton = document.querySelector('button');
@@ -50,11 +51,29 @@ let paragraphs = document.querySelectorAll("p")
 let middleImg = document.getElementById("middle-img");
 
 
+
+
 let counter = 1;
 navAnchors.forEach(function(element) {
   element.textContent = siteContent['nav'][`nav-item-${counter}`]
+  element.style.color = "green";
   counter++;
 });
+
+const newAnchor1 = document.createElement("a");
+const newAnchor2 = document.createElement("a");
+
+newAnchor1.textContent = "Hello";
+newAnchor2.textContent = "World";
+
+newAnchor1.style.color = "green";
+newAnchor2.style.color = "green";
+
+
+Nav.appendChild(newAnchor1);
+Nav.appendChild(newAnchor2);
+
+
 
 mainHeader.textContent = siteContent["cta"]["h1"];
 
