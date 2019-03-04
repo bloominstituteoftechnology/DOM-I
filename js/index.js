@@ -55,7 +55,7 @@ navLinks.forEach(function(element,index){
   element.textContent = siteContent.nav[navKeys[index]];
 });
 
-
+// ============================ CTA SECTION =====================
 //  CTA Image
 const ctaImg = document.getElementById('cta-img');
 ctaImg.src = 'img/header-img.png';
@@ -79,3 +79,22 @@ allCtaH1.forEach(function(element, index){
 const ctaBtn = document.querySelector('button');
 ctaBtn.textContent = siteContent.cta.button;
 
+// ============================ MAIN SECTION =====================
+
+
+// H4
+const mainContentTopTextH4 = document.querySelectorAll('.main-content .top-content .text-content h4');
+let listOfH4 = Array.from(mainContentTopTextH4);
+
+listOfH4[0].textContent= siteContent["main-content"]["features-h4"];
+listOfH4[1].textContent = siteContent["main-content"]["about-h4"];
+
+// P 
+const mainContentTopTextP = document.querySelectorAll('.main-content .top-content .text-content p');
+let listOfP = Array.from(mainContentTopTextP);
+
+listOfP[0].textContent= siteContent["main-content"]["features-content"];
+listOfP[1].textContent = siteContent["main-content"]["about-content"];
+
+const middleImg = document.getElementById('middle-img');
+middleImg.src = 'img/mid-page-accent.jpg';
