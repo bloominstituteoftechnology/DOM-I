@@ -57,3 +57,38 @@ for (let i = 0; i < anchor.length; i++) {
   anchor[i].style.color = 'green';
 }
 
+//header 
+const h1 = document.querySelector('h1');
+h1.textContent = siteContent['cta']['h1'];
+
+const button = document.querySelector('button');
+button.textContent = siteContent['cta']['button'];
+
+
+//main content 
+let h4 = document.querySelectorAll(".main-content h4");
+
+let mainContent = ["features", "about", "services", "product", "vision"];
+for (let i = 0; i < mainContent.length; i++) {
+  h4[i].textContent = siteContent["main-content"][`${mainContent[i]}-h4`];
+}
+
+let mainParagraphs = document.querySelectorAll('.main-content p');
+for (let i = 0; i < mainContent.length; i++) {
+  mainParagraphs[i].textContent = siteContent["main-content"][`${mainContent[i]}-content`];
+}
+
+//contact
+const contactHeading = document.querySelector('.contact h4');
+contactHeading.textContent = siteContent['contact']['contact-h4'];
+
+const contactParagraphs = document.querySelectorAll('.contact p');
+
+let contactSections = ['address', 'phone', 'email'];
+for (let i = 0; i < contactParagraphs.length; i++) {
+  contactParagraphs[i].textContent = siteContent['contact'][`${contactSections[i]}`];
+}
+
+//footer
+const footer = document.querySelector('footer p');
+footer.textContent = siteContent['footer']['copyright'];
