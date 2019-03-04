@@ -48,3 +48,12 @@ headerImg.setAttribute("src", siteContent["cta"]["img-src"]);
 let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
+//nav
+const anchor = document.querySelectorAll('a');
+const nav = document.querySelector('nav');
+
+for (let i = 0; i < anchor.length; i++) {
+  anchor[i].textContent = siteContent.nav[`nav-item-${i}`];
+  anchor[i].style.color = 'green';
+}
+
