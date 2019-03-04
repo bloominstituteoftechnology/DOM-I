@@ -37,6 +37,45 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
+
+ //console.log(siteContent.nav["nav-item-1"]);
+
+// ============================ NAV SECTION =====================
+// Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+
+// Update Dom's data Nav
+const navBarTop = document.querySelector('nav');
+const navLinks = document.querySelectorAll('nav a');
+const navKeys = Object.keys(siteContent.nav);
+
+navLinks.forEach(function(element,index){
+  element.textContent = siteContent.nav[navKeys[index]];
+});
+
+
+//  CTA Image
+const ctaImg = document.getElementById('cta-img');
+ctaImg.src = 'img/header-img.png';
+
+// CTA Text
+//create new el - prepend new el to div 
+const divCtaText = document.querySelector('.cta-text');
+divCtaText.prepend(document.createElement('h1'));
+divCtaText.prepend(document.createElement('h1'));
+
+// grab all h1 in the div
+const allCtaH1 = document.querySelectorAll('.cta-text h1');
+
+allCtaH1.forEach(function(element, index){
+  //make aray of strings out of 1 string
+  let h1Content = siteContent.cta.h1.split(' ');
+  element.textContent = h1Content[index];
+});
+
+// CTA Button
+const ctaBtn = document.querySelector('button');
+ctaBtn.textContent = siteContent.cta.button;
+
