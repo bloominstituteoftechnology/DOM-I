@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "<h1>DOM<br> Is<br> Awesome</h1>",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "<p>123 Way 456 Street <br> Somewhere, USA</p>",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -47,54 +47,73 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 
 // Update Dom's data Nav
-const navBarTop = document.querySelector('nav');
-const navLinks = document.querySelectorAll('nav a');
-const navKeys = Object.keys(siteContent.nav);
+const newA = document.createElement('a');
+newA.textContent = 'Hello';
 
-navLinks.forEach(function(element,index){
-  element.textContent = siteContent.nav[navKeys[index]];
-});
+const newA2 = document.createElement('a');
+newA.textContent = 'World';
+
+
+const navBarTop = document.querySelector('nav');
+navBarTop.append(newA);
+navBarTop.append(newA2);
+
+const navKeys = Object.keys(siteContent.nav);
+const navLinks = document.querySelectorAll('nav a');
+
+navLinks[0].textContent = siteContent.nav[navKeys[0]];
+navLinks[1].textContent = siteContent.nav[navKeys[1]];
+navLinks[2].textContent = siteContent.nav[navKeys[2]];
+navLinks[3].textContent = siteContent.nav[navKeys[3]];
+navLinks[4].textContent = siteContent.nav[navKeys[4]];
+navLinks[5].textContent = siteContent.nav[navKeys[5]];
+navLinks.forEach(function(el){
+  el.style.color = 'green';
+})
+
 
 // ============================ CTA SECTION =====================
 //  CTA Image
 const ctaImg = document.getElementById('cta-img');
-ctaImg.src = 'img/header-img.png';
+ctaImg.src = siteContent.cta["img-src"];
 
 // CTA Text
-//create new el - prepend new el to div 
 const divCtaText = document.querySelector('.cta-text');
-divCtaText.prepend(document.createElement('h1'));
-divCtaText.prepend(document.createElement('h1'));
+
 
 // grab all h1 in the div
-const allCtaH1 = document.querySelectorAll('.cta-text h1');
+const ctaH1 = document.querySelector('.cta-text h1');
+ctaH1.innerHTML = siteContent.cta.h1;
 
-allCtaH1.forEach(function(element, index){
-  //make aray of strings out of 1 string
-  let h1Content = siteContent.cta.h1.split(' ');
-  element.textContent = h1Content[index];
-});
 
 // CTA Button
 const ctaBtn = document.querySelector('button');
 ctaBtn.textContent = siteContent.cta.button;
 
-// ============================ MAIN SECTION =====================
+// ============================ MAIN TOP and Bottom SECTION =====================
 
+const mainContent = document.querySelectorAll(".main-content .text-content h4, .main-content .text-content p");
 
-// H4
-const mainContentTopTextH4 = document.querySelectorAll('.main-content .top-content .text-content h4');
-let listOfH4 = Array.from(mainContentTopTextH4);
+const mainContentKeys = Object.keys(siteContent["main-content"]);
+//Grab image from the list
+const middleImage = mainContentKeys.splice(4,1);
+const mainImg = document.getElementById('middle-img');
+mainImg.src = siteContent["main-content"][middleImage];
 
-listOfH4[0].textContent= siteContent["main-content"]["features-h4"];
-listOfH4[1].textContent = siteContent["main-content"]["about-h4"];
+mainContent.forEach(function(element,index){
+  element.textContent = siteContent["main-content"][mainContentKeys[index]];
+});
 
-// P 
-const mainContentTopTextP = document.querySelectorAll('.main-content .top-content .text-content p');
-let listOfP = Array.from(mainContentTopTextP);
+// ============================ CONTACT SECTION AND FOOTER =====================
 
-listOfP[0].textContent= siteContent["main-content"]["features-content"];
-listOfP[1].textContent = siteContent["main-content"]["about-content"];
+const contactH4 = document.querySelector('.contact h4');
+contactH4.textContent = siteContent.contact["contact-h4"];
 
-const middleImg = document.getElementById('middle-img');
-middleImg.src = 'img/mid-page-accent.jpg';
+let contactAllP = document.querySelectorAll('.contact p');
+const contactKeys = Object.keys(siteContent.contact);
+contactAllP[0].textContent = siteContent.contact[contactKeys[0]];
+contactAllP[1].innerHTML = siteContent.contact[contactKeys[1]];
+contactAllP[2].textContent = siteContent.contact[contactKeys[2]];
+
+const footerP = document.querySelector('footer p');
+footerP.textContent = siteContent.footer.copyright;
