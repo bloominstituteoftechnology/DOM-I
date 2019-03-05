@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // ## Project Description
 //  You will be making a timer that:
 //   * Counts up to 10 seconds
@@ -42,3 +43,6 @@ function count(){
 
 count();
 
+=======
+alert('yo');
+>>>>>>> 95261f16bc1d0dfe1a9a5963253c13ac73cc1d4d
