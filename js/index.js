@@ -51,12 +51,13 @@ const newA = document.createElement('a');
 newA.textContent = 'Hello';
 
 const newA2 = document.createElement('a');
-newA.textContent = 'World';
+newA2.textContent = 'World';
 
 
 const navBarTop = document.querySelector('nav');
 navBarTop.append(newA);
 navBarTop.append(newA2);
+console.log(navBarTop)
 
 const navKeys = Object.keys(siteContent.nav);
 const navLinks = document.querySelectorAll('nav a');
