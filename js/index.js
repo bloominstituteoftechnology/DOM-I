@@ -48,12 +48,13 @@ logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
 // nav bar links
 const nav = document.querySelector("nav");
-nav.querySelector("a").textContent = siteContent.nav["nav-item-1"];
-nav.childNodes[3].textContent = siteContent.nav["nav-item-2"];
-nav.childNodes[5].textContent = siteContent.nav["nav-item-3"];
-nav.childNodes[7].textContent = siteContent.nav["nav-item-4"];
-nav.childNodes[9].textContent = siteContent.nav["nav-item-5"];
-nav.childNodes[11].textContent = siteContent.nav["nav-item-6"];
+
+// nav.querySelector("a").textContent = siteContent.nav["nav-item-1"];
+// nav.childNodes[3].textContent = siteContent.nav["nav-item-2"];
+// nav.childNodes[5].textContent = siteContent.nav["nav-item-3"];
+// nav.childNodes[7].textContent = siteContent.nav["nav-item-4"];
+// nav.childNodes[9].textContent = siteContent.nav["nav-item-5"];
+// nav.childNodes[11].textContent = siteContent.nav["nav-item-6"];
 // nav.querySelector('a').textContent = siteContent.nav['nav-item-1'];
 // nav.querySelector('a:nth-of-type(2)').textContent = siteContent.nav["nav-item-2"];
 // nav.querySelector('a:nth-of-type(3)').textContent = siteContent.nav["nav-item-3"];
@@ -108,6 +109,7 @@ btn.textContent = siteContent.cta.button;
 //   siteContent["main-content"]["about-content"];
 
 // selects all h4 as a node list
+
 const h4List = document.querySelectorAll(".text-content h4");
 // grab all the keys under main-content in siteContent object
 const contentKeys = Object.keys(siteContent["main-content"]);
