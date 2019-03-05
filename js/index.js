@@ -55,3 +55,31 @@ const button = document.getElementsByClassName('cta-text')[0].lastElementChild.t
 document.getElementById('cta-img').attributes[1].value = siteContent.cta["img-src"];
 document.querySelectorAll('.text-content')[0].firstElementChild.textContent = siteContent["main-content"]["features-h4"];
 document.querySelectorAll('.text-content')[0].lastElementChild.textContent = siteContent["main-content"]["features-content"];
+
+
+document.querySelectorAll('.text-content')[1].firstElementChild.textContent = siteContent["main-content"]["about-h4"];
+document.querySelectorAll('.text-content')[1].lastElementChild.textContent = siteContent["main-content"]["about-content"];
+
+
+document.querySelectorAll('.text-content')[2].firstElementChild.textContent = siteContent["main-content"]["services-h4"];
+document.querySelectorAll('.text-content')[2].lastElementChild.textContent = siteContent["main-content"]["services-content"];
+
+
+document.querySelectorAll('.text-content')[3].firstElementChild.textContent = siteContent["main-content"]["product-h4"];
+document.querySelectorAll('.text-content')[3].lastElementChild.textContent = siteContent["main-content"]["product-content"];
+
+
+document.querySelectorAll('.text-content')[4].firstElementChild.textContent = siteContent["main-content"]["features-h4"];
+document.querySelectorAll('.text-content')[4].lastElementChild.textContent = siteContent["main-content"]["features-content"];
+
+document.getElementById('middle-img').setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+let contact = document.getElementsByClassName("contact")[0];
+contact.getElementsByTagName("h4")[0].innerHTML = siteContent["contact"]["contact-h4"]
+contact.getElementsByTagName("p")[0].innerHTML = siteContent["contact"]["address"]
+contact.getElementsByTagName("p")[1].innerHTML = siteContent["contact"]["phone"]
+contact.getElementsByTagName("p")[2].innerHTML = siteContent["contact"]["email"]
+
+
+let footer = document.querySelector("footer");
+footer.getElementsByTagName("p")[0].innerHTML = siteContent["footer"]["copyright"];
