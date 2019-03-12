@@ -38,5 +38,65 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+const logo = document.getElementById("logo-img");
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+const imageSrc = document.getElementById("cta-img");
+imageSrc.setAttribute('src', siteContent["cta"]["img-src"]);
+
+const allTags = document.querySelectorAll("nav a");
+allTags.forEach((a,i) => a.textContent = siteContent["nav"][`nav-item-${++i}`]);
+
+// cta
+const ctaText = document.getElementsByClassName("cta-text")[0];
+
+ctaText.getElementsByTagName("h1")[0].innerHTML = siteContent["cta"]["h1"];
+ctaText.getElementsByTagName("button")[0].innerHTML = siteContent["cta"]["button"];
+
+const ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
+
+// main-content
+const textContentList = document.querySelectorAll(".text-content");
+
+textContentList[0].getElementsByTagName("h4")[0].textContent =
+  siteContent["main-content"]["features-h4"];
+textContentList[0].getElementsByTagName("p")[0].textContent =
+  siteContent["main-content"]["features-content"];
+textContentList[1].getElementsByTagName("h4")[0].textContent =
+  siteContent["main-content"]["about-h4"];
+textContentList[1].getElementsByTagName("p")[0].textContent =
+  siteContent["main-content"]["about-content"];
+textContentList[2].getElementsByTagName("h4")[0].textContent =
+  siteContent["main-content"]["services-h4"];
+textContentList[2].getElementsByTagName("p")[0].textContent =
+  siteContent["main-content"]["services-content"];
+textContentList[3].getElementsByTagName("h4")[0].textContent =
+  siteContent["main-content"]["product-h4"];
+textContentList[3].getElementsByTagName("p")[0].textContent =
+  siteContent["main-content"]["product-content"];
+textContentList[4].getElementsByTagName("h4")[0].textContent =
+  siteContent["main-content"]["vision-h4"];
+textContentList[4].getElementsByTagName("p")[0].textContent =
+  siteContent["main-content"]["vision-content"];
+
+// mid-content
+
+const middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+// footer
+
+const contact = document.getElementsByClassName("contact")[0];
+contact.getElementsByTagName("h4")[0].textContent = siteContent["contact"]["contact-h4"];
+contact.getElementsByTagName("p")[0].textContent = siteContent["contact"]["address"];
+contact.getElementsByTagName("p")[1].textContent = siteContent["contact"]["phone"];
+contact.getElementsByTagName("p")[2].textContent = siteContent["contact"]["email"];
+
+const footer = document.querySelector("footer");
+footer.getElementsByTagName("p")[0].textContent = siteContent["footer"]["copyright"];
+
+// stretch
+
+const navLinks = document.querySelectorAll("nav a");
+navLinks.forEach((a) => a.style.color = "green");
