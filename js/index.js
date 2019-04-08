@@ -39,6 +39,7 @@ const siteContent = {
 
 
 
+
 //===========imgs=============
 
 let logo = document.getElementById("logo-img");
@@ -52,13 +53,17 @@ middle.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 //===========nav=============
 
-const nav = document.querySelectorAll('a');
-nav[0].textContent = siteContent.nav["nav-item-1"];
-nav[1].textContent = siteContent.nav["nav-item-2"];
-nav[2].textContent = siteContent.nav["nav-item-3"];
-nav[3].textContent = siteContent.nav["nav-item-4"];
-nav[4].textContent = siteContent.nav["nav-item-5"];
-nav[5].textContent = siteContent.nav["nav-item-6"];
+const navLinks = document.querySelectorAll('header nav a');
+
+// navLinks[0].textContent = siteContent.nav["nav-item-1"];
+// navLinks[1].textContent = siteContent.nav["nav-item-2"];
+// navLinks[2].textContent = siteContent.nav["nav-item-3"];
+// navLinks[3].textContent = siteContent.nav["nav-item-4"];
+// navLinks[4].textContent = siteContent.nav["nav-item-5"];
+// navLinks[5].textContent = siteContent.nav["nav-item-6"];
+navLinks.forEach((link, index) => {
+  link.textContent = siteContent.nav[`nav-item-${index + 1}`];
+});
 
 //===========cta=============
 
@@ -71,13 +76,16 @@ ctaButton.textContent = siteContent.cta["button"];
 //===========main-content=============
 
 const mainContentH4 = document.querySelectorAll(".text-content h4");
+
 mainContentH4[0].textContent = siteContent["main-content"]["features-h4"];
 mainContentH4[1].textContent = siteContent["main-content"]["about-h4"];
 mainContentH4[2].textContent = siteContent["main-content"]["services-h4"];
 mainContentH4[3].textContent = siteContent["main-content"]["product-h4"];
 mainContentH4[4].textContent = siteContent["main-content"]["vision-h4"];
 
+
 const mainContentP = document.querySelectorAll(".text-content p");
+
 mainContentP[0].textContent = siteContent["main-content"]["features-content"];
 mainContentP[1].textContent = siteContent["main-content"]["about-content"];
 mainContentP[2].textContent = siteContent["main-content"]["services-content"];
@@ -90,9 +98,13 @@ const contactH4 = document.querySelector(".contact h4");
 contactH4.textContent = siteContent["contact"]["contact-h4"];
 
 const contactP = document.querySelectorAll(".contact p");
-contactP[0].textContent = siteContent["contact"]["address"];
-contactP[1].textContent = siteContent["contact"]["phone"];
-contactP[2].textContent = siteContent["contact"]["email"];
+
+// contactP[0].textContent = siteContent["contact"]["address"];
+// contactP[1].textContent = siteContent["contact"]["phone"];
+// contactP[2].textContent = siteContent["contact"]["email"];
+contactP.forEach((p, index) => {
+  p.innerText = Object.values(siteContent['contact'])[index + 1];
+});
 
 
 //===========footer=============
@@ -102,18 +114,21 @@ footer.textContent = siteContent["footer"]["copyright"];
 
 //===========Add New Content=============
 
-nav[0].style.color = "green";
-nav[1].style.color = "green";
-nav[2].style.color = "green";
-nav[3].style.color = "green";
-nav[4].style.color = "green";
-nav[5].style.color = "green";
+// navLinks[0].style.color = "green";
+// navLinks[1].style.color = "green";
+// navLinks[2].style.color = "green";
+// navLinks[3].style.color = "green";
+// navLinks[4].style.color = "green";
+// navLinks[5].style.color = "green";
+navLinks.forEach(link => {
+  link.style.color = "green"
+})
 
 
 const newBlogElement = document.createElement("a");
 newBlogElement.href = "#";
 newBlogElement.textContent = "Blog";
-newBlogElement.style.color = "green";
+newBlogElement.style.color = "red";
 
 const mainNav = document.querySelector("nav");
 
@@ -124,6 +139,6 @@ mainNav.appendChild(newBlogElement);
 const newAElement = document.createElement("a");
 newAElement.href = "#";
 newAElement.textContent = "Home";
-newAElement.style.color = "green";
+newAElement.style.color = "blue";
 
 mainNav.prepend(newAElement);
