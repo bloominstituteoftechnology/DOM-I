@@ -38,6 +38,7 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+// IMAGES
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
@@ -45,3 +46,10 @@ let ctaImg = document.querySelector('#cta-img');
 ctaImg.src = siteContent["cta"]["img-src"];
 
 document.querySelector('#middle-img').src = siteContent["main-content"]["middle-img-src"];
+
+// TOOLBAR NAVIGATION
+const tagElements = Array.from(document.getElementsByTagName('a'));
+
+for (let i = 0; i < tagElements.length; i++) {
+  tagElements[i].innerText = siteContent["nav"][`nav-item-${i+1}`];
+}
