@@ -16,7 +16,8 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 * [ ] Clone your OWN version of the repository (Not Lambda's by mistake!).
 * [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
 * [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-* [ ] Push commits: git push origin `<firstName-lastName>`.
+* [ ] Push commits: git push origin `<firstName-lastName>`. 
+OK
 
 **Follow these steps for completing your project.**
 
