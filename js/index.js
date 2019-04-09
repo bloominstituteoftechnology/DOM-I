@@ -53,3 +53,28 @@ const tagElements = Array.from(document.getElementsByTagName('a'));
 for (let i = 0; i < tagElements.length; i++) {
   tagElements[i].innerText = siteContent["nav"][`nav-item-${i+1}`];
 }
+
+// CTA
+document.querySelector('.cta-text').getElementsByTagName('h1')[0].innerText = siteContent["cta"]["h1"];
+document.querySelector('.cta-text').getElementsByTagName('button')[0].innerText = siteContent["cta"]["button"];
+
+// MAIN CONTENT: TOP
+document.querySelector('.main-content').getElementsByTagName('h4')[0].innerText = siteContent["main-content"]["features-h4"];
+document.querySelector('.main-content').getElementsByTagName('p')[0].innerText = siteContent["main-content"]["features-content"];
+
+document.querySelector('.main-content').getElementsByTagName('h4')[1].innerText = siteContent["main-content"]["about-h4"];
+document.querySelector('.main-content').getElementsByTagName('p')[1].innerText = siteContent["main-content"]["about-content"];
+
+// MAIN CONTENT: TOP
+document.querySelector('.top-content').getElementsByTagName('h4')[0].innerText = siteContent["main-content"]["features-h4"];
+document.querySelector('.top-content').getElementsByTagName('p')[0].innerText = siteContent["main-content"]["features-content"];
+
+// MAIN CONTENT: BOTTOM
+document.querySelector('.bottom-content').getElementsByTagName('h4')[0].innerText = siteContent["main-content"]["services-h4"];
+document.querySelector('.bottom-content').getElementsByTagName('p')[0].innerText = siteContent["main-content"]["services-content"];
+
+document.querySelector('.bottom-content').getElementsByTagName('h4')[1].innerText = siteContent["main-content"]["product-h4"];
+document.querySelector('.bottom-content').getElementsByTagName('p')[1].innerText = siteContent["main-content"]["product-content"];
+
+document.querySelector('.bottom-content').getElementsByTagName('h4')[2].innerText = siteContent["main-content"]["vision-h4"];
+document.querySelector('.bottom-content').getElementsByTagName('p')[2].innerText = siteContent["main-content"]["vision-content"];
