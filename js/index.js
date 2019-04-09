@@ -79,3 +79,13 @@ paragraphContent[8].textContent = siteContent["footer"]["copyright"];
 const centerImage = document.querySelector('#middle-img');
 centerImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
+const appendLink = document.createElement("a");
+const prependLink = document.createElement("a");
+
+const navigation = document.querySelector("nav");
+appendLink.href = "#";
+prependLink.href = "#";
+prependLink.textContent = "Linkadoodledoo";
+appendLink.textContent = "LinkasaurusRex";
+navigation.prepend(prependLink);
+navigation.append(appendLink);
