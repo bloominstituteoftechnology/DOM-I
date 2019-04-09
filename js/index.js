@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "123 Way 456 Street \nSomewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -47,4 +47,35 @@ for(let i = 0; i < navElements.length; i++) {
   navElements[i].textContent = Object.values(siteContent.nav)[i];
 }
 // navElements[0].textContent = siteContent.nav["nav-item-1"];
+
+const h1Tag = document.getElementsByTagName("h1");
+h1Tag[0].textContent = siteContent.cta.h1;
+
+const topImage = document.querySelector('#cta-img');
+topImage.setAttribute('src', siteContent["cta"]["img-src"]);
+
+const getStartedButton = document.getElementsByTagName("button");
+getStartedButton[0].textContent = siteContent.cta.button;
+
+const h4Tag = document.getElementsByTagName("h4");
+h4Tag[0].textContent = siteContent["main-content"]["features-h4"];
+h4Tag[1].textContent = siteContent["main-content"]["about-h4"];
+h4Tag[2].textContent = siteContent["main-content"]["services-h4"];
+h4Tag[3].textContent = siteContent["main-content"]["product-h4"];
+h4Tag[4].textContent = siteContent["main-content"]["vision-h4"];
+h4Tag[5].textContent = siteContent["contact"]["contact-h4"];
+
+const paragraphContent = document.getElementsByTagName("p");
+paragraphContent[0].textContent = siteContent["main-content"]["features-content"];
+paragraphContent[1].textContent = siteContent["main-content"]["about-content"];
+paragraphContent[2].textContent = siteContent["main-content"]["services-content"];
+paragraphContent[3].textContent = siteContent["main-content"]["product-content"];
+paragraphContent[4].textContent = siteContent["main-content"]["vision-content"];
+paragraphContent[5].textContent = siteContent["contact"]["address"];
+paragraphContent[6].textContent = siteContent["contact"]["phone"];
+paragraphContent[7].textContent = siteContent["contact"]["email"];
+paragraphContent[8].textContent = siteContent["footer"]["copyright"];
+
+const centerImage = document.querySelector('#middle-img');
+centerImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
