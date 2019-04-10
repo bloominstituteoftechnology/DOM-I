@@ -43,15 +43,15 @@ logoImg.setAttribute('src', siteContent["nav"]["img-src"])
 
 let links = document.querySelectorAll("nav a");
 links[0].textContent = siteContent["nav"]["nav-item-1"];
-links[0].style.color = "green";
+links[0].style.color = "red";
 links[1].textContent = siteContent["nav"]["nav-item-2"];
-links[1].style.color = "green";
+links[1].style.color = "blue";
 links[2].textContent = siteContent["nav"]["nav-item-3"];
-links[2].style.color = "green";
+links[2].style.color = "pink";
 links[3].textContent = siteContent["nav"]["nav-item-4"];
-links[3].style.color = "green";
+links[3].style.color = "orange";
 links[4].textContent = siteContent["nav"]["nav-item-5"];
-links[4].style.color = "green";
+links[4].style.color = "purple";
 links[5].textContent = siteContent["nav"]["nav-item-6"];
 links[5].style.color = "green";
 
