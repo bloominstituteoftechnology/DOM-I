@@ -45,14 +45,20 @@ const siteContent = {
 const header = document.querySelector('header');
  
  
-const navItems = document.querySelectorAll('a')
+  const navItems = document.querySelectorAll('a')
 
 
 // NAV SECTION
+//  const sNav = document.getElementsByTagName('a')[0];
+//  const Pnav = document.getElementsByTagName('a')[1];
+//  const Vnav = document.getElementsByTagName('a')[2];
+//  const Pnav = document.getElementsByTagName('a')[3];
+
+
 navItems.forEach((value, index) => 
 {value.innerText = siteContent["nav"][`nav-item-${index++ }`]})
 
-header.append(navItems)
+header.append(navItems);
 
 
 //IMG SECTION
@@ -74,8 +80,7 @@ const DOA = document.getElementsByTagName('h1')[0];
 DOA.innerText = siteContent['cta']['h1'];
   // DOA.style.display = inline-flex;
 
-// let button = document.getElementsByTagName("button")[0];
-// button.innerText = siteContent['cta']['button'];
+ 
 
 let button = document.querySelector('button');
 button.textContent ='GET STARTED'
@@ -131,14 +136,13 @@ email.innerText = siteContent['contact']['email'];
 
 ///Footer
 const copyright = document.getElementsByTagName('p')[8];
-copyright.innerText =siteContent['footer']['copyright']
+copyright.innerText =siteContent['footer']['copyright'];
 
 
 
  
-
-//  DOA.style.color =red;
- function ohYeah (){
+//BUTTON FUNCTION
+  function ohYeah (){
    const exclaim = document.createElement('p');
    exclaim.textContent = "OH YEAH !!";
    DOA.appendChild(exclaim);
@@ -150,4 +154,16 @@ copyright.innerText =siteContent['footer']['copyright']
 
    button.addEventListener('click', ohYeah)
    
-  
+  //SURPRISE!
+  // surprise = document.createElement('button');
+  // ctaText = document.querySelector('.cta-text');
+  // ctaText.appendChild(surprise);
+  // surprise.textContent ='SURPRISE';
+
+  // function shock(){
+  //   ctaIMG.src ='img/ABE-Copy.jpg';
+
+  // }
+  // surprise.addEventListener('click',shock);
+
+ 
