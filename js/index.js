@@ -41,6 +41,7 @@ const siteContent = {
 // let logo = document.getElementById("logo-img");
 // logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+
 const logo = document.getElementById("logo-img");
 logo.src = 'img/logo.png'
 
