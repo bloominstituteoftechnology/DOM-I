@@ -57,11 +57,24 @@ middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
  nav[4].textContent = siteContent["nav"] ["nav-item-5"]
 
 
- const mainContent = document.querySelectorAll(".text-content");
- mainContent[0].getElementsByTagName('h4')[0].textContent = siteContent["main-content"] ["features-h4"]
-
- mainContent[0].getElementsByTagName('p')[0].textContent = siteContent ["main-content"] ["features-content"]
  
+const topContent = document.querySelectorAll('.top-content .text-content h4');
+topContent[0].textContent = siteContent['main-content']['features-h4'];
+topContent[1].textContent = siteContent['main-content']['about-h4'];
 
+const topContent2 = document.querySelectorAll('.top-content .text-content p');
+topContent2[0].textContent = siteContent ['main-content'] ["features-content"]
+topContent2[1].textContent = siteContent ['main-content'] ["about-content"]
 
+ const bottomContent = document.querySelectorAll('.bottom-content .text-content h4');
+ bottomContent[0].textContent = siteContent['main-content'] ["services-h4"];
+ bottomContent[1].textContent = siteContent ['main-content'] ["product-h4"]
+ bottomContent[2].textContent = siteContent ['main-content'] ["vision-h4"]
+
+const bottomContent2 = document.querySelectorAll('.bottom-content .text-content p'); 
+bottomContent2[0].textContent = siteContent ['main-content'] ["services-content"]
+bottomContent2[1].textContent = siteContent ['main-content'] ["product-content"]
+bottomContent2[2].textContent = siteContent ['main-content'] ["vision-content"]
+
+const footer = document.querySelector()
 
