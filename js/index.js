@@ -56,7 +56,11 @@ middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
  nav[3].textContent = siteContent["nav"] ["nav-item-4"]
  nav[4].textContent = siteContent["nav"] ["nav-item-5"]
 
+ const cta = document.querySelector(".cta-text h1");
+ cta.textContent = siteContent ["cta"] ["h1"]
 
+ const ctaButton = document.querySelector(".cta-text button");
+ ctaButton.textContent = siteContent ["cta"] ["button"]
  
 const topContent = document.querySelectorAll('.top-content .text-content h4');
 topContent[0].textContent = siteContent['main-content']['features-h4'];
@@ -76,5 +80,14 @@ bottomContent2[0].textContent = siteContent ['main-content'] ["services-content"
 bottomContent2[1].textContent = siteContent ['main-content'] ["product-content"]
 bottomContent2[2].textContent = siteContent ['main-content'] ["vision-content"]
 
-const footer = document.querySelector()
+const contact = document.querySelectorAll('.contact h4 ');
+contact[0].textContent = siteContent ['contact'] ["contact-h4"]
+
+const contactP = document.querySelectorAll('.contact p');
+contactP[0].textContent = siteContent ['contact'] ["address" ]
+contactP[1].textContent = siteContent ['contact'] ["phone" ]
+contactP[2].textContent = siteContent ['contact'] ["email" ]
+
+const foot = document.querySelector('footer p');
+foot.textContent = siteContent ['footer']  ["copyright"]
 
