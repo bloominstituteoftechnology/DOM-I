@@ -37,6 +37,54 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+// Update the img src for the logo
+const logo = document.getElementById('logo-img');
+logo.setAttribute('src', siteContent['nav']['img-src']);
+
+// Update navigation items
+const navElement = document.querySelectorAll('header nav a');
+for (let i = 0; i < navElement.length; i++) {
+  navElement[i].textContent = siteContent['nav'][`nav-item-${i+1}`];
+};
+
+// Update CTA items
+const ctaH1 = document.querySelector('.cta .cta-text h1');
+ctaH1.textContent = siteContent['cta']['h1'];
+
+const ctaButton = document.querySelector('.cta .cta-text button');
+ctaButton.textContent = siteContent['cta']['button'];
+
+const ctaImg = document.querySelector('.cta #cta-img');
+ctaImg.setAttribute('src', siteContent['cta']['img-src']);
+
+// Update main content
+const mainTop = document.querySelectorAll('.main-content .top-content .text-content');
+for (let i = 0; i < mainTop.length; i++) {
+  let subject = ['features', 'about'];
+  mainTop[i].querySelector('h4').textContent = siteContent['main-content'][`${subject[i]}-h4`];
+  mainTop[i].querySelector('p').textContent = siteContent['main-content'][`${subject[i]}-content`];
+};
+
+const midImg = document.querySelector('.main-content .middle-img');
+midImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+const mainBot = document.querySelectorAll('.main-content .bottom-content .text-content');
+for (let i = 0; i < mainBot.length; i++) {
+  let subject = ['services', 'product', 'vision'];
+  mainBot[i].querySelector('h4').textContent = siteContent['main-content'][`${subject[i]}-h4`];
+  mainBot[i].querySelector('p').textContent = siteContent['main-content'][`${subject[i]}-content`];
+};
+
+// Update contact
+const contactH4 = document.querySelector('.contact h4');
+contactH4.textContent = siteContent['contact']['contact-h4'];
+
+const contactP = document.querySelectorAll('.contact p');
+for (let i = 0; i < contactP.length; i++) {
+  let subject = ['address', 'phone', 'email'];
+  contactP[i].textContent = siteContent['contact'][`${subject[i]}`];
+}
+
+// Update footer
+const footer = document.querySelector('footer p');
+footer.textContent = siteContent['footer']['copyright'];
