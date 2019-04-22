@@ -47,3 +47,11 @@ headerImg.setAttribute('src', siteContent["cta"]["img-src"])
 
 let middleImg = document.getElementById('middle-img')
 middleImg.setAttribute('src',siteContent['main-content']['middle-img-src'])
+
+//H1 and button
+
+let button = document.getElementsByTagName('button')[0]
+button.innerHTML = "Get Started";
+
+let h1 = document.querySelector('h1')
+h1.innerHTML = "DOM IS AWESOME!";
