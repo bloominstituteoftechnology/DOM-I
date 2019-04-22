@@ -42,11 +42,9 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let headerImg = document.getElementById("cta-img")
-headerImg.setAttribute('src', siteContent["cta"]["img-src"])
+document.getElementById("cta-img").setAttribute('src', siteContent["cta"]["img-src"])
 
-let middleImg = document.getElementById('middle-img')
-middleImg.setAttribute('src',siteContent['main-content']['middle-img-src'])
+document.getElementById('middle-img').setAttribute('src',siteContent['main-content']['middle-img-src'])
 
 //H1 and button
 
@@ -54,4 +52,22 @@ let button = document.getElementsByTagName('button')[0]
 button.innerHTML = "Get Started";
 
 let h1 = document.querySelector('h1')
-h1.innerHTML = "DOM IS AWESOME!";
+h1.innerHTML = 'DOM IS AWESOME!';
+
+// NAV BAR
+
+document.getElementsByTagName('a')[0].innerHTML = 'Services';
+
+document.getElementsByTagName('a')[1].innerHTML = 'Product';
+
+document.getElementsByTagName('a')[2].innerHTML = 'Vision';
+
+document.getElementsByTagName('a')[3].innerHTML = 'Features';
+
+document.getElementsByTagName('a')[4].innerHTML = 'About';
+
+document.getElementsByTagName('a')[5].innerHTML = 'Contact';
+
+//Main Content//
+
+
