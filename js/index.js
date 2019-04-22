@@ -53,8 +53,7 @@ button.innerHTML = "Get Started";
 
 let h1 = document.querySelector('h1')
 h1.innerHTML = 'DOM IS AWESOME!';
-h1.style.flexWrap= 'wrap';
-'wrap'
+
 // NAV BAR
 
 document.getElementsByTagName('a')[0].innerHTML = 'Services';
@@ -96,7 +95,12 @@ document.getElementsByTagName('p')[3].innerHTML = 'Product Eiusmod quis ullamco 
 
 document.getElementsByTagName('p')[4].innerHTML = 'Vision Quis qui nostrud reprehenderit est dolore sint laboris excepteur tempor ipsum velit consectetur incididunt Lorem. Anim quis esse nisi ex magna officia nostrud. Exercitation qui pariatur dolor ipsum cillum ullamco qui est labore consectetur. Voluptate excepteur exercitation consequat nisi mollit ut exercitation cupidatat officia. Officia cupidatat adipisicing labore sint ad commodo.';
 
-document.getElementsByTagName('p')[5].innerHTML = 'Contact Esse dolor aute sit sunt. Incididunt pariatur magna pariatur qui sint Lorem do cupidatat. Commodo minim deserunt do dolor veniam.';
+//Contact
 
+document.getElementsByTagName('p')[5].innerHTML = "123 Way 456 Street Somewhere, USA";
 
+document.getElementsByTagName('p')[6].innerHTML = "1-888-888-8888";
 
+document.getElementsByTagName('p')[7].innerHTML = "Sales@bigtimeballas.gmail.com";
+
+document.getElementsByTagName('p')[8].innerHTML = "Copyright 2019 DM Enterpises";
