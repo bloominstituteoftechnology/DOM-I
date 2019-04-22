@@ -48,11 +48,9 @@ document.getElementById('middle-img').setAttribute('src',siteContent['main-conte
 
 //H1 and button
 
-let button = document.getElementsByTagName('button')[0]
-button.innerHTML = "Get Started";
+document.getElementsByTagName('button')[0].innerHTML = "Get Started";
 
-let h1 = document.querySelector('h1')
-h1.innerHTML = 'DOM IS AWESOME!';
+document.querySelector('h1').innerHTML = 'DOM IS AWESOME!';
 
 // NAV BAR
 
@@ -104,3 +102,11 @@ document.getElementsByTagName('p')[6].innerHTML = "1-888-888-8888";
 document.getElementsByTagName('p')[7].innerHTML = "Sales@bigtimeballas.gmail.com";
 
 document.getElementsByTagName('p')[8].innerHTML = "Copyright 2019 DM Enterpises";
+
+//## Task 3: Add new content
+let newColor = document.querySelectorAll("a");
+newColor.forEach(link => {
+  link.style.color = "green";
+});
+  
+$( "a" ).prepend( "<a>Test</a>" );
