@@ -61,9 +61,11 @@ anchorTags.forEach(e => {
 })
 
 //ADDING NEW ELEMENTS TO NAV
-const nav = document.querySelectorAll('nav');
+const nav = document.querySelector('nav');
 console.log(nav);
-nav.appendChild('<a href="#">NEW</a>');
+const a = document.createElement('a');
+nav.prepend('prepend', a);
+nav.append('append', a);
 
 //CTA
 const ctaHeader = document.querySelector('.cta h1');
