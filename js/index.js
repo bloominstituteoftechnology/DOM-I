@@ -19,6 +19,7 @@ const siteContent = {
     "about-h4":"About",
     "about-content": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "middle-img-src": "img/mid-page-accent.jpg",
+
     "services-h4":"Services",
     "services-content": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "product-h4":"Product",
@@ -40,3 +41,81 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+////////////////////////////////////////////////////////////////////
+//MY CODE
+
+//HEADER NAV
+const anchorTags = document.querySelectorAll('a');
+anchorTags[0].textContent = siteContent['nav']['nav-item-1'];
+anchorTags[1].textContent = siteContent['nav']['nav-item-2'];
+anchorTags[2].textContent = siteContent['nav']['nav-item-3'];
+anchorTags[3].textContent = siteContent['nav']['nav-item-4'];
+anchorTags[4].textContent = siteContent['nav']['nav-item-5'];
+anchorTags[5].textContent = siteContent['nav']['nav-item-6'];
+
+//NAV COLOR GREEN
+anchorTags.forEach(e => {
+  e.style.color = 'green';
+})
+
+//ADDING NEW ELEMENTS TO NAV
+const nav = document.querySelectorAll('nav');
+console.log(nav);
+nav.appendChild('<a href="#">NEW</a>');
+
+//CTA
+const ctaHeader = document.querySelector('.cta h1');
+const ctaButton = document.querySelector('.cta button');
+const ctaImg = document.querySelector('#cta-img');
+
+ctaHeader.textContent = siteContent.cta.h1;
+ctaButton.textContent = siteContent.cta.button;
+ctaImg.setAttribute( 'src', siteContent['cta']['img-src']);
+
+
+//MAIN-CONTENT
+
+//TOP CONTENT
+const topContent = document.querySelectorAll('.top-content div');
+
+topContent[0].children[0].textContent = siteContent['main-content']['features-h4'];
+topContent[0].children[1].textContent = siteContent['main-content']['features-content'];
+
+topContent[1].children[0].textContent = siteContent['main-content']['about-h4'];
+topContent[1].children[1].textContent = siteContent['main-content']['about-content'];
+
+//log result to see DOM elements and children in chain
+//console.log(topContent);
+
+//MIDDLE IMAGE
+const mainContentImg = document.querySelector('#middle-img');
+mainContentImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+
+//BOTTOM CONTENT
+const bottomContent = document.querySelectorAll('.bottom-content div');
+bottomContent[0].children[0].textContent = siteContent['main-content']['services-h4'];
+bottomContent[0].children[1].textContent = siteContent['main-content']['services-content'];
+
+bottomContent[1].children[0].textContent = siteContent['main-content']['product-h4'];
+bottomContent[1].children[1].textContent = siteContent['main-content']['product-content'];
+
+bottomContent[2].children[0].textContent = siteContent['main-content']['vision-h4'];
+bottomContent[2].children[1].textContent = siteContent['main-content']['vision-content'];
+
+
+//CONTACT
+const contactHeader = document.querySelectorAll('.contact h4');
+const contactP = document.querySelectorAll('.contact p');
+contactHeader[0].textContent = siteContent.contact['contact-h4'];
+contactP[0].textContent = siteContent.contact.address;
+contactP[1].textContent = siteContent.contact.phone;
+contactP[2].textContent = siteContent.contact.email;
+
+
+//FOOTER
+const footer = document.querySelector('footer p');
+footer.textContent = siteContent.footer.copyright;
+
