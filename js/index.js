@@ -42,9 +42,16 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-
 ////////////////////////////////////////////////////////////////////
 //MY CODE
+
+
+//ADDING NEW ELEMENTS TO NAV. CLICK BUTTON TO SEE ELEMENTS
+const nav = document.querySelector('nav');
+nav.append(document.createElement('a'));
+nav.prepend(document.createElement('img'));
+
+console.log(nav);
 
 //HEADER NAV
 const anchorTags = document.querySelectorAll('a');
@@ -55,17 +62,14 @@ anchorTags[3].textContent = siteContent['nav']['nav-item-4'];
 anchorTags[4].textContent = siteContent['nav']['nav-item-5'];
 anchorTags[5].textContent = siteContent['nav']['nav-item-6'];
 
-//NAV COLOR GREEN
+
+
+
+//NAV COLORS GREEN
 anchorTags.forEach(e => {
   e.style.color = 'green';
 })
 
-//ADDING NEW ELEMENTS TO NAV
-const nav = document.querySelector('nav');
-console.log(nav);
-const a = document.createElement('a');
-nav.prepend('prepend', a);
-nav.append('append', a);
 
 //CTA
 const ctaHeader = document.querySelector('.cta h1');
@@ -76,6 +80,41 @@ ctaHeader.textContent = siteContent.cta.h1;
 ctaButton.textContent = siteContent.cta.button;
 ctaImg.setAttribute( 'src', siteContent['cta']['img-src']);
 
+
+
+//////////////////////////
+//FUNCTIONALITY
+
+//ADD NAVS
+ctaButton.addEventListener('click', () => {
+  //alert('You are about to prepend logo & append child to nav. Are you sure?');
+  anchorTags[6].textContent = 'appendChild';
+  document.querySelector('nav img').setAttribute('src', siteContent["nav"]["img-src"]);
+});
+
+//REMOVE NAVS
+// logo.addEventListener('click', () => {
+//   anchorTags.forEach(e => {
+//     console.log(nav.removeChild(e));
+//   })
+
+// logo.addEventListener('click', () => {
+//     while(nav.firstChild) {
+//       nav.removeChild(nav.firstChild);
+//     }
+// });
+
+logo.addEventListener('click', () => {
+    console.log(nav.innerHTML = '');
+});
+
+//TOGGLE CLASS
+ctaButton.addEventListener('click', () => {
+  ctaImg.classList.toggle("visible");
+});
+
+
+//////////////////////////////
 
 //MAIN-CONTENT
 
