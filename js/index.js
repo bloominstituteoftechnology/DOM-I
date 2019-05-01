@@ -43,13 +43,25 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // initial commit
 
-const nav = document.querySelector('nav');
-const navList = ['Services', 'Product', 'Vision', 'Features', 'About', 'Contact', logo.png];
-navList.forEach(navigation => {
-  let navItems = document.createElement('a');
-  navItems.textContent = navigation;
-  nav.append(navItems);
-});
+let navList = document.querySelectorAll('nav a')
+for (let i=0; i<navList.length; i++){
+  navList[i].textContent = siteContent['nav'][`nav-item-${i + 1}`];
+  navList[i].style.color = 'green';
+};
+
+// new content added using prepend and append
+const newNavList = document.querySelector('nav');
+const navHome = document.createElement('a');
+const navBlog = document.createElement('a');
+navHome.href = '#';
+navHome.textContent = 'Home';
+navHome.style.color = 'green';
+navBlog.href = '#';
+navBlog.textContent = 'Blog';
+navBlog.style.color = 'green';
+
+newNavList.appendChild(navBlog);
+newNavList.prepend(navHome);
 
 // cta h1
 const cta = document.querySelector('.cta')
