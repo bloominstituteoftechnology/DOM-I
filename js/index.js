@@ -59,7 +59,7 @@ anchorTags[5].textContent = siteContent['nav']['nav-item-6'];
 //NAV COLORS GREEN
 anchorTags.forEach(e => {
   e.style.color = 'green';
-})
+});
 
 
 //CTA
@@ -78,6 +78,7 @@ ctaImg.setAttribute( 'src', siteContent['cta']['img-src']);
 
 //ADDING NEW ELEMENTS TO NAV. CLICK BUTTON TO SEE ELEMENTS
 const nav = document.querySelector('nav');
+
 //1. Creating new elements
 const newImg = document.createElement('img');
 const newNav = document.createElement('a');
@@ -92,7 +93,7 @@ ctaButton.addEventListener('click', () => {
   nav.prepend(newImg);
 });
 
-//REMOVE NAVS
+//REMOVE NAV
 // logo.addEventListener('click', () => {
 //   anchorTags.forEach(e => {
 //     console.log(nav.removeChild(e));

@@ -12,3 +12,27 @@ body {
 .redDigit {
   color: red;
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-start {
+  background-color: aquamarine;
+  width: 100px;
+  margin-top: 20px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btn-stop {
+  background-color: tomato;
+  width: 100px;
+  margin-top: 20px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+}
