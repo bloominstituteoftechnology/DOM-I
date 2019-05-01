@@ -46,13 +46,6 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 //MY CODE
 
 
-//ADDING NEW ELEMENTS TO NAV. CLICK BUTTON TO SEE ELEMENTS
-const nav = document.querySelector('nav');
-nav.append(document.createElement('a'));
-nav.prepend(document.createElement('img'));
-
-console.log(nav);
-
 //HEADER NAV
 const anchorTags = document.querySelectorAll('a');
 anchorTags[0].textContent = siteContent['nav']['nav-item-1'];
@@ -61,8 +54,6 @@ anchorTags[2].textContent = siteContent['nav']['nav-item-3'];
 anchorTags[3].textContent = siteContent['nav']['nav-item-4'];
 anchorTags[4].textContent = siteContent['nav']['nav-item-5'];
 anchorTags[5].textContent = siteContent['nav']['nav-item-6'];
-
-
 
 
 //NAV COLORS GREEN
@@ -85,11 +76,20 @@ ctaImg.setAttribute( 'src', siteContent['cta']['img-src']);
 //////////////////////////
 //FUNCTIONALITY
 
-//ADD NAVS
+//ADDING NEW ELEMENTS TO NAV. CLICK BUTTON TO SEE ELEMENTS
+const nav = document.querySelector('nav');
+//1. Creating new elements
+const newImg = document.createElement('img');
+const newNav = document.createElement('a');
+
+//2. Adding new elements content
+newImg.setAttribute('src', siteContent["nav"]["img-src"]);
+newNav.textContent = 'appendChild';
+
+//3. Adding new elements to the DOM on Click
 ctaButton.addEventListener('click', () => {
-  //alert('You are about to prepend logo & append child to nav. Are you sure?');
-  anchorTags[6].textContent = 'appendChild';
-  document.querySelector('nav img').setAttribute('src', siteContent["nav"]["img-src"]);
+  nav.append(newNav);
+  nav.prepend(newImg);
 });
 
 //REMOVE NAVS
@@ -159,4 +159,6 @@ contactP[2].textContent = siteContent.contact.email;
 //FOOTER
 const footer = document.querySelector('footer p');
 footer.textContent = siteContent.footer.copyright;
+
+
 
