@@ -37,6 +37,35 @@ const siteContent = {
   },
 };
 
+console.log(document);
+
 // Example: Update the img src for the logo
+// Img Selectors
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+let ctaImg = document.getElementById('cta-img');
+ctaImg.setAttribute('src', siteContent['cta']['img-src']);
+
+let mainImg = document.getElementById('middle-img');
+mainImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+//Nav
+let nav = document.querySelectorAll('a');
+console.log(nav);
+
+for (i=0;i<nav.length;i++){
+  nav[i].textContent = siteContent['nav'][`nav-item-${i+1}`];
+}
+
+
+//CTA
+let headline = document.querySelector('h1');
+// console.log(headline);
+headline.textContent = siteContent['cta']['h1'];
+
+let ctaBtn = document.querySelector('button');
+ctaBtn.textContent = siteContent['cta']['button'];
+
+//Main-content
+
