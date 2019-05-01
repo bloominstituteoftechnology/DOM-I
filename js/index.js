@@ -81,3 +81,17 @@ ctaImg.src = siteContent.cta['img-src'];
 // main-content middle-img
 const middleImg = document.querySelector('.middle-img');
 middleImg.src = siteContent['main-content']['middle-img-src'];
+
+// main-content text-content
+const textH4 = Array.from(document.querySelectorAll('.text-content h4'));
+const textP = Array.from(document.querySelectorAll('.text-content p'));
+
+const features = textH4[0];
+const featureP = textP[0];
+features.textContent = siteContent['main-content']['features-h4'];
+featureP.textContent = siteContent['main-content']['features-content'];
+
+const about = textH4[1];
+const aboutContent = textP[1];
+about.textContent = siteContent['main-content']['about-h4'];
+aboutContent.textContent = siteContent['main-content']['about-content'];
