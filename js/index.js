@@ -110,3 +110,12 @@ const vision = textH4[4];
 const visionContent = textP[4];
 vision.textContent = siteContent['main-content']['vision-h4'];
 visionContent.textContent = siteContent['main-content']['vision-content'];
+
+// contact
+const contact = document.querySelectorAll('.contact h4')
+contact[0].textContent = siteContent['contact']['contact-h4']
+
+const contactUs = document.querySelectorAll('.contact p')
+contactUs[0].textContent = siteContent['contact']['address']
+contactUs[1].textContent = siteContent['contact']['phone']
+contactUs[2].textContent = siteContent['contact']['email']
