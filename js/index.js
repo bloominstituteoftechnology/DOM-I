@@ -82,7 +82,7 @@ mainContPara[3].textContent = siteContent['main-content']['product-content'];
 mainContHeader[4].textContent = siteContent['main-content']['vision-h4'];
 mainContPara[4].textContent = siteContent['main-content']['vision-content'];
 
-//Contact
+// Contact
 const contactHeader = document.querySelector('.contact h4');
 const contactPara = document.querySelectorAll('.contact p');
 
@@ -91,6 +91,11 @@ contactHeader.textContent = siteContent['contact']['contact-h4'];
 contactPara[0].textContent = siteContent['contact']['address'];
 contactPara[1].textContent = siteContent['contact']['phone'];
 contactPara[2].textContent = siteContent['contact']['email'];
+
+// Footer
+const footer = document.querySelector('footer')
+
+footer.textContent = siteContent['footer']['copyright'];
 
 
 
