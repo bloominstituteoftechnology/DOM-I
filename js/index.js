@@ -58,6 +58,39 @@ const ctaBtn = document.querySelector('button');
 ctaBtn.textContent = siteContent['cta']['button'];
 
 // Main Content
+// Top Content
+const mainContHeader = document.querySelectorAll('.main-content h4');
+const mainContPara = document.querySelectorAll('.main-content p')
+
+mainContHeader[0].textContent = siteContent['main-content']['features-h4'];
+mainContPara[0].textContent = siteContent['main-content']['features-content'];
+
+mainContHeader[1].textContent = siteContent['main-content']['about-h4'];
+mainContPara[1].textContent = siteContent['main-content']['about-content'];
+
+//Image
+const middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+// Bottom Content
+mainContHeader[2].textContent = siteContent['main-content']['services-h4'];
+mainContPara[2].textContent = siteContent['main-content']['services-content'];
+
+mainContHeader[3].textContent = siteContent['main-content']['product-h4'];
+mainContPara[3].textContent = siteContent['main-content']['product-content'];
+
+mainContHeader[4].textContent = siteContent['main-content']['vision-h4'];
+mainContPara[4].textContent = siteContent['main-content']['vision-content'];
+
+//Contact
+const contactHeader = document.querySelector('.contact h4');
+const contactPara = document.querySelectorAll('.contact p');
+
+contactHeader.textContent = siteContent['contact']['contact-h4'];
+
+contactPara[0].textContent = siteContent['contact']['address'];
+contactPara[1].textContent = siteContent['contact']['phone'];
+contactPara[2].textContent = siteContent['contact']['email'];
 
 
 
