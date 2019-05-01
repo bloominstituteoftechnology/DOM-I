@@ -95,3 +95,18 @@ const about = textH4[1];
 const aboutContent = textP[1];
 about.textContent = siteContent['main-content']['about-h4'];
 aboutContent.textContent = siteContent['main-content']['about-content'];
+
+const services = textH4[2];
+const servicesContent = textP[2];
+services.textContent = siteContent['main-content']['services-h4'];
+servicesContent.textContent = siteContent['main-content']['services-content'];
+
+const product = textH4[3];
+const productContent = textP[3];
+product.textContent = siteContent['main-content']['product-h4'];
+productContent.textContent = siteContent['main-content']['product-content'];
+
+const vision = textH4[4];
+const visionContent = textP[4];
+vision.textContent = siteContent['main-content']['vision-h4'];
+visionContent.textContent = siteContent['main-content']['vision-content'];
