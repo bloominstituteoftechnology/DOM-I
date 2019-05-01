@@ -113,7 +113,6 @@ ctaButton.addEventListener('click', () => {
   ctaImg.classList.toggle("visible");
 });
 
-
 //////////////////////////////
 
 //MAIN-CONTENT
