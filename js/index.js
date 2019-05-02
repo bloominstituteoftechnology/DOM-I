@@ -38,5 +38,45 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+
+// Beginning of my code Images
+
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const headerImg = document.getElementById('cta-img');
+headerImg.setAttribute('src', siteContent['cta']['img-src']);
+
+const contentImg = document.getElementById('middle-img');
+contentImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+
+// Nav Bar
+
+const navBar = document.querySelectorAll('a');
+const headerNav = document.querySelector('header nav');
+const aTagColor = Array.from(document.querySelectorAll('header nav a'));
+
+for (let i = 0; i < navBar.length; i++) {
+  navBar[i].textContent = siteContent.nav[`nav-item-${i + 1}`]; 
+}
+
+const main = document.createElement('a');
+main.href = '#';
+main.textContent = 'Main';
+main.headerNav.prepend(main);
+
+// Header
+
+
+
+
+
+// Main Content
+
+
+//Contact
+
+
+//Footer
+
