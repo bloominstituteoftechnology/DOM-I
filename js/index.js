@@ -65,9 +65,31 @@ about.innerHTML = 'About';
 let contact = document.getElementsByTagName('a')[4];
 contact.innerHTML = 'Contact';
 
+let newNav = document.querySelector('nav');
+let store = document.createElement('a');
+let blog = document.createElement('a');
 
-let nav_color = document.getElementsByClassName('header-na a')
-nav_color.style.color = "green";
+store.href = '#';
+store.textContent = 'Store';
+store.style.color = 'green';
+blog.href = '#';
+blog.textContent = 'Blog';
+blog.style.color = 'green';
+
+newNav.appendChild(blog);
+newNav.prepend(store);
+
+// Tried changing color of nav by updating class syntax.
+
+const nav = document.querySelector('nav');
+const navList = ['Services', 'Product', 'Vision', 'Features', 'About', 'Contact', logo.png];
+navList.forEach(navigation => {
+  let navItems = document.createElement('a');
+  navItems.textContent = navigation;
+  nav.append(navItems);
+});
+
+
 
 // HEADER
 
@@ -76,7 +98,6 @@ h1.innerText = siteContent['cta']['h1'];
 
 let button = document.getElementsByTagName("button")[0];
 button.innerText = siteContent['cta']['button'];
-
 
 // main-content
 
