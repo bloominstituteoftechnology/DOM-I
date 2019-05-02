@@ -52,11 +52,23 @@ mainImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
 //Nav
 let nav = document.querySelectorAll('a');
-console.log(nav);
 
 for (i=0;i<nav.length;i++){
   nav[i].textContent = siteContent['nav'][`nav-item-${i+1}`];
+  nav[i].style.color = 'green';
 }
+
+let nav6 = document.createElement('a');
+nav6.textContent = 'Clients';
+nav6.style.color = 'green';
+let nav7 = document.createElement('a');
+nav7.textContent = 'Subscribe';
+nav7.style.color = 'green';
+// console.log(nav6);
+// console.log(nav7);
+let navBar = document.querySelector('nav');
+navBar.prepend(nav6);
+navBar.append(nav7);
 
 
 //CTA
@@ -67,5 +79,25 @@ headline.textContent = siteContent['cta']['h1'];
 let ctaBtn = document.querySelector('button');
 ctaBtn.textContent = siteContent['cta']['button'];
 
-//Main-content
+//Headers
+let headers = document.querySelectorAll('h4');
+// console.log(headers);
+headers[0].textContent = siteContent['main-content']['features-h4'];
+headers[1].textContent = siteContent['main-content']['about-h4'];
+headers[2].textContent = siteContent['main-content']['product-h4'];
+headers[3].textContent = siteContent['main-content']['services-h4'];
+headers[4].textContent = siteContent['main-content']['vision-h4'];
+headers[5].textContent = siteContent['contact']['contact-h4'];
 
+//Content
+let content = document.querySelectorAll('p');
+// console.log(content);
+content[0].textContent = siteContent['main-content']['features-content'];
+content[1].textContent = siteContent['main-content']['about-content'];
+content[2].textContent = siteContent['main-content']['product-content'];
+content[3].textContent = siteContent['main-content']['services-content'];
+content[4].textContent = siteContent['main-content']['vision-content'];
+content[5].textContent = siteContent['contact']['address'];
+content[6].textContent = siteContent['contact']['phone'];
+content[7].textContent = siteContent['contact']['email'];
+content[8].textContent = siteContent['footer']['copyright'];
