@@ -46,20 +46,26 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 //MY CODE
 
 
-//HEADER NAV
+//HEADER NAVS ADDED
 const anchorTags = document.querySelectorAll('a');
-anchorTags[0].textContent = siteContent['nav']['nav-item-1'];
-anchorTags[1].textContent = siteContent['nav']['nav-item-2'];
-anchorTags[2].textContent = siteContent['nav']['nav-item-3'];
-anchorTags[3].textContent = siteContent['nav']['nav-item-4'];
-anchorTags[4].textContent = siteContent['nav']['nav-item-5'];
-anchorTags[5].textContent = siteContent['nav']['nav-item-6'];
+// anchorTags[0].textContent = siteContent['nav']['nav-item-1'];
+// anchorTags[1].textContent = siteContent['nav']['nav-item-2'];
+// anchorTags[2].textContent = siteContent['nav']['nav-item-3'];
+// anchorTags[3].textContent = siteContent['nav']['nav-item-4'];
+// anchorTags[4].textContent = siteContent['nav']['nav-item-5'];
+// anchorTags[5].textContent = siteContent['nav']['nav-item-6'];
 
+const titles = Object.values(siteContent.nav);
+console.log(titles);
+anchorTags.forEach((e, i) => {
+  e.textContent = titles[i];
+  e.style.color = 'green'; //NAV COLORS GREEN
+});
 
 //NAV COLORS GREEN
-anchorTags.forEach(e => {
-  e.style.color = 'green';
-});
+// anchorTags.forEach(e => {
+//   e.style.color = 'green';
+// })
 
 
 //CTA
@@ -93,7 +99,7 @@ ctaButton.addEventListener('click', () => {
   nav.prepend(newImg);
 });
 
-//REMOVE NAV
+//REMOVE NAVS
 // logo.addEventListener('click', () => {
 //   anchorTags.forEach(e => {
 //     console.log(nav.removeChild(e));
