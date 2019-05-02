@@ -37,10 +37,28 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
+// JS DOM img 
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"]);
+logo.setAttribute('src', siteContent.nav["img-src"]);
 let ctaImg = document.getElementById("cta-img");
-ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+ctaImg.setAttribute('src', siteContent.cta["img-src"]);
 let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+// JS DOM text 
+
+let navWords = document.querySelectorAll('a');
+
+
+let ctaWords = document.querySelector('.cta h1');
+ctaWords.textContent = siteContent.cta['h1'];
+
+let buttonWords = document.querySelector('button');
+buttonWords.textContent = siteContent.cta['button'];
+
+let contactH4Words = document.querySelector('.contact h4');
+contactH4Words.textContent = siteContent.contact['contact-h4'];
+
+
+let footerWords = document.querySelector('footer p');
+footerWords.textContent = siteContent.footer['copyright'];
