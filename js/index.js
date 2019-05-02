@@ -66,10 +66,19 @@ main.href = '#';
 main.textContent = 'Main';
 main.headerNav.prepend(main);
 
+const media = document.createElement('a');
+media.href = '#';
+media.textContent = 'Media';
+headerNav.appendChild(media);
+
+aTagColor.push(main);
+aTagColor.push(media);
+
+for(let i = 0; i < aTagColor.length; i++) {
+  aTagColor[i].style.color = 'green';
+}
+
 // Header
-
-
-
 
 
 // Main Content
