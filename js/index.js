@@ -50,6 +50,8 @@ const nav5 = document.getElementsByTagName("a")[5].innerHTML=`${siteContent.nav[
 const nav6 = document.getElementsByTagName("a")[5].innerHTML=`${siteContent.nav["nav-item-6"]}`;
 
 
+
+
 const newNav = document.getElementsByTagName("nav")[0]
 
 let newA = document.createElement("a")
@@ -81,50 +83,49 @@ const nav8Green = document.getElementsByTagName("a")[7].style.color="green"
 
 
 
-const header= document.getElementsByTagName("h1")[0].innerHTML=`DOM IS AWESOME`;
+const header= document.getElementsByTagName("h1")[0].innerHTML=`${siteContent.cta.h1}`;
 
 
-const button = document.getElementsByTagName("button")[0].innerHTML=`Get Started`;
+const button = document.getElementsByTagName("button")[0].innerHTML=`${siteContent.cta.button}`;
 
 
 const customImg = document.querySelector('#cta-img');
 
 const fi = customImg.setAttribute('src', './../img/header-img.png')
 
-const feat = document.getElementsByTagName("h4")[0].innerHTML=`Features`;
-const featP = document.getElementsByTagName("p")[0].innerHTML=`Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.`;
+const feat = document.getElementsByTagName("h4")[0].innerHTML=`${siteContent["main-content"]["features-h4"]}`;
+const featP = document.getElementsByTagName("p")[0].innerHTML=`${siteContent["main-content"]["features-content"]}`;
 
-const about = document.getElementsByTagName("h4")[1].innerHTML=`about`;
-const aboutP = document.getElementsByTagName("p")[1].innerHTML=`Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.`;
+const about = document.getElementsByTagName("h4")[1].innerHTML=`${siteContent["main-content"]["about-h4"]}`;
+const aboutP = document.getElementsByTagName("p")[1].innerHTML=`${siteContent["main-content"]["about-content"]}`;
 
 
 const middle = document.getElementsByTagName("img")[2]
 middle.src = "./../img/mid-page-accent.jpg"
 
-const services = document.getElementsByTagName("h4")[2].innerHTML=`services`;
-const servicesP = document.getElementsByTagName("p")[2].innerHTML=`Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.`;
+const services = document.getElementsByTagName("h4")[2].innerHTML=`${siteContent["main-content"]["services-h4"]}`;
+const servicesP = document.getElementsByTagName("p")[2].innerHTML=`${siteContent["main-content"]["services-content"]}`;
 
 
 
 
-const product = document.getElementsByTagName("h4")[3].innerHTML=`Product`;
-const productP = document.getElementsByTagName("p")[3].innerHTML=`Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.`;
+const product = document.getElementsByTagName("h4")[3].innerHTML=`${siteContent["main-content"]["product-h4"]}`;
+const productP = document.getElementsByTagName("p")[3].innerHTML=`${siteContent["main-content"]["product-content"]}`;
 
 
 
-const vison = document.getElementsByTagName("h4")[4].innerHTML=`Vison`
-const visonP = document.getElementsByTagName("p")[4].innerHTML=`Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.`;
+const vison = document.getElementsByTagName("h4")[4].innerHTML=`${siteContent["main-content"]["vision-h4"]}`
+const visonP = document.getElementsByTagName("p")[4].innerHTML=`${siteContent["main-content"]["vision-content"]}`;
 
-const footerH = document.getElementsByTagName("h4")[5].innerHTML=`CONTACT`
+const footerH = document.getElementsByTagName("h4")[5].innerHTML=`${siteContent["contact"]["contact-h4"]}`
 
-const address = document.getElementsByTagName("p")[5].innerHTML=`123 Way 456 Street
-Somewhere, USA`
+const address = document.getElementsByTagName("p")[5].innerHTML= `${siteContent["contact"]["address"]}`
 
-const phone = document.getElementsByTagName("p")[6].innerHTML=`1 (888) 888-8888`
+const phone = document.getElementsByTagName("p")[6].innerHTML=`${siteContent["contact"]["phone"]}`
 
-const email = document.getElementsByTagName("p")[7].innerHTML=`sales@greatidea.io`
+const email = document.getElementsByTagName("p")[7].innerHTML=`${siteContent["contact"]["email"]}`
 
-const fotter = document.getElementsByTagName("p")[8].innerHTML=`Copyright Great Idea! 2018`
+const fotter = document.getElementsByTagName("p")[8].innerHTML=`${siteContent["footer"]["copyright"]}`
 
 
 
