@@ -59,8 +59,19 @@ navWords.forEach(words => {
   words.style.color = 'green';  
 })
 
-// navWords.forEach(item => console.log(item));
+let navBar = document.querySelector('nav');
+let newNavA = document.createElement('a');
+let newNavP = document.createElement('a');
+let navContentAppend = document.createTextNode('Example');
+let navContentPrepend = document.createTextNode('Hire Us');
+newNavA.appendChild(navContentAppend);
+navBar.appendChild(newNavA);
 
+newNavP.prepend(navContentPrepend);
+navBar.prepend(newNavP);
+
+
+// navWords.forEach(item => console.log(item));
 // cta DOM
 let ctaWords = document.querySelector('.cta h1');
 ctaWords.textContent = siteContent.cta['h1'];
