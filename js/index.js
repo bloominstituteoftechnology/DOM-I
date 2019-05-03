@@ -82,8 +82,24 @@ const nav8Green = document.getElementsByTagName("a")[7].style.color="green"
 
 
 
+const h1 = siteContent["cta"]["h1"]
 
-const header= document.getElementsByTagName("h1")[0].innerHTML=`${siteContent.cta.h1}`;
+const arr = h1.substring(0,4)
+
+const arr1 = h1.substring(4,6)
+
+const arr2 = h1.substring(6,15)
+
+console.log(arr)
+
+
+
+
+
+
+
+
+const header= document.getElementsByTagName("h1")[0].innerHTML=`${arr} <br /> ${arr1} <br /> ${arr2}`;
 
 
 const button = document.getElementsByTagName("button")[0].innerHTML=`${siteContent.cta.button}`;
@@ -91,7 +107,7 @@ const button = document.getElementsByTagName("button")[0].innerHTML=`${siteConte
 
 const customImg = document.querySelector('#cta-img');
 
-const fi = customImg.setAttribute('src', './../img/header-img.png')
+const fi = customImg.setAttribute('src', siteContent["cta"]["img-src"]);
 
 const feat = document.getElementsByTagName("h4")[0].innerHTML=`${siteContent["main-content"]["features-h4"]}`;
 const featP = document.getElementsByTagName("p")[0].innerHTML=`${siteContent["main-content"]["features-content"]}`;
