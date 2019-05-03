@@ -59,6 +59,7 @@ navWords.forEach(words => {
   words.style.color = 'green';  
 })
 
+// Append and Prepend NavBar new links
 let navBar = document.querySelector('nav');
 let newNavA = document.createElement('a');
 let newNavP = document.createElement('a');
