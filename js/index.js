@@ -40,3 +40,94 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// insert nav links
+let navLinks = document.querySelectorAll("nav a");
+navLinks.forEach((link, i) => {
+  link.textContent = siteContent["nav"][`nav-item-${i+1}`]
+});
+
+// inset code snippet image
+
+let ctaImg = document.getElementById('cta-img');
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+// insert title
+let ctaText = document.querySelector("h1");
+// break string up into array
+let ctaTextArray = siteContent["cta"]["h1"].split(" ");
+// create <br> element
+let lineBreak1 = document.createElement("br");
+let lineBreak2 = document.createElement("br");
+// insert <br> after array element at index 1 and 3
+ctaText.append(ctaTextArray[0]);
+ctaText.append(lineBreak1);
+ctaText.append(ctaTextArray[1]);
+ctaText.append(lineBreak2);
+ctaText.append(ctaTextArray[2]);
+
+// let h1Arr = siteContent['cta']['h1'].split(' '); //apply split method on h1 string to create an array of strings stored in variable h1Arr
+// h1Arr.splice(1, 0, `<br>`); // use splice() on array to insert <br> at 1st index and remove no items
+// h1Arr.splice(3, 0, `<br>`); // use splice() on array to insert <br> at 3rd index and remove no items
+// let newH1Str = h1Arr.join(''); //join() joins the elements of h1Arr into a string newH1Stri
+
+// insert button text
+const buttonText = document.querySelector('button');
+buttonText.textContent = siteContent["cta"]["button"];
+
+//insert main content
+const mainHeaders = document.querySelectorAll('.main-content h4'); 
+const mainPargs = document.querySelectorAll('.main-content p');
+const middleImg = document.getElementById('middle-img');
+
+mainHeaders[0].textContent = siteContent["main-content"]["features-h4"];
+mainPargs[0].textContent = siteContent["main-content"]["features-content"];
+
+mainHeaders[1].textContent = siteContent["main-content"]["about-h4"];
+mainPargs[1].textContent = siteContent["main-content"]["about-content"];
+
+middleImg.src = siteContent["main-content"]["middle-img-src"];
+
+mainHeaders[2].textContent = siteContent["main-content"]["services-h4"];
+mainPargs[2].textContent = siteContent["main-content"]["services-content"];
+
+mainHeaders[3].textContent = siteContent["main-content"]["product-h4"];
+mainPargs[3].textContent = siteContent["main-content"]["product-content"];
+
+
+mainHeaders[4].textContent = siteContent["main-content"]["vision-h4"];
+mainPargs[4].textContent = siteContent["main-content"]["vision-content"];
+
+// insert contact
+
+const contactHeader = document.querySelector('.contact h4');
+contactHeader.textContent = siteContent["contact"]["contact-h4"];
+
+const address = document.querySelectorAll('.contact p');
+
+let addressArr = siteContent["contact"]["address"].split(' '); //apply split method on address string to create an array of strings stored in variable addressArr
+addressArr.splice(3, 0, `<br>`); // use splice() on array to insert <br> at 3rd index and remove no items
+console.log(addressArr);
+let newAddressStr = addressArr.join(' '); //join() joins the elements of addressArr into a string newAddressStri
+
+
+
+address[0].innerHTML = newAddressStr;
+address[1].textContent = siteContent["contact"]["phone"];
+address[2].textContent = siteContent["contact"]["email"];
+
+//insert footer
+
+const footer = document.querySelector('footer p');
+footer.textContent = siteContent["footer"]["copyright"];
+
+
+
+
+
+
+
+
+
+
+
