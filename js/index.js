@@ -107,10 +107,7 @@ const address = document.querySelectorAll('.contact p');
 
 let addressArr = siteContent["contact"]["address"].split(' '); //apply split method on address string to create an array of strings stored in variable addressArr
 addressArr.splice(3, 0, `<br>`); // use splice() on array to insert <br> at 3rd index and remove no items
-console.log(addressArr);
 let newAddressStr = addressArr.join(' '); //join() joins the elements of addressArr into a string newAddressStri
-
-
 
 address[0].innerHTML = newAddressStr;
 address[1].textContent = siteContent["contact"]["phone"];
