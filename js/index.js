@@ -59,28 +59,28 @@ main_title.textContent = siteContent['cta']['h1'];
 
 const codePic = document.querySelector('#cta-img');
 
-codePic.setAttribute('src', 'img/header-img.png');
+codePic.setAttribute('src', siteContent['cta']['img-src']);
 
 const top_button = document.querySelector('button');
 
-top_button.textContent = "Get Started";
+top_button.textContent = siteContent['cta']['button'];
 
 const subTitles = document.querySelectorAll('h4');
 
-subTitles[0].textContent = 'FEATURES';
-subTitles[1].textContent = 'ABOUT';
-subTitles[2].textContent = 'SERVICES';
-subTitles[3].textContent = 'PRODUCT';
-subTitles[4].textContent = 'VISION';
-subTitles[5].textContent = 'CONTACT';
+subTitles[0].textContent = siteContent['main-content']['features-h4'];
+subTitles[1].textContent = siteContent['main-content']['about-h4'];
+subTitles[2].textContent = siteContent['main-content']['services-h4'];
+subTitles[3].textContent = siteContent['main-content']['product-h4']
+subTitles[4].textContent = siteContent['main-content']['vision-h4'];
+
 
 const paragraphs = document.querySelectorAll('.main-content p');
 
-paragraphs[0].textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-paragraphs[1].textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-paragraphs[2].textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-paragraphs[3].textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-paragraphs[4].textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+paragraphs[0].textContent = siteContent['main-content']['features-content'];
+paragraphs[1].textContent = siteContent['main-content']['about-content'];
+paragraphs[2].textContent = siteContent['main-content']['services-content'];
+paragraphs[3].textContent = siteContent['main-content']['product-content'];
+paragraphs[4].textContent = siteContent['main-content']['vis']
 
 const midImage = document.querySelector('#middle-img');
 
@@ -88,19 +88,19 @@ console.log(midImage)
 
 midImage.setAttribute('src', 'img/mid-page-accent.jpg');
 
-const contactTitle = document.querySelector('h4');
+const contactTitle = document.querySelector('.contact h4');
 
-contactTitle.textContent = 'Contact';
+contactTitle.textContent = siteContent['contact']['contact-h4'];
 
 const contactP = document.querySelectorAll('.contact p');
 
-contactP[0].textContent = '123 Way 456 Street Somewhere, USA'
-contactP[1].textContent = '1 (888) 888-8888'
-contactP[2].textContent = 'sales@greatidea.io'
+contactP[0].textContent = siteContent['contact']['address'];
+contactP[1].textContent = siteContent['contact']['phone']
+contactP[2].textContent = siteContent['contact']['email']
 
 const footerP = document.querySelector('footer p');
 
-footerP.textContent = 'Copyright Great Idea! 2018'
+footerP.textContent = siteContent['footer']['copyright'];
 
 //Change Color + Add New Elements
 
@@ -113,6 +113,7 @@ newElement.textContent = 'Community';
 navBar.appendChild(newElement)
 
 const newElement2 = document.createElement('a');
+
 newElement2.textContent = 'Social Media';
 
 navBar.prepend(newElement2);
