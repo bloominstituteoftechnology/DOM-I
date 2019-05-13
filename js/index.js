@@ -39,4 +39,49 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent.nav["img-src"])
+
+let headImage = document.getElementById("cta-img");
+headImage.setAttribute('src', siteContent.cta["img-src"])
+
+let midPage = document.getElementById("middle-img");
+midPage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+const navSetup = document.querySelectorAll('nav a');
+navSetup.forEach(( currentValue, index) => {
+currentValue.textContent = siteContent.nav[`nav-item-${index + 1}`];
+});
+
+let green = document.querySelectorAll("header nav a");
+green.forEach(aGreen => {
+  aGreen.style.color = "green";
+});
+
+const topHeader = document.querySelector('h1');
+topHeader.textContent = siteContent.cta.h1;
+
+const topButton = document.querySelector('button');
+topButton.textContent = siteContent.cta.button;
+const ctaButton = document.querySelector('.cta-text button');
+ctaButton.textContent = siteContent.cta.button;
+
+const featuresHeader = document.querySelector('h4');
+featuresHeader.textContent = siteContent["main-content"]["features-h4"];
+
+const featuresContent = document.querySelector('p');
+featuresContent.textContent = siteContent["main-content"]["features-content"];
+
+const aboutHeader = document.querySelector('h4');
+aboutHeader.textContent = siteContent["main-content"]["about-h4"];
+
+const aboutContent = document.querySelector('p');
+aboutContent.textContent = siteContent["main-content"]["about-content"];
+
+//const serviceHeader = document.querySelector('h4');
+//serviceHeader.textContent = siteContent["main-content"]["service-h4"];
+
+//const serviceContent = document.querySelector('p');
+//serviceContent.textContent = siteContent["main-content"]["service-content"];
+
+const footer = document.querySelector('footer');
+footer.textContent = siteContent.footer.copyright;
