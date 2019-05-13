@@ -44,26 +44,26 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 // Navigation Bar
 // InnerHTML sets or returns the HTML content of an element, specifically <p>.
 // navItems = document.getElementsByTag("a") creates an array that can be manipulated.
-// Gray69 seemed to be in line with earlier projects on this "site."
+// Gray69 seemed to be in line with earlier projects on this "site." Then I had to go and change it to green, lol.
 
 const navItems = document.getElementsByTagName("a");
 navItems[0].innerHTML = siteContent["nav"]["nav-item-1"]
-navItems[0].style.color = "gray69";
+navItems[0].style.color = "green";
 
 navItems[1].innerHTML = siteContent["nav"]["nav-item-2"]
-navItems[1].style.color = "gray69";
+navItems[1].style.color = "green";
 
 navItems[2].innerHTML = siteContent["nav"]["nav-item-3"]
-navItems[2].style.color = "gray69";
+navItems[2].style.color = "green";
 
 navItems[3].innerHTML = siteContent["nav"]["nav-item-4"]
-navItems[3].style.color = "gray69";
+navItems[3].style.color = "green";
 
 navItems[4].innerHTML = siteContent["nav"]["nav-item-5"]
-navItems[4].style.color = "gray69";
+navItems[4].style.color = "green";
 
 navItems[5].innerHTML = siteContent["nav"]["nav-item-6"]
-navItems[5].style.color = "gray69";
+navItems[5].style.color = "green";
 
 // Main header for the site, "DOM IS AWESOME"
 // Able to narrow search to just the h1 since there is only one on the page.
