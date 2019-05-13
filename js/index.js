@@ -40,3 +40,67 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// Navigation Bar
+// InnerHTML sets or returns the HTML content of an element, specifically <p>.
+// navItems = document.getElementsByTag("a") creates an array that can be manipulated.
+// Gray69 seemed to be in line with earlier projects on this "site."
+
+const navItems = document.getElementsByTagName("a");
+navItems[0].innerHTML = siteContent["nav"]["nav-item-1"]
+navItems[0].style.color = "gray69";
+
+navItems[1].innerHTML = siteContent["nav"]["nav-item-2"]
+navItems[1].style.color = "gray69";
+
+navItems[2].innerHTML = siteContent["nav"]["nav-item-3"]
+navItems[2].style.color = "gray69";
+
+navItems[3].innerHTML = siteContent["nav"]["nav-item-4"]
+navItems[3].style.color = "gray69";
+
+navItems[4].innerHTML = siteContent["nav"]["nav-item-5"]
+navItems[4].style.color = "gray69";
+
+navItems[5].innerHTML = siteContent["nav"]["nav-item-6"]
+navItems[5].style.color = "gray69";
+
+// Main header for the site, "DOM IS AWESOME"
+// Able to narrow search to just the h1 since there is only one on the page.
+
+const DocHeading = document.querySelector("h1");
+DocHeading.innerHTML = siteContent["cta"]["h1"]
+
+// Button located under the H1.
+
+const BigBtn = document.querySelector("Button");
+BigBtn.innerHTML = siteContent["cta"]["button"]
+
+// Large image located on the side, next to the H1.
+
+const mainImg = document.getElementById("cta-img");
+mainImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+// Const headings = document.getElementsByTagName is exactly the same as with the navigation bar. It creates an array that can be manipulated to properly show the six H4 tags. 
+// Notice it only grabs the headers, not the text that it goes with. Also take care to notice it going down the "DOM Tree" from siteContent -> main-content -> features-h4.(or about, etc...) This is essential, since it changes from main-content to contact for the sixth iteration.
+
+headings = document.getElementsByTagName("h4")
+headings[0].innerHTML = siteContent["main-content"]["features-h4"]
+headings[1].innerHTML = siteContent["main-content"]["about-h4"]
+headings[2].innerHTML = siteContent["main-content"]["services-h4"]
+headings[3].innerHTML = siteContent["main-content"]["product-h4"]
+headings[4].innerHTML = siteContent["main-content"]["vision-h4"]
+headings[5].innerHTML = siteContent["contact"]["contact-h4"]
+
+// The following section pushes the copy listed above to the webpage. Notice that the second "branch" for the DOM Tree changes three times to reflect changing positions on the site. There are a total of nine paragraphs.
+
+const paragraphContent = document.getElementsByTagName("p")
+paragraphContent[0].innerHTML = siteContent["main-content"]["features-content"]
+paragraphContent[1].innerHTML = siteContent["main-content"]["about-content"]
+paragraphContent[2].innerHTML = siteContent["main-content"]["services-content"]
+paragraphContent[3].innerHTML = siteContent["main-content"]["product-content"]
+paragraphContent[4].innerHTML = siteContent["main-content"]["vision-content"]
+paragraphContent[5].innerHTML = siteContent["contact"]["address"]
+paragraphContent[6].innerHTML = siteContent["contact"]["phone"]
+paragraphContent[7].innerHTML = siteContent["contact"]["email"]
+paragraphContent[8].innerHTML = siteContent["footer"]["copyright"]
