@@ -43,6 +43,30 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
 
+document.getElementById("cta-img").setAttribute("src","https://raw.githubusercontent.com/bipolarbearstrikesback/DOM-I/master/img/header-img.png")
+document.getElementById("logo-img").setAttribute("src","https://raw.githubusercontent.com/bipolarbearstrikesback/DOM-I/master/img/logo.png")
+document.getElementById("middle-img").setAttribute("src","https://raw.githubusercontent.com/bipolarbearstrikesback/DOM-I/master/img/mid-page-accent.jpg")
+
+let ctaText = document.querySelector(".cta-text h1");
+ctaText.textContent = "dom is Awesome";
+document.querySelector(".cta-text button").textContent = siteContent["cta"]["button"];
+const topContent = document.querySelectorAll(".top-content .text-content");
+topContent[0].querySelector('h4').textContent = siteContent["main-content"]["features-h4"];
+topContent[0].querySelector('p').textContent = siteContent["main-content"]["features-content"];
+topContent[1].querySelector('h4').textContent = siteContent["main-content"]["about-h4"]
+topContent[1].querySelector('p').textContent = siteContent["main-content"]["about-content"]
+
+
+//document.querySelector(".main-content features-h4")
+const bottomContent = document.querySelectorAll(".bottom-content .text-content");
+//bottomContent[0]querySelector('h4').textContent = siteContent["main-content"]["services-h4"];
+
+
+
+
+
+
+
 document.getElementById("cta-img").src = "https://raw.githubusercontent.com/bipolarbearstrikesback/DOM-I/master/img/header-img.png";
 document.getElementById("logo-img").src = "https://raw.githubusercontent.com/bipolarbearstrikesback/DOM-I/master/img/logo.png";
 document.getElementById("middle-img").src = "https://raw.githubusercontent.com/bipolarbearstrikesback/DOM-I/master/img/mid-page-accent.jpg";
