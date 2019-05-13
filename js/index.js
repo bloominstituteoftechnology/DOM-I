@@ -52,6 +52,7 @@ navbar[3].textContent = siteContent['nav']['nav-item-4'];
 navbar[4].textContent = siteContent['nav']['nav-item-5'];
 navbar[5].textContent = siteContent['nav']['nav-item-6'];
 
+
 const main_title = document.querySelector('h1');
 
 main_title.textContent = siteContent['cta']['h1'];
@@ -103,18 +104,24 @@ footerP.textContent = 'Copyright Great Idea! 2018'
 
 //Change Color + Add New Elements
 
-const greenNavBar = document.querySelector('nav');
-
-greenNavBar.style.backgroundColor = 'green';
+const navBar = document.querySelector('nav');
 
 const newElement = document.createElement('a');
 
 newElement.textContent = 'Community';
 
-greenNavBar.appendChild(newElement)
+navBar.appendChild(newElement)
 
 const newElement2 = document.createElement('a');
 newElement2.textContent = 'Social Media';
 
-greenNavBar.prepend(newElement2);
+navBar.prepend(newElement2);
+
+const greenNav = document.querySelectorAll('nav a');
+
+// for(i = 0; i < greenNav.length; i++) {
+//   greenNav[i].style.color='green';
+// }
+
+greenNav.forEach((element) => element.style.color = 'green')
 
