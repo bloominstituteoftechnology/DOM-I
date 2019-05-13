@@ -41,18 +41,20 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+///Match Index w/ Original File
+
 const navbar = document.querySelectorAll('nav a')
 
-navbar[0].textContent = 'Services';
-navbar[1].textContent = 'Product';
-navbar[2].textContent = 'Vision';
-navbar[3].textContent = 'Features';
-navbar[4].textContent = 'About';
-navbar[5].textContent = 'Contact';
+navbar[0].textContent = siteContent['nav']['nav-item-1'];
+navbar[1].textContent = siteContent['nav']['nav-item-2'];
+navbar[2].textContent = siteContent['nav']['nav-item-3'];
+navbar[3].textContent = siteContent['nav']['nav-item-4'];
+navbar[4].textContent = siteContent['nav']['nav-item-5'];
+navbar[5].textContent = siteContent['nav']['nav-item-6'];
 
 const main_title = document.querySelector('h1');
 
-main_title.textContent = 'Dom is Awseome';
+main_title.textContent = siteContent['cta']['h1'];
 
 const codePic = document.querySelector('#cta-img');
 
@@ -98,3 +100,21 @@ contactP[2].textContent = 'sales@greatidea.io'
 const footerP = document.querySelector('footer p');
 
 footerP.textContent = 'Copyright Great Idea! 2018'
+
+//Change Color + Add New Elements
+
+const greenNavBar = document.querySelector('nav');
+
+greenNavBar.style.backgroundColor = 'green';
+
+const newElement = document.createElement('a');
+
+newElement.textContent = 'Community';
+
+greenNavBar.appendChild(newElement)
+
+const newElement2 = document.createElement('a');
+newElement2.textContent = 'Social Media';
+
+greenNavBar.prepend(newElement2);
+
