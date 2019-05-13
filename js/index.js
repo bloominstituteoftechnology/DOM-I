@@ -11,7 +11,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM <br> Is <br> Awesome",
+    "h1": "DOM Is Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -45,28 +45,43 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // Navigation Bar
 // InnerHTML sets or returns the HTML content of an element, specifically <p>.
-// navItems = document.querySelectorAll("nav a") creates an array that can be manipulated.
-//navItems.forEach(link => link.style.color = "green") creates a minature for loop that adds the color green property to all of the nav items.
+// navItems = document.getElementsByTag("a") creates an array that can be manipulated.
 // Gray69 seemed to be in line with earlier projects on this "site." Then I had to go and change it to green, lol.
 
-const navItems = document.querySelectorAll("nav a");
-navItems[0].innerHTML = siteContent["nav-item-1"]
+const navItems = document.getElementsByTagName("a");
+navItems[0].innerHTML = siteContent["nav"]["nav-item-1"]
+navItems[0].style.color = "green";
 
-navItems[1].innerHTML = siteContent["nav-item-2"]
+navItems[1].innerHTML = siteContent["nav"]["nav-item-2"]
+navItems[1].style.color = "green";
 
-navItems[2].innerHTML = siteContent["nav-item-3"]
+navItems[2].innerHTML = siteContent["nav"]["nav-item-3"]
+navItems[2].style.color = "green";
 
-navItems[3].innerHTML = siteContent["nav-item-4"]
+navItems[3].innerHTML = siteContent["nav"]["nav-item-4"]
+navItems[3].style.color = "green";
 
-navItems[4].innerHTML = siteContent["nav-item-5"]
+navItems[4].innerHTML = siteContent["nav"]["nav-item-5"]
+navItems[4].style.color = "green";
 
-navItems[5].innerHTML = siteContent["nav-item-6"]
+navItems[5].innerHTML = siteContent["nav"]["nav-item-6"]
+navItems[5].style.color = "green";
 
-navItems.forEach(link => link.style.color = "green")
+// The following shows how to use the prepend and append commands. All creation is handled in the text - doing it in the nav section creates chaos. ASK IF THERE IS AN ALTERNATE SOLUTION!!!
 
-// The following the appendChild() and prepend() for the navigation bar.
-// navItems.appendChild(["nav"]["nav-item-0"])
-// navItems.prepend(["nav"]["nav-item-6"])
+const newNav1 = document.createElement("a");
+newNav1.href = "#";
+newNav1.textContent = "Steps";
+newNav1.style.color = "green";
+
+const newNav2 = document.createElement("a");
+newNav2.href = "#";
+newNav2.textContent = "Walked";
+newNav2.style.color = "green";
+
+const newNav = document.querySelector("nav");
+newNav.append(newNav1);
+newNav.prepend(newNav2);
 
 // Main header for the site, "DOM IS AWESOME"
 // Able to narrow search to just the h1 since there is only one on the page.
@@ -112,15 +127,5 @@ paragraphContent[5].innerHTML = siteContent["contact"]["address"]
 paragraphContent[6].innerHTML = siteContent["contact"]["phone"]
 paragraphContent[7].innerHTML = siteContent["contact"]["email"]
 paragraphContent[8].innerHTML = siteContent["footer"]["copyright"]
-
-// The following is the appends as requested in task 3.
-
-// const = newNavItemsOne = document.createElement('a');
-// const = newNavItemsTwo = document.createElement('a');
-
-// newNavItemsOne.innerText = 'Discover More'
-// newNavItemsTwo.innerText = 'More Services';
-// navItems.append(newNavItemsOne);
-// navItems.prepend(newNavItemsTwo);
 
 // Thoughts on project - I decided to handle this by layer in order to maintain consistency throughout the design. My greatest challenge was in the append and prepend at the end of the project.
