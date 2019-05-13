@@ -40,3 +40,9 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+
+document.getElementById("cta-img").src = "https://raw.githubusercontent.com/bipolarbearstrikesback/DOM-I/master/img/header-img.png";
+document.getElementById("logo-img").src = "https://raw.githubusercontent.com/bipolarbearstrikesback/DOM-I/master/img/logo.png";
+document.getElementById("middle-img").src = "https://raw.githubusercontent.com/bipolarbearstrikesback/DOM-I/master/img/mid-page-accent.jpg";
