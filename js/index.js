@@ -113,7 +113,7 @@ headings[5].innerHTML = siteContent["contact"]["contact-h4"]
 // Ask about how to properly handle this! PROBLEM!!!
 
 const bannerImage = document.getElementById("middle-img");
-bannerImage.setAttribute('src', siteContent["cta"]["img-src"])
+bannerImage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 // The following section pushes the copy listed above to the webpage. Notice that the second "branch" for the DOM Tree changes three times to reflect changing positions on the site. There are a total of nine paragraphs.
 
