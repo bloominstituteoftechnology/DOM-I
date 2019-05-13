@@ -1,11 +1,13 @@
 const siteContent = {
   "nav": {
+    // "nav-item-0": "Added Item - Pre"
     "nav-item-1": "Services",
     "nav-item-2": "Product",
     "nav-item-3": "Vision",
     "nav-item-4": "Features",
     "nav-item-5": "About",
     "nav-item-6": "Contact",
+    // "nav-item-7": "Added Item - Post"
     "img-src": "img/logo.png"
   },
   "cta": {
@@ -64,6 +66,10 @@ navItems[4].style.color = "green";
 
 navItems[5].innerHTML = siteContent["nav"]["nav-item-6"]
 navItems[5].style.color = "green";
+
+// The following the appendChild() and prepend() for the navigation bar.
+// navItems.appendChild(["nav"]["nav-item-0"])
+// navItems.prepend(["nav"]["nav-item-6"])
 
 // Main header for the site, "DOM IS AWESOME"
 // Able to narrow search to just the h1 since there is only one on the page.
