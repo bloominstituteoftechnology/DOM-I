@@ -92,6 +92,11 @@ headings[3].innerHTML = siteContent["main-content"]["product-h4"]
 headings[4].innerHTML = siteContent["main-content"]["vision-h4"]
 headings[5].innerHTML = siteContent["contact"]["contact-h4"]
 
+// The following section is for the final graphic on the page. Notice that it is using ByID instead of ByTagName - this is because it is finding just one item, not a variety of the same class.
+
+const bannerImage = document.getElementById("middle-img");
+bannerImage.setAttribute('src', siteContent["cta"]["img-src"])
+
 // The following section pushes the copy listed above to the webpage. Notice that the second "branch" for the DOM Tree changes three times to reflect changing positions on the site. There are a total of nine paragraphs.
 
 const paragraphContent = document.getElementsByTagName("p")
@@ -104,3 +109,5 @@ paragraphContent[5].innerHTML = siteContent["contact"]["address"]
 paragraphContent[6].innerHTML = siteContent["contact"]["phone"]
 paragraphContent[7].innerHTML = siteContent["contact"]["email"]
 paragraphContent[8].innerHTML = siteContent["footer"]["copyright"]
+
+// Thoughts on project - I decided to handle this by layer in order to maintain consistency throughout the design. My greatest challenge was in the append and prepend at the end of the project.
