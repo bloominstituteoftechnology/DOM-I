@@ -67,7 +67,7 @@ navItems[4].style.color = "green";
 navItems[5].innerHTML = siteContent["nav"]["nav-item-6"]
 navItems[5].style.color = "green";
 
-// The following shows how to use the prepend and append commands. All creation is handled in the text - doing it in the nav section creates chaos. ASK IF THERE IS AN ALTERNATE SOLUTION!!!
+// The following shows how to use the prepend and append commands. All creation is handled in the text - doing it in the nav section creates chaos. ASK IF THERE IS AN ALTERNATE SOLUTION!!! This creates two additional references to the a tag, even with a different name. 
 
 const newNav1 = document.createElement("a");
 newNav1.href = "#";
