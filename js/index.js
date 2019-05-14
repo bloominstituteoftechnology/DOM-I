@@ -65,23 +65,31 @@ topButton.textContent = siteContent.cta.button;
 const ctaButton = document.querySelector('.cta-text button');
 ctaButton.textContent = siteContent.cta.button;
 
-const featuresHeader = document.querySelector('h4');
-featuresHeader.textContent = siteContent["main-content"]["features-h4"];
+let topContentH4 = document.querySelectorAll('.main-content .top-content H4');
+topContentH4[0].textContent = siteContent['main-content']['features-h4']
+topContentH4[1].textContent = siteContent['main-content']['about-h4']
 
-const featuresContent = document.querySelector('p');
-featuresContent.textContent = siteContent["main-content"]["features-content"];
+let topContentP = document.querySelectorAll('.main-content .top-content p');
+topContentP[0].textContent = siteContent['main-content']['features-content']
+topContentP[1].textContent = siteContent['main-content']['about-content']
 
-const aboutHeader = document.querySelector('h4');
-aboutHeader.textContent = siteContent["main-content"]["about-h4"];
+let bottomContentH4 = document.querySelectorAll('.main-content .bottom-content h4');
+bottomContentH4[0].textContent = siteContent['main-content']['services-h4']
+bottomContentH4[1].textContent = siteContent['main-content']['product-h4']
+bottomContentH4[2].textContent = siteContent['main-content']['vision-h4']
 
-const aboutContent = document.querySelector('p');
-aboutContent.textContent = siteContent["main-content"]["about-content"];
+let bottomContentP = document.querySelectorAll('.main-content .bottom-content p');
+bottomContentP[0].textContent = siteContent['main-content']['services-content']
+bottomContentP[1].textContent = siteContent['main-content']['product-content']
+bottomContentP[2].textContent = siteContent['main-content']['vision-content']
 
-//const serviceHeader = document.querySelector('h4');
-//serviceHeader.textContent = siteContent["main-content"]["service-h4"];
+const contactHeader = document.querySelectorAll('.contact h4');
+contactHeader[0].innerText = siteContent.contact['contact-h4'];
 
-//const serviceContent = document.querySelector('p');
-//serviceContent.textContent = siteContent["main-content"]["service-content"];
+const contactContent = document.querySelectorAll('.contact p');
+contactContent[0].textContent = siteContent.contact.address
+contactContent[1].textContent = siteContent.contact.phone
+contactContent[2].textContent = siteContent.contact.email
 
 const footer = document.querySelector('footer');
 footer.textContent = siteContent.footer.copyright;
