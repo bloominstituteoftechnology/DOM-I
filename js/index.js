@@ -59,14 +59,17 @@ topContent[1].querySelector('p').textContent = siteContent["main-content"]["abou
 
 //document.querySelector(".main-content features-h4")
 const bottomContent = document.querySelectorAll(".bottom-content .text-content");
-//bottomContent[0]querySelector('h4').textContent = siteContent["main-content"]["services-h4"];
+bottomContent[0].querySelector('h4').textContent = siteContent["main-content"]["services-h4"];
+bottomContent[0].querySelector('p').textContent = siteContent["main-content"]["services-content"];
+bottomContent[1].querySelector('h4').textContent = siteContent["main-content"]["product-h4"];
+bottomContent[1].querySelector('p').textContent = siteContent["main-content"]["product-content"];
+bottomContent[2].querySelector('h4').textContent = siteContent["main-content"]["vision-h4"];
+bottomContent[2].querySelector('p').textContent = siteContent["main-content"]["vision-content"];
 
 
+const contact = document.querySelector(".contact");
+contact.querySelector("h4").textContent = siteContent["contact"]["contact-h4"];
+contact.querySelectorAll("p")[0].innerHTML = siteContent["contact"]["address"];
+contact.querySelectorAll("p")[1].textContent = siteContent["contact"]["phone"]; 
+contact.querySelectorAll("p")[2].textContent = siteContent["contact"]["email"];
 
-
-
-
-
-document.getElementById("cta-img").src = "https://raw.githubusercontent.com/bipolarbearstrikesback/DOM-I/master/img/header-img.png";
-document.getElementById("logo-img").src = "https://raw.githubusercontent.com/bipolarbearstrikesback/DOM-I/master/img/logo.png";
-document.getElementById("middle-img").src = "https://raw.githubusercontent.com/bipolarbearstrikesback/DOM-I/master/img/mid-page-accent.jpg";
