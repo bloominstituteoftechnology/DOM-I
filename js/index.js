@@ -121,12 +121,20 @@ footer.textContent = siteContent["footer"]["copyright"];
 
 // Add two new items to navigation
 
-const nav = document.getElementsByTagName('nav'); 
+const nav = document.querySelector('nav'); 
 let newNavItem = document.createElement('a'); 
 newNavItem.textContent = 'Home'; 
+newNavItem.style.color = 'green';
+newNavItem.href = '#';
 
-nav.appendChild(newNavItem);
+let newNavItem2 = document.createElement('a');
+newNavItem2.textContent = 'Another Idea';
+newNavItem2.style.color = 'green';
+newNavItem2.href = '#';
 
+
+nav.prepend(newNavItem);
+nav.appendChild(newNavItem2);
 
 
 
