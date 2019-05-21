@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 <br> Street Somewhere, USA",
+    "address" : "123 Way 456 Street <br> Somewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -92,4 +92,3 @@ contactInfo[2].textContent = siteContent.contact.email;
 
 const footer = document.querySelector('footer p')
 footer.textContent = siteContent.footer.copyright;
-// console.log(footer.textContent)
