@@ -33,7 +33,7 @@ const siteContent = {
     "email" : "sales@greatidea.io",
   },
   "footer": {
-    "copyright" : "Copyright Great Idea! 2018"
+    "copyright" : "Copyright Great Idea! 2019"
   },
 };
 
@@ -89,3 +89,7 @@ const contactInfo = document.querySelectorAll('.contact p');
 contactInfo[0].innerHTML = siteContent.contact.address;
 contactInfo[1].textContent = siteContent.contact.phone;
 contactInfo[2].textContent = siteContent.contact.email;
+
+const footer = document.querySelector('footer p')
+footer.textContent = siteContent.footer.copyright;
+// console.log(footer.textContent)
