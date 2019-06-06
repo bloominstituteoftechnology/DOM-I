@@ -91,3 +91,15 @@ contact.children[2].textContent = siteContent['contact']['phone'];
 contact.children[3].textContent = siteContent['contact']['email'];
 
 footer.textContent = siteContent['footer']['copyright'];
+
+let newNavItem1 = document.createElement('a');
+let newNavItem2 = document.createElement('a');
+newNavItem1.textContent = 'Home';
+newNavItem2.textContent = 'Gallery';
+let navBar = document.querySelector('nav');
+
+navBar.prepend(newNavItem1);
+navBar.appendChild(newNavItem2);
+navList = document.querySelectorAll('nav a');
+
+navList.forEach(elm => elm.style.color = 'green');
