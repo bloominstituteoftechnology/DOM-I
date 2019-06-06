@@ -38,8 +38,8 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+let logo = document.getElementById("logo-img"); // select element
+logo.setAttribute('src', siteContent["nav"]["img-src"]) // update the JS content to take from siteContent object
 
 // insert nav links
 let navLinks = document.querySelectorAll("nav a");
@@ -67,19 +67,22 @@ ctaText.append(ctaTextArray[1]);
 ctaText.append(lineBreak2);
 ctaText.append(ctaTextArray[2]);
 
-// let h1Arr = siteContent['cta']['h1'].split(' '); //apply split method on h1 string to create an array of strings stored in variable h1Arr
-// h1Arr.splice(1, 0, `<br>`); // use splice() on array to insert <br> at 1st index and remove no items
-// h1Arr.splice(3, 0, `<br>`); // use splice() on array to insert <br> at 3rd index and remove no items
-// let newH1Str = h1Arr.join(''); //join() joins the elements of h1Arr into a string newH1Stri
 
 // insert button text
 const buttonText = document.querySelector('button');
 buttonText.textContent = siteContent["cta"]["button"];
 
 //insert main content
-const mainHeaders = document.querySelectorAll('.main-content h4'); 
+let mainHeaders = document.querySelectorAll('h4'); 
 const mainPargs = document.querySelectorAll('.main-content p');
 const middleImg = document.getElementById('middle-img');
+
+// // make an array of main-content keys that incliude h4
+// let mainHeadersArray = Array.from(Object.keys(siteContent["main-content"]).filter(key => key.includes("h4")));
+// for(let i=0; i < mainHeaders.length; i++) {
+//   mainHeaders[i].textContent = mainHeadersArray[i];
+// }
+
 
 mainHeaders[0].textContent = siteContent["main-content"]["features-h4"];
 mainPargs[0].textContent = siteContent["main-content"]["features-content"];
