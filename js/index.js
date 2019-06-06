@@ -57,6 +57,14 @@ pageNav[3].textContent = siteContent.nav["nav-item-4"];
 pageNav[4].textContent = siteContent.nav["nav-item-5"];
 pageNav[5].textContent = siteContent.nav["nav-item-6"];
 
+//make nav green
+pageNav[0].style.color = "green"; 
+pageNav[1].style.color = "green";
+pageNav[2].style.color = "green";
+pageNav[3].style.color = "green";
+pageNav[4].style.color = "green";
+pageNav[5].style.color = "green";
+
 //h1
 const ctaText = document.querySelector('.cta-text h1');
 ctaText.textContent = siteContent.cta["h1"];
@@ -95,3 +103,16 @@ contactPara[2].textContent = siteContent["contact"]["email"];
 //Footer
 const footer = document.querySelector("footer p");
 footer.textContent = siteContent["footer"]["copyright"];
+
+//Add 2 new nav
+const index = document.createElement("a");
+index.href = "#";
+index.textContent = "Home";
+const firstNav = document.querySelector("header nav");
+firstNav.prepend(index); 
+
+const signUp = document.createElement("a");
+signUp.href = "#";
+signUp.textContent = "Sign Up";
+const lastNav = document.querySelector("header nav");
+lastNav.append(signUp);
