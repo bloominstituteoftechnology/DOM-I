@@ -50,7 +50,7 @@ logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
 let headerNav = document.querySelectorAll("nav a");
 headerNav.forEach((item, num) => {
-  item.innerText = siteContent.nav[`nav-item-${num + 1}`];
+  item.textContent = siteContent.nav[`nav-item-${num + 1}`];
   item.setAttribute("style", "color: green");
 });
 
@@ -60,7 +60,7 @@ let firstAnchor = document.createElement("a");
 
 firstAnchor.setAttribute("href", "#");
 firstAnchor.setAttribute("style", "color: green");
-firstAnchor.innerText = "Hyrule!";
+firstAnchor.textContent = "Hyrule!";
 
 anchorContainer.prepend(firstAnchor);
 
@@ -68,7 +68,7 @@ let lastAnchor = document.createElement("a");
 
 lastAnchor.setAttribute("href", "#");
 lastAnchor.setAttribute("style", "color: green");
-lastAnchor.innerText = `I <3 Zelda!`;
+lastAnchor.textContent = `I <3 Zelda!`;
 
 anchorContainer.appendChild(lastAnchor);
 
@@ -77,10 +77,10 @@ anchorContainer.appendChild(lastAnchor);
 //CTA
 
 let ctaHeader = document.querySelector(".cta h1");
-ctaHeader.innerText = siteContent.cta.h1;
+ctaHeader.textContent = siteContent.cta.h1;
 
 let ctaButton = document.querySelector(".cta button");
-ctaButton.innerText = siteContent.cta.button;
+ctaButton.textContent = siteContent.cta.button;
 
 let ctaImg = document.querySelector(`#cta-img`);
 ctaImg.setAttribute(`src`, siteContent.cta["img-src"]);
@@ -88,17 +88,17 @@ ctaImg.setAttribute(`src`, siteContent.cta["img-src"]);
 // MAIN CONTENT - TOP CONTENT - H4
 
 let topContentHeader = document.querySelectorAll(".top-content h4");
-topContentHeader[0].innerText = siteContent["main-content"]["features-h4"];
+topContentHeader[0].textContent = siteContent["main-content"]["features-h4"];
 
-topContentHeader[1].innerText = siteContent["main-content"]["about-h4"];
+topContentHeader[1].textContent = siteContent["main-content"]["about-h4"];
 
 // MAIN CONTENT - TOP CONTENT - P
 
 let topContentParagraph = document.querySelectorAll(".top-content p");
-topContentParagraph[0].innerText =
+topContentParagraph[0].textContent =
   siteContent["main-content"]["features-content"];
 
-topContentParagraph[1].innerText = siteContent["main-content"]["about-content"];
+topContentParagraph[1].textContent = siteContent["main-content"]["about-content"];
 
 // MAIN CONTENT - MIDDLE IMAGE
 
@@ -109,39 +109,39 @@ middleImage.setAttribute(`src`, siteContent["main-content"]["middle-img-src"]);
 
 let bottomContentHeader = document.querySelectorAll(".bottom-content h4");
 
-bottomContentHeader[0].innerText = siteContent["main-content"]["services-h4"];
+bottomContentHeader[0].textContent = siteContent["main-content"]["services-h4"];
 
-bottomContentHeader[1].innerText = siteContent["main-content"]["product-h4"];
+bottomContentHeader[1].textContent = siteContent["main-content"]["product-h4"];
 
-bottomContentHeader[2].innerText = siteContent["main-content"]["vision-h4"];
+bottomContentHeader[2].textContent = siteContent["main-content"]["vision-h4"];
 
 // MAIN CONTENT - BOTTOM CONTENT - P
 
 let bottomContentParagraph = document.querySelectorAll(".bottom-content p");
 
-bottomContentParagraph[0].innerText =
+bottomContentParagraph[0].textContent =
   siteContent["main-content"]["services-content"];
 
-bottomContentParagraph[1].innerText =
+bottomContentParagraph[1].textContent =
   siteContent["main-content"]["product-content"];
 
-bottomContentParagraph[2].innerText =
+bottomContentParagraph[2].textContent =
   siteContent["main-content"]["vision-content"];
 
 // CONTACT H4
 
 let contactHeader = document.querySelector(".contact h4");
-contactHeader.innerText = siteContent.contact["contact-h4"];
+contactHeader.textContent = siteContent.contact["contact-h4"];
 
 // CONTACT P
 
 let contactParagraphs = document.querySelectorAll(`.contact p`);
 
-contactParagraphs[0].innerText = siteContent.contact.address;
-contactParagraphs[1].innerText = siteContent.contact.phone;
-contactParagraphs[2].innerText = siteContent.contact.email;
+contactParagraphs[0].textContent = siteContent.contact.address;
+contactParagraphs[1].textContent = siteContent.contact.phone;
+contactParagraphs[2].textContent = siteContent.contact.email;
 
 // FOOTER
 
 let footerParagraph = document.querySelector("footer p");
-footerParagraph.innerText = siteContent.footer.copyright;
+footerParagraph.textContent = siteContent.footer.copyright;
