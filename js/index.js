@@ -46,7 +46,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 let navList = document.querySelectorAll('nav a');
 let ctaText = document.querySelector('.cta-text h1');
 let ctaBtn = document.querySelector('.cta-text button');
-let ctaImg = document.querySelector('cta-img');
+let ctaImg = document.querySelector('#cta-img');
 let topContent = document.querySelector('.top-content');
 let features = topContent.children[0];
 let about = topContent.children[1];
@@ -58,3 +58,36 @@ let vision = bottomContent.children[2];
 let contact = document.querySelector('.contact');
 let footer = document.querySelector('footer p');
 
+
+
+navList[0].textContent = siteContent['nav']['nav-item-1'];
+navList[1].textContent = siteContent['nav']['nav-item-2'];
+navList[2].textContent = siteContent['nav']['nav-item-3'];
+navList[3].textContent = siteContent['nav']['nav-item-4'];
+navList[4].textContent = siteContent['nav']['nav-item-5'];
+navList[5].textContent = siteContent['nav']['nav-item-6'];
+
+ctaText.textContent = siteContent['cta']['h1'];
+ctaBtn.textContent = siteContent['cta']['button'];
+ctaImg.setAttribute('src', siteContent['cta']['img-src']);
+
+features.children[0].textContent = siteContent['main-content']['features-h4'];
+features.children[1].textContent = siteContent['main-content']['features-content'];
+about.children[0].textContent = siteContent['main-content']['about-h4'];
+about.children[1].textContent = siteContent['main-content']['about-content'];
+
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+services.children[0].textContent = siteContent['main-content']['services-h4'];
+services.children[1].textContent = siteContent['main-content']['services-content'];
+product.children[0].textContent = siteContent['main-content']['product-h4'];
+product.children[1].textContent = siteContent['main-content']['product-content'];
+vision.children[0].textContent = siteContent['main-content']['vision-h4'];
+vision.children[1].textContent = siteContent['main-content']['vision-content'];
+
+contact.children[0].textContent = siteContent['contact']['contact-h4'];
+contact.children[1].textContent = siteContent['contact']['address'];
+contact.children[2].textContent = siteContent['contact']['phone'];
+contact.children[3].textContent = siteContent['contact']['email'];
+
+footer.textContent = siteContent['footer']['copyright'];
