@@ -33,7 +33,7 @@ const siteContent = {
     "email" : "sales@greatidea.io",
   },
   "footer": {
-    "copyright" : "Copyright Great Idea! 2018"
+    "copyright" : "Copyright Great Idea! 2019"
   },
 };
 
@@ -63,20 +63,42 @@ const Title = document. querySelector(".cta-text h1");
 
 Title.textContent = "DOM IS AWESOME";
 
-const left1 = document.querySelector (".text-content h4")
+const left1 = document.querySelectorAll (".text-content h4")
 
-left1.textContent = "Features";
+left1[0].textContent = "Features";
+left1[1].textContent = "About";
 
-const left2 = document.querySelector (".text-content p")
+const left2 = document.querySelectorAll (".text-content p")
 
-left2.textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+left2[0].textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+left2[1].textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
-const right1 = document.querySelector ("")
+const middleImg = document.querySelector('.main-content img');
+middleImg.src = siteContent['main-content']['middle-img-src'];
+
+const under = document.querySelectorAll (".bottom-content .text-content h4")
+
+under[0].textContent = "Services";
+under[1].textContent = "Product";
+under[2].textContent = "Vision";
+
+const under2 = document.querySelectorAll (".bottom-content .text-content p")
+
+under2[0].textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+under2[1].textContent = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+under2[2].textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
 
+const contact = document.querySelector (".contact h4")
 
+contact.textContent = "Contact";
 
+const contact2 = document.querySelectorAll (".contact p")
 
-// const top2 = document.querySelector (".text-content p")
-// top1.textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+contact2[0].textContent = "123 Way 456 Street, Somewhere, USA";
+contact2[1].textContent = "1 (888) 888-8888";
+contact2[2].textContent = "sales@greatidea.io";
 
+const footer = document.querySelector('footer p');
+
+ footer.textContent = siteContent.footer.copyright;
