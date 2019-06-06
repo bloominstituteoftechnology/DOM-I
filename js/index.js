@@ -103,3 +103,14 @@ navBar.appendChild(newNavItem2);
 navList = document.querySelectorAll('nav a');
 
 navList.forEach(elm => elm.style.color = 'green');
+
+
+let newImg = document.createElement('img');
+let mainContent = document.querySelector('.main-content');
+newImg.setAttribute('src', 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+newImg.style.width = '100%';
+function toggleImg() {
+  mainContent.prepend(newImg);
+}
+
+ctaBtn.setAttribute('onClick', 'toggleImg()');
