@@ -40,3 +40,43 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const header = document.querySelector('#cta-img');
+
+header.src = siteContent.cta["img-src"];
+
+const Anchors = document.querySelectorAll('a');
+
+Anchors[0].textContent = "Servicces"; 
+Anchors[1].textContent = "Product"; 
+Anchors[2].textContent = "Vision"; 
+Anchors[3].textContent = "Features"; 
+Anchors[4].textContent = "About"; 
+Anchors[5].textContent = "Contact"; 
+
+const button = document.querySelector("button");
+
+button.textContent = "Get Started";
+button.style.color = "black";
+
+const Title = document. querySelector(".cta-text h1");
+
+Title.textContent = "DOM IS AWESOME";
+
+const left1 = document.querySelector (".text-content h4")
+
+left1.textContent = "Features";
+
+const left2 = document.querySelector (".text-content p")
+
+left2.textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+const right1 = document.querySelector ("")
+
+
+
+
+
+// const top2 = document.querySelector (".text-content p")
+// top1.textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
