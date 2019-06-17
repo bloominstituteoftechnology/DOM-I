@@ -40,6 +40,12 @@ const siteContent = {
 // Example: Update the img src for the logo
 
 // Navigation
+const header = document.querySelector('header')
+header.style.position = 'fixed'
+header.style.top = '0'
+header.style.background = '#fff'
+header.style.paddingBottom = '20px'
+
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
@@ -51,14 +57,35 @@ navLinks[3].textContent = siteContent['nav']['nav-item-4'];
 navLinks[4].textContent = siteContent['nav']['nav-item-5'];
 navLinks[5].textContent = siteContent['nav']['nav-item-6'];
 
+navLinks.forEach(color => color.style.color = 'green')
+
+const allNavs = document.querySelector('nav')
+
+const blog = document.createElement('a')
+blog.textContent = "Blog"
+
+const home = document.createElement('a')
+home.textContent = "Home"
+
+allNavs.appendChild(blog)
+allNavs.prepend(home)
+
+blog.style.color = 'green'
+blog.style.cursor = 'pointer'
+home.style.color = 'green'
+home.style.cursor = 'pointer'
 
 
 // CTA
+let cta = document.querySelector('.cta')
+cta.style.marginTop = '112px'
+
 let ctaImage = document.getElementById("cta-img");
 ctaImage.setAttribute('src', siteContent["cta"]["img-src"])
 
 let ctaTitle = document.querySelector('.cta-text > h1')
 ctaTitle.textContent = siteContent['cta']['h1']
+ctaTitle.innerHTML = 'DOM <br> IS <br> AWESOME'
 
 let ctaButton = document.querySelector('.cta-text > button')
 ctaButton.textContent = siteContent['cta']['button']
@@ -92,6 +119,8 @@ let contactPara = document.querySelectorAll('.contact p')
 contactPara[0].textContent = siteContent['contact']['address']
 contactPara[1].textContent = siteContent['contact']['phone']
 contactPara[2].textContent = siteContent['contact']['email']
+
+contactPara[0].innerHTML = '123 Way 456 Street <br> Somewhere, USA'
 
 // footer 
 let footer = document.querySelector('footer')
