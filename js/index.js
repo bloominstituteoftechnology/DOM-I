@@ -38,24 +38,49 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+let logo = document.getElementById('logo-img')
+logo.setAttribute('src', siteContent['nav']['img-src'])
 
-let nav = document.querySelectorAll("a");
-let cta = document.querySelector('.cta');
-let ctaTextH1 = document.querySelector('.cta .cta-text h1');
-let ctaTextButton = document.querySelector('.cta .cta-text button');
-let ctaImage = document.getElementById('cta-img');
-let topContent = document.querySelectorAll('.top-content .text-content');
-let features = topContent[0];
-let about = topContent[1];
-let middleImage = document.getElementById('middle-img');
-let bottomContent = document.querySelectorAll('.bottom-content .text-content');
-let services = bottomContent[0];
-let product = bottomContent[1];
-let vision = bottomContent[2];
-let contact = document.querySelector('.contact');
-let footer = document.querySelector('footer');
+let nav = document.querySelectorAll("a")
+nav[0].innerHTML = siteContent['nav']['nav-item-1']
+nav[1].innerHTML = siteContent['nav']['nav-item-2']
+nav[2].innerHTML = siteContent['nav']['nav-item-3']
+nav[3].innerHTML = siteContent['nav']['nav-item-4']
+nav[4].innerHTML = siteContent['nav']['nav-item-5']
+nav[5].innerHTML = siteContent['nav']['nav-item-6']
 
-ctaImage.src = "img/header-img.png"
-middleImage.src = "img/mid-page-accent.jpg"
+let cta = document.querySelector('.cta')
+
+let ctaTextH1 = document.querySelector('.cta .cta-text h1')
+ctaTextH1.innerHTML = siteContent['cta']['h1']
+
+let ctaTextButton = document.querySelector('.cta .cta-text button')
+ctaTextButton.innerHTML = siteContent['cta']['button']
+
+let ctaImage = document.getElementById('cta-img')
+ctaImage.src = 'img/header-img.png'
+
+let titles = document.querySelectorAll("h4");
+titles[0].innerHTML = siteContent['main-content']['features-h4'];
+titles[1].innerHTML = siteContent['main-content']['about-h4'];
+titles[2].innerHTML = siteContent['main-content']['services-h4'];
+titles[3].innerHTML = siteContent['main-content']['product-h4'];
+titles[4].innerHTML = siteContent['main-content']['vision-h4'];
+
+let middleImage = document.getElementById('middle-img')
+middleImage.src = 'img/mid-page-accent.jpg'
+
+let textContent = document.querySelectorAll('.text-content p');
+textContent[0].innerHTML = siteContent['main-content']['features-content'];
+textContent[1].innerHTML = siteContent['main-content']['about-content'];
+textContent[2].innerHTML = siteContent['main-content']['services-content'];
+textContent[3].innerHTML = siteContent['main-content']['product-content'];
+textContent[4].innerHTML = siteContent['main-content']['vision-content'];
+
+let contactInfo = document.querySelectorAll('.contact p');
+contactInfo[0].innerHTML = siteContent["contact"]['address']
+contactInfo[1].innerHTML = siteContent["contact"]['phone']
+contactInfo[2].innerHTML = siteContent['contact']['email']
+
+let footer = document.querySelector('footer p')
+footer.innerHTML = siteContent['footer']['copyright']
