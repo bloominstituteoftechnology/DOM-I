@@ -6,6 +6,7 @@ const siteContent = {
     "nav-item-4": "Features",
     "nav-item-5": "About",
     "nav-item-6": "Contact",
+    "nav-item-7": "Go Home",
     "img-src": "img/logo.png"
   },
   "cta": {
@@ -47,14 +48,22 @@ ctaImg.setAttribute('src', siteContent['cta']['img-src']);
 let middleImg = document.getElementById('middle-img');
 middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
+let nav = document.getElementsByTagName('nav')[0];
+// create new anchor to append to the nav bar
+let newNavLink = document.createElement('a');
+nav.appendChild(newNavLink);
+
 
 // Update the header children
-let nav = document.getElementsByTagName('a');
-for(let i = 0; i < nav.length; i++) {
-  let navItem = nav.item(i);
+let navLinks = document.getElementsByTagName('a');
+for(let i = 0; i < navLinks.length; i++) {
+  let navItem = navLinks.item(i);
   let innerText = 'nav-item-' + (i + 1);
   navItem.innerText = siteContent['nav'][innerText];
+  navItem.style.color = 'green';
 }
+
+
 
 //****** CTA section
 // HEADER
