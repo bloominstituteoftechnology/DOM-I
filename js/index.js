@@ -38,7 +38,38 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+const logo = document.getElementById("logo-img");
+logo.src = siteContent["nav"]["img-src"];
 
-//Vanesa
+const snippetOne = document.getElementById("cta-img");
+snippetOne.src = siteContent["cta"]["img-src"];
+
+const snippetTwo = document.getElementById("middle-img");
+snippetTwo.src = siteContent ["main-content"] ["middle-img-src"];
+
+//navigation
+
+const navigation = document.querySelectorAll("a")
+navigation [0].textContent = siteContent ["nav"] ["nav-item-1"];
+navigation [1].textContent = siteContent ["nav"] ["nav-item-2"];
+navigation [2].textContent = siteContent ["nav"] ["nav-item-3"];
+navigation [3].textContent = siteContent ["nav"] ["nav-item-4"];
+navigation [4].textContent = siteContent ["nav"] ["nav-item-5"];
+navigation [5].textContent = siteContent ["nav"] ["nav-item-6"];
+
+//Headers
+const thedomH1 = document.querySelectorAll("h1");
+thedomH1[0].textContent = siteContent ["cta"] ["h1"];
+
+// thedomH1.textContent = "The Dom <br> Is <br> Awesome"
+
+document.querySelector(".cta-text").style.whiteSpace = 'pre';
+
+
+const head = document.querySelectorAll('h4');
+head [0].textContent = siteContent ["main-content"] ["features-h4"];
+head [1].textContent = siteContent ["main-content"] ["about-h4"];
+head [2].textContent = siteContent ["main-content"] ["services-h4"];
+head [3].textContent = siteContent ["main-content"] ["product-h4"];
+head [4].textContent = siteContent ["main-content"] ["vision-h4"];
+
