@@ -49,3 +49,5 @@ anchorTag.forEach ((element, text)=> {
 document.querySelector(".cta h1").innerHTML = siteContent.cta.h1
 
 document.querySelector(".cta button").textContent = siteContent.cta.button
+
+document.querySelector(`.cta img`).src=siteContent.cta["img-src"];
