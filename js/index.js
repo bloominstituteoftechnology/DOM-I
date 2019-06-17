@@ -46,3 +46,11 @@ ctaImg.setAttribute('src', siteContent['cta']['img-src']);
 
 let middleImg = document.getElementById('middle-img');
 middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+let nav = document.getElementsByTagName('a');
+
+for(let i = 0; i < nav.length; i++) {
+  let navItem = nav.item(i);
+  let innerText = 'nav-item-' + (i + 1);
+  navItem.innerText = siteContent['nav'][innerText];
+}
