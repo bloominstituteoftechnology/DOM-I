@@ -41,21 +41,34 @@ const siteContent = {
 let logo = document.getElementById('logo-img')
 logo.setAttribute('src', siteContent['nav']['img-src'])
 
-let nav = document.querySelectorAll("a")
-nav[0].innerHTML = siteContent['nav']['nav-item-1']
-nav[1].innerHTML = siteContent['nav']['nav-item-2']
-nav[2].innerHTML = siteContent['nav']['nav-item-3']
-nav[3].innerHTML = siteContent['nav']['nav-item-4']
-nav[4].innerHTML = siteContent['nav']['nav-item-5']
-nav[5].innerHTML = siteContent['nav']['nav-item-6']
+let navHome = document.createElement('a')
+navHome.href = '#'
 
-let cta = document.querySelector('.cta')
+let navSignUp = document.createElement('a')
+navSignUp.href = '#'
 
-let ctaTextH1 = document.querySelector('.cta .cta-text h1')
-ctaTextH1.innerHTML = siteContent['cta']['h1']
+let newNav = document.querySelector('nav')
+newNav.prepend(navHome)
+newNav.append(navSignUp)
 
-let ctaTextButton = document.querySelector('.cta .cta-text button')
-ctaTextButton.innerHTML = siteContent['cta']['button']
+let nav = document.querySelectorAll('a')
+nav[0].innerHTML = 'Home'
+nav[1].innerHTML = siteContent['nav']['nav-item-1']
+nav[2].innerHTML = siteContent['nav']['nav-item-2']
+nav[3].innerHTML = siteContent['nav']['nav-item-3']
+nav[4].innerHTML = siteContent['nav']['nav-item-4']
+nav[5].innerHTML = siteContent['nav']['nav-item-5']
+nav[6].innerHTML = siteContent['nav']['nav-item-6']
+nav[7].innerHTML = 'Sign Up'
+for (let i = 0; i < nav.length; i++) {
+    nav[i].style.color = 'green'
+}
+
+let ctaH1 = document.querySelector('.cta .cta-text h1')
+ctaH1.innerHTML = siteContent['cta']['h1']
+
+let ctaButton = document.querySelector('.cta .cta-text button')
+ctaButton.innerHTML = siteContent['cta']['button']
 
 let ctaImage = document.getElementById('cta-img')
 ctaImage.src = 'img/header-img.png'
