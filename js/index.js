@@ -40,3 +40,70 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const header = document.querySelector('#cta-img');
+
+ header.src = siteContent.cta["img-src"];
+
+ const Anchors = document.querySelectorAll('a');
+
+Anchors[0].textContent = "Servicces"; 
+Anchors[1].textContent = "Product"; 
+Anchors[2].textContent = "Vision"; 
+Anchors[3].textContent = "Features"; 
+Anchors[4].textContent = "About"; 
+Anchors[5].textContent = "Contact"; 
+
+ const button = document.querySelector("button");
+
+ button.textContent = "Get Started";
+button.style.color = "black";
+
+ const Title = document. querySelector(".cta-text h1");
+
+ Title.textContent = "DOM IS AWESOME";
+
+ const left1 = document.querySelectorAll (".text-content h4")
+
+ left1[0].textContent = "Features";
+ left1[1].textContent = "About";
+
+ const left2 = document.querySelectorAll (".text-content p")
+
+ left2[0].textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+ left2[1].textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+ 
+
+ const middleImg = document.querySelector('.main-content img');
+middleImg.src = siteContent['main-content']['middle-img-src'];
+
+
+ const under = document.querySelectorAll (".bottom-content .text-content h4")
+
+
+ under[0].textContent = "Services";
+under[1].textContent = "Product";
+under[2].textContent = "Vision";
+
+
+ const under2 = document.querySelectorAll (".bottom-content .text-content p")
+
+
+ under2[0].textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+under2[1].textContent = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+under2[2].textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+const contact = document.querySelector (".contact h4")
+
+ contact.textContent = "Contact";
+
+ const contact2 = document.querySelectorAll (".contact p")
+
+ contact2[0].textContent = "123 Way 456 Street, Somewhere, USA";
+contact2[1].textContent = "1 (888) 888-8888";
+contact2[2].textContent = "sales@greatidea.io";
+
+ const footer = document.querySelector('footer p');
+
+  footer.textContent = siteContent.footer.copyright;
