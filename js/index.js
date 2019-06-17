@@ -95,3 +95,12 @@ const siteContent = {
     contactP[i].textContent = siteContent["contact"][contactText[i]];
   }
   footer.textContent = siteContent["footer"]["copyright"];
+
+  //stretch Button
+  
+
+
+ctaButton.addEventListener("click", (event) => {
+  ctaButton.classList.toggle("buttonClick");
+  console.log("Yahtzee");
+});
