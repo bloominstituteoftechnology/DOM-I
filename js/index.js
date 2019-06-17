@@ -123,3 +123,4 @@ contactChildren.item(3).innerText = contactContent['email'];
 
 //******** Footer
 let footer = document.getElementsByTagName('footer');
+footer[0].firstElementChild.innerText = siteContent['footer']['copyright'];
