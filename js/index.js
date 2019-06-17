@@ -108,6 +108,18 @@ visionElement.children.item(0).innerText = mainContent['vision-h4'];
 // P
 visionElement.children.item(1).innerText = mainContent['vision-content'];
 
+//******** Contact Section
+let contactContent = siteContent['contact'];
+let contactSection = document.getElementsByClassName('contact');
+let contactChildren = contactSection[0].children;
+// H4
+contactChildren.item(0).innerText = contactContent['contact-h4'];
+// address
+contactChildren.item(1).innerText = contactContent['address'];
+// phone number
+contactChildren.item(2).innerText = contactContent['phone'];
+// email
+contactChildren.item(3).innerText = contactContent['email'];
 
-
-// Contact Section
+//******** Footer
+let footer = document.getElementsByTagName('footer');
