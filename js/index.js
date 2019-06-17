@@ -58,8 +58,9 @@ navigation [4].textContent = siteContent ["nav"] ["nav-item-5"];
 navigation [5].textContent = siteContent ["nav"] ["nav-item-6"];
 
 //Headers
-const thedomH1 = document.querySelectorAll(".cta-text h1");
+const thedomH1 = document.querySelector(".cta-text h1").innerHTML = "<h1>Dom <br> Is <br> Awesome!</h1>"
 thedomH1[0].textContent = siteContent ["cta"] ["h1"];
+//let section = document.querySelector('p').innerHTML = "<h1>Hello!</h1>"
 // // thedomH1.textContent = "The Dom <br> Is <br> Awesome" ?
 // document.querySelector(".cta-text").style.whiteSpace = 'pre';  ?
 
@@ -85,7 +86,5 @@ paragraphs [7].textContent = siteContent ["contact"] ["email"];
 paragraphs [8].textContent = siteContent ["footer"] ["copyright"];
 
 //getstarted button
-cont buttonOne = document.querySelect('button');
-buttonOne.textContent = siteContent ["cta"] ["button"];
-
-
+const buttonOne = document.querySelector("button");
+buttonOne.textContent = siteContent ["cta"] ["button"]
