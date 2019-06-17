@@ -51,3 +51,5 @@ document.querySelector(".cta h1").innerHTML = siteContent.cta.h1
 document.querySelector(".cta button").textContent = siteContent.cta.button
 
 document.querySelector(`.cta img`).src=siteContent.cta["img-src"];
+
+document.querySelector("top-content h4").textContent = siteContent.main-content["features-h4"]
