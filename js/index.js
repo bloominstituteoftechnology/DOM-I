@@ -82,10 +82,8 @@ let textContentElements = document.querySelectorAll('.text-content'),
            aboutElement = textContentElements[1],
         servicesElement = textContentElements[2],
          productElement = textContentElements[3],
-          visionElement = textContentElements[4];
-
-let mainContent = siteContent['main-content'];
-// let topContent = document.getElementsByClassName('top-content');
+          visionElement = textContentElements[4]
+            mainContent = siteContent['main-content'];
 
 //******** Features Content
 // H4
