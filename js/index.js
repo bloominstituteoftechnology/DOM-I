@@ -57,5 +57,20 @@ for(let i = 0; i < nav.length; i++) {
 }
 
 // Update CTA section
+// HEADER
 let header = document.getElementsByTagName('h1')[0];
-header.innerHTML = 'DOM<br> Is</br> Awesome'
+let headerText = siteContent['cta']['h1'];
+headerText = headerText.split(' ').join('<br>');
+header.innerHTML = headerText;
+// BUTTON
+let getStartedButton = document.getElementsByTagName('button')[0];
+getStartedButton.innerText = siteContent['cta']['button'];
+
+// Main content
+let mainContent = document.getElementsByClassName('main-content');
+
+
+// Bottom Content
+let bottomContent = document.getElementsByClassName('botton-content');
+
+// Contact Section
