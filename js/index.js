@@ -38,5 +38,43 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+//let logo = document.getElementById("logo-img");
+//logo.setAttribute('src', siteContent["nav"]["img-src"])
+//const nav = document.querySelector('nav');
+//var nav = document.createElement("nav-items");
+  //       var heading_text = document.createTextNode("DOM Is Awesome");
+    //     heading.appendChild(heading_text);
+      //   document.body.appendChild(heading);
+      
+        //const mainheader = document.querySelector('.cta h1');
+        
+      
+  //nav.style.backgroundColor = "green";
+//const navbar = document.querySelector('nav');
+//nav.textContent('.nav-item-7', Portfolio);
+let link = document.body.getElementsByTagName("a")[0];
+console.log(link.href);
+const multipleSelections = document.querySelectorAll('a');
+console.log(multipleSelections[0]);
+const multipleSelections = document.querySelectorAll('a');
+console.log(multipleSelections[1]);
+const multipleSelections = document.querySelectorAll('a');
+console.log(multipleSelections[2]);
+const multipleSelections = document.querySelectorAll('a');
+console.log(multipleSelections[3]);
+const multipleSelections = document.querySelectorAll('a');
+console.log(multipleSelections[4]);
+const multipleSelections = document.querySelectorAll('a');
+console.log(multipleSelections[5]);
+var p = document.appendElement("p");
+p.innerHTML="Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",";       
+ 
+//const middleimg = document.querySelector('middle-img-src');
+//middleimg.src = "img/mid-page-accent.jpg";
+//middleimg.alt ="middle pic";
+//const info = document.getElementsByClassName('main-element');
+//info.textContent.add(".main-content");
+
+//const contact = document.querySelector('contact');
+//contact.classList.add('.address');
+var fh4 = document.getElementById("features-h4").innerHTML = "Features";
