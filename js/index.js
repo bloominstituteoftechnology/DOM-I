@@ -41,6 +41,8 @@ const siteContent = {
 let logo = document.getElementById('logo-img')
 logo.setAttribute('src', siteContent['nav']['img-src'])
 
+let page = document.querySelector('html')
+
 let navHome = document.createElement('a')
 navHome.href = '#'
 
@@ -69,7 +71,12 @@ ctaH1.innerHTML = siteContent['cta']['h1']
 
 let ctaButton = document.querySelector('.cta .cta-text button')
 ctaButton.innerHTML = siteContent['cta']['button']
+ctaButton.addEventListener("click", newColor)
 
+function newColor() {
+    page.style.backgroundColor = 'gray'
+    ctaButton.textContent = "What did you do?"
+}
 let ctaImage = document.getElementById('cta-img')
 ctaImage.src = 'img/header-img.png'
 
