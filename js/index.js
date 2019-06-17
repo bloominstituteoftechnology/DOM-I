@@ -1,3 +1,24 @@
+const logoElement = document.getElementById("logo-img");
+console.log(logoElement)
+
+const tagNames = document.getElementsByTagName("nav");
+console.log(tagNames)
+
+const classNames = document.getElementsByClassName("main-content");
+console.log(classNames)
+
+
+
+
+
+
+
+
+
+
+
+
+
 const siteContent = {
   "nav": {
     "nav-item-1": "Services",
@@ -37,6 +58,13 @@ const siteContent = {
   },
 };
 
+
+
+
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+
