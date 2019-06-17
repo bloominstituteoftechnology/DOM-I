@@ -45,14 +45,14 @@ const header = document.querySelector('#cta-img');
 
  header.src = siteContent.cta["img-src"];
 
- const Anchors = document.querySelectorAll('a');
+ const anchors = document.querySelectorAll('a');
 
-Anchors[0].textContent = "Servicces"; 
-Anchors[1].textContent = "Product"; 
-Anchors[2].textContent = "Vision"; 
-Anchors[3].textContent = "Features"; 
-Anchors[4].textContent = "About"; 
-Anchors[5].textContent = "Contact"; 
+anchors[0].textContent = "Servicces"; 
+anchors[1].textContent = "Product"; 
+anchors[2].textContent = "Vision"; 
+anchors[3].textContent = "Features"; 
+anchors[4].textContent = "About"; 
+anchors[5].textContent = "Contact"; 
 
  const button = document.querySelector("button");
 
