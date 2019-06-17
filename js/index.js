@@ -56,7 +56,7 @@ for(let i = 0; i < nav.length; i++) {
   navItem.innerText = siteContent['nav'][innerText];
 }
 
-// Update CTA section
+//****** CTA section
 // HEADER
 let header = document.getElementsByTagName('h1')[0];
 let headerText = siteContent['cta']['h1'];
@@ -66,11 +66,48 @@ header.innerHTML = headerText;
 let getStartedButton = document.getElementsByTagName('button')[0];
 getStartedButton.innerText = siteContent['cta']['button'];
 
-// Main content
-let mainContent = document.getElementsByClassName('main-content');
+//******* Main content
+
+let textContentElements = document.querySelectorAll('.text-content'),
+        featuresElement = textContentElements[0],
+           aboutElement = textContentElements[1],
+        servicesElement = textContentElements[2],
+         productElement = textContentElements[3],
+          visionElement = textContentElements[4];
+
+let mainContent = siteContent['main-content'];
+// let topContent = document.getElementsByClassName('top-content');
+
+//******** Features Content
+// H4
+featuresElement.children.item(0).innerText = mainContent['features-h4'];
+// P
+featuresElement.children.item(1).innerText = mainContent['features-content'];
+
+//******** About Content
+// H4
+aboutElement.children.item(0).innerText = mainContent['about-h4'];
+// P
+aboutElement.children.item(1).innerText = mainContent['about-content'];
+
+//******** Services Content
+// H4
+servicesElement.children.item(0).innerText = mainContent['services-h4'];
+// P
+servicesElement.children.item(1).innerText = mainContent['services-content'];
+
+//******** Product Content
+// H4
+productElement.children.item(0).innerText = mainContent['product-h4'];
+// P
+productElement.children.item(1).innerText = mainContent['product-content'];
+
+//******** Vision Content
+// H4
+visionElement.children.item(0).innerText = mainContent['vision-h4'];
+// P
+visionElement.children.item(1).innerText = mainContent['vision-content'];
 
 
-// Bottom Content
-let bottomContent = document.getElementsByClassName('botton-content');
 
 // Contact Section
