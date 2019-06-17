@@ -49,7 +49,11 @@ logo.setAttribute('src', siteContent['nav']['img-src']);
 
 // Nav Bar
 let navLinks = document.getElementsByTagName('a');
+console.log(`navLinks`);
+console.log(navLinks);
 let navArray = Array.from(navLinks);
+console.log(`navArray`);
+console.log(navArray);
 
 navArray[0].innerText = siteContent['nav']['nav-item-1']
 navArray[1].innerText = siteContent['nav']['nav-item-2']
@@ -57,10 +61,10 @@ navArray[2].innerText = siteContent['nav']['nav-item-3']
 navArray[3].innerText = siteContent['nav']['nav-item-4']
 navArray[4].innerText = siteContent['nav']['nav-item-5']
 navArray[5].innerText = siteContent['nav']['nav-item-6']
+for (var i = 0; i < navArray.length; i++){
+    navArray[i].style.color = '#32CD32';
+};
 
-console.log(navLinks);
-
-console.log(navArray);
 
 // New links
 let newLink1 = document.createElement('a');
@@ -68,7 +72,10 @@ let newLink2 = document.createElement('a');
 let navHolder = document.querySelector('nav');
 navHolder.appendChild(newLink1).innerHTML = 'Welcome';
 navHolder.appendChild(newLink2).innerHTML = 'Sponsors';
+
+console.log(`navHolder`);
 console.log(navHolder);
+
 
 // let newLink1 = document.createElement('a');
 // let newLink2 = document.createElement('a').innerHTML = "Home";
