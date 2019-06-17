@@ -51,14 +51,30 @@ logo.setAttribute('src', siteContent['nav']['img-src']);
 let navLinks = document.getElementsByTagName('a');
 let navArray = Array.from(navLinks);
 
-navLinks[0].innerText = siteContent['nav']['nav-item-1']
-navLinks[1].innerText = siteContent['nav']['nav-item-2']
-navLinks[2].innerText = siteContent['nav']['nav-item-3']
-navLinks[3].innerText = siteContent['nav']['nav-item-4']
-navLinks[4].innerText = siteContent['nav']['nav-item-5']
-navLinks[5].innerText = siteContent['nav']['nav-item-6']
+navArray[0].innerText = siteContent['nav']['nav-item-1']
+navArray[1].innerText = siteContent['nav']['nav-item-2']
+navArray[2].innerText = siteContent['nav']['nav-item-3']
+navArray[3].innerText = siteContent['nav']['nav-item-4']
+navArray[4].innerText = siteContent['nav']['nav-item-5']
+navArray[5].innerText = siteContent['nav']['nav-item-6']
 
 console.log(navLinks);
+
+console.log(navArray);
+
+// New links
+let newLink1 = document.createElement('a');
+let newLink2 = document.createElement('a');
+let navHolder = document.querySelector('nav');
+navHolder.appendChild(newLink1).innerHTML = 'Welcome';
+navHolder.appendChild(newLink2).innerHTML = 'Sponsors';
+console.log(navHolder);
+
+// let newLink1 = document.createElement('a');
+// let newLink2 = document.createElement('a').innerHTML = "Home";
+// let navTag = document.querySelector('nav');
+// navTag.appendChild(newLink1).innerHTML = "Opportunities";
+// navTag.prepend(newLink2);
 
 // Header section
 let header = document.querySelector('.cta h1');
