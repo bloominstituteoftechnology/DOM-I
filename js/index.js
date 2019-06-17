@@ -16,13 +16,17 @@ const siteContent = {
   "main-content": {
     "features-h4":"Features",
     "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+
     "about-h4":"About",
     "about-content": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "middle-img-src": "img/mid-page-accent.jpg",
+
     "services-h4":"Services",
     "services-content": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+
     "product-h4":"Product",
     "product-content": "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+
     "vision-h4":"Vision",
     "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
   },
@@ -38,5 +42,41 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+// Nav
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// Header section
+let header = document.querySelector('.cta h1');
+header.innerHTML = siteContent['cta']['h1'];
+
+let button = document.querySelector('.cta button');
+button.innerHTML = siteContent['cta']['button']
+
+let ctaIMG = document.getElementById("cta-img");
+logo.setAttribute('src', siteContent["cta"]["img-src"])
+
+// Main Content
+let h4 = document.getElementsByTagName('h4');
+let p = document.getElementsByTagName('p');
+
+// Top content
+h4[0].innerText = siteContent['main-content']['features-h4']
+p[0].innerText = siteContent['main-content']['features-content']
+h4[1].innerText = siteContent['main-content']['aobut-h4']
+p[1].innerText = siteContent['main-content']['about-content']
+
+// Middle image
+let ctaIMG = document.getElementById("cta-img");
+logo.setAttribute('src', siteContent["cta"]["img-src"])
+
+// Middle content
+h4[2].innerText = siteContent['main-content']['services-h4']
+p[2].innerText = siteContent['main-content']['services-content']
+h4[3].innerText = siteContent['main-content']['product-h4']
+p[3].innerText = siteContent['main-content']['product-content']
+h4[4].innerText = siteContent['main-content']['about-h4']
+p[4].innerText = siteContent['main-content']['about-content']
+
+
+// Contact
