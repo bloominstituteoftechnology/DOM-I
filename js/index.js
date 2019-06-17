@@ -58,12 +58,10 @@ navigation [4].textContent = siteContent ["nav"] ["nav-item-5"];
 navigation [5].textContent = siteContent ["nav"] ["nav-item-6"];
 
 //Headers
-const thedomH1 = document.querySelectorAll("h1");
+const thedomH1 = document.querySelectorAll(".cta-text h1");
 thedomH1[0].textContent = siteContent ["cta"] ["h1"];
-
-// thedomH1.textContent = "The Dom <br> Is <br> Awesome"
-
-document.querySelector(".cta-text").style.whiteSpace = 'pre';
+// // thedomH1.textContent = "The Dom <br> Is <br> Awesome" ?
+// document.querySelector(".cta-text").style.whiteSpace = 'pre';  ?
 
 
 const head = document.querySelectorAll('h4');
@@ -72,4 +70,22 @@ head [1].textContent = siteContent ["main-content"] ["about-h4"];
 head [2].textContent = siteContent ["main-content"] ["services-h4"];
 head [3].textContent = siteContent ["main-content"] ["product-h4"];
 head [4].textContent = siteContent ["main-content"] ["vision-h4"];
+head [5].textContent = siteContent ["contact"] ["contact-h4"];
+
+//paragraph texts
+const paragraphs = document.querySelectorAll('p');
+paragraphs [0].textContent = siteContent ["main-content"] ["features-content"];
+paragraphs [1].textContent = siteContent ["main-content"] ["about-content"];
+paragraphs [2].textContent = siteContent ["main-content"] ["services-content"];
+paragraphs [3].textContent = siteContent ["main-content"] ["product-content"];
+paragraphs [4].textContent = siteContent ["main-content"] ["vision-content"];
+paragraphs [5].textContent = siteContent ["contact"] ["address"];
+paragraphs [6].textContent = siteContent ["contact"] ["phone"];
+paragraphs [7].textContent = siteContent ["contact"] ["email"];
+paragraphs [8].textContent = siteContent ["footer"] ["copyright"];
+
+//getstarted button
+cont buttonOne = document.querySelect('button');
+buttonOne.textContent = siteContent ["cta"] ["button"];
+
 
