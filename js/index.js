@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   cta: {
-    h1: "DOM sIs Awesome",
+    h1: "DOM Is Awesome",
     button: "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -53,8 +53,8 @@ let middleimg = document.getElementById("middle-img");
 middleimg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
 //Navigation//
-let navigation = document.querySelectorAll("header nav a");
-//console.log(navigation);
+let navigation = document.querySelectorAll("nav a");
+console.log(navigation);
 navigation.forEach((tag, index) => {
   i = index + 1;
   tag.textContent = siteContent["nav"][`nav-item-${i}`];
@@ -72,35 +72,44 @@ newL.textContent = "Introduction";
 //newL.style.color = "green";
 document.querySelector("nav").prepend(newL);
 
-/* Main Body*/
+/* CTA*/
 
-let headerOne = document.querySelector(".cta-text h1");
-//console.log(headerOne);
-headerOne.innerHTML = "DOM<br>IS<br>Awesome";
+let ctaText = document.getElementsByClassName("cta-text")[0];
+console.log(ctaText);
+ctaText.getElementsByTagName("h1")[0].innerHTML = siteContent["cta"]["h1"];
+ctaText.getElementsByTagName("button")[0].textContent =
+  siteContent["cta"]["button"];
 
-let button = document.querySelector(".cta-text button");
-button.textContent = siteContent["cta"]["button"];
+//Update Main content
+let textContentList = document.querySelectorAll(".text-content");
+console.log(textContentList);
 
-/*Main Body*/
+textContentList[0].getElementsByTagName("h4")[0].textContent =
+  siteContent["main-content"]["features-h4"];
+textContentList[0].getElementsByTagName("p")[0].textContent =
+  siteContent["main-content"]["features-content"];
 
-//features//
-let featureH = document.querySelector(".top-content h4:nth-of-type(1)");
-console.log(featureH);
-featureH.textContent = siteContent["main-content"]["features-h4"];
+textContentList[1].getElementsByTagName("h4")[0].textContent =
+  siteContent["main-content"]["about-h4"];
+textContentList[1].getElementsByTagName("p")[0].textContent =
+  siteContent["main-content"]["about-content"];
 
-let textF = document.querySelector(".top-content p:nth-of-type(1)");
-console.log(textF);
-textF.textContent = siteContent["main-content"]["features-content"];
+textContentList[2].getElementsByTagName("h4")[0].textContent =
+  siteContent["main-content"]["services-h4"];
+textContentList[2].getElementsByTagName("p")[0].textContent =
+  siteContent["main-content"]["services-content"];
 
-// //about
-// let aboutH = document.querySelector(".top-content h4:nth-of-type(2)");
-// console.log(aboutH);
-// aboutH.textContent = siteContent["main-content"]["about-h4"];
+textContentList[3].getElementsByTagName("h4")[0].textContent =
+  siteContent["main-content"]["product-h4"];
+textContentList[3].getElementsByTagName("p")[0].textContent =
+  siteContent["main-content"]["product-content"];
 
-// let textA = document.querySelector(".top-content p:nth-of-type(2)");
-// console.log(textA);
-// textA.textContent = siteContent["main-content"]["about-content"];
+textContentList[4].getElementsByTagName("h4")[0].textContent =
+  siteContent["main-content"]["vision-h4"];
+textContentList[4].getElementsByTagName("p")[0].textContent =
+  siteContent["main-content"]["vision-content"];
 
+/* ********************* */
 //Contacts//
 let contactH = document.querySelector(".contact h4");
 console.log(contactH);
