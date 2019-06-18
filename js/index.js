@@ -60,9 +60,9 @@ document.querySelector(`.cta img`).src=siteContent.cta["img-src"];
 const all4Headings = document.querySelectorAll(".main-content h4");
 
 const {"main-content": {
-  "features-h4": featuresH4,
-  "about-h4": aboutH4,
-  "services-h4": servicesH4,
+  "address": featuresH4,
+  "phone": aboutH4,
+  "email": servicesH4,
   "product-h4": productH4,
   "vision-h4": visionH4
 }} = siteContent;
@@ -74,7 +74,7 @@ all4Headings[3].textContent = productH4,
 all4Headings[4].textContent = visionH4
 
 // ---------Middle Image ---------
-document.querySelector(`middle-img`).src = siteContent["main-content"]["middle-img-src"]
+document.querySelector(`.middle-img`).src = siteContent["main-content"]["middle-img-src"]
 
 //----------- Main Content Paragraphs
 const all4Paragraphs = document.querySelectorAll(".main-content p");
@@ -87,8 +87,28 @@ const {"main-content": {
   "vision-content": visionP
 }} = siteContent;
 
+
 all4Paragraphs[0].textContent = featuresP,
 all4Paragraphs[1].textContent = aboutP,
 all4Paragraphs[2].textContent = servicesP,
 all4Paragraphs[3].textContent = productP,
 all4Paragraphs[4].textContent = visionP
+
+// ----- contact -----
+
+document.querySelector(".contact h4").textContent = siteContent.contact["contact-h4"]
+
+const contactInfo = document.querySelectorAll(".contact p");
+
+const {"contact": {
+  "address": address,
+  "phone": phone,
+  "email": email,
+}} = siteContent;
+
+contactInfo[0].textContent = address,
+contactInfo[1].textContent = phone,
+contactInfo[2].textContent = email,
+
+//------ footer -------
+document.querySelector("footer p").textContent = siteContent.footer.copyright
