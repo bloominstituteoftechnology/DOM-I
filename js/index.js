@@ -57,8 +57,6 @@ document.querySelector(".cta button").textContent = siteContent.cta.button;
 
 // -------------- Main Content --------------
 
-// document.querySelector(".top-content h4").textContent = siteContent["top-content"]["features-h4"]
-
 const allH4 = document.querySelectorAll(".main-content h4"); 
 
 const {"main-content":{
@@ -90,6 +88,22 @@ mainContent[1].textContent = aboutContent,
 mainContent[2].textContent = servicesContent, 
 mainContent[3].textContent = productContent, 
 mainContent[4].textContent = visionContent 
+
+// ----------- Footer Content --------------
+
+document.querySelector(".contact h4").textContent = siteContent.contact["contact-h4"]; 
+
+const footerPTags = document.querySelectorAll(".contact p"); 
+
+const {"contact":{
+  "address": addressP, 
+  "phone": phoneP, 
+  "email": emailP
+}} = siteContent 
+footerPTags[0].textContent = addressP, 
+footerPTags[1].textContent = phoneP, 
+footerPTags[2].textContent = emailP
+
 
 
 
