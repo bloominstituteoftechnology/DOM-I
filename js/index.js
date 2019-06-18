@@ -41,10 +41,13 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+//Header - Nav bar
 const anchorTag = document.querySelectorAll("header nav a")
 anchorTag.forEach ((element, text)=> {
   element.textContent=siteContent.nav[`nav-item-${text + 1}`]
 })
+
+//Dom is Awesome, button, and circle image 
 
 document.querySelector(".cta h1").innerHTML = siteContent.cta.h1
 
@@ -52,4 +55,22 @@ document.querySelector(".cta button").textContent = siteContent.cta.button
 
 document.querySelector(`.cta img`).src=siteContent.cta["img-src"];
 
-document.querySelector("top-content h4").textContent = siteContent.main-content["features-h4"]
+// main content
+
+const all4Headings = document.querySelector(".main-content h4");
+
+const {"main-content":{
+  "features-h4": featuresH4,
+  "about-h4": aboutH4,
+  "services-h4": servicesH4,
+  "product-h4": productH4,
+  "vision-h4": visionH4
+}} = siteContent;
+
+all4Headings[0].textContent = featuresH4,
+all4Headings[1].textContent = aboutH4,
+all4Headings[2].textContent = servicesH4,
+all4Headings[3].textContent = productH4,
+all4Headings[4].textContent = visionH4,
+
+document.querySelector(`middle-img`).src=siteContent.main-content["middle-img-src"]
