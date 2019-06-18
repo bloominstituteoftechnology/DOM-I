@@ -46,63 +46,91 @@ const siteContent = {
 logo = document.getElementById('logo-img');
 logo.setAttribute('src', siteContent['nav']['img-src']);
 
-// setting the names for the a links
-// navA = Array.from(document.querySelectorAll('nav a'));
-// for (i = 0; i <= navA.length; i++) {
-// 	navA[i].innerHTML = siteContent['nav']['nav-item-' + (i + 1)]; // come back to this    MOVED TO BOTTOM BECAUSE BREAKS PROGRAM.
-// }
+// setting the names and colors for the a link
+
+const nav = document.querySelector('nav');
+const navA = document.querySelectorAll('nav a');
+
+navA[0].innerText = siteContent['nav']['nav-item-1'];
+
+navA[1].innerText = siteContent['nav']['nav-item-2'];
+
+navA[2].innerText = siteContent['nav']['nav-item-3'];
+
+navA[3].innerText = siteContent['nav']['nav-item-4'];
+
+navA[4].innerText = siteContent['nav']['nav-item-5'];
+
+navA[5].innerText = siteContent['nav']['nav-item-6'];
+
+// append and prepend
+let listItem2 = document.createElement('a');
+listItem2.textContent = 'Ideas';
+listItem2.style.color = 'green';
+nav.prepend(listItem2);
+
+let listItem = document.createElement('a');
+listItem.textContent = 'Experiments';
+listItem.style.color = 'green';
+nav.appendChild(listItem);
+
+//adding color to each a element
+navA.forEach(function(a) {
+	a.style.color = 'green';
+});
 
 // The CTA section
-domIsAwesomeH1 = document.querySelector('.cta-text h1').innerHTML = siteContent['cta']['h1'];
-domIsAwesomeButton = document.querySelector('.cta-text button').innerHTML = siteContent['cta']['button'];
-domIsAwesomeImg = document.getElementById('cta-img').src = siteContent['cta']['img-src'];
+const domIsAwesomeH1 = document.querySelector('.cta-text h1');
+domIsAwesomeH1.innerHTML = siteContent['cta']['h1'].split(' ').join('<br>'); //adding line breaks to the h1 cta
+
+const domIsAwesomeButton = document.querySelector('.cta-text button');
+domIsAwesomeButton.textContent = siteContent['cta']['button'];
+
+const domIsAwesomeImg = document.getElementById('cta-img');
+domIsAwesomeImg.src = siteContent['cta']['img-src'];
 
 // main content section
-topFeaturesH4 = document.querySelector('.top-content div h4').innerHTML = siteContent['main-content']['features-h4'];
+topFeaturesH4 = document.querySelector('.top-content div h4').textContent = siteContent['main-content']['features-h4'];
 
-topFeaturesP = document.querySelector('.top-content div p').innerHTML = siteContent['main-content']['features-content'];
+topFeaturesP = document.querySelector('.top-content div p').textContent =
+	siteContent['main-content']['features-content'];
 
-topAboutH4 = document.querySelector('.top-content .text-content:nth-of-type(2) h4').innerHTML = // DON'T FORGET TO ADD . FOR CLASSES
+topAboutH4 = document.querySelector('.top-content .text-content:nth-of-type(2) h4').textContent = // DON'T FORGET TO ADD . FOR CLASSES
 	siteContent['main-content']['about-h4'];
 
-topAboutP = document.querySelector('.top-content .text-content:nth-of-type(2) p').innerHTML = //// HASHES FOR ID'S////////////////
+topAboutP = document.querySelector('.top-content .text-content:nth-of-type(2) p').textContent = //// HASHES FOR ID'S////////////////
 	siteContent['main-content']['about-content'];
 
 //Middle image
 MiddleImg = document.getElementById('middle-img').src = siteContent['main-content']['middle-img-src'];
 
 //Bottom content
-bottomServicesH4 = document.querySelector('.bottom-content .text-content:nth-of-type(1) h4').innerHTML = // DON'T FORGET TO ADD . FOR CLASSES
+bottomServicesH4 = document.querySelector('.bottom-content .text-content:nth-of-type(1) h4').textContent = // DON'T FORGET TO ADD . FOR CLASSES
 	siteContent['main-content']['services-h4'];
 
-bottomServicesp = document.querySelector('.bottom-content .text-content:nth-of-type(1) p').innerHTML = // DON'T FORGET TO ADD . FOR CLASSES
+bottomServicesp = document.querySelector('.bottom-content .text-content:nth-of-type(1) p').textContent = // DON'T FORGET TO ADD . FOR CLASSES
 	siteContent['main-content']['services-content'];
 
-bottomProductH4 = document.querySelector('.bottom-content .text-content:nth-of-type(2) h4').innerHTML = // HASHES FOR ID'S////////////////
+bottomProductH4 = document.querySelector('.bottom-content .text-content:nth-of-type(2) h4').textContent = // HASHES FOR ID'S////////////////
 	siteContent['main-content']['product-h4'];
 
-bottomProductH4 = document.querySelector('.bottom-content .text-content:nth-of-type(2) p').innerHTML = // DON'T FORGET TO ADD . FOR CLASSES
+bottomProductH4 = document.querySelector('.bottom-content .text-content:nth-of-type(2) p').textContent = // DON'T FORGET TO ADD . FOR CLASSES
 	siteContent['main-content']['product-content'];
 
-bottomVisionH4 = document.querySelector('.bottom-content .text-content:nth-of-type(3) h4').innerHTML = // HASHES FOR ID'S////////////////
+bottomVisionH4 = document.querySelector('.bottom-content .text-content:nth-of-type(3) h4').textContent = // HASHES FOR ID'S////////////////
 	siteContent['main-content']['vision-h4'];
 
-bottomVisionH4 = document.querySelector('.bottom-content .text-content:nth-of-type(3) p').innerHTML = // DON'T FORGET TO ADD . FOR CLASSES
+bottomVisionH4 = document.querySelector('.bottom-content .text-content:nth-of-type(3) p').textContent = // DON'T FORGET TO ADD . FOR CLASSES
 	siteContent['main-content']['vision-content'];
 
 // Contact section
-contactContentH4 = document.querySelector('.contact h4').innerHTML = siteContent['contact']['contact-h4'];
+contactContentH4 = document.querySelector('.contact h4').textContent = siteContent['contact']['contact-h4'];
 
-contactContentH4 = document.querySelector('.contact p:nth-of-type(1)').innerHTML = siteContent['contact']['address'];
+contactContentH4 = document.querySelector('.contact p:nth-of-type(1)').textContent = siteContent['contact']['address'];
 
-contactContentH4 = document.querySelector('.contact p:nth-of-type(2)').innerHTML = siteContent['contact']['phone'];
+contactContentH4 = document.querySelector('.contact p:nth-of-type(2)').textContent = siteContent['contact']['phone'];
 
-contactContentH4 = document.querySelector('.contact p:nth-of-type(3)').innerHTML = siteContent['contact']['email'];
+contactContentH4 = document.querySelector('.contact p:nth-of-type(3)').textContent = siteContent['contact']['email'];
 
 //Footer section
-foot = document.querySelector('footer p').innerHTML = siteContent['footer']['copyright'];
-
-navA = Array.from(document.querySelectorAll('nav a'));
-for (i = 0; i <= navA.length; i++) {
-	navA[i].innerHTML = siteContent['nav']['nav-item-' + (i + 1)];
-}
+foot = document.querySelector('footer p').textContent = siteContent['footer']['copyright'];
