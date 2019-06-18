@@ -104,6 +104,8 @@ footerPTags[0].textContent = addressP,
 footerPTags[1].textContent = phoneP, 
 footerPTags[2].textContent = emailP
 
+document.querySelector("footer p").textContent = siteContent.footer.copyright; 
+
 
 
 
