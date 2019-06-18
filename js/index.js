@@ -74,8 +74,7 @@ allH4[2].textContent = servicesH4,
 allH4[3].textContent = productH4, 
 allH4[4].textContent = visionH4
 
-document.querySelector(".main-content").src = siteContent.cta["middle-img-src"]; 
-
+document.querySelector(".main-content img").src = siteContent["main-content"]["middle-img-src"]; 
 
 const mainContent = document.querySelectorAll(".main-content p"); 
 
@@ -89,7 +88,7 @@ const {"main-content": {
 mainContent[0].textContent = featuresContent, 
 mainContent[1].textContent = aboutContent, 
 mainContent[2].textContent = servicesContent, 
-mainContnet[3].textContent = productContent, 
+mainContent[3].textContent = productContent, 
 mainContent[4].textContent = visionContent 
 
 
