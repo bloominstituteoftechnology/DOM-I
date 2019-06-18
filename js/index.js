@@ -57,6 +57,25 @@ document.querySelector(".cta button").textContent = siteContent.cta.button;
 
 // -------------- Main Content --------------
 
-document.querySelector(".main-content features-h4").textContent = siteContent["top-content"]["features-h4"]
+// document.querySelector(".top-content h4").textContent = siteContent["top-content"]["features-h4"]
+
+const allH4 = document.querySelectorAll("main-content h4") 
+
+
+const {"main-content":{
+  "features-h4": featuresH4, 
+  "about-h4": aboutH4, 
+  "services-h4": servicesH4, 
+  "product-h4": roductH4,
+  "vision-h4": visionH4
+} } = siteContent; 
+allH4[0].textContent = featuresH4, 
+allH4[1].textContent = aboutH4, 
+allH4[3].textContent = servicesH4, 
+allH4[4].textContent = roductH4, 
+allH4[5].textContent = visionH4
+
+
+
 
 
