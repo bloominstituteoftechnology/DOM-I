@@ -77,7 +77,7 @@ all4Headings[4].textContent = visionH4
 document.querySelector(`middle-img`).src=siteContent.main-content["middle-img-src"]
 
 //----------- Main Content Paragraphs
-const all4Paragraphs = document.querySelectorAll(".main-Content p");
+const all4Paragraphs = document.querySelectorAll(".main-content p");
 
 const {"main-content": {
   "features-content": featuresP,
