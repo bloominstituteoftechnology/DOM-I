@@ -48,15 +48,44 @@ const snippetTwo = document.getElementById("middle-img");
 snippetTwo.src = siteContent ["main-content"] ["middle-img-src"];
 
 //navigation
+let navigation = document.querySelectorAll("nav a")
+navigation[0].textContent = siteContent["nav"]["nav-item-1"];
+navigation[1].textContent = siteContent["nav"]["nav-item-2"];
+navigation[2].textContent = siteContent["nav"]["nav-item-3"];
+navigation[3].textContent = siteContent["nav"]["nav-item-4"];
+navigation[4].textContent = siteContent["nav"]["nav-item-5"];
+navigation[5].textContent = siteContent["nav"]["nav-item-6"];
 
-const navigation = document.querySelectorAll("a")
-navigation [0].textContent = siteContent ["nav"] ["nav-item-1"];
-navigation [1].textContent = siteContent ["nav"] ["nav-item-2"];
-navigation [2].textContent = siteContent ["nav"] ["nav-item-3"];
-navigation [3].textContent = siteContent ["nav"] ["nav-item-4"];
-navigation [4].textContent = siteContent ["nav"] ["nav-item-5"];
-navigation [5].textContent = siteContent ["nav"] ["nav-item-6"];
+// navigation to be green...
+navigation.forEach(x => {
+  x.style.color = "green"
+})
 
+// for (let i=0; i<navigation.length; i++) {
+//   navigation[i].style.color = "green";
+// }
+
+//prepending here//
+/*create element called subHeadline*/
+const newlinkA = document.createElement('a');
+newlinkA.innerHTML="History";
+
+const navtwo = document.querySelector("nav");
+navtwo.prepend(newlinkA);
+
+navigation.forEach(x => {
+  newlinkA.style.color = "green";
+});
+//appending here//
+const newlinkB = document.createElement('a');
+newlinkB.innerHTML="Login";
+
+const navthree = document.querySelector("nav");
+navthree.append(newlinkB);
+
+navigation.forEach(x => {
+  newlinkB.style.color = "green";
+});
 //Headers
 const thedomH1 = document.querySelector(".cta-text h1").innerHTML = "<h1>Dom <br> Is <br> Awesome!</h1>"
 thedomH1[0].textContent = siteContent ["cta"] ["h1"];
@@ -87,4 +116,4 @@ paragraphs [8].textContent = siteContent ["footer"] ["copyright"];
 
 //getstarted button
 const buttonOne = document.querySelector("button");
-buttonOne.textContent = siteContent ["cta"] ["button"]
+buttonOne.textContent = siteContent["cta"]["button"]
