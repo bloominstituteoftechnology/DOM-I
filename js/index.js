@@ -59,23 +59,38 @@ document.querySelector(".cta button").textContent = siteContent.cta.button;
 
 // document.querySelector(".top-content h4").textContent = siteContent["top-content"]["features-h4"]
 
-const allH4 = document.querySelectorAll("main-content h4") 
-
+const allH4 = document.querySelectorAll(".main-content h4"); 
 
 const {"main-content":{
   "features-h4": featuresH4, 
   "about-h4": aboutH4, 
   "services-h4": servicesH4, 
-  "product-h4": roductH4,
+  "product-h4": productH4,
   "vision-h4": visionH4
 } } = siteContent; 
 allH4[0].textContent = featuresH4, 
 allH4[1].textContent = aboutH4, 
-allH4[3].textContent = servicesH4, 
-allH4[4].textContent = roductH4, 
-allH4[5].textContent = visionH4
+allH4[2].textContent = servicesH4, 
+allH4[3].textContent = productH4, 
+allH4[4].textContent = visionH4
+
+document.querySelector(".main-content").src = siteContent.cta["middle-img-src"]; 
 
 
+const mainContent = document.querySelectorAll(".main-content p"); 
+
+const {"main-content": {
+  "features-content": featuresContent, 
+  "about-content": aboutContent, 
+  "services-content": servicesContent, 
+  "product-content": productContent, 
+  "vision-content": visionContent 
+}} = siteContent; 
+mainContent[0].textContent = featuresContent, 
+mainContent[1].textContent = aboutContent, 
+mainContent[2].textContent = servicesContent, 
+mainContnet[3].textContent = productContent, 
+mainContent[4].textContent = visionContent 
 
 
 
