@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM<br>Is<br>Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -39,9 +39,9 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"])  
 
-// DOM goes here 
+// ------------ Header -------------
 
 let anchorTag = document.querySelectorAll("a");  
 anchorTag = Array.from(anchorTag)
@@ -49,7 +49,14 @@ anchorTag.forEach(function(element, index) {
   element.innerText = siteContent["nav"][`nav-item-${index+1}`]
 });
 
+document.querySelector(".cta img").src = siteContent.cta["img-src"]; 
 
-let imgOfCode = document.querySelector("#cta-img"); 
-imgOfCode.setAttribute('src', siteContent["cta"]["img-src"])
+document.querySelector(".cta h1").innerHTML = siteContent.cta.h1; 
+
+document.querySelector(".cta button").textContent = siteContent.cta.button; 
+
+// -------------- Main Content --------------
+
+document.querySelector(".main-content features-h4").textContent = siteContent["top-content"]["features-h4"]
+
 
