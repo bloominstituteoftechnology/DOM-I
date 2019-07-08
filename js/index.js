@@ -42,6 +42,9 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+
+
+
 // NAVIGATION
 
 let NavA = document.querySelectorAll("nav a");
@@ -49,3 +52,15 @@ NavA.forEach((element, i) => {
   element.innerHTML = siteContent.nav[`nav-item-${i+1}`];
   element.style.color = "green";
 })
+
+
+
+
+// CTA 
+
+let ctaContent = document.getElementsByClassName("cta-text")[0];
+
+ctaContent.getElementsByTagName("h1")[0].innerHTML = siteContent["cta"]["h1"];
+
+ctaContent.getElementsByTagName("button")[0].innerHTML = siteContent["cta"]["button"];
+
