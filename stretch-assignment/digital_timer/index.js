@@ -1,5 +1,9 @@
-const timer = window.setInterval(myCallback, 500);
+let timer = window.setInterval(callback, 1000);
+let counter = 0;
 
-function myCallback() {
-  // Your code here
+function callback() {
+  if (counter < 10) counter++;
+  console.log(counter);
 }
+
+callback();
