@@ -64,3 +64,8 @@ ctaContent.getElementsByTagName("h1")[0].innerHTML = siteContent["cta"]["h1"];
 
 ctaContent.getElementsByTagName("button")[0].innerHTML = siteContent["cta"]["button"];
 
+
+// FIRST IMG
+
+let firstImg = document.getElementById("cta-img");
+firstImg.setAttribute("src", siteContent["cta"]["img-src"]);
