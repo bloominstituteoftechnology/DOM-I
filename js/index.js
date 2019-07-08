@@ -57,6 +57,13 @@ const questionsText = document.createTextNode('Questions');
 const subscribeText = document.createTextNode('Subscribe');
 
 newATag.appendChild(questionsText);
-nav2.prepend(newATag);
+nav2.prepend(newATag);///puts questions at beginning of nav tabs
 otherNewATag.appendChild(subscribeText);
-nav2.append(otherNewATag);
+nav2.append(otherNewATag);////puts subscribe at end of nav tabs
+
+const allNavLinks = document.querySelectorAll('nav a');
+allNavLinks.forEach((link) => {
+  link.style.color = 'green';
+  link.style.decoration = 'none';
+})
+
