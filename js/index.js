@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM\nIs\n Awesome",
+    "h1": "DOM Is Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -40,71 +40,3 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
-
-const snippetImg = document.getElementById("cta-img");
-snippetImg.setAttribute('src', siteContent['cta']['img-src']);
-
-const nav = document.querySelector('nav');
-const newTag1 = document.createElement('a');
-const tag1Text = document.createTextNode('Resources');
-const newTag2 = document.createElement('a');
-const tag2Text = document.createTextNode('Extras');
-
-nav.appendChild(newTag1);
-nav.appendChild(newTag2);
-newTag1.appendChild(tag1Text);
-newTag2.appendChild(tag2Text);
-
-
-let navLinks = document.querySelectorAll('nav a');
-navLinks[0].textContent = siteContent['nav']['nav-item-1']; 
-navLinks[1].textContent = siteContent['nav']['nav-item-2']; 
-navLinks[2].textContent = siteContent['nav']['nav-item-3']; 
-navLinks[3].textContent = siteContent['nav']['nav-item-4']; 
-navLinks[4].textContent = siteContent['nav']['nav-item-5']; 
-navLinks[5].textContent = siteContent['nav']['nav-item-6'];  
-
-navLinks.forEach(function(colorValue){
-  colorValue.style.color = 'green'
-}
-)
-
-
-document.querySelector('.cta-text').style.whiteSpace = 'pre';
-const splashText = document.querySelector('h1');
-splashText.textContent = siteContent.cta.h1;
-
-const startBtn = document.querySelector('button');
-startBtn.textContent = siteContent.cta.button;
-
-const contentTitles = document.querySelectorAll('.text-content h4');
-
-contentTitles[0].textContent = siteContent['main-content']['features-h4'];
-contentTitles[1].textContent = siteContent['main-content']['about-h4'];
-contentTitles[2].textContent = siteContent['main-content']['services-h4'];
-contentTitles[3].textContent = siteContent['main-content']['vision-h4'];
-
-
-
-const contentP = document.querySelectorAll('p');
-contentP[0].textContent = siteContent['main-content']['features-content'];
-contentP[1].textContent = siteContent['main-content']['about-content'];
-contentP[2].textContent = siteContent['main-content']['services-content'];
-contentP[3].textContent = siteContent['main-content']['vision-content'];
-
-
-
-const midImg = document.getElementById('middle-img');
-midImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
-
-const contactTitle = document.querySelector('.contact h4');
-contactTitle.textContent = siteContent['contact']['contact-h4'];
-
-const contactInfo = document.querySelectorAll('.contact p')
-contactInfo[0].textContent = siteContent['contact']['address'];
-contactInfo[1].textContent = siteContent['contact']['phone'];
-contactInfo[2].textContent = siteContent['contact']['email'];
-
-const cr = document.querySelector('footer')
-cr.textContent = siteContent['footer']['copyright'];
-
