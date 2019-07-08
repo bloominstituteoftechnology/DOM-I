@@ -98,3 +98,11 @@ mainContentProps[4].getElementsByTagName("p")[0].innerHTML = siteContent["main-c
 // SECOND IMG
 let secondImg = document.getElementById("middle-img");
 secondImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+
+// CONTACT
+let contactSection = document.getElementsByClassName("contact")[0];
+contactSection.getElementsByTagName("h4")[0].innerHTML = siteContent["contact"]["contact-h4"]
+contactSection.getElementsByTagName("p")[0].innerHTML = siteContent["contact"]["address"]
+contactSection.getElementsByTagName("p")[1].innerHTML = siteContent["contact"]["phone"]
+contactSection.getElementsByTagName("p")[2].innerHTML = siteContent["contact"]["email"]
