@@ -66,35 +66,20 @@ ctaBtn.innerText = siteContent['cta']['button']
 
 //Main Content  Items
 
-let firstContent = document.querySelector('.top-content');
-firstContent.innerText = siteContent['main-content']['features-content']
-
 let contentH4 = document.querySelectorAll('.text-content > h4')
-contentH4[0].innerText = siteContent['main-content']['about-h4']
-contentH4[1].innerText = siteContent['main-content']['services-h4']
-contentH4[2].innerText = siteContent['main-content']['product-h4']
+contentH4[0].innerText = siteContent['main-content']['features-h4']
+contentH4[1].innerText = siteContent['main-content']['about-h4']
+contentH4[2].innerText = siteContent['main-content']['services-h4']
+contentH4[3].innerText = siteContent['main-content']['product-h4']
+contentH4[4].innerText = siteContent['main-content']['vision-h4']
+
 
 let contentP = document.querySelectorAll('.text-content > p')
-contentP[0].innerText = siteContent['main-content']['about-content']
-contentP[1].innerText = siteContent['main-content']['services-content']
-contentP[2].innerText = siteContent['main-content']['product-content']
-
-
-
-// "main-content": {
-//   "features-h4":"Features",
-//   "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-//   "about-h4":"About",
-//   "about-content": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-//   "middle-img-src": "img/mid-page-accent.jpg",
-//   "services-h4":"Services",
-//   "services-content": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-//   "product-h4":"Product",
-//   "product-content": "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-//   "vision-h4":"Vision",
-//   "vision-content": 
-
-
+contentP[0].innerText = siteContent['main-content']['features-content']
+contentP[1].innerText = siteContent['main-content']['about-content']
+contentP[2].innerText = siteContent['main-content']['services-content']
+contentP[3].innerText = siteContent['main-content']['product-content']
+contentP[4].innerText = siteContent['main-content']['vision-content']
 
 
 //Contact
