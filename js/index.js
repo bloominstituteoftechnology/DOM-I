@@ -36,7 +36,7 @@ const siteContent = {
     "copyright" : "Copyright Great Idea! 2018"
   },
 };
-
+////nav
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
@@ -64,6 +64,17 @@ nav2.append(otherNewATag);////puts subscribe at end of nav tabs
 const allNavLinks = document.querySelectorAll('nav a');
 allNavLinks.forEach((link) => {
   link.style.color = 'green';
-  link.style.decoration = 'none';
 })
 
+
+///cta
+
+const header = document.querySelector('#cta-img');
+header.src = siteContent.cta['img-src'];
+
+const button = document.querySelector('button');
+button.textContent= 'Get Started';
+button.style.color= 'black';
+
+const Title = document.querySelector('.cta-text h1');
+Title.innerHTML = 'DOM<br> IS THE <br> BEES KNEES';
