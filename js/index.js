@@ -42,6 +42,12 @@ const siteContent = {
 	}
 };
 
+const newButton = {
+	cta: {
+		myButton: 'Click this'
+	}
+};
+
 // Example: Update the img src for the logo
 logo = document.getElementById('logo-img');
 logo.setAttribute('src', siteContent['nav']['img-src']);
@@ -49,30 +55,28 @@ logo.setAttribute('src', siteContent['nav']['img-src']);
 // setting the names and colors for the a link
 
 const nav = document.querySelector('nav');
-const navA = document.querySelectorAll('nav a');
 
-navA[0].innerText = siteContent['nav']['nav-item-1'];
-
-navA[1].innerText = siteContent['nav']['nav-item-2'];
-
-navA[2].innerText = siteContent['nav']['nav-item-3'];
-
-navA[3].innerText = siteContent['nav']['nav-item-4'];
-
-navA[4].innerText = siteContent['nav']['nav-item-5'];
-
-navA[5].innerText = siteContent['nav']['nav-item-6'];
-
-// append and prepend
 let listItem2 = document.createElement('a');
 listItem2.textContent = 'Ideas';
-listItem2.style.color = 'green';
 nav.prepend(listItem2);
 
 let listItem = document.createElement('a');
 listItem.textContent = 'Experiments';
-listItem.style.color = 'green';
 nav.appendChild(listItem);
+
+const navA = document.querySelectorAll('nav a');
+
+navA[1].innerText = siteContent['nav']['nav-item-1'];
+
+navA[2].innerText = siteContent['nav']['nav-item-2'];
+
+navA[3].innerText = siteContent['nav']['nav-item-3'];
+
+navA[4].innerText = siteContent['nav']['nav-item-4'];
+
+navA[5].innerText = siteContent['nav']['nav-item-5'];
+
+navA[6].innerText = siteContent['nav']['nav-item-6'];
 
 //adding color to each a element
 navA.forEach(function(a) {
@@ -86,51 +90,65 @@ domIsAwesomeH1.innerHTML = siteContent['cta']['h1'].split(' ').join('<br>'); //a
 const domIsAwesomeButton = document.querySelector('.cta-text button');
 domIsAwesomeButton.textContent = siteContent['cta']['button'];
 
+const myButton = document.querySelector('#myButton');
+myButton.textContent = newButton['cta']['myButton'];
+
 const domIsAwesomeImg = document.getElementById('cta-img');
 domIsAwesomeImg.src = siteContent['cta']['img-src'];
 
+//added button that changes the img in the CTA.
+myButton.addEventListener('click', () => {
+	domIsAwesomeImg.src =
+		'https://images.unsplash.com/photo-1562150467-17d77392ad0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80';
+	domIsAwesomeImg.style.borderRadius = '50%';
+});
+
 // main content section
-topFeaturesH4 = document.querySelector('.top-content div h4').textContent = siteContent['main-content']['features-h4'];
+const topFeaturesH4 = (document.querySelector('.top-content div h4').textContent =
+	siteContent['main-content']['features-h4']);
 
-topFeaturesP = document.querySelector('.top-content div p').textContent =
-	siteContent['main-content']['features-content'];
+const topFeaturesP = (document.querySelector('.top-content div p').textContent =
+	siteContent['main-content']['features-content']);
 
-topAboutH4 = document.querySelector('.top-content .text-content:nth-of-type(2) h4').textContent = // DON'T FORGET TO ADD . FOR CLASSES
-	siteContent['main-content']['about-h4'];
+const topAboutH4 = (document.querySelector('.top-content .text-content:nth-of-type(2) h4').textContent = // DON'T FORGET TO ADD . FOR CLASSES
+	siteContent['main-content']['about-h4']);
 
-topAboutP = document.querySelector('.top-content .text-content:nth-of-type(2) p').textContent = //// HASHES FOR ID'S////////////////
-	siteContent['main-content']['about-content'];
+const topAboutP = (document.querySelector('.top-content .text-content:nth-of-type(2) p').textContent = //// HASHES FOR ID'S////////////////
+	siteContent['main-content']['about-content']);
 
 //Middle image
-MiddleImg = document.getElementById('middle-img').src = siteContent['main-content']['middle-img-src'];
+const MiddleImg = (document.getElementById('middle-img').src = siteContent['main-content']['middle-img-src']);
 
 //Bottom content
-bottomServicesH4 = document.querySelector('.bottom-content .text-content:nth-of-type(1) h4').textContent = // DON'T FORGET TO ADD . FOR CLASSES
-	siteContent['main-content']['services-h4'];
+const bottomServicesH4 = (document.querySelector('.bottom-content .text-content:nth-of-type(1) h4').textContent = // DON'T FORGET TO ADD . FOR CLASSES
+	siteContent['main-content']['services-h4']);
 
-bottomServicesp = document.querySelector('.bottom-content .text-content:nth-of-type(1) p').textContent = // DON'T FORGET TO ADD . FOR CLASSES
-	siteContent['main-content']['services-content'];
+const bottomServicesP = (document.querySelector('.bottom-content .text-content:nth-of-type(1) p').textContent = // DON'T FORGET TO ADD . FOR CLASSES
+	siteContent['main-content']['services-content']);
 
-bottomProductH4 = document.querySelector('.bottom-content .text-content:nth-of-type(2) h4').textContent = // HASHES FOR ID'S////////////////
-	siteContent['main-content']['product-h4'];
+const bottomProductH4 = (document.querySelector('.bottom-content .text-content:nth-of-type(2) h4').textContent = // HASHES FOR ID'S////////////////
+	siteContent['main-content']['product-h4']);
 
-bottomProductH4 = document.querySelector('.bottom-content .text-content:nth-of-type(2) p').textContent = // DON'T FORGET TO ADD . FOR CLASSES
-	siteContent['main-content']['product-content'];
+const bottomProductP = (document.querySelector('.bottom-content .text-content:nth-of-type(2) p').textContent = // DON'T FORGET TO ADD . FOR CLASSES
+	siteContent['main-content']['product-content']);
 
-bottomVisionH4 = document.querySelector('.bottom-content .text-content:nth-of-type(3) h4').textContent = // HASHES FOR ID'S////////////////
-	siteContent['main-content']['vision-h4'];
+const bottomVisionH4 = (document.querySelector('.bottom-content .text-content:nth-of-type(3) h4').textContent = // HASHES FOR ID'S////////////////
+	siteContent['main-content']['vision-h4']);
 
-bottomVisionH4 = document.querySelector('.bottom-content .text-content:nth-of-type(3) p').textContent = // DON'T FORGET TO ADD . FOR CLASSES
-	siteContent['main-content']['vision-content'];
+const bottomVisionP = (document.querySelector('.bottom-content .text-content:nth-of-type(3) p').textContent = // DON'T FORGET TO ADD . FOR CLASSES
+	siteContent['main-content']['vision-content']);
 
 // Contact section
-contactContentH4 = document.querySelector('.contact h4').textContent = siteContent['contact']['contact-h4'];
+const contactContentH4 = (document.querySelector('.contact h4').textContent = siteContent['contact']['contact-h4']);
 
-contactContentH4 = document.querySelector('.contact p:nth-of-type(1)').textContent = siteContent['contact']['address'];
+const contactContentP1 = (document.querySelector('.contact p:nth-of-type(1)').textContent =
+	siteContent['contact']['address']);
 
-contactContentH4 = document.querySelector('.contact p:nth-of-type(2)').textContent = siteContent['contact']['phone'];
+const contactContentP2 = (document.querySelector('.contact p:nth-of-type(2)').textContent =
+	siteContent['contact']['phone']);
 
-contactContentH4 = document.querySelector('.contact p:nth-of-type(3)').textContent = siteContent['contact']['email'];
+const contactContentP3 = (document.querySelector('.contact p:nth-of-type(3)').textContent =
+	siteContent['contact']['email']);
 
 //Footer section
-foot = document.querySelector('footer p').textContent = siteContent['footer']['copyright'];
+const foot = (document.querySelector('footer p').textContent = siteContent['footer']['copyright']);
