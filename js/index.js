@@ -43,17 +43,27 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 const header = document.querySelector('#cta-img');
 
- header.src = siteContent.cta["img-src"];
 
- const anchors = document.querySelectorAll('a');
 
-anchors[0].textContent = "Servicces"; 
+ const anchors = document.querySelectorAll('nav a');
+ 
+anchors[0].textContent = "Services"; 
 anchors[1].textContent = "Product"; 
 anchors[2].textContent = "Vision"; 
 anchors[3].textContent = "Features"; 
 anchors[4].textContent = "About"; 
 anchors[5].textContent = "Contact"; 
 
+  let newNode = document.createElement("a").innerHTML = ("Home");
+  let newNode2 = document.createElement('a').innerHTML = ("nav bar");
+  var navTag = document.querySelector('nav');
+
+navTag.prepend(newNode);
+navTag.append(newNode2);
+anchors.forEach(x => {
+  x.style.color = "green"
+  navTag.style.color = "green"
+});
  const button = document.querySelector("button");
 
  button.textContent = "Get Started";
@@ -107,3 +117,5 @@ contact2[2].textContent = "sales@greatidea.io";
  const footer = document.querySelector('footer p');
 
   footer.textContent = siteContent.footer.copyright;
+
+  
