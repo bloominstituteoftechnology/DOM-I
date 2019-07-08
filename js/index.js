@@ -41,3 +41,11 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// NAVIGATION
+
+let NavA = document.querySelectorAll("nav a");
+NavA.forEach((element, i) => {
+  element.innerHTML = siteContent.nav[`nav-item-${i+1}`];
+  element.style.color = "green";
+})
