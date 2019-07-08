@@ -40,3 +40,52 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let addImgCodeSnip = document.getElementById("cta-img");
+addImgCodeSnip.setAttribute('src', siteContent["cta"]["img-src"])
+
+let middleImg= document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+
+//Nav Items
+let addNav = document.querySelectorAll('a');
+addNav[0].innerText = siteContent["nav"]["nav-item-1"];
+addNav[1].innerText = siteContent["nav"]["nav-item-2"];
+addNav[2].innerText = siteContent["nav"]["nav-item-3"];
+addNav[3].innerText = siteContent["nav"]["nav-item-4"];
+addNav[4].innerText = siteContent["nav"]["nav-item-5"];
+addNav[5].innerText = siteContent["nav"]["nav-item-6"];
+
+//cta section
+let ctaH1 = document.querySelector("h1");
+ctaH1.innerText = siteContent["cta"]["h1"].split(' ').join("\n")
+
+let ctaBtn = document.querySelector('button')
+ctaBtn.innerText = siteContent['cta']['button']
+
+//Content  Items
+
+let firstContent = document.querySelector('.top-content');
+firstContent.innerText = siteContent['main-content']['features-content']
+
+
+
+//Contact
+let contactH4 = document.querySelector('.contact > h4')
+contactH4.innerText = siteContent['contact']['contact-h4']
+
+let contactSection = document.querySelectorAll('.contact > p')
+contactSection[0].innerText = siteContent['contact']['address'].split('Street').join('Street \n')
+contactSection[1].innerText = siteContent['contact']['phone']
+contactSection[2].innerText = siteContent['contact']['email']
+
+
+// "address" : "123 Way 456 Street Somewhere, USA",
+// "phone" : "1 (888) 888-8888",
+// "email" : "sales@greatidea.io",
+
+
+// Footer
+let footerContent = document.querySelector('footer')
+footerContent.innerText = siteContent['footer']['copyright']
