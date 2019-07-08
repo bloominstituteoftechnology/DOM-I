@@ -46,6 +46,14 @@ let navBar = document.querySelectorAll("a");
 
 //Nav 1
 navBar[0].textContent = siteContent["nav"]["nav-item-1"]
+
+//new Element
+let newNav = document.createElement("a");
+newNav.textContent = "Goods"
+newNav.style.margin = "30%"
+navBar[0].appendChild(newNav)
+
+
 //Nav 2
 navBar[1].textContent = siteContent["nav"]["nav-item-2"]
 //Nav 3
