@@ -62,5 +62,9 @@ navBar[5].textContent = siteContent["nav"]["nav-item-6"]
 //header
 let header = document.querySelector(".cta h1")
 header.textContent = siteContent["cta"]["h1"]
-
-//
+//button
+let button = document.querySelector(".cta button")
+button.textContent = siteContent["cta"]["button"]
+//Image
+let topImage = document.getElementById("cta-img")
+topImage.setAttribute("src", siteContent["cta"]["img-src"])
