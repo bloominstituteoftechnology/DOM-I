@@ -46,24 +46,34 @@ let navBar = document.querySelectorAll("a");
 
 //Nav 1
 navBar[0].textContent = siteContent["nav"]["nav-item-1"]
-
+navBar[0].style.color = "green"
 //new Element
 let newNav = document.createElement("a");
 newNav.textContent = "Goods"
 newNav.style.margin = "30%"
+newNav.style.color = "green"
 navBar[0].appendChild(newNav)
-
-
 //Nav 2
 navBar[1].textContent = siteContent["nav"]["nav-item-2"]
+navBar[1].style.color = "green"
+//new Element 2
+let secondNav = document.createElement("a");
+secondNav.textContent = "Something"
+secondNav.style.margin = "15%"
+secondNav.style.color = "green"
+navBar[1].appendChild(secondNav)
 //Nav 3
 navBar[2].textContent = siteContent["nav"]["nav-item-3"]
+navBar[2].style.color = "green"
 //Nav 4
 navBar[3].textContent = siteContent["nav"]["nav-item-4"]
+navBar[3].style.color = "green"
 //Nav 5
 navBar[4].textContent = siteContent["nav"]["nav-item-5"]
+navBar[4].style.color = "green"
 //Nav 6
 navBar[5].textContent = siteContent["nav"]["nav-item-6"]
+navBar[5].style.color = "green"
 
 //Top-Content
 
