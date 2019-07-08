@@ -85,9 +85,9 @@ button.style.color= 'black';
 const Title = document.querySelector('.cta-text h1');
 Title.innerHTML = 'DOM<br> IS <br> AWESOME';
 Title.style.color= 'green';
-Title.onmouseover = logMouseOver;
+Title.onmouseout = logMouseOut;
 
-function logMouseOver(){
+function logMouseOut(){
   Title.innerHTML = 'THE BEES KNEES';
   Title.style.color= 'blue';
 
