@@ -88,6 +88,10 @@ smallHeaders[3].textContent = siteContent["main-content"]["product-h4"]
 smallHeaders[4].textContent = siteContent["main-content"]["vision-h4"]
 smallHeaders[5].textContent = siteContent["contact"]["contact-h4"]
 
+//mid-Image
+let middleImage = document.getElementById("middle-img")
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
 //Content
 let content = document.querySelectorAll("p")
 content[0].textContent = siteContent["main-content"]["features-content"]
