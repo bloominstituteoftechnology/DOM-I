@@ -69,3 +69,26 @@ ctaContent.getElementsByTagName("button")[0].innerHTML = siteContent["cta"]["but
 
 let firstImg = document.getElementById("cta-img");
 firstImg.setAttribute("src", siteContent["cta"]["img-src"]);
+
+
+
+// MAIN CONTENT
+
+let mainContentProps = document.querySelectorAll(".text-content");
+// top part
+mainContentProps[0].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["features-h4"];
+mainContentProps[0].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["features-content"];
+
+mainContentProps[1].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["about-h4"];
+mainContentProps[1].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["about-content"];
+
+
+// bottom part
+mainContentProps[2].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["services-h4"];
+mainContentProps[2].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["services-content"];
+
+mainContentProps[3].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["product-h4"];
+mainContentProps[3].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["product-content"];
+
+mainContentProps[4].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["vision-h4"];
+mainContentProps[4].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["vision-content"];
