@@ -50,8 +50,23 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 let NavA = document.querySelectorAll("nav a");
 NavA.forEach((element, i) => {
   element.innerHTML = siteContent.nav[`nav-item-${i+1}`];
+  
+  // New - changed to green
   element.style.color = "green";
+  
 })
+
+// New - added a to nav
+NavA = document.getElementsByTagName("nav")[0];
+let newContent = (e) => {
+  let newLink = document.createElement("a");
+  newLink.innerHTML = e;
+  return newLink;
+}
+NavA.prepend(newContent ("Donate"));
+NavA.append(newContent ("Shop"));
+
+
 
 
 
