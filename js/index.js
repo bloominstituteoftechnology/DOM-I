@@ -84,6 +84,18 @@ button.style.color= 'black';
 
 const Title = document.querySelector('.cta-text h1');
 Title.innerHTML = 'DOM<br> IS <br> AWESOME';
+Title.style.color= 'green';
+Title.onmouseover = logMouseOver;
+
+function logMouseOver(){
+  Title.innerHTML = 'THE BEES KNEES';
+  Title.style.color= 'blue';
+
+  setTimeout (function(){
+   Title.innerHTML = 'DOM<br> IS <br> AWESOME';
+   Title.style.color= 'green';
+  }, 1000);
+}
 
 ////middle
 
@@ -106,6 +118,10 @@ featureH4.textContent='Features';
 
 const featureContent = document.querySelector('.text-content p');
 featureContent.textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis';
+featureContent.style.color='blue';
+featureContent.style.fontSize= '18px';
+
+
 
 const midImg = document.querySelector('.main-content img');
 midImg.src = siteContent['main-content']['middle-img-src'];
@@ -116,10 +132,17 @@ bottom[1].textContent = 'Product';
 bottom[2].textContent = 'Vision';
 
 const bottom2 = document.querySelectorAll('.bottom-content .text-content p');
-
 bottom2[0].textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 bottom2[1].textContent = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 bottom2[2].textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+bottom2[0].style.color= 'green';
+bottom2[2].style.color= 'green';
+bottom2[1].style.color= 'blue';
+
+bottom2[0].style.fontSize= '18px';
+bottom2[1].style.fontSize= '18px';
+bottom2[2].style.fontSize= '18px';
 
 
 
@@ -135,9 +158,23 @@ contact[0].textContent ="123 Way 456 Street Somewhere, USA";
 contact[1].textContent ="1 (888) 888-8888";
 contact[2].textContent ="sales@greatidea.io";
 
+contact[0].style.color= 'blue';
+contact[1].style.color= 'green';
+contact[2].style.color= 'blue';
+
+contact[0].style.fontSize= '18px';
+contact[1].style.fontSize= '18px';
+contact[2].style.fontSize= '18px';
+
 
 
 ////footer
 // "footer": {
 //   "copyright" : "Copyright Great Idea! 2018"
 // },
+
+const footer = document.querySelector('footer p');
+footer.textContent = siteContent.footer.copyright;
+footer.style.color= 'green';
+footer.style.fontSize= '18px';
+
