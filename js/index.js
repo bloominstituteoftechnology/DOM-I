@@ -177,4 +177,13 @@ const footer = document.querySelector('footer p');
 footer.textContent = siteContent.footer.copyright;
 footer.style.color= 'green';
 footer.style.fontSize= '18px';
+footer.onmouseover = logMouseOver;
+
+function logMouseOver(){
+  footer.style.color= 'blue';
+
+  setTimeout (function(){
+   footer.style.color= 'green';
+  }, 1000);
+}
 
