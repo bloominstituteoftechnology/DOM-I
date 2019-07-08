@@ -69,6 +69,12 @@ allNavLinks.forEach((link) => {
 
 ///cta
 
+// /// "cta": {
+//   "h1": "DOM Is Awesome",
+//   "button": "Get Started",
+//   "img-src": "img/header-img.png"
+// },
+
 const header = document.querySelector('#cta-img');
 header.src = siteContent.cta['img-src'];
 
@@ -77,4 +83,61 @@ button.textContent= 'Get Started';
 button.style.color= 'black';
 
 const Title = document.querySelector('.cta-text h1');
-Title.innerHTML = 'DOM<br> IS THE <br> BEES KNEES';
+Title.innerHTML = 'DOM<br> IS <br> AWESOME';
+
+////middle
+
+// //  "main-content": {
+//   "features-h4":"Features",
+//   "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+//   "about-h4":"About",
+//   "about-content": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+//   "middle-img-src": "img/mid-page-accent.jpg",
+//   "services-h4":"Services",
+//   "services-content": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+//   "product-h4":"Product",
+//   "product-content": "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+//   "vision-h4":"Vision",
+//   "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+// },
+
+const featureH4 = document.querySelector('.text-content h4');
+featureH4.textContent='Features';
+
+const featureContent = document.querySelector('.text-content p');
+featureContent.textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis';
+
+const midImg = document.querySelector('.main-content img');
+midImg.src = siteContent['main-content']['middle-img-src'];
+
+const bottom = document.querySelectorAll('.bottom-content .text-content h4')
+bottom[0].textContent = 'Services';
+bottom[1].textContent = 'Product';
+bottom[2].textContent = 'Vision';
+
+const bottom2 = document.querySelectorAll('.bottom-content .text-content p');
+
+bottom2[0].textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+bottom2[1].textContent = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+bottom2[2].textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+
+
+///contact
+// "contact": {
+//   "contact-h4" : "Contact",
+//   "address" : "123 Way 456 Street Somewhere, USA",
+//   "phone" : "1 (888) 888-8888",
+//   "email" : "sales@greatidea.io",
+
+const contact = document.querySelectorAll('.contact p');
+contact[0].textContent ="123 Way 456 Street Somewhere, USA";
+contact[1].textContent ="1 (888) 888-8888";
+contact[2].textContent ="sales@greatidea.io";
+
+
+
+////footer
+// "footer": {
+//   "copyright" : "Copyright Great Idea! 2018"
+// },
