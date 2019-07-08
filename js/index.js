@@ -92,3 +92,9 @@ mainContentProps[3].getElementsByTagName("p")[0].innerHTML = siteContent["main-c
 
 mainContentProps[4].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["vision-h4"];
 mainContentProps[4].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["vision-content"];
+
+
+
+// SECOND IMG
+let secondImg = document.getElementById("middle-img");
+secondImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
