@@ -95,3 +95,21 @@ contactSection[2].innerText = siteContent['contact']['email']
 // Footer
 let footerContent = document.querySelector('footer')
 footerContent.innerText = siteContent['footer']['copyright']
+
+let navi = document.getElementsByTagName('nav')[0]
+
+let addNewLinks = (link)=>{
+  let newLinks = document.createElement('a');
+  newLinks.innerText = link;
+  return newLinks;
+}
+
+
+
+navi.prepend(addNewLinks('🏠'));
+navi.append(addNewLinks('🎁'))
+
+x = document.querySelector('nav > a')
+y = document.querySelectorAll('nav > a')[7]
+x.style.fontSize = '1.2em';
+y.style.fontSize = '1.2em'
