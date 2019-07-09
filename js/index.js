@@ -37,6 +37,17 @@ const siteContent = {
   },
 };
 
+// Nav 
+const nav = document.querySelectorAll("nav a");
+nav.forEach(element => element.style.color = "gray");
+
+nav[0].textContent = siteContent.nav["nav-item-1"];
+nav[1].textContent = siteContent.nav["nav-item-2"];
+nav[2].textContent = siteContent.nav["nav-item-3"];
+nav[3].textContent = siteContent.nav["nav-item-4"];
+nav[4].textContent = siteContent.nav["nav-item-5"];
+nav[5].textContent = siteContent.nav["nav-item-6"];
+
 
 //Create selectors to point your data into elements
 //* [ ] Create selectors by using any of the DOM element's methods
@@ -52,50 +63,10 @@ const siteContent = {
 */
 // const btnID = document.getElementById('start-btn');
 
-// Example: Update the img src for the logo
+// logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-// let nav =
-// let cta =
-// let main-content =
-// let contact = 
-// let footer =
-
-
-/*  querySelector()
-- Any valid CSS selector will work
-- returns an element
-*/
-// const btnQuery = document.querySelector('button');
-// let btnQuery = document.querySelector('button');
-
-
-
-// // Multiple Element Selections
-// // HTMLCollection 
-// let tagNameTest = document.getElementsByTagName('p');
-// let classNameTest = document.getElementsByClassName('main-area');
-
-
-// // Change alt attribute of middle-img
-// /* <img class="middle-img" id="middle-img" src="img/mid-page-accent.jpg" alt="Image of code snippets across the screen"></img> */
-
-// let middle = document.querySelector('.middle-img');
-
-// middle-img-src = 'https://img/mid-page-accent.jpg';
-
-// middle-img-src.alt = "This is a picture of the middle image";
-
-
-// //Change the color of the navigation text to be green.
-// // DOM style
-// // anything with a - needs to be camel cased.  eg: background-color = backgroundColor
-
-// navQuery.forEach( element => {
-//   //console.log(element);
-//   element.style.color = "green"; 
-// });
 
 
 
