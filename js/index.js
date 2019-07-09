@@ -13,6 +13,9 @@ const siteContent = {
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
+  "change": {
+    "h1": "Ebi Is Da Best"
+  },
   "main-content": {
     "features-h4":"Features",
     "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
@@ -59,7 +62,7 @@ addNav[5].innerText = siteContent["nav"]["nav-item-6"];
 
 //cta section
 let ctaH1 = document.querySelector("h1");
-ctaH1.innerText = siteContent["cta"]["h1"].split(' ').join("\n")
+let ct = ctaH1.innerText = siteContent["cta"]["h1"].split(' ').join("\n")
 
 let ctaBtn = document.querySelector('button')
 ctaBtn.innerText = siteContent['cta']['button']
@@ -113,3 +116,16 @@ x = document.querySelector('nav > a')
 y = document.querySelectorAll('nav > a')[7]
 x.style.fontSize = '1.2em';
 y.style.fontSize = '1.2em'
+
+//stretch
+demo = document.getElementsByTagName('button')[0]
+demo.innerText = 'Click Me'
+demo.addEventListener('click', function(){
+  if(ctaH1.innerText=== ct){
+    ctaH1.innerText = siteContent['change']['h1'].split('Ebi').join('Ebi \n').split('Is').join('Is \n')
+  } else {
+    ctaH1.innerText = ct;
+  }
+
+  
+  })

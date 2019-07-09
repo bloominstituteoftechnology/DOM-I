@@ -11,35 +11,35 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 
 **Follow these steps to set up and work on your project:**
 
-* [ ] Create a forked copy of this project.
-* [ ] Add your project manager as collaborator on Github.
-* [ ] Clone your OWN version of the repository (Not Lambda's by mistake!).
-* [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-* [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-* [ ] Push commits: git push origin `<firstName-lastName>`.
+* :white_check_mark: Create a forked copy of this project.
+* :white_check_mark: Add your project manager as collaborator on Github.
+* :white_check_mark: Clone your OWN version of the repository (Not Lambda's by mistake!).
+* :white_check_mark: Create a new branch: git checkout -b `<firstName-lastName>`.
+* :white_check_mark: Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+* :white_check_mark: Push commits: git push origin `<firstName-lastName>`.
 
 **Follow these steps for completing your project.**
 
-* [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo). **Please don't merge your own pull request**
-* [ ] Add your project manager as a reviewer on the pull-request
-* [ ] Your project manager will count the project as complete by merging the branch back into master.
+* :white_check_mark: Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo). **Please don't merge your own pull request**
+* :white_check_mark: Add your project manager as a reviewer on the pull-request
+* :white_check_mark: Your project manager will count the project as complete by merging the branch back into master.
 
 ## Task 1: Create selectors to point your data into elements
-* [ ] Create selectors by using any of the DOM element's methods
-* [ ] Note that IDs have been used on all images.  Use the IDs to update src path content
+* :white_check_mark: Create selectors by using any of the DOM element's methods
+* :white_check_mark: Note that IDs have been used on all images.  Use the IDs to update src path content
 
 ## Task 2: Update the HTML with the JSON data
-* [ ] Remember, NO direct updating of the HTML source is allowed.
-* [ ] Using your selectors, update the content to match the example file.
-* [ ] Remember to update the src attributes on images
+* :white_check_mark: Remember, NO direct updating of the HTML source is allowed.
+* :white_check_mark: Using your selectors, update the content to match the example file.
+* :white_check_mark: Remember to update the src attributes on images
 
 ## Task 3: Add new content
-* [ ] Change the color of the navigation text to be green.
-* [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
-* [ ] Check your work by looking at the [original html](original.html) in the browser
+* :white_check_mark: Change the color of the navigation text to be green.
+* :white_check_mark: Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
+* :white_check_mark: Check your work by looking at the [original html](original.html) in the browser
 
 ## Stretch Goals
-* [ ] Update styles throughout the page as you see fit.  Study what happens when you updated the DOM using style in JavaScript.  
+* :white_check_mark: Update styles throughout the page as you see fit.  Study what happens when you updated the DOM using style in JavaScript.  
 * [ ] Study tomorrow's lesson on events and try to integrate a button that can update content on the site with a click of a button.  You could build a similar data object with new values to help you test the click event.
 
 ## Stretch Project: Digital Timer
