@@ -55,7 +55,7 @@ ctaImg.setAttribute("src", siteContent.cta["img-src"]);
 
 // Nav
 let navLink = document.querySelectorAll("a");
-console.log(navLink);
+
 let services = document.createTextNode(siteContent.nav["nav-item-1"]);
 let product = document.createTextNode(siteContent.nav["nav-item-2"]);
 let vision = document.createTextNode(siteContent.nav["nav-item-3"]);
@@ -69,3 +69,61 @@ navLink[2].append(vision);
 navLink[3].append(features);
 navLink[4].append(about);
 navLink[5].append(contact);
+
+// Change navigation text color to green
+navLink.forEach(color => (color.style.color = "green"));
+
+// .appendChild() & .prependChild()
+
+// Section Titles
+const sectionTitle = document.querySelectorAll("h4");
+
+const featuresSection = document.createTextNode(siteContent["main-content"]["features-h4"]);
+const aboutSection = document.createTextNode(siteContent["main-content"]["about-h4"]);
+const servicesSection = document.createTextNode(siteContent["main-content"]["services-h4"]);
+const productSection = document.createTextNode(siteContent["main-content"]["product-h4"]);
+const visionSection = document.createTextNode(siteContent["main-content"]["vision-h4"]);
+
+sectionTitle[0].append(featuresSection);
+sectionTitle[1].append(aboutSection);
+sectionTitle[2].append(servicesSection);
+sectionTitle[3].append(productSection);
+sectionTitle[4].append(visionSection);
+
+// Section Text
+const sectionText = document.querySelectorAll("div > h4 + p");
+
+let featuresText = document.createTextNode(siteContent["main-content"]["features-content"]);
+let aboutText = document.createTextNode(siteContent["main-content"]["about-content"]);
+let servicesText = document.createTextNode(siteContent["main-content"]["services-content"]);
+let productText = document.createTextNode(siteContent["main-content"]["product-content"]);
+let visionText = document.createTextNode(siteContent["main-content"]["vision-content"]);
+
+sectionText[0].append(featuresText);
+sectionText[1].append(aboutText);
+sectionText[2].append(servicesText);
+sectionText[3].append(productText);
+sectionText[4].append(visionText);
+
+// Divider Image
+const divImg = document.getElementById("middle-img");
+divImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+// Contact
+const contactH4 = document.querySelector(".contact > h4");
+const contactInfo = document.querySelectorAll(".contact > p");
+
+const contactTitle = document.createTextNode(siteContent.contact["contact-h4"]);
+const address = document.createTextNode(siteContent.contact.address);
+const phone = document.createTextNode(siteContent.contact.phone);
+const email = document.createTextNode(siteContent.contact.email);
+
+contactH4.append(contactTitle);
+contactInfo[0].append(address);
+contactInfo[1].append(phone);
+contactInfo[2].append(email);
+
+// Footer
+const copyright = document.querySelector("footer > p");
+const cr = document.createTextNode(siteContent.footer.copyright);
+copyright.append(cr);
