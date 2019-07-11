@@ -94,6 +94,10 @@ button.innerHTML = siteContent["cta"]["button"];
 // const ctaButton = document.querySelector("button");
 // ctaButton.textContent = siteContent.cta["button"];
 
+//stretch
+button.style.borderRadius = "8px";
+button.style.border = " 4px ridge aqua";
+
 //Text h4
 const textH4 = document.querySelectorAll(".text-content h4");
 textH4[0].textContent = siteContent["main-content"]["features-h4"];
@@ -121,7 +125,10 @@ contactPara[2].textContent = siteContent["contact"]["email"];
 
 //Footer
 const footer = document.querySelector("footer p");
-footer.textContent = siteContent["footer"]["copyright"];
+footer.innerHTML = siteContent["footer"]["copyright"];
+
+//stretch 
+footer.style.color = "DeepSkyBlue";
 
 //Add 2 new nav
 const home = document.createElement("a");
