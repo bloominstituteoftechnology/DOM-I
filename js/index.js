@@ -37,6 +37,31 @@ const siteContent = {
   },
 };
 
+//navigation:
+
+let navA = document.querySelectorAll("a");
+let i = 0;
+
+ while(i < navA.length){
+  navA[i].textContent=siteContent.nav[`nav-item-${i + 1}`];
+   i++;
+}
+
+//creation of two new a tags for the header
+let a = document.createElement("a");
+a.textContent ="Live Chat";
+let header = document.querySelector("nav");
+header.prepend(a);
+let b = document.createElement("a");
+let secondA = document.querySelector("nav a:nth-child(2)");
+b.textContent ="Share";
+secondA.prepend(b);	header.prepend(b);
+
+let nav = document.querySelectorAll("a");
+nav.forEach(function(element){
+  element.style.color="green";
+})
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
