@@ -63,3 +63,13 @@ document.querySelector(".H4-2").textContent = siteContent["main-content"]["produ
 document.querySelector(".H4-2+p").textContent = siteContent["main-content"]["product-content"];
 document.querySelector(".H4-3").textContent = siteContent["main-content"]["vision-h4"];
 document.querySelector(".H4-3+p").textContent = siteContent["main-content"]["vision-content"];
+
+ //content section 
+ document.querySelector(".contact h4").textContent = siteContent["contact"]["contact-h4"];
+ document.querySelector(".p-1").textContent = siteContent["contact"]["address"];
+ document.querySelector(".p-2").textContent = siteContent["contact"]["phone"];
+ document.querySelector(".p-3").textContent = siteContent["contact"]["email"];
+ 
+  //footer
+ document.querySelector("footer p").textContent = siteContent["footer"]["copyright"];
+ 
