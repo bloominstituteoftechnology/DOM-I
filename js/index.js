@@ -55,3 +55,11 @@ document.querySelector(".hr-2").textContent = siteContent["main-content"]["about
 document.querySelector(".hr-2+p").textContent=siteContent["main-content"]["about-content"];
 let middleImage = document.querySelector(".middle-img");
 middleImage.setAttribute('src',siteContent["main-content"]["middle-img-src"]);
+
+//bottom-content
+document.querySelector(".bottom-content .text-content h4").textContent = siteContent["main-content"]["services-h4"];
+document.querySelector(".bottom-content .text-content p").textContent = siteContent["main-content"]["services-content"];
+document.querySelector(".H4-2").textContent = siteContent["main-content"]["product-h4"];
+document.querySelector(".H4-2+p").textContent = siteContent["main-content"]["product-content"];
+document.querySelector(".H4-3").textContent = siteContent["main-content"]["vision-h4"];
+document.querySelector(".H4-3+p").textContent = siteContent["main-content"]["vision-content"];
