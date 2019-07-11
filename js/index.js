@@ -49,6 +49,7 @@ ctaH1.append(ctaText);
 const ctaBTN = document.querySelector("button");
 const btnText = document.createTextNode(siteContent.cta.button);
 ctaBTN.append(btnText);
+ctaBTN.style.background = "limegreen";
 
 const ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute("src", siteContent.cta["img-src"]);
@@ -83,7 +84,7 @@ navLink[0].prepend(pretend);
 navLink[5].appendChild(attend);
 
 // Section Titles
-const sectionTitle = document.querySelectorAll("h4");
+const sectionTitle = document.querySelectorAll(".text-content > h4");
 
 const featuresSection = document.createTextNode(siteContent["main-content"]["features-h4"]);
 const aboutSection = document.createTextNode(siteContent["main-content"]["about-h4"]);
@@ -96,6 +97,13 @@ sectionTitle[1].append(aboutSection);
 sectionTitle[2].append(servicesSection);
 sectionTitle[3].append(productSection);
 sectionTitle[4].append(visionSection);
+
+sectionTitle.forEach(title => {
+  title.style.fontSize = "35px";
+  title.style.letterSpacing = "5px";
+  title.style.color = "tomato";
+  title.style.marginBottom = "35px";
+});
 
 // Section Text
 const sectionText = document.querySelectorAll("div > h4 + p");
@@ -112,9 +120,13 @@ sectionText[2].append(servicesText);
 sectionText[3].append(productText);
 sectionText[4].append(visionText);
 
+sectionText.forEach(text => (text.style.lineHeight = "1.7"));
+
 // Divider Image
 const divImg = document.getElementById("middle-img");
 divImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+divImg.style.marginBottom = "70px";
+divImg.style.marginTop = "70px";
 
 // Contact
 const contactH4 = document.querySelector(".contact > h4");
@@ -129,6 +141,10 @@ contactH4.append(contactTitle);
 contactInfo[0].append(address);
 contactInfo[1].append(phone);
 contactInfo[2].append(email);
+
+contactH4.style.fontSize = "35px";
+contactH4.style.color = "dodgerblue";
+contactH4.style.marginTop = "40px";
 
 // Footer
 const copyright = document.querySelector("footer > p");
