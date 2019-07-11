@@ -73,7 +73,14 @@ navLink[5].append(contact);
 // Change navigation text color to green
 navLink.forEach(color => (color.style.color = "green"));
 
-// .appendChild() & .prependChild()
+// .appendChild() & .prepend()
+const navigation = document.querySelector("nav");
+
+const pretend = document.createTextNode("Prepended");
+const attend = document.createTextNode("Appended");
+
+navLink[0].prepend(pretend);
+navLink[5].appendChild(attend);
 
 // Section Titles
 const sectionTitle = document.querySelectorAll("h4");
