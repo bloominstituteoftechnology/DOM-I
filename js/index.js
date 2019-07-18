@@ -38,5 +38,33 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+
+
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// NAV Bar 
+
+let navBar = document.querySelectorAll('a');
+navBar[i].textContent = siteContent['nav'][`nav-item-${i+1}`];
+navBar[i].style.color = 'green';
+
+// for(let i = 0; < siteContent.nav.length; i++) {
+//   aTag[i].innerHtml = siteContent["nav"[i]];
+// }
+
+// let navBar = document.querySelectorAll("nav");
+//   for(let i = 0; i < siteContent.nav.length; i++){
+//     navBar.children[i].innerhtml = siteContent["nav"][i];
+//     navBar.children[i].style.color = "green";
+//   }
+
+const newNav1 = document.createElement('a');
+const newText2 = document.createTestNode('Append');
+newText1.style.color = 'green';
+newNav1.append(newNav1);
+
+const newNav2 = document.createElement('a')
+const newText2 = document.createTextNode('Prepend');
+newText2.style.color = 'green';
+newNav2.append(newText2);
