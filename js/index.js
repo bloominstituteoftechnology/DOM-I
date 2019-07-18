@@ -37,6 +37,10 @@ const siteContent = {
   },
 };
 
+
+
+
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
@@ -120,8 +124,7 @@ console.log(footerParagraph);
 // console.log(anchorTag1);
 // navItems[1].innerText = siteContent["nav"]["nav-item-2"]
 
-// console.log(navItems.length);
-
+console.log(navItems.length);
 
 
 //stretch probs
@@ -133,6 +136,16 @@ anchorTag1.href = "#";
 anchorTag2.href = "#";
 nav[0].appendChild(anchorTag1);
 nav[0].prepend(anchorTag2)
+const navBar = document.querySelectorAll("a");
+// navBar is a nodeList which has access to forEach
+navBar.forEach(function(item){
+  item.style.color = "green"
+})
+
+// navBar.style.color = "green"
+console.log(navBar);
+
+
 
 
 
