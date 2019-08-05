@@ -64,6 +64,7 @@ nav[4].style.color = "green";
 //cta h1
 const sec1 = document.querySelectorAll(".cta .cta-text h1");
 sec1[0].textContent = siteContent["cta"]["h1"];
+sec1[0].innerText = siteContent.cta.h1.split(' ').join('\n');
 
 //cta button
 const sec1But = document.querySelectorAll(".cta .cta-text button");
@@ -99,14 +100,20 @@ sec2Botp[0].textContent = siteContent["main-content"]["services-content"];
 sec2Botp[1].textContent = siteContent["main-content"]["product-content"];
 sec2Botp[2].textContent = siteContent["main-content"]["vision-content"];
 
-//contact class
+//contact h4
 const contactBot = document.querySelectorAll(".contact h4");
 contactBot[0].textContent = siteContent["contact"]["contact-h4"];
 
+//contact p
 const contactBot2 = document.querySelectorAll(".contact p");
 contactBot2[0].textContent = siteContent["contact"]["address"];
 contactBot2[1].textContent = siteContent["contact"]["phone"];
 contactBot2[2].textContent = siteContent["contact"]["email"];
+
+//contact split
+let addressArray = siteContent['contact']['address'].split(' ');
+addressArray.splice(4, 0, '\r\n');
+contactBot2[0].innerText = addressArray.join(' ');
 
 //footer
 const foot = document.querySelectorAll("footer");
@@ -116,8 +123,6 @@ foot[0].textContent = siteContent["footer"]["copyright"];
 //const ctaTxt = document.querySelector(".cta-text h1");
 //ctaTxt.textContent = siteContent["cta"]["h1"];
 //document.write("\n");
-
-
 
 
 
