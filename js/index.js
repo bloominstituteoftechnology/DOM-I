@@ -74,6 +74,21 @@ titleText.style.fontFamily = "Barriecito";
 buttonContent.textContent = siteContent["cta"]["button"];
 heroImage.src = siteContent["cta"]["img-src"];
 
+titleText.addEventListener("mouseenter", () => {
+  titleText.textContent = "Manipulate that DOM!!!";
+});
+
+titleText.addEventListener("mouseleave", () => {
+  titleText.textContent = siteContent["cta"]["h1"];
+})
+
+heroImage.addEventListener("mouseenter", () => {
+  heroImage.src = "../img/whoodle-pup.jpg";
+});
+
+heroImage.addEventListener("mouseleave", () => {
+  heroImage.src = siteContent["cta"]["img-src"];
+})
 //middle image
 
 let midPhoto = document.getElementById("middle-img");
