@@ -70,17 +70,17 @@ const navItem6 = document.getElementsByTagName('a')[5].textContent = siteContent
 //Main Content//
 //H4's
 
-document.getElementsByTagName('h4')[0].textContent = 'Features';
+const title1 = document.getElementsByTagName('h4')[0].textContent = siteContent["main-content"]["features-h4"];
 
-document.getElementsByTagName('h4')[1].textContent = 'About';
+const title2 = document.getElementsByTagName('h4')[1].textContent = siteContent["main-content"]["about-h4"];
 
-document.getElementsByTagName('h4')[2].textContent = 'Services';
+const title3 = document.getElementsByTagName('h4')[2].textContent = siteContent["main-content"]["services-h4"];
 
-document.getElementsByTagName('h4')[3].textContent = 'Product';
+const title4 = document.getElementsByTagName('h4')[3].textContent = siteContent["main-content"]["product-h4"];
 
-document.getElementsByTagName('h4')[4].textContent = 'Vision';
+const title5 = document.getElementsByTagName('h4')[4].textContent = siteContent["main-content"]["vision-h4"];
 
-document.getElementsByTagName('h4')[5].textContent = 'Contact';
+const title6 = document.getElementsByTagName('h4')[5].textContent = siteContent["main-content"]["vision-h4"];
 
 //Paragraphs//
 
