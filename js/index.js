@@ -10,7 +10,7 @@ const siteContent = {
   },
   "cta": {
     "h1": "DOM Is Awesome",
-    "button": "Get Started",
+    "button": "Awesome, is Dom.",
     "img-src": "img/header-img.png"
   },
   "main-content": {
@@ -66,6 +66,7 @@ lastAnchor.style.color = 'purple';
 navTag.prepend(firstAnchor);
 navTag.appendChild(lastAnchor);
 
+
 const ctaText = document.querySelector(".cta-text h1");
 
 let ctaArray = siteContent["cta"]["h1"].split(" ");
@@ -77,8 +78,22 @@ ctaText.innerText = ctaArray.join(" ");
 
 // const pText = document.querySelector('p');
 const ctaBtn = document.querySelector('.cta-text button');
-
 ctaBtn.innerText = siteContent["cta"]["button"];
+ctaBtn.addEventListener('mouseenter', (event) => {
+    ctaBtn.style.backgroundColor = 'green';
+});
+ctaBtn.addEventListener('mouseleave', (event) => {
+    ctaBtn.style.backgroundColor = 'initial';
+});
+let body = document.querySelector('body');
+let step = true;
+ctaBtn.addEventListener('click', (event) => {
+    step = !step;
+    if (step === false){body.style.filter = 'grayscale(100%)';}
+    else {body.style.filter = 'initial'};
+});
+
+
 
 const topH4 = document.querySelectorAll('.top-content .text-content h4');
 topH4[0].innerText = siteContent['main-content']['features-h4'];
