@@ -49,6 +49,17 @@ nav[2].textContent = siteContent["nav"]["nav-item-3"];
 nav[3].textContent = siteContent["nav"]["nav-item-4"];
 nav[4].textContent = siteContent["nav"]["nav-item-5"];
 nav[5].textContent = siteContent["nav"]["nav-item-6"];
+nav[5].style.color = "green";
+
+//color
+const navColor = document.querySelectorAll("a");
+nav[0].style.color = "green";
+nav[1].style.color = "green";
+nav[2].style.color = "green";
+nav[3].style.color = "green";
+nav[4].style.color = "green";
+
+
 
 //cta h1
 const sec1 = document.querySelectorAll(".cta .cta-text h1");
