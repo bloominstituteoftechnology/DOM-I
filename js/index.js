@@ -55,6 +55,27 @@ aTags[4].innerText = "About"
 aTags[5].setAttribute('src', siteContent["nav"]["nav-item-6"])
 aTags[5].innerText = "Contact"
 
+const nav = document.querySelectorAll('a');
+nav.forEach(element =>{
+  element.style.color = 'green';
+})
+
+let newElement1 = document.createElement('nav-item-7');
+newElement1.textContent = "Home";
+newElement1.href = "#";
+newElement1.style.color = "green";
+
+const extraNav1 = document.querySelector('nav');
+extraNav1.append(newElement1);
+
+const newElement2 = document.createElement('nav-item-8');
+newElement2.textContent = "Media";
+newElement2.href = "#";
+newElement2.style.color = "green";
+
+const extraNav2 = document.querySelector('nav');
+extraNav2.appendChild(newElement2);
+
 let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
 
