@@ -66,12 +66,13 @@ newItemTwo.style.color = "green";
 
 //cta
 let titleText = document.querySelector("h1");
-let buttonContent = document.querySelector("button");
+let buttonGadget = document.querySelector("button");
 let heroImage = document.getElementById("cta-img");
+let colorBackground = document.querySelector("body");
 
 titleText.textContent = siteContent["cta"]["h1"];
 titleText.style.fontFamily = "Barriecito";
-buttonContent.textContent = siteContent["cta"]["button"];
+buttonGadget.textContent = siteContent["cta"]["button"];
 heroImage.src = siteContent["cta"]["img-src"];
 
 titleText.addEventListener("mouseenter", () => {
@@ -82,6 +83,12 @@ titleText.addEventListener("mouseleave", () => {
   titleText.textContent = siteContent["cta"]["h1"];
 })
 
+buttonGadget.addEventListener("click", () => {
+  titleText.style.color = "red";
+  colorBackground.style.backgroundColor = "lime";
+
+});
+
 heroImage.addEventListener("mouseenter", () => {
   heroImage.src = "../img/whoodle-pup.jpg";
 });
@@ -89,6 +96,8 @@ heroImage.addEventListener("mouseenter", () => {
 heroImage.addEventListener("mouseleave", () => {
   heroImage.src = siteContent["cta"]["img-src"];
 })
+
+
 //middle image
 
 let midPhoto = document.getElementById("middle-img");
@@ -124,4 +133,5 @@ paraTag[8].textContent = siteContent["footer"]["copyright"];
 paraTag.forEach(element => {
   element.style.fontFamily = "Schoolbell";
 });
+
 
