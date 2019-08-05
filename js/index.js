@@ -92,6 +92,7 @@ const p4 = document.getElementsByTagName('p')[3].textContent =  siteContent["mai
 
 const p5 = document.getElementsByTagName('p')[4].textContent =  siteContent["main-content"]["vision-content"];
 
+
 //Contact
 
 const contact1 = document.getElementsByTagName('p')[5].textContent = siteContent.contact.address;
@@ -103,8 +104,19 @@ const contact3 = document.getElementsByTagName('p')[7].textContent = siteContent
 const contact4 = document.getElementsByTagName('p')[8].textContent = siteContent.footer.copyright;
 
 //## Task 3: Add new content
+
+
 let newColor = document.querySelectorAll("a");
+
 newColor.forEach(link => {
   link.style.color = "green";
 });
+
+var newChild1 = document.createElement('a');
+newChild1.textContent = 'link1';
+document.querySelector('nav').appendChild(newChild1);
+
+var newChild2 = document.createElement('a')
+newChild2.textContent = 'link2'
+document.querySelector('nav').prepend(newChild2);
   
