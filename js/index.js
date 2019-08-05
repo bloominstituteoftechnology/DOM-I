@@ -83,3 +83,21 @@ ctaBtn.innerText = siteContent["cta"]["button"];
 const topH4 = document.querySelectorAll('.top-content .text-content h4');
 topH4[0].innerText = siteContent['main-content']['features-h4'];
 topH4[1].innerText = siteContent['main-content']['about-h4'];
+
+const topP = document.querySelectorAll(".top-content .text-content p");
+topP[0].innerText = siteContent["main-content"]["features-content"];
+topP[1].innerText = siteContent["main-content"]["features-content"];
+
+const botH4 = document.querySelectorAll(".bottom-content .text-content h4");
+
+botH4[0].innerText = siteContent["main-content"]["services-h4"];
+botH4[1].innerText = siteContent["main-content"]["product-h4"];
+botH4[2].innerText = siteContent["main-content"]["vision-h4"];
+
+const botP = document.querySelectorAll(".bottom-content .text-content p");
+
+botP[0].innerText = siteContent["main-content"]["services-content"];
+
+botP[1].innerText = siteContent["main-content"]["product-content"];
+
+botP[2].innerText = siteContent["main-content"]["vision-content"];
