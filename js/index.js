@@ -65,6 +65,7 @@ nav[4].style.color = "green";
 const sec1 = document.querySelectorAll(".cta .cta-text h1");
 sec1[0].textContent = siteContent["cta"]["h1"];
 sec1[0].innerText = siteContent.cta.h1.split(' ').join('\n');
+sec1[0].style.color = "blue";
 
 //cta button
 const sec1But = document.querySelectorAll(".cta .cta-text button");
@@ -114,6 +115,9 @@ contactBot2[2].textContent = siteContent["contact"]["email"];
 let addressArray = siteContent['contact']['address'].split(' ');
 addressArray.splice(4, 0, '\r\n');
 contactBot2[0].innerText = addressArray.join(' ');
+
+//OR
+//contactInfo[0].style.width = '20%';
 
 //footer
 const foot = document.querySelectorAll("footer");
