@@ -64,6 +64,20 @@ mainHeading.innerHTML = "DOM IS Awesome"
 let mainButton = document.querySelector('.cta .cta-text button');
 mainButton.innerText = "Get Started"
 
+let mainHeaders = document.querySelectorAll('.main-content h4');
+mainHeaders[0].textContent = siteContent["main-content"]["features-h4"]
+mainHeaders[1].textContent = siteContent["main-content"]["about-h4"]
+mainHeaders[2].textContent = siteContent["main-content"]["services-h4"]
+mainHeaders[3].textContent = siteContent["main-content"]["product-h4"]
+mainHeaders[4].textContent = siteContent["main-content"]["vision-h4"]
+
+let mainContent = document.querySelectorAll('.main-content p');
+mainContent[0].textContent = siteContent["main-content"]["features-content"]
+mainContent[1].textContent = siteContent["main-content"]["about-content"]
+mainContent[2].textContent = siteContent["main-content"]["services-content"]
+mainContent[3].textContent = siteContent["main-content"]["product-content"]
+mainContent[4].textContent = siteContent["main-content"]["vision-content"]
+
 
 
 let middleImg = document.getElementById("middle-img");
