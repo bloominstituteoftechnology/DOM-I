@@ -42,11 +42,15 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //Navigation
-const navItems = document.querySelectorAll('nav a');
+let navItems = document.querySelectorAll('nav a');
 navItems.forEach((a, i=1) => {
  a.textContent = siteContent.nav[`nav-item-${i}`];
 })
 
+//Task 3
+navItems.forEach((a) => a.style.color = 'green');
+// navItems.prepend("Home");
+//navItems.appendChild("Contact");
 
 
 //CTA
@@ -78,6 +82,12 @@ mtext[2].textContent = siteContent["main-content"]["services-content"];
 mtext[3].textContent = siteContent["main-content"]["product-content"];
 mtext[4].textContent = siteContent["main-content"]["vision-content"];
 
+
+//Stretch
+mheadings.forEach((a)=> a.style.color = 'slateblue');
+title.style.color = 'slategray';
+
+
 //Contact
 contHead = document.querySelector(".contact h4");
 contText = document.querySelectorAll(".contact p");
@@ -91,4 +101,5 @@ contText[2].textContent = siteContent.contact.email;
 //Footer
 let foot = querySelector("footer p");
 foot.textContent = siteContent["footer"]["copyright"];
+
 
