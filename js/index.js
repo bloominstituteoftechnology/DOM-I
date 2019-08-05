@@ -57,12 +57,18 @@ navItems.forEach(element => {
 
 let newItemOne = document.createElement("a");
 newItemOne.textContent = "Dog";
-navItems[0].prepend(newItemOne);
-newItemOne.style.color = "green";
+newItemOne.style.fontFamily = "Schoolbell";
+
 let newItemTwo = document.createElement("a");
 newItemTwo.textContent = "muffin";
-navItems[5].append(newItemTwo);
+newItemTwo.style.fontFamily = "Schoolbell";
+
+let navNavNav = document.querySelector("nav");
+navNavNav.append(newItemTwo);
 newItemTwo.style.color = "green";
+navNavNav.prepend(newItemOne);
+newItemOne.style.color = "green";
+navNavNav.style.justifyContent = "space-between";
 
 
 //cta
@@ -84,20 +90,42 @@ titleText.addEventListener("mouseleave", () => {
   titleText.textContent = siteContent["cta"]["h1"];
 })
 
+const shenanigan = document.createElement("h1");
+shenanigan.textContent = "Why not make it ridiculous?";
+const cta = document.querySelector(".cta");
+const ctaText = document.querySelector(".cta-text");
+
 buttonGadget.addEventListener("click", () => {
+  cta.append(shenanigan);
   titleText.style.color = "red";
   colorBackground.style.backgroundColor = "lime";
-  const shenanigan = document.createElement("h1");
-  const cta = document.querySelector(".cta");
-  shenanigan.textContent = "Why not make it ridiculous?";
-  shenanigan.style.width = "100%";
+  ctaText.style.width = "45%";
   shenanigan.style.fontFamily = "Barriecito";
-  cta.append(shenanigan);
+  shenanigan.style.padding = "50px";
+  shenanigan.style.fontSize = "60px";
+  shenanigan.style.backgroundColor = "pink";
+  shenanigan.style.width= "100%";
+  shenanigan.style.textAlign = "center";
+  cta.style.flexWrap = "wrap";
+  
   navItems.forEach(element => {
     element.style.fontFamily = "Barriecito";
-  })
+  }); //end forEach
 
-});
+});//end button gadget
+
+const newButton = document.createElement("button");
+newButton.textContent = "back to professional please!";
+const daFooter = document.querySelector("footer");
+daFooter.append(newButton);
+newButton.addEventListener("click", () => {
+  titleText.style.color = "black";
+  colorBackground.style.backgroundColor = "white";
+  shenanigan.style.display = "none";
+  navItems.forEach(element => {
+    element.style.fontFamily = "Schoolbell";
+  });//end forEach
+}); //end button
 
 heroImage.addEventListener("mouseenter", () => {
   heroImage.src = "../img/whoodle-pup.jpg";
