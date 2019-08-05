@@ -56,6 +56,28 @@ navItemFour.textContent = siteContent.nav["nav-item-4"];
 navItemFive.textContent = siteContent.nav["nav-item-5"];
 navItemSix.textContent = siteContent.nav["nav-item-6"];
 
+const navItems = document.querySelectorAll('nav a');
+navItems.forEach(el => {
+	el.style.color = ("green");
+});
+
+// Createing Links
+const navTag = document.querySelector('nav');
+const home = document.createElement('a')
+home.textContent = "Home";
+home.setAttribute('href', '#');
+home.style.color = "green";
+
+const lorem = document.createElement('a')
+lorem.textContent = "Lorem";
+lorem.setAttribute('href', '#');
+lorem.style.color = "green";
+
+navTag.prepend(home);
+navTag.appendChild(lorem);
+
+
+
 // CTA header text
 const ctaHeader = document.querySelector('.cta-text');
 const ctaArray = siteContent.cta.h1.split(" ");
@@ -112,3 +134,20 @@ productText.textContent = siteContent["main-content"]["product-content"];
 visionHeader.textContent = siteContent["main-content"]["vision-h4"];
 visionText.textContent = siteContent["main-content"]["vision-content"];
 
+// Contact
+const contactHeader = document.querySelector('.contact h4');
+const contactP = document.querySelectorAll('section.contact p');
+
+const contactArray = siteContent.contact.address.split(" ");
+
+contactHeader.textContent = siteContent["contact"]["contact-h4"];
+
+contactHeader.insertAdjacentHTML('afterend', `<p>${contactArray[0]} ${contactArray[1]} ${contactArray[2]} ${contactArray[3]} <br> ${contactArray[4]} ${contactArray[5]}`);
+
+contactP[1].textContent = siteContent.contact.phone;
+contactP[2].textContent = siteContent.contact.email;
+
+
+// footer
+const mainFooterParagraph = document.querySelector('footer p');
+mainFooterParagraph.textContent = siteContent.footer.copyright;
