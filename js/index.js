@@ -65,3 +65,21 @@ lastAnchor.style.color = 'purple';
 
 navTag.prepend(firstAnchor);
 navTag.appendChild(lastAnchor);
+
+const ctaText = document.querySelector(".cta-text h1");
+
+let ctaArray = siteContent["cta"]["h1"].split(" ");
+
+ctaArray.splice(1, 0, "\r\n");
+ctaArray.splice(3, 0, "\r\n");
+
+ctaText.innerText = ctaArray.join(" ");
+
+const pText = document.querySelector('p');
+const ctaBtn = document.querySelector('.cta-text button');
+
+ctaBtn.innerText = siteContent["cta"]["button"];
+
+const topH4 = document.querySelectorAll('.top-content .text-content h4');
+topH4[0].innerText = siteContent['main-content']['features-h4'];
+topH4[1].innerText = siteContent['main-content']['about-h4'];
