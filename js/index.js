@@ -40,3 +40,62 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let navBar = document.getElementsByTagName('a');
+let navArray = Array.from(navBar);
+
+navBar[0].innerText = siteContent['nav']['nav-item-1']
+navBar[1].innerText = siteContent['nav']['nav-item-2']
+navBar[2].innerText = siteContent['nav']['nav-item-3']
+navBar[3].innerText = siteContent['nav']['nav-item-4']
+navBar[4].innerText = siteContent['nav']['nav-item-5']
+navBar[5].innerText = siteContent['nav']['nav-item-6']
+
+
+// cta section
+
+let ctaHeader = document.querySelector('.cta h1');
+ctaHeader.innerHTML = siteContent['cta']['h1'];
+
+let ctaButton = document.querySelector('.cta button');
+ctaButton.innerHTML = siteContent['cta']['button'];
+
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent['cta']['img-src']);
+
+// main section
+
+let mainHeader = document.getElementsByTagName('h4');
+let mainContent = document.getElementsByTagName('p');
+
+// top content
+
+mainHeader[0].innerText = siteContent['main-content']['features-h4'];
+mainContent[0].innerText = siteContent['main-content']['features-content'];
+mainHeader[1].innerText = siteContent['main-content']['about-h4'];
+mainContent[1].innerText = siteContent['main-content']['about-content'];
+
+// middle image
+
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+// bottom content
+
+mainHeader[2].innerText = siteContent['main-content']['services-h4'];
+mainContent[2].innerText = siteContent['main-content']['services-content'];
+mainHeader[3].innerText = siteContent['main-content']['product-h4'];
+mainContent[3].innerText = siteContent['main-content']['product-content'];
+mainHeader[4].innerText = siteContent['main-content']['vision-h4'];
+mainContent[4].innerText = siteContent['main-content']['vision-content'];
+
+// contact
+
+mainHeader[5].innerText = siteContent['contact']['contact-h4'];
+mainContent[5].innerText = siteContent['contact']['address'];
+mainContent[6].innerText = siteContent['contact']['phone'];
+mainContent[7].innerText = siteContent['contact']['email'];
+
+// footer
+
+mainContent[8].innerText = siteContent['footer']['copyright'];
