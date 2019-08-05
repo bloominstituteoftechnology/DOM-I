@@ -72,6 +72,7 @@ navBar.forEach((item)=>(item.style.color= "green"));
 
 let ctaHeader = document.querySelector('.cta h1');
 ctaHeader.innerText = siteContent['cta']['h1'];
+ctaHeader.innerText = siteContent.cta.h1.split(' ').join('\n');
 
 let ctaButton = document.querySelector('.cta button');
 ctaButton.innerText = siteContent['cta']['button'];
@@ -81,8 +82,8 @@ ctaImg.setAttribute('src', siteContent['cta']['img-src']);
 
 // main section
 
-let mainHeader = document.getElementsByTagName('h4');
-let mainContent = document.getElementsByTagName('p');
+let mainHeader = document.querySelectorAll('h4');
+let mainContent = document.querySelectorAll('p');
 
 // top content
 
@@ -106,11 +107,18 @@ mainHeader[4].innerText = siteContent['main-content']['vision-h4'];
 mainContent[4].innerText = siteContent['main-content']['vision-content'];
 
 // contact
+const contactHeader = document.querySelector('.contact h4');
+contactHeader.innerText = siteContent['contact']['contact-h4'];
 
-mainHeader[5].innerText = siteContent['contact']['contact-h4'];
-mainContent[5].innerText = siteContent['contact']['address'];
-mainContent[6].innerText = siteContent['contact']['phone'];
-mainContent[7].innerText = siteContent['contact']['email'];
+const contactContent = document.querySelectorAll('.contact p');
+
+let addressArray = siteContent['contact']['address'].split(' ');
+addressArray.splice(4, 0, '\r\n');
+
+contactContent[0].innerText = addressArray.join(' ');
+contactContent[1].innerText = siteContent['contact']['phone'];
+contactContent[2].innerText = siteContent['contact']['email'];
+
 
 // footer
 
