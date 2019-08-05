@@ -52,4 +52,16 @@ let navTag = document.querySelector("nav");
 let anchorTags = document.querySelectorAll('a');
 anchorTags.forEach(function(item, index, array) {
   item.innerText = siteContent['nav'][`nav-item-${index+1}`];
+  item.style.color = 'green';
 });
+
+const firstAnchor = document.createElement('a');
+const lastAnchor = document.createElement('a');
+
+firstAnchor.textContent = 'Greetings';
+lastAnchor.textContent = 'Safe Travels';
+firstAnchor.style.color = 'orange';
+lastAnchor.style.color = 'purple';
+
+navTag.prepend(firstAnchor);
+navTag.appendChild(lastAnchor);
