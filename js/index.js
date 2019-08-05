@@ -54,6 +54,9 @@ nav1.forEach(function(value, i) {
 const dia = document.querySelector('h1');
 dia.textContent = siteContent.cta.h1
 
+const ctaHeading = document.querySelector('.cta-text h1');
+ctaHeading.innerHTML = siteContent["cta"]["h1"].split(' ').join('<br>');
+ctaHeading.style.color = 'dodgerblue';
 // const diaBox = document.querySelector('.cta-text')
 // diaBox.style.width = "40%"
 
