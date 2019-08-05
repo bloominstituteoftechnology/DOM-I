@@ -49,8 +49,18 @@ navItems.forEach((a, i=1) => {
 
 //Task 3
 navItems.forEach((a) => a.style.color = 'green');
-// navItems.prepend("Home");
-//navItems.appendChild("Contact");
+
+let home = document.createElement("a");
+home.textContent = "Home";
+home.style.color = "green";
+
+let cont = document.createElement("a");
+cont.textContent = "Content";
+cont.style.color = "green";
+
+let navig = document.querySelector('nav')
+navig.prepend(home);
+navig.appendChild(cont);
 
 
 //CTA
@@ -99,7 +109,6 @@ contText[1].textContent = siteContent.contact.phone;
 contText[2].textContent = siteContent.contact.email;
 
 //Footer
-let foot = querySelector("footer p");
-foot.textContent = siteContent["footer"]["copyright"];
+document.querySelector("footer p").textContent = siteContent.footer.copyright;
 
 
