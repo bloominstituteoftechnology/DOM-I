@@ -47,10 +47,10 @@ ctaImg.setAttribute('src', siteContent['cta']['img-src']);
 let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
-let navTag = document.querySelector("nav");
+let navTag = document.querySelector('nav');
 
-let anchorTags = document.querySelectorAll('a');
-anchorTags.forEach(function(item, index, array) {
+let navAnchors = document.querySelectorAll('a');
+navAnchors.forEach(function(item, index, array) {
   item.innerText = siteContent['nav'][`nav-item-${index+1}`];
   item.style.color = 'green';
 });
@@ -75,7 +75,7 @@ ctaArray.splice(3, 0, "\r\n");
 
 ctaText.innerText = ctaArray.join(" ");
 
-const pText = document.querySelector('p');
+// const pText = document.querySelector('p');
 const ctaBtn = document.querySelector('.cta-text button');
 
 ctaBtn.innerText = siteContent["cta"]["button"];
@@ -89,15 +89,28 @@ topP[0].innerText = siteContent["main-content"]["features-content"];
 topP[1].innerText = siteContent["main-content"]["features-content"];
 
 const botH4 = document.querySelectorAll(".bottom-content .text-content h4");
-
 botH4[0].innerText = siteContent["main-content"]["services-h4"];
 botH4[1].innerText = siteContent["main-content"]["product-h4"];
 botH4[2].innerText = siteContent["main-content"]["vision-h4"];
 
 const botP = document.querySelectorAll(".bottom-content .text-content p");
-
 botP[0].innerText = siteContent["main-content"]["services-content"];
-
 botP[1].innerText = siteContent["main-content"]["product-content"];
-
 botP[2].innerText = siteContent["main-content"]["vision-content"];
+
+const contactH4 = document.querySelector('.contact h4');
+contactH4.innerText = siteContent['contact']['contact-h4'];
+
+const contactP = document.querySelectorAll(".contact p");
+
+let addressArray = siteContent["contact"]["address"].split(" ");
+
+addressArray.splice(4, 0, "\r\n");
+
+contactP[0].innerText = addressArray.join(" ");
+contactP[1].innerText = siteContent["contact"]["phone"];
+contactP[2].innerText = siteContent["contact"]["email"];
+
+const footerP = document.querySelector("footer p");
+
+footerP.innerText = siteContent["footer"]["copyright"];
