@@ -52,8 +52,22 @@ navBar[5].textContent = siteContent['nav']['nav-item-6']
 
 navBar.forEach(color => color.style.color = 'green')
 
+let globalNav = document.querySelector('nav')
 
-//CTA
+let home = document.createElement('a')
+home.textContent = "Home"
+home.style.color = 'green'
+
+let returns = document.createElement('a')
+returns.textContent = "Returns"
+returns.style.color = 'green'
+
+globalNav.prepend(home)
+globalNav.appendChild(returns)
+
+
+// //CTA
+
 
 
 //Main Content
