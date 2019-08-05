@@ -1,4 +1,4 @@
-const siteContent = {
+const siteContent = { 
   "nav": {
     "nav-item-1": "Services",
     "nav-item-2": "Product",
@@ -40,3 +40,46 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let aTags = document.querySelectorAll('a');
+aTags[0].setAttribute('src', siteContent["nav"]["nav-item-1"])
+aTags[0].innerText = "Services"
+aTags[1].setAttribute('src', siteContent["nav"]["nav-item-2"])
+aTags[1].innerText = "Product"
+aTags[2].setAttribute('src', siteContent["nav"]["nav-item-3"])
+aTags[2].innerText = "Vision"
+aTags[3].setAttribute('src', siteContent["nav"]["nav-item-4"])
+aTags[3].innerText = "Features"
+aTags[4].setAttribute('src', siteContent["nav"]["nav-item-5"])
+aTags[4].innerText = "About"
+aTags[5].setAttribute('src', siteContent["nav"]["nav-item-6"])
+aTags[5].innerText = "Contact"
+
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+let mainHeading = document.querySelector('.cta .cta-text h1');
+mainHeading.innerHTML = "DOM IS Awesome"
+
+let mainButton = document.querySelector('.cta .cta-text button');
+mainButton.innerText = "Get Started"
+
+
+
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+let headerContact = document.querySelector(".contact h4");
+headerContact.innerHTML = "Contact"
+
+let addressContact = document.querySelector(".contact p");
+addressContact.innerHTML = "123 Way 456 Street<br> Somewhere, USA<br> <br>1 (888) 888-8888<br> <br>sales@greatidea.io"
+
+let footer = document.querySelector("footer")
+footer.innerHTML = "Copyright Great Idea! 2018"
+
+
+
+
+
+
