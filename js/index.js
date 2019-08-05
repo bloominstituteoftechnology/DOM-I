@@ -41,7 +41,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let navBar = document.getElementsByTagName('a');
+let navBar = document.querySelectorAll('a');
 let navArray = Array.from(navBar);
 
 navBar[0].innerText = siteContent['nav']['nav-item-1']
@@ -51,14 +51,30 @@ navBar[3].innerText = siteContent['nav']['nav-item-4']
 navBar[4].innerText = siteContent['nav']['nav-item-5']
 navBar[5].innerText = siteContent['nav']['nav-item-6']
 
+let newNav1 = document.createElement('nav-item-7');
+newNav1.textContent = "New 1";
+newNav1.style.color="green";
+
+let navBarNew = document.querySelector('nav');
+navBarNew.append(newNav1);
+
+let newNav2 = document.createElement('nav-item-8');
+newNav2.textContent = "New 2";
+newNav2.style.color="green";
+
+let navBarNew2 = document.querySelector('nav');
+navBarNew2.prepend(newNav2);
+
+navBar.forEach((item)=>(item.style.color= "green"));
+
 
 // cta section
 
 let ctaHeader = document.querySelector('.cta h1');
-ctaHeader.innerHTML = siteContent['cta']['h1'];
+ctaHeader.innerText = siteContent['cta']['h1'];
 
 let ctaButton = document.querySelector('.cta button');
-ctaButton.innerHTML = siteContent['cta']['button'];
+ctaButton.innerText = siteContent['cta']['button'];
 
 let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent['cta']['img-src']);
