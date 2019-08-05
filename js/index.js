@@ -52,6 +52,7 @@ navItems[5].textContent = siteContent["nav"]["nav-item-6"];
 
 navItems.forEach(element => {
   element.style.color = "green";
+  element.style.fontFamily = "Schoolbell";
 });
 
 let newItemOne = document.createElement("a");
@@ -86,6 +87,15 @@ titleText.addEventListener("mouseleave", () => {
 buttonGadget.addEventListener("click", () => {
   titleText.style.color = "red";
   colorBackground.style.backgroundColor = "lime";
+  const shenanigan = document.createElement("h1");
+  const cta = document.querySelector(".cta");
+  shenanigan.textContent = "Why not make it ridiculous?";
+  shenanigan.style.width = "100%";
+  shenanigan.style.fontFamily = "Barriecito";
+  cta.append(shenanigan);
+  navItems.forEach(element => {
+    element.style.fontFamily = "Barriecito";
+  })
 
 });
 
