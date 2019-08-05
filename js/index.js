@@ -65,7 +65,6 @@ const navItem4 = document.getElementsByTagName('a')[3].textContent = siteContent
 
 const navItem5 = document.getElementsByTagName('a')[4].textContent = siteContent.nav["nav-item-5"];
 
-const navItem6 = document.getElementsByTagName('a')[5].textContent = siteContent.nav["nav-item-6"];
 
 //Main Content//
 //H4's
@@ -80,29 +79,28 @@ const title4 = document.getElementsByTagName('h4')[3].textContent = siteContent[
 
 const title5 = document.getElementsByTagName('h4')[4].textContent = siteContent["main-content"]["vision-h4"];
 
-const title6 = document.getElementsByTagName('h4')[5].textContent = siteContent["main-content"]["vision-h4"];
 
 //Paragraphs//
 
-document.getElementsByTagName('p')[0].textContent = 'Features Reprehenderit laborum est cillum occaecat do amet anim. Irure est labore nisi elit velit consectetur incididunt commodo. Fugiat commodo cupidatat mollit magna nostrud elit enim id elit consectetur et.';
+const p1 = document.getElementsByTagName('p')[0].textContent = siteContent["main-content"]["features-content"];
 
-document.getElementsByTagName('p')[1].textContent = 'About Labore id cillum est ipsum sint qui non qui dolore eiusmod tempor. Et aliquipe mollit officia pariatur minim consequat Lorem sint. Mollit consectetur incididunt fugiat et. Occaecat enim eu esse irure pariatur Lorem labore labore et. Lorem laboris exercitation non ipsum nulla duis pariatur irur';
+const p2 = document.getElementsByTagName('p')[1].textContent = siteContent["main-content"]["about-content"];
 
-document.getElementsByTagName('p')[2].textContent = 'Services Eu elit mollit laboris elit id irure. Occaecat cupidatat minim commodo pariatur reprehenderit ex veniam pariatur nulla ut magna dolor nulla. Aliqua adipisicing esse non labore Lorem labore duis est cupidatat voluptate. Cillum exercitation deserunt adipisicing nisi. Nisi cupidatatt tempor amet fugiat enim ea irure.';
+const p3 = document.getElementsByTagName('p')[2].textContent =  siteContent["main-content"]["services-content"];
 
-document.getElementsByTagName('p')[3].textContent = 'Product Eiusmod quis ullamco adipisicing quis esse velit quis. Ut cillum eu exercitation excepteur proident consequat aliqua cupidatat pariatur deserunt deserunt eu Lorem. Quis quis laboris aute id veniam occaecat nostrud cupidatat exercitation sint minim esse nostrud voluptate. Dolor duis aliquip pariatur exercitation. Incididunt occaecat laborum culpa cupidatat id enim dolore mollit ex aliqua anim tempor.';
+const p4 = document.getElementsByTagName('p')[3].textContent =  siteContent["main-content"]["product-content"];
 
-document.getElementsByTagName('p')[4].textContent = 'Vision Quis qui nostrud reprehenderit est dolore sint laboris excepteur tempor ipsum velit consectetur incididunt Lorem. Anim quis esse nisi ex magna officia nostrud. Exercitation qui pariatur dolor ipsum cillum ullamco qui est labore consectetur. Voluptate excepteur exercitation consequat nisi mollit ut exercitation cupidatat officia. Officia cupidatat adipisicing labore sint ad commodo.';
+const p5 = document.getElementsByTagName('p')[4].textContent =  siteContent["main-content"]["vision-content"];
 
 //Contact
 
-document.getElementsByTagName('p')[5].textContent = "123 Way 456 Street Somewhere, USA";
+const contact1 = document.getElementsByTagName('p')[5].textContent = siteContent.contact.address;
 
-document.getElementsByTagName('p')[6].textContent = "1-888-888-8888";
+const contact2 = document.getElementsByTagName('p')[6].textContent = siteContent.contact.phone;
 
-document.getElementsByTagName('p')[7].textContent = "Sales@bigtimeballas.gmail.com";
+const contact3 = document.getElementsByTagName('p')[7].textContent = siteContent.contact.email;
 
-document.getElementsByTagName('p')[8].textContent = "Copyright 2019 DM Enterpises";
+const contact4 = document.getElementsByTagName('p')[8].textContent = siteContent.footer.copyright;
 
 //## Task 3: Add new content
 let newColor = document.querySelectorAll("a");
