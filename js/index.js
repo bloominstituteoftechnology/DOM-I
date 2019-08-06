@@ -67,13 +67,15 @@ bigImg.src = "img/header-img.png"
 const button = document.querySelector('button');
 button.textContent = siteContent.cta.button;
 
+// -------------------------------- headers ------------------------------------
+
 const feature = document.querySelectorAll('.top-content .text-content h4')[0];
 feature.textContent = siteContent[`main-content`][`features-h4`];
 
 const about = document.querySelectorAll('.top-content .text-content h4')[1];
 about.textContent = siteContent[`main-content`][`about-h4`];
 
-// ----------------------------------------------------------------------
+// ---------------------------- paragraphs ----------------------------------
 
 const para1 = document.querySelectorAll('.top-content .text-content p')[0];
 para1.textContent = siteContent[`main-content`][`features-content`];
@@ -81,12 +83,12 @@ para1.textContent = siteContent[`main-content`][`features-content`];
 const para2 = document.querySelectorAll('.top-content .text-content p')[1];
 para2.textContent = siteContent[`main-content`][`about-content`];
 
-// ----------------------------------------------------------------------
+// ---------------------------------------------------------------------------
 
 const litImg = document.getElementById('middle-img');
 litImg.src = "img/mid-page-accent.jpg";
 
-// ----------------------------------------------------------------------
+// -------------------------------- headers ------------------------------------
 
 const service = document.querySelectorAll('.bottom-content .text-content h4')[0];
 service.textContent = siteContent[`main-content`][`services-h4`];
@@ -128,13 +130,6 @@ para8.textContent = siteContent[`contact`][`email`];
 
 const foot = document.querySelector('footer p');
 foot.textContent = siteContent[`footer`][`copyright`];
-
-// ----------------------------------------------------------------------
-
-// const navText = document.querySelectorAll('a');
-// navText.forEach(element => {
-//   element.style.color = 'green'
-// });
 
 // ----------------------------------------------------------------------
 
