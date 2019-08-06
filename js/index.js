@@ -49,25 +49,23 @@ nav1.forEach(function(value, i) {
   value.textContent = siteContent.nav[`nav-item-${i+1}`];
 });
 
-// let dia = document.getElementById("h1");
-
 const dia = document.querySelector('h1');
 dia.textContent = siteContent.cta.h1
 
 const ctaHeading = document.querySelector('.cta-text h1');
 ctaHeading.innerHTML = siteContent["cta"]["h1"].split(' ').join('<br>');
 ctaHeading.style.color = 'dodgerblue';
-// const diaBox = document.querySelector('.cta-text')
-// diaBox.style.width = "40%"
-
 
 const bigImg = document.getElementById('cta-img');
 bigImg.src = "img/header-img.png"
 
 const button = document.querySelector('button');
 button.textContent = siteContent.cta.button;
-
-// -------------------------------- headers ------------------------------------
+button.style[`background-color`] = "dodgerblue";
+// button.addEventListener(click, function(event) {
+//   button.textContent = "Yes it is!";
+// });
+// ---------------------------- headers --------------------------------
 
 const feature = document.querySelectorAll('.top-content .text-content h4')[0];
 feature.textContent = siteContent[`main-content`][`features-h4`];
@@ -75,7 +73,7 @@ feature.textContent = siteContent[`main-content`][`features-h4`];
 const about = document.querySelectorAll('.top-content .text-content h4')[1];
 about.textContent = siteContent[`main-content`][`about-h4`];
 
-// ---------------------------- paragraphs ----------------------------------
+// ------------------------- paragraphs ------------------------------
 
 const para1 = document.querySelectorAll('.top-content .text-content p')[0];
 para1.textContent = siteContent[`main-content`][`features-content`];
@@ -83,12 +81,12 @@ para1.textContent = siteContent[`main-content`][`features-content`];
 const para2 = document.querySelectorAll('.top-content .text-content p')[1];
 para2.textContent = siteContent[`main-content`][`about-content`];
 
-// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------
 
 const litImg = document.getElementById('middle-img');
 litImg.src = "img/mid-page-accent.jpg";
 
-// -------------------------------- headers ------------------------------------
+// ------------------------------ headers -------------------------------
 
 const service = document.querySelectorAll('.bottom-content .text-content h4')[0];
 service.textContent = siteContent[`main-content`][`services-h4`];
@@ -99,7 +97,7 @@ product.textContent = siteContent[`main-content`][`product-h4`];
 const vision = document.querySelectorAll('.bottom-content .text-content h4')[2];
 vision.textContent = siteContent[`main-content`][`vision-h4`];
 
-// ---------------------------- paragraphs ----------------------------------
+// ------------------------- paragraphs ---------------------------------
 
 const para3 = document.querySelectorAll('.bottom-content .text-content p')[0];
 para3.textContent = siteContent[`main-content`][`services-content`];
@@ -136,7 +134,6 @@ foot.textContent = siteContent[`footer`][`copyright`];
 const home = document.createElement('a');
 home.textContent = "Home";
 
-
 const shop = document.createElement('a');
 shop.textContent = "Shop";
 
@@ -144,7 +141,6 @@ shop.textContent = "Shop";
 
 const newnav = document.querySelector('nav');
 newnav.prepend(home);
-
 
 const newnav2 = document.querySelector('nav');
 newnav2.appendChild(shop);
