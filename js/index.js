@@ -40,3 +40,59 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let headTitle = document.querySelector("head title");
+headTitle.textContent = "Great Idea! DOM";
+
+let nav = document.querySelectorAll("nav a");
+nav[0].textContent = siteContent["nav"]["nav-item-1"];
+nav[1].textContent = siteContent["nav"]["nav-item-2"];
+nav[2].textContent = siteContent["nav"]["nav-item-3"];
+nav[3].textContent = siteContent["nav"]["nav-item-4"];
+nav[4].textContent = siteContent["nav"]["nav-item-5"];
+nav[5].textContent = siteContent["nav"]["nav-item-6"];
+nav.forEach(items => {items.style.color = 'green';});
+
+const mainHeader = document.querySelector("h1");
+mainHeader.textContent = siteContent["cta"]["h1"];
+
+const mainBtn = document.querySelector("button");
+mainBtn.textContent = siteContent["cta"]["button"];
+
+
+const codeImage = document.getElementById("cta-img");
+codeImage.src = "img/header-img.png";
+
+const h4Tags = document.querySelectorAll("h4");
+h4Tags[0].textContent = siteContent["main-content"]["features-h4"];
+h4Tags[1].textContent = siteContent["main-content"]["about-h4"];
+h4Tags[2].textContent = siteContent["main-content"]["services-h4"];
+h4Tags[3].textContent = siteContent["main-content"]["product-h4"];
+h4Tags[4].textContent = siteContent["main-content"]["vision-h4"];
+
+const pTags = document.querySelectorAll("p");
+pTags[0].textContent = siteContent["main-content"]["features-content"];
+pTags[1].textContent = siteContent["main-content"]["about-content"];
+pTags[2].textContent = siteContent["main-content"]["services-content"];
+pTags[3].textContent = siteContent["main-content"]["product-content"];
+pTags[4].textContent = siteContent["main-content"]["vision-content"];
+
+const middleImg = document.getElementById("middle-img");
+middleImg.src = "img/mid-page-accent.jpg";
+
+h4Tags[5].textContent = siteContent["contact"]["contact-h4"];
+pTags[5].textContent = siteContent["contact"]["address"];
+pTags[6].textContent = siteContent["contact"]["phone"];
+pTags[7].textContent = siteContent["contact"]["email"];
+pTags[8].textContent = siteContent["footer"]["copyright"];
+
+const newNav1 = document.createElement('a');
+const newNav2 = document.createElement('a');
+newNav1.textContent = 'Home';
+newNav2.textContent = 'Careers';
+newNav1.style.color = 'green';
+newNav2.style.color = 'green';
+
+const navItem = document.querySelector('nav');
+navItem.prepend(newNav1);
+navItem.appendChild(newNav2);
