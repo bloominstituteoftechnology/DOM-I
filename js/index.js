@@ -65,7 +65,7 @@ newElement1.textContent = "Home";
 newElement1.href = "#";
 newElement1.style.color = "green";
 
-const extraNav1 = document.querySelector('nav');
+const extraNav1 = document.querySelector('a');
 extraNav1.append(newElement1);
 
 const newElement2 = document.createElement('nav-item-8');
@@ -73,7 +73,7 @@ newElement2.textContent = "Media";
 newElement2.href = "#";
 newElement2.style.color = "green";
 
-const extraNav2 = document.querySelector('nav');
+const extraNav2 = document.querySelector('a');
 extraNav2.appendChild(newElement2);
 
 let ctaImg = document.getElementById("cta-img");
