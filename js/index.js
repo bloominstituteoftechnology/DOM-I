@@ -57,6 +57,8 @@ NavA.forEach((element, i) => {
   
 });
 
+
+
 // New - added a to nav
 NavA = document.getElementsByTagName("nav")[0];
 let newContent = (e) => {
@@ -127,6 +129,10 @@ contactSection.getElementsByTagName("h4")[0].textContent = siteContent["contact"
 contactSection.getElementsByTagName("p")[0].textContent = siteContent["contact"]["address"]
 contactSection.getElementsByTagName("p")[1].textContent = siteContent["contact"]["phone"]
 contactSection.getElementsByTagName("p")[2].textContent = siteContent["contact"]["email"]
+
+
+// Address on 2 lines
+contactSection.getElementsByTagName("p")[0].style.width = '20%';
 
 
 
