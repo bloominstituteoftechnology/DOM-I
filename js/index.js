@@ -62,9 +62,9 @@ bigImg.src = "img/header-img.png"
 const button = document.querySelector('button');
 button.textContent = siteContent.cta.button;
 button.style[`background-color`] = "dodgerblue";
-// button.addEventListener(click, function(event) {
-//   button.textContent = "Yes it is!";
-// });
+button.addEventListener("click", function(event) {
+  button.textContent = "Yes it is!";
+});
 // ---------------------------- headers --------------------------------
 
 const feature = document.querySelectorAll('.top-content .text-content h4')[0];
