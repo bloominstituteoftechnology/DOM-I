@@ -94,3 +94,14 @@ contact.querySelectorAll("p")[2].textContent = siteContent["contact"]["email"];
 
 let footer = document.querySelector("footer");
 footer.querySelector("p").textContent = siteContent["footer"]["copyright"];
+
+//add content
+let endNav = document.createElement("a");
+endNav.textContent = "Download";
+endNav.setAttribute('href','#');
+navBar.appendChild(endNav);
+let frontNav = document.createElement("a");
+frontNav.textContent = "Party";
+frontNav.setAttribute('href','#');
+navBar.prepend(frontNav);
+navBar.querySelectorAll("a").forEach((ele) => ele.style.color = "green");
