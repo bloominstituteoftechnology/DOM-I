@@ -38,5 +38,44 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+// let logo = document.getElementById("logo-img");
+// logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+// * Task 1: Create selectors to point your data into elements
+
+const logoAttrs = document.querySelector('#logo-img');
+logoAttrs.setAttribute('src', siteContent['nav']['img-src']);
+
+// * Task 2: Update the HTML with the JSON data
+// * Remember, NO direct updating of the HTML source is allowed.
+// * Using your selectors, update the content to match the example file.
+// * Remember to update the src attributes on images
+
+const navItems = document.querySelectorAll('header nav a');
+navItems[0].textContent = siteContent['nav']['nav-item-1'];
+navItems[1].textContent = siteContent['nav']['nav-item-2'];
+navItems[2].textContent = siteContent['nav']['nav-item-3'];
+navItems[3].textContent = siteContent['nav']['nav-item-4'];
+navItems[4].textContent = siteContent['nav']['nav-item-5'];
+navItems[5].textContent = siteContent['nav']['nav-item-6'];
+
+
+const ctaText = document.querySelector('.cta .cta-text h1');
+ctaText.textContent = siteContent['cta']['h1'];
+
+ctaText.innerText = siteContent.cta.h1.split(' ').join('\n');
+
+const ctaBtn = document.querySelector('.cta .cta-text button');
+ctaBtn.textContent = siteContent['cta']['button'];
+
+const ctaImage = document.querySelector('#cta-img');
+ctaImage.setAttribute('src', siteContent['cta']['img-src']);
+
+// top-content > text-content + text-content
+
+const featuresH4 = document.querySelector('.main-content .top-content .text-content h4')
+featuresH4.textContent = siteContent['main-content']['features-h4']
+
+const featuresContent = document.querySelector('.main-content .top-content .text-content p')
+featuresContent.textContent = siteContent['main-content']['features-content']
