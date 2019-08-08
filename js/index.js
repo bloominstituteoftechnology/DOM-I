@@ -60,3 +60,21 @@ middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 //* [ ] Using your selectors, update the content to match the example file.
 const mainTitle = document.getElementsByTagName('h1');
 mainTitle[0].innerHTML = "DOM<br/>IS<br/>AWESOME!";
+const mainButton = document.getElementsByTagName('button');
+mainButton[0].textContent = 'Get Started';
+
+// All H4 replacements
+const titleSet = document.querySelectorAll('h4');
+titleSet[0].textContent = siteContent["main-content"]["features-h4"];
+titleSet[1].textContent = siteContent["main-content"]["about-h4"];
+titleSet[2].textContent = siteContent["main-content"]["services-h4"];
+titleSet[3].textContent = siteContent["main-content"]["product-h4"];
+titleSet[4].textContent = siteContent["main-content"]["vision-h4"];
+
+//all main content p replacements
+const contentStuff = document.querySelectorAll('.text-content p');
+contentStuff[0].textContent = siteContent["main-content"]["features-content"];
+contentStuff[1].textContent = siteContent["main-content"]["about-content"];
+contentStuff[2].textContent = siteContent["main-content"]["services-content"];
+contentStuff[3].textContent = siteContent["main-content"]["product-content"];
+contentStuff[4].textContent = siteContent["main-content"]["vision-content"];
