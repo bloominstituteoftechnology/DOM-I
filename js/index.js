@@ -180,7 +180,7 @@ let header = document.querySelector("nav");
 header.prepend(a);
 let b = document.createElement("a");
 let secondA = document.querySelector("nav a:nth-child(2)");
-b.textContent ="Malicious link, dont click it!";
+b.textContent ="Malicious link!";
 header.appendChild(b);
 
 let nav = document.querySelectorAll("a");
