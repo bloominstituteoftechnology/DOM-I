@@ -104,8 +104,16 @@ visionParagraph.innerText = siteContent["main-content"]["vision-content"];
 const contact = document.querySelector(".contact").children;
 const contactHeading = contact[0];
 contactHeading.innerText = siteContent["contact"]["contact-h4"];
-const address = contact[1];
-address.innerText = siteContent["contact"]["address"];
+
+////contact address insert line break
+let contactP = document.querySelectorAll('.contact p');
+let address1 = siteContent.contact.address.substring(0, 18);
+let address2 = siteContent.contact.address.substring(19, 33);
+let newAddress = `${address1} \n ${address2}`;
+contactP[0].textContent = newAddress;
+contactP[0].style.whiteSpace = "pre-line";
+contactP[0].textContent = newAddress;
+
 const phone = contact[2];
 phone.innerText = siteContent["contact"]["phone"];
 const email = contact[3];
@@ -118,13 +126,13 @@ const footer = document.getElementsByTagName("footer");
 const footerParagraph = footer[0].querySelector("p");
 footerParagraph.innerText = siteContent["footer"]["copyright"];
 
-console.log(footerParagraph);
+// console.log(footerParagraph);
 
 
 // console.log(anchorTag1);
 // navItems[1].innerText = siteContent["nav"]["nav-item-2"]
 
-console.log(navItems.length);
+// console.log(navItems.length);
 
 
 //stretch goals
@@ -144,7 +152,7 @@ navBar.forEach(function(item){
 })
 
 // navBar.style.color = "green"
-console.log(navBar);
+// console.log(navBar);
 
 
 
