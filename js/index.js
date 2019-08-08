@@ -113,7 +113,7 @@ email.innerText = siteContent["contact"]["email"];
 
 ////FOOTER/////
 
-const footer = document.getElementsByTagName("footer")
+const footer = document.getElementsByTagName("footer");
 
 const footerParagraph = footer[0].querySelector("p");
 footerParagraph.innerText = siteContent["footer"]["copyright"];
@@ -127,15 +127,16 @@ console.log(footerParagraph);
 console.log(navItems.length);
 
 
-//stretch probs
+//stretch goals
+
 const anchorTag1 = document.createElement('a');
 const anchorTag2 = document.createElement('a');
 anchorTag1.innerText = "ANCHORTAG1";
 anchorTag2.innerText = "ANCHORTAG2";
 anchorTag1.href = "#";
 anchorTag2.href = "#";
-nav[0].appendChild(anchorTag1);
-nav[0].prepend(anchorTag2)
+nav[0].appendChild(anchorTag2);
+nav[0].prepend(anchorTag1);
 const navBar = document.querySelectorAll("a");
 // navBar is a nodeList which has access to forEach
 navBar.forEach(function(item){
