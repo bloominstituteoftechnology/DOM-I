@@ -112,7 +112,7 @@ let footer = document.querySelector('footer p');
 
 footer.textContent = siteContent.footer.copyright;
 
-
+//GARBAGE CODE BELOW!
 //document.getElementById("nav a").style.color = "green";
 //document.querySelectorAll('nav a').style.color = "green";
 // function givemecolor(thecolor,thetext)
@@ -148,7 +148,7 @@ footer.textContent = siteContent.footer.copyright;
 //     x[i].click();
 // }    
 
-// const h1 = document.createElement('br');
+// const h1br = document.createElement('br');
 // const h1br2 = document.createElement('br');
 // const h1text = siteContent['cta']['h1'].split(' ');
 // h1.append(h1br);
@@ -171,7 +171,9 @@ footer.textContent = siteContent.footer.copyright;
 //   "data": "text",
 //  });
 //  document.getElementById("a1").style.color = "green";
+//^^^NON WORKING CODE ABOVE!
 
+//WORKING CODE BELOW
 let a = document.createElement("a");
 a.textContent ="Click Here for free money!";
 let header = document.querySelector("nav");
