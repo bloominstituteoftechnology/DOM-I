@@ -186,5 +186,12 @@ header.appendChild(b);
 let nav = document.querySelectorAll("a");
 nav.forEach(function(element){
   element.style.color = "green";
-})
+});
+
+//STRETCH PROBLEMS!
+document.querySelector(".top-content").style.backgroundColor = "grey";
+
+document.querySelector(".bottom-content").style.backgroundColor = "grey";
+
+
 
