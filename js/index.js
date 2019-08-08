@@ -142,11 +142,11 @@ footer.textContent = siteContent.footer.copyright;
 
 // document.getElementById("p1").innerHTML = "This also failed";
 
-var x = document.getElementsByTagName("a");
-for (i = 0; i < x.length; i++) { 
-    if (x[i].innerHTML == "Select All")
-    x[i].click();
-}    
+// var x = document.getElementsByTagName("a");
+// for (i = 0; i < x.length; i++) { 
+//     if (x[i].innerHTML == "Select All")
+//     x[i].click();
+// }    
 
 // const h1 = document.createElement('br');
 // const h1br2 = document.createElement('br');
@@ -165,9 +165,24 @@ for (i = 0; i < x.length; i++) {
 //h1.innerHTML = "HEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHERE";
 //document.body.appendChild(h1);
 
-var div = document.createElement("a", {
-  "id": "a1",
-  "class": "anchor1",
-  "data": "text",
- });
- document.getElementById("a1").style.color = "green";
+// var div = document.createElement("a", {
+//   "id": "a1",
+//   "class": "anchor1",
+//   "data": "text",
+//  });
+//  document.getElementById("a1").style.color = "green";
+
+let a = document.createElement("a");
+a.textContent ="Click Here for free money!";
+let header = document.querySelector("nav");
+header.prepend(a);
+let b = document.createElement("a");
+let secondA = document.querySelector("nav a:nth-child(2)");
+b.textContent ="Malicious link, dont click it!";
+header.appendChild(b);
+
+let nav = document.querySelectorAll("a");
+nav.forEach(function(element){
+  element.style.color = "green";
+})
+
