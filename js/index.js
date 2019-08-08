@@ -111,3 +111,34 @@ contactP[2].textContent = siteContent.contact.email;
 let footer = document.querySelector('footer p');
 
 footer.textContent = siteContent.footer.copyright;
+
+
+//document.getElementById("nav a").style.color = "green";
+//document.querySelectorAll('nav a').style.color = "green";
+// function givemecolor(thecolor,thetext)
+//     {
+//     return '<span style="color:'+thecolor+'>'+thetext+'</span>';
+//     }
+// document.write(givemecolor('green'));
+// document.write(givemecolor('yellow'));
+
+// var navTags = document.getElementById("navTags");
+// var navTags = document.createElement('hello');
+// aTags.setAttribute('href',"done");
+// aTags.innerHTML = "link text";
+// mydiv.appendChild(navTags);
+
+
+// var p = document.createElement("p");
+// document.body.appendChild(p);
+// p.attributes
+
+// function pageLoad()
+// {
+// document.getElementById("ahref1").innerHTML = "This";
+// document.getElementById("ahref2").innerHTML = "Failed";
+// }
+// window.onload = pageLoad;
+
+// document.getElementById("p1").innerHTML = "This also failed";
+
