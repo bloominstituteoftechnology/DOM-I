@@ -51,3 +51,12 @@ newNav[4].textContent = "About";
 newNav[5].textContent = "Contact";
 
 //* [ ] Note that IDs have been used on all images.  Use the IDs to update src path content
+const topImg = document.getElementById('cta-img');
+topImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+const middleImg = document.getElementById('middle-img');
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+//* [ ] Using your selectors, update the content to match the example file.
+const mainTitle = document.getElementsByTagName('h1');
+mainTitle[0].innerHTML = "DOM<br/>IS<br/>AWESOME!";
