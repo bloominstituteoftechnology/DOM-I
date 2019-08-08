@@ -60,8 +60,14 @@ ctaButton.textContent = siteContent['cta']['h1'];
 //nav items
 const navItems = document.querySelectorAll('nav a');
 navItems.forEach((element, i) => {
+  element.style.color = 'green'
   element.textContent = siteContent['nav'][`nav-item-${i++}`];
 })
+
+
+
+
+
 
 //main content
 const mainContent = document.getElementById('middle-img');
