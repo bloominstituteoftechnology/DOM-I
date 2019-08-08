@@ -40,7 +40,7 @@ const siteContent = {
 // Example: Update the img src for the logo
 
 
-const logo = document.getElementById('logo-img');
+const logo = document.querySelector('#logo-img');
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // NAV Bar 
@@ -76,23 +76,28 @@ mainContent[4].textContent = siteContent["main-content"]["vision-h4"];
 
 let mainP = document.querySelectorAll('.text-content p');
 mainP[0].textContent = siteContent["main-content"]["features-content"];
-mainP[1].textContent = siteContent[""]
-
-
-
+mainP[1].textContent = siteContent["main-content"]["about-content"];
+mainP[2].textContent = siteContent["main-content"]["services-content"];
+mainP[3].textContent = siteContent["main-content"]["product-content"];
+mainP[4].textContent = siteContent["main-content"]["vision-content"]
 
 let midImg = document.querySelector('#middle-img');
 midImg.src = siteContent["main-content"]["middle-img-src"];
 
+// use white space css +\n (\n stands for a new line) to make a line break in JS.
 
-
-
-
-// use white space css +\n to make a line break in JS.
-// let newAddress = address1 + '\n' + address2;
+// let contactFooter = contact + '\n' + address2;
 // contactP[0].textContent = newAddress;
 // contactP[0].style.whiteSpace = 'preWrap';
 
-// contactP[0].textContent = address1;
-// contactP[1].textContent = siteContent.contact.phone;
-// contactP[1].textContent = siteContent.contact.email;
+let contactFooter = document.querySelector(".contact h4");
+contactFooter.textContent = siteContent["contact"]["contact-h4"]
+
+
+let address = document.querySelectorAll('.contact p')
+address[0].textContent = siteContent["contact"]["address"];
+address[1].textContent = siteContent["contact"]["phone"];
+address[2].textContent = siteContent["contact"]["email"]
+
+let footer = document.querySelector("footer");
+footer.textContent = siteContent["footer"]["copyright"]
