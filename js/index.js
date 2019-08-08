@@ -78,3 +78,11 @@ contentStuff[1].textContent = siteContent["main-content"]["about-content"];
 contentStuff[2].textContent = siteContent["main-content"]["services-content"];
 contentStuff[3].textContent = siteContent["main-content"]["product-content"];
 contentStuff[4].textContent = siteContent["main-content"]["vision-content"];
+
+//style change on navigation to Green
+const greenNav2 = document.querySelectorAll('nav');
+console.log(greenNav2)
+
+//greenNav2.style.color = "green";
+greenNav2.forEach(item => item.style.color = 'green');
+//I can't see why this didn't work. The selection is correct. It is reading as undefined.
