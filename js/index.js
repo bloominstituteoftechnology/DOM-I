@@ -40,18 +40,16 @@ const siteContent = {
 // Example: Update the img src for the logo
 
 
-let logo = document.getElementById("logo-img");
+const logo = document.getElementById('logo-img');
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // NAV Bar 
 
-let navBar = document.querySelectorAll('a');
-navBar[i].textContent = siteContent['nav'][`nav-item-${i+1}`];
-navBar[i].style.color = 'green';
-
-// for(let i = 0; < siteContent.nav.length; i++) {
-//   aTag[i].innerHtml = siteContent["nav"[i]];
-// }
+const navBar = document.querySelectorAll('a');
+navBar.forEach((element, i) => {
+  element.textContent = siteContent['nav'][`nav-item-${i + 1}`];
+  element.style.color = 'green';
+})
 
 // let navBar = document.querySelectorAll("nav");
 //   for(let i = 0; i < siteContent.nav.length; i++){
@@ -59,12 +57,42 @@ navBar[i].style.color = 'green';
 //     navBar.children[i].style.color = "green";
 //   }
 
-const newNav1 = document.createElement('a');
-const newText2 = document.createTestNode('Append');
-newText1.style.color = 'green';
-newNav1.append(newNav1);
 
-const newNav2 = document.createElement('a')
-const newText2 = document.createTextNode('Prepend');
-newText2.style.color = 'green';
-newNav2.append(newText2);
+let dom = document.querySelector('.cta-text h1');
+dom.textContent = siteContent.cta.h1
+
+let button = document.querySelector('.cta-text button');
+button.textContent = siteContent.cta.button
+
+let circleImg = document.querySelector('#cta-img');
+circleImg.src = siteContent.cta["img-src"];
+
+let mainContent = document.querySelectorAll('.text-content h4');
+mainContent[0].textContent = siteContent["main-content"]["features-h4"];
+mainContent[1].textContent = siteContent["main-content"]["about-h4"];
+mainContent[2].textContent = siteContent["main-content"]["services-h4"];
+mainContent[3].textContent = siteContent["main-content"]["product-h4"];
+mainContent[4].textContent = siteContent["main-content"]["vision-h4"];
+
+let mainP = document.querySelectorAll('.text-content p');
+mainP[0].textContent = siteContent["main-content"]["features-content"];
+mainP[1].textContent = siteContent[""]
+
+
+
+
+let midImg = document.querySelector('#middle-img');
+midImg.src = siteContent["main-content"]["middle-img-src"];
+
+
+
+
+
+// use white space css +\n to make a line break in JS.
+// let newAddress = address1 + '\n' + address2;
+// contactP[0].textContent = newAddress;
+// contactP[0].style.whiteSpace = 'preWrap';
+
+// contactP[0].textContent = address1;
+// contactP[1].textContent = siteContent.contact.phone;
+// contactP[1].textContent = siteContent.contact.email;
