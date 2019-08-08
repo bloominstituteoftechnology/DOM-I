@@ -142,3 +142,32 @@ footer.textContent = siteContent.footer.copyright;
 
 // document.getElementById("p1").innerHTML = "This also failed";
 
+var x = document.getElementsByTagName("a");
+for (i = 0; i < x.length; i++) { 
+    if (x[i].innerHTML == "Select All")
+    x[i].click();
+}    
+
+// const h1 = document.createElement('br');
+// const h1br2 = document.createElement('br');
+// const h1text = siteContent['cta']['h1'].split(' ');
+// h1.append(h1br);
+// h1.prepend(h1text[0]);
+// h1.append(h1text[1]);
+// h1.append(h1br2);
+// h1.append(h1text[2]);
+
+// g = document.createElement('a');
+// g.setAttribute("id", "anchor1");
+// document.getElementById("a1").style.color = "green";
+
+//var h1 = document.createElement("button");
+//h1.innerHTML = "HEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHERE";
+//document.body.appendChild(h1);
+
+var div = document.createElement("a", {
+  "id": "a1",
+  "class": "anchor1",
+  "data": "text",
+ });
+ document.getElementById("a1").style.color = "green";
