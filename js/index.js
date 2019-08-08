@@ -46,9 +46,15 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 const ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
 
-const cta = document.getElementsByClassName('cta-text');
-document.querySelector('h1').textContent = siteContent['cta']['h1'];
 
+
+// STEP ONE - Need to grab the element exactly and assign it to a variable.
+
+const ctaHeader = document.querySelector('.cta-text h1');
+ctaHeader.textContent = siteContent['cta']['h1'];
+
+const ctaButton = document.querySelector('.cta-text button')
+ctaButton.textContent = siteContent['cta']['h1'];
 
 
 //nav items
@@ -61,14 +67,59 @@ navItems.forEach((element, i) => {
 const mainContent = document.getElementById('middle-img');
 mainContent.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
+//THIS CODE IS SUPER DENSE. I CAN FIX THIS.
+//top content. FEATURES section.
+
+let topLHeader = document.querySelector('.top-content h4');
+topLHeader.textContent = siteContent['main-content']['features-h4'];
+
+let topLText = document.querySelector('.top-content p')
+topLText.textContent = siteContent['main-content']['features-content'];
+
+
+//not sure why these two aren't showing up. Need to ask Chris. ABOUT section
+let topRHeader = document.querySelectorAll('.top-content h4');
+topRHeader[1].textContent = siteContent['main-content']['about-h4'];
+
+let topRText = document.querySelectorAll('.top-content p')
+topRText[1].textContent = siteContent['main-content']['about-content'];
+
+//bottom content
+
+let bottomLHeader = document.querySelector('.bottom-content h4');
+bottomLHeader.textContent = siteContent['main-content']['services-h4'];
+
+let bottomLText = document.querySelector('.bottom-content p')
+bottomLText.textContent = siteContent['main-content']['services-content'];
+
+
+//PRODUCT section
+let bottomMHeader = document.querySelectorAll('.bottom-content h4');
+bottomMHeader[1].textContent = siteContent['main-content']['product-h4'];
+
+let bottomMText = document.querySelectorAll('.bottom-content p')
+bottomMText[1].textContent = siteContent['main-content']['product-content'];
+
+
+//VISION section
+let bottomRHeader = document.querySelectorAll('.bottom-content h4');
+bottomRHeader[2].textContent = siteContent['main-content']['vision-h4'];
+
+let bottomRText = document.querySelectorAll('.bottom-content p')
+bottomRText[2].textContent = siteContent['main-content']['vision-content'];
 
 //contact section
-const contact = document.querySelectorAll('.contact');
-document.querySelector('contact h4').textContent = siteContent['contact']['h4']
 
+let contactHeader = document.querySelector('.contact h4');
+contactHeader.textContent = siteContent['contact']['contact-h4'];
 
+let contactElements = document.querySelectorAll('.contact p')
+contactElements[0].textContent = siteContent['contact']['address'];
+contactElements[1].textContent = siteContent['contact']['phone'];
+contactElements[2].textContent = siteContent['contact']['email'];
 
 //footer
-const footer = document.getElementsByTagName('footer p');
+let footer = document.querySelector('footer p');
 footer.textContent = siteContent['footer']['copyright'];
+// footer.style.color = 'green';
 //THIS WORKED.
