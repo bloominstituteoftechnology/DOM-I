@@ -114,6 +114,7 @@ contactP[0].textContent = newAddress;
 contactP[0].style.whiteSpace = "pre-line";
 contactP[0].textContent = newAddress;
 
+//phone and email
 const phone = contact[2];
 phone.innerText = siteContent["contact"]["phone"];
 const email = contact[3];
@@ -122,21 +123,11 @@ email.innerText = siteContent["contact"]["email"];
 ////FOOTER/////
 
 const footer = document.getElementsByTagName("footer");
-
 const footerParagraph = footer[0].querySelector("p");
 footerParagraph.innerText = siteContent["footer"]["copyright"];
 
-// console.log(footerParagraph);
-
-
-// console.log(anchorTag1);
-// navItems[1].innerText = siteContent["nav"]["nav-item-2"]
-
-// console.log(navItems.length);
-
 
 //stretch goals
-
 const anchorTag1 = document.createElement('a');
 const anchorTag2 = document.createElement('a');
 anchorTag1.innerText = "ANCHORTAG1";
