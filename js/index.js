@@ -128,15 +128,13 @@ footer.textContent = siteContent.footer.copyright;
 // aTags.innerHTML = "link text";
 // mydiv.appendChild(navTags);
 
-
 // var p = document.createElement("p");
 // document.body.appendChild(p);
 // p.attributes
 
-// function pageLoad()
-// {
-// document.getElementById("ahref1").innerHTML = "This";
-// document.getElementById("ahref2").innerHTML = "Failed";
+// function pageLoad(){
+//  document.getElementById("ahref1").innerHTML = "This";
+//  document.getElementById("ahref2").innerHTML = "Failed";
 // }
 // window.onload = pageLoad;
 
@@ -160,10 +158,6 @@ footer.textContent = siteContent.footer.copyright;
 // g = document.createElement('a');
 // g.setAttribute("id", "anchor1");
 // document.getElementById("a1").style.color = "green";
-
-//var h1 = document.createElement("button");
-//h1.innerHTML = "HEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHERE";
-//document.body.appendChild(h1);
 
 // var div = document.createElement("a", {
 //   "id": "a1",
@@ -193,5 +187,8 @@ document.querySelector(".top-content").style.backgroundColor = "grey";
 
 document.querySelector(".bottom-content").style.backgroundColor = "grey";
 
+//ADDED A BUTTON, BUT NOT ONE THAT CHANGES THE PAGE, LOOK AT THE BOTTOM OF THE PAGE!
 
-
+var h1 = document.createElement("button");
+h1.innerHTML = "HEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHEREHERE";
+document.body.appendChild(h1);
