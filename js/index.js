@@ -38,5 +38,66 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+
+
+const logo = document.querySelector('#logo-img');
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// NAV Bar 
+
+const navBar = document.querySelectorAll('a');
+navBar.forEach((element, i) => {
+  element.textContent = siteContent['nav'][`nav-item-${i + 1}`];
+  element.style.color = 'green';
+})
+
+// let navBar = document.querySelectorAll("nav");
+//   for(let i = 0; i < siteContent.nav.length; i++){
+//     navBar.children[i].innerhtml = siteContent["nav"][i];
+//     navBar.children[i].style.color = "green";
+//   }
+
+
+let dom = document.querySelector('.cta-text h1');
+dom.textContent = siteContent.cta.h1
+
+let button = document.querySelector('.cta-text button');
+button.textContent = siteContent.cta.button
+
+let circleImg = document.querySelector('#cta-img');
+circleImg.src = siteContent.cta["img-src"];
+
+let mainContent = document.querySelectorAll('.text-content h4');
+mainContent[0].textContent = siteContent["main-content"]["features-h4"];
+mainContent[1].textContent = siteContent["main-content"]["about-h4"];
+mainContent[2].textContent = siteContent["main-content"]["services-h4"];
+mainContent[3].textContent = siteContent["main-content"]["product-h4"];
+mainContent[4].textContent = siteContent["main-content"]["vision-h4"];
+
+let mainP = document.querySelectorAll('.text-content p');
+mainP[0].textContent = siteContent["main-content"]["features-content"];
+mainP[1].textContent = siteContent["main-content"]["about-content"];
+mainP[2].textContent = siteContent["main-content"]["services-content"];
+mainP[3].textContent = siteContent["main-content"]["product-content"];
+mainP[4].textContent = siteContent["main-content"]["vision-content"]
+
+let midImg = document.querySelector('#middle-img');
+midImg.src = siteContent["main-content"]["middle-img-src"];
+
+// use white space css +\n (\n stands for a new line) to make a line break in JS.
+
+// let contactFooter = contact + '\n' + address2;
+// contactP[0].textContent = newAddress;
+// contactP[0].style.whiteSpace = 'preWrap';
+
+let contactFooter = document.querySelector(".contact h4");
+contactFooter.textContent = siteContent["contact"]["contact-h4"]
+
+
+let address = document.querySelectorAll('.contact p')
+address[0].textContent = siteContent["contact"]["address"];
+address[1].textContent = siteContent["contact"]["phone"];
+address[2].textContent = siteContent["contact"]["email"]
+
+let footer = document.querySelector("footer");
+footer.textContent = siteContent["footer"]["copyright"]
