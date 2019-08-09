@@ -37,44 +37,105 @@ const siteContent = {
   },
 };
 
-// Site Images
-// let logo = document.getElementsByClassName("logo").src = `img/logo.png`;//?
-// let logo1 = document.getElementsByClassName("cta-img").src = `img/header-img.png`;//?
-// let logo2 = document.getElementsByClassName("middle-img").src = `img/mid-page-accent.jpg`;//?
-
+// Example: Update the img src for the logo
+// let logo = document.getElementById("logo-img");
+// logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let logo = document.getElementById("logo-img").src = `img/logo.png`
 
-let roundPhoto = document.getElementById(`cta-img`).src = `img/header-img.png`
+let roundPhoto = document.getElementById(`cta-img`);
+roundPhoto.setAttribute(`src`, siteContent['cta']['img-src'])
+//.src = `img/header-img.png`
 
-let rectanglePhoto = document.getElementById(`middle-img`).src = `img/mid-page-accent.jpg`
+let rectanglePhoto = document.getElementById(`middle-img`)
+rectanglePhoto.setAttribute(`src`, siteContent[`main-content`]['middle-img-src'])
+//.src = `img/mid-page-accent.jpg`
 
 // // --------------------------------------------------------------------------------------
 
+// navItems = (Object.values(siteContent.nav))
+// navItems.pop()
+// aElements = document.getElementsByTagName("a")
+// for(var i = 0; i < aElements.length; i++){
+//  aElements[i].textContent = navItems[i];
+//  }
+// console.log(navItems)
+// console.log(aElements)
+
+
 // Navigation Styling 
-let navItemText = [`Services`, `Products`, `Vision`, `Feature`, `About`, `Contact`]
-let navItems = document.getElementsByTagName(`a`);
-// Array.from(navItems)
-//console.log(navItems)
+let allNavItems = Object.values(siteContent.nav)
+console.log(allNavItems)
 
-for (let i = 0; i <= navItems.length; i++){
-  for(let i = 0; i < navItemText.length; i++){
-    const currentElem = navItemText[i];
-    navItems[i].textContent = currentElem;
-  }
-}
+// let updatedArray = [];
+// for (let i = 0; i < allNavItems.length; i++){
+//   if(allNavItems[i].includes('nav-item'))
+//   updatedArray.push(allNavItems[i])
+// }
+
+// console.log(updatedArray)
+
+let navItems = document.querySelectorAll(`a`)
+console.log(navItems)
+for(var i = 0; i < navItems.length; i++){
+  navItems[i].textContent = allNavItems[i]
+ }
 
 
+// navItems.forEach(function(element){
+//   element.navItems.textContent = allNavItems
+// })
+
+// for (let i = 0; i < navItems; i++){
+//   for (let k = 0; k < updatedArray.length; k++){
+//     navItems[i].textContent = ('src', siteContent.nav.updatedArray[k])
+//   }
+// }
+
+
+
+// let navItemText = [`Services`, `Products`, `Vision`, `Feature`, `About`, `Contact`]
+// let navItems = document.getElementsByTagName(`a`);
+// // Array.from(navItems)
+// //console.log(navItems)
+
+// for (let i = 0; i <= navItems.length; i++){
+//   for(let i = 0; i < navItemText.length; i++){
+//     const currentElem = navItemText[i];
+//     navItems[i].textContent = currentElem;
+//   }
+// }
+
+
+// let navStyle = document.querySelectorAll(`a`);
+// navStyle.forEach(element => {element.style.color = `green`})
+
+// const newNavItem = document.createElement('a')
+// newNavItem.textContent = `Premium`
+// const newNavigationItem = document.querySelector(`a`);
+// newNavigationItem.prepend(newNavItem)
+// //console.log(newNavItem)
+
+
+// const secondNewNavItem = document.createElement(`a`)
+// secondNewNavItem.textContent = `Buy Now`
+// newNavigationItem.append(secondNewNavItem)
+
+// let logo = document.getElementById("logo-img");
+// logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // // --------------------------------------------------------------------------------------
 
 let cta_text = document.querySelector(`.cta-text h1`)
-cta_text.textContent = `Dom Is Awesome`
+cta_text.textContent = ('src', siteContent['cta']['h1'] )
+
 
 // // --------------------------------------------------------------------------------------
 
 const pageButton = document.getElementsByTagName(`button`);
-pageButton[0].textContent = `Get Started`
+pageButton[0].textContent = ('src', siteContent['cta']['button'])
+
+//pageButton[0].textContent = `Get Started`
 
 // const pageButton = document.querySelector(`button`);
 // pageButton.textContent = `Get Started`
@@ -122,5 +183,5 @@ contactSecion[2].textContent = `sales@greatidea.io`
 // --------------------------------------------------------------------------------------
 
 const footerInfo = document.querySelectorAll(`footer p`)
-console.log(footerInfo)
+// console.log(footerInfo)
 footerInfo[0].textContent = `Copyright Great Idea! 2018`;
