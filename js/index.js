@@ -45,14 +45,37 @@ const siteContent = {
 // * Task 1: Create selectors to point your data into elements
 
 const logoAttrs = document.querySelector('#logo-img');
-logoAttrs.setAttribute('src', siteContent['nav']['img-src']);
-
-// * Task 2: Update the HTML with the JSON data
-// * Remember, NO direct updating of the HTML source is allowed.
-// * Using your selectors, update the content to match the example file.
-// * Remember to update the src attributes on images
 
 const navItems = document.querySelectorAll('header nav a');
+
+const ctaText = document.querySelector('.cta .cta-text h1');
+
+const ctaBtn = document.querySelector('.cta .cta-text button');
+
+const ctaImage = document.querySelector('#cta-img');
+
+const topContentH4 = document.querySelectorAll('.main-content .top-content .text-content h4');
+
+const topContentP = document.querySelectorAll('.main-content .top-content .text-content p');
+
+const middleImg = document.querySelector('#middle-img');
+
+const bottomContentH4 = document.querySelectorAll('.main-content .bottom-content .text-content h4');
+
+const bottomContentP = document.querySelectorAll('.main-content .bottom-content .text-content p');
+
+const addressH4 = document.querySelector('.contact h4');
+
+const addressPlist = document.querySelectorAll('.contact p');
+let addressLines = siteContent['contact']['address'].split(' ');
+
+const footerP = document.querySelector('footer p');
+
+
+// * Task 2: Update the HTML with the JSON data using your selectors, update the content to match the example file.
+
+logoAttrs.setAttribute('src', siteContent['nav']['img-src']);
+
 navItems[0].textContent = siteContent['nav']['nav-item-1'];
 navItems[1].textContent = siteContent['nav']['nav-item-2'];
 navItems[2].textContent = siteContent['nav']['nav-item-3'];
@@ -60,52 +83,35 @@ navItems[3].textContent = siteContent['nav']['nav-item-4'];
 navItems[4].textContent = siteContent['nav']['nav-item-5'];
 navItems[5].textContent = siteContent['nav']['nav-item-6'];
 
-
-const ctaText = document.querySelector('.cta .cta-text h1');
 ctaText.textContent = siteContent['cta']['h1'];
 
 ctaText.innerText = siteContent.cta.h1.split(' ').join('\n');
 
-const ctaBtn = document.querySelector('.cta .cta-text button');
 ctaBtn.textContent = siteContent['cta']['button'];
 
-const ctaImage = document.querySelector('#cta-img');
 ctaImage.setAttribute('src', siteContent['cta']['img-src']);
 
-//!GOT STUCK
+//!GOT STUCK on .topcontent
 //was trying to use css combinators > + ~ to send in the JSON data in a particular order but I relized I could just create a nodelist for each element type and send the data in by specifying the nodelist item like I did in nav
-
-const topContentH4 = document.querySelectorAll('.main-content .top-content .text-content h4');
 
 topContentH4[0].textContent = siteContent['main-content']['features-h4'];
 topContentH4[1].textContent = siteContent['main-content']['about-h4'];
 
-const topContentP = document.querySelectorAll('.main-content .top-content .text-content p');
-
 topContentP[0].textContent = siteContent['main-content']['features-content'];
 topContentP[1].textContent = siteContent['main-content']['about-content'];
 
-const middleImg = document.querySelector('#middle-img');
 middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
-
-const bottomContentH4 = document.querySelectorAll('.main-content .bottom-content .text-content h4');
 
 bottomContentH4[0].textContent = siteContent['main-content']['services-h4'];
 bottomContentH4[1].textContent = siteContent['main-content']['product-h4'];
 bottomContentH4[2].textContent = siteContent['main-content']['vision-h4'];
 
-const bottomContentP = document.querySelectorAll('.main-content .bottom-content .text-content p');
-
 bottomContentP[0].textContent = siteContent['main-content']['services-content'];
 bottomContentP[1].textContent = siteContent['main-content']['product-content'];
 bottomContentP[2].textContent = siteContent['main-content']['vision-content'];
 
-const addressH4 = document.querySelector('.contact h4');
 addressH4.textContent = siteContent['contact']['contact-h4'];
 
-const addressPlist = document.querySelectorAll('.contact p');
-
-let addressLines = siteContent['contact']['address'].split(' ');
 addressLines.splice(4,0,'\n');
 addressPlist[0].innerText = addressLines.join(' ');
 
@@ -113,5 +119,29 @@ addressPlist[1].textContent = siteContent['contact']['phone'];
 
 addressPlist[2].textContent = siteContent['contact']['email'];
 
-const footerP = document.querySelector('footer p');
 footerP.textContent = siteContent['footer']['copyright'];
+
+//* Task 3: Add new content, Change the color of the navigation text to be green. Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system.
+
+navItems[0].style.color = "palegreen";
+navItems[1].style.color = "palegreen";
+navItems[2].style.color = "palegreen";
+navItems[3].style.color = "palegreen";
+navItems[4].style.color = "palegreen";
+navItems[5].style.color = "palegreen";
+
+
+const navItemList = document.querySelector( 'header nav')
+const newNavItem1 = document.createElement('a');
+newNavItem1.textContent = 'Work';
+newNavItem1.setAttribute('href', '#')
+newNavItem1.style.textDecoration = 'none';
+newNavItem1.style.color = "palegreen";
+navItemList.prepend(newNavItem1);
+
+const newNaveItem2 = document.createElement('a');
+newNavItem1.textContent = 'Team';
+newNavItem1.setAttribute('href', '#')
+newNavItem1.style.textDecoration = 'none';
+newNavItem1.style.color = "palegreen";
+navItemList.appendChild(newNavItem1);
