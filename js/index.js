@@ -72,10 +72,46 @@ ctaBtn.textContent = siteContent['cta']['button'];
 const ctaImage = document.querySelector('#cta-img');
 ctaImage.setAttribute('src', siteContent['cta']['img-src']);
 
-// top-content > text-content + text-content
+//!GOT STUCK
+//was trying to use css combinators > + ~ to send in the JSON data in a particular order but I relized I could just create a nodelist for each element type and send the data in by specifying the nodelist item like I did in nav
 
-const featuresH4 = document.querySelector('.main-content .top-content .text-content h4')
-featuresH4.textContent = siteContent['main-content']['features-h4']
+const topContentH4 = document.querySelectorAll('.main-content .top-content .text-content h4');
 
-const featuresContent = document.querySelector('.main-content .top-content .text-content p')
-featuresContent.textContent = siteContent['main-content']['features-content']
+topContentH4[0].textContent = siteContent['main-content']['features-h4'];
+topContentH4[1].textContent = siteContent['main-content']['about-h4'];
+
+const topContentP = document.querySelectorAll('.main-content .top-content .text-content p');
+
+topContentP[0].textContent = siteContent['main-content']['features-content'];
+topContentP[1].textContent = siteContent['main-content']['about-content'];
+
+const middleImg = document.querySelector('#middle-img');
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+const bottomContentH4 = document.querySelectorAll('.main-content .bottom-content .text-content h4');
+
+bottomContentH4[0].textContent = siteContent['main-content']['services-h4'];
+bottomContentH4[1].textContent = siteContent['main-content']['product-h4'];
+bottomContentH4[2].textContent = siteContent['main-content']['vision-h4'];
+
+const bottomContentP = document.querySelectorAll('.main-content .bottom-content .text-content p');
+
+bottomContentP[0].textContent = siteContent['main-content']['services-content'];
+bottomContentP[1].textContent = siteContent['main-content']['product-content'];
+bottomContentP[2].textContent = siteContent['main-content']['vision-content'];
+
+const addressH4 = document.querySelector('.contact h4');
+addressH4.textContent = siteContent['contact']['contact-h4'];
+
+const addressPlist = document.querySelectorAll('.contact p');
+
+let addressLines = siteContent['contact']['address'].split(' ');
+addressLines.splice(4,0,'\n');
+addressPlist[0].innerText = addressLines.join(' ');
+
+addressPlist[1].textContent = siteContent['contact']['phone'];
+
+addressPlist[2].textContent = siteContent['contact']['email'];
+
+const footerP = document.querySelector('footer p');
+footerP.textContent = siteContent['footer']['copyright'];
