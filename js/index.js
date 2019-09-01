@@ -40,3 +40,27 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// Update the navagation
+let navBar = document.querySelectorAll('a'); // Selected all "a" tags
+//Added the text content to each "a" tags 
+navBar[0].textContent= siteContent["nav"]["nav-item-1"];
+navBar[1].textContent= siteContent["nav"]["nav-item-2"];
+navBar[2].textContent= siteContent["nav"]["nav-item-3"];
+navBar[3].textContent= siteContent["nav"]["nav-item-4"];
+navBar[4].textContent= siteContent["nav"]["nav-item-5"];
+navBar[5].textContent= siteContent["nav"]["nav-item-6"];
+
+// Update the Call to action
+function myFunction() {
+ let cta = document.querySelector('h1');// Selected the first matching h1 selector.
+ ////Added the text content to the "h1" tag and "br" element
+ let arr =[...siteContent["cta"]["h1"]];
+ let element = document.createElement("br");
+ arr.add(element, arr[3]);
+ arr.add(element, arr[6]);
+ return arr
+}
+console.log(myFunction());
+
+ console.log([...siteContent["cta"]["h1"]])
