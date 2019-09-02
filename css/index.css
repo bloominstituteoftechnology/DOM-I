@@ -381,3 +381,20 @@ footer {
     margin: 20px;
   }
 }
+
+.hide {
+  display: none;
+}
+
+#render {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px double black;
+  font-size: 16px;
+  background: white;
+  width: 170px;
+  height: 32px;
+  margin-top: 10px;
+  cursor: pointer;
+}

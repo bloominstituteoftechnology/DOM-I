@@ -52,46 +52,54 @@ Array.prototype.chunk = function(size) {
   return results;
 };
 
-// Main Logic
-let nav = document.querySelector('nav');
-Array.from(nav.children).forEach((a, index) => {
-  a.textContent = Object.values(siteContent.nav)[index];
-  a.style.color = 'green';
-});
+const render = () => {
+  // Main Logic
+  let nav = document.querySelector('nav');
+  Array.from(nav.children).forEach((a, index) => {
+    a.textContent = Object.values(siteContent.nav)[index];
+    a.style.color = 'green';
+  });
 
-for (let i = 0; i < 2; i++) {
-  let a = document.createElement('a');
-  a.textContent = `item ${i}`;
-  a.style.color = 'red';
-  nav.appendChild(a);
-}
+  for (let i = 0; i < 2; i++) {
+    let a = document.createElement('a');
+    a.textContent = `item ${i}`;
+    a.style.color = 'red';
+    nav.appendChild(a);
+  }
 
-let logo = document.querySelector('#logo-img');
-logo.src = siteContent.nav['img-src'];
+  let logo = document.querySelector('#logo-img');
+  logo.src = siteContent.nav['img-src'];
 
-let cta = document.querySelector('.cta');
-cta.querySelector('h1').textContent = siteContent.cta['h1'];
-cta.querySelector('button').textContent = siteContent.cta['button'];
-cta.querySelector('img').src = siteContent.cta['img-src'];
+  let cta = document.querySelector('.cta');
+  cta.querySelector('h1').textContent = siteContent.cta['h1'];
+  cta.querySelector('button').textContent = siteContent.cta['button'];
+  cta.querySelector('img').src = siteContent.cta['img-src'];
 
-let contentsTexts = Object.values(siteContent['main-content'])
-  .filter(text => !text.includes('img'))
-  .chunk(2);
+  let contentsTexts = Object.values(siteContent['main-content'])
+    .filter(text => !text.includes('img'))
+    .chunk(2);
 
-let main = document.querySelector('.main-content');
-let contents = Array.from(main.querySelectorAll('.text-content'));
-contents.forEach((div, index) => {
-  div.querySelector('h4').textContent = contentsTexts[index][0];
-  div.querySelector('p').textContent = contentsTexts[index][1];
-});
+  let main = document.querySelector('.main-content');
+  let contents = Array.from(main.querySelectorAll('.text-content'));
+  contents.forEach((div, index) => {
+    div.querySelector('h4').textContent = contentsTexts[index][0];
+    div.querySelector('p').textContent = contentsTexts[index][1];
+  });
 
-let middleImg = document.querySelector('.middle-img');
-middleImg.src = siteContent['main-content']['middle-img-src'];
+  let middleImg = document.querySelector('.middle-img');
+  middleImg.src = siteContent['main-content']['middle-img-src'];
 
-let contact = document.querySelector('.contact');
-Array.from(contact.children).forEach((element, index) => {
-  element.textContent = Object.values(siteContent.contact)[index];
-});
+  let contact = document.querySelector('.contact');
+  Array.from(contact.children).forEach((element, index) => {
+    element.textContent = Object.values(siteContent.contact)[index];
+  });
 
-let footer = document.querySelector('footer p');
-footer.textContent = siteContent.footer.copyright;
+  let footer = document.querySelector('footer p');
+  footer.textContent = siteContent.footer.copyright;
+
+  let render = document.querySelector('#render');
+  render.className = 'hide';
+
+  let container = document.querySelector('.container');
+  container.className = 'container';
+};
