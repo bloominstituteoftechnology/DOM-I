@@ -37,6 +37,36 @@ const siteContent = {
   },
 };
 
+//-----------------------------nav
+const navA = document.queryselectorAll('a');
+const Values =object.values(sitecontent.nav);
+
+for (let i = 0; i < navA.length; i++) {
+  navA[i]. textcontent = values[i];
+}
+
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//-----------------------CTA
+//"cta": {
+  // "h1": "DOM Is Awesome",     
+  // "button": "Get Started",    
+  // "img-src": "img/header-img.png"
+
+  //---------------------h1
+  const ctaH1 = document.queryselector('div.cta-text > h1');
+
+  ctaH1.textcontent =sitecontent["cta"]["h1"]
+
+  //---------button
+  const ctabutton = document.queryselector('div.cta-text > button');
+  
+  ctaButton.textcontent = sitecontent["cta"]["button"];
+
+  //----------CTA image
+  const ctaImage = document.getElementById('cta-img');
+
+  ctaimage.setAttribute('src', sitecontent["cta"]["img-src"]);
