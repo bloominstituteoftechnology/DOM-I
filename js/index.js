@@ -13,9 +13,8 @@ const siteContent = {
     "button": "Get Started",//section class cts; div class cta-text buttton
     "img-src": "img/header-img.png"//section class cts;
   },
-  //---------------------main-content
   "main-content": {
-    "features-h4":"Features",  //section class main-content; div class top-content
+    "features-h4":"Features",  
     "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "about-h4":"About",
     "about-content": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
@@ -28,20 +27,6 @@ const siteContent = {
     "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
   },
   
-  //-----------------features-h4
-  const featText = document.querySelector('div.text-content > h4');
-  
-  featTile.textcontent = sitecontent["main-content"]["features"]
-
-  const featContent = document.queryselector('div.text-content > p');
-
-  featContent.textcontent = sitecontent["main-content"["feature-content"]
-  
-  //---------------about -h4
-
-  const aboutTitle = document.queryselector('div.text-content:nth-child(2) > h4');
-
-  aboutTitle.text-content = sitecontent["main-content"]["about-content"];
   "contact": {
     "contact-h4" : "Contact",
     "address" : "123 Way 456 Street Somewhere, USA",
