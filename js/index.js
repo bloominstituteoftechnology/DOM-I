@@ -63,7 +63,7 @@ ctaTextImg.src = siteContent.cta["img-src"];
 
 //My main content
 
-//assigning image
+//defining image
 let mainContentImg = document.querySelector('.main-content img');
 // All H4 heading on the site
 let mainContentH4 = document.querySelectorAll('h4')
@@ -75,3 +75,12 @@ mainContentH4[1].textContent = siteContent["main-content"]["about-h4"];
 mainContentH4[2].textContent = siteContent["main-content"]["services-h4"];
 mainContentH4[3].textContent = siteContent["main-content"]["product-h4"];
 mainContentH4[4].textContent = siteContent["main-content"]["vision-h4"];
+//Content
+mainContentP[0].textContent = siteContent["main-content"]["features-content"];
+mainContentP[1].textContent = siteContent["main-content"]["about-content"];
+mainContentP[2].textContent = siteContent["main-content"]["services-content"];
+mainContentP[3].textContent = siteContent["main-content"]["product-content"];
+mainContentP[4].textContent = siteContent["main-content"]["vision-content"];
+//Assigning image
+mainContentImg.src = siteContent["main-content"]["middle-img-src"];
+
