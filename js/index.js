@@ -108,7 +108,7 @@ newNav1.textContent = 'Home';
 newNav2.textContent = 'FAQS';
 newNav1.style.color = '#9932CC';
 newNav2.style.color = '#9932CC';
-
+//append and prepend 
 let navItem = document.querySelector('nav');
 navItem.prepend(newNav1);
 navItem.appendChild(newNav2);
