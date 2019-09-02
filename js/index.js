@@ -74,3 +74,25 @@ document.body.children[0].children[3].children[2].innerText = siteContent["conta
 document.body.children[0].children[3].children[3].innerText = siteContent["contact"]["email"];
 
 document.body.children[0].children[4].children[0].innerText = siteContent["footer"]["copyright"];
+
+let navigationLink = document.querySelectorAll('a');
+navigationLink.forEach(link => link.style.color = 'green');
+
+let navbar = document.getElementsByTagName('nav');
+
+let somethingAppropriate = document.createElement('a');
+somethingAppropriate.innerText = `I Am Appropriate`;
+somethingAppropriate.href= '#';
+
+let somethingAppropriate2 = document.createElement('a');
+somethingAppropriate2.innerText = `I Am Appropriate Also`;
+somethingAppropriate2.href= '#';
+
+navbar[0].appendChild(somethingAppropriate2);
+navbar[0].prepend(somethingAppropriate);
+
+// let navbar = document.getElementsByTagName('nav');
+// let cunt = document.createElement('a');
+// cunt.innerText = 'cunt';
+// cunt.href = '#';
+// navbar[0].prepend(cunt);
