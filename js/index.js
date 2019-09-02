@@ -36,6 +36,14 @@ const siteContent = {
     "copyright" : "Copyright Great Idea! 2018"
   },
 };
+let h1 = document.querySelector("h1");
+h1.textContent = siteContent["cta"]["h1"];
+
+let button = document.querySelector("button");
+button.textContent = siteContent["cta"]["button"];
+
+let headerImage = document.getElementById("cta-img");
+headerImage.setAttribute('src', siteContent["cta"]["img-src"]);
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
