@@ -51,7 +51,7 @@ navTags[4].textContent = siteContent.nav["nav-item-5"];
 navTags[5].textContent = siteContent.nav["nav-item-6"];
 
 
-//My CTA 
+//My CTA
 let ctaTextH1 = document.querySelector('.cta-text h1');
 ctaTextH1.textContent = siteContent.cta.h1;
 
@@ -60,3 +60,18 @@ ctaTextBtn.textContent = siteContent.cta.button;
 
 let ctaTextImg = document.querySelector('#cta-img');
 ctaTextImg.src = siteContent.cta["img-src"];
+
+//My main content
+
+//assigning image
+let mainContentImg = document.querySelector('.main-content img');
+// All H4 heading on the site
+let mainContentH4 = document.querySelectorAll('h4')
+// All P tags
+let mainContentP = document.querySelectorAll('.main-content p');
+//Headings
+mainContentH4[0].textContent = siteContent["main-content"]["features-h4"];
+mainContentH4[1].textContent = siteContent["main-content"]["about-h4"];
+mainContentH4[2].textContent = siteContent["main-content"]["services-h4"];
+mainContentH4[3].textContent = siteContent["main-content"]["product-h4"];
+mainContentH4[4].textContent = siteContent["main-content"]["vision-h4"];
