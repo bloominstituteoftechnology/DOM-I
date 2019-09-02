@@ -42,15 +42,20 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // querying out my navigation;
-let navTags = document.querySelectorAll('nav a');
-navTags[0].textContent = siteContent.nav["nav-item-1"];
-navTags[1].textContent = siteContent.nav["nav-item-2"];
-navTags[2].textContent = siteContent.nav["nav-item-3"];
-navTags[3].textContent = siteContent.nav["nav-item-4"];
-navTags[4].textContent = siteContent.nav["nav-item-5"];
-navTags[5].textContent = siteContent.nav["nav-item-6"];
-
-
+let navtags = document.querySelectorAll('nav a');
+navtags[0].textContent = siteContent.nav["nav-item-1"];
+navtags[1].textContent = siteContent.nav["nav-item-2"];
+navtags[2].textContent = siteContent.nav["nav-item-3"];
+navtags[3].textContent = siteContent.nav["nav-item-4"];
+navtags[4].textContent = siteContent.nav["nav-item-5"];
+navtags[5].textContent = siteContent.nav["nav-item-6"];
+//Font-color addition
+navtags[0].style.color = '#9932CC';
+navtags[1].style.color = 'red';
+navtags[2].style.color = 'blue';
+navtags[3].style.color = 'pink';
+navtags[4].style.color = 'yellow';
+navtags[5].style.color = 'black';
 //My CTA
 let ctaTextH1 = document.querySelector('.cta-text h1');
 ctaTextH1.textContent = siteContent.cta.h1;
@@ -88,7 +93,6 @@ mainContentImg.src = siteContent["main-content"]["middle-img-src"];
 let contactH4 = document.querySelector('.contact h4');
 let contactP = document.querySelectorAll('.contact p');
 contactH4.textContent = siteContent.contact["contact-h4"];
-
 contactP[0].textContent = siteContent.contact.address;
 contactP[1].textContent = siteContent.contact.phone;
 contactP[2].textContent = siteContent.contact.email;
@@ -96,3 +100,4 @@ contactP[2].textContent = siteContent.contact.email;
 //Footer area
 let footer = document.querySelector('footer p');
 footer.textContent = siteContent.footer.copyright;
+
