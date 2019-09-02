@@ -84,3 +84,11 @@ mainContentP[4].textContent = siteContent["main-content"]["vision-content"];
 //Assigning image
 mainContentImg.src = siteContent["main-content"]["middle-img-src"];
 
+//Contact area
+let contactH4 = document.querySelector('.contact h4');
+let contactP = document.querySelectorAll('.contact p');
+contactH4.textContent = siteContent.contact["contact-h4"];
+
+contactP[0].textContent = siteContent.contact.address;
+contactP[1].textContent = siteContent.contact.phone;
+contactP[2].textContent = siteContent.contact.email;
