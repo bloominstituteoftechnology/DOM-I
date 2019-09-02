@@ -61,16 +61,16 @@ document.body.children[0].children[2].children[0].children[1].children[1].innerT
 let middleimg = document.getElementById(`middle-img`);
 middleimg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
-document.body.children[0].children[2].children[2].children[0].children[0].innerText = siteContent["main-content"]["features-h4"];
-document.body.children[0].children[2].children[2].children[0].children[1].innerText = siteContent["main-content"]["features-content"];
-document.body.children[0].children[2].children[2].children[1].children[0].innerText = siteContent["main-content"]["about-h4"];
-document.body.children[0].children[2].children[2].children[1].children[1].innerText = siteContent["main-content"]["about-content"];
-document.body.children[0].children[2].children[2].children[2].children[0].innerText = siteContent["main-content"]["button"];
-document.body.children[0].children[2].children[2].children[2].children[1].innerText = siteContent["main-content"]["button"];
+document.body.children[0].children[2].children[2].children[0].children[0].innerText = siteContent["main-content"]["services-h4"];
+document.body.children[0].children[2].children[2].children[0].children[1].innerText = siteContent["main-content"]["services-content"];
+document.body.children[0].children[2].children[2].children[1].children[0].innerText = siteContent["main-content"]["product-h4"];
+document.body.children[0].children[2].children[2].children[1].children[1].innerText = siteContent["main-content"]["product-content"];
+document.body.children[0].children[2].children[2].children[2].children[0].innerText = siteContent["main-content"]["vision-h4"];
+document.body.children[0].children[2].children[2].children[2].children[1].innerText = siteContent["main-content"]["vision-content"];
 
-document.body.children[0].children[3].children[0].innerText = siteContent["cta"]["button"];
-document.body.children[0].children[3].children[1].innerText = siteContent["cta"]["button"];
-document.body.children[0].children[3].children[2].innerText = siteContent["cta"]["button"];
-document.body.children[0].children[3].children[3].innerText = siteContent["cta"]["button"];
+document.body.children[0].children[3].children[0].innerText = siteContent["contact"]["contact-h4"];
+document.body.children[0].children[3].children[1].innerText = siteContent["contact"]["address"];
+document.body.children[0].children[3].children[2].innerText = siteContent["contact"]["phone"];
+document.body.children[0].children[3].children[3].innerText = siteContent["contact"]["email"];
 
-document.body.children[0].children[4].children[0].innerText = siteContent["cta"]["button"];
+document.body.children[0].children[4].children[0].innerText = siteContent["footer"]["copyright"];
