@@ -49,3 +49,14 @@ navTags[2].textContent = siteContent.nav["nav-item-3"];
 navTags[3].textContent = siteContent.nav["nav-item-4"];
 navTags[4].textContent = siteContent.nav["nav-item-5"];
 navTags[5].textContent = siteContent.nav["nav-item-6"];
+
+
+//My CTA 
+let ctaTextH1 = document.querySelector('.cta-text h1');
+ctaTextH1.textContent = siteContent.cta.h1;
+
+let ctaTextBtn = document.querySelector('.cta-text button');
+ctaTextBtn.textContent = siteContent.cta.button;
+
+let ctaTextImg = document.querySelector('#cta-img');
+ctaTextImg.src = siteContent.cta["img-src"];
