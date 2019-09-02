@@ -1,7 +1,12 @@
 body {
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.digits {
+  margin: 20px;
 }
 
 .digit {
@@ -11,4 +16,21 @@ body {
 
 .redDigit {
   color: red;
+}
+
+.center {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+button {
+  border: 1px double black;
+  font-size: 16px;
+  background: white;
+  width: 170px;
+  height: 32px;
+  margin-top: 10px;
+  cursor: pointer;
 }
