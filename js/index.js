@@ -50,6 +50,10 @@ newLink.textContent = "Services";
 newLink;
 headerElement.appendChild(newLink);
 
+// Give the Services link a green color
+newLink.style.color = "green";
+newLink;
+
 // Add new link to navigation, to the front, called Product
 const firstLink = document.createElement('a');
 firstLink;
