@@ -36,6 +36,26 @@ const siteContent = {
     "copyright" : "Copyright Great Idea! 2018"
   },
 };
+
+let anchorTags = document.querySelectorAll("a");
+for(let i = 0; i < anchorTags.length; i++){
+  anchorTags[i].textContent = siteContent["nav"]["nav-item-"+(i+1)];
+  anchorTags[i].style.color = "green";
+};
+
+const followUs = document.createElement('a')
+followUs.href = "#";
+followUs.textContent = "Follow Us On Twitter";
+followUs.style.color = "green";
+const nav = document.querySelector("nav");
+nav.appendChild(followUs);
+
+const welcome = document.createElement("a")
+welcome.href = "#";
+welcome.textContent = "Welcome";
+welcome.style.color = "green";
+nav.prepend(welcome);
+
 let h1 = document.querySelector("h1");
 h1.textContent = siteContent["cta"]["h1"];
 
@@ -45,6 +65,30 @@ button.textContent = siteContent["cta"]["button"];
 let headerImage = document.getElementById("cta-img");
 headerImage.setAttribute('src', siteContent["cta"]["img-src"]);
 
+let middleImage = document.getElementById("middle-img");
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+let paragraph = document.querySelectorAll("p");
+paragraph[0].textContent = siteContent["main-content"]["features-content"];
+paragraph[1].textContent = siteContent["main-content"]["about-content"];
+paragraph[2].textContent = siteContent["main-content"]["services-content"];
+paragraph[3].textContent = siteContent["main-content"]["product-content"];
+paragraph[4].textContent = siteContent["main-content"]["vision-content"];
+paragraph[5].textContent = siteContent["contact"]["address"];
+paragraph[6].textContent = siteContent["contact"]["phone"];
+paragraph[7].textContent = siteContent["contact"]["email"];
+paragraph[8].textContent = siteContent["footer"]["copyright"];
+
+let h4 = document.querySelectorAll("h4");
+h4[0].textContent = siteContent["main-content"]["features-h4"];
+h4[1].textContent = siteContent["main-content"]["about-h4"];
+h4[2].textContent = siteContent["main-content"]["services-h4"];
+h4[3].textContent = siteContent["main-content"]["product-h4"];
+h4[4].textContent = siteContent["main-content"]["vision-h4"];
+h4[5].textContent = siteContent["contact"]["contact-h4"];
+
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
