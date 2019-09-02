@@ -130,7 +130,9 @@ header .logo {
     background: black;
     color: white;
 }
-
+.text-content {
+    margin: 0 0 0 15px;
+}
 /* Main Content Styles */
 
 .main-content {
