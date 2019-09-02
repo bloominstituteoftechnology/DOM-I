@@ -38,5 +38,20 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+
+document.body.children[0].children[0].children[0].children[0].innerText = siteContent["nav"]["nav-item-1"];
+document.body.children[0].children[0].children[0].children[1].innerText = siteContent["nav"]["nav-item-2"];
+document.body.children[0].children[0].children[0].children[2].innerText = siteContent["nav"]["nav-item-3"];
+document.body.children[0].children[0].children[0].children[3].innerText = siteContent["nav"]["nav-item-4"];
+document.body.children[0].children[0].children[0].children[4].innerText = siteContent["nav"]["nav-item-5"];
+document.body.children[0].children[0].children[0].children[5].innerText = siteContent["nav"]["nav-item-6"];
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+document.body.children[0].children[1].children[0].children[0].innerText = siteContent["cta"]["h1"];
+document.body.children[0].children[1].children[0].children[1].innerText = siteContent["cta"]["button"];
+let ctaimg = document.getElementById(`cta-img`);
+ctaimg.setAttribute('src', siteContent["cta"]["img-src"])
+
+let middleimg = document.getElementById(`middle-img`);
+middleimg.setAttribute('src', siteContent["main-content"]["middle-img-src"])

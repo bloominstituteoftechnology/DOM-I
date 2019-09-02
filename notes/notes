@@ -1,0 +1,151 @@
+
+nodes types will be used often
+
+element
+text 
+comments 
+documents
+
+
+document.body.children
+shows HTML Collection gives list of elements
+
+document.body.children.catsSection
+will bring up the section
+
+or brings up the first element
+document.body.children[0]
+
+document.body.children[0].children
+
+document.body.children[0].children[0]
+
+document.body.children[0].children[0].textContent = "Dogs"
+
+Will make the text content of the first child's first child equal Dogs
+
+.styles.color - will manipulate the text color to be directed 
+
+////
+document.body.children[0].childNodes
+
+gives a different list - any kind of nodes that will exist not just elements 
+
+children displays element
+childNodes display any nodes
+
+will probably use children 
+
+/////
+
+
+document.getElementsByTagName(`p`) 
+
+will bring back array type structure with just elements with the p type structure
+
+var paragraphs = document.getElementsByTagName(`p`) 
+
+will do the same thing when parapgraphs is ran
+
+var paragraphsArr = Array.from(paragraphs)
+
+paragraphArr.forEach(p=> p.style.color = "green")
+
+will change all p tags green
+
+
+////
+
+document.getElementsByTagName('p');
+document.getElementById('idName');
+document.getElementsByClassName('className');
+document.querySelector('.custom-style'); 
+document.querySelectorAll('.custom-style');
+///
+
+
+var cats = document.getElementsByClassName(`cats`)
+
+cats
+cat[0].style.color= `red`
+
+cats[0].classList.add(`alert`)
+
+
+
+//////
+
+
+document.querySelector('.custom-style'); 
+document.querySelectorAll('.custom-style');
+
+this is for CSS selectors
+
+
+difference selctor will just return all that matches only the first often
+
+all will return the arr like structure
+
+
+document.querySelector('#catSection')
+
+
+
+: The Array class does contain a method we can use to create an array from an array-like object, called .from(). To use this we would simply give .from the array-like object as it’s only argument.
+
+
+var cats = document.querySelectorAll(.`cats`)
+cats.forEach (c => c.textContext =" meh")
+
+setting variables are short cuts
+
+
+
+
+///
+.textContent
+Gets and sets the text of an element. Essentially whatever text is between the open and closing tags of an HTML element.
+Can use the assignment operator ( = ) to reset the text of an element
+Setting this property on a node removes all of its children and replaces them with the new single text node.
+<div>Something Here</div>
+element.textContent = 'Something New;
+.setAttribute() (or .{attr})
+This method (or property) is used as a way to set or reassign an attribute on the element.
+‘.setAttribute()’ is a method that takes two arguments, the attribute to set, and the value to set to that attribute.
+eg: element.setAttribute('src', 'http://www.imagsource.com/image.jpg')
+Can also use the pattern: element.'attrName' = ‘value’.
+eg: element.src = 'http://www.imagsource.com/image.jpg'
+.style
+Every element contains a style object. This property accesses that style object. The style object contains every available style as a key and a value as the value. It is important to note, that these are NOT the CSS styles, these are inline HTML styles.
+These styles are associated with the HTML inline style set on the element
+eg: <div style=“color: red;”>DIV STUFF</div>
+You can access and change a property on the style object by using the assignment operator =.
+eg: element.style.color = ‘blue’;
+Changing a property on the style object will effectively give this element an inline style.
+Inline styles have the highest specificity, overriding any other selector except !important.
+VERY IMPORTANT to note that this does NOT access or change anything in the CSS file.
+.className, .id
+.className accesses or assigns a string containing all of the classes on the element.
+.id accesses or assigns a string containing the id of the element.
+.classList
+classList will return an array-like object of all the classes on the element. There are a number of useful methods available on classList.
+classList is a DOMTokenList.
+A DOMTokenList is an array-like object with a numerical zero-based index, a length property, also the .contains() and .forEach() methods.
+Most notably the methods .add() .remove() and .toggle() exist. All three take a single string representing the class.
+.add('className') and .remove('className') do as their names indicate.
+.toggle('className') will add the class if it does not exist and remove it if if does.
+.appendChild() and .prepend()
+These methods are used for adding child elements to parent elements.
+.appendChild(child) will take an element and add it to it’s children. It will add it to the ‘end’ physically so if the children are displayed in order it will be the last.
+eg: parentElement.appendChild(childElement)
+.prepend(child) adds a child to the beginning, displaying it first.
+eq: parentElement.prepend(childElement)
+.children and .parentNode
+These properties are used for accessing relatives of the element.
+.children returns an HTMLCollection of all the children of that element.
+.parentNode returns the parent element of that element.
+
+
+
+
+use camelCase when styles has a dash
