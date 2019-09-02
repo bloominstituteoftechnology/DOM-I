@@ -101,3 +101,14 @@ contactP[2].textContent = siteContent.contact.email;
 let footer = document.querySelector('footer p');
 footer.textContent = siteContent.footer.copyright;
 
+//Creating new elements
+let newNav1 = document.createElement('a');
+let newNav2 = document.createElement('a');
+newNav1.textContent = 'Home';
+newNav2.textContent = 'FAQS';
+newNav1.style.color = '#9932CC';
+newNav2.style.color = '#9932CC';
+
+let navItem = document.querySelector('nav');
+navItem.prepend(newNav1);
+navItem.appendChild(newNav2);
