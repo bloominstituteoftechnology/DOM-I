@@ -13,6 +13,7 @@ const siteContent = {
     "button": "Get Started",//section class cts; div class cta-text buttton
     "img-src": "img/header-img.png"//section class cts;
   },
+  //---------------------main-content
   "main-content": {
     "features-h4":"Features",  //section class main-content; div class top-content
     "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
@@ -26,6 +27,21 @@ const siteContent = {
     "vision-h4":"Vision",
     "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
   },
+  
+  //-----------------features-h4
+  const featText = document.querySelector('div.text-content > h4');
+  
+  featTile.textcontent = sitecontent["main-content"]["features"]
+
+  const featContent = document.queryselector('div.text-content > p');
+
+  featContent.textcontent = sitecontent["main-content"["feature-content"]
+  
+  //---------------about -h4
+
+  const aboutTitle = document.queryselector('div.text-content:nth-child(2) > h4');
+
+  aboutTitle.text-content = sitecontent["main-content"]["about-content"];
   "contact": {
     "contact-h4" : "Contact",
     "address" : "123 Way 456 Street Somewhere, USA",
@@ -37,36 +53,40 @@ const siteContent = {
   },
 };
 
-//-----------------------------nav
-const navA = document.queryselectorAll('a');
-const Values =object.values(sitecontent.nav);
-
-for (let i = 0; i < navA.length; i++) {
-  navA[i]. textcontent = values[i];
-}
-
-
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-//-----------------------CTA
-//"cta": {
-  // "h1": "DOM Is Awesome",     
-  // "button": "Get Started",    
-  // "img-src": "img/header-img.png"
+//Navigation links
+const navlinks = document.queryselectorAll('nav a');
+navlinks. foreach((link, idx) => {
+  link.textcontent = sitecontent.nav['nav-item-${idx + 1}'];
+  link.style.color = 'green';
+})
 
-  //---------------------h1
-  const ctaH1 = document.queryselector('div.cta-text > h1');
+const home = document.createElement('a')
+home.textcontent = 'home'
+home.href = '#';
+home.style.color = 'green';
 
-  ctaH1.textcontent =sitecontent["cta"]["h1"]
+const gallery = document.createElement('a')
+gallery.textcontent = 'gallery'
+gallery.href = '#'
+gallery.style.color = 'green'
 
-  //---------button
-  const ctabutton = document.queryselector('div.cta-text > button');
-  
-  ctaButton.textcontent = sitecontent["cta"]["button"];
+const nav = document.createElement('a')
+nav.prepend(home);
+nav.appendChild(gallery)
 
-  //----------CTA image
+
+  //---------------------CTA section
+  const ctaHeading = document.queryselector('cta-text h1');
+  ctaHeading.innerhtml = sitecontent.cta.h1.split('').join('<br>');
+
+  const ctabutton = document.queryselector('div.cta-text button');
+  ctaButton.textcontent = sitecontent.cta.button;
+
   const ctaImage = document.getElementById('cta-img');
+  ctaimg.src = siteContent.cta["img-src"];
 
-  ctaimage.setAttribute('src', sitecontent["cta"]["img-src"]);
+  
