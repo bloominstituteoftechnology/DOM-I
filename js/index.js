@@ -41,7 +41,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-// Add new link in navigation element, called Services
+// Add new link in navigation element, at the end, called Services
 const headerElement = document.querySelector('header');
 headerElement;
 const newLink = document.createElement('a');
@@ -49,3 +49,10 @@ newLink;
 newLink.textContent = "Services";
 newLink;
 headerElement.appendChild(newLink);
+
+// Add new link to navigation, to the front, called Product
+const firstLink = document.createElement('a');
+firstLink;
+firstLink.textContent = "Product";
+firstLink;
+headerElement.prepend(firstLink);
