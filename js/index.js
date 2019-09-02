@@ -39,4 +39,46 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+
+let navitems = document.querySelectorAll('nav a');
+navitems[0].textContent = siteContent["nav"]["nav-item-1"]
+
+navitems[1].textContent = siteContent['nav']['nav-item-2']
+
+navitems[2].textContent = siteContent['nav']['nav-item-3']
+
+navitems[3].textContent = siteContent['nav']['nav-item-4']
+
+navitems[4].textContent = siteContent['nav']['nav-item-5']
+
+navitems[5].textContent = siteContent['nav']['nav-item-6']
+
+
+let firstClass = document.querySelector('.cta-text h1');
+firstClass.textContent = siteContent['cta']['h1']
+
+let firstClassButton = document.querySelector('cta-text, button' )
+firstClassButton.textContent = siteContent['cta']['button']
+
+let topImage = document.getElementById("cta-img");
+topImage.setAttribute('src', siteContent['cta']['img-src'])
+
+let featureHeading = document.querySelector('.top-content .text-content h4')
+featureHeading.textContent = siteContent['main-content']['features-h4']
+
+let featureContent = document.querySelector('.top-content .text-content p')
+featureContent.textContent = siteContent['main-content']['features-content']
+
+// come back to it
+let aboutHeading = document.querySelectorAll('.top-content .text-content')
+aboutHeading :nth-of-typeof(1).textContent = siteContent['main-content']['about-h4']
+
+
+
+
+let middleImage = document.getElementById("middle-img");
+middleImage.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+
