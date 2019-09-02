@@ -92,3 +92,7 @@ contactH4.textContent = siteContent.contact["contact-h4"];
 contactP[0].textContent = siteContent.contact.address;
 contactP[1].textContent = siteContent.contact.phone;
 contactP[2].textContent = siteContent.contact.email;
+
+//Footer area
+let footer = document.querySelector('footer p');
+footer.textContent = siteContent.footer.copyright;
