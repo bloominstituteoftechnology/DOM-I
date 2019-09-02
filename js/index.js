@@ -56,3 +56,19 @@ firstLink;
 firstLink.textContent = "Product";
 firstLink;
 headerElement.prepend(firstLink);
+
+// Update all links in navigation bar using querySelectorAll
+const linkElements = document.querySelectorAll('a');
+linkElements;
+linkElements[0].textContent = "Services";
+linkElements[0];
+linkElements[1].textContent = "Product";
+linkElements[1];
+linkElements[2].textContent = "Vision";
+linkElements[2];
+linkElements[3].textContent = "Features";
+linkElements[3];
+linkElements[4].textContent = "About";
+linkElements[4];
+linkElements[5].textContent = "Contact";
+linkElements[5];
