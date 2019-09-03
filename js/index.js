@@ -38,5 +38,37 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+
+// let navLink = document.querySelectorAll(" a");
+// navLink.setAttribute(siteContent["nav"]["nav-item"])
+// console.log(navLink);
+
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+
+
+
+
+let ctaH = document.querySelector("h1")
+ctaH.setAttribute('src', siteContent["cta"]["h1"])
+console.log(ctaH);
+
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+
+
+
+
+
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+
+
+
+
+// let aboutH = document.querySelector("about-h4");
+// aboutH.setAttribute(siteContent["main-content"])
