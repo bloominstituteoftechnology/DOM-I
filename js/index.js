@@ -54,5 +54,11 @@ console.log(navLinks[0]);
 console.log(navLinks[1]);
 
 
-let cta = document.querySelectorAll(".cta");
+let ctaText = document.querySelector(".cta-text");
+console.log(ctaText);
+ctaText.firstElementChild.textContent = siteContent["cta"]["h1"];
+ctaText.lastElementChild.textContent = siteContent["cta"]["button"];
+let ctaLogo = document.getElementById("cta-img");
+ctaLogo.setAttribute('src', siteContent["cta"]["img-src"]);
+
 
