@@ -57,3 +57,11 @@ const  headerNavigation = document.querySelectorAll("nav a");
 headerNavigation.forEach((item) => {
    item.style.color = 'green'; 
 });
+
+const navigation = document.querySelector('nav')
+const home = document.createElement('a')
+home.textContent = 'Home';
+const shop = document.createElement('a')
+shop.textContent = 'Show Now'
+navigation.prepend(home)
+navigation.appendChild(shop)
