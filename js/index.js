@@ -54,42 +54,31 @@ navs.children[5].innerHTML = siteContent.nav['nav-item-6']
 //end of header/////////////////////////////
 
 //START OF CTA//////////////////////////////
-document.getElementsByClassName('cta-text')[0].innerHTML = '<h1>DOM <br> IS<br> AWESOME<h1>'
+document.querySelector('.cta-text > h1').innerHTML = 'DOM <br> IS<br> AWESOME'
+document.querySelector('.cta-text > button').textContent = 'Get Started'
 
 let codePic = document.getElementById("cta-img");
 codePic.setAttribute('src', siteContent["cta"]["img-src"])
 
+
 //END OF CTA////////////////////////////////
 
 //START OF MAIN-CONTENT/////////////////////
-document.getElementsByClassName("text-content")[0].innerHTML = '<h4>Features<h4>'
-document.getElementsByClassName("text-content")[1].innerHTML = '<p>Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.<p>'
-document.getElementsByClassName("text-content")[2].innerHTML = '<h4>About<h4>'
-document.getElementsByClassName("text-content")[3].innerHTML = '<p>About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.</p>'
-// document.getElementsByClassName("text-content")[4].innerHTML = '<h4>Service</h4>'
-// document.getElementsByClassName("text-content")[5].innerHTML = '<p>Service content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.</p>'
-// document.getElementsByClassName("text-content")[6].innerHTML = '<h4>Product</h4>'
-// document.getElementsByClassName("text-content")[7].innerHTML = '<p> Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.</p>'
-// document.getElementsByClassName("text-content")[8].innerHTML = '<h4>Vision</h4>'
-// document.getElementsByClassName("text-content")[9].innerHTML = '<p>Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.</p>'
 
 let code = document.getElementById("middle-img");
 code.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 const contacts = document.querySelector("contact");
+contacts.children[0].innerHTML = siteContent.contact['contact-h4']
+contact.children[1].innerHTML = siteContent.contact['address']
+contact.children[2].innerHTML = siteContent.contact['phone']
+contact.children[3].innerHTML = siteContent.contact['email']
 
-contacts.children[0].innerHTML = siteContent.contacts['contact-h4']
-// contact.children[1].innerHTML = siteContent.contact['address']
-// contact.children[2].innerHTML = siteContent.contact['phone']
-// contact.children[3].innerHTML = siteContent.contact['email']
-// const bottomTextContents = document.querySelectorAll('.bottom-content > .text-content');
-// const firstBottomTextContent = bottomTextContents[0];
-// firstBottomTextContent.innerHTML = 'CONTNET'
-// firstBottomTextContent.style.color = 'red'
 
-// const secondBottomTextContent = bottomTextContents[2];
-// secondBottomTextContent.innerHTML = 'CONTNET'
-// secondBottomTextContent.style.color = 'red'
+
+
+
+document.querySelector('.bottom-content :nth-child(1) > h4').textContent = 'Features'
 
 
 const footer = document.querySelector("footer");
