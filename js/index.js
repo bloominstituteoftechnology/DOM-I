@@ -40,3 +40,64 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// Middle Image
+const midImg = document.getElementById("middle-img");
+midImg.setAttribute("src",siteContent["main-content"]["middle-img-src"]);
+
+// Call to Action Image
+const ctaImg = document.getElementById("cta-img");
+ctaImg.src=siteContent["cta"]["img-src"];
+
+// Nav Links
+const navLinks = document.querySelectorAll("nav a");
+for(let i=0; i<navLinks.length; i++){
+  navLinks[i].textContent=siteContent["nav"]["nav-item-"+[i]];
+  navLinks[i].style.color="green";
+}
+
+// CTA Header
+const h1 = document.querySelector(".cta-text h1");
+h1.textContent = siteContent["cta"]["h1"];
+
+// CTA Button
+const button = document.querySelector(".cta-text button");
+button.textContent = siteContent["cta"]["button"];
+
+// Main Content
+const heading = ["features","about","services","product","vision"];
+const h4 = document.querySelectorAll(".text-content h4");
+const p = document.querySelectorAll(".text-content p");
+// h4.forEach((item, index) => 
+//   item[index].textContent = siteContent["main-content"][heading[index]+"-h4"],
+//   );
+for(let i=0; i<h4.length; i++){
+  h4[i].textContent = siteContent["main-content"][heading[i]+"-h4"];
+  h4[i].style.color = "red";
+  p[i].textContent = siteContent["main-content"][heading[i]+"-content"];
+  p[i].style.color = "blue";
+}
+
+// Contact
+const addr = ["address","phone","email"];
+
+const contactHeader = document.querySelector(".contact h4");
+contactHeader.textContent = siteContent["contact"]["contact-h4"];
+
+const contactP = document.querySelectorAll(".contact p");
+
+for(let i=0; i<contactP.length; i++){
+  contactP[i].textContent = siteContent["contact"][addr[i]];
+}
+
+// Addend and Prepend
+const navList = document.getElementsByTagName("nav");
+
+const append = document.createElement("a");
+const prepend = document.createElement("a");
+append.textContent = "Append";
+prepend.textContent = "Prepend";
+navList[0].appendChild(append);
+navList[0].prepend(prepend);
+
+
