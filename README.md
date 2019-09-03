@@ -44,3 +44,5 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 
 ## Stretch Project: Digital Timer
 This project is heavier on logic but employs some DOM manipulation to achieve it's goals.  Go check it out here: [stretch assignment](stretch-assignment) and see how far you can get. 
+
+## edit
