@@ -56,11 +56,6 @@ anchors.forEach(
   (el, index) => (el.textContent = siteContent["nav"][`nav-item-${index + 1}`])
 );
 
-// const headerEL1 = document.querySelector('header nav a:nth-child(0)')
-// headerEL1.textContent = 'Get Started';
-
-
-// const aTag1 = document.querySelector('a'):
 
 // CTA
 
@@ -73,34 +68,36 @@ ctaButtonText.innerHTML = 'Dom <br> Is <br> Awesome';
 
 // Main Content Top
 
-// let mainContent = document.querySelectorAll(".main-content");
-// mainContent.forEach(
-//   (elmP) => (elmP.textContent = siteContent["main-content"])
-// );
 
-const topContentTextH4 = document.querySelector(".top-content .text-content h4")
-topContentTextH4.textContent = 'Features';
 
-const topContentText1P = document.querySelector(".top-content .text-content p")
-topContentText1P.textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+const textHeading = document.querySelectorAll('.main-content h4');
+textHeading[0].textContent = siteContent["main-content"]["features-h4"];
+textHeading[1].textContent = siteContent['main-content']['about-h4'];
+textHeading[2].textContent = siteContent['main-content']['services-h4'];
+textHeading[3].textContent = siteContent['main-content']['product-h4'];
+textHeading[4].textContent = siteContent['main-content']['vision-h4'];
 
-// Main Content Bottom
-const bottomContentText1H4 = document.querySelector(".bottom-content .text-content h4")
-bottomContentText1H4.textContent = 'Services';
+const textWords = document.querySelectorAll('.main-content p');
+textWords[0].textContent = siteContent["main-content"]['features-content'];
+textWords[1].textContent = siteContent['main-content']['about-content'];
+textWords[2].textContent = siteContent['main-content']['services-content'];
+textWords[3].textContent = siteContent['main-content']['product-content'];
+textWords[4].textContent = siteContent['main-content']['vision-content'];
 
-const bottomContentText1P = document.querySelector(".bottom-content .text-content p")
-bottomContentText1P.textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
 
 // Contact
 // const contactH4Text = document.querySelector(".contact H4")
 // contactH4Text.textContent = 'Contact';
 
-let contactText = document.querySelectorAll(".contact");
-contactText.forEach(
-  (elContact) => (elContact.textContent = siteContent["contact"])
-);
+const contactHeading = document.querySelector('.contact h4');
+contactHeading.textContent = siteContent['contact']['contact-h4'];
+
+const contactText = document.querySelectorAll('.contact p');
+contactText[0].textContent = siteContent['contact']['address'];
+contactText[1].textContent = siteContent['contact']['phone'];
+contactText[2].textContent = siteContent['contact']['email'];
 
 // Footer
 
-const footerText = document.querySelector("footer p")
+const footerText = document.querySelector("footer p");
 footerText.textContent = 'Copyright Great Idea! 2018';
