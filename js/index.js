@@ -63,7 +63,7 @@ const ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', "img/header-img.png");
 
 //Main Content headers
-const headerText = document.querySelectorAll('h4');
+const headerText = document.querySelectorAll('.main-content h4');
 headerText[0].textContent = siteContent['main-content']['features-h4']
 headerText[1].textContent = siteContent['main-content']['about-h4']
 headerText[2].textContent = siteContent['main-content']['services-h4']
@@ -71,7 +71,7 @@ headerText[3].textContent = siteContent['main-content']['product-h4']
 headerText[4].textContent = siteContent['main-content']['vision-h4']
 
 //Main Content paragraphs
-const paraText = document.querySelectorAll('p');
+const paraText = document.querySelectorAll('.main-content p');
 paraText[0].textContent = siteContent['main-content']['features-content']
 paraText[1].textContent = siteContent['main-content']['about-content']
 paraText[2].textContent = siteContent['main-content']['services-content']
@@ -88,8 +88,11 @@ middleImg.alt = "Image of a code snippet."
 const contactHeader = document.querySelector('.contact h4');
 contactHeader.textContent = siteContent['contact']['contact-h4'];
 
-const contactText = document.querySelectorALL('.contact p');
-contactText[0].textContent =
+const contactText = document.querySelectorAll('.contact p');
+contactText[0].textContent = siteContent['contact']['address'];
+contactText[1].textContent = siteContent['contact']['phone'];
+contactText[2].textContent = siteContent['contact']['email'];
+
 
 //footer
 const footerContent = document.querySelector('footer p');
