@@ -41,24 +41,49 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+// for loop over a tags
+
 let navLinks = document.querySelectorAll("a");
 for (i = 0; i < navLinks.length; i++) {
   navLinks[i].textContent = siteContent["nav"][`nav-item-${i + 1}`];
 }
 
-// for (let element of navLinks) {
-//   element.textContent = 'yellow';
-// }
-
-console.log(navLinks[0]);
-console.log(navLinks[1]);
-
+// header
 
 let ctaText = document.querySelector(".cta-text");
 console.log(ctaText);
 ctaText.firstElementChild.textContent = siteContent["cta"]["h1"];
 ctaText.lastElementChild.textContent = siteContent["cta"]["button"];
+
 let ctaLogo = document.getElementById("cta-img");
 ctaLogo.setAttribute('src', siteContent["cta"]["img-src"]);
 
 
+// select all text-content to traverse
+
+let textContent = document.querySelectorAll(".text-content");
+
+
+// top content
+
+textContent[0].firstElementChild.textContent = siteContent["main-content"]["features-h4"];
+textContent[0].lastElementChild.textContent = siteContent["main-content"]["features-content"];
+
+textContent[1].firstElementChild.textContent = siteContent["main-content"]["about-h4"];
+textContent[1].lastElementChild.textContent = siteContent["main-content"]["about-content"];
+
+// middle image
+
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+// bottom content
+
+textContent[2].firstElementChild.textContent = siteContent["main-content"]["services-h4"];
+textContent[2].lastElementChild.textContent = siteContent["main-content"]["services-content"];
+
+textContent[3].firstElementChild.textContent = siteContent["main-content"]["product-h4"];
+textContent[3].lastElementChild.textContent = siteContent["main-content"]["product-content"];
+
+textContent[4].firstElementChild.textContent = siteContent["main-content"]["vision-h4"];
+textContent[4].lastElementChild.textContent = siteContent["main-content"]["vision-content"];
