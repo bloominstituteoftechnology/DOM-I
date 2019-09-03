@@ -42,6 +42,8 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //this is the section for the nav bar
+const navbar = document.querySelectorAll("a");
+console.log(navbar);
 
 
 //this is for the image of the code (circular)
@@ -50,9 +52,25 @@ snippet.setAttribute('src', siteContent["cta"]["img-src"])
 
 
 //This is the section for the text next to the circle img
-// let topText = document.getElementById("cta-text")
-// topText.querySelector('button', 'h1', siteContent["cta"]["cta-text"]["cta-button"])
+const dom = document.getElementsByClassName("cta-text");
+console.log(dom);
+
+const domText = document.querySelector("h1");
+console.log(domText);
+domText.textContent = "DOM  IS AWESOME";
+
+const domButton = document.querySelector("button");
+console.log(domButton);
+domButton.textContent = "Get Started";
 
 
+//This is the section for Features and About
+const features = document.getElementsByClassName("text-content");
+console.log(features);
+
+
+//This is the section for the bottom image 
 let midImg = document.getElementById("middle-img");
 midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+//This is the section for the bottom content
