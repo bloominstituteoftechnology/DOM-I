@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   cta: {
-    h1: "DOM Is Awesome",
+    h1: "DOM <br> Is <br> Awesome",
     button: "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -33,7 +33,7 @@ const siteContent = {
   },
   contact: {
     "contact-h4": "Contact",
-    address: "123 Way 456 Street Somewhere, USA",
+    address: "123 Way 456 Street <br> Somewhere, USA",
     phone: "1 (888) 888-8888",
     email: "sales@greatidea.io"
   },
@@ -80,7 +80,22 @@ document
   .querySelector("#middle-img")
   .setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
+// Contact
+document.querySelector(".contact h4").innerHTML =
+  siteContent["contact"]["contact-h4"];
+let contactTexts = document.querySelectorAll(".contact p");
+console.log(contactTexts);
+contactTexts[0].innerHTML = siteContent.contact.address;
+contactTexts[1].innerHTML = siteContent.contact.phone;
+contactTexts[2].innerHTML = siteContent.contact.email;
+
+document.querySelector("footer p").innerHTML = siteContent.footer.copyright;
+
 // Questions
 // * Is query selector just superior? Seems easier to write
 // * How would I do the Header Nav using an 'for of' loop?
 // * For mainHeaders, is there a faster way to copy and paste into one area?
+// * Given a element already, how do you go farther down? Or do you always start at the top with query Selector?
+// * Are JSONS usually named like that? why not assume nesting with each object eg, contact-h4 instead of just h4
+// * Is there a convention when referencing inside an object to use `[]` versus dot nonation? (see contactTexts)
+// * I ended up adding <br> to the json object, is that acceptable or is there another more correct method?
