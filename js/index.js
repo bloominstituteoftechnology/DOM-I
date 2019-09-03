@@ -39,26 +39,41 @@ const siteContent = {
 
 // nav
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+let logo = document.getElementById("logo-img"); // ID doesn't need . or #
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
-// cta
+// cta        DONE
 let ctaImg = document.getElementById("cta-img");  // make variable & set it to HTML class
 ctaImg.src = siteContent["cta"]["img-src"]; // tell variable source to use nested object data
 
 let ctaText = document.querySelector(".cta-text h1"); // make variable and set it to CSS selector
 ctaText.textContent = siteContent["cta"]["h1"]; // textContent points to CSS cta/h1 data
 
+let ctaButton = document.querySelector(".cta-text button"); // class needs .
+ctaButton.textContent = siteContent["cta"]["button"];
+
 
 // main-content
 let middleImg = document.getElementById("middle-img"); // make variable & set it to HTML class
 middleImg.src = siteContent["main-content"]["middle-img-src"]; // tell variable source to use nested object data
 
+let mainContentHeaders = document.querySelectorAll(".text-content h4"); // top-content and bottom-content headings
+let headerArray = ["features-h4", "about-h4", "services-h4", "product-h4", "vision-h4"]; // css content heading keys
+// need to put each headerArray element into a h4 field
+
 
 // contact
+let contactHeading = document.querySelector(".contact h4");
+contactHeading.textContent = siteContent["contact"]["contact-h4"];
+
+let contactArray = ["address", "phone", "email"];
+//need to put each contactArray element into a <p> in .contact
+let contactInfo = document.querySelectorAll(".contact p") // contactInfo uses all 3 <p>
+// contactInfo.forEach(paragraph)
 
 
-// footer
-
+// footer       DONE
+let footerText = document.querySelector("footer p");
+footerText.textContent = siteContent["footer"]["copyright"];
 
