@@ -92,3 +92,13 @@ const mainSectionImg = (document.getElementById("middle-img").src =
 
   const footer = document.querySelector("footer p");
   footer.textContent = siteContent .footer["copyright"];
+
+  
+
+  const button = document.querySelector('button');
+button.textContent = siteContent.cta.button;
+button.style[`background-color`] = "dodgerblue";
+
+button.addEventListener("click", function(event) {
+  button.textContent = "Yes it is!";
+});
