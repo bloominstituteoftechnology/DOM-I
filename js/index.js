@@ -48,8 +48,8 @@ document.querySelector("nav").appendChild(add);
 let nav_items = document.querySelectorAll('a');
 for (let i = 0; i < nav_items.length; i++) {
     nav_items[i].textContent = siteContent["nav"]["nav-item-" + i];
+    nav_items[i].style.color = 'green'
 }
-
 // Updating Class "cta section"
 let heading = document.querySelector('.cta-text h1');
 let heas = siteContent["cta"]["h1"];
