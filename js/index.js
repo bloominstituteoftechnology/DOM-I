@@ -70,3 +70,17 @@ const headerone = document.querySelector("h1").textContent = siteContent.cta["h1
 const btn = document.querySelector("button").textContent = siteContent.cta["button"];
 const ctaImg = document.querySelector("#cta-img").src = siteContent.cta["img-src"];
 
+const headingH4 = document.querySelectorAll("h4");
+const paragraphs = document.querySelectorAll("p");
+headingH4[0].textContent = siteContent["main-content"]["features-h4"];
+headingH4[1].textContent = siteContent["main-content"]["about-h4"];
+headingH4[2].textContent = siteContent["main-content"]["services-h4"];
+headingH4[3].textContent = siteContent["main-content"]["product-h4"];
+headingH4[4].textContent = siteContent["main-content"]["vision-h4"];
+paragraphs[0].textContent = siteContent["main-content"]["features-content"];
+paragraphs[1].textContent = siteContent["main-content"]["about-content"];
+paragraphs[2].textContent = siteContent["main-content"]["services-content"];
+paragraphs[3].textContent = siteContent["main-content"]["product-content"];
+paragraphs[4].textContent = siteContent["main-content"]["vision-content"];
+const mainSectionImg = (document.getElementById("middle-img").src =
+  siteContent["main-content"]["middle-img-src"]);
