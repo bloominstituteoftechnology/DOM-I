@@ -39,36 +39,34 @@ const siteContent = {
 
 
 
-let anchorTags = document.querySelectorAll("a");
-for(let i = 0; i < anchorTags.length; i++){
-  anchorTags[i].textContent = siteContent["nav"]["nav-item-"+(i+1)];
-  anchorTags[i].style.color = "green";
+let navLinks = document.querySelectorAll("a");
+for(let i = 0; i < navLinks.length; i++){
+  navLinks[i].textContent = siteContent["nav"]["nav-item-"+(i+1)];
+  navLinks[i].style.color = "green";
 };
 
-const followUs = document.createElement('a')
-followUs.href = "#";
-followUs.textContent = "Follow Us On Twitter";
-followUs.style.color = "green";
+// navNew
+const navAdd = document.createElement('a')
+navAdd.href = "https://lambdaschool.com";
+navAdd.textContent = "Created an element here";
+navAdd.style.color = "Blue";
 const nav = document.querySelector("nav");
-nav.appendChild(followUs);
+nav.appendChild(navAdd);
 
-const welcome = document.createElement("a")
-welcome.href = "#";
-welcome.textContent = "Welcome";
-welcome.style.color = "green";
-nav.prepend(welcome);
 
 let h1 = document.querySelector("h1");
 h1.textContent = siteContent["cta"]["h1"];
 
+// get started button
 let button = document.querySelector("button");
-button.textContent = siteContent["cta"]["button"];
-
+  button.textContent = siteContent["cta"]["button"];
+// header img
 let headerImage = document.getElementById("cta-img");
-headerImage.setAttribute('src', siteContent["cta"]["img-src"]);
+  headerImage.setAttribute('src', siteContent["cta"]["img-src"]);
 
+// middle img
 let middleImage = document.getElementById("middle-img");
-middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+  middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 
 
