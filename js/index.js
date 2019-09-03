@@ -41,13 +41,13 @@ const siteContent = {
 
 // Images
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 let ctaImg = document.getElementById("cta-img")
-ctaImg.setAttribute("src", "img/header-img.png")
+ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
 
 let middleImg = document.getElementById("middle-img")
-middleImg.setAttribute("src", "img/mid-page-accent.jpg")
+middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
 // Header
 
@@ -86,18 +86,18 @@ textWords[4].textContent = siteContent['main-content']['vision-content'];
 
 
 // Contact
-// const contactH4Text = document.querySelector(".contact H4")
-// contactH4Text.textContent = 'Contact';
 
 const contactHeading = document.querySelector('.contact h4');
 contactHeading.textContent = siteContent['contact']['contact-h4'];
 
 const contactText = document.querySelectorAll('.contact p');
-contactText[0].textContent = siteContent['contact']['address'];
+// contactText[0].textContent = siteContent['contact']['address'];
+const addressText = document.querySelector(".contact p")
+addressText.innerHTML = '123 Way 456 Street<br>Somewhere, USA';
 contactText[1].textContent = siteContent['contact']['phone'];
 contactText[2].textContent = siteContent['contact']['email'];
 
 // Footer
 
 const footerText = document.querySelector("footer p");
-footerText.textContent = 'Copyright Great Idea! 2018';
+footerText.textContent = siteContent['footer']['copyright'];
