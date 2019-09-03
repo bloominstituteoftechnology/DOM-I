@@ -75,3 +75,14 @@ let contentText = document.querySelectorAll('.top-content p');
 contentText[0].textContent = siteContent["main-content"]["features-content"]
 contentText[1].textContent = siteContent["main-content"]["about-content"]
 document.querySelector('#middle-img').src = siteContent["main-content"]["middle-img-src"];
+
+//Updating Middle Content
+let bottomContentHeading = document.querySelectorAll('.bottom-content h4');
+bottomContentHeading[0].textContent = siteContent["main-content"]["services-h4"]
+bottomContentHeading[1].textContent = siteContent["main-content"]["product-h4"]
+bottomContentHeading[2].textContent = siteContent["main-content"]["vision-h4"]
+
+let bottomContentText = document.querySelectorAll('.bottom-content p');
+bottomContentText[0].textContent = siteContent["main-content"]["services-content"]
+bottomContentText[1].textContent = siteContent["main-content"]["product-content"]
+bottomContentText[2].textContent = siteContent["main-content"]["vision-content"]
