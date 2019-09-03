@@ -37,6 +37,28 @@ const siteContent = {
   },
 };
 
+// nav
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+// cta
+let ctaImg = document.getElementById("cta-img");  // make variable & set it to HTML class
+ctaImg.src = siteContent["cta"]["img-src"]; // tell variable source to use nested object data
+
+let ctaText = document.querySelector(".cta-text h1"); // make variable and set it to CSS selector
+ctaText.textContent = siteContent["cta"]["h1"]; // textContent points to CSS cta/h1 data
+
+
+// main-content
+let middleImg = document.getElementById("middle-img"); // make variable & set it to HTML class
+middleImg.src = siteContent["main-content"]["middle-img-src"]; // tell variable source to use nested object data
+
+
+// contact
+
+
+// footer
+
+
