@@ -38,52 +38,60 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+let logo = document.querySelector('#logo-img')
+logo.setAttribute('src', siteContent['nav']['img-src'])
 
 //Task 1: Create selectors to point your data into elements 
 
 //nav 
-let aTags = document.querySelectorAll('a');
+let aTag = document.querySelectorAll('a')
 
-aTags[0].setAttribute('class', '.nav-item-1');
-aTags[0].innerText = 'Services';
-aTags[1].setAttribute('class', 'nav-item-2');
-aTags[1].innerText = 'Product';
-aTags[2].setAttribute('class', 'nav-item-3');
-aTags[2].innerText = 'Vision';
-aTags[3].setAttribute('class', 'nav-item-4');
-aTags[3].innerText = 'Features';
-aTags[4].setAttribute = ('class', '.nav-item-5');
-aTags[4].innerText = 'About';
-aTags[5].setAttribute = ('class', '.nav-item-6');
-aTags[5].innerText = 'Contact';
+aTag[0].setAttribute('nav', 'nav-item-1')
+aTag[0].innerHTML = "Services"
 
-aTags.forEach(link => link.style.color = "green");
+aTag[1].setAttribute('nav', 'nav-item-2')
+aTag[1].innerHTML = "Products"
 
-//two new nav items 
-const newATag1 = document.createElement('a')
-const mainNav = document.querySelector('nav')
-newATag1.innerText = 'Products'
-newATag1.href = "#"
-mainNav.prepend(newATag1)
-newATag1.style.color = "green"
+aTag[2].setAttribute('nav', 'nav-item-3')
+aTag[2].innerHTML = "Vision"
 
-const newATag2 = document.createElement('a')
-newATag2.innerText = 'Referals'
-newATag2.href = "#"
-mainNav.append(newATag2)
-newATag2.style.color = "green"
+aTag[3].setAttribute('nav', 'nav-item-4')
+aTag[3].innerHTML = "Features"
+
+aTag[4].setAttribute('nav', 'nav-item-5')
+aTag[4].innerHTML = "About"
+
+aTag[5].setAttribute('nav', 'nav-item-6')
+aTag[5].innerHTML = "Contact"
+
+aTag.forEach(link => link.style.color = "green")
+
+
+
+//new appended nav item
+const newTag1 = document.createElement('a')
+const mainTag = document.querySelector('nav')
+
+newTag1.href="#"
+newTag1.textContent="Login"
+newTag1.style.color = "green"
+
+mainTag.append(newTag1)
+
+//new prepended nav item 
+const newTag2 = document.createElement('a') // child element
+// const mainTag = document.querySelector('nav') //parent element
+newTag2.href="#"
+newTag2.textContent = "Logout"
+newTag2.style.color = "green"
+
+mainTag.prepend(newTag2)
 
 //main header 
-let mainHeader = document.querySelector('h1')
-mainHeader.textContent = siteContent['cta']['h1']
 
-let mainButton = document.querySelector('button')
-mainButton.textContent = siteContent['cta']['button']
 
-let logo2 = document.getElementById('cta-img')
-logo2.setAttribute('src', siteContent['cta']['img-src'])
+
+
 
 //main content 
 let mainContent = document.querySelectorAll('.text-content')
