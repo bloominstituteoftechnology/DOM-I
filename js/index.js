@@ -47,6 +47,14 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
 // Nav
+let nav = document.querySelector("nav");
+let rune = document.createElement("div");
+rune.innerHTML = "Rune";
+nav.prepend(rune);
+let scape = document.createElement("div");
+scape.innerHTML = "Scape";
+nav.appendChild(scape);
+
 let navAnchors = document.querySelectorAll("header nav a");
 for (let i = 0; i < navAnchors.length; i++) {
   navAnchors[i].innerHTML = siteContent["nav"][`nav-item-${i + 1}`];
