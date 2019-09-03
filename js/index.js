@@ -89,3 +89,6 @@ const mainSectionImg = (document.getElementById("middle-img").src =
   paragraphs[5].textContent = siteContent.contact.address;
   paragraphs[6].textContent = siteContent.contact.phone;
   paragraphs[7].textContent = siteContent.contact.email;
+
+  const footer = document.querySelector("footer p");
+  footer.textContent = siteContent .footer["copyright"];
