@@ -65,3 +65,13 @@ butt.textContent = siteContent["cta"]["button"];
 
 let img = document.querySelector('#cta-img');
 img.src = siteContent["cta"]["img-src"];
+
+//Updating Main content
+let contentHeading = document.querySelectorAll('.top-content h4');
+contentHeading[0].textContent = siteContent["main-content"]["features-h4"]
+contentHeading[1].textContent = siteContent["main-content"]["about-h4"]
+
+let contentText = document.querySelectorAll('.top-content p');
+contentText[0].textContent = siteContent["main-content"]["features-content"]
+contentText[1].textContent = siteContent["main-content"]["about-content"]
+document.querySelector('#middle-img').src = siteContent["main-content"]["middle-img-src"];
