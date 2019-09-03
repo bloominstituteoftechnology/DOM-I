@@ -49,3 +49,19 @@ let nav_items = document.querySelectorAll('a');
 for (let i = 0; i < nav_items.length; i++) {
     nav_items[i].textContent = siteContent["nav"]["nav-item-" + i];
 }
+
+// Updating Class "cta section"
+let heading = document.querySelector('.cta-text h1');
+let heas = siteContent["cta"]["h1"];
+var newArray = heas.split(" ")
+for (let i = newArray.length - 1; i > -1; i--) {
+    var node = document.createElement("h1"); // Create a <li> node
+    var textnode = document.createTextNode(newArray[i]); // Create a text node
+    node.appendChild(textnode); // Append the text to <li>
+    document.querySelector(".cta-text").prepend(node);
+}
+let butt = document.querySelector('.cta-text button');
+butt.textContent = siteContent["cta"]["button"];
+
+let img = document.querySelector('#cta-img');
+img.src = siteContent["cta"]["img-src"];
