@@ -40,3 +40,20 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+//code start
+
+const headerNav = document.querySelectorAll("a");
+let headerNav2 = Array.from(headerNav)
+
+headerNav2.map((item,index) =>{
+  item.textContent = Object.values(siteContent.nav)[index]
+})
+
+
+
+const  headerNavigation = document.querySelectorAll("nav a");
+headerNavigation.forEach((item) => {
+   item.style.color = 'green'; 
+});
