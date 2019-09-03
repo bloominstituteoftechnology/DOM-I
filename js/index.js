@@ -87,3 +87,17 @@ textContent[3].lastElementChild.textContent = siteContent["main-content"]["produ
 
 textContent[4].firstElementChild.textContent = siteContent["main-content"]["vision-h4"];
 textContent[4].lastElementChild.textContent = siteContent["main-content"]["vision-content"];
+
+// contact section
+
+let contactSection = document.querySelector(".contact").children;
+contactSection[0].textContent = siteContent["contact"]["contact-h4"];
+contactSection[1].textContent = siteContent["contact"]["address"];
+contactSection[2].textContent = siteContent["contact"]["phone"];
+contactSection[3].textContent = siteContent["contact"]["email"];
+
+// footer
+
+let footer = document.querySelector("footer");
+footer.firstElementChild.textContent = siteContent["footer"]["copyright"];
+
