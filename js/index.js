@@ -48,6 +48,22 @@ links[4].nav = siteContent['nav']['nav-item-5'];
 links[5].nav = siteContent['nav']['nav-item-6'];
 console.log(links);
 
+links[0].textContent = "Services";
+links[1].textContent = "Product";
+links[2].textContent = "Vision";
+links[3].textContent = "Features";
+links[4].textContent = "About";
+links[5].textContent = "Contact";
+
+
+// links.forEach((e, i) => {
+//   e.nav = Object.values(siteContent.nav)[i]
+// })
+
+// links.forEach(element => {
+//   element.style.color = '#b0b0b0';
+// })
+
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent['nav']['img-src'])
 console.log(logo);
@@ -57,9 +73,13 @@ let ctaH = document.querySelector('h1')
 ctaH.ctaText = siteContent['cta']['h1'];
 console.log(ctaH);
 
+ctaH.textContent = "DOM Is Awesome";
+
 let ctaBtn = document.querySelector('button');
 ctaBtn.ctaText = siteContent['cta']['button'];
 console.log(ctaBtn);
+ctaBtn.textContent = "Get Started";
+
 
 let ctaImg = document.getElementById('cta-img');
 ctaImg.setAttribute('src', siteContent['cta']['img-src'])
@@ -74,6 +94,8 @@ heading[3].textContent = siteContent['main-content']['product-h4'];
 heading[4].textContent = siteContent['main-content']['vision-h4'];
 heading[5].contact = siteContent['contact']['contact-h4'];
 console.log(heading);
+heading[5].textContent = "Contact";
+
 
 let mainText = document.querySelectorAll('p');
 mainText[0].textContent = siteContent['main-content']['features-content'];
@@ -87,12 +109,19 @@ mainText[7].contact = siteContent['contact']['email'];
 mainText[8].footer = siteContent['footer']['copyright'];
 console.log(mainText);
 
+mainText[5].textContent = "123 Way 456 Street Somewhere, USA";
+mainText[6].textContent = "1 (888) 888-8888";
+mainText[7].textContent = "sales@greatidea.io";
+
+
 let middleImg = document.getElementById('middle-img');
 middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
 console.log(middleImg);
 
-let footer = document.querySelector('footer')
+
+
+let footer = document.createElement('footer');
+mainText[8].textContent = 'Copyright Great Idea! 2018'
+
 footer.container = siteContent['footer'];
-console.log(footer);
-
-
+console.log(newFooter);
