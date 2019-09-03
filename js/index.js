@@ -65,3 +65,6 @@ const shop = document.createElement('a')
 shop.textContent = 'Show Now'
 navigation.prepend(home)
 navigation.appendChild(shop)
+
+const headerone = document.querySelector("h1").textContent = siteContent.cta["h1"];
+
