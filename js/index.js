@@ -45,12 +45,20 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 const navs = document.querySelector("nav");
 
-navs.children[0].innerHTML = siteContent.nav['nav-item-1']
-navs.children[1].innerHTML = siteContent.nav['nav-item-2']
-navs.children[2].innerHTML = siteContent.nav['nav-item-3']
-navs.children[3].innerHTML = siteContent.nav['nav-item-4']
-navs.children[4].innerHTML = siteContent.nav['nav-item-5']
-navs.children[5].innerHTML = siteContent.nav['nav-item-6']
+for (i = 0; i < navs.children.length; i++) {
+  navs.children[i].innerHTML = siteContent.nav['nav-item-' + [i + 1]]
+  console.log(navs.children[i])
+  console.log('nav-item-' + [i + 1])
+}
+
+
+
+// navs.children[0].innerHTML = siteContent.nav['nav-item-1']
+// navs.children[1].innerHTML = siteContent.nav['nav-item-2']
+// navs.children[2].innerHTML = siteContent.nav['nav-item-3']
+// navs.children[3].innerHTML = siteContent.nav['nav-item-4']
+// navs.children[4].innerHTML = siteContent.nav['nav-item-5']
+// navs.children[5].innerHTML = siteContent.nav['nav-item-6']
 //end of header/////////////////////////////
 
 //START OF CTA//////////////////////////////
@@ -87,8 +95,10 @@ document.querySelector('.bottom-content :nth-child(3) > p').textContent = 'Visio
 
 //END OF MAIN CONTENT ////////////////////////////////////
 //START OF FOOTER  ///////////////////////
-document.querySelector('.contact > h4').innerHTML = '<h4>Contact</h4>'
-document.querySelector('.contact > p').innerHTML = '<p>123 Way 456 Street<br>Somewhere, USA<br><br>1 (888) 888-8888<br><br>sales@greatidea.io'
+document.querySelector('.contact > h4').textContent = 'Contact'
+document.querySelector('.contact > p:nth-of-type(1)').innerHTML = '123 Way 456<br />StreetSmewhere, USA'
+document.querySelector('.contact > p:nth-of-type(2)').textContent = '1 (888) 888-8888'
+document.querySelector('.contact > p:nth-of-type(3)').textContent = 'sales@greatidea.io'
 
 
 const footer = document.querySelector("footer");
