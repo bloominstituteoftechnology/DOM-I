@@ -46,10 +46,11 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
-// Header Nav
-let nav = document.querySelectorAll("header nav a");
-for (let i = 0; i < nav.length; i++) {
-  nav[i].innerHTML = siteContent["nav"][`nav-item-${i + 1}`];
+// Nav
+let navAnchors = document.querySelectorAll("header nav a");
+for (let i = 0; i < navAnchors.length; i++) {
+  navAnchors[i].innerHTML = siteContent["nav"][`nav-item-${i + 1}`];
+  navAnchors[i].style.color = "green";
   //console.log(nav[i]);
   //console.log(siteContent["nav"][`nav-item-${i + 1}`]);
 }
@@ -89,6 +90,7 @@ contactTexts[0].innerHTML = siteContent.contact.address;
 contactTexts[1].innerHTML = siteContent.contact.phone;
 contactTexts[2].innerHTML = siteContent.contact.email;
 
+// Footer
 document.querySelector("footer p").innerHTML = siteContent.footer.copyright;
 
 // Questions
