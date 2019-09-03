@@ -40,3 +40,55 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+// const nav = document.querySelector('header');
+// const cta = document.querySelector('cta');
+// const mainContent = document.querySelector('main-content');
+// const contact = document.querySelector('contact');
+// const footer = document.querySelector('footer');
+let anchors = document.querySelectorAll("nav a");
+anchors.forEach(
+  (el, index) => (el.textContent = siteContent["nav"][`nav-item-${index + 1}`])
+);
+
+const ctaSection = document.querySelector('.cta');
+ctaSection.style.margin = "5%";
+
+
+//CTA Button text
+const ctaText = document.querySelector('.cta-text h1');
+ctaText.textContent = "Dom Is Awesome";
+
+//CTA Button text
+const ctaButton = document.querySelector('.cta-text button');
+ctaButton.textContent = "Get Started";
+
+//CTA Image
+const ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', "img/header-img.png");
+
+//Main Content headers
+const headerText = document.querySelectorAll('h4');
+headerText[0].textContent = siteContent['main-content']['features-h4']
+headerText[1].textContent = siteContent['main-content']['about-h4']
+headerText[2].textContent = siteContent['main-content']['services-h4']
+headerText[3].textContent = siteContent['main-content']['product-h4']
+headerText[4].textContent = siteContent['main-content']['vision-h4']
+
+//Main Content paragraphs
+const paraText = document.querySelectorAll('p');
+paraText[0].textContent = siteContent['main-content']['features-content']
+paraText[1].textContent = siteContent['main-content']['about-content']
+paraText[2].textContent = siteContent['main-content']['services-content']
+paraText[3].textContent = siteContent['main-content']['product-content']
+paraText[4].textContent = siteContent['main-content']['vision-content']
+
+
+const middleImg = document.querySelector('.middle-img');
+middleImg.src = "img/mid-page-accent.jpg";
+middleImg.alt = "Image of a code snippet."
+
+
+const footerContent = document.querySelector('footer p');
+footerContent.textContent = "Copyright Great Idea! 2018";
