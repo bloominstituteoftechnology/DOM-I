@@ -53,3 +53,34 @@ for (let i = 0; i < nav.length; i++) {
   //console.log(nav[i]);
   //console.log(siteContent["nav"][`nav-item-${i + 1}`]);
 }
+
+document.querySelector("h1").innerHTML = siteContent["cta"]["h1"];
+document.querySelector("button").innerHTML = siteContent["cta"]["button"];
+document
+  .querySelector("#cta-img")
+  .setAttribute("src", siteContent["cta"]["img-src"]);
+
+let mainHeaders = document.querySelectorAll(".text-content h4");
+mainHeaders[0].innerHTML = siteContent["main-content"]["features-h4"];
+mainHeaders[1].innerHTML = siteContent["main-content"]["about-h4"];
+mainHeaders[2].innerHTML = siteContent["main-content"]["services-h4"];
+mainHeaders[3].innerHTML = siteContent["main-content"]["product-h4"];
+mainHeaders[4].innerHTML = siteContent["main-content"]["vision-h4"];
+//console.log(siteContent["main-content"]["vision-h4"]);
+
+let mainTexts = document.querySelectorAll(".text-content p");
+mainTexts[0].innerHTML = siteContent["main-content"]["features-content"];
+mainTexts[1].innerHTML = siteContent["main-content"]["about-content"];
+mainTexts[2].innerHTML = siteContent["main-content"]["services-content"];
+mainTexts[3].innerHTML = siteContent["main-content"]["product-content"];
+mainTexts[4].innerHTML = siteContent["main-content"]["vision-content"];
+
+// Middle Img
+document
+  .querySelector("#middle-img")
+  .setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+// Questions
+// * Is query selector just superior? Seems easier to write
+// * How would I do the Header Nav using an 'for of' loop?
+// * For mainHeaders, is there a faster way to copy and paste into one area?
