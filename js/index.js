@@ -56,8 +56,9 @@ navitems[4].textContent = siteContent['nav']['nav-item-5']
 navitems[5].textContent = siteContent['nav']['nav-item-6']
 
 
-let firstClass = document.querySelector('.cta-text h1');
+let firstClass = document.querySelector('.cta h1');
 firstClass.textContent = siteContent['cta']['h1']
+
 
 let firstClassButton = document.querySelector('cta-text, button' )
 firstClassButton.textContent = siteContent['cta']['button']
@@ -96,3 +97,6 @@ contactSection[0].textContent = siteContent['contact']['contact-h4']
 contactSectionP[0].textContent = siteContent['contact']['address']
 contactSectionP[1].textContent = siteContent['contact']['phone']
 contactSectionP[2].textContent = siteContent['contact']['email']
+
+let footerSection = document.querySelector('footer p')
+footerSection.textContent = siteContent['footer']['copyright']
