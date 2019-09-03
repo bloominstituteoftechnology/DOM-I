@@ -35,6 +35,9 @@ const siteContent = {
     "footer": {
         "copyright": "Copyright Great Idea! 2018"
     },
+    "stretch": {
+        "img-lambda": "img/lambda.png"
+    }
 };
 
 // Example: Update the img src for the logo
@@ -65,7 +68,11 @@ butt.textContent = siteContent["cta"]["button"];
 
 let img = document.querySelector('#cta-img');
 img.src = siteContent["cta"]["img-src"];
+butt.addEventListener("click", myFunction);
 
+function myFunction() {
+    img.src = siteContent["stretch"]["img-lambda"];
+}
 //Updating Main content
 let contentHeading = document.querySelectorAll('.top-content h4');
 contentHeading[0].textContent = siteContent["main-content"]["features-h4"]
