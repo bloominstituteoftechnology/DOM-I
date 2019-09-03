@@ -37,7 +37,7 @@ const siteContent = {
     },
 };
 
-// Example: Update the img src for the logo
+// Example: Update the img src for the logo (Do likewise for the rest of the images)
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
@@ -62,9 +62,9 @@ firstLink;
 headerElement.prepend(firstLink);
 
 // Update all links in navigation bar using querySelectorAll
-const linkElements = document.querySelectorAll('a');
+const linkElements = document.querySelectorAll('nav a');
 linkElements;
-linkElements[0].textContent = "Services";
+linkElements[0].textContent = "Alison";
 linkElements[0];
 linkElements[1].textContent = "Product";
 linkElements[1];
@@ -76,3 +76,13 @@ linkElements[4].textContent = "About";
 linkElements[4];
 linkElements[5].textContent = "Contact";
 linkElements[5];
+console.log(linkElements);
+
+// Give the links a green color
+linkElements[0].style.color = "green";
+linkElements;
+
+// try creating a for loop to color all the links at the same time
+for (i = 0; i < linkElements.length; ++i) {
+    linkElements[i].style.color = "green";
+}
