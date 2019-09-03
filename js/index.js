@@ -42,21 +42,15 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
-// const nav = document.querySelector('header');
-// const cta = document.querySelector('cta');
-// const mainContent = document.querySelector('main-content');
-// const contact = document.querySelector('contact');
-// const footer = document.querySelector('footer');
+
+//added text to links
 let anchors = document.querySelectorAll("nav a");
 anchors.forEach(
   (el, index) => (el.textContent = siteContent["nav"][`nav-item-${index + 1}`])
 );
 
-const ctaSection = document.querySelector('.cta');
-ctaSection.style.margin = "5%";
 
-
-//CTA Button text
+//CTA header text
 const ctaText = document.querySelector('.cta-text h1');
 ctaText.textContent = "Dom Is Awesome";
 
@@ -84,11 +78,19 @@ paraText[2].textContent = siteContent['main-content']['services-content']
 paraText[3].textContent = siteContent['main-content']['product-content']
 paraText[4].textContent = siteContent['main-content']['vision-content']
 
-
+//Middle image
 const middleImg = document.querySelector('.middle-img');
 middleImg.src = "img/mid-page-accent.jpg";
 middleImg.alt = "Image of a code snippet."
 
 
+//Contact Info
+const contactHeader = document.querySelector('.contact h4');
+contactHeader.textContent = siteContent['contact']['contact-h4'];
+
+const contactText = document.querySelectorALL('.contact p');
+contactText[0].textContent =
+
+//footer
 const footerContent = document.querySelector('footer p');
 footerContent.textContent = "Copyright Great Idea! 2018";
