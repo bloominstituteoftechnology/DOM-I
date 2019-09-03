@@ -67,4 +67,5 @@ navigation.prepend(home)
 navigation.appendChild(shop)
 
 const headerone = document.querySelector("h1").textContent = siteContent.cta["h1"];
+const btn = document.querySelector("button").textContent = siteContent.cta["button"];
 
