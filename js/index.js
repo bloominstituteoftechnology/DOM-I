@@ -40,12 +40,27 @@ const siteContent = {
 // Example: Update the img src for the logo
 
 let links = document.querySelectorAll('a');
+// links.style.color = 'green';
 links[0].nav = siteContent['nav']['nav-item-1'];
 links[1].nav = siteContent['nav']['nav-item-2'];
 links[2].nav = siteContent['nav']['nav-item-3'];
 links[3].nav = siteContent['nav']['nav-item-4'];
 links[4].nav = siteContent['nav']['nav-item-5'];
 links[5].nav = siteContent['nav']['nav-item-6'];
+
+
+let newLinks = document.querySelector('nav');
+
+
+let endLink = document.createElement('a');
+endLink.textContent= "End";
+newLinks.append(endLink);
+
+let preLink = document.createElement('a')
+preLink.textContent = "Start";
+newLinks.prepend(preLink);
+
+
 console.log(links);
 
 links[0].textContent = "Services";
@@ -55,14 +70,6 @@ links[3].textContent = "Features";
 links[4].textContent = "About";
 links[5].textContent = "Contact";
 
-
-// links.forEach((e, i) => {
-//   e.nav = Object.values(siteContent.nav)[i]
-// })
-
-// links.forEach(element => {
-//   element.style.color = '#b0b0b0';
-// })
 
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent['nav']['img-src'])
@@ -109,7 +116,7 @@ mainText[7].contact = siteContent['contact']['email'];
 mainText[8].footer = siteContent['footer']['copyright'];
 console.log(mainText);
 
-mainText[5].textContent = "123 Way 456 Street Somewhere, USA";
+mainText[5].textContent = "123 Way 456 Street /n Somewhere, USA";
 mainText[6].textContent = "1 (888) 888-8888";
 mainText[7].textContent = "sales@greatidea.io";
 
