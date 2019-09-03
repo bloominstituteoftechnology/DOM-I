@@ -84,3 +84,8 @@ paragraphs[3].textContent = siteContent["main-content"]["product-content"];
 paragraphs[4].textContent = siteContent["main-content"]["vision-content"];
 const mainSectionImg = (document.getElementById("middle-img").src =
   siteContent["main-content"]["middle-img-src"]);
+
+  headingH4[5].textContent = siteContent.contact["contact-h4"];
+  paragraphs[5].textContent = siteContent.contact.address;
+  paragraphs[6].textContent = siteContent.contact.phone;
+  paragraphs[7].textContent = siteContent.contact.email;
