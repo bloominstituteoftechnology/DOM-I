@@ -65,21 +65,32 @@ codePic.setAttribute('src', siteContent["cta"]["img-src"])
 
 //START OF MAIN-CONTENT/////////////////////
 
+document.querySelector('.top-content :nth-child(1) > h4').textContent = 'Features'
+document.querySelector('.top-content :nth-child(1) > p').textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+
+document.querySelector('.top-content :nth-child(2) > h4').textContent = 'About'
+document.querySelector('.top-content :nth-child(2) > p').textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, ininterdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+
+
 let code = document.getElementById("middle-img");
 code.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
-const contacts = document.querySelector("contact");
-contacts.children[0].innerHTML = siteContent.contact['contact-h4']
-contact.children[1].innerHTML = siteContent.contact['address']
-contact.children[2].innerHTML = siteContent.contact['phone']
-contact.children[3].innerHTML = siteContent.contact['email']
 
+document.querySelector('.bottom-content :nth-child(1) > h4').textContent = 'Service'
+document.querySelector('.bottom-content :nth-child(1) > p').textContent = 'Service content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio,in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis. '
 
+document.querySelector('.bottom-content :nth-child(2) > h4').textContent = 'Product'
+document.querySelector('.bottom-content :nth-child(2) > p').textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
 
+document.querySelector('.bottom-content :nth-child(3) > h4').textContent = 'vision'
+document.querySelector('.bottom-content :nth-child(3) > p').textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis. '
 
-
-document.querySelector('.bottom-content :nth-child(1) > h4').textContent = 'Features'
+//END OF MAIN CONTENT ////////////////////////////////////
+//START OF FOOTER  ///////////////////////
+document.querySelector('.contact > h4').innerHTML = '<h4>Contact</h4>'
+document.querySelector('.contact > p').innerHTML = '<p>123 Way 456 Street<br>Somewhere, USA<br><br>1 (888) 888-8888<br><br>sales@greatidea.io'
 
 
 const footer = document.querySelector("footer");
 footer.children[0].innerHTML = siteContent.footer['copyright']
+//END OF FOOTER /////////////////////////////////
