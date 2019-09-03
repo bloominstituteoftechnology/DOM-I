@@ -43,7 +43,7 @@ const siteContent = {
 };
 
 // Operation save the penguins object
-const operationSaveThePenguins = {
+const operationSaveThePenguinsData = {
   nav: {
     "nav-item-1": "Penguins",
     "nav-item-2": "Population",
@@ -95,11 +95,11 @@ const renderModal = () => {
   modal.style.position = "absolute";
   modal.style.top = "0";
   modal.style.left = "0";
-  modal.style.backgroundColor = "#000";
+  modal.style.backgroundColor = "#000D";
   modal.style.display = "flex";
   modal.style.justifyContent = "center";
   modal.style.alignItems = "center";
-  modal.style.opacity = "0.90";
+  modal.setAttribute("id", "modal");
 
   let modalParent = document.querySelector("body");
   modalParent.appendChild(modal);
@@ -107,6 +107,7 @@ const renderModal = () => {
   modalParent.style.overflow = "hidden";
 
   let form = document.createElement("div");
+  form.style.width = "100%";
   form.style.fontSize = "1rem";
   form.style.color = "#fff";
   form.style.borderRadius = "10px";
@@ -116,24 +117,29 @@ const renderModal = () => {
   form.innerHTML = `
   <h2>Navigation</h2>
   <section>
-  <strong> #1 </strong><input type="text" name="nav-item-1" label="nav-item-1">
-  <strong>#2 </strong><input type="text" name="nav-item-2" label="nav-item-2">
-  <strong>#3 </strong><input type="text" name="nav-item-3" label="nav-item-3">
-  <strong>#4 </strong><input type="text" name="nav-item-4" label="nav-item-4">
-  <strong>#5 </strong><input type="text" name="nav-item-5" label="nav-item-5">
-  <strong>#6 </strong><input type="text" name="nav-item-6" label="nav-item-6">
+  <strong> #1 </strong><input type="text" id="nav-item-1" label="nav-item-1">
+  <strong>#2 </strong><input type="text" id="nav-item-2" label="nav-item-2">
+  <strong>#3 </strong><input type="text" id="nav-item-3" label="nav-item-3">
+  <strong>#4 </strong><input type="text" id="nav-item-4" label="nav-item-4">
+  <strong>#5 </strong><input type="text" id="nav-item-5" label="nav-item-5">
+  <strong>#6 </strong><input type="text" id="nav-item-6" label="nav-item-6">
   </section>
 
-<h2>Call to Action</h2>
+  <h2>Logo Image</h2>
+  <section>
+  <strong>Logo Image: </strong><input type="text" id="logo-img-src">
+  </section>
+
+  <h2>Call to Action</h2>
   <section>
   <div>
-  <strong>Heading: </strong><input type="text" name="cta-h1">
+  <strong>Heading: </strong><input type="text" id="cta-h1">
   </div>
   <div>
-  <strong>Button Text: </strong><input type="text" name="cta-button">
+  <strong>Button Text: </strong><input type="text" id="cta-button">
   </div>
   <div>
-  <strong>Image: </strong><input type="text" name="cta-image-src">
+  <strong>Image: </strong><input type="text" id="cta-image-src">
   </div>
   </section>
   
@@ -141,46 +147,53 @@ const renderModal = () => {
   <section>
   
   <div>
-  <strong>Section #1 Heading: </strong><input type="text" name="cta-h1">
-  <strong>Section #1 Content: </strong><textarea></textarea>
+  <strong>Section #1 Heading: </strong><input type="text" id="section-1-h1">
+  <strong>Section #1 Content: </strong><textarea id="section-1-content"></textarea>
   </div>
 
   <div>
-  <strong>Section #2 Heading: </strong><input type="text" name="cta-h1">
-  <strong>Section #2 Content: </strong><textarea></textarea>
+  <strong>Section #2 Heading: </strong><input type="text" id="section-2-h1">
+  <strong>Section #2 Content: </strong><textarea id="section-2-content"></textarea>
   </div>
   
   <div>
-  <strong>Section #3 Heading: </strong><input type="text" name="cta-h1">
-  <strong>Section #3 Content: </strong><textarea></textarea>
+  <strong>Section #3 Heading: </strong><input type="text" id="section-3-h1">
+  <strong>Section #3 Content: </strong><textarea id="section-3-content"></textarea>
   </div>
   
   <div>
-  <strong>Section #4 Heading: </strong><input type="text" name="cta-h1">
-  <strong>Section #4 Content: </strong><textarea></textarea>
+  <strong>Section #4 Heading: </strong><input type="text" id="section-4-h1">
+  <strong>Section #4 Content: </strong><textarea id="section-4-content"></textarea>
+  </div>
+
+  <div>
+  <strong>Section #5 Heading: </strong><input type="text" id="section-5-h1">
+  <strong>Section #5 Content: </strong><textarea id="section-5-content"></textarea>
   </div>
   </section>
   
   <h2>Middle Image</h2>
   <section>
-  <strong>Middle Image: </strong><input type="text" name="middle-img-src">
+  <strong>Middle Image: </strong><input type="text" id="middle-img-src">
   </section>
 
   <h2>Contact</h2>
   <section>
-  <strong>Contact Heading: </strong><input type="text" name="contact-heading">
-  <strong>Contact Address: </strong><input type="text" name="contact-address">
-  <strong>Contact Phone: </strong><input type="text" name="contact-phone">
-  <strong>Contact Email: </strong><input type="text" name="contact-email">
+  <strong>Contact Heading: </strong><input type="text" id="contact-heading">
+  <strong>Contact Address: </strong><input type="text" id="contact-address">
+  <strong>Contact Phone: </strong><input type="text" id="contact-phone">
+  <strong>Contact Email: </strong><input type="text" id="contact-email">
   </section>
   
   <h2>Footer</h2>
   <section>
-  <strong>Footer Content: </strong><input type="text" name="contact-heading">
+  <strong>Footer Content: </strong><input type="text" id="footer-content">
   </section>
 
-  <button id="modal-button" style="margin:20px auto; width:400px; height:50px; border-radius:20px; cursor:pointer; font-size:1.2rem;">Render Content</button>
-
+  <section>
+  <button id="modal-button" style="margin:20px auto; width:200px; height:30px; border-radius:20px; cursor:pointer; font-size:1.2rem;">Render Content</button>
+  <button id="penguin-modal-button" style="margin:20px auto; width:200px; height:30px; border-radius:20px; cursor:pointer; font-size:1.2rem;">Operation Save the Penguins</button>
+  </section>
 `;
   modal.appendChild(form);
   let formFields = form.querySelectorAll("input");
@@ -208,18 +221,21 @@ const renderModal = () => {
   formSections.forEach(element => {
     element.style.display = "flex";
     element.style.flexWrap = "wrap";
-    element.style.alignItems = "center";
-    element.style.width = "1200px";
     element.style.textAlign = "center";
     element.style.margin = "0 10px";
   });
 
   let modalButton = document.getElementById("modal-button");
-  modalButton.addEventListener('click', renderCustom);
+  modalButton.addEventListener("click", renderCustom);
+
+  let penguinModalButton = document.getElementById("penguin-modal-button");
+  penguinModalButton.addEventListener("click", renderOperationSaveThePenguins);
 };
 
+// Default  navigation selector
 let navigation = document.querySelector("nav");
 
+// Global Change button
 let changeButton = document.createElement("button");
 changeButton.textContent = "loading..";
 changeButton.style.display = "inline";
@@ -227,14 +243,10 @@ changeButton.style.marginTop = "-10px";
 changeButton.setAttribute("id", "nuke-button");
 navigation.appendChild(changeButton);
 
-let homeLink = document.createElement("a");
-homeLink.textContent = "Home";
-homeLink.style.color = "green";
-navigation.prepend(homeLink);
 
+// Render page with data and update nav button label
 const renderPage = (data, buttonLabel) => {
   let site = data;
-  console.log("Page is rendering..");
   // Example: Update the img src for the logo
   let logo = document.getElementById("logo-img");
   logo.setAttribute("src", site["nav"]["img-src"]);
@@ -243,11 +255,17 @@ const renderPage = (data, buttonLabel) => {
   let navigationLinks = document.querySelectorAll("nav a");
 
   navigationLinks.forEach((element, num) => {
-    if (num + 1 < 6) {
+    if (num < 7) {
       element.textContent = site.nav[`nav-item-${num + 1}`];
       element.style.color = "green";
+      element.style.margin = "0 5px";
     }
   });
+
+  let homeLink = document.createElement("a");
+  homeLink.textContent = "Home";
+  homeLink.style.color = "green";
+  navigation.prepend(homeLink);
 
   changeButton.textContent = buttonLabel;
 
@@ -352,16 +370,133 @@ const renderPage = (data, buttonLabel) => {
   footerParagraph.textContent = site.footer.copyright;
 };
 
-renderPage(siteContent, "Change");
+// Render the defaul Great Idea page.
+renderPage(siteContent, "Deface");
 
-const renderCustom = () =>{
-  console.log('Rendering Custom Page..');
+// Render a custom page bas
+const renderCustom = () => {
+
+  // Capture Form Data
+  let ni1 = document.querySelector("#nav-item-1").value;
+  let ni2 = document.querySelector("#nav-item-2").value;
+  let ni3 = document.querySelector("#nav-item-3").value;
+  let ni4 = document.querySelector("#nav-item-4").value;
+  let ni5 = document.querySelector("#nav-item-5").value;
+  let ni6 = document.querySelector("#nav-item-6").value;
+
+  let logoImage = document.querySelector("#logo-img-src").value;
+  let ctah1 = document.querySelector("#cta-h1").value;
+  let ctaButton = document.querySelector("#cta-button").value;
+  let ctaImageSrc = document.querySelector("#cta-image-src").value;
+
+  let section1Heading = document.querySelector("#section-1-h1").value;
+  let section1Content = document.querySelector("#section-1-content").value;
+  let section2Heading = document.querySelector("#section-2-h1").value;
+  let section2Content = document.querySelector("#section-2-content").value;
+  let section3Heading = document.querySelector("#section-3-h1").value;
+  let section3Content = document.querySelector("#section-3-content").value;
+  let section4Heading = document.querySelector("#section-4-h1").value;
+  let section4Content = document.querySelector("#section-4-content").value;
+  let section5Heading = document.querySelector("#section-5-h1").value;
+  let section5Content = document.querySelector("#section-5-content").value;
+
+  let middleSectionImage = document.querySelector("#middle-img-src").value;
+
+  let contactHeading = document.querySelector("#contact-heading").value;
+  let contactAddress = document.querySelector("#contact-address").value;
+  let contactPhone = document.querySelector("#contact-phone").value;
+  let contactEmail = document.querySelector("#contact-email").value;
+
+  let footerContent = document.querySelector("#footer-content").value;
+
+  const data = {
+    nav: {
+      "nav-item-1": ni1,
+      "nav-item-2": ni2,
+      "nav-item-3": ni3,
+      "nav-item-4": ni4,
+      "nav-item-5": ni5,
+      "nav-item-6": ni6,
+      "img-src": logoImage
+    },
+    cta: {
+      h1: ctah1,
+      button: ctaButton,
+      "img-src": ctaImageSrc
+    },
+    "main-content": {
+      "features-h4": section1Heading,
+      "features-content": section1Content,
+      "about-h4": section2Heading,
+      "about-content": section2Heading,
+
+      "middle-img-src": middleSectionImage,
+      
+      "services-h4": section3Heading,
+      "services-content":section3Content,
+      "product-h4": section4Heading,
+      "product-content":section4Content,
+      "vision-h4": section5Heading,
+      "vision-content": section5Content
+    },
+    contact: {
+      "contact-h4": contactHeading,
+      address: contactAddress,
+      phone: contactPhone,
+      email: contactEmail
+    },
+    footer: {
+      copyright: footerContent
+    }
+  };
+
+  console.log("Launching custom data..");
+  renderPage(data, "Change Data");
+
+  //Remove event listeners
+  let modalButton = document.getElementById("modal-button");
+  let penguinModalButton = document.getElementById("penguin-modal-button");
+  modalButton.removeEventListener("click", renderCustom);
+  penguinModalButton.removeEventListener(
+    "click",
+    renderOperationSaveThePenguins
+  );
+
+  //Allow document overflow again
+  document.body.style.overflow = "auto";
+
+  // Remove modal element
+  let existingModal = document.querySelector("#modal");
+  document.body.removeChild(existingModal);
 };
 
-const transformSite = () => {
-  console.log('Rendering Modal Window..');
+// Render the special Save the King Penguins page
+const renderOperationSaveThePenguins = () => {
+  console.log("Launching operation save the penguins..");
+  renderPage(operationSaveThePenguinsData, "Change");
+
+  //Remove event listeners
+  let modalButton = document.getElementById("modal-button");
+  let penguinModalButton = document.getElementById("penguin-modal-button");
+  modalButton.removeEventListener("click", renderCustom);
+  penguinModalButton.removeEventListener(
+    "click",
+    renderOperationSaveThePenguins
+  );
+
+  //Allow document overflow again
+  document.body.style.overflow = "auto";
+
+  // Remove modal element
+  let existingModal = document.querySelector("#modal");
+  document.body.removeChild(existingModal);
+};
+
+// Create Page Render Modal
+const createModal = () => {
+  console.log("Rendering Modal..");
   renderModal();
 };
 
 let nuke = document.querySelector("#nuke-button");
-nuke.addEventListener("click", transformSite);
+nuke.addEventListener("click", createModal);
