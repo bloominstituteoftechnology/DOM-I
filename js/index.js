@@ -65,20 +65,34 @@ firstClassButton.textContent = siteContent['cta']['button']
 let topImage = document.getElementById("cta-img");
 topImage.setAttribute('src', siteContent['cta']['img-src'])
 
-let featureHeading = document.querySelector('.top-content .text-content h4')
-featureHeading.textContent = siteContent['main-content']['features-h4']
-
-let featureContent = document.querySelector('.top-content .text-content p')
-featureContent.textContent = siteContent['main-content']['features-content']
 
 // come back to it
-let aboutHeading = document.querySelectorAll('.top-content .text-content')
-aboutHeading :nth-of-typeof(1).textContent = siteContent['main-content']['about-h4']
+let mainHeading = document.querySelectorAll('.main-content h4')
+let mainFeatures = document.querySelectorAll('.main-content p')
 
-
-
+// features 
+mainHeading[0].textContent = siteContent['main-content']['features-h4']
+mainFeatures[0].textContent = siteContent['main-content']['features-content']
+// about
+mainHeading[1].textContent = siteContent['main-content']['about-h4']
+mainFeatures[1].textContent = siteContent['main-content']['about-content']
 
 let middleImage = document.getElementById("middle-img");
 middleImage.setAttribute('src', siteContent['main-content']['middle-img-src'])
 
+// services 
+mainHeading[2].textContent = siteContent ['main-content']['services-h4']
+mainFeatures[2].textContent = siteContent['main-content']['services-content']
+// product
+mainHeading[3].textContent = siteContent['main-content']['product-h4']
+mainFeatures[3].textContent = siteContent['main-content']['product-content']
+// vision
+mainHeading[4].textContent = siteContent['main-content']['vision-h4']
+mainFeatures[4].textContent = siteContent['main-content'][ "vision-content"]
 
+let contactSection = document.querySelectorAll('.contact h4')
+let contactSectionP = document.querySelectorAll('.contact p')
+contactSection[0].textContent = siteContent['contact']['contact-h4']
+contactSectionP[0].textContent = siteContent['contact']['address']
+contactSectionP[1].textContent = siteContent['contact']['phone']
+contactSectionP[2].textContent = siteContent['contact']['email']
