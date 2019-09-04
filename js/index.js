@@ -42,6 +42,12 @@ const siteContent = {
 let logo = document.getElementById("logo-img"); // ID doesn't need . or #
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+let navLinks = document.querySelectorAll("nav a")
+// console.log("navLinks",navLinks);
+navLinks.forEach((link, i) => {
+  link.textContent = siteContent["nav"][`nav-item-${i+1}`]
+});
+
 
 // cta        DONE
 let ctaImg = document.getElementById("cta-img");  // make variable & set it to HTML class
@@ -70,7 +76,11 @@ contactHeading.textContent = siteContent["contact"]["contact-h4"];
 let contactArray = ["address", "phone", "email"];
 //need to put each contactArray element into a <p> in .contact
 let contactInfo = document.querySelectorAll(".contact p") // contactInfo uses all 3 <p>
-// contactInfo.forEach(paragraph)
+contactInfo.forEach(updateContactInfo);
+
+function updateContactInfo(infoField, infoData) {
+
+}
 
 
 // footer       DONE
