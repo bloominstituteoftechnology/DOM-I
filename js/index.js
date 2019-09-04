@@ -37,7 +37,7 @@ const siteContent = {
   },
 };
 
-// nav
+// nav          DONE
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img"); // ID doesn't need . or #
 logo.setAttribute('src', siteContent["nav"]["img-src"])
@@ -49,7 +49,7 @@ navLinks.forEach((link, i) => {
 });
 
 
-// cta        DONE
+// cta          DONE
 let ctaImg = document.getElementById("cta-img");  // make variable & set it to HTML class
 ctaImg.src = siteContent["cta"]["img-src"]; // tell variable source to use nested object data
 
@@ -64,9 +64,26 @@ ctaButton.textContent = siteContent["cta"]["button"];
 let middleImg = document.getElementById("middle-img"); // make variable & set it to HTML class
 middleImg.src = siteContent["main-content"]["middle-img-src"]; // tell variable source to use nested object data
 
-let mainContentHeaders = document.querySelectorAll(".text-content h4"); // top-content and bottom-content headings
-let headerArray = ["features-h4", "about-h4", "services-h4", "product-h4", "vision-h4"]; // css content heading keys
-// need to put each headerArray element into a h4 field
+let mainContentHeadings = document.querySelectorAll(".text-content h4"); // top-content and bottom-content headings
+// console.log("mainContentHeadings",mainContentHeadings);
+
+// let headingArray = ["features-h4", "about-h4", "services-h4", "product-h4", "vision-h4"]; // css content heading keys
+let headingArray = ["features", "about", "services", "product", "vision"];
+
+// console.log("headingArray",headingArray);
+// need to put each headingArray element into a h4 field
+mainContentHeadings.forEach((heading, i) => {
+  // console.log(["main-content"][headingArray[i]]);
+  // console.log(i);
+  // console.log(heading);
+  // console.log(heading, i);
+  // console.log([headingArray]);
+  // console.log([headingArray[i]]);
+
+  // heading.textContent = ["main-content"][headingArray[i]]
+  heading.textContent = [headingArray[i]];
+  console.log(heading.textContent);
+});
 
 
 // contact
