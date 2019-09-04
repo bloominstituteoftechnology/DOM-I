@@ -48,6 +48,20 @@ navLinks.forEach((link, i) => {
   link.textContent = siteContent["nav"][`nav-item-${i+1}`]
 });
 
+//---------- TASK 3: Add New Content
+navLinks.forEach((link) => (link.style.color = 'green'));
+
+let navBlog = document.createElement("a");
+navBlog.textContent = "Blog";
+let navMenu = document.querySelector("nav");
+navMenu.appendChild(navBlog);
+navBlog.style.color = "green"; // stretch
+
+let navHome = document.createElement("a");
+navHome.textContent = "Home";
+navMenu.prepend(navHome);
+navHome.style.color = "green"; // stretch
+
 
 // cta                  DONE
 let ctaImg = document.getElementById("cta-img");  // make variable & set it to HTML class
