@@ -81,8 +81,12 @@ mainContentHeadings.forEach((heading, i) => {
   // console.log([headingArray[i]]);
 
   // heading.textContent = ["main-content"][headingArray[i]]
-  heading.textContent = [headingArray[i]];
-  console.log(heading.textContent);
+  // heading.textContent = [headingArray[i]];
+  // console.log(heading.textContent);
+
+  // console.log(["main-content"][`${headingArray[i]}-h4`]); // UNDEFINED
+  console.log(siteContent["main-content"][`${headingArray[i]}-h4`]); //siteContent!!!
+  heading.textContent = siteContent["main-content"][`${headingArray[i]}-h4`];
 });
 
 
