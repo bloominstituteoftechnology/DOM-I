@@ -79,8 +79,7 @@ newTag1.style.color = "green"
 mainTag.append(newTag1)
 
 //new prepended nav item 
-const newTag2 = document.createElement('a') // child element
-// const mainTag = document.querySelector('nav') //parent element
+const newTag2 = document.createElement('a') 
 newTag2.href="#"
 newTag2.textContent = "Logout"
 newTag2.style.color = "green"
@@ -88,24 +87,32 @@ newTag2.style.color = "green"
 mainTag.prepend(newTag2)
 
 //main header 
+let mainHeader = document.querySelector('h1')
+mainHeader.textContent = siteContent['cta']['h1']
 
+let mainButton = document.querySelector('button')
+mainButton.textContent = siteContent['cta']['button']
 
-
-
+let logo2 = document.getElementById('cta-img')
+logo2.setAttribute('src', siteContent['cta']['img-src'])
 
 //main content 
 let mainContent = document.querySelectorAll('.text-content')
 
 mainContent[0].querySelector('h4').textContent = siteContent['main-content']['features-h4']
 mainContent[0].querySelector('p').textContent = siteContent['main-content']['features-content']
+
 mainContent[1].querySelector('h4').textContent = siteContent['main-content']['about-h4']
 mainContent[1].querySelector('p').textContent = siteContent['main-content']['about-content']
+
 mainContent[2].querySelector('h4').textContent = siteContent['main-content']['services-h4']
 mainContent[2].querySelector('p').textContent = siteContent['main-content']['services-content']
-mainContent[3].querySelector('h4').textContent = siteContent['main-content']['vision-h4']
-mainContent[3].querySelector('p').textContent = siteContent['main-content']['vision-content']
-mainContent[4].querySelector('h4').textContent = siteContent['main-content']['contact-h4']
-mainContent[4].querySelector('p').textContent = siteContent['main-content']['contact-content']
+
+mainContent[3].querySelector('h4').textContent = siteContent['main-content']['product-h4']
+mainContent[3].querySelector('p').textContent = siteContent['main-content']['product-content']
+
+mainContent[4].querySelector('h4').textContent = siteContent['main-content']['vision-h4']
+mainContent[4].querySelector('p').textContent = siteContent['main-content']['vision-content']
 
 //middle image 
 let logo3 = document.getElementById('middle-img')
@@ -120,6 +127,6 @@ contactInfo.getElementsByTagName('p')[0].textContent = siteContent['contact']['a
 contactInfo.getElementsByTagName('p')[1].textContent = siteContent['contact']['phone']
 contactInfo.getElementsByTagName('p')[2].textContent = siteContent['contact']['email']
 
-let dafooter = document.querySelector('footer')
-
-dafooter.getElementsByTagName('p')[0].textContent = siteContent['footer']['copyright']
+//footer
+let footer = document.querySelector('footer')
+footer.getElementsByTagName('p')[0].textContent = siteContent['footer']['copyright']
