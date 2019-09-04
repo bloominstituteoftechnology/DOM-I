@@ -37,7 +37,7 @@ const siteContent = {
   },
 };
 
-// nav          DONE
+// nav                  DONE
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img"); // ID doesn't need . or #
 logo.setAttribute('src', siteContent["nav"]["img-src"])
@@ -49,7 +49,7 @@ navLinks.forEach((link, i) => {
 });
 
 
-// cta          DONE
+// cta                  DONE
 let ctaImg = document.getElementById("cta-img");  // make variable & set it to HTML class
 ctaImg.src = siteContent["cta"]["img-src"]; // tell variable source to use nested object data
 
@@ -98,21 +98,20 @@ mainContentCopy.forEach((paragraph, i) => {
 });
 
 
-// contact
+// contact              DONE
 let contactHeading = document.querySelector(".contact h4");
 contactHeading.textContent = siteContent["contact"]["contact-h4"];
 
 let contactArray = ["address", "phone", "email"];
+// console.log(contactArray);
 //need to put each contactArray element into a <p> in .contact
 let contactInfo = document.querySelectorAll(".contact p") // contactInfo uses all 3 <p>
-contactInfo.forEach(updateContactInfo);
-
-function updateContactInfo(infoField, infoData) {
-
-}
+contactInfo.forEach((contactDetail, i) => {
+  contactDetail.textContent = siteContent["contact"][`${contactArray[i]}`];
+});
 
 
-// footer       DONE
+// footer               DONE
 let footerText = document.querySelector("footer p");
 footerText.textContent = siteContent["footer"]["copyright"];
 
