@@ -60,7 +60,7 @@ let ctaButton = document.querySelector(".cta-text button"); // class needs .
 ctaButton.textContent = siteContent["cta"]["button"];
 
 
-// main-content
+// main-content         DONE
 let middleImg = document.getElementById("middle-img"); // make variable & set it to HTML class
 middleImg.src = siteContent["main-content"]["middle-img-src"]; // tell variable source to use nested object data
 
@@ -85,8 +85,16 @@ mainContentHeadings.forEach((heading, i) => {
   // console.log(heading.textContent);
 
   // console.log(["main-content"][`${headingArray[i]}-h4`]); // UNDEFINED
-  console.log(siteContent["main-content"][`${headingArray[i]}-h4`]); //siteContent!!!
+
+  // console.log(siteContent["main-content"][`${headingArray[i]}-h4`]); //siteContent!!!
   heading.textContent = siteContent["main-content"][`${headingArray[i]}-h4`];
+});
+
+
+let mainContentCopy = document.querySelectorAll(".text-content p"); 
+mainContentCopy.forEach((paragraph, i) => {
+  // console.log(siteContent["main-content"][`${headingArray[i]}-content`]);
+  paragraph.textContent = siteContent["main-content"][`${headingArray[i]}-content`];
 });
 
 
