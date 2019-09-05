@@ -41,7 +41,9 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-
+let navTag = document.querySelector("nav");
+let newChild = document.createElement("a");
+let newChild2 = document.createElement("a");
 let aTags = document.querySelectorAll('a');
 let banner = document.querySelector('h1');
 let button = document.querySelector('button');
@@ -64,6 +66,20 @@ aTags[4].setAttribute('class', '.nav-item-5');
 aTags[4].innerText = 'About';
 aTags[5].setAttribute('class', '.nav-item-6');
 aTags[5].innerText = 'Contact';
+
+let nav = document.querySelectorAll("a");
+for (let i = 0; i < nav.length; i++) {
+  nav[i].textContent = Object.values(siteContent.nav)[i]
+  nav[i].style.color = 'green';
+}
+
+newChild.textContent = "Teammates";
+newChild.style.color = "green";
+navTag.appendChild(newChild);
+
+newChild2.textContent = "Home";
+newChild2.style.color = "green";
+navTag.prepend(newChild2);
 
 // Banner
 
