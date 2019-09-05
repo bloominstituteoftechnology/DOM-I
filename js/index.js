@@ -52,7 +52,7 @@ let headers = document.querySelectorAll('h4');
 let content = document.querySelectorAll('p')
 let contentImg = document.getElementById('middle-img');
 
-// NavBar
+// NavBar.
 
 aTags[0].setAttribute('class', '.nav-item-1');
 aTags[0].innerText = 'Service';
