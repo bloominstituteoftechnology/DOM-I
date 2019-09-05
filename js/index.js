@@ -42,5 +42,9 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let ctaText = document.querySelector('h1');
-ctaText.textContent = siteContent['cta']['h1'];
+ctaText.textContent = siteContent['cta']['h1']
 let ctaButton = document.querySelector('button');
+ctaButton.textContent = siteContent['cta']['button']
+
+let ctaImg = document.querySelector("img-src");
+ctaImg.imgContent = siteContent['cta']['img-src']
