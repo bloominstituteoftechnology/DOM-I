@@ -42,13 +42,21 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let navigation = document.querySelectorAll('a');
-navigation[0].textContent = 'Services';
-navigation[1].textContent = 'Product';
-navigation[2].textContent = 'Vision';
-navigation[3].textContent = 'Features';
-navigation[4].textContent = 'About';
-navigation[5].textContent = 'Contact';
-navigation.style.color('grey');
+navigation[0].textContent = siteContent.nav["nav-item-1"];
+navigation[1].textContent = siteContent.nav["nav-item-2"];
+navigation[2].textContent = siteContent.nav["nav-item-3"];
+navigation[3].textContent = siteContent.nav["nav-item-4"];
+navigation[4].textContent = siteContent.nav["nav-item-5"];
+navigation[5].textContent = siteContent.nav["nav-item-6"];
+navigation.forEach((item) => {
+  item.style.color = 'grey';
+})
+
+const topText = document.querySelector('h1');
+topText.textContent = siteContent.cta['h1'];
 
 const button = document.querySelector('button');
-button.style.color = 'black';
+button.textContent = siteContent.cta['button'];
+
+let mainPic = document.getElementById("cta-img");
+mainPic.setAttribute('src', siteContent.cta["img-src"]);
