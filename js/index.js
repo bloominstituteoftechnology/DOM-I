@@ -117,3 +117,25 @@ let footer = document.querySelector('footer')
 // * [ ] Check your work by looking at the [original html](original.html) in the browser
 
 aTags.forEach(link => link.style.color ='green')
+
+const newATag1 = document.createElement('a')
+const mainNav = document.querySelector('nav')
+newATag1.innerText = 'Home'
+newATag1.href = '#'
+mainNav.prepend(newATag1)
+newATag1.style.color = 'green'
+
+const newATag2 = document.createElement('a')
+const mainNav2 = document.querySelector('nav')
+newATag2.innerText = 'More Info'
+newATag2.href = '#'
+mainNav2.appendChild(newATag2)
+newATag2.style.color = 'green'
+
+
+//* Stretch  *//
+
+mainContent.forEach(text => text.style.color = 'orange')
+
+contactInfo.style.backgroundColor = "#33EFFF"
+
