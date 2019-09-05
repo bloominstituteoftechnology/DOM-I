@@ -48,14 +48,14 @@ for (i = 0; i < nl.length; i++) {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-let cta = document.getElementByClassName("cta-text");
-cta.setAttribute('h1', siteContent["cta"]["h1"]);
-
-let cta1 = document.getElementByClassName("cta-text");
-cta.setAttribute('button', siteContent["cta"]["button"]);
-
-let cta2 = document.getElementById("cta-img");
+let cta = document.getElementById("cta-img");
 cta.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let ctaText = document.querySelector('h1');
+ctaText.textContent = siteContent['cta']['h1'];
+
+ctaText = document.querySelector('button');
+ctaText.textContent = siteContent['cta']['button'];
 
 let mainContent = document.getElementById("middle-img");
 mainContent.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
