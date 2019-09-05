@@ -48,9 +48,9 @@ navigation[2].textContent = siteContent.nav["nav-item-3"];
 navigation[3].textContent = siteContent.nav["nav-item-4"];
 navigation[4].textContent = siteContent.nav["nav-item-5"];
 navigation[5].textContent = siteContent.nav["nav-item-6"];
-// navigation.forEach((item) => {
-//   item.style.color = 'grey';
-// })
+navigation.forEach((item) => {
+  item.style.color = 'green';
+})
 
 
 const topText = document.querySelector('h1');
