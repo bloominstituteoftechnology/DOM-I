@@ -48,15 +48,25 @@ navigation[2].textContent = siteContent.nav["nav-item-3"];
 navigation[3].textContent = siteContent.nav["nav-item-4"];
 navigation[4].textContent = siteContent.nav["nav-item-5"];
 navigation[5].textContent = siteContent.nav["nav-item-6"];
-navigation.forEach((item) => {
-  item.style.color = 'grey';
-})
+// navigation.forEach((item) => {
+//   item.style.color = 'grey';
+// })
+
 
 const topText = document.querySelector('h1');
 topText.textContent = siteContent.cta['h1'];
+topText.style.wordSpacing = '9999rem';
+topText.style.display = 'table-caption';
+topText.style.width = '65%';
+topText.style.height = '13rem';
+topText.style.marginLeft = '42.25%';
+
+
 
 const button = document.querySelector('button');
 button.textContent = siteContent.cta['button'];
+button.style.marginTop = '4.5%';
+button.style.marginLeft = '42.25%';
 
 const mainPic = document.getElementById("cta-img");
 mainPic.setAttribute('src', siteContent.cta["img-src"]);
@@ -83,3 +93,4 @@ mainText[8].textContent = siteContent["footer"]['copyright'];
 const middlePic = document.getElementById("middle-img");
 middlePic.setAttribute('src', siteContent['main-content']["middle-img-src"]);
 
+mainText[5].style.width = '20%';
