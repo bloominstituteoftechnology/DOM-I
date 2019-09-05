@@ -28,7 +28,7 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 * [ ] Create selectors by using any of the DOM element's methods
 * [ ] Note that IDs have been used on all images.  Use the IDs to update src path content
 
-## Task 2: Update the HTML with the JSON data
+## Task 2: Update the HTML with the JSON data 
 * [ ] Remember, NO direct updating of the HTML source is allowed.
 * [ ] Using your selectors, update the content to match the example file.
 * [ ] Remember to update the src attributes on images
