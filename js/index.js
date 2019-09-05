@@ -41,6 +41,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+
 let navigation = document.querySelectorAll('a');
 navigation[0].textContent = siteContent.nav["nav-item-1"];
 navigation[1].textContent = siteContent.nav["nav-item-2"];
@@ -48,10 +49,23 @@ navigation[2].textContent = siteContent.nav["nav-item-3"];
 navigation[3].textContent = siteContent.nav["nav-item-4"];
 navigation[4].textContent = siteContent.nav["nav-item-5"];
 navigation[5].textContent = siteContent.nav["nav-item-6"];
+
+
 navigation.forEach((item) => {
   item.style.color = 'green';
 })
 
+let newNav1 = document.createElement('a');
+let newText1 = document.createTextNode('Practice');
+newNav1.appendChild(newText1);
+document.querySelector('nav').appendChild(newNav1);
+newNav1.style.color = 'green';
+
+let newNav2 = document.createElement('a');
+let newText2 = document.createTextNode('Trivia');
+newNav2.appendChild(newText2);
+document.querySelector('nav').prepend(newNav2);
+newNav2.style.color = 'green';
 
 const topText = document.querySelector('h1');
 topText.textContent = siteContent.cta['h1'];
