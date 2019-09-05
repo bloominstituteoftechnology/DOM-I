@@ -38,7 +38,7 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.querySelector('#logo-img')
+let logo = document.getElementById('logo-img')
 logo.setAttribute('src', siteContent['nav']['img-src'])
 
 //Task 1: Create selectors to point your data into elements 
@@ -46,22 +46,11 @@ logo.setAttribute('src', siteContent['nav']['img-src'])
 //nav 
 let aTag = document.querySelectorAll('a')
 
-aTag[0].setAttribute('nav', 'nav-item-1')
 aTag[0].innerHTML = "Services"
-
-aTag[1].setAttribute('nav', 'nav-item-2')
 aTag[1].innerHTML = "Products"
-
-aTag[2].setAttribute('nav', 'nav-item-3')
 aTag[2].innerHTML = "Vision"
-
-aTag[3].setAttribute('nav', 'nav-item-4')
 aTag[3].innerHTML = "Features"
-
-aTag[4].setAttribute('nav', 'nav-item-5')
 aTag[4].innerHTML = "About"
-
-aTag[5].setAttribute('nav', 'nav-item-6')
 aTag[5].innerHTML = "Contact"
 
 aTag.forEach(link => link.style.color = "green")
