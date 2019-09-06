@@ -59,6 +59,7 @@ fill(navItems, navValues);
 //cta
 let cta_h1 = document.querySelector(".cta h1");
 cta_h1.innerText = siteContent.cta["h1"];
+cta_h1.style.wordSpacing = "999999px";
 
 let ctaButton = document.querySelector(".cta button");
 ctaButton.innerText = siteContent.cta["button"];
@@ -88,6 +89,8 @@ mainContentKeys.forEach(key => {
     pMainValues.push(siteContent["main-content"][key]);
   }
   //When conditions are met, push the value from "main-content" key onto its array.
+
+  //Future function ideas: make a function that brings in keys
 });
 
 //fills each tag location with the appropriate value
@@ -106,10 +109,26 @@ contactH4.innerText = siteContent.contact["contact-h4"];
 contactP[0].innerText = siteContent.contact["address"];
 contactP[1].innerText = siteContent.contact["phone"];
 contactP[2].innerText = siteContent.contact["email"];
+contactP[0].style.width = "150px";
 
 //footer
 let footerContent = document.querySelector("footer p");
 footerContent.innerText = siteContent.footer["copyright"];
 
 //----##Task Number 3##----//
+const aNew1 = document.createElement("a");
+const aNew2 = document.createElement("a");
+aNew1.innerText = "Hello";
+aNew2.innerText = "Goodbye";
+aNew1.setAttribute("href", "#");
+aNew2.setAttribute("href", "#");
+
+const firstVal = document.getElementsByTagName("nav")[0];
+const lastVal = document.getElementsByTagName("nav")[0];
+firstVal.prepend(aNew1);
+lastVal.appendChild(aNew2);
+
 navItems.forEach(item => (item.style.color = "green"));
+document
+  .querySelectorAll("nav a")
+  .forEach(index => (index.style.color = "green"));
