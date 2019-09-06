@@ -57,6 +57,13 @@ ctaText.textContent = siteContent['cta']['h1'];
 ctaText = document.querySelector('button');
 ctaText.textContent = siteContent['cta']['button'];
 
-let mainContent = document.getElementById("middle-img");
-mainContent.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+let mainContent = document.querySelector('h4');
+mainContent.textContent = siteContent['main-content']['features-h4'];
 
+mainContent = document.querySelector('p');
+mainContent.textContent = siteContent['main-content']['features-content'];
+
+
+
+mainContent = document.getElementById("middle-img");
+mainContent.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
