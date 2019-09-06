@@ -79,9 +79,6 @@ mainContent[0].textContent = siteContent['main-content']['services-content'];
 mainContent[1].textContent = siteContent['main-content']['product-content'];
 mainContent[2].textContent = siteContent['main-content']['vision-content'];
 
-mainContent = document.getElementById("middle-img");
-mainContent.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
-
 let contact = document.querySelector('.contact h4')
 contact.textContent = siteContent['contact']['contact-h4'];
 
