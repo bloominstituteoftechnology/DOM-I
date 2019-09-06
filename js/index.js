@@ -40,3 +40,30 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+document.getElementsByTagName('p');
+
+document.getElementsByClassName('text-content');
+
+document.getElementById('cta-img');
+
+// const navbar= document.querySelectorAll('nav a');
+// // navbar[0].nav="Services"
+
+// const logoText= document.querySelector('cta-text');
+// logoText.textContent ="DOM Is Awesome"
+
+
+const arttitle = document.querySelectorAll('.text-content h4');
+arttitle[0].textContent ="Features"
+arttitle[1].textContent ="About"
+arttitle[2].textContent ="Services"
+arttitle[3].textContent ="Product"
+arttitle[4].textContent ="Vision"
+
+const arttext = document.querySelectorAll('.text-content p');
+arttext[0].textContent ="Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+arttext[1].textContent ="About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+arttext[2].textContent ="Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+arttext[3].textContent ="Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+arttext[4].textContent ="Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
