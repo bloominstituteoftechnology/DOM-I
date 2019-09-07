@@ -52,20 +52,14 @@ let headers = document.querySelectorAll('h4');
 let content = document.querySelectorAll('p')
 let contentImg = document.getElementById('middle-img');
 
-// NavBar.
+// NavBar..
 
-aTags[0].setAttribute('class', '.nav-item-1');
-aTags[0].innerText = 'Service';
-aTags[1].setAttribute('class', '.nav-item-2');
-aTags[1].innerText = 'Product';
-aTags[2].setAttribute('class', '.nav-item-3');
-aTags[2].innerText = 'Vision';
-aTags[3].setAttribute('class', '.nav-item-4');
-aTags[3].innerText = 'Features';
-aTags[4].setAttribute('class', '.nav-item-5');
-aTags[4].innerText = 'About';
-aTags[5].setAttribute('class', '.nav-item-6');
-aTags[5].innerText = 'Contact';
+aTags[0].innerText = siteContent.nav["nav-item-1"];
+aTags[1].innerText = siteContent.nav["nav-item-2"];
+aTags[2].innerText = siteContent.nav["nav-item-3"];
+aTags[3].innerText = siteContent.nav["nav-item-4"];
+aTags[4].innerText = siteContent.nav["nav-item-5"];
+aTags[5].innerText = siteContent.nav["nav-item-6"];
 
 let nav = document.querySelectorAll("a");
 for (let i = 0; i < nav.length; i++) {
@@ -83,70 +77,56 @@ navTag.prepend(newChild2);
 
 // Banner
 
-banner.textContent = "DOM is Awesome";
-button.textContent = "Get Started";
-bannerImg.src = "img/header-img.png"
+banner.textContent = siteContent.cta.h1;
+button.textContent = siteContent.cta.button;
+bannerImg.src = siteContent.cta["img-src"];
 
 //Features
 
-headers[0].setAttribute('class', '.features-header');
-headers[0].textContent = "Features";
-content[0].setAttribute('class', '.features-text');
-content[0].textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+headers[0].textContent = siteContent["main-content"]["features-h4"];
+content[0].textContent = siteContent["main-content"]["features-content"];
 
 // About
 
-headers[1].setAttribute('class', '.about-header')
-headers[1].textContent = "About";
-content[1].setAttribute('class', '.about-text');
-content[1].textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+headers[1].textContent = siteContent["main-content"]["about-h4"];
+content[1].textContent = siteContent["main-content"]["about-content"];
 
 // Services
 
-headers[2].setAttribute('class', '.services-header')
-headers[2].textContent = "Services";
-content[2].setAttribute('class', '.services-text');
-content[2].textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+headers[2].textContent = siteContent["main-content"]["services-h4"];
+content[2].textContent = siteContent["main-content"]["services-content"]
 
 // Product
 
-headers[3].setAttribute('class', '.product-header');
-headers[3].textContent = "Product";
-content[3].setAttribute('class', '.product-text');
-content[3].textContent = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+headers[3].textContent = siteContent["main-content"]["product-h4"];
+content[3].textContent = siteContent["main-content"]["product-content"];
 
 // Vision
 
-headers[4].setAttribute('class', '.vision-header');
-headers[4].textContent = "Vision";
-content[4].setAttribute('class', '.product-text');
-content[4].textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+headers[4].textContent = siteContent["main-content"]["vision-h4"];
+content[4].textContent = siteContent["main-content"]["vision-content"];
 
 // Mid Image
 
-contentImg.src = "img/mid-page-accent.jpg";
+contentImg.src = siteContent["main-content"]["middle-img-src"];
 
 // Contact
 
-headers[5].setAttribute('class', '.contact-header');
-headers[5].textContent = "Contact";
+headers[5].textContent = siteContent.contact["contact-h4"];
 
 // Address
 
-content[5].setAttribute('class', '.address');
-content[5].textContent = "123 Way 456 Street Somewhere, USA";
+content[5].textContent = siteContent.contact.address;
 
 // Number
 
-content[6].setAttribute('class', '.number');
-content[6].textContent = "1 (888) 888-8888";
+content[6].textContent = siteContent.contact.phone;
 
 // Email
 
-content[7].setAttribute('class', '.email');
-content[7].textContent = "sales@greatidea.io";
+content[7].textContent = siteContent.contact.email;
 
 // Footer
 
-content[8].setAttribute = ('class', '.footer');
-content[8].textContent = "Copyright Great Idea! 2018";
+content[8].textContent = siteContent.footer.copyright;
