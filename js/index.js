@@ -47,7 +47,7 @@ ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 let middleImg = document.getElementById('middle-img');
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
-// Header navigation
+// Nav Items
 let navigation = document.querySelectorAll('nav a');
 const navigationArr = Array.from(navigation);
 navigationArr[0].textContent = siteContent["nav"]["nav-item-1"];
@@ -105,7 +105,7 @@ navColor.forEach( (element) => {
   element.style.color = 'green';
 });
 
-// add navigation items
+// Add new nav items
 const navElements = document.querySelector('nav');
 let newNavItem = document.createElement('a');
 newNavItem.textContent = "Login";
@@ -116,6 +116,7 @@ let newNavItem2 = document.createElement('a');
 newNavItem2.textContent = "Home";
 navElements.prepend(newNavItem2);
 
+// Add color to new nav items above
 navColor = document.querySelectorAll('nav a');
 navColor.forEach( (element) => {
   element.style.color = 'green';
