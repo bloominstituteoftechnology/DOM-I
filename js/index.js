@@ -62,6 +62,10 @@ cta.setAttribute('src', siteContent["cta"]["img-src"]);
 let ctaText = document.querySelector('h1');
 ctaText.textContent = siteContent['cta']['h1'];
 
+const ctaH1 = document.querySelector('.cta-text h1');
+const h1text = siteContent.cta.h1.split(' ');
+ctaH1.innerHTML = `${h1text[0]} </br> ${h1text[1]} </br> ${h1text[2]}`;
+
 ctaText = document.querySelector('button');
 ctaText.textContent = siteContent['cta']['button'];
 
@@ -97,3 +101,13 @@ contact[2].textContent = siteContent['contact']['email'];
 let footer = document.querySelector('footer p');
 footer.textContent = siteContent['footer']['copyright'];
 
+const nav1 = document.createElement('a');
+const nav2 = document.createElement('a');
+nav1.textContent = 'Growth';
+nav2.textContent = 'Blog';
+nav1.style.color = 'green';
+nav2.style.color = 'green';
+
+const navBar = document.querySelector('nav');
+navBar.append(nav1);
+navBar.prepend(nav2);
