@@ -46,9 +46,55 @@ let topImage = document.getElementById("cta-img");
 topImage.setAttribute('src', siteContent["cta"]["img-src"])
 
 
-const cta = document.getElementsByClassName("cta-text");
-const ctaH1 = cta.querySelector('h1');
-ctaH1.textContent = siteContent["cta"]['h1']
+let cta = document.querySelector('.cta-text');
+ let ctaH1 = cta.querySelector('h1');
+ctaH1.textContent = siteContent['cta']['h1'];
+// let lineBreak = document.createElement('br');
+// lineBreak.appendChild('linebreak');
 
 
-const navigation = document.getElementById
+
+let ctabtn = document.querySelector('button');
+ctabtn.textContent = siteContent['cta']['button'];
+
+
+
+let navBar = document.querySelectorAll('a');
+navBar[0].textContent = siteContent['nav']['nav-item-1'];
+navBar[1].textContent = siteContent['nav']['nav-item-2'];
+navBar[2].textContent = siteContent['nav']['nav-item-3'];
+navBar[3].textContent = siteContent['nav']['nav-item-4'];
+navBar[4].textContent = siteContent['nav']['nav-item-5'];
+navBar[5].textContent = siteContent['nav']['nav-item-6'];
+
+
+let mainHeader = document.querySelectorAll("h4");
+mainHeader[0].textContent = siteContent['main-content']['features-h4'];
+mainHeader[1].textContent = siteContent['main-content']['about-h4'];
+mainHeader[2].textContent = siteContent['main-content']['services-h4'];
+mainHeader[3].textContent = siteContent['main-content']['product-h4'];
+mainHeader[4].textContent = siteContent['main-content']['vision-h4'];
+mainHeader[5].textContent = siteContent["contact"]["contact-h4"];
+
+
+
+
+let mainText = document.querySelectorAll("p")
+mainText[0].textContent = siteContent['main-content']['features-content'];
+mainText[1].textContent = siteContent['main-content']['about-content'];
+mainText[2].textContent = siteContent['main-content']['services-content'];
+mainText[3].textContent = siteContent['main-content']['product-content'];
+mainText[4].textContent = siteContent['main-content']['vision-content'];
+mainText[5].textContent = siteContent['contact']['address'];
+mainText[6].textContent = siteContent['contact']['phone'];
+mainText[7].textContent = siteContent['contact']['email'];
+mainText[8].textContent = siteContent['footer']['copyright'];
+
+
+
+let centerImg = document.getElementById('middle-img');
+centerImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+
+
+
