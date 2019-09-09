@@ -62,27 +62,50 @@ firstLink;
 headerElement.prepend(firstLink);
 
 // Update all links in navigation bar using querySelectorAll
-const linkElements = document.querySelectorAll('nav a');
-linkElements;
-linkElements[0].textContent = "Alison";
-linkElements[0];
-linkElements[1].textContent = "Product";
-linkElements[1];
-linkElements[2].textContent = "Vision";
-linkElements[2];
-linkElements[3].textContent = "Features";
-linkElements[3];
-linkElements[4].textContent = "About";
-linkElements[4];
-linkElements[5].textContent = "Contact";
-linkElements[5];
-console.log(linkElements);
+// const linkElements = document.querySelectorAll('nav a');
+// linkElements;
+// linkElements[0].textContent = "Alison";
+// linkElements[0];
+// linkElements[1].textContent = "Product";
+// linkElements[1];
+// linkElements[2].textContent = "Vision";
+// linkElements[2];
+// linkElements[3].textContent = "Features";
+// linkElements[3];
+// linkElements[4].textContent = "About";
+// linkElements[4];
+// linkElements[5].textContent = "Contact";
+// linkElements[5];
+// console.log(linkElements);
 
-// Give the links a green color
-linkElements[0].style.color = "green";
-linkElements;
+// Better way to do the above
+let navBar = document.querySelector('nav'); // draw out from html doc the entire nav 
+console.log(navBar);
+let navLinks = navBar.querySelectorAll('a'); // now draw out all the anchor tags on the html doc within nav
+console.log(navLinks);
+let ObjNav = siteContent.nav; // draw out just the navs from the siteContent object; could use this too: siteContent["nav"]
+console.log(ObjNav);
+let navValues = Object.values(ObjNav); // all the values in the ObjNav object, store in a variable called navValues
+console.log(navValues);
+[...navLinks].forEach((link, index) => {
+    link.textContent = navValues[index];
+    link.setAttribute('style', 'color: green');
+})
 
-// try creating a for loop to color all the links at the same time
-for (i = 0; i < linkElements.length; ++i) {
-    linkElements[i].style.color = "green";
-}
+// Bonus' suggestion: try to use a different loop for the contact (and refer to the previous loop we used for the navs)
+let contactSection = document.querySelector('section.contact'); // storing the Contact info in the Section tag in a variable called contactSection
+console.log(contactSection);
+let headerContact = contactSection.querySelector('h4'); // draw out just the Contact header
+headerContact.textContent = siteContent.contact['contact-h4']; // set the HTML value of the Contact header (H4) to the JavaScript key value pair for the Contact object within siteContent 
+console.log(headerContact);
+
+// the Paragraphs
+let contactParas = contactSection.querySelectorAll('p'); // draw out just the paragraphs in the Contact section
+console.log(contactParas);
+let ObjParas = siteContent.contact; // taking the Contact object with siteContent and storing in a variable called ObjParas
+console.log(ObjParas);
+let paraValues = Object.values(ObjParas); // draw out just the paragraph values and set them in an object called paraValues 
+console.log(paraValues);
+[...contactParas].forEach((p, index) => { // call the forEach method over the contactParas array?
+    p.textContent = paraValues[index + 1];
+})
