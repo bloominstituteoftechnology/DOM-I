@@ -48,41 +48,37 @@ let middleImg = document.getElementById('middle-img');
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 // Nav Items
-let navigation = document.querySelectorAll('nav a');
-const navigationArr = Array.from(navigation);
-navigationArr[0].textContent = siteContent["nav"]["nav-item-1"];
-navigationArr[1].textContent = siteContent["nav"]["nav-item-2"];
-navigationArr[2].textContent = siteContent["nav"]["nav-item-3"];
-navigationArr[3].textContent = siteContent["nav"]["nav-item-4"];
-navigationArr[4].textContent = siteContent["nav"]["nav-item-5"];
-navigationArr[5].textContent = siteContent["nav"]["nav-item-6"];
+let links = document.querySelectorAll('a');
+links[0].innerHTML = siteContent["nav"]['nav-item-1'];
+links[1].innerHTML = siteContent["nav"]['nav-item-2'];
+links[2].innerHTML = siteContent["nav"]['nav-item-3'];
+links[3].innerHTML = siteContent["nav"]['nav-item-4'];
+links[4].innerHTML = siteContent["nav"]['nav-item-5'];
+links[5].innerHTML = siteContent["nav"]['nav-item-6'];
 
 // Header
-let headerContent = document.querySelectorAll('div .cta-text h1');
-const headerContentArr = Array.from(headerContent);
-headerContent[0].textContent = siteContent["cta"]['h1'];
-let ctaButton = document.querySelectorAll('div .cta-text button');
-const ctaButtonArr = Array.from(ctaButton);
-ctaButton[0].textContent = siteContent["cta"]['button'];
+let ctaText = document.querySelector('h1');
+ctaText.innerHTML = siteContent["cta"]['h1'];
+let button = document.querySelector('button');
+button.innerHTML = siteContent["cta"]['button'];
 
 
 // Main content top
-let mainContentHeader = document.querySelectorAll('div .text-content h4');
-const mainContentHeaderArr = Array.from(mainContentHeader);
-mainContentHeaderArr[0].textContent = siteContent['main-content']['features-h4'];
-mainContentHeaderArr[1].textContent = siteContent['main-content']['about-h4'];
-mainContentHeaderArr[2].textContent = siteContent['main-content']['services-h4'];
-mainContentHeaderArr[3].textContent = siteContent['main-content']['product-h4'];
-mainContentHeaderArr[4].textContent = siteContent['main-content']['vision-h4'];
+let h4 = document.querySelectorAll('h4');
+h4[0].innerHTML = siteContent["main-content"]['features-h4'];
+h4[1].innerHTML = siteContent["main-content"]['about-h4'];
+h4[2].innerHTML = siteContent["main-content"]['services-h4'];
+h4[3].innerHTML = siteContent["main-content"]['product-h4'];
+h4[4].innerHTML = siteContent["main-content"]['vision-h4'];
+h4[5].innerHTML = siteContent["contact"]['contact-h4'];
 
 //Main content bottom
-let mainContentParagraph = document.querySelectorAll('div .text-content p');
-const mainContentParagraphrArr = Array.from(mainContentParagraph);
-mainContentParagraphrArr[0].textContent = siteContent['main-content']['features-content'];
-mainContentParagraphrArr[1].textContent = siteContent['main-content']['about-content'];
-mainContentParagraphrArr[2].textContent = siteContent['main-content']['services-content'];
-mainContentParagraphrArr[3].textContent = siteContent['main-content']['product-content'];
-mainContentParagraphrArr[4].textContent = siteContent['main-content']['vision-content'];
+let p = document.querySelectorAll('p');
+p[0].innerHTML = siteContent['main-content']['features-content'];
+p[1].innerHTML = siteContent['main-content']['about-content'];
+p[2].innerHTML = siteContent['main-content']['services-content'];
+p[3].innerHTML = siteContent['main-content']['product-content'];
+p[4].innerHTML = siteContent['main-content']['vision-content'];
 
 // Contact section 
 let contactHeader = document.querySelectorAll('.contact h4');
@@ -90,9 +86,9 @@ const contactHeaderArr = Array.from(contactHeader);
 contactHeaderArr[0].textContent = siteContent['contact']['contact-h4'];
 let contactParagraph = document.querySelectorAll('.contact p');
 const contactParagraphArr = Array.from(contactParagraph);
-contactParagraphArr[0].textContent = siteContent['contact']['address'];
-contactParagraphArr[1].textContent = siteContent['contact']['phone'];
-contactParagraphArr[2].textContent = siteContent['contact']['email'];
+p[5].innerHTML = siteContent['contact']['address'];
+p[6].innerHTML = siteContent['contact']['phone'];
+p[7].innerHTML = siteContent['contact']['email'];
 
 
 // Footer 
