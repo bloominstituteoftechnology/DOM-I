@@ -70,3 +70,12 @@ textContent[3].children[1].innerHTML = siteContent['main-content']['product-cont
 
 textContent[4].children[0].innerHTML = siteContent['main-content']['vision-h4'];
 textContent[4].children[1].innerHTML = siteContent['main-content']['vision-content'];
+
+//adding contact information
+let contact = document.querySelector('.contact');
+contact.children[0].innerText = siteContent['contact']['contact-h4'];
+contact.children[1].innerText = siteContent['contact']['address'];
+contact.children[2].innerText = siteContent['contact']['phone'];
+contact.children[3].innerText = siteContent['contact']['email'];
+
+console.log(contact);
