@@ -77,17 +77,17 @@ let nav = document.querySelector("nav")
 
 
 let clicker = document.querySelector('button');
-clicker.textContent = ("Get Started")
+clicker.textContent = ('src', siteContent['cta']['button'])
 let nav0 = document.querySelectorAll('a');
-nav0[0].textContent = "Services"
+nav0[0].textContent = ('src', siteContent['nav']['nav-item-1'])
 let nav1 = document.querySelectorAll('a');
-nav1[1].textContent = "Product"
+nav1[1].textContent = ('src', siteContent['nav']['nav-item-2'])
 let nav2 = document.querySelectorAll('a');
-nav2[2].textContent = "Vison"
+nav2[2].textContent = ('src', siteContent['nav']['nav-item-3'])
 let nav3 = document.querySelectorAll('a');
-nav3[3].textContent = "Features"
+nav3[3].textContent = ('src', siteContent['nav']['nav-item-4'])
 let nav4 = document.querySelectorAll('a');
-nav4[4].textContent = "About";
+nav4[4].textContent = ('src', siteContent['nav']['nav-item-5']);
 let nav5 = document.querySelectorAll('a');
 nav5[5].textContent = "Contact";
 const nav6 = document.createElement('a');
@@ -114,15 +114,12 @@ head2[1].textContent = ('src', siteContent["main-content"]["about-h4"]);
 
 let para3 = document.querySelectorAll('p');
 para3[2].textContent = ('src', siteContent["main-content"]["services-content"])
-
 let head3= document.querySelectorAll('h4');
 head3[2].textContent = ('src', siteContent["main-content"]["services-h4"])
-
 let para4 = document.querySelectorAll('p');
 para4[3].textContent = ('src', siteContent["main-content"]["product-content"])
 let head4 = document.querySelectorAll('h4');
 head4[3].textContent = ('src', siteContent["main-content"]["product-h4"])
-
 let para5 = document.querySelectorAll('p');
 para5[4].textContent = ('src', siteContent["main-content"]["vision-content"])
 let head5 = document.querySelectorAll('h4');
@@ -130,15 +127,11 @@ head5[4].textContent = ('src', siteContent["main-content"]["vision-h4"]);
 
 let head6 = document.querySelectorAll('h4');
 head6[5].textContent = ('src', siteContent["contact"]["contact-h4"])
-
 let para6 = document.querySelectorAll('p')
 para6[6].textContent = ('src', siteContent['contact']['address'])
-
 let para7 = document.querySelectorAll('p');
 para7[7].textContent = ('src', siteContent['contact']['email'])
 para7[7].style.lineHeight = "2"
-
-
 let para8 = document.querySelectorAll('p');
 para8[8].textContent = ('src', siteContent['footer']['copyright'])
 
