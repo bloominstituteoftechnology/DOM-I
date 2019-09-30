@@ -72,3 +72,16 @@ cta_btn.textContent = "Get Started";
 // Assign CTA section image a src
 let cta_img = document.querySelector(".cta img");
 cta_img.setAttribute("src", siteContent.cta["img-src"]);
+
+// MAIN CONTENT SECTION
+// - - - - - - - - - - - - -
+
+// Assign Main Content H4's their respective titles
+let main_content_titles = document.querySelectorAll(".main-content h4");
+main_content_titles[0].textContent = siteContent["main-content"]["features-h4"];
+main_content_titles[1].textContent = siteContent["main-content"]["about-h4"];
+
+// Assign Main Content p's their respective text
+let main_content_ps = document.querySelectorAll(".main-content p");
+main_content_ps[0].textContent = siteContent["main-content"]["features-content"];
+main_content_ps[1].textContent = siteContent["main-content"]["about-content"];
