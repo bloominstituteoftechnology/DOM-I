@@ -47,12 +47,9 @@ const siteContent = {
 
 // Assign text to nav links
 let nav_links = document.querySelectorAll("header nav a");
-nav_links[0].textContent = siteContent.nav["nav-item-1"];
-nav_links[1].textContent = siteContent.nav["nav-item-2"];
-nav_links[2].textContent = siteContent.nav["nav-item-3"];
-nav_links[3].textContent = siteContent.nav["nav-item-4"];
-nav_links[4].textContent = siteContent.nav["nav-item-5"];
-nav_links[5].textContent = siteContent.nav["nav-item-6"];
+for (let i = 0; i < nav_links.length; i++) {
+  nav_links[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
+}
 
 // Update the img src for the logo
 let logo = document.getElementById("logo-img");
@@ -85,3 +82,10 @@ main_content_titles[1].textContent = siteContent["main-content"]["about-h4"];
 let main_content_ps = document.querySelectorAll(".main-content p");
 main_content_ps[0].textContent = siteContent["main-content"]["features-content"];
 main_content_ps[1].textContent = siteContent["main-content"]["about-content"];
+
+// MIDDLE IMAGE
+// - - - - - - - - -
+
+// Assign Middle Image a src
+let middle_img = document.querySelector("#middle-img");
+middle_img.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
