@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM \n Is \n Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -42,7 +42,7 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
-document.querySelector("#cta-img").src = "img/header1.png";
+document.querySelector("#cta-img").src = "img/header-img.png";
 document.querySelector("#middle-img").src = "img/mid-page-accent.jpg"
 document.querySelector("button").style.borderRadius = ".25rem"
 document.querySelector("#middle-img").style.padding = "2% 0% 2% 0% "
@@ -140,6 +140,6 @@ para7[7].style.lineHeight = "2"
 
 
 let para8 = document.querySelectorAll('p');
-para8[8].textContent = "Copyright Great Idea! 2018"
+para8[8].textContent = ('src', siteContent['footer']['copyright'])
 
 
