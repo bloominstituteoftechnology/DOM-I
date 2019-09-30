@@ -37,11 +37,15 @@ const siteContent = {
   },
 };
 
-// Update the title
+
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+// Update the title
+let newTitle = document.querySelector('Title')
+newTitle.textContent = 'Great Idea!'
 
 /* This is the navigation bar code */
 let navBar = document.querySelectorAll('nav a'); //selects all of the nav bar a tags.
