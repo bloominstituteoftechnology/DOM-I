@@ -42,9 +42,21 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+const headerAdd = document.querySelector("header nav")
 
-const headerNav = document.querySelector('a') 
+const name = document.createElement('div')
+name.textContent= "Aasa"
+name.style.fontSize= "200%"
+ headerAdd.appendChild(name)
+
 const allHeaderNavs =document.querySelectorAll('a')
+allHeaderNavs[0].style.color ='green'
+allHeaderNavs[1].style.color ='green'
+allHeaderNavs[2].style.color ='green'
+allHeaderNavs[3].style.color ='green'
+allHeaderNavs[4].style.color ='green'
+allHeaderNavs[5].style.color ='green'
+
 
 allHeaderNavs[0].textContent= 'Services'
 allHeaderNavs[1].textContent= 'Products'
@@ -67,6 +79,7 @@ const contentP = document.querySelectorAll("top-content, p")
 const bottomContentP = document.querySelectorAll("bottom-content, p")
 
 contentH4[0].textContent = "Features"
+
 contentH4[1].textContent = "About"
 contentH4[2].textContent = "Services"
 contentH4[3].textContent = "Product"
@@ -74,6 +87,9 @@ contentH4[4].textContent = "Vision"
 contentH4[5].textContent = "Contact"
 
 contentP[0].textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+
+contentP[1].style.color = "blue"
+contentP[3].style.color = "blue"
 
 contentP[1].textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
 
