@@ -104,3 +104,16 @@ let bottom_content_ps = document.querySelectorAll(".bottom-content p");
 bottom_content_ps[0].textContent = siteContent["main-content"]["services-content"];
 bottom_content_ps[1].textContent = siteContent["main-content"]["product-content"];
 bottom_content_ps[2].textContent = siteContent["main-content"]["vision-content"];
+
+// CONTACT SECTION
+// - - - - - - - - - -
+
+// Assign Contact H4 value
+let contact_h4 = document.querySelector(".contact h4");
+contact_h4.textContent = siteContent.contact["contact-h4"];
+
+// Assign Contact Ps value
+let contact_ps = document.querySelectorAll(".contact p");
+contact_ps[0].textContent = siteContent.contact.address;
+contact_ps[1].textContent = siteContent.contact.phone;
+contact_ps[2].textContent = siteContent.contact.email;
