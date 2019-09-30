@@ -89,3 +89,18 @@ main_content_ps[1].textContent = siteContent["main-content"]["about-content"];
 // Assign Middle Image a src
 let middle_img = document.querySelector("#middle-img");
 middle_img.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+// BOTTOM CONTENT
+// - - - - - - - - - -
+
+// Assign Bottom Content H4's their respective titles
+let bottom_content_titles = document.querySelectorAll(".bottom-content h4");
+bottom_content_titles[0].textContent = siteContent["main-content"]["services-h4"];
+bottom_content_titles[1].textContent = siteContent["main-content"]["product-h4"];
+bottom_content_titles[2].textContent = siteContent["main-content"]["vision-h4"];
+
+// Assign Bottom Content p's their respective values
+let bottom_content_ps = document.querySelectorAll(".bottom-content p");
+bottom_content_ps[0].textContent = siteContent["main-content"]["services-content"];
+bottom_content_ps[1].textContent = siteContent["main-content"]["product-content"];
+bottom_content_ps[2].textContent = siteContent["main-content"]["vision-content"];
