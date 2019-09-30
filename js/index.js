@@ -57,3 +57,18 @@ nav_links[5].textContent = siteContent.nav["nav-item-6"];
 // Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
+
+// CTA SECTION
+// - - - - - - - - -
+
+// Assign CTA section H1 text
+let cta_h1 = document.querySelector(".cta-text h1");
+cta_h1.textContent = "DOM IS AWESOME";
+
+// Assign CTA section button text
+let cta_btn = document.querySelector(".cta-text button");
+cta_btn.textContent = "Get Started";
+
+// Assign CTA section image a src
+let cta_img = document.querySelector(".cta img");
+cta_img.setAttribute("src", siteContent.cta["img-src"]);
