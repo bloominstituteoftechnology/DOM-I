@@ -73,6 +73,9 @@ mainHeader.textContent = siteContent.cta["h1"];
 let btn = document.querySelector("button");
 btn.textContent = siteContent.cta["button"];
 
+mainHeader.style.whiteSpace = "pre";
+mainHeader.textContent = "DOM\n Is\n Awesome";
+
 //Middle Text
 
 let midTextTitle = document.querySelectorAll("h4");
@@ -90,4 +93,17 @@ midTextContent[2].textContent = siteContent["main-content"]["services-content"];
 midTextContent[3].textContent = siteContent["main-content"]["product-content"];
 midTextContent[4].textContent = siteContent["main-content"]["vision-content"];
 
+// Bottom Text
+
+let bottomTextTitle = document.querySelector(".contact h4");
+bottomTextTitle.textContent = siteContent["contact"]["contact-h4"];
+
+let bottomText = document.querySelectorAll(".contact p");
+bottomText[0].textContent = siteContent.contact["address"];
+bottomText[1].textContent = siteContent.contact["phone"];
+bottomText[2].textContent = siteContent.contact["email"];
+
 //footer
+
+let foot = document.querySelector("footer");
+foot.textContent = siteContent.footer["copyright"];
