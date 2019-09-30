@@ -39,4 +39,34 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+// adding the links dynamically
+let navItems = document.querySelectorAll('header nav a');
+for(let i = 0; i <= (navItems.length-1); i ++){
+  navItems[i].innerHTML = siteContent['nav'][`nav-item-${i+1}`];
+}
+// adding cta-text
+document.querySelector('.cta-text h1').innerHTML = "DOM<br> Is<br> Awesome";
+document.querySelector('.cta-text button').innerHTML = "Get Started";
+// adding cta-Image
+document.querySelector('.cta img').setAttribute('src', siteContent['cta']['img-src']);
+//adding text-Content
+let textContent = document.querySelectorAll('.text-content');
+
+textContent[0].children[0].innerHTML = siteContent['main-content']['features-h4'];
+textContent[0].children[1].innerHTML = siteContent['main-content']['features-content'];
+
+textContent[1].children[0].innerHTML = siteContent['main-content']['about-h4'];
+textContent[1].children[1].innerHTML = siteContent['main-content']['about-content'];
+//adding image
+document.getElementById('middle-img').src = siteContent['main-content']['middle-img-src'];
+
+textContent[2].children[0].innerHTML = siteContent['main-content']['services-h4'];
+textContent[2].children[1].innerHTML = siteContent['main-content']['services-content'];
+
+textContent[3].children[0].innerHTML = siteContent['main-content']['product-h4'];
+textContent[3].children[1].innerHTML = siteContent['main-content']['product-content'];
+
+textContent[4].children[0].innerHTML = siteContent['main-content']['vision-h4'];
+textContent[4].children[1].innerHTML = siteContent['main-content']['vision-content'];
