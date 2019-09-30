@@ -45,6 +45,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 document.querySelector("#cta-img").src = "img/header-img.png";
 document.querySelector("#middle-img").src = "img/mid-page-accent.jpg"
 document.querySelector("button").style.borderRadius = ".25rem"
+document.querySelector("button").style.marginRight = "4rem"
 document.querySelector("#middle-img").style.padding = "2% 0% 2% 0% "
 document.querySelector('h1').style.width = "100px"
 document.querySelector("h1").style.wordBreak = "normal"
@@ -89,7 +90,7 @@ nav3[3].textContent = ('src', siteContent['nav']['nav-item-4'])
 let nav4 = document.querySelectorAll('a');
 nav4[4].textContent = ('src', siteContent['nav']['nav-item-5']);
 let nav5 = document.querySelectorAll('a');
-nav5[5].textContent = "Contact";
+nav5[5].textContent = ('src', siteContent['nav']['nav-item-6'])
 const nav6 = document.createElement('a');
 const nav7 = document.createElement('a');
 nav6.textContent = "Links"
@@ -128,11 +129,17 @@ head5[4].textContent = ('src', siteContent["main-content"]["vision-h4"]);
 let head6 = document.querySelectorAll('h4');
 head6[5].textContent = ('src', siteContent["contact"]["contact-h4"])
 let para6 = document.querySelectorAll('p')
-para6[6].textContent = ('src', siteContent['contact']['address'])
-let para7 = document.querySelectorAll('p');
-para7[7].textContent = ('src', siteContent['contact']['email'])
-para7[7].style.lineHeight = "2"
+para6[5].textContent = ('src', siteContent['contact']['address'])
+let para7 = document.querySelectorAll('p')
+para7[6].textContent = ('src', siteContent['contact']['phone'] )
 let para8 = document.querySelectorAll('p');
-para8[8].textContent = ('src', siteContent['footer']['copyright'])
+para8[7].textContent = ('src', siteContent['contact']['email'])
+para8[7].style.lineHeight = "2"
+
+
+
+
+let para9 = document.querySelectorAll('p');
+para9[8].textContent = ('src', siteContent['footer']['copyright'])
 
 
