@@ -58,10 +58,12 @@ element.style.color = 'green';
 let navigationBar = document.querySelector('nav'); //Parent Element
 let newNavItem1 = document.createElement('a');  
 newNavItem1.textContent = 'Red'; 
+newNavItem1.style.color = 'Red';
 navigationBar.appendChild(newNavItem1); //End of Nav Bar
 
 let newNavItem2 = document.createElement('a') //New Nav Item
 newNavItem2.textContent = 'Blue'; 
+newNavItem2.style.color = 'Blue';
 navigationBar.prepend(newNavItem2); //Beginning of Nav Bar
 
 /* .cta section code */
