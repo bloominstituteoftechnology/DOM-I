@@ -117,3 +117,10 @@ let contact_ps = document.querySelectorAll(".contact p");
 contact_ps[0].textContent = siteContent.contact.address;
 contact_ps[1].textContent = siteContent.contact.phone;
 contact_ps[2].textContent = siteContent.contact.email;
+
+// FOOTER SECTION
+// - - - - - - - - - -
+
+// Assign Footer P  value
+let footer_p = document.querySelector("footer p");
+footer_p.textContent = siteContent.footer.copyright;
