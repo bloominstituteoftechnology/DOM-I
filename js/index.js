@@ -40,3 +40,47 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const headerNav = document.querySelectorAll("a");
+headerNav[0].textContent = siteContent.nav["nav-item-1"];
+
+headerNav[1].textContent = siteContent.nav["nav-item-2"];
+headerNav[2].textContent = siteContent.nav["nav-item-3"];
+headerNav[3].textContent = siteContent.nav["nav-item-4"];
+headerNav[4].textContent = siteContent.nav["nav-item-5"];
+headerNav[5].textContent = siteContent.nav["nav-item-6"];
+
+let domHeading = document.querySelector("h1");
+domHeading.textContent = siteContent.cta.h1;
+
+let customBtn = document.querySelector("button");
+customBtn.textContent = siteContent.cta.button;
+
+let codeSnippet = document.getElementById("cta-img");
+codeSnippet.setAttribute("src", siteContent.cta["img-src"]);
+
+let headingsList = document.querySelectorAll("h4");
+headingsList[0].textContent = siteContent["main-content"]["features-h4"];
+headingsList[1].textContent = siteContent["main-content"]["about-h4"];
+headingsList[2].textContent = siteContent["main-content"]["services-h4"];
+headingsList[3].textContent = siteContent["main-content"]["product-h4"];
+headingsList[4].textContent = siteContent["main-content"]["vision-h4"];
+
+let pTextList = document.querySelectorAll("p");
+pTextList[0].textContent = siteContent["main-content"]["features-content"];
+pTextList[1].textContent = siteContent["main-content"]["about-content"];
+pTextList[2].textContent = siteContent["main-content"]["services-content"];
+pTextList[3].textContent = siteContent["main-content"]["product-content"];
+pTextList[4].textContent = siteContent["main-content"]["vision-content"];
+
+let midImage = document.getElementById("middle-img");
+midImage.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+let contactList = document.querySelectorAll("h4");
+contactList[5].textContent = siteContent.contact["contact-h4"];
+
+let contactP = document.querySelectorAll("p");
+contactP[5].textContent = siteContent.contact["address"];
+contactP[6].textContent = siteContent.contact["phone"];
+contactP[7].textContent = siteContent.contact["email"];
+contactP[8].textContent = siteContent.footer["copyright"];
