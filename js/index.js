@@ -78,4 +78,5 @@ contact.children[1].innerText = siteContent['contact']['address'];
 contact.children[2].innerText = siteContent['contact']['phone'];
 contact.children[3].innerText = siteContent['contact']['email'];
 
-console.log(contact);
+let footer = document.querySelector('footer p');
+footer.innerText = siteContent['footer']["copyright"];
