@@ -55,6 +55,11 @@ navBar[3].textContent = siteContent["nav"]["nav-item-4"];
 navBar[4].textContent = siteContent["nav"]["nav-item-5"];
 navBar[5].textContent = siteContent["nav"]["nav-item-6"];
 
+const navBarGreen = document.querySelectorAll('a');
+navBarGreen.forEach(element => {
+  element.style.color = "green";
+})
+
 let h1 = document.querySelector("h1");
 h1.textContent = siteContent["cta"]["h1"];
 
@@ -82,7 +87,22 @@ p[5].textContent = siteContent["contact"]["address"];
 p[6].textContent = siteContent["contact"]["phone"];
 p[7].textContent = siteContent["contact"]["email"];
 
+//footer
+p[8].textContent = siteContent["footer"]["copyright"];
 
+//childAppend()
+const addNew = document.createElement('a');
+addNew.href = "#";
+addNew.textContent = "News";
+addNew.style.color = "green";
 
+const nav = document.querySelector('nav');
+nav.appendChild(addNew);
 
+//prepend()
+const addNew1 = document.createElement('a');
+addNew1.href = "#";
+addNew1.textContent = "Welcome";
+addNew1.style.color = "green";
 
+nav.prepend(addNew1);
