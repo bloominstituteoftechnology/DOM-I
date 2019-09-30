@@ -40,3 +40,106 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+document.querySelector("#cta-img").src = "img/header1.png";
+document.querySelector("#middle-img").src = "img/mid-page-accent.jpg"
+document.querySelector("button").style.borderRadius = ".25rem"
+document.querySelector("#middle-img").style.padding = "2% 0% 2% 0% "
+document.querySelector('h1').style.width = "100px"
+document.querySelector("h1").style.wordBreak = "normal"
+document.querySelector("h1").style.justifyContent= "center"
+document.querySelector("h1").style.marginRight= "50px"
+document.querySelector("h1").style.display = "flex"
+document.querySelector("h1").style.flexWrap = "wrap"
+
+
+document.querySelector(".contact").style.width = "11rem"
+
+
+
+
+
+
+
+
+
+const links = document.querySelectorAll('a');
+links.forEach((currentValue, i) => (currentValue.textContent = Object.values(siteContent.nav)[i]))
+links.forEach((item) => (item.style.color = 'green'));
+
+
+let header = document.querySelector("h1");
+header.textContent = ('src', siteContent["cta"]["h1"])
+
+let nav = document.querySelector("nav")
+
+
+
+let clicker = document.querySelector('button');
+clicker.textContent = ("Get Started")
+let nav0 = document.querySelectorAll('a');
+nav0[0].textContent = "Services"
+let nav1 = document.querySelectorAll('a');
+nav1[1].textContent = "Product"
+let nav2 = document.querySelectorAll('a');
+nav2[2].textContent = "Vison"
+let nav3 = document.querySelectorAll('a');
+nav3[3].textContent = "Features"
+let nav4 = document.querySelectorAll('a');
+nav4[4].textContent = "About";
+let nav5 = document.querySelectorAll('a');
+nav5[5].textContent = "Contact";
+const nav6 = document.createElement('a');
+const nav7 = document.createElement('a');
+nav6.textContent = "Links"
+nav7.textContent = "Events"
+nav.appendChild(nav6);
+nav6.style.color = 'green';
+nav.appendChild(nav7);
+nav7.style.color = 'green';
+
+
+
+
+let para1 = document.querySelectorAll('p');
+para1[0].textContent = ('src', siteContent["main-content"]["features-content"])
+let head1 = document.querySelectorAll('h4');
+head1[0].textContent = ('src', siteContent["main-content"]["features-h4"]);
+
+let para2 = document.querySelectorAll('p');
+para2[1].textContent = ('src', siteContent["main-content"]["about-content"])
+let head2= document.querySelectorAll('h4');
+head2[1].textContent = ('src', siteContent["main-content"]["about-h4"]);
+
+let para3 = document.querySelectorAll('p');
+para3[2].textContent = ('src', siteContent["main-content"]["services-content"])
+
+let head3= document.querySelectorAll('h4');
+head3[2].textContent = ('src', siteContent["main-content"]["services-h4"])
+
+let para4 = document.querySelectorAll('p');
+para4[3].textContent = ('src', siteContent["main-content"]["product-content"])
+let head4 = document.querySelectorAll('h4');
+head4[3].textContent = ('src', siteContent["main-content"]["product-h4"])
+
+let para5 = document.querySelectorAll('p');
+para5[4].textContent = ('src', siteContent["main-content"]["vision-content"])
+let head5 = document.querySelectorAll('h4');
+head5[4].textContent = ('src', siteContent["main-content"]["vision-h4"]);
+
+let head6 = document.querySelectorAll('h4');
+head6[5].textContent = ('src', siteContent["contact"]["contact-h4"])
+
+let para6 = document.querySelectorAll('p')
+para6[6].textContent = ('src', siteContent['contact']['address'])
+
+let para7 = document.querySelectorAll('p');
+para7[7].textContent = ('src', siteContent['contact']['email'])
+para7[7].style.lineHeight = "2"
+
+
+let para8 = document.querySelectorAll('p');
+para8[8].textContent = "Copyright Great Idea! 2018"
+
+
