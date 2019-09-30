@@ -124,3 +124,13 @@ contact_ps[2].textContent = siteContent.contact.email;
 // Assign Footer P  value
 let footer_p = document.querySelector("footer p");
 footer_p.textContent = siteContent.footer.copyright;
+
+// STRETCH
+
+let h4_titles = document.querySelectorAll("h4");
+h4_titles.forEach(title => {
+  title.style.fontSize = "1.33rem";
+});
+
+middle_img.style.paddingTop = "2rem";
+middle_img.style.paddingBottom = "2rem";
