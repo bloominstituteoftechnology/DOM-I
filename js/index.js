@@ -65,6 +65,13 @@ topNav[3].textContent = siteContent.nav["nav-item-4"];
 topNav[4].textContent = siteContent.nav["nav-item-5"];
 topNav[5].textContent = siteContent.nav["nav-item-6"];
 
+let links = document.querySelectorAll("a");
+
+links.forEach(element => {
+  element.style.color = "blue";
+  element.style.fontStyle = "bold";
+});
+
 //Header Text
 
 let mainHeader = document.querySelector("h1");
@@ -73,8 +80,11 @@ mainHeader.textContent = siteContent.cta["h1"];
 let btn = document.querySelector("button");
 btn.textContent = siteContent.cta["button"];
 
+btn.style.color = "blue";
+
 mainHeader.style.whiteSpace = "pre";
 mainHeader.textContent = "DOM\n Is\n Awesome";
+mainHeader.style.color = "blue";
 
 //Middle Text
 
@@ -103,7 +113,11 @@ bottomText[0].textContent = siteContent.contact["address"];
 bottomText[1].textContent = siteContent.contact["phone"];
 bottomText[2].textContent = siteContent.contact["email"];
 
+bottomTextTitle.style.color = "blue";
+
 //footer
 
 let foot = document.querySelector("footer");
 foot.textContent = siteContent.footer["copyright"];
+
+foot.style.color = "blue";
