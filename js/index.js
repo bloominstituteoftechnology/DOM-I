@@ -50,6 +50,26 @@ headerNav[3].textContent = siteContent.nav["nav-item-4"];
 headerNav[4].textContent = siteContent.nav["nav-item-5"];
 headerNav[5].textContent = siteContent.nav["nav-item-6"];
 
+headerNav.forEach(nav => {
+  nav.style.color = "green"
+})
+
+let newA = document.createElement("a")
+newA.href = "#";
+newA.style.color = "green";
+newA.textContent = "Free";
+
+let newerA = document.createElement("a")
+newerA.href = "#";
+newerA.style.color = "green";
+newerA.textContent = "Stuff";
+
+let newNav = document.querySelector("nav");
+newNav.prepend(newA);
+
+let newerNav = document.querySelector("nav");
+newerNav.appendChild(newerA);
+
 let domHeading = document.querySelector("h1");
 domHeading.textContent = siteContent.cta.h1;
 
