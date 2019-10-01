@@ -92,7 +92,9 @@ ctaBtn.textContent = siteContent['cta']['button'];
 ctaImage.setAttribute('src', siteContent['cta']['img-src']);
 
 //!GOT STUCK on .topcontent
-//was trying to use css combinators > + ~ to send in the JSON data in a particular order but I relized I could just create a nodelist for each element type and send the data in by specifying the nodelist item like I did in nav
+// was trying to use css combinators > + ~ to import JSON data according to combinators
+// but realized I could just create a nodelist for each element type 
+// and import the data by specifying the nodelist item like I did in nav
 
 topContentH4[0].textContent = siteContent['main-content']['features-h4'];
 topContentH4[1].textContent = siteContent['main-content']['about-h4'];
@@ -123,12 +125,12 @@ footerP.textContent = siteContent['footer']['copyright'];
 
 //* Task 3: Add new content, Change the color of the navigation text to be green. Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system.
 
-navItems[0].style.color = "palegreen";
-navItems[1].style.color = "palegreen";
-navItems[2].style.color = "palegreen";
-navItems[3].style.color = "palegreen";
-navItems[4].style.color = "palegreen";
-navItems[5].style.color = "palegreen";
+navItems[0].style.color = "salmon";
+navItems[1].style.color = "salmon";
+navItems[2].style.color = "salmon";
+navItems[3].style.color = "salmon";
+navItems[4].style.color = "salmon";
+navItems[5].style.color = "salmon";
 
 
 const navItemList = document.querySelector( 'header nav')
@@ -139,9 +141,9 @@ newNavItem1.style.textDecoration = 'none';
 newNavItem1.style.color = "palegreen";
 navItemList.prepend(newNavItem1);
 
-const newNaveItem2 = document.createElement('a');
-newNavItem1.textContent = 'Team';
-newNavItem1.setAttribute('href', '#')
-newNavItem1.style.textDecoration = 'none';
-newNavItem1.style.color = "palegreen";
-navItemList.appendChild(newNavItem1);
+const newNavItem2 = document.createElement('a');
+newNavItem2.textContent = 'Team';
+newNavItem2.setAttribute('href', '#')
+newNavItem2.style.textDecoration = 'none';
+newNavItem2.style.color = "palegreen";
+// navItemList.appendChild(newNavItem2);
