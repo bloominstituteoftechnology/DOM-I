@@ -54,7 +54,6 @@ logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
 ///NAVIGATION
 const navItems = document.querySelectorAll("a");
-
 navItems[0].textContent = siteContent["nav"]["nav-item-1"];
 navItems[1].textContent = siteContent["nav"]["nav-item-2"];
 navItems[2].textContent = siteContent["nav"]["nav-item-3"];
@@ -136,5 +135,28 @@ const footer = document.querySelectorAll("footer p");
 footer.textContent = siteContent["footer"]["copyright"]
 
 navItems.forEach(function(nav){
-  nav.style.color = 'green'
+  nav.style.color = "green"
   });
+
+// navItems.appendChild(function(nav) {
+  
+// })
+
+// const newLinks = document.createElement("nav");
+
+// newLinks.textContent = "link"
+// d
+// navItems.append(newLink);
+
+// navItems.appendChild(lastNav);
+// navitems.prependChild(firstNav);
+// 
+const newNav1 = document.createElement("a");
+const newNav2 = document.createElement("a");
+newNav1.href = "#";
+newNav2.href = "#";
+newNav1.textContent = "pre";
+newNav2.textContent = "append";
+const newNav = document.querySelector("header nav");
+newNav.prepend(newNav1);
+newNav.appendChild(newNav2);
