@@ -11,16 +11,16 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 
 **Follow these steps to set up and work on your project:**
 
-* [ ] Create a forked copy of this project.
-* [ ] Add your project manager as collaborator on Github.
-* [ ] Clone your OWN version of the repository (Not Lambda's by mistake!).
-* [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-* [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-* [ ] Push commits: git push origin `<firstName-lastName>`.
+* [x ] Create a forked copy of this project.
+* [x ] Add your project manager as collaborator on Github.
+* [ x] Clone your OWN version of the repository (Not Lambda's by mistake!).
+* [x ] Create a new branch: git checkout -b `<firstName-lastName>`.
+* [x ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+* [x ] Push commits: git push origin `<firstName-lastName>`.
 
 **Follow these steps for completing your project.**
 
-* [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo). **Please don't merge your own pull request**
+* [ x] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo). **Please don't merge your own pull request**
 * [ ] Add your project manager as a reviewer on the pull-request
 * [ ] Your project manager will count the project as complete by merging the branch back into master.
 
@@ -34,9 +34,9 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 * [ ] Remember to update the src attributes on images
 
 ## Task 3: Add new content
-* [ ] Change the color of the navigation text to be green.
-* [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
-* [ ] Check your work by looking at the [original html](original.html) in the browser
+* [ x] Change the color of the navigation text to be green.
+* [ x] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
+* [x ] Check your work by looking at the [original html](original.html) in the browser
 
 ## Stretch Goals
 * [ ] Update styles throughout the page as you see fit.  Study what happens when you updated the DOM using style in JavaScript.  
