@@ -118,4 +118,23 @@ bottomContenth43.textContent = siteContent["main-content"]["vision-h4"];
 const bottomContentP3 = document.querySelectorAll(".bottom-content .text-content p")[2];
 bottomContentP3.textContent = siteContent["main-content"]["vision-content"];
 
+///CONTACT
 
+const contacth4 = document.querySelectorAll(".contact h4")[0];
+contacth4.textContent = siteContent["contact"]["contact-h4"]
+
+const contactP = document.querySelectorAll(".contact p")[0];
+contactP.textContent = siteContent["contact"]["address"]
+
+const contactP2 = document.querySelectorAll(".contact p")[1];
+contactP2.textContent = siteContent["contact"]["phone"]
+
+const contactP3 = document.querySelectorAll(".contact p")[2];
+contactP3.textContent = siteContent["contact"]["email"]
+
+const footer = document.querySelectorAll("footer p");
+footer.textContent = siteContent["footer"]["copyright"]
+
+navItems.forEach(function(nav){
+  nav.style.color = 'green'
+  });
