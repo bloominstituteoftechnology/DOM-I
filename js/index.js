@@ -64,27 +64,46 @@ header.textContent = siteContent["cta"]["h1"];
 const headerCta = document.querySelector("button");
 headerCta.textContent = siteContent["cta"]["button"];
 
-const titles = document.querySelectorAll(".text-content h4");
-console.log(titles);
+const topContent = document.querySelectorAll(".text-content h4");
+console.log(topContent);
 
-for (let i = 0; i < titles.length; i++) {
+// let titleArray = []
+// titleArray.push(titles);
+
+for (let i = 0; i < topContent.length; i++) {
   if (i % 2 == 0) {
-    titles[i].textContent = siteContent["main-content"]["features-h4"];
+    topContent[i].textContent = siteContent["main-content"]["features-h4"];
   } else {
-    titles[i].textContent = siteContent["main-content"]["about-h4"];
+    topContent[i].textContent = siteContent["main-content"]["about-h4"];
   }
 }
 
 const midImg = document.getElementById("middle-img");
 midImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
-const content = document.querySelectorAll(".text-content p");
-console.log(content);
-
-for (let i = 0; i < content.length; i++) {
+const btmContent = document.querySelectorAll(".text-content p");
+console.log(btmContent);
+for (let i = 0; i < btmContent.length; i++) {
   if (i % 2 == 0) {
-    content[i].textContent = siteContent["main-content"]["features-content"];
+    btmContent[i].textContent = siteContent["main-content"]["features-content"];
   } else {
-    content[i].textContent = siteContent["main-content"]["about-content"];
+    btmContent[i].textContent = siteContent["main-content"]["about-content"];
   }
 }
+
+const contact = document.querySelectorAll(".contact p");
+console.log(contact);
+for (let i = 1; i < contact.length; i++) {
+  if (i == 1) {
+    contact[i].textContent = siteContent["contact"]["address"];
+  } else if (i == 2) {
+    contact[i].textContent = siteContent["contact"]["phone"];
+  } else {
+    contact[i].textContent = siteContent["contact"]["email"];
+  }
+}
+
+const footer = document.querySelector("footer p");
+console.log(footer);
+
+footer.textContent = siteContent["footer"]["copyright"];
