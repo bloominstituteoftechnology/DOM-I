@@ -56,7 +56,7 @@ for (let i = 0; i < navbar.length; i++) {
 let ctaText = document.querySelector(".cta-text h1");
 ctaText.innerHTML = "DOM <br> IS<br>AWESOME";
 document.querySelector(".cta-text button").textContent = siteContent["cta"]["button"];
-let ctaImg = document.querySelector("#cta-img");
+let ctaImg = document.getElementById("cta-img");
 ctaImg.src = "img/header-img.png";
 
 // Features
@@ -68,7 +68,7 @@ document.querySelector(".text-content:nth-child(2) h4").textContent = siteConten
 document.querySelector(".text-content:nth-child(2) p").textContent = siteContent["main-content"]["about-content"];
 
 // Middle Image
-let middleImage = document.querySelector("#middle-img");
+let middleImage = document.getElementById("middle-img");
 middleImage.src = "img/mid-page-accent.jpg";
 
 // Services
