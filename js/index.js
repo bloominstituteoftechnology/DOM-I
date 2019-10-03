@@ -86,3 +86,5 @@ console.log(greenNav2)
 //greenNav2.style.color = "green";
 greenNav2.forEach(item => item.style.color = 'green');
 //I can't see why this didn't work. The selection is correct. It is reading as undefined.
+newNav.forEach(item => item.style.color = 'green');
+//this worked because the selector was wrong- I was trying to to select something that wasn't there.
