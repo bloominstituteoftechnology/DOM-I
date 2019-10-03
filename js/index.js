@@ -43,7 +43,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //Try working on the nav bar first
 const newNav = document.querySelectorAll('a');
-newNav[0].textContent = "Services";
+newNav[0].textContent = siteContent["nav"]["nav-item-1"];
 newNav[1].textContent = "Product";
 newNav[2].textContent = "Vision";
 newNav[3].textContent = "Features";
