@@ -40,3 +40,107 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+
+
+const mainContent= document.querySelector('.main-content')
+// console.log(mainContent.textContent)
+
+mainContent.textContent= "NO, NO, NO"
+
+// =====================================
+
+const header = document.getElementById("cta-img");
+header.setAttribute('src', siteContent["cta"]["img-src"])
+
+
+const h4Left= document.querySelector('h4');
+h4Left.textContent = "Hello";
+
+
+
+
+
+
+const menuItem = document.querySelectorAll('nav');
+console.log(menuItem)
+menuItem.textContent= "Hello"
+
+
+
+
+
+
+// const email =document.querySelector("site-content p:nth-child(4)")
+// contactP3.textContent= "sales@gmail.com";
+
+
+// ------------ WORKS     WORKS     WORKS ------------------
+const contactP3 =document.querySelector(".contact p:nth-child(4)")
+contactP3.textContent= "1 (888) 888-8888";
+// ------------ WORKS     WORKS     WORKS ------------------
+const contactP2 =document.querySelector(".contact p:nth-child(3)")
+contactP2.textContent= "Somewhere, USA"
+
+// ------------ WORKS     WORKS     WORKS ------------------
+const contactP1 =document.querySelector(".contact p:nth-child(2)")
+contactP1.textContent= "123 Way 456 Street ";
+
+// ------------ WORKS     WORKS     WORKS ------------------
+const contactH4 =document.querySelector(".contact h4")
+contactH4.textContent=  " Contact ";
+
+// ------------ WORKS     WORKS     WORKS ------------------
+const ctaButton= document.querySelector(".cta button")
+ctaButton.textContent=      "Get Started"
+
+// ------------ WORKS     WORKS     WORKS ------------------
+const cta= document.querySelector(".cta h1")
+cta.textContent=     "DOM Is Awesome"
+
+// ------------ WORKS     WORKS     WORKS ------------------
+const footer = document.querySelector('footer')
+footer.textContent=  "Copyright Great Idea! 2018"
+
+// ------------ WORKS     WORKS     WORKS ------------------
+const email =document.querySelector("site-content p:nth-child(8)")
+contactP3.textContent= "sales@gmail";
+
+// // ------------ WORKS     WORKS     WORKS ------------------
+const ctaImg= document.querySelector("#cta-img")
+ctaImg.src = 'img/header-img.png';
+
+// ------------ WORKS     WORKS     WORKS ------------------
+const headerH1= document.querySelector('h1')
+headerH1.style.color= "red";
+
+
+
+
+
+
+
+
+const midImg= document.querySelector('.middle-img')
+midImg.src = '/Users/TimGrey/DOM-I/img/mid-page-accent.jpg';
+
+
+
+
+//                     NOTE  NOT WORKING        NOT WORKING       NOT WORKING       NOTWORKING
+// let ctaImg = document.querySelector("#cta-img");
+// ctaImg.setAttribute=  "img/header-img.png"
+// -------------------------------------------------------------
+// const midImg= document.querySelector(".middle-img")
+// midImg.setAttribute= ("src", "/Users/TimGrey/DOM-I/img/mid-page-accent.jpg");
+// console.log(midImg)
+
+// -------------------------------------------------------------
+// const contactP2 =document.querySelector("p")
+// contactP2.textContent= "1 (888) 888-8888";
+
+
+// const textContent1= document.querySelectorAll(".top-content ")
+// console.log(textContent1)
+
