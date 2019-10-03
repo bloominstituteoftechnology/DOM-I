@@ -40,9 +40,9 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
-
+// end Example
 const nav = document.querySelector('nav')
-const aTag = document.querySelector('nav').querySelectorAll('a');
+const aTag = document.querySelectorAll("nav a")
 
 aTag.forEach(element => {
    element.style.color = 'green'
@@ -55,22 +55,24 @@ aTag.forEach(element => {
   var node2 = document.createElement("a");
   var textNode2 = document.createTextNode("Classic");
   node2.appendChild(textNode2);
- 
-  document.querySelector('nav').prepend(node2);
+ node2.style.color = "green"
+ node.style.color = "green"
+  document.querySelector('nav').appendChild(node2).id = "revert";
   let invert = document.getElementById('invert')
 // let revert = document.getElementById("revert").style.display = "none"
 
   invert.addEventListener('click', ()=>{
      document.querySelector('*').style.color = "white"
      document.querySelector("*").style.backgroundColor = "black"
-     
+       addEventListener('click', ()=>{
+            
+       } )
      
   })
   
-//   revert.addEventListener('click', ()=>{
-//     document.querySelector('*').style.color = "black"
-//     document.querySelector("*").style.backgroundColor = "white"
-//  })
+  revert.addEventListener('click', ()=>{
+  revert.setAttribute("href", "index.html")
+ })
  
 aTag[0].textContent = siteContent["nav"]["nav-item-1"];
 aTag[1].textContent = siteContent["nav"]["nav-item-2"];
