@@ -37,6 +37,32 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
+// Update Logo img
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.src = 'img/logo.png';
+
+// Update Header img
+let cta_logo = document.getElementById("cta-img");
+cta_logo.src = 'img/header-img.png';
+
+
+// Add a links to navbar
+let nav = document.querySelector('nav');
+
+const navWords = ['Services', 'Product', 'Vision', 'Features', 'About', 'Contact'];
+navWords.forEach(word => {
+  let aTag = document.createElement('a');
+  aTag.textContent = word;
+  nav.append(aTag);
+})
+
+// Add CTA section
+let cta_text = document.querySelector('h1');
+cta_text.innerHTML = siteContent.cta.h1.split(' ').join('<br>');
+
+// Add CTA button
+let cta_button = document.querySelector('button');
+cta_button.innerHTML = 'Get Started';
+
+
+
