@@ -38,15 +38,77 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+let $logo = document.getElementById("logo-img");
+$logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+//Image DOMs
+const $ctaImg2 = document.querySelector('#cta-img');
+$ctaImg2.setAttribute('src',siteContent["cta"]["img-src"]);
+
+const $middleImg2 = document.querySelector('.middle-img');
+$middleImg2.setAttribute('src',siteContent["main-content"]["middle-img-src"]);
+
+//NAV
+const $aTags = document.querySelectorAll('a');
+const $navTag = document.querySelectorAll('nav a');
+let navIndex = 0;
+for (let prop in siteContent.nav){
+  if (navIndex > $navTag.length-1){
+    continue;
+  }
+  $navTag[navIndex].textContent += siteContent.nav[prop];
+  navIndex++;
+}
+
+const $newAtag = document.createElement('a');
+$newAtag.textContent = 'Link1';
+$aTags.prepend($newAtag);
 
 
-const ctaImg2 = document.querySelector('#cta-img');
-ctaImg2.src="img/header-img.png";
 
-const middleImg2 = document.querySelector('.middle-img');
-middleImg2.src ="img/mid-page-accent.jpg";
+// const nav = document.querySelectorAll('a');
+// nav.style.color ='green';
 
-const nav = document.querySelector('nav');
-nav.style.color('green');
+
+//CTA
+const $ctaH1 = document.querySelector('.cta-text h1');
+$ctaH1.textContent = siteContent.cta.h1;
+const $ctaButton = document.querySelector('.cta-text button');
+$ctaButton.textContent = siteContent.cta.button;
+
+//top-content
+const $textContentH4 = document.querySelectorAll('.text-content h4');
+const $textContentP = document.querySelectorAll('.text-content p');
+$textContentH4[0].textContent = siteContent["main-content"]["features-h4"];
+$textContentH4[1].textContent = siteContent["main-content"]["about-h4"];
+$textContentP[0].textContent = siteContent["main-content"]["features-content"];
+$textContentP[1].textContent = siteContent["main-content"]["about-content"];
+
+//bottom-content
+
+const $bottomTextContentH4 = document.querySelectorAll('.bottom-content .text-content h4');
+const $bottomTextContentP = document.querySelectorAll('.bottom-content .text-content p');
+$bottomTextContentH4[0].textContent = siteContent["main-content"]["services-h4"];
+$bottomTextContentH4[1].textContent = siteContent["main-content"]["product-h4"];
+$bottomTextContentH4[2].textContent = siteContent["main-content"]["vision-h4"];
+$bottomTextContentP[0].textContent = siteContent["main-content"]["services-content"];
+$bottomTextContentP[1].textContent = siteContent["main-content"]["product-content"];
+$bottomTextContentP[2].textContent = siteContent["main-content"]["vision-content"];
+
+//contact
+// const contactGI = siteContent;
+// let address = contactGI.address.split(" ");
+// address.splice(4,0,"<br/>");
+// address = address.join(" ");
+// contactGI.address = address;
+
+const $contactH4 = document.querySelector('.contact h4');
+const $contactP = document.querySelectorAll('.contact p');
+$contactH4.textContent = siteContent.contact["contact-h4"];
+$contactP[0].textContent = siteContent.contact.address;
+$contactP[1].textContent = siteContent.contact.phone;
+$contactP[2].textContent = siteContent.contact.email;
+
+//footer
+const $footer = document.querySelector('footer p');
+$footer.textContent = siteContent.footer.copyright;
