@@ -43,22 +43,20 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 const nav1 = document.querySelectorAll('nav a');
+
 nav1.forEach((value, index) => {
   value.innerHTML = siteContent.nav[`nav-item-${index + 1}`]
 });
 nav1.forEach(param => param.style.color = 'green');
 
-const nav7 = document.createElement('a');
-const welcome = document.querySelector('nav');
-welcome.prepend(nav7);
-nav7.innerText = "Welcome";
-nav7.style.color = 'green';
+const newLink = document.createElement('a');
+const addNav = document.querySelector('nav');
 
-const nav8 = document.createElement('a');
-const closing = document.querySelector('nav');
-closing.append(nav8);
-nav8.innerText = "Goodbye";
-nav8.style.color = 'green';
+addNav.prepend(newLink.setAttribute('href', 'Welcome'));
+addNav.append(newLink.innerText = "Goodbye")
+newLink.style.color = "green";
+
+
 
 //CTA
 const shout = document.querySelector('h1');
@@ -75,12 +73,12 @@ ctaImg.setAttribute('src', siteContent['cta']['img-src'])
 let midImg = document.getElementById('middle-img');
 midImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
 
-const headers = document.querySelectorAll('h4');
-headers[0].innerText = siteContent["main-content"]["features-h4"];
-headers[1].innerText = siteContent["main-content"]["about-h4"];
-headers[2].innerText = siteContent["main-content"]["services-h4"];
-headers[3].innerText = siteContent["main-content"]["product-h4"];
-headers[4].innerText = siteContent["main-content"]["vision-h4"];
+// const headers = document.querySelectorAll('h4');
+// headers[0].innerText = siteContent["main-content"]["features-h4"];
+// headers[1].innerText = siteContent["main-content"]["about-h4"];
+// headers[2].innerText = siteContent["main-content"]["services-h4"];
+// headers[3].innerText = siteContent["main-content"]["product-h4"];
+// headers[4].innerText = siteContent["main-content"]["vision-h4"];
 
 const contents = document.querySelectorAll('p');
 contents[0].innerText = siteContent["main-content"]["features-content"];
@@ -102,7 +100,7 @@ contents[8].innerText = siteContent.footer.copyright;
 
 
 
-const mainH4 = document.getElementsByTagName('h4');
+const mainH4 = document.querySelectorAll('h4');
 mainH4.forEach((value, index) => {
   value.textContent = siteContent.main-content[`${index + 1}-h4`]
 });
