@@ -48,6 +48,7 @@ const navArr = Array.from(nav);
 for (let i = 0; i < navArr.length; i++) {
   const navLinks = `nav-item-${i+1}`;
   navArr[i].innerHTML = siteContent["nav"][navLinks];
+  navArr[i].style.color = "green";
 };
 
 //cta content
@@ -55,7 +56,7 @@ const ctaH1 = document.querySelector(".cta-text h1"); //console.log(ctaH1);
 const ctaBtn = document.querySelector(".cta-text button"); //console.log(ctaBtn);
 const ctaImg = document.querySelector("#cta-img"); //console.log(ctaImg);
 
-ctaH1.innerHTML = siteContent["cta"]["h1"];
+ctaH1.innerHTML = siteContent["cta"]["h1"].split(" ").join("<br>");
 ctaBtn.innerHTML = siteContent["cta"]["button"];
 ctaImg.src = siteContent["cta"]["img-src"];
 
@@ -93,3 +94,18 @@ contactP[2].innerHTML = siteContent["contact"]["email"];
 
 const footerP = document.querySelector("footer");
 footerP.innerHTML = siteContent["footer"]["copyright"];
+
+//new items added to navigation
+
+const navNewLinks = document.getElementsByTagName("nav");
+      
+const newFirstLink = document.createElement("a");
+newFirstLink.style.marginRight = "0px";
+newFirstLink.innerHTML = "Prepended";
+
+const newLastLink = document.createElement("a");
+newLastLink.style.marginLeft = "0px";
+newLastLink.innerHTML = "Appended";
+
+navNewLinks[0].prepend(newFirstLink);
+navNewLinks[0].appendChild(newLastLink);
