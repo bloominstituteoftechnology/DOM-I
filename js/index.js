@@ -38,31 +38,75 @@ const siteContent = {
 };
 
 // Update Logo img
-let logo = document.getElementById("logo-img");
-logo.src = 'img/logo.png';
+let logo = document.querySelector("#logo-img");
+logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
 // Update Header img
-let cta_logo = document.getElementById("cta-img");
-cta_logo.src = 'img/header-img.png';
+let cta_logo = document.querySelector("#cta-img");
+cta_logo.setAttribute("src", siteContent["cta"]["img-src"]);
 
+// Update Middle img
+let middle_img = document.querySelector("#middle-img");
+middle_img.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+                                                                                                                                                      
 
 // Add a links to navbar
-let nav = document.querySelector('nav');
+const navLinks = document.querySelectorAll('nav a');
 
-const navWords = ['Services', 'Product', 'Vision', 'Features', 'About', 'Contact'];
-navWords.forEach(word => {
-  let aTag = document.createElement('a');
-  aTag.textContent = word;
-  nav.append(aTag);
-})
+for (let i = 0; i <navLinks.length; i++) {
+  navLinks[i].id = `nav-item-${i + 1}`;
+  navLinks[i].innerHTML = siteContent["nav"][`nav-item-${i + 1}`];
+}
 
 // Add CTA section
-let cta_text = document.querySelector('h1');
-cta_text.innerHTML = siteContent.cta.h1.split(' ').join('<br>');
+let cta_text = document.querySelector('.cta-text h1');
+cta_text.innerHTML = siteContent["cta"]["h1"];
 
 // Add CTA button
-let cta_button = document.querySelector('button');
-cta_button.innerHTML = 'Get Started';
+let cta_button = document.querySelector('.cta-text button');
+cta_button.innerHTML = siteContent["cta"]["button"];
 
+// Add h4-content
+let featuresContent = document.querySelectorAll('.main-content .text-content h4');
+featuresContent[0].textContent = siteContent['main-content']['features-h4'] ;
+featuresContent[1].textContent = siteContent['main-content']['about-h4'] ;
+featuresContent[2].textContent = siteContent['main-content']['services-h4'] ;
+featuresContent[3].textContent = siteContent['main-content']['product-h4'] ;
+featuresContent[4].textContent = siteContent['main-content']['vision-h4'] ;
 
+// Add p-content
+let featuresContentP = document.querySelectorAll('.main-content .text-content p');
+featuresContentP[0].textContent = siteContent['main-content']['features-content'] ;
+featuresContentP[1].textContent = siteContent['main-content']['about-content'] ;
+featuresContentP[2].textContent = siteContent['main-content']['services-content'] ;
+featuresContentP[3].textContent = siteContent['main-content']['product-content'] ;
+featuresContentP[4].textContent = siteContent['main-content']['vision-content'] ;
 
+// Add contact
+let contactItems = document.querySelector(".contact h4");
+contactItems.textContent = siteContent.contact["contact-h4"];
+
+let contactItemsP = document.querySelectorAll(".contact p");
+contactItemsP[0].innerHTML = siteContent.contact["address"];
+contactItemsP[1].textContent = siteContent.contact["phone"];
+contactItemsP[2].textContent = siteContent.contact["email"];
+
+// Add footer
+let footer = document.querySelector("footer p");
+footer.textContent = siteContent.footer["copyright"];
+
+//Add extra nav and colors
+let navSelect = document.querySelector("nav");
+
+let firstNavA = document.createElement("a");
+firstNavA.setAttribute('href', '#');
+firstNavA.innerText = "Hello";
+navSelect.prepend(firstNavA);
+
+let lastNavA = document.createElement("a");
+lastNavA.setAttribute('href', '#');
+lastNavA.innerText = "World";
+navSelect.append(lastNavA);
+
+let colorChange = navSelect.querySelectorAll("a");
+colorChange.forEach(a => a.style.color = "red");
