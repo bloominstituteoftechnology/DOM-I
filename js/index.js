@@ -41,12 +41,24 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
+
+/* Nav */
+
 let nav = document.querySelectorAll('nav a');
 
 nav.forEach(item => item.style = 'color: #15840D');
 for (let i=0; i<nav.length; i++) {
   nav[i].textContent = siteContent.nav[`nav-item-${i+1}`];
 }
+
+var navParent = document.querySelector('nav');
+var newTag = document.createElement('a');
+newTag.innerHTML = 'Q&A';
+newTag.style = 'color: #15840D';
+navParent.appendChild(newTag);
+
+
+/*Images */
 
 let greatIdea = document.querySelector('.logo');
 greatIdea.src = "img/logo.png";
@@ -56,3 +68,60 @@ ctaImage.src = "img/header-img.png";
 
 let middleImage = document.querySelector('.middle-img');
 middleImage.src = "img/mid-page-accent.jpg";
+
+let paragraphTag = document.getElementsByTagName('p');
+
+for (let i = 0; i < paragraphTag.length; i++) {
+  paragraphTag[i].textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+}
+
+
+/* Section 1 */
+
+let domIsAwesome = document.querySelectorAll('.cta-text h1');
+for (let i = 0; i < domIsAwesome.length; i++) {
+  domIsAwesome[i].textContent = "DOM Is Awesome";
+}
+
+let button = document.querySelectorAll('.cta-text button');
+for (let i = 0; i < button.length; i++) {
+  button[i].textContent = "Get Started";
+}
+
+
+/* Section 2 */
+
+let features = document.querySelectorAll(".text-content h4");
+
+
+
+/* Contact */
+
+let contact = document.querySelectorAll(".contact p");
+console.log(contact);
+
+for (let i = 0; i < contact.length; i++) {
+ if ( i === 0 ) {
+   contact[ i ].textContent = siteContent.contact.address;
+ }
+ if ( i === 1 ) {
+  contact[ i ].textContent = siteContent.contact.phone;
+  } 
+  if ( i === 2 ) {
+  contact[ i ].textContent = siteContent.contact.email;
+  }
+}
+
+let contactHeader = document.querySelectorAll(".contact h4");
+
+for (let i = 0; i < contactHeader.length; i++) {
+  contactHeader[i].textContent = "Contact";
+}
+
+
+/* Footer */
+
+let footer = document.querySelectorAll("footer p");
+for (let i = 0; i < footer.length; i++) {
+  footer[i].textContent = "Copyright Great Idea! 2018";
+}
