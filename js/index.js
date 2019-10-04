@@ -57,6 +57,11 @@ newTag.innerHTML = 'Q&A';
 newTag.style = 'color: #15840D';
 navParent.appendChild(newTag);
 
+var navParentTag = document.querySelector('nav');
+var navTag = document.createElement('a');
+navTag.innerHTML = 'FAQ';
+navTag.style = 'color: #15840D';
+navParent.prepend(navTag);
 
 /*Images */
 
@@ -91,9 +96,29 @@ for (let i = 0; i < button.length; i++) {
 
 /* Section 2 */
 
-let features = document.querySelectorAll(".text-content h4");
+let mainContent = document.querySelectorAll(".top-content h4");
+console.log(mainContent);
+for (let i = 0; i < mainContent.length; i++) {
+  if ( i == 0) {
+    mainContent[i].textContent = "Features";
+  }
+  if ( i == 1) {
+    mainContent[i].textContent = "About";
+  }
+}
 
-
+let bottomContent = document.querySelectorAll(".bottom-content h4");
+for (let i = 0; i < bottomContent.length; i++) {
+  if ( i === 0) {
+    bottomContent[i].textContent = "Services";
+  }
+  if ( i === 1) {
+    bottomContent[i].textContent = "Product";
+  }
+  if ( i === 2) {
+    bottomContent[i].textContent = "Vision";
+  }
+}
 
 /* Contact */
 
