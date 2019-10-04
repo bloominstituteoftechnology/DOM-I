@@ -14,9 +14,9 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 * [x] Create a forked copy of this project.
 * [x] Add your project manager as collaborator on Github.
 * [x] Clone your OWN version of the repository (Not Lambda's by mistake!).
-* [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-* [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-* [ ] Push commits: git push origin `<firstName-lastName>`.
+* [x] Create a new branch: git checkout -b `<firstName-lastName>`.
+* [x] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+* [x] Push commits: git push origin `<firstName-lastName>`.
 
 **Follow these steps for completing your project.**
 
@@ -25,7 +25,7 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 * [ ] Your project manager will count the project as complete by merging the branch back into master.
 
 ## Task 1: Create selectors to point your data into elements
-* [ ] Create selectors by using any of the DOM element's methods
+* [x] Create selectors by using any of the DOM element's methods
 * [ ] Note that IDs have been used on all images.  Use the IDs to update src path content
 
 ## Task 2: Update the HTML with the JSON data
@@ -34,7 +34,7 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 * [ ] Remember to update the src attributes on images
 
 ## Task 3: Add new content
-* [ ] Change the color of the navigation text to be green.
+* [x] Change the color of the navigation text to be green.
 * [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
 * [ ] Check your work by looking at the [original html](original.html) in the browser
 
