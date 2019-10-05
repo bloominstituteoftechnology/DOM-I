@@ -40,3 +40,49 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//  navbar
+
+const navbar = document.querySelectorAll('a')
+
+navbar.forEach((val, i )=> val.textContent = siteContent.nav [`nav-item-${i +1}`])
+// navbar[0].textContent = siteContent.nav['nav-item-1']
+// navbar[1].textContent = siteContent.nav['nav-item-2']
+// navbar[2].textContent = siteContent.nav['nav-item-3'] 
+// navbar[3].textContent = siteContent.nav['nav-item-4']
+// navbar[4].textContent = siteContent.nav['nav-item-5']
+// navbar[5].textContent = siteContent.nav['nav-item-6']
+
+
+
+
+// title
+
+const header = document.querySelector('.cta-text h1');
+
+header.textContent = siteContent.cta['h1'];
+
+//  Button
+
+const button = document.querySelector('.cta-text button');
+
+button.textContent = siteContent.cta['button'];
+
+
+// header-img
+let headImg = document.getElementById("cta-img");
+headImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+
+// feature-header
+const featureHead = document.querySelector('.features-text h4');
+featureHead.textContent = siteContent.features['h4'];
+
+// const featureText = document.querySelector('cta-text features-content')
+// featureText.textContent = siteContent.cta[]
+
+// append child example
+// const navbarParent = document.querySelector('nav');
+// const hello = document.createElement('a');
+// hello.textContent-"Hello"
+// navbarParent.append(hello);
