@@ -13,7 +13,7 @@ const siteContent = {
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
-  "mainContent": {
+  "main-content": {
     "features-h4":"Features",
     "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "about-h4":"About",
@@ -46,7 +46,7 @@ let headingImg = document.getElementById('cta-img');
 headingImg.setAttribute('src', siteContent["cta"]["img-src"]);
 //middle image
 let midImg = document.querySelector('#middle-img');
-midImg.setAttribute('src', siteContent["mainContent"]["middle-img-src"]);
+midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 midImg.src = "img/mid-page-accent.jpg";
 //add dom is Awesome
 const bigText = document.querySelector('h1');
@@ -82,14 +82,35 @@ for(let prop in siteContent.nav){
 //   i++;
 // }
 
-let sectHeads = document.querySelectorAll('.mainContent .text-content');
-for(let key in siteContent.mainContent){
-  sectHeads[i].textContent = siteContent.mainContent[key];
+let midContentH4 = document.querySelectorAll('text-content h4');
+let midContentP = document.querySelectorAll('text-content p');
+for(let key in siteContent['main-content']){
+  if(i % 2 === 0){
+    midContentH4.textContent = siteContent.main-content[i];
+  }
   i++;
 }
 
+// midContentH4.textContent = siteContent['main-content']['features-h4'], siteContent['main-content']['about-h4'];
+// midContentH4.textContent = siteContent['main-content']['about-h4'];
+// midContentP.textContent = siteContent['main-content']['features-content'];
+// midContentP.textContent = siteContent['main-content']['about-content'];
 
 
+
+// let sectHeads = document.querySelectorAll('.main-content .text-content');
+// for(let prop in siteContent.main-content){
+//   //has to be on the first and 3rd but spaces 0 and 2
+//   if(i % 2 === 0){
+//     sectHeads[i].textContent = siteContent.main-content[prop];
+//   }
+//   //when i hits that mid picture it has to exit
+//   //if(i)
+//   i++;
+// }
+//
+//
+//
 //TRY FOR feature content
- let featCont = document.querySelector('top-content');
-// featCont = siteContent["mainContent"]["features-h4"];
+ // let featCont = document.querySelector('top-content');
+ // featCont = siteContent["main-content"]["features-h4"];
