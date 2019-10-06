@@ -89,56 +89,14 @@ let bottomP = document.querySelectorAll('.bottom-content p');
 bottomP[0].textContent = siteContent['main-content']['services-content'];
 bottomP[1].textContent = siteContent['main-content']['product-content'];
 bottomP[2].textContent = siteContent['main-content']['vision-content'];
-// onto the section headers i fucking guess
-// const $midContentH4 = document.querySelectorAll('text-content h4');
-// const $midContentP = document.querySelectorAll('text-content p');
-// for(let key in siteContent[]){
-//   if(i % 2===0){
-//     $midContentH4[i]
-//   }
-//   i++;
-// }
-// let mC = 'main-content';
-//
-// let midContentH4 = document.querySelectorAll('.text-content h4');
-// let midContentP = document.querySelectorAll('.text-content p');
-// for(let key in siteContent.mC){
-//   if(i % 2 === 0){
-//     midContentH4[i].textContent = siteContent.mC[key];
-//   }
-//   if(i > 4){
-//     continue;
-//   }
-//   i++;
-// };
 
-// for(let key in siteContent['main-content']){
-//   if(i % 2 === 0){
-//     midContentH4.textContent = siteContent.mC[i];
-//   }
-//   i++;
-// }
+let footerCopyright = document.querySelector('.contact h4');
+footerCopyright.textContent = siteContent['contact']['contact-h4'];
 
-// midContentH4.textContent = siteContent['main-content']['features-h4'], siteContent['main-content']['about-h4'];
-// midContentH4.textContent = siteContent['main-content']['about-h4'];
-// midContentP.textContent = siteContent['main-content']['features-content'];
-// midContentP.textContent = siteContent['main-content']['about-content'];
+let footP = document.querySelectorAll('.contact p');
+footP[0].textContent = siteContent['contact']['address'];
+footP[1].textContent = siteContent['contact']['phone'];
+footP[2].textContent = siteContent['contact']['email'];
 
-
-
-// let sectHeads = document.querySelectorAll('.main-content .text-content');
-// for(let prop in siteContent.main-content){
-//   //has to be on the first and 3rd but spaces 0 and 2
-//   if(i % 2 === 0){
-//     sectHeads[i].textContent = siteContent.main-content[prop];
-//   }
-//   //when i hits that mid picture it has to exit
-//   //if(i)
-//   i++;
-// }
-//
-//
-//
-//TRY FOR feature content
- // let featCont = document.querySelector('top-content');
- // featCont = siteContent["main-content"]["features-h4"];
+let centerCopy = document.querySelector('footer');
+centerCopy.textContent = siteContent['footer']['copyright'];
