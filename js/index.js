@@ -72,6 +72,23 @@ for(let prop in siteContent.nav){
   i++;
 };
 
+let topH4 = document.querySelectorAll('.top-content h4');
+topH4[0].textContent = siteContent['main-content']['features-h4'];
+topH4[1].textContent = siteContent['main-content']['about-h4'];
+
+let bottomH4 = document.querySelectorAll('.bottom-content h4');
+bottomH4[0].textContent = siteContent['main-content']['services-h4'];
+bottomH4[1].textContent = siteContent['main-content']['product-h4'];
+bottomH4[2].textContent = siteContent['main-content']['vision-h4'];
+
+let topP = document.querySelectorAll('.top-content p');
+topP[0].textContent = siteContent['main-content']['features-content'];
+topP[1].textContent = siteContent['main-content']['about-content'];
+
+let bottomP = document.querySelectorAll('.bottom-content p');
+bottomP[0].textContent = siteContent['main-content']['services-content'];
+bottomP[1].textContent = siteContent['main-content']['product-content'];
+bottomP[2].textContent = siteContent['main-content']['vision-content'];
 // onto the section headers i fucking guess
 // const $midContentH4 = document.querySelectorAll('text-content h4');
 // const $midContentP = document.querySelectorAll('text-content p');
@@ -81,15 +98,26 @@ for(let prop in siteContent.nav){
 //   }
 //   i++;
 // }
+// let mC = 'main-content';
+//
+// let midContentH4 = document.querySelectorAll('.text-content h4');
+// let midContentP = document.querySelectorAll('.text-content p');
+// for(let key in siteContent.mC){
+//   if(i % 2 === 0){
+//     midContentH4[i].textContent = siteContent.mC[key];
+//   }
+//   if(i > 4){
+//     continue;
+//   }
+//   i++;
+// };
 
-let midContentH4 = document.querySelectorAll('text-content h4');
-let midContentP = document.querySelectorAll('text-content p');
-for(let key in siteContent['main-content']){
-  if(i % 2 === 0){
-    midContentH4.textContent = siteContent.main-content[i];
-  }
-  i++;
-}
+// for(let key in siteContent['main-content']){
+//   if(i % 2 === 0){
+//     midContentH4.textContent = siteContent.mC[i];
+//   }
+//   i++;
+// }
 
 // midContentH4.textContent = siteContent['main-content']['features-h4'], siteContent['main-content']['about-h4'];
 // midContentH4.textContent = siteContent['main-content']['about-h4'];
