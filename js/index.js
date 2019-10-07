@@ -100,3 +100,27 @@ footP[2].textContent = siteContent['contact']['email'];
 
 let centerCopy = document.querySelector('footer');
 centerCopy.textContent = siteContent['footer']['copyright'];
+
+
+
+//oops didn't actually finish MVP. forgot about the last part where I add
+const navTags = document.querySelector('nav');
+const newTag = document.createElement('a');
+
+newTag.textContent = 'Careers';
+
+navTags.appendChild(newTag);
+//add soemthing to the start then change the font of all the nav tags to green
+const firstTag = document.createElement('a');
+
+firstTag.textContent = 'Leave Page';
+
+navTags.prepend(firstTag);
+
+const allTags = document.querySelectorAll('a');
+//allTags.style.color = "green";
+for(let i = 0; i < allTags.length; i++){
+  allTags[i].style.color = "green";
+};
+const thatNav = document.querySelector('nav');
+//thatNav.style.color = "green";
