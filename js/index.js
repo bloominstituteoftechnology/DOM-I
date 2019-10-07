@@ -60,10 +60,6 @@ for (let prop in siteContent.nav){
   navIndex++;
 }
 
-const $newAtag = document.createElement('a');
-$newAtag.textContent = 'Link1';
-$aTags.prepend($newAtag);
-
 
 
 // const nav = document.querySelectorAll('a');
