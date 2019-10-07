@@ -55,6 +55,25 @@ for(let i=0; i < nav.length; i++){
   nav[i].style.color = "green";
 }
 
+//Append Child Utilization
+let ourBlog = document.querySelector("a");
+ourBlog.textContent = "Our Blog";
+
+let navList = document.querySelector("nav");
+navList.appendChild(ourBlog);
+
+ourBlog.style.color = "green";
+console.log(ourBlog);
+
+//Prepend Utilization
+let prepend = document.createElement("a");
+prepend.textContent = "Prepend";
+
+let preNavList = document.querySelector("nav");
+preNavList.prepend(prepend);
+
+prepend.style.color = "green";
+
 //CTA Context
 let ctaText = document.querySelector(".cta-text > h1");
 ctaText.innerHTML = siteContent.cta.h1;
