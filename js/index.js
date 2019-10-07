@@ -36,6 +36,7 @@ const siteContent = {
     "copyright" : "Copyright Great Idea! 2018"
   },
 };
+//for breaking the text use Replace method for strings. 
 
 // Example: Update the img src for the logo
 let $logo = document.getElementById("logo-img");
@@ -49,7 +50,6 @@ const $middleImg2 = document.querySelector('.middle-img');
 $middleImg2.setAttribute('src',siteContent["main-content"]["middle-img-src"]);
 
 //NAV
-const $aTags = document.querySelectorAll('a');
 const $navTag = document.querySelectorAll('nav a');
 let navIndex = 0;
 for (let prop in siteContent.nav){
@@ -57,18 +57,13 @@ for (let prop in siteContent.nav){
     continue;
   }
   $navTag[navIndex].textContent += siteContent.nav[prop];
+  $navTag[navIndex].style.color ='green';
   navIndex++;
 }
 
-
-
-// const nav = document.querySelectorAll('a');
-// nav.style.color ='green';
-
-
 //CTA
 const $ctaH1 = document.querySelector('.cta-text h1');
-$ctaH1.textContent = siteContent.cta.h1;
+$ctaH1.innerHTML = siteContent.cta.h1.replace(/\s/g, "<br>");
 const $ctaButton = document.querySelector('.cta-text button');
 $ctaButton.textContent = siteContent.cta.button;
 
@@ -104,6 +99,18 @@ $contactH4.textContent = siteContent.contact["contact-h4"];
 $contactP[0].textContent = siteContent.contact.address;
 $contactP[1].textContent = siteContent.contact.phone;
 $contactP[2].textContent = siteContent.contact.email;
+
+const $link1 = document.createElement('a');
+$link1.textContent = 'Link1';
+
+const $link2 = document.createElement('a');
+$link2.textContent = 'Link2';
+
+const $nav = document.querySelector('nav');
+$nav.appendChild($link1);
+
+$nav.prepend($link2);
+
 
 //footer
 const $footer = document.querySelector('footer p');
