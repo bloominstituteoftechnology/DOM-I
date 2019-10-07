@@ -17,6 +17,8 @@ const siteContent = {
     "features-h4":"Features",
     "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "about-h4":"About",
+
+
     "about-content": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "middle-img-src": "img/mid-page-accent.jpg",
     "services-h4":"Services",
@@ -40,40 +42,53 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+// ==================================================================================
+// ==================================================================================
+// ==================================================================================
+// ==================================================================================
+
+// NOTE   When inserting images you can use 1 of 2 methods:
+//       catImg.src = "url"
+//               or
+//       catImg.setAttribute= ("src", "url")
 
 
 
-
-const mainContent= document.querySelector('.main-content')
-// console.log(mainContent.textContent)
-
-mainContent.textContent= "NO, NO, NO"
 
 // =====================================
+const features =document.querySelector(".main-content .top-content .text-content h4")
+features.textContent= "Features";
 
-const header = document.getElementById("cta-img");
-header.setAttribute('src', siteContent["cta"]["img-src"])
-
-
-const h4Left= document.querySelector('h4');
-h4Left.textContent = "Hello";
+const content1 =document.querySelector(".main-content .top-content .text-content p")
+content1.textContent= "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
 
+const content2 =document.querySelector(".main-content .bottom-content .text-content h4")
+content2.textContent= "Services";
 
-
-
-
-const menuItem = document.querySelectorAll('nav');
-console.log(menuItem)
-menuItem.textContent= "Hello"
+const content3 =document.querySelector(".main-content .bottom-content .text-content p")
+content3.textContent= "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
 
 
 
+// const features= document.querySelector(".main-content .top-content .text-content h4")
+// console.log(siteContent["main-content"]["features-h4"]);
+
+const features2=(siteContent["main-content"]["features-h4"]);
+console.log(features2)
 
 
-// const email =document.querySelector("site-content p:nth-child(4)")
-// contactP3.textContent= "sales@gmail.com";
+
+
+
+
+
+
+
+
+
+
 
 
 // ------------ WORKS     WORKS     WORKS ------------------
@@ -115,20 +130,17 @@ ctaImg.src = 'img/header-img.png';
 const headerH1= document.querySelector('h1')
 headerH1.style.color= "red";
 
+// ------------ WORKS     WORKS     WORKS ------------------
+const middleImg = document.querySelector('.example');
+middleImg.src = siteContent["main-content"]["middle-img-src"];
+
+// ==================================================================================
+// ==================================================================================
+// ==================================================================================
+// ==================================================================================
 
 
-
-
-
-
-
-const midImg= document.querySelector('.middle-img')
-midImg.src = '/Users/TimGrey/DOM-I/img/mid-page-accent.jpg';
-
-
-
-
-//                     NOTE  NOT WORKING        NOT WORKING       NOT WORKING       NOTWORKING
+//             NOTE  NOT WORKING        NOT WORKING       NOT WORKING       NOTWORKING
 // let ctaImg = document.querySelector("#cta-img");
 // ctaImg.setAttribute=  "img/header-img.png"
 // -------------------------------------------------------------
@@ -140,7 +152,33 @@ midImg.src = '/Users/TimGrey/DOM-I/img/mid-page-accent.jpg';
 // const contactP2 =document.querySelector("p")
 // contactP2.textContent= "1 (888) 888-8888";
 
-
+// -------------------------------------------------------------
 // const textContent1= document.querySelectorAll(".top-content ")
 // console.log(textContent1)
+
+// -------------------------------------------------------------
+// const midImg = document.getElementById("middle-img");
+// console.log(midImg)
+// midImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+// ==================================================================================
+// ==================================================================================
+// ==================================================================================
+// ==================================================================================
+
+
+
+
+// let logo = document.getElementById("logo-img");
+// logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// let navMenu= document.querySelectorAll(".container header nav")
+// navMenu.textContent(siteContent["nav"]["a"])
+
+
+
+// const navMenu = document.querySelectorAll('a');
+// console.log(navMenu);
+
+
 
