@@ -43,12 +43,25 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //Try working on the nav bar first
 const newNav = document.querySelectorAll('a');
-newNav[0].textContent = siteContent["nav"]["nav-item-1"];
-newNav[1].textContent = "Product";
-newNav[2].textContent = "Vision";
-newNav[3].textContent = "Features";
-newNav[4].textContent = "About";
-newNav[5].textContent = "Contact";
+// newNav[0].textContent = siteContent["nav"]["nav-item-1"];
+// newNav[1].textContent = siteContent["nav"]["nav-item-2"];
+// newNav[2].textContent = siteContent["nav"]["nav-item-3"];
+// newNav[3].textContent = siteContent["nav"]["nav-item-4"];
+// newNav[4].textContent = siteContent["nav"]["nav-item-5"];
+//newNav[5].textContent = siteContent["nav"]["nav-item-6"];
+
+console.log(newNav); //nodeList
+//var newNavArr = Array.from(newNav);
+// console.log(newNavArr); //array of empty anchor tags
+// for (let i = 0; i < newNavArr.length; i++) {
+//     newNavArr[i].textContent = siteContent[`nav`][`nav-item-${i+1}`];
+
+// }
+
+newNav.forEach(function(link, i) {
+    link.textContent = siteContent[`nav`][`nav-item-${i+1}`];
+})
+
 
 //* [ ] Note that IDs have been used on all images.  Use the IDs to update src path content
 const topImg = document.getElementById('cta-img');
