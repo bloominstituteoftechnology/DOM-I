@@ -52,9 +52,6 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 //               or
 //       catImg.setAttribute= ("src", "url")
 
-
-
-
 // =====================================
 const features =document.querySelector(".main-content .top-content .text-content h4")
 features.textContent= "Features";
@@ -75,16 +72,24 @@ content3.textContent= "Services content elementum magna eros, ac posuere elvit t
 // const features= document.querySelector(".main-content .top-content .text-content h4")
 // console.log(siteContent["main-content"]["features-h4"]);
 
-const features2=(siteContent["main-content"]["features-h4"]);
-console.log(features2)
+// const features2=(siteContent["main-content"]["features-h4"]);
+// console.log(features2)
 
 
 
 
-
-
-
-
+const a1 = document.querySelector('.container header nav a:nth-child(1)');
+a1.textContent= "Services"
+const a2 = document.querySelector('.container header nav a:nth-child(2)');
+a2.textContent= "Product"
+const a3 = document.querySelector('.container header nav a:nth-child(3)');
+a3.textContent= "Features"
+const a4 = document.querySelector('.container header nav a:nth-child(4)');
+a4.textContent= "Vision"
+const a5 = document.querySelector('.container header nav a:nth-child(5)');
+a5.textContent= "About                                                                                                                                                                                                                                                                                                                                                           "
+const a6 = document.querySelector('.container header nav a:nth-child(6)');
+a6.textContent= "Contact"
 
 
 
@@ -182,3 +187,17 @@ middleImg.src = siteContent["main-content"]["middle-img-src"];
 
 
 
+
+
+
+
+
+
+// const cta= document.querySelector(".cta h1")
+// cta.textContent=     "DOM Is Awesome"
+
+
+
+
+// const featuresText= document.querySelector(".main-content .features-content")
+// featuresText.TextContent= "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
