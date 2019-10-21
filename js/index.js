@@ -42,6 +42,10 @@ const siteContent = {
   }
 };
 
+/***********************************************
+                  Navigation
+***********************************************/
+
 // Example: Update the img src for the logo
 let logo = document.getElementById('logo-img');
 logo.setAttribute('src', siteContent['nav']['img-src']);
@@ -56,11 +60,15 @@ nav[3].textContent = siteContent['nav']['nav-item-4'];
 nav[4].textContent = siteContent['nav']['nav-item-5'];
 nav[5].textContent = siteContent['nav']['nav-item-6'];
 
+/***********************************************
+                Call to Action
+***********************************************/
+
 // Add cta, cta-text, and cta-img section
 let ctaHeader = document.querySelector('.cta .cta-text h1');
 let ctaButton = document.querySelector('.cta .cta-text button');
 let ctaImg = document.querySelector('#cta-img');
 
-ctaHeader.textContent = siteContent['cta']['h1'];
+ctaHeader.innerHTML = siteContent['cta']['h1'].replace(/\s/g, '<br>');
 ctaButton.textContent = siteContent['cta']['button'];
 ctaImg.src = siteContent['cta']['img-src'];
