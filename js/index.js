@@ -47,11 +47,14 @@ const siteContent = {
 ***********************************************/
 
 // Example: Update the img src for the logo
-let logo = document.getElementById('logo-img');
+const logo = document.getElementById('logo-img');
 logo.setAttribute('src', siteContent['nav']['img-src']);
 
 // Add the naviation to the header
-let nav = document.querySelectorAll('header nav a');
+const nav = document.querySelectorAll('header nav a');
+
+// Change the color of each navigation item from black to green
+nav.forEach(item => (item.style.color = 'green'));
 
 nav[0].textContent = siteContent['nav']['nav-item-1'];
 nav[1].textContent = siteContent['nav']['nav-item-2'];
@@ -60,14 +63,30 @@ nav[3].textContent = siteContent['nav']['nav-item-4'];
 nav[4].textContent = siteContent['nav']['nav-item-5'];
 nav[5].textContent = siteContent['nav']['nav-item-6'];
 
+// Create two new elements
+const newNav = document.querySelector('nav');
+
+const newNavItem1 = document.createElement('a');
+newNavItem1.textContent = 'Home';
+newNavItem1.href = '#';
+newNavItem1.style.color = 'green';
+
+const newNavItem2 = document.createElement('a');
+newNavItem2.textContent = 'Blog';
+newNavItem2.href = '#';
+newNavItem2.style.color = 'green';
+
+newNav.prepend(newNavItem1);
+newNav.appendChild(newNavItem2);
+
 /***********************************************
                 Call to Action
 ***********************************************/
 
 // Add cta, cta-text, and cta-img section
-let ctaHeader = document.querySelector('.cta .cta-text h1');
-let ctaButton = document.querySelector('.cta .cta-text button');
-let ctaImg = document.querySelector('#cta-img');
+const ctaHeader = document.querySelector('.cta .cta-text h1');
+const ctaButton = document.querySelector('.cta .cta-text button');
+const ctaImg = document.querySelector('#cta-img');
 
 ctaHeader.innerHTML = siteContent['cta']['h1'].replace(/\s/g, '<br>');
 ctaButton.textContent = siteContent['cta']['button'];
@@ -78,7 +97,7 @@ ctaImg.src = siteContent['cta']['img-src'];
 ***********************************************/
 
 // Add section headers
-let sectionHeader = document.querySelectorAll('.main-content h4');
+const sectionHeader = document.querySelectorAll('.main-content h4');
 
 sectionHeader[0].textContent = siteContent['main-content']['features-h4'];
 sectionHeader[1].textContent = siteContent['main-content']['about-h4'];
@@ -87,12 +106,12 @@ sectionHeader[3].textContent = siteContent['main-content']['product-h4'];
 sectionHeader[4].textContent = siteContent['main-content']['vision-h4'];
 
 // Add middle banner image
-let middleImage = document.querySelector('#middle-img');
+const middleImage = document.querySelector('#middle-img');
 
 middleImage.src = siteContent['main-content']['middle-img-src'];
 
 // Add section content
-let sectionContent = document.querySelectorAll('.main-content p');
+const sectionContent = document.querySelectorAll('.main-content p');
 
 sectionContent[0].textContent = siteContent['main-content']['features-content'];
 sectionContent[1].textContent = siteContent['main-content']['about-content'];
@@ -105,12 +124,12 @@ sectionContent[4].textContent = siteContent['main-content']['vision-content'];
 ***********************************************/
 
 // Add contact header
-let contactHeader = document.querySelector('.contact h4');
+const contactHeader = document.querySelector('.contact h4');
 
 contactHeader.textContent = siteContent['contact']['contact-h4'];
 
 // Add contact content
-let contactContent = document.querySelectorAll('.contact p');
+const contactContent = document.querySelectorAll('.contact p');
 
 contactContent[0].innerHTML = siteContent['contact']['address'];
 contactContent[1].textContent = siteContent['contact']['phone'];
@@ -121,6 +140,6 @@ contactContent[2].textContent = siteContent['contact']['email'];
 ***********************************************/
 
 // Add footer copyright
-let footer = document.querySelector('footer p');
+const footer = document.querySelector('footer p');
 
 footer.textContent = siteContent['footer']['copyright'];
