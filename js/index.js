@@ -115,3 +115,12 @@ let contactContent = document.querySelectorAll('.contact p');
 contactContent[0].innerHTML = siteContent['contact']['address'];
 contactContent[1].textContent = siteContent['contact']['phone'];
 contactContent[2].textContent = siteContent['contact']['email'];
+
+/***********************************************
+                      Footer
+***********************************************/
+
+// Add footer copyright
+let footer = document.querySelector('footer p');
+
+footer.textContent = siteContent['footer']['copyright'];
