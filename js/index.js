@@ -105,4 +105,25 @@ let visH4 = document.getElementsByTagName(`h4`)[4];
 visH4.textContent = `Vision`;
 
 let visCont = document.getElementsByTagName(`p`)[4];
-visCont.textContent = " Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis. ";
+visCont.textContent = " Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspenditersse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis. ";
+
+// Contact
+
+let contactH4 = document.getElementsByTagName(`h4`)[5];
+contactH4.textContent = "Contact";
+
+let address = document.getElementsByTagName(`p`)[5];
+address.textContent = "123 Way 456 Stree Somewhere, USA ";
+
+let phone = document.getElementsByTagName(`p`)[6];
+phone.textContent = "1 (888) 888-8888 ";
+
+let email = document.getElementsByTagName(`p`)[7];
+email.textContent = " sales@greatidea.io";
+
+//Footer
+
+let footer = document.getElementsByTagName(`p`)[8];
+footer.textContent = "Copyright Great Idea! 2018";
+
+ 

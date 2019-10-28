@@ -29,9 +29,9 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 * [x] Note that IDs have been used on all images.  Use the IDs to update src path content
 
 ## Task 2: Update the HTML with the JSON data
-* [ ] Remember, NO direct updating of the HTML source is allowed.
-* [ ] Using your selectors, update the content to match the example file.
-* [ ] Remember to update the src attributes on images
+* [x] Remember, NO direct updating of the HTML source is allowed.
+* [x] Using your selectors, update the content to match the example file.
+* [x] Remember to update the src attributes on images
 
 ## Task 3: Add new content
 * [ ] Change the color of the navigation text to be green.
