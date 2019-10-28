@@ -51,6 +51,9 @@ const mainContentP = document.querySelectorAll('.main-content .top-content .text
 const middleImg = document.querySelector('.main-content .middle-img');
 const bottomContentH4 = document.querySelectorAll('.main-content .bottom-content h4');
 const bottomContentP = document.querySelectorAll('.main-content .bottom-content p');
+const contactSecH4 = document.querySelector('.contact h4');
+const contactSecP = document.querySelectorAll('.contact p');
+const footerP = document.querySelector('footer p');
 
 
 
@@ -85,6 +88,32 @@ const bottomContentP = document.querySelectorAll('.main-content .bottom-content 
   mainContenth4[1].textContent = 'About';
   mainContentP[1].textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
   middleImg.src = 'img/mid-page-accent.jpg';
+
+//Bottom Content
+  //Text Content
+  bottomContentH4[0].textContent = 'Services';
+  bottomContentP[0].textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+  bottomContentH4[1].textContent = 'Product';
+  bottomContentP[1].textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+  bottomContentH4[2].textContent = 'Vision';
+  bottomContentP[2].textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+//Contact
+  //Text Content
+  contactSecH4.textContent = "Contact";
+  contactSecP[0].textContent = "123 Way 456 Street Somewhere, USA";
+  contactSecP[1].textContent = "1 (888) 888-8888";
+  contactSecP[2].textContent = "sales@greatidea.io";
+
+//Footer
+  footerP.textContent = "Copyright Great Idea! 2218";
+
+  
+
+
+
+
+
   
 
 
