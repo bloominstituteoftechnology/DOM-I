@@ -48,7 +48,7 @@ links.forEach(
 
 // CTA Section
 const title = document.querySelector(".cta-text h1");
-title.textContent = siteContent["cta"]["h1"];
+title.innerHTML = 'DOM' + '<br>' + 'Is' + '<br>' + 'Awesome!';
 
 const mainImg = document.querySelector("#cta-img");
 mainImg.setAttribute("src", siteContent["cta"]["img-src"]);
@@ -85,7 +85,7 @@ const contact = document.querySelector(".contact h4");
 contact.textContent = siteContent["contact"]["contact-h4"];
 
 const contactTxt = document.querySelectorAll(".contact p");
-contactTxt[0].textContent = siteContent["contact"]["address"];
+contactTxt[0].innerHTML = '123 Way 456 Street' + '<br>' + 'Somewhere, USA';
 contactTxt[1].textContent = siteContent["contact"]["phone"];
 contactTxt[2].textContent = siteContent["contact"]["email"];
 
