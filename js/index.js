@@ -43,9 +43,6 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let nav = document.getElementsByTagName("nav")[0];
 
-
-
-
 nav.getElementsByTagName('a')[0].textContent=siteContent['nav']['nav-item-1']
 
 nav.getElementsByTagName('a')[1].textContent=siteContent['nav']
