@@ -49,6 +49,61 @@ navbar.forEach((value, i) => value.textContent = siteContent.nav[`nav-item-${i +
 //title
 
 const header = document.querySelector('.cta-text h1')
-header.textContent = siteContent.cta['h1']
+header.innerHTML = siteContent['cta']['h1'].replace(/ /g, '<br>');
 
 const button = document.querySelector('.cta-text button')
+button.textContent = siteContent.cta['button']
+
+const headerimg = document.querySelector('#cta-img')
+headerimg.setAttribute('src', siteContent['cta']['img-src'])
+
+
+//main-content
+
+const featuresHeader = document.querySelector('.top-content h4');
+featuresHeader.textContent = siteContent['main-content'] ['features-h4'];
+
+const featuresCont = document.querySelector('.top-content p');
+console.log(featuresCont);
+
+const aboutHeader = document.querySelectorAll('.top-content div:last-child h4');
+console.log(aboutHeader);
+
+const aboutCont = document.querySelectorAll('.top-content div:last-child p');
+console.log(aboutCont);
+
+const midImg = document.querySelector('#middle-img');
+console.log(midImg);
+
+const servHeader = document.querySelector('.bottom-content h4');
+console.log(servHeader);
+
+const servCont = document.querySelector('.bottom-content p');
+console.log(servCont);
+
+const proHeader = document.querySelectorAll('.bottom-content div:nth-child(2) h4');
+console.log(proHeader);
+
+const proCont = document.querySelectorAll('.bottom-content div:nth-child(2) p');
+console.log(proCont);
+
+const visHeader = document.querySelectorAll('.bottom-content div:last-child h4');
+console.log(visHeader);
+
+const visCont = document.querySelectorAll('.bottom-content div:last-child p');
+console.log(visCont);
+
+const contHeader = document.querySelector('.contact h4');
+console.log(contHeader);
+
+const contAdd = document.querySelector('.contact p');
+console.log(contAdd);
+
+const contPhone = document.querySelectorAll('.contact p:nth-child(2)');
+console.log(contPhone);
+
+const contEmail = document.querySelectorAll('.contact p:last-child');
+console.log(contEmail);
+
+const footer = document.querySelector('footer p');
+console.log(footer);
