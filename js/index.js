@@ -57,7 +57,7 @@ console.log(navLinks);
 // CTA //
 
 const ctaText = document.querySelector('h1');
-ctaText.textContent = 'DOM is Awesome!';
+ctaText.innerHTML = 'DOM <br> is <br>Awesome!';
 
 const ctaButton = document.querySelector('button');
 ctaButton.textContent = 'Get Started';
