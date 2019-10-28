@@ -127,4 +127,19 @@ botSubTitles.forEach(element => {
   element.style.fontSize= "1.5rem"
 });
 
+const body = document.querySelector('body')
+
+button.addEventListener("click", () => {
+  body.style.backgroundColor = "black";
+  mainTxt.style.color= "green";
+  botCont.forEach(element => {
+    element.style.color = "green"
+  });
+  botSubTitles.forEach(element => {
+    element.style.color= "green"
+  });
+  logo.style.backgroundColor = "green"
+
+})
+
 
