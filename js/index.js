@@ -129,3 +129,24 @@ contactP3.textContent = siteContent['contact']['email']
 
 const copyrightP = document.querySelectorAll('p')[8]
 copyrightP.textContent = siteContent['footer']['copyright']
+
+
+//nav color
+
+const allAnchors = document.querySelectorAll('a')
+allAnchors.forEach(function(item) {
+  item.style.color = 'green'
+})
+
+// new elements 
+
+
+const newA = document.createElement('a')
+newA.textContent = 'New'
+newA.style.color = 'green'
+document.querySelector('nav').append(newA)
+
+const newNewA = document.createElement('a')
+newNewA.textContent = 'NewNew'
+newNewA.style.color = 'green'
+document.querySelector('nav').prepend(newNewA)
