@@ -42,24 +42,19 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 // ***create selectors***
-//html collections
-//anchor html collection
-const navItems = document.getElementsByTagName('a');
-//h4 headers html collection
-const headers = document.getElementsByTagName('h4');
-//p content html collection
-const content = document.getElementsByTagName('p');
+
+//node lists
+
+//anchor node list
+const navItems = document.querySelectorAll('a');
+//h4 headers node list
+const headers = document.querySelectorAll('h4');
+//p content node list
+const content = document.querySelectorAll('p');
+
 
 //nav bar
 const nav = document.getElementsByTagName('nav')[0];
-
-//nav links
-const nav1 = navItems[0];
-const nav2 = navItems[1];
-const nav3 = navItems[2];
-const nav4 = navItems[3];
-const nav5 = navItems[4];
-const nav6 = navItems[5];
 
 //cta content
 const ctaH1 = document.getElementsByTagName('h1')[0];
@@ -97,13 +92,7 @@ middleImg.src = siteContent["main-content"]['middle-img-src'];
 //add rest of JSON content
 
 //nav links
-// nav JSON shortcut
-nav1.textContent = siteContent.nav["nav-item-1"];
-nav2.textContent = siteContent.nav["nav-item-2"];
-nav3.textContent = siteContent.nav["nav-item-3"];
-nav4.textContent = siteContent.nav["nav-item-4"];
-nav5.textContent = siteContent.nav["nav-item-5"];
-nav6.textContent = siteContent.nav["nav-item-6"];
+navItems.forEach((navLink, i) => navLink.textContent = siteContent.nav[`nav-item-${++i}`]);
 
 //cta content
 ctaH1.textContent = siteContent.cta.h1;
@@ -132,13 +121,10 @@ email.textContent = siteContent.contact.email;
 //footer content
 copyright.textContent = siteContent.footer.copyright;
 
-//change styles
-nav1.style.color = 'green';
-nav2.style.color = 'green';
-nav3.style.color = 'green';
-nav4.style.color = 'green';
-nav5.style.color = 'green';
-nav6.style.color = 'green';
+// ***change styles***
+
+//change nav links to green
+navItems.forEach(navLink => navLink.style.color = 'green');
 
 // ***add elements to nav***
 // *note: would prefer to normally create before manipulating existing links, neater code. 
