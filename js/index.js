@@ -88,9 +88,13 @@ contInfo[2].textContent = siteContent["contact"]["email"]
 let foot = document.querySelector("footer")
 foot.textContent = siteContent["footer"]["copyright"]
 
+
+// Created elements
+
+
 const invest = document.createElement("a");
 invest.textContent = "Invest";
-invest.style.color = "green";
+
 
 const newElement = document.querySelector('header nav');
 
@@ -99,7 +103,7 @@ newElement.prepend(invest)
 
 const time = document.createElement("a");
 time.textContent = "Time";
-time.style.color = "green";
+
 
 const ele = document.querySelector('header nav');
 
@@ -109,4 +113,18 @@ top_a.forEach(element => {
   element.style.color='green';
 })
 
+// Stretch
+
 button.style.color = "green";
+time.style.color = "green";
+invest.style.color = "green";
+
+botCont.forEach(element => {
+  element.style.fontSize= "1.2rem"
+});
+
+botSubTitles.forEach(element => {
+  element.style.fontSize= "1.5rem"
+});
+
+
