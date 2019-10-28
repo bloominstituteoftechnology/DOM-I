@@ -137,3 +137,23 @@ contactH4.textContent = siteContent['contact']['contact-h4'];
 
 //Test for contact h4 CONTACT
 console.log(contactH4);
+
+
+// ContactP element
+const contactP = document.querySelectorAll('.contact p');
+
+let address = siteContent['contact']['address'].split(" ");
+address.splice(4,0, '\r\n');
+
+//Features for contact p tags
+contactP[0].innerText = address.join(' ');
+contactP[1].textContent = siteContent ['contact']['phone'];
+contactP[2].textContent = siteContent ['contact']['email'];
+
+//Test address and contactP
+console.log(address);
+console.log(contactP[0].innerText);
+console.log(contactP[1].textContent);
+console.log(contactP[2].textContent);
+
+
