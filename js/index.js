@@ -61,6 +61,7 @@ mainTxt.textContent = siteContent.cta["h1"]
 
 let button = document.querySelector("button");
 button.textContent = siteContent.cta["button"];
+button.style.green
 
 let botSubTitles = document.querySelectorAll("h4");
 botSubTitles[0].textContent = siteContent["main-content"]["features-h4"];
@@ -86,3 +87,26 @@ contInfo[2].textContent = siteContent["contact"]["email"]
 
 let foot = document.querySelector("footer")
 foot.textContent = siteContent["footer"]["copyright"]
+
+const invest = document.createElement("a");
+invest.textContent = "Invest";
+invest.style.color = "green";
+
+const newElement = document.querySelector('header nav');
+
+newElement.prepend(invest)
+
+
+const time = document.createElement("a");
+time.textContent = "Time";
+time.style.color = "green";
+
+const ele = document.querySelector('header nav');
+
+ele.appendChild(time)
+
+top_a.forEach(element => {
+  element.style.color='green';
+})
+
+button.style.color = "green";
