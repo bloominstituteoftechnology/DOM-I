@@ -11,7 +11,7 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 
 **Follow these steps to set up and work on your project:**
 
-* [ ] Create a forked copy of this project.
+* [X] Create a forked copy of this project.
 * [ ] Add your project manager as collaborator on Github.
 * [ ] Clone your OWN version of the repository (Not Lambda's by mistake!).
 * [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
