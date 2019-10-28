@@ -143,4 +143,10 @@ address.innerHTML = "123 Way 456 Street<br> Somewhere, USA<br><br> 1 (888) 888-8
 console.log(address);
 
 
+//copyRight contents
+const copyRight= document.querySelector('footer');
+copyRight.textContent = siteContent['footer']['copyright'];
+//Testing copyRight on footer
+console.log(copyRight.textContent);
+
 
