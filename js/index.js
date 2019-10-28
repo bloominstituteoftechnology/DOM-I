@@ -57,8 +57,8 @@ navATag.forEach(function(item, index){
 console.log(navBar);
 
 // Updated images for cta
-let cta = document.getElementById("cta-img");
-cta.setAttribute('src', siteContent["cta"]["img-src"] )
+let cta = document.getElementById("cta-img");;
+cta.setAttribute('src', siteContent["cta"]["img-src"] );
 
 //Test for cta-img
 console.log(cta);
@@ -104,10 +104,36 @@ console.log(contentTopP[1].textContent);
 
 //Updated images for middle-img-src
 let middleImage = document.getElementById("middle-img");
-middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 //Test for middleImage
 console.log(middleImage);
 
+//features  & about h4 for bottom contents
+const contentBottomH4 = document.querySelectorAll('.bottom-content .text-content h4');
+contentBottomH4[0].textContent = siteContent['main-content']['services-h4'];
+contentBottomH4[1].textContent = siteContent['main-content']['product-h4'];
+contentBottomH4[2].textContent = siteContent['main-content']['vision-h4'];
 
+//Test contentBottomH4 for services, product and vision
+console.log(contentBottomH4[0].textContent);
+console.log(contentBottomH4[1].textContent);
+console.log(contentBottomH4[2].textContent);
 
+//features  & about P for bottom contents
+const contentBottomP = document.querySelectorAll('.bottom-content .text-content p');
+contentBottomP[0].textContent = siteContent['main-content']['services-content'];
+contentBottomP[1].textContent = siteContent['main-content']['product-content'];
+contentBottomP[2].textContent = siteContent['main-content']['vision-content'];
+
+//Test features and about P for bottom contents for services, product, and vision
+console.log(contentBottomP[0].textContent);
+console.log(contentBottomP[1].textContent);
+console.log(contentBottomP[2].textContent);
+
+//Features for contact h4 
+const contactH4 = document.querySelector('.contact h4');
+contactH4.textContent = siteContent['contact']['contact-h4'];
+
+//Test for contact h4 CONTACT
+console.log(contactH4);
