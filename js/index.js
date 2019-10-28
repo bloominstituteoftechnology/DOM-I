@@ -40,6 +40,7 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
 //Test for logo-img
 console.log(logo);
 
@@ -64,13 +65,8 @@ cta.setAttribute('src', siteContent["cta"]["img-src"] );
 console.log(cta);
 
 // Update to cta-text
-const ctaText1 = document.querySelector('h1');
-const ctaText2 = siteContent['cta']['h1'].split(' ');
-
-ctaText2.splice(1,0, '\r\n');
-ctaText2.splice(3,0, '\r\n');
-
-ctaText1.innerText = ctaText2.join('');
+let ctaText1 = document.querySelector('.cta h1');
+ctaText1.innerHTML   = "DOM<br> IS<br> AWESOME";
 
 //Test ctaText1 out put should be "DOM IS AWESOME"
 console.log(ctaText1);
@@ -139,21 +135,12 @@ contactH4.textContent = siteContent['contact']['contact-h4'];
 console.log(contactH4);
 
 
-// ContactP element
-const contactP = document.querySelectorAll('.contact p');
-
-let address = siteContent['contact']['address'].split(" ");
-address.splice(4,0, '\r\n');
-
-//Features for contact p tags
-contactP[0].innerText = address.join(' ');
-contactP[1].textContent = siteContent ['contact']['phone'];
-contactP[2].textContent = siteContent ['contact']['email'];
+// Update to cta-text
+let address = document.querySelector('.contact p');
+address.innerHTML = "123 Way 456 Street<br> Somewhere, USA<br><br> 1 (888) 888-8888<br><br> sales@greatidea.io";
 
 //Test address and contactP
 console.log(address);
-console.log(contactP[0].innerText);
-console.log(contactP[1].textContent);
-console.log(contactP[2].textContent);
+
 
 
