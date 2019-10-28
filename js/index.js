@@ -40,3 +40,74 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+
+
+// NAV
+let navItems = Object.values(siteContent.nav)
+console.log(navItems)
+let navLinks = document.querySelectorAll('a');
+navLinks.forEach((item, index) => item.innerText = navItems[index])
+
+//change color to green
+navLinks.forEach((item) => item.style.color = 'green')
+
+
+//Utilize .appendChild() and .prepend() to add two new items to the nav.
+let nav = document.querySelector('nav')
+
+let nav1 = document.createElement('a')
+nav1.textContent = 'Novak'
+nav.appendChild(nav1)
+
+let nav2 = document.createElement('a')
+nav2.textContent = 'Jess'
+nav.prepend(nav2)
+
+let navImg = document.querySelector('header img')
+navImg.src = siteContent.nav["img-src"]
+
+//CTA
+let h1 = document.querySelector('h1')
+h1.innerText = siteContent.cta.h1;
+
+let button = document.querySelector('button')
+button.innerText = siteContent.cta.button;
+
+let ctaImg = document.querySelector('.cta img')
+ctaImg.src = siteContent.cta["img-src"];
+
+
+
+//main content
+let featuresH4 = document.querySelectorAll('.main-content h4')
+featuresH4[0].innerText = siteContent["main-content"]["features-h4"]
+featuresH4[1].innerText = siteContent["main-content"]["about-h4"]
+featuresH4[2].innerText = siteContent["main-content"]["services-h4"]
+featuresH4[3].innerText = siteContent["main-content"]["product-h4"]
+featuresH4[4].innerText = siteContent["main-content"]["vision-h4"]
+
+
+let mainContent = document.querySelectorAll('.main-content p')
+mainContent[0].innerText = siteContent["main-content"]["features-content"]
+mainContent[1].innerText = siteContent["main-content"]["about-content"]
+mainContent[2].innerText = siteContent["main-content"]["services-content"]
+mainContent[3].innerText = siteContent["main-content"]["product-content"]
+mainContent[4].innerText = siteContent["main-content"]["vision-content"]
+
+let mainContentImg = document.querySelector('.main-content img')
+mainContentImg.src = siteContent["main-content"]["middle-img-src"]
+
+//contact
+let contactH4 = document.querySelector('.contact h4')
+contactH4.innerText = siteContent.contact["contact-h4"]
+
+let contactValues = Object.values(siteContent.contact)
+let mainContact = document.querySelectorAll('.contact p')
+mainContact.forEach((item, index) => item.innerText = contactValues[index + 1])
+
+
+//footer
+let footer = document.querySelector('footer')
+footer.innerText = siteContent.footer.copyright;
