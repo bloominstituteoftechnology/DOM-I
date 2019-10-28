@@ -40,3 +40,92 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//Task 1
+
+//Images
+
+const codeSnippet = document.querySelector('#cta-img')
+
+codeSnippet.setAttribute('src', siteContent['cta']['img-src'])
+
+const roundImage = document.querySelector('#middle-img')
+
+roundImage.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+// anchor tags nav
+
+anchorNavs = Object.keys(siteContent.nav)
+anchorNavs.pop() //Just using anchorNavs.length -1 in the for loop would work aswell.
+navLinks = document.querySelectorAll('a')
+
+for(let i = 0; i < anchorNavs.length; i++) {
+  navLinks[i].textContent = siteContent["nav"][`nav-item-${i}`]
+}
+
+//h1
+
+const mainh1 = document.querySelector('h1')
+const newline = "\r\n";
+const nbsp = "\u00a0";
+mainh1.textContent = "DOM" + newline + "IS" + newline + "AWESOME";
+
+//button
+
+const mainButton = document.querySelector('button')
+mainButton.textContent = `${siteContent.cta.button}`
+
+//h4's
+
+const featureh4 = document.querySelectorAll('h4')[0]
+featureh4.textContent = siteContent['main-content']['features-h4']
+
+const abouth4 = document.querySelectorAll('h4')[1]
+abouth4.textContent = siteContent['main-content']['about-h4']
+
+const servicesh4 = document.querySelectorAll('h4')[2]
+servicesh4.textContent = siteContent['main-content']['services-h4']
+
+const producth4 = document.querySelectorAll('h4')[3]
+producth4.textContent = siteContent['main-content']['product-h4']
+
+const visionh4 = document.querySelectorAll('h4')[4]
+visionh4.textContent = siteContent['main-content']['vision-h4']
+
+// h4 ps
+
+const featurep = document.querySelectorAll('p')[0]
+featurep.textContent = siteContent['main-content']['features-content']
+
+const aboutp = document.querySelectorAll('p')[1]
+aboutp.textContent = siteContent['main-content']['about-content']
+
+const servicesp = document.querySelectorAll('p')[2]
+servicesp.textContent = siteContent['main-content']['services-content']
+
+const productp = document.querySelectorAll('p')[3]
+productp.textContent = siteContent['main-content']['product-content']
+
+const visionp = document.querySelectorAll('p')[4]
+visionp.textContent = siteContent['main-content']['vision-content']
+
+//contact
+
+const contacth4 = document.querySelectorAll('h4')[5]
+contacth4.textContent = siteContent['contact']['contact-h4']
+
+//contact ps
+
+const contactP1 = document.querySelectorAll('p')[5]
+contactP1.textContent = siteContent['contact']['address']
+
+const contactP2 = document.querySelectorAll('p')[6]
+contactP2.textContent = siteContent['contact']['phone']
+
+const contactP3 = document.querySelectorAll('p')[7]
+contactP3.textContent = siteContent['contact']['email']
+
+//copyright
+
+const copyrightP = document.querySelectorAll('p')[8]
+copyrightP.textContent = siteContent['footer']['copyright']
