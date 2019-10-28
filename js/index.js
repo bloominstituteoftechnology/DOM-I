@@ -55,3 +55,34 @@ top_a[2].textContent = siteContent.nav["nav-item-3"];
 top_a[3].textContent = siteContent.nav["nav-item-4"];
 top_a[4].textContent = siteContent.nav["nav-item-5"];
 top_a[5].textContent = siteContent.nav["nav-item-6"];
+
+let mainTxt = document.querySelector("h1")
+mainTxt.textContent = siteContent.cta["h1"]
+
+let button = document.querySelector("button");
+button.textContent = siteContent.cta["button"];
+
+let botSubTitles = document.querySelectorAll("h4");
+botSubTitles[0].textContent = siteContent["main-content"]["features-h4"];
+botSubTitles[1].textContent = siteContent["main-content"]["about-h4"];
+botSubTitles[2].textContent = siteContent["main-content"]["services-h4"];
+botSubTitles[3].textContent = siteContent["main-content"]["product-h4"];
+botSubTitles[4].textContent = siteContent["main-content"]["vision-h4"];
+
+let botCont = document.querySelectorAll("p");
+botCont[0].textContent = siteContent["main-content"]["features-content"];
+botCont[1].textContent = siteContent["main-content"]["about-content"];
+botCont[2].textContent = siteContent["main-content"]["services-content"];
+botCont[3].textContent = siteContent["main-content"]["product-content"];
+botCont[4].textContent = siteContent["main-content"]["vision-content"];
+
+let cont = document.querySelector(".contact h4")
+cont.textContent = siteContent["contact"]["contact-h4"]
+
+let contInfo = document.querySelectorAll(".contact p")
+contInfo[0].textContent = siteContent["contact"]["address"]
+contInfo[1].textContent = siteContent["contact"]["phone"]
+contInfo[2].textContent = siteContent["contact"]["email"]
+
+let foot = document.querySelector("footer")
+foot.textContent = siteContent["footer"]["copyright"]
