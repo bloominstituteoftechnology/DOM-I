@@ -53,13 +53,13 @@ nav[3].textContent = siteContent["nav"]["nav-item-4"];
 nav[4].textContent = siteContent["nav"]["nav-item-5"];
 nav[5].textContent = siteContent["nav"]["nav-item-6"];
 
-//green
+//greenNav
 let green = document.querySelectorAll("a");
 green.forEach(function(a) {
   a.style.color = "green";
 });
 
-//append and prepend
+//append-prepend -partTres
 let newNav = document.querySelector("nav");
 
 let appendNav = document.createElement("a");
@@ -73,11 +73,16 @@ newNav.prepend(prependNav);
 let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
-let ctaImg = document.querySelector(".cta img");
-ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
+//CTA
+document.querySelector("h1").innerHTML = "DOM <br> is <br> Awesome";
 
 let ctaButton = document.querySelector(".cta .cta-text button");
 ctaButton.textContent = siteContent["cta"]["button"];
+
+let ctaImg = document.querySelector(".cta img");
+ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
+
+//main-content
 
 let mainContentH4 = document.querySelectorAll(".main-content h4");
 mainContentH4[0].textContent = siteContent["main-content"]["features-h4"];
@@ -96,8 +101,10 @@ mainContentP[2].textContent = siteContent["main-content"]["services-content"];
 mainContentP[3].textContent = siteContent["main-content"]["product-content"];
 mainContentP[4].textContent = siteContent["main-content"]["vision-content"];
 
-document.querySelector("h1").textContent = "DOM is Awesome";
-cta.innerHTML = "DOM<br> Is<br> Awesome";
+//document.querySelector("h1").textContent = "DOM is Awesome";
+//cta.innerHTML = "DOM<br> Is<br> Awesome";
+
+//footer
 
 let contactH4 = document.querySelector(".contact h4");
 contactH4.textContent = siteContent["contact"]["contact-h4"];
