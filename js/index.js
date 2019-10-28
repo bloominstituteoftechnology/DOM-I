@@ -42,10 +42,12 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //Task 1: Create selectors to point your data into elements
-//Task 2: Update the HTML with the JSON data
-
 const navItem = document.querySelectorAll('a');
+const ctaH1 = document.querySelector('.cta .cta-text h1');
+const ctaButton = document.querySelector('.cta .cta-text button');
+const ctaImg = document.querySelector('.cta #cta-img');
 
+//Task 2: Update the HTML with the JSON data
 //NavBar 
   //ClassNames
   navItem[0].className = "nav-item-1";
@@ -55,10 +57,17 @@ const navItem = document.querySelectorAll('a');
   navItem[4].className = "nav-item-5";
   navItem[5].className = "nav-item-6";
 
-  //TextContent
+  //Text Content
   navItem[0].textContent = "Services";
   navItem[1].textContent = "Product";
   navItem[2].textContent = "Vision";
   navItem[3].textContent = "Features";
   navItem[4].textContent = "About";
   navItem[5].textContent = "Contact";
+
+//Call To Action
+  //Text Content
+  ctaH1.textContent = "DOM Is Awesome";
+  ctaButton.textContent = "Get Started";
+  ctaImg.src = "img/header-img.png";
+
