@@ -50,6 +50,8 @@ const headers = document.getElementsByTagName('h4');
 //p content html collection
 const content = document.getElementsByTagName('p');
 
+//nav bar
+const nav = document.getElementsByTagName('nav')[0];
 
 //nav links
 const nav1 = navItems[0];
@@ -95,6 +97,7 @@ middleImg.src = siteContent["main-content"]['middle-img-src'];
 //add rest of JSON content
 
 //nav links
+// nav JSON shortcut
 nav1.textContent = siteContent.nav["nav-item-1"];
 nav2.textContent = siteContent.nav["nav-item-2"];
 nav3.textContent = siteContent.nav["nav-item-3"];
@@ -128,3 +131,33 @@ email.textContent = siteContent.contact.email;
 
 //footer content
 copyright.textContent = siteContent.footer.copyright;
+
+//change styles
+nav1.style.color = 'green';
+nav2.style.color = 'green';
+nav3.style.color = 'green';
+nav4.style.color = 'green';
+nav5.style.color = 'green';
+nav6.style.color = 'green';
+
+// ***add elements to nav***
+// *note: would prefer to normally create before manipulating existing links, neater code. 
+
+
+//create elements
+const first = document.createElement('a');
+const last = document.createElement('a');
+//add text content to first new element
+first.textContent = "First";
+//add text content to last new element
+last.textContent = "Last";
+//add href to each
+first.href = '#';
+last.href = '#'
+//match style
+first.style.color = 'green';
+last.style.color = 'green';
+//add element to beginning of nav
+nav.prepend(first);
+//add element to end of nav
+nav.appendChild(last);
