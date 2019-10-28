@@ -80,7 +80,6 @@ ctaText1.innerText = ctaText2.join('');
 console.log(ctaText1);
 
 //cta-text button
-
 const Button = document.querySelector('.cta-text button');
 Button.textContent = siteContent['cta']['button'];
 
