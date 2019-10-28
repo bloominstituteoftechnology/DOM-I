@@ -150,3 +150,13 @@ const newNewA = document.createElement('a')
 newNewA.textContent = 'NewNew'
 newNewA.style.color = 'green'
 document.querySelector('nav').prepend(newNewA)
+
+
+//Stretch
+
+const allAnchorsArray = Array.from(document.querySelectorAll('a'))
+
+
+allAnchorsArray.forEach(function(item) {
+  item.style.textDecoration = 'underline'
+})
