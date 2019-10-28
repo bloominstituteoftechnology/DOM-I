@@ -64,46 +64,47 @@ const featuresHeader = document.querySelector('.top-content h4');
 featuresHeader.textContent = siteContent['main-content'] ['features-h4'];
 
 const featuresCont = document.querySelector('.top-content p');
-console.log(featuresCont);
+featuresCont.textContent = siteContent["main-content"]['features-content'];
 
-const aboutHeader = document.querySelectorAll('.top-content div:last-child h4');
-console.log(aboutHeader);
+const aboutHeader = document.querySelector('.top-content div:last-child h4');
+aboutHeader.textContent = siteContent["main-content"]["about-h4"];
 
-const aboutCont = document.querySelectorAll('.top-content div:last-child p');
-console.log(aboutCont);
+const aboutCont = document.querySelector('.top-content div:last-child p');
+aboutCont.textContent = siteContent['main-content']['about-content'];
 
 const midImg = document.querySelector('#middle-img');
-console.log(midImg);
+midImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
 
 const servHeader = document.querySelector('.bottom-content h4');
-console.log(servHeader);
+servHeader.textContent = siteContent['main-content'] ['services-h4'];
 
 const servCont = document.querySelector('.bottom-content p');
-console.log(servCont);
+servCont.textContent = siteContent['main-content'] ['services-content'];
 
-const proHeader = document.querySelectorAll('.bottom-content div:nth-child(2) h4');
-console.log(proHeader);
+const proHeader = document.querySelector('.bottom-content div:nth-child(2) h4');
+proHeader.textContent = siteContent['main-content'] ['product-h4'];
 
-const proCont = document.querySelectorAll('.bottom-content div:nth-child(2) p');
-console.log(proCont);
+const proCont = document.querySelector('.bottom-content div:nth-child(2) p');
+proCont.textContent = siteContent['main-content'] ['product-content'];
 
-const visHeader = document.querySelectorAll('.bottom-content div:last-child h4');
-console.log(visHeader);
+const visHeader = document.querySelector('.bottom-content div:last-child h4');
+visHeader.textContent = siteContent['main-content'] ['vision-h4'];
 
-const visCont = document.querySelectorAll('.bottom-content div:last-child p');
-console.log(visCont);
+const visCont = document.querySelector('.bottom-content div:last-child p');
+visCont.textContent = siteContent['main-content'] ['vision-content'];
 
 const contHeader = document.querySelector('.contact h4');
-console.log(contHeader);
+contHeader.textContent = siteContent.contact['contact-h4'];
 
-const contAdd = document.querySelector('.contact p');
-console.log(contAdd);
+const contAddress = document.querySelector('.contact p:nth-of-type(1)');
+contAddress.textContent = siteContent.contact.address;
+console.log(contAddress);
+const contPhone = document.querySelector('.contact p:nth-child(3)');
+contPhone.textContent = siteContent.contact.phone;
 
-const contPhone = document.querySelectorAll('.contact p:nth-child(2)');
-console.log(contPhone);
-
-const contEmail = document.querySelectorAll('.contact p:last-child');
-console.log(contEmail);
+const contEmail = document.querySelector('.contact p:last-child');
+contEmail.textContent = siteContent.contact.email;
 
 const footer = document.querySelector('footer p');
-console.log(footer);
+footer.textContent = siteContent.footer.copyright;
