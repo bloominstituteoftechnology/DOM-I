@@ -57,6 +57,17 @@ domHeading.textContent = siteContent.cta.h1;
 headerNav.forEach(nav => {
   nav.style.color = "green"
 })
+
+//cta
+const ctaText = document.querySelector(".cta-text h1");
+ctaText.innerHTML = siteContent['cta']['h1'].replace(/\s/g, "</br>");
+
+const ctaBtn = document.querySelector(".cta-text button");
+ctaBtn.textContent = siteContent.cta["button"];
+
+const ctaImg = document.querySelector("#cta-img");
+ctaImg.src = siteContent.cta["img-src"];
+
 // create two new elements
 const newNav =document.querySelector("nav");
 
@@ -107,4 +118,4 @@ const contactP = document.querySelectorAll("p");
 contactP[5].textContent = siteContent.contact["address"];
 contactP[6].textContent = siteContent.contact["phone"];
 contactP[7].textContent = siteContent.contact["email"];
-contactP[8].textContent = siteContent.footer["copyright"];
+contactP[8].textContent = siteContent.footer["copyright"]
