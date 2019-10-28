@@ -54,3 +54,15 @@ let middleImage = document.getElementById("middle-img");
 middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 //Test for middleImage
 console.log(middleImage);
+
+
+//Update navBar Selector
+const navBar = document.querySelector('nav');
+
+const navA = document.querySelectorAll('a');
+navA.forEach(function(item, index){
+  item.innerText = siteContent['nav'][`nav-item-${index + 1}`];
+  item.style.color = 'silver';
+});
+//Test navBar  
+console.log(navBar);
