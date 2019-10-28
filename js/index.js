@@ -46,6 +46,13 @@ const navItem = document.querySelectorAll('a');
 const ctaH1 = document.querySelector('.cta .cta-text h1');
 const ctaButton = document.querySelector('.cta .cta-text button');
 const ctaImg = document.querySelector('.cta #cta-img');
+const mainContenth4 = document.querySelectorAll('.main-content .top-content .text-content h4');
+const mainContentP = document.querySelectorAll('.main-content .top-content .text-content p');
+const middleImg = document.querySelector('.main-content .middle-img');
+const bottomContentH4 = document.querySelectorAll('.main-content .bottom-content h4');
+const bottomContentP = document.querySelectorAll('.main-content .bottom-content p');
+
+
 
 //Task 2: Update the HTML with the JSON data
 //NavBar 
@@ -70,4 +77,14 @@ const ctaImg = document.querySelector('.cta #cta-img');
   ctaH1.textContent = "DOM Is Awesome";
   ctaButton.textContent = "Get Started";
   ctaImg.src = "img/header-img.png";
+
+//Main Content
+  //Text Content
+  mainContenth4[0].textContent = 'Features';
+  mainContentP[0].textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+  mainContenth4[1].textContent = 'About';
+  mainContentP[1].textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+  middleImg.src = 'img/mid-page-accent.jpg';
+  
+
 
