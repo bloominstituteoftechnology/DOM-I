@@ -40,7 +40,7 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
-//
+//images
 
 let cta = document.getElementById(`cta-img`);
 cta.setAttribute(`src`, siteContent["cta"]["img-src"]);
@@ -48,4 +48,12 @@ cta.setAttribute(`src`, siteContent["cta"]["img-src"]);
 
 let middleImg = document.getElementById(`middle-img`);
 middleImg.setAttribute(`src`, "img/mid-page-accent.jpg");
+
+let button = document.getElementsByTagName("button")[0];
+button.textContent ="Get started";
+
+//Navigation
+
+
+
 
