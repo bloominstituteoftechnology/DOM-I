@@ -43,18 +43,6 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 //Test for logo-img
 console.log(logo);
 
-// Updated images for cta
-let cta = document.getElementById("cta-img");
-cta.setAttribute('src', siteContent["cta"]["img-src"] )
-//Test for cta-img
-console.log(cta);
-
-//Updated images for middle-img-src
-let middleImage = document.getElementById("middle-img");
-middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
-//Test for middleImage
-console.log(middleImage);
-
 
 //Update navBar Selector
 const navBar = document.querySelector('nav');
@@ -64,8 +52,16 @@ navATag.forEach(function(item, index){
   item.innerText = siteContent['nav'][`nav-item-${index + 1}`];
   item.style.color = 'silver';
 });
+
 //Test navBar  
 console.log(navBar);
+
+// Updated images for cta
+let cta = document.getElementById("cta-img");
+cta.setAttribute('src', siteContent["cta"]["img-src"] )
+
+//Test for cta-img
+console.log(cta);
 
 // Update to cta-text
 const ctaText1 = document.querySelector('h1');
@@ -76,13 +72,42 @@ ctaText2.splice(3,0, '\r\n');
 
 ctaText1.innerText = ctaText2.join('');
 
-//Test ctaText1 out put should be DOM IS AWESOME
+//Test ctaText1 out put should be "DOM IS AWESOME"
 console.log(ctaText1);
 
 //cta-text button
 const Button = document.querySelector('.cta-text button');
 Button.textContent = siteContent['cta']['button'];
 
-// Test Button on console Get Started
+// Test Button on console "Get Started"
 console.log(Button);
+
+// features & abouT h4
+const contentTopH4 = document.querySelectorAll('.top-content .text-content h4');
+contentTopH4[0].textContent = siteContent['main-content']['features-h4'];
+contentTopH4[1].textContent = siteContent['main-content']['about-h4'];
+
+//test contentTopH4[]
+console.log(contentTopH4[0].textContent);
+console.log(contentTopH4[1].textContent);
+
+
+// Features and About contents on Top Content area
+const contentTopP = document.querySelectorAll('.top-content .text-content p');
+contentTopP[0].textContent = siteContent['main-content']['features-content'];
+contentTopP[1].textContent = siteContent['main-content']['about-content'];
+
+
+//Test contentTopP  for Features and About
+console.log(contentTopP[0].textContent);
+console.log(contentTopP[1].textContent);
+
+//Updated images for middle-img-src
+let middleImage = document.getElementById("middle-img");
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+//Test for middleImage
+console.log(middleImage);
+
+
 
