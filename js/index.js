@@ -142,4 +142,17 @@ button.addEventListener("click", () => {
 
 })
 
+button.addEventListener("dblclick", () => {
+  body.style.backgroundColor = "white";
+  mainTxt.style.color= "black";
+  botCont.forEach(element => {
+    element.style.color = "black"
+  });
+  botSubTitles.forEach(element => {
+    element.style.color= "black"
+  });
+  logo.style.backgroundColor = "white"
+
+})
+
 
