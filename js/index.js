@@ -76,8 +76,14 @@ ctaText2.splice(3,0, '\r\n');
 
 ctaText1.innerText = ctaText2.join('');
 
-//Test ctaText1 out put should me DOM IS AWESOME
+//Test ctaText1 out put should be DOM IS AWESOME
 console.log(ctaText1);
 
+//cta-text button
 
+const Button = document.querySelector('.cta-text button');
+Button.textContent = siteContent['cta']['button'];
+
+// Test Button on console Get Started
+console.log(Button);
 
