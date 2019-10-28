@@ -126,4 +126,30 @@ email.textContent = " sales@greatidea.io";
 let footer = document.getElementsByTagName(`p`)[8];
 footer.textContent = "Copyright Great Idea! 2018";
 
+// Section 3
+
+let nav = document.querySelectorAll(`a`);
+nav.forEach(Element => {
+  Element.style.color = `green`;
+})
+
+const nava = document.createElement(`a`);
+
+nava.textContent = `Price`;
+
+const Navigation = document.querySelector (`nav`);
+
+Navigation.append(nava);
+
+
+
+const newHeader = document.createElement(`a`);
+
+newHeader.textContent = "Blog";
+
+const header = document.querySelector (`nav`);
+
+Navigation.prepend(newHeader);
+
+
  
