@@ -49,11 +49,32 @@ cta.setAttribute(`src`, siteContent["cta"]["img-src"]);
 let middleImg = document.getElementById(`middle-img`);
 middleImg.setAttribute(`src`, "img/mid-page-accent.jpg");
 
+let h1T = document.getElementsByTagName(`h1`)[0]
+h1T.textContent = "Dom \n is \n  awsome";
+
+
 let button = document.getElementsByTagName("button")[0];
 button.textContent ="Get started";
 
-//Navigation
 
+//Navigation
+let services = document.getElementsByTagName('a')[0];
+services.textContent = 'Services';
+
+let product = document.getElementsByTagName('a')[1];
+product.textContent = 'Product';
+
+let vision = document.getElementsByTagName('a')[2];
+vision.textContent = 'Vision';
+
+let features = document.getElementsByTagName('a')[3];
+features.textContent = 'Features';
+
+let about = document.getElementsByTagName('a')[4];
+about.textContent = 'About';
+
+let contact = document.getElementsByTagName('a')[5];
+contact.textContent = 'Contact';
 
 
 
