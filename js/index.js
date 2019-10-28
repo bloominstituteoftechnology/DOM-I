@@ -59,10 +59,25 @@ console.log(middleImage);
 //Update navBar Selector
 const navBar = document.querySelector('nav');
 
-const navA = document.querySelectorAll('a');
-navA.forEach(function(item, index){
+const navATag = document.querySelectorAll('a');
+navATag.forEach(function(item, index){
   item.innerText = siteContent['nav'][`nav-item-${index + 1}`];
   item.style.color = 'silver';
 });
 //Test navBar  
 console.log(navBar);
+
+// Update to cta-text
+const ctaText1 = document.querySelector('h1');
+const ctaText2 = siteContent['cta']['h1'].split(' ');
+
+ctaText2.splice(1,0, '\r\n');
+ctaText2.splice(3,0, '\r\n');
+
+ctaText1.innerText = ctaText2.join('');
+
+//Test ctaText1 out put should me DOM IS AWESOME
+console.log(ctaText1);
+
+
+
