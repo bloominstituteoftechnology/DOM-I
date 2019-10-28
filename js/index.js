@@ -130,6 +130,18 @@ botSubTitles.forEach(element => {
 const body = document.querySelector('body')
 
 button.addEventListener("click", () => {
+  mainTxt.style.color= "green";
+
+});
+
+
+
+let ntMode = document.createElement("button");
+ntMode.textContent = "Night Mode";
+ntMode.style.marginLeft= "25px";
+foot.appendChild(ntMode);
+
+ntMode.addEventListener("click", () => {
   body.style.backgroundColor = "black";
   mainTxt.style.color= "green";
   botCont.forEach(element => {
@@ -139,10 +151,11 @@ button.addEventListener("click", () => {
     element.style.color= "green"
   });
   logo.style.backgroundColor = "green"
+  foot.style.color= "green";
 
 })
 
-button.addEventListener("dblclick", () => {
+ntMode.addEventListener("dblclick", () => {
   body.style.backgroundColor = "white";
   mainTxt.style.color= "black";
   botCont.forEach(element => {
@@ -154,5 +167,8 @@ button.addEventListener("dblclick", () => {
   logo.style.backgroundColor = "white"
 
 })
+
+
+
 
 
