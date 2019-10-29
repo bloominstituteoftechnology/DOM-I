@@ -42,15 +42,26 @@ const siteContent = {
 // logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 const navSection = document.querySelector('nav');
+const newLinkA = document.createElement('a');
+newLinkA.textContent = 'Travel';
+const newLinkB = document.createElement('a');
+newLinkB.textContent = 'Music';
+
+navSection.prepend(newLinkA);
+navSection.appendChild(newLinkB);
+
+
 let anchorTags = document.querySelectorAll('a');
-anchorTags[0].textContent = siteContent['nav']['nav-item-1'];
-anchorTags[1].textContent = siteContent['nav']['nav-item-2'];
-anchorTags[2].textContent = siteContent['nav']['nav-item-3'];
-anchorTags[3].textContent = siteContent['nav']['nav-item-4'];
-anchorTags[4].textContent = siteContent['nav']['nav-item-5'];
-anchorTags[5].textContent = siteContent['nav']['nav-item-6'];
+anchorTags[1].textContent = siteContent['nav']['nav-item-1'];
+anchorTags[2].textContent = siteContent['nav']['nav-item-2'];
+anchorTags[3].textContent = siteContent['nav']['nav-item-3'];
+anchorTags[4].textContent = siteContent['nav']['nav-item-4'];
+anchorTags[5].textContent = siteContent['nav']['nav-item-5'];
+anchorTags[6].textContent = siteContent['nav']['nav-item-6'];
 
 anchorTags.forEach(anchorTags => (anchorTags.style.color = 'Green'));
+anchorTags.forEach(anchorTags => (anchorTags.style.textDecorationColor = 'red'));
+anchorTags.forEach(anchorTags => (anchorTags.style.pointer));
 const logoImage = document.querySelector('#logo-img');
 logoImage.src = siteContent['nav']['img-src'];
 logoImage.alt = 'Great Idea! Company logo.'
