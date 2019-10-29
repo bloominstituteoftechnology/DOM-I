@@ -38,5 +38,84 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+
+//all images
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let headerImg = document.getElementById("cta-img");
+headerImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+//nav links
+
+let navLinks = document.getElementsByTagName("a");
+Array.from(navLinks).forEach((e, i) => {
+e.style.color = "green";
+e.textContent = siteContent["nav"][`nav-item-${i+1}`];
+}); 
+
+// heading text & button
+
+let headingText = document.getElementsByClassName("cta-text");
+headingText[0].children[0].textContent = siteContent["cta"]["h1"];
+headingText[0].children[1].textContent = siteContent["cta"]["button"];
+
+
+// Body Text
+
+
+
+// for (let i=0; i < bodyText.length; i++) {
+//   for (let j=0; j < bodyText[i].children.length; j++) {
+//     bodyText[i].children[j].textContent = Object.values(siteContent["main-content"])[i * j];
+//     console.log("Hello");
+//   }
+// }
+
+let bodyText = document.getElementsByClassName("text-content");
+
+bodyText[0].children[0].textContent = siteContent["main-content"]["features-h4"]
+bodyText[0].children[1].textContent = siteContent["main-content"]["features-content"]
+
+
+bodyText[1].children[0].textContent = siteContent["main-content"]["about-h4"]
+bodyText[1].children[1].textContent = siteContent["main-content"]["about-content"]
+
+
+bodyText[2].children[0].textContent = siteContent["main-content"]["services-h4"]
+bodyText[2].children[1].textContent = siteContent["main-content"]["services-content"]
+
+
+bodyText[3].children[0].textContent = siteContent["main-content"]["product-h4"]
+bodyText[3].children[1].textContent = siteContent["main-content"]["product-content"]
+
+
+bodyText[4].children[0].textContent = siteContent["main-content"]["vision-h4"]
+bodyText[4].children[1].textContent = siteContent["main-content"]["vision-content"]
+
+
+
+
+
+//Contact 
+
+let contactText = document.getElementsByClassName("contact");
+contactText[0].children[0].textContent = siteContent["contact"]["contact-h4"]
+contactText[0].children[1].textContent = siteContent["contact"]["address"]
+contactText[0].children[2].textContent = siteContent["contact"]["phone"]
+contactText[0].children[3].textContent = siteContent["contact"]["email"]
+
+
+const brTag = document.createElement("br");
+
+
+
+// Footer
+
+let footerText = document.getElementsByTagName("footer");
+footerText[0].textContent = siteContent["footer"]["copyright"];
+
+
