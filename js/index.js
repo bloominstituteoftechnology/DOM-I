@@ -37,6 +37,49 @@ const siteContent = {
   },
 };
 
+
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img/logo.png"])
+
+logo.alt = "Great Idea! Company logo."
+
+
+//getElement Method to select
+
+
+// document.getElementsByTagName('header');
+
+// document.getElementsByClassName('cta-text');
+
+// document.getElementsByClassName('text-content');
+
+
+
+const code = document.getElementById('cta-img');
+code.src = "img/header-img.png"; 
+code.alt = "Image of a code snippet";
+
+
+
+const middle = document.getElementById('middle-img');
+middle.src = "img/mid-page-accent.jpg" 
+middle.alt = "Image of code snippets across the screen" 
+
+
+
+const Nav = document.getElementsByTagName('a');
+
+Nav.textContent = "Services";
+Nav.textContent = "Product";
+Nav.textContent = "Vision";
+Nav.textContent = "Features";
+Nav.textContent = "About";
+Nav.textContent = "Contact";
+
+// const parentHeader =  document.getElementsByTagName('nav');
+
+// parentHeader.append(Nav);
+
+
