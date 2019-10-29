@@ -44,7 +44,15 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 //navbar
 const navbar = document.querySelectorAll('a')
 navbar.forEach((value, i) => value.textContent = siteContent.nav[`nav-item-${i + 1}`])
-
+navbar.forEach(element => {element.style.color = 'olive'})
+const newNavItem = document.createElement('a');
+newNavItem.textContent = 'Learn More';
+newNavItem.style.color = 'olive';
+const newNavItem2 = document.createElement('a');
+newNavItem2.textContent = 'Hello';
+newNavItem2.style.color = 'olive';
+const addNavItem = document.querySelector('nav');
+addNavItem.append(newNavItem, newNavItem2);
 
 //title
 
