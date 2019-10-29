@@ -67,7 +67,8 @@ headerimg.setAttribute('src', siteContent['cta']['img-src'])
 
 
 //main-content
-
+const mainContent = document.querySelector('.main-content');
+mainContent.style.background = 'rosybrown';
 const featuresHeader = document.querySelector('.top-content h4');
 featuresHeader.textContent = siteContent['main-content'] ['features-h4'];
 
