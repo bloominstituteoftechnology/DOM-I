@@ -37,6 +37,69 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+// // Example: Update the img src for the logo
+// let logo = document.getElementById("logo-img");
+// logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const navSection = document.querySelector('nav');
+let anchorTags = document.querySelectorAll('a');
+anchorTags[0].textContent = siteContent['nav']['nav-item-1'];
+anchorTags[1].textContent = siteContent['nav']['nav-item-2'];
+anchorTags[2].textContent = siteContent['nav']['nav-item-3'];
+anchorTags[3].textContent = siteContent['nav']['nav-item-4'];
+anchorTags[4].textContent = siteContent['nav']['nav-item-5'];
+anchorTags[5].textContent = siteContent['nav']['nav-item-6'];
+
+anchorTags.forEach(anchorTags => (anchorTags.style.color = 'Green'));
+const logoImage = document.querySelector('#logo-img');
+logoImage.src = siteContent['nav']['img-src'];
+logoImage.alt = 'Great Idea! Company logo.'
+
+//CTA SECTION
+
+//CTA-TEXT DIV
+const heroText = document.querySelector('h1');
+heroText.textContent = siteContent['cta']['h1'];
+
+const button = document.querySelector('button');
+button.textContent = siteContent['cta']['button'];
+
+const ctaImg = document.querySelector('#cta-img');
+ctaImg.src = siteContent['cta']['img-src'];
+ctaImg.alt = 'Image of code snippets'
+
+
+//MAIN CONTENT SECTION
+//TOP CONTENT DIV
+const middleImg = document.querySelector('.middle-img');
+middleImg.src = siteContent['main-content']['middle-img-src'];
+middleImg.alt = 'Image of code snippets across the screen'
+
+const contentH4 = document.querySelectorAll('h4');
+
+contentH4[0].textContent = siteContent['main-content']['features-h4'];
+contentH4[1].textContent = siteContent['main-content']['about-h4'];
+contentH4[2].textContent = siteContent['main-content']['services-h4'];
+contentH4[3].textContent = siteContent['main-content']['product-h4'];
+contentH4[4].textContent = siteContent['main-content']['vision-h4'];
+contentH4[5].textContent = siteContent['contact']['contact-h4'];
+
+const contentText = document.querySelectorAll('p');
+contentText[0].textContent = siteContent['main-content']['features-content'];
+contentText[1].textContent = siteContent['main-content']['about-content'];
+contentText[2].textContent = siteContent['main-content']['services-content'];
+contentText[3].textContent = siteContent['main-content']['product-content'];
+contentText[4].textContent = siteContent['main-content']['vision-content'];
+
+
+
+//Contact Class
+contentText[5].textContent = siteContent['contact']['address'];
+contentText[6].textContent = siteContent['contact']['phone'];
+contentText[7].textContent = siteContent['contact']['email'];
+
+//FOOTER DIV
+const footerInfo = document.querySelector('footer p');
+footerInfo.textContent = siteContent['footer']['copyright'];
+
+
