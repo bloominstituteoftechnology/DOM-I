@@ -65,15 +65,63 @@ atags[5].innerText = "Product";
 
 atags.forEach(link => (link.style.color = "black"));
 
+const newAtag1 = document.createElement("a");
+const mainNav = document.querySelector("nav");
+
 // Header
 
-const mainHeading = document.querySelector("h1");
-mainHeading.textContent = siteContent["cta"]["h1"];
+const mainHead = document.querySelector("h1");
+mainHead.textContent = siteContent["cta"]["h1"];
 
 const mainButton = document.querySelector("button");
 mainButton.innerText = "Get Started";
 
-const logo2 = document.querySelector("#cta-img");
-logo2.setAttribute("src", siteContennt["cta"][img - src]);
+const pic1 = document.querySelector("#cta-img");
+pic1.setAttribute("src", siteContent["cta"]["img-src"]);
 
 const mainContent = docuent.querySelectorAll(".text-content");
+
+// Main Content
+
+mainContent[0].querySelector("h4").textContent =
+  siteContent["main-content"]["features-h4"];
+mainContent[0].querySelector("p").textContent =
+  siteContent["main-content"]["features-content"];
+mainContent[1].querySelector("h4").textContent =
+  siteContent["main-content"]["about-h4"];
+mainContent[1].querySelector("p").textContent =
+  siteContent["main-content"]["about-content"];
+mainContent[2].querySelector("h4").textContent =
+  siteContent["main-content"]["services-h4"];
+mainContent[2].querySelector("p").textContent =
+  siteContent["main-content"]["services-content"];
+mainContent[3].querySelector("h4").textContent =
+  siteContent["main-content"]["product-h4"];
+mainContent[3].querySelector("p").textContent =
+  siteContent["main-content"]["product-content"];
+mainContent[4].querySelector("h4").textContent =
+  siteContent["main-content"]["vision-h4"];
+mainContent[4].querySelector("p").textContent =
+  siteContent["main-content"]["vision-content"];
+
+const pic2 = document.querySelector("middle-img");
+pic2.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+// contactinfo
+
+const contactinfo = document.querySelector(".contact");
+
+contactinfo.getElementsByTagName("h4")[0].textContent =
+  siteContent["contact"]["contact-h4"];
+contactinfo.getElementsByTagName("p")[0].textContent =
+  siteContent["contact"]["address"];
+contactinfo.getElementsByTagName("p")[1].textContent =
+  siteContent["contact"]["phone"];
+contactinfo.getElementsByTagName("p")[2].textContent =
+  siteContent["contact"]["email"];
+
+// bottom
+
+const footer = document.querySelector("footer");
+
+footer.innerText = "Copyright Great Idea! 2019";
