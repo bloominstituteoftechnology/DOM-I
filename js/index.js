@@ -54,4 +54,16 @@ const logoImg = document.querySelector('#logo-img');
 logoImg.src = "img/logo.png";
 
 let mainheader = document.querySelector('h1');
-mainheader.textContent = "DOM Is Awesome";
+mainheader.textContent = "DOM is Awesome";
+
+const button = document.querySelector('button');
+button.textContent = "Get Started";
+
+const headerImg = document.querySelector('#cta-img');
+headerImg.src = 'img/header-img.png';
+
+let featuresh4 = document.querySelector('features-h4');
+featuresh4.textContent = "Features";
+
+let featurescontent = document.querySelector("features-content");
+featurescontent.textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
