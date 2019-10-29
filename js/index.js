@@ -48,11 +48,23 @@ console.log(logo);
 //Update navBar Selector
 const navBar = document.querySelector('nav');
 
+const child1 = document.createElement('a');
+const child2 = document.createElement('a');
+
+child1.textContent ='Child1';
+child2.textContent = 'Child2'
+child1.style.color = 'DodgerBlue';
+child2.style.color = 'Purple';
+
 const navATag = document.querySelectorAll('a');
 navATag.forEach(function(item, index){
   item.innerText = siteContent['nav'][`nav-item-${index + 1}`];
-  item.style.color = 'silver';
+  item.style.color = 'green';
 });
+
+navBar.prepend(child1);
+navBar.appendChild(child2);
+
 
 //Test navBar  
 console.log(navBar);
@@ -148,5 +160,3 @@ const copyRight= document.querySelector('footer');
 copyRight.textContent = siteContent['footer']['copyright'];
 //Testing copyRight on footer
 console.log(copyRight.textContent);
-
-
