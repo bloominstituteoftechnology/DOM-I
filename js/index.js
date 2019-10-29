@@ -43,13 +43,13 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //nav
 
-const nav = document.querySelectorAll("nav a");
-nav.forEach((element, index) => {
-    return element.innerHTML = siteContent.nav[`nav-item-${index + 1}`];
-});
-nav.forEach((element, index) => {
-  return element.style.color = "green";
-});
+const navItems = Object.values(siteContent.nav)
+
+const navLinks = document.querySelectorAll('a');
+navLinks.forEach((item, index) => item.innerText = navItems[index])
+
+//change color to green
+navLinks.forEach((item) => item.style.color = 'green')
 
 const jess = document.createElement("a");
 const jessText = document.createTextNode("Jess");
@@ -63,42 +63,42 @@ novak.prepend(novakText);
 novak.style.color = "green";
 document.querySelector("nav").appendChild(novak);
 
-//CTA 
-const ctaH1 = document.querySelector(".cta-text h1");
-siteContent.cta.h1 = siteContent.cta.h1.split(" ").join("<br>")
-ctaH1.innerHTML = siteContent.cta.h1;
-const ctaButton = document.querySelector(".cta-text button");
-ctaButton.innerText = siteContent.cta.button;
-const ctaImg = document.getElementById('cta-img');
+//CTA
+const h1 = document.querySelector('h1')
+h1.innerText = siteContent.cta.h1;
+
+const button = document.querySelector('button')
+button.innerText = siteContent.cta.button;
+
+const ctaImg = document.querySelector('.cta img')
 ctaImg.src = siteContent.cta["img-src"];
 
 //main content
-const topContentHeaders = document.querySelectorAll(".top-content h4");
-topContentHeaders[0].innerHTML = siteContent["main-content"]["features-h4"];
-topContentHeaders[1].innerHTML = siteContent["main-content"]["about-h4"];
+const featuresH4 = document.querySelectorAll('.main-content h4')
+featuresH4[0].innerText = siteContent["main-content"]["features-h4"]
+featuresH4[1].innerText = siteContent["main-content"]["about-h4"]
+featuresH4[2].innerText = siteContent["main-content"]["services-h4"]
+featuresH4[3].innerText = siteContent["main-content"]["product-h4"]
+featuresH4[4].innerText = siteContent["main-content"]["vision-h4"]
 
-const topContentText = document.querySelectorAll(".top-content p");
-topContentText[0].innerHTML = siteContent["main-content"]["features-content"];
-topContentText[1].innerHTML = siteContent["main-content"]["about-content"];
-document.getElementById("middle-img").src = siteContent["main-content"]["middle-img-src"];
+const mainContent = document.querySelectorAll('.main-content p')
+mainContent[0].innerText = siteContent["main-content"]["features-content"]
+mainContent[1].innerText = siteContent["main-content"]["about-content"]
+mainContent[2].innerText = siteContent["main-content"]["services-content"]
+mainContent[3].innerText = siteContent["main-content"]["product-content"]
+mainContent[4].innerText = siteContent["main-content"]["vision-content"]
 
-const bottomContentHeaders = document.querySelectorAll(".bottom-content h4");
-bottomContentHeaders[0].innerHTML = siteContent["main-content"]["services-h4"];
-bottomContentHeaders[1].innerHTML = siteContent["main-content"]["product-h4"];
-bottomContentHeaders[2].innerHTML = siteContent["main-content"]["vision-h4"];
-
-const bottomContentText = document.querySelectorAll(".bottom-content p");
-bottomContentText[0].innerHTML = siteContent["main-content"]["services-content"];
-bottomContentText[1].innerHTML = siteContent["main-content"]["about-content"];
-bottomContentText[2].innerHTML = siteContent["main-content"]["vision-content"];
+const mainContentImg = document.querySelector('.main-content img')
+mainContentImg.src = siteContent["main-content"]["middle-img-src"]
 
 //contact
-const contactHeader = document.querySelector(".contact h4");
-contactHeader.innerHTML = siteContent.contact["contact-h4"];
-const contactInfo = document.querySelectorAll(".contact p");
-contactInfo[0].innerHTML = siteContent.contact.address;
-contactInfo[1].innerHTML = siteContent.contact.phone;
-contactInfo[2].innerHTML = siteContent.contact.email;
+const contactH4 = document.querySelector('.contact h4')
+contactH4.innerText = siteContent.contact["contact-h4"]
+
+const contactValues = Object.values(siteContent.contact)
+const mainContact = document.querySelectorAll('.contact p')
+mainContact.forEach((item, index) => item.innerText = contactValues[index + 1])
 
 //footer
-document.querySelector("footer p").innerHTML = siteContent.footer.copyright;
+const footer = document.querySelector('footer')
+footer.innerText = siteContent.footer.copyright;
