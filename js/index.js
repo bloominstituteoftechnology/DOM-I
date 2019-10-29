@@ -42,16 +42,16 @@ const siteContent = {
 // logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 const navSection = document.querySelector('nav');
-const newLinkA = document.createElement('a');
+let newLinkA = document.createElement('a');
 newLinkA.textContent = 'Travel';
-const newLinkB = document.createElement('a');
+let newLinkB = document.createElement('a');
 newLinkB.textContent = 'Music';
 
 navSection.prepend(newLinkA);
 navSection.appendChild(newLinkB);
 
 
-let anchorTags = document.querySelectorAll('a');
+const anchorTags = document.querySelectorAll('a');
 anchorTags[1].textContent = siteContent['nav']['nav-item-1'];
 anchorTags[2].textContent = siteContent['nav']['nav-item-2'];
 anchorTags[3].textContent = siteContent['nav']['nav-item-3'];
@@ -62,9 +62,10 @@ anchorTags[6].textContent = siteContent['nav']['nav-item-6'];
 anchorTags.forEach(anchorTags => (anchorTags.style.color = 'Green'));
 anchorTags.forEach(anchorTags => (anchorTags.style.textDecorationColor = 'red'));
 anchorTags.forEach(anchorTags => (anchorTags.style.pointer));
+
 const logoImage = document.querySelector('#logo-img');
 logoImage.src = siteContent['nav']['img-src'];
-logoImage.alt = 'Great Idea! Company logo.'
+logoImage.alt = 'Great Idea! Company logo.';
 
 //CTA SECTION
 
@@ -77,14 +78,14 @@ button.textContent = siteContent['cta']['button'];
 
 const ctaImg = document.querySelector('#cta-img');
 ctaImg.src = siteContent['cta']['img-src'];
-ctaImg.alt = 'Image of code snippets'
+ctaImg.alt = 'Image of code snippets';
 
 
 //MAIN CONTENT SECTION
 //TOP CONTENT DIV
 const middleImg = document.querySelector('.middle-img');
 middleImg.src = siteContent['main-content']['middle-img-src'];
-middleImg.alt = 'Image of code snippets across the screen'
+middleImg.alt = 'Image of code snippets across the screen';
 
 const contentH4 = document.querySelectorAll('h4');
 
