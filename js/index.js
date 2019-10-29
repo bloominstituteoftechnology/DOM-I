@@ -63,7 +63,7 @@ atags[4].innerText = "About";
 atags[5].setAttribute("class", ".nav-item-6");
 atags[5].innerText = "Product";
 
-atags.forEach(link => (link.style.color = "black"));
+atags.forEach(link => (link.style.color = "green"));
 
 const newAtag1 = document.createElement("a");
 const mainNav = document.querySelector("nav");
@@ -125,3 +125,19 @@ contactinfo.getElementsByTagName("p")[2].textContent =
 const footer = document.querySelector("footer");
 
 footer.innerText = "Copyright Great Idea! 2019";
+
+// task 3
+
+const navA = document.createElement("a");
+const headA = document.querySelector("nav");
+navA.href = "#";
+navA.innerText = "features";
+headA.appendChild(navA);
+navA.style.color = "green";
+
+const headA1 = document.querySelector("nav");
+const navA1 = document.createElement("a");
+navA1.href = "#";
+navA1.innerText = "contact";
+headA1.prepend(navA1);
+navA1.style.color = "green";
