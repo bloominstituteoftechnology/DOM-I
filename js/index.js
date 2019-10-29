@@ -39,4 +39,55 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src',["img/logo.png"])
+
+let nav = document.getElementsByTagName("a");
+
+nav[0].textContent = siteContent.nav["nav-item-1"];
+nav[1].textContent = siteContent.nav["nav-item-2"];
+nav[2].textContent = siteContent.nav["nav-item-3"];
+nav[3].textContent = siteContent.nav["nav-item-4"];
+nav[4].textContent = siteContent.nav["nav-item-5"];
+nav[5].textContent = siteContent.nav["nav-item-6"];
+
+const ctaHead = document.querySelector('.cta h1');
+
+ctaHead.innerHTML = siteContent['cta']['h1'].replace(/ /g,'<br>');
+
+const logoImg = document.getElementById('cta-img');
+logoImg.setAttribute('src',["img/header-img.png"] );
+
+const h4s = document.querySelectorAll('h4');
+h4s[0].textContent = siteContent["main-content"]["features-h4"];
+h4s[1].textContent = siteContent["main-content"]["about-h4"];
+h4s[2].textContent = siteContent["main-content"]["services-h4"];
+h4s[3].textContent = siteContent["main-content"]["product-h4"];
+h4s[4].textContent = siteContent["main-content"]["vision-h4"];
+h4s[5].textContent = siteContent["contact"]["contact-h4"];
+
+const btton = document.querySelector("button");
+btton.textContent = siteContent["cta"]["button"];
+
+let middleImg = document.querySelector(".middle-img");
+middleImg.setAttribute('src',["img/mid-page-accent.jpg"]);
+
+const ps = document.querySelectorAll('p');
+ps[0].textContent  = siteContent["main-content"]["features-content"];
+ps[1].textContent  = siteContent["main-content"]["about-content"];
+ps[2].textContent  = siteContent["main-content"]["services-content"];
+ps[3].textContent  = siteContent["main-content"]["product-content"];
+ps[3].textContent  = siteContent["main-content"]["vision-content"];
+ps[4].textContent  = siteContent["contact"]["address"];
+ps[5].textContent  = siteContent["contact"]["phone"];
+ps[6].textContent  = siteContent["contact"]["email"];
+ps[7].textContent  = siteContent["footer"]["copyright"];
+
+
+
+console.log(topContent,"topcontent");
+
+// topContent.textContent = siteContent['main-content']["features-h4"];
+
+
+
+
