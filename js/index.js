@@ -115,8 +115,23 @@ footer.textContent = siteContent ['footer'] ['copyright'];
 
 // Task 3 Add New Content
 
-// navigation color
+// navigation link color
 const navColor = document.querySelectorAll('a');
 navColor.forEach((a) =>{
   a.style.color = "green"
 });
+
+// Utilize .appendChild() and .prepend() to add two new items 
+// to the navigation system. You can call them whatever you want.
+
+const blog = document.createElement("a");
+const testimonials = document.createElement("a");
+const navbar = document.querySelector('nav');
+
+blog.textContent = "blog";
+testimonials.textContent = "testimonials";
+
+
+navbar.appendChild(blog);
+navbar.prepend(testimonials);
+
