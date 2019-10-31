@@ -49,7 +49,8 @@ navigationLinks.forEach((link, i) => {
 })
 
 
-// cta
+// Call to Action (cta)
+// cta references
 const headerText = document.querySelector('.cta h1');
 const headerButton = document.querySelector('.cta button');
 const headerImage = document.querySelector('#cta-img');
@@ -58,23 +59,46 @@ headerText.textContent = siteContent['cta'] ['h1'];
 headerButton.textContent = siteContent['cta']['button'];
 headerImage.setAttribute('src', siteContent ["cta"] ["img-src"]);
 
+// end of call to action
+
 
 // Content
+
+// content references
 const contentHeader = document.querySelectorAll('.text-content h4');
 const contentText = document.querySelectorAll('.text-content p');
 const contentImg = document.querySelector('#middle-img')
 
+// Content headers
 contentHeader[0].textContent = siteContent ['main-content'] ['features-h4'];
 contentHeader[1].textContent = siteContent ['main-content'] ['about-h4'];
 contentHeader[2].textContent = siteContent ['main-content'] ['services-h4'];
 contentHeader[3].textContent = siteContent ['main-content'] ['product-h4'];
 contentHeader[4].textContent = siteContent ['main-content'] ['vision-h4'];
 
+// content text
 contentText[0].textContent = siteContent ['main-content'] ['features-content'];
 contentText[1].textContent = siteContent ['main-content'] ['about-content'];
 contentText[2].textContent = siteContent ['main-content'] ['services-content'];
 contentText[3].textContent = siteContent ['main-content'] ['product-content'];
 contentText[4].textContent = siteContent ['main-content'] ['vision-content'];
 
-
+// content image
 contentImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+// end of content section
+
+
+// Contact Section
+
+// contact references
+const contactHeader = document.querySelector('.contact h4');
+const contactPara = document.querySelectorAll('.contact p')
+
+contactHeader.textContent = siteContent ['contact']['contact-h4'];
+contactPara[0].textContent = siteContent ['contact'] ['address'];
+contactPara[1].textContent = siteContent['contact'] ['phone'];
+contactPara[2].textContent = siteContent ['contact'] ['email'];
+
+// end of contact section 
+
