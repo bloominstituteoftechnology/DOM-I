@@ -57,6 +57,9 @@ let navbar = document.querySelectorAll('a');
     bar.style.color= "green";
     bar.style.fontSize= "20px";
     bar.style.textDecoration="none";
+    bar.addEventListener('click', (event)=>{
+      bar.style.color="#00FA9A";
+    })
   })
 
 /*------this works as well------>
@@ -70,6 +73,12 @@ navbar[5].innerHTML = siteContent["nav"]['nav-item-6'];*/
 let ctaText = document.querySelector('h1');
 ctaText.innerHTML = siteContent["cta"]['h1'];
 ctaText.style.color ='#e69900';
+ctaText.classList.add('new-class');
+
+let title =document.querySelector('.new-class')
+title.addEventListener('mouseover',(event)=>{
+  title.style.color="#A0522D"
+});
 
 let button = document.querySelector('button');
 button.textContent = siteContent["cta"]['button'];
@@ -138,6 +147,9 @@ newNavBar.textContent="Home";
 newNavBar.style.color="green";
 newNavBar.style.fontSize= "20px";
 newNavBar.style.textDecoration="none"
+newNavBar.addEventListener('click', (event)=>{
+  newNavBar.style.color="#00FA9A";
+})
 
 document.querySelector("nav").prepend(newNavBar);
 
@@ -148,3 +160,13 @@ document.querySelector("footer").appendChild(contactDays);
 const body= document.querySelector('.container');
 body.style.backgroundColor="#fff7e6";
 body.style.padding="10px";
+
+const travelImages = document.querySelector('#cta-img');
+travelImages.addEventListener('mouseenter', (event) => {
+  travelImages.style.transform = 'scale(1.1)';
+  travelImages.style.transition = 'transform 0.5s';})
+    
+  travelImages.addEventListener('mouseleave', (event) => {
+    travelImages.style.transform = 'scale(1.0)';
+    travelImages.style.transition = 'transform 0.5s';})
+    
