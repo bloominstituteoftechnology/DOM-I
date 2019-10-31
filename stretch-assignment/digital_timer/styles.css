@@ -1,7 +1,8 @@
-body {
+/* body {
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .digit {
@@ -11,4 +12,46 @@ body {
 
 .redDigit {
   color: red;
+}
+.digits{
+  
+  border:1px solid black;
+ 
+}
+.btn{
+  font-size: 20px;
+  border:1px solid black;
+} */
+*{
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+}
+div {
+  margin-top: 30px;
+  text-align: center;
+}
+.countdown {
+  margin-top: 300px;
+}
+.countdown span.time {
+  padding: 12px;
+  display: inline-block;
+  font-family: verdana;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 900;
+  color: #fff;
+  background: #008080;
+  border-radius: 10px;
+}
+button {
+  padding: 0 16px;
+  margin-right: 4px;
+  font-size: 15px;
+  line-height: 2;
+  color: #FFF;
+  background: #3E62AD;
+  border-radius: 5px;
 }
