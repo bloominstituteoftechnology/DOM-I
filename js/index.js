@@ -49,4 +49,14 @@ navigationLinks.forEach((link, i) => {
 })
 
 
+// cta
+const headerText = document.querySelector('.cta h1');
+const headerButton = document.querySelector('.cta button');
+const headerImage = document.querySelector('#cta-img');
+
+headerText.textContent = siteContent['cta'] ['h1'];
+headerButton.textContent = siteContent['cta']['button'];
+headerImage.setAttribute('src', siteContent ["cta"] ["img-src"]);
+
+
 
