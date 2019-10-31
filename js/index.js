@@ -74,8 +74,9 @@ const endLink = document.createElement('a'); {
     newNavItem.appendChild(endLink);
 }
 
+
 //Call To Action
-const ctaText = document.querySelector('.cta .cta-text h1');
+const ctaText = document.querySelector('.cta .cta-text h1').innerHTML = 'DOM<br/>Is</br>Awesome';
 const ctaBtn = document.querySelector('.cta .cta-text button');
 const headerImage = document.getElementById("cta-img");
 ctaText.textContent = siteContent['cta']['h1'];
