@@ -48,17 +48,15 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 // - [ ] Note that IDs have been used on all images. Use the IDs to update src path content
 
 let container = document.getElementsByClassName('container');
-console.log('CONTAINER', container);
 
-let logoImage = document.getElementById('logo-img');
-console.log('LOGO', logoImage);
+let logoImage = document.querySelector('#logo-img');
 logoImage.src = '/Users/omid/Documents/Lambda/2_Web_Applications_I/Applied_Javascript/DOM-I/img/logo.png';
 
-let ctaImage = document.getElementById('cta-img');
-console.log('CTA', ctaImage);
+let ctaImage = document.querySelector('#cta-img');
+ctaImage.src = '/Users/omid/Documents/Lambda/2_Web_Applications_I/Applied_Javascript/DOM-I/img/header-img.png';
 
-let middleImage = document.getElementById('middle-img');
-console.log('MIDDLE', middleImage);
+let middleImage = document.querySelector('#middle-img');
+middleImage.src = '/Users/omid/Documents/Lambda/2_Web_Applications_I/Applied_Javascript/DOM-I/img/mid-page-accent.jpg'
 
 
 
@@ -68,9 +66,56 @@ console.log('MIDDLE', middleImage);
 // - [ ] Using your selectors, update the content to match the example file.
 // - [ ] Remember to update the src attributes on images
 
+const nav = document.querySelectorAll('a');
+nav[0].innerHTML = siteContent.nav['nav-item-1'];
+nav[1].innerHTML = siteContent.nav['nav-item-2'];
+nav[2].innerHTML = siteContent.nav['nav-item-3'];
+nav[3].innerHTML = siteContent.nav['nav-item-4'];
+nav[4].innerHTML = siteContent.nav['nav-item-5'];
+nav[5].innerHTML = siteContent.nav['nav-item-6'];
+
+const ctaText = document.querySelector('.cta-text h1');
+ctaText.innerHTML = siteContent.cta.h1;
+
+const ctaButton = document.querySelector('button');
+ctaButton.innerHTML = siteContent.cta.button;
 
 
+// TOP CONTENT 
+const topContentH4 = document.querySelectorAll('.top-content .text-content h4');
+topContentH4[0].innerHTML = siteContent["main-content"]["features-h4"];
+topContentH4[1].innerHTML = siteContent["main-content"]["about-h4"];
 
+const topContentParagraphs = document.querySelectorAll('.top-content .text-content p');
+topContentParagraphs[0].innerHTML = siteContent["main-content"]["features-content"];
+topContentParagraphs[1].innerHTML = siteContent["main-content"]["about-content"];
+
+
+// BOTTOM CONTENT 
+
+const bottomContentH4 = document.querySelectorAll('.bottom-content .text-content h4');
+bottomContentH4[0].innerHTML = siteContent["main-content"]["services-h4"];
+bottomContentH4[1].innerHTML = siteContent["main-content"]["product-h4"];
+bottomContentH4[2].innerHTML = siteContent["main-content"]["vision-h4"];
+
+const bottomContentParagraphs = document.querySelectorAll('.bottom-content .text-content p');
+bottomContentParagraphs[0].innerHTML = siteContent["main-content"]["services-content"];
+bottomContentParagraphs[1].innerHTML = siteContent["main-content"]["product-content"];
+bottomContentParagraphs[2].innerHTML = siteContent["main-content"]["vision-content"];
+
+// CONTACT 
+
+const contactH4 = document.querySelector('.contact h4');
+const contactParagraphs = document.querySelectorAll('.contact p');
+
+contactH4.innerHTML = siteContent["contact"]["contact-h4"];
+contactParagraphs[0].innerHTML = siteContent["contact"].address;
+contactParagraphs[1].innerHTML = siteContent["contact"].phone;
+contactParagraphs[2].innerHTML = siteContent["contact"].email;
+
+// FOOTER 
+const footer = document.querySelector('footer p');
+footer.innerHTML = siteContent.footer.copyright;
 
 // ## Task 3: Add new content
 
