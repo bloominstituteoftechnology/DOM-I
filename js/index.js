@@ -102,3 +102,21 @@ contactPara[2].textContent = siteContent ['contact'] ['email'];
 
 // end of contact section 
 
+// Footer Section 
+
+// footer reference
+
+const footer = document.querySelector('footer p');
+
+footer.textContent = siteContent ['footer'] ['copyright'];
+
+// end of footer section
+
+
+// Task 3 Add New Content
+
+// navigation color
+const navColor = document.querySelectorAll('a');
+navColor.forEach((a) =>{
+  a.style.color = "green"
+});
