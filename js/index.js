@@ -135,3 +135,13 @@ testimonials.textContent = "testimonials";
 navbar.appendChild(blog);
 navbar.prepend(testimonials);
 
+
+// end of task 3
+
+// Stretch goals 
+
+const button = document.querySelector('button');
+
+button.addEventListener('click', () => {
+alert ("you clicked me")
+});
