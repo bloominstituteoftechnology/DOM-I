@@ -123,8 +123,20 @@ footer.innerHTML = siteContent.footer.copyright;
 // - [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
 // - [ ] Check your work by looking at the [original html](original.html) in the browser
 
+const navColor = document.querySelectorAll('nav a');
+navColor.forEach(item => {
+  item.style.color = 'green';
+})
 
+const newFooter = document.createElement('footer');
+newFooter.textContent = "This is a footer on top."
 
+const newHeader = document.createElement('header');
+newHeader.textContent = "This is a header on the bottom."
+
+const navAppending = document.querySelector('nav');
+navAppending.prepend(newFooter);
+navAppending.appendChild(newHeader);
 
 // ## Stretch Goals
 
