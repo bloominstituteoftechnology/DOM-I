@@ -64,7 +64,7 @@ ctaText.textContent = siteContent['cta']['h1'];
 
 const ctaH1 = document.querySelector('.cta-text h1');
 const h1text = siteContent.cta.h1.split(' ');
-ctaH1.innerHTML = `${h1text[0]} </br> ${h1text[1]} </br> ${h1text[2]}`;
+ctaH1.textContent = `${h1text[0]} ${h1text[1]} ${h1text[2]}`;
 
 ctaText = document.querySelector('button');
 ctaText.textContent = siteContent['cta']['button'];
