@@ -61,7 +61,7 @@ navA.forEach((nav, index) => {
 let start = document.createElement("a");
 let end = document.createElement("a");
 start.style.color = "green";
-end.style.color = "green";
+end.style.color = "blue";
 start.textContent = "Start";
 end.textContent = "End";
 nav.prepend(start);
