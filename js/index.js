@@ -53,10 +53,17 @@ nav[3].textContent = siteContent["nav"]["nav-item-4"];
 nav[4].textContent = siteContent["nav"]["nav-item-5"];
 nav[5].textContent = siteContent["nav"]["nav-item-6"];
 
-//greenNav
+//greenNav partTres
 let green = document.querySelectorAll("a");
 green.forEach(function(a) {
   a.style.color = "green";
+  a.style.borderBottom = "solid 5px blue";
+});
+
+//lite stretch
+let pTag = document.querySelectorAll("p");
+pTag.forEach(function(pStyle) {
+  pStyle.style.color = "dodgerblue";
 });
 
 //append-prepend -partTres
@@ -120,3 +127,6 @@ footer.textContent = siteContent["footer"]["copyright"];
 // Example: Update the img src for the logo
 //let logo = document.getElementById("logo-img");
 //logo.setAttribute("src", siteContent["nav"]["img-src"]);
+
+//don't change things this way, DOM will be modified if you add more content to HTML.
+//console.log(document.all[10]);
