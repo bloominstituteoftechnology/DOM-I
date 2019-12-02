@@ -51,9 +51,12 @@ navElements[4].textContent = siteContent['nav']['nav-item-5'];
 navElements[5].textContent = siteContent['nav']['nav-item-6'];
 
 for (let link of navElements) {
-  link.style.color = b0b0b0;
-  link.style.textDecoration = none;
+  link.style.color = 'b0b0b0';
+  link.style.textDecoration = 'none';
 }
 
-const title = document.querySelector('h1');
-title.textContent = 'Dom is Awesome'
+const title = document.querySelector("h1");
+title.textContent = siteContent['cta']['h1'];
+
+let ctaImage= document.getElementById("cta-img");
+ctaImage.setAttribute('src', siteContent["cta"]["img-src"])
