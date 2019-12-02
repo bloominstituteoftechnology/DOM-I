@@ -40,3 +40,64 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const navBar = document.querySelectorAll ('a')
+navBar.forEach((element, i) => {
+  element.textContent = siteContent["nav"][`nav-item-${i+1}`]
+})
+
+const head = document.querySelector ('h1')
+head.textContent = siteContent["cta"]['h1']
+
+const butt = document.querySelector('button')
+butt.textContent = siteContent['cta']['button']
+
+let picTwo = document.querySelector('#cta-img')
+picTwo.setAttribute('src', siteContent['cta']['img-src'])
+
+const topSection = document.querySelectorAll ('.text-content')
+console.log(topSection[0].children[0])
+topSection[0].children[0].textContent = siteContent['main-content']['features-h4']
+topSection[0].children[1].textContent = siteContent['main-content']['features-content']
+topSection[1].children[0].textContent = siteContent['main-content']['about-h4']
+topSection[1].children[1].textContent = siteContent['main-content']['about-content']
+topSection[2].children[0].textContent = siteContent['main-content']['services-h4']
+topSection[2].children[1].textContent = siteContent['main-content']['services-content']
+topSection[3].children[0].textContent = siteContent['main-content']['product-h4']
+topSection[3].children[1].textContent = siteContent['main-content']['product-content']
+topSection[4].children[0].textContent = siteContent['main-content']['vision-h4']
+topSection[4].children[1].textContent = siteContent['main-content']['vision-content']
+
+const midPic = document.querySelector('.middle-img')
+midPic.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+const contact = document.querySelector('.contact')
+contact.children[0].textContent = siteContent ['contact']['contact-h4']
+contact.children[1].textContent = siteContent ['contact']['address']
+contact.children[2].textContent = siteContent ['contact']['phone']
+contact.children[3].textContent = siteContent ['contact']['email']
+
+const foot = document.querySelector('footer')
+foot.textContent = siteContent ['footer']['copyright']
+
+const newTag = document.createElement('a')
+newTag.textContent = 'Goodbye'
+const parentElement = document.querySelector('nav')
+parentElement.append(newTag)
+
+const newTagTwo = document.createElement('a')
+newTagTwo.textContent = 'Hello'
+const parentElementtwo = document.querySelector('nav')
+parentElementtwo.prepend(newTagTwo)
+
+//stretch
+const headerbg = document.querySelectorAll('.text-content')
+headerbg.forEach(element => {element.style.backgroundColor = 'yellow'})
+
+const headercolor = document.querySelectorAll('.text-content h4')
+headercolor.forEach(element => {element.style.color = 'aqua'})
+
+const domcolor = document.querySelectorAll('h1')
+domcolor.forEach(element => {element.style.color = 'darkorchid'})
+
+
