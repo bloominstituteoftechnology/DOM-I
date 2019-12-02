@@ -101,17 +101,20 @@ navSelector.prepend(newNavATag2);
 const headerSelector = document.querySelector('h1');
 headerSelector.setAttribute('style', 'white-space:pre');
 headerSelector.textContent = 'Dom \r\n Is \r\n Awesome';
-headerSelector.style.color = 'black';
+headerSelector.style.color = 'dodgerblue';
 headerSelector.style.width = '15rem';
 
 //---button---
 const buttonSelector = document.querySelector('button');
 // buttonSelector.setAttribute('style');
 buttonSelector.textContent = 'Get Started';
-
+buttonSelector.style.background = 'dodgerblue';
+buttonSelector.style.color = 'white';
+buttonSelector.style.borderColor = 'green';
 
 //---main-content---
 const mainTitle = document.querySelectorAll('h4');
+// mainTitle.style.color = 'green';
 const mainText = document.querySelectorAll('p');
 
 const titleOne = mainTitle[0];
@@ -146,4 +149,23 @@ const textFive = mainText[4];
 titleFive.textContent = 'Vision';
 textFive.textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
 
+//---contact---
+const contactHeader = document.querySelector('.contact h4');
+contactHeader.textContent = 'Contact Us';
+
+const contactPara = document.querySelectorAll('.contact p');
+const contactPara1 = contactPara[0];
+const contactPara2 = contactPara[1];
+const contactPara3 = contactPara[2];
+
+contactPara1.setAttribute('style', 'white-space: pre;');
+contactPara1.textContent = '123 Way 456 Street \r\n Somewhere, USA';
+
+contactPara2.textContent = '1 (888) 888-8888';
+contactPara3.textContent = 'sales@greatidea.io';
+
+
+//---footer---
+const footerSelector = document.querySelector('footer p');
+footerSelector.textContent = 'Copyright Great Idea! 2018'
 //--------------
