@@ -1,14 +1,18 @@
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
 .digit {
   display: inline-block;
   font-size: 80px;
+  font-family: monospace;
 }
 
 .redDigit {
   color: red;
+}
+
+button {
+  border: 1px solid black;
+  font-size: 24pt;
 }
