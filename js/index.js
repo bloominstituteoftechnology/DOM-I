@@ -103,3 +103,21 @@ mainContent[1].querySelector('p').textContent = siteContent["main-content"]["abo
 mainContent[2].querySelector('p').textContent = siteContent["main-content"]["services-content"];
 mainContent[3].querySelector('p').textContent = siteContent["main-content"]["product-content"];
 mainContent[4].querySelector('p').textContent = siteContent["main-content"]["vision-content"];
+
+// Update mid page image
+
+let imgMid = document.querySelector('.middle-img');
+
+imgMid.src = siteContent["main-content"]["middle-img-src"];
+
+// Update contact section
+
+let contactTitle = document.querySelector('.contact').querySelector('h4');
+
+contactTitle.textContent = siteContent["contact"]["contact-h4"];
+
+let contactContent = document.querySelector('.contact').querySelectorAll('p');
+
+contactContent[0].textContent = siteContent["contact"]["address"];
+contactContent[1].textContent = siteContent["contact"]["phone"];
+contactContent[2].textContent = siteContent["contact"]["email"];
