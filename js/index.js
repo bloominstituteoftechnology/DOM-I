@@ -117,18 +117,33 @@ const mainText = document.querySelectorAll('p');
 const titleOne = mainTitle[0];
 const textOne = mainText[0];
 
+titleOne.textContent = 'Features';
+textOne.textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+
 const titleTwo = mainTitle[1];
 const textTwo = mainText[1];
+
+titleTwo.textContent = 'About';
+textTwo.textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+
 
 const titleThree = mainTitle[2];
 const textThree = mainText[2];
 
+titleThree.textContent = 'Services';
+textThree.textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+
+
 const titleFour = mainTitle[3];
 const textFour = mainText[3];
+
+titleFour.textContent = 'Product';
+textFour.textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
 
 const titleFive = mainTitle[4];
 const textFive = mainText[4];
 
-
+titleFive.textContent = 'Vision';
+textFive.textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
 
 //--------------
