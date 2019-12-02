@@ -47,13 +47,29 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
 // * Navigation
-let navA = document.querySelectorAll("a");
-navA[0].textContent = siteContent["nav"]["nav-item-1"];
-navA[1].textContent = siteContent["nav"]["nav-item-2"];
-navA[2].textContent = siteContent["nav"]["nav-item-3"];
-navA[3].textContent = siteContent["nav"]["nav-item-4"];
-navA[4].textContent = siteContent["nav"]["nav-item-5"];
-navA[5].textContent = siteContent["nav"]["nav-item-6"];
+let nav = document.querySelector("nav");
+let navA = document.querySelectorAll("nav a");
+navA.forEach((nav, index) => {
+  nav.textContent = siteContent.nav[`nav-item-${index + 1}`];
+});
+// navA[0].textContent = siteContent["nav"]["nav-item-1"];
+// navA[1].textContent = siteContent["nav"]["nav-item-2"];
+// navA[2].textContent = siteContent["nav"]["nav-item-3"];
+// navA[3].textContent = siteContent["nav"]["nav-item-4"];
+// navA[4].textContent = siteContent["nav"]["nav-item-5"];
+// navA[5].textContent = siteContent["nav"]["nav-item-6"];
+let start = document.createElement("a");
+let end = document.createElement("a");
+start.style.color = "green";
+end.style.color = "green";
+start.textContent = "Start";
+end.textContent = "End";
+nav.prepend(start);
+nav.appendChild(end);
+
+for (let i = 0; i < navA.length; i++) {
+  navA[i].style.color = "green";
+}
 
 // * CTA
 let ctaImage = document.querySelector("#cta-img");
@@ -86,3 +102,30 @@ contentP[3].textContent = siteContent["main-content"]["product-content"];
 contentP[4].textContent = siteContent["main-content"]["vision-content"];
 
 // * Contact
+let contactHeader = document.querySelector(".contact h4");
+contactHeader.textContent = siteContent.contact["contact-h4"];
+
+let contactP = document.querySelectorAll(".contact p");
+// contactP[0].textContent = siteContent.contact.address;
+// contactP[1].textContent = siteContent.contact.phone;
+// contactP[2].textContent = siteContent.contact.email;
+const contactIndex = Object.values(siteContent["contact"]);
+for (let i = 0; i < contactP.length; i++) {
+  contactP[i].textContent = contactIndex[i + 1];
+}
+
+// * Footer
+let footerP = document.querySelector("footer p");
+footerP.textContent = siteContent.footer.copyright;
+
+// augue justo, at imperdiet metus scelerisque quis."
+//   },
+//   contact: {
+//     "contact-h4": "Contact",
+//     address: "123 Way 456 Street Somewhere, USA",
+//     phone: "1 (888) 888-8888",
+//     email: "sales@greatidea.io"
+//   },
+//   footer: {
+//     copyright: "Copyright Great Idea! 2018"
+//   }
