@@ -41,11 +41,13 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+//TASK 1, ITEM 1
 let navSelector = document.querySelector('nav');
-
 const navATag = document.querySelectorAll('a');
-navATag.forEach(item => item.style.color = 'green');
+//--------------
 
+
+//TASK 2, ITEM 2
 const navAOne = navATag[0];
 navAOne.textContent = 'Services';
 
@@ -63,4 +65,51 @@ navAFive.textContent = 'About';
 
 const navASix = navATag[5];
 navASix.textContent = 'Contact';
+//---------------
+
+
+//TASK 2, ITEM 3
+const ctaImg = document.getElementById('cta-img');
+ctaImg.setAttribute('src', siteContent['cta']['img-src'])
+
+const middleImg = document.getElementById('middle-img');
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+//--------------
+
+
+//TASK 3, ITEM 1
+navATag.forEach(item => item.style.color = 'green');
+//--------------
+
+
+//TASK 3, ITEM 2
+const newNavATag1 = document.createElement('a');
+const newNavATag2 = document.createElement('a');
+
+newNavATag1.textContent = 'End';
+newNavATag1.style.color = 'green';
+navSelector.appendChild(newNavATag1);
+
+newNavATag2.textContent = 'Home';
+newNavATag2.style.color = 'green';
+navSelector.prepend(newNavATag2);
+//---------------
+
+
+//TASK 2, ITEM 2
+//---h1---
+const headerSelector = document.querySelector('h1');
+headerSelector.setAttribute('style', 'white-space:pre');
+headerSelector.textContent = 'Dom \r\n Is \r\n Awesome';
+headerSelector.style.color = 'black';
+headerSelector.style.width = '15rem';
+
+//---button---
+const buttonSelector = document.querySelector('button');
+// buttonSelector.setAttribute('style');
+buttonSelector.textContent = 'Get Started';
+
+//--------------
+
+
 
