@@ -42,6 +42,18 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 const navElements = document.getElementsByTagName('a');
-navElements.forEach( element => {
-  element.textContent = 'hello';
-})
+Array.from(navElements);
+navElements[0].textContent = siteContent['nav']['nav-item-1'];
+navElements[1].textContent = siteContent['nav']['nav-item-2'];
+navElements[2].textContent = siteContent['nav']['nav-item-3'];
+navElements[3].textContent = siteContent['nav']['nav-item-4'];
+navElements[4].textContent = siteContent['nav']['nav-item-5'];
+navElements[5].textContent = siteContent['nav']['nav-item-6'];
+
+for (let link of navElements) {
+  link.style.color = b0b0b0;
+  link.style.textDecoration = none;
+}
+
+const title = document.querySelector('h1');
+title.textContent = 'Dom is Awesome'
