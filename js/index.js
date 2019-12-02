@@ -109,7 +109,26 @@ const buttonSelector = document.querySelector('button');
 // buttonSelector.setAttribute('style');
 buttonSelector.textContent = 'Get Started';
 
+
+//---main-content---
+const mainTitle = document.querySelectorAll('h4');
+const mainText = document.querySelectorAll('p');
+
+const titleOne = mainTitle[0];
+const textOne = mainText[0];
+
+const titleTwo = mainTitle[1];
+const textTwo = mainText[1];
+
+const titleThree = mainTitle[2];
+const textThree = mainText[2];
+
+const titleFour = mainTitle[3];
+const textFour = mainText[3];
+
+const titleFive = mainTitle[4];
+const textFive = mainText[4];
+
+
+
 //--------------
-
-
-
