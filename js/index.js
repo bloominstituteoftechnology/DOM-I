@@ -87,4 +87,11 @@ document.querySelector("section.contact > p:nth-child(4)")
 //document.querySelectorAll("section.contact > p")[2].textContent = siteContent["contact"]["email"]
 
 document.querySelector("footer > p").textContent = siteContent["footer"]["copyright"];
-  
+
+document.querySelector("nav").appendChild(document.createElement("a")).textContent = "First";
+document.querySelector("nav").appendChild(document.createElement("a")).textContent = "Second";
+document.querySelector("nav").appendChild(document.createElement("a")).textContent = "Third";
+
+document.querySelectorAll("nav > a").forEach((e) => {
+  e.style.color = "green";
+});
