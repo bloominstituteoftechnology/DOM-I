@@ -41,6 +41,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+//navigation
 const navElements = document.getElementsByTagName('a');
 Array.from(navElements);
 navElements[0].textContent = siteContent['nav']['nav-item-1'];
@@ -54,7 +55,7 @@ for (let link of navElements) {
   link.style.color = 'b0b0b0';
   link.style.textDecoration = 'none';
 }
-
+//header
 const title = document.querySelector("h1");
 title.textContent = siteContent['cta']['h1'];
 
@@ -64,12 +65,15 @@ ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
 let button = document.querySelector('button');
 button.textContent = siteContent['cta']['button'];
 
+//middle section
 let subTitles = document.querySelectorAll('h4');
 subTitles[0].textContent = siteContent['main-content']['features-h4'];
 subTitles[1].textContent = siteContent['main-content']['about-h4'];
 subTitles[2].textContent = siteContent['main-content']['services-h4'];
 subTitles[3].textContent = siteContent['main-content']['product-h4'];
 subTitles[4].textContent = siteContent['main-content']['vision-h4'];
+//contact title
+subTitles[5].textContent = siteContent['contact']['contact-h4'];
 
 let subContent = document.querySelectorAll('p');
 subContent[0].textContent = siteContent['main-content']['features-content'];
@@ -77,9 +81,15 @@ subContent[1].textContent = siteContent['main-content']['about-content'];
 subContent[2].textContent = siteContent['main-content']['services-content'];
 subContent[3].textContent = siteContent['main-content']['product-content'];
 subContent[4].textContent = siteContent['main-content']['vision-content'];
+//contact content
+subContent[5].textContent = siteContent['contact']['address'];
+subContent[6].textContent = siteContent['contact']['phone'];
+subContent[7].textContent = siteContent['contact']['email'];
+//footer content
+subContent[8].textContent = siteContent['footer']['copyright'];
 
 let middleImage = document.getElementById("middle-img");
 middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
-let contactInfo = document.querySelector('h4');
-contactInfo['h4'].textContent = siteContent['contact']['contact-h4'];
+
+
