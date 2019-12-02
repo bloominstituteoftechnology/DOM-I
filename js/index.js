@@ -52,10 +52,21 @@ navElements[4].textContent = siteContent['nav']['nav-item-5'];
 navElements[5].textContent = siteContent['nav']['nav-item-6'];
 
 for (let link of navElements) {
-  link.style.color = 'b0b0b0';
+  link.style.color = 'green';
   link.style.textDecoration = 'none';
 }
-//header
+
+//added navigation links 
+const navigation = document.querySelector('nav');
+const newNavLink1 = document.createElement('a');
+newNavLink1.textContent = 'Peanut';
+const newNavLink2 = document.createElement('a');
+newNavLink2.textContent = 'Butter';
+
+navigation.prepend(newNavLink1);
+navigation.appendChild(newNavLink2);
+
+//top section
 const title = document.querySelector("h1");
 title.textContent = siteContent['cta']['h1'];
 
