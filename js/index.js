@@ -58,5 +58,28 @@ for (let link of navElements) {
 const title = document.querySelector("h1");
 title.textContent = siteContent['cta']['h1'];
 
-let ctaImage= document.getElementById("cta-img");
-ctaImage.setAttribute('src', siteContent["cta"]["img-src"])
+let ctaImage = document.getElementById("cta-img");
+ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let button = document.querySelector('button');
+button.textContent = siteContent['cta']['button'];
+
+let subTitles = document.querySelectorAll('h4');
+subTitles[0].textContent = siteContent['main-content']['features-h4'];
+subTitles[1].textContent = siteContent['main-content']['about-h4'];
+subTitles[2].textContent = siteContent['main-content']['services-h4'];
+subTitles[3].textContent = siteContent['main-content']['product-h4'];
+subTitles[4].textContent = siteContent['main-content']['vision-h4'];
+
+let subContent = document.querySelectorAll('p');
+subContent[0].textContent = siteContent['main-content']['features-content'];
+subContent[1].textContent = siteContent['main-content']['about-content'];
+subContent[2].textContent = siteContent['main-content']['services-content'];
+subContent[3].textContent = siteContent['main-content']['product-content'];
+subContent[4].textContent = siteContent['main-content']['vision-content'];
+
+let middleImage = document.getElementById("middle-img");
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+let contactInfo = document.querySelector('h4');
+contactInfo['h4'].textContent = siteContent['contact']['contact-h4'];
