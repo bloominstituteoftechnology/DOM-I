@@ -44,21 +44,21 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // Update links in <nav>
 
-let navLinks = document.querySelector('nav').querySelectorAll('a');
+let navLinks = document.querySelectorAll('nav a');
 
-for (let i = 0; i < navLinks.length; i++) {
-  navLinks[i].textContent = siteContent["nav"][`nav-item-${i + 1}`];
-}
+navLinks.forEach((link, index) => {
+  link.textContent = siteContent["nav"][`nav-item-${index + 1}`];
+});
 
 // Update <h1>
 
-let heading1 = document.querySelector('.cta-text').querySelector('h1');
+let heading1 = document.querySelector('.cta-text h1');
 
 let headingText = document.createTextNode(siteContent["cta"]["h1"]);
 
 heading1.appendChild(headingText);
 
-let textIsAwesome = headingText.splitText(3);
+const textIsAwesome = headingText.splitText(3);
 
 const textAwesome = textIsAwesome.splitText(3);
 
@@ -121,3 +121,36 @@ let contactContent = document.querySelector('.contact').querySelectorAll('p');
 contactContent[0].textContent = siteContent["contact"]["address"];
 contactContent[1].textContent = siteContent["contact"]["phone"];
 contactContent[2].textContent = siteContent["contact"]["email"];
+
+// Update footer
+
+let footerText = document.querySelector('footer').querySelector('p');
+
+footerText.textContent = siteContent["footer"]["copyright"];
+
+// Line break in address
+
+let address = contactContent[0];
+
+address.style = 'white-space: pre;';
+address.textContent = "123 Way 456 Street\nSomewhere, USA";
+
+// Use .appendChild() to add a new item to the navigation
+
+const loginLink = document.createElement('a');
+loginLink.href = "#";
+loginLink.textContent = 'Login';
+
+document.querySelector('nav').appendChild(loginLink);
+
+// Use .prepend() to add a new item to the navigation
+
+const missionLink = document.createElement('a');
+missionLink.href = "#";
+missionLink.textContent = 'Mission';
+
+document.querySelector('nav').prepend(missionLink);
+
+// Change color of navigation links to green
+
+document.querySelectorAll('nav a').forEach(link => link.style.color = 'green');
