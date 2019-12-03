@@ -43,12 +43,29 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 const navbar= document.querySelectorAll('nav a')
 const navItems = siteContent[Object.keys(siteContent)[0]];
-// for(let a of navbar){
-//   a.textContent = navItems[Object.keys(navItems)[.]]
-// }
+
+
 for(let i = 0; i< navbar.length; i++){
   navbar[i].textContent = navItems[Object.keys(navItems)[i]]
 }
+navbar.forEach( element => {
+   element.style.color = "green";
+ })
+ var navContainer = document.querySelector('nav')
+
+var newAnchorOne = document.createElement('a');
+var newAnchorT = document.createElement('div');
+
+newAnchorT.textContent = 'Hello';
+newAnchorT.style.color = 'green';
+
+newAnchorOne.textContent = 'Goodbye';
+newAnchorOne.style.color = 'green';
+
+navContainer.prepend(newAnchorT);
+navContainer.appendChild(newAnchorOne);
+
+
 //// end of nav////
 
 //// cta and image////
@@ -57,7 +74,7 @@ for(let i = 0; i< navbar.length; i++){
  const middleText = document.querySelector('.cta-text h1')
  middleText.setAttribute('style', 'white-space: pre;');
  middleText.textContent =('Dom \r\n is \r\n Awesome');
-
+ middleText.style.color = "cyan"
 const button = document.querySelector('.cta-text button')
 button.textContent = 'Get Started'
 
@@ -107,4 +124,29 @@ const footer = document.querySelector('footer p')
 footer.textContent = 'Copyright Great Idea! 2018'
 
 //// bottom-content end////
+
+
+// let h4 = document.querySelectorAll(`h4`)
+// //main content h4
+// h4[0].textContent = siteContent["main-content"]["features-h4"];
+// h4[1].textContent = siteContent["main-content"]["about-h4"];
+// h4[2].textContent = siteContent["main-content"]["services-h4"];
+// h4[3].textContent = siteContent["main-content"]["product-h4"];
+// h4[4].textContent = siteContent["main-content"]["vision-h4"];
+// //Contact h4
+// h4[5].textContent = siteContent["contact"]["contact-h4"];
+
+// let content = document.querySelectorAll(`p`)
+// //main-content content
+// content[0].textContent = siteContent["main-content"]["features-content"];
+// content[1].textContent = siteContent["main-content"]["about-content"];
+// content[2].textContent = siteContent["main-content"]["services-content"];
+// content[3].textContent = siteContent["main-content"]["product-content"];
+// content[4].textContent = siteContent["main-content"]["vision-content"];
+// //contact content
+// content[5].textContent = siteContent["contact"]["address"];
+// content[6].textContent = siteContent["contact"]["phone"];
+// content[7].textContent = siteContent["contact"]["email"];
+// content[8].textContent = siteContent["footer"]["copyright"];
+
 
