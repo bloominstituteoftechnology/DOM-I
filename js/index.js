@@ -122,5 +122,22 @@ nav.appendChild(newEnd);
 // .prepend()
 
 const newStart = document.createElement("a");
-newStart.textContent = "Start"
+newStart.textContent = "Start";
 nav.prepend(newStart);
+
+//Stretch//
+
+navLinks.forEach(function(currentVal){
+  currentVal.style.color = "cyan";
+});
+
+newBegin.style.color = "cyan";
+newBegin.style.cursor = "pointer";
+newEnd.style.color = "cyan";
+newEnd.style.cursor = "pointer";
+
+contentHeader.forEach(function(currentVal){
+  currentVal.style.color = "cyan";
+});
+
+ctabutton.style.backgroundColor = "cyan";
