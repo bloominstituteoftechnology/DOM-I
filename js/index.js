@@ -41,12 +41,29 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let navColor = document.querySelectorAll('a');
 
 
 
-let navFirst = document.querySelector('nav a');
-navFirst.textContent = "Services";
+let navFirst = document.querySelectorAll('nav a');
+
+navFirst.forEach((element, index) => {
+  element.textContent = (siteContent['nav'][`nav-item-${index + 1}`]);
+});
+
+let mainContent = document.querySelectorAll('.text-content h4');
+mainContent[0].textContent = (siteContent['main-content']['features-h4'])
+mainContent[1].textContent = (siteContent['main-content']['about-h4'])
+mainContent[2].textContent = (siteContent['main-content']['services-h4'])
+mainContent[3].textContent = (siteContent['main-content']['product-h4'])
+mainContent[4].textContent = (siteContent['main-content']['vision-h4'])
+
+let mainContentInfo = document.querySelectorAll('p');
+mainContentInfo[0].textContent = (siteContent['main-content']['features-content'])
+mainContentInfo[1].textContent = (siteContent['main-content']['about-content'])
+mainContentInfo[2].textContent = (siteContent['main-content']['services-content'])
+mainContentInfo[3].textContent = (siteContent['main-content']['product-content'])
+mainContentInfo[4].textContent = (siteContent['main-content']['vision-content'])
+
 
 
 
@@ -76,4 +93,9 @@ parentElement.append(footer);
 
 let contact = document.querySelector('.contact h4');
 contact.textContent = 'Contact';
+
+let contactInfo = document.querySelectorAll('.contact p')
+contactInfo[0].textContent = (siteContent['contact']['address'])
+contactInfo[1].textContent = (siteContent['contact']['phone'])
+contactInfo[2].textContent = (siteContent['contact']['email'])
 
