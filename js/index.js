@@ -68,6 +68,14 @@ let newContent = (e) => {
 headerLinks.prepend(newContent ('First'));
 headerLinks.append(newContent ('Last'));
 
+// MIDDLE
+
+let middle = document.getElementsByClassName('cta-text')[0];
+
+middle.getElementsByTagName('h1')[0].textContent = siteContent['cta']['h1'];
+middle.getElementsByTagName('button')[0].textContent = siteContent['cta']['button'];
+
+
 // CONTENT
 
 let content = document.querySelectorAll(".text-content");
@@ -97,3 +105,9 @@ contact.getElementsByTagName('p')[1].textContent = siteContent['contact']['phone
 contact.getElementsByTagName('p')[2].textContent = siteContent['contact']['email'];
 
 contact.getElementsByTagName('p')[0].style.width = '20%';
+
+// FOOTER
+
+let footer = document.querySelector('footer');
+
+footer.getElementsByTagName('p')[0].textContent = siteContent['footer']['copyright'];
