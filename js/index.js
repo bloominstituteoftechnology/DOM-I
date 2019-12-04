@@ -37,6 +37,33 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+// IMAGES
+const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const headerImg = document.getElementById("cta-img");
+headerImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+const middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+// NAV LINKS
+let headerLinks = document.querySelectorAll('nav a');
+
+headerLinks.forEach((el, i) => {
+  el.textContent = siteContent.nav[`nav-item-${i+1}`];
+  el.style.color = 'lightGreen';
+})
+
+// HEADER
+
+headerLinks = document.getElementsByTagName('nav')[0];
+let newContent = (e) => {
+  let newLink = document.createElement('a');
+  newLink.textContent = e;
+  newLink.style.color = 'lightGreen';
+  return newLink;
+}
+
+headerLinks.prepend(newContent ('first'));
+headerLinks.append(newContent ('last'));
