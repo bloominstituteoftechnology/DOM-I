@@ -65,5 +65,35 @@ let newContent = (e) => {
   return newLink;
 }
 
-headerLinks.prepend(newContent ('first'));
-headerLinks.append(newContent ('last'));
+headerLinks.prepend(newContent ('First'));
+headerLinks.append(newContent ('Last'));
+
+// CONTENT
+
+let content = document.querySelectorAll(".text-content");
+
+content[0].getElementsByTagName('h4')[0].textContent = siteContent['main-content']['features-h4'];
+content[0].getElementsByTagName('p')[0].textContent = siteContent['main-content']['features-content'];
+
+content[1].getElementsByTagName('h4')[0].textContent = siteContent['main-content']['about-h4'];
+content[1].getElementsByTagName('p')[0].textContent = siteContent['main-content']['about-content'];
+
+content[2].getElementsByTagName('h4')[0].textContent = siteContent['main-content']['services-h4'];
+content[2].getElementsByTagName('p')[0].textContent = siteContent['main-content']['services-content'];
+
+content[3].getElementsByTagName('h4')[0].textContent = siteContent['main-content']['product-h4'];
+content[3].getElementsByTagName('p')[0].textContent = siteContent['main-content']['product-content'];
+
+content[4].getElementsByTagName('h4')[0].textContent = siteContent['main-content']['vision-h4'];
+content[4].getElementsByTagName('p')[0].textContent = siteContent['main-content']['vision-content'];
+
+// CONTACT
+
+let contact = document.getElementsByClassName('contact')[0];
+
+contact.getElementsByTagName('h4')[0].textContent = siteContent['contact']['contact-h4'];
+contact.getElementsByTagName('p')[0].textContent = siteContent['contact']['address'];
+contact.getElementsByTagName('p')[1].textContent = siteContent['contact']['phone'];
+contact.getElementsByTagName('p')[2].textContent = siteContent['contact']['email'];
+
+contact.getElementsByTagName('p')[0].style.width = '20%';
