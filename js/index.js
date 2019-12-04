@@ -38,5 +38,11 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// Header Nav
+
+
+const domIsAwesome = document.querySelector('.cta-text > h1');
+domIsAwesome.innerHTML = `DOM <br> Is <br> Awesome`
