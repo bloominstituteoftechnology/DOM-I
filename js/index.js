@@ -78,11 +78,11 @@ const contactCl = document.getElementsByClassName('contact')
 
 //ID's
 
-const logoimgId = document.getElementsId('logo-img')
+const logoimgId = document.getElementById('logo-img')
 
-const ctaimgId = document.getElementsId('cta-img')
+const ctaimgId = document.getElementById('cta-img')
 
-const middleimgId = document.getElementsId('middle-img')
+const middleimgId = document.getElementById('middle-img')
 
 
 
