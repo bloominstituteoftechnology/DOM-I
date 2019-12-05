@@ -93,21 +93,25 @@ const ctaImg = document.querySelector('.cta img')
 
 const mainContent = document.querySelectorAll('.main-content')
 
-const h4s = document.querySelectorAll('h4')
+const mainContentH4s = document.querySelectorAll('.main-content h4')
 
-//ADDING SITE CONTENT
+const mainContentPs = document.querySelectorAll('.main-content p')
+
+const mainMiddleImg = document.getElementById("middle-img");
+
+//Query Selectors - contact
+
+const contact = document.querySelector('.contact');
+
+
+//////////////////////ADDING SITE CONTENT///////////////////////////
 
 //Nav Bar
 nav.children[0].textContent = siteContent['nav']['nav-item-1']
-
 nav.children[1].textContent = siteContent['nav']['nav-item-2']
-
 nav.children[2].textContent = siteContent['nav']['nav-item-3']
-
 nav.children[3].textContent = siteContent['nav']['nav-item-4']
-
 nav.children[4].textContent = siteContent['nav']['nav-item-5']
-
 nav.children[5].textContent = siteContent['nav']['nav-item-6']
 
 //cta
@@ -118,13 +122,21 @@ ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
 
 //main-content
 
-h4s[0].textContent = siteContent['main-content']["features-h4"]
-h4s[1].textContent = siteContent['main-content']["about-h4"]
-h4s[2].textContent = siteContent['main-content']["services-h4"]
-h4s[3].textContent = siteContent['main-content']["product-h4"]
-h4s[4].textContent = siteContent['main-content']["vision-h4"]
+mainContentH4s[0].textContent = siteContent['main-content']["features-h4"]
+mainContentH4s[1].textContent = siteContent['main-content']["about-h4"]
+mainContentH4s[2].textContent = siteContent['main-content']["services-h4"]
+mainContentH4s[3].textContent = siteContent['main-content']["product-h4"]
+mainContentH4s[4].textContent = siteContent['main-content']["vision-h4"]
+
+mainContentPs[0].textContent = siteContent['main-content']["features-content"]
+mainContentPs[1].textContent = siteContent['main-content']["about-content"]
+mainContentPs[2].textContent = siteContent['main-content']["services-content"]
+mainContentPs[3].textContent = siteContent['main-content']["product-content"]
+mainContentPs[4].textContent = siteContent['main-content']["vision-content"]
+
+mainMiddleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 
-
+//contact
 
 
