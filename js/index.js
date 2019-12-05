@@ -54,7 +54,8 @@ green.forEach(function(a) {
 
 
 
-// Top Nav 
+// Top Nav
+
 let newNav = document.querySelector("nav");
 let appendNav = document.createElement("a");
 appendNav.textContent = "Jason Nav 1";
@@ -99,4 +100,5 @@ contactP[0].textContent = siteContent["contact"]["address"];
 contactP[1].textContent = siteContent["contact"]["phone"];
 contactP[2].textContent = siteContent["contact"]["email"];
 let footer = document.querySelector("footer p");
+
 footer.textContent = siteContent["footer"]["copyright"];
