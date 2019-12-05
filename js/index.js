@@ -105,7 +105,7 @@ const contact = document.querySelector('.contact');
 
 //Query Selectors - footer
 
-const footer = document.querySelector('footer');
+const footerP = document.querySelector('footer p');
 
 //////////////////////ADDING SITE CONTENT///////////////////////////
 
@@ -148,3 +148,5 @@ contact.children[2].textContent = siteContent['contact']['phone']
 contact.children[3].textContent = siteContent['contact']['email']
 
 //footer
+
+footerP.textContent = siteContent['footer']['copyright']
