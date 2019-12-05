@@ -126,6 +126,7 @@ ctaH1.style.width = '42%'
 
 
 ctaButton.textContent = siteContent['cta']['button']
+ctaButton.style.alignItem = 'center';
 
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
 
