@@ -50,11 +50,11 @@ const $navLinks = document.querySelectorAll("header nav a");
 
 //  Add text into all nav links
 $navLinks.forEach(function(item, index) {
-    item.textContent = siteContent["nav"]["nav-item-" + (index + 1)];
+    item.textContent = siteContent["nav"][`nav-item-${index+1}`];
 });
 
 
-//  cta  //
+//  CTA  //
 
 //  h1
 const titleContent = siteContent["cta"]["h1"].replace(/ /g, " <br> ");
@@ -65,6 +65,35 @@ document.querySelector(".cta button").textContent = siteContent["cta"]["button"]
 
 //  image
 document.querySelector(".cta #cta-img").setAttribute("src", siteContent["cta"]["img-src"]);
+
+
+//  Main Content  //
+
+//  text - top left
+document.querySelector(".main-content .top-content .text-content:first-child h4").textContent = siteContent["main-content"]["features-h4"];
+document.querySelector(".main-content .top-content .text-content:first-child p").textContent = siteContent["main-content"]["features-content"];
+
+//  text - top right
+document.querySelector(".main-content .top-content .text-content:last-child h4").textContent = siteContent["main-content"]["about-h4"];
+document.querySelector(".main-content .top-content .text-content:last-child p").textContent = siteContent["main-content"]["about-content"];
+
+//  image
+document.querySelector(".main-content #middle-img").setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+//  text - bottom left
+document.querySelector(".main-content .bottom-content .text-content:first-child h4").textContent = siteContent["main-content"]["services-h4"];
+document.querySelector(".main-content .bottom-content .text-content:first-child p").textContent = siteContent["main-content"]["services-content"];
+
+//  text - bottom middle
+document.querySelector(".main-content .bottom-content .text-content:nth-child(2) h4").textContent = siteContent["main-content"]["product-h4"];
+document.querySelector(".main-content .bottom-content .text-content:nth-child(2) p").textContent = siteContent["main-content"]["product-content"];
+
+//  text - bottom middle
+document.querySelector(".main-content .bottom-content .text-content:last-child h4").textContent = siteContent["main-content"]["vision-h4"];
+document.querySelector(".main-content .bottom-content .text-content:last-child p").textContent = siteContent["main-content"]["vision-content"];
+
+
+//  Contact  //
 
 
 
