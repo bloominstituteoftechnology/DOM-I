@@ -43,7 +43,6 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // Header Nav
 
-
 const domIsAwesome = document.querySelector('.cta-text > h1');
 domIsAwesome.innerHTML = `DOM <br> Is <br> Awesome`
 
@@ -114,13 +113,9 @@ footer.textContent = siteContent['footer']['copyright']
 // * [ ] Change the color of the navigation text to be green.
 theNav.forEach(link => link.style.color = 'green');
 
-
-// ## Task 3: Add new content
-// * [ ] Utilize `.appendChild()` and `.prepend()` to 
 // add two new items to the navigation system. 
-// You can call them whatever you want.
-const nav = document.getElementsByTagName('nav');
-const blog   = document.createElement('a')
+const nav      = document.getElementsByTagName('nav');
+const blog     = document.createElement('a')
 const services = document.createElement('a')
 
 blog.innerHTML = "Blog"
@@ -134,3 +129,21 @@ services.style.color = "green"
 nav[0].appendChild(blog);
 nav[0].appendChild(services);
 
+// ## Stretch Goals ##
+//  * [ ] Update styles throughout the page as you see fit.
+//  * [ ] Study tomorrow's lesson on events and try to integrate a button 
+//  that can update content on the site with a click of a button.  You could 
+//  build a similar data object with new values to help you test the click event.
+
+// Style the button
+ctaButton.style.borderRadius = "5px"
+ctaButton.style.borderColor = "Silver"
+ctaButton.style.paddingTop = "15px"
+ctaButton.style.paddingBottom = "20px"
+ctaButton.style.height = "50px"
+ctaButton.style.opacity = "0.6"
+
+
+// Add a background image
+// const theBody = document.getElementsByTagName('body')
+// theBody[0].background = "../img/idea.jpg"
