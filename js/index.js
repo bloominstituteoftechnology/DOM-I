@@ -122,6 +122,8 @@ nav.children[5].textContent = siteContent['nav']['nav-item-6']
 //cta
 
 ctaH1.textContent = siteContent['cta']['h1']
+ctaH1.style.width = '42%'
+
 
 ctaButton.textContent = siteContent['cta']['button']
 
