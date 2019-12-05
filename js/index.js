@@ -47,6 +47,8 @@ const header = document.getElementsByName('header')
 
 const nav = document.getElementsByName('nav')
 
+const a = document.getElementsByName('a')
+
 const section = document.getElementsByName('section')
 
 const div = document.getElementsByName('div')
