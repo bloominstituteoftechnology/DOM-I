@@ -95,7 +95,14 @@ document.querySelector(".main-content .bottom-content .text-content:last-child p
 
 //  Contact  //
 
+//  h4
+document.querySelector(".contact h4").textContent = siteContent["contact"]["contact-h4"];
+
+//  contact info
+document.querySelector(".contact p:first-of-type").textContent = siteContent["contact"]["address"];
+document.querySelector(".contact p:nth-of-type(2)").textContent = siteContent["contact"]["phone"];
+document.querySelector(".contact p:last-of-type").textContent = siteContent["contact"]["email"];
 
 
-
-console.log($navLinks);
+//  Footer  //
+document.querySelector("footer p").textContent = siteContent["footer"]["copyright"];
