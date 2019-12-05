@@ -83,9 +83,19 @@ const section = document.querySelector('section')
 
 const div = document.querySelector('div')
 
+//Query Selectors - cta
 
-//Adding site content
+const ctaH1 = document.querySelector('.cta-text h1')
 
+const ctaImg = document.querySelector('.cta img')
+
+//Query Selectors - main-content
+
+
+
+//ADDING SITE CONTENT
+
+//Nav Bar
 nav.children[0].textContent = siteContent['nav']['nav-item-1']
 
 nav.children[1].textContent = siteContent['nav']['nav-item-2']
@@ -97,6 +107,12 @@ nav.children[3].textContent = siteContent['nav']['nav-item-4']
 nav.children[4].textContent = siteContent['nav']['nav-item-5']
 
 nav.children[5].textContent = siteContent['nav']['nav-item-6']
+
+//cta
+
+ctaH1.textContent = siteContent['cta']['h1']
+
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
 
 
 
