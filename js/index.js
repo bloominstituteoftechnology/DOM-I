@@ -39,25 +39,63 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.src = siteContent["nav"]["img-src"]
 
 
 
-let navlinks = document.getElementsByTagName('a');
-navlinks[0].textContent = 'Services';
-navlinks[1].textContent = 'Product';
-navlinks[2].textContent = 'Vision';
-navlinks[3].textContent = 'Features';
-navlinks[4].textContent = 'About';
-navlinks[5].textContent = 'Contact';
+let navlinks = document.querySelectorAll('nav a')
+navlinks[0].text = siteContent.nav["nav-item-1"]
+navlinks[1].text = siteContent.nav["nav-item-2"]
+navlinks[2].text = siteContent.nav["nav-item-3"]
+navlinks[3].text = siteContent.nav["nav-item-4"]
+navlinks[4].text = siteContent.nav["nav-item-5"]
+navlinks[5].text = siteContent.nav["nav-item-6"]
 
-let nav = document.querySelectorAll('a');
-nav.forEach((item, index) => {
-    item.textContent = siteContent["nav"][`nav-item-${index + 1}`];
-    item.style.color = 'green';
-});
+let navigation = document.querySelector('header nav')
+let facebookLink = document.createElement('a')
+facebookLink.innerHTML = "Facebook"
+navigation.append(facebookLink)
+facebookLink.style.color = "rgb(36, 163, 61)"
 
-document.querySelector('h1').textContent = siteContent.cta['h1'];
-document.querySelector('button').textContent = siteContent.cta['button'];
-document.querySelector('#cta-img').src = siteContent.cta['img-src'];
+let twitterLink = document.createElement('a')
+twitterLink.innerText = "Twitter"
+navigation.prepend(twitterLink)
+twitterLink.style.color = "rgb(36, 163, 61)"
 
+navlinks.forEach(link => {
+  link.style.color = "rgb(36, 163, 61)"
+})
+
+let ctaText = document.querySelector('.cta-text h1')
+ctaText.innerText = siteContent.cta.h1
+
+let ctaButton = document.querySelector('.cta-text button')
+ctaButton.innerText = siteContent.cta.button
+
+let ctaImg = document.getElementById("cta-img")
+ctaImg.src = siteContent.cta["img-src"]
+
+let mainHeadersH4 = document.querySelectorAll('.text-content h4')
+mainHeadersH4[0].innerText = siteContent['main-content']['features-h4']
+mainHeadersH4[1].innerText = siteContent['main-content']['about-h4']
+mainHeadersH4[2].innerText = siteContent['main-content']['services-h4']
+mainHeadersH4[3].innerText = siteContent['main-content']['product-h4']
+mainHeadersH4[4].innerText = siteContent['main-content']['vision-h4']
+
+let mainContentP = document.querySelectorAll('.text-content p')
+mainContentP[0].innerHTML = siteContent['main-content']['features-content']
+mainContentP[1].innerHTML = siteContent['main-content']['about-content']
+mainContentP[2].innerHTML = siteContent['main-content']['services-content']
+mainContentP[3].innerHTML = siteContent['main-content']['product-content']
+mainContentP[4].innerHTML = siteContent['main-content']['vision-content']
+
+let mainContentImg = document.getElementById('middle-img')
+mainContentImg.src = siteContent['main-content']["middle-img-src"]
+
+let contactH4 = document.querySelector('.contact h4')
+contactH4.innerText = siteContent.contact['contact-h4']
+
+let contactP = document.querySelectorAll('.contact p')
+contactP[0].innerHTML = siteContent.contact['address']
+contactP[1].innerHTML = siteContent.contact['phone']
+contactP[2].innerHTML = siteContent.contact['email']
