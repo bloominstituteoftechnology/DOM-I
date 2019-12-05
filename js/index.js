@@ -87,6 +87,8 @@ const div = document.querySelector('div')
 
 const ctaH1 = document.querySelector('.cta-text h1')
 
+const ctaButton = document.querySelector('.cta-text button')
+
 const ctaImg = document.querySelector('.cta img')
 
 //Query Selectors - main-content
@@ -120,6 +122,8 @@ nav.children[5].textContent = siteContent['nav']['nav-item-6']
 //cta
 
 ctaH1.textContent = siteContent['cta']['h1']
+
+ctaButton.textContent = siteContent['cta']['button']
 
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
 
