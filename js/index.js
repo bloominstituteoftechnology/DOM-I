@@ -91,7 +91,9 @@ const ctaImg = document.querySelector('.cta img')
 
 //Query Selectors - main-content
 
+const mainContent = document.querySelectorAll('.main-content')
 
+const h4s = document.querySelectorAll('h4')
 
 //ADDING SITE CONTENT
 
@@ -113,6 +115,16 @@ nav.children[5].textContent = siteContent['nav']['nav-item-6']
 ctaH1.textContent = siteContent['cta']['h1']
 
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+//main-content
+
+h4s[0].textContent = siteContent['main-content']["features-h4"]
+h4s[1].textContent = siteContent['main-content']["about-h4"]
+h4s[2].textContent = siteContent['main-content']["services-h4"]
+h4s[3].textContent = siteContent['main-content']["product-h4"]
+h4s[4].textContent = siteContent['main-content']["vision-h4"]
+
+
 
 
 
