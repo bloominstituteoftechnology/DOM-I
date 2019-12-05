@@ -41,6 +41,8 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+//Elements
+
 const header = document.getElementsByName('header')
 
 const nav = document.getElementsByName('nav')
@@ -49,4 +51,36 @@ const section = document.getElementsByName('section')
 
 const div = document.getElementsByName('div')
 
-const container = document.getElementsByClassName('container')
+
+//Classes
+
+const containerCl = document.getElementsByClassName('container')
+
+const logoCl = document.getElementsByClassName('logo')
+
+const ctaCl = document.getElementsByClassName('cta')
+
+const ctatextCl = document.getElementsByClassName('cta-text')
+
+const maincontentCl = document.getElementsByClassName('main-content')
+
+const topcontentCl = document.getElementsByClassName('top-content')
+
+const textcontentCl = document.getElementsByClassName('text-content')
+
+const middleimgCl = document.getElementsByClassName('middle-img')
+
+const bottomcontentCl = document.getElementsByClassName('bottom-content')
+
+const contactCl = document.getElementsByClassName('contact')
+
+//ID's
+
+const logoimgId = document.getElementsId('logo-img')
+
+const ctaimgId = document.getElementsId('cta-img')
+
+const middleimgId = document.getElementsId('middle-img')
+
+
+
