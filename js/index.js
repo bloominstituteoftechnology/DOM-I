@@ -103,6 +103,9 @@ const mainMiddleImg = document.getElementById("middle-img");
 
 const contact = document.querySelector('.contact');
 
+//Query Selectors - footer
+
+const footer = document.querySelector('footer');
 
 //////////////////////ADDING SITE CONTENT///////////////////////////
 
@@ -139,4 +142,9 @@ mainMiddleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 //contact
 
+contact.children[0].textContent = siteContent['contact']['contact-h4']
+contact.children[1].textContent = siteContent['contact']['address']
+contact.children[2].textContent = siteContent['contact']['phone']
+contact.children[3].textContent = siteContent['contact']['email']
 
+//footer
