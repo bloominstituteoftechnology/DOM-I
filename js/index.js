@@ -41,20 +41,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-//Elements
-
-const header = document.getElementsByName('header')
-
-const nav = document.getElementsByName('nav')
-
-const a = document.getElementsByName('a')
-
-const section = document.getElementsByName('section')
-
-const div = document.getElementsByName('div')
-
-
-//Classes
+//Elements by Class
 
 const containerCl = document.getElementsByClassName('container')
 
@@ -76,13 +63,40 @@ const bottomcontentCl = document.getElementsByClassName('bottom-content')
 
 const contactCl = document.getElementsByClassName('contact')
 
-//ID's
+//Elements by ID
 
 const logoimgId = document.getElementById('logo-img')
 
 const ctaimgId = document.getElementById('cta-img')
 
 const middleimgId = document.getElementById('middle-img')
+
+//Query Selectors - Elements
+
+const header = document.querySelector('header')
+
+const nav = document.querySelector('nav')
+
+const a = document.querySelector('a')
+
+const section = document.querySelector('section')
+
+const div = document.querySelector('div')
+
+
+//Adding site content
+
+nav.children[0].textContent = siteContent['nav']['nav-item-1']
+
+nav.children[1].textContent = siteContent['nav']['nav-item-2']
+
+nav.children[2].textContent = siteContent['nav']['nav-item-3']
+
+nav.children[3].textContent = siteContent['nav']['nav-item-4']
+
+nav.children[4].textContent = siteContent['nav']['nav-item-5']
+
+nav.children[5].textContent = siteContent['nav']['nav-item-6']
 
 
 
