@@ -86,7 +86,6 @@ let myNavValues = Object.values(siteContent.nav);
 
 let navTag1 = document.createElement('a');
 let navTag2 = document.createElement('a');
-
 let mainNav = document.querySelector('nav');
 
 mainNav.appendChild(navTag1);
@@ -99,11 +98,6 @@ $nav.forEach((aTag, index) => {
   aTag.textContent = myNavValues[index];
 });
 
-//nav.append($newNavTag);
-//words.forEach(word => {
- // let aTag = document.createElement('a');
- // aTag.textContent = word;
- // newNavTag.append(aTag);
-//});
+$contentH1[0].style.color = 'green';
 
 
