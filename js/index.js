@@ -39,4 +39,60 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+//navigation
+let navigation = document.querySelectorAll('nav a')
+navigation.forEach((item, index) => {
+    item.text = siteContent["nav"][`nav-item-${index + 1}`];
+    item.style.color = 'green';
+});
+
+let ctaText = document.querySelector('.cta-text h1')
+ctaText.innerText = siteContent.cta.h1
+
+let ctaButton = document.querySelector('.cta-text button')
+ctaButton.innerText = siteContent.cta.button
+
+
+
+//images
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+
+let middleImg = document.getElementById("middle-img")
+middleImg.src = siteContent["img-src"]
+
+let mainHeadersH4 = document.querySelectorAll('.text-content h4') 
+mainHeadersH4[0].innerText = siteContent['main-content']['features-h4']
+mainHeadersH4[1].innerText = siteContent['main-content']['about-h4']
+mainHeadersH4[2].innerText = siteContent['main-content']['services-h4']
+mainHeadersH4[3].innerText = siteContent['main-content']['product-h4']
+mainHeadersH4[4].innerText = siteContent['main-content']['vision-h4']
+
+let mainContentP = document.querySelectorAll('.main-content p')
+mainContentP[0].innerHTML = siteContent['main-content']['features-content']
+mainContentP[1].innerHTML = siteContent['main-content']['features-content']
+mainContentP[2].innerHTML = siteContent['main-content']['features-content']
+mainContentP[3].innerHTML = siteContent['main-content']['features-content']
+mainContentP[4].innerHTML = siteContent['main-content']['features-content']
+
+let mainContentImg = document.getElementById('middle-img');
+mainContentImg.src = siteContent['main-content']['middle-img-src']
+
+
+
+//contact info
+let contactInfo = document.querySelector(".contact h4")
+contactInfo.innerHTML = siteContent.contact["contact-h4"]
+
+let contactP = document.querySelectorAll('.contact p')
+contactP[0].innerHTML = siteContent.contact['address']
+contactP[1].innerHTML = siteContent.contact['phone']
+contactP[2].innerHTML = siteContent.contact['email']
+
+let footerP = document.querySelector('footer p')
+footerP[0].innerText = siteContent.footer['footer-p']
+
+
