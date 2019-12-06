@@ -41,4 +41,59 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-siteContent.innerText['nav-item-']['nav a'];
+let navlinks = document.querySelectorAll('nav a')
+
+navlinks[0].text = siteContent.nav['nav-item-1']
+navlinks[1].text = siteContent.nav['nav-item-2']
+navlinks[2].text = siteContent.nav['nav-item-3']
+navlinks[3].text = siteContent.nav['nav-item-4']
+navlinks[4].text = siteContent.nav['nav-item-5']
+navlinks[5].text = siteContent.nav['nav-item-6']
+
+navlinks.forEach(link =>{
+  link.style.color = 'lightgreen';
+})
+let navigation = document.querySelector('header nav')
+let BehanceLink = document.createElement('a')
+BehanceLink.innerHTML = 'Behance Page'
+navigation.append(BehanceLink)
+BehanceLink.style.color = 'lightgreen'
+
+let TwitterLink = document.createElement('a')
+TwitterLink.innerHTML = 'Twitter Page'
+navigation.prepend(TwitterLink)
+TwitterLink.style.color = 'lightgreen'
+
+let ctaText = document.querySelector('.cta-text h1')
+ctaText.innerHTML = siteContent.cta.h1
+
+let ctaImg = document.getElementById('cta-img')
+ctaImg.src = siteContent.cta['img-src']
+
+let ctaButton = document.querySelector('.cta-text button')
+ctaButton.innerText = siteContent.cta.button
+
+let mainHeadersH4 = document.querySelectorAll('.text-content h4')
+mainHeadersH4[0].innerText = siteContent['main-content']['features-h4']
+mainHeadersH4[1].innerText = siteContent['main-content']['about-h4']
+mainHeadersH4[2].innerText = siteContent['main-content']['services-h4']
+mainHeadersH4[3].innerText = siteContent['main-content']['product-h4']
+mainHeadersH4[4].innerText = siteContent['main-content']['vision-h4']
+
+let mainContentP = document.querySelectorAll('.text-content p')
+mainContentP[0].innerHTML = siteContent['main-content']['features-content']
+mainContentP[1].innerHTML = siteContent['main-content']['about-content']
+mainContentP[2].innerHTML = siteContent['main-content']['services-content']
+mainContentP[3].innerHTML = siteContent['main-content']['product-content']
+mainContentP[4].innerHTML = siteContent['main-content']['vision-content']
+
+let mainContentImg = document.getElementById('middle-img');
+mainContentImg.src = siteContent['main-content']['middle-img-src']
+
+let reachOutH4 = document.querySelector('.contact h4')
+reachOutH4.innerText = siteContent.contact['contact-h4']
+
+let contactP = document.querySelectorAll('.contact p')
+contactP[0].innerHTML = siteContent.contact['address']
+contactP[1].innerHTML = siteContent.contact['phone']
+contactP[2].innerHTML = siteContent.contact['email']
