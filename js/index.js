@@ -119,6 +119,11 @@ nav.children[3].textContent = siteContent['nav']['nav-item-4'];
 nav.children[4].textContent = siteContent['nav']['nav-item-5'];
 nav.children[5].textContent = siteContent['nav']['nav-item-6'];
 
+// for (let i = 0; i < 7; i++) {
+//   nav.children[i].textContent = siteContent['nav']['nav-item-'.concat(i)];
+// };
+
+
 //cta
 
 ctaH1.textContent = siteContent['cta']['h1'];
