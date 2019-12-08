@@ -49,3 +49,10 @@ navlinks.forEach((currentValue, i) => (currentValue.textContent = Object.values(
 const headerImg = document.getElementById("cta-img");
 headerImg.setAttribute('src', siteContent["cta"]["img-src"])
 
+// Cta header title
+const headerTitle = document.querySelector('h1');
+headerTitle.textContent = siteContent.cta.h1
+
+// Cta button
+const buttonText = document.querySelector('button');
+buttonText.textContent = siteContent.cta.button
