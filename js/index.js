@@ -41,6 +41,11 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+// nav bar
+const navlinks = document.querySelectorAll('a');
+navlinks.forEach((currentValue, i) => (currentValue.textContent = Object.values(siteContent.nav)[i]));
+
+// Cta header logo
 const headerImg = document.getElementById("cta-img");
 headerImg.setAttribute('src', siteContent["cta"]["img-src"])
 
