@@ -96,3 +96,6 @@ let footerP = document.querySelector('footer p')
 footerP[0].innerText = siteContent.footer['footer-p']
 
 
+//append and prepend
+//nav[0].appendChild;
+//nav[0].prepend;
