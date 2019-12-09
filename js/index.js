@@ -48,6 +48,10 @@ navigation.forEach((item, index) => {
     item.style.color = 'green';
 });
 
+const newItem = document.createElement("a")
+newItem.textContent = "Lines for testing"
+document.querySelector("nav").append(newItem)
+
 let ctaText = document.querySelector('.cta-text h1')
 ctaText.innerText = siteContent.cta.h1
 
@@ -93,7 +97,7 @@ contactP[1].innerHTML = siteContent.contact['phone']
 contactP[2].innerHTML = siteContent.contact['email']
 
 let footerP = document.querySelector('footer p')
-footerP[0].innerText = siteContent.footer['footer-p']
+footerP.innerText = siteContent.footer['copyright']
 
 
 //append and prepend
