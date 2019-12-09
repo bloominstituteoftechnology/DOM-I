@@ -50,7 +50,7 @@ navigation.forEach((item, index) => {
 
 const newItem = document.createElement("a")
 newItem.textContent = "Lines for testing"
-document.querySelector("nav").append(newItem)
+document.querySelector("nav").prepend(newItem)
 
 let ctaText = document.querySelector('.cta-text h1')
 ctaText.innerText = siteContent.cta.h1
