@@ -18,13 +18,13 @@ const siteContent = {
     "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "about-h4":"About",
     "about-content": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "middle-img-src": "img/mid-page-accent.jpg",
     "services-h4":"Services",
     "services-content": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "product-h4":"Product",
     "product-content": "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "vision-h4":"Vision",
     "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+    "middle-img-src": "img/mid-page-accent.jpg",
   },
   "contact": {
     "contact-h4" : "Contact",
@@ -43,9 +43,10 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // nav bar
 const navlinks = document.querySelectorAll('a');
-navlinks.forEach((currentValue, i) => (currentValue.textContent = Object.values(siteContent.nav)[i]));
+navlinks.forEach((currentValue, i) => 
+  (currentValue.textContent = Object.values(siteContent.nav)[i]));
 
-// Cta header logo
+// Cta header img
 const headerImg = document.getElementById("cta-img");
 headerImg.setAttribute('src', siteContent["cta"]["img-src"])
 
@@ -56,3 +57,19 @@ headerTitle.textContent = siteContent.cta.h1
 // Cta button
 const buttonText = document.querySelector('button');
 buttonText.textContent = siteContent.cta.button
+
+// Content header text
+const contentHeader = document.querySelectorAll('h4');
+contentHeader.forEach((currentValue, i) => {
+  if( i % 2 == 0) {
+
+  (currentValue.textContent = Object.values(siteContent["main-content"])[i])
+      
+    }
+  }
+);
+
+// Content img
+const middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
