@@ -75,3 +75,11 @@ mainContent[4].querySelector('p').textContent = siteContent['main-content']['vis
 const middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
+// Contact info
+const contactInfo = document.querySelector('.contact');
+contactInfo.querySelector('h4').textContent = siteContent['contact']['contact-h4']
+const contactDetails = contactInfo.querySelectorAll('p');
+contactDetails[0].textContent = siteContent['contact']['address'];
+contactDetails[1].textContent = siteContent['contact']['phone'];
+contactDetails[2].textContent = siteContent['contact']['email'];
+
