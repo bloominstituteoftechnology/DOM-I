@@ -50,6 +50,11 @@ console.log(ctaButton)
 let ctaImage = document.getElementById('cta-img')
 console.log(ctaImage)
 let middleImage = document.getElementById('middle-img')
+let paragraphs = document.querySelectorAll('.main-content p')
+let manyParagraphs = document.querySelectorAll('p')
+console.log("paragraphs: ", paragraphs)
+console.log("manyParagraphs: ", manyParagraphs)
+
 
 
 navLinks.forEach((element, index) => {
@@ -59,3 +64,47 @@ mainWords.innerHTML = siteContent['cta']['h1']
 ctaButton.innerHTML = siteContent['cta']['button']
 ctaImage.setAttribute('src', siteContent['cta']['img-src'])
 middleImage.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+let paragraphHeadings = document.getElementsByTagName("h4");
+paragraphHeadings[0].innerHTML = siteContent["main-content"]["features-h4"]
+paragraphHeadings[1].innerHTML = siteContent["main-content"]["about-h4"]
+paragraphHeadings[2].innerHTML = siteContent["main-content"]["services-h4"]
+paragraphHeadings[3].innerHTML = siteContent["main-content"]["product-h4"]
+paragraphHeadings[4].innerHTML = siteContent["main-content"]["vision-h4"]
+paragraphHeadings[5].innerHTML = siteContent["contact"]["contact-h4"]
+
+let paragraphText = document.getElementsByTagName("p");
+paragraphText[0].innerHTML = siteContent["main-content"]["features-content"]
+paragraphText[1].innerHTML = siteContent["main-content"]["about-content"]
+paragraphText[2].innerHTML = siteContent["main-content"]["services-content"]
+paragraphText[3].innerHTML = siteContent["main-content"]["product-content"]
+paragraphText[4].innerHTML = siteContent["main-content"]["vision-content"]
+paragraphText[5].innerHTML = siteContent["contact"]["address"]
+paragraphText[6].innerHTML = siteContent["contact"]["phone"]
+paragraphText[7].innerHTML = siteContent["contact"]["email"]
+paragraphText[8].innerHTML = siteContent["footer"]["copyright"]
+
+// Task 3: color of items
+// navLinks.forEach((item) => {
+//   item.style.color = 'green'
+// })
+// // other option
+// for (let i = 0; i < navLinks.length; i++) {
+  //   navLinks[i].style.color = 'blue'
+  // }
+
+//Task 3: CreateElement, appendChild(), & prepend()
+let newNavItem = document.createElement("a");
+let newNavText = document.createTextNode("New Item")
+
+newNavItem.appendChild(newNavText);
+
+let navBar = document.querySelector("nav");
+navBar.prepend(newNavItem);
+newNavItem.setAttribute('href', '#');
+// newNavItem.style.color = 'green';
+
+// Task 3: color of items
+document.querySelectorAll('nav a').forEach(function(item) {
+  item.style.color = 'green'
+})
