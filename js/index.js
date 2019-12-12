@@ -113,26 +113,26 @@ footer.textContent = siteContent['footer']['copyright']
 // * [ ] Change the color of the navigation text to be green.
 theNav.forEach(link => link.style.color = 'green');
 
-// add two new items to the navigation system. 
-const nav      = document.getElementsByTagName('nav');
-const blog     = document.createElement('a')
-const services = document.createElement('a')
+// add two new items to the navigation system.
+const nav        = document.getElementsByTagName('nav');
+const blog       = document.createElement('a')
+const employment = document.createElement('a')
 
 blog.innerHTML = "Blog"
 blog.href = "#"
 blog.style.color = "green"
 
-services.innerHTML = "Employment"
-services.href = "#"
-services.style.color = "green"
+employment.innerHTML = "Employment"
+employment.href = "#"
+employment.style.color = "green"
 
 nav[0].appendChild(blog);
-nav[0].appendChild(services);
+nav[0].prepend(employment);
 
 // ## Stretch Goals ##
 //  * [ ] Update styles throughout the page as you see fit.
-//  * [ ] Study tomorrow's lesson on events and try to integrate a button 
-//  that can update content on the site with a click of a button.  You could 
+//  * [ ] Study tomorrow's lesson on events and try to integrate a button
+//  that can update content on the site with a click of a button.  You could
 //  build a similar data object with new values to help you test the click event.
 
 // Style the button
