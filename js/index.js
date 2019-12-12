@@ -43,6 +43,19 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let navLinks = document.querySelectorAll('a')
 console.log(navLinks)
+let mainWords = document.querySelector('h1')
+console.log(mainWords)
+let ctaButton = document.querySelector('button')
+console.log(ctaButton)
+let ctaImage = document.getElementById('cta-img')
+console.log(ctaImage)
+let middleImage = document.getElementById('middle-img')
+
+
 navLinks.forEach((element, index) => {
   element.text = siteContent["nav"]["nav-item-".concat(index+1)]
 })
+mainWords.innerHTML = siteContent['cta']['h1']
+ctaButton.innerHTML = siteContent['cta']['button']
+ctaImage.setAttribute('src', siteContent['cta']['img-src'])
+middleImage.setAttribute('src', siteContent['main-content']['middle-img-src'])
