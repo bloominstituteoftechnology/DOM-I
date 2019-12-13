@@ -40,3 +40,62 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const mySelection = document.querySelectorAll('a');
+mySelection[0].textContent = siteContent["nav"]["nav-item-1"];
+mySelection[1].textContent = siteContent["nav"]["nav-item-2"];
+mySelection[2].textContent = siteContent["nav"]["nav-item-3"];
+mySelection[3].textContent = siteContent["nav"]["nav-item-4"];
+mySelection[4].textContent = siteContent["nav"]["nav-item-5"];
+mySelection[5].textContent = siteContent["nav"]["nav-item-6"];
+
+mySelection.forEach(function(currentValue) {
+  currentValue.style.color = "green";
+});
+
+let newNav = document.querySelector("nav");
+const newNav1 = document.createElement("a");
+newNav1.textContent = "New";
+newNav.prepend(newNav1);
+
+const newNav2 = document.createElement("a");
+newNav2.textContent = "New2";
+newNav.appendChild(newNav2);
+
+newNav1.style.color = "green";
+newNav1.style.cursor = "pointer";
+newNav2.style.color = "green";
+newNav2.style.cursor = "pointer";
+
+const title = document.querySelector('h1');
+title.textContent = "Dom is Awesome!";
+let snippet = document.getElementById("cta-img");
+snippet.setAttribute('src','img/header-img.png');
+
+let button = document.querySelector('.cta-text>button');
+button.textContent = siteContent['cta']['button'];
+
+let middleImg = document.querySelector('#middle-img');
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+let headers = document.querySelectorAll('h4');
+headers[0].textContent = siteContent['main-content']['text-content-h4'];
+headers[1].textContent = siteContent['main-content']['About-h4'];
+headers[2].textContent = siteContent['main-content']['Services-h4'];
+headers[3].textContent = siteContent['main-content']['Products-h4'];
+headers[4].textContent = siteContent['main-content']['Vision-h4'];
+
+let paragraphs = document.querySelectorAll('p'); 
+paragraphs[0].textContent = siteContent['main-content']['features-content']; 
+paragraphs[1].textContent = siteContent['main-content']['about-content']; 
+paragraphs[2].textContent = siteContent['main-content']['services-content'];
+paragraphs[3].textContent = siteContent['main-content']['product-content'];
+paragraphs[4].textContent = siteContent['main-content']['vision-content'];
+
+let contact = document.querySelectorAll(".contact");
+contact[0].children[0].textContent = siteContent["contact"]["contact-h4"];
+contact[0].children[1].textContent = siteContent["contact"]["address"];
+contact[0].children[2].textContent = siteContent["contact"]["phone"];
+
+const bannerBtm = document.getElementsByTagName("footer");
+bannerBtm.textContent = "Copyright Great Idea! 2018";
