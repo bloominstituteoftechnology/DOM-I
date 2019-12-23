@@ -40,43 +40,68 @@ const siteContent = {
 
 
 // Example: Update the img src for the logo
+
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img/logo.png"])
-
-logo.alt = "Great Idea! Company logo."
+logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
-//getElement Method to select
+// Other images
 
-
-// document.getElementsByTagName('header');
-
-// document.getElementsByClassName('cta-text');
-
-// document.getElementsByClassName('text-content');
+let circle = document.getElementById("cta-img");
+circle.setAttribute('src', siteContent["cta"]["img-src"])
 
 
 
-const code = document.getElementById('cta-img');
-code.src = "img/header-img.png"; 
-code.alt = "Image of a code snippet";
+
+
+//1. Create selectors by using any of the DOM element's methods
+//  Note that IDs have been used on all images. Use the IDs to update src path content
+
+//nav
+
+const navMulti = document.querySelectorAll('nav');
+navMulti.style.color = grey;
+
+navMulti.textContent = "Services";
+navMulti.textContent = "Product";
+navMulti.textContent = "Vision";
+navMulti.textContent = "Features";
+navMulti.textContent = "About";
+navMulti.textContent = "Contact";
+
+
+//header
+
+const head = document.querySelectorAll('cta');
+head.style.border = red;
 
 
 
-const middle = document.getElementById('middle-img');
-middle.src = "img/mid-page-accent.jpg" 
-middle.alt = "Image of code snippets across the screen" 
 
 
 
-const Nav = document.getElementsByTagName('a');
 
-Nav.textContent = "Services";
-Nav.textContent = "Product";
-Nav.textContent = "Vision";
-Nav.textContent = "Features";
-Nav.textContent = "About";
-Nav.textContent = "Contact";
+
+// let logo = document.getElementById("logo-img");
+// logo.setAttribute('src', siteContent["nav"]["img/logo.png"])
+
+// logo.alt = "Great Idea! Company logo."
+
+
+
+// const code = document.getElementById('cta-img');
+// code.src = "img/header-img.png"; 
+// code.alt = "Image of a code snippet";
+
+
+
+// const middle = document.getElementById('middle-img');
+// middle.src = "img/mid-page-accent.jpg" 
+// middle.alt = "Image of code snippets across the screen" 
+
+
+
+
 
 // const parentHeader =  document.getElementsByTagName('nav');
 
