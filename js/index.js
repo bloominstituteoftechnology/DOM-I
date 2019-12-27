@@ -18,7 +18,7 @@ const siteContent = {
     "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "about-h4":"About",
     "about-content": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "middle-img-src": "img/mid-page-accent.jpg",
+    "middle-img": "img/mid-page-accent.jpg",
     "services-h4":"Services",
     "services-content": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "product-h4":"Product",
@@ -46,37 +46,76 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
 // Other images
+// Use the IDs to update src path content
 
 let circle = document.getElementById("cta-img");
 circle.setAttribute('src', siteContent["cta"]["img-src"])
 
 
+let middle = document.getElementById("middle-img");
+middle.setAttribute('src', siteContent["main-content"]["middle-img"])
+
 
 
 
 //1. Create selectors by using any of the DOM element's methods
-//  Note that IDs have been used on all images. Use the IDs to update src path content
 
-//nav
-
-const navMulti = document.querySelectorAll('nav');
-navMulti.style.color = grey;
-
-navMulti.textContent = "Services";
-navMulti.textContent = "Product";
-navMulti.textContent = "Vision";
-navMulti.textContent = "Features";
-navMulti.textContent = "About";
-navMulti.textContent = "Contact";
+//Nav
 
 
-//header
+// const navMulti = document.querySelectorAll("nav");
 
-const head = document.querySelectorAll('cta');
-head.style.border = red;
+// navMulti.textContent = "Services";
+// navMulti.textContent = "Product";
+// navMulti.textContent = "Vision";
+// navMulti.textContent = "Features";
+// navMulti.textContent = "About";
+// navMulti.textContent = "Contact";
 
 
 
+
+
+//sections
+
+
+
+
+
+const hh4 = document.getElementsByTagName("features-h4");
+
+
+
+const mainContent = document.querySelector('.cta');
+mainContent.style.background = "green";
+
+const firstheader = document.getElementsByName("h1");
+
+
+
+
+
+
+//divs
+
+// const ctaDiv = document.querySelector('.cta-text')
+// ctaDiv.style.border = 'red';
+
+const topDiv = document.querySelector('.main-content')
+topDiv.style.backgroundColor = 'yellow';
+
+
+const contacting = document.querySelectorAll('.contact');
+contacting.style.backgroundColor = 'blue';
+
+
+
+
+//buttons
+
+const buttons = document.getElementsByTagName('cta-button');
+
+buttons.backgroundColor = 'white';
 
 
 
