@@ -141,28 +141,31 @@ let mainHeader = document.querySelector('h1');
 mainHeader.innerHTML = 'Dom <br> is <br> Awesome!';
 
 
-
-
-
-
-
-
-
-
-
-
 //Main sections
-
 
 let mainContent = document.querySelector('.cta-text')
 
-
 let mainContent1 = document.querySelector('.cta')
 
-
 let topDiv = document.querySelector('.main-content')
-topDiv.style.backgroundColor = 'yellow';
 
+
+featuresheader = document.getElementsByTagName('h4')[0];
+
+featuresheader.innerText = 'Features';
+
+featurespara = document.getElementsByTagName('p')[0];
+
+featurespara.innerText = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+
+aboutheader = document.getElementsByTagName('h4')[1];
+
+aboutheader.innerText = 'About';
+
+aboutcontent = document.getElementsByTagName('p')[1];
+
+aboutcontent.innerText = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
 
 
 
