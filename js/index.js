@@ -138,7 +138,7 @@ buttonClick.innerText = 'Get Started';
 
 let mainHeader = document.querySelector('h1');
 
-mainHeader.innerHTML = 'Dom <br> is <br> Awesome!';
+mainHeader.innerHTML = 'Dom <br> is <br> Awesome';
 
 
 //Main sections
@@ -168,7 +168,30 @@ aboutcontent = document.getElementsByTagName('p')[1];
 aboutcontent.innerText = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
 
 
+servicesheader = document.getElementsByTagName('h4')[2];
+
+servicesheader.innerText = 'Services';
+
+servicescontent = document.getElementsByTagName('p')[2];
+
+servicescontent.innerText = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
 
 
 
+productheader = document.getElementsByTagName('h4')[3];
 
+productheader.innerText = 'Product';
+
+productcontent = document.getElementsByTagName('p')[3];
+
+productcontent.innerText = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+
+
+
+visionheader = document.getElementsByTagName('h4')[4];
+
+visionheader.innerText = 'Vision';
+
+visioncontent = document.getElementsByTagName('p')[4];
+
+visioncontent.innerText = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
