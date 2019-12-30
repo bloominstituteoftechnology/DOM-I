@@ -134,6 +134,13 @@ let buttonClick = document.querySelector('button');
 
 buttonClick.innerText = 'Get Started';
 
+//stretch: adding a click event listener, changes background color when clicked
+
+buttonClick.addEventListener('click', (e) => {
+  e.target.style.backgroundColor = 'red';
+});
+
+
 //header 
 
 let mainHeader = document.querySelector('h1');
