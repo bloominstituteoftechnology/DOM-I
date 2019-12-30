@@ -128,22 +128,36 @@ navigationbar.prepend(newnav2);
 
 
 
+//button
+
+let buttonClick = document.querySelector('button');
+
+buttonClick.innerText = 'Get Started';
+
+//header 
+
+let mainHeader = document.querySelector('h1');
+
+mainHeader.innerHTML = 'Dom <br> is <br> Awesome!';
+
+
+
+
+
+
+
+
+
+
+
+
+//Main sections
+
 
 let mainContent = document.querySelector('.cta-text')
-// mainContent.style.backgroundColor = 'blue';
-
 
 
 let mainContent1 = document.querySelector('.cta')
-mainContent1.style.backgroundColor = 'red'
-
-let contactMe = document.querySelector('.contact');
-contactMe.style.backgroundColor = 'pink'
-
-
-
-
-//divs
 
 
 let topDiv = document.querySelector('.main-content')
@@ -154,36 +168,4 @@ topDiv.style.backgroundColor = 'yellow';
 
 
 
-//buttons
-
-
-
-
-
-
-
-// let logo = document.getElementById("logo-img");
-// logo.setAttribute('src', siteContent["nav"]["img/logo.png"])
-
-// logo.alt = "Great Idea! Company logo."
-
-
-
-// const code = document.getElementById('cta-img');
-// code.src = "img/header-img.png"; 
-// code.alt = "Image of a code snippet";
-
-
-
-// const middle = document.getElementById('middle-img');
-// middle.src = "img/mid-page-accent.jpg" 
-// middle.alt = "Image of code snippets across the screen" 
-
-
-
-
-
-// const parentHeader =  document.getElementsByTagName('nav');
-
-// parentHeader.append(Nav);
 
