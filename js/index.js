@@ -38,7 +38,6 @@ const siteContent = {
 };
 
 
-
 // Example: Update the img src for the logo
 
 let logo = document.getElementById("logo-img");
@@ -63,59 +62,101 @@ middle.setAttribute('src', siteContent["main-content"]["middle-img"])
 //Nav
 
 
-// const navMulti = document.querySelectorAll("nav");
+let navigation1 = document.getElementsByTagName("a")[0];
 
-// navMulti.textContent = "Services";
-// navMulti.textContent = "Product";
-// navMulti.textContent = "Vision";
-// navMulti.textContent = "Features";
-// navMulti.textContent = "About";
-// navMulti.textContent = "Contact";
+navigation1.innerText = 'Services';
 
 
 
+let navigation2 = document.getElementsByTagName("a")[1];
 
-
-//sections
-
-
-
-
-
-const hh4 = document.getElementsByTagName("features-h4");
+navigation2.innerText = 'Product';
 
 
 
-const mainContent = document.querySelector('.cta');
-mainContent.style.background = "green";
+let navigation3 = document.getElementsByTagName("a")[2];
 
-const firstheader = document.getElementsByName("h1");
+navigation3.innerText = 'Vision';
+
+let navigation4 = document.getElementsByTagName("a")[3];
+
+navigation4.innerText = 'Features';
+
+let navigation5 = document.getElementsByTagName("a")[4];
+
+navigation5.innerText = 'About';
 
 
+let navigation6 = document.getElementsByTagName("a")[5];
+
+navigation6.innerText = 'Contact';
+
+
+
+//changing color of nav text to green
+
+let navvy = document.querySelectorAll('a')
+
+const arrayHTML = Array.from(navvy);
+
+arrayHTML.forEach((el) => {
+  el.style.color = 'green';
+}
+
+);
+
+//  `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
+
+const navigationbar = document.querySelector('nav');
+
+const newnav1 = document.createElement('a');
+
+newnav1.textContent = 'Catalogue';
+
+newnav1.style.color = 'green';
+
+navigationbar.appendChild(newnav1);
+
+
+const newnav2 = document.createElement('a');
+
+newnav2.textContent = 'Welcome';
+
+newnav2.style.color = 'green';
+
+navigationbar.prepend(newnav2);
+
+
+
+
+let mainContent = document.querySelector('.cta-text')
+// mainContent.style.backgroundColor = 'blue';
+
+
+
+let mainContent1 = document.querySelector('.cta')
+mainContent1.style.backgroundColor = 'red'
+
+let contactMe = document.querySelector('.contact');
+contactMe.style.backgroundColor = 'pink'
 
 
 
 
 //divs
 
-// const ctaDiv = document.querySelector('.cta-text')
-// ctaDiv.style.border = 'red';
 
-const topDiv = document.querySelector('.main-content')
+let topDiv = document.querySelector('.main-content')
 topDiv.style.backgroundColor = 'yellow';
 
 
-const contacting = document.querySelectorAll('.contact');
-contacting.style.backgroundColor = 'blue';
 
 
 
 
 //buttons
 
-const buttons = document.getElementsByTagName('cta-button');
 
-buttons.backgroundColor = 'white';
 
 
 
@@ -145,5 +186,4 @@ buttons.backgroundColor = 'white';
 // const parentHeader =  document.getElementsByTagName('nav');
 
 // parentHeader.append(Nav);
-
 
