@@ -143,55 +143,86 @@ mainHeader.innerHTML = 'Dom <br> is <br> Awesome';
 
 //Main sections
 
-let mainContent = document.querySelector('.cta-text')
+// let mainContent = document.querySelector('.cta-text')
 
-let mainContent1 = document.querySelector('.cta')
+// let mainContent1 = document.querySelector('.cta')
 
-let topDiv = document.querySelector('.main-content')
+// let topDiv = document.querySelector('.main-content')
+
+// let contactsection = document.getElementsByTagName('section')
 
 
-featuresheader = document.getElementsByTagName('h4')[0];
+
+let featuresheader = document.getElementsByTagName('h4')[0];
 
 featuresheader.innerText = 'Features';
 
-featurespara = document.getElementsByTagName('p')[0];
+let featurespara = document.getElementsByTagName('p')[0];
 
 featurespara.innerText = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
 
 
-aboutheader = document.getElementsByTagName('h4')[1];
+let aboutheader = document.getElementsByTagName('h4')[1];
 
 aboutheader.innerText = 'About';
 
-aboutcontent = document.getElementsByTagName('p')[1];
+let aboutcontent = document.getElementsByTagName('p')[1];
 
 aboutcontent.innerText = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
 
 
-servicesheader = document.getElementsByTagName('h4')[2];
+let servicesheader = document.getElementsByTagName('h4')[2];
 
 servicesheader.innerText = 'Services';
 
-servicescontent = document.getElementsByTagName('p')[2];
+let servicescontent = document.getElementsByTagName('p')[2];
 
 servicescontent.innerText = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
 
 
 
-productheader = document.getElementsByTagName('h4')[3];
+let productheader = document.getElementsByTagName('h4')[3];
 
 productheader.innerText = 'Product';
 
-productcontent = document.getElementsByTagName('p')[3];
+let productcontent = document.getElementsByTagName('p')[3];
 
 productcontent.innerText = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
 
 
 
-visionheader = document.getElementsByTagName('h4')[4];
+let visionheader = document.getElementsByTagName('h4')[4];
 
 visionheader.innerText = 'Vision';
 
-visioncontent = document.getElementsByTagName('p')[4];
+let visioncontent = document.getElementsByTagName('p')[4];
 
 visioncontent.innerText = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+
+
+//contact section
+
+let contactheader = document.getElementsByTagName('h4')[5];
+
+contactheader.innerText = 'Contact';
+
+
+//adress
+
+let address = document.getElementsByTagName('p')[5];
+
+address.innerHTML = '123 Way 456 Street <br> Somewhere, USA'
+
+//last bits 
+
+let phone = document.getElementsByTagName('p')[6];
+
+phone.innerText = '1 (888) 888-8888'
+
+let email = document.getElementsByTagName('p')[7];
+
+email.innerText = 'sales@greatidea.io'
+
+let footer = document.getElementsByTagName('p')[8];
+
+footer.innerText = 'Copyright Great Idea! 2018';
