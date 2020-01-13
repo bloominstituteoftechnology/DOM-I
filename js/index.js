@@ -57,5 +57,11 @@ navText[4].textContent = 'About';
 navText[5].textContent = 'Contact';
 navText.forEach(fcolor => fcolor.style.color = 'green');
 
-const awesomeHead = document.querySelector('.cta-text');
+// const nav = document.querySelector('nav');
+// nav.prepend(navText) = 'poop';
+
+const awesomeHead = document.querySelector('h1');
 awesomeHead.textContent = 'DOM IS AWESOME';
+
+const booton = document.querySelector('button');
+booton.textContent = 'Get Started';
