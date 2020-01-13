@@ -101,3 +101,8 @@ const headerNav2 = document.querySelectorAll('a');
 headerNav2.forEach(element =>{
   element.style.color = "green";
 })
+
+const myFoot = document.querySelector('footer');
+myFoot.style.backgroundColor = "pink";
+
+
