@@ -76,6 +76,9 @@ const siteContent2 = {
   },
 };
 
-// Example: Update the img src for the logo
+//Selectors for global elements
+let body = document.getElementsByTagName("body")[0];
+let h4s = document.getElementsByTagName("h4");
+
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
