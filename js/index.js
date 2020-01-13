@@ -40,3 +40,33 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let header = document.getElementById("cta-img");
+header.setAttribute('src', siteContent["cta"]["img-src"])
+
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+
+const headerNav = document.querySelectorAll('a');
+headerNav[0].textContent = siteContent.nav['nav-item-1']
+headerNav[1].textContent = siteContent.nav['nav-item-2']
+headerNav[2].textContent = siteContent.nav['nav-item-3']
+headerNav[3].textContent = siteContent.nav['nav-item-4']
+headerNav[4].textContent = siteContent.nav['nav-item-5']
+headerNav[5].textContent = siteContent.nav['nav-item-6']
+
+const h1 = document.querySelector('h1');
+h1.textContent = "DOM Is Awesome";
+
+const button = document.querySelector('button');
+button.textContent = "Get Started";
+
+const newH4 = document.querySelectorAll('h4');
+newH4[0].textContent= siteContent['main-content']['features-h4']
+newH4[1].textContent= siteContent['main-content']['about-h4']
+newH4[2].textContent= siteContent['main-content']['services-h4']
+newH4[3].textContent= siteContent['main-content']['product-h4']
+newH4[4].textContent= siteContent['main-content']['vision-h4']
+newH4[5].textContent= siteContent['contact']['contact-h4']
+
