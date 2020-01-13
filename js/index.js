@@ -14,26 +14,26 @@ const siteContent = {
     "img-src": "img/header-img.png"
   },
   "main-content": {
-    "features-h4":"Features",
+    "features-h4": "Features",
     "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "about-h4":"About",
+    "about-h4": "About",
     "about-content": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "middle-img-src": "img/mid-page-accent.jpg",
-    "services-h4":"Services",
+    "services-h4": "Services",
     "services-content": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "product-h4":"Product",
+    "product-h4": "Product",
     "product-content": "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "vision-h4":"Vision",
+    "vision-h4": "Vision",
     "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
   },
   "contact": {
-    "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
-    "phone" : "1 (888) 888-8888",
-    "email" : "sales@greatidea.io",
+    "contact-h4": "Contact",
+    "address": "123 Way 456 Street Somewhere, USA",
+    "phone": "1 (888) 888-8888",
+    "email": "sales@greatidea.io",
   },
   "footer": {
-    "copyright" : "Copyright Great Idea! 2018"
+    "copyright": "Copyright Great Idea! 2018"
   },
 };
 
@@ -55,7 +55,7 @@ navText[2].textContent = 'Vision';
 navText[3].textContent = 'Features';
 navText[4].textContent = 'About';
 navText[5].textContent = 'Contact';
-navText.forEach(fcolor => fcolor.style.color = 'green');
+
 
 // const nav = document.querySelector('nav');
 // nav.prepend(navText) = 'poop';
@@ -81,7 +81,30 @@ featureText[1].textContent = 'About content elementum magna eros, ac posuere elv
 featureText[2].textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
 featureText[3].textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
 featureText[4].textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+featureText[5].textContent = '123 Way 456 Street Somewhere, USA';
+featureText[6].textContent = '1 (888) 888-8888';
+featureText[7].textContent = 'sales@greatidea.io';
+featureText[8].textContent = 'Copyright Great Idea! 2018';
+
+const navBox = document.querySelector('nav');
+const link = document.createElement('a');
+link.textContent = 'Suh Doo'
+navBox.prepend(link);
 
 
+const ap = document.createElement('a')
+ap.textContent = "child";
+navBox.appendChild(ap);
+
+const navColor = document.querySelectorAll('a')
+navColor.forEach(fcolor => fcolor.style.color = 'green');
+
+
+// These only make paragraphs
+// const parentElement = document.querySelector('nav');
+// parentElement.append('appended');
+
+// const prependBitch = document.querySelector('nav');
+// prependBitch.prepend('prepend');
 
 
