@@ -41,7 +41,6 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-
 const headerImg = document.querySelector('#cta-img');
 headerImg.src = 'img/header-img.png';
 
@@ -56,16 +55,11 @@ navText[3].textContent = 'Features';
 navText[4].textContent = 'About';
 navText[5].textContent = 'Contact';
 
-
-// const nav = document.querySelector('nav');
-// nav.prepend(navText) = 'poop';
-
 const awesomeHead = document.querySelector('h1');
 awesomeHead.textContent = 'DOM IS AWESOME';
 
 const booton = document.querySelector('button');
 booton.textContent = 'Get Started';
-
 
 const fh4 = document.querySelectorAll('h4');
 fh4[0].textContent = 'Features';
@@ -91,20 +85,9 @@ const link = document.createElement('a');
 link.textContent = 'Suh Doo'
 navBox.prepend(link);
 
-
 const ap = document.createElement('a')
 ap.textContent = "child";
 navBox.appendChild(ap);
 
 const navColor = document.querySelectorAll('a')
 navColor.forEach(fcolor => fcolor.style.color = 'green');
-
-
-// These only make paragraphs
-// const parentElement = document.querySelector('nav');
-// parentElement.append('appended');
-
-// const prependBitch = document.querySelector('nav');
-// prependBitch.prepend('prepend');
-
-
