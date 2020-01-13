@@ -48,3 +48,12 @@ headerNav[2].textContent = siteContent.nav['nav-item-3']
 headerNav[3].textContent = siteContent.nav['nav-item-4']
 headerNav[4].textContent = siteContent.nav['nav-item-5']
 headerNav[5].textContent = siteContent.nav['nav-item-6']
+
+const newH1 = document.querySelector('h1')
+newH1.textContent = siteContent.cta['h1'] 
+
+const newButton = document.querySelector('button')
+newButton.textContent = siteContent.cta['button']
+
+const newCtaImg = document.querySelector('#cta-img')
+newCtaImg.src = siteContent.cta['img-src']
