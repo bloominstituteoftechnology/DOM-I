@@ -65,3 +65,23 @@ awesomeHead.textContent = 'DOM IS AWESOME';
 
 const booton = document.querySelector('button');
 booton.textContent = 'Get Started';
+
+
+const fh4 = document.querySelectorAll('h4');
+fh4[0].textContent = 'Features';
+fh4[1].textContent = 'About';
+fh4[2].textContent = 'Services';
+fh4[3].textContent = 'Product';
+fh4[4].textContent = 'Vision';
+fh4[5].textContent = 'Contact';
+
+const featureText = document.querySelectorAll('p');
+featureText[0].textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+featureText[1].textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+featureText[2].textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+featureText[3].textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+featureText[4].textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+
+
+
