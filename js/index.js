@@ -40,39 +40,115 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
-logo.style.padding = ('21px')
-logo.style.margin = ('10px')
-
-//ie. header section footer
-const header = document.querySelector('header')
-
-header.style.alignContent = "center"
-header.style.justifyItems = "center"
-
-let headerSmImg = document.createElement('img');
-/** Sets Properties of Created Element **/
-headerSmImg.src="../img/headerSmImg.jpg"
-headerSmImg.alt="Developer Image"
 
 
-/** Sets Style of Element ie. size position color */
-headerSmImg.style.width=("86px")
-headerSmImg.style.height=("86px")
-headerSmImg.style.margin= ("18px")
+let navHeader = document.querySelector('nav')
+let aHeader = navHeader.querySelectorAll('a')
 
-header.prepend(headerSmImg)
-
-let headerCoName = document.createElement('h1');
-headerCoName.style.fontSize = ('32px')
-headerCoName.textContent = ('Guin Productions')
-headerCoName.style.padding = ('35px')
-
-header.appendChild(headerCoName)
-
-let headerNavA1 = document.querySelector('a'[0])
-headerNavA1.textContent = ('Home')
+aHeader[0].textContent = (siteContent['nav']['nav-item-1'])
+aHeader[1].textContent = (siteContent['nav']['nav-item-2'])
+aHeader[2].textContent = (siteContent['nav']['nav-item-3'])
+aHeader[3].textContent = (siteContent['nav']['nav-item-4'])
+aHeader[4].textContent = (siteContent['nav']['nav-item-5'])
+aHeader[5].textContent = (siteContent['nav']['nav-item-6'])
 
 
-let ctaImg = document.querySelector('#cta-img')
+let header1 = document.querySelector('h1')
+header1.textContent = (siteContent['cta']['h1'])
 
-ctaImg.src = "../img/header-img.png"
+// header.style.border = ('1px solid red')
+
+let ctaImg = document.getElementById('cta-img')
+ctaImg.setAttribute('src',siteContent['cta']['img-src'])
+
+let btnHeader = document.querySelector('button')
+btnHeader.textContent = (siteContent['cta']['button'])
+btnHeader.style.fontWeight = ('600')
+btnHeader.style.fontFamily = ('Titillium Web, sans-serif')
+
+btnHeader.style.fontSize = ('18px')
+
+
+let mainCtaHeader = document.getElementsByTagName('h4')
+let mainCtaTxt = document.getElementsByTagName('p')
+
+  mainCtaHeader[0].textContent = (siteContent['main-content']['features-h4'])
+  mainCtaHeader[1].textContent = (siteContent['main-content']['about-h4'])
+  mainCtaHeader[2].textContent = (siteContent['main-content']['services-h4'])
+  mainCtaHeader[3].textContent = (siteContent['main-content']['product-h4'])
+  mainCtaHeader[4].textContent = (siteContent['main-content']['vision-h4'])
+
+  mainCtaTxt[0].textContent = (siteContent['main-content']['features-content'])
+  mainCtaTxt[1].textContent = (siteContent['main-content']['about-content'])
+  mainCtaTxt[2].textContent = (siteContent['main-content']['services-content'])
+  mainCtaTxt[3].textContent = (siteContent['main-content']['product-content'])
+  mainCtaTxt[4].textContent = (siteContent['main-content']['vision-content'])
+
+
+
+let mainCtaImg = document.getElementById('middle-img')
+mainCtaImg.setAttribute ('src', siteContent['main-content']['middle-img-src'])
+
+
+
+/** Finds amount of elements in defined class */
+// let contactHeader = document.getElementsByClassName('contact').getElementsByTagName('h4').length
+
+
+let contactClass = document.querySelector('.contact')
+contactClass.style.height = ('200px')
+
+let contactH4 = contactClass.querySelector('h4')
+contactH4.textContent = (siteContent['contact']['contact-h4'])
+
+let contactP = contactClass.getElementsByTagName('p')
+
+
+
+Array.from(contactP).forEach((styleP) => {
+
+  styleP.style.fontWeight = '900'
+
+})
+
+let contactAdd = contactP[0]
+
+// contactAdd.style.fontWeight = ('bold')
+contactAdd.style.width = ('150px')
+
+contactP[0].textContent = (siteContent['contact']['address'])
+contactP[1].textContent = (siteContent['contact']['phone'])
+contactP[2].textContent = (siteContent['contact']['email'])
+
+
+let footerTag = document.querySelector('footer')
+
+footerTag.style.display = ('flex')
+footerTag.style.justifyContent = ('space-between')
+footerTag.style.alignItems = ('center')
+
+let footerImg = document.createElement('img')
+
+footerImg.style.height = ("52px")
+footerImg.style.width = ("52px")
+
+
+
+footerImg.style.justifySelf = ('right')
+footerImg.style.margin = ('32px')
+footerImg.setAttribute('src', '/img/headerSmImg.jpg')
+footerImg.setAttribute('alt', 'Footer Append Img')
+
+
+let copyrightTxt = footerTag.querySelector('p')
+copyrightTxt.textContent = (siteContent['footer']['copyright'])
+copyrightTxt.style.position = ('relative')
+copyrightTxt.style.marginTop = ('54px')
+
+
+
+
+footerTag.append(footerImg)
+
+
+
