@@ -55,7 +55,9 @@ aHeader[5].textContent = (siteContent['nav']['nav-item-6'])
 
 let header1 = document.querySelector('h1')
 header1.textContent = (siteContent['cta']['h1'])
-
+header1.style.marginRight = ('50px')
+header1.style.paddingLeft = ("35px")
+header1.style.width = ('200px')
 // header.style.border = ('1px solid red')
 
 let ctaImg = document.getElementById('cta-img')
@@ -68,8 +70,11 @@ btnHeader.style.fontFamily = ('Titillium Web, sans-serif')
 
 btnHeader.style.fontSize = ('18px')
 
+btnHeader.style.marginBottom = ('15px')
+
 
 let mainCtaHeader = document.getElementsByTagName('h4')
+
 let mainCtaTxt = document.getElementsByTagName('p')
 
   mainCtaHeader[0].textContent = (siteContent['main-content']['features-h4'])
@@ -90,11 +95,6 @@ let mainCtaImg = document.getElementById('middle-img')
 mainCtaImg.setAttribute ('src', siteContent['main-content']['middle-img-src'])
 
 
-
-/** Finds amount of elements in defined class */
-// let contactHeader = document.getElementsByClassName('contact').getElementsByTagName('h4').length
-
-
 let contactClass = document.querySelector('.contact')
 contactClass.style.height = ('200px')
 
@@ -102,8 +102,6 @@ let contactH4 = contactClass.querySelector('h4')
 contactH4.textContent = (siteContent['contact']['contact-h4'])
 
 let contactP = contactClass.getElementsByTagName('p')
-
-
 
 Array.from(contactP).forEach((styleP) => {
 
@@ -120,6 +118,15 @@ contactP[0].textContent = (siteContent['contact']['address'])
 contactP[1].textContent = (siteContent['contact']['phone'])
 contactP[2].textContent = (siteContent['contact']['email'])
 
+// HEADER CREATED IN CONTACT
+let contactH1 = document.createElement('h1')
+contactH1.textContent = ('Let Us Know Your Thoughts')
+contactH1.style.fontSize = ('32px')
+contactH1.style.textAlign = ('center')
+
+//PREPEND CONTACT NEW HEADER
+contactClass.prepend(contactH1)
+
 
 let footerTag = document.querySelector('footer')
 
@@ -127,12 +134,12 @@ footerTag.style.display = ('flex')
 footerTag.style.justifyContent = ('space-between')
 footerTag.style.alignItems = ('center')
 
+
+//FOOTER IMG CREATED
 let footerImg = document.createElement('img')
 
 footerImg.style.height = ("52px")
 footerImg.style.width = ("52px")
-
-
 
 footerImg.style.justifySelf = ('right')
 footerImg.style.margin = ('32px')
