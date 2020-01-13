@@ -41,6 +41,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+
 const headerNav = document.querySelectorAll('a');
 headerNav[0].textContent = siteContent.nav['nav-item-1']
 headerNav[1].textContent = siteContent.nav['nav-item-2']
@@ -48,6 +49,30 @@ headerNav[2].textContent = siteContent.nav['nav-item-3']
 headerNav[3].textContent = siteContent.nav['nav-item-4']
 headerNav[4].textContent = siteContent.nav['nav-item-5']
 headerNav[5].textContent = siteContent.nav['nav-item-6']
+headerNav.forEach(element => {
+  element.style.color = "green";
+})
+
+const navBox = document.querySelector('nav')
+
+const newLink1 = document.createElement('a')
+
+newLink1.textContent = 'Ummm'
+
+navBox.appendChild(newLink1)
+
+const newLink2 = document.createElement('a')
+
+newLink2.textContent = 'Huh'
+
+navBox.prepend(newLink2)
+
+
+newLink1.style.color = "green"
+newLink2.style.color = "green"
+
+
+
 
 const newH1 = document.querySelector('h1')
 newH1.textContent = siteContent.cta['h1'] 
