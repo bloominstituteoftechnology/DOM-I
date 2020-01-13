@@ -37,6 +37,45 @@ const siteContent = {
   },
 };
 
+const siteContent2 = {
+  "nav": {
+    "nav-item-1": "Services",
+    "nav-item-2": "Product",
+    "nav-item-3": "Vision",
+    "nav-item-4": "Features",
+    "nav-item-5": "About",
+    "nav-item-6": "Contact",
+    "img-src": "img/logo.png"
+  },
+  "cta": {
+    "h1": "A little 411 ",
+    "button": "Click Me - I Dare Ya",
+    "img-src": "https://upload.wikimedia.org/wikipedia/commons/8/82/Gremlins_Logo.png"
+  },
+  "main-content": {
+    "features-h4":"Features",
+    "features-content": "Gremlins is a 1984 American comedy horor film written by Chris Columbus",
+    "about-h4":"About",
+    "about-content": "The story follows a young man who receives a 'mogwai' as a Christmas present from his father",
+    "middle-img-src": "img/mid-page-accent.jpg",
+    "services-h4":"Services",
+    "services-content": "he film stars Zach Galligan and Phoebe Cates, with Howie Mandel providing the voice of Gizmo, the main mogwai character.",
+    "product-h4":"Product",
+    "product-content": "It was followed by a sequel, Gremlins 2: The New Batch, released in 1990.",
+    "vision-h4":"Vision",
+    "vision-content": "Unlike the more satirical tone of the sequel (which parodies Hollywood sequels), Gremlins opts for more black comedy, balanced against a Christmastime setting.",
+  },
+  "contact": {
+    "contact-h4" : "Contact",
+    "address" : "Florida, USA",
+    "phone" : "1 (888) 888-8888",
+    "email" : "Gremlin4544@gizmo",
+  },
+  "footer": {
+    "copyright" : "Copyright © Alve McKethen 2020."
+  },
+};
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
