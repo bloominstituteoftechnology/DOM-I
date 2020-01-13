@@ -109,3 +109,65 @@ const newNavItem2 = document.createElement("a");
 newNavItem2.textContent = "Store";
 newNavItem2.style.color = "#3ae5ad"; //mint green
 nav.prepend(newNavItem2);
+
+//CTA
+let ctaH1 = document.querySelector(".cta-text h1");
+ctaH1.textContent = siteContent["cta"]["h1"];
+let ctaButton = document.querySelector(".cta-text button");
+ctaButton.textContent = siteContent["cta"]["button"];
+
+// Main Content
+let mainSection = document.querySelector(".main-content");
+
+//Top Content
+let topSection = document.querySelector(".top-content");
+let featuresH4 = document.querySelector(".top-content h4");
+featuresH4.textContent = siteContent["main-content"]["features-h4"];
+let featuresP = document.querySelector(".text-content p");
+featuresP.textContent = siteContent["main-content"]["features-content"];
+
+let aboutH4 = document.querySelector(".top-content .text-content:last-of-type h4");
+aboutH4.textContent = siteContent["main-content"]["about-h4"];
+let aboutP = document.querySelector(".top-content .text-content:last-of-type p");
+aboutP.textContent = siteContent["main-content"]["about-content"];
+
+//Bottom Content
+let servicesH4 = document.querySelector(".bottom-content h4");
+servicesH4.textContent = siteContent["main-content"]["services-h4"];
+let servicesP = document.querySelector(".bottom-content p");
+servicesP.textContent = siteContent["main-content"]["services-content"];
+
+let productH4 = document.querySelector(".bottom-content .text-content:nth-of-type(2) h4");
+productH4.textContent = siteContent["main-content"]["product-h4"];
+let productP = document.querySelector(".bottom-content .text-content:nth-of-type(2) p");
+productP.textContent = siteContent["main-content"]["product-content"];
+
+let visionH4 = document.querySelector(".bottom-content .text-content:last-of-type h4");
+visionH4.textContent = siteContent["main-content"]["vision-h4"];
+let visionP = document.querySelector(".bottom-content .text-content:last-of-type p");
+visionP.textContent = siteContent["main-content"]["vision-content"];
+
+//Contact
+let contactH4 = document.querySelector(".contact h4");
+contactH4.textContent = siteContent["contact"]["contact-h4"];
+let contactAddress = document.querySelector(".contact p");
+contactAddress.textContent = siteContent["contact"]["address"];
+let contactPhone = document.querySelector(".contact p:nth-of-type(2)");
+contactPhone.textContent = siteContent["contact"]["phone"];
+let contactEmail = document.querySelector(".contact p:last-of-type");
+contactEmail.textContent = siteContent["contact"]["email"];
+
+//Footer
+let footer = document.getElementsByTagName("footer")[0];
+let footerCopyright = document.querySelector("footer p");
+footerCopyright.textContent = siteContent2["footer"]["copyright"];
+
+//Contact
+contactAddress.textContent = siteContent2["contact"]["address"];
+contactEmail.textContent = siteContent2["contact"]["email"];
+
+
+
+  
+
+
