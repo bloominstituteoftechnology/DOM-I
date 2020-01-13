@@ -89,10 +89,64 @@ const siteContent = {
         mainH4[2].textContent = siteContent["main-content"]["services-h4"]
         mainH4[3].textContent = siteContent["main-content"]["product-h4"]
         mainH4[4].textContent = siteContent["main-content"]["vision-h4"]
+        mainH4[5].textContent = siteContent["contact"]["contact-h4"]
+
+      //p
+
+        const mainP = document.querySelectorAll('p');
+        mainP[0].textContent = siteContent['main-content']['features-content']
+        mainP[1].textContent = siteContent['main-content']['about-content']
+        mainP[2].textContent = siteContent['main-content']['services-content']
+        mainP[3].textContent = siteContent['main-content']['product-content']
+        mainP[4].textContent = siteContent['main-content']['vision-content']
+        mainP[5].textContent = siteContent['contact']['address']
+        mainP[6].textContent = siteContent['contact']['phone']
+        mainP[7].textContent = siteContent['contact']['email']
+
+//Footer
+
+        mainP[8].textContent = siteContent['footer']['copyright']
 
 
 
-        mainH4[5].textContent = siteContent["main-content"]["contact-h4"]
+
+
+//DOM Manipulation
+
+    //Change Nav to green
+
+      aSelector[0].style.color = 'green';
+      aSelector[1].style.color = 'green';
+      aSelector[2].style.color = 'green';
+      aSelector[3].style.color = 'green';
+      aSelector[4].style.color = 'green';
+      aSelector[5].style.color = 'green';
+
+
+    //Add Two Elements with .append and .prepend
+
+//Variables
+
+    const navEL = document.querySelector('nav');
+    const nodeFronta = document.createElement("a");
+    const nFText = document.createTextNode("ThankScience");
+    const nodeBacka = document.createElement("a");
+    const nBText = document.createTextNode("It Works!");
+
+    nodeFronta.prepend(nFText);
+    nodeBacka.appendChild(nBText);
+
+
+    //Please Work Damn You!
+
+    
+    
+     navEL.prepend(nodeFronta);
+     navEL.appendChild(nodeBacka)
+
+    
+
+
 
    
 
