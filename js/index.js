@@ -55,3 +55,4 @@ navText[2].textContent = 'Vision';
 navText[3].textContent = 'Features';
 navText[4].textContent = 'About';
 navText[5].textContent = 'Contact';
+navText.forEach(fcolor => fcolor.style.color = 'green');
