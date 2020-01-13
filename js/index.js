@@ -46,11 +46,30 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
-//adding the nav bar list
+//updating  nav bar list
 const multipleSelections = document.querySelectorAll("a");
-multipleSelections[0].textContent = "Services";
-multipleSelections[1].textContent = "Product";
-multipleSelections[2].textContent = "Vision";
-multipleSelections[3].textContent = "Features";
-multipleSelections[4].textContent = "About";
-multipleSelections[5].textContent = "Contacts";
+multipleSelections[0].textContent = siteContent.nav["nav-item-1"];
+multipleSelections[1].textContent = siteContent.nav["nav-item-2"];
+multipleSelections[2].textContent = siteContent.nav["nav-item-3"];
+multipleSelections[3].textContent = siteContent.nav["nav-item-3"];
+multipleSelections[4].textContent = siteContent.nav["nav-item-5"];
+multipleSelections[5].textContent = siteContent.nav["nav-item-6"];
+
+//updating  section class="cta"
+let i;
+let text = document.querySelector("h1");
+let args = [siteContent.cta["h1"]];
+function input() {
+  "use strict";
+  for (i = 0; i < args.length; i++) {
+    text.appendChild(document.createTextNode(args[i]));
+    text.appendChild(document.createElement("br"));
+  }
+}
+input(args);
+
+const button = document.querySelector("button");
+button.textContent = "Get Started";
+
+const headImg = document.getElementById("cta-img");
+headImg.setAttribute("src", siteContent["cta"]["img-src"]);
