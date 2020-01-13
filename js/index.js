@@ -40,3 +40,21 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//ie. header section footer
+const header = document.querySelector('header')
+
+
+header.style.alignContent= "center"
+header.style.justifyItems = "center"
+
+let headerSmImg = document.createElement('img');
+/** Sets Properties of Created Element **/
+headerSmImg.src="../img/headerSmImg.jpg"
+headerSmImg.alt="Developer Image"
+
+
+/** Sets Style of Element ie. size position color */
+headerSmImg.style.width=("86px")
+headerSmImg.style.height=("86px")
+headerSmImg.style.margin= ("18px")
