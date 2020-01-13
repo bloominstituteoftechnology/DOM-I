@@ -40,3 +40,44 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let headerSmImg = document.createElement('img');
+/** Sets Properties of Created Element **/
+headerSmImg.src="../img/headerSmImg.jpg"
+headerSmImg.alt="Developer Image"
+
+/** Sets Style of Element ie. size position color */
+headerSmImg.style.width=("86px")
+headerSmImg.style.height=("86px")
+headerSmImg.style.margin= ("18px")
+
+/*Create H1 Company Name append to header */
+let companyNameTxt = document.createElement('h1')
+companyNameTxt.textContent = ('Guin Production Unlimited')
+companyNameTxt.style.color = ('grey')
+companyNameTxt.style.justifyContent('center')
+
+
+/** Defining Parent Element to Variable To Replace Newly Created Element **/
+//ie. header section footer
+const header = document.querySelector('header')
+
+header.style.alignContent= "center"
+header.style.justifyItems = "center"
+/** Adds created Img to end of parent Tag **/
+header.prepend(headerSmImg);
+
+let logoImg = document.querySelector('#logo-img')
+logoImg.style.padding = ('32px')
+logoImg.style.margin = ('10px')
+
+
+/** Returns Array list of all Elements of specified Tag Name */
+let idArrList = document.getElementsByTagName('img')
+/* Assign var to  img id */
+let ctaImg = document.querySelector("#cta-img")
+/* Assigns src to newly defined var */
+ctaImg.src = "../img/mid-page-accent.jpg"
+ctaImg.style.margin = ('12px')
+
+
