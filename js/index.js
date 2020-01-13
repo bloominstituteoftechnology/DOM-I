@@ -70,3 +70,34 @@ newH4[3].textContent= siteContent['main-content']['product-h4']
 newH4[4].textContent= siteContent['main-content']['vision-h4']
 newH4[5].textContent= siteContent['contact']['contact-h4']
 
+const newP = document.querySelectorAll('p');
+newP[0].textContent = siteContent['main-content']['features-content']
+newP[1].textContent = siteContent['main-content']['about-content']
+newP[2].textContent = siteContent['main-content']['services-content']
+newP[3].textContent = siteContent['main-content']['product-content']
+newP[4].textContent = siteContent['main-content']['vision-content']
+newP[5].textContent = siteContent['contact']['address']
+newP[6].textContent = siteContent['contact']['phone']
+newP[7].textContent = siteContent['contact']['email']
+newP[8].textContent = siteContent['footer']['copyright']
+
+headerNav.forEach(element =>{
+  element.style.color = "green";
+})
+
+const navBox = document.querySelector('nav');
+const newContent = document.createElement ('a');
+
+newContent.textContent = "Hello";
+navBox.appendChild(newContent)
+
+const newLink2 = document.createElement('a')
+newLink2.textContent = "Again"
+
+navBox.prepend(newLink2)
+
+const headerNav2 = document.querySelectorAll('a');
+
+headerNav2.forEach(element =>{
+  element.style.color = "green";
+})
