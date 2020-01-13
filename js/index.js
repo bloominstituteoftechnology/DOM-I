@@ -57,3 +57,26 @@ newButton.textContent = siteContent.cta['button']
 
 const newCtaImg = document.querySelector('#cta-img')
 newCtaImg.src = siteContent.cta['img-src']
+
+const newH4 = document.querySelectorAll('h4')
+newH4[0].textContent = siteContent['main-content']['features-h4']
+newH4[1].textContent = siteContent['main-content']['about-h4']
+newH4[2].textContent = siteContent['main-content']['services-h4']
+newH4[3].textContent = siteContent['main-content']['product-h4']
+newH4[4].textContent = siteContent['main-content']['vision-h4']
+newH4[5].textContent = siteContent['contact']['contact-h4']
+
+const newMiddleimg = document.querySelector('.middle-img')
+newMiddleimg.src = siteContent['main-content']['middle-img-src']
+
+const mainP = document.querySelectorAll('p')
+mainP[0].textContent = siteContent['main-content']['features-content']
+mainP[1].textContent = siteContent['main-content']["about-content"]
+mainP[2].textContent = siteContent['main-content']["services-content"]
+mainP[3].textContent = siteContent['main-content'][ "product-content"]
+mainP[4].textContent = siteContent['main-content']["vision-content"]
+mainP[5].textContent = siteContent['contact']['address']
+mainP[6].textContent = siteContent['contact']['phone']
+mainP[7].textContent = siteContent['contact']['email']
+mainP[8].textContent = siteContent['footer']['copyright']
+
