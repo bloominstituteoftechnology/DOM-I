@@ -80,5 +80,12 @@ const siteContent2 = {
 let body = document.getElementsByTagName("body")[0];
 let h4s = document.getElementsByTagName("h4");
 
+//Set source for images
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+let midImg = document.getElementById("middle-img");
+midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+//Navigation
