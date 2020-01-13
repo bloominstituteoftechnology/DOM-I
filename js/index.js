@@ -150,3 +150,7 @@ const siteContent = {
 
    
 
+//Stretch Goal
+
+  //Update styles
+ctaSelector.style.textShadow = `3px 2px red`
