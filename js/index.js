@@ -40,12 +40,13 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.style.padding = ('21px')
+logo.style.margin = ('10px')
 
 //ie. header section footer
 const header = document.querySelector('header')
 
-
-header.style.alignContent= "center"
+header.style.alignContent = "center"
 header.style.justifyItems = "center"
 
 let headerSmImg = document.createElement('img');
@@ -58,3 +59,20 @@ headerSmImg.alt="Developer Image"
 headerSmImg.style.width=("86px")
 headerSmImg.style.height=("86px")
 headerSmImg.style.margin= ("18px")
+
+header.prepend(headerSmImg)
+
+let headerCoName = document.createElement('h1');
+headerCoName.style.fontSize = ('32px')
+headerCoName.textContent = ('Guin Productions')
+headerCoName.style.padding = ('35px')
+
+header.appendChild(headerCoName)
+
+let headerNavA1 = document.querySelector('a'[0])
+headerNavA1.textContent = ('Home')
+
+
+let ctaImg = document.querySelector('#cta-img')
+
+ctaImg.src = "../img/header-img.png"
