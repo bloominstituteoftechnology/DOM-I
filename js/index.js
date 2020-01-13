@@ -85,3 +85,9 @@ contact[0].children[3].textContent = siteContent["contact"]["email"]
 
 let footer = document.querySelectorAll("footer")
 footer[0].textContent = siteContent["footer"]["copyright"]
+
+let awesome = document.querySelectorAll("h1")
+awesome[0].textContent = siteContent["cta"]["h1"]
+
+let button = document.querySelectorAll("button")
+button[0].textContent = siteContent["cta"]["button"] 
