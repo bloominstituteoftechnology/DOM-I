@@ -54,12 +54,17 @@ myNav1[5].textContent = siteContent.nav["nav-item-6"];
 
 //section cta
 
-//h1
+//cta-h1
 let myCtaH1 = document.querySelectorAll('.cta-text h1');
 myCtaH1[0].textContent = siteContent.cta['h1'];
 
+//cta-Button
 let myCtaButton = document.querySelectorAll('.cta-text button');
 myCtaButton[0].textContent = siteContent.cta['button'];
+
+//cta-img
+let myCtaImg = document.getElementById('cta-img');
+myCtaImg.setAttribute('src', siteContent.cta["img-src"]);
 
 
 
