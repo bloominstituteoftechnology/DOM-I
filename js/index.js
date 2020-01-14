@@ -42,11 +42,9 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
-
+// Nav code starts here 
 let links = document.querySelectorAll('a')
-
 navLinks = Array.from(links)
-console.log(navLinks)
 
 for (let i = 0; i < navLinks.length; i++) {
   navLinks[0].textContent = siteContent["nav"]["nav-item-1"]
@@ -55,10 +53,9 @@ for (let i = 0; i < navLinks.length; i++) {
   navLinks[3].textContent = siteContent["nav"]["nav-item-4"]
   navLinks[4].textContent = siteContent["nav"]["nav-item-5"]
   navLinks[5].textContent = siteContent["nav"]["nav-item-6"]
+}// nav codes ends here
 
-
-}
-
+// Top contents heading and middle heading code starts here
 let h1 = document.querySelector('h1');
 h1.textContent = siteContent.cta.h1
 
@@ -78,11 +75,11 @@ for (let i = 0; i < hFour.length; i++) {
   hFour[2].textContent = siteContent["main-content"]["services-h4"];
   hFour[3].textContent = siteContent["main-content"]["product-h4"];
   hFour[4].textContent = siteContent["main-content"]["vision-h4"];
-  hFour[5].textContent = siteContent["contact"]["contact-h4"];
+  hFour[5].textContent = siteContent["contact"]["contact-h4"]; // This is footer code
+} // Top contents  heading and middle code ends here
 
 
-}
-
+// Top content and middle content paragraph code starts here
 let middleImage = document.querySelector('#middle-img');
 middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 let paragraph = document.querySelectorAll('p')
@@ -98,9 +95,9 @@ for (let i = 0; i < allParagraph.length; i++) {
   allParagraph[6].textContent = siteContent.contact.phone;
   allParagraph[7].textContent = siteContent.contact.email;
   allParagraph[8].textContent = siteContent.footer.copyright;
-}
+} //Top content and middle content paragraph ends here
 
 
 
-console.log(hFour)
+
 
