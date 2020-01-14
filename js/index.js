@@ -48,6 +48,9 @@ logo.setAttribute("src", siteContent["nav"]["img-src"]);
 //==================================================================================================================//
 //updating  nav bar list
 const multipleSelections = document.querySelectorAll("a");
+Array.from(multipleSelections).forEach(el => {
+  el.style.color = " green";
+});
 multipleSelections[0].textContent = siteContent.nav["nav-item-1"];
 multipleSelections[1].textContent = siteContent.nav["nav-item-2"];
 multipleSelections[2].textContent = siteContent.nav["nav-item-3"];
@@ -55,7 +58,7 @@ multipleSelections[3].textContent = siteContent.nav["nav-item-3"];
 multipleSelections[4].textContent = siteContent.nav["nav-item-5"];
 multipleSelections[5].textContent = siteContent.nav["nav-item-6"];
 
-//updating  section class="cta"
+//updating      section class="cta"
 let i;
 let text = document.querySelector("h1");
 let args = [siteContent.cta["h1"]];
@@ -74,11 +77,11 @@ button.textContent = "Get Started";
 const headImg = document.getElementById("cta-img");
 headImg.setAttribute("src", siteContent["cta"]["img-src"]);
 //==================================================================================================================//
-//updating   section class="main-content"
+//updating      section class="main-content"
 var list = siteContent["main-content"]; // extract the list from the given object//
 var textCon = document.querySelectorAll("div.text-content > h4"); // grabbing h4//
 var img = document.getElementById("middle-img"); //grabbing the img//
-img.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+img.setAttribute("src", siteContent["main-content"]["middle-img-src"]); // updating the img src//
 var textConP = document.querySelectorAll("div.text-content > p"); // grabbing p//
 // looping over the object and pushing the "h4" values I need in the variable//
 var tx = [];
@@ -105,4 +108,18 @@ for (var c = 0; c < textConP.length; c++) {
   textConP[c].textContent = px[c];
 }
 //==================================================================================================================//
-//updating contacts
+//updating      section class="contact"
+
+let contact = document.querySelector("section.contact > h4");
+contact.textContent = siteContent["contact"]["contact-h4"];
+
+let paragraph = document.querySelectorAll("section.contact > p");
+paragraph[0].textContent = siteContent.contact.address;
+paragraph[1].textContent = siteContent.contact.phone;
+paragraph[2].textContent = siteContent.contact.email;
+
+//==================================================================================================================//
+//updating      footer
+
+let footer = document.querySelector("footer > p");
+footer.textContent = siteContent.footer.copyright;
