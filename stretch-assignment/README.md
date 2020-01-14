@@ -30,6 +30,10 @@ Topics:
   * Has digits change to red when it gets to 10 seconds
   * Should not count past 10 seconds
 
+<!-- use JS I and 2 to help -->
+<!-- sets a limit: limit = 10 -->
+
+
  You will also need to look up and use `window.setInterval`. For this method, and any of those listed in the "Topics" section of this README, you are encouraged to use MDN as your resource for Documentation. MDN can be challenging to consume at first, so you may also use something like W3schools if the MDN documentation on a given subject is a bit too complicated.
 
  ## Stretch On The Stretch!
