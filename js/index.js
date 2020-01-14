@@ -45,7 +45,7 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
-
+//==================================================================================================================//
 //updating  nav bar list
 const multipleSelections = document.querySelectorAll("a");
 multipleSelections[0].textContent = siteContent.nav["nav-item-1"];
@@ -73,3 +73,36 @@ button.textContent = "Get Started";
 
 const headImg = document.getElementById("cta-img");
 headImg.setAttribute("src", siteContent["cta"]["img-src"]);
+//==================================================================================================================//
+//updating   section class="main-content"
+var list = siteContent["main-content"]; // extract the list from the given object//
+var textCon = document.querySelectorAll("div.text-content > h4"); // grabbing h4//
+var img = document.getElementById("middle-img"); //grabbing the img//
+img.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+var textConP = document.querySelectorAll("div.text-content > p"); // grabbing p//
+// looping over the object and pushing the "h4" values I need in the variable//
+var tx = [];
+for (var key in list) {
+  if (list[key].length < 10) {
+    tx.push(list[key]);
+  }
+}
+// looping over the object and pushing the "p" values I need in the variable//
+var px = [];
+for (var key in list) {
+  if (list[key].length >= 30) {
+    px.push(list[key]);
+  }
+}
+
+//looping over the h4 and adding the object values//
+for (var a = 0; a < textCon.length; a++) {
+  textCon[a].textContent = tx[a];
+}
+
+//looping over the paragraph and adding needed object values//
+for (var c = 0; c < textConP.length; c++) {
+  textConP[c].textContent = px[c];
+}
+//==================================================================================================================//
+//updating contacts
