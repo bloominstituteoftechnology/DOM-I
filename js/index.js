@@ -113,3 +113,25 @@ bottomVisionH4.innerText = siteContent['main-content']['vision-h4'];
 
 let bottomVisionP = document.querySelector('.bottom-content div:nth-child(3) p');
 bottomVisionP.innerText = siteContent['main-content']['vision-content'];
+
+
+
+// CONTACT  section
+let contactH4 = document.querySelector('.contact h4');
+contactH4.innerText = siteContent["contact"]['contact-h4'];
+
+let contactAddress = document.querySelector('.contact p:nth-child(2)');
+contactAddress.innerText = siteContent["contact"]['address'];
+
+let contactPhone = document.querySelector('.contact p:nth-child(3)');
+contactPhone.innerText = siteContent["contact"]['phone'];
+
+let contactEmail = document.querySelector('.contact p:nth-child(4)');
+contactEmail.innerText = siteContent["contact"]['email'];
+
+
+
+//FOOTER
+
+let myFooter = document.querySelector('footer p');
+myFooter.innerText = siteContent['footer']['copyright'];
