@@ -51,12 +51,25 @@ const multipleSelections = document.querySelectorAll("a");
 Array.from(multipleSelections).forEach(el => {
   el.style.color = " green";
 });
+
 multipleSelections[0].textContent = siteContent.nav["nav-item-1"];
 multipleSelections[1].textContent = siteContent.nav["nav-item-2"];
 multipleSelections[2].textContent = siteContent.nav["nav-item-3"];
 multipleSelections[3].textContent = siteContent.nav["nav-item-3"];
 multipleSelections[4].textContent = siteContent.nav["nav-item-5"];
 multipleSelections[5].textContent = siteContent.nav["nav-item-6"];
+
+// appending and prepending to navbar
+const nav = document.querySelector("nav");
+const item = document.createElement("a");
+item.textContent = "whaat";
+item.style.color = "blue";
+const item2 = document.createElement("a");
+item2.textContent = "eveer";
+item2.style.color = "blue";
+nav.append(item2);
+nav.prepend(item);
+//
 
 //updating      section class="cta"
 let i;
