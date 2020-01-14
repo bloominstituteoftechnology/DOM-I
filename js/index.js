@@ -67,6 +67,20 @@ let myCtaImg = document.getElementById('cta-img');
 myCtaImg.setAttribute('src', siteContent.cta["img-src"]);
 
 
+//main  content
+
+//features h4
+let mainH4 = document.querySelectorAll('.text-content h4');
+mainH4[0].textContent = siteContent["main-content"]['features-h4'];
+
+//features P text
+let mainP = document.querySelectorAll('.text-content p');
+mainP[0].textContent = siteContent["main-content"]['features-content'];
+
+//about h4
+
+//about P text
+
 
 
 
