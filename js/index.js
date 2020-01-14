@@ -46,6 +46,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 let links = document.querySelectorAll('a')
 navLinks = Array.from(links)
 
+
 for (let i = 0; i < navLinks.length; i++) {
   navLinks[0].textContent = siteContent["nav"]["nav-item-1"]
   navLinks[1].textContent = siteContent["nav"]["nav-item-2"]
@@ -54,6 +55,10 @@ for (let i = 0; i < navLinks.length; i++) {
   navLinks[4].textContent = siteContent["nav"]["nav-item-5"]
   navLinks[5].textContent = siteContent["nav"]["nav-item-6"]
 }// nav codes ends here
+
+navLinks.forEach((link) => {
+  link.style.color = "green"
+})
 
 // Top contents heading and middle heading code starts here
 let h1 = document.querySelector('h1');
@@ -97,7 +102,18 @@ for (let i = 0; i < allParagraph.length; i++) {
   allParagraph[8].textContent = siteContent.footer.copyright;
 } //Top content and middle content paragraph ends here
 
+//New element content  prepend and append starts here
+const newContent = document.createElement('button');
+newContent.classList.add('button')
+newContent.textContent = 'Click Me';
+newContent.style.background = '#3dfe3a';
 
+const parentElement = document.querySelector('nav')
+parentElement.append(newContent)
 
+const newContent1 = document.createElement('h2');
+newContent1.id = 'created'
+newContent1.textContent = ' "JS is Awesome" '
 
-
+const parentElement1 = document.querySelector('nav')
+parentElement.prepend(newContent1)
