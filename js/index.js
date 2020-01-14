@@ -36,6 +36,9 @@ const siteContent = {
     "copyright" : "Copyright Great Idea! 2018"
   },
 };
+const countKey = Object.keys(siteContent.nav).length;
+console.log(countKey)
+
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
@@ -105,3 +108,8 @@ mainP[6].textContent = siteContent['contact']['phone']
 mainP[7].textContent = siteContent['contact']['email']
 mainP[8].textContent = siteContent['footer']['copyright']
 
+const button = document.querySelector('button').addEventListener('click', buttonClick);
+
+function buttonClick(){
+  newH1.textContent = 'Holy crap, my button works!'
+}
