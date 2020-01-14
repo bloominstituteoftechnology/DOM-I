@@ -2,6 +2,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #23bae9;
 }
 
 .digit {
@@ -10,5 +11,37 @@ body {
 }
 
 .redDigit {
-  color: red;
+  color: #D00025; /*red*/
 }
+
+body:before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  
+  z-index: -1;
+  background: #23bae9;
+  background: url("./img/jellyfish.jpg");
+  /*background-repeat: no-repeat;*/
+  background-size: cover;
+  -webkit-animation-name: rotate;
+  -webkit-animation-duration:150s;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-timing-function:linear;
+  -moz-animation-name: rotate;
+  -moz-animation-duration:150s;
+  -moz-animation-iteration-count:infinite;
+  -moz-animation-timing-function:linear;
+  }
+
+  @-webkit-keyframes rotate {
+    from {-webkit-transform:rotate(0deg);}
+    to {  -webkit-transform:rotate(360deg);}
+  }
+  
+  @-moz-keyframes rotate {
+    from {-moz-transform:rotate(0deg);}
+    to {  -moz-transform:rotate(360deg);}
+  }
+  
