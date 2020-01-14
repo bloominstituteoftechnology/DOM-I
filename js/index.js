@@ -42,7 +42,10 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 
-//navbar links 
+
+
+//-----------------------NAVBAR LINKS---------------------------
+
 let myNav1 = document.querySelectorAll('nav a');
 
 myNav1[0].textContent = siteContent.nav["nav-item-1"];
@@ -52,7 +55,33 @@ myNav1[3].textContent = siteContent.nav["nav-item-4"];
 myNav1[4].textContent = siteContent.nav["nav-item-5"];
 myNav1[5].textContent = siteContent.nav["nav-item-6"];
 
-//section cta
+//--------------------------TASK 3-------------------------
+
+// CHANGE NAV LINKS TO GREEN
+Array.from(myNav1).forEach((item) => {
+  return item.style.color = 'green';
+});
+
+
+//APPEND TO NAVBAR
+
+// new var that selects nav because myNav1 is htmlcollection
+let navAnchor = document.querySelector('nav');
+
+//appendChild() to navbar
+let newAnchor = document.createElement('a');
+newAnchor.textContent = 'pepen';
+navAnchor.appendChild(newAnchor);
+
+//prepend() to navbar
+let newAnchor2 = document.createElement('a');
+newAnchor2.textContent = 'luis';
+navAnchor.prepend(newAnchor2);
+
+
+
+
+//---------------------------SECTION CTA-------------------------
 
 //cta-h1
 let myCtaH1 = document.querySelectorAll('.cta-text h1');
@@ -67,7 +96,7 @@ let myCtaImg = document.getElementById('cta-img');
 myCtaImg.setAttribute('src', siteContent.cta["img-src"]);
 
 
-//MAIN CONTENT
+//---------------------------MAIN CONTENT-----------------------------
 
 //features h4
 let mainFeaturesH4 = document.querySelector('.top-content div:nth-child(1) h4');
@@ -91,7 +120,7 @@ let middleImg = document.getElementById('middle-img');
 middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
 
-// BOTTOM CONTENT
+//---------------------BOTTOM CONTENT-------------------------------------
 
 //services
 let bottomServicesH4 = document.querySelector('.bottom-content div:nth-child(1) h4');
@@ -116,7 +145,9 @@ bottomVisionP.innerText = siteContent['main-content']['vision-content'];
 
 
 
-// CONTACT  section
+// ----------------CONTACT  section------------------------------
+
+
 let contactH4 = document.querySelector('.contact h4');
 contactH4.innerText = siteContent["contact"]['contact-h4'];
 
@@ -131,7 +162,7 @@ contactEmail.innerText = siteContent["contact"]['email'];
 
 
 
-//FOOTER
+//----------------FOOTER-----------------------------
 
 let myFooter = document.querySelector('footer p');
 myFooter.innerText = siteContent['footer']['copyright'];
