@@ -113,3 +113,25 @@ contact.children[3].textContent = siteContent["contact"]["email"];
 
 let copyright = document.querySelector("footer");
 copyright.children[0].textContent = siteContent["footer"]["copyright"];
+
+// Use .appendChild() to add a new item to the navigation
+
+const loginLink = document.createElement('a');
+loginLink.href = "#";
+loginLink.textContent = 'Login';
+document.querySelector('nav').appendChild(loginLink);
+
+loginLink.addEventListener('click', (e) =>{
+  e.target.style.color = 'red';
+  })
+
+
+// Use .prepend() to add a new item to the navigation
+const missionLink = document.createElement('a');
+missionLink.href = "#";
+missionLink.textContent = 'Home';
+document.querySelector('nav').prepend(missionLink);
+
+missionLink.addEventListener('click', (e) =>{
+  e.target.style.color = 'red';
+  })
