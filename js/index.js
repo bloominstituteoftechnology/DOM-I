@@ -68,4 +68,11 @@ blog.textContent = "Blog";
 blog.style.color = "red";
 navBar.append(blog);
 
+//* THE IMAGES WILL BE CALLED HERE *//
+
+let ctaImg = document.querySelector("#cta-img");
+ctaImg.setAttribute("src", siteContent.cta["img-src"]);
+
+let middleImg = document.querySelector("#middle-img");
+middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
