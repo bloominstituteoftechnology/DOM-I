@@ -89,7 +89,7 @@ let middleImage = document.querySelector('#middle-img');
 middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 let paragraph = document.querySelectorAll('p')
 let allParagraph = Array.from(paragraph)
-console.log(allParagraph)
+
 for (let i = 0; i < allParagraph.length; i++) {
   allParagraph[0].textContent = siteContent["main-content"]["features-content"];
   allParagraph[1].textContent = siteContent["main-content"]["about-content"];
@@ -108,12 +108,24 @@ newContent.classList.add('button')
 newContent.textContent = 'Click Me';
 newContent.style.background = '#3dfe3a';
 
+
+
+const myFunction = () => {
+
+  console.log('Im excited to be in this cohort')
+
+}
+newContent.onclick = myFunction
+myFunction()
+
 const parentElement = document.querySelector('nav')
 parentElement.append(newContent)
 
 const newContent1 = document.createElement('h2');
 newContent1.id = 'created'
 newContent1.textContent = ' "JS is Awesome" '
+newContent1.style.color = 'purple'
 
 const parentElement1 = document.querySelector('nav')
 parentElement.prepend(newContent1)
+
