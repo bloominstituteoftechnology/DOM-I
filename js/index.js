@@ -78,6 +78,17 @@ let newAnchor2 = document.createElement('a');
 newAnchor2.textContent = 'luis';
 navAnchor.prepend(newAnchor2);
 
+//-----------------STRECHT GOAL EVEN LISTENER--------------
+let ctaSelect = document.querySelector('.cta');
+let actionBtn = document.createElement('button');
+actionBtn.textContent = 'Turn BG Red';
+ctaSelect.appendChild(actionBtn);
+
+actionBtn.addEventListener('click', function(){
+  return ctaSelect.style = 'background-color:red';
+});
+
+
 
 
 
