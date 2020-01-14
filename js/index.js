@@ -42,13 +42,26 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
-const paragraphone = document.getElementsByTagName('p');
-console.log(paragraphone);
+
+const midimg = document.getElementById(`middle-img`);
+midimg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+
+let ctaimg = document.getElementById("cta-img");
+ctaimg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+
+let anchors = document.getElementsByTagName('a');
+anchors[0].innerText = 'Services';
+anchors[1].innerText = 'Product';
+anchors[2].innerText = 'Vision';
+anchors[3].innerText = 'Features';
+anchors[4].innerText = 'About';
+anchors[5].innerText = 'Contact';
 
 
 
-const logoimg = document.querySelector('.logo-img');
-servicesImg.src = contentData.main_content.main_img.src;
-servicesImg.alt = contentData.main_content.main_img.alt;
 
-console.log(logoimg);
+
+const allLinks = document.getElementsByTagName('a');
+console.log(allLinks);
