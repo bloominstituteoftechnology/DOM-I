@@ -59,6 +59,17 @@ links[4].textContent = siteContent["nav"]["nav-item-5"];
 links[5].textContent = siteContent["nav"]["nav-item-6"];
 
 
+links[0].style.color = "green"
+links[1].style.color = "green"
+links[2].style.color = "green"
+links[3].style.color = "green"
+links[4].style.color = "green"
+links[5].style.color = "green"
+
+
+
+
+
 // populates headers 
 let paragraphHeaders = document.querySelectorAll('h4')
 paragraphHeaders[0].textContent = siteContent["main-content"]["features-h4"]
@@ -91,3 +102,21 @@ awesome[0].textContent = siteContent["cta"]["h1"]
 
 let button = document.querySelectorAll("button")
 button[0].textContent = siteContent["cta"]["button"] 
+
+
+const newItem1 = document.querySelector("a")
+newItem1.textContent = "Log In"
+newItem1.style.color = "green"
+document.querySelector("nav").prepend(newItem1);
+
+// const newItemAppend = document.querySelector("nav")
+const newItem = document.createElement("a")
+newItem.textContent = "Sign Up"
+newItem.style.color = "green"
+document.querySelector("nav").append(newItem)
+
+// const newItem1 = document.createElement("a")
+// newItem.textContent = ""
+// document.querySelector("nav").append(newItem1)
+
+
