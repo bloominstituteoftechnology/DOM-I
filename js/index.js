@@ -127,11 +127,11 @@ loginLink.addEventListener('click', (e) =>{
 
 
 // Use .prepend() to add a new item to the navigation
-const missionLink = document.createElement('a');
-missionLink.href = "#";
-missionLink.textContent = 'Home';
-document.querySelector('nav').prepend(missionLink);
+const homeLink = document.createElement('a');
+homeLink.href = "#";
+homeLink.textContent = 'Home';
+document.querySelector('nav').prepend(homeLink);
 
-missionLink.addEventListener('click', (e) =>{
+homeLink.addEventListener('click', (e) =>{
   e.target.style.color = 'red';
   })
