@@ -76,3 +76,13 @@ ctaImg.setAttribute("src", siteContent.cta["img-src"]);
 let middleImg = document.querySelector("#middle-img");
 middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
+//* H1 AND THE BUTTON *//
+
+let h1 = document.querySelector('h1');
+h1.textContent = siteContent.cta.h1;
+
+let button = document.querySelector("button");
+button.textContent = siteContent.cta.button;
+button.style.background = "dodgerblue";
+button.style.color = "black";
+
