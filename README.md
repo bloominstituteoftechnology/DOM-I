@@ -27,7 +27,7 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 * [ ] Your project manager will count the project as complete by merging the branch back into master.
 
 ## Task 1: Create selectors to point your data into elements
-* [ ] Create selectors by using any of the DOM element's methods
+* [x ] Create selectors by using any of the DOM element's methods
 * [ ] Note that IDs have been used on all images.  Use the IDs to update src path content
 
 ## Task 2: Update the HTML with the JSON data

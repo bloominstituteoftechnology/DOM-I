@@ -42,7 +42,7 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 
-//nav-items
+//navbar links 
 let myNav1 = document.querySelectorAll('nav a');
 
 myNav1[0].textContent = siteContent.nav["nav-item-1"];
@@ -51,6 +51,15 @@ myNav1[2].textContent = siteContent.nav["nav-item-3"];
 myNav1[3].textContent = siteContent.nav["nav-item-4"];
 myNav1[4].textContent = siteContent.nav["nav-item-5"];
 myNav1[5].textContent = siteContent.nav["nav-item-6"];
+
+//section cta
+
+//h1
+let myCtaH1 = document.querySelectorAll('.cta-text h1');
+myCtaH1[0].textContent = siteContent.cta['h1'];
+
+let myCtaButton = document.querySelectorAll('.cta-text button');
+myCtaButton[0].textContent = siteContent.cta['button'];
 
 
 
