@@ -39,7 +39,6 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-console.log(logo);
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //* THIS IS WHERE I WILL STYLE THE NAVIGATION *//
@@ -52,3 +51,21 @@ const navArray = Array.from(navLinks);
 
 navLinks.forEach((a, i) => a.textContent = siteContent.nav[`nav-item-${i + 1}`]);
 navLinks.forEach(element => element.style.color = 'dodgerblue');
+
+//* THIS IS WHERE I WILL ADD TO THE FRONT OF THE NAVIGATION *//
+
+const home = document.createElement('a');
+home.href = "index.html";
+home.textContent = "Home";
+home.style.color = "red";
+navBar.prepend(home);
+
+//* THIS IS WHERE I WILL ADD TO THE BACK OF THE NAVIGATION *//
+
+const blog = document.createElement('a');
+blog.href = "index.html";
+blog.textContent = "Blog";
+blog.style.color = "red";
+navBar.append(blog);
+
+
