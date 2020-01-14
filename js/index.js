@@ -109,14 +109,12 @@ newItem1.textContent = "Log In"
 newItem1.style.color = "green"
 document.querySelector("nav").prepend(newItem1);
 
-// const newItemAppend = document.querySelector("nav")
+
 const newItem = document.createElement("a")
 newItem.textContent = "Sign Up"
 newItem.style.color = "green"
 document.querySelector("nav").append(newItem)
 
-// const newItem1 = document.createElement("a")
-// newItem.textContent = ""
-// document.querySelector("nav").append(newItem1)
+//
 
 
