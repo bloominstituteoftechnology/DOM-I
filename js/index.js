@@ -50,14 +50,14 @@ const navArray = Array.from(navLinks);
 //* THIS IS WHERE I CALL THE EXISTING NAVIGATION BAR *//
 
 navLinks.forEach((a, i) => a.textContent = siteContent.nav[`nav-item-${i + 1}`]);
-navLinks.forEach(element => element.style.color = 'dodgerblue');
+navLinks.forEach(element => element.style.color = 'green');
 
 //* THIS IS WHERE I WILL ADD TO THE FRONT OF THE NAVIGATION *//
 
 const home = document.createElement('a');
 home.href = "index.html";
 home.textContent = "Home";
-home.style.color = "red";
+home.style.color = "green";
 navBar.prepend(home);
 
 //* THIS IS WHERE I WILL ADD TO THE BACK OF THE NAVIGATION *//
@@ -65,7 +65,7 @@ navBar.prepend(home);
 const blog = document.createElement('a');
 blog.href = "index.html";
 blog.textContent = "Blog";
-blog.style.color = "red";
+blog.style.color = "green";
 navBar.append(blog);
 
 //* THE IMAGES WILL BE CALLED HERE *//
@@ -83,7 +83,7 @@ h1.textContent = siteContent.cta.h1;
 
 let button = document.querySelector("button");
 button.textContent = siteContent.cta.button;
-button.style.background = "dodgerblue";
+button.style.background = "green";
 button.style.color = "black";
 
 
@@ -97,4 +97,21 @@ h4[3].textContent = siteContent["main-content"]["product-h4"];
 h4[4].textContent = siteContent["main-content"]["vision-h4"];
 h4[5].textContent = siteContent["main-content"]["contact-h4"];
 
+//* THIS IS WHERE I AM GOING TO CALL THE TEXT CONTENT *//
 
+let p = document.querySelectorAll("p")
+p[0].textContent = siteContent["main-content"]["features-content"];
+p[1].textContent = siteContent["main-content"]["about-content"];
+p[2].textContent = siteContent["main-content"]["services-content"];
+p[3].textContent = siteContent["main-content"]["product-content"];
+p[4].textContent = siteContent["main-content"]["vision-content"];
+
+//* THIS IS WHERE THE CONTACT INFORMATION STARTS *//
+
+p[5].textContent = siteContent.contact.address;
+p[6].textContent = siteContent.contact.phone;
+p[7].textContent = siteContent.contact.email;
+
+//* THIS IS WHERE THE COPYRIGHT STARTS *//
+
+p[8].textContent = siteContent.footer.copyright;
