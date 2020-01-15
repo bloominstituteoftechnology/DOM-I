@@ -77,3 +77,11 @@ let botContentP = document.querySelectorAll('.bottom-content .text-content p');
 botContentP[0].textContent = siteContent["main-content"]["services-content"];
 botContentP[1].textContent = siteContent["main-content"]["product-content"];
 botContentP[2].textContent = siteContent["main-content"]["vision-content"];
+
+let contact = document.querySelectorAll('.contact *');
+contact[0].textContent = siteContent.contact["contact-h4"];
+contact[1].textContent = siteContent.contact["address"];
+contact[2].textContent = siteContent.contact["phone"];
+contact[3].textContent = siteContent.contact["email"];
+
+let footer = document.querySelector('footer').textContent = siteContent.footer.copyright;
