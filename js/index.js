@@ -40,3 +40,19 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// Nav text
+let navArrayList = Array.from(document.getElementsByTagName('a'))
+
+// Converting useless json object into a nice little array
+let siteContentNavArray = [];
+for (key in siteContent.nav) {
+  siteContentNavArray.push(siteContent.nav[key])
+}
+//navArrayList[0].textContent = siteContent.nav["nav-item-1"]; example
+
+navArrayList.forEach((element, index) => {
+  element.textContent = siteContentNavArray[index];
+})
+let ctaText = document.querySelector('.cta-text').textContent = siteContent.cta.h1;
+let ctaButton = document.querySelector('button').textContent = siteContent.cta.button;
