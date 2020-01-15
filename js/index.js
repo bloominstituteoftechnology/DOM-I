@@ -54,5 +54,26 @@ for (key in siteContent.nav) {
 navArrayList.forEach((element, index) => {
   element.textContent = siteContentNavArray[index];
 })
-let ctaText = document.querySelector('.cta-text').textContent = siteContent.cta.h1;
-let ctaButton = document.querySelector('button').textContent = siteContent.cta.button;
+let ctaText = document.querySelector('.cta-text h1').textContent = siteContent.cta.h1;
+let ctaButton = document.querySelector('.cta-text button').textContent = siteContent.cta.button;
+let ctaImg = document.querySelector('#cta-img').src = siteContent.cta["img-src"];
+
+let topContentH4 = document.querySelectorAll('.top-content .text-content h4');
+topContentH4[0].textContent =  siteContent["main-content"]["features-h4"];
+topContentH4[1].textContent =  siteContent["main-content"]["about-h4"];
+
+let topContentP = document.querySelectorAll('.top-content .text-content p');
+topContentP[0].textContent = siteContent["main-content"]["features-content"];
+topContentP[1].textContent = siteContent["main-content"]["about-content"];
+
+let middleImg = document.querySelector('#middle-img').src = siteContent["main-content"]["middle-img-src"];
+
+let botContentH4 = document.querySelectorAll('.bottom-content .text-content h4');
+botContentH4[0].textContent = siteContent["main-content"]["services-h4"];
+botContentH4[1].textContent = siteContent["main-content"]["product-h4"];
+botContentH4[2].textContent = siteContent["main-content"]["vision-h4"];
+
+let botContentP = document.querySelectorAll('.bottom-content .text-content p');
+botContentP[0].textContent = siteContent["main-content"]["services-content"];
+botContentP[1].textContent = siteContent["main-content"]["product-content"];
+botContentP[2].textContent = siteContent["main-content"]["vision-content"];
