@@ -40,3 +40,18 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// Get the navLinks, which returns an HTML Collection
+const navLinks = document.querySelector('.container header nav').children;
+
+// Convert the Collection to a JS Array
+const navLinkArray = Array.from(navLinks);
+
+// For every item in the Array, set it's text to the corresponding data from our siteContent.nav dictionary using string interpolation 
+for (i=0;i<navLinkArray.length;i++) { 
+  navLinkArray[i].text = siteContent.nav[`nav-item-${i+1}`]; 
+}
+
+const logoImg = document.getElementById('logo-img')
+// logoImg.setAttribute('src', siteContent.nav["img-src"])
+logoImg.src = siteContent.nav["img-src"]
