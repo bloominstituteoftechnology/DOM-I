@@ -114,8 +114,8 @@ contentArr[7].textContent = siteContent["contact"]["email"];
 contentArr[8].textContent = siteContent["footer"]["copyright"];
 
 contentArr.forEach(element => (
-  element.style.fontSize = '.75rem',
-  element.style.fontSize = '1.5rem'
+  element.style.fontSize = '1.25rem',
+  element.style.color = 'gray'
 ));
 
 let midImg = document.getElementById("middle-img");
