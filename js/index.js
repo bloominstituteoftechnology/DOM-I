@@ -54,8 +54,18 @@ middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 // Header Links
 
 const headerLinks = document.getElementsByTagName('a');
-// headerLinks.setAttribute("href", siteContent["nav"]["nav-item-1"]);
+// headerLinks[0].textContent =  siteContent["nav"]["nav-item-1"];
+// headerLinks[1].textContent =  siteContent["nav"]["nav-item-2"];
+// headerLinks[2].textContent =  siteContent["nav"]["nav-item-3"];
+// headerLinks[3].textContent =  siteContent["nav"]["nav-item-4"];
+// headerLinks[4].textContent =  siteContent["nav"]["nav-item-5"];
+// headerLinks[5].textContent =  siteContent["nav"]["nav-item-6"];
+
+for (let i = 0; i < headerLinks.length; i++){
+  headerLinks[i].textContent = siteContent["nav"]["nav-item-" + (i+1)];
+}
 
 //  Text
-
+const titleMain = document.getElementsByTagName("h1")[0];
+titleMain.textContent = siteContent["cta"]["h1"];
 
