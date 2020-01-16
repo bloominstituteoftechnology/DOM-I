@@ -35,11 +35,11 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 
 ## Task 3: Add new content
 * [*] Change the color of the navigation text to be green.
-* [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
-* [ ] Check your work by looking at the [original html](original.html) in the browser
+* [*] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
+* [*] Check your work by looking at the [original html](original.html) in the browser
 
 ## Stretch Goals
-* [ ] Update styles throughout the page as you see fit.  Study what happens when you updated the DOM using style in JavaScript.  
+* [*] Update styles throughout the page as you see fit.  Study what happens when you updated the DOM using style in JavaScript.  
 * [ ] Study tomorrow's lesson on events and try to integrate a button that can update content on the site with a click of a button.  You could build a similar data object with new values to help you test the click event.
 
 ## Stretch Project: Digital Timer

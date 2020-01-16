@@ -48,30 +48,43 @@ logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
 const menuItems = document.getElementsByTagName("a");
 
-
 const arrMenuItems = Array.from(menuItems);
 arrMenuItems[0].textContent = siteContent["nav"]["nav-item-1"];
-
 arrMenuItems[1].textContent = siteContent["nav"]["nav-item-2"];
-
 arrMenuItems[2].textContent = siteContent["nav"]["nav-item-3"];
-
 arrMenuItems[3].textContent = siteContent["nav"]["nav-item-4"];
-
 arrMenuItems[4].textContent = siteContent["nav"]["nav-item-5"];
 
-arrMenuItems.forEach(element => element.style.color = "green")
+arrMenuItems.forEach(element => {
+  element.style.color = "green";
+});
+const lastNav = document.createElement("a");
+lastNav.textContent = "Time Warp";
+lastNav.style.color = "green";
+const parentElement1 = document.querySelector("nav");
+parentElement1.append(lastNav);
+
+const firstNav = document.createElement("a");
+firstNav.textContent = "Space Time";
+firstNav.style.color = "green";
+const parentElement2 = document.querySelector("nav");
+parentElement2.prepend(firstNav);
+
+arrMenuItems.forEach(element => (element.style.color = "green"));
 
 let circle = document.getElementById("cta-img");
 circle.setAttribute("src", siteContent["cta"]["img-src"]);
+circle.style.boxShadow = "1px 1px 10px green" 
 
 const ctaText = document.getElementsByTagName("h1");
 const ctaArr = Array.from(ctaText);
 ctaArr[0].textContent = siteContent["cta"]["h1"];
+ctaArr[0].style.color = 'purple'
 
 const button = document.getElementsByTagName("button");
 const buttArr = Array.from(button);
 buttArr[0].textContent = siteContent["cta"]["button"];
+button[0].style.backgroundColor ='grey'
 
 const subHeading = document.getElementsByTagName("h4");
 const subHeadArr = Array.from(subHeading);
@@ -80,7 +93,12 @@ subHeadArr[1].textContent = siteContent["main-content"]["about-h4"];
 subHeadArr[2].textContent = siteContent["main-content"]["services-h4"];
 subHeadArr[3].textContent = siteContent["main-content"]["product-h4"];
 subHeadArr[4].textContent = siteContent["main-content"]["vision-h4"];
-subHeadArr[5].textContent = siteContent['contact']['contact-h4'];
+subHeadArr[5].textContent = siteContent["contact"]["contact-h4"];
+
+subHeadArr.forEach(element =>(
+  element.style.fontSize = '3rem',
+  element.style.backgroundColor = 'red'
+))
 
 const content = document.getElementsByTagName("p");
 const contentArr = Array.from(content);
@@ -90,10 +108,14 @@ contentArr[2].textContent = siteContent["main-content"]["services-content"];
 contentArr[3].textContent = siteContent["main-content"]["product-content"];
 contentArr[4].textContent = siteContent["main-content"]["vision-content"];
 contentArr[5].textContent = siteContent["contact"]["address"];
-contentArr[6].textContent = siteContent["contact"]['phone'];
+contentArr[6].textContent = siteContent["contact"]["phone"];
 contentArr[7].textContent = siteContent["contact"]["email"];
 contentArr[8].textContent = siteContent["footer"]["copyright"];
 
+contentArr.forEach(element => (
+  element.style.fontSize = '.75rem',
+  element.style.fontSize = '1.5rem'
+));
+
 let midImg = document.getElementById("middle-img");
 midImg.src = "img/mid-page-accent.jpg";
-
