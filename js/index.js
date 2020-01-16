@@ -53,6 +53,12 @@ navBar[2].textContent = siteContent["nav"]["nav-item-3"]
 navBar[3].textContent = siteContent["nav"]["nav-item-4"]
 navBar[4].textContent = siteContent["nav"]["nav-item-5"]
 navBar[5].textContent = siteContent["nav"]["nav-item-6"]
+navBar[0].style.color = 'green'
+navBar[1].style.color = 'green'
+navBar[2].style.color = 'green'
+navBar[3].style.color = 'green'
+navBar[4].style.color = 'green'
+navBar[5].style.color = 'green'
 
 
 
@@ -109,3 +115,19 @@ contactsP[7].textContent = siteContent["contact"]["email"]
 
 const copy = document.getElementsByTagName('p')
 copy[8].textContent = siteContent["footer"]["copyright"]
+
+
+
+const newNav = document.createElement('a')
+newNav.textContent = "Home"
+newNav.style.color = 'green'
+
+const parentElement = document.querySelector("nav")
+parentElement.prepend(newNav)
+
+const newNav2 = document.createElement('a')
+newNav2.textContent = "Email"
+newNav2.style.color = 'green'
+
+const parentElement2 = document.querySelector("nav")
+parentElement.appendChild(newNav2)
