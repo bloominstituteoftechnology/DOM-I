@@ -78,8 +78,6 @@ Array.from(document.querySelector(".contact").children).forEach((child, index) =
 
 document.getElementsByTagName("footer")[0].children[0].textContent = siteContent["footer"]["copyright"]
 
-console.log(document.getElementsByTagName("a"))
-
 document.getElementsByTagName("nav")[0].appendChild(
   document.createElement("a")
 )
@@ -93,13 +91,19 @@ document.getElementsByTagName("nav")[0].lastChild.textContent = "Careers"
 document.getElementsByTagName("nav")[0].firstChild.textContent = "Home"
 
 Array.from(document.getElementsByTagName("a")).forEach((a) => {
+  const originalColor = a.style.color
   a.onmousedown = () => {
     a.style.color = "Chartreuse"
     a.style.textShadow = "0 0 3px #2b8c01, 0 0 5px #1a5700"
   }
   a.onmouseup = () => {
-    a.style.color = "#b0b0b0"
+    a.style.color = originalColor
     a.style.textShadow = null
   }
 })
 
+console.log(document.getElementsByTagName("html")[0].classList)
+
+document.getElementById("night-mode-button").addEventListener('click', () => {
+  document.getElementsByTagName("html")[0].classList.toggle("night-mode")
+})

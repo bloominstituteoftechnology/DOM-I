@@ -297,3 +297,21 @@ footer {
         margin: 20px;
     }
 }
+
+.night-mode {
+    background-color: black;
+    color: lightgray;
+    transition: all 1s;
+}
+
+.night-mode a {
+    color: white;
+}
+
+.night-mode a:hover {
+    color: white;
+}
+
+.night-mode header img {
+    filter: brightness(0) invert(1);
+}

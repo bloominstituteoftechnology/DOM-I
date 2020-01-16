@@ -39,8 +39,8 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 * [x] Check your work by looking at the [original html](original.html) in the browser
 
 ## Stretch Goals
-* [ ] Update styles throughout the page as you see fit.  Study what happens when you updated the DOM using style in JavaScript.  
-* [ ] Study tomorrow's lesson on events and try to integrate a button that can update content on the site with a click of a button.  You could build a similar data object with new values to help you test the click event.
+* [x] Update styles throughout the page as you see fit.  Study what happens when you updated the DOM using style in JavaScript.  
+* [x] Study tomorrow's lesson on events and try to integrate a button that can update content on the site with a click of a button.  You could build a similar data object with new values to help you test the click event.
 
 ## Stretch Project: Digital Timer
 This project is heavier on logic but employs some DOM manipulation to achieve it's goals.  Go check it out here: [stretch assignment](stretch-assignment) and see how far you can get. 
