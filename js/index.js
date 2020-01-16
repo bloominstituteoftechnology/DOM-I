@@ -63,9 +63,29 @@ const headerLinks = document.getElementsByTagName('a');
 
 for (let i = 0; i < headerLinks.length; i++){
   headerLinks[i].textContent = siteContent["nav"]["nav-item-" + (i+1)];
-}
+};
 
-//  Text
+//  Text - Title and Button
 const titleMain = document.getElementsByTagName("h1")[0];
 titleMain.textContent = siteContent["cta"]["h1"];
+
+const buttonText = document.getElementsByTagName("button")[0];
+buttonText.textContent = siteContent["cta"]["button"];
+
+//  Text - Top Content
+
+document.querySelector(".top-content>.text-content:first-child h4").textContent 
+  = siteContent["main-content"]["features-h4"];
+
+document.querySelector(".top-content>.text-content:last-child h4").textContent 
+  = siteContent["main-content"]["about-h4"];
+
+document.querySelector(".top-content>.text-content:first-child p").textContent
+ = siteContent["main-content"]["features-content"];
+
+ document.querySelector(".top-content>.text-content:last-child p").textContent
+ = siteContent["main-content"]["about-content"];
+
+
+
 
