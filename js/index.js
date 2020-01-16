@@ -40,3 +40,29 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const menuItems = document.getElementsByTagName("a")
+
+const arrMenuItems = Array.from(menuItems)
+arrMenuItems[0].textContent = siteContent['nav']['nav-item-1']
+
+arrMenuItems[1].textContent = siteContent['nav']['nav-item-2']
+
+arrMenuItems[2].textContent = siteContent['nav']['nav-item-3']
+
+arrMenuItems[3].textContent = siteContent['nav']['nav-item-4']
+
+arrMenuItems[4].textContent = siteContent['nav']['nav-item-5']
+
+
+
+let circle = document.getElementById("cta-img");
+circle.setAttribute('src', siteContent["cta"]["img-src"])
+
+
+let midImg = document.getElementById("middle-img");
+midImg.src = "img/mid-page-accent.jpg"
+
+
+
+
