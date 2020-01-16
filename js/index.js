@@ -43,25 +43,62 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+// let logo = document.getElementById("logo-img");
+// logo.setAttribute("src", siteContent["nav"]["img-src"]);
+
+// //Josh Luscombe
+// let navBarItems = document.querySelectorAll("a");
+// console.log(navBarItems);
+
+// navBarItems.forEach((item, index) => {
+//   console.log(item);
+//   item.textContent = siteContent["nav"]["nav-item $"];
+//   console.log(item, "test");
+// });
+
+// //  Task 1: Create selectors to point your data into elements
+// // ID
+// const ctaImg = document.getElementById("cta-img");
+// ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
+
+// // Class Name
+// const topContent = document.getElementByClassName("cta");
+
+// document.querySelector("cta");
+
+// Tag Name
+// const nav = document.getElementsByTagName("nav");
+
+// document.querySelectorAll("nav");
+
+// Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
-//  Task 1: Create selectors to point your data into elements
-// ID
-const logoImg = document.getElementById("logo-img");
+//anchor links
+let navBarItems = document.querySelectorAll("a");
 
-document.querySelector("#logo-img");
+//loops over node list and populates anchor link text
+navBarItems.forEach((item, index) => {
+  item.textContent = siteContent.nav[`nav-item-${index + 1}`];
+});
 
-// Class Name
-const topContent = document.getElementByClassName("cta");
+//h1 text
+let h1 = document.querySelector("h1");
+console.log(h1);
+h1.textContent = siteContent.cta.h1;
 
-document.querySelector("cta");
+//"Get Started Button"
 
-// Tag Name
-const nav = document.getElementsByTagName("nav");
+let getStartedButton = document.querySelector("button");
+getStartedButton.textContent = siteContent.cta.button;
 
-document.querySelectorAll("nav");
+let imgHeader = document.querySelector("#cta-img");
+console.log(imgHeader);
+
+imgHeader.setAttribute("src", siteContent.cta["img-src"]);
 
 // Task 2: Update the HTML with the JSON data
 
 // Task 3: Add new content
+console.log(getStartedButton);
