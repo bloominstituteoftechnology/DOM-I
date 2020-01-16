@@ -97,17 +97,23 @@ headBtn.textContent =siteContent.cta.button;
 
 // Head Button after click
 headBtn.addEventListener('click', (msg) => {
-  headBtn.textContent = "Ohhhh !!! Clicked";
-  headBtn.style.backgroundColor = "gray";
-  headBtn.style.color = "#fff"
+navLnkServices.style.color = "blue";
+navLnkProduct.style.color = "blue";
+navLnkVision.style.color = "blue";
+navLnkFeatures.style.color = "blue";
+navLnkAbout.style.color = "blue";
+navLnkContact.style.color = "blue";
+navLnkMore.style.color = "blue";
+navLnkHome.style.color = "blue";
+headBtn.textContent = "Clicked Blue Nav"
 })
 
 //Head IMG
-const ctaImg = document.querySelector("#cta-img");
+const ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute("src", siteContent.cta["img-src"]);
 
 //Mid IMG
-const midImg = document.querySelector(".middle-img");
+const midImg = document.getElementById("middle-img");
 midImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 midImg.style.borderRadius = "10px"
 
