@@ -42,63 +42,45 @@ const siteContent = {
   }
 };
 
-// Example: Update the img src for the logo
-// let logo = document.getElementById("logo-img");
-// logo.setAttribute("src", siteContent["nav"]["img-src"]);
-
-// //Josh Luscombe
-// let navBarItems = document.querySelectorAll("a");
-// console.log(navBarItems);
-
-// navBarItems.forEach((item, index) => {
-//   console.log(item);
-//   item.textContent = siteContent["nav"]["nav-item $"];
-//   console.log(item, "test");
-// });
-
-// //  Task 1: Create selectors to point your data into elements
-// // ID
-// const ctaImg = document.getElementById("cta-img");
-// ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
-
-// // Class Name
-// const topContent = document.getElementByClassName("cta");
-
-// document.querySelector("cta");
-
-// Tag Name
-// const nav = document.getElementsByTagName("nav");
-
-// document.querySelectorAll("nav");
-
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+const logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
-//anchor links
-let navBarItems = document.querySelectorAll("a");
+//  Task 1 & 2: Create selectors to point your data into elements &
+// Using your selectors, update the content to match the example file
 
-//loops over node list and populates anchor link text
-navBarItems.forEach((item, index) => {
-  item.textContent = siteContent.nav[`nav-item-${index + 1}`];
-});
+//anchor links
+const navBarItems = document.querySelectorAll("a");
+
+navBarItems[0].textContent = siteContent.nav[`nav-item-1`];
+navBarItems[1].textContent = siteContent.nav[`nav-item-2`];
+navBarItems[2].textContent = siteContent.nav[`nav-item-3`];
+navBarItems[3].textContent = siteContent.nav[`nav-item-4`];
+navBarItems[4].textContent = siteContent.nav[`nav-item-5`];
+navBarItems[5].textContent = siteContent.nav[`nav-item-6`];
+
+// //loops over node list and populates anchor link text (would replace the above code) - Josh Luscombe
+// navBarItems.forEach((item, index) => {
+//   item.textContent = siteContent.nav[`nav-item-${index + 1}`];
+// });
 
 //h1 text
-let h1 = document.querySelector("h1");
-console.log(h1);
+const h1 = document.querySelector("h1");
+
 h1.textContent = siteContent.cta.h1;
 
 //"Get Started Button"
+const getStartedButton = document.querySelector("button");
 
-let getStartedButton = document.querySelector("button");
 getStartedButton.textContent = siteContent.cta.button;
 
-let imgHeader = document.querySelector("#cta-img");
-console.log(imgHeader);
+// cta-img
+const imgHeader = document.querySelector("#cta-img");
 
 imgHeader.setAttribute("src", siteContent.cta["img-src"]);
-
-// Task 2: Update the HTML with the JSON data
-
-// Task 3: Add new content
 console.log(getStartedButton);
+
+// Task 3: Add new content - color
+navBarItems.forEach(element => {
+  element.style.color = "green";
+});
