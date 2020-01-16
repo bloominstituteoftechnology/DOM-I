@@ -86,6 +86,22 @@ document.querySelector(".top-content>.text-content:first-child p").textContent
  document.querySelector(".top-content>.text-content:last-child p").textContent
  = siteContent["main-content"]["about-content"];
 
+ //  Text - Bottom Content
 
+document.querySelector(".bottom-content>.text-content:first-child h4").textContent 
+  = siteContent["main-content"]["services-h4"];
 
+document.querySelector(".bottom-content>.text-content:nth-child(2) h4").textContent 
+  = siteContent["main-content"]["product-h4"];
 
+document.querySelector(".bottom-content>.text-content:last-child h4").textContent 
+  = siteContent["main-content"]["vision-h4"];
+
+document.querySelector(".bottom-content>.text-content:first-child p").textContent 
+  = siteContent["main-content"]["services-content"];
+
+document.querySelector(".bottom-content>.text-content:nth-child(2) p").textContent 
+  = siteContent["main-content"]["product-content"];
+
+document.querySelector(".bottom-content>.text-content:last-child p").textContent 
+  = siteContent["main-content"]["vision-content"];
