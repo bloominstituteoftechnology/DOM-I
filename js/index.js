@@ -53,7 +53,7 @@ for (i=0;i<navLinkArray.length;i++) {
 }
 
 //change nav text to green
-const navGreen =document.querySelectorAll('.container header nav');
+const navGreen = document.querySelectorAll('nav a');
 navGreen.forEach( element => {
   element.style.color ='green'
 });
