@@ -10,7 +10,7 @@ const siteContent = {
   },
   "cta": {
     "h1": "DOM Is Awesome",
-    "button": "Get Started",
+    "button": "Night Mode",
     "img-src": "img/header-img.png"
   },
   "main-content": {
@@ -44,3 +44,62 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 document.getElementById("cta-img").setAttribute('src', siteContent['cta']['img-src'])
 
 document.getElementById("middle-img").setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+const a =  document.getElementsByTagName("a")
+
+for (var i = 0; i < a.length; i++) {
+  a[i].textContent = siteContent["nav"][`nav-item-${i + 1}`]
+}
+
+const fillQueryContent = (query, tag, content, index=0) => {
+  document.querySelector(query).getElementsByTagName(tag)[index].textContent = content
+}
+
+fillQueryContent(".cta-text", "h1", siteContent["cta"]["h1"])
+fillQueryContent(".cta-text", "button", siteContent["cta"]["button"])
+
+let mainContent = []
+for (const prop in siteContent["main-content"]) {
+  if (!prop.includes("img")) {
+    mainContent.push(prop)
+  }
+}
+
+let index = 0
+document.querySelector(".main-content").querySelectorAll(".text-content").forEach(div => {
+  div.getElementsByTagName("h4")[0].textContent = siteContent["main-content"][mainContent[index]]
+  div.getElementsByTagName("p")[0].textContent = siteContent["main-content"][mainContent[index+ 1]]
+  index += 2
+})
+
+Array.from(document.querySelector(".contact").children).forEach((child, index) => {
+  child.textContent = siteContent["contact"][Object.keys(siteContent["contact"])[index]]
+})
+
+document.getElementsByTagName("footer")[0].children[0].textContent = siteContent["footer"]["copyright"]
+
+console.log(document.getElementsByTagName("a"))
+
+document.getElementsByTagName("nav")[0].appendChild(
+  document.createElement("a")
+)
+
+document.getElementsByTagName("nav")[0].prepend(
+  document.createElement("a")
+)
+
+document.getElementsByTagName("nav")[0].lastChild.textContent = "Careers"
+
+document.getElementsByTagName("nav")[0].firstChild.textContent = "Home"
+
+Array.from(document.getElementsByTagName("a")).forEach((a) => {
+  a.onmousedown = () => {
+    a.style.color = "Chartreuse"
+    a.style.textShadow = "0 0 3px #2b8c01, 0 0 5px #1a5700"
+  }
+  a.onmouseup = () => {
+    a.style.color = "#b0b0b0"
+    a.style.textShadow = null
+  }
+})
+
