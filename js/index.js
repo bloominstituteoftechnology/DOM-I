@@ -52,6 +52,16 @@ for (i=0;i<navLinkArray.length;i++) {
   navLinkArray[i].text = siteContent.nav[`nav-item-${i+1}`]; 
 }
 
+//change nav text to green
+const navGreen =document.querySelectorAll('.container header nav');
+navGreen.forEach( element => {
+  element.style.color ='green'
+});
+
+//add new content
+const newElementOne = document.createElement('nav')
+newElementOne.textContent = 'App';
+
 const logoImg = document.getElementById('logo-img')
 // logoImg.setAttribute('src', siteContent.nav["img-src"])
 logoImg.src = siteContent.nav["img-src"]
@@ -69,11 +79,24 @@ button.textContent = siteContent['cta']['button']
 const newTitle = document.querySelector('section.cta .cta-text h1');
 newTitle.textContent = siteContent['cta']['h1'];
 
-const features = document.querySelector('section.main-content .top-content .text-content h4');
-features.textContent = siteContent['main-content']['features-h4'];
+//main content
+const tcTextContent = document.querySelectorAll('section.main-content .top-content .text-content')
 
-const featuresContent = document.querySelector('section.main-content .top-content .text-content p');
-featuresContent.textContent = siteContent['main-content']['features-content'];
+const featureDiv = tcTextContent[0]
+const featureH4 = featureDiv.getElementsByTagName('h4')[0].textContent = siteContent['main-content']['features-h4']
+const featureP = featureDiv.getElementsByTagName('p')[0].textContent = siteContent['main-content']['features-content']
+
+const aboutDiv =  tcTextContent[1]
+const aboutH4 = aboutDiv.getElementsByTagName('h4')[0].textContent = siteContent['main-content']['about-h4']
+const aboutP = aboutDiv.getElementsByTagName('p')[0].textContent = siteContent['main-content']['about-content']
+
+
+
+// const features = document.querySelector('section.main-content .top-content .text-content h4');
+// features.textContent = siteContent['main-content']['features-h4'];
+
+// const featuresContent = document.querySelector('section.main-content .top-content .text-content p');
+// featuresContent.textContent = siteContent['main-content']['features-content'];
 
 // const about = document.querySelector('section.main-content .top-content .text-content h4');
 // about.textContent = siteContent['main-content']['about-h4'];
