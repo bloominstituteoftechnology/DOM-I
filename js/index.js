@@ -59,13 +59,23 @@ navGreen.forEach( element => {
 });
 
 //add new content
-const newElementOne = document.createElement('nav')
-newElementOne.textContent = 'App';
+const newElementOne = document.createElement('a')
+newElementOne.textContent = 'App'
+
+const parentElement = document.querySelector('nav')
+parentElement.prepend(newElementOne);
+
+// const node = document.createTextNode('App');
+// newElementOne.appendChild(node);
+
+// var element = document.getElementById('nav');
+// element.appendChild(newElementOne);
 
 const logoImg = document.getElementById('logo-img')
 // logoImg.setAttribute('src', siteContent.nav["img-src"])
 logoImg.src = siteContent.nav["img-src"]
 
+//add images
 const ctaImg = document.querySelector('#cta-img');
 ctaImg.setAttribute('src', siteContent['cta']['img-src']);
 
@@ -80,6 +90,8 @@ const newTitle = document.querySelector('section.cta .cta-text h1');
 newTitle.textContent = siteContent['cta']['h1'];
 
 //main content
+
+  //top content
 const tcTextContent = document.querySelectorAll('section.main-content .top-content .text-content')
 
 const featureDiv = tcTextContent[0]
@@ -90,25 +102,46 @@ const aboutDiv =  tcTextContent[1]
 const aboutH4 = aboutDiv.getElementsByTagName('h4')[0].textContent = siteContent['main-content']['about-h4']
 const aboutP = aboutDiv.getElementsByTagName('p')[0].textContent = siteContent['main-content']['about-content']
 
+  //bottom content
+const bcTextContent = document.querySelectorAll('section.main-content .bottom-content .text-content')
 
+const servicesDiv =  bcTextContent[0]
+const servicesH4 = servicesDiv.getElementsByTagName('h4')[0].textContent = siteContent['main-content']['services-h4']
+const servicesP = servicesDiv.getElementsByTagName('p')[0].textContent = siteContent['main-content']['services-content']
 
-// const features = document.querySelector('section.main-content .top-content .text-content h4');
-// features.textContent = siteContent['main-content']['features-h4'];
+const productDiv =  bcTextContent[1]
+const productH4 = productDiv.getElementsByTagName('h4')[0].textContent = siteContent['main-content']['product-h4']
+const productP = productDiv.getElementsByTagName('p')[0].textContent = siteContent['main-content']['product-content']
 
-// const featuresContent = document.querySelector('section.main-content .top-content .text-content p');
-// featuresContent.textContent = siteContent['main-content']['features-content'];
-
-// const about = document.querySelector('section.main-content .top-content .text-content h4');
-// about.textContent = siteContent['main-content']['about-h4'];
+const visionDiv =  bcTextContent[2]
+const visionH4 = visionDiv.getElementsByTagName('h4')[0].textContent = siteContent['main-content']['vision-h4']
+const visionP = visionDiv.getElementsByTagName('p')[0].textContent = siteContent['main-content']['vision-content']
 
 
 
 //Contacts
-const newContact = document.querySelector('section.contact h4');
-newContact.textContent = siteContent['contact']['contact-h4'];
+const contactSection = document.querySelectorAll('section.contact')
 
-const newAddress = document.querySelector('section.contact p');
-newAddress.textContent = siteContent['contact']['address'];
+const contactDiv = contactSection[0]
+const contactH4 =contactDiv.getElementsByTagName('h4')[0].textContent =siteContent['contact']['contact-h4']
+
+const addressDiv = contactSection[0]
+const addressP =addressDiv.getElementsByTagName('p')[0].textContent =siteContent['contact']['address']
+
+const phoneDiv = contactSection[1]
+const phoneP =phoneDiv.getElementsByTagName('p')[0].textContent =siteContent['contact']['phone']
+
+const emailDiv = contactSection[2]
+const emailP =emailDiv.getElementsByTagName('p')[0].textContent =siteContent['contact']['email']
+
+
+
+
+// const newContact = document.querySelector('section.contact h4');
+// newContact.textContent = siteContent['contact']['contact-h4'];
+
+// const newAddress = document.querySelector('section.contact p');
+// newAddress.textContent = siteContent['contact']['address'];
 
 // const newAddress = document.querySelector('section.contact p');
 // newAddress.textContent = siteContent['contact']['phone'];
