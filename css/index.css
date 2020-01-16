@@ -298,6 +298,10 @@ footer {
     }
 }
 
+.day-mode {
+    transition: all 1s;
+}
+
 .night-mode {
     background-color: black;
     color: lightgray;
@@ -314,4 +318,16 @@ footer {
 
 .night-mode header img {
     filter: brightness(0) invert(1);
+}
+
+.night-mode #night-mode-button {
+    background: black;
+    border-color: white;
+    color: white;
+}
+
+.night-mode #night-mode-button:hover {
+    background: white;
+    border-color: black;
+    color: black;
 }

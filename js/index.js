@@ -87,8 +87,10 @@ document.getElementsByTagName("nav")[0].prepend(
 )
 
 document.getElementsByTagName("nav")[0].lastChild.textContent = "Careers"
+document.getElementsByTagName("nav")[0].lastChild.setAttribute("href", "#")
 
 document.getElementsByTagName("nav")[0].firstChild.textContent = "Home"
+document.getElementsByTagName("nav")[0].firstChild.setAttribute("href", "#")
 
 Array.from(document.getElementsByTagName("a")).forEach((a) => {
   const originalColor = a.style.color
@@ -102,8 +104,7 @@ Array.from(document.getElementsByTagName("a")).forEach((a) => {
   }
 })
 
-console.log(document.getElementsByTagName("html")[0].classList)
-
 document.getElementById("night-mode-button").addEventListener('click', () => {
   document.getElementsByTagName("html")[0].classList.toggle("night-mode")
+  document.getElementsByTagName("html")[0].classList.toggle("day-mode")
 })
