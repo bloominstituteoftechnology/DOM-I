@@ -43,6 +43,8 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // My code starts below:
 
+//   TASKS 1 & 2
+
 // Images
 
 const codeImg = document.getElementById("cta-img");
@@ -123,3 +125,25 @@ document.querySelector(".contact p:last-of-type").textContent
 //  Text - Footer
 document.querySelector("footer p").textContent
   = siteContent["footer"]["copyright"];
+
+//  TASK 3
+
+//  Change nav color to green
+for (let i = 0; i < headerLinks.length; i++){
+  headerLinks[i].style.color = "green";
+};
+
+//  Add 2 nav items
+
+const newLinkOne = document.createElement('a');
+newLinkOne.textContent = "Home";
+newLinkOne.href = "#";
+newLinkOne.style.color = "green";
+document.querySelector("nav").prepend(newLinkOne);
+
+const newLinkTwo = document.createElement('a');
+newLinkTwo.textContent = "Media";
+newLinkTwo.href = "#";
+newLinkTwo.style.color = "green";
+document.querySelector("nav").appendChild(newLinkTwo);
+
