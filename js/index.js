@@ -109,6 +109,7 @@ ctaImg.setAttribute("src", siteContent.cta["img-src"]);
 //Mid IMG
 const midImg = document.querySelector(".middle-img");
 midImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+midImg.style.borderRadius = "10px"
 
 //Main content Heading
 const[contentServices,
@@ -123,6 +124,7 @@ contentServices.textContent = siteContent["main-content"]["services-h4"];
 contentProduct.textContent = siteContent["main-content"]["product-h4"];
 contentVision.textContent = siteContent["main-content"]["vision-h4"];
 
+
 //Main content P
 const[contentServicesText,
   contentProductText, 
@@ -135,10 +137,6 @@ const[contentServicesText,
   contentVisionText.textContent = siteContent["main-content"]["vision-content"];
   contentFeaturesText.textContent = siteContent["main-content"]["features-content"];
   contentAboutText.textContent = siteContent["main-content"]["about-content"];
-  //Style
-  contentAboutText.style.backgroundColor = "#d3d3d3";
-  contentAboutText.style.padding = "10px";
-  contentAboutText.style.borderRadius = "10px";
 
 //Contact
 let contactHead = document.querySelector(".contact h4");
@@ -149,7 +147,7 @@ contactPhone.textContent = siteContent.contact.phone;
 contactEmail.textContent = siteContent.contact.email;
 
 //Footer
-let copyRight = document.getElementsByTagName("footer p");
+let copyRight = document.querySelector("footer p");
 copyRight.textContent =siteContent.footer.copyright;
 
 
