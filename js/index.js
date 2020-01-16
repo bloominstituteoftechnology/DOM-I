@@ -40,3 +40,22 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// My code starts below:
+
+// Images
+
+const codeImg = document.getElementById("cta-img");
+codeImg.setAttribute("src", siteContent["cta"]["img-src"]);
+
+const middleImg = document.getElementById("middle-img");
+middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+// Header Links
+
+const headerLinks = document.getElementsByTagName('a');
+// headerLinks.setAttribute("href", siteContent["nav"]["nav-item-1"]);
+
+//  Text
+
+
