@@ -39,7 +39,14 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+//* THIS IS WHERE I CHANGED THE COLOR OF THE BACKGROUND *//
+
+document.body.style.backgroundColor = "linen";
+
+
+
 
 //* THIS IS WHERE I WILL STYLE THE NAVIGATION *//
 
@@ -57,7 +64,7 @@ navLinks.forEach(element => element.style.color = 'green');
 const home = document.createElement('a');
 home.href = "index.html";
 home.textContent = "Home";
-home.style.color = "green";
+home.style.color = "red";
 navBar.prepend(home);
 
 //* THIS IS WHERE I WILL ADD TO THE BACK OF THE NAVIGATION *//
@@ -65,7 +72,7 @@ navBar.prepend(home);
 const blog = document.createElement('a');
 blog.href = "index.html";
 blog.textContent = "Blog";
-blog.style.color = "green";
+blog.style.color = "red";
 navBar.append(blog);
 
 //* THE IMAGES WILL BE CALLED HERE *//
@@ -83,7 +90,7 @@ h1.textContent = siteContent.cta.h1;
 
 let button = document.querySelector("button");
 button.textContent = siteContent.cta.button;
-button.style.background = "green";
+button.style.background = "red";
 button.style.color = "black";
 
 
@@ -97,7 +104,13 @@ h4[3].textContent = siteContent["main-content"]["product-h4"];
 h4[4].textContent = siteContent["main-content"]["vision-h4"];
 h4[5].textContent = siteContent["main-content"]["contact-h4"];
 
+//* THIS IS WHERE I CHANGED THE COLOR OF THE TITLES *//
+
+h4.forEach(element => element.style.color = 'red');
+
 //* THIS IS WHERE I AM GOING TO CALL THE TEXT CONTENT *//
+
+
 
 let p = document.querySelectorAll("p")
 p[0].textContent = siteContent["main-content"]["features-content"];
@@ -115,3 +128,6 @@ p[7].textContent = siteContent.contact.email;
 //* THIS IS WHERE THE COPYRIGHT STARTS *//
 
 p[8].textContent = siteContent.footer.copyright;
+
+//* THIS IS WHERE I CHANGED THE COLOR OF THE TEXT *//
+p.forEach(element => element.style.color = 'dodgerblue');
