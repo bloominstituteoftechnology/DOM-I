@@ -54,6 +54,7 @@ arrMenuItems[1].textContent = siteContent["nav"]["nav-item-2"];
 arrMenuItems[2].textContent = siteContent["nav"]["nav-item-3"];
 arrMenuItems[3].textContent = siteContent["nav"]["nav-item-4"];
 arrMenuItems[4].textContent = siteContent["nav"]["nav-item-5"];
+arrMenuItems[5].textContent = siteContent["nav"]["nav-item-6"];
 
 arrMenuItems.forEach(element => {
   element.style.color = "green";
