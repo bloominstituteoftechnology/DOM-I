@@ -80,6 +80,24 @@ let imgHeader = document.querySelector("#cta-img");
 imgHeader.setAttribute("src", siteContent.cta["img-src"]);
 console.log(getStartedButton);
 
+// Update middle-img-src
+let mainContentImg = document.getElementById("middle-img");
+mainContentImg.src = siteContent["main-content"]["middle-img-src"];
+
+let h4 = document.querySelectorAll("h4");
+h4[0].textContent = siteContent["main-content"]["features-h4"];
+h4[1].textContent = siteContent["main-content"]["about-h4"];
+h4[2].textContent = siteContent["main-content"]["services-h4"];
+h4[3].textContent = siteContent["main-content"]["product-h4"];
+h4[4].textContent = siteContent["main-content"]["vision-h4"];
+
+let p = document.querySelectorAll("p");
+p[0].textContent = siteContent["main-content"]["features-content"];
+p[1].textContent = siteContent["main-content"]["about-content"];
+p[2].textContent = siteContent["main-content"]["services-content"];
+p[3].textContent = siteContent["main-content"]["product-content"];
+p[4].textContent = siteContent["main-content"]["vision-content"];
+
 // //Top content - Features h4
 // const features = document.querySelectorAll(".top-content .text-content h4")[0];
 // features.textContent = siteContent["main-content"]["features-h4"];
@@ -99,10 +117,6 @@ console.log(getStartedButton);
 //   ".top-content .text-content p"
 // )[1];
 // aboutParagraph.textContent = siteContent["main-content"]["about-content"];
-
-// Update middle-img-src
-let mainContentImg = document.getElementById("middle-img");
-mainContentImg.src = siteContent["main-content"]["middle-img-src"];
 
 // // Bottom content - Services h4
 // const services = document.querySelector(".bottom-content .text-content h4")[2];
@@ -134,21 +148,6 @@ mainContentImg.src = siteContent["main-content"]["middle-img-src"];
 // const visionParagraph = document.querySelectorAll(
 //   ".bottom-content .text-content p"
 // )[4];
-
-let h4 = document.querySelectorAll("h4");
-h4[0].textContent = siteContent["main-content"]["features-h4"];
-h4[1].textContent = siteContent["main-content"]["about-h4"];
-h4[2].textContent = siteContent["main-content"]["services-h4"];
-h4[3].textContent = siteContent["main-content"]["product-h4"];
-h4[4].textContent = siteContent["main-content"]["vision-h4"];
-
-let p = document.querySelectorAll("p");
-p[0].textContent = siteContent["main-content"]["features-content"];
-p[1].textContent = siteContent["main-content"]["about-content"];
-p[2].textContent = siteContent["main-content"]["services-content"];
-p[3].textContent = siteContent["main-content"]["product-content"];
-p[4].textContent = siteContent["main-content"]["vision-content"];
-
 // visionParagraph.textContent = siteContent["main-content"]["vision-content"];
 
 // Task 3: Add new content - color
