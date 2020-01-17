@@ -52,11 +52,7 @@ for (i=0;i<navLinkArray.length;i++) {
   navLinkArray[i].text = siteContent.nav[`nav-item-${i+1}`]; 
 }
 
-//change nav text to green
-const navGreen = document.querySelectorAll('nav a');
-navGreen.forEach( element => {
-  element.style.color ='green'
-});
+
 
 //add new content
 const newElementOne = document.createElement('a')
@@ -65,11 +61,19 @@ newElementOne.textContent = 'App'
 const parentElement = document.querySelector('nav')
 parentElement.prepend(newElementOne);
 
-// const node = document.createTextNode('App');
-// newElementOne.appendChild(node);
+const newElementTwo = document.createElement('a')
+newElementTwo.textContent = 'For Fun'
 
-// var element = document.getElementById('nav');
-// element.appendChild(newElementOne);
+parentElement.appendChild(newElementTwo);
+
+
+//change nav text to green
+const navGreen = document.querySelectorAll('nav a');
+navGreen.forEach( element => {
+  element.style.color ='green'
+});
+
+
 
 const logoImg = document.getElementById('logo-img')
 // logoImg.setAttribute('src', siteContent.nav["img-src"])
@@ -120,19 +124,19 @@ const visionP = visionDiv.getElementsByTagName('p')[0].textContent = siteContent
 
 
 //Contacts
-const contactSection = document.querySelectorAll('section.contact')
+const contactSection = document.querySelector('section.contact')
 
-const contactDiv = contactSection[0]
-const contactH4 =contactDiv.getElementsByTagName('h4')[0].textContent =siteContent['contact']['contact-h4']
 
-const addressDiv = contactSection[0]
-const addressP =addressDiv.getElementsByTagName('p')[0].textContent =siteContent['contact']['address']
+const contactH4 =contactSection.getElementsByTagName('h4')[0].textContent =siteContent['contact']['contact-h4']
 
-const phoneDiv = contactSection[1]
-const phoneP =phoneDiv.getElementsByTagName('p')[0].textContent =siteContent['contact']['phone']
 
-const emailDiv = contactSection[2]
-const emailP =emailDiv.getElementsByTagName('p')[0].textContent =siteContent['contact']['email']
+const addressP =contactSection.getElementsByTagName('p')[0].textContent =siteContent['contact']['address']
+
+
+const phoneP =contactSection .getElementsByTagName('p')[1].textContent =siteContent['contact']['phone']
+
+
+const emailP =contactSection .getElementsByTagName('p')[2].textContent =siteContent['contact']['email']
 
 
 
