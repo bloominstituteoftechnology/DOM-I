@@ -89,11 +89,29 @@ para[6].textContent = siteContent["contact"]["phone"];
 para[7].textContent = siteContent["contact"]["email"];
 para[8].textContent = siteContent["footer"]["copyright"];
 
-//styles - stretch
+// new navbar
+
+const newElement = document.createElement("a");
+newElement.textContent = "Home";
+
+const parentElement = document.querySelector("nav");
+parentElement.prepend(newElement);
+
+const newElement1 = document.createElement("a");
+newElement1.textContent = "Login";
+parentElement.appendChild(newElement1);
 
 const arrNavBar = Array.from(navBar);
-navBar.forEach(element => { element.style.color = "purple"});
+navBar.forEach(element => { element.style.color = "green"});
 
-// const arrheaders = Array.from (headers);
-headers.foreach( element => { element.style.backgroundColor = "blue"});
+
+
+
+// styles
+headers.forEach(element => { element.style.color = "red"});
+para.forEach (element => { element.style.color = "teal"});
+
+
+
+
 
