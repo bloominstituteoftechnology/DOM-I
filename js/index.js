@@ -80,33 +80,93 @@ let imgHeader = document.querySelector("#cta-img");
 imgHeader.setAttribute("src", siteContent.cta["img-src"]);
 console.log(getStartedButton);
 
-// Main content - Features h4
-const features = document.querySelectorAll(".top-content .text-content h4")[0];
-features.textContent = siteContent["main-content"]["features-h4"];
+// //Top content - Features h4
+// const features = document.querySelectorAll(".top-content .text-content h4")[0];
+// features.textContent = siteContent["main-content"]["features-h4"];
 
-//Main content - Features paragraph
-const featuresParagraph = document.querySelectorAll(
-  ".top-content .text-content p"
-)[0];
-featuresParagraph.textContent = siteContent["main-content"]["features-content"];
+// //Top content - Features paragraph
+// const featuresParagraph = document.querySelectorAll(
+//   ".top-content .text-content p"
+// )[0];
+// featuresParagraph.textContent = siteContent["main-content"]["features-content"];
 
-// Main content - About h4
-const about = document.querySelectorAll(".top-content .text-content h4")[1];
-about.textContent = siteContent["main-content"]["about-h4"];
+// // Top content - About h4
+// const about = document.querySelectorAll(".top-content .text-content h4")[1];
+// about.textContent = siteContent["main-content"]["about-h4"];
 
-//Main content - About paragraph
-const aboutParagraph = document.querySelectorAll(
-  ".top-content .text-content p"
-)[1];
-aboutParagraph.textContent = siteContent["main-content"]["about-content"];
+// //Top content - About paragraph
+// const aboutParagraph = document.querySelectorAll(
+//   ".top-content .text-content p"
+// )[1];
+// aboutParagraph.textContent = siteContent["main-content"]["about-content"];
 
 // Update middle-img-src
 let mainContentImg = document.getElementById("middle-img");
 mainContentImg.src = siteContent["main-content"]["middle-img-src"];
 
-//
+// // Bottom content - Services h4
+// const services = document.querySelector(".bottom-content .text-content h4")[2];
+// services.textContent = siteContent["main-content"]["services-h4"];
+
+// //Bottom content - Services paragraph
+// const servicesParagraph = document.querySelectorAll(
+//   ".bottom-content .text-content p"
+// )[2];
+// servicesParagraph.textContent = siteContent["main-content"]["services-content"];
+
+// // Bottom content - Product h4
+// const product = document.querySelectorAll(
+//   ".bottom-content .text-content h4"
+// )[3];
+// services.textContent = siteContent["main-content"]["product-h4"];
+
+// //Bottom content - Product paragraph
+// const productParagraph = document.querySelectorAll(
+//   ".bottom-content .text-content p"
+// )[3];
+// productParagraph.textContent = siteContent["main-content"]["product-content"];
+
+// // Bottom content - Vision h4
+// const vision = document.querySelectorAll(".bottom-content .text-content h4")[4];
+// services.textContent = siteContent["main-content"]["vision-h4"];
+
+// //Bottom content - Vision paragraph
+// const visionParagraph = document.querySelectorAll(
+//   ".bottom-content .text-content p"
+// )[4];
+
+let h4 = document.querySelectorAll("h4");
+h4[0].textContent = siteContent["main-content"]["features-h4"];
+h4[1].textContent = siteContent["main-content"]["about-h4"];
+h4[2].textContent = siteContent["main-content"]["services-h4"];
+h4[3].textContent = siteContent["main-content"]["product-h4"];
+h4[4].textContent = siteContent["main-content"]["vision-h4"];
+
+let p = document.querySelectorAll("p");
+p[0].textContent = siteContent["main-content"]["features-content"];
+p[1].textContent = siteContent["main-content"]["about-content"];
+p[2].textContent = siteContent["main-content"]["services-content"];
+p[3].textContent = siteContent["main-content"]["product-content"];
+p[4].textContent = siteContent["main-content"]["vision-content"];
+
+// visionParagraph.textContent = siteContent["main-content"]["vision-content"];
 
 // Task 3: Add new content - color
 navBarItems.forEach(element => {
   element.style.color = "green";
 });
+
+// Task 3: append and prepend
+const aButton = document.createElement("a");
+aButton.href = "#";
+aButton.textContent = "Append Button";
+aButton.style.color = "green";
+
+const nav = document.querySelector("nav");
+nav.appendChild(aButton);
+
+const pButton = document.createElement("a");
+pButton.href = "#";
+pButton.textContent = "Prepend Button";
+pButton.style.color = "green";
+nav.prepend(pButton);
