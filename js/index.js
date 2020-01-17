@@ -80,13 +80,25 @@ let imgHeader = document.querySelector("#cta-img");
 imgHeader.setAttribute("src", siteContent.cta["img-src"]);
 console.log(getStartedButton);
 
-// Main content - Features
+// Main content - Features h4
 const features = document.querySelectorAll(".top-content .text-content h4")[0];
 features.textContent = siteContent["main-content"]["features-h4"];
 
-// Main content - About
+//Main content - Features paragraph
+const featuresParagraph = document.querySelectorAll(
+  ".top-content .text-content p"
+)[0];
+featuresParagraph.textContent = siteContent["main-content"]["features-content"];
+
+// Main content - About h4
 const about = document.querySelectorAll(".top-content .text-content h4")[1];
 about.textContent = siteContent["main-content"]["about-h4"];
+
+//Main content - About paragraph
+const aboutParagraph = document.querySelectorAll(
+  ".top-content .text-content p"
+)[1];
+aboutParagraph.textContent = siteContent["main-content"]["about-content"];
 
 // Update middle-img-src
 let mainContentImg = document.getElementById("middle-img");
