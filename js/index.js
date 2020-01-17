@@ -74,11 +74,15 @@ const getStartedButton = document.querySelector("button");
 
 getStartedButton.textContent = siteContent.cta.button;
 
-// cta-img
-const imgHeader = document.querySelector("#cta-img");
+// Update cta-img
+let imgHeader = document.querySelector("#cta-img");
 
 imgHeader.setAttribute("src", siteContent.cta["img-src"]);
 console.log(getStartedButton);
+
+// Update middle-img-src
+let mainContentImg = document.getElementById("middle-img");
+mainContentImg.src = siteContent["main-content"]["middle-img-src"];
 
 // Task 3: Add new content - color
 navBarItems.forEach(element => {
