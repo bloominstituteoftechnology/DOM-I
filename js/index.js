@@ -52,6 +52,86 @@ middle.setAttribute("src", siteContent["main-content"]["middle-img-src"])
 
 // nav 
 
-let navBar = document.querySelectorAll("nav");
+let navBar = document.querySelectorAll("nav a");
 
-navBar.setAttribute('nav',siteContent[0]["nav-item"])
+navBar[0].textContent = siteContent['nav']["nav-item-1"]
+navBar[1].textContent = siteContent['nav']["nav-item-2"]
+navBar[2].textContent = siteContent['nav']["nav-item-3"]
+navBar[3].textContent = siteContent['nav']["nav-item-4"]
+navBar[4].textContent = siteContent['nav']["nav-item-5"]
+navBar[5].textContent = siteContent['nav']["nav-item-6"]
+
+navBar.forEach(Element => {
+  Element.style.color = "green";
+});
+
+// CTA
+let cta = document.querySelector(".cta-text h1");
+
+cta.textContent = siteContent['cta']["h1"]
+
+let bt = document.querySelector('.cta-text button')
+bt.textContent = siteContent['cta']['button']
+
+
+// TOP
+
+let topConH= document.querySelectorAll(".top-content  h4");
+
+topConH[0].textContent = siteContent["main-content"]["features-h4"]
+topConH[1].textContent = siteContent["main-content"]["about-h4"]
+
+let topConP = document.querySelectorAll('.top-content p')
+topConP[0].textContent = siteContent["main-content"]["features-content"]
+topConP[1].textContent = siteContent["main-content"]["about-content"]
+
+
+//Bottom
+
+
+let bottomH = document.querySelectorAll('.bottom-content h4');
+bottomH[0].textContent = siteContent['main-content']["services-h4"]
+bottomH[1].textContent = siteContent['main-content']["product-h4"]
+
+
+let bottomP = document.querySelectorAll('.bottom-content p')
+bottomP[0].textContent = siteContent['main-content']["services-content"]
+bottomP[1].textContent = siteContent['main-content']["vision-content"]
+
+
+// contact
+
+let conH = document.querySelectorAll( ".contact h4")
+
+conH[0].textContent = siteContent['contact']["contact-h4"]
+
+let conP = document.querySelectorAll(".contact p")
+
+conP[0].textContent = siteContent['contact']["address"]
+conP[1].textContent = siteContent['contact']["phone"]
+conP[2].textContent = siteContent['contact']["email" ]
+
+let foot = document.querySelectorAll('footer p ')
+foot[0].textContent = siteContent["footer"][ "copyright"]
+
+
+// NEW
+const headerEl = document.querySelector('header');
+
+const subHeadline = document.createElement('h1')
+subHeadline.textContent = 'Dev'
+subHeadline.style.fontSize = '2.4rem'
+subHeadline.style.color = 'Blue'
+subHeadline.style.marginLeft ="50px"
+
+const headLines = document.createElement('h1')
+headLines.textContent = 'Tech'
+headLines.style.fontSize = '1.4rem'
+headLines.style.color = 'Blue'
+headLines.style.margin ='1px'
+
+
+
+headerEl.appendChild(subHeadline)
+headerEl.appendChild(headLines)
+
