@@ -80,9 +80,19 @@ let imgHeader = document.querySelector("#cta-img");
 imgHeader.setAttribute("src", siteContent.cta["img-src"]);
 console.log(getStartedButton);
 
+// Main content - Features
+const features = document.querySelectorAll(".top-content .text-content h4")[0];
+features.textContent = siteContent["main-content"]["features-h4"];
+
+// Main content - About
+const about = document.querySelectorAll(".top-content .text-content h4")[1];
+about.textContent = siteContent["main-content"]["about-h4"];
+
 // Update middle-img-src
 let mainContentImg = document.getElementById("middle-img");
 mainContentImg.src = siteContent["main-content"]["middle-img-src"];
+
+//
 
 // Task 3: Add new content - color
 navBarItems.forEach(element => {
