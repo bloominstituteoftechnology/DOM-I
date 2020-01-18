@@ -125,5 +125,5 @@ midImg.src = "img/mid-page-accent.jpg";
 
 const logoChg = document.getElementById("logo-img")
 logoChg.addEventListener('dblclick', () => {
-  logoChg.src = 'https://www.freepik.com/free-icon/boy-broad-smile_882526.htm#page=1&query=face&position=3';
+  logoChg.src = 'img/FACE.png';
 })
