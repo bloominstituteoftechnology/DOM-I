@@ -77,10 +77,12 @@ let circle = document.getElementById("cta-img");
 circle.setAttribute("src", siteContent["cta"]["img-src"]);
 circle.style.boxShadow = "1px 1px 10px green" 
 
-const ctaText = document.getElementsByTagName("h1");
-const ctaArr = Array.from(ctaText);
-ctaArr[0].textContent = siteContent["cta"]["h1"];
-ctaArr[0].style.color = 'purple'
+const ctaText = document.querySelector(".cta-text h1");
+ctaText.textContent = siteContent["cta"]["h1"];
+ctaText.style.color = 'purple';
+ctaText.style.whiteSpace = 'pre';
+ctaText.textContent = 'dom\n is\n awesome';
+
 
 const button = document.getElementsByTagName("button");
 const buttArr = Array.from(button);
@@ -120,3 +122,8 @@ contentArr.forEach(element => (
 
 let midImg = document.getElementById("middle-img");
 midImg.src = "img/mid-page-accent.jpg";
+
+const logoChg = document.getElementById("logo-img")
+logoChg.addEventListener('dblclick', () => {
+  logoChg.src = 'https://www.freepik.com/free-icon/boy-broad-smile_882526.htm#page=1&query=face&position=3';
+})
