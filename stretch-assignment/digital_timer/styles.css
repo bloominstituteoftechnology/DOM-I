@@ -12,3 +12,8 @@ body {
 .redDigit {
   color: red;
 }
+
+.timer-section {
+  display: flex;
+  flex-direction: column;
+}
