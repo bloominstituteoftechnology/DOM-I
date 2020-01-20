@@ -53,6 +53,19 @@ const NavA = document.querySelectorAll("a");
 const Newarr = Array.from(NavA);
 NavA.forEach((a, i) => a.textContent = siteContent.nav[`nav-item-${i + 1}`]);
 
+const newNav = document.createElement("a");
+newNav.textContent = "Welcome";
+const parentElement = document.querySelector('nav');
+parentElement.prepend(newNav);
+
+const byeNav = document.createElement("a");
+byeNav.textContent = "Goodbye";
+const parElement = document.querySelector('nav');
+parElement.append(byeNav);
+
+
+Newarr.forEach(element => element.style.color = "green");
+
 // CTA
 const ctaText = document.getElementsByTagName("h1");
 const ctaArr = Array.from(ctaText);
