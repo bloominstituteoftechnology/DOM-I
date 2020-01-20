@@ -76,50 +76,72 @@ buttonText.textContent = siteContent["cta"]["button"];
 
 //  Text - Top Content
 
-document.querySelector(".top-content>.text-content:first-child h4").textContent 
-  = siteContent["main-content"]["features-h4"];
+// document.querySelector(".top-content>.text-content:first-child h4").textContent 
+//   = siteContent["main-content"]["features-h4"];
 
-document.querySelector(".top-content>.text-content:last-child h4").textContent 
-  = siteContent["main-content"]["about-h4"];
+// document.querySelector(".top-content>.text-content:last-child h4").textContent 
+//   = siteContent["main-content"]["about-h4"];
 
-document.querySelector(".top-content>.text-content:first-child p").textContent
- = siteContent["main-content"]["features-content"];
+// document.querySelector(".top-content>.text-content:first-child p").textContent
+//  = siteContent["main-content"]["features-content"];
 
- document.querySelector(".top-content>.text-content:last-child p").textContent
- = siteContent["main-content"]["about-content"];
+//  document.querySelector(".top-content>.text-content:last-child p").textContent
+//  = siteContent["main-content"]["about-content"];
+
+const topContentElements = document.querySelectorAll(".top-content>.text-content *");
+const mainContentData = Object.values(siteContent["main-content"]);
+
+topContentElements.forEach((element, index) => {
+  element.textContent = mainContentData[index];
+});
+
 
  //  Text - Bottom Content
 
-document.querySelector(".bottom-content>.text-content:first-child h4").textContent 
-  = siteContent["main-content"]["services-h4"];
+// document.querySelector(".bottom-content>.text-content:first-child h4").textContent 
+//   = siteContent["main-content"]["services-h4"];
 
-document.querySelector(".bottom-content>.text-content:nth-child(2) h4").textContent 
-  = siteContent["main-content"]["product-h4"];
+// document.querySelector(".bottom-content>.text-content:nth-child(2) h4").textContent 
+//   = siteContent["main-content"]["product-h4"];
 
-document.querySelector(".bottom-content>.text-content:last-child h4").textContent 
-  = siteContent["main-content"]["vision-h4"];
+// document.querySelector(".bottom-content>.text-content:last-child h4").textContent 
+//   = siteContent["main-content"]["vision-h4"];
 
-document.querySelector(".bottom-content>.text-content:first-child p").textContent 
-  = siteContent["main-content"]["services-content"];
+// document.querySelector(".bottom-content>.text-content:first-child p").textContent 
+//   = siteContent["main-content"]["services-content"];
 
-document.querySelector(".bottom-content>.text-content:nth-child(2) p").textContent 
-  = siteContent["main-content"]["product-content"];
+// document.querySelector(".bottom-content>.text-content:nth-child(2) p").textContent 
+//   = siteContent["main-content"]["product-content"];
 
-document.querySelector(".bottom-content>.text-content:last-child p").textContent 
-  = siteContent["main-content"]["vision-content"];
+// document.querySelector(".bottom-content>.text-content:last-child p").textContent 
+//   = siteContent["main-content"]["vision-content"];
+
+const bottomContentElements = document.querySelectorAll(".bottom-content>.text-content *");
+
+bottomContentElements.forEach((element, index) => {
+  element.textContent = mainContentData[index+5];
+});
+
 
 //  Text - Contact
-document.querySelector(".contact h4").textContent
-  = siteContent["contact"]["contact-h4"];
 
-document.querySelector(".contact p:first-of-type").textContent
-  = siteContent["contact"]["address"];
+// document.querySelector(".contact h4").textContent
+//   = siteContent["contact"]["contact-h4"];
 
-document.querySelector(".contact p:nth-of-type(2)").textContent
-  = siteContent["contact"]["phone"];
+// document.querySelector(".contact p:first-of-type").textContent
+//   = siteContent["contact"]["address"];
 
-document.querySelector(".contact p:last-of-type").textContent
-  = siteContent["contact"]["email"];
+// document.querySelector(".contact p:nth-of-type(2)").textContent
+//   = siteContent["contact"]["phone"];
+
+// document.querySelector(".contact p:last-of-type").textContent
+//   = siteContent["contact"]["email"];
+
+const contactElements = document.querySelectorAll(".contact *");
+const contactData = Object.values(siteContent.contact);
+contactElements.forEach((element, index) => {
+  element.textContent = contactData[index];
+});
 
 
 //  Text - Footer
