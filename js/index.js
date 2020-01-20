@@ -38,18 +38,41 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+
+//Pictures
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
-const headerImage = document.getElementById("cta-img");
-headerImage.setAttribute('src', siteContent["cta"]["img-src"]);
-const midImage = document.getElementById("middle-image");
-// midImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+const ctaImage = document.getElementById("cta-img");
+ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
+const midImage = document.getElementById("middle-img");
+midImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 
-// Nav
+// Navigation
 const NavA = document.querySelectorAll("a");
 const Newarr = Array.from(NavA);
 NavA.forEach((a, i) => a.textContent = siteContent.nav[`nav-item-${i + 1}`]);
 
-// H1
+// CTA
 const ctaText = document.getElementsByTagName("h1");
+const ctaArr = Array.from(ctaText);
+ctaArr[0].textContent = siteContent["cta"]["h1"];
+const button = document.getElementsByTagName("button");
+const buttonArr = Array.from(button);
+buttonArr[0].textContent = siteContent["cta"]["button"];
+
+//H's
+ 
+
+
+// Text
+let p = document.querySelectorAll("p")
+p[0].textContent = siteContent["main-content"]["features-content"];
+p[1].textContent = siteContent["main-content"]["about-content"];
+p[2].textContent = siteContent["main-content"]["services-content"];
+p[3].textContent = siteContent["main-content"]["product-content"];
+p[4].textContent = siteContent["main-content"]["vision-content"];
+p[5].textContent = siteContent.contact.address;
+p[6].textContent = siteContent.contact.phone;
+p[7].textContent = siteContent.contact.email;
+p[8].textContent = siteContent.footer.copyright;
