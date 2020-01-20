@@ -61,9 +61,14 @@ const button = document.getElementsByTagName("button");
 const buttonArr = Array.from(button);
 buttonArr[0].textContent = siteContent["cta"]["button"];
 
-//H's
- 
-
+// h4
+ const heading = document.getElementsByTagName("h4");
+ const headingArr = Array.from(heading);
+ headingArr[0].textContent = siteContent["main-content"]["features-h4"];
+ headingArr[1].textContent = siteContent["main-content"]["about-h4"];
+ headingArr[2].textContent = siteContent["main-content"]["services-h4"];
+ headingArr[3].textContent = siteContent["main-content"]["product-h4"];
+ headingArr[4].textContent = siteContent["main-content"]["vision-h4"];
 
 // Text
 let p = document.querySelectorAll("p")
