@@ -45,13 +45,10 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //   TASKS 1 & 2
 
-// Images
+// cta image
 
 const codeImg = document.getElementById("cta-img");
 codeImg.setAttribute("src", siteContent["cta"]["img-src"]);
-
-const middleImg = document.getElementById("middle-img");
-middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
 // Header Links
 
@@ -74,6 +71,10 @@ titleMain.textContent = siteContent["cta"]["h1"];
 const buttonText = document.getElementsByTagName("button")[0];
 buttonText.textContent = siteContent["cta"]["button"];
 
+//  Main Content
+
+const mainContentData = Object.values(siteContent["main-content"]);
+
 //  Text - Top Content
 
 // document.querySelector(".top-content>.text-content:first-child h4").textContent 
@@ -89,12 +90,15 @@ buttonText.textContent = siteContent["cta"]["button"];
 //  = siteContent["main-content"]["about-content"];
 
 const topContentElements = document.querySelectorAll(".top-content>.text-content *");
-const mainContentData = Object.values(siteContent["main-content"]);
 
-topContentElements.forEach((element, index) => {
-  element.textContent = mainContentData[index];
-});
+// topContentElements.forEach((element, index) => {
+//   element.textContent = mainContentData[index];
+// });
 
+// main-content image
+
+const middleImg = document.getElementById("middle-img");
+// middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
  //  Text - Bottom Content
 
@@ -118,8 +122,20 @@ topContentElements.forEach((element, index) => {
 
 const bottomContentElements = document.querySelectorAll(".bottom-content>.text-content *");
 
-bottomContentElements.forEach((element, index) => {
-  element.textContent = mainContentData[index+5];
+// bottomContentElements.forEach((element, index) => {
+//   element.textContent = mainContentData[index+5];
+// });
+
+let mainContentElements = Array.from(topContentElements);
+mainContentElements.push(middleImg);
+mainContentElements = mainContentElements.concat(Array.from(bottomContentElements));
+
+mainContentElements.forEach((element, index) => {
+  if (element === middleImg) {
+    middleImg.src = mainContentData[index];
+  } else {
+    element.textContent = mainContentData[index];
+  }
 });
 
 
@@ -168,4 +184,15 @@ newLinkTwo.textContent = "Media";
 newLinkTwo.href = "#";
 newLinkTwo.style.color = "green";
 document.querySelector("nav").appendChild(newLinkTwo);
+
+// let mainContentElements = Array.from(document.querySelectorAll('.top-content > .text-content *'));
+// mainContentElements.push(document.querySelector('.middle-img'));
+// mainContentElements = mainContentElements.concat(Array.from(document.querySelectorAll('.bottom-content > .text-content *')));
+// mainContentElements.forEach((element, index) => {
+//   if (element.tagName === 'IMG') {
+//     element.src = mainContentData[index];
+//   } else {
+//     element.textContent = mainContentData[index];
+//   }
+// });
 
