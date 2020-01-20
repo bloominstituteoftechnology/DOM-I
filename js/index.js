@@ -59,30 +59,6 @@ newLink;
 newLink.style.color = "green";
 newLink;
 
-// Add new link to navigation, to the front, called Product
-// const firstLink = document.createElement('a');
-// firstLink;
-// firstLink.textContent = "Product";
-// firstLink;
-// headerElement.prepend(firstLink);
-
-// Update all links in navigation bar using querySelectorAll
-// const linkElements = document.querySelectorAll('nav a');
-// linkElements;
-// linkElements[0].textContent = "Alison";
-// linkElements[0];
-// linkElements[1].textContent = "Product";
-// linkElements[1];
-// linkElements[2].textContent = "Vision";
-// linkElements[2];
-// linkElements[3].textContent = "Features";
-// linkElements[3];
-// linkElements[4].textContent = "About";
-// linkElements[4];
-// linkElements[5].textContent = "Contact";
-// linkElements[5];
-// console.log(linkElements);
-
 // Better way to do the above
 let navBar = document.querySelector('nav'); // draw out from html doc the entire nav 
 console.log(navBar);
@@ -96,6 +72,7 @@ console.log(navValues);
     link.textContent = navValues[index];
     link.setAttribute('style', 'color: green');
     // navBar.removeChild(navBar.lastChild); //trying to remove logo link
+    // link.removeChild(link.childNodes[6]); 
     
 })
 
@@ -145,15 +122,37 @@ console.log(paraValues);
 
 // the Button
 const getStartedButton = document.querySelector('button');
-console.log(getStartedButton); 
+console.log('get started button', getStartedButton); 
 getStartedButton.textContent = "Get Started"; // add the "Get Started" label to the button
+
+// add a reset button (for stretch goal)
+const newButton = document.createElement('button'); 
+newButton.textContent = "Reset"; 
+
+// add reset button to the same div that the first button is on
+let parentElement = document.querySelectorAll('div'); 
+console.log('parent element', parentElement); 
+
+parentElement[1].append(newButton); 
+
 
 // Populate Features paragraph, heading and content
 const featPara = document.querySelector('h1'); 
 console.log(featPara);
 featPara.textContent = "Dom Is Awesome"; 
 
+
 // the Footer
 const footerCopy = document.querySelector('footer'); 
 console.log(footerCopy);
 footerCopy.textContent = "Copyright Great Idea! 2018";  
+
+// trying this out
+
+var myVar = setInterval(myTimer, 1000);
+
+function myTimer() {
+  var d = new Date();
+  var t = d.toLocaleTimeString();
+  document.getElementsByClassName("cta-text").innerHTML = t;
+}
