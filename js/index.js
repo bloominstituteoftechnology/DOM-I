@@ -185,14 +185,4 @@ newLinkTwo.href = "#";
 newLinkTwo.style.color = "green";
 document.querySelector("nav").appendChild(newLinkTwo);
 
-// let mainContentElements = Array.from(document.querySelectorAll('.top-content > .text-content *'));
-// mainContentElements.push(document.querySelector('.middle-img'));
-// mainContentElements = mainContentElements.concat(Array.from(document.querySelectorAll('.bottom-content > .text-content *')));
-// mainContentElements.forEach((element, index) => {
-//   if (element.tagName === 'IMG') {
-//     element.src = mainContentData[index];
-//   } else {
-//     element.textContent = mainContentData[index];
-//   }
-// });
 
