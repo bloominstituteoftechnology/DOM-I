@@ -109,7 +109,7 @@ const nav = document.querySelector("nav");
 nav.appendChild(aButton);
 
 const pButton = document.createElement("a");
-pButton.href = "#";
-pButton.textContent = "Prepend Button";
-pButton.style.color = "green";
-nav.prepend(pButton);
+pButton.href = "#"; 
+pButton.textContent = "Prepend Button"; 
+pButton.style.color = "green"; 
+nav.prepend(pButton); 
