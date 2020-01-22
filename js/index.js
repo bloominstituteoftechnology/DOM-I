@@ -61,7 +61,7 @@ h1.textContent = siteContent.cta.h1;
 
 //Button - Get Started
 
-const getStartedButton = document/querySelector("button");
+const getStartedButton = document.querySelector("button");
 
 getStartedButton.textContent = siteContent.cta.button;
 
@@ -75,8 +75,7 @@ console.log(getStartedButton);
 
 // Image Middle (cta)
 
-
-let mainContentImg = document.getElementById("middle-img")
+let mainContentImg = document.getElementById("middle-img");
 mainContentImg.src = siteContent["main-content"]["middle-img-src"];
 
 let h4 = document.querySelectorAll("h4");
@@ -92,3 +91,25 @@ p[1].textContent = siteContent["main-content"]["about-content"];
 p[2].textContent = siteContent["main-content"]["services-content"];
 p[3].textContent = siteContent["main-content"]["product-content"];
 p[4].textContent = siteContent["main-content"]["vision-content"];
+
+//Task 3; New conctent / color
+
+navBarItems.forEach(element => {
+  element.style.color = "green";
+});
+
+//Task 3; `.appendChild()` and `.prepend()`
+
+const aButton = document.createElement("a");
+aButton.href = "#";
+aButton.textContent = "Append Button";
+aButton.style.color = "green";
+
+const nav = document.querySelector("nav");
+nav.appendChild(aButton);
+
+const pButton = document.createElement("a");
+pButton.href = "#";
+pButton.textContent = "Prepend Button";
+pButton.style.color = "green";
+nav.prepend(pButton);
