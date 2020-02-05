@@ -39,4 +39,46 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+// Update Remaining Images
+let ctaImg = document.getElementById("cta-img");
+ctaImg.src = siteContent.cta["img-src"];
+
+let middleImg = document.getElementById('middle-img');
+middleImg.src = siteContent["main-content"]["middle-img-src"];
+
+// Update Navbar
+const navBar = document.querySelectorAll("nav a")
+navBar.forEach((item, index) => item.textContent = siteContent.nav["nav-item-"+(index+1)])
+
+//Update the rest of the Header
+const heading = document.querySelector('h1');
+heading.innerHTML = siteContent.cta.h1.split(' ').join('<br>');
+
+const buttonText = document.querySelector('button');
+buttonText.textContent = siteContent.cta.button;
+
+//Update the Main content
+const arrOfSmallHeadings = Object.values(siteContent["main-content"]).filter(item =>
+    item.split(' ').length < 2 && !item.includes('jpg'));
+
+const smallHeadings = document.querySelectorAll('h4');
+smallHeadings.forEach((item, index) => item.textContent = arrOfSmallHeadings[index]);
+
+const arrOfContent = Object.values(siteContent["main-content"]).filter(item =>
+  item.split(' ').length > 1);
+const textBoxes = document.querySelectorAll('.text-content p');
+textBoxes.forEach((item, index) => item.textContent = arrOfContent[index]);
+
+//Update the contact section
+const contactSectionHeader = document.querySelector('.contact h4');
+contactSectionHeader.textContent = siteContent.contact["contact-h4"];
+
+const contactArr = Object.values(siteContent.contact).map(item => item.includes('et') ? item.split('et').join('et<br>') : item);
+const contactPs = document.querySelectorAll('.contact p')
+contactPs.forEach((item, index) => item.innerHTML = contactArr[index+1]);
+
+//Update the footer
+const footer = document.querySelector('footer p');
+footer.textContent = siteContent.footer.copyright;
