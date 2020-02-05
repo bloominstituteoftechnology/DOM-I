@@ -37,6 +37,7 @@ const siteContent = {
   },
 };
 
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
@@ -49,8 +50,22 @@ let middleImg = document.getElementById('middle-img');
 middleImg.src = siteContent["main-content"]["middle-img-src"];
 
 // Update Navbar
-const navBar = document.querySelectorAll("nav a")
+const navBar = document.querySelectorAll("nav a");
 navBar.forEach((item, index) => item.textContent = siteContent.nav["nav-item-"+(index+1)])
+//Make font color green
+navBar.forEach(item => item.style.color = 'green')
+//Add two children to nav
+const navParent = document.querySelector('nav');
+const leftChild = document.createElement('a');
+leftChild.textContent = 'Left';
+leftChild.href='#'
+navParent.prepend(leftChild);
+const rightChild = document.createElement('a');
+rightChild.textContent = 'Right';
+rightChild.href= '#';
+navParent.append(rightChild);
+leftChild.style.color = 'green';
+rightChild.style.color = 'green';
 
 //Update the rest of the Header
 const heading = document.querySelector('h1');
@@ -82,3 +97,19 @@ contactPs.forEach((item, index) => item.innerHTML = contactArr[index+1]);
 //Update the footer
 const footer = document.querySelector('footer p');
 footer.textContent = siteContent.footer.copyright;
+
+//Stretch: Event Handler
+heading.addEventListener('mouseenter', function(){
+  heading.style.color = 'green';
+})
+heading.addEventListener('mouseleave', function(){
+  heading.style.color = 'black';
+})
+const funButton = document.createElement('button');
+funButton.textContent = "See Something Cool";
+document.querySelector('.cta .cta-text').append(funButton);
+funButton.addEventListener('click', function(){
+  ctaImg.src = 'https://images.unsplash.com/photo-1572007776869-3f312088adac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80'
+  ctaImg.style.width = '40%';
+})
+
