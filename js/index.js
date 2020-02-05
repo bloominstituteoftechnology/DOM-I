@@ -109,7 +109,8 @@ const funButton = document.createElement('button');
 funButton.textContent = "See Something Cool";
 document.querySelector('.cta .cta-text').append(funButton);
 funButton.addEventListener('click', function(){
-  ctaImg.src = 'https://images.unsplash.com/photo-1572007776869-3f312088adac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80'
-  ctaImg.style.width = '40%';
+    ctaImg.src = 'https://images.unsplash.com/photo-1572007776869-3f312088adac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80'
+    ctaImg.style.width = '40%';
+    ctaImg.style.borderRadius = '50%';
 })
 
