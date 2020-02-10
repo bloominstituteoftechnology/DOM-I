@@ -52,11 +52,26 @@ let links = document.querySelectorAll('a');
       link.style.color = 'green';
     })
 
-    let header = document.querySelector('h1').textContent;
+    let header = document.querySelector('h1')
+    header.textContent = siteContent['cta']['h1'];
+
+    let getButton = document.querySelector('button')
+    getButton.innerText = "Get Started"
 
   let code = document.getElementById("cta-img");
   code.setAttribute('src', siteContent["cta"]["img-src"])
   
+  let mainContent = document.querySelectorAll('.text-content')
+  mainContent[0].querySelector('h4').textContent = siteContent['main-content']['features-h4']
+  mainContent[0].querySelector('p').textContent = siteContent['main-content']['features-content']
+  mainContent[1].querySelector('h4').textContent = siteContent['main-content']['about-h4']
+  mainContent[1].querySelector('p').textContent = siteContent['main-content']['about-content']  
+  mainContent[2].querySelector('h4').textContent = siteContent['main-content']['services-h4']
+  mainContent[2].querySelector('p').textContent = siteContent['main-content']['services-content']
+  mainContent[3].querySelector('h4').textContent = siteContent['main-content']['product-h4']
+  mainContent[3].querySelector('p').textContent = siteContent['main-content']['product-content']
+  mainContent[4].querySelector('h4').textContent = siteContent['main-content']['vision-h4']
+  mainContent[4].querySelector('p').textContent = siteContent['main-content']['vision-content']
 
   let middleImg = document.getElementById("middle-img");
   middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
