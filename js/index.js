@@ -61,3 +61,4 @@ nav[5].textContent = siteContent["nav"]["nav-item-6"];
 nav.forEach((green) => {
   green.style.color = "green"
 })
+
