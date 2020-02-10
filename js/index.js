@@ -62,12 +62,23 @@ const siteContent = {
       // a
 
         const aSelector = document.querySelectorAll('a');
-        aSelector[0].textContent = siteContent.nav['nav-item-1']
-        aSelector[1].textContent = siteContent.nav['nav-item-2']
-        aSelector[2].textContent = siteContent.nav['nav-item-3']
-        aSelector[3].textContent = siteContent.nav['nav-item-4']
-        aSelector[4].textContent = siteContent.nav['nav-item-5']
-        aSelector[5].textContent = siteContent.nav['nav-item-6']
+
+// aSelector.forEach(link => {link.textContent = link.siteContent.nav})
+
+
+        for(i = 0 ; i < aSelector.length; i++){
+
+  aSelector[i].textContent = siteContent.nav[`nav-item-${i}`];
+ 
+
+}
+
+        // aSelector[0].textContent = siteContent.nav['nav-item-1']
+        // aSelector[1].textContent = siteContent.nav['nav-item-2']
+        // aSelector[2].textContent = siteContent.nav['nav-item-3']
+        // aSelector[3].textContent = siteContent.nav['nav-item-4']
+        // aSelector[4].textContent = siteContent.nav['nav-item-5']
+        // aSelector[5].textContent = siteContent.nav['nav-item-6']
 
     // h1
 
@@ -142,7 +153,7 @@ const siteContent = {
     
     
      navEL.prepend(nodeFronta);
-     navEL.appendChild(nodeBacka)
+     navEL.appendChild(nodeBacka);
 
     
 
