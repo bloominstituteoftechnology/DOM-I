@@ -40,3 +40,55 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//Get <a> tags
+const nav = document.getElementsByTagName("a");
+const navArray = Array.from(nav);
+for(let i = 0; i < navArray.length; i++){
+  navArray[i].textContent = siteContent["nav"][`nav-item-${i}`];
+}
+
+//Last nav item (contact)
+const lastNav = document.createElement("a");
+lastNav.textContent = "Contact";
+const parentElement1 = document.querySelector("nav");
+parentElement1.append(lastNav);
+
+//Code image
+let wallOfCode = document.getElementById("cta-img");
+wallOfCode.setAttribute("src", siteContent["cta"]["img-src"]);
+
+//Title
+const ctaText = document.querySelector(".cta-text h1");
+ctaText.textContent = siteContent["cta"]["h1"];
+ctaText.textContent = 'dom\n is\n awesome';
+
+//Button
+const button = document.getElementsByTagName("button");
+button[0].textContent = siteContent["cta"]["button"];
+
+//Subtitles
+const subtitle = document.getElementsByTagName("h4");
+const subtitleArray = Array.from(subtitle);
+subtitleArray[0].textContent = siteContent["main-content"]["features-h4"];
+subtitleArray[1].textContent = siteContent["main-content"]["about-h4"];
+subtitleArray[2].textContent = siteContent["main-content"]["services-h4"];
+subtitleArray[3].textContent = siteContent["main-content"]["product-h4"];
+subtitleArray[4].textContent = siteContent["main-content"]["vision-h4"];
+subtitleArray[5].textContent = siteContent["contact"]["contact-h4"];
+
+
+//<p> tag text
+const paragraphs = document.getElementsByTagName("p");
+
+
+
+
+
+//middle image
+let midImg = document.getElementById("middle-img");
+midImg.src = "img/mid-page-accent.jpg";
+
+//Contact
+
+//Footer
