@@ -48,11 +48,11 @@ for(let i = 0; i < navArray.length; i++){
   navArray[i].textContent = siteContent["nav"][`nav-item-${i}`];
 }
 
-//Last nav item (contact)
+//Add to end of Nav bar
 const lastNav = document.createElement("a");
 lastNav.textContent = "Contact";
-const parentElement1 = document.querySelector("nav");
-parentElement1.append(lastNav);
+const allNav = document.querySelector("nav");
+allNav.append(lastNav);
 
 //Code image
 let wallOfCode = document.getElementById("cta-img");
@@ -77,18 +77,20 @@ subtitleArray[3].textContent = siteContent["main-content"]["product-h4"];
 subtitleArray[4].textContent = siteContent["main-content"]["vision-h4"];
 subtitleArray[5].textContent = siteContent["contact"]["contact-h4"];
 
-
 //<p> tag text
 const paragraphs = document.getElementsByTagName("p");
-
-
-
-
+const paragraphArray = Array.from(paragraphs);
+paragraphArray[0].textContent = siteContent["main-content"]["features-content"];
+paragraphArray[1].textContent = siteContent["main-content"]["about-content"];
+paragraphArray[2].textContent = siteContent["main-content"]["services-content"];
+paragraphArray[3].textContent = siteContent["main-content"]["product-content"];
+paragraphArray[4].textContent = siteContent["main-content"]["vision-content"];
+paragraphArray[5].textContent = siteContent["contact"]["address"];
+paragraphArray[6].textContent = siteContent["contact"]["phone"];
+paragraphArray[7].textContent = siteContent["contact"]["email"];
+paragraphArray[8].textContent = siteContent["footer"]["copyright"];
 
 //middle image
 let midImg = document.getElementById("middle-img");
 midImg.src = "img/mid-page-accent.jpg";
 
-//Contact
-
-//Footer
