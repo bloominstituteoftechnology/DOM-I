@@ -54,8 +54,10 @@ const newLinks = Array.from(document.querySelectorAll('a'));
 let linkName = 'nav-item-';
 let counter = 1;
 newLinks.forEach(link => {
+  link.style.color = 'green';
   link.textContent = siteContent['nav'][linkName + counter++]
 })
+
 
 const newH1 = document.querySelector('h1');
 newH1.textContent = siteContent['cta']['h1'];
@@ -75,5 +77,29 @@ for (i=0; i<newH4.length; i++) {
   newP[i].textContent = siteContent ['main-content'][ps[i]]
 }
 
-const footer = 
+
+const newContactH4 = document.querySelector('.contact h4')
+newContactH4.textContent = siteContent ['contact'] ['contact-h4']
+
+const newContactInfo = Array.from(document.querySelectorAll('.contact p'))
+let contactPs = ['address', 'email', 'phone']
+for (i=0; i< newContactInfo.length; i++) {
+  newContactInfo[i].textContent = siteContent['contact'][contactPs[i]]
+}
+
+// task 3
+let nav = document.querySelector('nav');
+
+let newLink1 = document.createElement('a');
+newLink1.setAttribute('src', '#');
+newLink1.textContent = "Link1";
+newLink1.style.color = 'green';
+nav.prepend(newLink1);
+
+let newLink2 = document.createElement('a')
+newLink2.setAttribute('src', '#');
+newLink2.textContent = "Link2";
+newLink2.style.color = 'green';
+nav.append(newLink2);
+
 
