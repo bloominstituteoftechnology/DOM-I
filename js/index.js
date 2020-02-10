@@ -102,4 +102,7 @@ newLink2.textContent = "Link2";
 newLink2.style.color = 'green';
 nav.append(newLink2);
 
+const newFooter = document.querySelector('footer p');
+newFooter.textContent = siteContent['footer']['copyright']
+
 
