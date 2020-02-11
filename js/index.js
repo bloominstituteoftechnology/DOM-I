@@ -41,12 +41,16 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+
 //Get <a> tags
-const nav = document.getElementsByTagName("a");
+const nav = document.getElementsByTagName("a"); 
 const navArray = Array.from(nav);
+
 for(let i = 0; i < navArray.length; i++){
   navArray[i].textContent = siteContent["nav"][`nav-item-${i}`];
 }
+
+console.log(navArray);
 
 //Add to end of Nav bar
 const lastNav = document.createElement("a");
@@ -54,7 +58,15 @@ lastNav.textContent = "Contact";
 const allNav = document.querySelector("nav");
 allNav.append(lastNav);
 
-//Code image
+//prepend
+const prependNav = "Prepend Test";
+allNav.prepend(prependNav);
+
+//append
+const appended = "Last";
+allNav.append(appended);
+
+//Wall of code image
 let wallOfCode = document.getElementById("cta-img");
 wallOfCode.setAttribute("src", siteContent["cta"]["img-src"]);
 
@@ -93,4 +105,12 @@ paragraphArray[8].textContent = siteContent["footer"]["copyright"];
 //middle image
 let midImg = document.getElementById("middle-img");
 midImg.src = "img/mid-page-accent.jpg";
+
+/* Task 3 */
+
+//Nav items to green
+navArray.forEach(nav => {
+  nav.style.color = "green";
+});
+lastNav.style.color = "green";
 
