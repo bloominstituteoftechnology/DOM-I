@@ -51,13 +51,13 @@ links[3].textContent = siteContent["nav"]["nav-item-4"]
 links[4].textContent = siteContent["nav"]["nav-item-5"]
 links[5].textContent = siteContent["nav"]["nav-item-6"]
 
-const navColor = document.querySelectorAll('a')
+let navColor = document.querySelectorAll('a')
 navColor.forEach( element => {
   element.style.color = "green"
-})
+});
 
 // let navi = document.getElementsByTagName('nav');
-// nav.style.backgroundColor = "green";
+// navi.style.backgroundColor = "green";
 console.log(links)
 
 
@@ -65,6 +65,7 @@ console.log(links)
 
 let title = document.querySelector("h1");
 title.textContent = siteContent["cta"]["h1"];
+//  siteContent["cta"]["h1"] = "DOM\nIs\nAwesome"; 
 
 let btn = document.getElementsByTagName('button')
 btn[0].textContent = siteContent["cta"]["button"]
@@ -106,9 +107,11 @@ addNavStart.textContent = "First";
 addNavStart.classList.add("a")
 let parentElement = document.querySelector('nav')
 parentElement.prepend(addNavStart);
+addNavStart.style.color = "red";
 
 let addNavEnd = document.createElement('a');
 addNavEnd.textContent = "Last";
 addNavEnd.classList.add('a');
 parentElement.append(addNavEnd);
+addNavEnd.style.color = "red"
 
