@@ -54,7 +54,14 @@ for (let x = 0; x < aTags.length; x++) {
 let cta = document.querySelectorAll(".cta");
 cta[0].querySelectorAll("h1")[0].textContent = siteContent.cta.h1; //changin title
 cta[0].querySelectorAll("button")[0].textContent = siteContent.cta.button; //changing button
-cta[0].querySelectorAll("#cta-img")[0].setAttribute('src', siteContent.cta["img-src"]); // asmdamsd img
+let ctaImg = cta[0].querySelectorAll("#cta-img");
+ctaImg[0].setAttribute('src', siteContent.cta["img-src"]); // asmdamsd img
+
+
+ctaImg[0].onclick = () => {
+    cta[0].remove();
+}
+
 
 //getting all the sectinos thigns
 let mainContent = document.querySelectorAll(".main-content");
@@ -90,5 +97,24 @@ contact[0].querySelectorAll("p")[1].textContent = siteContent.contact.phone;
 contact[0].querySelectorAll("p")[2].textContent = siteContent.contact.email;
 
 //footer
-let footer = document.querySelectorAll("footer");
-footer[0].querySelectorAll("p")[0].textContent = siteContent.footer.copyright;
+let fter = document.querySelectorAll("footer");
+fter[0].querySelectorAll("p")[0].textContent = siteContent.footer.copyright;
+
+let header = document.querySelectorAll("header");
+header[0].style.backgroundColor = "green";
+
+let nfooter = document.createElement("footer");
+
+nfooter.innerHTML = "This is appended";
+
+nfooter.style.color = "indigo";
+
+document.body.append(nfooter);
+
+
+//stretch 
+let cta_button = cta[0].querySelectorAll("button")[0];
+
+cta_button.onclick = () => {
+    header[0].style.backgroundColor = "indigo";
+}
