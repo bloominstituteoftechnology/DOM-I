@@ -51,6 +51,12 @@ let links = document.querySelectorAll('a');
     Array.from(links).forEach( link => {
       link.style.color = 'green';
     })
+    const newLink = document.createElement('a');
+    const newNav = document.querySelector('nav');
+      newLink.innerText = 'Our Team'
+      newLink.href = "#"
+      newNav.append(newLink);
+      newLink.style.color = 'green' 
 
     let header = document.querySelector('h1')
     header.textContent = siteContent['cta']['h1'];
@@ -75,3 +81,12 @@ let links = document.querySelectorAll('a');
 
   let middleImg = document.getElementById("middle-img");
   middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+  let info = document.querySelector('.contact')
+    info.getElementsByTagName('h4')[0].textContent = siteContent["contact"]["contact-h4"]
+    info.getElementsByTagName('p')[0].textContent = siteContent["contact"]["address"]
+    info.getElementsByTagName('p')[1].textContent = siteContent["contact"]["phone"]
+    info.getElementsByTagName('p')[2].textContent = siteContent["contact"]["email"]
+
+    let foot = document.querySelector('footer')
+    foot.innerText = "Copyright Great Idea! 2020"
