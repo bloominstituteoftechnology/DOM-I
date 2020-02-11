@@ -8,6 +8,7 @@ const siteContent = {
     "nav-item-6": "Contact",
     "img-src": "img/logo.png"
   },
+
   "cta": {
     "h1": "DOM Is Awesome",
     "button": "Get Started",
@@ -32,98 +33,100 @@ const siteContent = {
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
+
   "footer": {
     "copyright" : "Copyright Great Idea! 2018"
   },
 };
 
 // Example: Update the img src for the logo
+
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-// Task Task 1: Create selectors to point your data into elements
-// * [ ] Create selectors by using any of the DOM element's methods
-// * [ ] Note that IDs have been used on all images.  Use the IDs to update src path content
+const myASelection = document.querySelector('a');
+const myTextSelection = document.querySelector('.text-content');
+const customImage = document.querySelector('#cta-img');
+customImage.src = 'img/header-img.png';
 
-let aTags = document.querySelectorAll('a')
-
-
-aTags[0].setAttribute('class', '.nav-item-1')
-aTags[0].innerText = "Service"
-aTags[1].setAttribute('class', '.nav-item-2')
-aTags[1].innerText = "Product"
-aTags[2].setAttribute('class', '.nav-item-3')
-aTags[2].innerText = "Vision"
-aTags[3].setAttribute('class', '.nav-item-4')
-aTags[3].innerText = "Features"
-aTags[4].setAttribute('class', '.nav-item-5')
-aTags[4].innerText = "About"
-aTags[5].setAttribute('class', '.nav-item-6')
-aTags[5].innerText = "Contact"
-
-// ## Task 2: Update the HTML with the JSON data
-// * [ ] Remember, NO direct updating of the HTML source is allowed.
-// * [ ] Using your selectors, update the content to match the example file.
-// * [ ] Remember to update the src attributes on images
-
-let mainHeading = document.querySelector('h1')
-mainHeading.textContent = siteContent['cta']['h1']
+// task 2
+const navbar = document.querySelectorAll('nav a');
+for(let i = 1;i<7;i++){
+navbar[i-1].textContent = siteContent.nav[`nav-item-${i}`]};
 
 
-let mainButton = document.querySelector('button')
-mainButton.innerText = "Get Started"
+//Dom is Awesome
+
+const domIs = document.querySelector('.cta .cta-text h1');
+domIs.textContent = siteContent["cta"]["h1"];
+
+
+//Get Started Button
+
+const domButton = document.querySelector('.cta .cta-text button');
+domButton.textContent = siteContent.cta['button'];
+
+//middle header4s
+
+const midSection = document.querySelectorAll('.top-content .text-content h4');
+midSection[0].textContent = siteContent["main-content"]["features-h4"];
+midSection[1].textContent = siteContent["main-content"]["about-h4"];
+
+
+//middle paragraphs
+const midSectionP = document.querySelectorAll('.top-content .text-content p');
+
+midSectionP[0].textContent = siteContent["main-content"]["features-content"];
+midSectionP[1].textContent = siteContent["main-content"]["about-content"];
+
+//middle image
+
+
+const midImage = document.querySelector('.middle-img');
+midImage.src = "img/mid-page-accent.jpg";
+
+//middle section bottom headers
+
+
+const botSection = document.querySelectorAll('.bottom-content .text-content h4');
+botSection[0].textContent = siteContent["main-content"]["services-h4"];
+botSection[1].textContent = siteContent["main-content"]["product-h4"];
+botSection[2].textContent = siteContent["main-content"]["vision-h4"];
+
+//middle section bottom paragraphs
+
+const botSectionP = document.querySelectorAll('.bottom-content .text-content p');
+botSectionP[0].textContent = siteContent["main-content"]["services-content"];
+botSectionP[1].textContent = siteContent["main-content"]["product-content"];
+botSectionP[2].textContent = siteContent["main-content"]["vision-content"];
+
+//contact section
+const contact = document.querySelector('.contact h4');
+contact.textContent = siteContent["contact"]["contact-h4"];
+
+const contactsP = document.querySelectorAll('.contact p');
+contactsP[0].textContent = siteContent["contact"]["address"];
+contactsP[1].textContent = siteContent["contact"]["phone"];
+contactsP[2].textContent = siteContent["contact"]["email"];
+
+const footer = document.querySelector('footer p');
+footer.textContent = siteContent['footer']['copyright'];
+//green nav bar
+
+const navbarGreen = document.querySelectorAll('nav a');
+for(let i = 1;i<7;i++){
+
+navbarGreen[i-1].style.color = 'green'};
+
+//app and prepend
+const navbarParent = document.querySelector('nav');
+const hello = document.createElement('a');
+hello.textContent="Hello"
+navbarParent.append(hello);
+const hello1 = document.createElement('a');
+hello1.textContent="Hello"
+navbarParent.prepend(hello1);
 
 
 
-let ctaLogo = document.querySelector('#cta-img')
-ctaLogo.setAttribute('src', siteContent["cta"]["img-src"]) 
 
-
-
-let mainContent = document.querySelectorAll('.text-content')
-
-
-mainContent[0].querySelector('h4').textContent = siteContent['main-content']['features-h4']
-mainContent[0].querySelector('p').textContent = siteContent['main-content']['features-content']
-mainContent[1].querySelector('h4').textContent = siteContent['main-content']['about-h4']
-mainContent[1].querySelector('p').textContent = siteContent['main-content']['about-content']
-mainContent[2].querySelector('h4').textContent = siteContent['main-content']['services-h4']
-mainContent[2].querySelector('p').textContent = siteContent['main-content']['services-content']
-mainContent[3].querySelector('h4').textContent = siteContent['main-content']['product-h4']
-mainContent[3].querySelector('p').textContent = siteContent['main-content']['product-content']
-mainContent[4].querySelector('h4').textContent = siteContent['main-content']['vision-h4']
-mainContent[4].querySelector('p').textContent = siteContent['main-content']['vision-content']
-
-
-
-
-
-
-
-let middleImg = document.querySelector('.middle-img')
-middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]) 
-
-
-
-
-
-let contactInfo = document.querySelector('.contact')
-
-
-contactInfo.getElementsByTagName('h4')[0].textContent = siteContent['contact']['contact-h4']
-contactInfo.getElementsByTagName('p')[0].textContent = siteContent["contact"]["address"]
-contactInfo.getElementsByTagName('p')[1].textContent = siteContent['contact']['phone']
-contactInfo.getElementsByTagName('p')[2].textContent = siteContent['contact']['email']
-
-
-
-
-let footer = document.querySelector('footer')
-footer.textContent = siteContent['footer']['copyright']
-
-
-// ## Task 3: Add new content
-// * [ ] Change the color of the navigation text to be green.
-// * [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
-// * [ ] Check your work by looking at the [original html](original.html) in the browser
-aTags.forEach(link => link.style.color ='green') 
