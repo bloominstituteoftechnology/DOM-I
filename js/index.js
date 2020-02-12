@@ -41,4 +41,16 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-const container = document.querySelector('.container')
+const container      = document.querySelector('.container')
+const logoImg        = document.querySelector('#logo-img')
+const cta            = document.querySelector('.cta')
+const ctaText        = document.querySelector('.cta-text')
+const ctaImg         = document.querySelector('#cta-img')
+const mainContent    = document.querySelector('.main-content')
+const topContent     = document.querySelector('.top-content')
+const allTextContent = document.querySelectorAll('.text-content')
+const middleImage    = document.querySelector('#middle-img')
+const bottomContent  = document.querySelector('.bottom-content')
+const contact        = document.querySelector('.contact')
+
+
