@@ -119,13 +119,15 @@ let mainContent = document.querySelector('.main-content');
 
 //CONTACT
 
-let contact = document.querySelecto('.contact');
+let contact = document.querySelector('.contact');
 
-  contact.getElementsByTagName('h4')[0].textContent = siteContent['contact']['contact-h4'];
+contact.getElementsByTagName('h4')[0].textContent = siteContent['contact']['contact-h4'];
 
-  contact.getElementsByTagName('p')[0].textContent = siteContent['contact']['address'];
-  contact.getElementsByTagName('p')[1].textContent = siteContent['contact']['phone'];
-  contact.getElementsByTagName('p')[2].textContent = siteContent['contact']['email'];
+contact.getElementsByTagName('p')[0].textContent = siteContent['contact']['address'];
+
+contact.getElementsByTagName('p')[1].textContent = siteContent['contact']['phone'];
+
+contact.getElementsByTagName('p')[2].textContent = siteContent['contact']['email'];
 
 //Footer
 let foot = document.querySelector('footer p');
