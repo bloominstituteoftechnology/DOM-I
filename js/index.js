@@ -65,6 +65,16 @@ let nav = document.querySelector('nav');
 for (let link of navLinks) {
   link.style.color = 'green';
 };
+let firstNewNav = document.createElement('a');
+firstNewNav.textContent = 'Schedule';
+firstNewNav.style.color = 'green';
+
+let lastNewNav = document.createElement('a');
+lastNewNav.textContent = 'Kitty!';
+lastNewNav.style.color = 'green';
+
+nav.prepend(firstNewNav);
+nav.appendChild(lastNewNav);
 
 //CTA-TEXT header and button
 
