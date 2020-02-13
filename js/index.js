@@ -84,3 +84,21 @@ for (i=0; i< newContactInfo.length; i++) {
   newContactInfo[i].textContent = siteContent['contact'][contactPs[i]]
 }
 
+// Task Three
+
+let nav = document.querySelector('nav');
+
+let newLink1 = document.createElement('a');
+newLink1.setAttribute('src' , '#');
+newLink1.textContent = 'Link1';
+newLink1.style.color = 'green';
+nav.prepend(newLink1);
+
+let newLink2 = document.createElement('a');
+newLink2.setAttribute('src' , '#');
+newLink2.textContent = 'Link2';
+newLink2.style.color = 'green';
+nav.appendChild(newLink2);
+
+const newFooter = document.querySelector('footer p');
+newFooter.textContent = siteContent['footer']['copyright']
