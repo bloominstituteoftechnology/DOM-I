@@ -40,3 +40,69 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//nav
+const navBar = document.querySelector("nav");
+const navLinks = document.querySelectorAll("a");
+const navArray = Array.from(navLinks);
+
+navLinks.forEach((a, i) => a.textContent = siteContent.nav[`nav-item-${i + 1}`]);
+navLinks.forEach(element => element.style.color = 'green');
+
+const home = document.createElement('a');
+home.href = "index.html";
+home.textContent = "Home";
+home.style.color = "green";
+navBar.prepend(home);
+
+//back nav
+const blog = document.createElement('a');
+blog.href = "index.html";
+blog.textContent = "Blog";
+blog.style.color = "green";
+navBar.append(blog);
+
+//images
+let ctaImg = document.querySelector("#cta-img");
+ctaImg.setAttribute("src", siteContent.cta["img-src"]);
+let middleImg = document.querySelector("#middle-img");
+middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+//button
+let h1 = document.querySelector('h1');
+h1.textContent = siteContent.cta.h1;
+
+let button = document.querySelector(".cta .cta-text button");
+button.textContent = siteContent.cta.button;
+button.style.background = "yellow";
+button.style.color = "black";
+
+//titles
+let h4 = document.querySelectorAll("h4");
+h4[0].textContent = siteContent["main-content"]["features-h4"];
+h4[1].textContent = siteContent["main-content"]["about-h4"];
+h4[2].textContent = siteContent["main-content"]["services-h4"];
+h4[3].textContent = siteContent["main-content"]["product-h4"];
+h4[4].textContent = siteContent["main-content"]["vision-h4"];
+h4[5].textContent = siteContent["main-content"]["contact-h4"];
+
+//content
+let p = document.querySelectorAll("p")
+p[0].textContent = siteContent["main-content"]["features-content"];
+p[1].textContent = siteContent["main-content"]["about-content"];
+p[2].textContent = siteContent["main-content"]["services-content"];
+p[3].textContent = siteContent["main-content"]["product-content"];
+p[4].textContent = siteContent["main-content"]["vision-content"];
+
+//Contact
+
+p[5].textContent = siteContent.contact.address;
+p[6].textContent = siteContent.contact.phone;
+p[7].textContent = siteContent.contact.email;
+
+//Copyright
+
+p[8].textContent = siteContent.footer.copyright;
+
+
+
