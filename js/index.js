@@ -48,3 +48,39 @@ image1.setAttribute("src", siteContent['cta']['img-src'])
 const image2 = document.getElementById('middle-img');
 image2.setAttribute("src" , siteContent['main-content']['middle-img-src'])
 
+//Task Two:
+const newLinks = Array.from(document.querySelectorAll('a'));
+let linkName = 'nav-item-';
+let counter =1;
+newLinks.forEach(link => {
+  link.style.color = 'green';
+  link.textContent = siteContent['nav'][linkName + counter++]
+})
+
+const newH1 = document.querySelector('h1');
+newH1.textContent = siteContent['cta']['h1'];
+
+const newButton = document.querySelector('button');
+newButton.textContent = siteContent['cta']['button'];
+
+const h4s = ['features-h4' , 'about-h4', 'services-h4', 'product-h4' , 'vision-h4']
+const newH4 = Array.from(document.querySelectorAll('h4'));
+for (i=0; i<newH4.length; i++) {
+  newH4[i].textContent = siteContent['main-content'][h4s[i]]
+}
+
+const ps = ['features-content' , 'about-content', 'services-content', 'product-content' , 'vision-content'];
+const newP = Array.from(document.querySelectorAll('p'));
+for  (i=0; i<newH4.length; i++) {
+  newP[i].textContent = siteContent ['main-content'][ps[i]]
+}
+
+const newContactH4 = document.querySelector('.contact h4')
+newContactH4.textContent = siteContent ['contact'] ['contact-h4']
+
+const newContactInfo = Array.from(document.querySelectorAll('.contact p'));
+let contactPs = ['address' , 'email' , 'phone']
+for (i=0; i< newContactInfo.length; i++) {
+  newContactInfo[i].textContent = siteContent['contact'][contactPs[i]]
+}
+
