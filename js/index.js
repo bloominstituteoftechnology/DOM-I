@@ -61,4 +61,17 @@ navLinks[5].textContent = siteContent.nav['nav-item-6'];
 /* create a new variable to grab the entire nav tag so that you can prepend and append to it! */
 let nav = document.querySelector('nav');
 
+//CTA-TEXT header and button
+
+let ctaHead = document.querySelector('.cta-text h1');
+ctaHead.textContent = siteContent['cta']['h1'];
+
+let ctaButton = document.querySelector('button');
+ctaButton.textContent = siteContent['cta']['button'];
+ctaButton.style.backgroundColor = 'grey';
+
+//CTA IMAGE
+
+let ctaImg = document.getElementById('cta-img');
+ctaImg.setAttribute('src', siteContent['cta']['img-src']);
 
