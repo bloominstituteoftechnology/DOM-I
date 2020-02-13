@@ -40,3 +40,25 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// let newVariable = querySelector`/All`('selector')
+// newVariable.textContent = siteContent.property[childProperty]
+
+
+// Start
+
+let navLinks = document.getElementsByTagName('a');
+
+//using [index] to establish an order of items on the same tag. since otherwise identical there is no need to create a new variable fo reach one.
+
+navLinks[0].textContent = siteContent.nav['nav-item-1'];
+navLinks[1].textContent = siteContent.nav['nav-item-2'];
+navLinks[2].textContent = siteContent.nav['nav-item-3'];
+navLinks[3].textContent = siteContent.nav['nav-item-4'];
+navLinks[4].textContent = siteContent.nav['nav-item-5'];
+navLinks[5].textContent = siteContent.nav['nav-item-6'];
+
+/* create a new variable to grab the entire nav tag so that you can prepend and append to it! */
+let nav = document.querySelector('nav');
+
+
