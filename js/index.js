@@ -90,37 +90,54 @@ copy.item(6).textContent = siteContent["contact"]["phone"];
 copy.item(7).textContent = siteContent["contact"]["email"];
 copy.item(8).textContent = siteContent["footer"]["copyright"];
 
-let middleImg = document.getElementsByClassName('middle-img');
-// middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
-middleImg.src = siteContent["main-content"]["middle-img-src"];
-// console is logging correct info but cannot get the content to display 
 
-// STILL NEED MIDDLE IMG AND INTRO TEXT AND IMG
 
+let middleImg = document.getElementById('middle-img');
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+
+let introImg = document.getElementById('cta-img');
+introImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let introText = document.querySelector('h1');
+introText.textContent = siteContent["cta"]["h1"];
+
+let button = document.querySelector('button');
+button.textContent = siteContent["cta"]["button"];
 
 
 // ## Task 3: Add new content
 // * [ ] Change the color of the navigation text to be green.
-// * [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
+// * [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. 
+// You can call them whatever you want.
 // * [ ] Check your work by looking at the [original html](original.html) in the browser
 
 links.forEach( (element) => {
  element.style.color = "green";
 })
 
+let navParent = document.querySelector("nav");
 
+let newNavLinkLast = document.createElement('a');
+newNavLinkLast.textContent = 'newItemLast';
+newNavLinkLast.setAttribute('href', '#');
+
+navParent.appendChild(newNavLinkLast);
+
+let newNavLinkFirst = document.createElement('a');
+newNavLinkFirst.textContent = 'newItemFirst';
+newNavLinkFirst.setAttribute('href', '#');
+
+navParent.prepend(newNavLinkFirst);
 
 
 // ## Stretch Goals
 // * [ ] Update styles throughout the page as you see fit.  Study what happens when you updated the DOM using style in JavaScript.  
-// * [ ] Study tomorrow's lesson on events and try to integrate a button that can update content on the site with a click of a button.  You could build a similar data object with new values to help you test the click event.
-
-
-
-
-
+// * [ ] Study tomorrow's lesson on events and try to integrate a button that can update content on the site with a click of a button.  
+// You could build a similar data object with new values to help you test the click event.
 
 
 
 // ## Stretch Project: Digital Timer
-// This project is heavier on logic but employs some DOM manipulation to achieve it's goals.  Go check it out here: [stretch assignment](stretch-assignment) and see how far you can get. 
+// This project is heavier on logic but employs some DOM manipulation to achieve it's goals.  
+// Go check it out here: [stretch assignment](stretch-assignment) and see how far you can get. 
