@@ -75,3 +75,29 @@ ctaButton.style.backgroundColor = 'grey';
 let ctaImg = document.getElementById('cta-img');
 ctaImg.setAttribute('src', siteContent['cta']['img-src']);
 
+//Main Content
+let mainContent = document.querySelector('.main-content');
+
+  //first h4 and p tag
+  mainContent.getElementsByTagName('h4')[0].textContent = siteContent['main-content']['features-h4'];
+  mainContent.getElementsByTagName('p')[0].textContent = siteContent['main-content']['features-content'];
+
+  //Second h4 and p tag
+  mainContent.getElementsByTagName('h4')[1].textContent = siteContent['main-content']['about-h4'];
+  mainContent.getElementsByTagName('p')[1].textContent = siteContent['main-content']['about-content'];
+
+  //img Break
+  let mainImg = document.getElementById('middle-img');
+  mainImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+  //Third h4 and p tag
+  mainContent.getElementsByTagName('h4')[2].textContent = siteContent['main-content']['services-h4'];
+  mainContent.getElementsByTagName('p')[2].textContent = siteContent['main-content']['services-content'];
+
+  //Fourth h4 and p tag
+  mainContent.getElementsByTagName('h4')[3].textContent = siteContent['main-content']['product-h4'];
+  mainContent.getElementsByTagName('p')[3].textContent = siteContent['main-content']['product-content'];
+
+  //Fifth h4 and p tag
+  mainContent.getElementsByTagName('h4')[4].textContent = siteContent['main-content']['vision-h4'];
+  mainContent.getElementsByTagName('p')[4].textContent = siteContent['main-content']['vision-content'];
