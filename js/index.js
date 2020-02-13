@@ -101,3 +101,17 @@ let mainContent = document.querySelector('.main-content');
   //Fifth h4 and p tag
   mainContent.getElementsByTagName('h4')[4].textContent = siteContent['main-content']['vision-h4'];
   mainContent.getElementsByTagName('p')[4].textContent = siteContent['main-content']['vision-content'];
+
+//CONTACT
+
+let contact = document.querySelecto('.contact');
+
+  contact.getElementsByTagName('h4')[0].textContent = siteContent['contact']['contact-h4'];
+
+  contact.getElementsByTagName('p')[0].textContent = siteContent['contact']['address'];
+  contact.getElementsByTagName('p')[1].textContent = siteContent['contact']['phone'];
+  contact.getElementsByTagName('p')[2].textContent = siteContent['contact']['email'];
+
+//Footer
+let foot = document.querySelector('footer p');
+foot.textContent = siteContent.footer['copyright'];
