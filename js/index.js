@@ -76,7 +76,6 @@ logoImg.setAttribute('src', navData['img-src'])
 
 let splitWord = ctaData.h1.split(' ');
 let awesomeText = `<p>${splitWord[0]}</p><p>${splitWord[1]}</p><p>${splitWord[2]}</p>`
-console.log(awesomeText)
 ctaH1.innerHTML = awesomeText
 ctaButton.innerText = ctaData.button
 ctaImage.setAttribute('src', ctaData['img-src'])
