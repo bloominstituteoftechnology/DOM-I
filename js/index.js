@@ -102,3 +102,10 @@ nav.appendChild(newLink2);
 
 const newFooter = document.querySelector('footer p');
 newFooter.textContent = siteContent['footer']['copyright']
+
+// Stretch goal
+const button = document.querySelector('button').addEventListener('click', buttonClick);
+
+function buttonClick(){
+  newH1.textContent = 'Holy crap, my button works!'
+} 
