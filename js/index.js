@@ -64,7 +64,7 @@ ctaButton.innerText = siteContent.cta.button
 
 const newItem = document.createElement("a")
 newItem.textContent = "The Start"
-document.querySelector("nav").prepend(newItem)
+document.querySelector("nav").prepend(newItem)git 
 
 
 //images
