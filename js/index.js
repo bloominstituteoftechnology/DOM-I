@@ -132,3 +132,13 @@ contact.getElementsByTagName('p')[2].textContent = siteContent['contact']['email
 //Footer
 let foot = document.querySelector('footer p');
 foot.textContent = siteContent.footer['copyright'];
+
+//STRETCH GOAL STYLING
+
+// nav.style.backgroundColor = 'black';
+
+// mainContent.style.backgroundColor = 'black';
+// mainContent.style.color = '#7CEFFF';
+
+// foot.style.backgroundColor = 'black';
+// foot.style.color = '#E97CFF';
