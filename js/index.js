@@ -77,6 +77,19 @@ subheaders.item(2).textContent = siteContent["main-content"]["services-h4"];
 subheaders.item(3).textContent = siteContent["main-content"]["product-h4"];
 subheaders.item(4).textContent = siteContent["main-content"]["vision-h4"];
 
+let copy = document.querySelectorAll('p');
+copy.item(0).textContent = siteContent["main-content"]["features-content"];
+copy.item(1).textContent = siteContent["main-content"]["about-content"];
+copy.item(2).textContent = siteContent["main-content"]["services-content"];
+copy.item(3).textContent = siteContent["main-content"]["product-content"];
+copy.item(4).textContent = siteContent["main-content"]["vision-content"];
+
+let middleImg = document.getElementsByClassName('middle-img');
+// middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+middleImg.src = siteContent["main-content"]["middle-img-src"];
+// console is logging correct info but cannot get the content to display 
+
+
 
 
 
