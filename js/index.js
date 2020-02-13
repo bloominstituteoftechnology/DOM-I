@@ -41,6 +41,9 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+//Stretch goals
+document.body.style.backgroundColor = "#e3f6f5";
+
 //nav
 const navBar = document.querySelector("nav");
 const navLinks = document.querySelectorAll("a");
@@ -75,7 +78,7 @@ h1.textContent = siteContent.cta.h1;
 let button = document.querySelector(".cta .cta-text button");
 button.textContent = siteContent.cta.button;
 button.style.background = "yellow";
-button.style.color = "black";
+button.style.color = "red";
 
 //titles
 let h4 = document.querySelectorAll("h4");
@@ -85,6 +88,10 @@ h4[2].textContent = siteContent["main-content"]["services-h4"];
 h4[3].textContent = siteContent["main-content"]["product-h4"];
 h4[4].textContent = siteContent["main-content"]["vision-h4"];
 h4[5].textContent = siteContent["main-content"]["contact-h4"];
+
+//stretch goals
+h4.forEach(element => element.style.color = 'red');
+
 
 //content
 let p = document.querySelectorAll("p")
@@ -103,6 +110,9 @@ p[7].textContent = siteContent.contact.email;
 //Copyright
 
 p[8].textContent = siteContent.footer.copyright;
+
+//stretch goals
+p.forEach(element => element.style.color = '#65587f');
 
 
 
