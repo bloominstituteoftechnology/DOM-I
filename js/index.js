@@ -41,7 +41,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-// nav
+// nav items
 const navi = document.querySelectorAll('a');
 
 navi[0].textContent = siteContent['nav']['nav-item-1'];
@@ -66,7 +66,7 @@ newNav.textContent = 'PICS';
 navStuff.append(newNavi);
 navStuff.prepend(newNav)
 
- //cta 
+ //cta objects
 const heading = document.querySelector('h1');
 heading.textContent= siteContent['cta']['h1'];
 
@@ -78,7 +78,7 @@ const images = document.querySelectorAll('img');
 images[1].setAttribute('src', siteContent['cta']['img-src']);
 
 //main
-//top
+//top objects
 
 const titles = document.querySelectorAll('h4');
 const para = document.querySelectorAll('p');
@@ -101,11 +101,11 @@ para[2].textContent = siteContent['main-content']['services-content'];
 para[3].textContent = siteContent['main-content']['product-content'];
 para[4].textContent = siteContent['main-content']['vision-content'];
 
-//contact
+//contact objects
 titles[5].textContent = siteContent['contact']['contact-h4'];
 para[5].textContent = siteContent['contact']['address'];
 para[6].textContent = siteContent['contact']['phone'];
 para[7].textContent = siteContent['contact']['email'];
 
-//footer
+//footer 
 para[8].textContent = siteContent['footer']['copyright'];
