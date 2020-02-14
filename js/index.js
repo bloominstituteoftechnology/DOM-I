@@ -71,7 +71,7 @@ for (i=0; i<newH4.length; i++) {
 
 const ps = ['features-content' , 'about-content', 'services-content', 'product-content' , 'vision-content'];
 const newP = Array.from(document.querySelectorAll('p'));
-for  (i=0; i<newH4.length; i++) {
+for  (i=0; i<newP.length; i++) {
   newP[i].textContent = siteContent ['main-content'][ps[i]]
 }
 
