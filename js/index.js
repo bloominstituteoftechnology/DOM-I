@@ -40,3 +40,70 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const headerimg = document.getElementById("cta-img") 
+headerimg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+const midimg = document.getElementById("middle-img");
+midimg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+
+//nav
+const navLinks = document.querySelectorAll("a");
+navLinks[0].textContent = siteContent["nav"]["nav-item-1"];
+navLinks[1].textContent = siteContent["nav"]["nav-item-2"];
+navLinks[2].textContent = siteContent["nav"]["nav-item-3"];
+navLinks[3].textContent = siteContent["nav"]["nav-item-4"];
+navLinks[4].textContent = siteContent["nav"]["nav-item-5"];
+navLinks[5].textContent = siteContent["nav"]["nav-item-6"];
+
+
+const ctaheader = document.querySelector("h1");
+ctaheader.textContent = "DOM \r\n Is \r\n Awesome";
+ctaheader.setAttribute('style', 'white-space: pre;');
+
+const ctabutton = document.querySelector("button");
+ctabutton.textContent = siteContent["cta"]["button"];
+
+
+const contentHeader = document.querySelectorAll("h4");
+contentHeader[0].textContent = siteContent["main-content"]["features-h4"];
+contentHeader[1].textContent = siteContent["main-content"]["about-h4"];
+contentHeader[2].textContent = siteContent["main-content"]["services-h4"];
+contentHeader[3].textContent = siteContent["main-content"]["product-h4"];
+contentHeader[4].textContent = siteContent["main-content"]["vision-h4"];
+
+const contentP = document.querySelectorAll("p");
+contentP[0].textContent = siteContent["main-content"]["features-content"];
+contentP[1].textContent = siteContent["main-content"]["about-content"];
+contentP[2].textContent = siteContent["main-content"]["services-content"];
+contentP[3].textContent = siteContent["main-content"]["product-content"];
+contentP[4].textContent = siteContent["main-content"]["vision-content"];
+
+//contact
+const contactHeader = document.querySelectorAll("h4");
+contactHeader[5].textContent = siteContent["contact"]["contact-h4"];
+
+const contacttxt = document.querySelectorAll("p");
+contacttxt[5].textContent = "123 Way 456 Street \r\n Somewhere, USA";
+contacttxt[5].setAttribute('style', 'white-space: pre;');
+contacttxt[6].textContent = siteContent["contact"]["phone"];
+contacttxt[7].textContent = siteContent["contact"]["email"];
+
+//footer
+const footertxt = document.querySelector("footer p");
+footertxt.textContent = siteContent["footer"]["copyright"];
+
+navLinks.forEach(function(currentVal){
+currentVal.style.color = "grey";
+});
+
+let nav = document.querySelector("nav");
+const newEnd = document.createElement("a");
+newEnd.textContent = "End";
+nav.appendChild(newEnd);
+
+const newStart = document.createElement("a");
+newStart.textContent = "Start";
+nav.prepend(newStart);
+
