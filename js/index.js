@@ -124,3 +124,12 @@ let myFooter = document.querySelector("footer p");
 
 myFooter.setAttribute("footer", "copyright");
 myFooter.textContent = siteContent["footer"]["copyright"];
+
+// Append and Prepend
+let headerEl = document.querySelector('header');
+let newP = document.createElement('p');
+newP.textContent = 'Excellent';
+newP.style.color = 'green';
+newP.style.alignContent = 'center';
+headerEl.append('newP');
+headerEl.prepend('newP');
