@@ -76,11 +76,11 @@ const images = document.querySelectorAll('img');
 images[1].setAttribute('src', siteContent['cta']['img-src']);
 
 //middle
-const titles = document.querySelectorAll('h4');
+const headers = document.querySelectorAll('h4');
 const paragraphs = document.querySelectorAll('p');
 
-titles[0].textContent = siteContent['main-content']['features-h4'];
-titles[1].textContent = siteContent['main-content']['about-h4'];
+headers[0].textContent = siteContent['main-content']['features-h4'];
+headers[1].textContent = siteContent['main-content']['about-h4'];
 
 paragraphs[0].textContent = siteContent['main-content']['features-content'];
 paragraphs[1].textContent = siteContent['main-content']['about-content'];
@@ -89,16 +89,16 @@ paragraphs[1].textContent = siteContent['main-content']['about-content'];
 images[2].setAttribute('src', siteContent['main-content']['middle-img-src']);
 
 //bottom content
-titles[2].textContent = siteContent['main-content']['services-h4'];
-titles[3].textContent = siteContent['main-content']['product-h4'];
-titles[4].textContent = siteContent['main-content']['vision-h4'];
+headers[2].textContent = siteContent['main-content']['services-h4'];
+headers[3].textContent = siteContent['main-content']['product-h4'];
+headers[4].textContent = siteContent['main-content']['vision-h4'];
 
 paragraphs[2].textContent = siteContent['main-content']['services-content'];
 paragraphs[3].textContent = siteContent['main-content']['product-content'];
 paragraphs[4].textContent = siteContent['main-content']['vision-content'];
 
 //contact objects
-titles[5].textContent = siteContent['contact']['contact-h4'];
+headers[5].textContent = siteContent['contact']['contact-h4'];
 paragraphs[5].textContent = siteContent['contact']['address'];
 paragraphs[6].textContent = siteContent['contact']['phone'];
 paragraphs[7].textContent = siteContent['contact']['email'];
