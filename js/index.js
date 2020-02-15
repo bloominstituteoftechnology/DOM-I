@@ -41,53 +41,49 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-// nav items
-const navi = document.querySelectorAll('a');
+// navigation items**********
+const navbar = document.querySelectorAll('a');
 
-navi[0].textContent = siteContent['nav']['nav-item-1'];
-navi[1].textContent = siteContent['nav']['nav-item-2'];
-navi[2].textContent = siteContent['nav']['nav-item-3'];
-navi[3].textContent = siteContent['nav']['nav-item-4'];
-navi[4].textContent = siteContent['nav']['nav-item-5'];
-navi[5].textContent = siteContent['nav']['nav-item-6'];
+navbar[0].textContent = siteContent['nav']['nav-item-1'];
+navbar[1].textContent = siteContent['nav']['nav-item-2'];
+navbar[2].textContent = siteContent['nav']['nav-item-3'];
+navbar[3].textContent = siteContent['nav']['nav-item-4'];
+navbar[4].textContent = siteContent['nav']['nav-item-5'];
+navbar[5].textContent = siteContent['nav']['nav-item-6'];
 
-navi.forEach( text => {
+navbar.forEach( text => {
   text.style.color='green';
 })
 
-const navStuff = document.querySelector('nav');
+const navBar = document.querySelector('nav');
+const newNav1 = document.createElement('a');
+const newNav2 = document.createElement('a');
 
-const newNavi = document.createElement('a');
-const newNav = document.createElement('a');
-
-newNavi.textContent = 'BLOG';
-newNav.textContent = 'PICS';
-
-navStuff.append(newNavi);
-navStuff.prepend(newNav)
+newNav1.textContent = 'BLOG';
+newNav2.textContent = 'PICS';
+navBar.append(newNav1);
+navBar.prepend(newNav2);
+// End Nav Items ************
 
  //cta objects
-const heading = document.querySelector('h1');
-heading.textContent= siteContent['cta']['h1'];
+const header = document.querySelector('h1');
+header.textContent= siteContent['cta']['h1'];
 
 const button = document.querySelector('button');
 button.textContent = siteContent['cta']['button'];
 
 const images = document.querySelectorAll('img');
-
 images[1].setAttribute('src', siteContent['cta']['img-src']);
 
-//main
-//top objects
-
+//middle
 const titles = document.querySelectorAll('h4');
-const para = document.querySelectorAll('p');
+const paragraphs = document.querySelectorAll('p');
 
 titles[0].textContent = siteContent['main-content']['features-h4'];
 titles[1].textContent = siteContent['main-content']['about-h4'];
 
-para[0].textContent = siteContent['main-content']['features-content'];
-para[1].textContent = siteContent['main-content']['about-content'];
+paragraphs[0].textContent = siteContent['main-content']['features-content'];
+paragraphs[1].textContent = siteContent['main-content']['about-content'];
 
 
 images[2].setAttribute('src', siteContent['main-content']['middle-img-src']);
@@ -97,15 +93,15 @@ titles[2].textContent = siteContent['main-content']['services-h4'];
 titles[3].textContent = siteContent['main-content']['product-h4'];
 titles[4].textContent = siteContent['main-content']['vision-h4'];
 
-para[2].textContent = siteContent['main-content']['services-content'];
-para[3].textContent = siteContent['main-content']['product-content'];
-para[4].textContent = siteContent['main-content']['vision-content'];
+paragraphs[2].textContent = siteContent['main-content']['services-content'];
+paragraphs[3].textContent = siteContent['main-content']['product-content'];
+paragraphs[4].textContent = siteContent['main-content']['vision-content'];
 
 //contact objects
 titles[5].textContent = siteContent['contact']['contact-h4'];
-para[5].textContent = siteContent['contact']['address'];
-para[6].textContent = siteContent['contact']['phone'];
-para[7].textContent = siteContent['contact']['email'];
+paragraphs[5].textContent = siteContent['contact']['address'];
+paragraphs[6].textContent = siteContent['contact']['phone'];
+paragraphs[7].textContent = siteContent['contact']['email'];
 
 //footer 
-para[8].textContent = siteContent['footer']['copyright'];
+paragraphs[8].textContent = siteContent['footer']['copyright'];
