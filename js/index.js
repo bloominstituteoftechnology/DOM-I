@@ -46,25 +46,31 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
 // Start
-
-let navLinks = document.getElementsByTagName('a');
+//              vv converting the nodelist into an array.
+let navLinks = Array.from(document.getElementsByTagName('a'));
 
 //using [index] to establish an order of items on the same tag. since otherwise identical there is no need to create a new variable fo reach one.
 
-navLinks[0].textContent = siteContent.nav['nav-item-1'];
-navLinks[1].textContent = siteContent.nav['nav-item-2'];
-navLinks[2].textContent = siteContent.nav['nav-item-3'];
-navLinks[3].textContent = siteContent.nav['nav-item-4'];
-navLinks[4].textContent = siteContent.nav['nav-item-5'];
-navLinks[5].textContent = siteContent.nav['nav-item-6'];
+// navLinks[0].textContent = siteContent.nav['nav-item-1'];
+// navLinks[1].textContent = siteContent.nav['nav-item-2'];
+// navLinks[2].textContent = siteContent.nav['nav-item-3'];
+// navLinks[3].textContent = siteContent.nav['nav-item-4'];
+// navLinks[4].textContent = siteContent.nav['nav-item-5'];
+// navLinks[5].textContent = siteContent.nav['nav-item-6'];
+// instead of AAALLLL this code do this vvvv
+
+navLinks.forEach((link, i ) => link.textContent = siteContent.nav[`nav-item-${i+1}`]);
+
 
 /* create a new variable to grab the entire nav tag so that you can prepend and append to it! */
 let nav = document.querySelector('nav');
 
 //TASK 3
-for (let link of navLinks) {
-  link.style.color = 'green';
-};
+// for (let link of navLinks) {
+//   link.style.color = 'green';
+// };
+//either way is fine but be consistent and especially when working with groups
+navLinks.forEach((link) => link.style.color = 'green');
 let firstNewNav = document.createElement('a');
 firstNewNav.textContent = 'Schedule';
 firstNewNav.style.color = 'green';
@@ -135,10 +141,10 @@ foot.textContent = siteContent.footer['copyright'];
 
 //STRETCH GOAL STYLING
 
-// nav.style.backgroundColor = 'black';
+nav.style.backgroundColor = 'black';
 
-// mainContent.style.backgroundColor = 'black';
-// mainContent.style.color = '#7CEFFF';
+mainContent.style.backgroundColor = 'black';
+mainContent.style.color = '#7CEFFF';
 
-// foot.style.backgroundColor = 'black';
-// foot.style.color = '#E97CFF';
+foot.style.backgroundColor = 'black';
+foot.style.color = '#E97CFF';
