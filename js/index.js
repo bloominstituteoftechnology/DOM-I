@@ -37,14 +37,21 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
+// // Example: Update the img src for the logo
 let logo = document.getElementById('logo-img');
 logo.setAttribute('src', siteContent['nav']['img-src'])
 
 //*******************************KIM.BUCK*******************************2020
-
 //nav
 Array.from(document.getElementsByTagName('a')).forEach((a,index)=>{
   a.innerText = siteContent['nav'][`nav-item-${index+1}`];
 });
 
+// cta-text
+document.querySelector(".cta-text h1").innerText = siteContent["cta"]["h1"];
+
+//cta-button
+document.querySelector('.cta-text button').innerText = siteContent["cta"]["button"];
+
+//cta-image
+document.getElementById("cta-img").setAttribute("src", siteContent["cta"]["img-src"]);
