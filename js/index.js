@@ -48,10 +48,24 @@ Array.from(document.getElementsByTagName('a')).forEach((a,index)=>{
 });
 
 // cta-text
-document.querySelector(".cta-text h1").innerText = siteContent["cta"]["h1"];
+document.querySelector('.cta-text h1').innerText = siteContent["cta"]["h1"];
 
 //cta-button
 document.querySelector('.cta-text button').innerText = siteContent["cta"]["button"];
 
 //cta-image
-document.getElementById("cta-img").setAttribute("src", siteContent["cta"]["img-src"]);
+document.getElementById('cta-img').setAttribute("src", siteContent["cta"]["img-src"]);
+
+// main-content
+const sections = ['features','about','services','product','vision'];
+Array.from(document.getElementsByClassName('text-content')).forEach((text,index)=>{
+  const h4 = text.querySelector('h4');
+  const p =text.querySelector('p');
+  const section = sections[index];
+  h4.innerText = siteContent['main-content'][`${section}-h4`];
+  p.innerText = siteContent['main-content'][`${section}-content`];
+})
+
+//contact
+document.getElementsByClassName()
+
