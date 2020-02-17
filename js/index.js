@@ -44,6 +44,8 @@ logo.setAttribute('src', siteContent['nav']['img-src'])
 //*******************************KIM.BUCK*******************************2020
 //nav
 Array.from(document.getElementsByTagName('a')).forEach((a,index)=>{
+  //add color
+  a.style.color = "green";
   a.innerText = siteContent['nav'][`nav-item-${index+1}`];
 });
 
