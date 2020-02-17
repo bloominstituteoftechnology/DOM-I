@@ -45,7 +45,7 @@ logo.setAttribute('src', siteContent['nav']['img-src'])
 //nav
 Array.from(document.getElementsByTagName('a')).forEach((a,index)=>{
   //add color
-  a.style.color = "green";
+  a.style.color = 'green';
   a.innerText = siteContent['nav'][`nav-item-${index+1}`];
 });
 
@@ -66,13 +66,13 @@ kim.style.textShadow = 'black 1px 1px 2px';
 nav.appendChild(kim);
 
 // cta-text
-document.querySelector('.cta-text h1').innerText = siteContent["cta"]["h1"];
+document.querySelector('.cta-text h1').innerText = siteContent['cta']['h1'];
 
 //cta-button
-document.querySelector('.cta-text button').innerText = siteContent["cta"]["button"];
+document.querySelector('.cta-text button').innerText = siteContent['cta']['button'];
 
 //cta-image
-document.getElementById('cta-img').setAttribute("src", siteContent["cta"]["img-src"]);
+document.getElementById('cta-img').setAttribute('src', siteContent['cta']['img-src']);
 
 // main-content
 const sections = ['features','about','services','product','vision'];
@@ -100,3 +100,8 @@ Array.from(cont.querySelectorAll('p')).forEach((p,index)=>{
 //footer
 document.querySelector('footer p').innerText = siteContent['footer']['copyright'];
 
+//stretch - style
+document.body.style.background = 'linear-gradient(to right, #B8DEF2, white)';
+document.getElementsByTagName('button')[0].style.borderRadius ='5px';
+document.getElementsByTagName('button')[0].style.backgroundColor ='#0874C9';
+document.getElementsByTagName('button')[0].style.color ='white';
