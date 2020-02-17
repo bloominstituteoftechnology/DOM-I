@@ -9,6 +9,12 @@ const getTimeParts = elapseTime => {
     elapseTime -= msHundreds * 100;
 
     const msTens = Math.floor(elapseTime /10);
-    
+
     return [secondTens,second,msHundreds,msTens];
 };
+
+let timePassed = 0;
+const interval = setInterval(()=>{
+    timePassed += 10;
+    const [secondTens,second,msHundreds,msTens] = getTimeParts(timePassed)
+}, 10)
