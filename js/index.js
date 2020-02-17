@@ -49,6 +49,22 @@ Array.from(document.getElementsByTagName('a')).forEach((a,index)=>{
   a.innerText = siteContent['nav'][`nav-item-${index+1}`];
 });
 
+//nav add 2 elements
+//prepend
+const home = document.createElement('a');
+home.href = '#';
+home.innerText = 'Home';
+home.style.color = 'red';
+const nav = document.querySelector('header nav');
+nav.prepend(home);
+//appendChild
+const kim = document.createElement('a');
+kim.href = '#';
+kim.innerText = 'Kim';
+kim.style.color = 'yellow';
+kim.style.textShadow = 'black 1px 1px 2px';
+nav.appendChild(kim);
+
 // cta-text
 document.querySelector('.cta-text h1').innerText = siteContent["cta"]["h1"];
 
