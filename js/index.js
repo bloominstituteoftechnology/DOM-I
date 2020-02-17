@@ -66,6 +66,19 @@ Array.from(document.getElementsByClassName('text-content')).forEach((text,index)
   p.innerText = siteContent['main-content'][`${section}-content`];
 })
 
+//middle-img
+document.getElementsByClassName('middle-img')[0].setAttribute('src', siteContent['main-content']['middle-img-src'])
+
 //contact
-document.getElementsByClassName()
+const cont = document.getElementsByClassName('contact')[0];
+cont.querySelector('h4').innerText = siteContent['contact']['contact-h4'];
+
+const contactFields = ['address','phone','email'];
+Array.from(cont.querySelectorAll('p')).forEach((p,index)=>{
+  const key = contactFields[index];
+  p.innerText = siteContent['contact'][key];
+})
+
+//footer
+document.querySelector('footer p').innerText = siteContent['footer']['copyright'];
 
