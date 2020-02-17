@@ -12,9 +12,23 @@ const getTimeParts = elapseTime => {
 
     return [secondTens,second,msHundreds,msTens];
 };
+const secondTensEl = document.getElementById('secondTens');
+const secondOnesEl = document.getElementById('secondOnes');
+const msHundsEl = document.getElementById('msHundreds');
+const msTensEl = document.getElementById('msTens');
 
 let timePassed = 0;
 const interval = setInterval(()=>{
     timePassed += 10;
     const [secondTens,second,msHundreds,msTens] = getTimeParts(timePassed)
+    secondTensEl.textContent = secondTens;
+    secondOnesEl.textContent = second;
+    msHundsEl.textContent = msHundreds;
+    msTensEl.textContent = msTens;
+    if (timePassed >= 10000){
+        Array.from(document.getElementsByClassName('digit')).forEach((d)=>{
+            d.style.color = "red";
+        })
+        clearInterval(interval);
+    }
 }, 10)

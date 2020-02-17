@@ -90,6 +90,7 @@ document.getElementsByClassName('middle-img')[0].setAttribute('src', siteContent
 //contact
 const cont = document.getElementsByClassName('contact')[0];
 cont.querySelector('h4').innerText = siteContent['contact']['contact-h4'];
+cont.querySelector('p').style.width = '110px';
 
 const contactFields = ['address','phone','email'];
 Array.from(cont.querySelectorAll('p')).forEach((p,index)=>{
@@ -103,5 +104,5 @@ document.querySelector('footer p').innerText = siteContent['footer']['copyright'
 //stretch - style
 document.body.style.background = 'linear-gradient(to right, #B8DEF2, white)';
 document.getElementsByTagName('button')[0].style.borderRadius ='5px';
-document.getElementsByTagName('button')[0].style.backgroundColor ='#0874C9';
-document.getElementsByTagName('button')[0].style.color ='white';
+// document.getElementsByTagName('button')[0].style.backgroundColor ='#0874C9';
+// document.getElementsByTagName('button')[0].style.color ='white';
