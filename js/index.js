@@ -58,6 +58,14 @@ navItems[3].textContent = "Features";
 navItems[4].textContent = "About";
 navItems[5].textContent = "Contact";
 
+const link = document.getElementsByTagName("a")
+link[0].style.color = 'green';
+link[1].style.color = 'green';
+link[2].style.color = 'green';
+link[3].style.color = 'green';
+link[4].style.color = 'green';
+link[5].style.color = 'green';
+
 const getStarted = document.querySelector("button");
 
 getStarted.textContent = "Get Started";
