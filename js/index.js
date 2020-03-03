@@ -14,7 +14,7 @@ const siteContent = {
     "img-src": "img/header-img.png"
   },
   "main-content": {
-    "features-h4":"Features",
+    "features-h4":"Feature",
     "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "about-h4":"About",
     "about-content": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
@@ -41,14 +41,15 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-const features = document.querySelector('.features-h4');
+const navItem = document.querySelector('a');
 
-console.log(features);
+console.log(navItem);
 
-const navItems = document.querySelectorAll('.nav-item');
+const text = document.querySelectorAll('h4');
 
-console.log(navItems);
+console.log(text);
 
-let imgId = document.getElementById("img-id").src="../img/logo.png";
+const navItems = document.querySelectorAll('a');
 
-console.log(imgId)
+
+
