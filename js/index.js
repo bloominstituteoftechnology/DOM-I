@@ -48,3 +48,7 @@ console.log(features);
 const navItems = document.querySelectorAll('.nav-item');
 
 console.log(navItems);
+
+let imgId = document.getElementById("img-id").src="../img/logo.png";
+
+console.log(imgId)
