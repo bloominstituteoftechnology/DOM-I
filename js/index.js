@@ -66,6 +66,26 @@ link[3].style.color = 'green';
 link[4].style.color = 'green';
 link[5].style.color = 'green';
 
+// PREPREND
+
+let navBarSocial = document.querySelector('nav')
+navBarChild = document.createElement('a');
+navBarChild.textContent = "Social Media"
+
+navBarSocial.prepend(navBarChild);
+
+navBarChild.style.color = "green";
+
+// APPEND CHILD
+
+navBarChild2 = document.createElement('a');
+navBarChild2.textContent = "Upcoming Events"
+
+navBarSocial.prepend(navBarChild);
+navBarSocial.appendChild(navBarChild2);
+
+navBarChild2.style.color = "green";
+
 const getStarted = document.querySelector("button");
 
 getStarted.textContent = "Get Started";
