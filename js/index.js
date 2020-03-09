@@ -44,6 +44,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 // Selectors - Task 1
 const nav = document.querySelectorAll('nav a');
 const cta = document.querySelectorAll('.cta');
+const title = document.querySelector('h1');
 const header_img = document.getElementById('cta-img');
 const main_content = document.querySelectorAll('.main-content');
 const middle_img = document.getElementById('middle-img');
@@ -52,13 +53,21 @@ const footer = document.querySelectorAll('footer');
 
 // Task 2: Update the HTML with the JSON data
 
+//Navigation menu
 nav.forEach(element => {
-  console.log(element);
-  nav[0].textContent = 'Services';
-  nav[1].textContent = 'Product';
-  nav[2].textContent = 'Vision';
-  nav[3].textContent = 'Features';
-  nav[4].textContent = 'About';
-  nav[5].textContent = 'Contact';
+  nav[0].textContent = siteContent.nav["nav-item-1"];
+  nav[1].textContent = siteContent.nav["nav-item-2"];
+  nav[2].textContent = siteContent.nav["nav-item-3"];
+  nav[3].textContent = siteContent.nav["nav-item-4"];
+  nav[4].textContent = siteContent.nav["nav-item-5"];
+  nav[5].textContent = siteContent.nav["nav-item-6"];
 
 });
+
+//CTA Section
+// header_img.setAttribute('src', siteContent['.cta']['img/header-img'])
+// header_img.src = 'img/header-img.png';
+// cta.forEach(element => {
+//   cta.textContent =
+// })
+title.textContent = siteContent.cta.h1
