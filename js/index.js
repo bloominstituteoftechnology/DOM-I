@@ -67,7 +67,6 @@ topContentPArray[0].textContent = siteContent["main-content"]["features-content"
 topContentPArray[1].textContent = siteContent["main-content"]["about-content"];
 let midImg = document.getElementById("middle-img");
 midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
-
 let bottomContentH4 = document.querySelectorAll(".bottom-content .text-content h4");
 let bottomContentH4Array = Array.from(bottomContentH4);
 bottomContentH4Array[0].textContent = siteContent["main-content"]["services-h4"];
@@ -78,6 +77,15 @@ let bottomContentPArray = Array.from(bottomContentP);
 bottomContentPArray[0].textContent = siteContent["main-content"]["services-content"];
 bottomContentPArray[1].textContent = siteContent["main-content"]["product-content"];
 bottomContentPArray[2].textContent = siteContent["main-content"]["vision-content"];
+//contact section
+let contactH4 = document.querySelector(".contact h4");
+ contactH4.textContent = siteContent["contact"]["contact-h4"];
+let contactP = document.querySelectorAll(".contact p");
+let contactPArray = Array.from(contactP);
+contactP[0].textContent = siteContent["contact"]["address"];
+contactP[1].textContent = siteContent["contact"]["phone"];
+contactP[2].textContent = siteContent["contact"]["email"];
+
 
 
 
