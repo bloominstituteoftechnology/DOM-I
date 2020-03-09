@@ -41,10 +41,24 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-const nav = document.querySelectorAll('.nav a');
+// Selectors - Task 1
+const nav = document.querySelectorAll('nav a');
 const cta = document.querySelectorAll('.cta');
 const header_img = document.getElementById('cta-img');
 const main_content = document.querySelectorAll('.main-content');
 const middle_img = document.getElementById('middle-img');
 const contact = document.querySelectorAll('.contact');
 const footer = document.querySelectorAll('footer');
+
+// Task 2: Update the HTML with the JSON data
+
+nav.forEach(element => {
+  console.log(element);
+  nav[0].textContent = 'Services';
+  nav[1].textContent = 'Product';
+  nav[2].textContent = 'Vision';
+  nav[3].textContent = 'Features';
+  nav[4].textContent = 'About';
+  nav[5].textContent = 'Contact';
+
+});
