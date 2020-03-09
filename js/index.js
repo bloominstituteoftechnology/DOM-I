@@ -47,6 +47,12 @@ headerImg.setAttribute("src", siteContent["cta"]["img-src"]);
 const middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
+let newA2 = document.createElement("a");
+newA2.textContent = "Donkey";
+let navParent = document.querySelector("nav");
+navParent.appendChild(newA2);
+
+
 const navBar = document.querySelectorAll("nav a")
 
 navBar[0].innerText = siteContent.nav["nav-item-1"];
@@ -116,3 +122,4 @@ footerText.textContent = siteContent.footer.copyright;
 
 const coloringNav = document.querySelectorAll("a");
 coloringNav.forEach(coloring => coloring.style.color = "green");
+
