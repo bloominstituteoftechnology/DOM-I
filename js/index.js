@@ -67,10 +67,28 @@ nav.forEach(element => {
   nav[5].textContent = siteContent.nav["nav-item-6"];
 
 });
-
+// change nav text to green
 nav.forEach(element => {
   element.style.color = 'green'
 });
+
+const newNav = document.querySelector('nav')
+
+// Create 2 new elements
+const newLink1 = document.createElement('a')
+newLink1.textContent = 'Portfolio';
+newLink1.href = '#';
+newLink1.style.color = 'green';
+const newLink2 = document.createElement('a')
+newLink2.textContent = 'Portfolio';
+newLink2.href = '#';
+newLink2.style.color = 'green';
+
+// .appendChild() + Prepend()
+newNav.appendChild(newLink1);
+newNav.prepend(newLink2)
+
+
 
 //CTA Section
 header_img.src = siteContent.cta["img-src"]
