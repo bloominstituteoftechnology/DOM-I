@@ -46,9 +46,12 @@ const nav = document.querySelectorAll('nav a');
 const cta = document.querySelectorAll('.cta');
 const title = document.querySelector('h1');
 const header_img = document.getElementById('cta-img');
-const main_content = document.querySelectorAll('.main-content');
+const ctaButton = document.querySelector('button');
+const mainContentH4 = document.querySelectorAll('.main-content h4');
+const mainContentP = document.querySelectorAll('.main-content p');
 const middle_img = document.getElementById('middle-img');
-const contact = document.querySelectorAll('.contact');
+const contactHeader = document.querySelector('.contact h4');
+const contactP = document.querySelectorAll('.contact p');
 const footer = document.querySelectorAll('footer');
 
 // Task 2: Update the HTML with the JSON data
@@ -65,9 +68,35 @@ nav.forEach(element => {
 });
 
 //CTA Section
-// header_img.setAttribute('src', siteContent['.cta']['img/header-img'])
-// header_img.src = 'img/header-img.png';
-// cta.forEach(element => {
-//   cta.textContent =
-// })
-title.textContent = siteContent.cta.h1
+header_img.src = siteContent.cta["img-src"]
+title.textContent = siteContent.cta.h1;
+ctaButton.textContent = siteContent.cta.button;
+
+// Main Content
+
+
+mainContentH4.forEach(element => {
+  mainContentH4[0].textContent = siteContent["main-content"]["features-h4"];
+  mainContentH4[1].textContent = siteContent["main-content"]["about-h4"];
+  mainContentH4[2].textContent = siteContent["main-content"]["services-h4"];
+  mainContentH4[3].textContent = siteContent["main-content"]["product-h4"];
+  mainContentH4[4].textContent = siteContent["main-content"]["vision-h4"];
+  // mainContentH4[5].textContent = siteContent["main-content"]["contact-h4"];
+});
+middle_img.src = 'img/mid-page-accent.jpg'
+
+mainContentH4.forEach(element => {
+  mainContentP[0].textContent = siteContent["main-content"]["features-content"];
+  mainContentP[1].textContent = siteContent["main-content"]["about-content"];
+  mainContentP[2].textContent = siteContent["main-content"]["services-content"];
+  mainContentP[3].textContent = siteContent["main-content"]["product-content"];
+  mainContentP[4].textContent = siteContent["main-content"]["vision-content"];
+  // mainContentH4[5].textContent = siteContent["main-content"]["contact-h4"];
+});
+contactHeader.textContent = siteContent.contact["contact-h4"];
+contactP.forEach(element => {
+  contactP[0].textContent = siteContent.contact.address;
+  contactP[1].textContent = siteContent.contact.phone;
+  contactP[2].textContent = siteContent.contact.email;
+
+})
