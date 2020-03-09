@@ -52,7 +52,8 @@ const mainContentP = document.querySelectorAll('.main-content p');
 const middle_img = document.getElementById('middle-img');
 const contactHeader = document.querySelector('.contact h4');
 const contactP = document.querySelectorAll('.contact p');
-const footer = document.querySelectorAll('footer');
+const footer = document.querySelector('footer');
+
 
 // Task 2: Update the HTML with the JSON data
 
@@ -65,6 +66,10 @@ nav.forEach(element => {
   nav[4].textContent = siteContent.nav["nav-item-5"];
   nav[5].textContent = siteContent.nav["nav-item-6"];
 
+});
+
+nav.forEach(element => {
+  element.style.color = 'green'
 });
 
 //CTA Section
@@ -81,7 +86,6 @@ mainContentH4.forEach(element => {
   mainContentH4[2].textContent = siteContent["main-content"]["services-h4"];
   mainContentH4[3].textContent = siteContent["main-content"]["product-h4"];
   mainContentH4[4].textContent = siteContent["main-content"]["vision-h4"];
-  // mainContentH4[5].textContent = siteContent["main-content"]["contact-h4"];
 });
 middle_img.src = 'img/mid-page-accent.jpg'
 
@@ -91,12 +95,16 @@ mainContentH4.forEach(element => {
   mainContentP[2].textContent = siteContent["main-content"]["services-content"];
   mainContentP[3].textContent = siteContent["main-content"]["product-content"];
   mainContentP[4].textContent = siteContent["main-content"]["vision-content"];
-  // mainContentH4[5].textContent = siteContent["main-content"]["contact-h4"];
 });
+
+//Contact
 contactHeader.textContent = siteContent.contact["contact-h4"];
 contactP.forEach(element => {
   contactP[0].textContent = siteContent.contact.address;
   contactP[1].textContent = siteContent.contact.phone;
   contactP[2].textContent = siteContent.contact.email;
 
-})
+});
+
+//footer
+footer.textContent = siteContent.footer.copyright
