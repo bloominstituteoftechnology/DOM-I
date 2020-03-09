@@ -98,7 +98,6 @@ contactP[1].textContent = siteContent["contact"]["phone"];
 contactP[2].textContent = siteContent["contact"]["email"];
 let footer = document.querySelector("footer p");
 footer.textContent = siteContent["footer"]["copyright"];
-let navClass 
 
 
 
