@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": `DOM Is Awesome`,
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -49,6 +49,17 @@ navArray[2].textContent = siteContent["nav"]["nav-item-3"];
 navArray[3].textContent = siteContent["nav"]["nav-item-4"];
 navArray[4].textContent = siteContent["nav"]["nav-item-5"];
 navArray[5].textContent = siteContent["nav"]["nav-item-6"];
+navArray.forEach(element => element.style.color = `green`);
+let a = document.createElement('a');
+let b = document.createElement('a');
+a.textContent = "Home";
+b.textContent = "Gallery";
+a.style.paddingRight = "30%";
+b.style.paddingLeft = "30%";
+a.style.color = "green";
+b.style.color = "green";
+navArray[0].prepend(a);
+navArray[5].appendChild(b);
 //CTA section
 let ctaH1 = document.querySelector("section.cta h1");
 ctaH1.textContent = siteContent["cta"]["h1"];
@@ -87,6 +98,7 @@ contactP[1].textContent = siteContent["contact"]["phone"];
 contactP[2].textContent = siteContent["contact"]["email"];
 let footer = document.querySelector("footer p");
 footer.textContent = siteContent["footer"]["copyright"];
+let navClass 
 
 
 
