@@ -48,4 +48,12 @@ navArray[2].textContent = siteContent["nav"]["nav-item-3"];
 navArray[3].textContent = siteContent["nav"]["nav-item-4"];
 navArray[4].textContent = siteContent["nav"]["nav-item-5"];
 navArray[5].textContent = siteContent["nav"]["nav-item-6"];
+let ctaH1 = document.querySelector("section.cta h1");
+ctaH1.textContent = siteContent["cta"]["h1"];
+let ctaButton = document.querySelector("section.cta button");
+ctaButton.textContent = siteContent["cta"]["button"];
+let logo2 = document.getElementById("cta-img");
+logo2.setAttribute('src', siteContent["cta"]["img-src"]);
+
+
 
