@@ -69,7 +69,7 @@ nav.forEach(element => {
 });
 // change nav text to green
 nav.forEach(element => {
-  element.style.color = 'green'
+  element.style.color = 'green';
 });
 
 const newNav = document.querySelector('nav')
@@ -94,6 +94,7 @@ newNav.prepend(newLink2)
 header_img.src = siteContent.cta["img-src"]
 title.textContent = siteContent.cta.h1;
 ctaButton.textContent = siteContent.cta.button;
+ctaButton.style.color = 'blue'
 
 // Main Content
 
@@ -126,3 +127,18 @@ contactP.forEach(element => {
 
 //footer
 footer.textContent = siteContent.footer.copyright
+
+//Stretch
+mainContentH4.forEach(element => {
+  element.style.color = 'orange';
+});
+contactP.forEach(element => {
+
+  element.style.background = '#ffc87c';
+});
+
+//add event listener
+document.querySelector('button').addEventListener('click', function () {
+  alert('I have been clicked')
+  // let orangeColor = document.querySelector('body').style.color = '#ffc87c';
+});

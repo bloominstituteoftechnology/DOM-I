@@ -38,7 +38,7 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 
 ## Task 3: Add new content
 
-- [ ] Change the color of the navigation text to be green.
+- [x] Change the color of the navigation text to be green.
 - [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
 - [ ] Check your work by looking at the [original html](original.html) in the browser
 
