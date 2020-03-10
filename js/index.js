@@ -132,3 +132,31 @@ const bottomMidRightText = document.querySelectorAll(".bottom-content .text-cont
 bottomMidRightText[2].textContent = siteContent["main-content"]["vision-content"]
 // VISION END
 // BOTTOM SECTION TEXT END
+
+
+// CONTACT START
+// contact h4 start
+const contacth4 = document.querySelector(".contact h4");
+contacth4.textContent = siteContent["contact"]["contact-h4"]
+// contact h4 end
+
+// address start
+const addressText = document.querySelectorAll(".contact p")
+addressText[0].textContent = siteContent["contact"]["address"]
+// address end
+// phone start
+const phoneText = document.querySelectorAll(".contact p")
+phoneText[1].textContent = siteContent["contact"]["phone"]
+// phone end
+
+// email start
+const emailText = document.querySelectorAll(".contact p")
+emailText[2].textContent = siteContent["contact"]["email"]
+// email end
+// CONTACT END
+
+
+// FOOTER START
+const footerText = document.querySelector("footer p");
+footerText.textContent = siteContent["footer"]["copyright"]
+// FOOTER END
