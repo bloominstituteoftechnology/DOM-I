@@ -1,6 +1,6 @@
 let tenSecCounter = document.getElementById('secondTens');
-let counter = 0;
-
+let counter = 1;
+let buttonClick = 0
 
 // tenSecCounter.setInterval(function () {
 //     tenSecCounter.textContent = 'hi'
@@ -22,8 +22,25 @@ function timeOutSec() {
 };
 
 //button start timer
+document.querySelector('button').addEventListener('click', function () {
+
+    if (buttonClick <= 0) {
+        buttonClick++;
+        setInterval(timeOutSec, 1000);
+
+        console.log(buttonClick)
+    } else {
+        counter = 0;
+        tenSecCounter.textContent = 0
+        tenSecCounter.style.color = 'green';
+
+    }
+
+
+});
 
 function buttonStart() {
-    setInterval(timeOutSec, 1000); // put this code in button
+
+    // put this code in button
 
 }
