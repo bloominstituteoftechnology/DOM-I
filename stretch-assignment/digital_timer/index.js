@@ -1,0 +1,16 @@
+let secondTens = document.querySelector('#secondTens');
+let secondOnes = document.querySelector('#secondOnes');
+let msHundreds = document.querySelector('#msHundreds');
+let msTens = document.querySelector('#msTens');
+msTens.textContent = "1"
+setInterval(function(){ msTens.textContent = "1"}, 1000);
+setInterval(function(){ msTens.textContent = "2"}, 2000);
+setInterval(function(){ msTens.textContent = "3"}, 3000);
+setInterval(function(){ msTens.textContent = "4"}, 4000);
+setInterval(function(){ msTens.textContent = "5"}, 5000);
+setInterval(function(){ msTens.textContent = "6"}, 6000);
+setInterval(function(){ msTens.textContent = "7"}, 7000);
+setInterval(function(){ msTens.textContent = "8"}, 8000);
+setInterval(function(){ msTens.textContent = "9"}, 9000);
+setInterval(function(){ msTens.textContent = "0"}, 10000);
+setInterval(function(){ msHundreds.textContent = "1" }, 10000);
