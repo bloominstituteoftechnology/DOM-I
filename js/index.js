@@ -48,9 +48,23 @@ nav.forEach(element => {
   element.style.color = "green";
 });
 
-let newNav = document.createElement("a");
-newNav.textContent = 'jamie';
+let navBar = document.querySelector('nav');
 
+const newNavItem = document.createElement("a");
+
+newNavItem.textContent = "Sullivan";
+newNavItem.setAttribute('href', '#');
+newNavItem.style.color = 'green';
+
+const anotherNewNavItem = document.createElement("a");
+
+anotherNewNavItem.textContent = "Jamie";
+anotherNewNavItem.setAttribute('href', '#');
+anotherNewNavItem.style.color = 'green';
+
+navBar.appendChild(newNavItem);
+
+navBar.prepend(anotherNewNavItem);
 
 
 nav[0].textContent = siteContent["nav"]["nav-item-1"];
