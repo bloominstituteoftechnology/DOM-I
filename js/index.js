@@ -41,12 +41,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-
-let nav = document.querySelectorAll('nav a');
-
-nav.forEach(element => {
-  element.style.color = "green";
-});
+//adding new items to the nav bar
 
 let navBar = document.querySelector('nav');
 
@@ -67,6 +62,15 @@ navBar.appendChild(newNavItem);
 navBar.prepend(anotherNewNavItem);
 
 
+// adding the site content to the nav
+
+let nav = document.querySelectorAll('nav a');
+
+nav.forEach(element => {
+  element.style.color = "green";
+});
+
+
 nav[0].textContent = siteContent["nav"]["nav-item-1"];
 nav[1].textContent = siteContent["nav"]["nav-item-2"];
 nav[2].textContent = siteContent["nav"]["nav-item-3"];
@@ -74,6 +78,7 @@ nav[3].textContent = siteContent["nav"]["nav-item-4"];
 nav[4].textContent = siteContent["nav"]["nav-item-5"];
 nav[5].textContent = siteContent["nav"]["nav-item-6"];
 
+// creating cta box
 
 let ctaText = document.querySelector(".cta-text h1"); 
 ctaText.textContent = siteContent["cta"]["h1"];
@@ -83,6 +88,8 @@ ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
 
 let ctaButton = document.querySelector(".cta-text button");
 ctaButton.textContent = siteContent["cta"]["button"];
+
+// creating main content box
 
 let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
@@ -104,6 +111,8 @@ mainContentText[2].textContent = siteContent["main-content"]["services-content"]
 mainContentText[3].textContent = siteContent["main-content"]["product-content"];
 mainContentText[4].textContent = siteContent["main-content"]["vision-content"];
 
+// contact info
+
 
 let contactHeader = document.querySelectorAll(".contact h4");
 
@@ -114,6 +123,8 @@ let contactText = document.querySelectorAll(".contact p");
 contactText[0].textContent = siteContent["contact"]["address"];
 contactText[1].textContent = siteContent["contact"]["phone"];
 contactText[2].textContent = siteContent["contact"]["email"];
+
+//footer
 
 let footer = document.querySelectorAll("footer p");
 
