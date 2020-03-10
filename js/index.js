@@ -58,8 +58,77 @@ barPic.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 // * [ ] Using your selectors, update the content to match the example file.
 // * [ ] Remember to update the src attributes on images
 // NAV BAR BEG
-const navBar = document.querySelector("header nav");
-navBar.textContent = siteContent/*[".containter"]["header"]*/["nav"]
-
+const navBar = document.getElementsByTagName("a");
+// SERVICES
+const navItem1 = navBar[0];
+navItem1.textContent = siteContent["nav"]["nav-item-1"]
+// PRODUCT
+const navItem2 = navBar[1];
+navItem2.textContent = siteContent["nav"]["nav-item-2"]
+// VISION
+const navItem3 = navBar[2];
+navItem3.textContent = siteContent["nav"]["nav-item-3"]
+// FEATURES
+const navItem4 = navBar[3];
+navItem4.textContent = siteContent["nav"]["nav-item-4"]
+// ABOUT 
+const navItem5 = navBar[4];
+navItem5.textContent = siteContent["nav"]["nav-item-5"]
+// CONTACT
+const navItem6 = navBar[5];
+navItem6.textContent = siteContent["nav"]["nav-item-6"]
 // NAV BAR END
 
+// DOM IS AWESOME H1
+const domText = document.querySelector(".cta .cta-text h1");
+domText.textContent = siteContent["cta"]["h1"] /*WHY CAN'T WE DO ["cta"]["cta-text"]["h1"] ? Why do we need to follow the object we are given?*/
+// DOM IS AWESOME H1 END
+
+// BUTTON START
+const buttonText = document.querySelector(".cta .cta-text button");
+buttonText.textContent = siteContent["cta"]["button"]
+// BUTTON END
+
+// TOP MID SECTION h4/TEXT START
+// FEATURES START
+const topMidLefth4 = document.querySelectorAll(".top-content .text-content h4")
+topMidLefth4[0].textContent = siteContent["main-content"]["features-h4"]
+
+const topMidLeftText = document.querySelectorAll(".top-content .text-content p")
+topMidLeftText[0].textContent = siteContent["main-content"]["features-content"]
+// FEATURES END
+
+// ABOUT START
+const topMidRighth4 = document.querySelectorAll(".top-content .text-content h4")
+topMidRighth4[1].textContent = siteContent["main-content"]["about-h4"]
+
+const topMidRightText = document.querySelectorAll(".top-content .text-content p")
+topMidRightText[1].textContent = siteContent["main-content"]["about-content"]
+// ABOUT END
+// TOP MID SECTION h4/TEXT END
+
+// BOTTOM MID SECTION TEXT START
+// Services START
+const bottomMidLefth4 = document.querySelectorAll(".bottom-content .text-content h4")
+bottomMidLefth4[0].textContent = siteContent["main-content"]["services-h4"]
+
+const bottomMidLeftText = document.querySelectorAll(".bottom-content .text-content p")
+bottomMidLeftText[0].textContent = siteContent["main-content"]["services-content"]
+// Services END
+
+// Product START
+const bottomMidMidh4 = document.querySelectorAll(".bottom-content .text-content h4")
+bottomMidMidh4[1].textContent = siteContent["main-content"]["product-h4"]
+
+const bottomMidMidText = document.querySelectorAll(".bottom-content .text-content p")
+bottomMidMidText[1].textContent = siteContent["main-content"]["product-content"]
+// Product END
+
+// VISION START
+const bottomMidRighth4 = document.querySelectorAll(".bottom-content .text-content h4")
+bottomMidRighth4[2].textContent = siteContent["main-content"]["vision-h4"]
+
+const bottomMidRightText = document.querySelectorAll(".bottom-content .text-content p")
+bottomMidRightText[2].textContent = siteContent["main-content"]["vision-content"]
+// VISION END
+// BOTTOM SECTION TEXT END
