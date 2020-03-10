@@ -48,10 +48,22 @@ const middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 
-let newA2 = document.createElement("a");
-newA2.textContent = "Donkey";
-let navParent = document.querySelector("nav");
-navParent.appendChild(newA2);
+
+const newNavFirst = document.createElement("a");
+newNavFirst.textContent = "Brazil";
+const navParent = document.querySelector("nav");
+navParent.appendChild(newNavFirst);
+
+const newNavLast = document.createElement("a");
+newNavLast.textContent ="Korea";
+const navParentSecond = document.querySelector("nav");
+navParentSecond.prepend(newNavLast);
+
+
+// const newNavLast = document.createElement("a");
+// newNavLast.textContent = "Korea"
+// const navParentSecond = document.querySelector("nav");
+// navParentSecond.prepend(newNavLast);
 
 // Stretch down below:
 
@@ -64,15 +76,17 @@ newHeader.style.padding = "3%";
 //stretch up
 const navBar = document.querySelectorAll("nav a")
 
-navBar[0].innerText = siteContent.nav["nav-item-1"];
-navBar[1].innerText = siteContent.nav["nav-item-2"];
-navBar[2].innerText = siteContent.nav["nav-item-3"];
-navBar[3].innerText = siteContent.nav["nav-item-4"];
-navBar[4].innerText = siteContent.nav["nav-item-5"];
-navBar[5].innerText = siteContent.nav["nav-item-6"];
+navBar[0].textContent = siteContent.nav["nav-item-1"];
+navBar[1].textContent = siteContent.nav["nav-item-2"];
+navBar[2].textContent = siteContent.nav["nav-item-3"];
+navBar[3].textContent = siteContent.nav["nav-item-4"];
+navBar[4].textContent = siteContent.nav["nav-item-5"];
+navBar[5].textContent = siteContent.nav["nav-item-6"];
 
 
 const title = document.querySelector(".cta-text h1");
+// siteContent['cta']['h1'] = 
+
 title.textContent = siteContent['cta']['h1'];
 
 const newButton = document.querySelector(".cta-text button");
@@ -134,4 +148,4 @@ coloringNav.forEach(coloring => coloring.style.color = "green");
 
 //another stretch down below.
 
-coloringNav.forEach(bigger => bigger.style["font-size"] = "1.4rem") 
+coloringNav.forEach(bigger => bigger.style["font-size"] = "1.1rem") 
