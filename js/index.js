@@ -57,6 +57,9 @@ barPic.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 // * [ ] Remember, NO direct updating of the HTML source is allowed.
 // * [ ] Using your selectors, update the content to match the example file.
 // * [ ] Remember to update the src attributes on images
+
+
+
 // NAV BAR BEG
 const navBar = document.getElementsByTagName("a");
 // SERVICES
@@ -78,6 +81,8 @@ navItem5.textContent = siteContent["nav"]["nav-item-5"]
 const navItem6 = navBar[5];
 navItem6.textContent = siteContent["nav"]["nav-item-6"]
 // NAV BAR END
+
+
 
 // DOM IS AWESOME H1
 const domText = document.querySelector(".cta .cta-text h1");
@@ -107,6 +112,8 @@ topMidRightText[1].textContent = siteContent["main-content"]["about-content"]
 // ABOUT END
 // TOP MID SECTION h4/TEXT END
 
+
+
 // BOTTOM MID SECTION TEXT START
 // Services START
 const bottomMidLefth4 = document.querySelectorAll(".bottom-content .text-content h4")
@@ -134,6 +141,7 @@ bottomMidRightText[2].textContent = siteContent["main-content"]["vision-content"
 // BOTTOM SECTION TEXT END
 
 
+
 // CONTACT START
 // contact h4 start
 const contacth4 = document.querySelector(".contact h4");
@@ -141,17 +149,17 @@ contacth4.textContent = siteContent["contact"]["contact-h4"]
 // contact h4 end
 
 // address start
-const addressText = document.querySelectorAll(".contact p")
-addressText[0].textContent = siteContent["contact"]["address"]
+const contactP = document.querySelectorAll(".contact p")
+contactP[0].textContent = siteContent["contact"]["address"]
 // address end
 // phone start
-const phoneText = document.querySelectorAll(".contact p")
-phoneText[1].textContent = siteContent["contact"]["phone"]
+// const contactP = document.querySelectorAll(".contact p")
+contactP[1].textContent = siteContent["contact"]["phone"]
 // phone end
 
 // email start
-const emailText = document.querySelectorAll(".contact p")
-emailText[2].textContent = siteContent["contact"]["email"]
+// const contactP = document.querySelectorAll(".contact p") /*don't call it multiple times to the path*/
+contactP[2].textContent = siteContent["contact"]["email"]
 // email end
 // CONTACT END
 
@@ -160,3 +168,49 @@ emailText[2].textContent = siteContent["contact"]["email"]
 const footerText = document.querySelector("footer p");
 footerText.textContent = siteContent["footer"]["copyright"]
 // FOOTER END
+
+
+
+// ## Task 3: Add new content
+// * [ ] Change the color of the navigation text to be green.
+// * [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
+
+
+// // CHANGE NAV TITLES TO GREEN: START
+// const greenColorNav = document.querySelectorAll("header nav a");
+// for (let i=0; i<greenColorNav.length; i++){
+//   greenColorNav[i].style.color = "green";
+// }
+
+// // OR USE forEach EXAMPLE BELOW
+
+// // CHANGE NAV TITLES TO GREEN: END
+
+
+// APPENDCHILD: START
+const appendAnchor = document.createElement("a");
+appendAnchor.textContent = "Google";
+const appendParent = document.querySelector("nav");
+appendParent.appendChild(appendAnchor);
+// APPENDCHILD: END
+
+// PREPEND: START
+const prependAnchor = document.createElement("a");
+prependAnchor.textContent = "Amazon";
+const prependParent = document.querySelector("nav");
+prependParent.prepend(prependAnchor);
+// PREPEND: END
+
+
+// CHANGE NAV TITLES TO GREEN: START
+// const greenColorNav = document.querySelectorAll("header nav a");
+// for (let i=0; i<greenColorNav.length; i++){
+//   greenColorNav[i].style.color = "green";
+// }
+
+// OR USE forEach EXAMPLE BELOW
+const greenColorNav = document.querySelectorAll("header nav a");
+greenColorNav.forEach(element => {
+  element.style.color = "purple";
+});
+// CHANGE NAV TITLES TO GREEN: END
