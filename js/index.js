@@ -8,7 +8,7 @@ const siteContent = {
     "nav-item-6": "Contact",
     "img-src": "img/logo.png"
   },
-  "cta": {
+   "cta": {
     "h1": "DOM Is Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
@@ -40,3 +40,62 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+const anchors = document.getElementsByTagName('a');
+anchors[0].textContent = "Services";
+anchors[1].textContent = "Product";
+anchors[2].textContent = "Vision";
+anchors[3].textContent = "Features";
+anchors[4].textContent = "About";
+anchors[5].textContent = "Contact";
+
+const ctaImg = document.getElementById("cta-img").setAttribute('src', 'img/header-img.png');
+
+const ctaText = document.getElementsByTagName("h1");
+console.log(ctaText);
+ctaText[0].textContent = "DOM\n Is\n Awesome";
+
+const button = document.getElementsByTagName("button");
+console.log(button);
+button[0].textContent = "Get Started";
+
+const contentHeadings = document.getElementsByTagName('h4');
+console.log(contentHeadings);
+
+contentHeadings[0].textContent = 'Features';
+
+contentHeadings[1].textContent = 'About';
+
+contentHeadings[2].textContent = 'Services';
+
+contentHeadings[3].textContent = 'Product';
+
+contentHeadings[4].textContent = 'Vision';
+
+const contentP = document.getElementsByTagName('p');
+console.log(contentP);
+
+contentP[0].textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+contentP[1].textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+const middleImg = document.getElementById('middle-img');
+console.log(middleImg);
+middleImg.setAttribute('src', 'img/mid-page-accent.jpg');
+
+contentP[2].textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+contentP[3].textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+contentP[4].textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+contentHeadings[5].textContent = "Contact"
+
+contentP[5].textContent = "123 Way 456 Street Somewhere, USA";
+
+contentP[6].textContent = "1 (888) 888-8888";
+
+contentP[7].textContent = "sales@greatidea.io";
+
+contentP[8].textContent = "Copyright Great Idea! 2018";
