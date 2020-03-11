@@ -97,6 +97,76 @@ footer.textContent = siteContent['footer']['copyright'];
 
 
 
+//New nav items
+const home = document.createElement('a');
+const team = document.createElement('a');
 
+home.textContent = 'Home';
+home.href = 'index.html';
+team.textContent = 'Our Team';
+team.href = '#';
+
+let newNav = document.querySelector('header > nav');
+newNav.prepend(home);
+newNav.appendChild(team);
+
+
+//Change nav text color 
+
+const navColor = document.querySelectorAll('header > nav > a');
+navColor.forEach(navBar => {
+  navBar.style.color = 'green';
+});
+
+
+//Stretch goal
+
+//Updated styles
+
+const lakersNavColor = document.querySelectorAll('header > nav > a');
+lakersNavColor.forEach(navBar => {
+  navBar.style.color = 'purple';
+});
+
+const navBoldFont = document.querySelectorAll('header > nav');
+navBoldFont.forEach(navBar => {
+  navBar.style.fontWeight = 'bold';
+})
+
+
+const h1Color = document.querySelectorAll('.cta-text > h1');
+h1Color.forEach(mainText => {
+  mainText.style.color = 'gold';
+});
+
+const buttonColor = document.querySelectorAll('.cta-text > button');
+buttonColor.forEach(button => {
+  button.style.color = 'purple';
+});
+
+const h4Color = document.querySelectorAll('.text-content > h4');
+h4Color.forEach(h4 => {
+  h4.style.color = 'purple';
+});
+
+const pColor = document.querySelectorAll('.text-content > p');
+pColor.forEach(p => {
+  p.style.color = 'gold';
+});
+
+const contactH4Color = document.querySelectorAll('.contact > h4');
+contactH4Color.forEach(contactH4 => {
+  contactH4.style.color = 'purple';
+});
+
+const contactPColor = document.querySelectorAll('.contact > p');
+contactPColor.forEach(contactP => {
+  contactP.style.color = 'gold';
+});
+
+const footerColor = document.querySelectorAll('footer');
+footerColor.forEach(footer => {
+  footer.style.color = 'purple';
+});
 
 
