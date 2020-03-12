@@ -77,7 +77,7 @@ const ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
 
 const ctaHeader = document.querySelector(".cta h1");
-ctaHeader.textContent = siteContent["cta"]["h1"];
+ctaHeader.innerText = "DOM \n Is \n Awesome";
 
 const ctaBtn = document.querySelector(".cta button");
 ctaBtn.textContent = siteContent["cta"]["button"];
