@@ -38,5 +38,18 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+const logo = document.getElementById("logo-img");
+const headerImage = document.getElementById("cta-img");
+const midImage = document.getElementById("middle-img")
+
+//Task 1: Create selectors to point your data into elements
+const link = document.getElementsByTagName("a")
+const headerH1 = document.querySelector(".cta-text h1")
+const headerButton = document.querySelector(".cta-text button")
+const topContentH4 = document.querySelectorAll(".main-content .top-content .text-content h4")
+const topContentP = document.querySelectorAll(".main-content .top-content .text-content p")
+const bottomContentH4 = document.body.querySelectorAll(".main-content .bottom-content .text-content h4");
+const bottomContentP = document.body.querySelectorAll(".main-content .bottom-content .text-content p");
+const contactH4 = document.body.querySelector(".contact h4");
+const contactP = document.body.querySelectorAll(".contact p");
+const foot = document.body.querySelector("footer p");
