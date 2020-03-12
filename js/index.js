@@ -104,3 +104,11 @@ const navColor = document.querySelectorAll("header nav a")
 navColor.forEach(navBar => {
   navBar.style.color = 'green';
 })
+
+const contactInfo = document.querySelector('.contact h4');
+console.log(contactInfo)
+
+const newContent = document.createElement('section.end');
+const footer = document.querySelector('footer');
+newContent.textContent = "I just added content to my content";
+footer.appendChild(newContent);
