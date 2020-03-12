@@ -164,3 +164,6 @@ stretchNavLinks.forEach(element => {
   //element.onmouseover.textColor = 'red';
 });
 
+document.querySelectorAll('header nav a').onmouseover = function() {
+    this.style.backgroundColor = "blue";
+}
