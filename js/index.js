@@ -112,3 +112,20 @@ visionH4.textContent = siteContent['main-content']['vision-h4'];
 
 const visionPara = document.querySelectorAll('.text-content p')[4];
 visionPara.textContent = siteContent['main-content']['vision-content'];
+
+// Contact
+const contactH4 = document.querySelector('.contact h4');
+contactH4.textContent = siteContent['contact']['contact-h4'];
+
+const address = document.querySelectorAll('.contact p')[0];
+address.innerHTML = '123 Way 456 Street <br> Somewhere, USA';
+
+const phone = document.querySelectorAll('.contact p')[1];
+phone.textContent = siteContent['contact']['phone'];
+
+const email = document.querySelectorAll('.contact p')[2];
+email.textContent = siteContent['contact']['email'];
+
+// Footer
+const footer = document.querySelector('footer');
+footer.textContent = siteContent['footer']['copyright'];
