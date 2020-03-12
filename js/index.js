@@ -62,6 +62,7 @@ navlinkfive.textContent = siteContent.nav['nav-item-5'];
 const navlinksix = document.querySelectorAll('header nav a')[5];
 navlinksix.textContent = siteContent.nav['nav-item-6'];
 
+
 // Navigation Task 3
 const allNavLinks = document.querySelectorAll('header nav a');
 allNavLinks.forEach(element => {
@@ -91,6 +92,7 @@ ctaLogo.setAttribute('src', siteContent['cta']['img-src']);
 
 const ctaButton = document.querySelector('.cta-text button');
 ctaButton.textContent = siteContent.cta.button;
+
 
 // Main Content
 const featH4 = document.querySelectorAll('.text-content h4')[0];
@@ -131,6 +133,7 @@ visionH4.textContent = siteContent['main-content']['vision-h4'];
 const visionPara = document.querySelectorAll('.text-content p')[4];
 visionPara.textContent = siteContent['main-content']['vision-content'];
 
+
 // Contact
 const contactH4 = document.querySelector('.contact h4');
 contactH4.textContent = siteContent['contact']['contact-h4'];
@@ -144,6 +147,20 @@ phone.textContent = siteContent['contact']['phone'];
 const email = document.querySelectorAll('.contact p')[2];
 email.textContent = siteContent['contact']['email'];
 
+
 // Footer
 const footer = document.querySelector('footer');
 footer.textContent = siteContent['footer']['copyright'];
+
+
+// Stretch
+const stretchNavLinks = document.querySelectorAll('header nav a');
+stretchNavLinks.forEach(element => {
+  element.style.boxShadow = '10px 20px 30px black'; 
+  element.style.backgroundColor = 'black';
+  element.style.fontWeight = 'bold';
+  element.style.padding = '8.18px';
+  element.style.textDecoration = 'none';
+  //element.onmouseover.textColor = 'red';
+});
+
