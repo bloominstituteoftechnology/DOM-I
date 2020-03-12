@@ -93,6 +93,17 @@ const siteContent = {
       const btnSelector = document.querySelector('button');
       btnSelector.textContent = siteContent.cta["button"]
 
+      //Button event
+
+
+      function grBg (){
+
+        document.querySelector('body').style.backgroundColor = 'grey';
+      }
+
+
+      btnSelector.addEventListener('click', grBg)
+
 // Main-Content
 
       //h4
