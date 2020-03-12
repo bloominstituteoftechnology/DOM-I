@@ -142,3 +142,8 @@ const midImg = document.getElementById("middle-img");
 midImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
 //Nav text style...
+navLinks.forEach(el => {
+  el.style.color = "green";
+})
+
+
