@@ -53,10 +53,26 @@ anchorTag[3].innerText = siteContent.nav['nav-item-4'];
 anchorTag[4].innerText = siteContent.nav['nav-item-5'];
 anchorTag[5].innerText = siteContent.nav['nav-item-6'];
 
-//
+//top content
 let title = document.querySelector('h1');
 title.innerHTML = siteContent.cta.h1;
 
+let btn = document.querySelector('button');
+btn.innerText = siteContent.cta.button;
+
+let headerImg = document.querySelector('#cta-img');
+headerImg.src = siteContent.cta['img-src'];
+
+//main content
+let mainContent = document.querySelector('#main-content');
+
+let topContent = document.querySelector('.top-content');
+
+let topContentItems = topContent.querySelectorAll('.text-content');
+let featuresH4 = topContentItems[0].querySelector('h4');
+let featuresP = topContentItems[0].querySelector('p');
+featuresH4.innerText = siteContent['main-content']['features-h4'];
+featuresP.innerText = siteContent['main-content']['features-content'];
 
 //contact
 let contactInfo = document.querySelector('.contact');
