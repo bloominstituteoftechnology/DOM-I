@@ -53,15 +53,15 @@ anchors[5].textContent = "Contact";
 const ctaImg = document.getElementById("cta-img").setAttribute('src', 'img/header-img.png');
 
 const ctaText = document.getElementsByTagName("h1");
-console.log(ctaText);
+<!-- console.log(ctaText); -->
 ctaText[0].textContent = "DOM\n Is\n Awesome";
 
 const button = document.getElementsByTagName("button");
-console.log(button);
+<!-- console.log(button); -->
 button[0].textContent = "Get Started";
 
 const contentHeadings = document.getElementsByTagName('h4');
-console.log(contentHeadings);
+<!-- console.log(contentHeadings); -->
 
 contentHeadings[0].textContent = 'Features';
 
@@ -74,14 +74,14 @@ contentHeadings[3].textContent = 'Product';
 contentHeadings[4].textContent = 'Vision';
 
 const contentP = document.getElementsByTagName('p');
-console.log(contentP);
+<!-- console.log(contentP); -->
 
 contentP[0].textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
 
 contentP[1].textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
 
 const middleImg = document.getElementById('middle-img');
-console.log(middleImg);
+<!-- console.log(middleImg); -->
 middleImg.setAttribute('src', 'img/mid-page-accent.jpg');
 
 contentP[2].textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
@@ -99,3 +99,8 @@ contentP[6].textContent = "1 (888) 888-8888";
 contentP[7].textContent = "sales@greatidea.io";
 
 contentP[8].textContent = "Copyright Great Idea! 2018";
+
+const navColor = document.querySelectorAll("header nav a")
+navColor.forEach(navBar => {
+  navBar.style.color = 'green';
+})
