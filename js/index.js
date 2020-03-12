@@ -69,6 +69,9 @@ const siteContent = {
         for(i = 0 ; i < aSelector.length; i++){
 
   aSelector[i].textContent = siteContent.nav[`nav-item-${i}`];
+    //Change Nav to green
+  aSelector[i].style.color = 'green';
+
  
 
 }
@@ -126,12 +129,12 @@ const siteContent = {
 
     //Change Nav to green
 
-      aSelector[0].style.color = 'green';
-      aSelector[1].style.color = 'green';
-      aSelector[2].style.color = 'green';
-      aSelector[3].style.color = 'green';
-      aSelector[4].style.color = 'green';
-      aSelector[5].style.color = 'green';
+      // aSelector[0].style.color = 'green';
+      // aSelector[1].style.color = 'green';
+      // aSelector[2].style.color = 'green';
+      // aSelector[3].style.color = 'green';
+      // aSelector[4].style.color = 'green';
+      // aSelector[5].style.color = 'green';
 
 
     //Add Two Elements with .append and .prepend
