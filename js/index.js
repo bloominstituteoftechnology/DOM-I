@@ -53,6 +53,11 @@ anchorTag[3].innerText = siteContent.nav['nav-item-4'];
 anchorTag[4].innerText = siteContent.nav['nav-item-5'];
 anchorTag[5].innerText = siteContent.nav['nav-item-6'];
 
+//
+let title = document.querySelector('h1');
+title.innerHTML = siteContent.cta.h1;
+
+
 //contact
 let contactInfo = document.querySelector('.contact');
 let contactH4 = contactInfo.querySelector('h4');
