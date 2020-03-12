@@ -146,4 +146,26 @@ navLinks.forEach(el => {
   el.style.color = "green";
 })
 
+//Appended child to nav...
+
+const nav = document.querySelector("nav");
+const newLink = document.createElement("a");
+newLink.setAttribute("href", '#');
+newLink.setAttribute('id', 'nav-item-7');
+newLink.textContent = "Help";
+newLink.style.color = "green";
+nav.appendChild(newLink);
+
+const preLink = document.createElement("a");
+preLink.setAttribute("href", "#");
+preLink.textContent = "More Help";
+preLink.style.color = "green";
+nav.prepend(preLink);
+
+const br = document.createElement("br");
+const br2 = document.createElement("br");
+console.log(br);
+const h1 = document.querySelector("h1");
+h1.prepend(br2);
+h1.appendChild(br);
 
