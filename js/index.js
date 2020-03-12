@@ -63,7 +63,7 @@ btn.innerText = siteContent.cta.button;
 let headerImg = document.querySelector('#cta-img');
 headerImg.src = siteContent.cta['img-src'];
 
-//main content
+//top content
 let mainContent = document.querySelector('#main-content');
 
 let topContent = document.querySelector('.top-content');
@@ -81,6 +81,26 @@ aboutP.innerText = siteContent['main-content']['about-content'];
 
 let middleImg = document.querySelector('#middle-img');
 middleImg.src = siteContent['main-content']['middle-img-src'];
+
+//bottom content
+let bottomContent = document.querySelector('.bottom-content');
+let bottomContentItems = bottomContent.querySelectorAll('.text-content');
+
+let servicesH4 = bottomContentItems[0].querySelector('h4');
+let servicesP = bottomContentItems[0].querySelector('p');
+servicesH4.innerText = siteContent['main-content']['services-h4'];
+servicesP.innerText = siteContent['main-content']['services-content'];
+
+let productH4 = bottomContentItems[1].querySelector('h4');
+let productP = bottomContentItems[1].querySelector('p');
+productH4.innerText = siteContent['main-content']['product-h4'];
+productP.innerText = siteContent['main-content']['product-content'];
+
+let visionH4 = bottomContentItems[2].querySelector('h4');
+let visionP = bottomContentItems[2].querySelector('p');
+visionH4.innerText = siteContent['main-content']['vision-h4'];
+visionP.innerText = siteContent['main-content']['vision-content'];
+
 
 //contact
 let contactInfo = document.querySelector('.contact');
