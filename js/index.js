@@ -39,4 +39,65 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+const links = document.querySelectorAll('a');
+
+let pValues = Object.values(siteContent.nav)
+
+for(const x in links){links[x].textContent = pValues[x];}
+
+
+function matchData(x,y){
+  let newValues =  Object.values(y);
+
+  for(const k in x){
+
+
+    x[k].textContent = newValues[k];
+  }
+};
+
+function giveImgAtr(id, x){
+  document.getElementById(id).setAttribute('src', x);
+}
+
+matchData(document.querySelector('.cta-text').children,siteContent.cta);
+giveImgAtr('cta-img', siteContent["cta"]["img-src"]);
+
+matchData(document.getElementsByClassName('text-content')[0].children, siteContent["main-content"]);
+
+giveImgAtr('middle-img', siteContent["main-content"]["middle-img-src"]);
+
+
+document.getElementsByClassName('text-content')[1].children[0].textContent = siteContent["main-content"]["about-h4"];
+document.getElementsByClassName('text-content')[1].children[1].textContent = siteContent["main-content"]["about-content"];
+document.getElementsByClassName('text-content')[2].children[0].textContent = siteContent["main-content"]["services-h4"];
+document.getElementsByClassName('text-content')[2].children[1].textContent = siteContent["main-content"]["services-content"];
+document.getElementsByClassName('text-content')[3].children[0].textContent = siteContent["main-content"]["product-h4"];
+document.getElementsByClassName('text-content')[3].children[1].textContent = siteContent["main-content"]["product-content"];
+document.getElementsByClassName('text-content')[4].children[0].textContent = siteContent["main-content"]["vision-h4"];
+document.getElementsByClassName('text-content')[4].children[1].textContent = siteContent["main-content"]["vision-content"];
+
+matchData(document.getElementsByClassName('contact')[0].children, siteContent.contact);
+matchData(document.querySelector('footer').children, siteContent.footer);
+
+const newLink = document.createElement('a');
+newLink.innerText = 'New1';
+document.getElementsByTagName('nav')[0].prepend(newLink);
+
+document.getElementsByTagName('nav')[0].appendChild(document.createElement('a')).innerText = 'ExitProgram';
+
+const linksColor = document.getElementsByTagName('a');
+for(var x=0; x<linksColor.length; x++){
+  linksColor[x].style.color = 'green';
+}
+
+
+
+
+
+
+
+
+
