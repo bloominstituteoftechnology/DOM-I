@@ -41,6 +41,19 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+//nav
+const navContainer = document.querySelector('nav');
+
+let anchorTag = document.querySelectorAll('a');
+
+anchorTag[0].innerText = siteContent.nav['nav-item-1'];
+anchorTag[1].innerText = siteContent.nav['nav-item-2'];
+anchorTag[2].innerText = siteContent.nav['nav-item-3'];
+anchorTag[3].innerText = siteContent.nav['nav-item-4'];
+anchorTag[4].innerText = siteContent.nav['nav-item-5'];
+anchorTag[5].innerText = siteContent.nav['nav-item-6'];
+
+//contact
 let contactInfo = document.querySelector('.contact');
 let contactH4 = contactInfo.querySelector('h4');
 contactH4.innerText = siteContent.contact['contact-h4'];
@@ -50,6 +63,7 @@ contactInfoItems[0].innerHTML = siteContent.contact.address;
 contactInfoItems[1].innerText = siteContent.contact.phone;
 contactInfoItems[2].innerText = siteContent.contact.email;
 
+//footer
 let foot = document.querySelector('footer');
 let footP = foot.querySelector('p');
 footP.innerText = siteContent.footer.copyright;
