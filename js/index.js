@@ -53,3 +53,37 @@ const bottomContentP = document.body.querySelectorAll(".main-content .bottom-con
 const contactH4 = document.body.querySelector(".contact h4");
 const contactP = document.body.querySelectorAll(".contact p");
 const foot = document.body.querySelector("footer p");
+
+//Task 2: Update the HTML with the JSON data
+logo.setAttribute('src', siteContent["nav"]["img-src"])
+headerImage.setAttribute('src', siteContent["cta"]["img-src"]);
+midImage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+//Set links
+link[0].textContent = siteContent['nav']["nav-item-1"]
+link[1].textContent = siteContent['nav']["nav-item-2"]
+link[2].textContent = siteContent['nav']["nav-item-3"]
+link[3].textContent = siteContent['nav']["nav-item-4"]
+link[4].textContent = siteContent['nav']["nav-item-5"]
+link[5].textContent = siteContent['nav']["nav-item-6"]
+
+//Set header
+headerH1.textContent = siteContent['cta']["h1"]
+headerButton.textContent = siteContent['cta']["button"]
+
+//Set content
+topContentH4[0].textContent = siteContent['main-content']["features-h4"]
+topContentP[0].textContent = siteContent['main-content']["features-content"]
+topContentH4[1].textContent = siteContent['main-content']["about-h4"]
+topContentP[1].textContent = siteContent['main-content']['about-content']
+bottomContentH4[0].textContent = siteContent['main-content']["services-h4"]
+bottomContentP[0].textContent = siteContent['main-content']["services-content"]
+bottomContentH4[1].textContent = siteContent['main-content']["product-h4"]
+bottomContentP[1].textContent = siteContent['main-content']["product-content"]
+bottomContentH4[2].textContent = siteContent['main-content']["vision-h4"]
+bottomContentP[2].textContent = siteContent['main-content']["vision-content"]
+contactH4.textContent = siteContent["contact"]["contact-h4"]
+contactP[0].textContent = siteContent['contact']["address"]
+contactP[1].textContent = siteContent['contact']["phone"]
+contactP[2].textContent = siteContent['contact']["email"]
+foot.textContent = siteContent["footer"]["copyright"]
