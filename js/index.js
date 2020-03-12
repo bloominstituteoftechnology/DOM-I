@@ -74,6 +74,14 @@ let featuresP = topContentItems[0].querySelector('p');
 featuresH4.innerText = siteContent['main-content']['features-h4'];
 featuresP.innerText = siteContent['main-content']['features-content'];
 
+let aboutH4 = topContentItems[1].querySelector('h4');
+let aboutP = topContentItems[1].querySelector('p');
+aboutH4.innerText = siteContent['main-content']['about-h4'];
+aboutP.innerText = siteContent['main-content']['about-content'];
+
+let middleImg = document.querySelector('#middle-img');
+middleImg.src = siteContent['main-content']['middle-img-src'];
+
 //contact
 let contactInfo = document.querySelector('.contact');
 let contactH4 = contactInfo.querySelector('h4');
