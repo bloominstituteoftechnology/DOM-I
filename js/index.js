@@ -161,9 +161,4 @@ stretchNavLinks.forEach(element => {
   element.style.fontWeight = 'bold';
   element.style.padding = '8.18px';
   element.style.textDecoration = 'none';
-  //element.onmouseover.textColor = 'red';
 });
-
-document.querySelectorAll('header nav a').onmouseover = function() {
-    this.style.backgroundColor = "blue";
-}
