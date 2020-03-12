@@ -62,6 +62,24 @@ navlinkfive.textContent = siteContent.nav['nav-item-5'];
 const navlinksix = document.querySelectorAll('header nav a')[5];
 navlinksix.textContent = siteContent.nav['nav-item-6'];
 
+// Navigation Task 3
+const allNavLinks = document.querySelectorAll('header nav a');
+allNavLinks.forEach(element => {
+  element.style.color = 'green'; 
+});
+
+
+const nav = document.querySelector("nav");
+
+const navlinkfirst = document.createElement('a');
+navlinkfirst.textContent = 'New Stuff';
+navlinkfirst.style.color = 'green';
+nav.prepend(navlinkfirst);
+
+const navlinklast = document.createElement('a');
+navlinklast.textContent = 'More New Stuff';
+navlinklast.style.color = 'green';
+nav.appendChild(navlinklast);
 
 
 // CTA
