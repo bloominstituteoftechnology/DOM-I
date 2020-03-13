@@ -42,11 +42,19 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //navbar
-let navbar = document.querySelectorAll('nav a');
 
+
+let nav = document.querySelectorAll("a");
+for (let i = 0; i < nav.length; i++) {
+  nav[i].textContent = Object.values(siteContent.nav)[i];
+  nav[i].style.color = 'green';
+
+}
 
 //cta section
-document.querySelector('.cta-text h1').textContent = 'DOM IS AWESOME!'
+let ctaTxt = document.querySelector('.cta-text h1')
+ctaTxt.textContent = 'DOM IS AWESOME!'
+
 
 //cta img
 document.getElementById('cta-img').setAttribute('src', siteContent['cta']['img-src'])
@@ -76,3 +84,18 @@ document.querySelectorAll('.bottom-content p')[1].textContent = siteContent["mai
 //Vision
 document.querySelectorAll('.bottom-content h4')[2].textContent = siteContent['main-content']['vision-h4']
 document.querySelectorAll('.bottom-content p')[2].textContent = siteContent["main-content"]["vision-content"]
+
+//Contact Information
+document.querySelectorAll('.contact h4')[0].textContent = siteContent["contact"]["contact-h4"]
+
+document.querySelectorAll('.contact p')[0].textContent = siteContent["contact"]["address"]
+
+document.querySelectorAll('.contact p')[1].textContent = siteContent["contact"]["phone"]
+
+document.querySelectorAll('.contact p')[2].textContent = siteContent["contact"]["email"]
+
+//Footer
+document.querySelector('footer p').textContent = siteContent["footer"]["copyright"]
+
+
+
