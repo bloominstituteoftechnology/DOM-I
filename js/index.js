@@ -57,6 +57,7 @@ newA.style.color = 'red'
 
 let newA2 = newA.cloneNode(true);
 newA2.textContent = "Additional Links"; 
+newA2.style.color = "green"
 
 document.querySelector("nav").prepend(newA);
 document.querySelector("nav").appendChild(newA2);
