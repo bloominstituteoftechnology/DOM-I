@@ -90,10 +90,12 @@ foot.textContent = siteContent["footer"]["copyright"];
 
 //Task 3: Add new content
 link.forEach(el => el.style.color = 'green');
-const navBar = document.getElementsByTagName('nav');
+const navBar = document.querySelector('nav');
 const first = document.createElement('a');
 first.textContent = "Home";
+first.style.color = "green";
 const last = document.createElement('a');
 last.textContent = "About Us";
+last.style.color = "green";
 navBar.appendChild(last);
 navBar.prepend(first);
