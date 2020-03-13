@@ -50,6 +50,18 @@ for (let i = 0; i < nav.length; i++) {
   nav[i].style.color = 'green';
 
 }
+//Prepend and Appened
+let newA = document.createElement('a');
+newA.textContent = "Home";
+newA.style.color = 'red'
+
+let newA2 = newA.cloneNode(true);
+newA2.textContent = "Additional Links"; 
+
+document.querySelector("nav").prepend(newA);
+document.querySelector("nav").appendChild(newA2);
+
+
 
 //cta section
 let ctaTxt = document.querySelector('.cta-text h1')
