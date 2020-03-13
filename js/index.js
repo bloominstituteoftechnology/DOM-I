@@ -49,15 +49,21 @@ logo.setAttribute("src", siteContent["nav"]["img-src"]);
 //Nav links...
 const navLinks = document.querySelectorAll("a");
 
+//Created navObj using nav object
 const navObj = siteContent["nav"];
-console.log(navObj);
+
+//Created nav arr using Object.values
 const navArr = Object.values(navObj);
+
+//Remove last index
 navArr.pop();
 
+//Set attribute using forEach
 navLinks.forEach((el, i) => {
  return el.setAttribute("id", `nav-item-${i + 1}`);
 });
 
+//Added textContent using forEach and navArr
 navLinks.forEach((el, i) => {
   return el.textContent = navArr[i]
 })
