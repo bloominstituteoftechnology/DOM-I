@@ -48,25 +48,39 @@ logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
 //Nav links...
 const navLinks = document.querySelectorAll("a");
+
+const navObj = siteContent["nav"];
+console.log(navObj);
+const navArr = Object.values(navObj);
+navArr.pop();
+
 navLinks.forEach((el, i) => {
  return el.setAttribute("id", `nav-item-${i + 1}`);
 });
 
-// const navObj = siteContent["nav"];
+navLinks.forEach((el, i) => {
+  return el.textContent = navArr[i]
+})
+
+
+
+
+
+
 // const navMap = navObj.map({id: content})
 
-document.getElementById("nav-item-1").textContent =
-  siteContent["nav"]["nav-item-1"];
-document.getElementById("nav-item-2").textContent =
-  siteContent["nav"]["nav-item-2"];
-document.getElementById("nav-item-3").textContent =
-  siteContent["nav"]["nav-item-3"];
-document.getElementById("nav-item-4").textContent =
-  siteContent["nav"]["nav-item-4"];
-document.getElementById("nav-item-5").textContent =
-  siteContent["nav"]["nav-item-5"];
-document.getElementById("nav-item-6").textContent =
-  siteContent["nav"]["nav-item-6"];
+// document.getElementById("nav-item-1").textContent =
+//   siteContent["nav"]["nav-item-1"];
+// document.getElementById("nav-item-2").textContent =
+//   siteContent["nav"]["nav-item-2"];
+// document.getElementById("nav-item-3").textContent =
+//   siteContent["nav"]["nav-item-3"];
+// document.getElementById("nav-item-4").textContent =
+//   siteContent["nav"]["nav-item-4"];
+// document.getElementById("nav-item-5").textContent =
+//   siteContent["nav"]["nav-item-5"];
+// document.getElementById("nav-item-6").textContent =
+//   siteContent["nav"]["nav-item-6"];
 
 //Cta...
 const ctaImg = document.getElementById("cta-img");
