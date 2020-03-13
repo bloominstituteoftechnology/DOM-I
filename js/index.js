@@ -62,26 +62,6 @@ navLinks.forEach((el, i) => {
   return el.textContent = navArr[i]
 })
 
-
-
-
-
-
-// const navMap = navObj.map({id: content})
-
-// document.getElementById("nav-item-1").textContent =
-//   siteContent["nav"]["nav-item-1"];
-// document.getElementById("nav-item-2").textContent =
-//   siteContent["nav"]["nav-item-2"];
-// document.getElementById("nav-item-3").textContent =
-//   siteContent["nav"]["nav-item-3"];
-// document.getElementById("nav-item-4").textContent =
-//   siteContent["nav"]["nav-item-4"];
-// document.getElementById("nav-item-5").textContent =
-//   siteContent["nav"]["nav-item-5"];
-// document.getElementById("nav-item-6").textContent =
-//   siteContent["nav"]["nav-item-6"];
-
 //Cta...
 const ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
@@ -102,20 +82,30 @@ h4[3].setAttribute("class", "product-h4");
 h4[4].setAttribute("class", "vision-h4");
 h4[5].setAttribute("class", "contact-h4");
 
+//Making new content arr...
+//Created object from main-content
+const contentObj = siteContent["main-content"];
+console.log(contentObj);
+
+//Turned into array using Object.entries...
+const contentArr = Object.entries(contentObj);
+console.log(contentArr)
+
+//Use array indices and text contentArr to add text to DOM
 const featH4 = document.querySelector(".features-h4");
-featH4.textContent = siteContent["main-content"]["features-h4"];
+featH4.textContent = contentArr[0][1];
 
 const abtH4 = document.querySelector(".about-h4");
-abtH4.textContent = siteContent["main-content"]["about-h4"];
+abtH4.textContent = contentArr[2][1];
 
 const svcH4 = document.querySelector(".services-h4");
-svcH4.textContent = siteContent["main-content"]["services-h4"];
+svcH4.textContent = contentArr[5][1];
 
 const prodH4 = document.querySelector(".product-h4");
-prodH4.textContent = siteContent["main-content"]["product-h4"];
+prodH4.textContent = contentArr[7][1];
 
 const visH4 = document.querySelector(".vision-h4");
-visH4.textContent = siteContent["main-content"]["vision-h4"];
+visH4.textContent = contentArr[9][1];
 
 const conH4 = document.querySelector(".contact-h4");
 conH4.textContent = siteContent["contact"]["contact-h4"];
@@ -157,7 +147,6 @@ navLinks.forEach(el => {
 })
 
 //Appended child to nav...
-
 const nav = document.querySelector("nav");
 const newLink = document.createElement("a");
 newLink.setAttribute("href", '#');
@@ -171,11 +160,3 @@ preLink.setAttribute("href", "#");
 preLink.textContent = "More Help";
 preLink.style.color = "green";
 nav.prepend(preLink);
-
-const br = document.createElement("br");
-const br2 = document.createElement("br");
-console.log(br);
-const h1 = document.querySelector("h1");
-h1.prepend(br2);
-h1.appendChild(br);
-
