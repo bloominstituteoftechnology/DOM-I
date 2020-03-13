@@ -48,16 +48,16 @@ logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
 //Nav links...
 const navLinks = document.querySelectorAll("a");
-// navLinks.forEach(el => {
-//  return el.setAttribute("id", `nav-item-${navLinks.length}`);
-// });
+navLinks.forEach((el, i) => {
+ return el.setAttribute("id", `nav-item-${i + 1}`);
+});
 
-navLinks[0].setAttribute("id", "nav-item-1");
-navLinks[1].setAttribute("id", "nav-item-2");
-navLinks[2].setAttribute("id", "nav-item-3");
-navLinks[3].setAttribute("id", "nav-item-4");
-navLinks[4].setAttribute("id", "nav-item-5");
-navLinks[5].setAttribute("id", "nav-item-6");
+// navLinks[0].setAttribute("id", "nav-item-1");
+// navLinks[1].setAttribute("id", "nav-item-2");
+// navLinks[2].setAttribute("id", "nav-item-3");
+// navLinks[3].setAttribute("id", "nav-item-4");
+// navLinks[4].setAttribute("id", "nav-item-5");
+// navLinks[5].setAttribute("id", "nav-item-6");
 
 document.getElementById("nav-item-1").textContent =
   siteContent["nav"]["nav-item-1"];
