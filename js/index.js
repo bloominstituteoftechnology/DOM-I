@@ -45,7 +45,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
                   NAV BAR LINKS
  **********************************************/
 const navItems = document.querySelectorAll('a');
-navItems[0].textContent = siteContent['nav']['nav-item-1']
+navItems[0].textContent = siteContent['nav']['nav-item-1'];
 navItems[1].textContent = siteContent['nav']['nav-item-2'];
 navItems[2].textContent = siteContent['nav']['nav-item-3'];
 navItems[3].textContent = siteContent['nav']['nav-item-4'];
@@ -165,15 +165,28 @@ const contact = document.getElementsByTagName('h4')[5]
 contact.textContent = "Contact";
 contact.style.color = "Pink";
 
-const street = document.getElementsByTagName('p')[5]
-street.textContent = "123 Way 456 Street Somewhere, USA";
-street.style.color = "red";
+const street = document.getElementsByTagName('p')[6]
+street.textContent = "123 Way 456 Street"
+street.style.color = 'green';
 
-const phone = document.getElementsByTagName('p')[6]
-phone.textContent = "1 (888) 888-8888";
+const cityState = document.querySelectorAll('.contact')[0];
+const addCity = document.createElement('p');
+
+const somewhere = cityState.appendChild(addCity);
+
+somewhere.textContent = 'Somewhere, USA';
+phone.insertBefore(addCity,phone);
+
+
+const phone = document.getElementsByTagName('p')[7]
+const addPhone = document.createElement('p');
+
+const phoneNumber = cityState.appendChild(addPhone);
+
+phoneNumber.textContent = "1 (888) 888-8888";
 phone.style.color = "orange";
 
-const email = document.getElementsByTagName('p')[7]
+const email = document.getElementsByTagName('p')[8]
 email.textContent = "sales@greatidea.io";
 email.style.color = "violet";
 
