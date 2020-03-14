@@ -44,14 +44,35 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 /**********************************************
                   NAV BAR LINKS
  **********************************************/
+const navItems = document.querySelectorAll('a');
+navItems[0].textContent = siteContent['nav']['nav-item-1']
+navItems[1].textContent = siteContent['nav']['nav-item-2'];
+navItems[2].textContent = siteContent['nav']['nav-item-3'];
+navItems[3].textContent = siteContent['nav']['nav-item-4'];
+navItems[4].textContent = siteContent['nav']['nav-item-5'];
+navItems[5].textContent = siteContent['nav']['nav-item-6'];
 
-document.querySelectorAll('a')[0].textContent = "Services";
-document.querySelectorAll('a')[1].textContent = "Product";
-document.querySelectorAll('a')[2].textContent = "Vision";
-document.querySelectorAll('a')[3].textContent = "Features";
-document.querySelectorAll('a')[4].textContent = "About";
-document.querySelectorAll('a')[5].textContent = "Contact";
+navItems[0].style.color = "green";
+navItems[1].style.color = "green";
+navItems[2].style.color = "green";
+navItems[3].style.color = "green";
+navItems[4].style.color = "green";
+navItems[5].style.color = "green";
 
+const navBar = document.querySelector('nav');
+const addNav1 = document.createElement('a');
+const addNav2 = document.createElement('a');
+
+addNav1.href = '#';
+addNav1.textContent = 'Home';
+addNav1.style.color = 'green';
+
+addNav2.href = '#';
+addNav2.textContent = 'Lexi';
+addNav2.style.color = 'green';
+
+navBar.prepend(addNav1);
+navBar.append(addNav2);
 
 /**********************************************
                     CTA
@@ -117,3 +138,6 @@ document.getElementsByTagName('p')[7].textContent = "sales@greatidea.io";
  **********************************************/
 
  document.getElementsByTagName('p')[8].textContent = "Copyright Great Idea 2018"
+
+
+
