@@ -78,8 +78,15 @@ navBar.append(addNav2);
                     CTA
  **********************************************/
 
- document.querySelector('h1').textContent = "DOM Is Awesome"
- document.querySelector('button').textContent = "Get Started"
+ const ctaText = document.querySelector('h1')
+ 
+ ctaText.textContent = "DOM Is Awesome"
+ ctaText.style.color = "pink";
+
+ const ctaButton = document.querySelector('button')
+ ctaButton.textContent = "Get started"
+ ctaButton.style.color = "Red";
+
  document.getElementById("cta-img").src = "img/header-img.png";
 
 
@@ -87,15 +94,26 @@ navBar.append(addNav2);
                     Features
  **********************************************/
 
-document.getElementsByTagName('h4')[0].textContent = "Features";
-document.getElementsByTagName('p')[0].textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+const featuresH4 = document.getElementsByTagName('h4')[0]
+
+featuresH4.textContent = "Features";
+featuresH4.style.color = "Blue";
+
+const featuresP = document.getElementsByTagName('p')[0]
+featuresP.textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+featuresP.style.color = "Blue";
 
 /**********************************************
                     About
  **********************************************/
 
-document.getElementsByTagName('h4')[1].textContent = "About";
-document.getElementsByTagName('p')[1].textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+const aboutH4 = document.getElementsByTagName('h4')[1]
+aboutH4.textContent = "About";
+aboutH4.style.color = "purple";
+
+const aboutP = document.getElementsByTagName('p')[1]
+aboutP.textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+aboutP.style.color = "purple";
 
  /**********************************************
                     Middle Image
@@ -107,37 +125,65 @@ document.getElementById("middle-img").src = "img/mid-page-accent.jpg";
                     Services
  **********************************************/
 
-document.getElementsByTagName('h4')[2].textContent = "Services";
-document.getElementsByTagName('p')[2].textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+const servicesH4 = document.getElementsByTagName('h4')[2]
+servicesH4.textContent = "Services";
+servicesH4.style.color = "purple";
+
+const servicesP =document.getElementsByTagName('p')[2]
+servicesP.textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+servicesP.style.color = "purple";
 
  /**********************************************
                     Product
  **********************************************/
 
-document.getElementsByTagName('h4')[3].textContent = "Product";
-document.getElementsByTagName('p')[3].textContent = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+const productH4 = document.getElementsByTagName('h4')[3]
+productH4.textContent = "Product";
+productH4.style.color = "green";
+
+const productP =  document.getElementsByTagName('p')[3]
+productP.textContent = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+productP.style.color = "green";
 
  /**********************************************
                     Vision
  **********************************************/
 
-document.getElementsByTagName('h4')[4].textContent = "Vision";
-document.getElementsByTagName('p')[4].textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+const visionH4 = document.getElementsByTagName('h4')[4]
+visionH4.textContent = "Vision";
+visionH4.style.color = "orange";
+
+const visionP = document.getElementsByTagName('p')[4]
+visionP.textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+visionP.style.color = "orange";
 
  /**********************************************
                     Contact
  **********************************************/
 
-document.getElementsByTagName('h4')[5].textContent = "Contact";
-document.getElementsByTagName('p')[5].textContent = "123 Way 456 Street Somewhere, USA";
-document.getElementsByTagName('p')[6].textContent = "1 (888) 888-8888";
-document.getElementsByTagName('p')[7].textContent = "sales@greatidea.io";
+const contact = document.getElementsByTagName('h4')[5]
+contact.textContent = "Contact";
+contact.style.color = "Pink";
+
+const street = document.getElementsByTagName('p')[5]
+street.textContent = "123 Way 456 Street Somewhere, USA";
+street.style.color = "red";
+
+const phone = document.getElementsByTagName('p')[6]
+phone.textContent = "1 (888) 888-8888";
+phone.style.color = "orange";
+
+const email = document.getElementsByTagName('p')[7]
+email.textContent = "sales@greatidea.io";
+email.style.color = "violet";
 
  /**********************************************
                     Footer
  **********************************************/
 
- document.getElementsByTagName('p')[8].textContent = "Copyright Great Idea 2018"
+ const footer = document.getElementsByTagName('p')[8]
+ footer.textContent = "Copyright Great Idea 2018";
+ footer.style.color = "turquoise";
 
 
 
