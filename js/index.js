@@ -44,6 +44,8 @@ navLinks[1].textContent = siteContent["nav"]["nav-item-2"];
 navLinks[2].textContent = siteContent["nav"]["nav-item-3"];
 navLinks[3].textContent = siteContent["nav"]["nav-item-4"];
 navLinks[4].textContent = siteContent["nav"]["nav-item-5"];
+navLinks[5].textContent = siteContent["nav"]["nav-item-6"];
+
 
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
@@ -52,7 +54,7 @@ let greatIdeaNoDom = document.getElementById("cta-img");
 greatIdeaNoDom.setAttribute("src", "img/header-img.png")
 
 let domIsAwesome = document.querySelector(".cta-text h1");
-domIsAwesome.textContent = siteContent["cta"]["h1"];
+domIsAwesome.innerHTML = "DOM<br> Is<br> Awesome";
 
 let button = document.querySelector(".cta-text button");
 button.textContent = siteContent["cta"]["button"];
@@ -82,7 +84,7 @@ let contactH4 = document.querySelector(".contact h4");
 contactH4.textContent = siteContent["contact"]["contact-h4"];
 
 let contactP = document.querySelectorAll(".contact p");
-contactP[0].textContent = siteContent["contact"]["address"];
+contactP[0].innerHTML = "123 Way 456 Street<br>Somewhere, USA" 
 contactP[1].textContent = siteContent["contact"]["phone"];
 contactP[2].textContent = siteContent["contact"]["email"];
 
