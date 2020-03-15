@@ -39,34 +39,24 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-//could you use a switch for this? Or for loop to do this quicker?
+//how can I make more generic? or actually, more specific?
+//want to check if the prop .includes() nav || h4
+//I could add all selectorVar as args and then sort them as we go through --> if x = y it goes into z, if x = w it goes into a, etc.
+function contentLooper(contentProp, selectorVar) {
+  const valueArray = Object.values(siteContent[contentProp]);
+  for (let i = 0; i < selectorVar.length; i++) {
+    selectorVar[i].textContent = valueArray[i];
+  }
+}
+
 const navSelector = document.querySelectorAll("a");
-
-//one way to do it...
-// navChange[0].textContent = (siteContent["nav"]["nav-item-1"]);
-// navChange[1].textContent = (siteContent["nav"]["nav-item-2"]);
-// navChange[2].textContent = (siteContent["nav"]["nav-item-3"]);
-// navChange[3].textContent = (siteContent["nav"]["nav-item-4"]);
-// navChange[4].textContent = (siteContent["nav"]["nav-item-5"]);
-// navChange[5].textContent = (siteContent["nav"]["nav-item-6"]);
-
-//another... --> make this function reusable elsewhere? add selector arg, obj, propName
-//try using a counter or for loop and .toString
-let navChangeFunc = (index, propNum) => navSelector[index].textContent = (siteContent["nav"]["nav-item-" + propNum]);
-navChangeFunc(0, "1");
-navChangeFunc(1, "2");
-navChangeFunc(2, "3");
-navChangeFunc(3, "4");
-navChangeFunc(4, "5");
-navChangeFunc(5, "6");
+contentLooper('nav', navSelector)
 
 
 //bad form to do this as one line?
-//for 'h1', need to add <br>s
 const title = document.querySelector("h1").textContent = (siteContent["cta"]["h1"]);
-// document.querySelector("h1").textContent = ("Dom "+ <br>+ "Is "+ <br> + "Awesome");
 
 const button = document.querySelector("button").textContent = (siteContent["cta"]["button"]);
 
@@ -74,6 +64,22 @@ const mainImage = document.getElementById("cta-img").setAttribute("src", siteCon
 
 //add h4 titles
 const h4Selector = document.querySelectorAll("h4");
+
+//can't loop enough times, with selectorVar the length is 6, Services is the last h4 it reads --> for some reason it puts it in place of Contact too...
+// function contentLooper1(contentProp, selectorVar) {
+//   const keysArray = Object.keys(siteContent[contentProp])
+//   const valueArray = Object.values(siteContent[contentProp]);
+//   for (let i = 0; i < selectorVar.length; i++) {
+//     if (keysArray[i].includes('h4')) { 
+//       selectorVar[i].textContent = valueArray[i]
+//     }
+//   }
+// }
+
+//contentLooper1('main-content', h4Selector)
+console.log(Object.keys(siteContent['nav']))
+
+
 let h4Adder = (index, prop) => h4Selector[index].textContent = (siteContent["main-content"][prop + "-h4"]);
 
 h4Adder(0, "features");
@@ -123,7 +129,6 @@ document.querySelector('nav').prepend(newPortfolio);
 
 
 //make nav green
-//could expand this to shorten paragraphAdder, etc.
 function makeGreen(selector) {
   for (let i = 0; i < selector.length; i++) {
     selector[i].style.color = "green";
@@ -131,4 +136,6 @@ function makeGreen(selector) {
 }
 
 makeGreen(navSelector);
+
+
 
