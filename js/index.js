@@ -153,7 +153,7 @@ const footer = document.querySelector('footer');
 footer.textContent = siteContent['footer']['copyright'];
 
 
-// Stretch
+// Stretch?
 const stretchNavLinks = document.querySelectorAll('header nav a');
 stretchNavLinks.forEach(element => {
   element.style.boxShadow = '10px 20px 30px black'; 
