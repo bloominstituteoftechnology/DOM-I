@@ -161,4 +161,5 @@ stretchNavLinks.forEach(element => {
   element.style.fontWeight = 'bold';
   element.style.padding = '8.18px';
   element.style.textDecoration = 'none';
+  element.style.borderRadius = '10px';
 });
