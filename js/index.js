@@ -49,10 +49,49 @@ navigation[3] .textContent = siteContent["nav"]["nav-item-4"];
 navigation[4] .textContent = siteContent["nav"]["nav-item-5"];
 navigation[5] .textContent = siteContent["nav"]["nav-item-6"];
 
-let logoTitle = document.getElementsByTagName("h1");
-logoTitle.textContent = h1;
+let logoTitle = document.querySelector("h1");
+logoTitle.textContent = siteContent["cta"]["h1"];
 
 let heroImg = document.getElementById('cta-img');
 heroImg.setAttribute('src', siteContent['cta']['img-src']);
+
+let startBtn = document.querySelector ("button");
+startBtn.textContent = siteContent ["cta"]["button"];
+
+
+
+let mContent = document.querySelectorAll(".text-content");
+mContent[0].children[0].textContent = siteContent["main-content"]["features-h4"];
+mContent[0].children[1].textContent = siteContent["main-content"] ["features-content"];
+mContent[1].children[0].textContent = 
+siteContent["main-content"]["about-h4"];
+mContent[1].children[1].textContent = siteContent["main-content"]["about-content"];
+let snippets = document.getElementById('middle-img');
+
+snippets.setAttribute('src', siteContent['main-content']["middle-img-src"]);
+
+mContent[2].children[0].textContent = siteContent ["main-content"]["services-h4"];
+mContent[2].children[1].textContent = siteContent ["main-content"]["services-content"];
+mContent[3].children[0].textContent = siteContent ["main-content"]["product-h4"];
+mContent[3].children[1].textContent = siteContent ["main-content"]["product-content"];
+mContent[4].children[0].textContent = siteContent ["main-content"]["vision-h4"];
+mContent[4].children[1].textContent = siteContent ["main-content"]["vision-content"];
+
+let contactInfo = document.querySelectorAll(".contact");
+
+contactInfo[0].children[0].textContent = siteContent ["contact"]["contact-h4"];
+contactInfo[0].children[1].textContent = siteContent ["contact"]["address"];
+contactInfo[0].children[2].textContent = siteContent ["contact"]["phone"];
+contactInfo[0].children[3].textContent = siteContent ["contact"]["email"];
+
+let copy = document.querySelectorAll("footer");
+
+copy[0].textContent = siteContent ["footer"]["copyright"];
+
+
+
+
+
+
 
 
