@@ -40,3 +40,109 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+// anchor tags
+
+const navList = document.getElementsByTagName('a');
+
+//why doesnt this work?
+/* const navListArr = Array.from(navList);
+
+navListArr.forEach(a => {
+  a.stlye = "color: green";
+}); */
+
+for(let i = 0; i < navList.length; i++){
+  navList[i].style = "color:green";
+}
+
+for(let i = 0; i < navList.length; i++){
+  navList[i].innerHTML = siteContent["nav"]["nav-item-"+(i+1)];
+}
+
+//brand img
+const brandImg = document.getElementById("logo-img");
+brandImg.setAttribute('src', siteContent["nav"]["img-src"]);
+
+
+//code snippet img
+
+const cdeSnipImg = document.getElementById("cta-img");
+cdeSnipImg.setAttribute('src', siteContent["cta"]["img-src"]);
+// ---------------------------END OF NAV STUFF -----------------------
+
+
+// ---------------------------CTA SECTION ----------------------------
+//h1 'DOM is Awesome text
+const ctaContent = document.querySelector(".cta-text");
+ctaContent.childNodes[1].innerHTML = siteContent["cta"]["h1"];
+
+//cta button
+ctaContent.childNodes[3].innerHTML = siteContent["cta"]["button"];
+// ----------------------------END OF CTA STUFF -----------------------
+
+
+// ----------------------------MAIN CONTENT----------------------------
+//Image of codesnip across screen 
+const CdeSnipImgMid = document.getElementById("middle-img");
+CdeSnipImgMid.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+
+//top content
+
+const topContent = document.querySelector(".top-content");
+
+
+//features
+topContent.childNodes[1].children[0].innerHTML = siteContent['main-content']['features-h4'];
+topContent.childNodes[1].children[1].innerHTML = siteContent['main-content']['features-content'];
+
+//about
+topContent.childNodes[3].children[0].innerHTML = siteContent['main-content']['about-h4'];
+topContent.childNodes[3].children[1].innerHTML = siteContent['main-content']['about-content'];
+//------------------------------------END OF TOP CONTENT --------------------
+
+//bottom content
+
+const bottContent = document.querySelector(".bottom-content");
+
+
+//services
+bottContent.childNodes[1].children[0].innerHTML = siteContent['main-content']['services-h4'];
+bottContent.childNodes[1].children[1].innerHTML = siteContent['main-content']['services-content'];
+
+//product
+bottContent.childNodes[3].children[0].innerHTML = siteContent['main-content']['product-h4'];
+bottContent.childNodes[3].children[1].innerHTML = siteContent['main-content']['services-content'];
+
+//vision
+bottContent.childNodes[5].children[0].innerHTML = siteContent['main-content']['vision-h4'];
+bottContent.childNodes[5].children[1].innerHTML = siteContent['main-content']['vision-content'];
+//---------------------------------END OF BOTTOM CONTENT ----------------------
+
+//---------------------------------CONTACT SECTION ----------------------------
+
+const contactSect = document.querySelector(".contact");
+
+//conact h4
+contactSect.childNodes[1].innerHTML = siteContent['contact']['contact-h4'];
+
+//address
+contactSect.childNodes[3].innerHTML = siteContent['contact']['address'];
+
+//phone
+contactSect.childNodes[5].innerHTML = siteContent['contact']['phone'];
+
+//email
+contactSect.childNodes[7].innerHTML = siteContent['contact']['email'];
+
+//---------------------------------END OF CONTACT SECTION ------------------------
+
+//---------------------------------FOOTER ----------------------------------------
+
+const footerSect = document.getElementsByTagName("footer");
+footerSect[0].innerHTML = siteContent['footer']['copyright'];
+
+//---------------------------------END OF FOOTER-----------------------------------
+
