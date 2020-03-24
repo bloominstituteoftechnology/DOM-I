@@ -86,16 +86,29 @@ const setCtaImage = ctaImage.setAttribute('src', siteContent.cta["img-src"]);
 const mainContentFeaturesH4 = document.querySelector('.top-content .text-content:first-child h4');
 mainContentFeaturesH4.textContent = siteContent["main-content"]["features-h4"];
 
+// change the color of the H4
+mainContentFeaturesH4.style.color = 'red';
+
 // main content features p
 const mainContentFeaturesP = document.querySelector('.top-content .text-content:first-child p');
 mainContentFeaturesP.textContent = siteContent["main-content"]["features-content"];
 
+// change the color of p
+mainContentFeaturesP.style.color = 'green';
+
 // main content about h4
 const mainContentAboutH4 = document.querySelector('.top-content .text-content:last-child h4');
 mainContentAboutH4.textContent = siteContent["main-content"]["about-h4"];
+
+// change the color of h4
+mainContentAboutH4.style.color = 'red';
+
 // main content about p
 const mainContentAboutP = document.querySelector('.top-content .text-content:last-child p');
 mainContentAboutP.textContent = siteContent["main-content"]["about-content"];
+
+// change the color of p
+mainContentAboutP.style.color = 'green';
 
 // main content middle-image
 const middleImage = document.getElementById('middle-img');
@@ -105,25 +118,43 @@ const setMiddleImage = middleImage.setAttribute('src', siteContent["main-content
 const bottomContentServicesH4 = document.querySelector('.bottom-content .text-content:nth-child(1) h4');
 bottomContentServicesH4.textContent = siteContent["main-content"]["services-h4"];
 
+// change the color of h4
+bottomContentServicesH4.style.color = 'red';
+
 // bottom content services p
 const bottomContentServicesP = document.querySelector('.bottom-content .text-content:nth-child(1) p');
 bottomContentServicesP.textContent = siteContent["main-content"]["services-content"];
+
+// change the color of p
+bottomContentServicesP.style.color = 'green';
 
 // botom content product H4
 const bottomContentProductsH4 = document.querySelector('.bottom-content .text-content:nth-child(2) h4');
 bottomContentProductsH4.textContent = siteContent["main-content"]["product-h4"];
 
+// change color of h4
+bottomContentProductsH4.style.color = 'red';
+
 // bottom content product p
 const bottomContentProductP = document.querySelector('.bottom-content .text-content:nth-child(2) p');
 bottomContentProductP.textContent = siteContent["main-content"]["product-content"];
+
+// change color of p
+bottomContentProductP.style.color = 'green';
 
 // bottom content vision h4
 const bottomContentVisionH4 = document.querySelector('.bottom-content .text-content:nth-child(3) h4');
 bottomContentVisionH4.textContent = siteContent["main-content"]["vision-h4"];
 
+// change color of h4
+bottomContentVisionH4.style.color = 'red';
+
 // bottom content vision p
 const bottomContentVisionP = document.querySelector('.bottom-content .text-content:nth-child(3) p');
 bottomContentVisionP.textContent = siteContent["main-content"]["vision-content"];
+
+// change color of p
+bottomContentVisionP.style.color = 'green';
 
 // contact h4
 const contactHeading = document.querySelector('.contact h4');
