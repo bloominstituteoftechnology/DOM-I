@@ -42,37 +42,108 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // Nav Bar
-const navItemServices = siteContent.nav["nav-item-1"];
-const navItemProduct = siteContent.nav["nav-item-2"];
-const navItemVision = siteContent.nav["nav-item-3"];
-const navItemFeatures = siteContent.nav["nav-item-4"];
-const navItemAbout = siteContent.nav["nav-item-5"];
-const navItemContact = siteContent.nav["nav-item-6"];
 
+const navItem = document.querySelectorAll('a');
+navItem.className = 'nav-item';
+const navToArray = Array.from(navItem);
 
+const theNav = navToArray.map((item, index) => {
+  item.style.textDecoration = 'none';
+  item.style.color = 'green';
+  return item.textContent = siteContent.nav[`nav-item-${index+1}`];
+});
 
+// append child
+const newLink = document.createElement("A");
+const randomTextNode1 = document.createTextNode("Appended");
+const setAppendChild = newLink.appendChild(randomTextNode1);
+const appendToNav =document.querySelector("nav").appendChild(newLink);
 
-// services
-const navItem1 = document.querySelectorAll('a');
-console.log(navItem1);
-navItem1.className = 'nav-item';
-navItem1.map( item => item )
+// prepend child
+const newLink2 = document.createElement("A");
+const randomTextNode2 = document.createTextNode("Prepended");
+const setPrepend = newLink2.prepend(randomTextNode2);
+const prependToNav = document.querySelector("nav").prepend(newLink2);
 
-console.log(navItem1);
-
-// product
-// const navProduct = document.querySelector("a");
-// navProduct.textContent = navItemProduct;
-//
-// // vision
-// const navVision = document.querySelector("nav");
-// navVision.textContent = navItemVision;
-//
-
-
-
-// H1 Element
-const cta = siteContent.cta.h1;
+// cta H1
 const h1 = document.querySelector('h1');
-h1.textContent = cta;
-h1.textContent;
+h1.textContent = siteContent.cta.h1;
+
+
+// cta button
+const ctaButton = document.getElementsByTagName('button');
+ctaButton.className = 'cta-button';
+
+const buttonToArray = Array.from(ctaButton);
+
+const theCtaButton = buttonToArray.map( item => item.textContent = siteContent.cta.button );
+
+// cta img
+const ctaImage = document.getElementById('cta-img');
+const setCtaImage = ctaImage.setAttribute('src', siteContent.cta["img-src"]);
+
+// main content features H4
+const mainContentFeaturesH4 = document.querySelector('.top-content .text-content:first-child h4');
+mainContentFeaturesH4.textContent = siteContent["main-content"]["features-h4"];
+
+// main content features p
+const mainContentFeaturesP = document.querySelector('.top-content .text-content:first-child p');
+mainContentFeaturesP.textContent = siteContent["main-content"]["features-content"];
+
+// main content about h4
+const mainContentAboutH4 = document.querySelector('.top-content .text-content:last-child h4');
+mainContentAboutH4.textContent = siteContent["main-content"]["about-h4"];
+// main content about p
+const mainContentAboutP = document.querySelector('.top-content .text-content:last-child p');
+mainContentAboutP.textContent = siteContent["main-content"]["about-content"];
+
+// main content middle-image
+const middleImage = document.getElementById('middle-img');
+const setMiddleImage = middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+// bottom content services h4
+const bottomContentServicesH4 = document.querySelector('.bottom-content .text-content:nth-child(1) h4');
+bottomContentServicesH4.textContent = siteContent["main-content"]["services-h4"];
+
+// bottom content services p
+const bottomContentServicesP = document.querySelector('.bottom-content .text-content:nth-child(1) p');
+bottomContentServicesP.textContent = siteContent["main-content"]["services-content"];
+
+// botom content product H4
+const bottomContentProductsH4 = document.querySelector('.bottom-content .text-content:nth-child(2) h4');
+bottomContentProductsH4.textContent = siteContent["main-content"]["product-h4"];
+
+// bottom content product p
+const bottomContentProductP = document.querySelector('.bottom-content .text-content:nth-child(2) p');
+bottomContentProductP.textContent = siteContent["main-content"]["product-content"];
+
+// bottom content vision h4
+const bottomContentVisionH4 = document.querySelector('.bottom-content .text-content:nth-child(3) h4');
+bottomContentVisionH4.textContent = siteContent["main-content"]["vision-h4"];
+
+// bottom content vision p
+const bottomContentVisionP = document.querySelector('.bottom-content .text-content:nth-child(3) p');
+bottomContentVisionP.textContent = siteContent["main-content"]["vision-content"];
+
+// contact h4
+const contactHeading = document.querySelector('.contact h4');
+contactHeading.textContent = siteContent.contact["contact-h4"];
+
+// contact address
+const contactAddress = document.querySelector('.contact p:nth-child(2)');
+contactAddress.textContent = siteContent.contact.address;
+
+// contact phone
+const contactPhone = document.querySelector('.contact p:nth-child(3)');
+contactPhone.textContent = siteContent.contact.phone;
+
+// contact email
+const contactEmail = document.querySelector('.contact p:nth-child(4)');
+contactEmail.textContent = siteContent.contact.email;
+
+// footer
+const theFooter = document.querySelector('footer p');
+theFooter.textContent = siteContent.footer.copyright;
+
+
+
