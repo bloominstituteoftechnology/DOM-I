@@ -45,6 +45,9 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // My Code
 
+
+//navigation
+
 const navBar = document.querySelectorAll('a');
 navBar[0].textContent = 'Services';
 navBar[1].textContent = 'Products';
@@ -52,6 +55,8 @@ navBar[2].textContent = 'Vision';
 navBar[3].textContent = 'Features';
 navBar[4].textContent = 'About';
 navBar[5].textContent = 'Contact';
+
+//header content
 
 const headImg = document.getElementById('cta-img');
 headImg.src = 'img/header-img.png';
@@ -62,15 +67,17 @@ ctaText.textContent = "DOM is awesome";
 const ctaButton = document.querySelector('button');
 ctaButton.textContent = 'Get Started';
 
+
+
 const content = document.querySelectorAll('h4');
 content[0].textContent = 'Features';
 content[1].textContent = 'About';
 content[2].textContent = 'Services';
 content[3].textContent = 'Product';
 content[4].textContent = 'Vision';
-content[5].textContent = 'Contact'
+content[5].textContent = 'Contact';
 
-//top content
+// top content
 
 const text = document.querySelectorAll('p');
 text[0].textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
