@@ -40,3 +40,43 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+
+// My Code
+
+const navBar = document.querySelectorAll('a');
+navBar[0].textContent = 'Services';
+navBar[1].textContent = 'Products';
+navBar[2].textContent = 'Vision';
+navBar[3].textContent = 'Features';
+navBar[4].textContent = 'About';
+navBar[5].textContent = 'Contact';
+
+const headImg = document.getElementById('cta-img');
+headImg.src = 'img/header-img.png';
+
+const ctaText = document.querySelector('h1');
+ctaText.textContent = "DOM is awesome";
+
+const ctaButton = document.querySelector('button');
+ctaButton.textContent = 'Get Started';
+
+const content = document.querySelectorAll('h4');
+content[0].textContent = 'Features';
+content[1].textContent = 'About';
+content[2].textContent = 'Services';
+content[3].textContent = 'Product';
+content[4].textContent = 'Vision';
+
+//top content
+
+const text = document.querySelectorAll('p');
+text[0].textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+text[1].textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+//bottom content
+
+text[2].textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+text[3].textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+text[4].textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
