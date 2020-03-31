@@ -67,8 +67,6 @@ ctaText.textContent = "DOM is awesome";
 const ctaButton = document.querySelector('button');
 ctaButton.textContent = 'Get Started';
 
-
-
 const content = document.querySelectorAll('h4');
 content[0].textContent = 'Features';
 content[1].textContent = 'About';
@@ -97,3 +95,9 @@ text[7].textContent = 'sales@greatidea.io';
 
 const middleImg = document.getElementById ('middle-img');
 middleImg.setAttribute('src', 'img/mid-page-accent.jpg');
+
+// margin adjustments
+
+const headerMargin = document.querySelector('.cta-text');
+headerMargin.style.width = "25%"
+
