@@ -68,6 +68,7 @@ content[1].textContent = 'About';
 content[2].textContent = 'Services';
 content[3].textContent = 'Product';
 content[4].textContent = 'Vision';
+content[5].textContent = 'Contact'
 
 //top content
 
@@ -80,3 +81,12 @@ text[1].textContent = 'About content elementum magna eros, ac posuere elvit temp
 text[2].textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
 text[3].textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
 text[4].textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+// contact
+
+text[5].textContent = '123 Way 456 Street Somewhere, USA';
+text[6].textContent = '1 (888) 888-8888';
+text[7].textContent = 'sales@greatidea.io';
+
+const middleImg = document.getElementById ('middle-img');
+middleImg.setAttribute('src', 'img/mid-page-accent.jpg');
