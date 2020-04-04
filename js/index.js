@@ -46,3 +46,10 @@ ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 
 let midImg = document.getElementById("middle-img");
 midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+let navItems = document.getElementsByTagName("a");
+//console.log(navItems);
+for (let i = 0; i<navItems.length; i++){
+  //console.log(siteContent["nav"]["nav-item-"+i]);
+  navItems[i].innerHTML = siteContent["nav"]["nav-item-"+(i+1)];
+};
