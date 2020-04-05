@@ -36,7 +36,7 @@ const siteContent = {
     "copyright" : "Copyright Great Idea! 2018"
   },
 };
-
+  let something = ['features', 'about', 'services', 'product', 'vision', 'contact', 'address', 'phone', 'email'];
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
@@ -44,29 +44,26 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 //let ctaTextEL = document.querySelector('.cta-text');
 //console.log(ctaTextEl);
  let ctaTextEl = document.querySelector('h1');
- console.log(ctaTextEl);
+ //console.log(ctaTextEl);
 // //ctaTextEl.textContent = "";
  ctaTextEl.textContent = siteContent["cta"]["h1"];
 
 let ctaButton = document.querySelector("button");
 ctaButton.textContent = siteContent["cta"]["button"];
-console.log(ctaButton.textContent);
+//console.log(ctaButton.textContent);
 
 let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 
 let thisVar = document.querySelectorAll(".text-content");
 for (let i = 0; i < thisVar.length; i++){
-  console.log(thisVar[i].firstElementChild);
-  let something = ['features', 'about', 'services', 'product', 'vision'];
+  //console.log(thisVar[i].firstElementChild);
   let j = something[i];
   //something = siteContent["main-content"][i];
   //console.log(something);
   thisVar[i].firstElementChild.textContent = siteContent["main-content"][j+"-h4"];
   thisVar[i].lastElementChild.textContent = siteContent["main-content"][j+"-content"];
 }
-
-
 
 let midImg = document.getElementById("middle-img");
 midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
@@ -78,3 +75,19 @@ for (let i = 0; i<navItems.length; i++){
   navItems[i].innerHTML = siteContent["nav"]["nav-item-"+(i+1)];
 };
 
+
+let contacts = document.getElementsByClassName("contact");
+console.log(contacts);
+// for (let i=1; i<contacts.length; i++){
+//   contactJ = something[i+5];
+//   console.log(contactJ);
+//   contacts[i].textContent = siteContent["contact"][contactJ];
+// }
+let thisJ = something[5];
+contacts[0].textContent = siteContent["contact"][thisJ+"-h4"];
+
+let paragraphs = document.getElementsByTagName("p");
+console.log(paragraphs);
+
+let closingText = document.querySelector("footer");
+closingText.textContent = siteContent["footer"]["copyright"];
