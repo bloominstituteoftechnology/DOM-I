@@ -55,6 +55,19 @@ console.log(ctaButton.textContent);
 let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 
+let thisVar = document.querySelectorAll(".text-content");
+for (let i = 0; i < thisVar.length; i++){
+  console.log(thisVar[i].firstElementChild);
+  let something = ['features', 'about', 'services', 'product', 'vision'];
+  let j = something[i];
+  //something = siteContent["main-content"][i];
+  //console.log(something);
+  thisVar[i].firstElementChild.textContent = siteContent["main-content"][j+"-h4"];
+  thisVar[i].lastElementChild.textContent = siteContent["main-content"][j+"-content"];
+}
+
+
+
 let midImg = document.getElementById("middle-img");
 midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
