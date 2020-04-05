@@ -41,6 +41,17 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
+//let ctaTextEL = document.querySelector('.cta-text');
+//console.log(ctaTextEl);
+ let ctaTextEl = document.querySelector('h1');
+ console.log(ctaTextEl);
+// //ctaTextEl.textContent = "";
+ ctaTextEl.textContent = siteContent["cta"]["h1"];
+
+let ctaButton = document.querySelector("button");
+ctaButton.textContent = siteContent["cta"]["button"];
+console.log(ctaButton.textContent);
+
 let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 
@@ -53,3 +64,4 @@ for (let i = 0; i<navItems.length; i++){
   //console.log(siteContent["nav"]["nav-item-"+i]);
   navItems[i].innerHTML = siteContent["nav"]["nav-item-"+(i+1)];
 };
+
