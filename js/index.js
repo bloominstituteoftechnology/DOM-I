@@ -44,14 +44,25 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
 //---NAV---
+let navigation = document.querySelector('nav');
+
+let navBaby = document.createElement('a');
+navBaby.href = '#';
+navBaby.classList.toggle('nav-item-1')
+navBaby.textContent = 'Yoooo';
+navigation.appendChild(navBaby);
+
 let navLinks = document.querySelectorAll('nav a');
 let navLinksArr = Array.from(navLinks);
+
 navLinksArr[0].textContent = siteContent['nav']['nav-item-1'];
 navLinksArr[1].textContent = siteContent['nav']['nav-item-2'];
 navLinksArr[2].textContent = siteContent['nav']['nav-item-3'];
 navLinksArr[3].textContent = siteContent['nav']['nav-item-4'];
 navLinksArr[4].textContent = siteContent['nav']['nav-item-5'];
 navLinksArr[5].textContent = siteContent['nav']['nav-item-6'];
+navLinksArr.forEach(item => item.style.color = "green");
+
 
 
 //---CTA---
