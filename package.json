@@ -1,0 +1,23 @@
+{
+  "name": "DOM-I",
+  "version": "1.0.0",
+  "description": "## Project Description You are going to be emulating a content managment system by controlling the content in the JavaScript file instead of the HTML file. This project is an excercise pointed at selecting elements and then updating them without touching the HTML file using the DOM.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manzur1990/DOM-I.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manzur1990/DOM-I/issues"
+  },
+  "homepage": "https://github.com/manzur1990/DOM-I#readme",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
