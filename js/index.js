@@ -49,7 +49,7 @@ logo.setAttribute("src", siteContent["nav"]["img-src"]);
 //Navigation bar
 function setAtt() {
   const navBarObj = Object.values(siteContent.nav);
-  let navBar = document.querySelectorAll("nav a");
+  const navBar = document.querySelectorAll("nav a");
   for (let i = 0; i < navBar.length; i++) {
     navBar[i].textContent = navBarObj[i];
   }
@@ -67,12 +67,12 @@ newLink2.textContent = "Start";
 const parentElement2 = document.querySelector("nav");
 parentElement2.prepend(newLink2);
 
-navigationBar.forEach((element) => {
+const navBarColor = document.querySelectorAll("nav a");
+navBarColor.forEach((element) => {
   element.style.color = "green";
 });
 
 //Body
-
 let bodyImg = document.getElementById("cta-img");
 bodyImg.setAttribute("src", siteContent["cta"]["img-src"]);
 
@@ -81,3 +81,23 @@ domText.textContent = siteContent["cta"]["h1"];
 
 let button1 = document.querySelector("button");
 button1.textContent = siteContent["cta"]["button"];
+
+// top content
+let topContent = document.querySelectorAll("h4");
+const bodyObj = Object.values(siteContent["main-content"]);
+for (let i = 0; i < topContent.length; i++) {
+  topContent[i].textContent = bodyObj[i];
+}
+
+//images
+let mainImg = document.getElementById("middle-img");
+mainImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+//paragraphs
+
+let pContent = document.querySelectorAll("p");
+
+const pObj = Object.values(siteContent["main-content"]);
+for (let i = 0; i < pContent.length; i++) {
+  pContent[i].textContent = pObj[i];
+}
