@@ -69,7 +69,7 @@ parentElement2.prepend(newLink2);
 
 const navBarColor = document.querySelectorAll("nav a");
 navBarColor.forEach((element) => {
-  element.style.color = "green";
+  element.style.color = "blue";
 });
 
 //Body
@@ -101,3 +101,24 @@ const pObj = Object.values(siteContent["main-content"]);
 for (let i = 0; i < pContent.length; i++) {
   pContent[i].textContent = pObj[i];
 }
+//footer
+pContent[8].textContent = siteContent["footer"]["copyright"];
+
+// stretch goal
+const header = document.querySelector("header");
+header.style.backgroundColor = "limegreen";
+const textContentDiv = document.querySelectorAll("div.text-content");
+textContentDiv.forEach((item) => {
+  item.style.border = "1px solid black";
+  item.style.borderRadius = "5px";
+  item.style.margin = "2px";
+  item.style.padding = "5px";
+});
+
+function alertUser(e) {
+  alert(`You clicked "${e.target.textContent}" menu option`);
+}
+
+navBarColor.forEach((element) => {
+  element.addEventListener("click", alertUser);
+});
