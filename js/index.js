@@ -68,14 +68,23 @@ let midImg = document.getElementById("middle-img");
 midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 let navItems = document.getElementsByTagName("a");
-
+const navA = document.querySelector("nav");
 //console.log(navItems);
 for (let i = 0; i<navItems.length; i++){
   //console.log(siteContent["nav"]["nav-item-"+i]);
   navItems[i].innerHTML = siteContent["nav"]["nav-item-"+(i+1)];
   navItems[i].style.color = "green";
 };
-
+let navApp = document.createElement("a");
+navApp.href = "#";
+navApp.textContent = "end";
+// console.log(navApp);
+// console.log(navA);
+navA.appendChild(navApp);
+let navPre = document.createElement('a');
+navPre.href = "#";
+navPre.textContent = "start";
+navA.prepend(navPre);
 
 const contacts = document.getElementsByClassName("contact");
 console.log(contacts);
