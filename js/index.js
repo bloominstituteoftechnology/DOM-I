@@ -55,6 +55,8 @@ function setAtt() {
   }
 }
 setAtt();
+
+//Add extra link
 const newLink = document.createElement("a");
 newLink.textContent = "End";
 
@@ -82,19 +84,26 @@ domText.textContent = siteContent["cta"]["h1"];
 let button1 = document.querySelector("button");
 button1.textContent = siteContent["cta"]["button"];
 
-// top content
+//top content
+// let topContent = document.querySelectorAll("h4");
+// const bodyObj = Object.values(siteContent["main-content"]);
+// for (let i = 0; i < topContent.length; i++) {
+//   topContent[i].textContent = bodyObj[i];
+// }
+
 let topContent = document.querySelectorAll("h4");
-const bodyObj = Object.values(siteContent["main-content"]);
-for (let i = 0; i < topContent.length; i++) {
-  topContent[i].textContent = bodyObj[i];
-}
+topContent[0].textContent = siteContent["main-content"]["features-h4"];
+topContent[1].textContent = siteContent["main-content"]["about-h4"];
+topContent[2].textContent = siteContent["main-content"]["services-h4"];
+topContent[3].textContent = siteContent["main-content"]["product-h4"];
+topContent[4].textContent = siteContent["main-content"]["vision-h4"];
+topContent[5].textContent = siteContent["contact"]["contact-h4"];
 
 //images
 let mainImg = document.getElementById("middle-img");
 mainImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
 //paragraphs
-
 let pContent = document.querySelectorAll("p");
 
 const pObj = Object.values(siteContent["main-content"]);
@@ -104,7 +113,7 @@ for (let i = 0; i < pContent.length; i++) {
 //footer
 pContent[8].textContent = siteContent["footer"]["copyright"];
 
-// stretch goal
+// stretch goal 1, update nav bar color, add borders to paragraphs
 const header = document.querySelector("header");
 header.style.backgroundColor = "limegreen";
 const textContentDiv = document.querySelectorAll("div.text-content");
@@ -122,3 +131,16 @@ function alertUser(e) {
 navBarColor.forEach((element) => {
   element.addEventListener("click", alertUser);
 });
+
+//Stretch goal 2, add a button
+const changedBtn = document.querySelector("button");
+changedBtn.addEventListener("click", addContent);
+function addContent() {
+  const btnContent = document.createElement("p");
+  btnContent.textContent = "Projects and more projects till you get it!!";
+  btnContent.style.fontSize = "1.6rem";
+  btnContent.style.color = "green";
+
+  const ctaText = document.querySelector(".cta-text");
+  ctaText.append(btnContent);
+}
