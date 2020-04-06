@@ -36,17 +36,16 @@ const siteContent = {
     "copyright" : "Copyright Great Idea! 2018"
   },
 };
-  let something = ['features', 'about', 'services', 'product', 'vision', 'contact', 'address', 'phone', 'email'];
+let something = ['features', 'about', 'services', 'product', 'vision', 'contact', 'address', 'phone', 'email'];
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
-
 //let ctaTextEL = document.querySelector('.cta-text');
 //console.log(ctaTextEl);
- let ctaTextEl = document.querySelector('h1');
+let ctaTextEl = document.querySelector('h1');
  //console.log(ctaTextEl);
 // //ctaTextEl.textContent = "";
- ctaTextEl.textContent = siteContent["cta"]["h1"];
+ctaTextEl.textContent = siteContent["cta"]["h1"];
 
 let ctaButton = document.querySelector("button");
 ctaButton.textContent = siteContent["cta"]["button"];
@@ -69,25 +68,48 @@ let midImg = document.getElementById("middle-img");
 midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 let navItems = document.getElementsByTagName("a");
+
 //console.log(navItems);
 for (let i = 0; i<navItems.length; i++){
   //console.log(siteContent["nav"]["nav-item-"+i]);
   navItems[i].innerHTML = siteContent["nav"]["nav-item-"+(i+1)];
+  navItems[i].style.color = "green";
 };
 
 
-let contacts = document.getElementsByClassName("contact");
+const contacts = document.getElementsByClassName("contact");
 console.log(contacts);
 // for (let i=1; i<contacts.length; i++){
 //   contactJ = something[i+5];
 //   console.log(contactJ);
 //   contacts[i].textContent = siteContent["contact"][contactJ];
 // }
-let thisJ = something[5];
-contacts[0].textContent = siteContent["contact"][thisJ+"-h4"];
+let j = something[5];
+contacts[0].textContent = siteContent["contact"][j+"-h4"];
+const newAd = document.createElement("p");
+newAd.innerHTML = siteContent["contact"][something[6]];
+contacts[0].appendChild(newAd);
+const newP = document.createElement("p");
+newP.innerHTML = siteContent["contact"][something[7]];
+contacts[0].appendChild(newP);
+const newEM = document.createElement("p");
+newEM.innerHTML = siteContent["contact"][something[8]];
+contacts[0].appendChild(newEM);
+// for (let i = 0; i < 3; i++){
+//   let j = something[i+6];
+//   console.log(newP);
+//   console.log("in newP where i="+i+" and j is "+j);
+// }
+console.log(contacts);
+
+// let contactP = document.getElementsByTagName(".contact p");
+// for (let i = 0; i < contactP.length; i++){
+//   let j = something[i+6];
+//   contactP[i].innerHTML = siteContent["contact"][j];
+// }
 
 let paragraphs = document.getElementsByTagName("p");
-console.log(paragraphs);
+//console.log(paragraphs);
 
 let closingText = document.querySelector("footer");
 closingText.textContent = siteContent["footer"]["copyright"];
