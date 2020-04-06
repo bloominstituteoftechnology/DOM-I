@@ -37,6 +37,77 @@ const siteContent = {
   },
 };
 
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+//---NAV---
+let navLinks = document.querySelectorAll('nav a');
+let navLinksArr = Array.from(navLinks);
+navLinksArr[0].textContent = siteContent['nav']['nav-item-1'];
+navLinksArr[1].textContent = siteContent['nav']['nav-item-2'];
+navLinksArr[2].textContent = siteContent['nav']['nav-item-3'];
+navLinksArr[3].textContent = siteContent['nav']['nav-item-4'];
+navLinksArr[4].textContent = siteContent['nav']['nav-item-5'];
+navLinksArr[5].textContent = siteContent['nav']['nav-item-6'];
+
+
+//---CTA---
+let cta = document.querySelector('.cta');
+let ctaImage = cta.children[1];
+ctaImage.src = siteContent['cta']['img-src']
+let ctaText = document.querySelector('.cta-text');
+let ctaArr = Array.from(ctaText.children);
+ctaArr[0].textContent = siteContent['cta']['h1'];
+ctaArr[1].textContent = siteContent['cta']['button'];
+
+
+//---MAIN CONTENT---
+//top content
+let topTextContent = document.querySelectorAll('.top-content .text-content');
+
+//top content first child
+let ttcFirstChild = topTextContent[0].children;
+ttcFirstChild[0].textContent = siteContent['main-content']['features-h4'];
+ttcFirstChild[1].textContent = siteContent['main-content']['features-content'];
+
+//top content second child
+let ttcSecondChild = topTextContent[1].children;
+ttcSecondChild[0].textContent = siteContent['main-content']['about-h4'];
+ttcSecondChild[1].textContent = siteContent['main-content']['about-content'];
+
+//middle image
+let mainImage = document.querySelector('#middle-img');
+mainImage.src = siteContent['main-content']['middle-img-src'];
+
+//bottom content
+let bottomTextContent = document.querySelectorAll('.bottom-content .text-content');
+
+//bottom content first child
+let btcFirstChild = bottomTextContent[0].children;
+btcFirstChild[0].textContent = siteContent['main-content']['product-h4']
+btcFirstChild[1].textContent = siteContent['main-content']['product-content']
+
+//bottom middle child
+let btcMiddleChild = bottomTextContent[1].children;
+btcMiddleChild[0].textContent = siteContent['main-content']['services-h4']
+btcMiddleChild[1].textContent = siteContent['main-content']['services-content'];
+
+//bottom last child
+let btcLast = bottomTextContent[2].children;
+btcLast[0].textContent = siteContent['main-content']['vision-h4'];
+btcLast[1].textContent = siteContent['main-content']['vision-content'];
+
+
+//---CONTACT---
+let contactChildren = document.querySelector('.contact').children;
+contactChildren[0].textContent = siteContent['contact']['contact-h4'];
+contactChildren[1].textContent = siteContent['contact']['email'];
+contactChildren[2].textContent = siteContent['contact']['phone'];
+contactChildren[3].textContent = siteContent['contact']['address'];
+
+//---FOOTER---
+let footerChild = document.querySelector('footer p');
+footerChild.textContent = siteContent['footer']['copyright']
