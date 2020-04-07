@@ -95,16 +95,22 @@ const footer = document.querySelector('footer p');
 footer.textContent = siteContent['footer']['copyright']; 
 
 
-// adding new content
-const firstNewLink = document.querySelector('a')
-firstNewLink.href = '#'//or secondNewLink.setAttribute('href', '#')
-firstNewLink.textContent = 'GoLambda'
-
-const secondNewLink = document.querySelector('a')
-secondNewLink.href = '#' //or secondNewLink.setAttribute('href', '#')
-secondNewLink.textContent = 'SchoolLife'
-
+// adding new content=element
 const newNav = document.querySelector('nav')
-nav.prependChild(firstNewLink)
-nav.appendChild(secondNewLink)
+
+// const firstNewLink = document.createElement('a')
+// firstNewLink.href = '#GoLambda'; //or firstNewLink.setAttribute('href', '#');
+// firstNewLink.textContent = 'GoLambda';
+// firstNewLink.style.color = 'green'
+// newNav.appendChild(firstNewLink);
+
+const secondNewLink = document.createElement('a')
+secondNewLink.href = '#SchoolLife' //or secondNewLink.setAttribute('href', '#')
+secondNewLink.textContent = 'SchoolLife'
+secondNewLink.style.color = 'green'
+newNav.prependChild(secondNewLink)
+
+// const newNav = document.querySelector('nav')
+// newNav.prependChild(firstNewLink)
+// newNav.appendChild(secondNewLink)
 
