@@ -50,7 +50,7 @@ navLinks[i].textContent = navTexts[i]
 navLinks[i].style.color ='green'
 }
 
-// for first section
+// for first section= cta
 const ctaH1 = document.querySelector('.cta-text h1');
 ctaH1.textContent = siteContent['cta']['h1'];
 
@@ -64,7 +64,7 @@ ctaImage.setAttribute('src',siteContent['cta']['img-src']);
 const middleImg = document.querySelector('#middle-img');
 middleImg.src = siteContent['main-content']['middle-img-src'];
 
-
+// for second section= main-content
 const sectionHeader = document.querySelectorAll('.main-content h4');
 sectionHeader[0].textContent = siteContent['main-content']['features-h4'];
 sectionHeader[1].textContent = siteContent['main-content']['about-h4'];
@@ -80,31 +80,16 @@ sectionParagraph[3].textContent = siteContent['main-content']['product-content']
 sectionParagraph[4].textContent = siteContent['main-content']['vision-content'];
 
 
+// for third Content= contact
+const contactHeader = document.querySelector('.contact h4');
+contactHeader.textContent = siteContent['contact']['contact-h4'];
 
+const contactParagraph = document.querySelectorAll('.contact p');
+contactParagraph[0].textContent = siteContent['contact']['address'];
+contactParagraph[1].textContent = siteContent['contact']['phone'];
+contactParagraph[2].textContent = siteContent['contact']['email'];
 
-// const mainContentFirstH = document.querySelector('.text-content h4');
-// mainContentFirstH.textContent = Object.values(siteContent['main-content']['features-h4']);
+// for fourth content= footer
 
-// const mainContentFirstP = document.querySelector('.text-content p');
-// mainContentFirstP.textContent = Object.values(siteContent['main-content']['features-content']);
-
-
-
-
-
-// const mainContentSecondH = document.querySelector('.text-content h4')
-// mainContentSecondH.textContent = Object.values(siteContent['main-content']['about-h4'])
-
-// const mainContentSecondP = document.querySelector('.text-content p')
-// mainContentSecondP.textContent = Object.values(siteContent['main-content']['about-content'])
-
-
-
-
-// const sectionHeader = document.querySelector('.maim-content .text-content h4');
-// topContentHeader[0].textContent = Object.values(siteContent['main-content']['features-h4']);
-// topContentHeader[1].textContent = Object.values(siteContent['main-content']['about-h4'])
-
-// const topContentParagraph = document.querySelector('.main-content .text-content p');
-// topContentParagraph[0].textContent = Object.values(siteContent['main-content']['features-content']);
-// topContentParagraph[1].textContent = Object.values(siteContent['main-content']['about-content'])
+const footer = document.querySelector('footer p');
+footer.textContent = siteContent['footer']['copyright']; 
