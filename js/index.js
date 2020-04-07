@@ -76,7 +76,15 @@ ctaButton.className = 'cta-button';
 
 const buttonToArray = Array.from(ctaButton);
 
-const theCtaButton = buttonToArray.map( item => item.textContent = siteContent.cta.button );
+const theCtaButton = buttonToArray.map( item => {
+  item.textContent = siteContent.cta.button;
+  item.addEventListener('click', () => {
+    console.log("the CTA button was pressed");
+    alert("the CTA button was pressed");
+  });
+});
+
+
 
 // cta img
 const ctaImage = document.getElementById('cta-img');
@@ -128,7 +136,7 @@ bottomContentServicesP.textContent = siteContent["main-content"]["services-conte
 // change the color of p
 bottomContentServicesP.style.color = 'green';
 
-// botom content product H4
+// bottom content product H4
 const bottomContentProductsH4 = document.querySelector('.bottom-content .text-content:nth-child(2) h4');
 bottomContentProductsH4.textContent = siteContent["main-content"]["product-h4"];
 
