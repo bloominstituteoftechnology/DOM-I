@@ -42,9 +42,14 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
+
 const navLinks = document.querySelectorAll('nav a');
 for (let i = 0; i <navLinks.length; i++){
-const navContent = Object.value(siteContent .nav)
-navlinks[i].textContent = navContent[i]
+const navTexts = Object.values(siteContent.nav)
+navLinks[i].textContent = navTexts[i]
+navLinks[i].style.color ='green'
 }
 
+// for first section
+const sectionH1 = document.querySelector('.cta .cta0text h1')
+sectionH1.textContent = cta.h1
