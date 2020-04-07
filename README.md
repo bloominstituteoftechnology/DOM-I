@@ -9,6 +9,7 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 
 ## Set Up The Project With Git
 
+** Cassie **
 **Follow these steps to set up and work on your project:**
 
 * [ ] Create a forked copy of this project.
