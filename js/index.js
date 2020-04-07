@@ -50,16 +50,15 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 const navBar = document.querySelectorAll('a');
 navBar[0].textContent = 'Services';
-navBar[1].textContent = 'Products';
+navBar[1].textContent = 'Product';
 navBar[2].textContent = 'Vision';
 navBar[3].textContent = 'Features';
 navBar[4].textContent = 'About';
 navBar[5].textContent = 'Contact';
 
-//header content
 
-const headImg = document.getElementById('cta-img');
-headImg.src = 'img/header-img.png';
+
+//header content
 
 const ctaText = document.querySelector('h1');
 ctaText.textContent = "DOM is awesome";
@@ -93,8 +92,20 @@ text[5].textContent = '123 Way 456 Street Somewhere, USA';
 text[6].textContent = '1 (888) 888-8888';
 text[7].textContent = 'sales@greatidea.io';
 
+//footer
+
+text[8].textContent = 'Copyright Great Idea! 2018';
+
+
+//images
+
+// header img
+const headImg = document.getElementById('cta-img');
+headImg.src = 'img/header-img.png';
+// middle img
 const middleImg = document.getElementById ('middle-img');
 middleImg.setAttribute('src', 'img/mid-page-accent.jpg');
+
 
 // margin adjustments
 
