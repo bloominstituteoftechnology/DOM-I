@@ -93,3 +93,18 @@ contactParagraph[2].textContent = siteContent['contact']['email'];
 
 const footer = document.querySelector('footer p');
 footer.textContent = siteContent['footer']['copyright']; 
+
+
+// adding new content
+const firstNewLink = document.querySelector('a')
+firstNewLink.href = '#'//or secondNewLink.setAttribute('href', '#')
+firstNewLink.textContent = 'GoLambda'
+
+const secondNewLink = document.querySelector('a')
+secondNewLink.href = '#' //or secondNewLink.setAttribute('href', '#')
+secondNewLink.textContent = 'SchoolLife'
+
+const newNav = document.querySelector('nav')
+nav.prependChild(firstNewLink)
+nav.appendChild(secondNewLink)
+
