@@ -71,7 +71,10 @@ const startTimer = () => {
     const appendStartButton = buttonDiv.appendChild(startButton);
 
     // style the button
-    startButton.style.marginLeft = '-1rem';
+    startButton.style.marginLeft = '-0.5rem';
+    startButton.style.backgroundColor = 'green';
+    startButton.style.padding ='0.2rem 1.2rem';
+    startButton.style.color = '#fff';
     // add the button text
     startButton.textContent = 'start';
 
@@ -92,6 +95,9 @@ const resetTimer = () => {
 
     // style the button
     resetButton.style.marginLeft = '1.5rem';
+    resetButton.style.backgroundColor = 'red';
+    resetButton.style.padding ='0.2rem 1rem';
+    resetButton.style.color = '#fff';
 
     // add the button to the dom
     const appendResetButton = buttonDiv.appendChild(resetButton);
