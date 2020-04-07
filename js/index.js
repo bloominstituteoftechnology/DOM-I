@@ -6,12 +6,12 @@ const siteContent = {
     "nav-item-4": "Features",
     "nav-item-5": "About",
     "nav-item-6": "Contact",
-    "img-src": "img/logo.png"
+    "img-src": "img/logo.png",
   },
   cta: {
     h1: "DOM Is Awesome",
     button: "Get Started",
-    "img-src": "img/header-img.png"
+    "img-src": "img/header-img.png",
   },
   "main-content": {
     "features-h4": "Features",
@@ -29,17 +29,17 @@ const siteContent = {
       "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "vision-h4": "Vision",
     "vision-content":
-      "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+      "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
   },
   contact: {
     "contact-h4": "Contact",
     address: "123 Way 456 Street Somewhere, USA",
     phone: "1 (888) 888-8888",
-    email: "sales@greatidea.io"
+    email: "sales@greatidea.io",
   },
   footer: {
-    copyright: "Copyright Great Idea! 2018"
-  }
+    copyright: "Copyright Great Idea! 2018",
+  },
 };
 
 // Example: Update the img src for the logo
@@ -118,13 +118,11 @@ pTagsArray[8].textContent = "Copyright Great Idea! 2018";
 const newAncs = document.querySelectorAll("nav a");
 const newAncsArray = Array.from(newAncs);
 
-for (let i = 0; i < newAncsArray.length; i++) {
-  newAncsArray[i].style.color = "green";
+for (let i of newAncsArray) {
+  i.style.color = "green";
 }
 
 //////////////random event listeners/////////////////////
-
-
 
 const b = document.querySelector("body");
 
@@ -142,6 +140,3 @@ hero1.addEventListener("mouseleave", () => {
   hero1.style.transform = "scaleX(1)";
   hero1.style.transition = "1s";
 });
-
-
-
