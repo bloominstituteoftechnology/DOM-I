@@ -48,3 +48,9 @@ ctaimg.setAttribute('src', siteContent["cta"]["img-src"])
 
 let middleimg = document.getElementById("middle-img");
 middleimg.setAttribute('src', siteContent["main-content"]["img-src"])
+
+const headline = document.querySelector('h1');
+headline.textContent = 'DOM Is Awesome'
+
+const buttn = document.querySelector('button');
+buttn.textContent = 'Get Started'
