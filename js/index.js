@@ -59,6 +59,21 @@ topContent.textContent = "Features content elementum magna eros, ac posuere elvi
 let topSubHead = document.querySelector(".top-content .text-content h4");
 topSubHead.textContent = "Features";
 
+let bottomSubHead1 = document.querySelector(".bottom-content .text-content h4");
+bottomSubHead1.textContent = "Services";
+
+let bottomContent = document.querySelector(".bottom-content .text-content p");
+bottomContent.textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+let contact = document.getElementsByClassName("contact");
+contact.textContent =  "123 Way 456 Street Somewhere, USA";
+
+let contactHeading = document.querySelector(".contact h4");
+contactHeading.textContent = "Contact";
+
+let footer = document.querySelector("footer p");
+footer.textContent = "Copyright Great Idea! 2018";
+
 
 
 
