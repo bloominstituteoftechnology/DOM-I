@@ -41,8 +41,28 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let nav1 = document.querySelector("nav-item-1");
-nav1.setAttribute('a', siteContent["nav"]['nav-item-1'])
+let snippet = document.getElementById("cta-img");
+snippet.setAttribute('src', siteContent["cta"]["img-src"])
+
+let codesnip = document.getElementById("middle-img");
+codesnip.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+let button = document.querySelector("button");
+button.textContent = "Get Started";
+
+let mainHeadLine = document.querySelector(".cta-text h1");
+mainHeadLine.textContent = "DOM is Awesome!";
+
+let topContent = document.querySelector(".top-content .text-content p");
+topContent.textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+let topSubHead = document.querySelector(".top-content .text-content h4");
+topSubHead.textContent = "Features";
+
+
+
+
+
 
 
 
