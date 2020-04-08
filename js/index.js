@@ -56,6 +56,28 @@ navBar[3].textContent = 'Features';
 navBar[4].textContent = 'About';
 navBar[5].textContent = 'Contact';
 
+// new navbar content
+
+let newNav = document.querySelector('nav');
+let homeContent = document.createElement('a');
+homeContent.textContent = "Home";
+newNav.prepend(homeContent);
+homeContent.style.color = 'green';
+
+let blogContent = document.createElement('a');
+blogContent.textContent = "Blog";
+newNav.appendChild(blogContent);
+blogContent.style.color = 'green';
+
+// green navbar text
+
+Array.from(navBar).forEach((element) =>
+{
+  element.style.color = "green";
+})
+// navBar.prepend("Home");
+// navBar.append("Blog");
+
 
 
 //header content
