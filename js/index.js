@@ -40,3 +40,59 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
+let cta = document.getElementById("cta-img");
+cta.setAttribute('src', siteContent["cta"]["img-src"]);
+let middleimg = document.getElementById("middle-img");
+middleimg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+const navSelect = document.querySelectorAll("a");
+for(let i = 0; i < navSelect.length; i++){
+  let add = i + 1;
+  navSelect[i].textContent = siteContent["nav"][`nav-item-${add}`];
+}
+
+let ctaText = document.querySelector("h1");
+ctaText.textContent = siteContent["cta"]["h1"];
+
+let ctaButton = document.querySelector("button");
+ctaButton.textContent = siteContent["cta"]["button"];
+
+const h4Select = document.querySelectorAll("h4");
+for(let i = 0; i < h4Select.length; i++){
+  if(i === 0){
+    h4Select[i].textContent = siteContent["main-content"]["features-h4"];
+  }else if(i === 1){
+    h4Select[i].textContent = siteContent["main-content"]["about-h4"];
+  }else if(i === 2){
+    h4Select[i].textContent = siteContent["main-content"]["services-h4"];
+  }else if(i === 3){
+    h4Select[i].textContent = siteContent["main-content"]["product-h4"];
+  }else if(i === 4){
+    h4Select[i].textContent = siteContent["main-content"]["vision-h4"];
+  }else if(i === 5){
+    h4Select[i].textContent = siteContent["contact"]["contact-h4"];
+  }
+}
+
+const contentSelect = document.querySelectorAll("p");
+for(let i = 0; i < contentSelect.length; i++){
+  if(i === 0){
+    contentSelect[i].textContent = siteContent["main-content"]["features-content"];
+  }else if(i === 1){
+    contentSelect[i].textContent = siteContent["main-content"]["about-content"];
+  }else if(i === 2){
+    contentSelect[i].textContent = siteContent["main-content"]["services-content"];
+  }else if(i === 3){
+    contentSelect[i].textContent = siteContent["main-content"]["product-content"];
+  }else if(i === 4){
+    contentSelect[i].textContent = siteContent["main-content"]["vision-content"];
+  }else if(i === 5){
+    contentSelect[i].textContent = siteContent["contact"]["address"];
+  }else if(i === 6){
+    contentSelect[i].textContent = siteContent["contact"]["phone"];
+  }else if(i === 7){
+    contentSelect[i].textContent = siteContent["contact"]["email"];
+  }else if(i === 8){
+    contentSelect[i].textContent = siteContent["footer"]["copyright"];
+  }
+}
