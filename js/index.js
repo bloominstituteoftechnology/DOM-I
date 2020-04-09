@@ -42,13 +42,16 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let nav = document.getElementsByTagName("nav");
-let navItems = document.getElementsByClassName("nav-item");
-navItems.setAttribute('src', siteContent["nav"]["nav-item"]);
+let navItems = document.querySelectorAll(".nav-item");
+// navItems.setAttribute('src', siteContent["header"]["nav"]["a"])
 
-let title = document.getElementsByTagName("h1");
+
+let title = document.querySelector("h1");
+
 
 let button = document.getElementsByTagName("button");
 
 let image = document.getElementById("cta-img");
+image.setAttribute('src' , siteContent["cta"]["img-src"])
 
 
