@@ -92,7 +92,7 @@ const content = document.querySelectorAll('h4');
 content[0].textContent = 'Features';
 content[1].textContent = 'About';
 content[2].textContent = 'Services';
-content[3].textContent = 'Product';
+content[3].textContent                                           = 'Product';
 content[4].textContent = 'Vision';
 content[5].textContent = 'Contact';
 
@@ -129,7 +129,7 @@ const middleImg = document.getElementById ('middle-img');
 middleImg.setAttribute('src', 'img/mid-page-accent.jpg');
 
 
-// margin adjustments
+// header margin adjustments
 
 const headerMargin = document.querySelector('.cta-text');
 headerMargin.style.width = "25%"
