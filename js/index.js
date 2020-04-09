@@ -45,17 +45,31 @@ cta.setAttribute('src', siteContent["cta"]["img-src"]);
 let middleimg = document.getElementById("middle-img");
 middleimg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
-const navSelect = document.querySelectorAll("a");
-for(let i = 0; i < navSelect.length; i++){
+const anchorSelect = document.querySelectorAll("a");
+for(let i = 0; i < anchorSelect.length; i++){
   let add = i + 1;
-  navSelect[i].textContent = siteContent["nav"][`nav-item-${add}`];
+  anchorSelect[i].textContent = siteContent["nav"][`nav-item-${add}`];
+  anchorSelect[i].style.color = 'green';
 }
+
+const navSelect = document.querySelector("nav");
+const newNav1 = document.createElement('a');
+newNav1.textContent = 'Ideas';
+newNav1.style.color = 'green';
+navSelect.appendChild(newNav1);
+const newNav2 = document.createElement('a');
+newNav1.textContent = 'Home';
+newNav1.style.color = 'green';
+navSelect.prepend(newNav1);
 
 let ctaText = document.querySelector("h1");
 ctaText.textContent = siteContent["cta"]["h1"];
+let ctaCont = document.querySelector(".cta-text");
+ctaCont.style.width = "20vw";
 
 let ctaButton = document.querySelector("button");
 ctaButton.textContent = siteContent["cta"]["button"];
+
 
 const h4Select = document.querySelectorAll("h4");
 for(let i = 0; i < h4Select.length; i++){
