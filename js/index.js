@@ -43,3 +43,12 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let nav = document.getElementsByTagName("nav");
 let navItems = document.getElementsByClassName("nav-item");
+navItems.setAttribute('src', siteContent["nav"]["nav-item"]);
+
+let title = document.getElementsByTagName("h1");
+
+let button = document.getElementsByTagName("button");
+
+let image = document.getElementById("cta-img");
+
+
