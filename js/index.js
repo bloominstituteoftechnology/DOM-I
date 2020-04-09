@@ -45,7 +45,6 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // My Code
 
-
 //navigation
 
 const navBar = document.querySelectorAll('a');
