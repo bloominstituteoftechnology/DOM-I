@@ -90,8 +90,10 @@ bottomContent[1].textContent = "Product content elementum magna eros, ac posuere
 bottomContent[2].textContent = siteContent["main-content"]['vision-content'];
 
 
-let contact = document.getElementsByClassName("contact p");
-contact.textContent =  "123 Way 456 Street Somewhere, USA"; 
+let contact = document.querySelectorAll(".contact p");
+contact[0].textContent =  "123 Way 456 Street Somewhere, USA";
+contact[1].textContent =  "1 (888) 888-8888";
+contact[2].textContent = "sales@greatidea.io";
 
 let contactHeading = document.querySelector(".contact h4");
 contactHeading.textContent = "Contact";
@@ -99,11 +101,6 @@ contactHeading.textContent = "Contact";
 let footer = document.querySelector("footer p");
 footer.textContent = "Copyright Great Idea! 2018";
 
-
-
-
-
-
-
+navItems.appendChildd("blog");
 
 
