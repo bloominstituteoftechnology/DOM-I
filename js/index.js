@@ -42,17 +42,54 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let nav = document.getElementsByTagName("nav");
-let navItems = document.querySelectorAll(".nav-item");
-navItems.forEach( (element) => {
-  element.style.color = "#b0b0b0"
+
+console.log(nav)
+
+let navItems = document.querySelectorAll("a");
+navItems.forEach( (element, index) => {
+  siteContent["nav"]
+
+  let linkName = siteContent["nav"]["nav-item-" + (index+1)]
+
+  element.innerHTML = linkName
 })
 
-let title = document.querySelector("h1");
+
+let Top = document.querySelector(".cta-text h1");
+Top.textContent =  siteContent["cta"]["h1"]
+console.log(Top)
 
 
-let button = document.getElementsByTagName("button");
+let button = document.querySelector(".cta-text button");
+button.textContent = siteContent["cta"]["button"]
+console.log(button)
 
 let image = document.getElementById("cta-img");
 image.setAttribute('src' , siteContent["cta"]["img-src"])
+
+
+let Features = document.querySelector(".text-content h4")
+Features.textContent = siteContent["main-content"]["features-h4"]
+
+let features = document.querySelector(".top-content")
+features.textContent = siteContent["main-content"]["features-content"]
+
+console.log(Features)
+console.log(features)
+
+
+let About = document.querySelector(".text-content h4");
+About.textContent = siteContent["main-content"]["about-h4"]
+
+let about = document.querySelector(".text-content p")
+about.textContent = siteContent["main-content"]["about-content"]
+
+console.log(About)
+console.log(about)
+
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+console.log(middleImg)
+
 
 
