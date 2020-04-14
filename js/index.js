@@ -68,28 +68,71 @@ let image = document.getElementById("cta-img");
 image.setAttribute('src' , siteContent["cta"]["img-src"])
 
 
-let Features = document.querySelector(".text-content h4")
+let Titles = document.querySelectorAll(".text-content h4")
+
+
+
+console.log(Titles)
+
+// let text = document.querySelectorAll(.text-content)
+
+let Features = Titles[0]
 Features.textContent = siteContent["main-content"]["features-h4"]
 
-let features = document.querySelector(".top-content")
-features.textContent = siteContent["main-content"]["features-content"]
-
-console.log(Features)
-console.log(features)
-
-
-let About = document.querySelector(".text-content h4");
+let About = Titles[1]
 About.textContent = siteContent["main-content"]["about-h4"]
 
-let about = document.querySelector(".text-content p")
+let Services = Titles[2]
+Services.textContent = siteContent["main-content"]["services-h4"]
+
+let Product = Titles[3]
+Product.textContent = siteContent["main-content"]["product-h4"]
+
+let Vision = Titles[4]
+Vision.textContent = siteContent["main-content"]["vision-h4"]
+
+
+let sectionContent = document.querySelectorAll(".text-content p")
+
+console.log(sectionContent)
+let features = sectionContent[0]
+features.textContent = siteContent["main-content"]["features-content"]
+
+let about = sectionContent[1]
 about.textContent = siteContent["main-content"]["about-content"]
 
-console.log(About)
-console.log(about)
+let services = sectionContent[2]
+services.textContent = siteContent["main-content"]["services-content"]
+
+let product = sectionContent[3]
+product.textContent = siteContent["main-content"]["product-content"]
+
+let vision = sectionContent[4]
+vision.textContent = siteContent["main-content"]["vision-content"]
+
 
 let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
-console.log(middleImg)
+// console.log(middleImg)
+
+
+let ContactTitle = document.querySelector(".contact h4")
+ContactTitle.textContent = siteContent["contact"]["contact-h4"]
+
+let Contact = document.querySelectorAll(".contact p")
+
+let address = Contact[0]
+address.textContent = siteContent["contact"]["address"]
+
+let phone = Contact[1]
+phone.textContent = siteContent["contact"]["phone"]
+
+let email = Contact[2]
+email.textContent = siteContent["contact"]["email"]
+
+let footer = document.querySelector("footer")
+footer.textContent = siteContent["footer"]["copyright"]
+
 
 
 
