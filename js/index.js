@@ -40,3 +40,76 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+// Task 1 and 2; create selectors, and elements
+
+const navBarItems = document.querySelectorAll("a");
+
+navBarItems[0].textContent = siteContent.nav[`nav-item-1`];
+navBarItems[1].textContent = siteContent.nav[`nav-item-2`];
+navBarItems[2].textContent = siteContent.nav[`nav-item-3`];
+navBarItems[3].textContent = siteContent.nav[`nav-item-4`];
+navBarItems[4].textContent = siteContent.nav[`nav-item-5`];
+navBarItems[5].textContent = siteContent.nav[`nav-item-6`];
+
+//h1 text
+
+const h1 = document.querySelector("h1");
+
+h1.textContent = siteContent.cta.h1;
+
+//Button - Get Started
+
+const getStartedButton = document.querySelector("button");
+
+getStartedButton.textContent = siteContent.cta.button;
+
+//Image (cta)
+
+let imgHeader = document.querySelector("#cta-img");
+
+imgHeader.setAttribute("src", siteContent.cta["img-src"]);
+console.log(getStartedButton);
+
+
+// Image Middle (cta)
+
+let mainContentImg = document.getElementById("middle-img");
+mainContentImg.src = siteContent["main-content"]["middle-img-src"];
+
+let h4 = document.querySelectorAll("h4");
+h4[0].textContent = siteContent["main-content"]["features-h4"];
+h4[1].textContent = siteContent["main-content"]["about-h4"];
+h4[2].textContent = siteContent["main-content"]["services-h4"];
+h4[3].textContent = siteContent["main-content"]["product-h4"];
+h4[4].textContent = siteContent["main-content"]["vision-h4"];
+
+let p = document.querySelectorAll("p");
+p[0].textContent = siteContent["main-content"]["features-content"];
+p[1].textContent = siteContent["main-content"]["about-content"];
+p[2].textContent = siteContent["main-content"]["services-content"];
+p[3].textContent = siteContent["main-content"]["product-content"];
+p[4].textContent = siteContent["main-content"]["vision-content"];
+
+//Task 3; New conctent / color
+
+navBarItems.forEach(element => {
+  element.style.color = "green";
+});
+
+//Task 3; `.appendChild()` and `.prepend()`
+
+const aButton = document.createElement("a");
+aButton.href = "#";
+aButton.textContent = "Append Button";
+aButton.style.color = "green";
+
+const nav = document.querySelector("nav");
+nav.appendChild(aButton);
+
+const pButton = document.createElement("a");
+pButton.href = "#"; 
+pButton.textContent = "Prepend Button"; 
+pButton.style.color = "green"; 
+nav.prepend(pButton); 
