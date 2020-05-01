@@ -2,7 +2,8 @@
   "name": "dom-1",
   "version": "1.0.0",
   "scripts": {
-    "start": "parcel src/index.html"
+    "start": "parcel src/index.html",
+    "stretch": "parcel src/stretch-assignment/digital_timer/index.html"
   },
   "repository": {
     "type": "git",
