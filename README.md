@@ -4,7 +4,7 @@
 
 You are going to be emulating a content management system by controlling the content in the JavaScript file instead of the HTML file. This project is an exercise pointed at selecting elements and then updating them without touching the HTML file using the DOM.
 
-You have been provided an [object](src/index.js) with all the necessary data to accomplish this task.  Use dot or bracket notation to traverse the data provided.
+You have been provided an [object](src/index.js) with all the necessary data to accomplish this task. Use dot or bracket notation to traverse the data provided. All of your work should be done in the `src/index.js` file.
 
 **ONE RULE: You cannot update the HTML or CSS files directly. You must use JavaScript and the DOM only for your tasks today.**
 
@@ -16,7 +16,7 @@ You have been provided an [object](src/index.js) with all the necessary data to 
 * [ ] Add your team lead as collaborator on Github.
 * [ ] Clone your OWN version of the repository (Not Lambda's by mistake!).
 * [ ] Move into the project folder with the command line.
-* [ ] On the command line, run the command `npm install`.
+* [ ] Run the command `npm install` to download project dependencies.
 * [ ] Run the command `npm start` to spin up a development server.
 * [ ] Navigate Chrome to `http://localhost:1234` to see your project. The port number might be different.
 * [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
@@ -44,7 +44,7 @@ You have been provided an [object](src/index.js) with all the necessary data to 
 
 * [ ] Change the color of the navigation text to be green.
 * [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
-* [ ] Check your work by looking at the [original html](original.html) in the browser
+* [ ] Check your work by looking at the [original html](src/design-files/original.html) in the browser
 
 ## Stretch Goals
 
@@ -53,4 +53,4 @@ You have been provided an [object](src/index.js) with all the necessary data to 
 
 ## Stretch Project: Digital Timer
 
-This project is heavier on logic but employs some DOM manipulation to achieve its goals.  Go check it out here: [stretch assignment](stretch-assignment) and see how far you can get.
+This project is heavier on logic but employs some DOM manipulation to achieve its goals. Go check it out here: [stretch assignment](src/stretch-assignment/README.md) and see how far you can get.
