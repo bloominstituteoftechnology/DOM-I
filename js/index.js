@@ -90,7 +90,7 @@ newHeader2.appendChild(newNavItem1);
 
 
 
-//main header 
+//main header items
 
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent['nav']["img-src"]);
@@ -101,9 +101,11 @@ mainHeading.textContent = siteContent['cta'] ['h1'];
 let mainButton = document.querySelector('button');
 mainButton.innerText = "Get started";
 
+//cta image
 let logo2 = document.querySelector("cta-img");
 logo2.setAttribute('src', siteContent['cta']['img-src']);
 
+//main content
 let mainContent = document.querySelectorAll('.text-content');
 
 mainContent[0].querySelector('h4').textContent = siteContent['main-content']['features-h4'];
