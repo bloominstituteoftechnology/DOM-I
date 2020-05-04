@@ -6,6 +6,7 @@ const siteContent = {
     "nav-item-4": "Features",
     "nav-item-5": "About",
     "nav-item-6": "Contact",
+  
     "img-src": "img/logo.png"
   },
   "cta": {
@@ -44,39 +45,29 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // Nav -------------------------
 
+const navLinks = siteContent['nav']
+const keys = Object.keys(navLinks)
 
-const navLinks = document.querySelectorAll('a');
-
-navLinks[0].textContent = siteContent['nav']['nav-item-1'];
-navLinks[1].textContent = siteContent['nav']['nav-item-2'];
-navLinks[2].textContent = siteContent['nav']['nav-item-3'];
-navLinks[3].textContent = siteContent['nav']['nav-item-4'];
-navLinks[4].textContent = siteContent['nav']['nav-item-5'];
-navLinks[5].textContent = siteContent['nav']['nav-item-6'];
-
-
-
-navLinks[0].style.color = "green";
-navLinks[1].style.color = "green";
-navLinks[2].style.color = "green";
-navLinks[3].style.color = "green";
-navLinks[4].style.color = "green";
-navLinks[5].style.color = "green";
-
+document.querySelectorAll('a').forEach((a, idx) =>{
+  a.textContent = navLinks[keys[idx]]
+  a.style.color = "green"
+  a.style.padding = "0 10px 0 0"
+})
 
 const navBar = document.querySelector('nav');
+
 const nav1 = document.createElement('a');
-const nav2 = document.createElement('a');
-
 nav1.href = '#';
-nav1.textContent = 'Awesome';
+nav1.textContent = 'Forums';
 nav1.style.color = 'green';
+nav1.style.padding = "0 10px 0 0"
 
-
+const nav2 = document.createElement('a');
 nav2. href = '#';
-nav2.textContent = 'Ness';
+nav2.textContent = 'Location';
 nav2.style.color = 'green';
 
+//[x] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system
 navBar.prepend(nav1);
 navBar.append(nav2);
 
@@ -85,12 +76,14 @@ navBar.append(nav2);
 
 const ctaContent = document.querySelector('h1')
 
-ctaContent.textContent = "DOM Is Awesome"
+ctaContent.textContent = siteContent['cta']['h1']
 
 
 const ctaButton = document.querySelector('button')
-ctaButton.textContent = "Get Started"
+ctaButton.textContent = siteContent['cta']['button']
+ctaButton.style.backgroundColor = 'lightgreen'
 
+// [x] Note that IDs have been used on all images.  Use the IDs to update src path content
 document.getElementById("cta-img").src="img/header-img.png";
 
 
@@ -99,19 +92,19 @@ document.getElementById("cta-img").src="img/header-img.png";
 
 // Features
 const featureH4 = document.getElementsByTagName('h4')[0]
-featureH4.textContent = "Features";
+featureH4.textContent = siteContent['main-content']['features-h4']
 
 const featuresP = document.getElementsByTagName('p')[0]
-featuresP.textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+featuresP.textContent = siteContent['main-content']['features-content']
 // Features Ends
 
 
 // About
 const aboutH4 = document.getElementsByTagName('h4')[1]
-aboutH4.textContent = "Features";
+aboutH4.textContent = siteContent['main-content']['about-h4']
 
 const aboutP = document.getElementsByTagName('p')[1]
-aboutP.textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+aboutP.textContent = siteContent['main-content']['about-content']
 // About Ends
 
 
@@ -122,28 +115,28 @@ document.getElementById("middle-img").src = "img/mid-page-accent.jpg"
 
 // Services
 const servicesH4 = document.getElementsByTagName('h4')[2]
-servicesH4.textContent = "Features";
+servicesH4.textContent = siteContent['main-content']['services-h4']
 
 const servicesP = document.getElementsByTagName('p')[2]
-servicesP.textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+servicesP.textContent = siteContent['main-content']['services-content']
 // Services Ends
 
 
 // Product
 const productH4 = document.getElementsByTagName('h4')[3]
-productH4.textContent = "Features";
+productH4.textContent = siteContent['main-content']['product-h4']
 
 const productP = document.getElementsByTagName('p')[3]
-productP.textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+productP.textContent = siteContent['main-content']['product-content']
 // Product Ends
 
 
 // Vision
 const visionH4 = document.getElementsByTagName('h4')[4]
-visionH4.textContent = "Vision";
+visionH4.textContent = siteContent['main-content']['vision-h4']
 
 const visionP = document.getElementsByTagName('p')[4]
-visionP.textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+visionP.textContent = siteContent['main-content']['vision-content']
 // Vision Ends
 
 
@@ -152,19 +145,17 @@ visionP.textContent = "Vision content elementum magna eros, ac posuere elvit tem
 // Contact
 const contact = document.getElementsByTagName('h4')[5]
 
-contact.textContent = "Contact"
+contact.textContent = siteContent['contact']['contact-h4']
 const street = document.getElementsByTagName('p')[5]
-street.textContent = "123 Way Up North Street"
+street.textContent = siteContent['contact']['address']
 street.fontSize = '1px'
 
-const somewhere = document.getElementsByTagName ('p')[6]
-somewhere.textContent = "Somwhere, USA"
 
-const numberPhone = document.getElementsByTagName ('p')[7]
-numberPhone.textContent = "1 (888) 888-8888"
+const numberPhone = document.getElementsByTagName ('p')[6]
+numberPhone.textContent = siteContent['contact']['phone']
 
 const email = document.getElementsByTagName ('p')[7]
-email.textContent = "sales@greatidea.io"
+email.textContent = siteContent['contact']['email']
 
 // Contact Ends
 
@@ -172,7 +163,7 @@ email.textContent = "sales@greatidea.io"
 // Footer ---------------------------
 
 const footer = document.getElementsByTagName('p')[8]
-footer.textContent = "Copyright Great Idea 2018"
+footer.textContent = siteContent['footer']['copyright']
 
 
 
