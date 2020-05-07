@@ -1,0 +1,1 @@
+let numbers = document.querySelectorAll('.digits');

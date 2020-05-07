@@ -97,3 +97,4 @@ cInfo2[2].textContent = siteContent['contact']['email'];
 cInfo2[0].style.whiteSpace = 'pre';
 let footr = document.querySelector('footer p');
 footr.textContent = siteContent['footer']['copyright'];
+
