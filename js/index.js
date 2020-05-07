@@ -58,7 +58,7 @@ aStats.textContent = "Stats";
 aCareers.textContent = "Career";
 aStats.style.color = "green";
 aCareers.style.color = "green";
- navy.prepend(aCareers);
+ navy.appendChild(aCareers);
  navy.prepend(aStats);
 //  navy.appendChild('Stats');
 
