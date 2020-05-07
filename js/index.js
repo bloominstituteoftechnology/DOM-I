@@ -52,8 +52,14 @@ allAs[3].textContent = siteContent['nav']['nav-item-4'];
 allAs[4].textContent = siteContent['nav']['nav-item-5'];
 allAs[5].textContent = siteContent['nav']['nav-item-6'];
 // navy.appendChild('Stats');
-// navy.prepend('Careers');
-document.createElement
+let aStats = document.createElement('a');
+let aCareer = document.createElement('a')
+aStats.textContent = "Stats";
+aCareer.textContent = "Career";
+ navy.prepend('aCareers');
+ navy.prepend('aStats')
+//  navy.appendChild('Stats');
+
 allAs.forEach(element => element.style.color = "green")
 
 //cta
