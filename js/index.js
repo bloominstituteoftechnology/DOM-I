@@ -37,6 +37,15 @@ const siteContent = {
   },
 };
 
+//adding nav a
+const navInfo = document.querySelectorAll("nav a")
+navInfo[0].textContent = siteContent["nav"]["nav-item-1"]
+navInfo[1].textContent = siteContent["nav"]["nav-item-2"]
+navInfo[2].textContent = siteContent["nav"]["nav-item-3"]
+navInfo[3].textContent = siteContent["nav"]["nav-item-4"]
+navInfo[4].textContent = siteContent["nav"]["nav-item-5"]
+navInfo[5].textContent = siteContent["nav"]["nav-item-6"]
+
 // Example: Update the img src for the logo 
 const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
@@ -95,3 +104,19 @@ para[3].textContent = siteContent["main-content"]["product-content"]
 //updating vision
 headers[4].textContent = siteContent["main-content"]["vision-h4"]
 para[4].textContent = siteContent["main-content"]["vision-content"]
+
+//changing nav text to green
+const navigation = document.querySelectorAll("nav a")
+navigation.forEach((element)=>{
+  element.style.color = "green";
+})
+
+//append child
+const parentElement = document.querySelector("nav")
+parentElement.append("FAQs");
+
+//prepend child
+parentElement.prepend("OurTeam")
+
+//changing color of the added nav a's
+parentElement.style.color = "green"
