@@ -37,6 +37,85 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+//Photos
+const logo = document.querySelector("#logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const bigImage = document.querySelector("#cta-img");
+bigImage.setAttribute('src', siteContent["cta"]["img-src"])
+
+const middleImg = document.querySelector("#middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+
+// //Nav
+const nav = document.querySelectorAll("a");
+nav.forEach( (element, index) => {
+element.textContent = siteContent['nav'][`nav-item-${index + 1}`]
+element.style.color = "green"
+})
+
+navHeader = document.createElement("a")
+navHeader.textContent = "Contact"
+etcHeader = document.createElement("a")
+etcHeader.textContent = "Etc"
+const newItems = document.querySelector("nav")
+newItems.appendChild(navHeader)
+newItems.prepend(etcHeader)
+
+
+// //Header
+const ctaHeader = document.querySelector(".cta-text h1");
+ctaHeader.textContent = siteContent["cta"]["h1"]
+
+const featureHeader = document.querySelectorAll("h4");
+featureHeader[0].textContent = siteContent["main-content"]["features-h4"]
+
+const aboutHeader = document.querySelectorAll("h4");
+aboutHeader[1].textContent = siteContent["main-content"]["about-h4"]
+
+const servicesHeader = document.querySelectorAll("h4");
+servicesHeader[2].textContent = siteContent["main-content"]["services-h4"]
+
+const productHeader = document.querySelectorAll("h4");
+productHeader[3].textContent = siteContent["main-content"]["product-h4"]
+
+const visionHeader = document.querySelectorAll("h4");
+visionHeader[4].textContent = siteContent["main-content"]["vision-h4"]
+
+const contactHeader = document.querySelectorAll("h4");
+contactHeader[5].textContent = siteContent["contact"]["contact-h4"]
+
+// //Text Content
+const featureText = document.querySelectorAll("p");
+featureText[0].textContent = siteContent["main-content"]["features-content"]
+
+const aboutText = document.querySelectorAll("p");
+aboutText[1].textContent = siteContent["main-content"]["about-content"]
+
+const servicesText = document.querySelectorAll("p");
+servicesText[2].textContent = siteContent["main-content"]["services-content"]
+
+const productText = document.querySelectorAll("p");
+productText[3].textContent = siteContent["main-content"]["product-content"]
+
+const visionText = document.querySelectorAll("p");
+visionText[4].textContent = siteContent["main-content"]["vision-content"]
+
+const address = document.querySelectorAll("p")
+address[5].textContent = siteContent["contact"]["address"]
+
+const phone = document.querySelectorAll("p")
+phone[6].textContent = siteContent["contact"]["phone"]
+
+const email = document.querySelectorAll("p")
+email[7].textContent = siteContent["contact"]["email"]
+
+const footer = document.querySelectorAll("p")
+footer[8].textContent = siteContent["footer"]["copyright"]
+
+// //Button
+const button = document.querySelector('button');
+button.textContent = siteContent["cta"]["button"]
+
+
