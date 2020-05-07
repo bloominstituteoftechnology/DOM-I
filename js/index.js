@@ -42,25 +42,27 @@ const siteContent = {
 
 //nav
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
 let allAs = document.querySelectorAll('a');
-let navy = document.querySelector('nav')
+let navy = document.querySelector('nav');
 allAs[0].textContent = siteContent['nav']['nav-item-1'];
 allAs[1].textContent = siteContent['nav']['nav-item-2'];
 allAs[2].textContent = siteContent['nav']['nav-item-3'];
 allAs[3].textContent = siteContent['nav']['nav-item-4'];
 allAs[4].textContent = siteContent['nav']['nav-item-5'];
 allAs[5].textContent = siteContent['nav']['nav-item-6'];
-// navy.appendChild('Stats');
 let aStats = document.createElement('a');
-let aCareer = document.createElement('a')
+let aCareers = document.createElement('a');
 aStats.textContent = "Stats";
-aCareer.textContent = "Career";
- navy.prepend('aCareers');
- navy.prepend('aStats')
+aCareers.textContent = "Career";
+aStats.style.color = "green";
+aCareers.style.color = "green";
+ navy.prepend(aCareers);
+ navy.prepend(aStats);
 //  navy.appendChild('Stats');
 
-allAs.forEach(element => element.style.color = "green")
+allAs.forEach(element => element.style.color = "green");
 
 //cta
 let awesome = document.querySelector('h1').textContent = "Dom is Awesome!";
