@@ -38,24 +38,60 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo 
-let logo = document.getElementById("logo-img");
+const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
 //update the code snippets
-let headerImage = document.getElementById("cta-img");
+const headerImage = document.getElementById("cta-img");
 headerImage.setAttribute("src", siteContent["cta"]["img-src"])
 
 //updating code snippets
-let codeImage = document.getElementById("middle-img")
+const codeImage = document.getElementById("middle-img")
 codeImage.setAttribute("src", siteContent["main-content"]["middle-img-src"])
 
 //updating header
-let header = document.querySelector("h1")
+const header = document.querySelector("h1")
 header.textContent = siteContent["cta"]["h1"]
 
 //updating button
-let button = document.querySelector("button")
+const button = document.querySelector("button")
 button.textContent = siteContent["cta"]["button"]
 
-//
+//updating contact
+const contactHeader = document.querySelector(".contact h4")
+contactHeader.textContent = siteContent["contact"]["contact-h4"]
+
+//updating contact information
+const contactPara = document.querySelectorAll(".contact p")
+contactPara[0].textContent = siteContent["contact"]["address"]
+contactPara[1].textContent = siteContent["contact"]["phone"]
+contactPara[2].textContent = siteContent["contact"]["email"]
+
+//updating footer
+const footer = document.querySelector("footer")
+footer.textContent = siteContent["footer"]["copyright"]
+
+//headers and paragraphs
+const headers = document.querySelectorAll(".text-content h4")
+const para = document.querySelectorAll(".text-content p")
+
+//updating features
+headers[0].textContent = siteContent["main-content"]["features-h4"]
+para[0].textContent = siteContent["main-content"]["features-content"]
+
+//updating about
+headers[1].textContent = siteContent["main-content"]["about-h4"]
+para[1].textContent = siteContent["main-content"]["about-content"]
+
+//updating services
+headers[2].textContent = siteContent["main-content"]["services-h4"]
+para[2].textContent = siteContent["main-content"]["services-content"]
+
+//updating products
+headers[3].textContent = siteContent["main-content"]["product-h4"]
+para[3].textContent = siteContent["main-content"]["product-content"]
+
+//updating vision
+headers[4].textContent = siteContent["main-content"]["vision-h4"]
+para[4].textContent = siteContent["main-content"]["vision-content"]
