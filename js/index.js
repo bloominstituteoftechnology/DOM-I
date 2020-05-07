@@ -120,3 +120,14 @@ parentElement.prepend("OurTeam")
 
 //changing color of the added nav a's
 parentElement.style.color = "green"
+
+//changing main header to green
+header.style.color = "green"
+
+//changing headers to green
+headers.forEach((element)=>{
+  element.style.color = "green"
+})
+
+//changing the contact header
+contactHeader.style.color = "green"
