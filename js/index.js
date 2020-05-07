@@ -41,7 +41,21 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let newContent = document.createElement('a');
-newContent.textContent = "addition to save";
-const parentElement = document.querySelector('body');
-parentElement.prepend(newContent);
+let navigation = document.querySelectorAll('nav a');
+navigation[0].textContent = 'Services';
+navigation[1].textContent = siteContent["nav"]["nav-item-2"];
+navigation[2].textContent = siteContent["nav"]["nav-item-3"];
+navigation[3].textContent = siteContent["nav"]["nav-item-4"];
+navigation[4].textContent = siteContent["nav"]["nav-item-5"];
+navigation[5].textContent = siteContent["nav"]["nav-item-6"];
+
+let headerimg = document.getElementById("cta-img");
+headerimg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let headline = document.getElementsByTagName('h1');
+headline[0].textContent = siteContent["cta"]["h1"];
+
+let btn = document.getElementsByTagName('button');
+btn[0].textContent = siteContent["cta"]["button"];
+
+
