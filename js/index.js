@@ -42,66 +42,101 @@ const siteContent = {
   },
 };
 
-document.getElementById("cta-img").src = "img/header-img.png";
-
-document.getElementById("middle-img").src = "img/mid-page-accent.jpg";
-
 //all variables
+
 const title = document.querySelector(".cta-text h1");
+
+const annoyingText =
+  "content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+const navAs = document.querySelectorAll("nav a");
 
 const button = document.querySelector("#btn");
 
-const features = document.querySelectorAll(".text-content h4")[0];
+const headerNames = ["Features", "About", "Services", "Product", "Vision"];
 
-const about = document.querySelectorAll(".text-content h4")[1];
+const headers = document.querySelectorAll(".text-content h4");
 
-const services = document.querySelectorAll(".text-content h4")[2];
+const para = document.querySelectorAll(".text-content p");
 
-const product = document.querySelectorAll(".text-content h4")[3];
+const contact = document.querySelector(".contact h4");
 
-const vision = document.querySelectorAll(".text-content h4")[4];
+const nav = document.querySelector(".container nav");
+
+const contactSelect = document.querySelectorAll(".contact p");
+
+const copyRight = document.querySelector("footer p");
+
+const newNavElementOne = document.createElement("a");
+
+const newNavElementTwo = document.createElement("a");
+
+newNavElementOne.href = "#";
+
+newNavElementTwo.href = "#";
+
+const firstWord = document.createTextNode("Hello");
+
+const lastWord = document.createTextNode("Goodbye");
+
+newNavElementOne.prepend(firstWord);
+
+nav.prepend(newNavElementOne);
+
+newNavElementTwo.appendChild(lastWord);
+
+nav.appendChild(newNavElementTwo);
 
 /* --------------------------------------------------------------- */
 
-const featuresPara = document.querySelectorAll(".text-content p")[0];
+const navItems = [
+  "Services",
+  "Product",
+  "Vision",
+  "Features",
+  "About",
+  "Contact",
+];
 
-const aboutPara = document.querySelectorAll(".text-content p")[1];
+const contacts = [
+  "Copyright Great Idea! 2018",
+  "123 Wat 456 Street Somewhere, USA",
+  "1 (888) 888-8888",
+  "sales@greatidea.io",
+];
 
-const servicesPara = document.querySelectorAll(".text-content p")[2];
-
-const productPara = document.querySelectorAll(".text-content p")[3];
-
-const visionPara = document.querySelectorAll(".text-content p")[4];
+/* ------------------------------------------------------------ */
 
 //top half of the page
 title.textContent = "DOM IS AWESOME";
 
-features.textContent = "Features";
-
-about.textContent = "About";
-
-services.textContent = "Services";
-
-product.textContent = "Product";
-
-vision.textContent = "Vision";
-
 button.textContent = "Get Started";
 
-featuresPara.textContent =
-  "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+contact.textContent = "Contact";
 
-aboutPara.textContent =
-  "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+copyRight.textContent = "Copyright Great Idea! 2018";
 
-servicesPara.textContent =
-  "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+document.getElementById("cta-img").src = "img/header-img.png";
 
-productPara.textContent =
-  "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+document.getElementById("middle-img").src = "img/mid-page-accent.jpg";
 
-visionPara.textContent =
-  "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+for (let i = 0; i < navAs.length; i++) navAs[i].textContent = navItems[i];
+
+for (let i = 0; i < headers.length; i++) {
+  headers[i].textContent = headerNames[i];
+}
+
+for (let i = 0; i < para.length; i++) {
+  para[i].textContent = `${headerNames[i]} ${annoyingText}`;
+}
+
+for (let i = 0; i < document.getElementsByTagName("a").length; i++) {
+  document.getElementsByTagName("a")[i].style.color = "green";
+}
+
+for (let i = 0; i < contactSelect.length; i++) {
+  contactSelect[i].textContent = contacts[i];
+}
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
