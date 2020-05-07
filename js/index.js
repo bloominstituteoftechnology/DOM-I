@@ -40,3 +40,47 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let nav1 = document.querySelectorAll("nav a");
+nav1.forEach(( currentValue, index) => {
+  currentValue.textContent = siteContent.nav[`nav-item-${index + 1}`];
+  });
+
+nav1.forEach((element) => {
+element.style.color = 'gray'
+});
+
+let newContent = document.createElement("a");
+newContent.innerHTML = 'Portfolio';
+document.querySelector("nav").appendChild(newContent);
+let newContent2 = document.createElement("a");
+newContent2.textContent = 'Support';
+document.querySelector("nav").appendChild(newContent2)
+
+let ctaText = document.querySelector("h1");
+ctaText.textContent = siteContent["cta"]["h1"];
+
+let TYon = document.querySelector('button');
+TYon.textContent = siteContent["cta"]["button"];
+
+let circleCodeImg = document.getElementById("cta-img");
+circleCodeImg.src = "img/header-img.png";
+
+let midAccentImg = document.querySelector(".middle-img");
+midAccentImg.src = "img/mid-page-accent.jpg";
+
+let mainHeaders = document.querySelectorAll(".main-content h4");
+
+let mainText = document.querySelectorAll(".main-content p");
+
+let sections = ['features', 'about', 'services', 'product', 'vision']; 
+for(let i=0; i<mainHeaders.length; i++){
+  mainHeaders[i].textContent = sections[i];
+  mainText[i].textContent = siteContent["main-content"][`${sections[i]}-content`];
+}
+
+let Contact = document.querySelector('.contact'); 
+Contact.innerHTML = '<h4>Contact</h4> <p>123 Way 456 Street<br>Somewhere, USA</p> <p>1 (888) 888-8888</p> <p>sales@greatidea.io</p>';
+
+let Footer = document.querySelector('footer');
+Footer.innerHTML = 'Copyright Great Idea! 2018';
