@@ -41,15 +41,12 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-// Global Styling
-document.querySelectorAll('nav a');
-
-
 // Navigation Content
 const navItems = document.querySelectorAll('nav a');
 let count = 1;
 navItems.forEach(navItem => {
   navItem.textContent = siteContent["nav"]["nav-item-" + count];
+  navItem.style.color = "green";
   count++;
 });
 
@@ -60,7 +57,7 @@ document.querySelector(".cta-text button").textContent = siteContent["cta"]["but
 const ctaImage = document.getElementById("cta-img");
 ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
 
-// Main Content
+// Main Content - Top Content
 const topContenth4 = document.querySelectorAll('.top-content h4');
 topContenth4[0].textContent = siteContent["main-content"]["features-h4"];
 topContenth4[1].textContent = siteContent["main-content"]["about-h4"];
@@ -68,3 +65,58 @@ topContenth4[1].textContent = siteContent["main-content"]["about-h4"];
 const topContentp = document.querySelectorAll('.top-content p');
 topContentp[0].textContent = siteContent["main-content"]["features-content"];
 topContentp[1].textContent = siteContent["main-content"]["about-content"];
+
+// Middle Image
+document.getElementById("middle-img").setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+// Main Content - Bottom Content
+const bottomContenth4 = document.querySelectorAll('.bottom-content h4');
+bottomContenth4[0].textContent = siteContent["main-content"]["services-h4"];
+bottomContenth4[1].textContent = siteContent["main-content"]["product-h4"];
+bottomContenth4[2].textContent = siteContent["main-content"]["vision-h4"];
+
+const bottomContentp = document.querySelectorAll('.bottom-content p');
+bottomContentp[0].textContent = siteContent["main-content"]["services-content"];
+bottomContentp[1].textContent = siteContent["main-content"]["product-content"];
+bottomContentp[2].textContent = siteContent["main-content"]["vision-content"];
+
+// Contact Content
+document.querySelector(".contact h4").textContent = siteContent["contact"]["contact-h4"];
+
+const contactP = document.querySelectorAll('.contact p');
+contactP[0].textContent = siteContent["contact"]["address"];
+contactP[1].textContent = siteContent["contact"]["phone"];
+contactP[2].textContent = siteContent["contact"]["email"];
+
+// Footer Content
+document.querySelector("footer p").textContent = siteContent["footer"]["copyright"];
+
+// New Elements
+document.querySelector("nav").style.cssText = "position: relative";
+const navItemspecials = document.createElement("a");
+navItemspecials.setAttribute('class', 'specials');
+navItemspecials.setAttribute('href', '#');
+
+navItemspecials.textContent = "Specials";
+navItemspecials.style.cssText = "display: inline-block; margin-top: -5px; color: white; padding: 5px 10px; background-color: red;";
+
+const navItemjobs = document.createElement("a");
+navItemjobs.setAttribute('class', 'jobs');
+navItemjobs.setAttribute('href', '#');
+
+navItemjobs.textContent = "Jobs";
+navItemjobs.style.cssText = "display: inline-block; margin-top: 28px; color: white; padding: 5px 23px; background-color: green; position: absolute; right: 0;";
+
+const parentElement = document.querySelector('nav');
+parentElement.append(navItemspecials);
+parentElement.append(navItemjobs);
+
+// Extra Styling
+document.querySelector("h1").style.color = "green";
+
+const allH4 = document.querySelectorAll('h4');
+allH4.forEach(h4 => {
+  h4.style.cssText = "font-size: 24px; color: green;";
+});
+
+document.querySelector("footer").style.cssText = "background-color: green; color: white; padding: 20px 0;";
