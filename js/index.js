@@ -58,4 +58,19 @@ headline[0].textContent = siteContent["cta"]["h1"];
 let btn = document.getElementsByTagName('button');
 btn[0].textContent = siteContent["cta"]["button"];
 
+let topText = document.querySelectorAll(".text-content h4");
+topText[0].textContent = siteContent['main-content']['features-h4'];
+topText[1].textContent = siteContent['main-content']['about-h4'];
+topText[2].textContent = siteContent['main-content']['services-h4'];
+topText[3].textContent = siteContent['main-content']['product-h4'];
+topText[4].textContent = siteContent['main-content']['vision-h4'];
 
+let middleImg = document.querySelector('#middle-img');
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+let bottomText = document.querySelectorAll('.text-content p');
+bottomText[0].textContent = siteContent['main-content']['features-content'];
+bottomText[1].textContent = siteContent['main-content']["about-content"];
+bottomText[2].textContent = siteContent['main-content']['services-content'];
+bottomText[3].textContent = siteContent['main-content']['product-content'];
+bottomText[4].textContent = siteContent['main-content']['vision-content'];
