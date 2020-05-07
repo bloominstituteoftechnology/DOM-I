@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM\nIs\nAwesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4": "Contact",
-    "address": "123 Way 456 Street Somewhere, USA",
+    "address": "123 Way 456 Street\nSomewhere, USA",
     "phone": "1 (888) 888-8888",
     "email": "sales@greatidea.io",
   },
@@ -49,11 +49,23 @@ navigation[3].textContent = siteContent["nav"]["nav-item-4"];
 navigation[4].textContent = siteContent["nav"]["nav-item-5"];
 navigation[5].textContent = siteContent["nav"]["nav-item-6"];
 
+let newNavItem = document.createElement('a');
+newNavItem.textContent = 'Home';
+let nav2 = document.querySelector('nav');
+nav2.appendChild(newNavItem);
+let newNavItem2 = document.createElement('a');
+newNavItem2.textContent = 'Author';
+nav2.prepend(newNavItem2);
+
+let newNavigation = document.querySelectorAll('nav a');
+newNavigation.forEach(text => { text.style.color = 'green' });
+
 let headerimg = document.getElementById("cta-img");
 headerimg.setAttribute('src', siteContent["cta"]["img-src"]);
 
 let headline = document.getElementsByTagName('h1');
 headline[0].textContent = siteContent["cta"]["h1"];
+headline[0].style.whiteSpace = 'pre';
 
 let btn = document.getElementsByTagName('button');
 btn[0].textContent = siteContent["cta"]["button"];
@@ -82,5 +94,6 @@ cInfo2[0].textContent = siteContent['contact']['address'];
 cInfo2[1].textContent = siteContent['contact']['phone'];
 cInfo2[2].textContent = siteContent['contact']['email'];
 
+cInfo2[0].style.whiteSpace = 'pre';
 let footr = document.querySelector('footer p');
 footr.textContent = siteContent['footer']['copyright'];
