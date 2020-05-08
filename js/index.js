@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM\nIs\nAwesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "123 Way 456 Street\nSomewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -59,8 +59,12 @@ anchor[5].textContent = siteContent["nav"]["nav-item-6"];
 const heading = document.querySelector("h1");
 heading.textContent = siteContent["cta"]["h1"];
 
+// const content = heading.innerHTML;
+// heading.innerHTML = <br>"DOM"</br> + <br> "is" </br> + "Awesome!"
+
 // linebreak = document.createElement("br");
 // heading.appendChild(linebreak);
+
 
 
 const button = document.querySelector("button");
@@ -96,4 +100,27 @@ footer.textContent = siteContent["footer"]["copyright"];
 
 anchor.forEach (item => {
   item.style.color = "green";
-})
+});
+
+const newNav = document.createElement('a');
+newNav.setAttribute('href', '#');
+newNav.textContent = 'Home';
+
+const parentNav = document.querySelector('nav');
+parentNav.prepend(newNav);
+
+const newNav2 = document.createElement('a');
+newNav2.setAttribute('href', '#');
+newNav2.textContent = 'More';
+
+const parentNav2 = document.querySelector('nav');
+parentNav2.appendChild(newNav2);
+
+newNav.style.color = "green";
+newNav2.style.color = "green";
+
+// var br = document.createElement('br');
+// heading.appendChild(br);
+
+heading.style.whiteSpace = "pre-line";
+contact[0].style.whiteSpace = "pre-line";
