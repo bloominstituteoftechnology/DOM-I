@@ -47,6 +47,7 @@ let navMnu = document.querySelectorAll('a');
 // navMnu.forEach((curVal,idx){
 //   return (curVal.textContent = Object.values(siteContent.nav)[idx])
 //  });
+
 navMnu.forEach((curVal,idx) => (curVal.textContent = Object.values(siteContent.nav)[idx]));
 
 //for header Title
@@ -54,11 +55,31 @@ let hdrBigTitle = document.querySelector('h1');
 hdrBigTitle.textContent = siteContent.cta.h1
 
 //for button
-
+let hdrbtn = document.querySelector('button');
+hdrbtn.textContent = siteContent.cta.button
 
 //for header logo-img
 let hdrimg = document.getElementById('cta-img');
 hdrimg.setAttribute('src' , siteContent['cta']['img-src'])
+
+/* //for main-content top-content 'h4' 'Features'
+let mainCntTopCnt = document.querySelector('.top-content')
+//for main-content top-content text-content 'p' 'Features
+let mainCntTextCnt = document.querySelector('.text-content')
+//for main-content top-content 'h4 'About'
+let mainCnt
+
+//for main-content top-content 'h4' 'Features'
+mainCntTopCnt.querySelector('h4').textContent = siteContent['main-content']['features-h4']
+//for main-content top-content text-content 'p' 'Features'
+mainCntTextCnt.querySelector('p').textContent = siteContent['main-content']['features-content']
+//for main-content top-content 'h4 'About' */
+
+let mainCnt = document.querySelectorAll('top-content')
+
+
+
+
 
 
 
