@@ -98,8 +98,23 @@ mainCnt[3].querySelector('h4').textContent = siteContent['main-content']['produc
 mainCnt[3].querySelector('p').textContent = siteContent['main-content']['product-content']
 
 //main-content bottom-content 'Vision'
+mainCnt[3].querySelector('h4').textContent = siteContent['main-content']['vision-h4']
+mainCnt[3].querySelector('p').textContent = siteContent['main-content']['vision-content']
 
+//Contact with 'h4' and 'p'
+let contactVal = document.querySelector('.contact')
+//contactVal[0].querySelector('h4').textContent = siteContent['contact']['contact-h4'] 
+// contactVal.querySelector('h4').textContent = siteContent['contact']['contact-h4']
+// contactVal.querySelector('p').textContent = siteContent['contact']['address']
+// contactVal.querySelector('p').textContent = siteContent['contact']['phone']
+// contactVal.querySelector('p').textContent = siteContent['contact']['email']
 
+contactVal.querySelector('h4').textContent = siteContent['contact']['contact-h4']
+//let detailConta = document.querySelectorAll('.contact')
+let detailConta 
+contactVal.querySelector('p').textContent = siteContent['contact']['address']
+contactVal.querySelector('p').textContent = siteContent['contact']['phone']
+contactVal.querySelector('p').textContent = siteContent['contact']['email']
 
 
 
