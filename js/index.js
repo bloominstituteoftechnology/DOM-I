@@ -73,9 +73,23 @@ let mainCnt
 mainCntTopCnt.querySelector('h4').textContent = siteContent['main-content']['features-h4']
 //for main-content top-content text-content 'p' 'Features'
 mainCntTextCnt.querySelector('p').textContent = siteContent['main-content']['features-content']
-//for main-content top-content 'h4 'About' */
 
-let mainCnt = document.querySelectorAll('top-content')
+
+//for the main-content top-content 'Features' with 'h4' and 'p' */
+let mainCnt = document.querySelectorAll('.text-content')
+mainCnt[0].querySelector('h4').textContent = siteContent['main-content']['features-h4']
+mainCnt[0].querySelector('p').textContent = siteContent['main-content']['features-content']
+
+//for the main-content top-content 'About' with 'h4' and 'p' */
+mainCnt[1].querySelector('h4').textContent = siteContent['main-content']['about-h4']
+mainCnt[1].querySelector('p').textContent = siteContent['main-content']['about-content']
+
+//for the main-content top-content 'About' with 'h4' and 'p' */
+mainCnt[1].querySelector('h4').textContent = siteContent['main-content']['services-h4']
+mainCnt[1].querySelector('p').textContent = siteContent['main-content']['services-content']
+
+
+//
 
 
 
