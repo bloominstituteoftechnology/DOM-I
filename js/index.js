@@ -102,20 +102,26 @@ mainCnt[3].querySelector('h4').textContent = siteContent['main-content']['vision
 mainCnt[3].querySelector('p').textContent = siteContent['main-content']['vision-content']
 
 //Contact with 'h4' and 'p'
-let contactVal = document.querySelector('.contact')
+let contactProfile = document.querySelector('.contact')
 //contactVal[0].querySelector('h4').textContent = siteContent['contact']['contact-h4'] 
 // contactVal.querySelector('h4').textContent = siteContent['contact']['contact-h4']
 // contactVal.querySelector('p').textContent = siteContent['contact']['address']
 // contactVal.querySelector('p').textContent = siteContent['contact']['phone']
 // contactVal.querySelector('p').textContent = siteContent['contact']['email']
 
-contactVal.querySelector('h4').textContent = siteContent['contact']['contact-h4']
-//let detailConta = document.querySelectorAll('.contact')
-let detailConta 
-contactVal.querySelector('p').textContent = siteContent['contact']['address']
-contactVal.querySelector('p').textContent = siteContent['contact']['phone']
-contactVal.querySelector('p').textContent = siteContent['contact']['email']
+//Contact address 'h4'
+contactProfile.querySelector('h4').textContent = siteContent['contact']['contact-h4']
 
+//getting the leaves
+let detailContact  = contactProfile.querySelectorAll('p')
 
-
+//address
+detailContact[0].textContent = siteContent['contact']['address']
+//phone
+detailContact[1].textContent = siteContent['contact']['phone']
+//email
+detailContact[2].textContent = siteContent['contact']['email']
+//footer
+let footerVal = document.querySelector('footer');
+footerVal.textContent = siteContent['footer']['copyright']
 
