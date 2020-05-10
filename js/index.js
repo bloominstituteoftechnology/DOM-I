@@ -75,22 +75,22 @@ mainCntTopCnt.querySelector('h4').textContent = siteContent['main-content']['fea
 mainCntTextCnt.querySelector('p').textContent = siteContent['main-content']['features-content']
 
 
-//for the main-content top-content 'Features' with 'h4' and 'p' */
+// main-content top-content 'Features' with 'h4' and 'p' */
 let mainCnt = document.querySelectorAll('.text-content')
 mainCnt[0].querySelector('h4').textContent = siteContent['main-content']['features-h4']
 mainCnt[0].querySelector('p').textContent = siteContent['main-content']['features-content']
 
-//for the main-content top-content 'About' with 'h4' and 'p' */
+// main-content top-content 'About' with 'h4' and 'p' */
 mainCnt[1].querySelector('h4').textContent = siteContent['main-content']['about-h4']
 mainCnt[1].querySelector('p').textContent = siteContent['main-content']['about-content']
 
-//for the main-content top-content 'About' with 'h4' and 'p' */
+//main-content top-content 'About' with 'h4' and 'p' */
 mainCnt[1].querySelector('h4').textContent = siteContent['main-content']['services-h4']
 mainCnt[1].querySelector('p').textContent = siteContent['main-content']['services-content']
 
-
-//
-
+// main-content top-content 'About' with 'h4' and 'p' */
+let midImg = document.getElementById('middle-img')
+midImg.setAttribute('Src' , siteContent['main-content']['middle-img-src'])
 
 
 
