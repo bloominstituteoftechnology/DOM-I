@@ -41,3 +41,12 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 //testing the commit
+
+let navMnu = document.querySelectorAll('a');
+// return navMnu.forEach((curVal,idx){
+//   (curVal.textContent = Object.values(siteContent.nav)[idx])
+// });
+
+//navMnu.forEach((curVal,idx) => (curVal.textContent = Object.values(siteContent.nav)[idx]));
+
+
