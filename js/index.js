@@ -74,23 +74,30 @@ mainCntTopCnt.querySelector('h4').textContent = siteContent['main-content']['fea
 //for main-content top-content text-content 'p' 'Features'
 mainCntTextCnt.querySelector('p').textContent = siteContent['main-content']['features-content']
 
+*/
 
-// main-content top-content 'Features' with 'h4' and 'p' */
+// Node list main-content top-content 'Features' with 'h4' and 'p' 
 let mainCnt = document.querySelectorAll('.text-content')
 mainCnt[0].querySelector('h4').textContent = siteContent['main-content']['features-h4']
 mainCnt[0].querySelector('p').textContent = siteContent['main-content']['features-content']
 
-// main-content top-content 'About' with 'h4' and 'p' */
+// main-content top-content 'About' with 'h4' and 'p'
 mainCnt[1].querySelector('h4').textContent = siteContent['main-content']['about-h4']
 mainCnt[1].querySelector('p').textContent = siteContent['main-content']['about-content']
 
-//main-content top-content 'About' with 'h4' and 'p' */
-mainCnt[1].querySelector('h4').textContent = siteContent['main-content']['services-h4']
-mainCnt[1].querySelector('p').textContent = siteContent['main-content']['services-content']
+//main-content top-content 'Services' with 'h4' and 'p'
+mainCnt[2].querySelector('h4').textContent = siteContent['main-content']['services-h4']
+mainCnt[2].querySelector('p').textContent = siteContent['main-content']['services-content']
 
-// main-content top-content 'About' with 'h4' and 'p' */
+// main-content top-content 'middle-img'
 let midImg = document.getElementById('middle-img')
 midImg.setAttribute('Src' , siteContent['main-content']['middle-img-src'])
+
+//main-content bottom-content 'Product' with 'h4' and 'p'
+mainCnt[3].querySelector('h4').textContent = siteContent['main-content']['product-h4']
+mainCnt[3].querySelector('p').textContent = siteContent['main-content']['product-content']
+
+//main-content bottom-content 'Vision'
 
 
 
