@@ -40,13 +40,25 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
 //testing the commit
-
+// for Menu Links
 let navMnu = document.querySelectorAll('a');
-// return navMnu.forEach((curVal,idx){
-//   (curVal.textContent = Object.values(siteContent.nav)[idx])
-// });
+// navMnu.forEach((curVal,idx){
+//   return (curVal.textContent = Object.values(siteContent.nav)[idx])
+//  });
+navMnu.forEach((curVal,idx) => (curVal.textContent = Object.values(siteContent.nav)[idx]));
 
-//navMnu.forEach((curVal,idx) => (curVal.textContent = Object.values(siteContent.nav)[idx]));
+//for header Title
+let hdrBigTitle = document.querySelector('h1');
+hdrBigTitle.textContent = siteContent.cta.h1
+
+//for button
+
+
+//for header logo-img
+let hdrimg = document.getElementById('cta-img');
+hdrimg.setAttribute('src' , siteContent['cta']['img-src'])
+
 
 
