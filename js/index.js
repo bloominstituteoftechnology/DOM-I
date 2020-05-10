@@ -36,12 +36,19 @@ const siteContent = {
     "copyright" : "Copyright Great Idea! 2018"
   },
 };
+//OK, we just need to work this in to our contentLoop1 and it should work! Returns all keys with h4.
+// let keysArray = Object.keys(siteContent['main-content']);
+// console.log(keysArray);
+// for (let i = 0; i < keysArray.length; i++) {
+//   if (keysArray[i].includes('h4')) {
+//     console.log(keysArray[i]);
+//   }
+// }
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-//how can I make more generic? or actually, more specific?
 //want to check if the prop .includes() nav || h4
 //I could add all selectorVar as args and then sort them as we go through --> if x = y it goes into z, if x = w it goes into a, etc.
 function contentLooper(contentProp, selectorVar) {
@@ -55,7 +62,8 @@ const navSelector = document.querySelectorAll("a");
 contentLooper('nav', navSelector)
 
 
-//bad form to do this as one line?
+//q: bad form to do this as one line?
+//a : not necessarily bad, but harder to read.
 const title = document.querySelector("h1").textContent = (siteContent["cta"]["h1"]);
 
 const button = document.querySelector("button").textContent = (siteContent["cta"]["button"]);
@@ -63,21 +71,11 @@ const button = document.querySelector("button").textContent = (siteContent["cta"
 const mainImage = document.getElementById("cta-img").setAttribute("src", siteContent["cta"]["img-src"]);
 
 //add h4 titles
+//query select all in div main-content --> nested for?
 const h4Selector = document.querySelectorAll("h4");
 
-//can't loop enough times, with selectorVar the length is 6, Services is the last h4 it reads --> for some reason it puts it in place of Contact too...
-// function contentLooper1(contentProp, selectorVar) {
-//   const keysArray = Object.keys(siteContent[contentProp])
-//   const valueArray = Object.values(siteContent[contentProp]);
-//   for (let i = 0; i < selectorVar.length; i++) {
-//     if (keysArray[i].includes('h4')) { 
-//       selectorVar[i].textContent = valueArray[i]
-//     }
-//   }
-// }
-
-//contentLooper1('main-content', h4Selector)
-console.log(Object.keys(siteContent['nav']))
+// contentLooper('main-content', h4Selector)
+//console.log(Object.keys(siteContent['nav']))
 
 
 let h4Adder = (index, prop) => h4Selector[index].textContent = (siteContent["main-content"][prop + "-h4"]);
