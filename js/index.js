@@ -112,7 +112,7 @@ let contactProfile = document.querySelector('.contact')
 //Contact address 'h4'
 contactProfile.querySelector('h4').textContent = siteContent['contact']['contact-h4']
 
-//getting the leaves
+//getting the children
 let detailContact  = contactProfile.querySelectorAll('p')
 
 //address
@@ -121,6 +121,7 @@ detailContact[0].textContent = siteContent['contact']['address']
 detailContact[1].textContent = siteContent['contact']['phone']
 //email
 detailContact[2].textContent = siteContent['contact']['email']
+
 //footer
 let footerVal = document.querySelector('footer');
 footerVal.textContent = siteContent['footer']['copyright']
