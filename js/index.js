@@ -54,7 +54,7 @@ navMnu.forEach((curVal,idx) => (curVal.textContent = Object.values(siteContent.n
 let hdrBigTitle = document.querySelector('h1');
 hdrBigTitle.textContent = siteContent.cta.h1
 
-//for button
+//for header button
 let hdrbtn = document.querySelector('button');
 hdrbtn.textContent = siteContent.cta.button
 
@@ -126,3 +126,16 @@ detailContact[2].textContent = siteContent['contact']['email']
 let footerVal = document.querySelector('footer');
 footerVal.textContent = siteContent['footer']['copyright']
 
+//color to green
+// let colorizer = document.querySelectorAll('a')
+// colorizer[0].style.color = 'green'
+// colorizer[1].style.color = 'green'
+// colorizer[2].style.color = 'green'
+// colorizer[3].style.color = 'green'
+// colorizer[4].style.color = 'green'
+// colorizer[5].style.color = 'green'
+
+let colorizer = document.querySelectorAll('a')
+colorizer.forEach(element => {
+  element.style.color= 'green'
+})
