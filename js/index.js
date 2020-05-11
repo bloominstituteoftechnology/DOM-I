@@ -53,6 +53,8 @@ const navAs = document.querySelectorAll("nav a");
 
 const button = document.querySelector("#btn");
 
+const anchorTag = document.getElementsByTagName("a");
+
 const headerNames = ["Features", "About", "Services", "Product", "Vision"];
 
 const headers = document.querySelectorAll(".text-content h4");
@@ -108,7 +110,7 @@ const contacts = [
 /* ------------------------------------------------------------ */
 
 //top half of the page
-title.textContent = "DOM IS AWESOME";
+title.innerHTML = "DOM <br/> IS <br/> AWESOME";
 
 button.textContent = "Get Started";
 
@@ -130,8 +132,8 @@ for (let i = 0; i < para.length; i++) {
   para[i].textContent = `${headerNames[i]} ${annoyingText}`;
 }
 
-for (let i = 0; i < document.getElementsByTagName("a").length; i++) {
-  document.getElementsByTagName("a")[i].style.color = "green";
+for (let i = 0; i < anchorTag.length; i++) {
+  anchorTag[i].style.color = "green";
 }
 
 for (let i = 0; i < contactSelect.length; i++) {
