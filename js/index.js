@@ -142,9 +142,15 @@ colorizer.forEach(element => {
 
 // Making the new element
 let newA = document.createElement('a')
+
 // Assigining value
 newA.textContent = 'Robel'
+
 // Parent element made 
 let parentEle = document.querySelector('nav')
+
+//Prepedning to parent
+parentEle.prepend(newA)
+
 //Appending the Child to Parent
 parentEle.appendChild(newA)
