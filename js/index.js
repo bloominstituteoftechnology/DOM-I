@@ -43,12 +43,20 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //testing the commit
 // for Menu Links
-let navMnu = document.querySelectorAll('a');
-// navMnu.forEach((curVal,idx){
+
+//normal function
+// navMnu.forEach(function(curVal,idx){
 //   return (curVal.textContent = Object.values(siteContent.nav)[idx])
 //  });
 
-navMnu.forEach((curVal,idx) => (curVal.textContent = Object.values(siteContent.nav)[idx]));
+//arrow 1
+//let navMnu = document.querySelector('nav');
+// navMnuEach.forEach((curVal,idx) => (curVal.textContent = Object.values(siteContent.nav)[idx]));
+
+//arrow 2
+let navMnuEach = document.querySelectorAll('a')//can also be slected from navMnu as a child
+navMnuEach.forEach((curVal,idx) => (curVal.textContent = siteContent.nav[`nav-item-${idx}`]));
+
 
 //for header Title
 let hdrBigTitle = document.querySelector('h1');
