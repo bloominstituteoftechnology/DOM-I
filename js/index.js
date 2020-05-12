@@ -76,10 +76,14 @@ cdeSnipImg.setAttribute('src', siteContent["cta"]["img-src"]);
 // ---------------------------CTA SECTION ----------------------------
 //h1 'DOM is Awesome text
 const ctaContent = document.querySelector(".cta-text");
+ctaContent.style.backgroundColor = "red";
+
 ctaContent.childNodes[1].innerHTML = siteContent["cta"]["h1"];
 
 //cta button
 ctaContent.childNodes[3].innerHTML = siteContent["cta"]["button"];
+ctaContent.childNodes[3].style.backgroundColor = "black";
+ctaContent.childNodes[3].style.color = "white";
 // ----------------------------END OF CTA STUFF -----------------------
 
 
@@ -124,6 +128,8 @@ bottContent.childNodes[5].children[1].innerHTML = siteContent['main-content']['v
 //---------------------------------CONTACT SECTION ----------------------------
 
 const contactSect = document.querySelector(".contact");
+contactSect.style.backgroundColor = "red";
+contactSect.style.color = "white";
 
 //conact h4
 contactSect.childNodes[1].innerHTML = siteContent['contact']['contact-h4'];
