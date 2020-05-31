@@ -56,3 +56,6 @@ const headline = document.querySelector('div.cta-text');
 const hOne = document.createElement('h1');
 hOne.innerHTML = "DOM<br>is<br>Awesome"; // Unable to use siteContent as is AND include the breaks?
 headline.prepend(hOne);
+
+const mainButton = document.getElementsByTagName('button');
+mainButton[0].textContent = siteContent.cta["button"];
