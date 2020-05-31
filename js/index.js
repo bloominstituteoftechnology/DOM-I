@@ -48,3 +48,6 @@ links[2].textContent = siteContent.nav["nav-item-3"];
 links[3].textContent = siteContent.nav["nav-item-4"];
 links[4].textContent = siteContent.nav["nav-item-5"];
 links[5].textContent = siteContent.nav["nav-item-6"];
+
+const mainImg = document.getElementById('cta-img');
+mainImg.src = siteContent.cta["img-src"];
