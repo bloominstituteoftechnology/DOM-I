@@ -59,3 +59,6 @@ headline.prepend(hOne);
 
 const mainButton = document.getElementsByTagName('button');
 mainButton[0].textContent = siteContent.cta["button"];
+
+const middleImg = document.getElementById('middle-img');
+middleImg.src = siteContent["main-content"]["middle-img-src"];
