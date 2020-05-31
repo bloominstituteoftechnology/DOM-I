@@ -51,3 +51,8 @@ links[5].textContent = siteContent.nav["nav-item-6"];
 
 const mainImg = document.getElementById('cta-img');
 mainImg.src = siteContent.cta["img-src"];
+
+const headline = document.querySelector('div.cta-text');
+const hOne = document.createElement('h1');
+hOne.innerHTML = "DOM<br>is<br>Awesome"; // Unable to use siteContent as is AND include the breaks?
+headline.prepend(hOne);
