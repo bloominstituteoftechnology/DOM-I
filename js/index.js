@@ -81,6 +81,20 @@ document.querySelector('.contact p:nth-of-type(3)').textContent = siteContent['c
 
 document.querySelector('footer p').textContent = siteContent['footer']['copyright'];
 
+
+
+// .appendChild()
+const newNav = document.createElement('a');
+const nav = document.querySelector('nav');
+newNav.textContent = 'Test';
+console.log(newNav);
+nav.appendChild(newNav);
+
+// .prepend()
+const newNavTwo = document.createElement('a');
+newNavTwo.textContent = 'Blog';
+nav.prepend(newNavTwo);
+
 // Nav text green
 const navTextGreen = document.querySelectorAll('header nav a');
 navTextGreen.forEach(heading => {
