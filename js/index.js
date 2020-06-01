@@ -58,7 +58,10 @@ hOne.innerHTML = "DOM<br>is<br>Awesome"; // Unable to use siteContent as is AND 
 headline.prepend(hOne);
 
 const mainButton = document.getElementsByTagName('button');
-mainButton[0].textContent = siteContent.cta["button"];
+mainButton[0].textContent = "Change Navigation Link Color"; // mainButton[0] Stretch Goal Button
+mainButton[0].style.padding = "8px";
+mainButton[0].style.margin = "12px";
+mainButton[1].textContent = siteContent.cta["button"]; // mainButton[1] Get Started Button
 
 const middleImg = document.getElementById('middle-img');
 middleImg.src = siteContent["main-content"]["middle-img-src"];
@@ -76,3 +79,46 @@ para[1].textContent = siteContent["main-content"]["about-content"];
 para[2].textContent = siteContent["main-content"]["services-content"];
 para[3].textContent = siteContent["main-content"]["product-content"];
 para[4].textContent = siteContent["main-content"]["vision-content"];
+
+subHeadings[5].textContent = siteContent["contact"]["contact-h4"];
+
+para[5].textContent = siteContent["contact"]["address"];
+para[5].innerHTML = "123 Way 456 Street<br>Somewhere, USA"; // In order to add break
+para[6].textContent = siteContent["contact"]["phone"];
+para[7].textContent = siteContent["contact"]["email"];
+para[8].textContent = siteContent["footer"]["copyright"];
+
+const navigation = document.querySelectorAll("nav a");
+navigation[0].style.color = "darkGreen";
+navigation[1].style.color = "darkGreen";
+navigation[2].style.color = "darkGreen";
+navigation[3].style.color = "darkGreen";
+navigation[4].style.color = "darkGreen";
+navigation[5].style.color = "darkGreen";
+
+const addNavLinks = document.querySelector("nav");
+const newLinkOne = document.createElement('a');
+const newLinkTwo = document.createElement('a');
+newLinkOne.textContent = "First Item";
+newLinkOne.href = "#";
+newLinkOne.style.color = "darkGreen";
+newLinkTwo.textContent = "Last Item";
+newLinkTwo.href = "#";
+newLinkTwo.style.color = "darkGreen";
+addNavLinks.prepend(newLinkOne);
+addNavLinks.appendChild(newLinkTwo);
+
+// STRETCH GOAL
+
+function changeColor() {
+  navigation[0].style.color = "darkBlue";
+  navigation[1].style.color = "darkBlue";
+  navigation[2].style.color = "darkBlue";
+  navigation[3].style.color = "darkBlue";
+  navigation[4].style.color = "darkBlue";
+  navigation[5].style.color = "darkBlue";
+  newLinkOne.style.color = "darkBlue";
+  newLinkTwo.style.color = "darkBlue";
+}
+
+// END STRETCH GOAL
