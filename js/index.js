@@ -80,3 +80,9 @@ document.querySelector('.contact p:nth-of-type(2)').textContent = siteContent['c
 document.querySelector('.contact p:nth-of-type(3)').textContent = siteContent['contact']['email'];
 
 document.querySelector('footer p').textContent = siteContent['footer']['copyright'];
+
+// Nav text green
+const navTextGreen = document.querySelectorAll('header nav a');
+navTextGreen.forEach(heading => {
+  heading.style.color = 'green'
+});
