@@ -57,6 +57,9 @@ navItems[4].setAttribute('style', 'color:green;')
 navItems[5].textContent = 'Contact'
 navItems[5].setAttribute('style', 'color:green;')
 
+
+
+
 let newLinkProps = {
   href: '#',
   textContent: 'One Thing'
@@ -79,6 +82,8 @@ newlink2.textContent = newLink2Props.textContent
 
 nav.prepend(newlink2)
 
+navItems[7].setAttribute('style', 'color:green;')
+navItems[0].setAttribute('style', 'color:green;')
 
 
 // landing section
