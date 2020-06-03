@@ -44,19 +44,52 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 //Nav 
 
 const navbars = document.querySelectorAll("nav a");
-navbars[0].textContent = siteContent["nav"]["nav-item-1"]; 
+navbars[0].textContent = siteContent["nav"]["nav-item-1"];
+//navbars[0].style.color = "green"; 
 navbars[1].textContent = siteContent["nav"]["nav-item-2"];
+//navbars[1].style.color = "green"; 
 navbars[2].textContent = siteContent["nav"]["nav-item-3"];
+////navbars[2].style.color = "green"; 
 navbars[3].textContent = siteContent["nav"]["nav-item-4"];
+//navbars[3].style.color = "green"; 
 navbars[4].textContent = siteContent["nav"]["nav-item-5"];
+//navbars[4].style.color = "green"; 
 navbars[5].textContent = siteContent["nav"]["nav-item-6"];
+//navbars[5].style.color = "green"; 
+
+//another way to add color to all the Nav anchors is using .forEach method :
+
+navbars.forEach( element => element.style.color = "green");
+
+//creating a nav tab using .appendchild() that goes to the right side
+
+const navNewLast = document.createElement("a");
+navNewLast.textContent = "About Us";
+navNewLast.style.color = "green";
+//added this part so the nav tab was linkible 
+navNewLast.setAttribute('href', "#");
+
+const navNewOne = document.querySelector("nav");
+navNewOne.appendChild(navNewLast);
+
+//creating another nav tab using .prepend() that goes to the left side
+
+const navNewFirst = document.createElement("a");
+navNewFirst.textContent = "Portafolio";
+navNewFirst.style.color = "green";
+//added this part so the nav tab was linkible 
+navNewFirst.setAttribute('href', "#");
+
+const navNewTwo = document.querySelector("nav");
+navNewTwo.prepend(navNewFirst);
+
 
 //cta
 
 const ctaHeader = document.querySelector("h1");
 ctaHeader.textContent = siteContent["cta"]["h1"];
 ctaHeader.innerHTML = 'DOM <br> Is <br> Awesome'
-// I used .innerHTML beacuse it said on the web that it is for innerHTML can be used to change the contents of the DOM by string, and the use for br worked.
+// I used .innerHTML beacuse it said on the web that it is for innerHTML can be used to change the contents of the DOM by string, and I used for br, and worked.
 
 
 const headerButton = document.querySelector("button");
@@ -101,9 +134,6 @@ contactParagr[0].innerHTML = "123 Way 456 Street <br> Somewhere, USA"
 
 contactParagr[1].textContent = siteContent["contact"]["phone"];
 contactParagr[2].textContent = siteContent["contact"]["email"];
-
-
-
 //Footer
 
 const footerContent = document.querySelector("footer");
