@@ -100,19 +100,38 @@ mainContent9.textContent=siteContent["main-content"]["vision-content"]
 
 
 
-let contact_h4= document.querySelectorAll('.contact,h4')[5]
+let contact_h4= document.getElementsByTagName('h4')[5]
 contact_h4.textContent=siteContent["contact"]["contact-h4"]
 
-let contact_p= document.querySelectorAll('contact,p')[5]
+let contact_p= document.getElementsByTagName('p')[5]
 contact_p.textContent=siteContent["contact"]["address"]
 
-let contact_phone= document.querySelectorAll('contact,p')
+let contact_phone= document.getElementsByTagName('p')[6]
 contact_phone.textContent=siteContent["contact"]["phone"]
 
-let contact_email= document.querySelectorAll('contact,p')
+let contact_email= document.querySelectorAll('p')[7]
 contact_email.textContent=siteContent["contact"]["email"]
 
-let footer_p= document.querySelector(footer,p)
-textContent=siteContent["footer"]["copyright"]
+let footer_p= document.getElementsByTagName('p')[8]
+footer_p.textContent=siteContent["footer"]["copyright"]
+
+let newContent=document.createElement('footer')
+newContent.textContent="Thank you"
+let body=document.querySelector('body')
+
+body.appendChild(newContent)
+newContent.style.color='green'
+
+let newContent1=document.createElement('nav')
+newContent1.textContent='Hello'
+let body1=document.querySelector('body')
+body1.prepend(newContent1)
+newContent1.style.color='green'
+
+
+
+
+
+
 
 
