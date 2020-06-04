@@ -55,3 +55,18 @@ navItems[5].textContent = siteContent.nav["nav-item-6"];
 navItems.forEach( function (currentValue) {
   currentValue.style.color = "green";
 });
+
+//Add two new elements to navigation system (styled BLUE to differentiate from other elements)
+const nav = document.querySelector("nav");
+
+const newNavElement1 = document.createElement("a")
+newNavElement1.textContent = "Demos"
+newNavElement1.href = "#";
+newNavElement1.style.color = "blue"
+nav.prepend(newNavElement1);
+
+const newNavElement2 = document.createElement("a")
+newNavElement2.textContent = "Pricing"
+newNavElement2.href = "#";
+newNavElement2.style.color = "blue"
+nav.append(newNavElement2);
