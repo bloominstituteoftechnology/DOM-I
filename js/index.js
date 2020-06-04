@@ -37,7 +37,7 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
+//Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
@@ -83,38 +83,50 @@ console.log(aTag[5]);
 
 const cta = document.getElementById("cta-img");
 cta.setAttribute('src', siteContent["cta"]["img-src"])
+console.log(cta);
 
 const ctaH = document.querySelector("h1");
 console.log(ctaH);
 
 ctaH.textContent = siteContent.cta.h1;
+ctaH.style.wordSpacing = '991px';
+ctaH.style.marginLeft = '25%'
 
 
 const ctaB = document.querySelector("button");
 console.log(ctaB)
 
 ctaB.textContent = siteContent.cta.button;
+ctaB.style.marginLeft = '22%'
 
 // TITLES H4
 const titles = document.querySelectorAll('h4')
 console.log(titles)
 
 titles[0].textContent = siteContent["main-content"]["features-h4"];
+titles[0].style.color = 'lime';
 console.log(titles[0]);
 
+
 titles[1].textContent = siteContent["main-content"]["about-h4"];
+titles[1].style.color = 'lime';
 console.log(titles[1]);
 
+
 titles[2].textContent = siteContent["main-content"]["services-h4"];
+titles[2].style.color = 'turquoise';
 console.log(titles[2]);
 
 titles[3].textContent = siteContent["main-content"]["product-h4"]
+titles[3].style.color = 'turquoise';
 console.log(titles[3]);
 
 titles[4].textContent = siteContent["main-content"]["vision-h4"]
+titles[4].style.color = 'turquoise';
 console.log(titles[4])
 
 titles[5].textContent = siteContent.contact["contact-h4"]
+titles[5].style.color = 'lime';
 console.log(titles[5]);
 
 //PARAGRAPHS
@@ -146,17 +158,50 @@ paragraphs[7].textContent = siteContent.contact.email
 console.log(paragraphs[7])
 
 
-//MIDDLE IMG SRC
+// MIDDLE IMG SRC //
 const mainImg = document.getElementById("middle-img");
 mainImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 console.log(mainImg);
 
+// APPRENDCHILD //
+const newContent = document.createElement('img');
+console.log(newContent);
 
-/*Footer Section */
+newContent.setAttribute('src','https://i.postimg.cc/k55bTCjp/bandwidth-close-up-computer-connection-1148820.jpg');
+newContent.style.width = '876px';
+newContent.style.height = '182px';
+newContent.style.marginTop = '4%'
+console.log(newContent);
+
+const mainContentI = document.querySelector('.main-content');
+console.log(mainContentI);
+
+mainContentI.appendChild(newContent);
+console.log(mainContentI);
+
+// PREPEND //
+const preContent = document.createElement('img');
+console.log(preContent);
+
+preContent.setAttribute('src','https://i.postimg.cc/0jZzxJ30/technology-computer-display-text-330771.jpg')
+//preContent.style.borderRadius = '100%';
+preContent.style.width = '876px';
+preContent.style.height = '279px';
+preContent.style.marginBottom = '5%'
+console.log(preContent);
+
+const ctaC = document.querySelector('.contact');
+ctaC.prepend(preContent);
+console.log(ctaC);
+
+
+
+
+// FOOTER SECTION //
 
 const footerCR = document.querySelector("footer p");
 footerCR.textContent = siteContent.footer.copyright;
-
+footerCR.style.marginTop = '10%'
 console.log(footerCR)
 
 
