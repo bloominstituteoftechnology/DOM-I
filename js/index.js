@@ -70,3 +70,22 @@ newNavElement2.textContent = "Pricing"
 newNavElement2.href = "#";
 newNavElement2.style.color = "blue"
 nav.append(newNavElement2);
+
+//Update the CTA section
+const ctaText= document.querySelector(".cta h1");
+ctaText.textContent = siteContent.cta["h1"];
+
+const ctaButton= document.querySelector(".cta button");
+ctaButton.textContent = siteContent.cta["button"];
+
+const ctaImage = document.getElementById("cta-img");
+ctaImage.src = siteContent.cta["img-src"];
+ctaImage.alt = "Image of a code snippet."
+
+
+//Update the top-content "Features" section 
+const topContentHeaderFeatures= document.querySelectorAll(".main-content .top-content h4");
+topContentHeaderFeatures[0].textContent = siteContent["main-content"]["features-h4"];
+
+const topContentTextFeatures= document.querySelectorAll(".main-content .top-content p");
+topContentTextFeatures[0].textContent = siteContent["main-content"]["features-content"];
