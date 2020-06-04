@@ -41,10 +41,45 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-const multipleClasses = document.querySelectorAll ("nav");
-console.log(multipleClasses[0])
+var aTag = document.querySelectorAll('a')
+console.log(aTag);
 
-// Cta Section
+aTag[0].textContent = siteContent.nav["nav-item-1"];
+aTag[0].style.color = 'green';
+console.log(aTag[0]);
+
+aTag[1].textContent = siteContent.nav["nav-item-2"];
+aTag[1].style.color = 'green';
+console.log(aTag[1]);
+
+
+aTag[2].textContent = siteContent.nav["nav-item-3"];
+aTag[2].style.color = 'green';
+console.log(aTag[2]);
+
+
+aTag[3].textContent = siteContent.nav["nav-item-4"];
+aTag[3].style.color = 'green';
+console.log(aTag[3]);
+
+
+aTag[4].textContent = siteContent.nav["nav-item-5"];
+aTag[4].style.color = 'green';
+console.log(aTag[4]);
+
+
+aTag[5].textContent = siteContent.nav["nav-item-6"];
+aTag[5].style.color = 'green';
+console.log(aTag[5]);
+
+
+
+//for(var i = 0; i < 'a'.length; i++) {
+   // 'a'[i].textContent = siteContent.nav["nav-item-1"]
+//}
+//console.log(aTag)
+
+// CTA SECTION
 
 const cta = document.getElementById("cta-img");
 cta.setAttribute('src', siteContent["cta"]["img-src"])
@@ -60,117 +95,61 @@ console.log(ctaB)
 
 ctaB.textContent = siteContent.cta.button;
 
-// Main-Content Section
+// TITLES H4
+const titles = document.querySelectorAll('h4')
+console.log(titles)
 
-//FEATURES H4
-const mainContent = document.querySelector(".main-content .top-content h4");
-console.log(mainContent);
+titles[0].textContent = siteContent["main-content"]["features-h4"];
+console.log(titles[0]);
 
-//FEATURES H4 TEXT-CONTENT
-mainContent.textContent = siteContent["main-content"]["features-h4"];
+titles[1].textContent = siteContent["main-content"]["about-h4"];
+console.log(titles[1]);
 
+titles[2].textContent = siteContent["main-content"]["services-h4"];
+console.log(titles[2]);
 
+titles[3].textContent = siteContent["main-content"]["product-h4"]
+console.log(titles[3]);
 
-//FEATURES CONTENT 
-const mainFeatures = document.querySelector(".main-content .top-content p")
-console.log(mainFeatures);
+titles[4].textContent = siteContent["main-content"]["vision-h4"]
+console.log(titles[4])
 
-//FEATURES CONTENT (TEXT-CONTENT)
-mainFeatures.textContent = siteContent["main-content"]["features-content"];
+titles[5].textContent = siteContent.contact["contact-h4"]
+console.log(titles[5]);
 
+//PARAGRAPHS
+const paragraphs = document.querySelectorAll('p')
+console.log(paragraphs);
 
-//ABOUT H4
-const mainAboutH = document.querySelector(".main-content .top-content .text-content h4")
-console.log(mainAboutH);
+paragraphs[0].textContent = siteContent["main-content"]["features-content"]
+console.log(paragraphs[0]);
 
-//ABOUT H4 TEXT-CONTENT
-mainAboutH.textContent = siteContent["main-content"]["about-h4"]
+paragraphs[1].textContent = siteContent["main-content"]["about-content"]
+console.log(paragraphs[1])
 
+paragraphs[2].textContent = siteContent["main-content"]["services-content"]
+console.log(paragraphs[2]);
 
-//ABOUT CONTENT 
-const mainAboutContent = document.querySelector(".main-content .top-content .text-content p");
-console.log(mainAboutContent);
+paragraphs[3].textContent = siteContent["main-content"]["product-content"]
+console.log(paragraphs[3])
 
-//ABOUT CONTENT (TEXT-CONTENT)
-mainAboutContent.textContent = siteContent["main-content"]["about-content"];
+paragraphs[4].textContent = siteContent["main-content"]["vision-content"]
+console.log(paragraphs[4]);
+
+paragraphs[5].textContent = siteContent.contact.address
+console.log(paragraphs[5])
+
+paragraphs[6].textContent = siteContent.contact.phone
+console.log(paragraphs[6])
+
+paragraphs[7].textContent = siteContent.contact.email
+console.log(paragraphs[7])
 
 
 //MIDDLE IMG SRC
 const mainImg = document.getElementById("middle-img");
 mainImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 console.log(mainImg);
-
-
-//SERVICE H4
-const mainServicesH = document.querySelector(".main-content .bottom-content h4");
-console.log(mainServicesH);
-
-//SERVICE H4 (TEXT-CONTENT)
-mainServicesH.textContent = siteContent["main-content"]["services-h4"];
-
-
-
-//SERVICE CONTENT 
-const mainServicesC = document.querySelector(".main-content .bottom-content p"); 
-console.log(mainServicesC)
-
-//SERVICE CONTENT (TEXT-CONTENT)
-mainServicesC.textContent = siteContent["main-content"]["services-content"]
-
-
-
-//PRODUCT H4
-const mainProductH = document.querySelector(".main-content .bottom-content .text-content h4"); 
-console.log(mainProductH)
-
-//PRODUCT H4 (TEXT-CONTENT)
-mainProductH.textContent = siteContent["main-content"]["product-h4"]
-
-
-
-//PRODUCT CONTENT 
-const mainProductC = document.querySelector(".main-content .bottom-content .text-content p")
-console.log(mainProductC)
-
-//PRODUCT CONTENT (TEXT-CONTENT)
-mainProductC.textContent = siteContent["main-content"]["product-content"]
-
-
-
-//VISION H4
-const mainVisionH = document.querySelector(".main-content .bottom-content .text-content h4")
-console.log(mainVisionH)
-
-//VISION H4 (TEXT-CONTENT)
-mainVisionH.textContent = siteContent["main-content"]["vision-h4"];
-
-
-
-//VISION CONTENT
-const mainVisionC = document.querySelector(".main-content .bottom-content .text-content p")
-console.log(mainVisionC)
-
-//VISION CONTENT (TEXT-CONTENT)
-mainVisionC.textContent = siteContent["main-content"]["vision-content"];
-
-/*Contact Section */ 
-
-const contactH = document.querySelector(".contact h4");
-console.log(contactH)
-contactH.textContent = siteContent.contact["contact-h4"]
-
-const contactAddress = document.querySelector(".contact p");
-console.log(contactAddress)
-contactAddress.textContent = siteContent.contact.address;
-
-const contactPhone = document.querySelector(".contact p");
-console.log(contactPhone)
-contactPhone.textContent = siteContent.contact.phone
-
-
-const contactEmail = document.querySelector(".contact p");
-console.log(contactEmail)
-contactEmail.textContent = siteContent.contact.email
 
 
 /*Footer Section */
