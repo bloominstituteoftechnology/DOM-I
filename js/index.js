@@ -51,11 +51,66 @@ navBar[4].textContent= "About"
 navBar[5].textContent= "Contact"
 
 
-const domText = document.querySelector('h1')
-domText.textContent = "DOM Is Awesome"
+const ctaText = document.querySelector('.cta-text h1')
+ctaText.textContent = "DOM Is Awesome"
 
-const domButton = document.querySelector('button')
+
+
+
+const domButton = document.querySelector('.cta-text button')
 domButton.textContent = "Get Started"
 
-const codeImage = document.querySelector("#cta-img")
-codeImage.src=""
+const ctaImage = document.querySelector('.cta #cta-img')
+ctaImage.src = siteContent.cta['img-src']
+
+
+
+
+// main-content
+
+
+const textH4 = document.querySelectorAll('.text-content h4')
+textH4[0].textContent = "FEATURES"
+textH4[1].textContent = "ABOUT"
+textH4[2].textContent = "SERVICES"
+textH4[3].textContent = "PRODUCT"
+textH4[4].textContent = "VISION"
+
+
+
+const textP = document.querySelectorAll('.text-content p')
+textP[0].textContent = "Features content elementum magana eros,ac posuere elevit<br>tempus et.Suspendisse vel tempus sodio,insin interdutm nisi, <br>suspendisse eu orinari nisl.Nullam convallis augue justo,at<br>impoerdiet metus seclear quis."
+
+textP[1].textContent = "Features content elementum magana eros,ac posuere elevit<br>tempus et.Suspendisse vel tempus sodio,insin interdutm nisi, <br>suspendisse eu orinari nisl.Nullam convallis augue justo,at<br>impoerdiet metus seclear quis."
+textP[2].textContent = "Features content elementum magana eros,ac posuere elevit<br>tempus et.Suspendisse vel tempus sodio,insin interdutm nisi, <br>suspendisse eu orinari nisl.Nullam convallis augue justo,at<br>impoerdiet metus seclear quis."
+textP[3].textContent = "Features content elementum magana eros,ac posuere elevit<br>tempus et.Suspendisse vel tempus sodio,insin interdutm nisi, <br>suspendisse eu orinari nisl.Nullam convallis augue justo,at<br>impoerdiet metus seclear quis."
+textP[4].textContent = "Features content elementum magana eros,ac posuere elevit<br>tempus et.Suspendisse vel tempus sodio,insin interdutm nisi, <br>suspendisse eu orinari nisl.Nullam convallis augue justo,at<br>impoerdiet metus seclear quis."
+
+
+
+const middleImg = document.getElementById('middle-img')
+middleImg.src = siteContent['main-content']['middle-img-src']
+
+
+
+// Contact piont
+
+
+const contact = document.querySelector('.contact h4')
+
+contact.textContent = "contact"
+
+
+const cont = document.querySelectorAll('.contact p')
+cont[0].textContent = "123 Way 456 Street Somewhere USA"
+cont[1].textContent = "(888) 888-8888"
+cont[2].textContent = "Sale@greatIdea.io"
+
+
+
+
+
+// footer
+
+const footer = document.querySelector(' footer')
+footer.textContent = "Copyright Greate Idea! 2018"
