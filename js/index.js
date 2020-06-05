@@ -46,6 +46,12 @@ let navBar = document.querySelectorAll('nav a');
 navBar.forEach((value, index) => {
   value.textContent = siteContent['nav'][`nav-item-${index + 1}`];
 });
+navBar[0].style.color = 'green';
+navBar[1].style.color = 'green';
+navBar[2].style.color = 'green';
+navBar[3].style.color = 'green';
+navBar[4].style.color = 'green';
+navBar[5].style.color = 'green';
 
 // cta section
 let ctaH1 = document.querySelector('.cta-text h1');
