@@ -55,7 +55,7 @@ navBar[5].style.color = 'green';
 
 // cta section
 let ctaH1 = document.querySelector('.cta-text h1');
-ctaH1.textContent = siteContent['cta']['h1'];
+ctaH1.innerHTML = '<h1>DOM<br> Is<br> Awesome</h1>';
 
 let ctaButton = document.querySelector('.cta-text button');
 ctaButton.textContent = siteContent['cta']['button'];
@@ -81,7 +81,7 @@ let contactH4 = document.querySelector('.contact h4');
 contactH4.textContent = siteContent['contact']['contact-h4'];
 
 let contactP = document.querySelectorAll('.contact p');
-contactP[0].textContent = siteContent['contact']['address'];
+contactP[0].innerHTML = '<p>123 Way 456 Street<br> Somewhere, USA</p>';
 contactP[1].textContent = siteContent['contact']['phone'];
 contactP[2].textContent = siteContent['contact']['email'];
 
