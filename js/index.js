@@ -89,3 +89,51 @@ topContentHeaderFeatures[0].textContent = siteContent["main-content"]["features-
 
 const topContentTextFeatures= document.querySelectorAll(".main-content .top-content p");
 topContentTextFeatures[0].textContent = siteContent["main-content"]["features-content"];
+
+//Update the top-content "About" section 
+const topContentAbout= document.querySelectorAll(".main-content .top-content h4");
+topContentAbout[1].textContent = siteContent["main-content"]["about-h4"];
+
+const topContentTextAbout= document.querySelectorAll(".main-content .top-content p");
+topContentTextAbout[1].textContent = siteContent["main-content"]["about-content"];
+
+
+//Update the middle-img section 
+const middleImage = document.getElementById("middle-img");
+middleImage.src = siteContent["main-content"]["middle-img-src"];
+middleImage.alt = "Image of code snippets across the screen."
+
+//Update the bottom-content "Services" section 
+const bottomContentHeaderServices= document.querySelectorAll(".main-content .bottom-content h4");
+bottomContentHeaderServices[0].textContent = siteContent["main-content"]["services-h4"];
+
+const bottomContentTextServices= document.querySelectorAll(".main-content .bottom-content p");
+bottomContentTextServices[0].textContent = siteContent["main-content"]["services-content"];
+
+//Update the bottom-content "Product" section 
+const bottomContentHeaderProduct= document.querySelectorAll(".main-content .bottom-content h4");
+bottomContentHeaderProduct[1].textContent = siteContent["main-content"]["product-h4"];
+
+const bottomContentTextProduct= document.querySelectorAll(".main-content .bottom-content p");
+bottomContentTextProduct[1].textContent = siteContent["main-content"]["product-content"];
+
+//Update the bottom-content "Vision" section 
+const bottomContentHeaderVision= document.querySelectorAll(".main-content .bottom-content h4");
+bottomContentHeaderVision[2].textContent = siteContent["main-content"]["vision-h4"];
+
+const bottomContentTextVision= document.querySelectorAll(".main-content .bottom-content p");
+bottomContentTextVision[2].textContent = siteContent["main-content"]["vision-content"];
+
+
+//Update the contact section
+const contactSectionHeader= document.querySelectorAll(".contact h4");
+contactSectionHeader[0].textContent = siteContent["contact"]["contact-h4"];
+
+const contactSectionDetails= document.querySelectorAll(".contact p");
+contactSectionDetails[0].textContent = siteContent["contact"]["address"];
+contactSectionDetails[1].textContent = siteContent["contact"]["phone"];
+contactSectionDetails[2].textContent = siteContent["contact"]["email"];
+
+//Update the footer
+const footerSection= document.querySelectorAll("footer p");
+footerSection[0].textContent = siteContent.footer.copyright;
