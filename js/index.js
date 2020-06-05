@@ -48,8 +48,17 @@ navBar[2].textContent = siteContent['nav']["nav-item-3"];
 navBar[3].textContent = siteContent['nav']["nav-item-4"];
 navBar[4].textContent = siteContent['nav']["nav-item-5"];
 navBar[5].textContent = siteContent['nav']["nav-item-6"];
-const nav = document.querySelector('nav');
-nav.style.color = 'green'
+const navsection = document.querySelector('nav');
+let append = document.createElement('append');
+navBar[0].style.color = 'green';
+navBar[1].style.color = 'green';
+navBar[2].style.color = 'green';
+navBar[3].style.color = 'green';
+navBar[4].style.color = 'green';
+navBar[5].style.color = 'green';
+// const nav = document.querySelector('nav');
+// navBar.appendChild = ('append');
+
 const ctaImg = document.querySelector('#cta-img');
 ctaImg.setAttribute('src', 'img/header-img.png');
 const ctaTextH1 = document.querySelector('.cta-text h1');
