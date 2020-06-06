@@ -68,6 +68,10 @@ let topContentH4 = document.querySelectorAll('.main-content .top-content h4');
 topContentH4[0].textContent = siteContent['main-content']['features-h4'];
 topContentH4[1].textContent = siteContent['main-content']['about-h4'];
 
+let topContentP = document.querySelectorAll('.main-content .top-content p');
+topContentP[0].textContent = siteContent['main-content']['features-content'];
+topContentP[1].textContent = siteContent['main-content']['about-content'];
+
 let mainContentImg = document.querySelector('.main-content img');
 mainContentImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
@@ -75,6 +79,11 @@ let bottomContentH4 = document.querySelectorAll('.main-content .bottom-content h
 bottomContentH4[0].textContent = siteContent['main-content']['product-h4'];
 bottomContentH4[1].textContent = siteContent['main-content']['services-h4'];
 bottomContentH4[2].textContent = siteContent['main-content']['vision-h4'];
+
+let bottomContentP = document.querySelectorAll('.main-content .bottom-content p');
+bottomContentP[0].textContent = siteContent['main-content']['product-content'];
+bottomContentP[1].textContent = siteContent['main-content']['services-content'];
+bottomContentP[2].textContent = siteContent['main-content']['vision-content'];
 
 // contact section
 let contactH4 = document.querySelector('.contact h4');
@@ -88,3 +97,16 @@ contactP[2].textContent = siteContent['contact']['email'];
 // footer
 let footerP = document.querySelector('footer p');
 footerP.textContent = siteContent['footer']['copyright'];
+
+// my two nav items
+let nav = document.getElementsByTagName('nav')[0];
+
+let navItem1 = document.createElement('a');
+navItem1.textContent = 'FAQ';
+navItem1.style.color = 'green';
+nav.prepend(navItem1);
+
+let navItem2 = document.createElement('a');
+navItem2.textContent = 'Help';
+navItem2.style.color = 'green';
+nav.appendChild(navItem2);
