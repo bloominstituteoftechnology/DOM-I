@@ -51,6 +51,13 @@ navBar[4].textContent= "About"
 navBar[5].textContent= "Contact"
 
 
+navBar.forEach(nav=>{
+  nav.style.color = "green"
+})
+
+const createNav = document.createElement('p')
+
+
 const ctaText = document.querySelector('.cta-text h1')
 ctaText.textContent = "DOM Is Awesome"
 
@@ -61,9 +68,21 @@ const domButton = document.querySelector('.cta-text button')
 domButton.textContent = "Get Started"
 
 const ctaImage = document.querySelector('.cta #cta-img')
-ctaImage.src = siteContent.cta['img-src']
+ctaImage.setAttribute('src', siteContent.cta['img-src'])  
 
 
+
+
+
+let navigation = document.querySelector('nav')
+let newLink = document.createElement('a')
+newLink.textContent = 'Facebook'
+navigation.append(newLink)
+
+
+let newLinkII = document.querySelector('a')
+newLinkII.textContent = 'Google'
+navigation.prepend(newLinkII)
 
 
 // main-content
@@ -89,7 +108,8 @@ textP[4].textContent = "Features content elementum magana eros,ac posuere elevit
 
 
 const middleImg = document.getElementById('middle-img')
-middleImg.src = siteContent['main-content']['middle-img-src']
+
+middleImg.setAttribute('src',siteContent['main-content']['middle-img-src'])  
 
 
 
