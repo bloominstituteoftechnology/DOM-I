@@ -67,3 +67,36 @@ about.textContent = "About";
 
 let contact = document.querySelectorAll('a')[5];
 contact.textContent = "Contact";
+
+let button = document.querySelector('button');
+button.textContent = "Get Started";
+
+let topfeature = document.querySelectorAll('h4')[0];
+topfeature.textContent = 'Features';
+
+let topabout = document.querySelectorAll('h4')[1];
+topabout.textContent = 'About';
+
+let topServices = document.querySelectorAll('h4')[2];
+topServices.textContent = 'Services';
+
+let topProduct = document.querySelectorAll('h4')[3];
+topProduct.textContent = 'Product';
+
+let topVision = document.querySelectorAll('h4')[4];
+topVision.textContent = 'Vision';
+
+let topFeatureText = document.querySelectorAll('p')[0];
+topFeatureText.textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+let topAboutText = document.querySelectorAll('p')[1];
+topAboutText.textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+let servicesText = document.querySelectorAll('p')[2];
+servicesText.textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+let productText = document.querySelectorAll('p')[3];
+productText.textContent = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+let visionText = document.querySelectorAll('p')[4];
+visionText.textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
