@@ -86,6 +86,9 @@ topProduct.textContent = 'Product';
 let topVision = document.querySelectorAll('h4')[4];
 topVision.textContent = 'Vision';
 
+let bottomContact = document.querySelectorAll('h4')[5];
+bottomContact.textContent = 'Contact';
+
 let topFeatureText = document.querySelectorAll('p')[0];
 topFeatureText.textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
@@ -100,3 +103,15 @@ productText.textContent = "Product content elementum magna eros, ac posuere elvi
 
 let visionText = document.querySelectorAll('p')[4];
 visionText.textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+let street = document.querySelectorAll('p')[5];
+street.textContent = "123 Way 456 Street SomeWhere, USA";
+
+let phone = document.querySelectorAll('p')[6];
+phone.textContent = "1 (888) 888-8888";
+
+let email = document.querySelectorAll('p')[7];
+email.textContent = "sales@greatidea.io";
+
+let footer = document.querySelectorAll('p')[8];
+footer.textContent = "Copyright Great Idea! 2008";
