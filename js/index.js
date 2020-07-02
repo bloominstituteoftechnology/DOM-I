@@ -48,7 +48,7 @@ let midImg = document.getElementById("middle-img");
 midImg.src = 'img/mid-page-accent.jpg';
 
 let heading = document.querySelector('h1')
-heading.textContent = "DOM Is Awsome";
+heading.innerHTML = "DOM<br>Is<br>Awsome";
 
 let newATag = document.createElement('a');
 newATag.textContent = 'SIGN UP';
@@ -125,7 +125,7 @@ let visionText = document.querySelectorAll('p')[4];
 visionText.textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
 let street = document.querySelectorAll('p')[5];
-street.textContent = "123 Way 456 Street <br> SomeWhere, USA";
+street.innerHTML = "123 Way 456 Street<br>SomeWhere, USA";
 
 let phone = document.querySelectorAll('p')[6];
 phone.textContent = "1 (888) 888-8888";
