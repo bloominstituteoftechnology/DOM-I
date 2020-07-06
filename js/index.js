@@ -71,9 +71,9 @@ button[3].textContent = 'Features';
 button[4].textContent = 'About';
 button[5].textContent = 'Contact';
 console.log(button)
-//adding i=logo image
+//adding logo image
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', 'http://127.0.0.1:5500/img/logo.png')
+logo.setAttribute('src', '../img/logo.png')
 //chaning container to flex
 //const cont = document.querySelector("container")
 
@@ -88,4 +88,24 @@ button2.textContent = 'Get Strarted'
 const headerText = document.querySelector('h1')
 headerText.textContent = "DOm is Awesome"
 // adding middle image
-cta-img
+let headImg = document.getElementById("cta-img");
+headImg.setAttribute('src', '../img/header-img.png')
+//adding mid image
+let midImg = document.getElementById("middle-img");
+midImg.setAttribute('src', '../img/mid-page-accent.jpg')
+//adding h4 text
+const button3 = document.querySelectorAll('h4')
+button3[0].textContent = 'Services';
+button3[1].textContent = 'Product';
+button3[2].textContent = 'Vision';
+button3[3].textContent = 'Features';
+button3[4].textContent = 'About';
+//adding txt to p in h4's
+const pText1 = document.querySelectorAll('.text-content p')
+pText1[0].textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+pText1[1].textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+pText1[2].textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+pText1[3].textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+pText1[4].textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+console.log(pText1)
+//
