@@ -44,7 +44,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 let ctaImage = document.getElementById("cta-img");
 ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
 
-const navBar = document.querySelectorAll('a')
+let navBar = document.querySelectorAll('nav a')
 navBar[0].textContent = 'Services'
 navBar[1].textContent = 'Product'
 navBar[2].textContent = 'Vision'
@@ -52,6 +52,9 @@ navBar[3].textContent = 'Features'
 navBar[4].textContent = 'About'
 navBar[5].textContent = 'Contact'
 
+navBar.forEach(link => {
+  link.style.color = 'green'
+})
 
 const ctaText = document.querySelector('h1');
 ctaText.textContent = 'DOM is Awesome'
@@ -64,24 +67,28 @@ buttonText.style.fontWeight = 'bold'
 let middleImage = document.querySelector('.middle-img')
 middleImage.src = 'img/mid-page-accent.jpg'
 
-const newHeader = document.querySelector('h4')
-newHeader.textContent = "Features"
+let titleNames = document.querySelectorAll('.text-content h4')
+titleNames[0].textContent = 'Features'
+titleNames[1].textContent = 'About'
+titleNames[2].textContent = 'Services'
+titleNames[3].textContent = 'Products'
+titleNames[4].textContent = 'Vision'
 
-let firstPara = document.querySelector('p')
-firstPara.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+let paraText = document.querySelectorAll('.text-content p')
+console.log(paraText)
+paraText[0].textContent = 'this is Features'
+paraText[1].textContent = 'this is about'
+paraText[2].textContent = 'this is services'
+paraText[3].textContent = 'this is Products'
+paraText[4].textContent = 'this is Vision'
 
-const secondHeader = document.createElement('h4')
-secondHeader.textContent = "About"
-secondHeader.style.marginTop = "25px";
+let getInTouch = document.querySelector('.contact h4')
+getInTouch.textContent = 'Contact'
 
-const newPara = document.createElement('p')
-newPara.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+let bottomText = document.querySelectorAll('.contact p')
+bottomText[0].textContent = '123 Way 456 Street Somewhere, USA'
+bottomText[1].textContent = '1(888)888-8888'
+bottomText[2].textContent = 'sales@greatidea.io'
 
-firstPara.appendChild(secondHeader)
-
-firstPara.appendChild(newPara)
-
-let topContent = document.getElementsByClassName('.top-content')
-topContent.style.flexWrap = "wrap";
-
-
+let closingRemarks = document.querySelector('footer')
+closingRemarks.textContent = 'Copyright Great Idea! 2018'
