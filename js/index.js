@@ -38,10 +38,36 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.src = 'https://images.all-free-download.com/images/graphicthumb/cat_cats_eyes_curious_215925.jpg'
-logo.setAttribute('src', 'https://images.all-free-download.com/images/graphicthumb/cat_cats_eyes_curious_215925.jpg')
+//let logo = document.getElementById("logo-img");
+//logo.setAttribute('src', 'https://images.all-free-download.com/images/graphicthumb/cat_cats_eyes_curious_215925.jpg')
 //
-const links = document.querySelector('a')
-links.classList.add('navigation')
-console.log(navigation)
+
+
+//const div1 = document.querySelector('#logo-img')
+
+//#1reate selectors by using any of the DOM element's methods
+//div1.className = "newClass"
+//div1.classList.add('newClass')
+//div1.classList.remove('newClass')
+//console.log(div1)
+
+
+//#2Note that IDs have been used on all images. Use the IDs to update src path content
+//const newImg = document.querySelectorAll('img')
+
+//newImg.forEach(link => {
+  //link.setAttribute('src', 'https://images.all-free-download.com/images/graphicthumb/cat_hangover_relax_213869.jpg')
+   
+ //})
+//console.log(newImg)
+
+//#3
+const button = document.querySelectorAll('a')
+button[0].textContent = 'Services';
+button[1].textContent = 'Product';
+button[2].textContent = 'Vision';
+button[3].textContent = 'Features';
+button[4].textContent = 'About';
+button[5].textContent = 'Contact';
+console.log(button)
+
