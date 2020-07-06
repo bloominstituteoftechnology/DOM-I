@@ -90,10 +90,36 @@ codeImg.src = '/img/mid-page-accent.jpg'
 
 // all of the headers for the paragraphs live in the divs with class 'text-content', in the h4 tag. Create a reference to the h4s using querySelectorAll because there are more than one! 
 const contentHeader = document.querySelectorAll('.text-content h4')
-console.log(contentHeader) // this returns a nodeList that we can manipulate like an array 
+// console.log(contentHeader) // this returns a nodeList that we can manipulate like an array 
 // target the h4's based on their index and manipulate the text 
 contentHeader[0].textContent = 'Features'
 contentHeader[1].textContent = 'About'
 contentHeader[2].textContent = 'Services'
 contentHeader[3].textContent = 'Product'
 contentHeader[4].textContent = 'Vision'
+// now we must grab and manipulate the p tags, and fill them with the ipsum text with .textContent, just as we did with the h4 tags 
+const content = document.querySelectorAll('.text-content p')
+// console.log(content)
+content[0].textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+content[1].textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+content[2].textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+content[3].textContent = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+content[4].textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+// step five: manipulate the footer section of the page, the div class is 'contact'
+
+const footerTitle = document.querySelector('.contact h4')
+// console.log(footerTitle)
+footerTitle.textContent = 'Contact'
+// because there are more than one p tags beneath the title, we need to use querySelectorAll, and target them like an array, as before
+const footerDetails = document.querySelectorAll('.contact p')
+console.log(footerDetails)
+footerDetails[0].textContent = "123 Way 456 Street Somewhere, USA"
+footerDetails[1].textContent = "1 (888) 888-8888"
+footerDetails[2].textContent = "sales@greatidea.io"
+
+// add the copyright information at the bottom of the page, using a querySelector and targeting the p tag. Because this returns as an elements, we do not manipulate it as we would an array
+
+const copyRight = document.querySelector('footer p')
+console.log(copyRight)
+copyRight.textContent = "Copyright Great Idea! 2018"
