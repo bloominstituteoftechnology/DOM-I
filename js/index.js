@@ -136,8 +136,8 @@ const newA = document.createElement('a')
 newA.textContent = 'Hello Dom!'
 nav.appendChild(newA)
 console.log(newA)
-
-
+//prepending
+const foot = document.querySelector('footer');
 const newC = document.createElement('p')
 newC.textContent = 'Privacy'
-footer.prepend(newC)
+foot.prepend(newC)
