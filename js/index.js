@@ -55,6 +55,35 @@ nav[3].textContent = "Features"
 nav[4].textContent = "About"
 nav[5].textContent = "Contact"
 
+// change the text to green!
+const navContainer = document.querySelectorAll('nav a')
+// console.log(navContainer)
+
+// long form forEach:
+// navContainer.forEach(function(item) {
+//     item.style.color = 'green'
+// })
+
+// arrow function forEach: 
+navContainer.forEach((item) => {
+  item.style.color = 'green'
+})
+
+// ADD to new links to the navigation using append and prepend 
+// we already have a reference to the nav set up on line 47, using nav and querySelectorAll
+const navigationBox = document.querySelector('nav')
+const newLink = document.createElement('a')
+console.log(newLink)
+newLink.textContent = 'Append'
+newLink.style.fontSize = '1.3rem'
+newLink.style.color = 'blue'
+
+navigationBox.appendChild(newLink)
+
+const firstLink = document.createElement('a')
+firstLink.textContent = 'Prepend'
+firstLink.style.fontSize = '1.3rem'
+navigationBox.prepend(firstLink);
 // step two: style the top body box
 
 // target the h1 that lives inside the section (class: cta) and div (class: cta-text) BUT because it is the only h1 on the page, we can use selectElementByTagName: 
@@ -113,7 +142,7 @@ const footerTitle = document.querySelector('.contact h4')
 footerTitle.textContent = 'Contact'
 // because there are more than one p tags beneath the title, we need to use querySelectorAll, and target them like an array, as before
 const footerDetails = document.querySelectorAll('.contact p')
-console.log(footerDetails)
+// console.log(footerDetails)
 footerDetails[0].textContent = "123 Way 456 Street Somewhere, USA"
 footerDetails[1].textContent = "1 (888) 888-8888"
 footerDetails[2].textContent = "sales@greatidea.io"
@@ -121,5 +150,5 @@ footerDetails[2].textContent = "sales@greatidea.io"
 // add the copyright information at the bottom of the page, using a querySelector and targeting the p tag. Because this returns as an elements, we do not manipulate it as we would an array
 
 const copyRight = document.querySelector('footer p')
-console.log(copyRight)
+// console.log(copyRight)
 copyRight.textContent = "Copyright Great Idea! 2018"
