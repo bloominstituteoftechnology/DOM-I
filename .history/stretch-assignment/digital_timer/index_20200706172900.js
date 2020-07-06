@@ -1,0 +1,1 @@
+const digits = document.querySelector('.digits')
