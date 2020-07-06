@@ -42,7 +42,7 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 const navBar = document.querySelectorAll('a')
-console.log(navBar)
+// console.log(navBar)
 navBar[0].textContent = siteContent.nav["nav-item-1"]
 navBar[1].textContent = siteContent.nav["nav-item-2"]
 navBar[2].textContent = siteContent.nav["nav-item-3"]
@@ -51,12 +51,36 @@ navBar[4].textContent = siteContent.nav["nav-item-5"]
 navBar[5].textContent = siteContent.nav["nav-item-6"]
 
 const h1 = document.querySelector('h1')
-console.log(h1)
+// console.log(h1)
 h1.textContent = siteContent.cta.h1
 
 const button = document.querySelector('button')
-console.log(button)
+// console.log(button)
 button.textContent = siteContent.cta.button
 
-const img = document.querySelector('#cta-img')
-img.src = siteContent.cta["img-src"]
+const imgMain = document.querySelector('#cta-img')
+imgMain.src = siteContent.cta["img-src"]
+
+const h4 = document.querySelectorAll('h4')
+// console.log(h4)
+h4[0].textContent = siteContent["main-content"]["features-h4"]
+h4[1].textContent = siteContent["main-content"]["about-h4"]
+h4[2].textContent = siteContent["main-content"]["services-h4"]
+h4[3].textContent = siteContent["main-content"]["product-h4"]
+h4[4].textContent = siteContent["main-content"]["vision-h4"]
+h4[5].textContent = siteContent["contact"]["contact-h4"]
+
+const p = document.querySelectorAll('p')
+console.log(p)
+p[0].textContent = siteContent["main-content"]["features-content"]
+p[1].textContent = siteContent["main-content"]["about-content"]
+p[2].textContent = siteContent["main-content"]["services-content"]
+p[3].textContent = siteContent["main-content"]["product-content"]
+p[4].textContent = siteContent["main-content"]["vision-content"]
+p[5].textContent = siteContent["contact"]["address"]
+p[6].textContent = siteContent["contact"]["phone"]
+p[7].textContent = siteContent["contact"]["email"]
+p[8].textContent = siteContent["footer"]["copyright"]
+
+const imgLong = document.querySelector('.middle-img')
+imgLong.src = siteContent["main-content"]["middle-img-src"]
