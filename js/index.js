@@ -62,6 +62,7 @@ const siteContent = {
 //console.log(newImg)
 
 //#3
+//adding button text
 const button = document.querySelectorAll('a')
 button[0].textContent = 'Services';
 button[1].textContent = 'Product';
@@ -70,4 +71,21 @@ button[3].textContent = 'Features';
 button[4].textContent = 'About';
 button[5].textContent = 'Contact';
 console.log(button)
+//adding i=logo image
+let logo = document.getElementById("logo-img");
+logo.setAttribute('src', 'http://127.0.0.1:5500/img/logo.png')
+//chaning container to flex
+//const cont = document.querySelector("container")
 
+//console.log(cont)
+
+//adding text to button
+
+const button2 = document.querySelector('button')
+button2.textContent = 'Get Strarted'
+//adding h1 text
+
+const headerText = document.querySelector('h1')
+headerText.textContent = "DOm is Awesome"
+// adding middle image
+cta-img
