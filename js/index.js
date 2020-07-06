@@ -42,6 +42,7 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // step one: style the nav bar: 
+
 // create a reference to the nav links, using querySelectorAll
 let nav = document.querySelectorAll('a')
 // console.log(nav) 
@@ -59,8 +60,40 @@ nav[5].textContent = "Contact"
 // target the h1 that lives inside the section (class: cta) and div (class: cta-text) BUT because it is the only h1 on the page, we can use selectElementByTagName: 
 // create a reference to the h1 
 const domIsAwesome = document.getElementsByTagName('h1')
-console.log(domIsAwesome)
-// now add the heading text to the h1 elements 
+// console.log(domIsAwesome)
 
+// now add the heading text to the h1 elements 
 // because an HTML collection is LIKE an array, we have to target it as such, not like an element where we would not need the bracket notation to add the correct text 
 domIsAwesome[0].textContent = 'Dom is Awesome!'
+// grab the button HTML element, and add text/style, just as we did for the h1. We can re-use getElementByTagName because the button is the only one on the
+const bigButton = document.getElementsByTagName('button')
+// console.log(bigButton)
+
+// add text to the button 
+bigButton[0].textContent = 'Get Started'
+// now we need to add the code image to the top body box by using .setAttributes, after creating a reference to the image tag that has an id of cta-img
+const roundImg = document.querySelector('#cta-img')
+// console.log(roundImg)
+// now we can assign the src using 1 of 2 approaches: dot notation or .setAttribute method (which takes 2 strings as arguments), we will use dot notation 
+roundImg.src = '/img/header-img.png'
+
+// step three: add the mid-page image that separates the paragraphs 
+
+// now add the code snippet image to the box using a querySelector, assign the src. This element lives in the img tag with the class name 'middle-child' AND id 'middle-img', either could be used. We will use the id for specificity reasons 
+const codeImg = document.querySelector('#middle-img')
+// console.log(codeImg)
+// now we want to assign attributes, using the setAttribute method
+codeImg.src = '/img/mid-page-accent.jpg'
+// console.log(codeImg)
+
+// step four: establish the body paragraphs and their headlines, add the text with .textContent, and target them with querySelectorAll
+
+// all of the headers for the paragraphs live in the divs with class 'text-content', in the h4 tag. Create a reference to the h4s using querySelectorAll because there are more than one! 
+const contentHeader = document.querySelectorAll('.text-content h4')
+console.log(contentHeader) // this returns a nodeList that we can manipulate like an array 
+// target the h4's based on their index and manipulate the text 
+contentHeader[0].textContent = 'Features'
+contentHeader[1].textContent = 'About'
+contentHeader[2].textContent = 'Services'
+contentHeader[3].textContent = 'Product'
+contentHeader[4].textContent = 'Vision'
