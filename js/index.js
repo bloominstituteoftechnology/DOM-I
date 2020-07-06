@@ -79,3 +79,8 @@ let bottomHeading = document.querySelectorAll('.bottom-content h4');
 bottomHeading[0].textContent = 'Services';
 bottomHeading[1].textContent = 'Product';
 bottomHeading[2].textContent = 'Vision';
+
+let bottomParagraph = document.querySelectorAll('.bottom-content p');
+bottomParagraph[0].textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+bottomParagraph[1].textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+bottomParagraph[2].textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
