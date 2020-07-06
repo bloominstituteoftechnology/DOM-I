@@ -41,6 +41,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+// Nav Links 
 let headerNavLinks = document.querySelectorAll('header nav a');
 headerNavLinks[0].textContent = 'Services';
 headerNavLinks[1].textContent = 'Product';
@@ -48,3 +49,11 @@ headerNavLinks[2].textContent = 'Vision';
 headerNavLinks[3].textContent = 'About';
 headerNavLinks[4].textContent = 'Features';
 headerNavLinks[5].textContent = 'Contact';
+
+let headerImg = document.querySelector('header img');
+headerImg.src = 'img/header-img.png';
+
+// cta 
+let ctaH1 = document.querySelector('h1');
+ctaH1.innerHTML = 'DOM <br> Is <br> Awesome';
+
