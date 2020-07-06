@@ -99,12 +99,16 @@ let footerParagraph = document.querySelector('footer p');
 footerParagraph.textContent = 'Copyright Great Idea! 2018';
 
 // New content 
-headerNavLinks[0].style.color = 'green';
-headerNavLinks[1].style.color = 'green';
-headerNavLinks[2].style.color = 'green';
-headerNavLinks[3].style.color = 'green';
-headerNavLinks[4].style.color = 'green';
-headerNavLinks[5].style.color = 'green';
+// headerNavLinks[0].style.color = 'green';
+// headerNavLinks[1].style.color = 'green';
+// headerNavLinks[2].style.color = 'green';
+// headerNavLinks[3].style.color = 'green';
+// headerNavLinks[4].style.color = 'green';
+// headerNavLinks[5].style.color = 'green';
+
+headerNavLinks.forEach((greenColor) =>{
+  return greenColor.style.color = 'green';
+})
 
 // // 5- Creating new elements and appending them
 // // make the element
@@ -116,9 +120,14 @@ headerNavLinks[5].style.color = 'green';
 // // append to an existing element in the DOM
 // nav.appendChild(newBlogLink)
 
+let nav = document.querySelector('header nav');
+
 let navAppend = document.createElement('a');
 navAppend.textContent = 'Blurple';
 navAppend.href = '#';
 nav.appendChild(navAppend);
 
-console.log(navAppend);
+let navPrepend = document.createElement('a');
+navPrepend.textContent = 'Potato';
+navPrepend.href = '#';
+nav.prepend(navPrepend);
