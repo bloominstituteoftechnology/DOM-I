@@ -55,7 +55,7 @@ The completion of these questions is mandatory for MVP. However, passing the qui
 
 This project is heavier on logic but employs some DOM manipulation to achieve its goals.  Go check it out here: [stretch assignment](stretch-assignment) and see how far you can get.
 
-## Submission Instructions
+## Submission Format
 
 **Follow these steps for completing your project.**
 
