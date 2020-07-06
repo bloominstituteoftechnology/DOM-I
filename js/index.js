@@ -129,4 +129,15 @@ console.log(header)
 header.forEach(link => {
      link.style.color = 'green'
    })
-   
+
+   //Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
+const nav = document.querySelector('nav');
+const newA = document.createElement('a')
+newA.textContent = 'Hello Dom!'
+nav.appendChild(newA)
+console.log(newA)
+
+
+const newC = document.createElement('p')
+newC.textContent = 'Privacy'
+footer.prepend(newC)
