@@ -40,3 +40,27 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// step one: style the nav bar: 
+// create a reference to the nav links, using querySelectorAll
+let nav = document.querySelectorAll('a')
+// console.log(nav) 
+
+// assign the text values for the links in the nav 
+nav[0].textContent = "Services"
+nav[1].textContent = "Product"
+nav[2].textContent = "Vision"
+nav[3].textContent = "Features"
+nav[4].textContent = "About"
+nav[5].textContent = "Contact"
+
+// step two: style the top body box
+
+// target the h1 that lives inside the section (class: cta) and div (class: cta-text) BUT because it is the only h1 on the page, we can use selectElementByTagName: 
+// create a reference to the h1 
+const domIsAwesome = document.getElementsByTagName('h1')
+console.log(domIsAwesome)
+// now add the heading text to the h1 elements 
+
+// because an HTML collection is LIKE an array, we have to target it as such, not like an element where we would not need the bracket notation to add the correct text 
+domIsAwesome[0].textContent = 'Dom is Awesome!'
