@@ -52,7 +52,6 @@ navBar[3].textContent = 'Features'
 navBar[4].textContent = 'About'
 navBar[5].textContent = 'Contact'
 
-navBar[0].style.color = 'green'
 
 const ctaText = document.querySelector('h1');
 ctaText.textContent = 'DOM is Awesome'
@@ -64,4 +63,25 @@ buttonText.style.fontWeight = 'bold'
 
 let middleImage = document.querySelector('.middle-img')
 middleImage.src = 'img/mid-page-accent.jpg'
+
+const newHeader = document.querySelector('h4')
+newHeader.textContent = "Features"
+
+let firstPara = document.querySelector('p')
+firstPara.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+const secondHeader = document.createElement('h4')
+secondHeader.textContent = "About"
+secondHeader.style.marginTop = "25px";
+
+const newPara = document.createElement('p')
+newPara.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+firstPara.appendChild(secondHeader)
+
+firstPara.appendChild(newPara)
+
+let topContent = document.getElementsByClassName('.top-content')
+topContent.style.flexWrap = "wrap";
+
 
