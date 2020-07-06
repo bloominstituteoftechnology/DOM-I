@@ -121,3 +121,12 @@ pText2[2].textContent ='sales@greatidea.io'
 const cRight = document.querySelector('footer p')
 console.log(cRight)
 cRight.textContent = 'Copyright Great Idea! 2018'
+// Change the color of the navigation text to be green.
+
+const header = document.querySelectorAll('.container a')
+console.log(header)
+//header.style.color = 'green' 
+header.forEach(link => {
+     link.style.color = 'green'
+   })
+   
