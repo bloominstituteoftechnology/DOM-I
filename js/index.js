@@ -100,6 +100,7 @@ button3[1].textContent = 'Product';
 button3[2].textContent = 'Vision';
 button3[3].textContent = 'Features';
 button3[4].textContent = 'About';
+button3[5].textContent = 'Contact';
 //adding txt to p in h4's
 const pText1 = document.querySelectorAll('.text-content p')
 pText1[0].textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
@@ -108,4 +109,15 @@ pText1[2].textContent = 'Vision content elementum magna eros, ac posuere elvit t
 pText1[3].textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
 pText1[4].textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
 console.log(pText1)
-//
+//adding contact info
+const pText2 = document.querySelectorAll('.contact p')
+pText2[0].textContent ='123 Way 456 Street Somewhere, USA'
+pText2[1].textContent ='1 (888) 888-8888'
+pText2[2].textContent ='sales@greatidea.io'
+
+//pText2.wrap(20)
+//pText2[0].breakAt(3)
+//adding copyright
+const cRight = document.querySelector('footer p')
+console.log(cRight)
+cRight.textContent = 'Copyright Great Idea! 2018'
