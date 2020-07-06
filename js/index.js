@@ -51,9 +51,14 @@ headerNavLinks[4].textContent = 'Features';
 headerNavLinks[5].textContent = 'Contact';
 
 let headerImg = document.querySelector('header img');
-headerImg.src = 'img/header-img.png';
+headerImg.src = 'img/logo.png';
 
 // cta 
 let ctaH1 = document.querySelector('h1');
 ctaH1.innerHTML = 'DOM <br> Is <br> Awesome';
 
+let ctaButton = document.querySelector('.cta-text button');
+ctaButton.textContent = 'Get Started';
+
+let ctaImg = document.querySelector('#cta-img');
+ctaImg.src = 'img/header-img.png';
