@@ -39,4 +39,9 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.src = 'https://images.all-free-download.com/images/graphicthumb/cat_cats_eyes_curious_215925.jpg'
+logo.setAttribute('src', 'https://images.all-free-download.com/images/graphicthumb/cat_cats_eyes_curious_215925.jpg')
+//
+const links = document.querySelector('a')
+links.classList.add('navigation')
+console.log(navigation)
