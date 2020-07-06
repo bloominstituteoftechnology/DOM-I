@@ -62,3 +62,20 @@ ctaButton.textContent = 'Get Started';
 
 let ctaImg = document.querySelector('#cta-img');
 ctaImg.src = 'img/header-img.png';
+
+// main content 
+let topContentHeading = document.querySelectorAll('.top-content h4');
+topContentHeading[0].textContent = 'Features';
+topContentHeading[1].textContent = 'About';
+
+let topContentParagraph = document.querySelectorAll('.top-content p');
+topContentParagraph[0].textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+topContentParagraph[1].textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+let middleImg = document.querySelector('#middle-img');
+middleImg.src = 'img/mid-page-accent.jpg';
+
+let bottomHeading = document.querySelectorAll('.bottom-content h4');
+bottomHeading[0].textContent = 'Services';
+bottomHeading[1].textContent = 'Product';
+bottomHeading[2].textContent = 'Vision';
