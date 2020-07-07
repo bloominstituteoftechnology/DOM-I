@@ -107,3 +107,6 @@ button.textContent = 'Started! 😎'
 button.style.backgroundColor = 'green'
 h1.textContent = 'You are awesome!'
 })
+
+const contact = document.querySelector('.contact')
+contact.style.textAlign = 'center'
