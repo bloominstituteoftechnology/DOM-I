@@ -50,6 +50,9 @@ navBar[3].textContent = siteContent.nav["nav-item-4"]
 navBar[4].textContent = siteContent.nav["nav-item-5"]
 navBar[5].textContent = siteContent.nav["nav-item-6"]
 
+
+
+
 const h1 = document.querySelector('h1')
 // console.log(h1)
 h1.textContent = siteContent.cta.h1
@@ -84,3 +87,23 @@ p[8].textContent = siteContent["footer"]["copyright"]
 
 const imgLong = document.querySelector('.middle-img')
 imgLong.src = siteContent["main-content"]["middle-img-src"]
+
+const potato = document.createElement('a')
+potato.textContent = 'Potato'
+const tomato = document.createElement('a')
+tomato.textContent = 'Tomato'
+
+const nav = document.querySelector('nav')
+nav.appendChild(potato)
+nav.prepend(tomato)
+
+navBar.forEach(link => {
+  link.style.color = "green";
+  })
+
+
+button.addEventListener("click",() => {
+button.textContent = 'Started! 😎'
+button.style.backgroundColor = 'green'
+h1.textContent = 'You are awesome!'
+})
