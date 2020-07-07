@@ -107,4 +107,12 @@ lastSection2[2].textContent = (siteContent['contact']['email'])
 const footerSection = document.querySelector('footer p')
 footerSection.textContent = (siteContent['footer']['copyright'])
 
-const mainNav = document.querySelectorAll('nav a')
+const nav = document.querySelector('nav')
+const newHome = document.createElement('a')
+newHome.textContent = 'Home'
+nav.prepend(newHome)
+newHome.style.color ='green'
+const newCat = document.createElement('a')
+newCat.textContent = 'Categories'
+nav.appendChild(newCat)
+newCat.style.color = 'green'
