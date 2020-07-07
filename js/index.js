@@ -46,12 +46,23 @@ const midPageAccent = document.getElementById('middle-img')
 midPageAccent.setAttribute = ('src', 'img/mid-page-accent.jpg')
 const topNavLinks = document.querySelectorAll('a')
 // console.log(topNavLinks)
-const navBarText = document.querySelectorAll('nav a')
-// console.log(navBar)
-navBarText.forEach()
 topNavLinks[0].textContent = 'Services'
 topNavLinks[1].textContent = 'Product'
 topNavLinks[2].textContent = 'Vision'
 topNavLinks[3].textContent = 'Features'
 topNavLinks[4].textContent = 'About'
 topNavLinks[5].textContent = 'Contact'
+const newNavItem1 = document.createElement('a')
+newNavItem1.textContent = 'Blog'
+newNavItem1.href = '#'
+const nav = document.querySelector('nav');
+nav.appendChild(newNavItem1);
+const newNavItem2 = document.createElement('a')
+newNavItem2.textContent = 'Other'
+newNavItem2.href = '#'
+nav.prepend(newNavItem2);
+const navBarText = document.querySelectorAll('nav a')
+// console.log(navBarText)
+navBarText.forEach(element => {
+  element.style.color = 'green'
+})
