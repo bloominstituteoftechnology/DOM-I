@@ -94,14 +94,16 @@ navLinks.forEach((item) => {
 item.style.color = 'green'
 });
 
+console.log(nav)
+console.dir(nav)
 const newFooLink = document.createElement('a') 
 newFooLink.textContent = 'Foo'
 newFooLink.href = '#'
-nav.prependChild(newFooLink)
-consele.log(newFooLink)
+nav.prepend(newFooLink)
+console.log(newFooLink)
 
 const newBarLink = document.createElement('a')
 newBarLink.textContent = 'Bar'
 newBarLink.href = '#'
-nav.appendChild(newBarLink)
+nav.append(newBarLink)
 console.log(newBarLink)
