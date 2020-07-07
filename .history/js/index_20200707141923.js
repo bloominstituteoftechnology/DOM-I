@@ -56,4 +56,4 @@ contactTextAreas[1].textContent = '1 (888) 888-8888 '
 contactTextAreas[2].textContent = 'sales@greatidea.io'
 
 const copywright = document.querySelector('footer p')
-copywright.textContent = 'Copywright Great Idea! 2018'
+cop

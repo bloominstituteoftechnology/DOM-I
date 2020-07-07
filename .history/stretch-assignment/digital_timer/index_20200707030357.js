@@ -4,3 +4,4 @@ const secondOnes = document.querySelector('#secondOnes')
 const msHundreds = document.querySelector('#msHundreds')
 const msTens = document.querySelector('#msTens')
 
+if msTens !=

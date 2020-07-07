@@ -4,3 +4,10 @@ const secondOnes = document.querySelector('#secondOnes')
 const msHundreds = document.querySelector('#msHundreds')
 const msTens = document.querySelector('#msTens')
 
+setTimeout(function () {
+  for (let i = 0; i < 10; i++) {
+    setTimeout(function () { msTens.textContent = i }, 100)
+    setTimeout(function() {msHund})
+  }
+}, 100)
+
