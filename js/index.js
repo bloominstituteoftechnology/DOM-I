@@ -59,6 +59,27 @@ topNav[3].textContent = "Features";
 topNav[4].textContent = "About";
 topNav[5].textContent = "Contact";
 
+//adding new links
+const blogLink = document.createElement("a");
+blogLink.textContent = "Blog";
+const originalLinks = document.querySelector("nav");
+originalLinks.prepend(blogLink);
+const firstColor = document.querySelectorAll("a");
+firstColor[0].style.color = "green";
+
+const squirrelLink = document.createElement("a");
+squirrelLink.textContent = "Squirrel";
+const links = document.querySelector("nav");
+links.appendChild(squirrelLink);
+const newColor = document.querySelectorAll("a");
+newColor[7].style.color = "green";
+
+//changing nav to green
+
+topNav.forEach((nav) => {
+  nav.style.color = "green";
+});
+
 //cta section
 
 const ctaImg = document.querySelector("#cta-img");
@@ -107,3 +128,20 @@ bottomContP[1].textContent =
   "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 bottomContP[2].textContent =
   "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+//contact
+
+const contactInfoH4 = document.querySelector(".contact h4");
+const contactInfoP = document.querySelectorAll(".contact p");
+
+contactInfoH4.textContent = "Contact";
+
+contactInfoP[0].innerHTML = "123 Way 456 Street </br> Somewhere, USA";
+contactInfoP[1].textContent = "1 (888) 888-8888";
+contactInfoP[2].textContent = "sales@greatidea.io";
+
+//footer
+
+const footer = document.querySelector("footer");
+
+footer.textContent = "Copyright Great Idea! 2018";
