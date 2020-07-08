@@ -48,6 +48,8 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
+//nav bar
+
 const topNav = document.querySelectorAll("a");
 console.log(topNav);
 topNav[0].textContent = "Services";
@@ -57,6 +59,8 @@ topNav[3].textContent = "Features";
 topNav[4].textContent = "About";
 topNav[5].textContent = "Contact";
 
+//cta section
+
 const ctaImg = document.querySelector("#cta-img");
 ctaImg.src = "img/header-img.png";
 
@@ -64,4 +68,26 @@ const ctaText = document.querySelector("h1");
 ctaText.innerHTML = "DOM <br> Is <br> Awesome";
 
 const ctaButton = document.querySelector("button");
-ctaButton.textContent = siteContent.cta.button;
+ctaButton.textContent = "Get Started";
+
+//middle image
+
+const midImg = document.querySelector("#middle-img");
+midImg.src = "img/mid-page-accent.jpg";
+
+// features and about blurbs
+
+const topContH4 = document.querySelectorAll("h4");
+const topContP = document.querySelectorAll("p");
+
+//h4 headlines
+
+topContH4[0].textContent = "Features";
+topContH4[1].textContent = "About";
+
+// paragraphs
+
+topContP[0].textContent =
+  "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+topContP[1].textContent =
+  "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
