@@ -168,20 +168,63 @@ contackTitle.textContent = siteContent ['contact']['contact-h4']
 const contactAdd = contactKids[1];
 contactAdd.textContent = siteContent ['contact']['address'];
 
+const contactPhone = contactKids[2];
+contactPhone.textContent = siteContent ['contact']['phone'];
+
+const contactEmail = contactKids[3];
+contactEmail.textContent = siteContent ['contact']['email'];
+
+const trademark = document.querySelector('footer');
+
+const tradeKids = trademark.childNodes;
+
+const tradeBody = tradeKids[0];
+tradeBody.textContent = siteContent['footer']['copyright']
+
+
+/// Part 3
+
+a1.style.color = 'green';
+a2.style.color = 'green';
+a3.style.color = 'green';
+a4.style.color = 'green';
+a5.style.color = 'green';
+a6.style.color = 'green';
+
+const preWel = document.createElement('a');
+preWel.setAttribute('href', '#')
+preWel.style.color = 'green';
+preWel.textContent = 'Welcome';
+console.log(preWel);
+navigation.prepend(preWel);
+
+const appHir = document.createElement('a');
+appHir.setAttribute('href', '#')
+appHir.style.color = 'green';
+appHir.textContent = 'Hiring';
+navigation.append(appHir)
+
+const allNav = navigation.childNodes;
+
+// const allNavText = allNav.querySelectorAll('text');
+
+// navigation.appendChild('Welcome');
+
+console.log(navigation);
+
+
+
+// console.log(allNav);
+
+// allNav.forEach((item) => {item.class = 'greeny'});
+
+// const navID = document.querySelectorAll('greeny');
+
+// navID.forEach((item) => {item.style.color = 'green';});
 
 
 
 
-
-// "contact": {
-//   "contact-h4" : "Contact",
-//   "address" : "123 Way 456 Street Somewhere, USA",
-//   "phone" : "1 (888) 888-8888",
-//   "email" : "sales@greatidea.io",
-// },
-// "footer": {
-//   "copyright" : "Copyright Great Idea! 2018"
-// },
 
 
 
