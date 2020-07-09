@@ -47,7 +47,7 @@ for (let i=0; i<navItems.length; i++){
   navItems[i].textContent = siteContent.nav[`nav-item-${i+1}`];
 }
 
-// Change the color of Nav
+// Change Nav Color
 for(let i=0; i<navItems.length; i++){
   navItems[i].style.color = 'green';
 }
@@ -61,17 +61,18 @@ for (let i=0; i<newItems.length; i++){
   nav.appendChild(aTag);
 }
 
-// CTA Section
+// CTA Section //
+//H1
 const ctaH1 = document.querySelector('.cta .cta-text h1');
 ctaH1.textContent = siteContent['cta']['h1'];
-
+//Button
 const ctaButton = document.querySelector('.cta .cta-text button');
 ctaButton.textContent = siteContent['cta']['button'];
-
+//Image
 const ctaImage = document.querySelector('#cta-img');
 ctaImage.src = siteContent['cta']['img-src'];
 
-// Main Section 
+// Main Section //
 // H4
 const contentTitlesH4 = ['features-h4', 'about-h4', 'services-h4', 'product-h4', 'vision-h4'];
 const mainContentH4 = document.querySelectorAll('.main-content .text-content h4');
@@ -90,7 +91,7 @@ for(let i=0; i<contentP.length; i++){
 const mainImg = document.querySelector('.main-content img');
 mainImg.src = siteContent['main-content']['middle-img-src'];
 
-// Contact Section 
+// Contact Section //
 //H4
 const contactH4 = document.querySelector('.contact h4');
 contactH4.textContent = siteContent['contact']['contact-h4'];
