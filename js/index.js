@@ -131,3 +131,13 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 	navArray[4].style.color = "green";
 	navArray[5].style.color = "green";
 	
+const myElement = document.createElement("div");
+const myElement2 = document.createElement("p");
+myElement.textContent = 'Website made by me yo ';
+myElement.style.color = 'green';
+myElement.style.backgroundColor = "black";
+myElement2.textContent = "DaNiEl WaZ hErE";
+myElement2.color = "tomato";
+const stickItToTheMan = document.querySelector(".main-content");
+stickItToTheMan.prepend(myElement2);
+stickItToTheMan.appendChild(myElement);
