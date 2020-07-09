@@ -59,7 +59,7 @@ html, body {
 
 h1, h2, h3, h4, h5 {
     font-family: 'Bangers', cursive;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     margin-bottom: 15px;
 }
 
@@ -84,7 +84,7 @@ header nav {
 
 header nav a {
     text-decoration: none;
-    color: #b0b0b0;
+    color: green;
 }
 
 header nav a:hover {
@@ -108,7 +108,7 @@ header .logo {
 .cta .cta-text {
     font-size: 72px;
     text-align: center;
-    letter-spacing: 5px;
+    letter-spacing: 0px;
     display: flex;
     justify-content: center;
     flex-flow: column;
