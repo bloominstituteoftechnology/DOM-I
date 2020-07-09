@@ -101,14 +101,54 @@ const topContents = document.querySelectorAll(".top-content .text-content");
 
 const aboutSec = topContents[1];
 const aboutKids = aboutSec.childNodes;
+
 const aboutTitle = aboutKids[1]
+aboutTitle.textContent = siteContent['main-content']['about-h4'];
+
+const aboutBody = aboutKids[2];
+aboutBody.textContent = siteContent['main-content']['about-content'];
 
 
+/// services
 
-console.log(aboutSec)
+const bottomContents = document.querySelectorAll('.bottom-content .text-content');
+
+console.log(bottomContents)
+
+const servSec = bottomContents[0]
+const servKids = servSec.childNodes;
+
+const servTitle = servKids[1]
+servTitle.textContent = siteContent['main-content']['services-h4']
+
+const servPara = servKids[2]
+servPara.textContent = siteContent['main-content']['services-content']
 
 
-// feats.textContent = siteContent['main-content']['features-h4'];
+/// product
+
+const prodSec = bottomContents[1];
+const prodKids = prodSec.childNodes;
+
+const prodTitle = prodKids[1];
+prodTitle.textContent = siteContent['main-content']['product-h4']
+
+const prodPara = prodKids[2]
+prodPara.textContent = siteContent['main-content']['product-content']
+
+
+///vision
+
+const visSec = bottomContents[2];
+const visKids = visSec.childNodes;
+
+const visTitle = visKids[1];
+visTitle.textContent = siteContent['main-content']['vision-h4']
+
+const visPara = visKids[2]
+visPara.textContent = siteContent['main-content']['vision-content']
+
+
 
 
 // *** img across ***
@@ -119,10 +159,29 @@ crossImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
 // *** footer ***
 
+const contactInfo = document.querySelector('.contact');
+
+const contactKids = contactInfo.childNodes;
+const contackTitle = contactKids[0];
+contackTitle.textContent = siteContent ['contact']['contact-h4']
+
+const contactAdd = contactKids[1];
+contactAdd.textContent = siteContent ['contact']['address'];
 
 
 
 
+
+
+// "contact": {
+//   "contact-h4" : "Contact",
+//   "address" : "123 Way 456 Street Somewhere, USA",
+//   "phone" : "1 (888) 888-8888",
+//   "email" : "sales@greatidea.io",
+// },
+// "footer": {
+//   "copyright" : "Copyright Great Idea! 2018"
+// },
 
 
 
