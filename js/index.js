@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM  Is Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -40,3 +40,104 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+ //Header and nav 
+ let navArray = document.querySelectorAll("nav a");
+ navArray[0].textContent = siteContent["nav"]["nav-item-1"];
+ navArray[1].textContent = siteContent["nav"]["nav-item-2"];
+ navArray[2].textContent = siteContent["nav"]["nav-item-3"];
+ navArray[3].textContent = siteContent["nav"]["nav-item-4"];
+ navArray[4].textContent = siteContent["nav"]["nav-item-5"];
+ navArray[5].textContent = siteContent["nav"]["nav-item-6"];
+  
+ // CTA
+ //setting variables
+	// ctaH1 = siteContent["cta"]["h1"];
+	//ctaButton = siteContent["cta"]["button"];
+ 	// ctaImg = siteContent["cta"]["img-src"];
+ 	//grabbing elements
+	const ctaButton = document.querySelector(".cta-text button");
+ 	const ctaImg = document.querySelector(".cta img");
+ 	//ctaH1.textContent = siteContent["cta"]["h1"];
+ 	const ctaH1 = document.querySelector(".cta-text h1").innerHTML = "DOM <br> Is <br> Awesome";
+ 	ctaButton.textContent = siteContent["cta"]["button"];
+ 	ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+ 	
+ 	
+  // Main content 
+  /*
+  "main-content": {
+    "features-h4":"Features",
+    "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+    "about-h4":"About",
+    "about-content": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+    "middle-img-src": "img/mid-page-accent.jpg",
+    "services-h4":"Services",
+    "services-content": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+    "product-h4":"Product",
+    "product-content": "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+    "vision-h4":"Vision",
+    "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+  }
+  */
+  
+  	const topH4 = document.querySelectorAll(".top-content h4");
+   const topP = document.querySelectorAll(".top-content p");
+   const bottomH4 = document.querySelectorAll(".bottom-content h4");
+   const bottomP = document.querySelectorAll(".bottom-content p");
+   const mainImg = document.querySelector(".main-content img");
+   //top content
+	topH4[0].textContent = siteContent["main-content"]["features-h4"];
+	topP[0].textContent = siteContent["main-content"]["features-content"];
+   topH4[1].textContent = siteContent["main-content"]["about-h4"];
+	topP[1].textContent = siteContent["main-content"]["about-content"];
+	mainImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+   //bottom content 
+   
+   bottomH4[0].textContent = siteContent["main-content"]["services-h4"];
+   bottomP[0].textContent = siteContent["main-content"]["services-content"];
+   bottomH4[1].textContent = siteContent["main-content"]["product-h4"];
+   bottomP[1].textContent = siteContent["main-content"]["product-content"];
+   bottomH4[2].textContent = siteContent["main-content"]["vision-h4"];
+   bottomP[2].textContent = siteContent["main-content"]["vision-content"];
+   
+   
+   //contact 
+   /*
+    "contact": {
+    "contact-h4" : "Contact",
+    "address" : "123 Way 456 Street Somewhere, USA",
+    "phone" : "1 (888) 888-8888",
+    "email" : "sales@greatidea.io",
+  },
+  "footer": {
+    "copyright" : "Copyright Great Idea! 2018"
+  },
+};
+*/
+	const contactH4 = document.querySelector(".contact h4");
+	const contactP = document.querySelectorAll(".contact p");
+	const foot = document.querySelector("footer");
+	
+	contactH4.textContent = siteContent["contact"]["contact-h4"];
+	contactP[0].textContent = siteContent["contact"]["address"];
+	contactP[1].textContent = siteContent["contact"]["phone"];
+	contactP[2].textContent = siteContent["contact"]["email"];
+	foot.textContent = siteContent["footer"]["copyright"];
+	
+	navArray[0].style.color = "green";
+	navArray[1].style.color = "green";
+	navArray[2].style.color = "green";
+	navArray[3].style.color = "green";
+	navArray[4].style.color = "green";
+	navArray[5].style.color = "green";
+	
+const myElement = document.createElement("div");
+const myElement2 = document.createElement("p");
+myElement.textContent = 'Website made by me yo ';
+myElement.style.color = 'green';
+myElement.style.backgroundColor = "black";
+myElement2.textContent = "DaNiEl WaZ hErE";
+myElement2.color = "tomato";
+const stickItToTheMan = document.querySelector(".main-content");
+stickItToTheMan.prepend(myElement2);
+stickItToTheMan.appendChild(myElement);
