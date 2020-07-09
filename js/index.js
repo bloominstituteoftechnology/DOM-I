@@ -65,19 +65,19 @@ blogLink.textContent = "Blog";
 const originalLinks = document.querySelector("nav");
 originalLinks.prepend(blogLink);
 const firstColor = document.querySelectorAll("a");
-firstColor[0].style.color = "green";
+firstColor[0].style.color = "forestgreen";
 
 const squirrelLink = document.createElement("a");
 squirrelLink.textContent = "Squirrel";
 const links = document.querySelector("nav");
 links.appendChild(squirrelLink);
 const newColor = document.querySelectorAll("a");
-newColor[7].style.color = "green";
+newColor[7].style.color = "forestgreen";
 
 //changing nav to green
 
 topNav.forEach((nav) => {
-  nav.style.color = "green";
+  nav.style.color = "forestgreen";
 });
 
 //cta section
@@ -85,11 +85,22 @@ topNav.forEach((nav) => {
 const ctaImg = document.querySelector("#cta-img");
 ctaImg.src = "img/header-img.png";
 
+ctaImg.addEventListener("mouseenter", () => {
+  ctaImg.style.transform = "scale(1.2)";
+  ctaImg.style.Transform = "transform 1s";
+});
+
+ctaImg.addEventListener("mouseleave", () => {
+  ctaImg.style.transform = "scale(1)";
+  ctaImg.style.transform = "transform 1s";
+});
 const ctaText = document.querySelector("h1");
 ctaText.innerHTML = "DOM <br> Is <br> Awesome";
+ctaText.style.color = "darkgreen";
 
 const ctaButton = document.querySelector("button");
 ctaButton.textContent = "Get Started";
+//ctaButton.style.color = "springgreen";
 
 //middle image
 
@@ -105,7 +116,8 @@ const topContP = document.querySelectorAll("p");
 
 topContH4[0].textContent = "Features";
 topContH4[1].textContent = "About";
-
+topContH4[0].style.color = "darkgreen";
+topContH4[1].style.color = "darkgreen";
 // paragraphs
 
 topContP[0].textContent =
@@ -121,6 +133,9 @@ const bottomContP = document.querySelectorAll(".bottom-content p");
 bottomContH4[0].textContent = "Services";
 bottomContH4[1].textContent = "Product";
 bottomContH4[2].textContent = "Vision";
+bottomContH4[0].style.color = "darkgreen";
+bottomContH4[1].style.color = "darkgreen";
+bottomContH4[2].style.color = "darkgreen";
 
 bottomContP[0].textContent =
   "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
@@ -135,6 +150,7 @@ const contactInfoH4 = document.querySelector(".contact h4");
 const contactInfoP = document.querySelectorAll(".contact p");
 
 contactInfoH4.textContent = "Contact";
+contactInfoH4.style.color = "darkgreen";
 
 contactInfoP[0].innerHTML = "123 Way 456 Street </br> Somewhere, USA";
 contactInfoP[1].textContent = "1 (888) 888-8888";
