@@ -39,16 +39,15 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 let nav = document.querySelectorAll("a");
-console.group(nav[0].textContent = siteContent["nav"]["nav-item-1"]);
-console.group(nav[1].textContent = siteContent["nav"]["nav-item-2"]);
-console.group(nav[2].textContent = siteContent["nav"]["nav-item-3"]);
-console.group(nav[3].textContent = siteContent["nav"]["nav-item-4"]);
-console.group(nav[4].textContent = siteContent["nav"]["nav-item-5"]);
-console.group(nav[5].textContent = siteContent["nav"]["nav-item-6"]);
+let m = Object.values(siteContent.nav);
+console.log(m)
 
+for(let i =0; i < nav.length;i++) {
+   nav[i].textContent = m[i]
+}
 
 // //h1
 let h1 = document.querySelector(".cta .cta-text h1");
