@@ -50,15 +50,9 @@ console.group(nav[4].textContent = siteContent["nav"]["nav-item-5"]);
 console.group(nav[5].textContent = siteContent["nav"]["nav-item-6"]);
 
 
-let a = siteContent["cta"]["h1"];
-console.log(a.split(' '));
-
 // //h1
-let h1 = document.querySelectorAll(".cta .cta-text h1");
-h1.forEach(o => {
-  console.log(o.textContent = siteContent["cta"]["h1"])
-})
-
+let h1 = document.querySelector(".cta .cta-text h1");
+h1.textContent = siteContent["cta"]["h1"]
 
 //button
 let button = document.querySelector("button");
