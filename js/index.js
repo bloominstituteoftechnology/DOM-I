@@ -49,5 +49,25 @@ atags[2].textContent=siteContent.nav['nav-item-3']
 atags[3].textContent=siteContent.nav['nav-item-4']
 atags[4].textContent=siteContent.nav["nav-item-5"]
 atags[5].textContent=siteContent.nav["nav-item-6"]
+ const cta1 =document.querySelector(".cta")
+const ctaText =cta1.querySelector('h1')
+ctaText.textContent=siteContent.cta.h1;
+
+ const bnt = cta1.querySelector('button')
+bnt.textContent=siteContent.cta["button"];
+
+ let ctalogo = cta1.querySelector("#cta-img")
+ ctalogo.setAttribute('src', siteContent['cta']["img-src"]);
+// const h1cta = document.querySelector('.cta .cta-text h1');
+// h1cta.innerHTML = siteContent['cta']['h1'];
+// const buttonCta = document.querySelector('.cta .cta-text button');
+// buttonCta.textContent = siteContent['cta']['button'];
+const main =  document.querySelector(".main-content")
+const mainh4 = main.querySelector('h4')
+mainh4.textContent=siteContent["main-content"]["features-h4"]
+
+const mainpara = main.querySelector("p")
+mainpara.textContent=siteContent["main-content"]["features-content"]
+
 
 
