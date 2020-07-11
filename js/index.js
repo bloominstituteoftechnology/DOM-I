@@ -43,7 +43,6 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 let nav = document.querySelectorAll("a");
 let m = Object.values(siteContent.nav);
-console.log(m)
 
 for(let i =0; i < nav.length;i++) {
    nav[i].textContent = m[i]
@@ -68,10 +67,10 @@ imgr.setAttribute('src', siteContent["cta"]["img-src"])
 let feature = document.querySelectorAll(".main-content .top-content .text-content h4");
 
 feature[0].textContent = siteContent["main-content"][ "features-h4"]
-console.log(feature);
+
 
 feature[1].textContent = siteContent["main-content"][ "about-h4"]
-console.log(feature);
+
 
 //top body
 let featureText = document.querySelectorAll(".main-content .top-content .text-content p");
@@ -81,7 +80,6 @@ featureText[1].textContent = siteContent["main-content"]["about-content"];
 
 //image Middle
 let middleImg = document.querySelector(".middle-img");
-console.log(middleImg)
 middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"])
 
 //bottom headers h4
@@ -89,7 +87,7 @@ let services = document.querySelectorAll(".main-content .bottom-content  .text-c
 services[0].textContent = siteContent["main-content"]["services-h4"];
 services[1].textContent = siteContent["main-content"]["product-h4"];
 services[2].textContent = siteContent["main-content"]["vision-h4"];
-console.log(services)
+
 
 //bottom content of middle
 let middlebottom = document.querySelectorAll(".bottom-content p");
@@ -97,4 +95,25 @@ let middlebottom = document.querySelectorAll(".bottom-content p");
 middlebottom[0].textContent = siteContent["main-content"]["services-content"];
 middlebottom[1].textContent = siteContent["main-content"]["product-content"];
 middlebottom[2].textContent = siteContent["main-content"]["vision-content"];
+
+
+//contatct
+let contact = document.querySelector(".contact h4 ")
+contact.textContent = siteContent["contact"]["contact-h4"];
+
+let contactP = document.querySelectorAll(".contact p");
+contactP[0].textContent = siteContent["contact"]["address"];
+contactP[1].textContent = siteContent["contact"]["phone"]
+contactP[2].textContent = siteContent["contact"]["email"]
+
+
+//footer
+let footer = document.querySelector("footer p");
+footer.textContent = siteContent["footer"]["copyright"]
+
+
+
+
+
+
 
