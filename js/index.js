@@ -79,6 +79,11 @@ let featureText = document.querySelectorAll(".main-content .top-content .text-co
 featureText[0].textContent = siteContent["main-content"]["features-content"];
 featureText[1].textContent = siteContent["main-content"]["about-content"];
 
+//image Middle
+let middleImg = document.querySelector(".middle-img");
+console.log(middleImg)
+middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"])
+
 //bottom headers h4
 let services = document.querySelectorAll(".main-content .bottom-content  .text-content h4");
 services[0].textContent = siteContent["main-content"]["services-h4"];
@@ -92,3 +97,4 @@ let middlebottom = document.querySelectorAll(".bottom-content p");
 middlebottom[0].textContent = siteContent["main-content"]["services-content"];
 middlebottom[1].textContent = siteContent["main-content"]["product-content"];
 middlebottom[2].textContent = siteContent["main-content"]["vision-content"];
+
