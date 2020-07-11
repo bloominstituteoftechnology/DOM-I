@@ -41,11 +41,22 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
+// let appendChil = document.createElement("a");
+// console.log(appendChil)
+// appendChil.textContent = "Time";
+// let element= document.querySelector("nav");
+// element.appendChild();
+
+
+
+
 let nav = document.querySelectorAll("a");
 let m = Object.values(siteContent.nav);
 
 for(let i =0; i < nav.length;i++) {
-   nav[i].textContent = m[i]
+  nav[i].style.color = "green";
+   nav[i].textContent = m[i];
+
 }
 
 
@@ -111,7 +122,20 @@ contactP[2].textContent = siteContent["contact"]["email"]
 let footer = document.querySelector("footer p");
 footer.textContent = siteContent["footer"]["copyright"]
 
+//append a tag
+let appendChil = document.createElement("a");
+appendChil.textContent = "Time";
+console.log(appendChil);
+let insert = document.querySelector("nav");
+insert.appendChild(appendChil);
+appendChil.style.color = "green";
 
+//prepend
+let firstNav = document.createElement("a");
+firstNav.textContent = "Before";
+let navaF = document.querySelector("nav");
+navaF.prepend(firstNav);
+firstNav.style.color = "green";
 
 
 
