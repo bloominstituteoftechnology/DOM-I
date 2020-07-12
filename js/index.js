@@ -58,16 +58,14 @@ bnt.textContent=siteContent.cta["button"];
 
  let ctalogo = cta1.querySelector("#cta-img")
  ctalogo.setAttribute('src', siteContent['cta']["img-src"]);
-// const h1cta = document.querySelector('.cta .cta-text h1');
-// h1cta.innerHTML = siteContent['cta']['h1'];
-// const buttonCta = document.querySelector('.cta .cta-text button');
-// buttonCta.textContent = siteContent['cta']['button'];
+
+
 const main =  document.querySelector(".main-content")
-const mainh4 = main.querySelector('h4')
+const mainh4 = main.querySelector(' .top-content h4')
 mainh4.textContent=siteContent["main-content"]["features-h4"]
 
-const mainpara = main.querySelector("p")
+const mainpara = main.querySelector(".top-content p")
 mainpara.textContent=siteContent["main-content"]["features-content"]
 
-
-
+const mainabout = main.querySelector('.text-content h4')
+mainabout.textContent=siteContent["main-content"]["about-h4"]
