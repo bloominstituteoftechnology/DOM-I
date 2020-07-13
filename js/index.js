@@ -60,12 +60,43 @@ bnt.textContent=siteContent.cta["button"];
  ctalogo.setAttribute('src', siteContent['cta']["img-src"]);
 
 
-const main =  document.querySelector(".main-content")
-const mainh4 = main.querySelector(' .top-content h4')
-mainh4.textContent=siteContent["main-content"]["features-h4"]
+const main =  document.querySelectorAll(".top-content")
+const mainh4 = document.querySelectorAll('.top-content h4')
+mainh4[0].textContent=siteContent["main-content"]["features-h4"]
+mainh4[1].textContent=siteContent["main-content"]["about-h4"]
 
-const mainpara = main.querySelector(".top-content p")
-mainpara.textContent=siteContent["main-content"]["features-content"]
+const mainpar = document.querySelectorAll(".top-content p")
+mainpar[0].textContent=siteContent["main-content"]["features-content"]
 
-const mainabout = main.querySelector('.text-content h4')
-mainabout.textContent=siteContent["main-content"]["about-h4"]
+mainpar[1].textContent=siteContent["main-content"]["about-content"]
+
+let middleimdg = document.querySelector(".middle-img")
+middleimdg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+let bottomcontent = document.querySelectorAll(".bottom-content h4")
+bottomcontent[0].textContent=siteContent['main-content']['services-h4']
+
+bottomcontent[1].textContent=siteContent['main-content']['product-h4']
+
+bottomcontent[2].textContent=siteContent['main-content']['vision-h4']
+
+let bottomcontentpar = document.querySelectorAll(".bottom-content  p")
+bottomcontentpar[0].textContent=siteContent['main-content']['services-content']
+
+bottomcontentpar[1].textContent=siteContent['main-content']['product-content']
+
+bottomcontentpar[2].textContent=siteContent['main-content'][
+  'vision-content']
+
+  let contactsec = document.querySelector('.contact h4')
+  contactsec.textContent=siteContent['contact']['contact-h4']
+
+  let contactsecpara = document.querySelectorAll('.contact p')
+  contactsecpara[0].textContent=siteContent['contact']['address']
+
+  contactsecpara[1].textContent=siteContent['contact']['phone']
+
+  contactsecpara[2].textContent=siteContent['contact']['email']
+
+let footer1 = document.querySelector('footer')
+footer1.textContent=siteContent['footer']['copyright']
