@@ -9,19 +9,11 @@ navigationItems[3].textContent = 'Features'
 navigationItems[4].textContent = 'About'
 navigationItems[5].textContent = 'Contact'
 
-const appendedNavItem = document.createElement('a')
-navigationBar.appendChild(appendedNavItem)
-appendedNavItem.textContent = 'Blog'
-const prependedNavItem = document.createElement('a')
-navigationBar.prepend(prependedNavItem)
-prependedNavItem.textContent = 'Home'
-
-navigationItems.forEach(() => {
+navigationItems.forEach ((event) => {
   for (let i = 0; i < navigationItems.length; i++) {
-    navigationItems[i].style.color = 'green';
+    navigationItems[i].
   }
 })
-
 // NavBar Logo
 const logo = document.getElementById("logo-img");
 logo.src = '/img/logo.png'
@@ -33,12 +25,6 @@ const button = document.querySelector('button')
 button.textContent = 'Get Started'
 const heading = document.querySelector('h1')
 heading.textContent = 'DOM IS AWESOME'
-heading.addEventListener('mouseover', (event) => {
-  event.target.style.color = 'green'
-})
-heading.addEventListener('mouseleave', (event) => {
-  event.target.style.color = 'black'
-})
 
 // Top Content
 const topContent = document.querySelector('.top-content')

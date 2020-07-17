@@ -37,7 +37,7 @@ heading.addEventListener('mouseover', (event) => {
   event.target.style.color = 'green'
 })
 heading.addEventListener('mouseleave', (event) => {
-  event.target.style.color = 'black'
+  
 })
 
 // Top Content

@@ -36,9 +36,7 @@ heading.textContent = 'DOM IS AWESOME'
 heading.addEventListener('mouseover', (event) => {
   event.target.style.color = 'green'
 })
-heading.addEventListener('mouseleave', (event) => {
-  event.target.style.color = 'black'
-})
+heading.addEventListener('mouseleave',)
 
 // Top Content
 const topContent = document.querySelector('.top-content')

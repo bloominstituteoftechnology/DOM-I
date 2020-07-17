@@ -9,19 +9,6 @@ navigationItems[3].textContent = 'Features'
 navigationItems[4].textContent = 'About'
 navigationItems[5].textContent = 'Contact'
 
-const appendedNavItem = document.createElement('a')
-navigationBar.appendChild(appendedNavItem)
-appendedNavItem.textContent = 'Blog'
-const prependedNavItem = document.createElement('a')
-navigationBar.prepend(prependedNavItem)
-prependedNavItem.textContent = 'Home'
-
-navigationItems.forEach(() => {
-  for (let i = 0; i < navigationItems.length; i++) {
-    navigationItems[i].style.color = 'green';
-  }
-})
-
 // NavBar Logo
 const logo = document.getElementById("logo-img");
 logo.src = '/img/logo.png'
@@ -33,12 +20,6 @@ const button = document.querySelector('button')
 button.textContent = 'Get Started'
 const heading = document.querySelector('h1')
 heading.textContent = 'DOM IS AWESOME'
-heading.addEventListener('mouseover', (event) => {
-  event.target.style.color = 'green'
-})
-heading.addEventListener('mouseleave', (event) => {
-  event.target.style.color = 'black'
-})
 
 // Top Content
 const topContent = document.querySelector('.top-content')
@@ -68,7 +49,7 @@ bottomContentTextAreas[1].textContent = 'Product content elementum magna eros, a
 
 // Bottom Content 3 Heading
 bottomContentHeadings[2].textContent = 'Vision'
-bottomContentTextAreas[2].textContent = 'Vision content elemen tum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+bottomContentTextAreas[2].textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
 
 const contactSection = document.querySelector('.contact')
 const contactHeading = contactSection.querySelector('h4')

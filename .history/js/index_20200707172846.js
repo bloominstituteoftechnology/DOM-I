@@ -34,10 +34,7 @@ button.textContent = 'Get Started'
 const heading = document.querySelector('h1')
 heading.textContent = 'DOM IS AWESOME'
 heading.addEventListener('mouseover', (event) => {
-  event.target.style.color = 'green'
-})
-heading.addEventListener('mouseleave', (event) => {
-  event.target.style.color = 'black'
+
 })
 
 // Top Content
