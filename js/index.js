@@ -48,4 +48,7 @@ const link4 = allLinks[3].textContent = siteContent["nav"]["nav-item-4"]
 const link5 = allLinks[4].textContent = siteContent["nav"]["nav-item-5"]
 const link6 = allLinks[5].textContent = siteContent["nav"]["nav-item-6"]
 
-const headerH1 = document.getElementsByClassName('cta-text h1').innerText = siteContent['cta']["h1"]
+const headerH1 = document.querySelector('cta-text h1').setAttribute('h1', siteContent["cta"]["h1"])
+console.log(headerH1)
+const headerH1 = document.querySelector('cta-text h1').setAttribute('h1', siteContent["cta"]["h1"])
+console.log(headerH1)
