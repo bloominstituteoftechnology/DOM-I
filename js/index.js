@@ -40,3 +40,78 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const navs = document.querySelectorAll('a')
+console.log(navs)
+
+navs[0].textContent = "Services"
+navs[1].textContent = "Product"
+navs[2].textContent = "Vision"
+navs[3].textContent = "Features"
+navs[4].textContent = "About"
+navs[5].textContent = "Contact"
+
+navs[0].style.color = "green"
+navs[1].style.color = "green"
+navs[2].style.color = "green"
+navs[3].style.color = "green"
+navs[4].style.color = "green"
+navs[5].style.color = "green"
+
+
+const navlink  = document.querySelector("a")
+navlink.textContent = "Home"
+navlink.href = "google.com"
+const nav = document.querySelector("nav")
+nav.appendChild(navlink);
+
+const news = document.createElement("a")
+news.textContent = "lol"
+nav.prepend(news)
+
+// logo.src ="img/logo.png"
+
+// document.querySelectorAll('a').style.fontcolor = 'green'
+
+
+
+
+
+
+const title = document.querySelector('.cta-text h1')
+title.textContent = "DOM Is Awesome"
+
+const titlebutton = document.querySelector(".cta-text button")
+titlebutton.textContent ="Get Started"
+
+const headerimg = document.getElementById('cta-img')
+headerimg.src ="img/header-img.png" 
+
+
+const maintexttitles = document.querySelectorAll('h4')
+console.log(maintexttitles)
+
+maintexttitles[0].textContent = "Features"
+maintexttitles[1].textContent = "About"
+maintexttitles[2].textContent = "Services"
+maintexttitles[3].textContent = "Product"
+maintexttitles[4].textContent = "Vision"
+maintexttitles[5].textContent = "Contact"
+
+
+maintextPtags = document.querySelectorAll('p')
+console.log(maintextPtags)
+maintextPtags[0].textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+maintextPtags[1].textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+maintextPtags[2].textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+maintextPtags[3].textContent = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+maintextPtags[4].textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+maintextPtags[5].textContent = "123 Way 456 Street Somewhere, USA"
+maintextPtags[6].textContent = "1 (888) 888-8888"
+maintextPtags[7].textContent = "sales@greatidea.io"
+maintextPtags[8].textContent = "Copyright Great Idea! 2018"
+
+
+
+const middleimage  = document.getElementById('middle-img')
+middleimage.src = "img/mid-page-accent.jpg"
