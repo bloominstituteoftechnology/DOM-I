@@ -38,5 +38,123 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+//Header
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+//Nav
+
+let headerLinks = document.querySelectorAll('a')
+
+Array.from(headerLinks).forEach(links => {
+  links.style.color = 'green'
+})
+
+let nav = document.querySelector('nav')
+
+let anchor1 = document.querySelector('a:nth-of-type(1)')
+anchor1.textContent = 'Services'
+
+let anchor2 =  document.querySelector('a:nth-of-type(2)')
+anchor2.textContent = 'Product'
+
+let anchor3 =  document.querySelector('a:nth-of-type(3)')
+anchor3.textContent = 'Vision'
+
+let anchor4 =  document.querySelector('a:nth-of-type(4)')
+anchor4.textContent = 'Features'
+
+let anchor5 =  document.querySelector('a:nth-of-type(5)')
+anchor5.textContent = 'About'
+
+let anchor6 =  document.querySelector('a:nth-of-type(6)')
+anchor6.textContent = 'Contact'
+
+let newLink1 = document.createElement('a')
+newLink1.textContent = 'Link 1'
+newLink1.href = '#'
+newLink1.style.color = 'green'
+nav.appendChild(newLink1)
+
+let newLink2 = document.createElement('a')
+newLink2.textContent = 'Link 2'
+newLink2.href = '#'
+newLink2.style.color = 'green'
+nav.appendChild(newLink2)
+
+//Section cta
+let cta = document.querySelector('.cta')
+let ctaText = cta.querySelector('h1')
+let ctaButton = cta.querySelector('button')
+let ctaImg = cta.querySelector('img')
+let br = document.createElement('br')
+
+
+ctaText.innerHTML = "DOM <br> Is <br> Awesome"
+// ctaText.appendChild(br)
+ctaButton.textContent = "Get Started"
+ctaImg.setAttribute('src', siteContent["cta"]['img-src'])
+
+
+
+//Section - main-content
+let topCont = document.querySelector('.top-content')
+
+let featureDiv = topCont.querySelector('.text-content:nth-of-type(1)')
+let featureHead = featureDiv.querySelector('h4')
+let featureP = featureDiv.querySelector('p')
+
+featureHead.textContent = "Features"
+featureP.textContent = siteContent['main-content']['features-content']
+
+
+let aboutDiv = topCont.querySelector('.text-content:nth-of-type(2)')
+let aboutHead = aboutDiv.querySelector('h4')
+let aboutP = aboutDiv.querySelector('p')
+
+aboutHead.textContent = "About"
+aboutP.textContent = siteContent['main-content']['about-content']
+
+let mainContImg = document.querySelector("#middle-img")
+mainContImg.setAttribute('src', "img/mid-page-accent.jpg")
+
+let botCont = document.querySelector('.bottom-content')
+
+let serviceDiv = botCont.querySelector('.text-content:nth-of-type(1)')
+let serviceHead = serviceDiv.querySelector('h4')
+let serviceP = serviceDiv.querySelector('p')
+serviceHead.textContent = "Services"
+serviceP.textContent = siteContent['main-content']['services-content']
+
+
+let productDiv = botCont.querySelector('.text-content:nth-of-type(2)')
+let productHead = productDiv.querySelector('h4')
+let productP = productDiv.querySelector('p')
+productHead.textContent = "Product"
+productP.textContent = siteContent['main-content']['product-content']
+
+let visionDiv = botCont.querySelector('.text-content:nth-of-type(3)')
+let visionHead = visionDiv.querySelector('h4')
+let visionP = visionDiv.querySelector('p')
+visionHead.textContent = "Vision"
+visionP.textContent = siteContent['main-content']['vision-content']
+
+//Section - conact
+
+let contact = document.querySelector('.contact')
+let contactHead = contact.querySelector('h4')
+let address = contact.querySelector('p:nth-of-type(1)')
+let phone = contact.querySelector('p:nth-of-type(2)')
+let email = contact.querySelector('p:nth-of-type(3)')
+
+contactHead.textContent = siteContent['contact']['contact-h4']
+address.innerHTML = "123 Way 456 Street <br> Somewhere, USA"
+phone.textContent = siteContent['contact']['phone']
+email.textContent = siteContent['contact']['email']
+
+
+//footer
+
+let foot = document.querySelector('footer')
+let copyright = foot.querySelector('p')
+
+copyright.textContent = siteContent['footer']['copyright']
