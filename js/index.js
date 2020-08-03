@@ -38,5 +38,41 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+//Header
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+//Nav
+let anchor1 = document.querySelector('a:nth-of-type(1)')
+anchor1.textContent = 'Services'
+let anchor2 =  document.querySelector('a:nth-of-type(2)')
+anchor2.textContent = 'Product'
+let anchor3 =  document.querySelector('a:nth-of-type(3)')
+anchor3.textContent = 'Vision'
+let anchor4 =  document.querySelector('a:nth-of-type(4)')
+anchor4.textContent = 'Features'
+let anchor5 =  document.querySelector('a:nth-of-type(5)')
+anchor5.textContent = 'About'
+let anchor6 =  document.querySelector('a:nth-of-type(6)')
+anchor6.textContent = 'Contact'
+//Section cta
+let cta = document.querySelector('.cta')
+let ctaText = cta.querySelector('h1')
+let ctaButton = cta.querySelector('button')
+let ctaImg = cta.querySelector('img')
+
+
+ctaText.textContent = "DOM Is Awesome"
+ctaButton.textContent = "Get Started"
+ctaImg.setAttribute('src', siteContent["cta"]['img-src'])
+
+
+
+//Section - main-content
+
+
+
+//Section - conact
+
+
+
+//footer
