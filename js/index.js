@@ -39,6 +39,7 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 //Header
+let br = document.createElement('br')
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 //Nav
@@ -61,15 +62,55 @@ let ctaButton = cta.querySelector('button')
 let ctaImg = cta.querySelector('img')
 
 
+
 ctaText.textContent = "DOM Is Awesome"
+ctaText.appendChild(br)
 ctaButton.textContent = "Get Started"
 ctaImg.setAttribute('src', siteContent["cta"]['img-src'])
 
 
 
 //Section - main-content
+let topCont = document.querySelector('.top-content')
+
+let featureDiv = topCont.querySelector('.text-content:nth-of-type(1)')
+let featureHead = featureDiv.querySelector('h4')
+let featureP = featureDiv.querySelector('p')
+
+featureHead.textContent = "Features"
+featureP.textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
 
 
+let aboutDiv = topCont.querySelector('.text-content:nth-of-type(2)')
+let aboutHead = aboutDiv.querySelector('h4')
+let aboutP = aboutDiv.querySelector('p')
+
+aboutHead.textContent = "About"
+aboutP.textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+let mainContImg = document.querySelector("#middle-img")
+mainContImg.setAttribute('src', "img/mid-page-accent.jpg")
+
+let botCont = document.querySelector('.bottom-content')
+
+let serviceDiv = botCont.querySelector('.text-content:nth-of-type(1)')
+let serviceHead = serviceDiv.querySelector('h4')
+let serviceP = serviceDiv.querySelector('p')
+serviceHead.textContent = "Service"
+serviceP.textContent = siteContent['main-content']['services-content']
+
+
+let productDiv = botCont.querySelector('.text-content:nth-of-type(2)')
+let productHead = productDiv.querySelector('h4')
+let productP = productDiv.querySelector('p')
+productHead.textContent = "Product"
+productP.textContent = siteContent['main-content']['product-content']
+
+let visionDiv = botCont.querySelector('.text-content:nth-of-type(3)')
+let visionHead = visionDiv.querySelector('h4')
+let visionP = visionDiv.querySelector('p')
+visionHead.textContent = "Vision"
+visionP.textContent = siteContent['main-content']['vision-content']
 
 //Section - conact
 
