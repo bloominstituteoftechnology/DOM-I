@@ -48,7 +48,14 @@ const link4 = allLinks[3].textContent = siteContent["nav"]["nav-item-4"]
 const link5 = allLinks[4].textContent = siteContent["nav"]["nav-item-5"]
 const link6 = allLinks[5].textContent = siteContent["nav"]["nav-item-6"]
 
-const headerH1 = document.querySelector('cta-text h1').setAttribute('h1', siteContent["cta"]["h1"])
-console.log(headerH1)
-const headerH1 = document.querySelector('cta-text h1').setAttribute('h1', siteContent["cta"]["h1"])
-console.log(headerH1)
+
+const headerH1 = document.querySelector('.cta-text h1').textContent = siteContent["cta"]["h1"];
+
+const headerButton = document.querySelector('.cta-text button').textContent = siteContent["cta"]["button"];
+
+const textCont1 = document.querySelector('.text-content h4').textContent = siteContent["main-content"]["features-h4"];
+
+const textCont1Pa = document.querySelector('.text-content p').textContent = siteContent["main-content"]["features-content"]
+
+const textContent2 = textCont1.nextElementSibling
+console.log (textContent2)
