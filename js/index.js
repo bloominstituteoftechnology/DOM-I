@@ -1,3 +1,5 @@
+// const { forEach } = require("core-js/fn/array");
+
 const siteContent = {
   "nav": {
     "nav-item-1": "Services",
@@ -42,6 +44,15 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 const allLinks = document.querySelectorAll('a')
+
+// allLinks.style.color = 'green';
+
+allLinks[0].style.color = 'green';
+allLinks[1].style.color = 'green';
+allLinks[2].style.color = 'green';
+allLinks[3].style.color = 'green';
+allLinks[4].style.color = 'green';
+allLinks[5].style.color = 'green';
 const link1 = allLinks[0].textContent = siteContent["nav"]["nav-item-1"];
 const link2 = allLinks[1].textContent = siteContent["nav"]["nav-item-2"];
 const link3 = allLinks[2].textContent = siteContent["nav"]["nav-item-3"];
@@ -57,6 +68,17 @@ headerButton.textContent = siteContent["cta"]["button"];
 
 const headerImg = document.getElementById('cta-img');
 headerImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+
+const nav = document.querySelector('nav');
+const navHome = document.createElement('a')
+navHome.textContent = 'Home';
+navHome.style.color = 'green';
+
+nav.appendChild(navHome)
+nav.prepend(navHome)
+console.log(navHome)
+
 
 // body starts here
 
