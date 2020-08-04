@@ -49,12 +49,12 @@ const headerContainer = document.querySelectorAll ('container');
 // NAV LINKS // 
 const headerLinks = document.querySelectorAll('header nav a');
 
-services = headerLinks[0].textContent = 'Services';
-product = headerLinks[1].textContent = 'Product';
-vision = headerLinks[2].textContent = 'Vision';
-features = headerLinks[3].textContent = 'Features';
-about = headerLinks[4].textContent = 'About';
-contact = headerLinks[5].textContent = 'Contact';
+headerLinks[0].textContent = 'Services';
+headerLinks[1].textContent = 'Product';
+headerLinks[2].textContent = 'Vision';
+headerLinks[3].textContent = 'Features';
+headerLinks[4].textContent = 'About';
+headerLinks[5].textContent = 'Contact';
 
 
 // CTA SECTION //
@@ -74,23 +74,23 @@ const mainTextTop = document.getElementsByTagName('h4');
 const mainParTop = document.getElementsByTagName('p');
 
 
-addFeaturesText = mainTextTop[0].textContent = 'Features';
-addFeaturesPar = mainParTop[0].textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+mainTextTop[0].textContent = 'Features';
+mainParTop[0].textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
 
-addAboutText = mainTextTop[1].textContent = 'About';
-addAboutPar = mainParTop[1].textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+mainTextTop[1].textContent = 'About';
+mainParTop[1].textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
 
 const middleImg = document.getElementById('middle-img');
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
-addServicesText = mainTextTop[2].textContent = 'Services';
-addServicesPar = mainParTop[2].textContent ='Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+mainTextTop[2].textContent = 'Services';
+mainParTop[2].textContent ='Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
 
-addProductText = mainTextTop[3].textContent = 'Product';
-addProductPar = mainParTop[3].textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+mainTextTop[3].textContent = 'Product';
+mainParTop[3].textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
 
-addVisionText = mainTextTop[4].textContent = 'Vision';
-addVisionPar = mainParTop[4].textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+mainTextTop[4].textContent = 'Vision';
+mainParTop[4].textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
 
 // CONTACT //
 
