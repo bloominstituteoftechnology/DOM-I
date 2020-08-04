@@ -94,12 +94,20 @@ addVisionPar = mainParTop[4].textContent = 'Vision content elementum magna eros,
 
 // CONTACT //
 
-const contactText = document.getElementsByClassName('contact');
-console.log (contactText)
+const contactText = document.querySelector('.contact h4');
+contactText.textContent = siteContent.contact['contact-h4'];
+
+const contactInfo = document.querySelectorAll ('.contact p');
+contactInfo[0].textContent = siteContent.contact['address'];
+contactInfo[1].textContent = siteContent.contact['phone'];
+contactInfo[2].textContent = siteContent.contact['email'];
+
+// FOOTER//
+
+const footer = document.querySelector('footer p');
+footer.textContent = siteContent.footer['copyright'];
 
 
-
-const contactPar = document.getElementsByTagName('.contact p');
 
 
 
