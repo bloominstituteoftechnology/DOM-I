@@ -108,9 +108,35 @@ const footer = document.querySelector('footer p');
 footer.textContent = siteContent.footer['copyright'];
 
 
+// CHANGE HEADER TEXT COLOR ///
+
+const newColor = document.getElementsByTagName('a');
+newColor[0].style.color = 'green';
+newColor[1].style.color = 'green';
+newColor[2].style.color = 'green';
+newColor[3].style.color = 'green';
+newColor[4].style.color = 'green';
+newColor[5].style.color = 'green';
 
 
 
+
+// ADD NEW ITEMS TO NAV BAR USING: .appendChild() && .prepend() ///
+
+const newNavLink = document.createElement('a');
+newNavLink.textContent = 'Sign In';
+newNavLink.href = '#';
+const nav = document.querySelector('nav');
+nav.appendChild(newNavLink);
+
+newColor[6].style.color = 'green';
+
+const firstNavLink = document.createElement('a');
+firstNavLink.textContent = 'Store';
+firstNavLink.href = '#';
+nav.prepend(firstNavLink);
+
+newColor[0].style.color = 'green';
 
 
 
