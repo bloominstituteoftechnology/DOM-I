@@ -40,7 +40,7 @@ const siteContent = {
 // Example: Update the img src for the logo
 // header starts here
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
 const allLinks = document.querySelectorAll('a')
 const link1 = allLinks[0].textContent = siteContent["nav"]["nav-item-1"];
 const link2 = allLinks[1].textContent = siteContent["nav"]["nav-item-2"];
@@ -49,87 +49,72 @@ const link4 = allLinks[3].textContent = siteContent["nav"]["nav-item-4"];
 const link5 = allLinks[4].textContent = siteContent["nav"]["nav-item-5"];
 const link6 = allLinks[5].textContent = siteContent["nav"]["nav-item-6"];
 
-const headerH1 = document.querySelector('.cta-text h1').textContent = siteContent["cta"]["h1"];
+const headerH1 = document.querySelector('.cta-text h1');
+headerH1.textContent = siteContent["cta"]["h1"];
 
-const headerButton = document.querySelector('.cta-text button').textContent = siteContent["cta"]["button"];
+const headerButton = document.querySelector('.cta-text button');
+headerButton.textContent = siteContent["cta"]["button"];
 
-const headerImg = document.getElementById('cta-img').setAttribute('src', siteContent["cta"]["img-src"]);
+const headerImg = document.getElementById('cta-img');
+headerImg.setAttribute('src', siteContent["cta"]["img-src"]);
 
 // body starts here
 
-const changeClass = document.querySelector('section div div')
-changeClass.className = "first-text";
+const changeClass = document.querySelector('section div div');
+  changeClass.className = "first-text";
 
-const textCont2 = document.querySelector('.first-text h4').textContent = siteContent["main-content"]["features-h4"]
+  const textCont2 = document.querySelector('.first-text h4');
+  textCont2.textContent = siteContent["main-content"]["features-h4"];
 
-const textCont2Pa = document.querySelector('.first-text p').textContent = siteContent["main-content"]["features-content"]
+  const textCont2Pa = document.querySelector('.first-text p');
+  textCont2Pa.textContent = siteContent["main-content"]["features-content"];
 
-const textCont1 = document.querySelector('.text-content h4').textContent = siteContent["main-content"]["about-h4"];
+  const textCont1 = document.querySelector('.text-content h4');
+  textCont1.textContent = siteContent["main-content"]["about-h4"];
 
-const textCont1Pa = document.querySelector('.text-content p').textContent = siteContent["main-content"]["about-content"];
+  const textCont1Pa = document.querySelector('.text-content p');
+  textCont1Pa.textContent = siteContent["main-content"]["about-content"];
 
-const bodyPic = document.querySelector('#middle-img').setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+  const bodyPic = document.querySelector('#middle-img');
+  bodyPic.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
-const bottomText = document.querySelectorAll('.bottom-content div')
+const bottomText = document.querySelectorAll('.bottom-content div');
 
-const botfirst = bottomText[0].querySelector('h4').textContent = siteContent['main-content']['services-h4']
+  const botfirst = bottomText[0].querySelector('h4');
+  botfirst.textContent = siteContent['main-content']['services-h4']
+;
+  const botfirstPa = bottomText[0].querySelector('p');
+  botfirstPa.textContent = siteContent['main-content']['services-content'];
 
-const botfirstPa = bottomText[0].querySelector('p').textContent = siteContent['main-content']['services-content']
+  const botSec = bottomText[1].querySelector('h4');
+  botSec.textContent = siteContent['main-content']['product-h4'];
 
-const botSec = bottomText[1].querySelector('h4').textContent = siteContent['main-content']['product-h4']
+  const botSecPa = bottomText[1].querySelector('p');
+  botSecPa.textContent = siteContent['main-content']['product-content'];
 
-const botSecPa = bottomText[1].querySelector('p').textContent = siteContent['main-content']['product-content']
+  const botThird = bottomText[2].querySelector('h4')
+  botThird.textContent = siteContent['main-content']['vision-h4'];
 
-const botThird = bottomText[2].querySelector('h4').textContent = siteContent['main-content']['vision-h4']
+  const botThirdPa = bottomText[2].querySelector('p');
+  botThirdPa.textContent = siteContent['main-content']['vision-content'];
+//footer starts here
 
-const botThirdPa = bottomText[2].querySelector('p').textContent = siteContent['main-content']['vision-content']
-
-
-
-
-// const botfirst = bottomText.querySelector('div')
-// botfirst.classList.add("botText1")
-// const textBot1 = document.querySelector('.botText1 h4').textContent = siteContent["main-content"]["services-h4"]
-// console.log (textBot1)
-// const ParagBot1 = document.querySelector('.botText1 p').textContent = siteContent["main-content"]["services-content"]
-
-
-
-// console.log(botfirst)
-
-// const botSec = bottomText.querySelector('div div')
-// botfirst.classList.add("botText2")
-
-
-
-// bottomText.classList.toggle('botText1')
-
-// const textBot1 = document.querySelector('.botText1 h4').textContent = siteContent["main-content"]["services-h4"]
-// console.log (textBot1)
-// const ParagBot1 = document.querySelector('.botText1 p').textContent = siteContent["main-content"]["services-content"]
-
-// bottomText.classList.toggle('botText2')
-
-// const textBot2 = document.querySelector('.botText2 h4').textContent = siteContent["main-content"]["product-h4"]
-
-// const ParagBot2 = document.querySelector('.botText2 p').textContent = siteContent["main-content"]["product-content"]
-
-// bottomText.classList.toggle('botText3')
-
-
-
-// const textBot2 = document.querySelector('.botText2 h4').textContent = siteContent["main-content"]["product-h4"]
-
-// const ParagBot2 = document.querySelector('.botText2 p').textContent = siteContent["main-content"]["product-content"]
-
-// const textBot3 = document.querySelector('.botText3 h4').textContent = siteContent["main-content"]["vision-h4"]
+const footerContact = document.querySelector('.contact');
+  
+  const contactHeader = footerContact.querySelector('h4');
+  
+  contactHeader.textContent = siteContent["contact"]["contact-h4"];
+  
+const contactBody = footerContact.querySelectorAll('p');
+    const address = contactBody[0].textContent = siteContent["contact"]["address"];
+    const phone = contactBody[1].textContent = siteContent["contact"]["phone"];
+    const email = contactBody[2].textContent = siteContent["contact"]["email"];
+const  copyright = document.querySelector('footer p').textContent = siteContent["footer"]["copyright"]
 
 
 
 
 
 
-
-console.log(bottomText.classList)
 
 
