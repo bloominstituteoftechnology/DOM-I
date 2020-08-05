@@ -38,46 +38,19 @@ const siteContent = {
 };
 
 //Example: Update the img src for the logo
+
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 var aTag = document.querySelectorAll('a')
+let i = 0;
+aTag.forEach(a => {
+ a.textContent = siteContent.nav[`nav-item-${i}`]
+ aTag[i].style.color= 'lime';
+ i++
+});
 console.log(aTag, 'navigation');
 
-aTag[0].textContent = siteContent.nav["nav-item-1"];
-aTag[0].style.color = 'green';
-console.log(aTag[0], 'navigation');
-
-aTag[1].textContent = siteContent.nav["nav-item-2"];
-aTag[1].style.color = 'green';
-console.log(aTag[1], 'navigation');
-
-
-aTag[2].textContent = siteContent.nav["nav-item-3"];
-aTag[2].style.color = 'green';
-console.log(aTag[2], 'navigation');
-
-
-aTag[3].textContent = siteContent.nav["nav-item-4"];
-aTag[3].style.color = 'green';
-console.log(aTag[3], 'navigation');
-
-
-aTag[4].textContent = siteContent.nav["nav-item-5"];
-aTag[4].style.color = 'green';
-console.log(aTag[4], 'navigation');
-
-
-aTag[5].textContent = siteContent.nav["nav-item-6"];
-aTag[5].style.color = 'green';
-console.log(aTag[5], 'navigation');
-
-
-
-//for(var i = 0; i < 'a'.length; i++) {
-   // 'a'[i].textContent = siteContent.nav["nav-item-1"]
-//}
-//console.log(aTag)
 
 // CTA SECTION
 
@@ -174,6 +147,8 @@ newContent.style.width = '876px';
 newContent.style.height = '182px';
 newContent.style.marginTop = '4%'
 console.log(newContent, 'apprendchild');
+
+
 
 const mainContentI = document.querySelector('.main-content');
 console.log(mainContentI, 'apprendchild');
