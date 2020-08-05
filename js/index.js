@@ -59,6 +59,8 @@ const myButton = document.querySelector(".cta-text button");
 
 console.log(myButton);
 
-
 myButton.textContent = siteContent["cta"]["button"]
 
+const middleImg = document.getElementById("cta-img");
+console.log(middleImg)
+middleImg.setAttribute('src', siteContent["cta"]["img-src"]);
