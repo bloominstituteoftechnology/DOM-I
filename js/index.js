@@ -48,4 +48,7 @@ let middleImage = document.getElementById("middle-img");
 middleImage.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
 let mainText = document.querySelector('.cta-text h1');
-console.log(mainText);
+mainText.innerHTML = siteContent['cta']['h1'];
+
+let mainButton = document.querySelector('cta-text button');
+mainButton.innerHTML = siteContent['cta']['button'];
