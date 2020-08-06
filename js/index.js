@@ -41,6 +41,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+//header and nav plus image
 const aSelect = document.querySelectorAll('a');
 console.log(aSelect);
 
@@ -51,7 +52,7 @@ aSelect[3].textContent = siteContent["nav"]["nav-item-4"];
 aSelect[4].textContent = siteContent["nav"]["nav-item-5"];
 aSelect[5].textContent = siteContent["nav"]["nav-item-6"];
 
-
+// banner middle with button
 const myOne = document.querySelector(".cta-text h1");
 myOne.innerHTML = ("DOM <br> IS <br> AWESOME")
 
@@ -61,6 +62,29 @@ console.log(myButton);
 
 myButton.textContent = siteContent["cta"]["button"]
 
+//middle section top content (feature and about).
+
 const middleImg = document.getElementById("cta-img");
 console.log(middleImg)
 middleImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+const topFour = document.querySelectorAll(".top-content h4");
+
+
+topFour[0].textContent = siteContent["main-content"]["features-h4"]
+
+
+topFour[1].textContent = siteContent["main-content"]["about-h4"]
+
+//middle content top part
+
+const paraTop = document.querySelectorAll(".top-content p");
+console.log(paraTop);
+
+paraTop[0].textContent = siteContent["main-content"]["features-content"];
+
+paraTop[1].textContent = siteContent["main-content"]["about-content"];
+
+
+
+
