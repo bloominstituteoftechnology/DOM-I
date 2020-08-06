@@ -50,5 +50,5 @@ middleImage.setAttribute('src', siteContent['main-content']['middle-img-src']);
 let mainText = document.querySelector('.cta-text h1');
 mainText.innerHTML = siteContent['cta']['h1'];
 
-let mainButton = document.querySelector('cta-text button');
-mainButton.innerHTML = siteContent['cta']['button'];
+let copyright = document.querySelector('footer p');
+copyright.innerHTML = siteContent['footer']['copyright'];
