@@ -41,7 +41,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-//header and nav plus image
+//header and nav 
 const aSelect = document.querySelectorAll('a');
 console.log(aSelect);
 
@@ -51,6 +51,10 @@ aSelect[2].textContent = siteContent["nav"]["nav-item-3"];
 aSelect[3].textContent = siteContent["nav"]["nav-item-4"];
 aSelect[4].textContent = siteContent["nav"]["nav-item-5"];
 aSelect[5].textContent = siteContent["nav"]["nav-item-6"];
+
+aSelect.forEach((colorA) => {
+  colorA.style.color = 'green'
+});
 
 // banner middle with button
 const myOne = document.querySelector(".cta-text h1");
@@ -62,11 +66,11 @@ console.log(myButton);
 
 myButton.textContent = siteContent["cta"]["button"]
 
-//middle section top content (feature and about).
+//middle section top content h4
 
-const middleImg = document.getElementById("cta-img");
-console.log(middleImg)
-middleImg.setAttribute('src', siteContent["cta"]["img-src"]);
+const middleImg1 = document.getElementById("cta-img");
+console.log(middleImg1)
+middleImg1.setAttribute('src', siteContent["cta"]["img-src"]);
 
 const topFour = document.querySelectorAll(".top-content h4");
 
@@ -76,7 +80,7 @@ topFour[0].textContent = siteContent["main-content"]["features-h4"]
 
 topFour[1].textContent = siteContent["main-content"]["about-h4"]
 
-//middle content top part
+//middle content top part p
 
 const paraTop = document.querySelectorAll(".top-content p");
 console.log(paraTop);
@@ -85,6 +89,64 @@ paraTop[0].textContent = siteContent["main-content"]["features-content"];
 
 paraTop[1].textContent = siteContent["main-content"]["about-content"];
 
+//img middle part
+
+const middleImg = document.getElementById("middle-img");
+
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+// middle content bottom part h4 
+
+const bottomH4 = document.querySelectorAll(".bottom-content h4");
+
+bottomH4[0].textContent = siteContent["main-content"]["services-h4"];
+bottomH4[1].textContent = siteContent["main-content"]["product-h4"];
+bottomH4[2].textContent = siteContent["main-content"]["vision-h4"];
+
+//middle content bottom part p
+
+const bottomP = document.querySelectorAll(".bottom-content p");
+console.log(bottomP);
+
+bottomP[0].textContent = siteContent["main-content"]["services-content"];
+bottomP[1].textContent = siteContent["main-content"]["product-content"];
+bottomP[2].textContent = siteContent["main-content"]["vision-content"];
+
+//contact 
+const contactLast1 = document.querySelectorAll(".contact h4");
+
+contactLast1[0].textContent = siteContent["contact"]["contact-h4"];
+
+const contactP = document.querySelectorAll(".contact p");
+
+contactP[0].textContent = siteContent["contact"]["address"];
+contactP[1].textContent = siteContent["contact"]["phone"];
+contactP[2].textContent = siteContent["contact"]["email"];
+
+//footer 
+
+const foot = document.querySelectorAll("footer");
+
+foot[0].textContent = siteContent["footer"]["copyright"];
 
 
+// new items
+
+const newItem = document.createElement('a');
+newItem.textContent = "More";
+
+const addItem = document.querySelector("nav");
+addItem.appendChild(newItem);
+
+newItem.style.color = 'green';
+
+const newItem2 = document.createElement('a');
+newItem2.textContent = "Log in";
+
+const addItem2 = document.querySelector("nav");
+addItem2.prepend(newItem2);
+
+addItem2.style.color = 'green';
+
+newItem2.style.color = 'green';
 
