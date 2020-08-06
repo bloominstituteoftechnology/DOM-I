@@ -52,3 +52,6 @@ mainText.innerHTML = siteContent['cta']['h1'];
 
 let copyright = document.querySelector('footer p');
 copyright.innerHTML = siteContent['footer']['copyright'];
+
+let mainButton = document.querySelector('.cta-text button');
+mainButton.innerHTML = siteContent['cta']['button'];
