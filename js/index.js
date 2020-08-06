@@ -118,8 +118,9 @@ const contactLast1 = document.querySelectorAll(".contact h4");
 contactLast1[0].textContent = siteContent["contact"]["contact-h4"];
 
 const contactP = document.querySelectorAll(".contact p");
-
 contactP[0].textContent = siteContent["contact"]["address"];
+contactP[0].innerHTML = "123 Way 456 Street <br> Somewhere, USA"
+
 contactP[1].textContent = siteContent["contact"]["phone"];
 contactP[2].textContent = siteContent["contact"]["email"];
 
@@ -146,7 +147,7 @@ newItem2.textContent = "Log in";
 const addItem2 = document.querySelector("nav");
 addItem2.prepend(newItem2);
 
-addItem2.style.color = 'green';
+// addItem2.style.color = 'green';
 
 newItem2.style.color = 'green';
 
