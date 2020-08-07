@@ -63,3 +63,11 @@ navBar[2].innerHTML = siteContent['nav']['nav-item-3'];
 navBar[3].innerHTML = siteContent['nav']['nav-item-4'];
 navBar[4].innerHTML = siteContent['nav']['nav-item-5'];
 navBar[5].innerHTML = siteContent['nav']['nav-item-6'];
+
+let contactInfoTitle = document.querySelector('.contact h4');
+contactInfoTitle.innerHTML = siteContent['contact']['contact-h4'];
+
+let contactInfo = document.querySelectorAll('.contact p');
+contactInfo[0].innerHTML = siteContent['contact']['address'];
+contactInfo[1].innerHTML = siteContent['contact']['phone'];
+contactInfo[2].innerHTML = siteContent['contact']['email'];
