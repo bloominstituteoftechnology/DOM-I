@@ -65,7 +65,17 @@ navBar[4].innerHTML = siteContent['nav']['nav-item-5'];
 navBar[5].innerHTML = siteContent['nav']['nav-item-6'];
 navBar.forEach((element) => {
   element.style.color = 'green';
-})
+});
+
+let extra = document.createElement('a');
+extra.innerHTML = 'Extra';
+extra.style.color = 'green';
+document.querySelector('.container header nav').appendChild(extra);
+
+let news = document.createElement('a');
+news.innerHTML = 'News';
+news.style.color = 'green';
+document.querySelector('.container header nav').appendChild(news);
 
 let contactInfoTitle = document.querySelector('.contact h4');
 contactInfoTitle.innerHTML = siteContent['contact']['contact-h4'];
