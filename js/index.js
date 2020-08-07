@@ -55,3 +55,11 @@ copyright.innerHTML = siteContent['footer']['copyright'];
 
 let mainButton = document.querySelector('.cta-text button');
 mainButton.innerHTML = siteContent['cta']['button'];
+
+let navBar = document.querySelectorAll('a');
+navBar[0].innerHTML = siteContent['nav']['nav-item-1'];
+navBar[1].innerHTML = siteContent['nav']['nav-item-2'];
+navBar[2].innerHTML = siteContent['nav']['nav-item-3'];
+navBar[3].innerHTML = siteContent['nav']['nav-item-4'];
+navBar[4].innerHTML = siteContent['nav']['nav-item-5'];
+navBar[5].innerHTML = siteContent['nav']['nav-item-6'];
