@@ -71,3 +71,12 @@ let contactInfo = document.querySelectorAll('.contact p');
 contactInfo[0].innerHTML = siteContent['contact']['address'];
 contactInfo[1].innerHTML = siteContent['contact']['phone'];
 contactInfo[2].innerHTML = siteContent['contact']['email'];
+
+let mainContentTitle = document.querySelectorAll('.text-content h4')
+mainContentTitle[0].innerHTML = siteContent['main-content']['features-h4'];
+mainContentTitle[1].innerHTML = siteContent['main-content']['about-h4'];
+mainContentTitle[2].innerHTML = siteContent['main-content']['services-h4'];
+mainContentTitle[3].innerHTML = siteContent['main-content']['product-h4'];
+mainContentTitle[4].innerHTML = siteContent['main-content']['vision-h4'];
+
+let 
