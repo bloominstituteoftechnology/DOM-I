@@ -79,4 +79,9 @@ mainContentTitle[2].innerHTML = siteContent['main-content']['services-h4'];
 mainContentTitle[3].innerHTML = siteContent['main-content']['product-h4'];
 mainContentTitle[4].innerHTML = siteContent['main-content']['vision-h4'];
 
-let 
+let mainContent = document.querySelectorAll('.text-content p');
+mainContent[0].innerHTML = siteContent['main-content']['features-content'];
+mainContent[1].innerHTML = siteContent['main-content']['about-content'];
+mainContent[2].innerHTML = siteContent['main-content']['services-content'];
+mainContent[3].innerHTML = siteContent['main-content']['product-content'];
+mainContent[4].innerHTML = siteContent['main-content']['vision-content'];
