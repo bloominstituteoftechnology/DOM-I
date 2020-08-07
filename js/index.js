@@ -79,3 +79,17 @@ mainHeader.textContent = siteContent["cta"]["h1"];
 
 let mainButton = document.querySelector('button');
 mainButton.textContent = siteContent["cta"]["button"];
+
+const newOrder = document.createElement('a');
+newOrder.textContent = 'Order';
+const newReview = document.createElement('a');
+newReview.textContent = 'Review';
+
+const navigation = document.querySelector('nav');
+navigation.prepend(newOrder);
+navigation.append(newReview);
+
+const navColoring = document.querySelectorAll('a');
+navColoring.forEach((element) => {
+  element.style.color = 'green';
+});
