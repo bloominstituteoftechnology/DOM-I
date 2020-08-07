@@ -63,6 +63,9 @@ navBar[2].innerHTML = siteContent['nav']['nav-item-3'];
 navBar[3].innerHTML = siteContent['nav']['nav-item-4'];
 navBar[4].innerHTML = siteContent['nav']['nav-item-5'];
 navBar[5].innerHTML = siteContent['nav']['nav-item-6'];
+navBar.forEach((element) => {
+  element.style.color = 'green';
+})
 
 let contactInfoTitle = document.querySelector('.contact h4');
 contactInfoTitle.innerHTML = siteContent['contact']['contact-h4'];
