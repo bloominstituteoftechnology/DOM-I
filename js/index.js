@@ -49,10 +49,7 @@ navLinks.forEach(
 	(x, i) => (x.textContent = siteContent['nav'][`nav-item-${i + 1}`])
 )
 
-// Nav links green
-navLinks.forEach(x => (x.style.color = 'green'))
-
-// New links
+// New links .append and .prepend
 let firstNav = document.createElement('a')
 let textFirstNav = document.createTextNode('Home')
 let lastNav = document.createElement('a')
@@ -63,6 +60,9 @@ firstNav.appendChild(textFirstNav)
 lastNav.appendChild(textLastNav)
 navBar.prepend(firstNav)
 navBar.appendChild(lastNav)
+
+// Nav links green
+navLinks.forEach(x => (x.style.color = 'green'))
 
 //  Title 'Dom is awesome'
 let ctaTitle = document.querySelector('.cta .cta-text h1')
@@ -84,17 +84,17 @@ titlesH4[2].textContent = siteContent['main-content']['services-h4']
 titlesH4[3].textContent = siteContent['main-content']['product-h4']
 titlesH4[4].textContent = siteContent['main-content']['vision-h4']
 
-// Mid-Image
+// MidImage
 let middleImage = document.querySelector('.middle-img')
 middleImage.setAttribute('src', siteContent['main-content']['middle-img-src'])
 
-// Mid-Text
+// Bottom Text
 let contentText = document.querySelectorAll('.main-content .text-content p')
 contentText[0].textContent = siteContent['main-content']['features-content']
 contentText[1].textContent = siteContent['main-content']['about-content']
 contentText[2].textContent = siteContent['main-content']['services-content']
 contentText[3].textContent = siteContent['main-content']['product-content']
-contentText[4].textContent = siteContent['main-content']['vison-content']
+contentText[4].textContent = siteContent['main-content']['vision-content']
 
 // Title Contacts
 let contactTitle = document.querySelector('.contact h4')
