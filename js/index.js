@@ -42,7 +42,7 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // Nav 
-let navLinks = document.querySelectorAll('nav a')
+const navLinks = document.querySelectorAll('nav a')
 
 // Nav links forEach
 navLinks.forEach(
@@ -50,11 +50,11 @@ navLinks.forEach(
 )
 
 // New links .append and .prepend
-let firstNav = document.createElement('a')
-let textFirstNav = document.createTextNode('Home')
-let lastNav = document.createElement('a')
-let textLastNav = document.createTextNode('Links')
-let navBar = document.querySelector('nav')
+const firstNav = document.createElement('a')
+const textFirstNav = document.createTextNode('Home')
+const lastNav = document.createElement('a')
+const textLastNav = document.createTextNode('Links')
+const navBar = document.querySelector('nav')
 
 firstNav.appendChild(textFirstNav)
 lastNav.appendChild(textLastNav)
@@ -65,19 +65,19 @@ navBar.appendChild(lastNav)
 navLinks.forEach(x => (x.style.color = 'green'))
 
 //  Title 'Dom is awesome'
-let ctaTitle = document.querySelector('.cta .cta-text h1')
+const ctaTitle = document.querySelector('.cta .cta-text h1')
 ctaTitle.textContent = siteContent['cta']['h1']
 
 //  Top Button
-let ctaButton = document.querySelector('.cta .cta-text button')
+const ctaButton = document.querySelector('.cta .cta-text button')
 ctaButton.textContent = siteContent['cta']['button']
 
 // Top Img
-let ctaImage = document.querySelector('.cta #cta-img')
+const ctaImage = document.querySelector('.cta #cta-img')
 ctaImage.setAttribute('src', siteContent['cta']['img-src'])
 
 // Titles Mid-Content
-let titlesH4 = document.querySelectorAll('.main-content .text-content h4')
+const titlesH4 = document.querySelectorAll('.main-content .text-content h4')
 titlesH4[0].textContent = siteContent['main-content']['features-h4']
 titlesH4[1].textContent = siteContent['main-content']['about-h4']
 titlesH4[2].textContent = siteContent['main-content']['services-h4']
@@ -85,11 +85,11 @@ titlesH4[3].textContent = siteContent['main-content']['product-h4']
 titlesH4[4].textContent = siteContent['main-content']['vision-h4']
 
 // MidImage
-let middleImage = document.querySelector('.middle-img')
+const middleImage = document.querySelector('.middle-img')
 middleImage.setAttribute('src', siteContent['main-content']['middle-img-src'])
 
 // Bottom Text
-let contentText = document.querySelectorAll('.main-content .text-content p')
+const contentText = document.querySelectorAll('.main-content .text-content p')
 contentText[0].textContent = siteContent['main-content']['features-content']
 contentText[1].textContent = siteContent['main-content']['about-content']
 contentText[2].textContent = siteContent['main-content']['services-content']
@@ -97,16 +97,16 @@ contentText[3].textContent = siteContent['main-content']['product-content']
 contentText[4].textContent = siteContent['main-content']['vision-content']
 
 // Title Contacts
-let contactTitle = document.querySelector('.contact h4')
+const contactTitle = document.querySelector('.contact h4')
 contactTitle.textContent = siteContent['contact']['contact-h4']
 
 // Contact Text
-let contactData = document.querySelectorAll('.contact p')
+const contactData = document.querySelectorAll('.contact p')
 contactData[0].textContent = siteContent['contact']['address']
 contactData[1].textContent = siteContent['contact']['phone']
 contactData[2].textContent = siteContent['contact']['email']
 
 // Footer
-let footer = document.querySelector('footer p')
+const footer = document.querySelector('footer p')
 footer.textContent = siteContent['footer']['copyright']
 
