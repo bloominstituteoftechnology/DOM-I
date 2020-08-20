@@ -56,9 +56,6 @@ nav[3].textContent = ("src", siteContent["nav"]["nav-item-4"]);
 nav[4].textContent = ("src", siteContent["nav"]["nav-item-5"]);
 nav[5].textContent = ("src", siteContent["nav"]["nav-item-6"]);
 
-let firstA = document.createElement('a');
-firstA.textContent = 'Hope It Works';
-nav.appendChild(firstA);
 
 //color change on Navigation elements
 for (i = 0; i < nav.length ; i++) {

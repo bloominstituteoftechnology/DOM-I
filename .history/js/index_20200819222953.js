@@ -56,14 +56,6 @@ nav[3].textContent = ("src", siteContent["nav"]["nav-item-4"]);
 nav[4].textContent = ("src", siteContent["nav"]["nav-item-5"]);
 nav[5].textContent = ("src", siteContent["nav"]["nav-item-6"]);
 
-let firstA = document.createElement('a');
-firstA.textContent = 'Hope It Works';
-nav.appendChild(firstA);
-
-//color change on Navigation elements
-for (i = 0; i < nav.length ; i++) {
-  nav[i].style.color = 'green';
-}
 
 let ctah1 = document.querySelector("div.cta-text > h1")
 ctah1.textContent = ("src", siteContent["cta"]["h1"]);
@@ -73,17 +65,6 @@ ctabutton.textContent = ("src", siteContent["cta"]["button"]);
 
 let h4 = document.querySelectorAll("div.text-content > h4");
 h4[0].textContent = ("src", siteContent["main-content"]["features-h4"]);
-h4[1].textContent = ("src", siteContent["main-content"]["about-h4"]);
-h4[2].textContent = ("src", siteContent["main-content"]["services-h4"]);
-h4[3].textContent = ("src", siteContent["main-content"]["product-h4"]);
-h4[4].textContent = ("src", siteContent["main-content"]["vision-h4"]);
-
-let mainP = document.querySelectorAll("div.text-content > p");
-mainP[0].textContent = ("src", siteContent["main-content"]["features-content"]);
-mainP[1].textContent = ("src", siteContent["main-content"]["about-content"]);
-mainP[2].textContent = ("src", siteContent["main-content"]["services-content"]);
-mainP[3].textContent = ("src", siteContent["main-content"]["product-content"]);
-mainP[4].textContent = ("src", siteContent["main-content"]["vision-content"]);
 
 
 let contacth4 = document.querySelector("section.contact > h4");
