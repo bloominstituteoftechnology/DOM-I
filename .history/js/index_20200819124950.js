@@ -38,38 +38,11 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"]);
+logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let navi = document.querySelectorAll("a");
+navi.textContent('yolo');
 
 let ctaimg = document.getElementById("cta-img");
-ctaimg.setAttribute('src', siteContent["cta"]["img-src"]);
-
-let midimg = document.getElementById("middle-img");
-midimg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
-
-let nav = document.querySelectorAll("nav > a");
-nav[0].textContent = ("src", siteContent["nav"]["nav-item-1"]);
-nav[1].textContent = ("src", siteContent["nav"]["nav-item-2"]);
-nav[2].textContent = ("src", siteContent["nav"]["nav-item-3"]);
-nav[3].textContent = ("src", siteContent["nav"]["nav-item-4"]);
-nav[4].textContent = ("src", siteContent["nav"]["nav-item-5"]);
-nav[5].textContent = ("src", siteContent["nav"]["nav-item-6"]);
-
-
-let ctah1 = document.querySelector("div.cta-text > h1")
-ctah1.textContent = ("src", siteContent["cta"]["h1"]);
-
-let ctabutton = document.querySelector("div.cta-text > button")
-ctabutton.textContent = ("src", siteContent["cta"]["button"]);
-
-let contacth4 = document.querySelector("section.contact > h4");
-contacth4.textContent = ("src", siteContent["contact"]["contact-h4"]);
-
-let contactP = document.querySelectorAll('section.contact > p');
-contactP[0].textContent = ("src", siteContent["contact"]["address"]);
-contactP[1].textContent = ("src", siteContent["contact"]["phone"]);
-contactP[2].textContent = ("src", siteContent["contact"]["email"]);
-
-let footer = document.querySelector("footer > p");
-footer.textContent = ('src', siteContent["footer"]["copyright"]);
+ctaimg.setAttribute('src', siteContent["cta"]["img-src"])

@@ -63,6 +63,11 @@ ctah1.textContent = ("src", siteContent["cta"]["h1"]);
 let ctabutton = document.querySelector("div.cta-text > button")
 ctabutton.textContent = ("src", siteContent["cta"]["button"]);
 
+let topconth4 = document.querySelectorAll("div.top-content > h4");
+topconth4[0].textContent = ("src", siteContent['main-content']["features-h4"])
+
+
+
 let contacth4 = document.querySelector("section.contact > h4");
 contacth4.textContent = ("src", siteContent["contact"]["contact-h4"]);
 

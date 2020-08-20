@@ -38,7 +38,6 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
@@ -63,13 +62,7 @@ ctah1.textContent = ("src", siteContent["cta"]["h1"]);
 let ctabutton = document.querySelector("div.cta-text > button")
 ctabutton.textContent = ("src", siteContent["cta"]["button"]);
 
-let contacth4 = document.querySelector("section.contact > h4");
-contacth4.textContent = ("src", siteContent["contact"]["contact-h4"]);
 
-let contactP = document.querySelectorAll('section.contact > p');
-contactP[0].textContent = ("src", siteContent["contact"]["address"]);
-contactP[1].textContent = ("src", siteContent["contact"]["phone"]);
-contactP[2].textContent = ("src", siteContent["contact"]["email"]);
 
-let footer = document.querySelector("footer > p");
-footer.textContent = ('src', siteContent["footer"]["copyright"]);
+// let contact = document.getElementsByTagName("footer").quer;
+// contact.setAttribute('src', siteContent["footer"]["copyright"]);
