@@ -59,12 +59,7 @@ nav[5].textContent = ("src", siteContent["nav"]["nav-item-6"]);
 let firstA = document.createElement('a');
 firstA.textContent = 'Hope It Works';
 firstA.style.color = "green";
-document.querySelector('nav').prepend(firstA);
-
-let lastA = document.createElement('a');
-lastA.textContent = "Last Element";
-lastA.style.color = "green";
-document.querySelector('nav').appendChild(lastA);
+document.querySelector('nav').prependChild(firstA);
 
 //color change on Navigation elements
 for (i = 0; i < nav.length ; i++) {
