@@ -76,7 +76,21 @@ aTags[4].innerText = "About"
 aTags[5].setAttribute('class', '.nav-item-6')
 aTags[5].innerText = "Contact"
 
-aTags.forEach(link => link.style.color ='grey')
+aTags.forEach(link => link.style.color ='green')
+
+const newATag1 = document.createElement('a')
+const mainNav = document.querySelector('nav')
+newATag1.innerText = 'Reviews'
+newATag1.href = '#'
+mainNav.prepend(newATag1)
+newATag1.style.color = 'green'
+
+const newATag2 = document.createElement('a')
+const mainNav2 = document.querySelector('nav')
+newATag2.innerText = 'Info'
+newATag2.href = '#'
+mainNav2.append(newATag2)
+newATag2.style.color = 'green'
 
 //image
 

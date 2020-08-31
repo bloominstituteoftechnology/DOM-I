@@ -1,0 +1,1 @@
+let msTens = document.querySelector('#msTens')
