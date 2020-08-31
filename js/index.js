@@ -82,10 +82,11 @@ nav7.href = '#';
 nav7.textContent = 'News';
 nav7.style.color = 'lightgreen';
 
-const nav8 = nav.appendChild(document.createElement('a'));
+const nav8 = document.createElement('a');
 nav8.href = '#';
-nav8.textContent = 'Hello World';
+nav8.innerHTML = 'Hello World';
 nav8.style.color = 'lightgreen';
+nav.prepend(nav8);
 
 // CTA SECTION
 // Selectors
