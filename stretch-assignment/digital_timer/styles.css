@@ -12,3 +12,8 @@ body {
 .redDigit {
   color: red;
 }
+button{
+
+  justify-content: center;
+  flex-direction: row;
+}
