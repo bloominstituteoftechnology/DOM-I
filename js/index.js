@@ -71,7 +71,7 @@ secondNav.style.color = "green"
 navAdd.prepend(secondNav)
 
 const headline = document.querySelector(".cta-text h1")
-headline.innerText = "DOM is Awesome"
+headline.innerHTML = "DOM <br> is <br> Awesome"
 
 const button = document.querySelector(".cta-text button")
 button.textContent = "Get Started"
@@ -102,7 +102,7 @@ contactH4.textContent = "Contact"
 
 const contactP = document.querySelectorAll('.contact p')
 
-contactP[0].textContent = "123 Way 456 Street Anywhere, USA"
+contactP[0].innerHTML = "123 Way 456 Street <br> Anywhere, USA"
 contactP[1].textContent = "1 (888) 888-8888"
 contactP[2].textContent = "sales@greatidea.io"
 
