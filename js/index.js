@@ -37,6 +37,44 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
+//Updates the images
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', 'img/logo.png');
+let headimage = document.getElementById("cta-img");
+headimage.setAttribute('src', 'img/header-img.png');
+let middleimg = document.getElementById("middle-img");
+middleimg.setAttribute('src', 'img/mid-page-accent.jpg');
+//updates the main header and button
+const mainheader = document.querySelector('h1');
+mainheader.textContent = 'DOM IS AWESOME'
+const bigbutton = document.querySelector('button');
+bigbutton.textContent = 'Get Started'
+//updates the h4s throughout the page
+const h4s = document.getElementsByTagName('h4');
+h4s[0].textContent = 'Features';
+h4s[1].textContent = 'About';
+h4s[2].textContent = 'Services';
+h4s[3].textContent = 'Product';
+h4s[4].textContent = 'vision';
+h4s[5].textContent = 'contact';
+//updates the paragraphs
+const theipsums = document.getElementsByTagName('p');
+theipsums[0].textContent = 'Metrics investor non-disclosure agreement lean startup handshake branding innovator supply chain network effects scrum project disruptive angel investor gamification growth hacking. Twitter pivot lean startup technology interaction design MVP validation venture angel investor crowdfunding seed money android gamification.';
+theipsums[1].textContent = 'Metrics investor non-disclosure agreement lean startup handshake branding innovator supply chain network effects scrum project disruptive angel investor gamification growth hacking. Twitter pivot lean startup technology interaction design MVP validation venture angel investor crowdfunding seed money android gamification.';
+theipsums[2].textContent = 'Metrics investor non-disclosure agreement lean startup handshake branding innovator supply chain network effects scrum project disruptive angel investor gamification growth hacking. Twitter pivot lean startup technology interaction design MVP validation venture angel investor crowdfunding seed money android gamification.';
+theipsums[3].textContent = 'Metrics investor non-disclosure agreement lean startup handshake branding innovator supply chain network effects scrum project disruptive angel investor gamification growth hacking. Twitter pivot lean startup technology interaction design MVP validation venture angel investor crowdfunding seed money android gamification.';
+theipsums[4].textContent = 'Metrics investor non-disclosure agreement lean startup handshake branding innovator supply chain network effects scrum project disruptive angel investor gamification growth hacking. Twitter pivot lean startup technology interaction design MVP validation venture angel investor crowdfunding seed money android gamification.';
+theipsums[5].textContent = '123 way 456 street Somewhere, USA';
+theipsums[6].textContent = '1-888-888-8888';
+theipsums[7].textContent = 'Sales@greatidea.io';
+theipsums[8].textContent = 'Copywright Great Idea! 2018';
+//fixes the a tags
+const thelinks = document.getElementsByTagName('a');
+console.log(thelinks);
+thelinks[0].textContent = 'Services';
+thelinks[1].textContent = 'Product';
+thelinks[2].textContent = 'Vision';
+thelinks[3].textContent = 'Features';
+thelinks[4].textContent = 'About';
+thelinks[5].textContent = 'Contact';
+
