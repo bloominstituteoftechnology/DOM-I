@@ -37,15 +37,81 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
+// Example: Update ALL IMAGES ON THE WEBPAGE
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+let circle = document.getElementById("cta-img");
+circle.setAttribute('src', siteContent["cta"]["img-src"])
+
+// general website section selectors
 const header = document.querySelector('header')
-const nav = document.querySelector('nav')
-const cta = document.querySelector('cta')
-const maincontent = document.querySelector('main-content')
-const contact = document.querySelector('contact')
+
+const contact = document.querySelector('#contact')
 const footer = document.querySelector('footer')
+
+//Navigation menu item selectors
+const nav = document.querySelector('nav');
+const nav1 = nav.querySelector('a:nth-of-type(1)');
+const nav2 = nav.querySelector('a:nth-of-type(2)');
+const nav3 = nav.querySelector('a:nth-of-type(3)');
+const nav4 = nav.querySelector('a:nth-of-type(4)');
+const nav5 = nav.querySelector('a:nth-of-type(5)');
+const nav6 = nav.querySelector('a:nth-of-type(6)');
+
+// Insert corrrect text into the nav
+nav1.textContent = siteContent['nav']['nav-item-1'];
+nav2.textContent = siteContent['nav']['nav-item-2'];
+nav3.textContent = siteContent['nav']['nav-item-3'];
+nav4.textContent = siteContent['nav']['nav-item-4'];
+nav5.textContent = siteContent['nav']['nav-item-5'];
+nav6.textContent = siteContent['nav']['nav-item-6'];
+
+
+//Change the text color to green
+nav1.style.color = 'lightgreen';
+nav2.style.color = 'lightgreen';
+nav3.style.color = 'lightgreen';
+nav4.style.color = 'lightgreen';
+nav5.style.color = 'lightgreen';
+nav6.style.color = 'lightgreen';
+
+// Adding additional new items into the nav
+
+const nav7 = nav.appendChild(document.createElement('a'));
+nav7.href = '#';
+nav7.textContent = 'News';
+nav7.style.color = 'lightgreen';
+
+const nav8 = nav.prepend(document.createElement('a'));
+nav8.href = '#';
+nav8.textContent = 'Hello World';
+nav8.style.color = 'lightgreen';
+
+// Insert content for CTA Section
+const cta = document.querySelector('#cta');
+const ctatext = cta.querySelector('.cta-text');
+const h1 = ctatext.querySelector('h1:nth-of-type(1)');
+const button = ctatext.querySelector('button:nth-of-type(1)');
+
+h1.textContent = siteContent['cta']['h1'];
+button.textContent = siteContent['cta']['button'];
+
+
+
+// Main Content Section
+
+const maincontent = document.querySelector('#main-content')
+
+
+
+
+
+
+
+
+
+
+
 
 
