@@ -49,6 +49,25 @@ nav[3].textContent = "Features"
 nav[4].textContent = "About"
 nav[5].textContent = "Contact"
 
+nav[0].style.color = "green"
+nav[1].style.color = "green"
+nav[2].style.color = "green"
+nav[3].style.color = "green"
+nav[4].style.color = "green"
+nav[5].style.color = "green"
+
+// Add new item in nav bar
+const navAdd = document.querySelector('nav');
+const newNav = document.createElement('a');
+newNav.href = '#';
+newNav.textContent = 'Company'
+navAdd.appendChild(newNav);
+
+const secondNav = document.createElement('a')
+secondNav.href = '#'
+secondNav.textContent = 'Testing'
+navAdd.prepend(secondNav)
+
 const headline = document.querySelector(".cta-text h1")
 headline.innerText = "DOM is Awesome"
 
@@ -72,7 +91,7 @@ mainPs[2].textContent = "Services content elementum magna eros, ac posuere elvit
 mainPs[3].textContent = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
 mainPs[4].textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
 
-const middleImage = document.querySelector(".middle-img")
+const middleImage = document.querySelector("#middle-img")
 middleImage.setAttribute("src", "img/mid-page-accent.jpg")
 
 const contactH4 = document.querySelector('.contact h4')
