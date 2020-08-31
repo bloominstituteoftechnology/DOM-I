@@ -83,5 +83,14 @@ mainContentText[2].textContent= (siteContent['main-content']['services-content']
 mainContentText[3].textContent= (siteContent['main-content']['product-content'])
 mainContentText[4].textContent= (siteContent['main-content']['vision-content'])
 
+//Contact 
+const contactInfo = document.querySelector('.contact h4');
+contactInfo.textContent = (siteContent['contact']['contact-h4'])
 
+const contactInfoText = document.querySelectorAll('.contact p');
+contactInfoText[0].textContent= (siteContent['contact']['address'])
+contactInfoText[1].textContent= (siteContent['contact']['phone'])
+contactInfoText[2].textContent= (siteContent['contact']['email'])
 
+const copyrightFooter = document.querySelector('footer');
+copyrightFooter.textContent = (siteContent['footer']['copyright'])
