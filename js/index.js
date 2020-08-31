@@ -44,7 +44,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
 // Implement Nav Links
-const allNavLinks = document.links;
+let allNavLinks = document.links;
 // console.log(siteContent.nav["nav-item-1"])
 
 for (let i=1; i < 6; i++){
@@ -108,7 +108,6 @@ mainContentImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]
 // Implement Contact
 const contacth4 = document.querySelector('.contact h4');
 contacth4.textContent = siteContent['contact']['contact-h4'];
-console.log(contacth4.textContent);
 
 //const contactP = document.querySelectorAll('.contact p');
 const contactP1 = document.querySelector('.contact p');
@@ -123,3 +122,26 @@ contactP3.textContent = siteContent['contact']['email'];
 // Implement Footer
 const footerP = document.querySelector('footer'); // only one element in the footer
 footerP.textContent = siteContent['footer']['copyright'];
+
+
+
+//Adding Content
+
+//Turning Nav Links to Green
+for (let i = 0; i < allNavLinks.length; i++) {
+  allNavLinks[i].style.color = 'green'
+}
+
+//Add 2 items to navigation
+const rightLink = document.createElement("a");
+rightLink.setAttribute('href', "#Righty")
+rightLink.textContent = " -----> RightyLink";
+rightLink.style.color = 'darkred';
+allNavLinks[5].appendChild(rightLink); // append to last node in allNavLinks
+// Is there an easy way to add spacing between the last node and this one??
+
+const leftLink = document.createElement("a");
+leftLink.setAttribute('href', "#Lefty")
+leftLink.textContent = "LeftyLink <----- ";
+leftLink.style.color = 'darkred';
+allNavLinks[0].prepend(leftLink);
