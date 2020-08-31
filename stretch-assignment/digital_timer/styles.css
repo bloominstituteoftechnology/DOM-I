@@ -1,5 +1,6 @@
 body {
   display: flex;
+flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -7,6 +8,23 @@ body {
 .digit {
   display: inline-block;
   font-size: 80px;
+  font-family: 'Roboto', sans-serif;
+}
+button {
+  align-items: center;
+  color: white;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 20px;
+  background: black;
+  border-radius: 10%;
+
+}
+.startB {
+ margin: 5px;
+}
+.stopB
+{
+  margin: 5px;
 }
 
 .redDigit {
