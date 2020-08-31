@@ -57,15 +57,17 @@ nav[4].style.color = "green"
 nav[5].style.color = "green"
 
 // Add new item in nav bar
-const navAdd = document.querySelector('nav');
-const newNav = document.createElement('a');
-newNav.href = '#';
-newNav.textContent = 'Company'
+const navAdd = document.querySelector("nav");
+const newNav = document.createElement("a");
+newNav.href = "#"
+newNav.textContent = "Company"
+newNav.style.color = "green"
 navAdd.appendChild(newNav);
 
-const secondNav = document.createElement('a')
-secondNav.href = '#'
-secondNav.textContent = 'Testing'
+const secondNav = document.createElement("a")
+secondNav.href = "#"
+secondNav.textContent = "Testing"
+secondNav.style.color = "green"
 navAdd.prepend(secondNav)
 
 const headline = document.querySelector(".cta-text h1")
