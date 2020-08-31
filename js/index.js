@@ -66,6 +66,22 @@ navMenu[3].textContent = (siteContent['nav']['nav-item-4'])
 navMenu[4].textContent = (siteContent['nav']['nav-item-5'])
 navMenu[5].textContent = (siteContent['nav']['nav-item-6'])
 
+const navMenuColor = document.querySelectorAll('nav a');
+navMenuColor.forEach (link => {
+  link.style.color = 'green'
+})
+
+const navElement = document.querySelector('nav');
+const newNavElement = document.createElement('a');
+newNavElement.textContent = "Welcome"
+newNavElement.style.color = "green"
+navElement.appendChild(newNavElement);
+
+const newNavElement2 = document.createElement('a');
+newNavElement2.textContent = "The Team"
+newNavElement2.style.color = 'green'
+navElement.prepend(newNavElement2);
+
 //Middle Content
 
 const h4Headers =  document.querySelectorAll('.main-content h4');
