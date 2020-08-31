@@ -38,5 +38,37 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+
+//Images
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let headerImage = document.getElementById("cta-img");
+headerImage.setAttribute('src', siteContent['cta']["img-src"])
+
+let midPageImg = document.getElementById('middle-img');
+midPageImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+//Title Content
+
+const titleText = document.querySelector('h1');
+titleText.textContent = (siteContent['cta']['h1'])
+
+const buttonText = document.querySelector('button');
+buttonText.textContent = (siteContent['cta']['button'])
+
+
+const navMenu = document.querySelectorAll('nav a');
+navMenu[1].textContent = (siteContent['nav']['nav-item-1'])
+navMenu[2].textContent = (siteContent['nav']['nav-item-2'])
+navMenu[3].textContent = (siteContent['nav']['nav-item-3'])
+navMenu[4].textContent = (siteContent['nav']['nav-item-4'])
+navMenu[5].textContent = (siteContent['nav']['nav-item-5'])
+navMenu[6].textContent = (siteContent['nav']['nav-item-6'])
+
+//Middle Content
+
+
+
+
+
