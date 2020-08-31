@@ -145,3 +145,15 @@ leftLink.setAttribute('href', "#Lefty")
 leftLink.textContent = "LeftyLink <----- ";
 leftLink.style.color = 'darkred';
 allNavLinks[0].prepend(leftLink);
+
+// STRETCH - Update Styles
+for (let i = 0; i < allNavLinks.length; i++) {
+  allNavLinks[i].style.fontWeight = 'bold'
+}
+
+const mainContent_p = document.querySelectorAll('.main-content p');
+for (let i = 0; i < mainContent_p.length; i++) {
+  mainContent_p[i].style.fontStyle = 'oblique'
+  mainContent_p[i].style.padding = '5%';
+  mainContent_p[i].style.border = 'thin dotted slategray'
+}
