@@ -40,3 +40,48 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// Nav Section
+let navItems = document.querySelectorAll('a').forEach((item, i)=>item.textContent = siteContent['nav'][`nav-item-${i}`])
+
+// Call To Action Section
+let ctaText = document.querySelector('.cta-text')
+ctaText.children[0].textContent = siteContent['cta']['h1']
+ctaText.children[1].textContent = siteContent['cta']['button']
+
+let ctaImg = document.querySelector('#cta-img').setAttribute('src', siteContent['cta']['img-src'])
+
+// Main Content Section
+let mainH4 = document.querySelectorAll('.main-content h4')
+let mainP = document.querySelectorAll('.main-content p')
+let middleImg = document.querySelector('.middle-img')
+
+const mainText = (index, item)=>{
+  let newH4=mainH4[index].textContent = siteContent['main-content'][`${item}-h4`]
+  let newP=mainP[index].textContent = siteContent['main-content'][`${item}-content`]
+  return {newH4, newP}
+}
+
+// Top Content
+mainText(0, 'features')
+mainText(1, 'about')
+
+// Middle Image
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+
+// Bottom Content
+mainText(2, 'services')
+mainText(3, 'product')
+mainText(4, 'vision')
+
+// Contacts Section
+let contacts = document.querySelector('.contact').children
+
+contacts[0].textContent = siteContent['contact']['contact-h4']
+contacts[1].textContent = siteContent['contact']['address']
+contacts[2].textContent = siteContent['contact']['phone']
+contacts[3].textContent = siteContent['contact']['email']
+
+// Footer Section
+let footer = document.querySelector('footer p').textContent = siteContent['footer']['copyright']
