@@ -40,3 +40,10 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let contact = document.querySelector('.contact')
+let contactH4 = contact.nextElementSibling
+
+
+let footer = document.querySelector('footer')
+footer.textContent = 'Copyright Great Idea! 2020'
