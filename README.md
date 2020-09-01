@@ -16,31 +16,31 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 
 **Follow these steps to set up and work on your project:**
 
-* [ ] Create a forked copy of this project.
-* [ ] Add your project manager as collaborator on Github.
-* [ ] Clone your OWN version of the repository (Not Lambda's by mistake!).
-* [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-* [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-* [ ] Push commits: git push origin `<firstName-lastName>`.
+* [X] Create a forked copy of this project.
+* [X] Add your project manager as collaborator on Github.
+* [X] Clone your OWN version of the repository (Not Lambda's by mistake!).
+* [X] Create a new branch: git checkout -b `<firstName-lastName>`.
+* [X] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+* [X] Push commits: git push origin `<firstName-lastName>`.
 
 ### Task 2a: MVP
 
 #### Create selectors to point your data into elements
 
-* [ ] Create selectors by using any of the DOM element's methods
-* [ ] Note that IDs have been used on all images. Use the IDs to update src path content
+* [X] Create selectors by using any of the DOM element's methods
+* [X] Note that IDs have been used on all images. Use the IDs to update src path content
 
 #### Update the HTML with the JSON data
 
-* [ ] Remember, NO direct updating of the HTML source is allowed.
-* [ ] Using your selectors, update the content to match the example file.
-* [ ] Remember to update the src attributes on images
+* [X] Remember, NO direct updating of the HTML source is allowed.
+* [X] Using your selectors, update the content to match the example file.
+* [X] Remember to update the src attributes on images
 
 #### Add new content
 
-* [ ] Change the color of the navigation text to be green.
-* [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
-* [ ] Check your work by looking at the [original html](original.html) in the browser
+* [X] Change the color of the navigation text to be green.
+* [X] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
+* [X] Check your work by looking at the [original html](original.html) in the browser
 
 ### Task 2b: Exit Ticket
 
