@@ -104,7 +104,7 @@ navLink3.style.color = 'green'
 navLink4.style.color = 'green'
 navLink5.style.color = 'green'
 navLink6.style.color = 'green'
-//looking back I feel that using .getElementsByTagName would be well used here as well, and would save me several lines of code in changing the link colors
+//looking back I feel that using .getElementsByTagName would be well used here as well, and would save me several lines of code in changing the link colors. Annotating instead of rewriting code because I am late turning in my project.
 
 //.prepend
 const addNav1 = document.createElement('a')
