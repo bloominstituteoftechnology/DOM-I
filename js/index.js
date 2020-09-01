@@ -96,3 +96,27 @@ p[7].textContent = siteContent['contact']['email']
 
 //footer
 p[8].textContent = siteContent['footer']['copyright']
+
+//change nav text to green
+navLink1.style.color = 'green'
+navLink2.style.color = 'green'
+navLink3.style.color = 'green'
+navLink4.style.color = 'green'
+navLink5.style.color = 'green'
+navLink6.style.color = 'green'
+//looking back I feel that using .getElementsByTagName would be well used here as well, and would save me several lines of code in changing the link colors
+
+//.prepend
+const addNav1 = document.createElement('a')
+addNav1.textContent = 'Home'
+addNav1.href = '#'
+addNav1.style.color = 'green'
+navBar.prepend(addNav1)
+
+//.appendChild
+const addNav2 = document.createElement('a')
+addNav2.textContent = 'Blog'
+addNav2.href = '#'
+addNav2.style.color = 'green'
+navBar.appendChild(addNav2)
+
