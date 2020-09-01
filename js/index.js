@@ -71,11 +71,34 @@ theipsums[7].textContent = siteContent['contact']['email'];
 theipsums[8].textContent = siteContent['footer']['copyright'];
 //fixes the a tags
 const thelinks = document.getElementsByTagName('a');
-console.log(thelinks);
 thelinks[0].textContent = siteContent['nav']['nav-item-1'];
 thelinks[1].textContent = siteContent['nav']['nav-item-2'];
 thelinks[2].textContent = siteContent['nav']['nav-item-3'];
 thelinks[3].textContent = siteContent['nav']['nav-item-4'];
 thelinks[4].textContent = siteContent['nav']['nav-item-5'];
 thelinks[5].textContent = siteContent['nav']['nav-item-6'];
+//add new items to the nav
+// const navbar = document.querySelector('.container nav');
+// const addelement = document.createElement('a');
+// addelement.href = '#'
+// navbar.appendChild(addelement);
+// addelement.textcontent = 'please work';
+// console.log(navbar);
+const navBar = document.querySelector(".container nav");
+const addElement = document.createElement("a");
+addElement.href = "#";
+addElement.textContent = "It works!";
+navBar.appendChild(addElement);
+console.log(navBar);
+const addElement2 = document.createElement("a");
+addElement2.href = "#";
+addElement2.textContent = "not a scam link";
+navBar.prepend(addElement2);
+console.log(navBar);
 
+
+//changing the nav color to green
+const navchange = document.getElementsByTagName('a');
+for(let i = 0; i < navchange.length;i++){
+  navchange[i].style.color = 'green';
+}

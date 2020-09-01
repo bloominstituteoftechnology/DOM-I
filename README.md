@@ -32,15 +32,15 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 
 #### Update the HTML with the JSON data
 
-* [ ] Remember, NO direct updating of the HTML source is allowed.
-* [ ] Using your selectors, update the content to match the example file.
-* [ ] Remember to update the src attributes on images
+* [x] Remember, NO direct updating of the HTML source is allowed.
+* [x] Using your selectors, update the content to match the example file.
+* [x] Remember to update the src attributes on images
 
 #### Add new content
 
-* [ ] Change the color of the navigation text to be green.
-* [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
-* [ ] Check your work by looking at the [original html](original.html) in the browser
+* [x] Change the color of the navigation text to be green.
+* [x] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
+* [x] Check your work by looking at the [original html](original.html) in the browser
 
 ### Task 2b: Exit Ticket
 
