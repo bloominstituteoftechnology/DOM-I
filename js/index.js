@@ -11,7 +11,7 @@ const siteContent = {
   "cta": {
     "h1": "DOM Is Awesome",
     "button": "Get Started",
-    "img-src": "img/header-img.png"
+    "img-src": "file:///Users/austinlittlefield/DOM-I/img/logo.png"
   },
   "main-content": {
     "features-h4":"Features",
@@ -40,3 +40,13 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let nav = document.querySelector("a");
+nav.textContent = siteContent["nav"]["nav-item-1"]
+
+
+
+
+// const title = document.getElementById("title");
+// const text = document.createTextNode("Great Idea")
+// title.append(text);
