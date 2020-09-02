@@ -54,9 +54,11 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 logo.src = "img/logo.png"
 
 let codeSnippet = document.getElementById("cta-img");
+codeSnippet.setAttribute('src', siteContent["cta"]["img-src"])
 codeSnippet.src = "img/header-img.png"
 
 let middleImage = document.getElementById("middle-img");
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 middleImage.src = "img/mid-page-accent.jpg"
 
 const navItem1 = document.querySelector("a")
