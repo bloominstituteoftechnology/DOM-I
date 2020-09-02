@@ -45,10 +45,15 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 // navI.textContent = siteContent["nav"]["nav-item-1"];
 
 var x = document.getElementById("navButtons").querySelectorAll("a");
-
-let i ;
-for (i = 0; i < x.length; i++) {
-  let g = i+1;
-  x[i].textContent = siteContent["nav"]["nav-item-"+g];
-} 
+/// /Almost professinoal way of it
+// let i ;
+// for (i = 0; i < x.length; i++) {
+//   let g = i+1;
+//   x[i].textContent = siteContent["nav"]["nav-item-"+g];
+// } 
+// The interview question answer for applying a json object to a nav link
+x.forEach(function(e,y){
+  y = y+ 1;
+  return e.textContent = siteContent["nav"]["nav-item-"+y];
+})
 
