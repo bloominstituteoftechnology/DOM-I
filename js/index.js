@@ -54,6 +54,11 @@ var x = document.getElementById("navButtons").querySelectorAll("a");
 // The interview question answer for applying a json object to a nav link
 x.forEach(function(e,y){
   y = y+ 1;
-  return e.textContent = siteContent["nav"]["nav-item-"+y];
-})
+   e.textContent = siteContent["nav"]["nav-item-"+y];
+   e.style.color = "green";
+});
+
+// Now add the two new items to the nav ssystem
+
+
 
