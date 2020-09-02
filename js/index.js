@@ -146,3 +146,16 @@ const parent = document.querySelector("nav")
 parent.appendChild(appendContent)
 
 parent.prepend(appendContent)
+
+/*Stretch*/
+
+const changes = document.querySelectorAll("p")
+changes.forEach(element => {
+  element.style.fontStyle = "italic"
+  element.style.color = "purple"
+})
+
+const changes2 = document.querySelectorAll("h1")
+changes2.forEach(element => {
+  element.style.color = "#14699C"
+})
