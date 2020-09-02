@@ -132,3 +132,15 @@ pContact3.textContent = "sales@greatidea.io"
 
 const footerText = document.querySelector("footer p")
 footerText.textContent = "Copyright Great Idea! 2018"
+
+const colorChange = document.querySelectorAll("nav a")
+colorChange.forEach(element => {
+  element.style.color = "green"
+})
+
+const appendContent = document.createElement("a")
+appendContent.textContent = "My Page!"
+const parent = document.querySelector("nav")
+parent.appendChild(appendContent)
+
+parent.prepend(appendContent)
