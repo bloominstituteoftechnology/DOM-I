@@ -159,3 +159,8 @@ const changes2 = document.querySelectorAll("h1")
 changes2.forEach(element => {
   element.style.color = "#14699C"
 })
+
+buttonText.addEventListener("click", myClick => {
+  h1Text.textContent = "Let's\r\n"
+  h1Text.textContent += "Go!"
+})
