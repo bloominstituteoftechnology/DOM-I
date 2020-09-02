@@ -60,5 +60,16 @@ x.forEach(function(e,y){
 
 // Now add the two new items to the nav ssystem
 
-
+const parent = document.querySelector("nav");
+const child = document.querySelector("nav");
+const newContent  = document.createElement("a");
+newContent.textContent = "New Stuff";
+newContent.style.color = "green";
+const newContentChild  = document.createElement("a");
+newContentChild.textContent = "Old Stuff";
+newContentChild.style.color = "green";
+// Places at the begginning
+parent.prepend(newContent);
+// Places at the end
+child.appendChild(newContentChild);
 
