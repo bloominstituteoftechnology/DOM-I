@@ -81,3 +81,28 @@ parent.prepend(newContent);
 // Places at the end
 child.appendChild(newContentChild);
 
+
+
+// Stretch
+
+let stretchit = {"button":"", "h1":"",
+    "h4s":{
+      "h4-1":"",
+      "h4-2":""
+    }
+     };
+stretchit["h1"] = document.querySelector("h1");
+stretchit["h1"].textContent = "Dom is Awesome!";
+
+stretchit["button"] = document.querySelector("button");
+stretchit["button"].textContent = "Get Started"; 
+
+stretchit["h4s"] = document.querySelectorAll(".top-content > .text-content");
+stretchit["h4s"]["h4-1"] = document.querySelector("h4");
+stretchit["h4s"]["h4-1"].textContent = "FEATURES";
+// stretchit["h4s"][1] = document.querySelector("h4");
+// stretchit["h4s"]["h4-1"].appendChild("h4");
+// stretchit["h4s"]["h4-1"].textContent = "About"
+// stretchit["h4s"]["h4-1"].appendChild(stretchit["h4s"]["h4-2"]);
+
+console.log(stretchit);
