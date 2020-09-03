@@ -49,4 +49,19 @@ logo.setAttribute("src", siteContent["nav"]["img-src"]);
 let links = document.querySelectorAll("a");
 console.log("links", links);
 
-links[0].textContent(["nav"][0]);
+links[0].textContent = siteContent["nav"]["nav-item-1"];
+links[1].textContent = siteContent["nav"]["nav-item-2"];
+links[2].textContent = siteContent["nav"]["nav-item-3"];
+links[3].textContent = siteContent["nav"]["nav-item-4"];
+links[4].textContent = siteContent["nav"]["nav-item-5"];
+links[5].textContent = siteContent["nav"]["nav-item-6"];
+
+let buttonContent = document.querySelector("button");
+
+buttonContent.textContent = siteContent["cta"]["button"];
+
+let ctaImg = document.getElementById("cta-img");
+ctaImg.src = "img/header-img.png";
+
+let headerOne = document.querySelector("h1");
+headerOne.innerHTML = "Dom<br>Is<br>Awesome";
