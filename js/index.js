@@ -91,6 +91,5 @@ contactParagraph[2].textContent = siteContent["contact"]["email"]
 let footer = document.querySelector("footer p")
 footer.textContent = siteContent["footer"]["copyright"]
 
-// const title = document.getElementById("title");
-// const text = document.createTextNode("Great Idea")
-// title.append(text);
+let title = document.querySelector("title");
+title.textContent = "Great Idea!"
