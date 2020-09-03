@@ -91,3 +91,23 @@ middleImage.src = "img/mid-page-accent.jpg";
 
 let footerContent = document.querySelector("footer p");
 footerContent.textContent = siteContent["footer"]["copyright"];
+
+links.forEach((element) => {
+  element.style.color = "green";
+});
+
+const newNav = document.createElement("a");
+newNav.textContent = "Team";
+
+const parent = document.querySelector("nav");
+parent.prepend(newNav);
+
+newNav.style.color = "green";
+
+const newNav2 = document.createElement("a");
+newNav2.textContent = "Projects";
+
+const parent2 = document.querySelector("nav");
+parent2.appendChild(newNav2);
+
+newNav2.style.color = "green";
