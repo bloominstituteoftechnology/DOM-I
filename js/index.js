@@ -50,7 +50,7 @@ atags[2].textContent=siteContent.nav['nav-item-3']
 atags[3].textContent=siteContent.nav['nav-item-4']
 atags[4].textContent=siteContent.nav["nav-item-5"]
 atags[5].textContent=siteContent.nav["nav-item-6"]
- const cta1 =document.querySelector(".cta")
+const cta1 =document.querySelector(".cta")
 const ctaText =cta1.querySelector('h1')
 ctaText.textContent=siteContent.cta.h1;
 ctaText.style.color="red";
@@ -65,7 +65,6 @@ atags[5].style.color="red";
 //   element.stlye.color="red"
 // })
 
-const bnt = cta1.querySelector('button')
 
  const bnt = cta1.querySelector('button')
 bnt.textContent=siteContent.cta["button"];
