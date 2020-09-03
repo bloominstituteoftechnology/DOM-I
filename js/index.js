@@ -83,6 +83,13 @@ let contactHeaderFour = document.querySelector(".contact h4");
 contactHeaderFour.textContent = siteContent["contact"]["contact-h4"]
 
 
+let contactParagraph = document.querySelectorAll(".contact p");
+contactParagraph[0].textContent = siteContent["contact"]["address"]
+contactParagraph[1].textContent = siteContent["contact"]["phone"]
+contactParagraph[2].textContent = siteContent["contact"]["email"]
+
+let footer = document.querySelector("footer p")
+footer.textContent = siteContent["footer"]["copyright"]
 
 // const title = document.getElementById("title");
 // const text = document.createTextNode("Great Idea")
