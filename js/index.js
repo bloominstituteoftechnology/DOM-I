@@ -65,3 +65,29 @@ ctaImg.src = "img/header-img.png";
 
 let headerOne = document.querySelector("h1");
 headerOne.innerHTML = "Dom<br>Is<br>Awesome";
+
+let headerFour = document.getElementsByTagName("h4");
+console.log(headerFour);
+headerFour[0].innerHTML = siteContent["main-content"]["features-h4"];
+headerFour[1].innerHTML = siteContent["main-content"]["about-h4"];
+headerFour[2].innerHTML = siteContent["main-content"]["services-h4"];
+headerFour[3].innerHTML = siteContent["main-content"]["product-h4"];
+headerFour[4].innerHTML = siteContent["main-content"]["vision-h4"];
+headerFour[5].innerHTML = siteContent["contact"]["contact-h4"];
+
+let pTags = document.getElementsByTagName("p");
+console.log(pTags);
+pTags[0].innerHTML = siteContent["main-content"]["features-content"];
+pTags[1].innerHTML = siteContent["main-content"]["about-content"];
+pTags[2].innerHTML = siteContent["main-content"]["services-content"];
+pTags[3].innerHTML = siteContent["main-content"]["product-content"];
+pTags[4].innerHTML = siteContent["main-content"]["vision-content"];
+pTags[5].innerHTML = siteContent["contact"]["address"];
+pTags[6].innerHTML = siteContent["contact"]["phone"];
+pTags[7].innerHTML = siteContent["contact"]["email"];
+
+let middleImage = document.getElementById("middle-img");
+middleImage.src = "img/mid-page-accent.jpg";
+
+let footerContent = document.querySelector("footer p");
+footerContent.textContent = siteContent["footer"]["copyright"];
