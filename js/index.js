@@ -116,7 +116,7 @@ const h4Text5 = document.querySelectorAll("h4")[4]
 h4Text5.textContent = "Vision"
 
 const pText5 = document.querySelectorAll("p")[4]
-pText5.textContent = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+pText5.textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
 
 const contact = document.querySelector(".contact h4")
 contact.textContent = "Contact"
@@ -141,11 +141,14 @@ colorChange.forEach(element => {
 })
 
 const appendContent = document.createElement("a")
+const appendContent2 = document.createElement("a")
 appendContent.textContent = "My Page!"
+appendContent2.textContent = "My Other Page!"
+
 const parent = document.querySelector("nav")
 parent.appendChild(appendContent)
 
-parent.prepend(appendContent)
+parent.prepend(appendContent2)
 
 /*Stretch*/
 
