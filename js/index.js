@@ -47,6 +47,7 @@ cta.setAttribute('src', siteContent["cta"]["img-src"])
 let middleImage = document.getElementById("middle-img");
 middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
+// Nav Bar
 
 let nav = document.querySelectorAll('a');
 nav[0].textContent = siteContent["nav"]["nav-item-1"]
@@ -56,13 +57,15 @@ nav[3].textContent = siteContent["nav"]["nav-item-4"]
 nav[4].textContent = siteContent["nav"]["nav-item-5"]
 nav[5].textContent = siteContent["nav"]["nav-item-6"]
 
-
+//header tag
 let headertag = document.querySelector('h1');
 headertag.textContent = siteContent["cta"]["h1"]
 
+//button
 let button = document.querySelector('button');
 button.textContent = siteContent["cta"]["button"]
 
+//header four tags
 let headerFour = document.querySelectorAll('h4');
 headerFour[0].textContent = siteContent["main-content"]["features-h4"]
 headerFour[1].textContent = siteContent["main-content"]["about-h4"]
@@ -70,8 +73,8 @@ headerFour[2].textContent = siteContent["main-content"]["services-h4"]
 headerFour[3].textContent = siteContent["main-content"]["product-h4"]
 headerFour[4].textContent = siteContent["main-content"]["vision-h4"]
 
-//text align left with css
 
+//paragraphs under h4 tags
 let paragraph = document.querySelectorAll('p');
 paragraph[0].textContent = siteContent["main-content"]["features-content"]
 paragraph[1].textContent = siteContent["main-content"]["about-content"]
@@ -79,17 +82,22 @@ paragraph[2].textContent = siteContent["main-content"]["services-content"]
 paragraph[3].textContent = siteContent["main-content"]["product-content"]
 paragraph[4].textContent = siteContent["main-content"]["vision-content"]
 
+
+//Contact h4 tags
 let contactHeaderFour = document.querySelector(".contact h4");
 contactHeaderFour.textContent = siteContent["contact"]["contact-h4"]
 
-
+// contact paragraph tags
 let contactParagraph = document.querySelectorAll(".contact p");
 contactParagraph[0].textContent = siteContent["contact"]["address"]
 contactParagraph[1].textContent = siteContent["contact"]["phone"]
 contactParagraph[2].textContent = siteContent["contact"]["email"]
 
+// Footer
 let footer = document.querySelector("footer p")
 footer.textContent = siteContent["footer"]["copyright"]
 
+
+//title
 let title = document.querySelector("title");
 title.textContent = "Great Idea!"
