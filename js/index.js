@@ -1,4 +1,4 @@
-const siteContent = {
+ const siteContent = {
   "nav": {
     "nav-item-1": "Services",
     "nav-item-2": "Product",
@@ -63,11 +63,11 @@ const mainImg = document.querySelector('#cta-img')
 mainImg.src = siteContent.cta["img-src"]
 
 const titleContent = document.querySelectorAll('.text-content h4')
-titleContent[0].textContent = 'Feature'
-titleContent[1].textContent = 'About'
-titleContent[2].textContent = 'Services'
-titleContent[3].textContent = 'Product'
-titleContent[4].textContent = 'Vision'
+titleContent[0].textContent = siteContent["main-content"]['features-h4']
+titleContent[1].textContent = siteContent["main-content"]['about-h4']
+titleContent[2].textContent = siteContent["main-content"]['services-h4']
+titleContent[3].textContent = siteContent["main-content"]['products-h4']
+titleContent[4].textContent = siteContent["main-content"]['vision-h4']
 
 const pContent = document.querySelectorAll('p')
 pContent[0].textContent = siteContent["main-content"]["features-content"]
@@ -80,21 +80,33 @@ const midImg = document.querySelector('.middle-img')
 midImg.src = siteContent["main-content"]["middle-img-src"]
 
 const footerMain = document.querySelector('.contact h4')
-footerMain.textContent = 'Contact'
+footerMain.textContent = siteContent["contact"]["contact-h4"]
+
 
 const footerInfo = document.querySelectorAll('.contact p')
-footerInfo[0].textContent = "123 Way 456 Street Somewhere, USA"
-footerInfo[1].textContent = "footerInfo[0].textContent"
-footerInfo[2].textContent = "sales@greatidea.io"
+footerInfo[0].textContent = siteContent["contact"]["address"]
+footerInfo[1].textContent = siteContent["contact"]["phone"]
+footerInfo[2].textContent =siteContent["contact"]["email"]
 
 const footerCopyRight = document.querySelector('footer p')
 footerCopyRight.textContent = "Copyright Great Idea! 2018"
 
-// new content
 
-//const newContent = document.createElement('a')
-//newContent.textContent = 'Material' 
+//adding itmes to nav
 
-//const newContent = document.createElement('a')
-//newContent.textContent = 'Prices' 
+const newNav = document.createElement('a');
+newNav.textContent = "Other"
+const parentElement = document.querySelector('nav');
+parentElement.append(newNav)
 
+const newNav2 = document.createElement('a');
+newNav2.textContent = "Hello"
+parentElement.prepend(newNav2)
+
+//styling
+navItems.forEach( element => {
+  element.style.color = "green"
+})
+
+newNav.setAttribute("style", "color: green;");
+newNav2.setAttribute("style", "color: green;");
