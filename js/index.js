@@ -41,7 +41,10 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4641ad7d65bb4feb527d8e19678aec28d06b6694
 const atags = document.querySelectorAll('nav a')
 
 atags[0].textContent=siteContent.nav["nav-item-1"]
@@ -53,6 +56,7 @@ atags[5].textContent=siteContent.nav["nav-item-6"]
  const cta1 =document.querySelector(".cta")
 const ctaText =cta1.querySelector('h1')
 ctaText.textContent=siteContent.cta.h1;
+<<<<<<< HEAD
 ctaText.style.color="red";
 atags[0].style.color="blue";
 atags[1].style.color="red";
@@ -66,6 +70,10 @@ atags[5].style.color="red";
 // })
 
 const bnt = cta1.querySelector('button')
+=======
+
+ const bnt = cta1.querySelector('button')
+>>>>>>> 4641ad7d65bb4feb527d8e19678aec28d06b6694
 bnt.textContent=siteContent.cta["button"];
 
  let ctalogo = cta1.querySelector("#cta-img")
@@ -79,17 +87,29 @@ mainh4[1].textContent=siteContent["main-content"]["about-h4"]
 
 const mainpar = document.querySelectorAll(".top-content p")
 mainpar[0].textContent=siteContent["main-content"]["features-content"]
+<<<<<<< HEAD
 mainpar[0].style.color="blue";
 mainpar[1].textContent=siteContent["main-content"]["about-content"]
 mainpar[1].style.color="red";
+=======
+
+mainpar[1].textContent=siteContent["main-content"]["about-content"]
+
+>>>>>>> 4641ad7d65bb4feb527d8e19678aec28d06b6694
 let middleimdg = document.querySelector(".middle-img")
 middleimdg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 let bottomcontent = document.querySelectorAll(".bottom-content h4")
 bottomcontent[0].textContent=siteContent['main-content']['services-h4']
+<<<<<<< HEAD
 bottomcontent[0].style.color="red";
 bottomcontent[1].textContent=siteContent['main-content']['product-h4']
 bottomcontent[1].style.color="blue";
+=======
+
+bottomcontent[1].textContent=siteContent['main-content']['product-h4']
+
+>>>>>>> 4641ad7d65bb4feb527d8e19678aec28d06b6694
 bottomcontent[2].textContent=siteContent['main-content']['vision-h4']
 
 let bottomcontentpar = document.querySelectorAll(".bottom-content  p")
