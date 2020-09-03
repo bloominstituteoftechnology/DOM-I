@@ -50,8 +50,13 @@ newNav[3].textContent = siteContent["nav"]["nav-item-4"]
 newNav[4].textContent = siteContent["nav"]["nav-item-5"]
 newNav[5].textContent = siteContent["nav"]["nav-item-6"]
 
+newNav.forEach(element => {
+  element.style.color = "green"
+})
+
 let newH1 = document.querySelector('h1')
 newH1.textContent = siteContent["cta"]["h1"]
+
 
 let newButton = document.querySelector('button')
 newButton.textContent = siteContent["cta"]["button"]
