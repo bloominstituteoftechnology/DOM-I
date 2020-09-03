@@ -66,6 +66,9 @@ newH4[2].textContent = siteContent["main-content"]["services-h4"]
 newH4[3].textContent = siteContent["main-content"]["product-h4"]
 newH4[4].textContent = siteContent["main-content"]["vision-h4"]
 
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
 let newMainPara = document.querySelectorAll('p')
 newMainPara[0].textContent = siteContent["main-content"]["features-content"]
 newMainPara[1].textContent = siteContent["main-content"]["about-content"]
@@ -73,11 +76,15 @@ newMainPara[2].textContent = siteContent["main-content"]["services-content"]
 newMainPara[3].textContent = siteContent["main-content"]["product-content"]
 newMainPara[4].textContent = siteContent["main-content"]["vision-content"]
 
-let newContact = document.querySelector('.contact')
-// newContact.textContent = siteContent["contact-h4"]
-console.log(newContact)
-newContact[0].textContent = siteContent["contact-h4"]
+let newContactH4 = document.querySelector('.contact h4')
+newContactH4.textContent = siteContent["contact"]["contact-h4"]
 
+let newContactPara = document.querySelectorAll('.contact p')
+newContactPara[0].textContent = siteContent["contact"]["address"]
+newContactPara[1].textContent = siteContent["contact"]["phone"]
+newContactPara[2].textContent = siteContent["contact"]["email"]
 
+let footer = document.querySelector('footer p')
+footer.textContent = siteContent["footer"]["copyright"]
 
 
