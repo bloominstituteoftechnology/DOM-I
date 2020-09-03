@@ -40,11 +40,17 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+let midImg = document.querySelector(".middle-img");
+midImg.src =  siteContent["main-content"]["middle-img-src"];
+
+
 
 // let navI = document.getElementById("nav-item-1");
 // navI.textContent = siteContent["nav"]["nav-item-1"];
-
-var x = document.getElementById("navButtons").querySelectorAll("a");
+// let x = document.getElementsByTagName("nav");
+let x = document.querySelectorAll("nav > a");
 /// /Almost professinoal way of it
 // let i ;
 // for (i = 0; i < x.length; i++) {
@@ -65,9 +71,11 @@ const child = document.querySelector("nav");
 const newContent  = document.createElement("a");
 newContent.textContent = "New Stuff";
 newContent.style.color = "green";
+newContent.href = "#";
 const newContentChild  = document.createElement("a");
 newContentChild.textContent = "Old Stuff";
 newContentChild.style.color = "green";
+newContentChild.href = "#";
 // Places at the begginning
 parent.prepend(newContent);
 // Places at the end
