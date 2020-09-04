@@ -59,7 +59,9 @@ nav[5].textContent = siteContent["nav"]["nav-item-6"]
 
 //header tag
 let headertag = document.querySelector('h1');
-headertag.textContent = siteContent["cta"]["h1"]
+headertag.innerHTML = "Dom <br> Is <br> Awesome"; 
+
+
 
 //button
 let button = document.querySelector('button');
@@ -101,3 +103,24 @@ footer.textContent = siteContent["footer"]["copyright"]
 //title
 let title = document.querySelector("title");
 title.textContent = "Great Idea!"
+
+// new content
+let navColor = document.querySelectorAll('a')
+navColor.forEach(element => {
+  element.style.color = "green"
+}); 
+
+
+//Append Tag
+let learnMore = document.createElement('a');
+learnMore.textContent = "Learn More";
+learnMore.setAttribute('href','#')
+document.querySelector('nav').appendChild(learnMore)
+
+
+
+//Prepend
+let homeTag = document.createElement('a');
+homeTag.textContent = "Home";
+homeTag.setAttribute('href','#')
+document.querySelector('nav').prepend(homeTag)
