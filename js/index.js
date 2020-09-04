@@ -40,3 +40,89 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let cta = document.getElementById("cta-img");
+cta.setAttribute('src', siteContent["cta"]["img-src"])
+
+let middleImage = document.getElementById("middle-img");
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+// Nav Bar
+
+let nav = document.querySelectorAll('a');
+nav[0].textContent = siteContent["nav"]["nav-item-1"]
+nav[1].textContent = siteContent["nav"]["nav-item-2"]
+nav[2].textContent = siteContent["nav"]["nav-item-3"]
+nav[3].textContent = siteContent["nav"]["nav-item-4"]
+nav[4].textContent = siteContent["nav"]["nav-item-5"]
+nav[5].textContent = siteContent["nav"]["nav-item-6"]
+
+//header tag
+let headertag = document.querySelector('h1');
+headertag.innerHTML = "Dom <br> Is <br> Awesome"; 
+
+
+
+//button
+let button = document.querySelector('button');
+button.textContent = siteContent["cta"]["button"]
+
+//header four tags
+let headerFour = document.querySelectorAll('h4');
+headerFour[0].textContent = siteContent["main-content"]["features-h4"]
+headerFour[1].textContent = siteContent["main-content"]["about-h4"]
+headerFour[2].textContent = siteContent["main-content"]["services-h4"]
+headerFour[3].textContent = siteContent["main-content"]["product-h4"]
+headerFour[4].textContent = siteContent["main-content"]["vision-h4"]
+
+
+//paragraphs under h4 tags
+let paragraph = document.querySelectorAll('p');
+paragraph[0].textContent = siteContent["main-content"]["features-content"]
+paragraph[1].textContent = siteContent["main-content"]["about-content"]
+paragraph[2].textContent = siteContent["main-content"]["services-content"]
+paragraph[3].textContent = siteContent["main-content"]["product-content"]
+paragraph[4].textContent = siteContent["main-content"]["vision-content"]
+
+
+//Contact h4 tags
+let contactHeaderFour = document.querySelector(".contact h4");
+contactHeaderFour.textContent = siteContent["contact"]["contact-h4"]
+
+// contact paragraph tags
+let contactParagraph = document.querySelectorAll(".contact p");
+contactParagraph[0].innerHTML = "123 Way 456 Street <br> Somewhere, USA",
+contactParagraph[1].textContent = siteContent["contact"]["phone"]
+contactParagraph[2].textContent = siteContent["contact"]["email"]
+
+// Footer
+let footer = document.querySelector("footer p")
+footer.textContent = siteContent["footer"]["copyright"]
+
+
+//title
+let title = document.querySelector("title");
+title.textContent = "Great Idea!"
+
+
+//Append Tag
+let learnMore = document.createElement('a');
+learnMore.textContent = "Learn More";
+learnMore.setAttribute('href','#')
+document.querySelector('nav').appendChild(learnMore)
+
+
+
+//Prepend
+let homeTag = document.createElement('a');
+homeTag.textContent = "Home";
+homeTag.setAttribute('href','#')
+document.querySelector('nav').prepend(homeTag)
+
+
+// new content Green
+let navColor = document.querySelectorAll('a')
+navColor.forEach(element => {
+  element.style.color = "green"
+}); 
+
