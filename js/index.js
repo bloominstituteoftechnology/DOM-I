@@ -91,7 +91,7 @@ contactHeaderFour.textContent = siteContent["contact"]["contact-h4"]
 
 // contact paragraph tags
 let contactParagraph = document.querySelectorAll(".contact p");
-contactParagraph[0].textContent = siteContent["contact"]["address"]
+contactParagraph[0].innerHTML = "123 Way 456 Street <br> Somewhere, USA",
 contactParagraph[1].textContent = siteContent["contact"]["phone"]
 contactParagraph[2].textContent = siteContent["contact"]["email"]
 
@@ -103,12 +103,6 @@ footer.textContent = siteContent["footer"]["copyright"]
 //title
 let title = document.querySelector("title");
 title.textContent = "Great Idea!"
-
-// new content
-let navColor = document.querySelectorAll('a')
-navColor.forEach(element => {
-  element.style.color = "green"
-}); 
 
 
 //Append Tag
@@ -124,3 +118,11 @@ let homeTag = document.createElement('a');
 homeTag.textContent = "Home";
 homeTag.setAttribute('href','#')
 document.querySelector('nav').prepend(homeTag)
+
+
+// new content Green
+let navColor = document.querySelectorAll('a')
+navColor.forEach(element => {
+  element.style.color = "green"
+}); 
+
