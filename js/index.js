@@ -57,7 +57,6 @@ newNav.forEach(element => {
 let newH1 = document.querySelector('h1')
 newH1.textContent = siteContent["cta"]["h1"]
 
-
 let newButton = document.querySelector('button')
 newButton.textContent = siteContent["cta"]["button"]
 
@@ -91,5 +90,12 @@ newContactPara[2].textContent = siteContent["contact"]["email"]
 
 let footer = document.querySelector('footer p')
 footer.textContent = siteContent["footer"]["copyright"]
+
+let body = document.querySelector("nav")
+let newItem1 = document.createElement('div')
+body.prepend("MVP", newItem1)
+let newItem2 = document.createElement('div')
+newItem1.textContent = "MVP"
+body.appendChild(newItem2)
 
 
