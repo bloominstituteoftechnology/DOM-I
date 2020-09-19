@@ -39,4 +39,42 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+// logo.setAttribute('src', siteContent["nav"]["img-src"]);
+logo.src = siteContent['nav']['img-src'];
+
+
+// looping through anchor tags using forEach
+let navItems = document.querySelectorAll('a');
+navItems.forEach((element, index) => element.textContent = siteContent['nav']['nav-item-' + (index + 1)]);
+// cta h1
+let ctaH1 = document.querySelector('h1');
+ctaH1.textContent = siteContent['cta']['h1'];
+// cta button
+let ctaButton = document.querySelector('button');
+ctaButton.textContent = siteContent['cta']['button']
+// cta image
+let ctaImg = document.querySelector('#cta-img');
+ctaImg.src = siteContent['cta']['img-src'];
+// middle image
+let middleImg = document.querySelector('#middle-img');
+middleImg.src = siteContent['main-content']['middle-img-src'];
+// grabbing h4 and p tags
+let h4Items = document.querySelectorAll('h4');
+let pItems = document.querySelectorAll('p');
+// h4 tags
+h4Items[0].textContent = siteContent['main-content']['features-h4'];
+h4Items[1].textContent = siteContent['main-content']['about-h4'];
+h4Items[2].textContent = siteContent['main-content']['services-h4'];
+h4Items[3].textContent = siteContent['main-content']['product-h4'];
+h4Items[4].textContent = siteContent['main-content']['vision-h4'];
+h4Items[5].textContent = siteContent['contact']['contact-h4'];
+// p tags
+pItems[0].textContent = siteContent['main-content']['features-content']
+pItems[1].textContent = siteContent['main-content']['about-content'];
+pItems[2].textContent = siteContent['main-content']['services-content']
+pItems[3].textContent = siteContent['main-content']['product-content'];
+pItems[4].textContent = siteContent['main-content']['vision-content'];
+pItems[5].textContent = siteContent['contact']['address'];
+pItems[6].textContent = siteContent['contact']['phone'];
+pItems[7].textContent = siteContent['contact']['email'];
+pItems[8].textContent = siteContent['footer']['copyright']
