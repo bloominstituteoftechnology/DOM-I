@@ -45,7 +45,16 @@ let myNav = document.querySelector('nav')
 let navLinks = myNav.getElementsByTagName('a')
 for (let i = 0; i < navLinks.length; i++) {
   navLinks[i].textContent = Object.values(siteContent.nav)[i]
+  navLinks[i].style.color = 'green'
 }
+const firstNav = document.createElement('a')
+firstNav.textContent = 'firstNav'
+firstNav.href = '#'
+const lastNav = document.createElement('a')
+lastNav.textContent = 'lastNav'
+lastNav.href = '#'
+document.querySelector('nav').appendChild(lastNav)
+document.querySelector('nav').prepend(firstNav)
 
 let ctaText = document.querySelector('.cta-text')
 let h1 = ctaText.querySelector('H1')
@@ -100,3 +109,4 @@ myContactP3.textContent = siteContent.contact.email
 let foot = document.querySelector('footer')
 let copy = foot.querySelector('p')
 copy.textContent = siteContent.footer.copyright
+
