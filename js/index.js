@@ -70,7 +70,7 @@ let newLink2 = document.createElement("a");
 newLink2.textContent = "Reviews";
 newLink2.href = "#";
 newLink2.style.color = "green";
-document.querySelector("nav").appendChild(newLink2);
+document.querySelector("nav").prepend(newLink2);
 
 let cta = document.querySelector(".cta-text h1");
 cta.textContent = siteContent["cta"]["h1"];
