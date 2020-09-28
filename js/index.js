@@ -55,3 +55,48 @@ button.textContent = siteContent.cta.button
 let ctaImg = document.getElementById('cta-img')
 ctaImg.setAttribute('src', siteContent.cta['img-src'])
 
+let topContent = document.querySelector('.top-content')
+let firstTopContent = topContent.querySelector('div:nth-of-type(1)')
+let firstTopContentH4 = firstTopContent.querySelector('H4')
+let firstTopContentP = firstTopContent.querySelector('p')
+firstTopContentH4.textContent = siteContent['main-content']['features-h4']
+firstTopContentP.textContent = siteContent['main-content']['features-content']
+let secondTopContent = topContent.querySelector('div:nth-of-type(2)')
+let secondTopContentH4 = secondTopContent.querySelector('H4')
+let secondTopContentP = secondTopContent.querySelector('p')
+secondTopContentH4.textContent = siteContent['main-content']['about-h4']
+secondTopContentP.textContent = siteContent['main-content']['about-content']
+
+let midImg = document.getElementById('middle-img')
+midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+let bottomContent = document.querySelector('.bottom-content')
+let firstBottomContent = bottomContent.querySelector('div:nth-of-type(1)')
+let firstBottomContentH4 = firstBottomContent.querySelector('H4')
+let firstBottomContentP = firstBottomContent.querySelector('p')
+firstBottomContentH4.textContent = siteContent['main-content']['services-h4']
+firstBottomContentP.textContent = siteContent['main-content']['services-content']
+let secondBottomContent = bottomContent.querySelector('div:nth-of-type(2)')
+let secondBottomContentH4 = secondBottomContent.querySelector('H4')
+let secondBottomContentP = secondBottomContent.querySelector('p')
+secondBottomContentH4.textContent = siteContent['main-content']['product-h4']
+secondBottomContentP.textContent = siteContent['main-content']['product-content']
+let thirdBottomContent = bottomContent.querySelector('div:nth-of-type(3)')
+let thirdBottomContentH4 = thirdBottomContent.querySelector('H4')
+let thirdBottomContentP = thirdBottomContent.querySelector('p')
+thirdBottomContentH4.textContent = siteContent['main-content']['vision-h4']
+thirdBottomContentP.textContent = siteContent['main-content']['vision-content']
+
+let myContact = document.querySelector('.contact')
+let myContactH4 = myContact.querySelector('H4')
+myContactH4.textContent = siteContent.contact['contact-h4']
+let myContactP1 = myContact.querySelector('p:nth-of-type(1)')
+let myContactP2 = myContact.querySelector('p:nth-of-type(2)')
+let myContactP3 = myContact.querySelector('p:nth-of-type(3)')
+myContactP1.textContent = siteContent.contact.address
+myContactP2.textContent = siteContent.contact.phone
+myContactP3.textContent = siteContent.contact.email
+
+let foot = document.querySelector('footer')
+let copy = foot.querySelector('p')
+copy.textContent = siteContent.footer.copyright
