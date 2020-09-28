@@ -132,3 +132,11 @@ const faqLink = document.createElement('a')
 faqLink.textContent = "FAQ"
 faqLink.href = "#"
 document.querySelector("nav").appendChild(faqLink)
+
+// changing color of nav bar text
+const container = document.querySelector('.container')
+const header = container.querySelector('header')
+const nav = header.querySelector('nav')
+const a = nav.querySelectorAll('a')
+console.log(a)
+a.style.color = "00ff00"
