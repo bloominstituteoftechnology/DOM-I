@@ -64,7 +64,6 @@ titleSectionImg.setAttribute('src', siteContent["cta"]["img-src"])
 // features and about text boxes
 const mainContent = document.querySelector('.main-content')
 const topContent = document.querySelector('.top-content')
-const bottomContent = document.querySelector('.bottom-content')
 
 const textBox = topContent.querySelector('.text-content')
 const textBoxOne = textBox.cloneNode(true)
@@ -85,14 +84,37 @@ const middleImg = document.querySelector('#middle-img')
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 // services, product, and vision text boxes
-const textBoxTwo = bottomContent.querySelector('.bottom-content')
-const textBoxThree = textBoxTwo.cloneNode(true)
-const textboxFour = textBoxTwo.cloneNode(true)
-bottomContent.appendChild(textBoxTwo)
-bottomContent.appendChild(textBoxThree)
-bottomContent.appendChild(textBoxFour)
+const bottomContent = document.querySelector('.bottom-content')
+const bottomTextBox = bottomContent.querySelector('.text-content')
+const bottomTextBoxOne = bottomTextBox.cloneNode(true)
+const bottomTextBoxTwo = bottomTextBox.cloneNode(true)
+bottomContent.appendChild(bottomTextBoxOne)
+bottomContent.appendChild(bottomTextBoxTwo)
 
+const cardTitleServices = bottomTextBox.querySelector('h4')
+const cardContentServices = bottomTextBox.querySelector('p')
+cardTitleServices.textContent = "Services"
+cardContentServices.textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+const cardTitleProduct = bottomTextBoxOne.querySelector('h4')
+const cardContentProduct = bottomTextBoxOne.querySelector('p')
+cardTitleProduct.textContent = "Product"
+cardContentProduct.textContent = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+const cardTitleVision = bottomTextBoxTwo.querySelector('h4')
+const cardContentVision = bottomTextBoxTwo.querySelector('p')
+cardTitleVision.textContent = "Vision"
+cardContentVision.textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
 
 // contact
+const contact = document.querySelector('.contact')
+
+const h4 = contact.querySelector('h4')
+h4.textContent = "Contact"
+
+const address = contact.querySelectorAll('p')
+address[0].textContent = "123 Way 456 Street Somewhere, USA"
+address[1].textContent = "1 (888) 888-8888"
+address[2].textContent = "sales@greatidea.io"
 
 // footer
