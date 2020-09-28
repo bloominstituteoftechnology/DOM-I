@@ -118,3 +118,6 @@ address[1].textContent = "1 (888) 888-8888"
 address[2].textContent = "sales@greatidea.io"
 
 // footer
+const footer = document.querySelector('footer')
+const footerText = footer.querySelector('p')
+footerText.textContent = "Copyright Great Idea! 2018"
