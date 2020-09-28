@@ -40,3 +40,77 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+let header = document.querySelector('h1')
+
+header.innerHTML = "DOM <br> IS <br> AWESOME"
+
+
+let titleImg = document.getElementById("cta-img");
+
+titleImg.setAttribute('src', "img/header-img.png")
+
+let button = document.querySelector('button')
+
+button.textContent = "Get Started"
+
+ let sectionImg = document.getElementById("middle-img");
+
+ sectionImg.setAttribute('src', "img/mid-page-accent.jpg")
+
+ let bodyTitles = document.querySelectorAll('h4');
+
+ bodyTitles[0].textContent = "Features"
+ bodyTitles[1].textContent = "About";
+ bodyTitles[2].textContent = "Services";
+ bodyTitles[3].textContent = "Product";
+ bodyTitles[4].textContent = "Vision";
+ bodyTitles[5].textContent = "Contact";
+
+ let bodyText = document.querySelectorAll('p');
+
+bodyText[0].textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+bodyText[1].textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+bodyText[2].textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+bodyText[3].textContent = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+bodyText[4].textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+bodyText[5].innerHTML = "123 Way 456 Street <br> Somewhere, USA"
+
+bodyText[6].textContent = "1 (888) 888-8888"
+
+bodyText[7].textContent = "sales@greatidea.io"
+
+bodyText[8].textContent = "Copyright Great Idea! 2018"
+
+const blogLink = document.createElement('a')
+blogLink.textContent = "Blog"
+blogLink.href = "#"
+
+document.querySelector('nav').appendChild(blogLink)
+
+const heyLink = document.createElement('a')
+heyLink.textContent = "Hey!"
+heyLink.href = "#"
+
+document.querySelector('nav').appendChild(heyLink)
+
+let navbar = document.querySelectorAll('nav a')
+
+navbar[0].textContent = "Services"
+navbar[1].textContent = "Product"
+navbar[2].textContent = "Vision"
+navbar[3].textContent = "About"
+navbar[4].textContent = "Contact"
+
+for (i = 0; i < navbar.length; i++){
+navbar[i].style.color = 'green'
+}
+
+  
+  
