@@ -108,4 +108,17 @@ setContactInfo();
 //set copyright text
 p[p.length-1].textContent = `${siteContent["footer"]["copyright"]}`;
 
-//stretch
+
+
+//use appendChild and prepend
+let nav = document.querySelector("nav");
+nav.appendChild(document.createElement("a"));
+nav.children[6].textContent = "Last Page";
+nav.prepend(document.createElement("a"));
+nav.children[0].textContent = "First Page"
+
+//make links green
+navLinks = document.querySelectorAll("a");
+for (let i = 0; i < navLinks.length; i++) {
+  navLinks[i].style.color = "green";
+}
