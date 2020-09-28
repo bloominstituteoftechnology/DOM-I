@@ -62,12 +62,10 @@ h1text = h1text.join("<br> ");
 h1.innerHTML = `${h1text}`
 
 //set button text
-let button = document.querySelector("button");
-button.textContent = `${siteContent.cta.button}`;
+document.querySelector("button").textContent = `${siteContent.cta.button}`;
 
 //set cta image
-let ctaLogo = document.getElementById("cta-img");
-ctaLogo.setAttribute('src', siteContent["cta"]["img-src"]);
+document.getElementById("cta-img").setAttribute('src', siteContent["cta"]["img-src"]);
 
 //set main content
 let h4 = document.querySelectorAll("h4");
@@ -88,8 +86,7 @@ setMainText(h4, "h4");
 setMainText(p, "content");
 
 //set middle img
-let middleImg = document.getElementById("middle-img");
-middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+document.getElementById("middle-img").setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 //set contact info
 let contact = document.querySelector(".contact");
