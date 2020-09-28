@@ -50,6 +50,7 @@ Array.from(header.children[0].children).forEach((item, idx) => {
 const cta = document.querySelector(".cta");
 cta.children[0].children[0].textContent = siteContent.cta["h1"];
 cta.children[0].children[1].textContent = siteContent.cta["button"];
+
 cta.children[1].src = siteContent.cta["img-src"];
 
 const mainContent = document.querySelector(".main-content");
@@ -75,3 +76,29 @@ contact.children[3].textContent = siteContent.contact["email"];
 
 const footer = document.getElementsByTagName("footer")[0];
 footer.children[0].textContent = siteContent.footer["copyright"];
+
+const anchors = document.getElementsByTagName("a")
+Array.from(anchors).forEach(item => {
+    item.style.color = "green";
+});
+
+const arr1 = [
+    { "a1": "dumb" },
+    { "a2": "dumber" }
+]
+
+function imBored(arr, parent) {
+    for (let i = 0; i < arr.length / 2; i += 2) {
+        const i1 = document.createElement("a");
+        const i2 = document.createElement("a");
+        i1.textContent = arr[i]["a1"];
+        i2.textContent = arr[i + 1]["a2"];
+        i1.style.color = "green";
+        i2.style.color = "green";
+        parent.appendChild(i1);
+        parent.prepend(i2);
+    }
+}
+
+const nav = document.getElementsByTagName("nav")[0];
+imBored(arr1, nav);
