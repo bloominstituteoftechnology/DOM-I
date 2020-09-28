@@ -94,29 +94,26 @@ aboutParagraph.textContent = siteContent['main-content']['about-content']
 let middleImg = document.querySelector('#middle-img')
 middleImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
 
-let servicesHeading = document.querySelector('.text-content:nth-of-type(3) h4')
+let servicesHeading = document.querySelector('.bottom-content .text-content:nth-of-type(1) h4')
 servicesHeading.textContent = siteContent['main-content']['services-h4']
 
-let servicesParagraph = document.querySelector('.text-content:nth-of-type(3) p')
+let servicesParagraph = document.querySelector('.bottom-content .text-content:nth-of-type(1) p')
 servicesParagraph.textContent = siteContent['main-content']['services-content']
 
-// let productHeading = document.querySelector('.text-content:nth-of-type(4) h4')
-// productHeading.textContent = siteContent['main-content']['product-h4']
+let productHeading = document.querySelector('.bottom-content .text-content:nth-of-type(2) h4')
+productHeading.textContent = siteContent['main-content']['product-h4']
 
-// let productParagraph = document.querySelector('.text-content:nth-of-type(4) p')
-// productParagraph.textContent = siteContent['main-content']['product-content']
+let productParagraph = document.querySelector('.bottom-content .text-content:nth-of-type(2) p')
+productParagraph.textContent = siteContent['main-content']['product-content']
 
-// let visionHeading = document.querySelector('.text-content:nth-of-type(5) h4')
-// visionHeading.textContent = siteContent['main-content']['vision-h4']
+let visionHeading = document.querySelector('.bottom-content .text-content:nth-of-type(3) h4')
+visionHeading.textContent = siteContent['main-content']['vision-h4']
 
-// let visionParagraph = document.querySelector('.text-content:nth-of-type(5) p')
-// visionParagraph.textContent = siteContent['main-content']['vision-content']
+let visionParagraph = document.querySelector('.bottom-content .text-content:nth-of-type(3) p')
+visionParagraph.textContent = siteContent['main-content']['vision-content']
 
 let contactHeading = document.querySelector('.contact h4')
 contactHeading.textContent = siteContent['contact']['contact-h4']
-
-// let contactAddress = document.querySelector('.contact p:nth-of-type(1)')
-// contactAddress.textContent = siteContent['contact']['address']
 
 let contactAddressOne = document.querySelector('.contact p:nth-of-type(1)')
 contactAddressOne.appendChild(document.createTextNode('123 Way 456 Street'))
@@ -128,4 +125,7 @@ contactNumber.textContent = siteContent['contact']['phone']
 
 let contactEmail = document.querySelector('.contact p:nth-of-type(3)')
 contactEmail.textContent = siteContent['contact']['email']
+
+let footerParagraph = document.querySelector('footer p')
+footerParagraph.textContent = siteContent['footer']['copyright']
 
