@@ -121,3 +121,14 @@ address[2].textContent = "sales@greatidea.io"
 const footer = document.querySelector('footer')
 const footerText = footer.querySelector('p')
 footerText.textContent = "Copyright Great Idea! 2018"
+
+// new nav items
+const blogLink = document.createElement('a')
+blogLink.textContent = "Blog"
+blogLink.href = "#"
+document.querySelector("nav").appendChild(blogLink)
+
+const faqLink = document.createElement('a')
+faqLink.textContent = "FAQ"
+faqLink.href = "#"
+document.querySelector("nav").appendChild(faqLink)
