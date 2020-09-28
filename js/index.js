@@ -53,6 +53,24 @@ nav.children[2].textContent = siteContent["nav"]["nav-item-3"];
 nav.children[3].textContent = siteContent["nav"]["nav-item-4"];
 nav.children[4].textContent = siteContent["nav"]["nav-item-5"];
 nav.children[5].textContent = siteContent["nav"]["nav-item-6"];
+nav.children[0].style.color = "green";
+nav.children[1].style.color = "green";
+nav.children[2].style.color = "green";
+nav.children[3].style.color = "green";
+nav.children[4].style.color = "green";
+nav.children[5].style.color = "green";
+
+let newLink = document.createElement("a");
+newLink.textContent = "Vlog";
+newLink.href = "#";
+newLink.style.color = "green";
+document.querySelector("nav").appendChild(newLink);
+
+let newLink2 = document.createElement("a");
+newLink2.textContent = "Reviews";
+newLink2.href = "#";
+newLink2.style.color = "green";
+document.querySelector("nav").appendChild(newLink2);
 
 let cta = document.querySelector(".cta-text h1");
 cta.textContent = siteContent["cta"]["h1"];
