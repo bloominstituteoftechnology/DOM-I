@@ -65,32 +65,49 @@ ctaButton.textContent = siteContent["cta"]["button"];
 let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
 
-let mainConFeat = document.querySelector(".text-content:nth-of-type(1) h4");
-mainConFeat.textContent = siteContent["main-content"]["features-h4"];
-let mainConFeatText = document.querySelector(".text-content:nth-of-type(1) p");
-mainConFeatText.textContent = siteContent["main-content"]["features-content"];
+let mainConFeat = document.querySelectorAll(".text-content h4");
+mainConFeat[0].textContent = siteContent["main-content"]["features-h4"];
+let mainConFeatText = document.querySelectorAll(".text-content p");
+mainConFeatText[0].textContent =
+  siteContent["main-content"]["features-content"];
 
-let mainConAbout = document.querySelector(".text-content:nth-of-type(2) h4");
-mainConAbout.textContent = siteContent["main-content"]["about-h4"];
-let mainConAboutText = document.querySelector(".text-content:nth-of-type(2) p");
-mainConAboutText.textContent = siteContent["main-content"]["about-content"];
+let mainConAbout = document.querySelectorAll(".text-content h4");
+mainConAbout[1].textContent = siteContent["main-content"]["about-h4"];
+let mainConAboutText = document.querySelectorAll(".text-content p");
+mainConAboutText[1].textContent = siteContent["main-content"]["about-content"];
 
 let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
-let mainConServ = document.querySelector(".text-content:nth-of-type(3) h4");
-mainConServ.textContent = siteContent["main-content"]["services-h4"];
-let mainConServText = document.querySelector(".text-content:nth-of-type(3) p");
-mainConServText.textContent = siteContent["main-content"]["services-content"];
+let mainConServ = document.querySelectorAll(".text-content h4");
+mainConServ[2].textContent = siteContent["main-content"]["services-h4"];
+let mainConServText = document.querySelectorAll(".text-content p");
+mainConServText[2].textContent =
+  siteContent["main-content"]["services-content"];
 
-let mainConProd = document.querySelector(".text-content:nth-of-type(4) h4");
-mainConProd.textContent = siteContent["main-content"]["product-h4"];
-let mainConProdText = document.querySelector(".text-content:nth-of-type(4) p");
-mainConProdText.textContent = siteContent["main-content"]["product-content"];
+let mainConProd = document.querySelectorAll(".text-content h4");
+mainConProd[3].textContent = siteContent["main-content"]["product-h4"];
+let mainConProdText = document.querySelectorAll(".text-content p");
+mainConProdText[3].textContent = siteContent["main-content"]["product-content"];
 
-let mainConVision = document.querySelector(".text-content:nth-of-type(5) h4");
-mainConVision.textContent = siteContent["main-content"]["vision-h4"];
-let mainConVisionText = document.querySelector(
-  ".text-content:nth-of-type(5) p"
-);
-mainConVisionText.textContent = siteContent["main-content"]["vision-content"];
+let mainConVision = document.querySelectorAll(".text-content h4");
+mainConVision[4].textContent = siteContent["main-content"]["vision-h4"];
+let mainConVisionText = document.querySelectorAll(".text-content p");
+mainConVisionText[4].textContent =
+  siteContent["main-content"]["vision-content"];
+
+let contact = document.querySelector(".contact h4");
+contact.textContent = siteContent["contact"]["contact-h4"];
+
+let contactAddress = document.querySelectorAll(".contact p");
+contactAddress[0].textContent = siteContent["contact"]["address"];
+contactAddress[0].innerHTML = "123 Way 456 Street<br>Somewhere, USA";
+
+let contactPhone = document.querySelectorAll(".contact p");
+contactPhone[1].textContent = siteContent["contact"]["phone"];
+
+let contactEmail = document.querySelectorAll(".contact p");
+contactEmail[2].textContent = siteContent["contact"]["email"];
+
+let footer = document.querySelector("footer p");
+footer.textContent = siteContent["footer"]["copyright"];
