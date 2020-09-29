@@ -37,6 +37,8 @@ const siteContent = {
   },
 };
 
+//IMAGES
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
@@ -49,7 +51,7 @@ middleImg.setAttribute('src', 'img/mid-page-accent.jpg')
 
 
 
-
+//PARAGRAPHS AND H4 HERE
 
 let featFour = document.querySelector(' .top-content .text-content:nth-of-type(1) h4');
 featFour.textContent = siteContent['main-content']['features-h4']
@@ -86,11 +88,31 @@ visionP.textContent = siteContent['main-content']['vision-content']
 let visionFour = document.querySelector('.bottom-content .text-content:nth-of-type(3) h4')
 visionFour.textContent = siteContent['main-content']['vision-h4']
 
+
+
+
+//CONTACT SECTION HERE
+
+let contactsOne = document.querySelector('.contact p:nth-of-type(1)')
+contactsOne.textContent = siteContent['contact']['email']
+
+
+let  contactsThree= document.querySelector('.contact p:nth-of-type(2)')
+contactsThree.textContent = siteContent['contact']['address']
+
+let contactsTwo = document.querySelector('.contact p:nth-of-type(3)')
+contactsTwo.textContent = siteContent['contact']['phone']
+
+let contactsFour = document.querySelector('.contact h4')
+contactsFour.textContent = siteContent['contact']['contact-h4']
+
+//FOOTER HERE
+
 let foot = document.querySelector('footer');
 foot.textContent = siteContent['footer']['copyright']
 
 
-
+//NAV, H1, BUTTON HERE
 
 let hOne = document.querySelector('h1');
 hOne.textContent = siteContent['cta']['h1']
@@ -110,12 +132,7 @@ links[5].textContent = siteContent['nav']['nav-item-6']
 
 
 
-let contacts = document.querySelector('.contact')
-contacts.textContent = siteContent['contact']['email']
-
-
-let addresses = document.querySelector('.contact')
-addresses.textContent = siteContent['contact']['address']
+//CHANGE NAV TO GREEN COLOR HERE
 
 let changer = document.getElementsByTagName('a');
 changer[0].style.color = 'green'
@@ -126,10 +143,19 @@ changer[4].style.color = 'green'
 changer[5].style.color = 'green'
 
 
-let parent = document.createElement('div')
-let child = document.createElement('p')
+//ADD TWO NAV ITEMS HERE
 
+const newLink = document.createElement('a')
+newLink.textContent = 'Blog'
+newLink.href = '#'
+newLink.style.color = 'green'
+document.querySelector('nav').appendChild(newLink)
 
+const diffLink = document.createElement('a')
+diffLink.textContent = 'Meet Us'
+diffLink.href = '#'
+diffLink.style.color = 'green'
+document.querySelector('nav').prepend(diffLink)
 
 
 
