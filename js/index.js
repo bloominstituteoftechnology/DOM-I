@@ -40,3 +40,102 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// nav
+const navigationBar = document.querySelectorAll('a');
+navigationBar[0].textContent = "Services"
+navigationBar[1].textContent = "Product"
+navigationBar[2].textContent = "Vision"
+navigationBar[3].textContent = "Features"
+navigationBar[4].textContent = "About"
+navigationBar[5].textContent = "Contact"
+
+// cta
+const h1 = document.querySelector('h1')
+h1.textContent = "DOM Is Awesome"
+
+const button = document.querySelector('button')
+button.textContent = "Get Started"
+
+const titleSectionImg = document.querySelector('#cta-img')
+titleSectionImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+// main content
+// features and about text boxes
+const mainContent = document.querySelector('.main-content')
+const topContent = document.querySelector('.top-content')
+
+const textBox = topContent.querySelector('.text-content')
+const textBoxOne = textBox.cloneNode(true)
+topContent.appendChild(textBoxOne)
+
+const cardTitleFeatures = textBox.querySelector('h4')
+const cardContentFeatures = textBox.querySelector('p')
+cardTitleFeatures.textContent = "Features"
+cardContentFeatures.textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+const cardTitleAbout = textBoxOne.querySelector('h4')
+const cardContentAbout = textBoxOne.querySelector('p')
+cardTitleAbout.textContent = "About"
+cardContentAbout.textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+// middle image
+const middleImg = document.querySelector('#middle-img')
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+// services, product, and vision text boxes
+const bottomContent = document.querySelector('.bottom-content')
+const bottomTextBox = bottomContent.querySelector('.text-content')
+const bottomTextBoxOne = bottomTextBox.cloneNode(true)
+const bottomTextBoxTwo = bottomTextBox.cloneNode(true)
+bottomContent.appendChild(bottomTextBoxOne)
+bottomContent.appendChild(bottomTextBoxTwo)
+
+const cardTitleServices = bottomTextBox.querySelector('h4')
+const cardContentServices = bottomTextBox.querySelector('p')
+cardTitleServices.textContent = "Services"
+cardContentServices.textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+const cardTitleProduct = bottomTextBoxOne.querySelector('h4')
+const cardContentProduct = bottomTextBoxOne.querySelector('p')
+cardTitleProduct.textContent = "Product"
+cardContentProduct.textContent = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+const cardTitleVision = bottomTextBoxTwo.querySelector('h4')
+const cardContentVision = bottomTextBoxTwo.querySelector('p')
+cardTitleVision.textContent = "Vision"
+cardContentVision.textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+// contact
+const contact = document.querySelector('.contact')
+
+const h4 = contact.querySelector('h4')
+h4.textContent = "Contact"
+
+const address = contact.querySelectorAll('p')
+address[0].textContent = "123 Way 456 Street Somewhere, USA"
+address[1].textContent = "1 (888) 888-8888"
+address[2].textContent = "sales@greatidea.io"
+
+// footer
+const footer = document.querySelector('footer')
+const footerText = footer.querySelector('p')
+footerText.textContent = "Copyright Great Idea! 2018"
+
+// new nav items
+const blogLink = document.createElement('a')
+blogLink.textContent = "Blog"
+blogLink.href = "#"
+document.querySelector("nav").appendChild(blogLink)
+
+const faqLink = document.createElement('a')
+faqLink.textContent = "FAQ"
+faqLink.href = "#"
+document.querySelector("nav").appendChild(faqLink)
+
+// changing color of nav bar text
+var x = document.getElementsByTagName('a');
+var i;
+for (i=0; i < x.length; i++){
+  x[i].style.color = 'green';
+}
