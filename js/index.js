@@ -44,7 +44,22 @@ let headImg = document.getElementById("cta-img");
 headImg.setAttribute('src', siteContent['cta']['img-src'])
 let midImg = document.getElementById("middle-img");
 midImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
-let navBar = document.querySelectorAll('nav a');
+
+let navBarBack = document.querySelectorAll('header nav a')
+for(var i = 0; i < navBarBack.length; i++){
+  navBarBack[i].style.color = 'green';
+}
+let navMenu = document.querySelector('nav')
+
+let navBar = document.querySelectorAll('header nav a');
+
+let menu1 = document.createElement('a');
+menu1.textContent = 'Life';
+navMenu.appendChild(menu1)
+console.log(menu1)
+let menu2 = document.createElement('a');
+menu2.textContent = 'Death';
+navMenu.appendChild(menu2)
 
 console.log(navBar)
 navBar[0].textContent = siteContent['nav']['nav-item-1'];
