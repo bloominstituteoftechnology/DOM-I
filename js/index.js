@@ -40,3 +40,71 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+let headImg = document.getElementById("cta-img");
+headImg.setAttribute('src', siteContent['cta']['img-src'])
+let midImg = document.getElementById("middle-img");
+midImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+let navBar = document.querySelectorAll('nav a');
+
+console.log(navBar)
+navBar[0].textContent = siteContent['nav']['nav-item-1'];
+navBar[1].textContent = siteContent['nav']['nav-item-2'];
+navBar[2].textContent = siteContent['nav']['nav-item-3'];
+navBar[3].textContent = siteContent['nav']['nav-item-4'];
+navBar[4].textContent = siteContent['nav']['nav-item-5'];
+navBar[5].textContent = siteContent['nav']['nav-item-6'];
+let h1 = document.querySelector('h1');
+let h1text1 = document.createTextNode('DOM');
+h1.appendChild(h1text1);
+let br = document.createElement('br')
+h1.appendChild(br)
+let h1text2 = document.createTextNode("IS");
+h1.appendChild(h1text2)
+let br2 = document.createElement('br');
+h1.appendChild(br2)
+let h1text3 = document.createTextNode('Awesome!');
+h1.appendChild(h1text3);
+console.log(h1)
+let button = document.querySelector('button');
+button.textContent = "Get Started?"
+//TOP STYLES
+let paragraphsTopHeading1 = document.querySelector('div .top-content .text-content:nth-of-type(1) h4');
+paragraphsTopHeading1.textContent = siteContent['main-content']['features-h4']
+let paragraphsTopParagraph = document.querySelector('div .top-content .text-content:nth-of-type(1) p');
+paragraphsTopParagraph.textContent = siteContent['main-content']['features-content']
+
+let paragraphsTopHeading2 = document.querySelector('div .top-content .text-content:nth-of-type(2) h4');
+paragraphsTopHeading2.textContent = siteContent['main-content']['about-h4']
+let paragraphsTopParagraph2 = document.querySelector('div .top-content .text-content:nth-of-type(2) p');
+paragraphsTopParagraph2.textContent = siteContent['main-content']['about-content']
+
+//BOTOOM STYLES
+let paragraphsBottomHeading1 = document.querySelector('div .bottom-content .text-content:nth-of-type(1) h4');
+paragraphsBottomHeading1.textContent = siteContent['main-content']['features-h4']
+let paragraphsBottomParagraph = document.querySelector('div .bottom-content .text-content:nth-of-type(1) p');
+paragraphsBottomParagraph.textContent = siteContent['main-content']['features-content']
+
+let paragraphsBottomHeading2 = document.querySelector('div .bottom-content .text-content:nth-of-type(2) h4');
+paragraphsBottomHeading2.textContent = siteContent['main-content']['about-h4']
+let paragraphsBottomParagraph2 = document.querySelector('div .bottom-content .text-content:nth-of-type(2) p');
+paragraphsBottomParagraph2.textContent = siteContent['main-content']['about-content']
+
+let paragraphsBottomHeading3 = document.querySelector('div .bottom-content .text-content:nth-of-type(3) h4');
+paragraphsBottomHeading3.textContent = siteContent['main-content']['services-h4']
+let paragraphsBottomParagraph3 = document.querySelector('div .bottom-content .text-content:nth-of-type(3) p');
+paragraphsBottomParagraph3.textContent = siteContent['main-content']['services-content']
+console.log(paragraphsBottomHeading1)
+
+//FOOTER
+let footerh4 = document.querySelector('.contact h4');
+console.log(footerh4)
+footerh4.textContent = siteContent['contact']['contact-h4']
+let footerP = document.querySelector('.contact p')
+footerP.textContent = siteContent['contact']['address']
+let breaker = document.createElement('br');
+footerP.appendChild(breaker)
+let footerP2 = document.querySelector('.contact p:nth-of-type(2)')
+console.log(footerP2)
+footerP2.textContent = siteContent['contact']['phone']
+let footerP3 = document.querySelector('footer p');
+footerP3.textContent = siteContent['footer']['copyright']
