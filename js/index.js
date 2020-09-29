@@ -41,4 +41,31 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-const links = document.
+const headerIMG = document.querySelector('#cta-img')
+headerIMG.setAttribute('src', siteContent['cta']['img-src'])
+
+let nav = document.querySelector('nav')
+nav.children[0].textContent = 'Services'
+nav.children[1].textContent = 'Product'
+nav.children[2].textContent = 'Vision'
+nav.children[3].textContent = 'Features'
+nav.children[4].textContent = 'About'
+nav.children[5].textContent = 'Contract'
+
+const ctaHeader = document.querySelector('cta, h1')
+ctaHeader.textContent = 'DOM IS AWESOME'
+
+const ctaButton = document.querySelector('cta, button')
+ctaButton.textContent = 'Get Started'
+
+const featuresHeader =  document.querySelector('div .top-content .text-content:nth=of-type(1) h4')
+
+featuresHeader.textContent = siteContent['main-content] ['features-h4'])
+
+
+featuresContent.textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+
+
+
+
+
