@@ -47,6 +47,8 @@ headerImg.setAttribute('src', 'img/header-img.png')
 let middleImg = document.getElementById('middle-img');
 middleImg.setAttribute('src', 'img/mid-page-accent.jpg')
 
+
+
 let featureP = document.querySelector('.text-content:nth-of-type(1)')
 featureP.textContent = siteContent['main-content']['features-content']
 
@@ -61,5 +63,39 @@ productP.textContent = siteContent['main-content']['product-content']
 
 let visionP = document.querySelector('.bottom-content .text-content:nth-of-type(2)')
 visionP.textContent = siteContent['main-content']['vision-content']
+
+
+
+let foot = document.querySelector('footer');
+foot.textContent = siteContent['footer']['copyright']
+
+let contacts = document.querySelector('.contact')
+contacts.textContent = siteContent['contact']['address']
+contacts.textContent = siteContent['contact']['phone']
+contacts.textContent = siteContent['contact']['contact-h4']
+contacts.textContent = siteContent['contact']['email']
+
+
+
+
+
+
+let hOne = document.querySelector('h1');
+hOne.textContent = siteContent['cta']['h1']
+
+let buttons = document.querySelector('button');
+buttons.textContent = siteContent['cta']['button']
+
+
+let links = document.getElementsByTagName('a')
+// console.log('link at 4', links)
+links[0].textContent = siteContent['nav']['nav-item-1']
+links[1].textContent = siteContent['nav']['nav-item-2']
+links[2].textContent = siteContent['nav']['nav-item-3']
+links[3].textContent = siteContent['nav']['nav-item-4']
+links[4].textContent = siteContent['nav']['nav-item-5']
+links[5].textContent = siteContent['nav']['nav-item-6']
+
+
 
 
