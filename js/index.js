@@ -49,33 +49,45 @@ middleImg.setAttribute('src', 'img/mid-page-accent.jpg')
 
 
 
-let featureP = document.querySelector('.text-content:nth-of-type(1)')
-featureP.textContent = siteContent['main-content']['features-content']
 
-let aboutP = document.querySelector('.text-content:nth-of-type(2)')
+
+let featFour = document.querySelector(' .top-content .text-content:nth-of-type(1) h4');
+featFour.textContent = siteContent['main-content']['features-h4']
+
+let featP = document.querySelector('.top-content .text-content:nth-of-type(1) p');
+featP.textContent = siteContent['main-content']['features-content']
+
+
+let aboutFour = document.querySelector('.text-content:nth-of-type(2) h4');
+aboutFour.textContent = siteContent['main-content']['about-h4']
+
+let aboutP = document.querySelector('.top-content .text-content:nth-of-type(2) p');
 aboutP.textContent = siteContent['main-content']['about-content']
 
-let serviceP = document.querySelector('.text-content:nth-of-type(3)')
+
+let serviceP = document.querySelector('.bottom-content .text-content:nth-of-type(1) p');
 serviceP.textContent = siteContent['main-content']['services-content']
 
-let productP = document.querySelector('.bottom-content .text-content:nth-of-type(1)')
+let serviceFour = document.querySelector('.bottom-content .text-content:nth-of-type(1) h4')
+serviceFour.textContent = siteContent['main-content']['services-h4']
+
+
+
+let productP = document.querySelector('.bottom-content .text-content:nth-of-type(2) p')
 productP.textContent = siteContent['main-content']['product-content']
 
-let visionP = document.querySelector('.bottom-content .text-content:nth-of-type(2)')
+let productFour = document.querySelector('.bottom-content .text-content:nth-of-type(2) h4')
+productFour.textContent = siteContent['main-content']['product-h4']
+
+
+let visionP = document.querySelector('.bottom-content .text-content:nth-of-type(3) p')
 visionP.textContent = siteContent['main-content']['vision-content']
 
-
+let visionFour = document.querySelector('.bottom-content .text-content:nth-of-type(3) h4')
+visionFour.textContent = siteContent['main-content']['vision-h4']
 
 let foot = document.querySelector('footer');
 foot.textContent = siteContent['footer']['copyright']
-
-let contacts = document.querySelector('.contact')
-contacts.textContent = siteContent['contact']['address']
-contacts.textContent = siteContent['contact']['phone']
-contacts.textContent = siteContent['contact']['contact-h4']
-contacts.textContent = siteContent['contact']['email']
-
-
 
 
 
@@ -88,13 +100,40 @@ buttons.textContent = siteContent['cta']['button']
 
 
 let links = document.getElementsByTagName('a')
-// console.log('link at 4', links)
+
 links[0].textContent = siteContent['nav']['nav-item-1']
 links[1].textContent = siteContent['nav']['nav-item-2']
 links[2].textContent = siteContent['nav']['nav-item-3']
 links[3].textContent = siteContent['nav']['nav-item-4']
 links[4].textContent = siteContent['nav']['nav-item-5']
 links[5].textContent = siteContent['nav']['nav-item-6']
+
+
+
+let contacts = document.querySelector('.contact')
+contacts.textContent = siteContent['contact']['email']
+
+
+let addresses = document.querySelector('.contact')
+addresses.textContent = siteContent['contact']['address']
+
+let changer = document.getElementsByTagName('a');
+changer[0].style.color = 'green'
+changer[1].style.color = 'green'
+changer[2].style.color = 'green'
+changer[3].style.color = 'green'
+changer[4].style.color = 'green'
+changer[5].style.color = 'green'
+
+
+let parent = document.createElement('div')
+let child = document.createElement('p')
+
+
+
+
+
+
 
 
 
