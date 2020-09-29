@@ -61,6 +61,9 @@ navItems[3].textContent = 'Features';
 navItems[4].textContent = 'About';
 navItems[5].textContent = 'Contact';
 
+navItems.forEach( function (currentValue) {
+  currentValue.style.color= 'green';
+});
 
 //create two new nav items
 const navOne = document.createElement('a');
