@@ -40,3 +40,74 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+
+
+const headerImg = document.querySelector('#cta-img');
+headerImg.src = 'img/header-img.png';
+headerImg.alt = 'image of a code snippet';
+
+const middleImg = document.querySelector('#middle-img');
+middleImg.src = 'img/mid-page-accent.jpg';
+middleImg.alt = 'Image of code snippets across the screen';
+
+
+const navItems = document.querySelectorAll('a');
+navItems[0].textContent = 'Services';
+navItems[1].textContent = 'Product';
+navItems[2].textContent = 'Vision';
+navItems[3].textContent = 'Features';
+navItems[4].textContent = 'About';
+navItems[5].textContent = 'Contact';
+
+
+//create two new nav items
+const navOne = document.createElement('a');
+navOne.textContent = 'info';
+navOne.href ='#';
+
+navOne.style.color = 'green'
+document.querySelector('nav').appendChild(navOne)
+
+const navTwo = document.createElement('a');
+navTwo.textContent = 'box';
+navTwo.href ='#';
+
+navTwo.style.color = 'green';
+document.querySelector('nav').prepend(navTwo)
+
+
+// const text = document.querySelector('h1');
+// text.innerHTML = 'DOM <br>IS <br> AWESOME';
+
+
+const newHeader = document.querySelectorAll('h4');
+newHeader[0].textContent = 'FEATURES';
+newHeader[1].textContent = 'ABOUT';
+newHeader[2].textContent = 'SERVICES';
+newHeader[3].textContent = 'PRODUCT';
+newHeader[4].textContent = 'VISION';
+newHeader[5].textContent = 'CONTACT'
+
+
+const htitle = document.querySelectorAll('.text-content h4')
+const hpar = document.querySelectorAll('.text-content p')
+
+htitle[0].textContent = siteContent['main-content']['features-h4']
+htitle[1].textContent = siteContent['main-content']['about-h4']
+htitle[2].textContent = siteContent['main-content']['services-h4']
+htitle[3].textContent = siteContent['main-content']['product-h4']
+htitle[4].textContent = siteContent['main-content']['vision-h4']
+
+hpar[0].textContent= siteContent['main-content']['features-content']
+hpar[1].textContent= siteContent['main-content']['about-content']
+hpar[2].textContent= siteContent['main-content']['services-content']
+hpar[3].textContent= siteContent['main-content']['product-content']
+hpar[4].textContent= siteContent['main-content']['vision-content']
+
+
+
+const newBut = document.querySelector('button');
+newBut.textContent = 'Get Started';
+
