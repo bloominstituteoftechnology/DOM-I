@@ -58,14 +58,63 @@ ctaHeader.textContent = 'DOM IS AWESOME'
 const ctaButton = document.querySelector('cta, button')
 ctaButton.textContent = 'Get Started'
 
-const featuresHeader =  document.querySelector('div .top-content .text-content:nth=of-type(1) h4')
+const featuresHeader =  document.querySelector('div .top-content .text-content:nth-of-type(1) h4')
 
-featuresHeader.textContent = siteContent['main-content] ['features-h4'])
+const featuresContent = document.querySelector('div .top-content .text-content:nth-of-type(1) p')
 
+featuresHeader.textContent = 'Features'
 
 featuresContent.textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
 
+const aboutHeader = document.querySelector('div .top-content .text-content:nth-of-type(2) h4')
+
+const aboutContent = document.querySelector('div .top-content .text-content:nth-of-type(2) p')
+
+aboutHeader.textContent = 'About'
+
+aboutContent.textContent = 'Aout content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, ininterdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+
+const MainImg = document.querySelector('.middle-img')
+MainImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+const servicesHeader = document.querySelector('div .bottom-content .text-content:nth-of-type(1) h4')
+
+const servicesContent = document.querySelector('div .bottom-content .text-content:nth-of-type(1) p')
+
+servicesHeader.textContent = 'Services'
+
+servicesContent.textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+
+const productHeader = document.querySelector('div .bottom-content .text-content:nth-of-type(2) h4')
+
+const productContent = document.querySelector('div .bottom-content .text-content:nth-of-type(2) p')
+
+productHeader.textContent = 'Product'
+
+productContent.textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+
+const visionHeader = document.querySelector('div .bottom-content .text-content:nth-of-type(3) h4')
+
+const visionContent = document.querySelector('div .bottom-content .text-content:nth-of-type(3) p')
+
+visionHeader.textContent = 'Vision'
+
+visionContent.textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+
+const contactHeader = document.querySelector('.contact h4')
+
+// const contactContent1 = document.querySelector('.contact:nth-of-type(1) p')
+// const contactContent2 = document.querySelector('.contact:nth-of-type(2) p')
+// const contactContent3 = document.querySelector('.contact:nth-of-type(3) p')
 
 
 
+contactHeader.textContent = 'Contact'
 
+// contactContent1.textContent = '123 Way 456 Street Somewhere, USA'
+// contactContent2.textContent = '1 (888) 888-8888'
+// contactContent3.textContent = 'sales@greatidea.io'
+
+const footer = document.querySelector('footer p')
+
+footer.textContent = 'Copyright Great Idea! 2018'
