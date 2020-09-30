@@ -41,6 +41,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+//nav
 const navItems = document.querySelectorAll('nav a')
 console.log(navItems)
 navItems[0].textContent = siteContent.nav['nav-item-1']
@@ -50,5 +51,14 @@ navItems[3].textContent = siteContent.nav['nav-item-4']
 navItems[4].textContent = siteContent.nav['nav-item-5']
 navItems[5].textContent = siteContent.nav['nav-item-6']
 
+//dom
+const domHeader = document.querySelector('h1')
+domHeader.textContent = siteContent.cta['h1']
+
+//code
 const codeSnippet = document.getElementById('cta-img')
 codeSnippet.src = "img/header-img.png"
+
+//button 
+const button = document.querySelector('button')
+button.textContent = siteContent.cta['button']
