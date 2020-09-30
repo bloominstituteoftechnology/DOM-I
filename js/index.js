@@ -57,8 +57,27 @@ domHeader.textContent = siteContent.cta['h1']
 
 //code
 const codeSnippet = document.getElementById('cta-img')
-codeSnippet.src = "img/header-img.png"
+codeSnippet.src = siteContent.cta['img-src']
 
 //button 
 const button = document.querySelector('button')
 button.textContent = siteContent.cta['button']
+
+//content
+const par = document.querySelectorAll('.text-content p')
+par[0].textContent = siteContent['main-content']['features-content']
+par[1].textContent = siteContent['main-content']['about-content']
+par[2].textContent = siteContent['main-content']['services-content']
+par[3].textContent = siteContent['main-content']['product-content']
+par[4].textContent = siteContent['main-content']['vision-content']
+
+
+const head4 = document.querySelectorAll('.main-content h4')
+head4[0].textContent = siteContent['main-content']['features-h4']
+head4[1].textContent = siteContent['main-content']['about-h4']
+head4[2].textContent = siteContent['main-content']['services-h4']
+head4[3].textContent = siteContent['main-content']['product-h4']
+head4[4].textContent = siteContent['main-content']['vision-h4']
+
+const midImg = document.querySelector('.middle-img')
+midImg.src = siteContent['main-content']['middle-img-src']
