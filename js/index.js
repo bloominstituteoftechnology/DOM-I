@@ -95,3 +95,21 @@ contact[2].textContent = siteContent.contact['email']
 
 const footer = document.querySelector('footer p')
 footer.textContent = siteContent.footer['copyright']
+
+//added content
+
+navItems.forEach((anchor) => {
+  anchor.style.color = 'green'
+})
+
+const navEl = document.createElement('a')
+navEl.textContent = 'Mailing List'
+
+const nav = document.querySelector('nav')
+nav.append(navEl)
+
+const navEl2 = document.createElement('a')
+navEl2.textContent = 'Social Media'
+
+const nav2 = document.querySelector('nav')
+nav.prepend(navEl2)
