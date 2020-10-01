@@ -46,10 +46,14 @@ let navItems = document.querySelectorAll('nav a');
 console.log(navItems);
 navItems[0].innerHTML = "Services";
 navItems[1].innerHTML = "Product";
-navItems[2].innerHtml = "Vision";
+navItems[2].textContent = siteContent['nav']['nav-item-3'];
 navItems[3].innerHTML = "Features";
 navItems[4].innerHTML = "About";
 navItems[5].innerHTML = "Contact";
+//Change Nav Element Colors
+navItems.forEach((item) => {
+  item.style.color = "#00FF00";
+});
 
 
 //Create the "Get Started" CTA
@@ -111,3 +115,5 @@ footerContent[2].textContent = siteContent['contact']['email'];
 let copyFooter = document.querySelector('footer p');
 console.log(copyFooter);
 copyFooter.textContent = siteContent['footer']['copyright'];
+
+
