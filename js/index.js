@@ -71,3 +71,9 @@ let primaryHeaders = document.querySelectorAll('.top-content h4');
 console.log(primaryHeaders);
 primaryHeaders[0].textContent = siteContent["main-content"]['features-h4'];
 primaryHeaders[1].textContent = siteContent["main-content"]['about-h4'];
+
+//Render Main content
+let primaryContent = document.querySelectorAll('.top-content p');
+console.log(primaryContent);
+primaryContent[0].textContent = siteContent['main-content']['features-content'];
+primaryContent[1].textContent = siteContent['main-content']['about-content'];
