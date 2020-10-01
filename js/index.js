@@ -95,3 +95,13 @@ console.log(secondaryContent);
 secondaryContent[0].textContent = siteContent['main-content']['services-content']
 secondaryContent[1].textContent = siteContent['main-content']['product-content']
 secondaryContent[2].textContent = siteContent['main-content']['vision-content']
+
+//Render Footer content
+let footerTitle = document.querySelector('.contact h4');
+console.log(footerTitle);
+footerTitle.innerHTML = "Contact";
+let footerContent = document.querySelectorAll('.contact p');
+console.log(footerContent);
+footerContent[0].textContent = siteContent['contact']['address'];
+footerContent[1].textContent = siteContent['contact']['phone'];
+footerContent[2].textContent = siteContent['contact']['email'];
