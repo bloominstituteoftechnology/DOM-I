@@ -58,16 +58,39 @@ logo.setAttribute("src", siteContent["nav"]["img-src"]);
 let theHeader = document.querySelector(".cta-text h1");
 theHeader.textContent = siteContent ["cta"]
 ["h1"]
+theHeader.
 let theButton = document.querySelector(".cta-text button");
 theButton.textContent = siteContent["cta"]["button"];
 let ctaImg = document.getElementById('cta-img');
 ctaImg.src = siteContent ['cta'] ['img-src']
 // section cta end
 // section main content start
-let mainContent1A = document.querySelectorAll (".top-content h4")
-mainContent1A[0].textContent= siteContent ["main-content"] ["features-h4"]
-mainContent1A[1].textContent= siteContent ["main-content"] ["about-h4"]
+let mainContent1A = document.querySelectorAll (".top-content h4");
+let mainContent1B = document.querySelectorAll (".top-content p");
+mainContent1A[0].textContent= siteContent ["main-content"] ["features-h4"];
+mainContent1B[0].textContent= siteContent ["main-content"] ["features-content"];
+mainContent1A[1].textContent= siteContent ["main-content"] ["about-h4"];
+mainContent1B[1].textContent= siteContent ["main-content"] ["about-content"];
+let middleImg = document.getElementById("middle-img")
+middleImg.src= siteContent ["main-content"]['middle-img-src']
+let mainContent1C = document.querySelectorAll (".bottom-content h4");
+let mainContent1D = document.querySelectorAll (".bottom-content p");
+mainContent1C[0].textContent= siteContent ["main-content"] ["services-h4"];
+mainContent1D[0].textContent= siteContent ["main-content"] ["services-content"];
+mainContent1C[1].textContent= siteContent ["main-content"] ["product-h4"];
+mainContent1D[1].textContent= siteContent ["main-content"] ["product-content"];
+mainContent1C[2].textContent= siteContent ["main-content"] ["vision-h4"];
+mainContent1D[2].textContent= siteContent ["main-content"] ["vision-content"];
 // section main content end
 // section contact start
-
+let contactA= document.querySelector(".contact h4")
+contactA.textContent= siteContent ['contact']['contact-h4']
+let contactB= document.querySelectorAll(".contact p")
+contactB[0].textContent = siteContent ['contact']['address']
+contactB[1].textContent = siteContent ['contact']['phone']
+contactB[2].textContent = siteContent ['contact']['email']
 // section contact end
+// footer start
+let newFooter = document.querySelector(" footer p")
+newFooter.textContent = siteContent ["footer"]['copyright']
+// fotter end
