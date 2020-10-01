@@ -38,5 +38,54 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+const logo = document.getElementById("logo-img");
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+// fill in nav links using forEach to fill in each anchor tag
+const navLinks = document.querySelectorAll('nav a');
+navLinks.forEach((el, i) => {
+  el.textContent = siteContent.nav[`nav-item-${i}`];
+  el.style.color = 'green';
+})
+const newLink1 = document.createElement('a');
+const nav = document.querySelector('nav');
+newLink1.textContent = "Prepend"
+newLink1.style.color = "green"
+nav.prepend(newLink1);
+const newLink2 = document.createElement('a');
+newLink1.textContent = "AppendChild"
+newLink1.style.color = "green"
+nav.appendChild(newLink1);
+
+
+const ctaH1 = document.querySelector('.cta-text h1');
+ctaH1.textContent = siteContent.cta.h1;
+
+const ctaButton = document.querySelector('.cta-text button');
+ctaButton.textContent = siteContent.cta.button;
+
+const ctaImage = document.querySelector('.cta img');
+ctaImage.src = siteContent.cta["img-src"];
+
+const mainH4Arr = ["features-h4", "about-h4", "services-h4", "product-h4", "vision-h4"];
+const mainPArr = ["features-content", "about-content", "services-content", "product-content", "vision-content"];
+
+const mainH4 = document.querySelectorAll('.text-content h4');
+mainH4.forEach((el, i) => el.textContent = siteContent["main-content"][mainH4Arr[i]]);
+
+const mainP = document.querySelectorAll('.text-content p');
+mainP.forEach((el, i) => el.textContent = siteContent["main-content"][mainPArr[i]]);
+
+const mainImage = document.getElementById('middle-img');
+mainImage.src = siteContent["main-content"]["middle-img-src"];
+
+const contactH4 = document.querySelector('.contact h4');
+contactH4.textContent = siteContent.contact['contact-h4'];
+
+const contactP = document.querySelectorAll('.contact p');
+contactArr = ["address", "phone", "email"];
+contactP.forEach((el, i) => el.textContent = siteContent.contact[contactArr[i]]);
+
+const footer = document.querySelector('footer p');
+footer.textContent = siteContent.footer.copyright;
+
