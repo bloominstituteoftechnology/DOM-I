@@ -58,3 +58,10 @@ console.log(mainCTA);
 mainCTA.innerHTML = 'Get Started';
 //CTA Completed
 
+//Create the "Dom Is Awesome" text
+let bigText = document.querySelector(".cta-text h1");
+bigText.textContent = siteContent["cta"]["h1"];
+
+//Create the Code Snippet image
+let codeSnippet = document.getElementById('cta-img');
+codeSnippet.src = "img/header-img.png";
