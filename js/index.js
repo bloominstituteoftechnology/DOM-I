@@ -55,6 +55,10 @@ navItems.forEach((item) => {
   item.style.color = "#00FF00";
 });
 
+//Append/Prepend children
+const nav = document.querySelector('nav');
+nav.prepend("History");
+nav.append("Cost");
 
 //Create the "Get Started" CTA
 let mainCTA = document.querySelector('button');
