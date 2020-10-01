@@ -40,3 +40,85 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//nav
+const navItems = document.querySelectorAll('nav a')
+console.log(navItems)
+navItems[0].textContent = siteContent.nav['nav-item-1']
+navItems[1].textContent = siteContent.nav['nav-item-2']
+navItems[2].textContent = siteContent.nav['nav-item-3']
+navItems[3].textContent = siteContent.nav['nav-item-4']
+navItems[4].textContent = siteContent.nav['nav-item-5']
+navItems[5].textContent = siteContent.nav['nav-item-6']
+
+//dom
+const domHeader = document.querySelector('h1')
+domHeader.textContent = siteContent.cta['h1']
+
+//code
+const codeSnippet = document.getElementById('cta-img')
+codeSnippet.src = siteContent.cta['img-src']
+
+//button 
+const button = document.querySelector('button')
+button.textContent = siteContent.cta['button']
+
+//content
+const par = document.querySelectorAll('.text-content p')
+par[0].textContent = siteContent['main-content']['features-content']
+par[1].textContent = siteContent['main-content']['about-content']
+par[2].textContent = siteContent['main-content']['services-content']
+par[3].textContent = siteContent['main-content']['product-content']
+par[4].textContent = siteContent['main-content']['vision-content']
+
+
+const head4 = document.querySelectorAll('.main-content h4')
+head4[0].textContent = siteContent['main-content']['features-h4']
+head4[1].textContent = siteContent['main-content']['about-h4']
+head4[2].textContent = siteContent['main-content']['services-h4']
+head4[3].textContent = siteContent['main-content']['product-h4']
+head4[4].textContent = siteContent['main-content']['vision-h4']
+
+const midImg = document.querySelector('.middle-img')
+midImg.src = siteContent['main-content']['middle-img-src']
+
+//contact
+
+const newH4 = document.querySelector('.contact h4')
+newH4.textContent = siteContent.contact['contact-h4']
+
+const contact = document.querySelectorAll('.contact p')
+
+contact[0].textContent = siteContent.contact['address']
+contact[1].textContent = siteContent.contact['phone']
+contact[2].textContent = siteContent.contact['email']
+
+const footer = document.querySelector('footer p')
+footer.textContent = siteContent.footer['copyright']
+
+//added content
+
+navItems.forEach((anchor) => {
+  anchor.style.color = 'green'
+})
+
+const navEl = document.createElement('a')
+navEl.textContent = 'Mailing List'
+navEl.style.color = 'green'
+
+const nav = document.querySelector('nav')
+nav.append(navEl)
+
+const navEl2 = document.createElement('a')
+navEl2.textContent = 'Social Media'
+navEl2.style.color = 'green'
+
+const nav2 = document.querySelector('nav')
+nav.prepend(navEl2)
+
+//stretch
+const background = document.querySelector('body')
+background.style.backgroundColor = '#FFC0CB'
+
+const buttonColor = document.querySelector('button')
+buttonColor.style.backgroundColor = 'green'
