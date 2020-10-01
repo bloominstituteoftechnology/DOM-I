@@ -77,3 +77,21 @@ let primaryContent = document.querySelectorAll('.top-content p');
 console.log(primaryContent);
 primaryContent[0].textContent = siteContent['main-content']['features-content'];
 primaryContent[1].textContent = siteContent['main-content']['about-content'];
+
+
+//Render main Body image
+let bodyImg = document.getElementById('middle-img');
+console.log(bodyImg);
+bodyImg.src = "img/mid-page-accent.jpg";
+
+//Render Secondary titles/content
+let secondaryTitles = document.querySelectorAll('.bottom-content h4');
+console.log(secondaryTitles);
+secondaryTitles[0].innerHTML = "Services";
+secondaryTitles[1].innerHTML = "Product";
+secondaryTitles[2].innerHTML = "Vision";
+let secondaryContent = document.querySelectorAll('.bottom-content p');
+console.log(secondaryContent);
+secondaryContent[0].textContent = siteContent['main-content']['services-content']
+secondaryContent[1].textContent = siteContent['main-content']['product-content']
+secondaryContent[2].textContent = siteContent['main-content']['vision-content']
