@@ -50,13 +50,13 @@ navItems[2].innerHtml = "Vision";
 navItems[3].innerHTML = "Features";
 navItems[4].innerHTML = "About";
 navItems[5].innerHTML = "Contact";
-//Nav Items Completed
+
 
 //Create the "Get Started" CTA
 let mainCTA = document.querySelector('button');
 console.log(mainCTA);
 mainCTA.innerHTML = 'Get Started';
-//CTA Completed
+
 
 //Create the "Dom Is Awesome" text
 let bigText = document.querySelector(".cta-text h1");
