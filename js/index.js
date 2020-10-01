@@ -105,3 +105,9 @@ console.log(footerContent);
 footerContent[0].textContent = siteContent['contact']['address'];
 footerContent[1].textContent = siteContent['contact']['phone'];
 footerContent[2].textContent = siteContent['contact']['email'];
+
+
+//Render Copyright
+let copyFooter = document.querySelector('footer p');
+console.log(copyFooter);
+copyFooter.textContent = siteContent['footer']['copyright'];
