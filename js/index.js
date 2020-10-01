@@ -53,21 +53,45 @@ title.innerHTML = "Great Idea!";
 
 const services = document.querySelector("a");
 services.innerHTML = "Services";
+services.style.color = "green";
+services.prepend("Our ");
 
 const product = document.querySelector("a:nth-child(2)");
 product.innerHTML = "Product";
+product.style.color = "green";
 
 const vision = document.querySelector("a:nth-child(3)");
 vision.innerHTML = "Vision";
+vision.style.color = "green";
 
 const features = document.querySelector("a:nth-child(4)");
 features.innerHTML = "Features";
+features.style.color = "green";
 
 const about = document.querySelector("a:nth-child(5)");
 about.innerHTML = "About";
+about.style.color = "green";
 
 const contact = document.querySelector("a:nth-child(6)");
 contact.innerHTML = "Contact";
+contact.style.color = "green";
+
+//Appending Node with styling
+var node = document.createElement("a");
+node.appendChild(document.createTextNode("Social"));
+node.style.color = "green";
+document.querySelector("nav").appendChild(node);
+
+//Prepending Node with styling (using a function) This could be useful if you want to create a new nav item on page load OR when certain conditions are met
+function createNavItemBefore() {
+  var newTag = document.createElement("a");
+  newTag.style.color = "green";
+  newTag.appendChild(document.createTextNode("Home"));
+  document.querySelector("nav").prepend(newTag);
+}
+
+//Running our function
+createNavItemBefore();
 
 //CTA Area
 const headingText = document.querySelector("h1");
@@ -121,3 +145,14 @@ paragraph.forEach(function (el, index) {
   el.innerHTML = paragraphArr[index];
   index++;
 });
+
+//stretch
+
+//all I really want to do is make the images grow on hover (flex-grow)
+
+function makeImagesGrow() {
+  const stretch = document.querySelectorAll("img");
+  stretch.style.flex = "1.5";
+}
+
+img.addEventListener("mouseover", makeImagesGrow());
