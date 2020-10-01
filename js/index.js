@@ -65,3 +65,9 @@ bigText.textContent = siteContent["cta"]["h1"];
 //Create the Code Snippet image
 let codeSnippet = document.getElementById('cta-img');
 codeSnippet.src = "img/header-img.png";
+
+//Render Main content Titles
+let primaryHeaders = document.querySelectorAll('.top-content h4');
+console.log(primaryHeaders);
+primaryHeaders[0].textContent = siteContent["main-content"]['features-h4'];
+primaryHeaders[1].textContent = siteContent["main-content"]['about-h4'];
