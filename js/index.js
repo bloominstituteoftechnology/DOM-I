@@ -40,3 +40,84 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//Creating the Nav Elements
+let navItems = document.querySelectorAll('nav a');
+console.log(navItems);
+navItems[0].innerHTML = "Services";
+navItems[1].innerHTML = "Product";
+navItems[2].textContent = siteContent['nav']['nav-item-3'];
+navItems[3].innerHTML = "Features";
+navItems[4].innerHTML = "About";
+navItems[5].innerHTML = "Contact";
+//Change Nav Element Colors
+navItems.forEach((item) => {
+  item.style.color = "#00FF00";
+});
+
+//Append/Prepend children
+const nav = document.querySelector('nav');
+nav.prepend("History");
+nav.append("Cost");
+
+//Create the "Get Started" CTA
+let mainCTA = document.querySelector('button');
+console.log(mainCTA);
+mainCTA.innerHTML = 'Get Started';
+
+
+//Create the "Dom Is Awesome" text
+let bigText = document.querySelector(".cta-text h1");
+bigText.textContent = siteContent["cta"]["h1"];
+
+//Create the Code Snippet image
+let codeSnippet = document.getElementById('cta-img');
+codeSnippet.src = "img/header-img.png";
+
+//Render Main content Titles
+let primaryHeaders = document.querySelectorAll('.top-content h4');
+console.log(primaryHeaders);
+primaryHeaders[0].textContent = siteContent["main-content"]['features-h4'];
+primaryHeaders[1].textContent = siteContent["main-content"]['about-h4'];
+
+//Render Main content
+let primaryContent = document.querySelectorAll('.top-content p');
+console.log(primaryContent);
+primaryContent[0].textContent = siteContent['main-content']['features-content'];
+primaryContent[1].textContent = siteContent['main-content']['about-content'];
+
+
+//Render main Body image
+let bodyImg = document.getElementById('middle-img');
+console.log(bodyImg);
+bodyImg.src = "img/mid-page-accent.jpg";
+
+//Render Secondary titles/content
+let secondaryTitles = document.querySelectorAll('.bottom-content h4');
+console.log(secondaryTitles);
+secondaryTitles[0].innerHTML = "Services";
+secondaryTitles[1].innerHTML = "Product";
+secondaryTitles[2].innerHTML = "Vision";
+let secondaryContent = document.querySelectorAll('.bottom-content p');
+console.log(secondaryContent);
+secondaryContent[0].textContent = siteContent['main-content']['services-content']
+secondaryContent[1].textContent = siteContent['main-content']['product-content']
+secondaryContent[2].textContent = siteContent['main-content']['vision-content']
+
+//Render Footer content
+let footerTitle = document.querySelector('.contact h4');
+console.log(footerTitle);
+footerTitle.innerHTML = "Contact";
+let footerContent = document.querySelectorAll('.contact p');
+console.log(footerContent);
+footerContent[0].textContent = siteContent['contact']['address'];
+footerContent[1].textContent = siteContent['contact']['phone'];
+footerContent[2].textContent = siteContent['contact']['email'];
+
+
+//Render Copyright
+let copyFooter = document.querySelector('footer p');
+console.log(copyFooter);
+copyFooter.textContent = siteContent['footer']['copyright'];
+
+
