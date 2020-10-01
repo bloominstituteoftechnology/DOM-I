@@ -104,12 +104,21 @@ navItems.forEach((anchor) => {
 
 const navEl = document.createElement('a')
 navEl.textContent = 'Mailing List'
+navEl.style.color = 'green'
 
 const nav = document.querySelector('nav')
 nav.append(navEl)
 
 const navEl2 = document.createElement('a')
 navEl2.textContent = 'Social Media'
+navEl2.style.color = 'green'
 
 const nav2 = document.querySelector('nav')
 nav.prepend(navEl2)
+
+//stretch
+const background = document.querySelector('body')
+background.style.backgroundColor = '#FFC0CB'
+
+const buttonColor = document.querySelector('button')
+buttonColor.style.backgroundColor = 'green'
