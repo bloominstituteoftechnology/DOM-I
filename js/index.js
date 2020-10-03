@@ -108,7 +108,7 @@ anchor.textContent = "newelement";
 
 anchor2.textContent = "newelement2";
 
-navbar.append(anchor);
+navbar.appendChild(anchor);
 
 navbar.prepend(anchor2);
 
