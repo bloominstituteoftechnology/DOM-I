@@ -38,5 +38,99 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+
+//Images
+
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+let headerImg = document.getElementById("cta-img");
+headerImg.setAttribute('src', siteContent['cta']['img-src'])
+
+
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+
+//H1 Tag
+const h1s = document.querySelector('h1');
+
+h1s.textContent = siteContent.cta['h1'];
+
+//Button
+
+const newCtaB = document.querySelector('button');
+newCtaB.textContent = siteContent.cta['button']
+
+//h4 tags 
+
+const h4s = document.querySelectorAll('h4');
+h4s[0].textContent = siteContent['main-content']['features-h4']
+h4s[1].textContent = siteContent['main-content']['about-h4']
+h4s[2].textContent = siteContent['main-content']["services-h4"]
+h4s[3].textContent = siteContent['main-content']['product-h4']
+h4s[4].textContent = siteContent['main-content']['vision-h4']
+h4s[5].textContent = siteContent['contact']['contact-h4']
+
+//p tags 
+
+const paragraphs = document.querySelectorAll('p');
+
+paragraphs[0].textContent = siteContent['main-content']['features-content']
+paragraphs[1].textContent = siteContent['main-content']['about-content']
+paragraphs[2].textContent = siteContent['main-content']['services-content']
+paragraphs[3].textContent = siteContent['main-content']['product-content']
+paragraphs[4].textContent = siteContent['main-content']['vision-content']
+paragraphs[5].textContent = siteContent['contact']['address']
+paragraphs[6].textContent = siteContent['contact']['phone']
+paragraphs[7].textContent = siteContent['contact']['email']
+paragraphs[8].textContent = siteContent['footer']['copyright']
+
+
+//Nav
+
+const anchors = document.querySelectorAll('a');
+
+
+
+let as = 0;
+
+anchors.forEach((el) => {
+  
+  as++
+  el.textContent = siteContent.nav[`nav-item-${as}`]; 
+}
+);
+
+//All  Nav Text  Colors Changed
+
+anchors.forEach((el) =>{el.style.color = "green";})
+
+
+// New Nav Items
+
+const newNav1 = document.createElement('a');
+newNav1.textContent = "Team"
+newNav1.style.color = 'green'
+
+const newNav2 = document.createElement('a');
+newNav2.textContent = 'FAQ'
+newNav2.style.color = 'green'
+
+
+const nav = document.querySelector('nav');
+nav.appendChild(newNav1);
+nav.appendChild(newNav2);
+
+
+
+
+
+
+
+
+
+
+
+
