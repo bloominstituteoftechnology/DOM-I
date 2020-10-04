@@ -92,13 +92,36 @@ paragraphs[8].textContent = siteContent['footer']['copyright']
 
 const anchors = document.querySelectorAll('a');
 
+
+
 let as = 0;
 
 anchors.forEach((el) => {
+  
   as++
   el.textContent = siteContent.nav[`nav-item-${as}`]; 
 }
 );
+
+//All  Nav Text  Colors Changed
+
+anchors.forEach((el) =>{el.style.color = "green";})
+
+
+// New Nav Items
+
+const newNav1 = document.createElement('a');
+newNav1.textContent = "Team"
+newNav1.style.color = 'green'
+
+const newNav2 = document.createElement('a');
+newNav2.textContent = 'FAQ'
+newNav2.style.color = 'green'
+
+
+const nav = document.querySelector('nav');
+nav.appendChild(newNav1);
+nav.appendChild(newNav2);
 
 
 
