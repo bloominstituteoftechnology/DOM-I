@@ -16,34 +16,36 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 
 **Follow these steps to set up and work on your project:**
 
-* [ ] Create a forked copy of this project.
-* [ ] Clone your OWN version of the repository (Not Lambda's by mistake!).
-* [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-* [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-* [ ] Push commits: git push origin `<firstName-lastName>`.
+* [X] Create a forked copy of this project.
+* [X] Clone your OWN version of the repository (Not Lambda's by mistake!).
+* [X] Create a new branch: git checkout -b `<firstName-lastName>`.
+* [X] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+* [X] Push commits: git push origin `<firstName-lastName>`.
 
 ### Task 2a: MVP
 
 #### Create selectors to point your data into elements
 
 * [ ] Create selectors by using any of the DOM element's methods
+<!-- I dont know what this means -->
 * [ ] Note that IDs have been used on all images. Use the IDs to update src path content
-
+<!-- I dont understand this either -->
 #### Update the HTML with the JSON data
 
-* [ ] Remember, NO direct updating of the HTML source is allowed.
+* [x] Remember, NO direct updating of the HTML source is allowed.
 * [ ] Using your selectors, update the content to match the example file.
+<!-- Theres an example file?! This is going to be difficult isnt it?  -->
 * [ ] Remember to update the src attributes on images
-
+<!-- huh? -->
 #### Add new content
 
-* [ ] Change the color of the navigation text to be green.
-* [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
-* [ ] Check your work by looking at the [original html](original.html) in the browser
+* [x] Change the color of the navigation text to be green.
+* [x] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
+* [x] Check your work by looking at the [original html](original.html) in the browser
 
 ### Task 3: Stretch
 
-* [ ] Update styles throughout the page as you see fit. Study what happens when you updated the DOM using style in JavaScript.  
+* [ ] Update styles throughout the page as you see fit. Study what happens when you updated the DOM using style in JavaScript.
 * [ ] Study tomorrow's lesson on events and try to integrate a button that can update content on the site with a click of a button.  You could build a similar data object with new values to help you test the click event.
 
 #### Stretch Project: Digital Timer
