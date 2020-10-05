@@ -27,19 +27,21 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 #### Create selectors to point your data into elements
 
 * [ ] Create selectors by using any of the DOM element's methods
+<!-- I dont know what this means -->
 * [ ] Note that IDs have been used on all images. Use the IDs to update src path content
-
+<!-- I dont understand this either -->
 #### Update the HTML with the JSON data
 
-* [ ] Remember, NO direct updating of the HTML source is allowed.
+* [x] Remember, NO direct updating of the HTML source is allowed.
 * [ ] Using your selectors, update the content to match the example file.
+<!-- Theres an example file?! This is going to be difficult isnt it?  -->
 * [ ] Remember to update the src attributes on images
-
+<!-- huh? -->
 #### Add new content
 
-* [ ] Change the color of the navigation text to be green.
-* [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
-* [ ] Check your work by looking at the [original html](original.html) in the browser
+* [x] Change the color of the navigation text to be green.
+* [x] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
+* [x] Check your work by looking at the [original html](original.html) in the browser
 
 ### Task 3: Stretch
 
