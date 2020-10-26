@@ -103,13 +103,20 @@ visionContent.textContent = 'Vision content elementum magna eros, ac posuere elv
 
 const contactHeader = document.querySelector('.contact h4')
 
-// const contactContent1 = document.querySelector('.contact:nth-of-type(1) p')
-// const contactContent2 = document.querySelector('.contact:nth-of-type(2) p')
-// const contactContent3 = document.querySelector('.contact:nth-of-type(3) p')
-
-
-
 contactHeader.textContent = 'Contact'
+
+const contactContent = document.querySelectorAll('.contact p')
+
+const contactContent0 = contactContent[0]
+
+contactContent0.textContent = '123 Way 456 Street'
+
+
+
+console.log(contactContent.innerText)
+
+// contactContent.innerText = siteContent.contact.phone.split('123 Way 456 Street Somewhere, USA' '1 (888) 888-8888' 'sales@greatidea.io').join('/n')
+
 
 // contactContent1.textContent = '123 Way 456 Street Somewhere, USA'
 // contactContent2.textContent = '1 (888) 888-8888'
@@ -118,3 +125,4 @@ contactHeader.textContent = 'Contact'
 const footer = document.querySelector('footer p')
 
 footer.textContent = 'Copyright Great Idea! 2018'
+
