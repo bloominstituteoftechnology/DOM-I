@@ -96,7 +96,6 @@ header .logo {
     align-self: flex-end;
     margin: 28px 0 0 91px;
 }
-
 /* Call To Action (CTA) Styles */
 
 .cta {
@@ -141,6 +140,22 @@ header .logo {
    font-size: 16px;
    line-height: 18px;
 }
+.black{
+    background-color:black;
+    color:white;
+    border-radius: 15px;
+    width:100%;
+    margin:0;
+}
+.green{
+    background-color:green;
+}
+.grow{
+    font-size:2rem;
+    transition: 2s;
+}
+
+
 
 .main-content .top-content {
     display: flex;
