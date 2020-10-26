@@ -40,3 +40,42 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+document.title = "Great idea!";
+
+// Links section ------------------------------------
+const links = document.querySelectorAll("nav a");
+
+links[0].textContent = "Services";
+links[1].textContent = "Product";
+links[2].textContent = "Vision";
+links[3].textContent = "Features";
+links[4].textContent = "About";
+links[5].textContent = "Contact";
+
+// Heading section ------------------------------------
+const heading = document.querySelector("h1");
+heading.textContent = "DOM is awesome";
+
+// const headerImage = getElementById("#cta-img")
+// headerImage.setAttribute('src', siteContent["img-src"])
+
+const button = document.querySelector("button");
+button.textContent = "Get Started";
+
+// Main content section --------------------------------
+const text = document.querySelectorAll(".text-content");
+text[0].textContent = "Features";
+text[1].textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+text[2].textContent = "Hello";
+text[3].textContent = "There";
+
+
+// const featuresTitle = document.querySelector("h4");
+// featuresTitle.textContent = "Features";
+
+// const featuresText = document.querySelector("p");
+// featuresText.textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis"
+
+// aboutTitle = document.querySelector(".text-content");
+// aboutTitle.textContent = "About";
