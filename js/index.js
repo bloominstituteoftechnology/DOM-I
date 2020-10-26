@@ -152,5 +152,13 @@ contactThirdP.textContent = "sales@greatidea.io";
 const footerP = document.querySelector("footer p");
 //footer p text content
 footerP.textContent = "Copyright Great Idea! 2018";
-
+//body section
+const bodyS = document.querySelector('.cta')
+//Chnage backgrond color to black every 1.2seconds
+setInterval(()=>{
+bodyS.classList.toggle('black')
+},1255)
+setInterval(()=>{
+  footerP.classList.toggle('grow')
+},1000)
 
