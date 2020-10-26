@@ -62,7 +62,7 @@ navLink6.textContent = "Contact";
 //grab the h1
 let domText = document.querySelector("h1");
 //change the h1 text
-domText.textContent = "DOM IS AWESOME";
+domText.innerHTML = "DOM <br> IS <br> AWESOME";
 //grab the button
 const myButton = document.querySelector("button");
 myButton.textContent = "Get Started";
@@ -133,23 +133,24 @@ const visionP = document.querySelector(
 visionP.textContent =
   "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 //grab contact h4
-const contactH4 = document.querySelector('.contact h4')
+const contactH4 = document.querySelector(".contact h4");
 //contact h4 text content
-contactH4.textContent='Contact'
+contactH4.textContent = "Contact";
 //grab contact first p
-const contactP = document.querySelector('.contact p')
+const contactP = document.querySelector(".contact p");
 //contact first p text content
-contactP.textContent='23 Way 456 Street Somewhere, USA'
+contactP.textContent = "23 Way 456 Street Somewhere, USA";
 //grab contact second p
-const contactSecondP = document.querySelector('.contact p:nth-of-type(2)')
+const contactSecondP = document.querySelector(".contact p:nth-of-type(2)");
 //second P text content
-contactSecondP.textContent='1 (888) 888-8888'
+contactSecondP.textContent = "1 (888) 888-8888";
 //grab contact third P
-const contactThirdP = document.querySelector('.contact p:nth-of-type(3)')
+const contactThirdP = document.querySelector(".contact p:nth-of-type(3)");
 //third P text content
-contactThirdP.textContent='sales@greatidea.io'
+contactThirdP.textContent = "sales@greatidea.io";
 //grab footer p
-const footerP = document.querySelector('footer p')
+const footerP = document.querySelector("footer p");
 //footer p text content
-footerP.textContent='Copyright Great Idea! 2018'
+footerP.textContent = "Copyright Great Idea! 2018";
+
 
