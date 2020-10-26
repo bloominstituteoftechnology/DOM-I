@@ -69,3 +69,34 @@ bigText.innerHTML = "Dom <br> is <br> Awesome";
 
 const buttonText = document.querySelector("button");
 buttonText.textContent = "Get Started";
+
+//Edit for main content/ middle of page
+
+const feats = document.querySelector(".text-content h4");
+feats.textContent = "Features";
+const text = document.querySelector(".text-content p");
+text.textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+// const aboutH4 = feats.nextElementSibling;
+// aboutH4.textContent = ;
+
+const widelogo = document.getElementById("middle-img");
+widelogo.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+
+//Bottom section
+const contact = document.querySelector(".contact h4");
+contact.textContent = "CONTACT";
+
+const bottomText = document.querySelector(".contact p");
+bottomText.innerHTML = "123 Way 456 Street <br>Somewhere, USA";
+
+const bottomText2 = bottomText.nextElementSibling;
+bottomText2.textContent = "1 (888) 888-8888";
+
+const bottomText3 = bottomText2.nextElementSibling;
+bottomText3.textContent = "sales@greatidea.io";
+
+//Footer
+const copyRight = document.querySelector("footer p");
+copyRight.textContent = "Copyright Great Idea! 2018";
