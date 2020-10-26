@@ -39,4 +39,9 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img\logo.png"])
+
+
+
+let bigLogo = document.getElementById("cta-img")
+bigLogo.src = "img\header-img.png";
