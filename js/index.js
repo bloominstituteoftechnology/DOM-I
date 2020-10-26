@@ -43,7 +43,7 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+let logo = document.querySelector(".logo");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
 let nav = document.querySelector("nav");
@@ -80,7 +80,7 @@ cta.innerHTML = "Dom<br> Is<br> Awesome";
 let ctaButton = document.querySelector(".cta-text button");
 ctaButton.textContent = siteContent["cta"]["button"];
 
-let ctaImg = document.getElementById("cta-img");
+let ctaImg = document.querySelector(".cta img");
 ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
 
 let mainConFeat = document.querySelectorAll(".text-content h4");
@@ -94,7 +94,7 @@ mainConAbout[1].textContent = siteContent["main-content"]["about-h4"];
 let mainConAboutText = document.querySelectorAll(".text-content p");
 mainConAboutText[1].textContent = siteContent["main-content"]["about-content"];
 
-let middleImg = document.getElementById("middle-img");
+let middleImg = document.querySelector(".middle-img");
 middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
 let mainConServ = document.querySelectorAll(".text-content h4");
