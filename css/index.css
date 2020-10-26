@@ -143,6 +143,9 @@ header .logo {
 .black{
     background-color:black;
     color:white;
+    border-radius: 15px;
+    width:100%;
+    margin:0;
 }
 .green{
     background-color:green;
