@@ -40,3 +40,75 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// Nav Bar
+let navElements = siteContent['nav']
+console.log(navElements);
+
+const newNav = document.querySelectorAll('nav > a');
+console.log(newNav);
+
+for(let i=0; i<newNav.length; i++){
+  newNav[i].textContent=navElements[`nav-item-${i}`]
+}
+
+// Cta Section
+const cta = siteContent['cta']
+
+const newCta = document.querySelector('.cta').children
+const newCtaText = newCta[0].children
+newCtaText[0].innerHTML=cta['h1']
+newCtaText[1].textContent=cta['button']
+newCta[1].src=cta['img-src']
+
+const wholeSection = document.querySelector('.main-content').children
+console.log(wholeSection)
+
+
+//Main Content
+const topContent = wholeSection[0].children
+const botContent = wholeSection[2].children
+const picContent = wholeSection[1]
+
+topContent[0].children[0].innerText=siteContent['main-content']['featuers-h4']
+topContent[0].children[1].innerText=siteContent['main-content']['features-content']
+topContent[1].children[0].innerText=siteContent['main-content']['about-h4']
+topContent[1].children[1].innerText=siteContent['main-content']['about-content']
+
+picContent.src = siteContent['main-content']['middle-img-src']
+
+botContent[0].children[0].innerText=siteContent['main-content']['featuers-h4']
+botContent[0].children[1].innerText=siteContent['main-content']['features-content']
+botContent[1].children[0].innerText=siteContent['main-content']['about-h4']
+botContent[1].children[1].innerText=siteContent['main-content']['about-content']
+botContent[2].children[0].innerText=siteContent['main-content']['featuers-h4']
+botContent[2].children[0].innerText=siteContent['main-content']['featuers-h4']
+
+//Contact Area
+const contactArea = document.querySelector('.contact').children;
+contactArea[0].innerText=siteContent['contact']['contact-h4']
+contactArea[1].innerText=siteContent['contact']['address']
+contactArea[2].innerText=siteContent['contact']['phone']
+contactArea[3].innerText=siteContent['contact']['email']
+
+//Footer 
+
+document.querySelector('footer > p').innerText= siteContent.footer.copyright
+
+// sprint
+const button = document.querySelector('button')
+let seconds = document.querySelector('#secondOnes')
+
+button.addEventListener('click', event =>{
+  button.innerHtml = `Click count: ${event.detail}`;
+  console.log('clicked')
+  setInterval(() => {
+    counter++
+    seconds.innerText = counter
+    if(counter>5){
+      clearInterval();
+    }
+  },1000);
+
+
+});
