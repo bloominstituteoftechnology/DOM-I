@@ -158,7 +158,11 @@ const bodyS = document.querySelector('.cta')
 setInterval(()=>{
 bodyS.classList.toggle('black')
 },1255)
+//grows footer text
 setInterval(()=>{
   footerP.classList.toggle('grow')
 },1000)
-
+//Annoying DOM is awesome popup every 10 seconds LOL!
+setInterval(()=>{
+  window.confirm('Press OK if you think DOM IS AWESOME')
+},10000)
