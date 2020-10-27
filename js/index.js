@@ -128,3 +128,14 @@ navItems3.style.color = "green";
 navItems4.style.color = "green";
 navItems5.style.color = "green";
 navItems6.style.color = "green";
+
+//Adding to nav bar
+const shopLink = document.createElement("a");
+shopLink.textContent = "Shop";
+shopLink.href = "#";
+document.querySelector("nav").appendChild(shopLink);
+
+const education = document.createElement("a");
+education.textContent = "Education";
+education.href = "#";
+document.querySelector("nav").prepend(education);
