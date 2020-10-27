@@ -70,18 +70,37 @@ bigText.innerHTML = "Dom <br> is <br> Awesome";
 const buttonText = document.querySelector("button");
 buttonText.textContent = "Get Started";
 
-//Edit for main content/ middle of page
+//Edit for main content/ top middle of page
 
-const feats = document.querySelector(".text-content h4");
+const feats = document.querySelector(".top-content .text-content:nth-of-type(1) h4:nth-of-type(1)");
 feats.textContent = "Features";
-const text = document.querySelector(".text-content p");
-text.textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+const featsText = document.querySelector(".top-content .text-content:nth-of-type(1) p:nth-of-type(1)");
+featsText.textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
-// const aboutH4 = feats.nextElementSibling;
-// aboutH4.textContent = ;
+const about = document.querySelector(".top-content .text-content:nth-of-type(2) h4:nth-of-type(1)");
+about.textContent = "About";
+const aboutText = document.querySelector(".top-content .text-content:nth-of-type(2) p:nth-of-type(1)");
+aboutText.textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
+//wide image
 const widelogo = document.getElementById("middle-img");
 widelogo.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+//Edit for main content/ bottom middle of page
+const services = document.querySelector(".bottom-content .text-content:nth-of-type(1) h4:nth-of-type(1)");
+services.textContent = "Services";
+const serviceText = document.querySelector(".bottom-content .text-content:nth-of-type(1) p:nth-of-type(1)");
+serviceText.textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+const product = document.querySelector(".bottom-content .text-content:nth-of-type(2) h4:nth-of-type(1)");
+product.textContent = "Product";
+const productText = document.querySelector(".bottom-content .text-content:nth-of-type(2) p:nth-of-type(1)");
+productText.textContent = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+const vision = document.querySelector(".bottom-content .text-content:nth-of-type(3) h4:nth-of-type(1)");
+vision.textContent = "Vision";
+const visionText = document.querySelector(".bottom-content .text-content:nth-of-type(3) p:nth-of-type(1)");
+visionText.textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
 
 //Bottom section
@@ -100,3 +119,12 @@ bottomText3.textContent = "sales@greatidea.io";
 //Footer
 const copyRight = document.querySelector("footer p");
 copyRight.textContent = "Copyright Great Idea! 2018";
+
+
+//Nav Text color
+navItems.style.color = "green";
+navItems2.style.color = "green";
+navItems3.style.color = "green";
+navItems4.style.color = "green";
+navItems5.style.color = "green";
+navItems6.style.color = "green";
