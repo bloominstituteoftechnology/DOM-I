@@ -40,3 +40,56 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const container = document.querySelector(".container");
+
+const containerHeader = container.querySelector("header");
+const containerHeaderImg = containerHeader.querySelector("img");
+
+const navItemsArray = containerHeader.querySelectorAll("nav a");
+
+navItemsArray.forEach((element, index) => element.textContent = siteContent["nav"][`nav-item-${index+1}`]);
+
+const containerCta = container.querySelector(".cta");
+const containerCtaImg = containerCta.querySelector("img");
+const containerCtaTextH1 = containerCta.querySelector(".cta-text h1");
+const containerCtaTextButt = containerCta.querySelector(".cta-text button");
+
+const regex = /\s/g;
+containerCtaTextH1.innerText = siteContent["cta"]["h1"].replace(regex, "\n");
+containerCtaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+containerCtaTextButt.textContent = "Get Started";
+
+const mainDivsTextCont = container.querySelectorAll(".main-content .text-content p");
+console.log(mainDivsTextCont);
+const mainDivsH4Cont = container.querySelectorAll(".main-content .text-content h4");
+
+const mainContentArray = Object.keys(siteContent["main-content"]);
+
+const contentInMainContent = mainContentArray.filter((element) => element.includes("-content"));
+
+
+mainDivsTextCont.forEach((element, index) => element.textContent = siteContent["main-content"][`${contentInMainContent[index]}`]);
+
+const h4InMainContent = mainContentArray.filter((element) => element.includes("h4"));
+
+mainDivsH4Cont.forEach((element, index) => element.textContent = siteContent["main-content"][`${h4InMainContent[index]}`]);
+
+const mainContImg = container.querySelector(".main-content img");
+mainContImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+const contactH4 = container.querySelector(".contact h4");
+contactH4.textContent = "Contact";
+
+const contactPArray = container.querySelectorAll(".contact p");
+console.log(contactPArray);
+
+const siteContentContactPs = {...siteContent["contact"]};
+delete siteContentContactPs["contact-h4"];
+const siteContentContactPsKeys = Object.keys(siteContentContactPs);
+
+contactPArray.forEach((element, index) => element.textContent = siteContent["contact"][`${siteContentContactPsKeys[index]}`]);
+console.log(contactPArray);
+
+const footerP = container.querySelector("footer p");
+footerP.textContent = siteContent["footer"]["copyright"];
