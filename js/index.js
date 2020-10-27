@@ -111,9 +111,13 @@ const contactContent0 = contactContent[0]
 
 contactContent0.textContent = '123 Way 456 Street'
 
+const contactContent1 = contactContent[1]
 
+contactContent1.textContent = '1 (888) 888-8888'
 
-console.log(contactContent.innerText)
+const contactContent2 = contactContent[2]
+
+contactContent2.textContent = 'sales@greatidea.io'
 
 // contactContent.innerText = siteContent.contact.phone.split('123 Way 456 Street Somewhere, USA' '1 (888) 888-8888' 'sales@greatidea.io').join('/n')
 
