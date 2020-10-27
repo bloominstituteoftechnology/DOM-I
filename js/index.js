@@ -120,7 +120,6 @@ bottomText3.textContent = "sales@greatidea.io";
 const copyRight = document.querySelector("footer p");
 copyRight.textContent = "Copyright Great Idea! 2018";
 
-
 //Nav Text color
 navItems.style.color = "green";
 navItems2.style.color = "green";
@@ -134,8 +133,12 @@ const shopLink = document.createElement("a");
 shopLink.textContent = "Shop";
 shopLink.href = "#";
 document.querySelector("nav").appendChild(shopLink);
+shopLink.style.color = "green";
 
 const education = document.createElement("a");
 education.textContent = "Education";
 education.href = "#";
 document.querySelector("nav").prepend(education);
+education.style.color = "green";
+
+
