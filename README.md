@@ -21,7 +21,6 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 * [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
 * [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
 * [ ] Push commits: git push origin `<firstName-lastName>`.
-<!-- <!-- Getting a late start on this project. Will likely have to return to it after 8:00 PM ET, to finish. -->
 
 ### Task 2a: MVP
 
