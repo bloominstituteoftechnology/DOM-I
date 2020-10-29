@@ -51,7 +51,9 @@ topNavItem[3].textContent = siteContent["nav"]["nav-item-4"]
 topNavItem[4].textContent = siteContent["nav"]["nav-item-5"]
 topNavItem[5].textContent = siteContent["nav"]["nav-item-6"]
 // document.querySelector().appendChild(topNavItem)
+topNavItem.forEach(coolor => coolor.style.color = 'green');
 console.log(topNav)
+
 
 
 // Adding h1 tag 
@@ -69,14 +71,49 @@ const addImg = document.getElementById("cta-img");
 addImg.setAttribute('src', siteContent["cta"]["img-src"])
 console.log(addImg);
 
-// Adding h4 tag
-const hFour = document.querySelector('h4');
-hFour.textContent = siteContent["main-content"]["features-h4"]
-console.log(hFour);
 
-// Adding text-content p 
-const addP = document.querySelector("p");
-addP.textContent = siteContent["main-content"]["features-content"];
-console.log(addP);
+// Adding middle content img 
+const midImage = document.getElementById("middle-img");
+midImage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+console.log(midImage);
 
-// Adding about h4
+
+// Adding h4 tag   -------------  This was commented out due to creating an array containing all h4 tags
+// const hFour = document.querySelector('h4');
+// hFour.textContent = siteContent["main-content"]["features-h4"]
+// console.log(hFour);
+
+// Adding text-content p  ---------- This was commented out due to creating an array containing all the p tags
+// const addP = document.querySelector("p");
+// addP.textContent = siteContent["main-content"]["features-content"];
+// console.log(addP);
+
+// Creating an array to add all h4 tags
+const headings = document.querySelector('h4');
+const addHeadings = document.querySelectorAll('h4');
+addHeadings[0].textContent = siteContent["main-content"]["features-h4"]
+addHeadings[1].textContent = siteContent["main-content"]["about-h4"]
+addHeadings[2].textContent = siteContent["main-content"]["services-h4"]
+addHeadings[3].textContent = siteContent["main-content"]["product-h4"]
+addHeadings[4].textContent = siteContent["main-content"]["vision-h4"]
+addHeadings[5].textContent = siteContent["contact"]["contact-h4"];
+console.log(headings);
+
+// Creating an array to add all p tags
+const contents = document.querySelector('p');
+const addConts = document.querySelectorAll('p');
+addConts[0].textContent = siteContent["main-content"]["features-content"]
+addConts[1].textContent = siteContent["main-content"]["about-content"];
+addConts[2].textContent = siteContent["main-content"]["services-content"]
+addConts[3].textContent = siteContent["main-content"]["product-content"]
+addConts[4].textContent = siteContent["main-content"]["vision-content"]
+addConts[5].textContent = siteContent["contact"]["address"]
+addConts[6].textContent = siteContent["contact"]["phone"]
+addConts[7].textContent = siteContent["contact"]["email"]
+addConts[8].textContent = siteContent["footer"]["copyright"];
+console.log(contents);
+
+
+// Changing color of nav bar text to be green 
+// const a = document.querySelector("nav")
+// a.style.color = 'green';
