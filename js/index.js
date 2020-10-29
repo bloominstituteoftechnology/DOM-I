@@ -41,7 +41,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-//Setting out all the NAV names to be in line with original.html
+//Setting out all the NAV names to be in line with original.html (is there a way to loop over this?)
 let navItems = document.querySelectorAll('nav a');
 let arrNavItems = Array.from(navItems);
 arrNavItems[0].textContent = siteContent["nav"]["nav-item-1"];
@@ -50,8 +50,20 @@ arrNavItems[2].textContent = siteContent["nav"]["nav-item-3"];
 arrNavItems[3].textContent = siteContent["nav"]["nav-item-4"];
 arrNavItems[4].textContent = siteContent["nav"]["nav-item-5"];
 arrNavItems[5].textContent = siteContent["nav"]["nav-item-6"];
-// is there a way to do this with map 
-// let updatedArrItems = arrNavItems.map()
+
+// mapping over array to change color to green
+arrNavItems.map(e => e.style.color = 'green');
+
+// appending an anchor child to the nav bar
+let navv = document.querySelector('nav');
+const addNavA1 = document.createElement('a');
+addNavA1.textContent = 'anchorEnd';
+navv.appendChild(addNavA1);
+
+// prepending an anchor child to nav bar
+const addNavA2 = document.createElement('a');
+addNavA2.textContent = 'anchorBeg';
+navv.prepend(addNavA2);
 
 
 //Section CTA: setting up first section (h1 text,button and image)
@@ -98,7 +110,8 @@ arrNavItems[5].textContent = siteContent["nav"]["nav-item-6"];
   mainContentImg.setAttribute('src',siteContent["main-content"]['middle-img-src']);
 
 
-
-
-
+// Changing Nav Text to Green
+// let nav = document.querySelectorAll('a');
+// navArr = Array.from(nav);
+// navArr.map(e => e.style.color = 'green');
 
