@@ -54,17 +54,29 @@ topNavItem[5].textContent = siteContent["nav"]["nav-item-6"]
 console.log(topNav)
 
 
-// Creating h1 tag 
+// Adding h1 tag 
 const hOne = document.querySelector('h1');
 hOne.textContent = siteContent["cta"]["h1"]
 console.log(hOne);
 
-// Creating button
+// Adding button
 const button = document.querySelector('button');
 button.textContent = siteContent["cta"]["button"];
-console.log(button)
+console.log(button);
 
-// Creating cta img 
-const addImg = document.querySelector('img-src');
-addImg.textContent = siteContent["cta"]["img-src"];
-console.log(addImg)
+// Adding cta img 
+const addImg = document.getElementById("cta-img");
+addImg.setAttribute('src', siteContent["cta"]["img-src"])
+console.log(addImg);
+
+// Adding h4 tag
+const hFour = document.querySelector('h4');
+hFour.textContent = siteContent["main-content"]["features-h4"]
+console.log(hFour);
+
+// Adding text-content p 
+const addP = document.querySelector("p");
+addP.textContent = siteContent["main-content"]["features-content"];
+console.log(addP);
+
+// Adding about h4
