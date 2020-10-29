@@ -58,11 +58,13 @@ arrNavItems.map(e => e.style.color = 'green');
 let navv = document.querySelector('nav');
 const addNavA1 = document.createElement('a');
 addNavA1.textContent = 'anchorEnd';
+addNavA1.style.color = 'green';
 navv.appendChild(addNavA1);
 
 // prepending an anchor child to nav bar
 const addNavA2 = document.createElement('a');
 addNavA2.textContent = 'anchorBeg';
+addNavA2.style.color = 'green';
 navv.prepend(addNavA2);
 
 
@@ -110,8 +112,5 @@ navv.prepend(addNavA2);
   mainContentImg.setAttribute('src',siteContent["main-content"]['middle-img-src']);
 
 
-// Changing Nav Text to Green
-// let nav = document.querySelectorAll('a');
-// navArr = Array.from(nav);
-// navArr.map(e => e.style.color = 'green');
-
+// putting the br in the middle of h1
+// using array methods and loops to traverse between array and object
