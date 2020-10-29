@@ -40,3 +40,39 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// anchor tag manipulation
+let a = document.querySelectorAll('a')
+a[0].textContent = "Services"
+a[1].textContent = "Product"
+a[2].textContent = "Vision"
+a[3].textContent = "Features"
+a[4].textContent = "About"
+a[5].textContent = "Contact"
+
+// h1 manipulation
+
+let h1 = document.querySelector('h1')
+h1.innerHTML = "DOM <br>Is<br> Awesome"
+
+// image manipulation
+
+let ctaImg = document.getElementById('cta-img')
+ctaImg.setAttribute('src','/img/header-img.png')
+
+// button manipulation
+
+let button = document.querySelector('button')
+button.textContent = "Get Started"
+
+// text snippet manipulation
+
+let h4 = document.querySelectorAll('h4')
+h4[0].textContent = "FEATURES"
+h4[1].textContent = "About"
+h4[2].textContent = "Services"
+h4[3].textContent = "Product"
+h4[4].textContent = "Vision"
+
+let middleImg = document.getElementById('middle-img')
+middleImg.setAttribute('src','/img/mid-page-accent.jpg')
