@@ -40,3 +40,86 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// images
+
+let cta = document.getElementById("cta-img");
+cta.setAttribute("src", siteContent["cta"]["img-src"])
+
+let middle = document.getElementById("middle-img");
+middle.setAttribute("src", siteContent["main-content"]["middle-img-src"])
+
+// nav
+
+let nav = document.getElementsByClassName("container")[0].children[0].children[0];
+// console.log(nav.children)
+nav.children[0].innerHTML = siteContent.nav["nav-item-1"].fontcolor("green");
+nav.children[1].innerHTML = siteContent.nav["nav-item-2"].fontcolor("green");
+nav.children[2].innerHTML = siteContent.nav["nav-item-3"].fontcolor("green");
+nav.children[3].innerHTML = siteContent.nav["nav-item-4"].fontcolor("green");
+nav.children[4].innerHTML = siteContent.nav["nav-item-5"].fontcolor("green");
+nav.children[5].innerHTML = siteContent.nav["nav-item-6"].fontcolor("green");
+
+let glorp = document.createElement("a");
+glorp.innerHTML = "Glorp".fontcolor("green");
+nav.appendChild(glorp);
+
+let clam = document.createElement("a");
+clam.innerHTML = "Clam".fontcolor("green");
+nav.prepend(clam);
+
+// cta 
+
+let ctaText = document.getElementsByClassName("cta-text")[0];
+ctaText.children[0].innerHTML = siteContent.cta["h1"];
+
+ctaText.children[1].innerHTML = siteContent.cta["button"];
+
+// Top Content
+
+let features = document.getElementsByClassName("top-content")[0];
+features.children[0].children[0].innerHTML = siteContent["main-content"]["features-h4"]
+
+features.children[0].children[1].innerHTML = siteContent["main-content"]["features-content"]
+
+let about = document.getElementsByClassName("top-content")[0].children[1];
+// console.log(about)
+about.children[0].innerHTML = siteContent["main-content"]["about-h4"]
+
+about.children[1].innerHTML = siteContent["main-content"]["about-content"]
+
+// Bottom Content 
+
+let services = document.getElementsByClassName("bottom-content")[0].children[0];
+services.children[0].innerHTML = siteContent ["main-content"]["services-h4"]
+
+services.children[1].innerHTML = siteContent ["main-content"]["services-content"]
+
+let vision = document.getElementsByClassName("bottom-content")[0].children[1];
+vision.children[0].innerHTML = siteContent ["main-content"]["vision-h4"]
+
+vision.children[1].innerHTML = siteContent ["main-content"]["vision-content"]
+
+let product = document.getElementsByClassName("bottom-content")[0].children[2];
+product.children[0].innerHTML = siteContent ["main-content"]["product-h4"]
+
+product.children[1].innerHTML = siteContent ["main-content"]["product-content"]
+
+
+// contact
+
+let contact = document.getElementsByClassName("contact")[0];
+contact.children[0].innerHTML = siteContent ["contact"]["contact-h4"];
+
+let address = document.getElementsByClassName("contact")[0];
+address.children[1].innerHTML = siteContent ["contact"]["address"]
+
+let phone = document.getElementsByClassName("contact")[0];
+phone.children[2].innerHTML = siteContent ["contact"]["phone"];
+
+let email = document.getElementsByClassName("contact")[0];
+email.children[3].innerHTML = siteContent ["contact"]["email"];
+
+// footer 
+
+let footer = document.getElementsByTagName("footer")[0].children[0].innerHTML = siteContent ["footer"]["copyright"]
