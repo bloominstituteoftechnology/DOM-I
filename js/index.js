@@ -76,3 +76,50 @@ h4[4].textContent = "Vision"
 
 let middleImg = document.getElementById('middle-img')
 middleImg.setAttribute('src','/img/mid-page-accent.jpg')
+
+let p = document.querySelectorAll('p')
+p[0].textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio,in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+p[1].textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+p[2].textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+p[3].textContent = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+p[4].textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+// contact manipulation
+
+h4[5].textContent = "Contact"
+
+p[5].innerHTML = "123 Way 456 Street <br>Somewhere, USA</br>"
+p[6].textContent = "1 (888) 888-8888"
+p[7].textContent = "sales@greatidea.io"
+
+// footer
+
+p[8].textContent ="Copyright Great Idea! 2018"
+
+// style manipulation
+
+let anchor = document.querySelectorAll('a')
+anchor[0].style.color = "green"
+anchor[1].style.color = "green"
+anchor[2].style.color = "green"
+anchor[3].style.color = "green"
+anchor[4].style.color = "green"
+anchor[5].style.color = "green"
+// anchor[6].style.color = "green"
+// anchor[7].style.color = "green"
+
+// order manipulation
+
+let node = document.createElement('a')
+let secNode = document.createElement('a')
+
+let navNode = document.createTextNode('Sponsors')
+let secNavNode = document.createTextNode('Profile')
+
+document.querySelector('nav').appendChild(node);
+document.querySelector('nav').prepend(secNode);
+node.appendChild(navNode)
+secNode.prepend(secNavNode)
+
+node.style.color = "green"
+secNode.style.color = "green"
