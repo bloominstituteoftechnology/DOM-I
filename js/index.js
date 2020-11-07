@@ -40,3 +40,56 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//nav bar
+document.querySelector("a").textContent = 'Services'
+document.querySelector("a:nth-of-type(2)").textContent = 'Product'
+document.querySelector("a:nth-of-type(3)").textContent = 'Vision'
+document.querySelector("a:nth-of-type(4)").textContent = 'Features'
+document.querySelector("a:nth-of-type(5)").textContent = 'About'
+document.querySelector("a:nth-of-type(6)").textContent = 'Contact'
+
+//button
+const button = document.querySelector('button')
+button.textContent = 'Get Started!'
+
+//middle text
+const headerTexr = document.querySelector('h1')
+headerTexr.textContent = 'DOM IS AWESOME'
+
+//Code image is here 
+let code_img = document.getElementById("cta-img");
+code_img.setAttribute('src', siteContent["cta"]["img-src"]); 
+//top content h4
+
+document.getElementsByTagName('h4')[0].textContent ='Features'
+document.getElementsByTagName('h4')[1].textContent ='About'
+// top content p tag
+document.getElementsByTagName('p')[0].textContent ='Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+document.getElementsByTagName('p')[1].textContent ='About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+
+// code for middle image
+let middle = document.getElementById("middle-img");
+middle.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+//bottom content
+document.getElementsByTagName('h4')[2].textContent ='Services'
+document.getElementsByTagName('h4')[3].textContent ='Product'
+document.getElementsByTagName('h4')[4].textContent ='Vision'
+//Bottom Paragraphs 
+
+document.getElementsByTagName('p')[2].textContent ='Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+document.getElementsByTagName('p')[3].textContent ='Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+document.getElementsByTagName('p')[4].textContent ='Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+//contact
+document.getElementsByTagName('h4')[5].textContent ='Contact'
+document.getElementsByTagName('p')[5].textContent = '123 456 Street Somewhere,USA'
+document.getElementsByTagName('p')[6].textContent = '1 (888) 888-8888'
+document.getElementsByTagName('p')[7].textContent = 'sales@greatIdea.io'
+//footer
+document.getElementsByTagName('p')[8].textContent ="Copyright Great Idea! 2020"
+
+
+
+
+
