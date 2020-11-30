@@ -44,4 +44,11 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 const nav = document.querySelectorAll('nav a');
 nav.forEach((link, i) => link.textContent= siteContent['nav'][`nav-item-${i + 1}`]);
 
+const title = document.querySelector('.cta-text h1')
+title.innerHTML = siteContent['cta']['h1'];
 
+const codeImg = document.querySelector('.cta img')
+codeImg.setAttribute('src', siteContent['cta']['img-src']);
+
+const button = document.querySelector('.cta-text button')
+button.textContent = siteContent['cta']['button'];
