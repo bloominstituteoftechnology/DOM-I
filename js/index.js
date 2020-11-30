@@ -43,9 +43,17 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 const navItem = document.querySelectorAll('nav a');
 // console.log(navItem)
-navItem[0].textContent = 'Services'
-navItem[1].textContent = 'Product'
-navItem[2].textContent = 'Vision'
-navItem[3].textContent = 'Features'
-navItem[4].textContent = 'About'
-navItem[5].textContent = 'Contact'
+navItem[0].textContent = siteContent["nav"]["nav-item-1"];
+navItem[1].textContent = siteContent["nav"]["nav-item-2"];
+navItem[2].textContent = siteContent["nav"]["nav-item-3"];
+navItem[3].textContent = siteContent["nav"]["nav-item-4"];
+navItem[4].textContent = siteContent["nav"]["nav-item-5"];
+navItem[5].textContent = siteContent["nav"]["nav-item-6"];
+
+const title =  document.querySelector('h1');
+title.textContent = siteContent["cta"]["h1"];
+const button = document.querySelector('button');
+button.textContent = siteContent["cta"]["button"];
+let ctaImg = document.querySelector("#cta-img");
+// console.log(ctaImg)
+ctaImg.src = siteContent["cta"]["img-src"];
