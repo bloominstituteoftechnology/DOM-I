@@ -66,3 +66,16 @@ topH[0].textContent = siteContent["main-content"]["features-h4"];
 topH[1].textContent = siteContent["main-content"]["about-h4"];
 topP[0].textContent = siteContent["main-content"]["features-content"];
 topP[1].textContent = siteContent["main-content"]["about-content"];
+
+const midImg = document.querySelector(".middle-img");
+midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+const botH = document.querySelectorAll(".bottom-content .text-content h4");
+const botP = document.querySelectorAll(".bottom-content .text-content p");
+
+botH[0].textContent = siteContent["main-content"]["services-h4"];
+botH[1].textContent = siteContent["main-content"]["product-h4"];
+botH[2].textContent = siteContent["main-content"]["vision-h4"];
+botP[0].textContent = siteContent["main-content"]["services-content"];
+botP[1].textContent = siteContent["main-content"]["product-content"];
+botP[2].textContent = siteContent["main-content"]["vision-content"];
