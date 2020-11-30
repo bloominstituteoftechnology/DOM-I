@@ -52,3 +52,42 @@ codeImg.setAttribute('src', siteContent['cta']['img-src']);
 
 const button = document.querySelector('.cta-text button')
 button.textContent = siteContent['cta']['button'];
+
+//feature section
+const featureSec = document.querySelector('.top-content .text-content:nth-of-type(1) h4')
+featureSec.textContent = siteContent['main-content']['features-h4']
+
+const featureText = document.querySelector('.text-content:nth-of-type(1) p')
+featureText.textContent = siteContent['main-content']['features-content']
+
+//About section
+const aboutSec = document.querySelector('.text-content:nth-of-type(2) h4')
+aboutSec.textContent = siteContent['main-content']['about-h4']
+
+const aboutText = document.querySelector('.text-content:nth-of-type(2) p')
+aboutText.textContent = siteContent['main-content']['about-content']
+
+//middle image
+const centerImg = document.querySelector('.middle-img')
+centerImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+//services Section
+const servicesSec = document.querySelector('.bottom-content .text-content:nth-of-type(1) h4')
+servicesSec.textContent = siteContent['main-content']['services-h4']
+
+const servicesText = document.querySelector('.bottom-content .text-content:nth-of-type(1) p')
+servicesText.textContent = siteContent['main-content']['services-content']
+
+//product Section
+const productSec = document.querySelector('.bottom-content .text-content:nth-of-type(2) h4')
+productSec.textContent = siteContent['main-content']['product-h4']
+
+const productText = document.querySelector('.bottom-content .text-content:nth-of-type(2) p')
+productText.textContent = siteContent['main-content']['product-content']
+
+//Vision Section
+const visionSec = document.querySelector('.bottom-content .text-content:nth-of-type(3) h4')
+visionSec.textContent = siteContent['main-content']['vision-h4']
+
+const visionText = document.querySelector('.bottom-content .text-content:nth-of-type(3) p')
+visionText.textContent = siteContent['main-content']['vision-content']
