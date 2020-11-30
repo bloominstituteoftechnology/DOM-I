@@ -45,16 +45,11 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-
-const add = document.querySelectorAll('a')
-add[0].style.color = 'green'
-add[1].style.color = 'green'
-add[2].style.color = 'green'
-add[3].style.color = 'green'
-add[4].style.color = 'green'
-add[5].style.color = 'green'
-
-
+let navColor = document.querySelector('nav')
+let navItems = document.querySelectorAll('a')
+navItems.forEach(item => {
+    item.style.color = "green"
+})
 
 //________________________________________________________
 let ctaImg = document.getElementById("cta-img");
@@ -68,23 +63,15 @@ middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 //________________________________________________________
 
 let newCta = document.getElementsByClassName("cta")[0];
-
 newCta.getElementsByTagName("h1")[0].innerHTML = siteContent["cta"]["h1"]
 newCta.getElementsByTagName("button")[0].innerHTML = siteContent["cta"]["button"]
-newCta.getElementsByTagName("img")[0].innerHTML = siteContent["cta"]["img-src"]
 
 
-let newNav = document.getElementsByTagName("nav")[0];
-newNav.getElementsByTagName("a")[0].innerHTML = siteContent["nav"]["nav-item-1"]
-newNav.getElementsByTagName("a")[1].innerHTML = siteContent["nav"]["nav-item-2"]
-newNav.getElementsByTagName("a")[2].innerHTML = siteContent["nav"]["nav-item-3"]
-newNav.getElementsByTagName("a")[3].innerHTML = siteContent["nav"]["nav-item-4"]
-newNav.getElementsByTagName("a")[4].innerHTML = siteContent["nav"]["nav-item-5"]
-newNav.getElementsByTagName("a")[5].innerHTML = siteContent["nav"]["nav-item-6"]
 
-//newNav.getElementsByTagName("img")[0].innerHTML = siteContent["nav"]['img-src']
-//newNav.setAttribute('src', siteContent["nav"]["img-src"]);
-
+// this is navItems 
+for (let i = 0; i < navItems.length; i++) {
+    navItems[i].innerHTML = siteContent["nav"][`nav-item-${i+1}`]
+}
 
 let subHeader = document.getElementsByClassName("main-content")[0];
 subHeader.getElementsByTagName('h4')[0].innerHTML = siteContent["main-content"]["features-h4"];
