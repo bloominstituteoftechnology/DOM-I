@@ -8,6 +8,10 @@ body {
   display: inline-block;
   font-size: 80px;
 }
+.colonDigit {
+  display: inline-block;
+  font-size: 80px;
+}
 
 .redDigit {
   color: red;
