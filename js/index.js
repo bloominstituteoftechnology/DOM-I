@@ -107,3 +107,17 @@ email.textContent = siteContent['contact']['email']
 
 const footer = document.querySelector('footer')
 footer.textContent = siteContent['footer']['copyright']
+
+//color change of vavigation text
+nav.forEach((link) => link.style.color = 'green');
+
+//adding to nav
+const community = document.createElement('a')
+community.textContent = 'Community'
+ document.querySelector('nav').appendChild(community)
+ community.style.color = 'green'
+
+ const projects = document.createElement('a')
+ projects.textContent = 'Projects'
+ document.querySelector('nav').prepend(projects)
+ projects.style.color = 'green'
