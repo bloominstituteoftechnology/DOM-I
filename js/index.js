@@ -45,6 +45,7 @@ const navLinks = document.querySelectorAll("nav a");
 navLinks.forEach((item,i) => {
   item.textContent = siteContent["nav"][`nav-item-${i + 1}`]
 });
+greenNav = navLinks.fontcolor ("green");
 
 //cta 
 const cta = document.querySelector(".cta");
