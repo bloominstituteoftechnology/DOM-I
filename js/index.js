@@ -57,8 +57,13 @@ const ctaText = document.querySelector('.cta-text');
 ctaText.innerHTML = "DOM <br> IS <br> AWESOME!";
 
 // not working FIX THIS
-// const ctaButton = document.querySelector('.cta .cta-text button');
+// const ctaButton = document.getElementById('button');
 // ctaButton.textContent = siteContent['cta']['button'];
+
+
+const codeSnippet = document.getElementById('cta-img');
+codeSnippet.src = siteContent['cta']['img-src'];
+
 
 // top section
 const h4 = document.querySelectorAll('h4');
