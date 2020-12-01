@@ -91,10 +91,19 @@ h4BottomText1.innerText = siteContent['main-content']['product-h4'];
 const pBottomText1 = p[2];
 pBottomText1.innerText = siteContent['main-content']['product-content'];
 
+
 const h4BottomText2 = h4[3];
-h4BottomText2.innerText = siteContent['main-content']['vision-h4'];
+h4BottomText2.innerText = siteContent['main-content']['product-h4'];
 const pBottomText2 = p[3];
-pBottomText2.innerText = siteContent['main-content']['vision-content'];
+pBottomText2.innerText = siteContent['main-content']['product-content'];
+
+const h4BottomText3 = h4[4];
+h4BottomText3.innerText = siteContent['main-content']['vision-h4'];
+const pBottomText3 = p[4];
+pBottomText3.innerText = siteContent['main-content']['vision-content'];
+
+
+// contact
 
 
 
