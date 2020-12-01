@@ -40,3 +40,96 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+const servLink = document.createElement("a");
+servLink.textContent = "Services";
+servLink.href = "#";
+document.querySelector("nav").appendChild(servLink);
+
+const proLink = document.createElement("a");
+proLink.textContent = "Product";
+proLink.href = "#";
+document.querySelector("nav").appendChild(proLink);
+
+const visLink = document.createElement("a");
+visLink.textContent = "Vision";
+visLink.href = "#";
+document.querySelector("nav").appendChild(visLink);
+
+const featLink = document.createElement("a");
+featLink.textContent = "Features";
+featLink.href = "#";
+document.querySelector("nav").appendChild(featLink);
+
+const aboutLink = document.createElement("a");
+aboutLink.textContent = "About";
+aboutLink.href = "#";
+document.querySelector("nav").appendChild(aboutLink);
+
+const contactLink = document.createElement("a");
+contactLink.textContent = "Contact";
+contactLink.href = "#";
+document.querySelector("nav").appendChild(contactLink);
+
+const testLink = document.createElement("a");
+testLink.textContent = "Test";
+testLink.href = "#";
+document.querySelector("nav").appendChild(testLink);
+
+const checkLink = document.createElement("a");
+checkLink.textContent = "Check";
+checkLink.href = "#";
+document.querySelector("nav").appendChild(checkLink);
+
+
+const test = document.querySelector('.cta-text h1');
+test.textContent = siteContent["cta"]["h1"];
+
+
+const main = document.querySelector('.text-content h4');
+main.textContent = siteContent["main-content"]["features-h4"];
+
+const mainone = document.querySelector(".text-content p");
+mainone.textContent = siteContent["main-content"]["features-content"];
+
+const main2 = document.querySelectorAll('.text-content h4');
+main2[0].textContent = siteContent["main-content"]["about-h4"];
+
+const main3 = document.querySelectorAll(".text-content p");
+main3[1].textContent = siteContent["main-content"]["about-content"];
+
+
+const ctaButton = document.querySelector('button');
+ctaButton.textContent = siteContent["cta"]["button"];
+
+
+
+
+
+const middleImg = document.querySelector('.middle-img');
+middleImg.src = 'img/mid-page-accent.jpg';
+
+const logoImg = document.querySelector('.logo');
+logoImg.src = 'img/logo.png';
+
+const ctaImg = document.querySelector('#cta-img');
+ctaImg.src = 'img/header-img.png';
+
+const feet = document.querySelectorAll('.contact h4');
+feet[0].textContent = siteContent["contact"]["contact-h4"];
+
+const contactInfo = document.querySelectorAll('.contact p');
+let contactContent = Array.from(contactInfo)
+contactContent[0].textContent = siteContent["contact"]["address"];
+contactContent[1].textContent = siteContent["contact"]["phone"];
+contactContent[2].textContent = siteContent["contact"]["email"];
+
+
+
+
+
+
+
+
+
