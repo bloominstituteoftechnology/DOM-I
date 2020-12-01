@@ -39,4 +39,56 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent ["nav"]["img-src"])
+
+const navLinks = document.querySelectorAll("nav a");
+let count = 1
+navLinks.forEach(item => {
+  item.textContent = siteContent.nav [`nav-item-${count.toString()}`];
+  count++;
+});
+
+const awesomeDom = document.querySelector("h1");
+awesomeDom.textContent = siteContent ["cta"]["h1"]
+awesomeDom.innerHTML = "DOM <br> IS <br> AWESOME"
+
+const button = document.querySelector("button");
+button.textContent = siteContent ["cta"]["button"];
+
+const snippet = document.getElementById("cta-img");
+snippet.setAttribute('src', siteContent ["cta"]["img-src"]);
+
+const features1 = document.querySelector(".text-content h4");
+features1.textContent = siteContent ["main-content"]["features-h4"];
+
+const features2 = document.querySelector(".text-content p");
+features2.textContent = siteContent ["main-content"]["features-content"];
+
+const about1 = document.querySelector(".text-content h4");
+features1.textContent = siteContent ["main-content"]["about-h4"];
+
+const about2 = document.querySelector(".text-content p");
+about2.textContent = siteContent ["main-content"]["about-content"];
+
+const snippetAcross = document.getElementById("middle-img");
+snippetAcross.setAttribute('src', siteContent ["main-content"]["middle-img-src"]);
+
+const contactTitle = document.querySelector(".contact h4")
+ contactTitle.textContent = siteContent["contact"]["contact-h4"];
+
+const contactInfo = document.querySelectorAll('.contact p');
+// declaring contactinfo which is going to take all the p tags with a  class of contact and put it into a nodelist which for now think of it as a group
+let contact = Array.from(contactInfo)
+// this turns the nodelist into an array so were declaring a new variable and making an array from the nodelist which in this case is contactInfo
+contact[0].textContent = siteContent["contact"]["address"];
+contact[1].textContent = siteContent["contact"]["phone"];
+contact[2].textContent = siteContent["contact"]["email"];
+
+
+const Links = document.querySelectorAll("a");
+
+const LinksArray = Array.from(Links);
+
+for(i=0;i<LinksArray.length;i++){
+  LinksArray[i].style.color = "green"
+}
