@@ -86,6 +86,7 @@ document.querySelector("nav").appendChild(checkLink);
 const test = document.querySelector('.cta-text h1');
 test.textContent = siteContent["cta"]["h1"];
 
+
 const main = document.querySelector('.text-content h4');
 main.textContent = siteContent["main-content"]["features-h4"];
 
@@ -93,7 +94,10 @@ const mainone = document.querySelector(".text-content p");
 mainone.textContent = siteContent["main-content"]["features-content"];
 
 const main2 = document.querySelectorAll('.text-content h4');
-main2.textContent = siteContent["main-content"]["about-h4"];
+main2[0].textContent = siteContent["main-content"]["about-h4"];
+
+const main3 = document.querySelectorAll(".text-content p");
+main3[1].textContent = siteContent["main-content"]["about-content"];
 
 
 const ctaButton = document.querySelector('button');
@@ -112,18 +116,14 @@ logoImg.src = 'img/logo.png';
 const ctaImg = document.querySelector('#cta-img');
 ctaImg.src = 'img/header-img.png';
 
-const feet = document.querySelector('.contact h4');
-feet.textContent = siteContent["contact"]["contact-h4"];
+const feet = document.querySelectorAll('.contact h4');
+feet[0].textContent = siteContent["contact"]["contact-h4"];
 
-const add = document.querySelectorAll('.contact p');
-add[1].textContent = siteContent["contact"]["address"];
-
-const phone = document.querySelectorAll('.contact p');
-phone[2].textContent = siteContent["contact"]["phone"];
-
-const mail = document.querySelectorAll('.contact p')[3];
-mail[3].textContent = siteContent["contact"]["email"];
-
+const contactInfo = document.querySelectorAll('.contact p');
+let contactContent = Array.from(contactInfo)
+contactContent[0].textContent = siteContent["contact"]["address"];
+contactContent[1].textContent = siteContent["contact"]["phone"];
+contactContent[2].textContent = siteContent["contact"]["email"];
 
 
 
