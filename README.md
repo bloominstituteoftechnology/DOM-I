@@ -27,6 +27,7 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 #### Create selectors to point your data into elements
 
 * [ ] Create selectors by using any of the DOM element's methods
+getelement.className= DomElements
 * [ ] Note that IDs have been used on all images. Use the IDs to update src path content
 
 #### Update the HTML with the JSON data
