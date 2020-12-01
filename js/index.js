@@ -41,6 +41,67 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
+
+
+// USE SITECONTENT
+
+const nav = document.querySelectorAll('nav a');
+nav[0].innerText = siteContent['nav']['nav-item-1'];
+nav[1].innerText = siteContent['nav']['nav-item-2'];
+nav[2].innerText = siteContent['nav']['nav-item-3'];
+nav[3].innerText = siteContent['nav']['nav-item-4'];
+nav[4].innerText = siteContent['nav']['nav-item-5'];
+nav[5].innerText = siteContent['nav']['nav-item-6'];
+
+const ctaText = document.querySelector('.cta-text');
+ctaText.innerHTML = "DOM <br> IS <br> AWESOME!";
+
+// not working
+const ctaButton = document.querySelector('.cta .cta-text button');
+ctaButton.textContent = siteContent['cta']['button'];
+
+// top section
+const h4 = document.querySelectorAll('h4');
+const h4TopText1 = h4[0];
+h4TopText1.innerText = siteContent['main-content']['features-h4'];
+
+const p = document.querySelectorAll('p');
+const pTopText1 = p[0];
+pTopText1.innerText = siteContent['main-content']['features-content'];
+
+
+const h4TopText2 = h4[1];
+h4TopText2.innerText = siteContent['main-content']['about-h4'];
+
+const pTopText2 = p[1];
+pTopText2.innerText = siteContent['main-content']['about-content'];
+
+
+
+// middle section
+
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]['middle-img-src']);
+
+
+// bottom section
+
+const h4BottomText1 = h4[2];
+h4BottomText1.innerText = siteContent['main-content']['product-h4'];
+const pBottomText1 = p[2];
+pBottomText1.innerText = siteContent['main-content']['product-content'];
+
+const h4BottomText2 = h4[3];
+h4BottomText2.innerText = siteContent['main-content']['vision-h4'];
+const pBottomText2 = p[3];
+pBottomText2.innerText = siteContent['main-content']['vision-content'];
+
+
+
+
+
+
+
 // Question: if the anchor tags already exist, is what I am doing below redundant?
 // const servicesLink = document.createElement("a");
 // servicesLink.textContent = "Services";
@@ -71,12 +132,3 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 // productLink.textContent = "Product";
 // productLink.href = "#";
 // document.querySelector("nav").appendChild(productLink);
-
-
-const nav = document.querySelectorAll('nav a');
-nav[0].innerText = siteContent['nav']['nav-item-1'];
-nav[1].innerText = siteContent['nav']['nav-item-2'];
-nav[2].innerText = siteContent['nav']['nav-item-3'];
-nav[3].innerText = siteContent['nav']['nav-item-4'];
-nav[4].innerText = siteContent['nav']['nav-item-5'];
-nav[5].innerText = siteContent['nav']['nav-item-6'];
