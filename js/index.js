@@ -50,6 +50,27 @@ navItem[3].textContent = siteContent["nav"]["nav-item-4"];
 navItem[4].textContent = siteContent["nav"]["nav-item-5"];
 navItem[5].textContent = siteContent["nav"]["nav-item-6"];
 
+navItem[0].style.color = "green";
+navItem[1].style.color = "green";
+navItem[2].style.color = "green";
+navItem[3].style.color = "green";
+navItem[4].style.color = "green";
+navItem[5].style.color = "green";
+
+const newNav1 = document.createElement("a");
+newNav1.textContent = 'Dominos';
+newNav1.href = '#';
+document.querySelector("nav").appendChild(newNav1);
+
+newNav1.style.color = "green";
+
+const newNav2 = document.createElement("a")
+newNav2.textContent = 'Nates';
+newNav2.href = '#';
+document.querySelector("nav").prepend(newNav2)
+
+newNav2.style.color = "green";
+
 const title =  document.querySelector('h1');
 title.textContent = siteContent["cta"]["h1"];
 const button = document.querySelector('button');
@@ -79,3 +100,15 @@ botH[2].textContent = siteContent["main-content"]["vision-h4"];
 botP[0].textContent = siteContent["main-content"]["services-content"];
 botP[1].textContent = siteContent["main-content"]["product-content"];
 botP[2].textContent = siteContent["main-content"]["vision-content"];
+
+const contH = document.querySelector(".contact h4");
+const contP = document.querySelectorAll(".contact p");
+
+contH.textContent = siteContent["contact"]["contact-h4"];
+contP[0].textContent = siteContent["contact"]["address"];
+contP[1].textContent = siteContent["contact"]["phone"];
+contP[2].textContent = siteContent["contact"]["email"];
+
+const foot = document.querySelector("footer p");
+// console.log(foot)
+foot.textContent = siteContent["footer"]["copyright"];
