@@ -68,7 +68,7 @@ newCta.getElementsByTagName("button")[0].innerHTML = siteContent["cta"]["button"
 
 
 
-// this is navItems 
+// this is navItems //
 for (let i = 0; i < navItems.length; i++) {
     navItems[i].innerHTML = siteContent["nav"][`nav-item-${i+1}`]
 }
