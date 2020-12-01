@@ -40,3 +40,60 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+// -------------- Navigation Bar ----------------------------------------
+
+
+
+
+
+let navItemOne = document.querySelector("a:nth-of-typeof(1)");
+let navItemTwo = document.querySelector("a:nth-of-typeof(2)");
+let navItemThree = document.querySelector("a:nth-of-typeof(3)");
+let navItemFour = document.querySelector("a:nth-of-typeof(4)");
+let navItemFive = document.querySelector("a:nth-of-typeof(5)");
+let navItemSix = document.querySelector("a:nth-of-typeof(6)");
+
+
+// -------------- CTA ----------------------------------------------------
+
+// let cta = document.getElementsByClassName("cta");
+let ctaText = document.getElementsByClassName("cta-text");
+let ctaImage = document.getElementsByClassName("cta-img");
+
+// -------------- Main Content --------------------------------------------
+let textContent = document.getElementsByClassName("text-content");
+let middleImage = document.getElementsByClassName("middle-img");
+
+
+// -------------- Contact -------------------------------------------------
+
+
+
+// -------------- Footer --------------------------------------------------
+
+
+
+
+// --------------------------------
+
+//Top Bar
+//-- Nav Bar
+//-- Logo
+
+//Hero (CTA)
+//-- Header
+//-- Button
+
+//Main Content
+//-- Top Content
+//-- Middle Content
+//-- Bottom Content
+
+//Contact
+
+
+//Footer
+
+
