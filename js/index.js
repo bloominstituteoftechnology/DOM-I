@@ -45,11 +45,28 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let navColor = document.querySelector('nav')
+// this will change color to green
+
 let navItems = document.querySelectorAll('a')
 navItems.forEach(item => {
     item.style.color = "green"
 })
+
+// this is navItems //
+
+for (let i = 0; i < navItems.length; i++) {
+    navItems[i].innerHTML = siteContent["nav"][`nav-item-${i+1}`]
+}
+
+let addLastAnhor = document.createElement("a");
+addLastAnhor.textContent = "New Tab"
+addLastAnhor.href = "#"
+document.querySelector("nav").appendChild(addLastAnhor)
+
+let addFirstAnhor = document.createElement("a");
+addFirstAnhor.textContent = "New Tab"
+addFirstAnhor.href = "#"
+document.querySelector("nav").prepend(addFirstAnhor)
 
 //________________________________________________________
 let ctaImg = document.getElementById("cta-img");
@@ -66,13 +83,6 @@ let newCta = document.getElementsByClassName("cta")[0];
 newCta.getElementsByTagName("h1")[0].innerHTML = siteContent["cta"]["h1"]
 newCta.getElementsByTagName("button")[0].innerHTML = siteContent["cta"]["button"]
 
-
-
-// this is navItems //
-for (let i = 0; i < navItems.length; i++) {
-    navItems[i].innerHTML = siteContent["nav"][`nav-item-${i+1}`]
-}
-
 let subHeader = document.getElementsByClassName("main-content")[0];
 subHeader.getElementsByTagName('h4')[0].innerHTML = siteContent["main-content"]["features-h4"];
 subHeader.getElementsByTagName('h4')[1].innerHTML = siteContent["main-content"]["about-h4"];
@@ -87,7 +97,6 @@ subHeader.getElementsByTagName('p')[2].innerHTML = siteContent["main-content"]["
 subHeader.getElementsByTagName('p')[3].innerHTML = siteContent["main-content"]["product-content"];
 subHeader.getElementsByTagName('p')[4].innerHTML = siteContent["main-content"]["vision-content"];
 
-
 let contact = document.getElementsByClassName("contact")[0];
 contact.getElementsByTagName("h4")[0].innerHTML = siteContent["contact"]["contact-h4"]
 contact.getElementsByTagName("p")[0].innerHTML = siteContent["contact"]["address"]
@@ -96,8 +105,3 @@ contact.getElementsByTagName("p")[2].innerHTML = siteContent["contact"]["email"]
 
 let footer = document.querySelector("footer");
 footer.getElementsByTagName("p")[0].innerHTML = siteContent["footer"]["copyright"]
-
-// const nav = document.getElementsByTagName("nav")
-// let newElement = document.createElement('<a href="#"></a>')
-// newElement.textContent = OO
-// nav.appendChild(newElement)
