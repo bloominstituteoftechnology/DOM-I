@@ -105,7 +105,22 @@ pBottomText3.innerText = siteContent['main-content']['vision-content'];
 
 // contact
 
+const h4Contact = h4[5];
+h4Contact.innerText = siteContent['contact']['contact-h4'];
 
+const pContact1 = p[5];
+pContact1.innerText = siteContent['contact']['address'];
+
+const pContact2 = p[6];
+pContact2.innerText = siteContent['contact']['phone'];
+
+const pContact3 = p[7];
+pContact3.innerText = siteContent['contact']['email'];
+
+// footer
+
+const pFooter = p[8];
+pFooter.innerText = siteContent['footer']['copyright'];
 
 
 
