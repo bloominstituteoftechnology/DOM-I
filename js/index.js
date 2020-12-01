@@ -56,9 +56,9 @@ nav[5].innerText = siteContent['nav']['nav-item-6'];
 const ctaText = document.querySelector('.cta-text');
 ctaText.innerHTML = "DOM <br> IS <br> AWESOME!";
 
-// not working
-const ctaButton = document.querySelector('.cta .cta-text button');
-ctaButton.textContent = siteContent['cta']['button'];
+// not working FIX THIS
+// const ctaButton = document.querySelector('.cta .cta-text button');
+// ctaButton.textContent = siteContent['cta']['button'];
 
 // top section
 const h4 = document.querySelectorAll('h4');
@@ -122,6 +122,24 @@ pContact3.innerText = siteContent['contact']['email'];
 const pFooter = p[8];
 pFooter.innerText = siteContent['footer']['copyright'];
 
+
+
+// add two new items to nav bar, beginning and end
+
+const testimonialLink = document.createElement("a");
+testimonialLink.textContent = "Testimonial";
+testimonialLink.href = "#";
+document.querySelector("nav").appendChild(testimonialLink);
+
+const randomLink = document.createElement("a");
+randomLink.textContent = "Random";
+randomLink.href = "#";
+document.querySelector("nav").prepend(randomLink);
+
+// change color of navigation text to green
+
+const navText = document.querySelectorAll('header nav a');
+navText.forEach( (item) => item.style.color = 'green')
 
 
 
