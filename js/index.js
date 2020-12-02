@@ -40,3 +40,32 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// div.container - link titles
+const headerLinks = document.querySelectorAll('nav a')
+headerLinks[0].textContent = siteContent['nav']['nav-item-1'];
+headerLinks[1].textContent = siteContent['nav']['nav-item-2'];
+headerLinks[2].textContent = siteContent['nav']['nav-item-3'];
+headerLinks[3].textContent = siteContent['nav']['nav-item-4'];
+headerLinks[4].textContent = siteContent['nav']['nav-item-5'];
+headerLinks[5].textContent = siteContent['nav']['nav-item-6'];
+
+// change Nav text color to green
+headerLinks.forEach(link => {link.style.color = 'green';});
+
+// .appendChild
+const newLastLink = document.createElement('a');
+newLastLink.textContent = ('Blog');
+document.querySelector('nav').appendChild(newLastLink);
+newLastLink.style.color = 'green';
+
+// .prepend
+newFirstLink = document.createElement('a');
+newFirstLink.textContent = ('Locations');
+document.querySelector('nav').prepend(newFirstLink);
+newFirstLink.style.color = 'green';
+
+// img#cta-img - needs an image src
+const codeSnippetImg = document.getElementById('cta-img');
+codeSnippetImg.setAttribute('src', siteContent['cta']['img-src']);
+
