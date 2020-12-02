@@ -72,6 +72,13 @@ const ctaImg = document.getElementById('cta-img')
 ctaImg.setAttribute('src', siteContent['cta']['img-src']);
 
 
+//update top content
+const topContent = document.querySelectorAll('h4')
+
+topContent[0].textContent = siteContent["main-content"]["features-h4"];
+topContent[0].nextSibling.textContent = siteContent["main-content"]["features-content"];
+topContent[1].textContent = siteContent["main-content"]["about-h4"];
+topContent[1].nextSibling.textContent = siteContent["main-content"]["about-content"];
 
 
 
