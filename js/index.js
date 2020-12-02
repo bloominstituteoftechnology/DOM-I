@@ -81,7 +81,25 @@ topContent[1].textContent = siteContent["main-content"]["about-h4"];
 topContent[1].nextSibling.textContent = siteContent["main-content"]["about-content"];
 
 
+//update middle image
 
+const middleImg = document.getElementById('middle-img')
+
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+
+//update middle content under middle image
+
+const bottomContent = document.querySelectorAll('h4')
+
+
+bottomContent[2].textContent = siteContent["main-content"]["services-h4"];
+bottomContent[2].nextSibling.textContent = siteContent["main-content"]["services-content"];
+bottomContent[3].textContent = siteContent["main-content"]["product-h4"];
+bottomContent[3].nextSibling.textContent = siteContent["main-content"]["product-content"]
+bottomContent[4].textContent = siteContent["main-content"]["vision-h4"];
+bottomContent[4].nextSibling.textContent = siteContent["main-content"]["vision-content"];
+bottomContent[5].textContent = siteContent["contact"]["contact-h4"]
 
 
 
