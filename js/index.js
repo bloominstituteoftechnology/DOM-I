@@ -118,3 +118,35 @@ contactSectionP[2].textContent = siteContent['contact']['email'];
 // footer - needs copyright
 const copyright = document.querySelectorAll('footer p');
 copyright[0].textContent = siteContent['footer']['copyright'];
+
+// Stretch goals
+const paraFont = document.querySelectorAll('p');
+
+paraFont.forEach((item) => {
+  item.style.fontFamily = "Inconsolata, monospace";
+});
+
+const titleColors = document.querySelectorAll('h1');
+
+titleColors.forEach((item) => {
+  item.style.color = "#9be7ad";
+});
+
+const subtitleColors = document.querySelectorAll('h4');
+
+subtitleColors.forEach((item) => {
+  item.style.color = '#0bfdff';
+});
+
+const buttonHover = document.querySelector('button')
+
+buttonHover.addEventListener("mouseenter", function(event) {
+  event.target.style.background = "#FD88A1";
+})
+buttonHover.addEventListener("mouseout", function(event) {
+  event.target.style.background = "white";
+})
+
+const backgroundColor = document.querySelector('*');
+
+backgroundColor.style.background = "#4F646F";
