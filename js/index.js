@@ -1,3 +1,9 @@
+
+
+
+
+
+
 const siteContent = {
   "nav": {
     "nav-item-1": "Services",
@@ -84,20 +90,42 @@ firstTextContentParagraphElement.textContent = "Features content elementum magna
 //firstTextContentTitleElement.textContent = "Features";
 //firstTextContentParagraphElement.textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
-/////
+const secondTextContentTitleElement = secondTextContent.querySelector('h4');
+const secondTextContentParagraphElement = secondTextContent.querySelector('p');
+secondTextContentTitleElement.textContent = "About";
+secondTextContentParagraphElement.textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
-const aboutDiv = document.querySelector('.top-content h4 ')
+// BOTTOM CONTENT
+
+const bottomContentContainerDiv = document.querySelectorAll('.bottom-content .text-content');
+const thirdTextContent = bottomContentContainerDiv[0];
+const fourthTextContent = bottomContentContainerDiv[1];
+const fifthTextContent = bottomContentContainerDiv[2];
+console.log(bottomContentContainerDiv);
+//First - Services
+
+const thirdTextContentTitleElement = thirdTextContent.querySelector('h4');
+thirdTextContentTitleElement.textContent = "Services";
+const thirdTextContentParagraphElement = thirdTextContent.querySelector('p');
+thirdTextContentParagraphElement.textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio,in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+//Second - Product
+const fourthTextContentTitleElement = fourthTextContent.querySelector('h4');
+fourthTextContentTitleElement.textContent = "Product";
+const fourthTextContentParagraphElement = fourthTextContent.querySelector('p');
+fourthTextContentParagraphElement.textContent = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, ininterdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metusscelerisque quis.";
+//Third - Vision
+const fifthTextContentTitleElement = fifthTextContent.querySelector('h4');
+fifthTextContentTitleElement.textContent = "Vision";
+const fifthTextContentParagraphElement = fifthTextContent.querySelector('p');
+fifthTextContentParagraphElement.textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, ininterdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metusscelerisque quis.";
 
 
+/////////////////////////////////////TO DO TODAY//////////////////////////////////////////////////////////////////////////////////////////
+/////*[x] Need to complete this second text-content above, then do the same for the bottom three, complete the footer contact
+/////* Need to organize and clean up my code with comments 
+/////*Need to complete the Add New Content section of the README
 
-
-const bottomContentServices = document.querySelector('.bottom-content h4');
-bottomContentServices.textContent = "Services";
-
-
-const navLinks = document.querySelectorAll('nav a');
-console.log('navLinks', navLinks);
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // creating new elements for the DOM
 //const blogLink = document.createElement('a');
