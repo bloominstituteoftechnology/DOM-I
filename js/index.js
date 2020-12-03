@@ -62,13 +62,40 @@ circleImage.src = "img/header-img.png";
 
 let midImage = document.querySelector('.middle-img');
 console.log(midImage);
+midImage.src = "img/mid-page-accent.jpg";
+
+
+const startButton = firstHeading.nextElementSibling;
+console.log(startButton);
+startButton.textContent = "Get Started";
+
+
+const topContentContainerDiv = document.querySelectorAll('.top-content .text-content');
+const firstTextContent = topContentContainerDiv[0];
+const secondTextContent = topContentContainerDiv[1];
+//
+const firstTextContentTitleElement = firstTextContent.querySelector("h4");
+const firstTextContentParagraphElement = firstTextContent.querySelector("p");
+firstTextContentTitleElement.textContent = "Features";
+firstTextContentParagraphElement.textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+const aboutDiv = document.querySelector('.top-content h4 ')
+
+
+
+
+const bottomContentServices = document.querySelector('.bottom-content h4');
+bottomContentServices.textContent = "Services";
+
+
+const navLinks = document.querySelectorAll('nav a');
+console.log('navLinks', navLinks);
+
 
 // creating new elements for the DOM
 //const blogLink = document.createElement('a');
 //blogLink.textContent = 'Blog Here';
 //blogLink.href = '#';
 //document.querySelector('nav').appendChild(blogLink);
-
-
 
 
