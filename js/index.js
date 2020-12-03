@@ -86,5 +86,10 @@ bottomContentH4[0].textContent = siteContent['main-content']['services-h4'];
 bottomContentH4[1].textContent = siteContent['main-content']['product-h4'];
 bottomContentH4[2].textContent = siteContent['main-content']['vision-h4'];
 
+// adding bottom p content 
+let bottomContentP = document.querySelectorAll('.bottom-content p');
+bottomContentP[0].textContent = siteContent['main-content']['services-content'];
+bottomContentP[1].textContent = siteContent['main-content']['product-content'];
+bottomContentP[2].textContent = siteContent['main-content']['vision-content'];
 
 // console.log(img);
