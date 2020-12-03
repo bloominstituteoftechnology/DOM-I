@@ -79,6 +79,12 @@ topContentP[1].textContent = siteContent['main-content']['about-content'];
 let middleImg = document.querySelector('#middle-img');
 middleImg.src = siteContent["main-content"]["middle-img-src"];
 
+// adding bottom h4 content 
+
+let bottomContentH4 = document.querySelectorAll('.bottom-content h4');
+bottomContentH4[0].textContent = siteContent['main-content']['services-h4'];
+bottomContentH4[1].textContent = siteContent['main-content']['product-h4'];
+bottomContentH4[2].textContent = siteContent['main-content']['vision-h4'];
 
 
 // console.log(img);
