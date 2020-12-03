@@ -40,3 +40,84 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//updating all anchor text
+const anchorText = document.querySelectorAll('nav a')
+
+anchorText[0].textContent = "Services"
+anchorText[1].textContent = "Product"
+anchorText[2].textContent = "Vision"
+anchorText[3].textContent = "Features"
+anchorText[4].textContent = "About"
+anchorText[5].textContent = "Contact"
+
+///append new link per mvp
+const newAnchor = document.createElement('a')
+newAnchor.textContent = "Careers"
+newAnchor.href = '#'
+document.querySelector("nav").appendChild(newAnchor)
+newAnchor.style.color = "green"
+
+//change color of navigation text to green per mvp
+anchorText.forEach(x => x.style.color = "green")
+
+
+
+//updating h1 text
+const h1Text = document.querySelector('h1')
+
+h1Text.textContent = (siteContent['cta']['h1']);
+
+
+
+//updating button text
+const buttonText = document.querySelector('button')
+
+buttonText.textContent = (siteContent['cta']['button']);
+
+
+//update cta image
+const ctaImg = document.getElementById('cta-img')
+
+ctaImg.setAttribute('src', siteContent['cta']['img-src']);
+
+
+//update top content
+const topContent = document.querySelectorAll('h4')
+
+topContent[0].textContent = siteContent["main-content"]["features-h4"];
+topContent[0].nextSibling.textContent = siteContent["main-content"]["features-content"];
+topContent[1].textContent = siteContent["main-content"]["about-h4"];
+topContent[1].nextSibling.textContent = siteContent["main-content"]["about-content"];
+
+
+//update middle image
+const middleImg = document.getElementById('middle-img')
+
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+
+//update middle content under middle image
+const bottomContent = document.querySelectorAll('h4')
+
+
+bottomContent[2].textContent = siteContent["main-content"]["services-h4"];
+bottomContent[2].nextSibling.textContent = siteContent["main-content"]["services-content"];
+bottomContent[3].textContent = siteContent["main-content"]["product-h4"];
+bottomContent[3].nextSibling.textContent = siteContent["main-content"]["product-content"]
+bottomContent[4].textContent = siteContent["main-content"]["vision-h4"];
+bottomContent[4].nextSibling.textContent = siteContent["main-content"]["vision-content"];
+bottomContent[5].textContent = siteContent["contact"]["contact-h4"]
+
+
+//update contact section
+const contactContent = document.querySelectorAll('.contact p')
+
+contactContent[0].textContent = siteContent["contact"]["address"]
+contactContent[1].textContent = siteContent["contact"]["phone"]
+contactContent[2].textContent = siteContent["contact"]["email"]
+
+
+//update footer section
+const footerContent = document.querySelectorAll('footer p')
+footerContent[0].textContent = siteContent["footer"]["copyright"]
