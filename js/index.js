@@ -40,3 +40,94 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+// retrieve nav elements 
+let anchorTags = document.querySelectorAll('nav > a');
+anchorTags.forEach((anchorTag, index )  => {
+  console.log(index + 1);
+  const property = 'nav-item-' + (index + 1)
+  console.log(property);
+  anchorTag.textContent = siteContent.nav[property];
+});
+
+
+const headerLinks = document.querySelectorAll('nav a')
+headerLinks[0].textContent = siteContent['nav']['nav-item-1'];
+headerLinks[1].textContent = siteContent['nav']['nav-item-2'];
+headerLinks[2].textContent = siteContent['nav']['nav-item-3'];
+headerLinks[3].textContent = siteContent['nav']['nav-item-4'];
+headerLinks[4].textContent = siteContent['nav']['nav-item-5'];
+headerLinks[5].textContent = siteContent['nav']['nav-item-6'];
+
+// change Nav text color to green
+headerLinks.forEach(link => {link.style.color = 'green';});
+
+// .appendChild
+const newLastLink = document.createElement('a');
+newLastLink.textContent = ('DOM Tips');
+document.querySelector('nav').appendChild(newLastLink);
+newLastLink.style.color = 'green';
+
+// .prepend
+newFirstLink = document.createElement('a');
+newFirstLink.textContent = ('Learn Here');
+document.querySelector('nav').prepend(newFirstLink);
+newFirstLink.style.color = 'green';
+
+
+// retrieve img 
+let img = document.querySelector('#cta-img');
+
+img.src = siteContent.cta["img-src"];
+
+// title of page h1 
+let mainTitle = document.querySelectorAll('.cta-text h1');
+mainTitle[0].textContent = siteContent['cta']['h1'];
+
+// adding button 
+let button = document.querySelector('button');
+button.textContent = siteContent['cta']['button'];
+
+// adding top h4 content 
+let topContentH4 = document.querySelectorAll('.top-content h4');
+topContentH4[0].textContent = siteContent['main-content']['features-h4'];
+
+topContentH4[1].textContent = siteContent['main-content']['about-h4'];
+
+// adding top p content
+let topContentP = document.querySelectorAll('.top-content p');
+topContentP[0].textContent = siteContent['main-content']['features-content'];
+topContentP[1].textContent = siteContent['main-content']['about-content'];
+
+// adding middle img 
+let middleImg = document.querySelector('#middle-img');
+middleImg.src = siteContent["main-content"]["middle-img-src"];
+
+// adding bottom h4 content 
+
+let bottomContentH4 = document.querySelectorAll('.bottom-content h4');
+bottomContentH4[0].textContent = siteContent['main-content']['services-h4'];
+bottomContentH4[1].textContent = siteContent['main-content']['product-h4'];
+bottomContentH4[2].textContent = siteContent['main-content']['vision-h4'];
+
+// adding bottom p content 
+let bottomContentP = document.querySelectorAll('.bottom-content p');
+bottomContentP[0].textContent = siteContent['main-content']['services-content'];
+bottomContentP[1].textContent = siteContent['main-content']['product-content'];
+bottomContentP[2].textContent = siteContent['main-content']['vision-content'];
+
+// adding contact section h4 
+let contactSectionH4 = document.querySelectorAll('.contact h4');
+contactSectionH4[0].textContent = siteContent['contact']['contact-h4'];
+
+// adding contact section p 
+
+let contactSectionP = document.querySelectorAll('.contact p');
+contactSectionP[0].textContent = siteContent['contact']['address'];
+contactSectionP[1].textContent = siteContent['contact']['phone'];
+contactSectionP[2].textContent = siteContent['contact']['email'];
+
+let footerP = document.querySelectorAll('footer p');
+footerP[0].textContent = siteContent['footer']['copyright'];
+// console.log(img);
