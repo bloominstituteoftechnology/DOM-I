@@ -42,7 +42,7 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
-
+// retrieve nav elements 
 let anchorTags = document.querySelectorAll('nav > a');
 anchorTags.forEach((anchorTag, index )  => {
   console.log(index + 1);
@@ -50,10 +50,25 @@ anchorTags.forEach((anchorTag, index )  => {
   console.log(property);
   anchorTag.textContent = siteContent.nav[property];
 });
-// console.log(anchorTags);
+
+// retrieve img 
 let img = document.querySelector('#cta-img');
 
 img.src = siteContent.cta["img-src"];
+
+// title of page h1 
+let mainTitle = document.querySelectorAll('.cta-text h1');
+mainTitle[0].textContent = siteContent['cta']['h1'];
+
+// adding button 
+
+// let button = document.querySelector('button');
+// button[]
+
+
+
+
+
 
 
 // console.log(img);
