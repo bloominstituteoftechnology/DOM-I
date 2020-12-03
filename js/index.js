@@ -92,4 +92,9 @@ bottomContentP[0].textContent = siteContent['main-content']['services-content'];
 bottomContentP[1].textContent = siteContent['main-content']['product-content'];
 bottomContentP[2].textContent = siteContent['main-content']['vision-content'];
 
+// adding contact section h4 
+let contactSectionH4 = document.querySelectorAll('.contact h4')
+contactSectionH4[0].textContent = siteContent['contact']['contact-h4'];
+
+
 // console.log(img);
