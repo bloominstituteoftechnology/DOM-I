@@ -55,10 +55,14 @@ navItems.forEach( (element, index) => {
 
   element.style.color = "green"
 })
-let newNavItem1 = document.createElement("a")
-newNavItem1.textContent = "DOM"
-console.log(newNavItem1, "newNavItem1")
-document.navItems.appendChild(newNavItem1)
+
+// let newNavItem1 = document.createElement("a")
+// newNavItem1.textContent = "DOM"
+// console.log(newNavItem1, "newNavItem1")
+// document.navItems.prepend(newNavItem1)
+// let newNavItem2 = document.createElement("a")
+// newNavItem2.textContent = "MOD"
+// document.navItems.appendChild(newNavItem2)
 
 let Top = document.querySelector(".cta-text h1");
 Top.textContent =  siteContent["cta"]["h1"]
