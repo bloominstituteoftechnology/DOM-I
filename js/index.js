@@ -41,10 +41,37 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-
+//Top image
 let centerImage = document.getElementById("cta-img");
 centerImage.setAttribute('src', siteContent['cta']['img-src'])
 
-
+//Center image
 let middleImage = document.getElementById("middle-img");
 middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+
+
+let x = document.querySelectorAll('a');
+
+Array.from(x);
+
+for (let i = 0; i < x.length; ++i) {
+  if (i === 0) {
+    x[i].innerText = 'Services';
+  }
+  if (i === 1) {
+    x[i].innerText = 'Products';
+  }
+  if (i === 2) {
+    x[i].innerText = 'Vision';
+  }
+  if (i === 3) {
+    x[i].innerText = 'Features';
+  }
+  if (i === 4) {
+    x[i].innerText = 'About';
+  }
+  if (i === 5) {
+    x[i].innerText = 'Contact';
+  }
+}
