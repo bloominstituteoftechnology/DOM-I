@@ -143,19 +143,24 @@ navAttributes[3].style.color = 'green';
 navAttributes[4].style.color = 'green';
 navAttributes[5].style.color = 'green';
 
-//APPEND CHILD/ PREPREND CHILD
+//APPEND CHILD/ PREPREND 
+const newNavElementCalledAnna = document.createElement('a');
+newNavElementCalledAnna.textContent = "Anna";
+newNavElementCalledAnna.href = '#';
+document.querySelector('nav').appendChild(newNavElementCalledAnna);
+newNavElementCalledAnna.style.color = 'green';
+
+const newNavElementCalledElsa = document.createElement('a');
+newNavElementCalledElsa.textContent = "Elsa";
+newNavElementCalledElsa.href = '#';
+document.querySelector('nav').prepend(newNavElementCalledElsa);
+newNavElementCalledElsa.style.color = 'green';
 
 /////////////////////////////////////TO DO TODAY//////////////////////////////////////////////////////////////////////////////////////////
 /////*[x] Need to complete this second text-content above, [x]then do the same for the bottom three, [x]complete the footer contact
 /////*[x] Need to organize and clean up my code with comments 
 /////*[x]Need to complete the Add New Content section of the README
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// creating new elements for the DOM
-//const blogLink = document.createElement('a');
-//blogLink.textContent = 'Blog Here';
-//blogLink.href = '#';
-//document.querySelector('nav').appendChild(blogLink);
 
 
