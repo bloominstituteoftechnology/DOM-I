@@ -51,6 +51,12 @@ anchorText[3].textContent = "Features"
 anchorText[4].textContent = "About"
 anchorText[5].textContent = "Contact"
 
+///append new link per mvp
+const newAnchor = document.createElement('a')
+newAnchor.textContent = "Careers"
+newAnchor.href = '#'
+document.querySelector("nav").appendChild(newAnchor)
+
 
 
 //updating h1 text
