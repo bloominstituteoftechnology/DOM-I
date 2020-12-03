@@ -39,4 +39,46 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+
+
+let navBar = document.querySelectorAll("nav a")
+navBar.forEach((nav, index) =>  {
+  nav.innerHTML = siteContent.nav [`nav-item-${index + 1}`]
+})
+
+console.log(navBar)
+
+
+
+//  console.log(navBar)
+
+
+
+let img = document.querySelector("#cta-img");
+img.src = siteContent.cta["img-src"]
+console.log(img)
+
+
+const body = document.querySelector(".main-content")
+console.log(body)
+body.textContent = siteContent["main-content"]["features-h4"]
+body.textContent = siteContent.appendChild(["main-content"]["features-content"])
+body.textContent = siteContent["main-content"]["features-content"]
+
+console.log(siteContent)
+
+const callInfo = document.querySelector(".contact")
+
+callInfo.textContent = ".contact"
+
+const bottom = document.querySelector(".footer")
+
+document.querySelectorAll("nav a").style.color = "blue"
+
+const newA = document.createElement("a")
+newA.textContent = "Blog here"
+document.querySelector("nav").appendChild(newA)
+document.querySelector("nav").prepend(newA)
+
