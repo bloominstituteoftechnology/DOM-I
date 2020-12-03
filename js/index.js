@@ -75,3 +75,6 @@ for (let i = 0; i < x.length; ++i) {
     x[i].innerText = 'Contact';
   }
 }
+
+let centerText = document.querySelector("h1");
+centerText.innerText = "DOM \n Is \n Awesome";
