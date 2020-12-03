@@ -65,10 +65,16 @@ let button = document.querySelector('button');
 button.textContent = siteContent['cta']['button'];
 
 // adding top h4 content 
-const topContentH4 = document.querySelectorAll('.top-content h4');
+let topContentH4 = document.querySelectorAll('.top-content h4');
 topContentH4[0].textContent = siteContent['main-content']['features-h4'];
 
 topContentH4[1].textContent = siteContent['main-content']['about-h4'];
+
+// adding top p content
+let topContentP = document.querySelectorAll('.top-content p');
+topContentP[0].textContent = siteContent['main-content']['features-content'];
+topContentP[1].textContent = siteContent['main-content']['about-content'];
+
 
 
 
