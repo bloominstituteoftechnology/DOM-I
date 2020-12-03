@@ -82,14 +82,12 @@ topContent[1].nextSibling.textContent = siteContent["main-content"]["about-conte
 
 
 //update middle image
-
 const middleImg = document.getElementById('middle-img')
 
 middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
 
 //update middle content under middle image
-
 const bottomContent = document.querySelectorAll('h4')
 
 
@@ -102,4 +100,14 @@ bottomContent[4].nextSibling.textContent = siteContent["main-content"]["vision-c
 bottomContent[5].textContent = siteContent["contact"]["contact-h4"]
 
 
+//update contact section
+const contactContent = document.querySelectorAll('.contact p')
 
+contactContent[0].textContent = siteContent["contact"]["address"]
+contactContent[1].textContent = siteContent["contact"]["phone"]
+contactContent[2].textContent = siteContent["contact"]["email"]
+
+
+//update footer section
+const footerContent = document.querySelectorAll('footer p')
+footerContent[0].textContent = siteContent["footer"]["copyright"]
