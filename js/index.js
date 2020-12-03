@@ -64,7 +64,11 @@ mainTitle[0].textContent = siteContent['cta']['h1'];
 let button = document.querySelector('button');
 button.textContent = siteContent['cta']['button'];
 
+// adding top h4 content 
+const topContentH4 = document.querySelectorAll('.top-content h4');
+topContentH4[0].textContent = siteContent['main-content']['features-h4'];
 
+topContentH4[1].textContent = siteContent['main-content']['about-h4'];
 
 
 
