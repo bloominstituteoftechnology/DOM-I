@@ -38,5 +38,37 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+let logo = document.getElementById('logo-img');
+logo.setAttribute('src', siteContent['nav']['img-src'])
+
+let navAttributes = document.querySelectorAll('nav a');
+//console.log('navAttributes', navAttributes);
+navAttributes[0].textContent = 'Services';
+//console.log(navAttributes[0]);
+navAttributes[1].textContent = 'Product';
+navAttributes[2].textContent = 'Vision';
+navAttributes[3].textContent = 'Features';
+navAttributes[4].textContent = 'About';
+navAttributes[5].textContent = 'Contact';
+
+let firstHeading = document.querySelector('h1');
+console.log(firstHeading);
+
+firstHeading.textContent = "DOM Is Awesome";
+
+let circleImage = document.getElementById('cta-img');
+//console.log(circleImage);
+circleImage.src = "img/header-img.png";
+
+let midImage = document.querySelector('.middle-img');
+console.log(midImage);
+
+// creating new elements for the DOM
+//const blogLink = document.createElement('a');
+//blogLink.textContent = 'Blog Here';
+//blogLink.href = '#';
+//document.querySelector('nav').appendChild(blogLink);
+
+
+
+
