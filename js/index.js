@@ -69,15 +69,22 @@ const startButton = firstHeading.nextElementSibling;
 console.log(startButton);
 startButton.textContent = "Get Started";
 
-
+//Top Content
 const topContentContainerDiv = document.querySelectorAll('.top-content .text-content');
 const firstTextContent = topContentContainerDiv[0];
 const secondTextContent = topContentContainerDiv[1];
-//
+// First
 const firstTextContentTitleElement = firstTextContent.querySelector("h4");
 const firstTextContentParagraphElement = firstTextContent.querySelector("p");
 firstTextContentTitleElement.textContent = "Features";
 firstTextContentParagraphElement.textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+// Second
+//const firstTextContentTitleElement = secondTextContent.querySelector("h4");
+//const firstTextContentParagraphElement = secondTextContent.querySelector("p");
+//firstTextContentTitleElement.textContent = "Features";
+//firstTextContentParagraphElement.textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+/////
 
 const aboutDiv = document.querySelector('.top-content h4 ')
 
