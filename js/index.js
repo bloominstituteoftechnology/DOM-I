@@ -51,6 +51,31 @@ anchorTags.forEach((anchorTag, index )  => {
   anchorTag.textContent = siteContent.nav[property];
 });
 
+
+const headerLinks = document.querySelectorAll('nav a')
+headerLinks[0].textContent = siteContent['nav']['nav-item-1'];
+headerLinks[1].textContent = siteContent['nav']['nav-item-2'];
+headerLinks[2].textContent = siteContent['nav']['nav-item-3'];
+headerLinks[3].textContent = siteContent['nav']['nav-item-4'];
+headerLinks[4].textContent = siteContent['nav']['nav-item-5'];
+headerLinks[5].textContent = siteContent['nav']['nav-item-6'];
+
+// change Nav text color to green
+headerLinks.forEach(link => {link.style.color = 'green';});
+
+// .appendChild
+const newLastLink = document.createElement('a');
+newLastLink.textContent = ('DOM Tips');
+document.querySelector('nav').appendChild(newLastLink);
+newLastLink.style.color = 'green';
+
+// .prepend
+newFirstLink = document.createElement('a');
+newFirstLink.textContent = ('Learn Here');
+document.querySelector('nav').prepend(newFirstLink);
+newFirstLink.style.color = 'green';
+
+
 // retrieve img 
 let img = document.querySelector('#cta-img');
 
@@ -103,5 +128,6 @@ contactSectionP[0].textContent = siteContent['contact']['address'];
 contactSectionP[1].textContent = siteContent['contact']['phone'];
 contactSectionP[2].textContent = siteContent['contact']['email'];
 
-
+let footerP = document.querySelectorAll('footer p');
+footerP[0].textContent = siteContent['footer']['copyright'];
 // console.log(img);
