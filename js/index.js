@@ -56,6 +56,10 @@ const newAnchor = document.createElement('a')
 newAnchor.textContent = "Careers"
 newAnchor.href = '#'
 document.querySelector("nav").appendChild(newAnchor)
+newAnchor.style.color = "green"
+
+//change color of navigation text to green per mvp
+anchorText.forEach(x => x.style.color = "green")
 
 
 
