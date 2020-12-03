@@ -61,9 +61,8 @@ let mainTitle = document.querySelectorAll('.cta-text h1');
 mainTitle[0].textContent = siteContent['cta']['h1'];
 
 // adding button 
-
-// let button = document.querySelector('button');
-// button[]
+let button = document.querySelector('button');
+button.textContent = siteContent['cta']['button'];
 
 
 
