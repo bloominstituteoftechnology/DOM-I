@@ -93,8 +93,15 @@ bottomContentP[1].textContent = siteContent['main-content']['product-content'];
 bottomContentP[2].textContent = siteContent['main-content']['vision-content'];
 
 // adding contact section h4 
-let contactSectionH4 = document.querySelectorAll('.contact h4')
+let contactSectionH4 = document.querySelectorAll('.contact h4');
 contactSectionH4[0].textContent = siteContent['contact']['contact-h4'];
+
+// adding contact section p 
+
+let contactSectionP = document.querySelectorAll('.contact p');
+contactSectionP[0].textContent = siteContent['contact']['address'];
+contactSectionP[1].textContent = siteContent['contact']['phone'];
+contactSectionP[2].textContent = siteContent['contact']['email'];
 
 
 // console.log(img);
