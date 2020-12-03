@@ -75,8 +75,9 @@ let topContentP = document.querySelectorAll('.top-content p');
 topContentP[0].textContent = siteContent['main-content']['features-content'];
 topContentP[1].textContent = siteContent['main-content']['about-content'];
 
-
-
+// adding middle img 
+let middleImg = document.querySelector('#middle-img');
+middleImg.src = siteContent["main-content"]["middle-img-src"];
 
 
 
