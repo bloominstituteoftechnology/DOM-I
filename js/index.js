@@ -40,3 +40,67 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let logo = document.getElementById("logo-img");
+logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let logo = document.getElementById("logo-img");
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+let head = document.getElementById("cta-img");
+head.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let middle = document.getElementById("middle-img");
+middle.setAttribute('src', siteContent["main-content"]["img-src"]);
+
+const frontPage = document.querySelector("h1");
+frontPage.textContent = siteContent["cta"]["h1"]
+frontPage.innerHTML = "DOM <br> IS <br> AWESOME"
+
+const navLinks = document.querySelectorAll('nav a');
+let count = 1
+navLinks.forEach(element => {
+  element.textContent = siteContent.nav[`nav-item-${count.toString()}`];
+  count++;
+});
+
+const new1 = document.querySelectorAll(".text-content h4");
+new1[0].textContent = siteContent["main-content"]["features-h4"];
+
+ const new2 = document.querySelectorAll(".text-content p");
+ 
+ new2[1].innerText = siteContent["main-content"]["features-content"];
+
+ const new3 = document.querySelectorAll(".text-content h4");
+ 
+ new3[2].innerText = siteContent["main-content"]["about-h4"];
+
+const new4 = document.querySelectorAll(".text-content p");
+
+new4[3].innerText = siteContent["main-content"]["about-content"];
+
+const new5 = document.querySelectorAll(".text-content h4");
+
+new5[4].innerText = siteContent["main-content"]["services-h4"];
+
+const new6 = document.querySelectorAll(".text-content p");
+new6[5].innerText = siteContent["main-content"]["services-content"];
+
+const new7 = document.querySelectorAll(".text-content h4");
+new7[6].innerText = siteContent["main-content"]["product-h4"];
+
+const new8 = document.querySelectorAll(".text-content p");
+new8[7].innerText = siteContent["main-content"]["product-content"];
+
+const new9 = document.querySelectorAll(".text-content h4");
+new9[8].innerText = siteContent["main-content"]["vision-h4"];
+
+const new10= document.querySelectorAll(".text-content p");
+new10[9].innerText = siteContent["main-content"]["vision-content"];
+
+let contactText = document.querySelectorAll('.contact p')
+
+let contactArray = Array.from(contactText)
+contactArray[0].textContent = siteContent['contact']['address']
+contactArray[1].textContent = siteContent['contact']['phone']
+contactArray[2].textContent = siteContent['contact']['email']
