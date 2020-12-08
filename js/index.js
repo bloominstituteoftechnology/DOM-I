@@ -87,3 +87,15 @@ contactP3.textContent = siteContent["contact"]["email"]
 
 const footer = document.querySelector('footer')
 footer.querySelector('p').textContent = siteContent["footer"]["copyright"]
+
+// New content
+const navLastItem = document.createElement('a')
+navLastItem.textContent = "Cats"
+navLastItem.setAttribute("href", "https://cat-bounce.com/")
+navLastItem.setAttribute("target", "_blank")
+nav.appendChild(navLastItem)
+const navFirstItem = document.createElement('a')
+navFirstItem.textContent = "Koalas"
+navFirstItem.setAttribute("href", "http://www.koalastothemax.com/")
+navFirstItem.setAttribute("target", "_blank")
+nav.prepend(navFirstItem)
