@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "123 Way 456 Street \n Somewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -73,32 +73,32 @@ let ctaImg = doc.getElementById('cta-img');
 ctaImg.setAttribute('src', siteContent['cta']['img-src']);
 
 //Headers
-let section = doc.querySelector('.main-content')
-let sectionHeader = section.querySelectorAll('h4')
-sectionHeader[0].textContent = siteContent["main-content"]["features-h4"]
-sectionHeader[1].textContent = siteContent["main-content"]["about-h4"]
-sectionHeader[2].textContent = siteContent["main-content"]["services-h4"]
-sectionHeader[3].textContent = siteContent["main-content"]["product-h4"]
-sectionHeader[4].textContent = siteContent["main-content"]["vision-h4"]
+let section = doc.querySelector('.main-content');
+let sectionHeader = section.querySelectorAll('h4');
+sectionHeader[0].textContent = siteContent["main-content"]["features-h4"];
+sectionHeader[1].textContent = siteContent["main-content"]["about-h4"];
+sectionHeader[2].textContent = siteContent["main-content"]["services-h4"];
+sectionHeader[3].textContent = siteContent["main-content"]["product-h4"];
+sectionHeader[4].textContent = siteContent["main-content"]["vision-h4"];
 
 let sectionContent = section.querySelectorAll('p');
-sectionContent[0].textContent = siteContent["main-content"]["features-content"]
-sectionContent[1].textContent = siteContent["main-content"]["about-content"]
-sectionContent[2].textContent = siteContent["main-content"]["services-content"]
-sectionContent[3].textContent = siteContent["main-content"]["product-content"]
-sectionContent[4].textContent = siteContent["main-content"]["vision-content"]
+sectionContent[0].textContent = siteContent["main-content"]["features-content"];
+sectionContent[1].textContent = siteContent["main-content"]["about-content"];
+sectionContent[2].textContent = siteContent["main-content"]["services-content"];
+sectionContent[3].textContent = siteContent["main-content"]["product-content"];
+sectionContent[4].textContent = siteContent["main-content"]["vision-content"];
 
 let sectionImg = doc.querySelector("#middle-img");
-sectionImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+sectionImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 //Contact
-let contact = doc.querySelector('.contact')
-let contactHeader = contact.querySelectorAll('h4')
-contactHeader[0].textContent = siteContent["contact"]["contact-h4"]
+let contact = doc.querySelector('.contact');
+let contactHeader = contact.querySelectorAll('h4');
+contactHeader[0].textContent = siteContent["contact"]["contact-h4"];
 let contactP = contact.querySelectorAll('p');
-contactP[0].textContent = siteContent["contact"]["address"]
-contactP[1].textContent = siteContent["contact"]["phone"]
-contactP[2].textContent = siteContent["contact"]["email"]
+contactP[0].innerHTML = siteContent["contact"]["address"].replace(/\n/g, '<br>');
+contactP[1].innerHTML = siteContent["contact"]["phone"];
+contactP[2].innerHTML = siteContent["contact"]["email"];
 
 //Footer
 let footer = doc.querySelector('footer');
