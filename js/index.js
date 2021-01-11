@@ -48,9 +48,15 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //Title Change
 const h1=document.querySelector('h1');
-h1.textContent="DOM Is Awesome"
+h1.textContent="DOM Is Awesome";
+
+//Header Image Add
+const circleImg=document.querySelector('#cta-img');
+circleImg.src='img/header-img.png';
 
 //Button Change
+const button=document.querySelector('button');
+button.textContent="Get Started"
 
 
 //Attempt #1
@@ -62,6 +68,3 @@ h1.textContent="DOM Is Awesome"
 
 //Note that IDs have been used on all images. Use the IDs to update src path content
 
-//Attempt #1
-const circleImg=document.querySelector('#cta-img')
-circleImg.src='img/header-img.png'
