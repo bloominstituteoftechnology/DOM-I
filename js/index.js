@@ -116,5 +116,18 @@ address.innerHTML = dataAddress.join(" ");
 phone.textContent = siteContent['contact']['phone'];
 email.textContent = siteContent['contact']['email'];
 
-// ** footer **
+// ** Updating footer **
 footer.textContent = siteContent['footer']['copyright'];
+
+// ** Change the color of the navigation text to green **
+navLinks.map(link => link.style.color = "green");
+
+// ** Add two new items to the new navigation **
+const beforeLink = document.createElement("a"),
+      afterLink = document.createElement("a");
+
+beforeLink.textContent = "Before";
+afterLink.textContent = "After";
+
+nav.prepend(beforeLink);
+nav.appendChild(afterLink);
