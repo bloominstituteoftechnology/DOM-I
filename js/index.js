@@ -62,6 +62,14 @@ button.textContent="Get Started"
 const midAccent=document.querySelector('#middle-img');
 midAccent.src='img/mid-page-accent.jpg';
 
+//Nav Add
+const navBar=document.querySelectorAll('a');
+navBar[0].textContent='Services'
+navBar[1].textContent='Product'
+navBar[2].textContent='Vision'
+navBar[3].textContent='Features'
+navBar[4].textContent='About'
+navBar[5].textContent='Contact'
 
 //Attempt #1
 //const navBar=document.querySelector('nav');
