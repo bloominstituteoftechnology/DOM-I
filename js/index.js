@@ -43,16 +43,16 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
 const navigation = document.querySelector('nav');
-const links = document.querySelector('a');
-const imgs = document.querySelector('img');
+const links = document.querySelectorAll('a');
+const imgs = document.querySelectorAll('img');
 const button = document.querySelector('button');
 const h1Tag = document.querySelector('h1');
-const h4S = document.querySelector('h4');
-const pTag = document.querySelector('p');
+const h4S = document.querySelectorAll('h4');
+const pTag = document.querySelectorAll('p');
 
 const mainNav = Object.values(siteContent['nav']);
 for (let i = 0; i < mainNav.length - 1; i++) {
-  links[i].textContent = val[i];
+  links[i].textContent = mainNav[i];
 }
 
 links.forEach(Link => Link.style.color = 'green');
