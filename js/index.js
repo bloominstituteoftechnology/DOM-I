@@ -115,3 +115,6 @@ address.innerHTML = dataAddress.join(" ");
 
 phone.textContent = siteContent['contact']['phone'];
 email.textContent = siteContent['contact']['email'];
+
+// ** footer **
+footer.textContent = siteContent['footer']['copyright'];
