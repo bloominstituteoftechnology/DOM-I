@@ -84,3 +84,15 @@ pTag[5].textContent = siteContent['contact']['address'];
 pTag[6].textContent = siteContent['contact']['phone'];
 pTag[7].textContent = siteContent['contact']['email'];
 pTag[8].textContent = siteContent['footer']['copyright'];
+
+const blogLink = document.createElement('a');
+blogLink.textContent = 'Blog';
+blogLink.href = '#';
+blogLink.style.color = 'green';
+navigation.appendChild(blogLink);
+
+const learnLink = document.createElement('a');
+learnLink.textContent = 'Learn';
+learnLink.href = '#';
+learnLink.style.color = 'green';
+navigation.prepend(learnLink);
