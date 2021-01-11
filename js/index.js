@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM \n Is \n Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "123 Way 456 Street \n Somewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -40,3 +40,56 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+let navBar = document.querySelector('nav')
+let nav = document.getElementsByTagName('a');
+let navArr = Array.from(nav);
+
+nav[0].textContent = siteContent["nav"]["nav-item-1"]
+nav[1].textContent = siteContent["nav"]["nav-item-2"]
+nav[2].textContent = siteContent["nav"]["nav-item-3"]
+nav[3].textContent = siteContent["nav"]["nav-item-4"]
+nav[4].textContent = siteContent["nav"]["nav-item-5"]
+nav[5].textContent = siteContent["nav"]["nav-item-6"]
+
+for(let i = 0; i < nav.length; i++){
+  nav[i].style.color = 'green'
+}
+
+
+let ctaHeader = document.querySelector('h1')
+ctaHeader.textContent = siteContent.cta.h1;
+
+let ctaButton = document.querySelector('button')
+ctaButton.textContent = siteContent.cta.button;
+
+let ctaImg = document.querySelector('#cta-img')
+ctaImg.src = siteContent.cta["img-src"]
+
+let headerContent4 = document.getElementsByTagName('h4')
+headerContent4[0].textContent = siteContent["main-content"]["features-h4"]
+headerContent4[1].textContent = siteContent["main-content"]["about-h4"]
+headerContent4[2].textContent = siteContent["main-content"]["services-h4"]
+headerContent4[3].textContent = siteContent["main-content"]["product-h4"]
+headerContent4[4].textContent = siteContent["main-content"]["vision-h4"]
+headerContent4[5].textContent = siteContent["contact"]["contact-h4"]
+
+let paragraphContent = document.querySelectorAll('p')
+paragraphContent[0].textContent = siteContent["main-content"]["features-content"]
+paragraphContent[1].textContent = siteContent["main-content"]["about-content"]
+paragraphContent[2].textContent = siteContent["main-content"]["services-content"]
+paragraphContent[3].textContent = siteContent["main-content"]["product-content"]
+paragraphContent[4].textContent = siteContent["main-content"]["vision-content"]
+paragraphContent[5].innerHTML = siteContent["contact"]["address"].replace(/\n/g, '<br>')
+paragraphContent[6].textContent = siteContent["contact"]["phone"]
+paragraphContent[7].textContent = siteContent["contact"]["email"]
+paragraphContent[8].textContent = siteContent["footer"]["copyright"]
+
+let middleImg = document.querySelector("#middle-img")
+middleImg.src = siteContent["main-content"]["middle-img-src"]
+
+ctaHeader.innerHTML = siteContent.cta.h1.replace(/\n/g, '<br>')
+
+
+
