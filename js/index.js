@@ -80,11 +80,10 @@ navLinks.map((link, index) => {
 // ** Updating the CTA content **
 let headingString = siteContent['cta']['h1'].split(' ');
 for (let i=0; i < headingString.length - 1; i++) {
-  headingString[i] = headingString[i] + "\n";
+  headingString[i] = headingString[i] + "<br>";
 }
 headingString = headingString.join("");
-ctaHeading.textContent = headingString;
-ctaHeading.style.whiteSpace = "pre-wrap";
+ctaHeading.innerHTML = headingString;
 
 ctaButton.textContent = siteContent['cta']['button'];
 ctaImage.src = siteContent['cta']['img-src'];
@@ -107,4 +106,12 @@ bottomThirdContent.children[1].textContent = siteContent['main-content']['vision
 
 imageContent.src = siteContent['main-content']['middle-img-src'];
 
-// 
+// ** Updating the contact info **
+contactTitle.textContent = siteContent['contact']['contact-h4'];
+
+let dataAddress = siteContent['contact']['address'].split(" ");
+dataAddress.splice(4, 0, "<br>");
+address.innerHTML = dataAddress.join(" ");
+
+phone.textContent = siteContent['contact']['phone'];
+email.textContent = siteContent['contact']['email'];
