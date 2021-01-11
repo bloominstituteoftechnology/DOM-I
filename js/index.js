@@ -49,11 +49,13 @@ navBar[3].textContent = 'Features';
 navBar[4].textContent = 'About';
 navBar[5].textContent = 'Contact';
 
+
 const heading = document.querySelector('h1');
 heading.textContent = "DOM Is Awesome"
 
 const booton = document.querySelector('button');
 booton.textContent = "Get Started"
+booton.onclick = (evt) => { logo.setAttribute('src', 'img/header-img.png') }
 
 const daPic = document.getElementById('cta-img');
 daPic.setAttribute('src', siteContent['cta']['img-src'])
@@ -76,6 +78,7 @@ paraGs[5].textContent = "123 Way 456 Street Somewhere, USA"
 paraGs[6].textContent = "1 (888) 888-8888"
 paraGs[7].textContent = "sales@greatidea.io"
 paraGs[8].textContent = "Copyright Great Idea! 2018"
+
 
 const codePic = document.getElementById('middle-img');
 codePic.setAttribute("src", siteContent["main-content"]["middle-img-src"])
