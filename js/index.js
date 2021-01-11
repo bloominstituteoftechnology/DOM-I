@@ -131,3 +131,14 @@ afterLink.textContent = "After";
 
 nav.prepend(beforeLink);
 nav.appendChild(afterLink);
+
+// Stretch:
+// ** Update some styles **
+const paragraphs = Array.from(document.querySelectorAll('p'));
+paragraphs.map(p => {
+  p.style.fontSize = "0.9rem";
+  p.style.color = "#888"
+});
+
+footer.style.paddingBottom = "50px";
+
