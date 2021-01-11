@@ -56,7 +56,7 @@ circleImg.src='img/header-img.png';
 
 //Button Change
 const button=document.querySelector('button');
-button.textContent="Get Started"
+button.textContent="Get Started";
 
 //Mid Page Accent Add
 const midAccent=document.querySelector('#middle-img');
@@ -64,12 +64,37 @@ midAccent.src='img/mid-page-accent.jpg';
 
 //Nav Add
 const navBar=document.querySelectorAll('a');
-navBar[0].textContent='Services'
-navBar[1].textContent='Product'
-navBar[2].textContent='Vision'
-navBar[3].textContent='Features'
-navBar[4].textContent='About'
-navBar[5].textContent='Contact'
+navBar[0].textContent='Services';
+navBar[1].textContent='Product';
+navBar[2].textContent='Vision';
+navBar[3].textContent='Features';
+navBar[4].textContent='About';
+navBar[5].textContent='Contact';
+
+//Text around the accent
+//Subheaders
+const subheader=document.getElementsByClassName("main-content")[0];
+subheader.getElementsByTagName('h4')[0].innerHTML=siteContent["main-content"]["features-h4"]
+subheader.getElementsByTagName('h4')[1].innerHTML=siteContent["main-content"]["about-h4"]
+subheader.getElementsByTagName('h4')[2].innerHTML=siteContent["main-content"]["services-h4"]
+subheader.getElementsByTagName('h4')[3].innerHTML=siteContent["main-content"]["product-h4"]
+subheader.getElementsByTagName('h4')[4].innerHTML=siteContent["main-content"]["vision-h4"]
+
+//Text
+const text=document.getElementsByClassName("main-content")[0];
+text.getElementsByTagName('p')[0].innerHTML=siteContent["main-content"]["features-content"]
+text.getElementsByTagName('p')[1].innerHTML=siteContent["main-content"]["about-content"]
+text.getElementsByTagName('p')[2].innerHTML=siteContent["main-content"]["services-content"]
+text.getElementsByTagName('p')[3].innerHTML=siteContent["main-content"]["product-content"]
+text.getElementsByTagName('p')[4].innerHTML=siteContent["main-content"]["vision-content"]
+
+//Contact
+const contact=document.getElementsByClassName("contact")[0];
+contact.getElementsByTagName('h4')[0].innerHTML=siteContent['contact']['contact-h4']
+contact.getElementsByTagName('p')[0].innerHTML=siteContent['contact']['address']
+contact.getElementsByTagName('p')[1].innerHTML=siteContent['contact']['phone']
+contact.getElementsByTagName('p')[2].innerHTML=siteContent['contact']['email']
+
 
 //Attempt #1
 //const navBar=document.querySelector('nav');
