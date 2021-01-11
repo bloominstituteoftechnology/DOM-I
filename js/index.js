@@ -38,5 +38,68 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+
+
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let navItems = document.querySelectorAll('a');
+
+let addLastAnchor = document.createElement('a')
+addLastAnchor.textContent = 'Last Tab'
+addLastAnchor.href = '#'
+document.querySelector('nav').appendChild(addLastAnchor)
+
+
+let addFirstAnhor = document.createElement("a");
+addFirstAnhor.textContent = "First Tab"
+addFirstAnhor.href = "#"
+document.querySelector("nav").prepend(addFirstAnhor)
+
+for (let i = 0; i < navItems.length; i++){
+  navItems[i].innerHTML = siteContent['nav'][`nav-item-${i+1}`]
+}
+let navItemsArray = Array.from(navItems)
+navItemsArray.push(addLastAnchor)
+navItemsArray.push(addFirstAnhor)
+
+navItemsArray.forEach(item => {
+  item.style.color = "green"
+  item.style.background = "lightblue"
+})
+
+let ctaImg = document.getElementById('cta-img');
+ctaImg.setAttribute('src', siteContent['cta']['img-src'])
+
+let header = document.getElementsByTagName('h1')[0];
+header.innerHTML = siteContent['cta']['h1']
+
+let button = document.getElementsByTagName('button')[0];
+button.innerHTML = siteContent['cta']['button']
+
+let middleImg = document.getElementById('middle-img');
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+let subHeader = document.getElementsByClassName("main-content")[0];
+subHeader.getElementsByTagName('h4')[0].innerHTML = siteContent["main-content"]["features-h4"];
+subHeader.getElementsByTagName('h4')[1].innerHTML = siteContent["main-content"]["about-h4"]
+subHeader.getElementsByTagName('h4')[2].innerHTML = siteContent["main-content"]["services-h4"]
+subHeader.getElementsByTagName('h4')[3].innerHTML = siteContent["main-content"]["product-h4"]
+subHeader.getElementsByTagName('h4')[4].innerHTML = siteContent["main-content"]["vision-h4"]
+
+let text = document.getElementsByClassName("main-content")[0];
+text.getElementsByTagName('p')[0].innerHTML = siteContent["main-content"]["features-content"];
+text.getElementsByTagName('p')[1].innerHTML = siteContent["main-content"]["about-content"];
+text.getElementsByTagName('p')[2].innerHTML = siteContent["main-content"]["services-content"]
+text.getElementsByTagName('p')[3].innerHTML = siteContent["main-content"]["product-content"]
+text.getElementsByTagName('p')[4].innerHTML = siteContent['main-content']["vision-content"]
+
+let contact = document.getElementsByClassName('contact')[0]
+contact.getElementsByTagName('h4')[0].innerHTML = siteContent['contact']['contact-h4']
+contact.getElementsByTagName('p')[0].innerHTML = siteContent['contact']["address"]
+contact.getElementsByTagName('p')[1].innerHTML = siteContent['contact']["phone"]
+contact.getElementsByTagName('p')[2].innerHTML = siteContent['contact']["email"]
+
+
+let footer = document.querySelector("footer");
+footer.getElementsByTagName("p")[0].innerHTML = siteContent["footer"]["copyright"]
