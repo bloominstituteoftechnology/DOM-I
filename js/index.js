@@ -95,6 +95,10 @@ contact.getElementsByTagName('p')[0].innerHTML=siteContent['contact']['address']
 contact.getElementsByTagName('p')[1].innerHTML=siteContent['contact']['phone']
 contact.getElementsByTagName('p')[2].innerHTML=siteContent['contact']['email']
 
+//Copyright
+const copyright=document.getElementsByTagName('footer')[0];
+copyright.getElementsByTagName('p')[0].innerHTML=siteContent['footer']['copyright'];
+
 
 //Attempt #1
 //const navBar=document.querySelector('nav');
