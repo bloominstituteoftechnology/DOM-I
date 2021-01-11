@@ -52,6 +52,16 @@ nav[4].textContent = siteContent["nav"]["nav-item-5"]
 nav[5].textContent = siteContent["nav"]["nav-item-6"]
 
 nav.forEach(ele => (ele.style.color = "green"));
+let nav1 = doc.createElement('a');
+let nav2 = doc.createElement('a');
+nav1.href = '#';
+nav2.href = '#';
+nav1.textContent = 'Blog';
+nav2.textContent = 'People';
+nav1.style.color = 'green';
+nav2.style.color = 'green';
+doc.querySelector('nav').appendChild(nav1);
+doc.querySelector('nav').appendChild(nav2);
 
 //Cta
 let cta = doc.querySelector('.cta');
@@ -61,8 +71,35 @@ ctaH1.textContent = siteContent["cta"]['h1'];
 ctaButton.textContent = siteContent["cta"]['button'];
 let ctaImg = doc.getElementById('cta-img');
 ctaImg.setAttribute('src', siteContent['cta']['img-src']);
-//Main Content
+
+//Headers
+let section = doc.querySelector('.main-content')
+let sectionHeader = section.querySelectorAll('h4')
+sectionHeader[0].textContent = siteContent["main-content"]["features-h4"]
+sectionHeader[1].textContent = siteContent["main-content"]["about-h4"]
+sectionHeader[2].textContent = siteContent["main-content"]["services-h4"]
+sectionHeader[3].textContent = siteContent["main-content"]["product-h4"]
+sectionHeader[4].textContent = siteContent["main-content"]["vision-h4"]
+
+let sectionContent = section.querySelectorAll('p');
+sectionContent[0].textContent = siteContent["main-content"]["features-content"]
+sectionContent[1].textContent = siteContent["main-content"]["about-content"]
+sectionContent[2].textContent = siteContent["main-content"]["services-content"]
+sectionContent[3].textContent = siteContent["main-content"]["product-content"]
+sectionContent[4].textContent = siteContent["main-content"]["vision-content"]
+
+let sectionImg = doc.querySelector("#middle-img");
+sectionImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 //Contact
+let contact = doc.querySelector('.contact')
+let contactHeader = contact.querySelectorAll('h4')
+contactHeader[0].textContent = siteContent["contact"]["contact-h4"]
+let contactP = contact.querySelectorAll('p');
+contactP[0].textContent = siteContent["contact"]["address"]
+contactP[1].textContent = siteContent["contact"]["phone"]
+contactP[2].textContent = siteContent["contact"]["email"]
 
 //Footer
+let footer = doc.querySelector('footer');
+footer.querySelector('p').textContent = siteContent.footer.copyright;
