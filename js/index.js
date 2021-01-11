@@ -41,27 +41,31 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', 'img/logo.png');
 
-const  header1 = document.querySelector('nav a');
-const nav1 = header1;
-const nav2 = nav1.nextElementSibling;
-const nav3 = nav2.nextElementSibling;
-const nav4 = nav3.nextElementSibling;
-const nav5 = nav4.nextElementSibling;
-const nav6 = nav5.nextElementSibling;
+const  header1 = document.querySelectorAll('nav a');
+header1[0].textContent = 'Services';
+header1[1].textContent = 'Product';
+header1[2].textContent = 'Vision';
+header1[3].textContent = 'Features';
+header1[4].textContent = 'About';
+header1[5].textContent = 'Contact';
 
-nav1.textContent = 'Services';
-nav2.textContent = 'Product';
-nav3.textContent = 'Vision';
-nav4.textContent = 'Features';
-nav5.textContent = 'About';
-nav6.textContent = 'Contact';
+header1.forEach( link => link.style.color = "green");
 
-header1.style.color = "green";
-nav2.style.color = "green";
-nav3.style.color = "green";
-nav4.style.color = "green";
-nav5.style.color = "green";
-nav6.style.color = "green";
+
+
+const navLink = document.createElement('a');
+navLink.textContent = 'Blog';
+navLink.href = '#';
+navLink.style.color = "green";
+document.querySelector('nav').appendChild(navLink);
+
+const navLink2 = document.createElement('a');
+navLink2.textContent = 'Home';
+navLink2.href = "#";
+navLink2.style.color = "green";
+document.querySelector('nav').prepend(navLink2);
+
+
 
 
 
@@ -76,6 +80,7 @@ const bigText = firstSection.querySelector('h1');
 const button = firstSection.querySelector('button');
 bigText.innerHTML = "DOM <br> Is <br> Awesome";
 button.textContent = "Get Started";
+button.style.backgroundColor = "green";
 
 const secondSectionH4 = document.querySelectorAll('.text-content h4 ');
 const secondSectionP = document.querySelectorAll('.text-content p');
@@ -94,6 +99,8 @@ secondSectionP[3].textContent = "Vision content elementum magna eros, ac posuere
 secondSectionH4[4].textContent = "vison";
 secondSectionP[4].textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, ininterdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metusscelerisque quis.";
 
+secondSectionH4.forEach( link => link.style.color = "green");
+
 const bottomSection = document.querySelector('.contact h4');
 const bottomSectionP = document.querySelectorAll('.contact p');
 bottomSection.textContent = "CONTACT";
@@ -103,3 +110,4 @@ bottomSectionP[2].textContent = "sales@greatidea.io";
 
 const footerEnd = document.querySelector('footer p');
 footerEnd.textContent = "Copyright Great Idea! 2018";
+
