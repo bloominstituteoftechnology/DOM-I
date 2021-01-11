@@ -41,10 +41,22 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-
+//selects nav tag and assigns it to navBar
 let navBar = document.querySelector('nav')
+console.log(navBar)
+
+//selects all anchor tags and assigns the HTMLCollection to Nav
 let nav = document.getElementsByTagName('a');
-let navArr = Array.from(nav);
+
+//creates an anchor element and assigns it to customNavItem
+let customNavItem = document.createElement('a');
+
+//sets text content and href of customNavItem
+customNavItem.textContent = 'CustomItem'
+customNavItem.href = '#'
+
+//prepends customNavItem into NavBar
+navBar.prepend(customNavItem)
 
 nav[0].textContent = siteContent["nav"]["nav-item-1"]
 nav[1].textContent = siteContent["nav"]["nav-item-2"]
@@ -56,7 +68,6 @@ nav[5].textContent = siteContent["nav"]["nav-item-6"]
 for(let i = 0; i < nav.length; i++){
   nav[i].style.color = 'green'
 }
-
 
 let ctaHeader = document.querySelector('h1')
 ctaHeader.textContent = siteContent.cta.h1;
