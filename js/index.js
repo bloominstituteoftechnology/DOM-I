@@ -58,6 +58,10 @@ circleImg.src='img/header-img.png';
 const button=document.querySelector('button');
 button.textContent="Get Started"
 
+//Mid Page Accent Add
+const midAccent=document.querySelector('#middle-img');
+midAccent.src='img/mid-page-accent.jpg';
+
 
 //Attempt #1
 //const navBar=document.querySelector('nav');
