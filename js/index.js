@@ -39,4 +39,116 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+// Nav Links
+let navStart = document.querySelector("nav a");
+navStart.textContent = siteContent["nav"]["nav-item-1"];
+let aOne = navStart.nextElementSibling;
+aOne.textContent = siteContent["nav"]["nav-item-2"];
+let aTwo = aOne.nextElementSibling;
+aTwo.textContent = siteContent["nav"]["nav-item-3"];
+let aThree = aTwo.nextElementSibling;
+aThree.textContent = siteContent["nav"]["nav-item-4"];
+let aFour = aThree.nextElementSibling;
+aFour.textContent = siteContent["nav"]["nav-item-5"];
+let navLast = aFour.nextElementSibling;
+navLast.textContent = siteContent["nav"]["nav-item-6"];
+
+let homeLink = document.createElement("a");
+homeLink.textContent = "HOME";
+homeLink.href = "#";
+document.querySelector("nav").prepend(homeLink);
+
+let extraLink = document.createElement("a");
+extraLink.textContent = "EXTRA LINK";
+extraLink.href = "#";
+document.querySelector("nav").appendChild(extraLink);
+
+
+//CTA
+let ctaSection = document.querySelector(".cta");
+let ctaText = ctaSection.querySelector("h1");
+ctaText.textContent = siteContent["cta"]["h1"];
+
+let ctaButton = ctaSection.querySelector("button");
+ctaButton.textContent = siteContent["cta"]["button"];
+
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute("src", siteContent["cta"]["img-src"])
+
+//Top content
+let upperContent = document.querySelector(".top-content");
+
+//Top content 1
+let topContent = upperContent.querySelector(".text-content");
+let topContentHeader = topContent.querySelector("h4");
+topContentHeader.textContent = siteContent["main-content"]["features-h4"];
+let topContentText = topContent.querySelector("p");
+topContentText.textContent = siteContent["main-content"]["features-content"];
+//Top content 2
+let topContentTwo = topContent.nextElementSibling;
+let topContentTwoHeader = topContentTwo.querySelector("h4");
+topContentTwoHeader.textContent = siteContent["main-content"]["about-h4"];
+let topContentTwoText = topContentTwo.querySelector("p");
+topContentTwoText.textContent = siteContent["main-content"]["about-content"];
+
+//img
+let mainImg = document.getElementById("middle-img");
+mainImg.setAttribute("src", siteContent["main-content"]["middle-img-src"])
+
+//Bottom content 
+let lowerContent = document.querySelector(".bottom-content");
+
+//Bottom content 1
+let bottomContent = lowerContent.querySelector(".text-content");
+let bottomContentHeader = bottomContent.querySelector("h4");
+bottomContentHeader.textContent = siteContent["main-content"]["services-h4"];
+let bottomContentText = bottomContent.querySelector("p");
+bottomContentText.textContent = siteContent["main-content"]["services-content"];
+
+//Bottom content 2
+let bottomContentTwo = bottomContent.nextElementSibling;
+let bottomContentHeaderTwo = bottomContentTwo.querySelector("h4");
+bottomContentHeaderTwo.textContent = siteContent["main-content"]["product-h4"];
+let bottomContentTextTwo = bottomContentTwo.querySelector("p");
+bottomContentTextTwo.textContent = siteContent["main-content"]["product-content"];
+
+//Bottom content 3
+let bottomContentThree = bottomContentTwo.nextElementSibling;
+let bottomContentHeaderThree = bottomContentThree.querySelector("h4");
+bottomContentHeaderThree.textContent = siteContent["main-content"]["vision-h4"];
+let bottomContentTextThree = bottomContentThree.querySelector("p");
+bottomContentTextThree.textContent = siteContent["main-content"]["vision-content"];
+
+//Contact section
+let contact = document.querySelector(".contact");
+let contactHeader = contact.querySelector("h4");
+contactHeader.textContent = siteContent["contact"]["contact-h4"];
+let contactText = contact.querySelector("p");
+contactText.textContent = siteContent["contact"]["address"];
+let contactTextTwo = contactText.nextElementSibling;
+contactTextTwo.textContent = siteContent["contact"]["phone"];
+let contactTextThree = contactTextTwo.nextElementSibling;
+contactTextThree.textContent = siteContent["contact"]["email"];
+
+//Footer
+
+let footer = document.querySelector("footer");
+footer.textContent = siteContent["footer"]["copyright"]
+
+//STYLING
+ctaText.innerHTML = "Dom<br>Is<br>Awesome"
+contactText.innerHTML = "123 Way 456 Street<br>Somewhere, USA"
+
+navStart.style.color = "green";
+aOne.style.color = "green";
+aTwo.style.color = "green";
+aThree.style.color = "green";
+aFour.style.color = "green";
+navLast.style.color = "green";
+
+homeLink.style.paddingRight = "10%"
+homeLink.style.color = "red";
+
+extraLink.style.paddingLeft = "10%";
+extraLink.style.color = "red";
