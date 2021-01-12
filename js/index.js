@@ -41,32 +41,31 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-//selects nav tag and assigns it to navBar
-let navBar = document.querySelector('nav')
-console.log(navBar)
-
-//selects all anchor tags and assigns the HTMLCollection to Nav
-let nav = document.getElementsByTagName('a');
-
-//creates an anchor element and assigns it to customNavItem
 let customNavItem = document.createElement('a');
-
-//sets text content and href of customNavItem
 customNavItem.textContent = 'CustomItem'
 customNavItem.href = '#'
 
-//prepends customNavItem into NavBar
-navBar.prepend(customNavItem)
+let customNavItem2 = document.createElement('a');
+customNavItem2.textContent = 'CustomItem2'
+customNavItem2.href = '#'
 
-nav[0].textContent = siteContent["nav"]["nav-item-1"]
-nav[1].textContent = siteContent["nav"]["nav-item-2"]
-nav[2].textContent = siteContent["nav"]["nav-item-3"]
-nav[3].textContent = siteContent["nav"]["nav-item-4"]
-nav[4].textContent = siteContent["nav"]["nav-item-5"]
-nav[5].textContent = siteContent["nav"]["nav-item-6"]
+let navBar = document.querySelectorAll('a');
+console.log(navBar);
 
-for(let i = 0; i < nav.length; i++){
-  nav[i].style.color = 'green'
+
+document.querySelector('nav').prepend(customNavItem)
+document.querySelector('nav').appendChild(customNavItem2)
+
+
+navBar[0].textContent = siteContent["nav"]["nav-item-1"]
+navBar[1].textContent = siteContent["nav"]["nav-item-2"]
+navBar[2].textContent = siteContent["nav"]["nav-item-3"]
+navBar[3].textContent = siteContent["nav"]["nav-item-4"]
+navBar[4].textContent = siteContent["nav"]["nav-item-5"]
+navBar[5].textContent = siteContent["nav"]["nav-item-6"]
+
+for(let i = 0; i < navBar.length; i++){
+  navBar[i].style.color = 'green'
 }
 
 let ctaHeader = document.querySelector('h1')
