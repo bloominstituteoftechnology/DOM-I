@@ -90,3 +90,21 @@ contactP[2].textContent = siteContent.contact["email"]
 
 const footer = document.querySelector("footer")
 footer.textContent = siteContent.footer["copyright"]
+
+
+
+const head = document.querySelector("nav")
+const us = document.createElement("a")
+const loc = document.createElement("a")
+
+us.textContent = "Us";
+loc.textContent = "Location";
+
+head.appendChild(us);
+head.appendChild(loc);
+
+
+
+const greenie = document.querySelectorAll("a");
+
+greenie.forEach( a => a.style.color = "green" );
