@@ -51,9 +51,19 @@ let aThree = aTwo.nextElementSibling;
 aThree.textContent = siteContent["nav"]["nav-item-4"];
 let aFour = aThree.nextElementSibling;
 aFour.textContent = siteContent["nav"]["nav-item-5"];
-let aFive = aFour.nextElementSibling;
-aFive.textContent = siteContent["nav"]["nav-item-6"];
-let aLast = aFive.nextElementSibling;
+let navLast = aFour.nextElementSibling;
+navLast.textContent = siteContent["nav"]["nav-item-6"];
+
+let homeLink = document.createElement("a");
+homeLink.textContent = "HOME";
+homeLink.href = "#";
+document.querySelector("nav").prepend(homeLink);
+
+let extraLink = document.createElement("a");
+extraLink.textContent = "EXTRA LINK";
+extraLink.href = "#";
+document.querySelector("nav").appendChild(extraLink);
+
 
 //CTA
 let ctaSection = document.querySelector(".cta");
@@ -109,3 +119,36 @@ let bottomContentHeaderThree = bottomContentThree.querySelector("h4");
 bottomContentHeaderThree.textContent = siteContent["main-content"]["vision-h4"];
 let bottomContentTextThree = bottomContentThree.querySelector("p");
 bottomContentTextThree.textContent = siteContent["main-content"]["vision-content"];
+
+//Contact section
+let contact = document.querySelector(".contact");
+let contactHeader = contact.querySelector("h4");
+contactHeader.textContent = siteContent["contact"]["contact-h4"];
+let contactText = contact.querySelector("p");
+contactText.textContent = siteContent["contact"]["address"];
+let contactTextTwo = contactText.nextElementSibling;
+contactTextTwo.textContent = siteContent["contact"]["phone"];
+let contactTextThree = contactTextTwo.nextElementSibling;
+contactTextThree.textContent = siteContent["contact"]["email"];
+
+//Footer
+
+let footer = document.querySelector("footer");
+footer.textContent = siteContent["footer"]["copyright"]
+
+//STYLING
+ctaText.innerHTML = "Dom<br>Is<br>Awesome"
+contactText.innerHTML = "123 Way 456 Street<br>Somewhere, USA"
+
+navStart.style.color = "green";
+aOne.style.color = "green";
+aTwo.style.color = "green";
+aThree.style.color = "green";
+aFour.style.color = "green";
+navLast.style.color = "green";
+
+homeLink.style.paddingRight = "10%"
+homeLink.style.color = "red";
+
+extraLink.style.paddingLeft = "10%";
+extraLink.style.color = "red";
