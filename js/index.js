@@ -63,6 +63,49 @@ ctaText.textContent = siteContent["cta"]["h1"];
 let ctaButton = ctaSection.querySelector("button");
 ctaButton.textContent = siteContent["cta"]["button"];
 
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute("src", siteContent["cta"]["img-src"])
 
+//Top content
+let upperContent = document.querySelector(".top-content");
 
+//Top content 1
+let topContent = upperContent.querySelector(".text-content");
+let topContentHeader = topContent.querySelector("h4");
+topContentHeader.textContent = siteContent["main-content"]["features-h4"];
+let topContentText = topContent.querySelector("p");
+topContentText.textContent = siteContent["main-content"]["features-content"];
+//Top content 2
+let topContentTwo = topContent.nextElementSibling;
+let topContentTwoHeader = topContentTwo.querySelector("h4");
+topContentTwoHeader.textContent = siteContent["main-content"]["about-h4"];
+let topContentTwoText = topContentTwo.querySelector("p");
+topContentTwoText.textContent = siteContent["main-content"]["about-content"];
 
+//img
+let mainImg = document.getElementById("middle-img");
+mainImg.setAttribute("src", siteContent["main-content"]["middle-img-src"])
+
+//Bottom content 
+let lowerContent = document.querySelector(".bottom-content");
+
+//Bottom content 1
+let bottomContent = lowerContent.querySelector(".text-content");
+let bottomContentHeader = bottomContent.querySelector("h4");
+bottomContentHeader.textContent = siteContent["main-content"]["services-h4"];
+let bottomContentText = bottomContent.querySelector("p");
+bottomContentText.textContent = siteContent["main-content"]["services-content"];
+
+//Bottom content 2
+let bottomContentTwo = bottomContent.nextElementSibling;
+let bottomContentHeaderTwo = bottomContentTwo.querySelector("h4");
+bottomContentHeaderTwo.textContent = siteContent["main-content"]["product-h4"];
+let bottomContentTextTwo = bottomContentTwo.querySelector("p");
+bottomContentTextTwo.textContent = siteContent["main-content"]["product-content"];
+
+//Bottom content 3
+let bottomContentThree = bottomContentTwo.nextElementSibling;
+let bottomContentHeaderThree = bottomContentThree.querySelector("h4");
+bottomContentHeaderThree.textContent = siteContent["main-content"]["vision-h4"];
+let bottomContentTextThree = bottomContentThree.querySelector("p");
+bottomContentTextThree.textContent = siteContent["main-content"]["vision-content"];
