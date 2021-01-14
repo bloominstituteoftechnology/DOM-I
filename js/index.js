@@ -65,3 +65,37 @@ button[0].textContent = siteContent['cta']['button'];
 
 let image1 = document.getElementById('cta-img');
 image1.setAttribute('src', siteContent['cta']['img-src']);
+
+// // MAIN CONTENT
+
+//     //TOP CONTENT
+  let topContentParent = document.querySelector('.top-content');
+  let topContentChildren = Array.from(topContentParent.children);
+
+  let featuresSection = topContentChildren[0].children;
+  featuresSection[0].textContent = siteContent['main-content']['features-h4'];
+  featuresSection[1].textContent = siteContent['main-content']['features-content'];
+
+  let aboutSection = topContentChildren[1].children;
+  aboutSection[0].textContent = siteContent['main-content']['about-h4'];
+  aboutSection[1].textContent = siteContent['main-content']['about-content'];
+
+  let midImg = document.getElementById('middle-img');
+  midImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+  // BOTTOM CONTENT
+
+  let bottomContentParent = document.querySelector('.bottom-content');
+  let bottomContentChildren = Array.from(bottomContentParent.children);
+
+  let servicesSection = bottomContentChildren[0].children;
+  servicesSection[0].textContent = siteContent['main-content']['services-h4'];
+  servicesSection[1].textContent = siteContent['main-content']['services-content'];
+
+  let productSection = bottomContentChildren[1].children;
+  productSection[0].textContent = siteContent['main-content']['product-h4'];
+  productSection[1].textContent = siteContent['main-content']['product-content'];
+
+  let visionSection = bottomContentChildren[2].children;
+  visionSection[0].textContent = siteContent['main-content']['vision-h4'];
+  visionSection[1].textContent = siteContent['main-content']['vision-content'];
