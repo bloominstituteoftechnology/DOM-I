@@ -43,7 +43,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
 
-//STEP ONE: Create all selectors
+//STEP ONE: CREATE ALL SELECTORS
 //nav
 const nav = document.querySelectorAll('nav a')
 
@@ -63,3 +63,48 @@ const contactParagraph = document.querySelectorAll('.contact p')
 
 //footer
 const footer = document.querySelector('footer p')
+
+
+//STEP TWO: UPDATE HTML WITH JSON DATA
+//nav
+nav.forEach((item, index) => {
+  //console.log(item)
+  item.textContent = siteContent.nav[`nav-item-${index + 1}`]
+})
+
+//cta 
+const br = document.createElement("br")
+br.textContent = ""
+console.log(br)
+ctaH1.textContent = siteContent.cta.h1
+//add <br> to h1
+
+
+ctaButton.textContent = siteContent.cta.button
+ctaImg.setAttribute('src', siteContent.cta["img-src"])
+
+//main content - heading
+mcHeading[0].textContent = siteContent["main-content"]['features-h4']
+mcHeading[1].textContent = siteContent["main-content"]['about-h4']
+mcHeading[2].textContent = siteContent["main-content"]['services-h4']
+mcHeading[3].textContent = siteContent["main-content"]['product-h4']
+mcHeading[4].textContent = siteContent["main-content"]['vision-h4']
+
+//main content - paragraph content
+mcParagraph[0].textContent = siteContent["main-content"]['features-content']
+mcParagraph[1].textContent = siteContent["main-content"]['about-content']
+mcParagraph[2].textContent = siteContent["main-content"]['services-content']
+mcParagraph[3].textContent = siteContent["main-content"]['product-content']
+mcParagraph[4].textContent = siteContent["main-content"]['vision-content']
+
+//main content - img
+mcImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+//contact
+contactH4.textContent = siteContent.contact["contact-h4"]
+contactParagraph[0].textContent = siteContent.contact.address
+contactParagraph[1].textContent = siteContent.contact.phone
+contactParagraph[2].textContent = siteContent.contact.email
+
+//footer
+footer.textContent = siteContent.footer.copyright
