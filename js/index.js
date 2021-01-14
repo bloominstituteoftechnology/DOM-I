@@ -75,7 +75,7 @@ fourHeads[1].textContent = siteContent['main-content']['about-h4'];
 fourHeads[2].textContent = siteContent['main-content']['services-h4'];
 fourHeads[3].textContent = siteContent['main-content']['product-h4'];
 fourHeads[4].textContent = siteContent['main-content']['vision-h4'];
-
+fourHeads[5].textContent = siteContent['contact']['contact-h4'];
 //add p elements
 const pText = document.querySelectorAll('p')
 pText[0].textContent = siteContent['main-content']['features-content'];
