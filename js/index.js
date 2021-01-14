@@ -38,5 +38,71 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+// * My Code Starts Below
+
+// > Nav & Header
+
+// header-img 
+const ctaImg = document.querySelector('#cta-img');
+ctaImg.src = siteContent.cta["img-src"];
+
+// navbar
+const aEls = document.querySelectorAll('a');
+for (let i=0; i<aEls.length; i++) {
+  aEls[i].textContent = siteContent.nav[`nav-item-${i+1}`];
+}
+
+// Title text
+const h1El = document.querySelector('h1');
+const titleText = siteContent.cta.h1.split(" ");
+const titleHtml = `${titleText[0]} <br /> ${titleText[1]} <br /> ${titleText[2]}`;
+h1El.innerHTML = titleHtml;
+
+// button "get started"
+const button = document.querySelector('button');
+button.textContent = siteContent.cta.button;
+
+// > Main content
+
+//  Top content
+const topContent = document.querySelector('.top-content').children;
+const topDiv1 = topContent[0].children;
+
+// Features Section
+topDiv1[0].innerHTML = siteContent["main-content"]["features-h4"];
+topDiv1[1].innerHTML = siteContent["main-content"]["features-content"];
+
+// About Section
+const topDiv2 = topContent[1].children;
+topDiv2[0].innerHTML = siteContent["main-content"]["about-h4"];
+topDiv2[1].innerHTML = siteContent["main-content"]["about-content"];
+
+// Middle-Img
+const imgEl = document.querySelector('.middle-img');
+imgEl.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+// Bottom content
+const bottomContent = document.querySelector('.bottom-content').children;
+bottomContent[0].children[0].innerHTML = siteContent["main-content"]["services-h4"];
+bottomContent[0].children[1].innerHTML = siteContent["main-content"]["services-content"];
+bottomContent[1].children[0].innerHTML = siteContent["main-content"]["product-h4"];
+bottomContent[1].children[1].innerHTML = siteContent["main-content"]["product-content"];
+bottomContent[2].children[0].innerHTML = siteContent["main-content"]["vision-h4"];
+bottomContent[2].children[1].innerHTML = siteContent["main-content"]["vision-content"];
+
+// Contact Section
+const contactSection = document.querySelector('section.contact').children;
+const splitAddress = siteContent["contact"]["address"].split(" ");
+splitAddress.splice(4, 0, "<br />");
+contactSection[0].innerHTML = siteContent["contact"]["contact-h4"];
+contactSection[1].innerHTML = splitAddress.join(" ");
+contactSection[2].innerHTML = siteContent["contact"]["phone"];
+contactSection[3].innerHTML = siteContent["contact"]["email"];
+
+// footer Copyright
+const footer = document.querySelector('footer').children;
+footer[0].innerHTML = siteContent["footer"]["copyright"];
