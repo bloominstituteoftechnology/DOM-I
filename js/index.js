@@ -54,6 +54,20 @@ navTxt[3].textContent = "Features";
 navTxt[4].textContent = "About";
 navTxt[5].textContent = "Contact";
 
+let buttonTxt = document.querySelector("button");
+buttonTxt.textContent = "Get Started";
+
+let titleTxt = document.querySelector("h1");
+titleTxt.textContent = "DOM Is Awesome";
+
+let headerTxt = document.querySelectorAll("h4");
+headerTxt[0].textContent = "Features";
+headerTxt[1].textContent = "About";
+headerTxt[2].textContent = "Services";
+headerTxt[3].textContent = "Product";
+headerTxt[4].textContent = "Vision";
+headerTxt[5].textContent = "Contact";
+
 let pTxt = document.querySelectorAll("p");
 pTxt[0].textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio,in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metusscelerisque quis";
 pTxt[1].textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, ininterdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
