@@ -40,3 +40,116 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// NAV BAR
+let navItems = document.querySelectorAll('a');
+
+navItems[0].textContent = siteContent['nav']['nav-item-1'];
+navItems[1].textContent = siteContent['nav']['nav-item-2'];
+navItems[2].textContent = siteContent['nav']['nav-item-3'];
+navItems[3].textContent = siteContent['nav']['nav-item-4'];
+navItems[4].textContent = siteContent['nav']['nav-item-5'];
+navItems[5].textContent = siteContent['nav']['nav-item-6'];
+
+//CTA SECTION
+
+let header1 = document.getElementsByTagName('h1');
+header1[0].textContent = siteContent['cta']['h1'];
+
+//Button
+
+let button = document.getElementsByTagName('button');
+button[0].textContent = siteContent['cta']['button'];
+
+//Image
+
+let image1 = document.getElementById('cta-img');
+image1.setAttribute('src', siteContent['cta']['img-src']);
+
+// // MAIN CONTENT
+
+//     //TOP CONTENT
+  let topContentParent = document.querySelector('.top-content');
+  let topContentChildren = Array.from(topContentParent.children);
+
+  let featuresSection = topContentChildren[0].children;
+  featuresSection[0].textContent = siteContent['main-content']['features-h4'];
+  featuresSection[1].textContent = siteContent['main-content']['features-content'];
+
+  let aboutSection = topContentChildren[1].children;
+  aboutSection[0].textContent = siteContent['main-content']['about-h4'];
+  aboutSection[1].textContent = siteContent['main-content']['about-content'];
+
+  let midImg = document.getElementById('middle-img');
+  midImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+  // BOTTOM CONTENT
+
+  let bottomContentParent = document.querySelector('.bottom-content');
+  let bottomContentChildren = Array.from(bottomContentParent.children);
+
+  let servicesSection = bottomContentChildren[0].children;
+  servicesSection[0].textContent = siteContent['main-content']['services-h4'];
+  servicesSection[1].textContent = siteContent['main-content']['services-content'];
+
+  let productSection = bottomContentChildren[1].children;
+  productSection[0].textContent = siteContent['main-content']['product-h4'];
+  productSection[1].textContent = siteContent['main-content']['product-content'];
+
+  let visionSection = bottomContentChildren[2].children;
+  visionSection[0].textContent = siteContent['main-content']['vision-h4'];
+  visionSection[1].textContent = siteContent['main-content']['vision-content'];
+
+  //CONTACT
+
+  let contactParent = document.querySelector('.contact');
+  let contactChildren = Array.from(contactParent.children);
+
+  let contactHead = contactChildren[0];
+  contactChildren[0].textContent = siteContent['contact']['contact-h4'];
+
+  let contactAddress = contactChildren[1];
+  contactChildren[1].textContent = siteContent['contact']['address'];
+
+  let contactPhoneNumber = contactChildren[2];
+  contactChildren[2].textContent = siteContent['contact']['phone'];
+
+  let contactEmail = contactChildren[3];
+  contactChildren[3].textContent = siteContent['contact']['email'];
+
+  //FOOTER
+
+  let copyrightParent = document.getElementsByTagName('footer');
+  let copyrightChildren = Array.from(copyrightParent);
+
+  let copyrightFooter = copyrightChildren[0];
+  copyrightChildren[0].textContent = siteContent['footer']['copyright'];
+
+  // NAV COLOR
+
+  let navColor = document.getElementsByTagName('a')
+  navColor[0].style.color = 'green';
+  navColor[1].style.color = 'green';
+  navColor[2].style.color = 'green';
+  navColor[3].style.color = 'green';
+  navColor[4].style.color = 'green';
+  navColor[5].style.color = 'green';
+
+  // PREPEND
+
+  let navBarHi = document.querySelector('nav')
+  navBarChild = document.createElement('a')
+  navBarChild.textContent = 'Hi'
+
+  navBarHi.prepend(navBarChild);
+
+  navBarChild.style.color = 'green';
+  //APPEND
+
+  navBarChild2 =  document.createElement('a')
+  navBarChild2.textContent = 'Bye';
+
+  navBarHi.prepend(navBarChild);
+  navBarHi.appendChild(navBarChild2);
+
+  navBarChild2.style.color = 'green';
