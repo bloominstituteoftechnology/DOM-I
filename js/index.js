@@ -93,7 +93,10 @@ pText[8].textContent =  siteContent['footer']['copyright'];
 //add middle-img src attribute
 document.getElementById('middle-img').setAttribute('src', siteContent['main-content']['middle-img-src']);
 
-
+//Change the color of the navigation text to be green.
+navLinks.forEach(link => {
+	link.style.color = 'green'
+});
 
 
 //testing
