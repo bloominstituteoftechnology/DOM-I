@@ -117,7 +117,10 @@ linkOne.style.color = 'green';
 linkTwo.style.color = 'green';
 
 
-
+//Update styles throughout the page
+pText.forEach(link => {
+	link.style.lineHeight = '24px'
+});
 
 //testing
 console.log(linkOne);
