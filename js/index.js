@@ -68,6 +68,14 @@ document.querySelector('button').textContent = siteContent.cta.button;
 //add middle-img src attribute
 document.getElementById('cta-img').setAttribute('src', siteContent['cta']['img-src']);
 
+//add h4 elements
+const fourHeads = document.querySelectorAll('h4')
+fourHeads[0].textContent = siteContent['main-content']['features-h4'];
+fourHeads[1].textContent = siteContent['main-content']['about-h4'];
+fourHeads[2].textContent = siteContent['main-content']['services-h4'];
+fourHeads[3].textContent = siteContent['main-content']['product-h4'];
+fourHeads[4].textContent = siteContent['main-content']['vision-h4'];
 
 //testing
-console.log(siteContent['cta']['img-src']);
+console.log(fourHeads);
+console.log(siteContent['main-content']);
