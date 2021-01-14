@@ -99,3 +99,28 @@ image1.setAttribute('src', siteContent['cta']['img-src']);
   let visionSection = bottomContentChildren[2].children;
   visionSection[0].textContent = siteContent['main-content']['vision-h4'];
   visionSection[1].textContent = siteContent['main-content']['vision-content'];
+
+  //CONTACT
+
+  let contactParent = document.querySelector('.contact');
+  let contactChildren = Array.from(contactParent.children);
+
+  let contactHead = contactChildren[0];
+  contactChildren[0].textContent = siteContent['contact']['contact-h4'];
+
+  let contactAddress = contactChildren[1];
+  contactChildren[1].textContent = siteContent['contact']['address'];
+
+  let contactPhoneNumber = contactChildren[2];
+  contactChildren[2].textContent = siteContent['contact']['phone'];
+
+  let contactEmail = contactChildren[3];
+  contactChildren[3].textContent = siteContent['contact']['email'];
+
+  //FOOTER
+
+  let copyrightParent = document.getElementsByTagName('footer');
+  let copyrightChildren = Array.from(copyrightParent);
+
+  let copyrightFooter = copyrightChildren[0];
+  copyrightChildren[0].textContent = siteContent['footer']['copyright'] 
