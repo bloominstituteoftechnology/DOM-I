@@ -97,8 +97,28 @@ document.getElementById('middle-img').setAttribute('src', siteContent['main-cont
 navLinks.forEach(link => {
 	link.style.color = 'green'
 });
+//.appendChild()` and `.prepend() to create new 2 links
+//target the parent
+const linkParent = document.querySelector('nav')
+//create elements
+const linkOne = document.createElement('a');
+const linkTwo = document.createElement('a');
+//set text content
+linkOne.textContent = 'One';
+linkTwo.textContent = 'Two';
+//set href
+linkOne.href ='#';
+linkTwo.href ='#';
+//place on page
+linkParent.prepend(linkOne);
+linkParent.appendChild(linkTwo);
+//style the links to match!
+linkOne.style.color = 'green';
+linkTwo.style.color = 'green';
+
+
 
 
 //testing
-console.log(pText[5]);
-console.log(siteContent['contact']);
+console.log(linkOne);
+console.log(linkParent);
