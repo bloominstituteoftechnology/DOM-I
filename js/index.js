@@ -65,7 +65,7 @@ document.querySelector('h1').insertAdjacentHTML('beforeend', 'DOM<br> Is<br> Awe
 //add 'Get Started' text to button
 document.querySelector('button').textContent = siteContent.cta.button;
 
-//add middle-img src attribute
+//add cta src attribute
 document.getElementById('cta-img').setAttribute('src', siteContent['cta']['img-src']);
 
 //add h4 elements
@@ -76,6 +76,7 @@ fourHeads[2].textContent = siteContent['main-content']['services-h4'];
 fourHeads[3].textContent = siteContent['main-content']['product-h4'];
 fourHeads[4].textContent = siteContent['main-content']['vision-h4'];
 fourHeads[5].textContent = siteContent['contact']['contact-h4'];
+
 //add p elements
 const pText = document.querySelectorAll('p')
 pText[0].textContent = siteContent['main-content']['features-content'];
@@ -83,6 +84,7 @@ pText[1].textContent = siteContent['main-content']['about-content'];
 pText[2].textContent = siteContent['main-content']['services-content'];
 pText[3].textContent = siteContent['main-content']['product-content'];
 pText[4].textContent = siteContent['main-content']['vision-content'];
+
 
 
 //testing
