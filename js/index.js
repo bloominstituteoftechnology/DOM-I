@@ -84,12 +84,18 @@ pText[1].textContent = siteContent['main-content']['about-content'];
 pText[2].textContent = siteContent['main-content']['services-content'];
 pText[3].textContent = siteContent['main-content']['product-content'];
 pText[4].textContent = siteContent['main-content']['vision-content'];
+//pText[5].textContent =  siteContent['contact']['address'];
+pText[5].insertAdjacentHTML('afterbegin', '123 Way 456 Street<br>Somewhere, USA');
+pText[6].textContent =  siteContent['contact']['phone'];
+pText[7].textContent =  siteContent['contact']['email'];
+pText[8].textContent =  siteContent['footer']['copyright'];
 
 //add middle-img src attribute
 document.getElementById('middle-img').setAttribute('src', siteContent['main-content']['middle-img-src']);
 
 
 
+
 //testing
-console.log(pText);
-console.log(siteContent['main-content']);
+console.log(pText[5]);
+console.log(siteContent['contact']);
