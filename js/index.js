@@ -62,5 +62,9 @@ navLinks[5].textContent = siteContent.nav['nav-item-6'];
 //Adding <h1>DOM<br> Is<br> Awesome</h1>  - will attempt to pull from object later. 20 minutes on this is up.
 document.querySelector('h1').insertAdjacentHTML('beforeend', 'DOM<br> Is<br> Awesome</DOM>');
 
+//add 'Get Started' text to button
+document.querySelector('button').textContent = siteContent.cta.button;
+
+
 //testing
-console.log(navLinks);
+console.log(siteContent.cta.button);
