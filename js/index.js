@@ -48,19 +48,31 @@ midImg.src = siteContent["main-content"]["middle-img-src"];
 
 let navTxt = document.querySelectorAll("a");
 navTxt[0].textContent = siteContent["nav"]["nav-item-1"];
-navTxt[1].textContent = siteContent["nav"]["nav-item-2"];;
-navTxt[2].textContent = siteContent["nav"]["nav-item-3"];;
-navTxt[3].textContent = siteContent["nav"]["nav-item-4"];;
-navTxt[4].textContent = siteContent["nav"]["nav-item-5"];;
-navTxt[5].textContent = siteContent["nav"]["nav-item-6"];;
+navTxt[1].textContent = siteContent["nav"]["nav-item-2"];
+navTxt[2].textContent = siteContent["nav"]["nav-item-3"];
+navTxt[3].textContent = siteContent["nav"]["nav-item-4"];
+navTxt[4].textContent = siteContent["nav"]["nav-item-5"];
+navTxt[5].textContent = siteContent["nav"]["nav-item-6"];
+const navBar = document.querySelector('nav');
+const newLink = document.createElement('a');
+newLink.textContent = "NO! Click Me";
+newLink.style.color = "green";
+const diffLink = document.createElement('a');
+diffLink.textContent = "Click Me >:)";
+diffLink.style.color = "green";
+navBar.prepend(diffLink);
+navBar.appendChild(newLink);
+
+
 
 navTxt.forEach(element => element.style.color = "green");
 
+
 let buttonTxt = document.querySelector("button");
-buttonTxt.textContent = "Get Started";
+buttonTxt.textContent = siteContent["cta"]["button"];
 
 let titleTxt = document.querySelector("h1");
-titleTxt.textContent = "DOM Is Awesome";
+titleTxt.textContent = siteContent["cta"]["h1"];
 
 let headerTxt = document.querySelectorAll("h4");
 headerTxt[0].textContent = siteContent["main-content"]["features-h4"];
