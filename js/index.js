@@ -65,6 +65,9 @@ document.querySelector('h1').insertAdjacentHTML('beforeend', 'DOM<br> Is<br> Awe
 //add 'Get Started' text to button
 document.querySelector('button').textContent = siteContent.cta.button;
 
+//add middle-img src attribute
+document.getElementById('cta-img').setAttribute('src', siteContent['cta']['img-src']);
+
 
 //testing
-console.log(siteContent.cta.button);
+console.log(siteContent['cta']['img-src']);
