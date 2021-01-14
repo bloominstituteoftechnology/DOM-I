@@ -40,3 +40,27 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+let ctaImg = document.getElementById("cta-img");
+ctaImg.src = "img/header-img.png";
+let midImg = document.getElementById("middle-img");
+midImg.src = "img/mid-page-accent.jpg";
+
+
+let navTxt = document.querySelectorAll("a");
+navTxt[0].textContent = "Services";
+navTxt[1].textContent = "Product";
+navTxt[2].textContent = "Vision";
+navTxt[3].textContent = "Features";
+navTxt[4].textContent = "About";
+navTxt[5].textContent = "Contact";
+
+let pTxt = document.querySelectorAll("p");
+pTxt[0].textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio,in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metusscelerisque quis";
+pTxt[1].textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, ininterdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+pTxt[2].textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio,in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+pTxt[3].textContent = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+pTxt[4].textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+pTxt[5].textContent = "123 Way 456 Street Somewhere, USA";
+pTxt[6].textContent = "1 (888) 888-8888";
+pTxt[7].textContent = "sales@greatidea.io";
+pTxt[8].textContent = "Copyright Great Idea! 2018";
