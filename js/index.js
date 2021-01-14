@@ -59,5 +59,8 @@ navLinks[4].textContent = siteContent.nav['nav-item-5'];
 navLinks[5].textContent = siteContent.nav['nav-item-6'];
 //must be a better way to do this... with a for each.. RESEARCH THIS
 
+//Adding <h1>DOM<br> Is<br> Awesome</h1>  - will attempt to pull from object later. 20 minutes on this is up.
+document.querySelector('h1').insertAdjacentHTML('beforeend', 'DOM<br> Is<br> Awesome</DOM>');
+
 //testing
 console.log(navLinks);
