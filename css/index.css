@@ -297,3 +297,7 @@ footer {
         margin: 20px;
     }
 }
+
+.green-text {
+    color:green;
+}
