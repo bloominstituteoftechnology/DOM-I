@@ -123,4 +123,33 @@ image1.setAttribute('src', siteContent['cta']['img-src']);
   let copyrightChildren = Array.from(copyrightParent);
 
   let copyrightFooter = copyrightChildren[0];
-  copyrightChildren[0].textContent = siteContent['footer']['copyright'] 
+  copyrightChildren[0].textContent = siteContent['footer']['copyright'];
+
+  // NAV COLOR
+
+  let navColor = document.getElementsByTagName('a')
+  navColor[0].style.color = 'green';
+  navColor[1].style.color = 'green';
+  navColor[2].style.color = 'green';
+  navColor[3].style.color = 'green';
+  navColor[4].style.color = 'green';
+  navColor[5].style.color = 'green';
+
+  // PREPEND
+
+  let navBarHi = document.querySelector('nav')
+  navBarChild = document.createElement('a')
+  navBarChild.textContent = 'Hi'
+
+  navBarHi.prepend(navBarChild);
+
+  navBarChild.style.color = 'green';
+  //APPEND
+
+  navBarChild2 =  document.createElement('a')
+  navBarChild2.textContent = 'Bye';
+
+  navBarHi.prepend(navBarChild);
+  navBarHi.appendChild(navBarChild2);
+
+  navBarChild2.style.color = 'green';
