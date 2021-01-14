@@ -76,6 +76,15 @@ fourHeads[2].textContent = siteContent['main-content']['services-h4'];
 fourHeads[3].textContent = siteContent['main-content']['product-h4'];
 fourHeads[4].textContent = siteContent['main-content']['vision-h4'];
 
+//add p elements
+const pText = document.querySelectorAll('p')
+pText[0].textContent = siteContent['main-content']['features-content'];
+pText[1].textContent = siteContent['main-content']['about-content'];
+pText[2].textContent = siteContent['main-content']['services-content'];
+pText[3].textContent = siteContent['main-content']['product-content'];
+pText[4].textContent = siteContent['main-content']['vision-content'];
+
+
 //testing
-console.log(fourHeads);
+console.log(pText);
 console.log(siteContent['main-content']);
