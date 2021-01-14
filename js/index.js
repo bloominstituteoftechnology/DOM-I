@@ -85,6 +85,9 @@ pText[2].textContent = siteContent['main-content']['services-content'];
 pText[3].textContent = siteContent['main-content']['product-content'];
 pText[4].textContent = siteContent['main-content']['vision-content'];
 
+//add middle-img src attribute
+document.getElementById('middle-img').setAttribute('src', siteContent['main-content']['middle-img-src']);
+
 
 
 //testing
