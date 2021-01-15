@@ -40,3 +40,96 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+
+//STEP ONE: CREATE ALL SELECTORS
+//nav
+const nav = document.querySelector("nav")
+const navItems = document.querySelectorAll('nav a')
+
+//cta
+const ctaH1 = document.querySelector('h1')
+const ctaButton = document.querySelector('button')
+const ctaImg = document.getElementById('cta-img')
+
+//main content
+const mcHeading = document.querySelectorAll('.main-content h4')
+const mcParagraph = document.querySelectorAll('.main-content p')
+const mcImg = document.getElementById('middle-img')
+
+//contact
+const contactH4 = document.querySelector('.contact h4')
+const contactParagraph = document.querySelectorAll('.contact p')
+
+//footer
+const footer = document.querySelector('footer p')
+
+
+//STEP TWO: UPDATE HTML WITH JSON DATA
+//nav
+navItems.forEach((item, index) => {
+  //console.log(item)
+  item.textContent = siteContent.nav[`nav-item-${index + 1}`]
+})
+
+//cta 
+const br = document.createElement("br")
+
+const h1String = siteContent.cta.h1.split(" ")
+ctaH1.setAttribute("style", "white-space: pre")
+ctaH1.textContent = h1String[0] + "\n"
+ctaH1.textContent += h1String[1] + "\n"
+ctaH1.textContent += h1String[2] + "\n"
+
+
+
+ctaButton.textContent = siteContent.cta.button
+ctaImg.setAttribute('src', siteContent.cta["img-src"])
+
+//main content - heading
+mcHeading[0].textContent = siteContent["main-content"]['features-h4']
+mcHeading[1].textContent = siteContent["main-content"]['about-h4']
+mcHeading[2].textContent = siteContent["main-content"]['services-h4']
+mcHeading[3].textContent = siteContent["main-content"]['product-h4']
+mcHeading[4].textContent = siteContent["main-content"]['vision-h4']
+
+//main content - paragraph content
+mcParagraph[0].textContent = siteContent["main-content"]['features-content']
+mcParagraph[1].textContent = siteContent["main-content"]['about-content']
+mcParagraph[2].textContent = siteContent["main-content"]['services-content']
+mcParagraph[3].textContent = siteContent["main-content"]['product-content']
+mcParagraph[4].textContent = siteContent["main-content"]['vision-content']
+
+//main content - img
+mcImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+//contact
+contactH4.textContent = siteContent.contact["contact-h4"]
+contactParagraph[0].textContent = siteContent.contact.address
+contactParagraph[1].textContent = siteContent.contact.phone
+contactParagraph[2].textContent = siteContent.contact.email
+
+//footer
+footer.textContent = siteContent.footer.copyright
+
+
+
+//STEP THREE: ADD NEW CONTENT
+//change nav items color to green
+navItems.forEach((item) => {
+  item.style.color = "green"
+})
+
+//add new nav items with both prepend and append
+const blog = document.createElement("a")
+blog.setAttribute("href", "#")
+blog.style.color = "green"
+blog.textContent = "Blog"
+nav.prepend(blog)
+
+const help = document.createElement("a")
+help.setAttribute("href", "#")
+help.style.color = "green"
+help.textContent = "Help"
+nav.appendChild(help)
