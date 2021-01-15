@@ -45,7 +45,8 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //STEP ONE: CREATE ALL SELECTORS
 //nav
-const nav = document.querySelectorAll('nav a')
+const nav = document.querySelector("nav")
+const navItems = document.querySelectorAll('nav a')
 
 //cta
 const ctaH1 = document.querySelector('h1')
@@ -67,17 +68,20 @@ const footer = document.querySelector('footer p')
 
 //STEP TWO: UPDATE HTML WITH JSON DATA
 //nav
-nav.forEach((item, index) => {
+navItems.forEach((item, index) => {
   //console.log(item)
   item.textContent = siteContent.nav[`nav-item-${index + 1}`]
 })
 
 //cta 
 const br = document.createElement("br")
-br.textContent = ""
-console.log(br)
-ctaH1.textContent = siteContent.cta.h1
-//add <br> to h1
+
+const h1String = siteContent.cta.h1.split(" ")
+ctaH1.setAttribute("style", "white-space: pre")
+ctaH1.textContent = h1String[0] + "\n"
+ctaH1.textContent += h1String[1] + "\n"
+ctaH1.textContent += h1String[2] + "\n"
+
 
 
 ctaButton.textContent = siteContent.cta.button
@@ -108,3 +112,24 @@ contactParagraph[2].textContent = siteContent.contact.email
 
 //footer
 footer.textContent = siteContent.footer.copyright
+
+
+
+//STEP THREE: ADD NEW CONTENT
+//change nav items color to green
+navItems.forEach((item) => {
+  item.style.color = "green"
+})
+
+//add new nav items with both prepend and append
+const blog = document.createElement("a")
+blog.setAttribute("href", "#")
+blog.style.color = "green"
+blog.textContent = "Blog"
+nav.prepend(blog)
+
+const help = document.createElement("a")
+help.setAttribute("href", "#")
+help.style.color = "green"
+help.textContent = "Help"
+nav.appendChild(help)
