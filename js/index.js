@@ -41,6 +41,9 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+//
+
+const nav = document.querySelector('nav')
 
 // Nav Links
 const navLinks = document.querySelectorAll('nav a')
@@ -51,6 +54,16 @@ navLinks[3].textContent = 'Features'
 navLinks[4].textContent = 'About'
 navLinks[5].textContent = 'Contact'
 
+//change color
+navLinks.forEach(item => {
+  item.style.color = 'green'
+})
+
+//adding more elements to nav
+const extraNav1 = document.createElement('a')
+extraNav1.textContent = 'Maps'
+extraNav1.href = '#'
+nav.appendChild(extraNav1)
 
 //H1
 const headline = document.querySelector('.cta-text h1')
@@ -108,6 +121,3 @@ contactInfo[2].textContent = 'sales@greatidea.io'
 //Footer
 const copy = document.querySelector('footer p')
 copy.textContent = 'Copyright Great Idea! 2018'
-
-
-console.log(contactInfo)
