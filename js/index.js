@@ -86,3 +86,19 @@ contSec.children[3].textContent = siteContent["contact"]["email"];
 
 document.querySelector("footer p").textContent =
   siteContent["footer"]["copyright"];
+
+const linkY = document.createElement("a");
+linkY.textContent = "Free Cheese";
+linkY.href = "#";
+
+document.querySelector("nav").appendChild(linkY);
+
+document
+  .querySelectorAll("nav a")
+  .forEach((elem) => (elem.style.color = "green"));
+
+const fLink = document.createElement("a");
+fLink.textContent = "Hell Yeah";
+fLink.href = "#";
+
+document.querySelector("nav").prepend(fLink);
