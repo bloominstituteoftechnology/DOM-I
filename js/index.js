@@ -42,26 +42,33 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // Nav Bar
-const nav = document.querySelectorAll("nav a");
-nav[0].innerText = siteContent.nav["nav-item-1"];
-nav[1].innerText = siteContent.nav["nav-item-2"];
-nav[2].innerText = siteContent.nav["nav-item-3"];
-nav[3].innerText = siteContent.nav["nav-item-4"];
-nav[4].innerText = siteContent.nav["nav-item-5"];
-nav[5].innerText = siteContent.nav["nav-item-6"];
+const navA = document.querySelectorAll("nav a");
+navA[0].innerText = siteContent.nav["nav-item-1"];
+navA[1].innerText = siteContent.nav["nav-item-2"];
+navA[2].innerText = siteContent.nav["nav-item-3"];
+navA[3].innerText = siteContent.nav["nav-item-4"];
+navA[4].innerText = siteContent.nav["nav-item-5"];
+navA[5].innerText = siteContent.nav["nav-item-6"];
 
 // Add Nav Items
 
+const createElement = document.createElement("a");
+createElement.textContent = "Test";
+const secondNav = document.createElement("a");
+secondNav.textContent = "Test2"
+const nav = document.querySelector("nav");
+nav.appendChild(createElement);
+nav.prepend(secondNav);
 const header = document.querySelector("header");
 
 
 // Nav Color
-for(let i=0; i<nav.length; i++) {
-  nav[i].style.color = "green";
-}
+createElement.style.color="green";
+secondNav.style.color = "green";
+navA.forEach(makeGreen => makeGreen.style.color = "green");
 
 // CTA section
-document.querySelector("h1").innerHTML = siteContent.cta["h1"];
+document.querySelector("h1").innerHTML = siteContent.cta["h1"].split(" ").join("<br>");
 document.querySelector("button").innerHTML = siteContent.cta["button"];
 document.querySelector("#cta-img").setAttribute("src", siteContent["cta"]["img-src"])
 

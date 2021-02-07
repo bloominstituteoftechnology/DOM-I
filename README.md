@@ -38,7 +38,7 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 #### Add new content
 
 * [X] Change the color of the navigation text to be green.
-* [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
+* [X] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
 * [X] Check your work by looking at the [original html](original.html) in the browser
 
 ### Task 3: Stretch
