@@ -41,6 +41,45 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-document.title ='Great Idea!'
+const titleUpdate = document.title ='Great Idea!'
 
-document.
+//  NAV LIST
+const nav = document.querySelectorAll('nav a')
+
+const linksRealArr = Array.from(nav)
+const services = nav[0];
+const product = nav[1];
+const vision = nav[2]
+const features = nav[3]
+const about = nav[4]
+const contact = nav[5]
+
+services.textContent = 'Services';
+product.textContent = 'Product';
+vision.textContent = 'Vision';
+features.textContent = 'Features';
+about.textContent = 'About';
+contact.textContent = 'Contact';
+
+const imageOne = document.querySelector('.logo')
+imageOne.setAttribute('src', "img/logo.png")
+
+
+const ctaTxt = document.querySelector('.cta-text')
+ctaTxt.firstChild.textContent = 'DOM Is Awesome'
+ctaTxt.lastChild.textContent = 'Get Started'
+
+const ctaImg = document.querySelector('#cta-img');
+ctaImg.setAttribute('src', "img/header-img.png");
+
+const topContent = document.querySelectorAll('.top-content')
+topContent[0][0].textContent = 'Features';
+
+topContent.firstChild.lastChild.textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio,in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+
+topContent
+
+
+
+
+
