@@ -110,3 +110,11 @@ contactAddress.innerHTML = addressArray.join(' ');
 // Footer
 const footerCopyright = document.querySelector('footer > p');
 footerCopyright.textContent = footer['copyright'];
+
+// !STRETCH
+
+const bodySelector = document.querySelector('body');
+
+ctaBtn.addEventListener('click', () => {
+	bodySelector.classList.toggle('dark');
+});
