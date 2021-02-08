@@ -40,3 +40,27 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const navItemOne = document.querySelector('a:nth-of-type(1)')
+const navItemTwo = document.querySelector('a:nth-of-type(2)')
+const navItemThree = document.querySelector('a:nth-of-type(3)')
+const navItemFour = document.querySelector('a:nth-of-type(4)')
+const navItemFive = document.querySelector('a:nth-of-type(5)')
+const navItemSix = document.querySelector('a:nth-of-type(6)')
+
+
+navItemOne.textContent = "Services"
+navItemTwo.textContent = "Product"
+navItemThree.textContent = "Vision"
+navItemFour.textContent = "Features"
+navItemFive.textContent = "About"
+navItemSix.textContent = "Contact"
+
+const ctaH1 = document.querySelector('h1')
+const ctaButton = document.querySelector('button')
+const ctaImage = document.querySelector('#cta-img')
+
+ctaH1.textContent = "DOM Is Awesome"  //Find out how to use split() later
+ctaButton.textContent = "Get Started"
+ctaImage.src = "img/header-img.png"
+
