@@ -38,7 +38,7 @@ function myTimer() {
         msHundreds.textContent = countH;
         secondOnes.textContent = countS;
       }
-      if (countS === 1) {
+      if (countS === 10) {
         countT++;
         countS = 0;
         document
