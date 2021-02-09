@@ -40,3 +40,81 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let newNav = document.querySelector('nav');
+let newK = document.createElement('a');
+let preK = document.createElement('a')
+newK.setAttribute('href', '#');
+preK.setAttribute('href', '#');
+newNav.appendChild(newK);
+newNav.prepend(preK);
+
+let nav = document.querySelectorAll("nav a");
+nav.forEach( (item, index)=> {
+  item.innerText = siteContent['nav'][Object.keys(siteContent['nav'])[index-1]]
+  item.style.color = 'purple';
+})
+
+newK.innerText = 'Its Me';
+preK.innerText = 'Hello';
+
+let ctaimg = document.getElementById("cta-img");
+ctaimg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let ctabut = document.querySelector("button");
+ctabut.innerText = siteContent["cta"]["button"];
+
+let ctah1 = document.querySelector('h1');
+ctah1.textContent = siteContent['cta']['h1']
+
+let mContent = Object.entries(siteContent['main-content']);
+let mh4 = document.querySelectorAll('.main-content h4');
+let mp = document.querySelectorAll('.main-content p');
+let mainH4 = [];
+let mainC =[];
+
+mContent.forEach( (item) => {
+  if(item[0].includes('h4')){
+    mainH4.push(item[1]);
+  } else if(item[0].includes('content')){
+    mainC.push(item[1]);
+  }else{null}
+})
+
+mh4.forEach((item, index) => {
+  item.innerText = mainH4[index];
+})
+
+mp.forEach((item, index) => {
+  item.innerText = mainC[index];
+})
+
+let midimg = document.getElementById("middle-img");
+midimg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+let conh4 = document.querySelector('.contact h4');
+conh4.textContent = siteContent['contact']['contact-h4'];
+
+let conp = document.querySelectorAll(".contact p");
+conp.forEach( (item, index)=> {
+  item.textContent = siteContent['contact'][Object.keys(siteContent['contact'])[index+1]]
+})
+
+let foot = document.querySelector('footer');
+foot.innerText = siteContent['footer']['copyright'];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
