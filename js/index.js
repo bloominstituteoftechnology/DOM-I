@@ -62,7 +62,9 @@ about.textContent = 'About';
 contact.textContent = 'Contact';
 
 const imageOne = document.querySelector('.logo')
+const imageTwo = document.querySelector('#middle-img')
 imageOne.setAttribute('src', "img/logo.png")
+imageTwo.setAttribute('src', "img/mid-page-accent.jpg")
 
 
 const ctaTxt = document.querySelector('.cta-text')
@@ -75,9 +77,39 @@ ctaImg.setAttribute('src', "img/header-img.png");
 const topContent = document.querySelector('.top-content')
 
 const feature = topContent.querySelector('.text-content:nth-of-type(1)')
-const featureTitle = feature.querySelector('h4')
+const featureTitle = feature.querySelector('h4');
+const featureTxt = feature.querySelector('p');
 featureTitle.textContent = "Feature"
-const featureTxt = feature.querySelector('p')
 featureTxt.textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio,in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metusscelerisque quis.'
 
-const about = 
+const aboutSection = topContent.querySelector('.text-content:nth-of-type(2)')
+const aboutTitle = aboutSection.querySelector('h4');
+const aboutTxt = aboutSection.querySelector('p');
+aboutTitle.textContent = 'About';
+aboutTxt.textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, ininterdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metusscelerisque quis.'
+
+// Bottom Content
+
+const bottomContent = document.querySelector('.bottom-content')
+
+const servicesSection = bottomContent.querySelector('.text-content:nth-of-type(1)')
+const serviceTitle = servicesSection.querySelector('h4')
+const serviceTxt = servicesSection.querySelector('p')
+
+serviceTitle.textContent = "Services";
+serviceTxt.textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio,in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metusscelerisque quis.';
+
+
+const productSection = bottomContent.querySelector('.text-content:nth-of-type(2)')
+const productTitle = productSection.querySelector('h4')
+const productTxt = productSection.querySelector('p')
+
+productTitle.textContent = 'Product';
+productTxt.textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, ininterdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metusscelerisque quis.'
+
+const VisionSection = bottomContent.querySelector('.text-content:nth-of-type(3)')
+const visionTitle = servicesSection.querySelector('h4')
+const visionTxt = servicesSection.querySelector('p')
+
+
+
