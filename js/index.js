@@ -114,11 +114,13 @@ const aboutTxt = aboutSection.querySelector('p');
 aboutTitle.textContent = 'About';
 aboutTxt.textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, ininterdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metusscelerisque quis.'
 
+
+
 // Bottom Content
 
 const bottomContent = document.querySelector('.bottom-content')
 
-const servicesSection = bottomContent.querySelector('.text-content:first-child')
+const servicesSection = bottomContent.querySelector('.text-content:nth-child(1)')
 const serviceTitle = servicesSection.querySelector('h4')
 const serviceTxt = servicesSection.querySelector('p')
 
@@ -126,16 +128,19 @@ serviceTitle.textContent = 'Services';
 serviceTxt.textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio,in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metusscelerisque quis.';
 
 
-const productSection = bottomContent.querySelector('.text-content:nth-of-type(2)')
+const productSection = bottomContent.querySelector('.text-content:nth-child(2)')
 const productTitle = productSection.querySelector('h4')
 const productTxt = productSection.querySelector('p')
+
+console.log(productSection)
+console.log(servicesSection)
 
 productTitle.textContent = 'Product';
 productTxt.textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, ininterdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metusscelerisque quis.'
 
-const VisionSection = bottomContent.querySelector('.text-content:last-child')
-const visionTitle = servicesSection.querySelector('h4')
-const visionTxt = servicesSection.querySelector('p')
+const visionSection = bottomContent.querySelector('.text-content:nth-child(3)')
+const visionTitle = visionSection.querySelector('h4')
+const visionTxt = visionSection.querySelector('p')
 
 visionTitle.textContent ='Vision';
 visionTxt.textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, ininterdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metusscelerisque quis.'
