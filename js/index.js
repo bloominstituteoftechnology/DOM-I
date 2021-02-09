@@ -40,3 +40,54 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+
+
+// NAVBAR SELECTORS
+const header = document.querySelector('header')
+
+const nav = document.querySelector('nav')
+const navItem = nav.children
+const navArray = [...navItem]
+
+// const jsonobj = []
+// jsonobj.push(siteContent)
+// console.log(jsonobj[0].nav)
+
+
+  const jsonobj = []
+  jsonobj.push(siteContent)
+  jsonobj.forEach(x => {
+    
+
+    for(let i = 0; i < navArray.length; i++){
+      for(let j = 0; j < navArray.length; j++){
+
+        navArray[i] = jsonobj[0].nav['nav-item-2']
+
+
+        }
+
+      }
+  
+  })
+
+
+
+  // navArray[i].textContent = x.nav['nav-item-2']
+  
+  // jarr = []
+  // jarr.push(jsonobj[0].nav)
+  // console.log(jarr)
+
+
+console.log(nav)
+console.log(navItem)
+console.log(navArray)
+console.log(siteContent.nav)
+console.log(jsonobj[0].nav['nav-item-2'])
+
+
+// siteContent.nav.forEach((nav) => console.log(nav))
+
