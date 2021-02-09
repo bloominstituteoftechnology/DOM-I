@@ -81,9 +81,6 @@ siteContentArray.forEach((item) => {
 let h4Items = document.querySelectorAll(".main-content h4");
 let pItems = document.querySelectorAll(".main-content p");
 
-console.log(h4Items);
-console.log(pItems);
-
 //Loop through arrays to set new content.
 
 h4Items.forEach((item, i) => {
@@ -95,4 +92,41 @@ pItems.forEach((item, i) => {
   item.textContent = mainContent_p[i];
 });
 
+let contactSection_h4 = document.querySelector('.contact h4');
+contactSection_h4.textContent = siteContent['contact']['contact-h4'];
 
+let contactSection_p = document.querySelectorAll('.contact p');
+console.log(contactSection_p);
+
+let address;
+let phone;
+let email;
+const contact_p = Object.entries(siteContent["contact"]);
+contact_p.forEach((item) => {
+    item[0].includes('address') ? address = item[1] 
+  : item[0].includes('phone') ? phone = item[1]
+  : item[0].includes('email') ?  email = item[1]
+  :null;
+});
+
+
+let index1 = address.indexOf("Somewhere");
+console.log(index1);
+
+let slice1 = address.slice(0,18);
+console.log(slice1);
+
+ let slice2 = address.slice(19);
+ console.log(slice2);
+
+ const br = document.createElement('br');
+address = `${slice1} ${br} ${slice2}`;
+
+contactSection_p[0].textContent = address;
+contactSection_p[1].textContent = phone;
+contactSection_p[2].textContent = email;
+
+
+
+let footerSection = document.querySelector('footer p');
+footerSection.textContent = siteContent["footer"]["copyright"];
