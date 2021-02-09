@@ -40,3 +40,36 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//header
+const navSelections = document.querySelectorAll('a');
+const navArray = Array.from(navSelections);
+navArray[0].textContent = 'Services';
+navArray[1].textContent = 'Product';
+navArray[2].textContent = 'Vision';
+navArray[3].textContent = 'Features';
+navArray[4].textContent = 'About';
+navArray[5].textContent = 'Contact';
+
+const greenNav= document.querySelector('nav');
+greenNav.style.color = 'green';
+
+
+//CTA
+const ctaheader = document.querySelector('.cta h1');
+ctaheader.textContent = siteContent['cta']['h1'];
+
+const ctabutton = document.querySelector('.cta button');
+ctabutton.textContent = siteContent['cta']['button'];
+
+const ctaImg = document.querySelector('.cta img');
+ctaImg.setAttribute('src', siteContent['cta']['img-src']);
+
+//Contnent
+const mainContentTopHeader = document.querySelector('.main-content .top-content .text-content h4');
+mainContentTopHeader.textContent = siteContent['main-content']['features-h4'];
+
+const mainContentTopP = document.querySelector('.main-content .top-content .text-content p');
+mainContentTopP.textContent = siteContent['main-content']['features-content'];
+
+
