@@ -72,14 +72,12 @@ ctaTxt.lastChild.textContent = 'Get Started'
 const ctaImg = document.querySelector('#cta-img');
 ctaImg.setAttribute('src', "img/header-img.png");
 
-const topContent = document.querySelectorAll('.top-content')
-topContent[0][0].textContent = 'Features';
+const topContent = document.querySelector('.top-content')
 
-topContent.firstChild.lastChild.textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio,in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+const feature = topContent.querySelector('.text-content:nth-of-type(1)')
+const featureTitle = feature.querySelector('h4')
+featureTitle.textContent = "Feature"
+const featureTxt = feature.querySelector('p')
+featureTxt.textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio,in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metusscelerisque quis.'
 
-topContent
-
-
-
-
-
+const about = 
