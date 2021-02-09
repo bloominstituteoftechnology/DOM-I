@@ -1,0 +1,23 @@
+{
+  "name": "DOM-I",
+  "version": "1.0.0",
+  "description": "You are going to be emulating a content management system by controlling the content in the JavaScript file instead of the HTML file. This project is an exercise pointed at selecting elements and then updating them without touching the HTML file using the DOM.",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mzteepowell/DOM-I.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mzteepowell/DOM-I/issues"
+  },
+  "homepage": "https://github.com/mzteepowell/DOM-I#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}

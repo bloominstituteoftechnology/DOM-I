@@ -37,6 +37,19 @@ const siteContent = {
   },
 };
 
+
+let navItems = document.querySelectorAll("nav a");
+for (let i = 0; i < navItems.length; i++) {
+  navItems[i].textContent = siteContent['nav'][`nav-item-${i+1}`];
+}
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+let ctaa = document.querySelectorAll(".cta div.cta-text");
+ct
+// let ctaItem1 = document.querySelector(".cta-text > h1");
+// ctaItem1.textContent = siteContent['cta']["h1"];
+// let ctaItem2 = document.querySelector(".cta-text > button");
+// ctaItem2.textContent = siteContent['cta']["button"];
