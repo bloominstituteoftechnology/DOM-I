@@ -46,6 +46,8 @@ const titleUpdate = document.title ='Great Idea!'
 //  NAV LIST
 
 const nav = document.querySelectorAll('nav a')
+// document.querySelector('nav').style.color = 'green'
+
 
 const linksRealArr = Array.from(nav)
 const services = nav[0];
@@ -54,6 +56,10 @@ const vision = nav[2]
 const features = nav[3]
 const about = nav[4]
 const contact = nav[5]
+const blogLink = document.createElement('a');
+const scrubbles = document.createElement('a');
+
+
 
 services.textContent = 'Services';
 product.textContent = 'Product';
@@ -61,6 +67,15 @@ vision.textContent = 'Vision';
 features.textContent = 'Features';
 about.textContent = 'About';
 contact.textContent = 'Contact';
+scrubbles.textContent = 'Scrubbles';
+blogLink.textContent = 'Blog';
+blogLink.href = '#';
+
+
+document.querySelector('nav').appendChild(blogLink)
+document.querySelector('nav').prepend(scrubbles)
+
+nav.forEach(link => link.style.color = 'green')
 
 // IMAGES
 
@@ -74,8 +89,9 @@ imageTwo.setAttribute('src', "img/mid-page-accent.jpg");
 
 const ctaTxt = document.querySelector('.cta-text');
 const buttontext = ctaTxt.querySelector('button');
-header = ctaTxt.querySelector('h1')
-header = 'DOM Is Awesome';
+const linkbreak = document.createElement('br');
+header = document.querySelector('h1')
+header.innerHTML = 'DOM<br> Is<br> Awesome';
 buttontext.textContent = 'Get Started'
 
 const ctaImg = document.querySelector('#cta-img');
@@ -133,7 +149,8 @@ const phone = contactSection.querySelector('p:nth-of-type(2)');
 const email = contactSection.querySelector('p:nth-of-type(3)');
 
 contactTitle.textContent = 'Contact';
-address.textContent = '123 Way 456 Street Somewhere, USA';
+address.innerHTML= '123 Way 456 Street<br>Somewhere, USA'
+// address.textContent = '123 Way 456 Street Somewhere, USA';
 phone.textContent = '1 (888) 888-8888';
 email.textContent = 'sales@greatidea.io';
 
