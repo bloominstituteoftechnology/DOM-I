@@ -58,6 +58,26 @@ h1.textContent = siteContent.cta.h1;
 let button = document.querySelector("button");
 button.textContent = siteContent.cta.button;
 
+//beggining of nav
+
+let nav1 = document.querySelector("nav a:nth-of-type(1)");
+nav1.textContent = siteContent.nav["nav-item-1"];
+
+let nav2 = document.querySelector("nav a:nth-of-type(2)");
+nav2.textContent = siteContent.nav["nav-item-2"];
+
+let nav3 = document.querySelector("nav a:nth-of-type(3)");
+nav3.textContent = siteContent.nav["nav-item-3"];
+
+let nav4 = document.querySelector("nav a:nth-of-type(4)");
+nav4.textContent = siteContent.nav["nav-item-4"];
+
+let nav5 = document.querySelector("nav a:nth-of-type(5)");
+nav5.textContent = siteContent.nav["nav-item-5"];
+
+let nav6 = document.querySelector("nav a:nth-of-type(6)");
+nav6.textContent = siteContent.nav["nav-item-6"];
+
 //beggining of top section
 
 let topTitleOne = document.querySelector(
@@ -111,3 +131,35 @@ let bottomTextThree = document.querySelector(
   ".bottom-content .text-content:nth-of-type(3) p"
 );
 bottomTextThree.textContent = siteContent["main-content"]["vision-content"];
+
+//contact section
+
+let contactTitle = document.querySelector(".contact h4");
+contactTitle.textContent = siteContent["contact"]["contact-h4"];
+
+let contactP1 = document.querySelector(".contact p:nth-of-type(1)");
+contactP1.textContent = siteContent["contact"].address;
+
+let contactP2 = document.querySelector(".contact p:nth-of-type(2)");
+contactP2.textContent = siteContent["contact"].phone;
+
+let contactP3 = document.querySelector(".contact p:nth-of-type(3)");
+contactP3.textContent = siteContent["contact"].email;
+
+//footer section
+
+let footer = document.querySelector("footer p");
+footer.textContent = siteContent["footer"]["copyright"];
+
+let nav = document.querySelector("nav");
+
+nav.style.backgroundColor = "green";
+
+const newNavLink1 = document.createElement("a");
+const newNavLink2 = document.createElement("a");
+newNavLink1.textContent = "Help";
+newNavLink2.textContent = "Rewards";
+newNavLink1.href = "#";
+newNavLink2.href = "#";
+document.querySelector("nav").appendChild(newNavLink1);
+document.querySelector("nav").prepend(newNavLink2);
