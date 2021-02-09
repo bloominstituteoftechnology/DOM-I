@@ -120,12 +120,10 @@ console.log(slice1);
  console.log(slice2);
 
  const br = document.createElement('br');
-address = `${slice1} ${br} ${slice2}`;
 
-contactSection_p[0].textContent = address;
+contactSection_p[0].append(slice1, br, slice2);
 contactSection_p[1].textContent = phone;
 contactSection_p[2].textContent = email;
-
 
 
 let footerSection = document.querySelector('footer p');
