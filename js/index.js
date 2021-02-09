@@ -44,6 +44,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 const titleUpdate = document.title ='Great Idea!'
 
 //  NAV LIST
+
 const nav = document.querySelectorAll('nav a')
 
 const linksRealArr = Array.from(nav)
@@ -61,18 +62,27 @@ features.textContent = 'Features';
 about.textContent = 'About';
 contact.textContent = 'Contact';
 
-const imageOne = document.querySelector('.logo')
-const imageTwo = document.querySelector('#middle-img')
-imageOne.setAttribute('src', "img/logo.png")
-imageTwo.setAttribute('src', "img/mid-page-accent.jpg")
+// IMAGES
+
+const imageOne = document.querySelector('.logo');
+const imageTwo = document.querySelector('#middle-img');
+imageOne.setAttribute('src', "img/logo.png");
+imageTwo.setAttribute('src', "img/mid-page-accent.jpg");
 
 
-const ctaTxt = document.querySelector('.cta-text')
-ctaTxt.firstChild.textContent = 'DOM Is Awesome'
-ctaTxt.lastChild.textContent = 'Get Started'
+// CTA
+
+const ctaTxt = document.querySelector('.cta-text');
+const buttontext = ctaTxt.querySelector('button');
+header = ctaTxt.querySelector('h1')
+header = 'DOM Is Awesome';
+buttontext.textContent = 'Get Started'
 
 const ctaImg = document.querySelector('#cta-img');
 ctaImg.setAttribute('src', "img/header-img.png");
+
+
+// Top Content
 
 const topContent = document.querySelector('.top-content')
 
@@ -92,11 +102,11 @@ aboutTxt.textContent = 'About content elementum magna eros, ac posuere elvit tem
 
 const bottomContent = document.querySelector('.bottom-content')
 
-const servicesSection = bottomContent.querySelector('.text-content:nth-of-type(1)')
+const servicesSection = bottomContent.querySelector('.text-content:first-child')
 const serviceTitle = servicesSection.querySelector('h4')
 const serviceTxt = servicesSection.querySelector('p')
 
-serviceTitle.textContent = "Services";
+serviceTitle.textContent = 'Services';
 serviceTxt.textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio,in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metusscelerisque quis.';
 
 
@@ -107,9 +117,32 @@ const productTxt = productSection.querySelector('p')
 productTitle.textContent = 'Product';
 productTxt.textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, ininterdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metusscelerisque quis.'
 
-const VisionSection = bottomContent.querySelector('.text-content:nth-of-type(3)')
+const VisionSection = bottomContent.querySelector('.text-content:last-child')
 const visionTitle = servicesSection.querySelector('h4')
 const visionTxt = servicesSection.querySelector('p')
+
+visionTitle.textContent ='Vision';
+visionTxt.textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, ininterdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metusscelerisque quis.'
+
+// Contact Section 
+
+const contactSection = document.querySelector('.contact');
+const contactTitle = contactSection.querySelector('h4');
+const address = contactSection.querySelector('p:nth-of-type(1)');
+const phone = contactSection.querySelector('p:nth-of-type(2)');
+const email = contactSection.querySelector('p:nth-of-type(3)');
+
+contactTitle.textContent = 'Contact';
+address.textContent = '123 Way 456 Street Somewhere, USA';
+phone.textContent = '1 (888) 888-8888';
+email.textContent = 'sales@greatidea.io';
+
+
+// Footer
+
+const footer = document.querySelector('footer');
+const copyright = footer.querySelector('p');
+copyright.textContent = 'Copyright Great Idea! 2018';
 
 
 
