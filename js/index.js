@@ -39,4 +39,39 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+const navArr = document.body.querySelectorAll('a')
+navArr[0].textContent = 'Services';
+navArr[1].textContent = 'Product';
+navArr[2].textContent = 'Vision';
+navArr[3].textContent = 'Features';
+navArr[4].textContent = 'About';
+navArr[5].textContent = 'Contact';
+
+const mHeader = document.body.querySelector('h1');
+mHeader.textContent = 'DOM IS AWESOME';
+
+const mImg = document.body.querySelector('#cta-img');
+mImg.src = 'img/header-img.png';
+
+const btn = document.body.querySelector('button');
+btn.textContent = 'Get Started';
+
+const subHeaders = document.body.querySelectorAll('h4');
+subHeaders[0].textContent = 'FEATURES';
+subHeaders[1].textContent = 'ABOUT';
+subHeaders[2].textContent = 'SERVICES';
+subHeaders[3].textContent = 'PRODUCT';
+subHeaders[4].textContent = 'VISION';
+
+const subParas = document.body.querySelectorAll('p');
+subParas[0].textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+subParas[1].textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+subParas[2].textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+subParas[3].textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+subParas[4].textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+const midImg = document.body.querySelector('.middle-img');
+
+midImg.src = 'img/mid-page-accent.jpg';
