@@ -43,31 +43,31 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
 const ser = document.getElementsByTagName('a')[0];
-ser.textContent = "Service";
+ser.textContent = siteContent ['nav'] ['nav-item-1'];
 
 const pro = document.getElementsByTagName('a')[1];
-pro.textContent = "Product";
+pro.textContent = siteContent ['nav'] ['nav-item-2'];
 
 const vis = document.getElementsByTagName('a')[2];
-vis.textContent = "Vision";
+vis.textContent = siteContent ['nav'] ['nav-item-3'];
 
 const fea = document.getElementsByTagName('a')[3];
-fea.textContent = "Features";
+fea.textContent = siteContent ['nav'] ['nav-item-4'];
 
 const abou = document.getElementsByTagName('a')[4];
-abou.textContent = "About";
+abou.textContent = siteContent ['nav'] ['nav-item-5'];
 
 const con = document.getElementsByTagName('a')[5];
-con.textContent = "Contact"
+con.textContent = siteContent ['nav'] ['nav-item-6']
 
 const codeImg = document.querySelector('#cta-img');
-codeImg.setAttribute('src', "img/header-img.png");
+codeImg.setAttribute('src', siteContent ['cta'] ['img-src']);
 
 const head = document.querySelector('.cta-text h1');
 head.innerHTML = "Dom <br>  Is <br> Awesome";
 
 const button = document.querySelector('.cta-text button');
-button.textContent = "Get Started";
+button.textContent = siteContent ['cta'] ['button'];
 
 const toph4 = document.getElementsByTagName('h4')[0];
 toph4.textContent = 'Features';
