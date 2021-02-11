@@ -84,5 +84,10 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
   const image2 = document.querySelector('#middle-img'); // selector for the image at the middle of the page
   image2.setAttribute('src', 'img/mid-page-accent.jpg') // sourced from the provided img file.
 
-  
+  const nav = document.querySelectorAll('a'); // selecting the navigation items to change its font color to green.
+  console.log(nav);
+  nav.forEach(element =>{
+    element.style.color ='Green';
+  })
+
 
