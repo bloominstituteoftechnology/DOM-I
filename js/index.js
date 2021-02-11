@@ -52,4 +52,6 @@ multipleSelections.forEach(function(item) {
 });
 
 
-document.getElementById("cta-img").src = "img/header-img.png";
+document.getElementById("cta-img").src = siteContent.cta["img-src"];
+//document.getElementsByClassName("cta-text")[0].textContent = siteContent.cta["h1"];
+document.getElementsByClassName("cta-text")[0].textContent = siteContent.cta["h1"];
