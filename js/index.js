@@ -89,5 +89,14 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
   nav.forEach(element =>{
     element.style.color ='Green';
   })
+const extendedNav = document.querySelector('nav'); // selecting navigation bar to add 2 more navigation items.
+console.log(extendedNav);
+const newNavitem1 = document.createElement('a');
+const newNavitem2 = document.createElement('a');
 
+newNavitem1.textContent = 'Locations'; //new navigation item 'locations' 
+newNavitem2.textContent = 'careers'; // new navigation item 'careers'.
+
+extendedNav.appendChild(newNavitem1); // added navigation item using appendChild
+extendedNav.prepend(newNavitem2); // added item using prepend.
 
