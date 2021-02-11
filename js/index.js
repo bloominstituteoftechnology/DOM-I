@@ -64,7 +64,7 @@ const codeImg = document.querySelector('#cta-img');
 codeImg.setAttribute('src', "img/header-img.png");
 
 const head = document.querySelector('.cta-text h1');
-head.textContent = "Dom  Is Awesome";
+head.innerHTML = "Dom <br>  Is <br> Awesome";
 
 const button = document.querySelector('.cta-text button');
 button.textContent = "Get Started";
@@ -109,15 +109,14 @@ botvis.textContent = "Vision";
 
 const botvisp = document.getElementsByTagName('p')[4];
 botvisp.textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in\
-interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus\
+ interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus\
 scelerisque quis.';
 
 const cont = document.querySelector('.contact h4');
 cont.textContent = "Contact"
 
 const conp = document.querySelectorAll('.contact p')[0];
-conp.textContent = '123 Way 456 Street \
-Somewhere, USA';
+conp.innerHTML = '123 Way 456 Street <br> Somewhere, USA';
 
 const conpp = document.querySelectorAll('.contact p')[1];
 conpp.textContent = '1 (888) 888-8888';
@@ -125,5 +124,5 @@ conpp.textContent = '1 (888) 888-8888';
 const conppp = document.querySelectorAll('.contact p')[2];
 conppp.textContent = 'sales@greatidea.io';
 
-const foot = document.querySelector('footer p')
-foot.textContent = 'Copyright Great Idea! 2018'
+const foot = document.querySelector('footer p');
+foot.textContent = 'Copyright Great Idea! 2018';
