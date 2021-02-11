@@ -41,13 +41,18 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-const navArr = document.body.querySelectorAll('a')
+const navArr = document.body.querySelectorAll('a');
+
 navArr[0].textContent = 'Services';
 navArr[1].textContent = 'Product';
 navArr[2].textContent = 'Vision';
 navArr[3].textContent = 'Features';
 navArr[4].textContent = 'About';
 navArr[5].textContent = 'Contact';
+
+for (var i = 0; i < navArr.length; i++) {
+  navArr[i].style.color = 'green';
+}
 
 const mHeader = document.body.querySelector('h1');
 mHeader.textContent = 'DOM IS AWESOME';
@@ -73,5 +78,24 @@ subParas[3].textContent = 'Product content elementum magna eros, ac posuere elvi
 subParas[4].textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
 
 const midImg = document.body.querySelector('.middle-img');
-
 midImg.src = 'img/mid-page-accent.jpg';
+
+const navBar = document.body.querySelector('nav');
+const newAnchor = document.createElement('a');
+
+let insertAnchor = function (naviArray, href, text) {
+  let anchor = navBar.appendChild(newAnchor);
+  anchor.href = href;
+  anchor.textContent = text;
+  anchor.style.color = 'green';
+};
+
+
+insertAnchor(navArr, '#', 'Recipes');
+insertAnchor(navArr, '#', 'Apply');
+
+
+console.log(navArr);
+
+//
+// navArr[6].textContent = 'Recipes';
