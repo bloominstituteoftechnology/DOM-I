@@ -90,9 +90,23 @@ let insertAnchor = function (naviArray, href, text) {
   anchor.style.color = 'green';
 };
 
+// //
+// var element = document.getElementById("div1");
+// var child = document.getElementById("p1");
+// element.insertBefore(para, child)
+
 
 insertAnchor(navArr, '#', 'Recipes');
 insertAnchor(navArr, '#', 'Apply');
+
+
+let prependAnchor = document.createElement('a');
+prependAnchor.textContent = 'Videos';
+console.log(prependAnchor);
+navBar.insertBefore(prependAnchor, navBar.firstChild);
+
+prependAnchor.href = '#';
+prependAnchor.style.color = 'green';
 
 
 console.log(navArr);
