@@ -40,3 +40,46 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let nav = document.querySelectorAll("header nav a");
+console.log(nav)
+nav.forEach((a, index) =>
+  {
+    a.textContent = siteContent['nav']["nav-item-" + (index + 1)];
+  })
+
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+/* cta */
+let ctaImg = document.getElementById('cta-img');
+ctaImg.setAttribute('src', siteContent['cta']['img-src']);
+let ctaButton = document.querySelector('.cta-text button');
+ctaButton.textContent = siteContent['cta']['button'];
+let ctaH1 = document.querySelector('.cta-text h1');
+ctaH1.textContent =  siteContent['cta']['h1']
+
+// main section
+let featuresH4 = document.querySelector('.text-content h4');
+featuresH4.textContent = siteContent['main-content']['features-h4'];
+let featuresContent = document.querySelector('.text-content p');
+featuresContent.textContent = siteContent['main-content']['features-content']
+
+
+
+
+
+
+// contact section
+let contactH4 = document.querySelector('.contact h4')
+contactH4.textContent = siteContent['contact']['contact-h4'];
+let address = document.querySelector('.contact p:nth-child(2)');
+address.textContent = siteContent['contact']['address'];
+let phoneNumber = document.querySelector('.contact p:nth-child(3)');
+phoneNumber.textContent =  siteContent['contact']['phone'];
+let email = document.querySelector('.contact p:nth-child(4)');
+email.textContent = siteContent['contact']['email'];
+
+// footer
+let footer = document.querySelector('footer p');
+footer.textContent = siteContent["footer"]["copyright"]
