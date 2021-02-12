@@ -62,41 +62,57 @@ button.textContent = 'Get Started'
 
 const topContent = document.querySelectorAll('.top-content .text-content')
 console.log(topContent)
+
 const textTwo = topContent[0].querySelector('h4') 
 textTwo.textContent = siteContent["main-content"]["features-h4"]
+
 const mainText = topContent[0].querySelector('p')
 mainText.textContent = siteContent["main-content"]["features-content"]
+
 const about = topContent[1].querySelector('h4')
 about.textContent = siteContent["main-content"]['about-h4']
+
 const aboutText = topContent[1].querySelector('p')
 aboutText.textContent= siteContent["main-content"]["about-content"]
+
 const bottomContent = document.querySelectorAll('.bottom-content .text-content')
 const services  = bottomContent[0].querySelector('h4')
 services.textContent = siteContent["main-content"]["services-h4"]
+
 const servicesText  = bottomContent[0].querySelector('p')
 servicesText.textContent = siteContent["main-content"]["services-content"]
+
 const product = bottomContent[1].querySelector('h4')
 product.textContent = siteContent["main-content"]["product-h4"]
+
 const productText = bottomContent[1].querySelector('p')
 productText.textContent = siteContent["main-content"]["product-content"]
+
 const vision = bottomContent[2].querySelector('h4')
 vision.textContent = siteContent["main-content"]["vision-h4"]
+
 const visionText = bottomContent[2].querySelector('p')
 visionText.textContent = siteContent["main-content"]["vision-content"]
 
 const middleImg = document.querySelector('#middle-img')
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
-const contact = document.querySelectorAll('.contact')
-//console.log(contact)
-const contactText = contact[0].querySelector('h4')
+const contactText = document.querySelector(' .contact h4')
 contactText.textContent = siteContent["contact"]["contact-h4"]
-const address = contact[0].querySelector('p')
-address.textContent = siteContent["contact"]["address"]
-const phone = contact[0].querySelector('p')
+
+const address = document.querySelector('.contact p:nth-child(2)')
+console.log(siteContent["contact"]["address"].split("  ").join("<br>"))
+address.innerHTML = siteContent["contact"]["address"].split(" ").join("<br>")
+
+
+
+const phone = document.querySelector('.contact p:nth-child(3)')
 phone.textContent = siteContent["contact"]["phone"]
-const email = contact[0].querySelector('p')
+
+const email = document.querySelector('.contact p:nth-child(4)')
 email.textContent = siteContent["contact"]["email"] 
+
 
 const footerText = document.querySelector('footer p')
 footerText.textContent = siteContent["footer"]["copyright"]
+
