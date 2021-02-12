@@ -91,16 +91,14 @@ visionText.textContent = siteContent["main-content"]["vision-content"]
 const middleImg = document.querySelector('#middle-img')
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
-/*const contactInfo = document.querySelectorAll('.contact')
-console.log(contactInfo)
-const contactText = contactInfo[0].querySelector('h4')
+const contactText = document.querySelector(' .contact h4')
 contactText.textContent = siteContent["contact"]["contact-h4"]
-const address = contactInfo[1].querySelector('p')
+const address = document.querySelector('.contact p:nth-child(2)')
 address.textContent = siteContent["contact"]["address"]
-const phone = contactInfo[2].querySelector('p')
+const phone = document.querySelector('.contact p:nth-child(3)')
 phone.textContent = siteContent["contact"]["phone"]
-const email = contactInfo[3].querySelector('p')
-email.textContent = siteContent["contact"]["email"]*///i dont know what is wrong with "contact" part, but when i uncomment it, it breaks my footer code.
+const email = document.querySelector('.contact p:nth-child(4)')
+email.textContent = siteContent["contact"]["email"]
 
 const footerText = document.querySelector('footer p')
 footerText.textContent = siteContent["footer"]["copyright"]
