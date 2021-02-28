@@ -26,7 +26,7 @@ const siteContent = {
     "vision-h4":"Vision",
     "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
   },
-  "contact": {
+  "contact": {.
     "contact-h4" : "Contact",
     "address" : "123 Way 456 Street Somewhere, USA",
     "phone" : "1 (888) 888-8888",
