@@ -45,7 +45,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 // Create selectors by using any of the DOM element's methods
 
 // let navItems = ['Services', 'Product', 'Vision', 'Features', ];
-const navItems = document.querySelectorAll('a');
+const navItems = document.querySelectorAll('nav > a');
 // console.log(navItems);
 let itemArray = Array.from(navItems);
 
@@ -81,9 +81,15 @@ sixthItem.textContent = "Contact";
 
 // let div = document.querySelector('section.cta');
 
-let h1 = document.querySelectorAll('h1');
+let h1 = document.querySelector('h1');
+// let h1 = document.getElementById()
 
 h1.innerHTML = siteContent["cta"]["h1"];
+
+
+let button = document.querySelector('.cta-text button');
+// console.log(button.innerHTML);
+button.textContent = 'Get Started';
 
 // console.log(siteContent["cta"]["h1"]);
 
@@ -94,5 +100,11 @@ h1.innerHTML = siteContent["cta"]["h1"];
 // console.log(h1);
 
 let cta = document.getElementById("cta-img");
-cta.setAttribute('src', siteContent["cta"]["img-src"])
-console.log(cta);
+cta.setAttribute('src', siteContent["cta"]["img-src"]);
+// console.log(cta);
+
+let topContent = document.getElementsByClassName("top-content");
+// topContent[0][0].textContent = siteContent["main-content"]["features-h4"];
+
+let children = topContent[0].childNodes;
+console.log(children[1].childNodes);
