@@ -81,13 +81,13 @@ sixthItem.textContent = "Contact";
 
 // let div = document.querySelector('section.cta');
 
-let h1 = document.querySelector('h1');
+const h1 = document.querySelector('h1');
 // let h1 = document.getElementById()
 
 h1.innerHTML = siteContent["cta"]["h1"];
 
 
-let button = document.querySelector('.cta-text button');
+const button = document.querySelector('.cta-text button');
 // console.log(button.innerHTML);
 button.textContent = 'Get Started';
 
@@ -99,15 +99,15 @@ button.textContent = 'Get Started';
 // console.log(h1.childNodes);
 // console.log(h1);
 
-let cta = document.getElementById("cta-img");
+const cta = document.getElementById("cta-img");
 cta.setAttribute('src', siteContent["cta"]["img-src"]);
 // console.log(cta);
 
-let topContent = document.querySelector('.top-content');
+const topContent = document.querySelector('.top-content');
 // topContent[0][0].textContent = siteContent["main-content"]["features-h4"];
 
-let firstTop = topContent.childNodes[1];
-let secondTop = topContent.childNodes[3];
+const firstTop = topContent.childNodes[1];
+const secondTop = topContent.childNodes[3];
 
 firstTop.children[0].textContent = siteContent["main-content"]["features-h4"];
 firstTop.children[1].textContent = siteContent["main-content"]["features-content"];
@@ -115,7 +115,21 @@ firstTop.children[1].textContent = siteContent["main-content"]["features-content
 secondTop.children[0].textContent = siteContent["main-content"]["about-h4"];
 secondTop.children[1].textContent = siteContent["main-content"]["about-content"];
 
-let middleImg = document.getElementById("middle-img");
+const middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
+const bottomContent = document.querySelector('.bottom-content');
+// console.log(bottomContent.childNodes);
 
+const firstBottom = bottomContent.childNodes[1];
+const secondBottom = bottomContent.childNodes[3];
+const thirdBottom = bottomContent.childNodes[5]
+
+firstBottom.children[0].textContent = siteContent["main-content"]["services-h4"];
+firstBottom.children[1].textContent = siteContent["main-content"]["services-content"];
+
+secondBottom.children[0].textContent = siteContent["main-content"]["product-h4"];
+secondBottom.children[1].textContent = siteContent["main-content"]["product-content"];
+
+thirdBottom.children[0].textContent = siteContent["main-content"]["vision-h4"];
+thirdBottom.children[1].textContent = siteContent["main-content"]["vision-content"];
