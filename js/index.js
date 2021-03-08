@@ -43,3 +43,32 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // MVP
 // Create selectors by using any of the DOM element's methods
+
+// let navItems = ['Services', 'Product', 'Vision', 'Features', ];
+const navItems = document.querySelectorAll('a');
+console.log(navItems);
+let itemArray = Array.from(navItems);
+
+// console.log(firstItem.textContent);
+let firstItem = itemArray[0];
+firstItem.textContent = "Services";
+// console.log(firstItem)
+let secondItem = itemArray[1];
+secondItem.textContent = "Product";
+let thirdItem = itemArray[2];
+thirdItem.textContent = "Vision";
+let fourthItem = itemArray[3];
+fourthItem.textContent = "Features";
+let fifthItem = itemArray[4];
+fifthItem.textContent = "About";
+let sixthItem = itemArray[5];
+sixthItem.textContent = "Contact";
+
+
+// console.log(itemArray);
+
+// ??? I thought we couldn't use Array methods on HTML Collections and Nodelists???
+
+// navItems.forEach(function(item){
+//   console.log(item);
+// })
