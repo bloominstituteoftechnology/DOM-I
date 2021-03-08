@@ -46,8 +46,9 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // let navItems = ['Services', 'Product', 'Vision', 'Features', ];
 const navItems = document.querySelectorAll('a');
-console.log(navItems);
+// console.log(navItems);
 let itemArray = Array.from(navItems);
+
 
 // console.log(firstItem.textContent);
 let firstItem = itemArray[0];
@@ -72,3 +73,26 @@ sixthItem.textContent = "Contact";
 // navItems.forEach(function(item){
 //   console.log(item);
 // })
+
+// let item = document.getElementById("logo-img");
+// console.log(item);
+
+// let h1 = document.getElementsByClassName('cta-text');
+
+// let div = document.querySelector('section.cta');
+
+let h1 = document.querySelectorAll('h1');
+
+h1.innerHTML = siteContent["cta"]["h1"];
+
+// console.log(siteContent["cta"]["h1"]);
+
+// querySelectors and Bracket Notation
+
+// ??? why am I getting undefined for the childNodes here???
+// console.log(h1.childNodes);
+// console.log(h1);
+
+let cta = document.getElementById("cta-img");
+cta.setAttribute('src', siteContent["cta"]["img-src"])
+console.log(cta);
