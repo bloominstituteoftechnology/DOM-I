@@ -133,3 +133,18 @@ secondBottom.children[1].textContent = siteContent["main-content"]["product-cont
 
 thirdBottom.children[0].textContent = siteContent["main-content"]["vision-h4"];
 thirdBottom.children[1].textContent = siteContent["main-content"]["vision-content"];
+
+
+const contact = document.querySelector('.contact');
+console.log(contact.childNodes);
+
+let contactTitle = contact.childNodes[1];
+let address = contact.childNodes[3];
+let phone = contact.childNodes[5];
+let email = contact.childNodes[7];
+
+contactTitle.textContent = siteContent["contact"]["contact-h4"];
+address.textContent = siteContent["contact"]["address"];
+phone.textContent = siteContent["contact"]["phone"];
+email.textContent = siteContent["contact"]["email"];
+
