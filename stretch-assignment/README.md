@@ -1,5 +1,7 @@
 # Stretch Assignment - Digital Timer
 
+Initial
+
 Topics:
  * Interacting with the DOM
  * Selectors
