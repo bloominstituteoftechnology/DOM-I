@@ -71,7 +71,7 @@ navBar[3].textContent='Features';
 navBar[4].textContent='About';
 navBar[5].textContent='Contact';
 
-//Text around the accent
+//Text around the accents
 //Subheaders
 const subheader=document.getElementsByClassName("main-content")[0];
 subheader.getElementsByTagName('h4')[0].innerHTML=siteContent["main-content"]["features-h4"]
