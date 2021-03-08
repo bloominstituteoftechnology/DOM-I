@@ -42,3 +42,4 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // MVP
+// Create selectors by using any of the DOM element's methods
