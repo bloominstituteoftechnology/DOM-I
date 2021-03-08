@@ -39,7 +39,7 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 // MVP
 // Create selectors by using any of the DOM element's methods
@@ -103,8 +103,19 @@ let cta = document.getElementById("cta-img");
 cta.setAttribute('src', siteContent["cta"]["img-src"]);
 // console.log(cta);
 
-let topContent = document.getElementsByClassName("top-content");
+let topContent = document.querySelector('.top-content');
 // topContent[0][0].textContent = siteContent["main-content"]["features-h4"];
 
-let children = topContent[0].childNodes;
-console.log(children[1].childNodes);
+let firstTop = topContent.childNodes[1];
+let secondTop = topContent.childNodes[3];
+
+firstTop.children[0].textContent = siteContent["main-content"]["features-h4"];
+firstTop.children[1].textContent = siteContent["main-content"]["features-content"];
+
+secondTop.children[0].textContent = siteContent["main-content"]["about-h4"];
+secondTop.children[1].textContent = siteContent["main-content"]["about-content"];
+
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+
