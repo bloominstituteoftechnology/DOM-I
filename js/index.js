@@ -49,6 +49,11 @@ const navItems = document.querySelectorAll('nav > a');
 // console.log(navItems);
 let itemArray = Array.from(navItems);
 
+// navItems.style.color = "green";
+navItems.forEach(function(item){
+  // console.log(item);
+  item.style.color = 'green';
+});
 
 // console.log(firstItem.textContent);
 let firstItem = itemArray[0];
