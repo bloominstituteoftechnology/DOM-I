@@ -56,35 +56,58 @@ document.title = "Great Idea";
 const newNav = document.querySelectorAll("nav a");
 
 //use forEach method to go through each item in the new nav - all the nav anchors, and give them the .innerText method to "import" the key: values from the siteContent
-newNav.forEach( (anchors, index) => {
-  anchors.innerText = siteContent["nav"][Object.keys(siteContent["nav"])[index]]
+newNav.forEach( (item, index) => {
+  item.innerText = siteContent["nav"][Object.keys(siteContent["nav"])[index]]
 });
 
 const h1 = document.querySelector("h1"); //declare the variable and where it is
 h1.innerHTML = siteContent["cta"]["h1"]; // add the conent to the variable
-//h1.innerHTML = siteContent["cta"]["h1"].split(" ").join("<br>");
+h1.innerHTML = siteContent["cta"]["h1"].split(" ").join("<br>");
 // Track team showed me how to do the breaks ^^^
 
 const codeSnippetImage = document.querySelector("#cta-img"); //# targets an ID!
 codeSnippetImage.setAttribute("src", siteContent["cta"]["img-src"]);
 
+
 const button = document.querySelector("button");
 button.textContent = siteContent["cta"]["button"];
 
+// top-content first child h4 target
+const topContentFirstChildh4 = document.querySelector(".top-content:first-child h4");
+topContentFirstChildh4.textContent = siteContent["main-content"]["features-h4"];
 
-const topContentText = document.querySelector
-//      top content
-//          text content
-//               h4
-//               p
+// top-content first child p target
+const topContentFirstChildP = document.querySelector(".top-content:first-child p");
+topContentFirstChildP.textContent = siteContent["main-content"]["features-content"];
 
+// top-content second child h4 target
+const topContentSecondChildh4 = document.querySelector(".top-content:last-child h4");
+topContentSecondChildh4.textContent = siteContent["main-content"]["about-h4"];
+
+// top-content p target
+const topContentSecondChildP = document.querySelector(".top-content:last-child p");
+topContentSecondChildP.textContent = siteContent["main-content"]["about-content"];
+
+
+// middle image
 const middleImage = document.querySelector("#middle-img");
 middleImage.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
-//      bottom content
-//         text content
-//           h4
-//           p
+
+// bottom-content first child h4
+
+const bottomContentFirstChildh4 = document.querySelector("")
+
+// bottom content first child p 
+
+// bottom-content middle child h4
+
+// bottom content middle child p 
+
+// bottom-content last child h4
+
+// bottom content last child p 
+
 
 
 // const newNav = "Services"
