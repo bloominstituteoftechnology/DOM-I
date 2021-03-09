@@ -49,15 +49,57 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // 🌸🌸🌸STUDENT WORK FROM HERE ON🌸🌸🌸//
 
-document.title = "Great Idea"
+// title
+document.title = "Great Idea";
 
-const navItem1 = "Services"
-const navItem2 = "Product"
-const navitem3 = "Vision"
-const navItem4 = "Features"
-const navItem5 = "About"
-const navItem6 = "Content"
+//select all the anchors through the semantic element "nav a" after the header div
+const newNav = document.querySelectorAll("nav a");
 
-document.createElement = "nav"
-document.header.prepend(nav)
+//use forEach method to go through each item in the new nav - all the nav anchors, and give them the .innerText method to "import" the key: values from the siteContent
+newNav.forEach( (anchors, index) => {
+  anchors.innerText = siteContent["nav"][Object.keys(siteContent["nav"])[index]]
+});
 
+const h1 = document.querySelector("h1");
+h1.innerHTML = siteContent["cta"]["h1"];
+
+const codeSnippetImage = document.querySelector
+// const newNav = "Services"
+// document.nav[0].createTextNode("Services")
+
+
+// nav
+// document.createElement = "nav";
+// document.header.prepend(nav);
+
+
+// nav items
+
+// const navItem1 = document.createElement("a");
+// navItem1.textContent = "Services";
+// navItem1.href = "#";
+// document.querySelector("nav").appendChild(navItem1)
+
+// const navItem2 = document.createElement("a");
+// navItem2.textContent = "Product"
+// navItem2.href = "#";
+
+// const navItem3 = document.createElement("a");
+// navItem3.textContent = "Vision"
+// navItem3.href = "#";
+
+// const navItem4 =document.createElement("a");
+// navItem4.textContent = "Features"
+// navItem4.href = "#";
+
+// const navItem5 = document.createElement("a");
+// navItem5.textContent = "About"
+// navItem5.href = "#";
+
+// const navItem6 = document.createElement("a");
+// navItem6.textContent = "Content"
+// navItem6.href = "#";
+
+
+
+// document.nav[0].a = "Services"
