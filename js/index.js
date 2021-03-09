@@ -47,7 +47,16 @@ pic.setAttribute('src', siteContent["cta"]["img-src"]);
 
 
 let midImg = document.getElementById("middle-img");
-midImg.src = "mid-page-accent.jpg";
+midImg.setAttribute('src', siteContent["mid-page-accent.jpg"])
 
 let multi = document.querySelectorAll("nav");
-multi.
+
+let nav = document.querySelector(nav);
+nav.innerHTML = <nav>
+<a href="#">Services</a>
+<a href="#">Product</a>
+<a href="#">Vision</a>
+<a href="#">Features</a>
+<a href="#">about</a>
+<a href="#">Contact</a>
+</nav>
