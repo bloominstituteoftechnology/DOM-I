@@ -39,4 +39,132 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+// MVP
+// Create selectors by using any of the DOM element's methods
+
+// let navItems = ['Services', 'Product', 'Vision', 'Features', ];
+
+const nav = document.querySelector('nav');
+const navItems = document.querySelectorAll('nav > a');
+// console.log(navItems);
+let itemArray = Array.from(navItems);
+
+let newItemPrepend = document.createElement('a');
+newItemPrepend.innerHTML = 'Home';
+nav.prepend(newItemPrepend);
+console.log(newItemPrepend);
+
+let newItemAppend = document.createElement('a');
+newItemAppend.innerHTML = 'Info';
+nav.appendChild(newItemAppend);
+console.log(newItemAppend);
+
+// navItems.style.color = "green";
+navItems.forEach(function(item){
+  // console.log(item);
+  item.style.color = 'green';
+});
+
+
+
+
+// console.log(firstItem.textContent);
+let firstItem = itemArray[0];
+firstItem.textContent = "Services";
+// console.log(firstItem)
+let secondItem = itemArray[1];
+secondItem.textContent = "Product";
+let thirdItem = itemArray[2];
+thirdItem.textContent = "Vision";
+let fourthItem = itemArray[3];
+fourthItem.textContent = "Features";
+let fifthItem = itemArray[4];
+fifthItem.textContent = "About";
+let sixthItem = itemArray[5];
+sixthItem.textContent = "Contact";
+
+
+// console.log(itemArray);
+
+// ??? I thought we couldn't use Array methods on HTML Collections and Nodelists???
+
+// navItems.forEach(function(item){
+//   console.log(item);
+// })
+
+// let item = document.getElementById("logo-img");
+// console.log(item);
+
+// let h1 = document.getElementsByClassName('cta-text');
+
+// let div = document.querySelector('section.cta');
+
+const h1 = document.querySelector('h1');
+// let h1 = document.getElementById()
+
+h1.innerHTML = siteContent["cta"]["h1"];
+
+
+const button = document.querySelector('.cta-text button');
+// console.log(button.innerHTML);
+button.textContent = 'Get Started';
+
+// console.log(siteContent["cta"]["h1"]);
+
+// querySelectors and Bracket Notation
+
+// ??? why am I getting undefined for the childNodes here???
+// console.log(h1.childNodes);
+// console.log(h1);
+
+const cta = document.getElementById("cta-img");
+cta.setAttribute('src', siteContent["cta"]["img-src"]);
+// console.log(cta);
+
+const topContent = document.querySelector('.top-content');
+// topContent[0][0].textContent = siteContent["main-content"]["features-h4"];
+
+const firstTop = topContent.childNodes[1];
+const secondTop = topContent.childNodes[3];
+
+firstTop.children[0].textContent = siteContent["main-content"]["features-h4"];
+firstTop.children[1].textContent = siteContent["main-content"]["features-content"];
+
+secondTop.children[0].textContent = siteContent["main-content"]["about-h4"];
+secondTop.children[1].textContent = siteContent["main-content"]["about-content"];
+
+const middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+const bottomContent = document.querySelector('.bottom-content');
+// console.log(bottomContent.childNodes);
+
+const firstBottom = bottomContent.childNodes[1];
+const secondBottom = bottomContent.childNodes[3];
+const thirdBottom = bottomContent.childNodes[5]
+
+firstBottom.children[0].textContent = siteContent["main-content"]["services-h4"];
+firstBottom.children[1].textContent = siteContent["main-content"]["services-content"];
+
+secondBottom.children[0].textContent = siteContent["main-content"]["product-h4"];
+secondBottom.children[1].textContent = siteContent["main-content"]["product-content"];
+
+thirdBottom.children[0].textContent = siteContent["main-content"]["vision-h4"];
+thirdBottom.children[1].textContent = siteContent["main-content"]["vision-content"];
+
+
+const contact = document.querySelector('.contact');
+console.log(contact.childNodes);
+
+let contactTitle = contact.childNodes[1];
+let address = contact.childNodes[3];
+let phone = contact.childNodes[5];
+let email = contact.childNodes[7];
+
+contactTitle.textContent = siteContent["contact"]["contact-h4"];
+address.textContent = siteContent["contact"]["address"];
+phone.textContent = siteContent["contact"]["phone"];
+email.textContent = siteContent["contact"]["email"];
+
