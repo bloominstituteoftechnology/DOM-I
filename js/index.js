@@ -47,7 +47,7 @@ let counter = 1;
 anchorTags.forEach(currentItem => {
   currentItem.textContent = siteContent['nav'][`nav-item-${counter}`];
   currentItem.style.color = 'green';
-  counter++
+  counter++;
 })
 
 const navBar = document.querySelector('nav');
