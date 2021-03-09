@@ -45,15 +45,30 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 // Create selectors by using any of the DOM element's methods
 
 // let navItems = ['Services', 'Product', 'Vision', 'Features', ];
+
+const nav = document.querySelector('nav');
 const navItems = document.querySelectorAll('nav > a');
 // console.log(navItems);
 let itemArray = Array.from(navItems);
+
+let newItemPrepend = document.createElement('a');
+newItemPrepend.innerHTML = 'Home';
+nav.prepend(newItemPrepend);
+console.log(newItemPrepend);
+
+let newItemAppend = document.createElement('a');
+newItemAppend.innerHTML = 'Info';
+nav.appendChild(newItemAppend);
+console.log(newItemAppend);
 
 // navItems.style.color = "green";
 navItems.forEach(function(item){
   // console.log(item);
   item.style.color = 'green';
 });
+
+
+
 
 // console.log(firstItem.textContent);
 let firstItem = itemArray[0];
