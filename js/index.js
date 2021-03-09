@@ -60,10 +60,33 @@ newNav.forEach( (anchors, index) => {
   anchors.innerText = siteContent["nav"][Object.keys(siteContent["nav"])[index]]
 });
 
-const h1 = document.querySelector("h1");
-h1.innerHTML = siteContent["cta"]["h1"];
+const h1 = document.querySelector("h1"); //declare the variable and where it is
+h1.innerHTML = siteContent["cta"]["h1"]; // add the conent to the variable
+//h1.innerHTML = siteContent["cta"]["h1"].split(" ").join("<br>");
+// Track team showed me how to do the breaks ^^^
 
-const codeSnippetImage = document.querySelector
+const codeSnippetImage = document.querySelector("#cta-img"); //# targets an ID!
+codeSnippetImage.setAttribute("src", siteContent["cta"]["img-src"]);
+
+const button = document.querySelector("button");
+button.textContent = siteContent["cta"]["button"];
+
+
+const topContentText = document.querySelector
+//      top content
+//          text content
+//               h4
+//               p
+
+const middleImage = document.querySelector("#middle-img");
+middleImage.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+//      bottom content
+//         text content
+//           h4
+//           p
+
+
 // const newNav = "Services"
 // document.nav[0].createTextNode("Services")
 
