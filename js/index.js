@@ -57,38 +57,55 @@ navLinks[5].href = '#'
 
 const ctaStuff = document.querySelector('h1')
 
-ctaStuff.textContent = 'DOM IS AWESOME'
+ctaStuff.textContent = siteContent['cta']['h1']
 
 const button = document.querySelector('button')
-button.textContent = 'Get Started'
+button.textContent = siteContent['cta']['button']
 
 const image = document.getElementById("cta-img")
-image.setAttribute('src', "img/header-img.png")
+image.setAttribute('src', siteContent['cta']['img-src'])
 
-const h4Stuff = document.querySelectorAll('h4')
+const h4 = document.querySelectorAll('h4')
 
-h4Stuff[0].textContent = "Features"
-h4Stuff[1].textContent = "About"
-h4Stuff[2].textContent = "Services"
-h4Stuff[3].textContent = "Product"
-h4Stuff[4].textContent = "Vision"
-h4Stuff[5].textContent = "Contact"
+h4[0].textContent = "Features"
+h4[1].textContent = "About"
+h4[2].textContent = "Services"
+h4[3].textContent = "Product"
+h4[4].textContent = "Vision"
+h4[5].textContent = "Contact"
 
-h4Stuff[0].nextElementSibling.textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+h4[0].nextElementSibling.textContent = siteContent['main-content']['features-content']
 
-h4Stuff[1].nextElementSibling.textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis"
+h4[1].nextElementSibling.textContent = siteContent['main-content']['about-content']
 
-h4Stuff[2].nextElementSibling.textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+h4[2].nextElementSibling.textContent = siteContent['main-content']['services-content']
 
-h4Stuff[3].nextElementSibling.textContent = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+h4[3].nextElementSibling.textContent = siteContent['main-content']['product-content']
 
-h4Stuff[4].nextElementSibling.textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+h4[4].nextElementSibling.textContent = siteContent['main-content']['vision-content']
 
-h4Stuff[5].nextElementSibling.textContent = "123 Way 456 Street Somewhere, USA"
+h4[5].nextElementSibling.textContent = siteContent['contact']['address']
 
-h4Stuff[5].nextElementSibling.nextElementSibling.textContent = "1 (888) 888-8888"
+h4[5].nextElementSibling.nextElementSibling.textContent = siteContent['contact']['phone']
 
-h4Stuff[5].nextElementSibling.nextElementSibling.nextElementSibling.textContent = "sales@greatidea.io"
+h4[5].nextElementSibling.nextElementSibling.nextElementSibling.textContent = siteContent['contact']['email']
 
 const image2 = document.getElementById('middle-img')
-image2.setAttribute('src', 'img/mid-page-accent.jpg')
+image2.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+const footerStuff = document.querySelector('footer p')
+footerStuff.textContent = siteContent['footer']['copyright']
+
+const nav = document.querySelector('nav')
+navLinks[0].style.color = "green"
+navLinks[1].style.color = "green"
+navLinks[2].style.color = "green"
+navLinks[3].style.color = "green"
+navLinks[4].style.color = "green"
+navLinks[5].style.color = "green"
+const home = document.createElement('a')
+home.textContent = 'Home'
+nav.prepend(home)
+const credits = document.createElement('credits')
+credits.textContent = 'Credits'
+nav.appendChild(credits)
