@@ -40,8 +40,9 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById('logo-img');
 logo.setAttribute('src', siteContent["nav"]["img-src"])
-//NAV  and HEADER stuff 
+//NAV and HEADER stuff 
 const headerNav = document.querySelectorAll('a');
+
   headerNav[0].textContent = siteContent["nav"]["nav-item-1"];
   headerNav[1].textContent = siteContent["nav"]["nav-item-2"];
   headerNav[2].textContent = siteContent["nav"]["nav-item-3"];
@@ -59,11 +60,15 @@ Appended.textContent = 'this is appended';
 head.prepend(Prepended);
 head.append(Appended)
 
-headerNav.forEach(ele => (ele.style.color = "green"));
+headerNav.forEach(e => (e.style.color = "green"));
 Appended.style.color = 'green';
+Appended.style.fontWeight = 'bold';
+
 Prepended.style.color = 'green';
+Prepended.style.fontWeight = 'bold';
 
 //CTA 
+
 let h1 = document.querySelector('h1');
 let button = document.querySelector('button');
 let ctaImg = document.querySelector('#cta-img');
@@ -86,6 +91,7 @@ let SectionContents = document.querySelectorAll('p')
 
 
 let h4 = document.querySelectorAll('h4')
+
   h4[0].textContent = siteContent['main-content']['features-h4'];
   h4[1].textContent = siteContent['main-content']['about-h4'];
   h4[2].textContent = siteContent['main-content']['services-h4'];
@@ -97,6 +103,7 @@ midIMG.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
 
 //CONTACT
+
 let contactheader = document.querySelectorAll('h4');
  contactheader[5].textContent = siteContent["contact"]["contact-h4"];
 
@@ -106,5 +113,6 @@ let contactinfo = document.querySelectorAll('p');
   contactinfo[7].textContent = siteContent ['contact']['email']
   
 //FOOTER
+
 let footer = document.querySelectorAll('p')
   footer[8].textContent = siteContent['footer']['copyright']
