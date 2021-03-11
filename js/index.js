@@ -42,7 +42,6 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // Nav * * *
-let nav = document.querySelector("nav");
 let navMenu = document.querySelectorAll("a");
   navMenu[0].textContent = "Services";
   navMenu[1].textContent = "Product";
@@ -60,8 +59,17 @@ let newButton = document.querySelector("button");
   newButton.textContent = siteContent["cta"]["button"];
 
 // Main content * * *
+let newContent = document.querySelectorAll("main-content");
+  newContent.textContent = siteContent["main-content"]["Features"];
 let img2 = document.querySelectorAll("img"); 
   img2[2].setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
-// Fooetr * * * 
+  
+  // Contact * * *   
+let newContact = document.querySelector("contact");
+  newContact.textContent = siteContent["contact"]["Contact"];
 
+
+// Footer * * * 
+let newFooter = document.querySelector("footer");
+  newFooter.textContent = siteContent["footer"]["copyright"];
