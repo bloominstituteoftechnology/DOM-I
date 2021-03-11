@@ -41,7 +41,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-// Navigation * * *
+// Nav * * *
 let nav = document.querySelector("nav");
 let navMenu = document.querySelectorAll("a");
   navMenu[0].textContent = "Services";
@@ -51,7 +51,17 @@ let navMenu = document.querySelectorAll("a");
   navMenu[4].textContent = "About";
   navMenu[5].textContent = "Contact";
 
-// Images * * * 
-let allimg = document.querySelectorAll("img"); 
-  allimg[1].setAttribute("src", siteContent["cta"]["img-src"]);
-  allimg[2].setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+// cta * * * 
+let ah1 = document.querySelector("h1");
+  ah1.innerHTML = "Dom <br>Is <br>Awesome"
+let img1 = document.querySelectorAll("img"); 
+  img1[1].setAttribute("src", siteContent["cta"]["img-src"]);
+let newButton = document.querySelector("button");
+  newButton.textContent = siteContent["cta"]["button"];
+
+// Main content * * *
+let img2 = document.querySelectorAll("img"); 
+  img2[2].setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+// Fooetr * * * 
+
