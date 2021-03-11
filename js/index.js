@@ -48,7 +48,7 @@ navItems.forEach(item => {
     item.style.color = "green"
 })
 
-// this is navItems //
+// this is navItems ////////
 
 for (let i = 0; i < navItems.length; i++) {
     navItems[i].innerHTML = siteContent["nav"][`nav-item-${i+1}`]
