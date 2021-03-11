@@ -40,3 +40,38 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const anchorTags = document.querySelectorAll('nav a')
+const ArrayAnchorTags = Array.from(anchorTags) 
+
+ArrayAnchorTags[0].textContent= siteContent.nav["nav-item-1"]
+ArrayAnchorTags[1].textContent= siteContent.nav["nav-item-2"]
+ArrayAnchorTags[2].textContent= siteContent.nav["nav-item-3"]
+ArrayAnchorTags[3].textContent= siteContent.nav["nav-item-4"]
+ArrayAnchorTags[4].textContent= siteContent.nav["nav-item-4"]
+ArrayAnchorTags[5].textContent= siteContent.nav["nav-item-6"]
+
+
+let newHeader = document.querySelector(".cta h1")
+newHeader.innerHTML = siteContent.cta.h1.split(" ").join("<br>")
+
+let newButton = document.querySelector(".cta button")
+    newButton.textContent = siteContent.cta.button
+
+let newFeatures = document.querySelectorAll(".main-content h4")
+    newFeatures[0].textContent = siteContent["main-content"]["features-h4"]
+
+let fParagraph = document.querySelectorAll(".main-content p")
+    fParagraph[0].textContent = siteContent["main-content"] ["features-content"]
+
+let newAbout = document.querySelectorAll(".main-content h4")
+    newAbout[1].textContent = siteContent["main-content"] ["about-h4"]
+
+let aParagraph = document.querySelectorAll(".main-content p")
+    newAbout[1].textContent = siteContent["main-content"] ["about-content"]
+
+ let middleImage = document.getElementById("middle-img");
+    middleImage.setAttribute('src', siteContent["main-content"] ["middle-img-src"])
+
+let newBottom = document.querySelectorAll(".main-content h4")
+    newBottom[2.textContent]
