@@ -61,6 +61,22 @@ features.textContent = siteContent['nav']['nav-item-4'];
 about.textContent = siteContent['nav']['nav-item-5'];
 contact.textContent = siteContent['nav']['nav-item-6'];
 
+// Add 2 links to nav
+const firstAddition = document.createElement('a');
+const secondAddition = document.createElement('a');
+
+firstAddition.href = '#';
+firstAddition.textContent = 'I Did It';
+document.querySelector('nav').prepend(firstAddition);
+
+secondAddition.href = '#';
+secondAddition.textContent = 'Oops I Did it Again';
+document.querySelector('nav').appendChild(secondAddition);
+
+// Change font color of nav bar to green
+const navText = document.querySelectorAll('nav a');
+navText.forEach(text => (text.style.color = 'green'));
+
 // logo image placement
 const navLogo = document.querySelector('#logo-img');
 
