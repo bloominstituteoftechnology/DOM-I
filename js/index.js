@@ -39,4 +39,13 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+nav.setAttribute("color", "green");
+const navChild = '';
+navChild.textContent = "nav-item 0", "Home";
+nav.appendChild("navChild");
+const pnavChild = "";
+pnavChild.textContent = "nav-item "
+nav.prependChild("pnavChild");
+
