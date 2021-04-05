@@ -89,7 +89,7 @@ topP[0].textContent = siteContent['main-content']['features-content'];
 topP[1].textContent = siteContent['main-content']['about-content'];
 
 //Middle Img
-// document.querySelector('#middle-img').src = siteContent['main-content']['middle-img-src'];
+document.querySelector('#middle-img').src = siteContent['main-content']['middle-img-src'];
 
 //Bottom Section
 // const bottomSection = document.querySelector('.bottom-content');
