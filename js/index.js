@@ -40,3 +40,45 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+const nav = document.querySelector("nav")
+const navanchor=nav.firstElementChild
+navanchor.textContent="Services"
+const nava2 = navanchor.nextElementSibling
+nava2.textContent="Product"
+const nava3 = nava2.nextElementSibling
+nava3.textContent="Vision"
+const nava4 = nava3.nextElementSibling
+nava4.textContent="Features"
+const nava5 = nava4.nextElementSibling
+nava5.textContent="About"
+const nava6 = nava5.nextElementSibling
+nava6.textContent="Contact"
+const b1=document.querySelector(".cta-text")
+const h1 = b1.firstElementChild
+h1.innerText="DOM \n Is \n Awesome"
+const btn = h1.nextElementSibling
+btn.textContent="Get Started"
+const cta =document.querySelectorAll(".cta img")
+console.log(cta)
+cta[0].src="./img/header-img.png"
+const pardiv= document.querySelectorAll("h4")
+pardiv[0].textContent="Features"
+pardiv[1].textContent="About"
+pardiv[2].textContent="Services"
+pardiv[3].textContent="Product"
+pardiv[4].textContent="Vision"
+const par= document.querySelectorAll("p")
+par[0].textContent="Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+par[1].textContent="About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+par[2].textContent="Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+par[3].textContent="Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+par[4].textContent="Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+const img2=document.querySelector(".middle-img")
+img2.src="img/mid-page-accent.jpg"
+pardiv[5].textContent="Contact"
+par[5].innerText="123 Way 456 Street \n Somewhere, USA"
+par[6].textContent="1 (888) 888-8888"
+par[7].textContent="sales@greatidea.io"
+const ftpar= document.querySelector("footer")
+console.log(ftpar)
+ftpar.firstElementChild.textContent="Copyright Great Idea! 2018"
