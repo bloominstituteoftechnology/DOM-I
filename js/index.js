@@ -62,7 +62,8 @@ nav[2].textContent = 'Vision';
 nav[3].textContent = 'Features';
 nav[4].textContent = 'About';
 nav[5].textContent = 'Contact';
-nav.style.color = 'green';
+
+
 
 // H1
 const h1 = document.getElementsByTagName('h1');
