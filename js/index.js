@@ -85,6 +85,23 @@ allP[7].textContent = 'sales@greatidea.io';
 //Footer
 allP[8].textContent = 'Copyright Great Idea! 2018';
 
+//Nav Text Green
+navItems[0].style.color = 'green';
+navItems[1].style.color = 'green';
+navItems[2].style.color = 'green';
+navItems[3].style.color = 'green';
+navItems[4].style.color = 'green';
+navItems[5].style.color = 'green';
+
+//NAV TWO NEW ITEMS:
+const newParagraph1 = document.createElement('p');
+newParagraph1.textContent = 'Goodbye';
+document.querySelector('nav').appendChild(newParagraph1);
+
+const newParagraph2 = document.createElement('p');
+newParagraph2.textContent = 'Hello';
+document.querySelector('nav').prepend(newParagraph2);
+
 // Example: Update the img src for the logo
 //let logo = document.getElementById("logo-img");
 //logo.setAttribute('src', siteContent["nav"]["img-src"])
