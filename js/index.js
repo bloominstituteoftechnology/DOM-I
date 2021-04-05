@@ -53,3 +53,12 @@ ctaImg.setAttribute('src', 'img/header-img.png');
 
 const midImg = document.getElementById('middle-img');
 midImg.setAttribute('src', 'img/mid-page-accent.jpg');
+
+// NAV
+const nav = document.getElementsByTagName('a');
+nav[0].textContent = 'Services';
+nav[1].textContent = 'Product';
+nav[2].textContent = 'Vision';
+nav[3].textContent = 'Features';
+nav[4].textContent = 'About';
+nav[5].textContent = 'Contact';
