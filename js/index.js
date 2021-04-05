@@ -47,17 +47,24 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
 const navLink = document.querySelectorAll("nav > a");
-navLink[0].textContent = siteContent['nav']['nav-item-1'];
-navLink[1].textContent = siteContent['nav']['nav-item-2'];
-navLink[2].textContent = siteContent['nav']['nav-item-3'];
-navLink[3].textContent = siteContent['nav']['nav-item-4'];
-navLink[4].textContent = siteContent['nav']['nav-item-5'];
-navLink[5].textContent = siteContent['nav']['nav-item-6'];
+navLink[0].textContent = siteContent["nav"]["nav-item-1"];
+navLink[1].textContent = siteContent["nav"]["nav-item-2"];
+navLink[2].textContent = siteContent["nav"]["nav-item-3"];
+navLink[3].textContent = siteContent["nav"]["nav-item-4"];
+navLink[4].textContent = siteContent["nav"]["nav-item-5"];
+navLink[5].textContent = siteContent["nav"]["nav-item-6"];
+navLink.style.color = 'green';
 
-const ctaImg = document.getElementById('cta-img');
+const ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
 
-const ctaContent = document.querySelector('h1')
-ctaContent.textContent = siteContent['cta']['h1']
-const ctaButton = document.querySelector('button')
-ctaButton.textContent = siteContent['cta']['button']
+const lineBreak = document.createElement("br");
+
+const ctaContent = document.querySelector("h1");
+ctaContent.textContent = siteContent["cta"]["h1"];
+// ctaContent.appendChild(lineBreak);
+const ctaButton = document.querySelector("button");
+ctaButton.textContent = siteContent["cta"]["button"];
+
+const mainContentTop = document.querySelectorAll('main-content > top-content');
+
