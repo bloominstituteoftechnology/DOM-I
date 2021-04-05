@@ -47,27 +47,30 @@ circle.setAttribute('src', siteContent['cta']['img-src']);
 let line = document.getElementById('middle-img');
 line.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
-const navBar = document.querySelector('nav');
-let item1 = navBar.querySelector('a:nth-of-type(1)');
-item1.textContent= siteContent.nav["nav-item-1"];
+const navBar = document.querySelectorAll('nav > a');
+navBar[0].textContent = siteContent.nav['nav-item-1'];
+navBar[1].textContent = siteContent.nav['nav-item-2'];
+navBar[2].textContent = siteContent.nav['nav-item-3'];
+navBar[3].textContent = siteContent.nav['nav-item-4'];
+navBar[4].textContent = siteContent.nav['nav-item-5'];
+navBar[5].textContent = siteContent.nav['nav-item-6'];
 
-let item2 = navBar.querySelector('a:nth-of-type(2)');
-item2.textContent= siteContent.nav["nav-item-2"];
-
-let item3 = navBar.querySelector('a:nth-of-type(3)');
-item3.textContent= siteContent.nav["nav-item-3"];
-
-let item4 = navBar.querySelector('a:nth-of-type(4)');
-item4.textContent= siteContent.nav["nav-item-4"];
-
-let item5 = navBar.querySelector('a:nth-of-type(5)');
-item5.textContent= siteContent.nav["nav-item-5"];
-
-let item6 = navBar.querySelector('a:nth-of-type(6)');
-item6.textContent= siteContent.nav["nav-item-6"];
+// const navBar = document.querySelector('nav');
+// let item1 = navBar.querySelector('a:nth-of-type(1)');
+// item1.textContent= siteContent.nav["nav-item-1"];
+// let item2 = navBar.querySelector('a:nth-of-type(2)');
+// item2.textContent= siteContent.nav["nav-item-2"];
+// let item3 = navBar.querySelector('a:nth-of-type(3)');
+// item3.textContent= siteContent.nav["nav-item-3"];
+// let item4 = navBar.querySelector('a:nth-of-type(4)');
+// item4.textContent= siteContent.nav["nav-item-4"];
+// let item5 = navBar.querySelector('a:nth-of-type(5)');
+// item5.textContent= siteContent.nav["nav-item-5"];
+// let item6 = navBar.querySelector('a:nth-of-type(6)');
+// item6.textContent= siteContent.nav["nav-item-6"];
 
 let title = document.querySelector(".cta-text h1");
-title.textContent = siteContent['cta']['h1'];
+title.innerHTML = siteContent['cta']['h1'];
 
 let tButton = document.querySelector('button');
 tButton.textContent = "Get started"
@@ -107,10 +110,9 @@ back.href = '#';
 back.style.color = 'green';
 document.querySelector('nav').appendChild(back);
 
-item1.style.color = 'green';
-item2.style.color = 'green';
-item3.style.color = 'green';
-item4.style.color = 'green';
-item5.style.color = 'green';
-item6.style.color = 'green';
-
+navBar[0].style.color = 'green'
+navBar[1].style.color = 'green'
+navBar[2].style.color = 'green'
+navBar[3].style.color = 'green'
+navBar[4].style.color = 'green'
+navBar[5].style.color = 'green'
