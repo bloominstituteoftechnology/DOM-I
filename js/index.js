@@ -40,3 +40,52 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const header = document.querySelector('header');
+
+let links = document.querySelectorAll("nav a");
+
+links[0].href='#'
+links[0].style.color='green'
+
+links[1].href='#'
+links[1].style.color='green'
+links[2].href='#'
+links[2].style.color='green'
+links[3].href='#'
+links[3].style.color='green'
+links[4].href='#'
+links[4].style.color='green'
+links[5].href='#'
+links[5].style.color='green'
+
+const extra = document.createElement('a')
+extra.textContent = "Hello"
+extra.href = "#"
+extra.style.color = 'green'
+document.querySelector('nav').prepend(extra)
+
+const extra2 = document.createElement('a')
+extra2.textContent = "User"
+extra2.href = "#"
+extra2.style.color = 'green'
+document.querySelector('nav').prepend(extra2)
+
+const cta = document.querySelector('h1');
+
+cta.innerHTML = 'Dom <br> Is <br> Awesome'
+
+const btn = document.querySelector('button');
+btn.textContent= 'get started'
+
+const image = document.getElementById('cta-img')
+image.setAttribute('src', 'img/header-img.png')
+
+const h4 = document.querySelectorAll('h4')
+
+h4[0].textContent="Features"
+h4[1].textContent="About"
+h4[2].textContent="Services"
+h4[3].textContent="Product"
+h4[4].textContent="Vision"
+h4[5].textContent="Contact"
