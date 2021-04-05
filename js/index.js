@@ -37,6 +37,106 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+Example: Update the img src for the logo
+
+ let logo = document.getElementById("logo-img");
+ logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+ let title = document.querySelector('title');
+ title.textContent = "Great Idea!";
+ console.log(title);
+
+ let navLinks = document.querySelectorAll('nav > a');
+ console.log(navLinks);
+
+ navLinks[0].textCOntent = siteContent;
+
+ let h1Text = document.querySelector('h1');
+ h1Text.textContent = siteContent['cta']['h1'];
+
+ let codePicture = document.querySelector('#cta-img');
+ codePicture.setAtrribute('src', siteContent["cta"]["img-src"]);
+
+ let buttonText = document.querySelector('.cta-text button');
+ buttonText.textContent = siteContent['cta']['button'];
+
+ let mainContent = document.querySelector
+
+ const navBar = document.querySelectorAll('nav > a')
+ console.log(navBar)
+
+ navBar[0].textContent = siteContent.nav['nav-item-1'];
+ navBar[1].textContent = siteContent.nav['nav-item-2'];
+ navBar[2].textContent = siteContent.nav['nav-item-3'];
+ navBar[3].textContent = siteContent.nav['nav-item-4'];
+ navBar[4].textContent = siteContent.nav['nav-item-5'];
+ navBar[5].textContent = siteContent.nav['nav-item-6'];
+
+ logoTitle.className = "logo heading green"
+
+
+///
+
+
+ 
+const logo = documnet.getElementByID("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const links = documnet.querySelectorAll('nav a');
+links[0].textContent = siteContent['nav']['nav-item-1'];
+links[1].textContent = siteContent['nav']['nav-item-2'];
+links[2].textContent = siteContent['nav']['nav-item-3'];
+links[3].textContent = siteContent['nav']['nav-item-4'];
+links[4].textContent = siteContent['nav']['nav-item-5'];
+links[5].textContent = siteContent['nav']['nav-item-6'];
+links.style.color = 'green';
+
+const headerTitle= documnet.querySelector('.cta-text h1');
+headerTitle.textContent = siteContent['cta']['h1'];
+
+console.log(headerTitle);
+
+const buttonText = document.querySelector('.cta-text button');
+buttonText.textContent = siteContent['cta']['button'];
+
+const HeaderImg = document.querySelector('#cta-img');
+headerImg.src = siteContent['cta']['img-src'];
+
+const topSelectionContent = document.querySelector('.top-content');
+const topSubtitles = topSectionContent.querySelectorAll('h4');
+const topPara = topSectionContent.querySelectorAll('p');
+topSubtitles[0].textContent = siteContent['main-content']['features-h4'];
+topSubtitles[1].textContent = siteContent['main-content']['about-h4'];
+topPara[0].textContent = siteContent['main-content']['features-content'];
+topPara[1].textContent = siteContent['main-content']['about-content'];
+
+const middleImg = document.querySelector('#middle-img');
+middleImg.src = siteContent['main-content']['middle-img-src'];
+
+const bottomSectionContent = document.querySelector('bottom-content');
+const bottomSubtitles = bottomSectionContent.querySelectorAll('h4');
+const bottomPara = bottomSectionContent.querySelectorAll('p');
+bottomSubtitles[0].textContent = siteContent['main-content']['services-h4'];
+
+const contact = document.querySelector('contact');
+const footer = document.querySelector('footer');
+
+const firstImg = document.querySelector('#cta-img');
+
+const headerEl = documement.querySelector('header');
+ headerEl.appendChild(subHeadline)
+subHeadline.style.color = "green"
+
+const section = document.querySelector('section');
+section.style.flexWrap = "wrap";
+
+section.style.justifyContent="center";
+const newImg = document.createElement('img');
+newImg
+newImg.src="logo.png"
+
+newImg.style.marginRight = '20px';
+newImg.alt = "Another Img"
+
+section.prepend(newImg)
+
