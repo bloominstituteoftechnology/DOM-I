@@ -58,7 +58,10 @@ buttonThing.innerText = siteContent.cta['button']
 let ctaImage = document.querySelector('#cta-img')
 ctaImage.setAttribute('src', siteContent['cta']['img-src'])
 
-let h4Thing = document.querySelectorAll('h4')
+let middleImage = document.querySelector('.middleImage')
+middleImage.setAttribute('src', siteContent["main-content"]['middle-img-src'])
+
+let h4Thing = document.querySelectorAll('.text-content h4')
 h4Thing[0].innerText = siteContent["main-content"]['features-h4']
 h4Thing[1].innerText = siteContent["main-content"]['about-h4']
 h4Thing[2].innerText = siteContent["main-content"]['services-h4']
@@ -71,3 +74,12 @@ pThing[1].innertext = siteContent["main-content"]['about-content']
 pThing[2].innertext = siteContent["main-content"]['services-content']
 pThing[3].innertext = siteContent["main-content"]['product-content']
 pThing[4].innertext = siteContent["main-content"]['vision-content']
+
+let contactH4 = document.querySelector('.contact h4')
+contactH4.innertext = siteContent.contact['contact-h4']
+
+
+
+
+let footerCopy = document.querySelector('footer p')
+footerCopy.innerText = siteContent.footer['copyright']
