@@ -43,12 +43,20 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 let navLinks = document.querySelectorAll("nav a");
 
+
 navLinks[0].textContent = siteContent["nav"]["nav-item-1"];
 navLinks[1].textContent = siteContent["nav"]["nav-item-2"];
 navLinks[2].textContent = siteContent["nav"]["nav-item-3"];
 navLinks[3].textContent = siteContent["nav"]["nav-item-4"];
 navLinks[4].textContent = siteContent["nav"]["nav-item-5"];
 navLinks[5].textContent = siteContent["nav"]["nav-item-6"];
+
+navLinks[0].style.color = "green";
+navLinks[1].style.color = "green";
+navLinks[2].style.color = "green";
+navLinks[3].style.color = "green";
+navLinks[4].style.color = "green";
+navLinks[5].style.color = "green";
 
 
 let domAwesome = document.querySelector(".cta-text h1");
