@@ -58,7 +58,7 @@ buttonThing.innerText = siteContent.cta['button']
 let ctaImage = document.querySelector('#cta-img')
 ctaImage.setAttribute('src', siteContent['cta']['img-src'])
 
-let middleImage = document.querySelector('.middleImage')
+let middleImage = document.querySelector('.middle-img')
 middleImage.setAttribute('src', siteContent["main-content"]['middle-img-src'])
 
 let h4Thing = document.querySelectorAll('.text-content h4')
@@ -69,17 +69,19 @@ h4Thing[3].innerText = siteContent["main-content"]['product-h4']
 h4Thing[4].innerText = siteContent["main-content"]['vision-h4']
 
 let pThing = document.querySelectorAll('.text-content p')
-pThing[0].innertext = siteContent["main-content"]['features-content']
-pThing[1].innertext = siteContent["main-content"]['about-content']
-pThing[2].innertext = siteContent["main-content"]['services-content']
-pThing[3].innertext = siteContent["main-content"]['product-content']
-pThing[4].innertext = siteContent["main-content"]['vision-content']
+pThing[0].innerText = siteContent["main-content"]['features-content']
+pThing[1].innerText = siteContent["main-content"]['about-content']
+pThing[2].innerText = siteContent["main-content"]['services-content']
+pThing[3].innerText = siteContent["main-content"]['product-content']
+pThing[4].innerText = siteContent["main-content"]['vision-content']
 
 let contactH4 = document.querySelector('.contact h4')
-contactH4.innertext = siteContent.contact['contact-h4']
+contactH4.innerText = siteContent.contact['contact-h4']
 
-
-
+let contactPs = document.querySelectorAll('.contact p')
+contactPs[0].innerText = siteContent.contact['address']
+contactPs[1].innerText = siteContent.contact['email']
+contactPs[2].innerText = siteContent.contact['phone']
 
 let footerCopy = document.querySelector('footer p')
 footerCopy.innerText = siteContent.footer['copyright']
