@@ -40,3 +40,105 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+
+// Example: Update the img src for the logo
+let logo = document.getElementById("logo-img");
+logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// node list into an array
+
+
+let atag = document.getElementsByTagName("container");
+atag.setAttribute( "href", siteContent["nav"]["nav-item-1"])
+
+let atag2 = document.getElementsByTagName("container");
+atag.setAttribute( "href", siteContent["nav"]["nav-item-2"])
+
+let atag3 = document.getElementsByTagName("container")
+atag3.setAttribute("href", siteContent["nav"]["nav-item-3"]) 
+
+let atag4 = docuemnt.getElementByTagName("container")
+atag4.setAttribute   ("href", siteContent ["nav"]["nav-item-4"])
+
+let atag5 = document.getElementByTagName("container")
+atag5.setAttribute ("href",siteContent ["nav"]["nav-item-5"])
+
+let atag6 = document.getElementByTagName("container")
+atag6.setAttribute("href", siteContent["nav"]["nav-item-6"])
+
+let main1 = document.getElementByTagName("cta-text")
+main1.setAttribute("href", siteContent["cta"]["h1"])
+
+let main2 = document.getElementByTagName("cta-text")
+main2.setAttribute("href", siteContent["cta"]["button"])
+
+
+let main3 = document.getElementByTagName("cta-text")
+main3.setAttribute("href", siteContent["cta"]["img-src"])
+
+
+
+
+let newBox = document.getElementsByTagName("text-content")
+newBox.setAttribute("href", siteContent["main-content"][ "features-content"])
+
+
+let newBox9 = document.getElementsByTagName("text-content")
+newBox9.setAttribute("href", siteContent["main-content"]["features-h4"])
+
+let newBox2 = document.getElementsByTagName("text-content")
+newBox2.setAttribute("href", siteContent["main-content"]["about-h4"])
+
+
+let newBox3 = document.getElementsByTagName("text-content")
+newBox3.setAttribute("href", siteContent["main-content"]["about-content"])
+
+
+let newBox4 = document.getElementsByTagName("text-content")
+newBox4.setAttribute("href", siteContent["main-content"]["middle-img-src"])
+
+
+let newBox5 = document.getElementsByTagName("text-content")
+newBox5.setAttribute("href", siteContent["main-content"]["services-h4"])
+
+
+let newBox6 = document.getElementsByTagName("text-content")
+newBox6.setAttribute("href", siteContent["main-content"]["services-content"])
+
+
+let newBox7 = document.getElementsByTagName("text-content")
+newBox7.setAttribute("href", siteContent["main-content"]["product-h4"])
+
+
+let newBox8 = document.getElementsByTagName("text-content")
+newBox8.setAttribute("href", siteContent["main-content"]["product-content"])
+
+
+
+let newBox10 = document.getElementsByTagName("text-content")
+newBox10.setAttribute("href", siteContent["main-content"]["vision-h4"])
+
+
+let newBox11 = document.getElementsByTagName("text-content")
+newBox11.setAttribute("href", siteContent["main-content"]["vision-content"])
+
+
+
+let contacts = document.getElementsByTagName("contact")
+contacts.setAttribute("href", siteContent["main-content"]["contact-h4"])
+
+let contacts2 = document.getElementsByTagName("contact")
+contacts2.setAttribute("href", siteContent["contact"]["address"])
+
+let contacts3 = document.getElementsByTagName("contact")
+contacts3.setAttribute("href", siteContent["main-content"]["phone"])
+
+
+let contacts3 = document.getElementsByTagName("contact")
+contacts3.setAttribute("href", siteContent["main-content"]["email"])
+
+
+let footer1 = document.getElementsByTagName("")
+footer1.setAttribute("href", siteContent["footer"]["copyright"])
