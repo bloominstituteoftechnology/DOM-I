@@ -63,7 +63,29 @@ newElementTwo.textContent = "Dude";
 newElementTwo.href = "#";
 document.querySelector("nav").append(newElementTwo);
 
-// img
+// Dom is Awesome
+let titleText = document.querySelector(".cta h1");
+titleText.textContent = siteContent["cta"]["h1"];
+let buttonOne = document.querySelector(".cta button");
+buttonOne.textContent = siteContent["cta"]["button"];
+
+// img 
+let img1 = document.querySelector("#cta-img");
+img1.src = siteContent["cta"]["img-src"];
+
+// MAIN CONTENT
+let heading= document.querySelectorAll(".text-content h4");
+heading[0].textContent = siteContent["main-content"]["features-h4"];
+heading[1].textContent = siteContent["main-content"]["about-h4"];
+heading[2].textContent = siteContent["main-content"]["services-h4"];
+heading[3].textContent = siteContent["main-content"]["product-h4"];
+heading[4].textContent = siteContent["main-content"]["vision-h4"];
+
+let imgTwo = document.querySelector(".middle-img");
+imgTwo.src = siteContent["main-content"]["middle-img-src"]
+
+
+
 
 
 // let nav1 = document.querySelector("a:nth-of-type(1)")
