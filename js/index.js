@@ -8,6 +8,7 @@ const siteContent = {
     "nav-item-6": "Contact",
     "img-src": "img/logo.png"
   },
+
   "cta": {
     "h1": "DOM Is Awesome",
     "button": "Get Started",
@@ -40,3 +41,32 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const navBar =  document.querySelectorAll (' nav  > a ');
+
+// console.log(navBar)
+
+navBar [0] .textContent = siteContent.nav ["nav-item-1"];
+navBar [1] .textContent = siteContent.nav ["nav-item-2"];
+navBar [2] .textContent = siteContent.nav ["nav-item-3"];
+navBar [3] .textContent = siteContent.nav ["nav-item-4"];
+navBar [4] .textContent = siteContent.nav ["nav-item-5"];
+navBar [5] .textContent = siteContent.nav ["nav-item-6"];
+
+
+
+const circleImage = document.querySelector ('cta cta-img');
+circleImage.src = 'img/header-img.png'
+
+const title = document.querySelector ('h1');
+title.textContent = "dom is awesome";
+
+const button = document.querySelector ('button');
+button.textContent = "Get Started"
+
+//*********************** page break ************************* */
+
+
+
+
+
