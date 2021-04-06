@@ -89,3 +89,9 @@ contactPs[2].innerText = siteContent.contact['phone']
 
 let footerCopy = document.querySelector('footer p')
 footerCopy.innerText = siteContent.footer['copyright']
+
+const navAppend = document.createElement('a')
+    navAppend.textContent = 'Blog'
+    navAppend.href = '#'
+    navAppend.classList.add('menu-item')
+    document.querySelector('nav').appendChild(navAppend)
