@@ -52,7 +52,18 @@ navItem[3].textContent = siteContent["nav"]["nav-item-4"];
 navItem[4].textContent = siteContent["nav"]["nav-item-5"];
 navItem[5].textContent = siteContent["nav"]["nav-item-6"];
 
+// Adding elements to nav
+let newElementOne = document.createElement("a");
+newElementOne.textContent = "Bruh";
+newElementOne.href = "#";
+document.querySelector("nav").prepend(newElementOne);
 
+let newElementTwo = document.createElement("a");
+newElementTwo.textContent = "Dude";
+newElementTwo.href = "#";
+document.querySelector("nav").append(newElementTwo);
+
+// img
 
 
 // let nav1 = document.querySelector("a:nth-of-type(1)")
