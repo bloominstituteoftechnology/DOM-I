@@ -49,6 +49,10 @@ navAnchor[3].innerText = siteContent.nav['nav-item-4']
 navAnchor[4].innerText = siteContent.nav['nav-item-5']
 navAnchor[5].innerText = siteContent.nav['nav-item-6']
 
+navAnchor.forEach(function(a){
+  a.style.color = "green"
+})
+
 let h1Thing = document.querySelector("h1")
 h1Thing.innerText = siteContent.cta['h1']
 
