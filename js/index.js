@@ -42,12 +42,23 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //navigation
+//adding 2 things to the navbar
+let navBar = document.querySelector('nav');
 let nav = document.querySelectorAll('nav a');
+
 for (var i = 0; i < nav.length; i++) {
   nav[i].textContent = siteContent.nav[`nav-item-${i}`];
   nav[i].style.color = 'green';
-}
+};
 
+const newNav = (text, color) => {
+  let newItem = document.createElement('a');
+  newItem.style.color = color;
+  newItem.textContent = text;
+  return navBar.appendChild(newItem);
+}
+newNav('Donate', 'red')
+newNav('Learn More', 'blue')
 
 //cta img
 let ctaImg = document.querySelector('#cta-img');
