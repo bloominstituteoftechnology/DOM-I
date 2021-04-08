@@ -51,3 +51,7 @@ let nav = document.querySelector('nav')
 const navItem = querySelectorAll('a')
 navItem[0].textContent = siteContent['nav']['nav-item-1'];
 navItem[1].textContent = siteContent['nav']['nav-item-2'];
+navItem[2].textContent = siteContent['nav']['nav-item-3'];
+navItem[3].textContent = siteContent['nav']['nav-item-4'];
+navItem[4].textContent = siteContent['nav']['nav-item-5'];
+navItem[5].textContent = siteContent['nav']['nav-item-6'];
