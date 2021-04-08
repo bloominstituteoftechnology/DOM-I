@@ -41,6 +41,10 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+//header
+const headerBG = document.querySelector('.container');
+headerBG.style.backgroundColor = 'gainsboro'
+
 //updating nav
 let navigation = document.querySelectorAll('nav a');
 navigation[0].text = siteContent.nav['nav-item-1'];
@@ -80,6 +84,10 @@ headerImg.src = siteContent['cta']['img-src']
 console.log(headerImg)
 
 //Updating the Main-Content
+
+const mainContentBkGround = document.querySelector('.main-content');
+mainContentBkGround.style.backgroundColor = 'lightBlue'
+
 const mainHeader = document.querySelectorAll('.text-content h4');
 mainHeader[0].innerText = siteContent['main-content']['features-h4'];
 mainHeader[1].innerText = siteContent['main-content']['about-h4'];
@@ -100,11 +108,10 @@ mainContent[3].innerText = siteContent['main-content']['product-content'];
 mainContent[4].innerText = siteContent['main-content']['vision-content']
 
 mainContent.forEach((element) => {
-  element.style.color = 'green',
+  element.style.color = 'green'
   // element.style.background = 'black'
 });
 
-mainContent.setAttribute('backgroundColor', 'green');
 
 const middleImg = document.getElementById('middle-img')
 middleImg.src = siteContent['main-content']['middle-img-src'];
