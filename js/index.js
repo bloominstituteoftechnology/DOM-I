@@ -41,10 +41,15 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let nav = document.getElementsByTagName("nav")[0].children;
-for (i = 0; i < nav.length; i++) {
-  nav[i].textContent = siteContent["nav"][`nav-item-${i + 1}`];
-}
+let nav = document.querySelectorAll('nav a')
+
+nav.forEach((nav, index) => {
+  nav.textContent = siteContent.nav['nav-item-' + (index +1)]
+})
+
+nav.forEach((item) => {
+  item.style.color = "green"
+})
 
 let ctaImg = document.querySelector('#cta-img')
 ctaImg.setAttribute('src', siteContent.cta['img-src'])
