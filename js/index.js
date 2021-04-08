@@ -41,17 +41,22 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let ctaImg = document.getElementById('cta-img');
-ctaImg.setAttribute('src', siteContent['cta']['img-src'])
+//nav
 
-
-
-
-let nav = document.querySelector('nav')
-const navItem = querySelectorAll('a')
+let navItem = querySelectorAll('nav a');
 navItem[0].textContent = siteContent['nav']['nav-item-1'];
 navItem[1].textContent = siteContent['nav']['nav-item-2'];
 navItem[2].textContent = siteContent['nav']['nav-item-3'];
 navItem[3].textContent = siteContent['nav']['nav-item-4'];
 navItem[4].textContent = siteContent['nav']['nav-item-5'];
 navItem[5].textContent = siteContent['nav']['nav-item-6'];
+
+//cta
+
+const cta = siteContent['cta']['h1'].split(' ')
+
+const ctaText = getDocumentByTagName('h1')[0]
+ctaText.innerHTML = cta.join('<br>')
+
+const ctaImg = document.getElementById('cta-img');
+ctaImg = siteContent['cta']['img-src']
