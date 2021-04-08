@@ -56,12 +56,38 @@ navigation[5].text = siteContent.nav['nav-item-6'];
 // let cta = document.querySelector('.cta-text h1');
 // cta.innerHTML = 'DOM <br> is <br> Awesome';
 
-let callAction = document.querySelector('.cta-text h1');
+const callAction = document.querySelector('.cta-text h1');
 callAction.innerHTML= siteContent.cta['h1']
 
-let start = document.querySelector('.cta-text button');
+const start = document.querySelector('.cta-text button');
 start.innerText = siteContent['cta']['button']
 
 const headerImg = document.getElementById('cta-img');
 headerImg.src = siteContent['cta']['img-src']
 console.log(headerImg)
+
+//Updating the Main-Content
+const mainHeader = document.querySelectorAll('.text-content h4');
+mainHeader[0].innerText = siteContent['main-content']['features-h4'];
+mainHeader[1].innerText = siteContent['main-content']['about-h4'];
+mainHeader[2].innerText = siteContent['main-content']['services-h4'];
+mainHeader[3].innerText = siteContent['main-content']['product-h4'];
+mainHeader[4].innerText = siteContent['main-content']['vision-h4'];
+
+mainHeader.forEach((element) => {
+	element.style.color = 'green';
+});
+
+const mainContent = document.querySelectorAll('.text-content p');
+mainContent[0].innerText = siteContent['main-content']['features-content'];
+mainContent[1].innerText = siteContent['main-content']['about-content'];
+mainContent[2].innerText = siteContent['main-content']['services-content'];
+mainContent[3].innerText = siteContent['main-content']['product-content'];
+mainContent[4].innerText = siteContent['main-content']['vision-content']
+
+mainContent.forEach((element) => {
+  element.style.backgroundColor = 'aqua'
+});
+
+const middleImg = document.getElementById('middle-img')
+middleImg.src = siteContent['main-content']['middle-img-src'];
