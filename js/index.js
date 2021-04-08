@@ -51,10 +51,23 @@ navigation[4].text = siteContent.nav['nav-item-5'];
 navigation[5].text = siteContent.nav['nav-item-6'];
 
 
-//header 
+navigation.forEach((element) => {
+  element.style.color = 'green'
+});
 
-// let cta = document.querySelector('.cta-text h1');
-// cta.innerHTML = 'DOM <br> is <br> Awesome';
+const newNav = document.querySelector('nav');
+
+const newItem = document.createElement('a');
+newItem.innerText = 'Social Page';
+newItem.style.color = 'green';
+newNav.appendChild(newItem);
+
+const signUp = document.createElement('a');
+signUp.innerText = 'Sign Up';
+signUp.style.color = 'green';
+newNav.prepend(signUp);
+
+//header 
 
 const callAction = document.querySelector('.cta-text h1');
 callAction.innerHTML= siteContent.cta['h1']
@@ -78,6 +91,7 @@ mainHeader.forEach((element) => {
 	element.style.color = 'green';
 });
 
+
 const mainContent = document.querySelectorAll('.text-content p');
 mainContent[0].innerText = siteContent['main-content']['features-content'];
 mainContent[1].innerText = siteContent['main-content']['about-content'];
@@ -86,8 +100,11 @@ mainContent[3].innerText = siteContent['main-content']['product-content'];
 mainContent[4].innerText = siteContent['main-content']['vision-content']
 
 mainContent.forEach((element) => {
-  element.style.backgroundColor = 'aqua'
+  element.style.color = 'green',
+  // element.style.background = 'black'
 });
+
+mainContent.setAttribute('backgroundColor', 'green');
 
 const middleImg = document.getElementById('middle-img')
 middleImg.src = siteContent['main-content']['middle-img-src'];
@@ -102,3 +119,8 @@ const contactText = document.querySelectorAll('.contact p');
 contactText[0].innerText = siteContent['contact']['address'];
 contactText[1].innerText = siteContent['contact']['phone'];
 contactText[2].innerText = siteContent['contact']['email'];
+
+// footer
+
+const footerText = document.querySelector('footer p');
+footerText.innerText = siteContent['footer']['copyright']
