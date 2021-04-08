@@ -91,3 +91,14 @@ mainContent.forEach((element) => {
 
 const middleImg = document.getElementById('middle-img')
 middleImg.src = siteContent['main-content']['middle-img-src'];
+
+
+//contact info
+
+const contactHead = document.querySelector('.contact h4');
+contactHead.innerText = siteContent['contact']['contact-h4'];
+
+const contactText = document.querySelectorAll('.contact p');
+contactText[0].innerText = siteContent['contact']['address'];
+contactText[1].innerText = siteContent['contact']['phone'];
+contactText[2].innerText = siteContent['contact']['email'];
