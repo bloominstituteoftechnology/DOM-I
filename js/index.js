@@ -40,3 +40,41 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let nav = document.getElementsByTagName("nav")[0].children;
+for (i = 0; i < nav.length; i++) {
+  nav[i].textContent = siteContent["nav"][`nav-item-${i + 1}`];
+}
+
+let ctaImg = document.querySelector('#cta-img')
+ctaImg.setAttribute('src', siteContent.cta['img-src'])
+
+let ctaText = document.querySelector('.cta-text').children
+ctaText[0].textContent = siteContent.cta['h1']
+ctaText[1].textContent = siteContent.cta['button']
+
+let main = document.querySelector('.top-content').children
+main[0].children[0].textContent = siteContent["main-content"]["features-h4"]
+main[0].children[1].textContent = siteContent["main-content"]["features-content"]
+
+main[1].children[0].textContent = siteContent['main-content']["about-h4"]
+main[1].children[1].textContent = siteContent['main-content']["about-content"]
+
+let middleImg = document.querySelector('.middle-img')
+middleImg.setAttribute('src', 'img/mid-page-accent.jpg')
+
+let bottom = document.querySelector('.bottom-content').children
+bottom[0].children[0].textContent = siteContent['main-content']["services-h4"]
+bottom[0].children[1].textContent = siteContent['main-content']["services-content"]
+
+bottom[1].children[0].textContent = siteContent['main-content']["product-h4"]
+bottom[1].children[1].textContent = siteContent['main-content']["product-content"]
+
+let contact = document.querySelector('.contact').children
+contact[0].textContent = siteContent['contact']["contact-h4"]
+contact[1].textContent = siteContent['contact'].address
+contact[2].textContent = siteContent['contact'].phone
+contact[3].textContent = siteContent['contact'].email
+
+let footer = document.querySelector('footer').children
+footer[0].textContent = siteContent['footer'].copyright
