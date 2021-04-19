@@ -8,7 +8,7 @@ Topics:
   * querySelector
   * querySelectorAll
  * NodeList
- * HTMLCollection
+ * HTMLCollections
 
 ## Objectives
  * Manipulate the DOM using JavaScript
