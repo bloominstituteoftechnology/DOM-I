@@ -8,6 +8,7 @@ const siteContent = {
         "nav-item-6": "Contact",
         "img-src": "img/logo.png"
     },
+   
     "cta": {
         "h1": "DOM Is Awesome",
         "button": "Get Started",
@@ -93,3 +94,7 @@ nav.prepend( home );
 const projects = navItem[ 0 ].cloneNode( true );
 projects.textContent = 'ClickBait';
 nav.appendChild( projects );
+
+
+
+

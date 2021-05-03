@@ -48,8 +48,19 @@ ctaImg.src = siteContent.cta[ "img-src" ];
 //* [] Check your work by looking at the[original html](original.html) in the browser
 const nav = document.querySelector( 'nav' );
 const navItem = nav.querySelectorAll( 'a' );
-navItem.textContent = siteContent[ "nav" ][ "nav-item-1" ];
-console.log( `${navItem.textContent}` );
+navItem.textContent = siteContent[ "nav" ][ "nav-item-1" ]
+console.log( navItem.textContent )
 navItem.forEach( ( currentItem ) => {
   currentItem.style.color = 'green';
 } );
+
+
+Message ceyda - yurga
+
+
+
+
+
+
+Thread
+web43_help
