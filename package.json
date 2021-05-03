@@ -1,0 +1,19 @@
+{
+  "name": "dom-i",
+  "version": "1.0.0",
+  "description": "## Project Description",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bgoonz/DOM-I.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bgoonz/DOM-I/issues"
+  },
+  "homepage": "https://github.com/bgoonz/DOM-I#readme"
+}
