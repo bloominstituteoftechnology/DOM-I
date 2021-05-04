@@ -37,6 +37,61 @@ const siteContent = {
   },
 };
 
+const mainH4 = document.querySelectorAll(".text-content h4");
+const mainP = document.querySelectorAll('.text-content p');
+const mainImage = document.getElementById('middle-img');
+
+
+
+mainH4[0].textContent = siteContent['main-content']['features-h4'];
+mainP[0].textContent = siteContent['main-content']["features-content"];
+
+mainH4[1].textContent = siteContent['main-content']['about-h4'];
+mainP[1].textContent = siteContent['main-content']["about-content"];
+
+mainImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+mainH4[2].textContent = siteContent['main-content']['services-h4'];
+mainP[2].textContent = siteContent['main-content']["services-content"];
+
+mainH4[3].textContent = siteContent['main-content']['product-h4'];
+mainP[3].textContent = siteContent['main-content']["product-content"];
+
+mainH4[4].textContent = siteContent['main-content']['vision-h4'];
+mainP[4].textContent = siteContent['main-content']["vision-content"];
+
+
+
+
+
+
+
+
+// _________________________________________________
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+
+
+
+// Upgrading Nav
+const navigation = document.querySelectorAll('nav a');
+navigation[0].textContent = siteContent.nav['nav-item-1'];
+navigation[1].textContent = siteContent.nav['nav-item-2'];
+navigation[2].textContent = siteContent.nav['nav-item-3'];
+navigation[3].textContent = siteContent.nav['nav-item-4'];
+navigation[4].textContent = siteContent.nav['nav-item-5'];
+navigation[5].textContent = siteContent.nav['nav-item-6'];
+
+
+// Updating "section"
+const headerText = document.querySelector('.cta h1')
+headerText.textContent = siteContent.cta.h1;
+
+const headerBtn = document.querySelector('.cta button');
+headerBtn.textContent = siteContent.cta.button;
+
+const headerImg = document.querySelector('#cta-img');
+headerImg.setAttribute('src', siteContent['cta']['img-src']);
