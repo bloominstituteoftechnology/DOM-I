@@ -37,46 +37,16 @@ const siteContent = {
   },
 };
 
-const mainH4 = document.querySelectorAll(".text-content h4");
-const mainP = document.querySelectorAll('.text-content p');
-const mainImage = document.getElementById('middle-img');
-
-
-
-mainH4[0].textContent = siteContent['main-content']['features-h4'];
-mainP[0].textContent = siteContent['main-content']["features-content"];
-
-mainH4[1].textContent = siteContent['main-content']['about-h4'];
-mainP[1].textContent = siteContent['main-content']["about-content"];
-
-mainImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
-
-mainH4[2].textContent = siteContent['main-content']['services-h4'];
-mainP[2].textContent = siteContent['main-content']["services-content"];
-
-mainH4[3].textContent = siteContent['main-content']['product-h4'];
-mainP[3].textContent = siteContent['main-content']["product-content"];
-
-mainH4[4].textContent = siteContent['main-content']['vision-h4'];
-mainP[4].textContent = siteContent['main-content']["vision-content"];
-
-
-
-
-
-
-
-
-// _________________________________________________
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 
+// ______________ NAV BAR __________________
 
 
-// Upgrading Nav
+// Nav selector and adding text via indexing.
 const navigation = document.querySelectorAll('nav a');
 navigation[0].textContent = siteContent.nav['nav-item-1'];
 navigation[1].textContent = siteContent.nav['nav-item-2'];
@@ -86,7 +56,9 @@ navigation[4].textContent = siteContent.nav['nav-item-5'];
 navigation[5].textContent = siteContent.nav['nav-item-6'];
 
 
-// Updating "section"
+// _____________ SECTION CONTAINER ______________
+
+
 const headerText = document.querySelector('.cta h1')
 headerText.textContent = siteContent.cta.h1;
 
@@ -95,3 +67,67 @@ headerBtn.textContent = siteContent.cta.button;
 
 const headerImg = document.querySelector('#cta-img');
 headerImg.setAttribute('src', siteContent['cta']['img-src']);
+
+
+//______________ MAIN CONTENT ____________________
+
+
+// 3 selectors "All H4's, all P's, & the 1 image"
+const mainH4 = document.querySelectorAll(".text-content h4");
+const mainP = document.querySelectorAll('.text-content p');
+const mainImage = document.getElementById('middle-img');
+
+// Adding Features.
+mainH4[0].textContent = siteContent['main-content']['features-h4'];
+mainP[0].textContent = siteContent['main-content']["features-content"];
+
+// Adding About
+mainH4[1].textContent = siteContent['main-content']['about-h4'];
+mainP[1].textContent = siteContent['main-content']["about-content"];
+
+// Adding Image
+mainImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+// Adding Services
+mainH4[2].textContent = siteContent['main-content']['services-h4'];
+mainP[2].textContent = siteContent['main-content']["services-content"];
+
+// Adding Product
+mainH4[3].textContent = siteContent['main-content']['product-h4'];
+mainP[3].textContent = siteContent['main-content']["product-content"];
+
+// Adding Vision
+mainH4[4].textContent = siteContent['main-content']['vision-h4'];
+mainP[4].textContent = siteContent['main-content']["vision-content"];
+
+
+//___________________ CONTACT _______________________
+
+
+// Contact H4 Selector
+const contactH4 = document.querySelector(".contact h4");
+// Contact H4 text.
+contactH4.textContent = siteContent.contact["contact-h4"];
+
+
+// Contact P selector.
+const contactP = document.querySelectorAll('.contact p');
+
+// Contact Address text
+contactP[0].textContent = siteContent.contact.address;
+// Contact Phone text
+contactP[1].textContent = siteContent.contact.phone;
+// Contact Email text
+contactP[2].textContent = siteContent.contact.email;
+
+
+// ________________ FOOTER _________________
+
+
+// Footer P Selector.
+const footerP = document.querySelector('footer p');
+
+// Footer P text.
+footerP.textContent = siteContent.footer.copyright;
+
+// console.log(footerP)
