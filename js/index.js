@@ -61,23 +61,44 @@ const bottomText = bottomContent.querySelectorAll("p");
 const middleImg = document.querySelector("#middle-img");
 const contactHeader = contact.querySelector("h4");
 const contactParas = contact.querySelectorAll("p");
+const newNav1 = document.createElement('a')
+const newNav2 = document.createElement('a')
 
 //Nav
 for (let i = 0; i < navItems.length; i++) {
   navItems[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
 }
 navImg.setAttribute("src", siteContent.nav["img-src"])
+navItems.forEach(element => {
+  element.style.color = 'green'
+})
+newNav1.textContent = 'Blog'
+newNav1.href = 'a'
+nav.appendChild(newNav1)
+newNav1.style.color = 'green'
+
+newNav2.textContent = 'Home'
+newNav2.href = 'a'
+nav.prepend(newNav2)
+newNav2.style.color = 'green'
 
 //CTA
 ctaHeader.textContent = siteContent.cta.h1;
 ctaImg.setAttribute("src", siteContent.cta["img-src"]);
 ctaButton.textContent = siteContent.cta.button;
 
+ctaHeader.style.color = 'purple'
+ctaButton.style.borderColor = 'limegreen'
+ctaButton.style.borderWidth = '5px'
+
 //Top Content 
 topHeaders[0].textContent = siteContent["main-content"]["features-h4"];
 topHeaders[1].textContent = siteContent["main-content"]["about-h4"];
 topText[0].textContent = siteContent["main-content"]["features-content"];
 topText[1].textContent = siteContent["main-content"]["about-content"];
+
+topHeaders[0].style.color = 'blue'
+topHeaders[1].style.color = 'green'
 
 //Bottom Content 
 middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
@@ -88,11 +109,17 @@ bottomText[0].textContent = siteContent["main-content"]["services-content"]
 bottomText[1].textContent = siteContent["main-content"]["product-content"]
 bottomText[2].textContent = siteContent["main-content"]["vision-content"]
 
+bottomHeaders[0].style.color = 'purple'
+bottomHeaders[1].style.color = 'blue'
+bottomHeaders[2].style.color = 'limegreen'
+
 //Contact
 contactHeader.textContent = siteContent.contact["contact-h4"];
 contactParas[0].textContent = siteContent.contact.address;
 contactParas[1].textContent = siteContent.contact.phone;
 contactParas[2].textContent = siteContent.contact.email;
+
+contactHeader.style.textDecoration = 'underline'
 
 //Copyright
 footer.firstChild.textContent = siteContent.footer.copyright;
