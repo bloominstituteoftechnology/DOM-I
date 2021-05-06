@@ -50,7 +50,12 @@ logo.setAttribute("src", siteContent["nav"]["img-src"]);
 const nav = document.querySelector("nav");
 const navItems = nav.querySelectorAll("a");
 const navImg = document.querySelector("#logo-img");
+
 const cta = document.querySelector(".cta");
+const ctaHeader = cta.querySelector("h1");
+const ctaImg = document.querySelector("#cta-img");
+const ctaButton = cta.querySelector("button");
+
 const mainContent = document.querySelector(".main-content");
 const contact = document.querySelector(".contact");
 const footer = document.querySelector("footer");
@@ -60,6 +65,9 @@ for (let i = 0; i < navItems.length; i++) {
   navItems[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
 }
 
-navImg.setAttribute("src", siteContent.nav["img-src"]);//do not know why the image doesn't render - src shows properly in the inspector
+navImg.setAttribute("src", siteContent.nav["img-src"]); //do not know why the image doesn't render - src shows properly in the inspector
 
-
+// Update CTA content
+ctaHeader.textContent = siteContent.cta.h1;
+ctaImg.setAttribute("src", siteContent.cta["img-src"]);
+ctaButton.textContent = siteContent.cta.button;
