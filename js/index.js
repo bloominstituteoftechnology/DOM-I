@@ -99,3 +99,5 @@ contactHeader.textContent = siteContent.contact["contact-h4"];
 contactPs[0].textContent = siteContent.contact.address;
 contactPs[1].textContent = siteContent.contact.phone;
 contactPs[2].textContent = siteContent.contact.email;
+
+footer.firstChild.textContent = siteContent.footer.copyright;
