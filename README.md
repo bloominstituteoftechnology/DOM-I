@@ -55,3 +55,58 @@ This project is heavier on logic but employs some DOM manipulation to achieve it
 **Follow these steps for completing your project.**
 
 * [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's  Repo). **Please don't merge your own pull request**
+
+
+<!-- 
+// let topSection = document.querySelectorAll('.top-content .text-content')
+
+// let top1 = topSection[0].children;
+// let top2 = topSection[1].children;
+
+// let featureHead = top1[0].textContent = (siteContent['main-content']['features-h4'])
+
+// let featureDesc = top1[1].textContent = (siteContent['main-content']['features-content'])
+
+// let aboutHead = top2[0].textContent = (siteContent['main-content']['about-h4'])
+// let aboutDesc = top2[1].textContent = (siteContent['main-content']['about-content'])
+
+let middlePic = document.querySelector('#middle-img').src = siteContent['main-content']['middle-img-src']
+
+// let bottomSection = document.querySelectorAll('.bottom-content .text-content')
+
+// let bottom1 = bottomSection[0].children
+// let bottom2 = bottomSection[1].children
+// let bottom3 = bottomSection[2].children
+
+// let servicesHead = bottom1[0].textContent = (siteContent['main-content']['services-h4'])
+// let servicesDesc = bottom1[1].textContent = (siteContent['main-content']['services-content'])
+
+// let productHead = bottom2[0].textContent = (siteContent['main-content']['product-h4'])
+// let productDesc = bottom2[1].textContent = (siteContent['main-content']['product-content'])
+
+// let visionHead = bottom3[0].textContent = (siteContent['main-content']['vision-h4'])
+// let visionDesc = bottom3[1].textContent = (siteContent['main-content']['vision-content'])
+
+// let contactHead = document.querySelector('.contact h4').textContent = (siteContent['contact']['contact-h4'])
+
+// let contactParas = document.querySelectorAll('.contact p')
+// let contactAddress = contactParas[0].textContent = (siteContent['contact']['address'])
+// let contactNumb = contactParas[1].textContent = (siteContent['contact']['phone'])
+// let contactMail = contactParas[2].textContent = (siteContent['contact']['email'])
+
+// let footer = document.querySelector('footer p').textContent = (siteContent['footer']['copyright'])
+
+// let nav = document.querySelector('nav');
+// function addNav(linkName) {
+//   let newLink = document.createElement('a')
+//   newLink.textContent = (linkName)
+//   nav.appendChild(newLink)
+// }
+
+// addNav('Hello')
+// addNav('New')
+
+
+// navItems.forEach(item => {
+//   item.style.color = "green"
+// }) -->
