@@ -56,7 +56,14 @@ const ctaHeader = cta.querySelector("h1");
 const ctaImg = document.querySelector("#cta-img");
 const ctaButton = cta.querySelector("button");
 
-const mainContent = document.querySelector(".main-content");
+const topContent = document.querySelector(".top-content");
+const topHeaders = topContent.querySelectorAll("h4");
+const topText = topContent.querySelectorAll("p");
+const bottomContent = document.querySelector(".bottom-content");
+const bottomHeaders = bottomContent.querySelectorAll("h4");
+const bottomText = bottomContent.querySelectorAll("p");
+const middleImg = document.querySelector("#middle-img");
+
 const contact = document.querySelector(".contact");
 const footer = document.querySelector("footer");
 
@@ -73,13 +80,6 @@ ctaImg.setAttribute("src", siteContent.cta["img-src"]);
 ctaButton.textContent = siteContent.cta.button;
 
 // Update Main content
-const topContent = document.querySelector(".top-content");
-const bottomContent = document.querySelector(".bottom-content");
-const topHeaders = topContent.querySelectorAll("h4");
-const bottomHeaders = bottomContent.querySelectorAll("h4");
-const topText = topContent.querySelectorAll("p");
-const bottomText = bottomContent.querySelectorAll("p");
-const middleImg = document.querySelector("#middle-img");
 topHeaders[0].textContent = siteContent["main-content"]["features-h4"];
 topHeaders[1].textContent = siteContent["main-content"]["about-h4"];
 topText[0].textContent = siteContent["main-content"]["features-content"];
@@ -88,6 +88,14 @@ middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 bottomHeaders[0].textContent = siteContent["main-content"]["services-h4"];
 bottomHeaders[1].textContent = siteContent["main-content"]["product-h4"];
 bottomHeaders[2].textContent = siteContent["main-content"]["vision-h4"];
-bottomText[0].textContent = siteContent["main-content"]["services-content"]
-bottomText[1].textContent = siteContent["main-content"]["product-content"]
-bottomText[2].textContent = siteContent["main-content"]["vision-content"]
+bottomText[0].textContent = siteContent["main-content"]["services-content"];
+bottomText[1].textContent = siteContent["main-content"]["product-content"];
+bottomText[2].textContent = siteContent["main-content"]["vision-content"];
+
+// Update Contact section
+const contactHeader = contact.querySelector("h4");
+const contactPs = contact.querySelectorAll("p");
+contactHeader.textContent = siteContent.contact["contact-h4"];
+contactPs[0].textContent = siteContent.contact.address;
+contactPs[1].textContent = siteContent.contact.phone;
+contactPs[2].textContent = siteContent.contact.email;
