@@ -43,14 +43,56 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //Selectors
 const nav = document.querySelector("nav");
+const navItems = nav.querySelectorAll("a");
+const navImg = document.querySelector("#logo-img");
 const cta = document.querySelector(".cta");
+const ctaHeader = cta.querySelector("h1");
+const ctaImg = document.querySelector("#cta-img");
+const ctaButton = cta.querySelector("button");
 const mainContent = document.querySelector(".main-content");
 const contact = document.querySelector(".contact");
 const footer = document.querySelector("footer");
+const topContent = document.querySelector(".top-content");
+const bottomContent = document.querySelector(".bottom-content");
+const topHeaders = topContent.querySelectorAll("h4");
+const bottomHeaders = bottomContent.querySelectorAll("h4");
+const topText = topContent.querySelectorAll("p");
+const bottomText = bottomContent.querySelectorAll("p");
+const middleImg = document.querySelector("#middle-img");
+const contactHeader = contact.querySelector("h4");
+const contactParas = contact.querySelectorAll("p");
 
 //Nav
-const navItems = nav.querySelectorAll("a");
 for (let i = 0; i < navItems.length; i++) {
   navItems[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
 }
+navImg.setAttribute("src", siteContent.nav["img-src"])
 
+//CTA
+ctaHeader.textContent = siteContent.cta.h1;
+ctaImg.setAttribute("src", siteContent.cta["img-src"]);
+ctaButton.textContent = siteContent.cta.button;
+
+//Top Content 
+topHeaders[0].textContent = siteContent["main-content"]["features-h4"];
+topHeaders[1].textContent = siteContent["main-content"]["about-h4"];
+topText[0].textContent = siteContent["main-content"]["features-content"];
+topText[1].textContent = siteContent["main-content"]["about-content"];
+
+//Bottom Content 
+middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+bottomHeaders[0].textContent = siteContent["main-content"]["services-h4"];
+bottomHeaders[1].textContent = siteContent["main-content"]["product-h4"];
+bottomHeaders[2].textContent = siteContent["main-content"]["vision-h4"];
+bottomText[0].textContent = siteContent["main-content"]["services-content"]
+bottomText[1].textContent = siteContent["main-content"]["product-content"]
+bottomText[2].textContent = siteContent["main-content"]["vision-content"]
+
+//Contact
+contactHeader.textContent = siteContent.contact["contact-h4"];
+contactParas[0].textContent = siteContent.contact.address;
+contactParas[1].textContent = siteContent.contact.phone;
+contactParas[2].textContent = siteContent.contact.email;
+
+//Copyright
+footer.firstChild.textContent = siteContent.footer.copyright;
