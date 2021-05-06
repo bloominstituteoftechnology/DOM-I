@@ -45,12 +45,15 @@ const nav = document.querySelectorAll('header nav a');
 
 nav.forEach((a, index) => {
   a.textContent = siteContent['nav']['nav-item-' +(index + 1)];
+  a.style.color = 'green'
 })
+
 
 let domH1 = document.querySelector('h1')
 domH1.textContent = siteContent['cta']['h1']
 let button =document.querySelector('button')
 button.textContent = siteContent['cta']['button']
+button.borderRadius = '4 px'
 let ctaImg = document.querySelector("#cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
 
@@ -96,6 +99,7 @@ contactH4.textContent = siteContent['contact']['contact-h4']
 let address = document.querySelector('.contact p:nth-child(2)')
 address.textContent = siteContent['contact']['address']
 
+
 let phone =document.querySelector('.contact p:nth-child(3)')
 phone.textContent = siteContent['contact']['phone']
 
@@ -105,3 +109,29 @@ email.textContent = siteContent['contact']['email']
 
 let footer = document.querySelector('footer p')
 footer.textContent = siteContent['footer']['copyright']
+
+let newLink = document.createElement('a')
+newLink.classList.add('nav-item-7')
+newLink.textContent  = 'Blog'
+document.querySelector('nav').prepend(newLink)
+
+let newLink2 = document.createElement('a')
+newLink2.classList.add('nav-item-8')
+newLink2.textContent  = 'Help'
+document.querySelector('nav').appendChild(newLink2)
+
+
+
+const mainText = document.querySelectorAll('.main-content .text-content p')
+mainText.forEach(ele =>{
+  ele.style.color = 'hotpink'
+  ele.style.backgroundColor = 'blue' })
+
+  const mainHeader = document.querySelectorAll('.main-content .text-content h4')
+  mainHeader.forEach(ele2 => {
+    ele2.style.color = 'red'
+    ele2.style.backgroundColor ='yellow'
+})
+
+
+
