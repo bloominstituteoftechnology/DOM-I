@@ -65,6 +65,9 @@ const bottomText = bottomContent.querySelectorAll("p");
 const middleImg = document.querySelector("#middle-img");
 
 const contact = document.querySelector(".contact");
+const contactHeader = contact.querySelector("h4");
+const contactPs = contact.querySelectorAll("p");
+
 const footer = document.querySelector("footer");
 
 // Update Header content
@@ -93,11 +96,22 @@ bottomText[1].textContent = siteContent["main-content"]["product-content"];
 bottomText[2].textContent = siteContent["main-content"]["vision-content"];
 
 // Update Contact section
-const contactHeader = contact.querySelector("h4");
-const contactPs = contact.querySelectorAll("p");
 contactHeader.textContent = siteContent.contact["contact-h4"];
 contactPs[0].textContent = siteContent.contact.address;
 contactPs[1].textContent = siteContent.contact.phone;
 contactPs[2].textContent = siteContent.contact.email;
 
 footer.firstChild.textContent = siteContent.footer.copyright;
+
+// Adding new content
+for (let i = 0; i < navItems.length; i++) {
+  navItems[i].style.color = "green";
+}
+const newLink1 = document.createElement("a");
+newLink1.textContent = "Foo";
+newLink1.style.color = "green";
+nav.prepend(newLink1);
+const newLink2 = document.createElement("a");
+newLink2.textContent = "Bar";
+newLink2.style.color = "green";
+nav.appendChild(newLink2);
