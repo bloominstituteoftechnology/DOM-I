@@ -65,7 +65,7 @@ for (let i = 0; i < navItems.length; i++) {
   navItems[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
 }
 
-navImg.setAttribute("src", siteContent.nav["img-src"]); //do not know why the image doesn't render - src shows properly in the inspector
+navImg.setAttribute("src", siteContent.nav["img-src"]);
 
 // Update CTA content
 ctaHeader.textContent = siteContent.cta.h1;
@@ -79,7 +79,15 @@ const topHeaders = topContent.querySelectorAll("h4");
 const bottomHeaders = bottomContent.querySelectorAll("h4");
 const topText = topContent.querySelectorAll("p");
 const bottomText = bottomContent.querySelectorAll("p");
+const middleImg = document.querySelector("#middle-img");
 topHeaders[0].textContent = siteContent["main-content"]["features-h4"];
 topHeaders[1].textContent = siteContent["main-content"]["about-h4"];
 topText[0].textContent = siteContent["main-content"]["features-content"];
 topText[1].textContent = siteContent["main-content"]["about-content"];
+middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+bottomHeaders[0].textContent = siteContent["main-content"]["services-h4"];
+bottomHeaders[1].textContent = siteContent["main-content"]["product-h4"];
+bottomHeaders[2].textContent = siteContent["main-content"]["vision-h4"];
+bottomText[0].textContent = siteContent["main-content"]["services-content"]
+bottomText[1].textContent = siteContent["main-content"]["product-content"]
+bottomText[2].textContent = siteContent["main-content"]["vision-content"]
