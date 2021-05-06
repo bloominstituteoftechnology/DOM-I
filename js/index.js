@@ -71,3 +71,15 @@ navImg.setAttribute("src", siteContent.nav["img-src"]); //do not know why the im
 ctaHeader.textContent = siteContent.cta.h1;
 ctaImg.setAttribute("src", siteContent.cta["img-src"]);
 ctaButton.textContent = siteContent.cta.button;
+
+// Update Main content
+const topContent = document.querySelector(".top-content");
+const bottomContent = document.querySelector(".bottom-content");
+const topHeaders = topContent.querySelectorAll("h4");
+const bottomHeaders = bottomContent.querySelectorAll("h4");
+const topText = topContent.querySelectorAll("p");
+const bottomText = bottomContent.querySelectorAll("p");
+topHeaders[0].textContent = siteContent["main-content"]["features-h4"];
+topHeaders[1].textContent = siteContent["main-content"]["about-h4"];
+topText[0].textContent = siteContent["main-content"]["features-content"];
+topText[1].textContent = siteContent["main-content"]["about-content"];
