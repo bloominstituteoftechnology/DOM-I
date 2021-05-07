@@ -40,3 +40,44 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const headerImg = document.getElementById('cta-img');
+headerImg.setAttribute('src', siteContent['cta']['img-src'])
+
+const midImg = document.getElementById('middle-img');
+midImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+// const link1 = document.querySelector(('nav')[0])
+// console.log(link1)
+// links1.textContent = (siteContent['nav'][0])
+// linksArray.textContent = (siteContent['nav'])
+
+
+const ctaText = document.querySelector('.cta h1')
+console.log(ctaText)
+ctaText.textContent = (siteContent['cta']['h1'])
+
+const ctaButton = document.querySelector('.cta button')
+console.log(ctaButton)
+ctaButton.textContent = (siteContent['cta']['button'])
+
+const features = document.querySelector('.text-content h4')
+console.log(features)
+features.textContent = (siteContent['main-content']['features-h4'])
+
+const featuresTxt = document.querySelector('.text-content p')
+featuresTxt.textContent = (siteContent['main-content']['features-content'])
+
+// const about = document.querySelector('.top-content h4')
+// about.textContent = (siteContent['main-content']['about-h4'])
+
+
+
+
+
+
+
+
+
+
+
