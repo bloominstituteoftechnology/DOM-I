@@ -97,6 +97,8 @@ document.querySelector(".middle-img").setAttribute("src", "img/mid-page-accent.j
 
 let contacts = document.querySelector(".contact").children
 let contactValues = Object.values(siteContent.contact)
-for (let i=0; i<contacts.length;) {
+for (let i=0; i<contacts.length; i++) {
   contacts[i].textContent = contactValues[i]
 }
+
+document.querySelector("footer > p").textContent = siteContent.footer.copyright
