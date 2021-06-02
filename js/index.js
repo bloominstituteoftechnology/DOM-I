@@ -40,3 +40,65 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let navTags = document.querySelectorAll("nav > a");
+
+for (let i=1; i<navTags.length; i++) {
+  navTags[i].textContent = siteContent.nav["nav-item-" + i]
+}
+
+let ctaChild1 = document.getElementsByClassName("cta-text")[0]
+let ctaText = ctaChild1.querySelector("h1");
+let ctaButton = ctaChild1.querySelector("button");
+
+ctaText.innerHTML = "DOM<br> Is<br> Awesome"
+ctaButton.textContent = "Get Started";
+
+let ctaSection = document.getElementsByClassName("cta")[0];
+let ctaImg = ctaSection.querySelector("img")
+ctaImg.setAttribute("src", "img/header-img.png")
+
+let topContent = document.querySelector(".top-content");
+let textSections1 = document.querySelectorAll(".top-content > .text-content");
+let textSections2 = document.querySelectorAll(".bottom-content > .text-content");
+// let 
+// textContent1.innertext = siteContent["main-content"]["features-h4"]
+let mainContentValues = Object.values(siteContent["main-content"]);
+(function() {
+  let i = 0;
+  let textSection = textSections1[0];
+  textSection.querySelector("h4").textContent = mainContentValues[i];;
+  i++;
+  textSection.querySelector("p").textContent = mainContentValues[i];
+  i++
+  textSection = textSections1[1];
+  textSection.querySelector("h4").textContent = mainContentValues[i];
+  i++;
+  textSection.querySelector("p").textContent = mainContentValues[i];
+  i++
+  textSection = textSections2[0];
+  i++
+  textSection.querySelector("h4").textContent = mainContentValues[i];;
+  i++;
+  textSection.querySelector("p").textContent = mainContentValues[i];
+  i++
+  textSection = textSections2[1];
+  textSection.querySelector("h4").textContent = mainContentValues[i];
+  i++;
+  textSection.querySelector("p").textContent = mainContentValues[i];
+  i++
+  textSection = textSections2[2];
+  textSection.querySelector("h4").textContent = mainContentValues[i];
+  i++;
+  textSection.querySelector("p").textContent = mainContentValues[i];
+})();
+
+document.querySelector(".middle-img").setAttribute("src", "img/mid-page-accent.jpg")
+
+let contacts = document.querySelector(".contact").children
+let contactValues = Object.values(siteContent.contact)
+for (let i=0; i<contacts.length; i++) {
+  contacts[i].textContent = contactValues[i]
+}
+
+document.querySelector("footer > p").textContent = siteContent.footer.copyright
