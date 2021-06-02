@@ -40,3 +40,68 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// *** the missing nav bar ***
+// first set navAnchors to be an array of all the anchor tags
+// within the nav so they can be indexed and modified
+let navAnchors = document.querySelectorAll('nav a')
+
+// each navAnchors index gets its text content from siteContent
+// indexed to nav with the corresponding index for the text!
+navAnchors[0].textContent = siteContent['nav']['nav-item-1']
+navAnchors[1].textContent = siteContent['nav']['nav-item-2']
+navAnchors[2].textContent = siteContent['nav']['nav-item-3']
+navAnchors[3].textContent = siteContent['nav']['nav-item-4']
+navAnchors[4].textContent = siteContent['nav']['nav-item-5']
+navAnchors[5].textContent = siteContent['nav']['nav-item-6']
+
+// *** the missing cta section ***
+// selecting and updating the h1
+let h1Text = document.querySelector('h1')
+h1Text.textContent = siteContent['cta']['h1']
+
+// select and update the button
+let ctaButton = document.querySelector('button')
+ctaButton.textContent = siteContent['cta']['button']
+
+// cta img update
+let ctaImg = document.querySelector('#cta-img')
+ctaImg.src = siteContent['cta']['img-src']
+
+// *** the missing content ***
+// indexing the content will come from these selectors
+let h4Content = document.querySelectorAll('div h4')
+let pContent = document.querySelectorAll('div p')
+let midImg = document.querySelector('#middle-img')
+
+// updating the content and the img in the middle
+// main content
+h4Content[0].textContent = siteContent['main-content']['features-h4']
+pContent[0].textContent = siteContent['main-content']['features-content']
+h4Content[1].textContent = siteContent['main-content']['about-h4']
+pContent[1].textContent = siteContent['main-content']['about-content']
+
+// middle img
+midImg.src = siteContent['main-content']['middle-img-src']
+
+// main content after img
+h4Content[2].textContent = siteContent['main-content']['services-h4']
+pContent[2].textContent = siteContent['main-content']['services-content']
+h4Content[3].textContent = siteContent['main-content']['product-h4']
+pContent[3].textContent = siteContent['main-content']['product-content']
+h4Content[4].textContent = siteContent['main-content']['vision-h4']
+pContent[4].textContent = siteContent['main-content']['vision-content']
+
+// *** the missing contacts section and footer***
+// selecting the elements in the contact
+let contactSection = document.querySelector('.contact')
+let h4Contact = contactSection.querySelector('h4')
+let indexPs = contactSection.querySelectorAll('p')
+let pFooter = document.querySelector('footer p')
+
+// updating missing text
+h4Contact.textContent = siteContent['contact']['contact-h4']
+indexPs[0].textContent = siteContent['contact']['address']
+indexPs[1].textContent = siteContent['contact']['phone']
+indexPs[2].textContent = siteContent['contact']['email']
+pFooter.textContent = siteContent['footer']['copyright']
