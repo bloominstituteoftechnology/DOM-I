@@ -59,6 +59,7 @@ topImg.setAttribute("src", siteContent["cta"]["img-src"]);
 
 let ctaH1 = document.querySelector("h1");
 ctaH1.textContent = siteContent["cta"]["h1"];
+ctaH1.style.setProperty("width", "40%");
 
 let ctaButton = document.querySelector("button");
 ctaButton.textContent = siteContent["cta"]["button"];
