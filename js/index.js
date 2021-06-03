@@ -58,7 +58,8 @@ navAnchors[5].textContent = siteContent['nav']['nav-item-6']
 // *** the missing cta section ***
 // selecting and updating the h1
 let h1Text = document.querySelector('h1')
-h1Text.textContent = siteContent['cta']['h1']
+let h1Split = siteContent['cta']['h1'].split(' ')
+h1Text.innerHTML = `${h1Split[0]}<br>${h1Split[1]}<br>${h1Split[2]}`
 
 // select and update the button
 let ctaButton = document.querySelector('button')
@@ -101,7 +102,10 @@ let pFooter = document.querySelector('footer p')
 
 // updating missing text
 h4Contact.textContent = siteContent['contact']['contact-h4']
-indexPs[0].textContent = siteContent['contact']['address']
+// the adress needs a br tag to put the city/state below the street adress
+// retrieve site content and split then add each 'word' and spaces then a br before the city at index 4
+let index0pSplit = siteContent['contact']['address'].split(' ')
+indexPs[0].innerHTML = `${index0pSplit[0]} ${index0pSplit[1]} ${index0pSplit[2]} ${index0pSplit[3]}<br>${index0pSplit[4]} ${index0pSplit[5]}`
 indexPs[1].textContent = siteContent['contact']['phone']
 indexPs[2].textContent = siteContent['contact']['email']
 pFooter.textContent = siteContent['footer']['copyright']
