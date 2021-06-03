@@ -39,7 +39,7 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 
-//* nav bar section 
+//* NavBar section 
 // sets nav bar logo img
 document
 	.getElementById("logo-img")
@@ -59,6 +59,13 @@ document.querySelectorAll(".container a")[4].textContent =
 document.querySelectorAll(".container a")[5].textContent =
 	siteContent.nav["nav-item-5"];
 
+let navButtons = document.querySelectorAll(".container a")
+
+for (var i = 0, max = navButtons.length; i < max; i++) {
+  navButtons[i].style.color = "#2E88B6";
+}
+
+//* CTA Section
 // sets cta text. Used inner html and += to experiment with ways to use line breaks
 document.querySelector(".cta-text h1").innerHTML = "DOM <br />";
 document.querySelector(".cta-text h1").innerHTML += "Is <br />";
@@ -70,12 +77,51 @@ document
 // sets cta button text 
 document.querySelector(".cta-text button").textContent = siteContent.cta.button;
 
+
+//* Main content Section
+//sets features h4
 document.querySelector(".top-content .text-content h4").textContent =
 	siteContent["main-content"]["features-h4"];
+//sets features paragraph 
 document.querySelector(".top-content .text-content p").textContent =
 	siteContent["main-content"]["features-content"];
-
+//sets about h4
 document.querySelectorAll(".top-content .text-content h4")[1].textContent =
 	siteContent["main-content"]["about-h4"];
+//sets about paragraph 
 document.querySelectorAll(".top-content .text-content p")[1].textContent =
 	siteContent["main-content"]["about-content"];
+//sets cta img src
+document.querySelector("#middle-img").setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+//sets bottom services h4
+document.querySelectorAll(".bottom-content .text-content h4")[0].textContent =
+	siteContent["main-content"]["services-h4"];
+//sets services p content 
+  document.querySelectorAll(".bottom-content .text-content p")[0].textContent =
+	siteContent["main-content"]["services-content"];
+  //sets bottom product h4
+document.querySelectorAll(".bottom-content .text-content h4")[1].textContent =
+siteContent["main-content"]["product-h4"];
+//sets product p content 
+document.querySelectorAll(".bottom-content .text-content p")[1].textContent =
+siteContent["main-content"]["product-content"];
+ //sets bottom vision h4
+ document.querySelectorAll(".bottom-content .text-content h4")[2].textContent =
+ siteContent["main-content"]["vision-h4"];
+ //sets product p vision  
+ document.querySelectorAll(".bottom-content .text-content p")[2].textContent =
+ siteContent["main-content"]["vision-content"];
+
+ //* Contact Section 
+ // sets h4   
+ document.querySelector(".contact h4").textContent = siteContent.contact["contact-h4"]
+ //sets p tags 
+ document.querySelectorAll(".contact p")[0].textContent = siteContent.contact.address
+ 
+ document.querySelectorAll(".contact p")[1].textContent = siteContent.contact.phone
+ 
+ document.querySelectorAll(".contact p")[2].textContent =
+		siteContent.contact.email; 
+
+//* Footer Section 
+document.querySelector("footer p").textContent = siteContent.footer.copyright
