@@ -38,5 +38,44 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//* nav bar section 
+// sets nav bar logo img
+document
+	.getElementById("logo-img")
+	.setAttribute("src", siteContent.nav["img-src"]);
+
+// sets nav bar items text
+document.querySelectorAll(".container a")[0].textContent =
+	siteContent.nav["nav-item-1"];
+document.querySelectorAll(".container a")[1].textContent =
+	siteContent.nav["nav-item-1"];
+document.querySelectorAll(".container a")[2].textContent =
+	siteContent.nav["nav-item-2"];
+document.querySelectorAll(".container a")[3].textContent =
+	siteContent.nav["nav-item-3"];
+document.querySelectorAll(".container a")[4].textContent =
+	siteContent.nav["nav-item-4"];
+document.querySelectorAll(".container a")[5].textContent =
+	siteContent.nav["nav-item-5"];
+
+// sets cta text. Used inner html and += to experiment with ways to use line breaks
+document.querySelector(".cta-text h1").innerHTML = "DOM <br />";
+document.querySelector(".cta-text h1").innerHTML += "Is <br />";
+document.querySelector(".cta-text h1").innerHTML += "Awesome";
+// sets cta img 
+document
+	.getElementById("cta-img")
+	.setAttribute("src", siteContent.cta["img-src"]);
+// sets cta button text 
+document.querySelector(".cta-text button").textContent = siteContent.cta.button;
+
+document.querySelector(".top-content .text-content h4").textContent =
+	siteContent["main-content"]["features-h4"];
+document.querySelector(".top-content .text-content p").textContent =
+	siteContent["main-content"]["features-content"];
+
+document.querySelectorAll(".top-content .text-content h4")[1].textContent =
+	siteContent["main-content"]["about-h4"];
+document.querySelectorAll(".top-content .text-content p")[1].textContent =
+	siteContent["main-content"]["about-content"];
