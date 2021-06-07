@@ -68,3 +68,7 @@ aboutH4[1].textContent = siteContent["main-content"]["about-h4"]
 const aboutPar = document.querySelectorAll(".text-content p")
 aboutPar[1].textContent = siteContent["main-content"]["about-content"]
 
+const middleImg = document.querySelector(".middle-img")
+middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"])
+
+
