@@ -56,6 +56,7 @@ ctaButton.textContent = siteContent["cta"]["button"]
 const ctaImg = document.querySelector("#cta-img")
 ctaImg.setAttribute("src", siteContent["cta"]["img-src"])
 
+//main content before codes graphic
 const featureH4 = document.querySelectorAll(".text-content h4")
 featureH4[0].textContent = siteContent["main-content"]["features-h4"]
 
@@ -68,7 +69,26 @@ aboutH4[1].textContent = siteContent["main-content"]["about-h4"]
 const aboutPar = document.querySelectorAll(".text-content p")
 aboutPar[1].textContent = siteContent["main-content"]["about-content"]
 
+//code graphic
 const middleImg = document.querySelector(".middle-img")
 middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"])
 
+//bottom content
+const servicesH4 = document.querySelectorAll(".text-content h4")
+servicesH4[2].textContent = siteContent["main-content"]["services-h4"]
+
+const servicesPar = document.querySelectorAll(".text-content p")
+servicesPar[2].textContent = siteContent["main-content"]["services-content"]
+
+const productH4 = document.querySelectorAll(".text-content h4")
+productH4[3].textContent = siteContent["main-content"]["product-h4"]
+
+const productPar = document.querySelectorAll(".text-content p")
+productPar[3].textContent = siteContent["main-content"]["product-content"]
+
+const visionH4 = document.querySelectorAll(".text-content h4")
+visionH4[4].textContent = siteContent["main-content"]["vision-h4"]
+
+const visionPar = document.querySelectorAll(".text-content p")
+visionPar[4].textContent = siteContent["main-content"]["vision-content"]
 
