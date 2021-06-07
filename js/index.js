@@ -36,7 +36,25 @@ const siteContent = {
     "copyright" : "Copyright Great Idea! 2018"
   },
 };
-const x = steve;
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const navLinks = document.querySelectorAll("nav a")
+ 
+navLinks.forEach((links, index) => {
+  links.textContent = siteContent["nav"]["nav-item-" + (index + 1)]
+})
+
+const ctaHeader = document.getElementsByClassName("cta-text")
+ctaHeader.textContent = siteContent["cta"]["h1"]
+
+const ctaButton = document.querySelector("div button")
+ctaButton.textContent = siteContent["cta"]["button"]
+
+const ctaImg = document.querySelector("#cta-img")
+ctaImg.setAttribute("src", siteContent["cta"]["img-src"])
+
+const topContent = document.querySelector(".text-content h4")
+topContent.textContent = siteContent["main-content"]["features-h4"]
