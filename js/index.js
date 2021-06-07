@@ -47,7 +47,7 @@ navLinks.forEach((links, index) => {
   links.textContent = siteContent["nav"]["nav-item-" + (index + 1)]
 })
 
-const ctaHeader = document.getElementsByClassName("cta-text")
+const ctaHeader = document.querySelector(".cta-text h1")
 ctaHeader.textContent = siteContent["cta"]["h1"]
 
 const ctaButton = document.querySelector("div button")
@@ -56,5 +56,15 @@ ctaButton.textContent = siteContent["cta"]["button"]
 const ctaImg = document.querySelector("#cta-img")
 ctaImg.setAttribute("src", siteContent["cta"]["img-src"])
 
-const topContent = document.querySelector(".text-content h4")
-topContent.textContent = siteContent["main-content"]["features-h4"]
+const featureH4 = document.querySelectorAll(".text-content h4")
+featureH4[0].textContent = siteContent["main-content"]["features-h4"]
+
+const featurePar = document.querySelectorAll(".text-content p")
+featurePar[0].textContent = siteContent["main-content"]["features-content"]
+
+const aboutH4 = document.querySelectorAll(".text-content h4")
+aboutH4[1].textContent = siteContent["main-content"]["about-h4"]
+
+const aboutPar = document.querySelectorAll(".text-content p")
+aboutPar[1].textContent = siteContent["main-content"]["about-content"]
+
