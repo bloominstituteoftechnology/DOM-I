@@ -102,7 +102,10 @@ const contactPhone = document.querySelectorAll(".contact p")
 contactPhone[1].textContent = siteContent["contact"]["phone"]
 
 const contactEmail = document.querySelectorAll(".contact p")
-contactEmail[2].textContent = siteContent ["contact"]["email"]
+contactEmail[2].textContent = siteContent["contact"]["email"]
+
+const footer = document.querySelector("footer")
+footer.textContent = siteContent ["footer"] ["copyright"]
 
 
 
