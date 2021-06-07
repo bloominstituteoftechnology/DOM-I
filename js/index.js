@@ -40,3 +40,73 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const navLinks = document.querySelectorAll("nav a")
+ 
+navLinks.forEach((links, index) => {
+  links.textContent = siteContent["nav"]["nav-item-" + (index + 1)]
+})
+
+const ctaHeader = document.querySelector(".cta-text h1")
+ctaHeader.textContent = siteContent["cta"]["h1"]
+
+const ctaButton = document.querySelector("div button")
+ctaButton.textContent = siteContent["cta"]["button"]
+
+const ctaImg = document.querySelector("#cta-img")
+ctaImg.setAttribute("src", siteContent["cta"]["img-src"])
+
+//main content before codes graphic
+const featureH4 = document.querySelectorAll(".text-content h4")
+featureH4[0].textContent = siteContent["main-content"]["features-h4"]
+
+const featurePar = document.querySelectorAll(".text-content p")
+featurePar[0].textContent = siteContent["main-content"]["features-content"]
+
+const aboutH4 = document.querySelectorAll(".text-content h4")
+aboutH4[1].textContent = siteContent["main-content"]["about-h4"]
+
+const aboutPar = document.querySelectorAll(".text-content p")
+aboutPar[1].textContent = siteContent["main-content"]["about-content"]
+
+//code graphic
+const middleImg = document.querySelector(".middle-img")
+middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"])
+
+//bottom content
+const servicesH4 = document.querySelectorAll(".text-content h4")
+servicesH4[2].textContent = siteContent["main-content"]["services-h4"]
+
+const servicesPar = document.querySelectorAll(".text-content p")
+servicesPar[2].textContent = siteContent["main-content"]["services-content"]
+
+const productH4 = document.querySelectorAll(".text-content h4")
+productH4[3].textContent = siteContent["main-content"]["product-h4"]
+
+const productPar = document.querySelectorAll(".text-content p")
+productPar[3].textContent = siteContent["main-content"]["product-content"]
+
+const visionH4 = document.querySelectorAll(".text-content h4")
+visionH4[4].textContent = siteContent["main-content"]["vision-h4"]
+
+const visionPar = document.querySelectorAll(".text-content p")
+visionPar[4].textContent = siteContent["main-content"]["vision-content"]
+
+const contactH4 = document.querySelector(".contact h4")
+contactH4.textContent = siteContent ["contact"]["contact-h4"]
+
+const contactAddress = document.querySelectorAll(".contact p")
+contactAddress[0].textContent = siteContent["contact"]["address"]
+
+const contactPhone = document.querySelectorAll(".contact p")
+contactPhone[1].textContent = siteContent["contact"]["phone"]
+
+const contactEmail = document.querySelectorAll(".contact p")
+contactEmail[2].textContent = siteContent["contact"]["email"]
+
+const footer = document.querySelector("footer")
+footer.textContent = siteContent ["footer"] ["copyright"]
+
+
+
+
