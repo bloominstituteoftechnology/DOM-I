@@ -92,3 +92,18 @@ visionH4[4].textContent = siteContent["main-content"]["vision-h4"]
 const visionPar = document.querySelectorAll(".text-content p")
 visionPar[4].textContent = siteContent["main-content"]["vision-content"]
 
+const contactH4 = document.querySelector(".contact h4")
+contactH4.textContent = siteContent ["contact"]["contact-h4"]
+
+const contactAddress = document.querySelectorAll(".contact p")
+contactAddress[0].textContent = siteContent["contact"]["address"]
+
+const contactPhone = document.querySelectorAll(".contact p")
+contactPhone[1].textContent = siteContent["contact"]["phone"]
+
+const contactEmail = document.querySelectorAll(".contact p")
+contactEmail[2].textContent = siteContent ["contact"]["email"]
+
+
+
+
