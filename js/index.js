@@ -77,7 +77,7 @@ navImg.setAttribute("src", siteContent.nav["img-src"]);
 navItems.forEach((element) => {
   element.style.color = "green";
 });
-newNav1.textContent = "Blog";
+newNav1.textContent = "Contribute";
 newNav1.href = "a";
 nav.appendChild(newNav1);
 newNav1.style.color = "green";
