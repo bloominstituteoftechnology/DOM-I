@@ -106,3 +106,16 @@ topHeaders[0].style.color = "crimson";
 topHeaders[1].style.color = "crimson";
 
 //Bottom Content
+middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+bottomHeaders[0].textContent = siteContent["main-content"]["services-h4"];
+bottomHeaders[1].textContent = siteContent["main-content"]["product-h4"];
+bottomHeaders[2].textContent = siteContent["main-content"]["vision-h4"];
+bottomText[0].textContent = siteContent["main-content"]["services-content"];
+bottomText[1].textContent = siteContent["main-content"]["product-content"];
+bottomText[2].textContent = siteContent["main-content"]["vision-content"];
+
+bottomHeaders[0].style.color = "crimson";
+bottomHeaders[1].style.color = "crimson";
+bottomHeaders[2].style.color = "crimson";
+
+//Contact
