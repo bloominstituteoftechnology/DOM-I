@@ -119,3 +119,15 @@ bottomHeaders[1].style.color = "crimson";
 bottomHeaders[2].style.color = "crimson";
 
 //Contact
+contactHeader.textContent = siteContent.contact["contact-h4"];
+contactParas[0].textContent = siteContent.contact.address;
+contactParas[1].textContent = siteContent.contact.phone;
+contactParas[2].textContent = siteContent.contact.email;
+
+contactHeader.style.textDecoration = "underline";
+contactHeader.style.color = "crimson";
+
+//Copyright
+footer.firstChild.textContent = siteContent.footer.copyright;
+
+footer.style.color = "crimson";
