@@ -46,19 +46,19 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
-// selectors
+//Selectors
 const nav = document.querySelector("nav");
 const navItems = nav.querySelectorAll("a");
 const navImg = document.querySelector("#logo-img");
 const cta = document.querySelector(".cta");
 const ctaHeader = cta.querySelector("h1");
-const ctaImg = document.querySelector("button");
+const ctaImg = document.querySelector("#cta-img");
 const ctaButton = cta.querySelector("button");
 const mainContent = document.querySelector(".main-content");
 const contact = document.querySelector(".contact");
 const footer = document.querySelector("footer");
 const topContent = document.querySelector(".top-content");
-const bottomContent = document.querySelector(".bottom-center");
+const bottomContent = document.querySelector(".bottom-content");
 const topHeaders = topContent.querySelectorAll("h4");
 const bottomHeaders = bottomContent.querySelectorAll("h4");
 const topText = topContent.querySelectorAll("p");
@@ -67,6 +67,42 @@ const middleImg = document.querySelector("#middle-img");
 const contactHeader = contact.querySelector("h4");
 const contactParas = contact.querySelectorAll("p");
 const newNav1 = document.createElement("a");
-const newNav2 = doc.createElement("a");
+const newNav2 = document.createElement("a");
 
-// nav links
+//Nav
+for (let i = 0; i < navItems.length; i++) {
+  navItems[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
+}
+navImg.setAttribute("src", siteContent.nav["img-src"]);
+navItems.forEach((element) => {
+  element.style.color = "green";
+});
+newNav1.textContent = "Blog";
+newNav1.href = "a";
+nav.appendChild(newNav1);
+newNav1.style.color = "green";
+
+newNav2.textContent = "Home";
+newNav2.href = "a";
+nav.prepend(newNav2);
+newNav2.style.color = "green";
+
+//CTA
+ctaHeader.textContent = siteContent.cta.h1;
+ctaImg.setAttribute("src", siteContent.cta["img-src"]);
+ctaButton.textContent = siteContent.cta.button;
+
+ctaHeader.style.color = "crimson";
+ctaButton.style.borderColor = "crimson";
+ctaButton.style.borderWidth = "5px";
+
+//Top Content
+topHeaders[0].textContent = siteContent["main-content"]["features-h4"];
+topHeaders[1].textContent = siteContent["main-content"]["about-h4"];
+topText[0].textContent = siteContent["main-content"]["features-content"];
+topText[1].textContent = siteContent["main-content"]["about-content"];
+
+topHeaders[0].style.color = "crimson";
+topHeaders[1].style.color = "crimson";
+
+//Bottom Content
