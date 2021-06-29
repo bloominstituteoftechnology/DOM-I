@@ -1,5 +1,19 @@
 # DOM I - JavaScript Content Management System
 
+## Contents
+
+- [DOM I - JavaScript Content Management System](#dom-i---javascript-content-management-system)
+  - [Contents](#contents)
+  - [Project Description](#project-description)
+  - [Instructions](#instructions)
+    - [Task 1: Set Up The Project With Git](#task-1-set-up-the-project-with-git)
+    - [Task 2a: MVP](#task-2a-mvp)
+      - [Create selectors to point your data into elements](#create-selectors-to-point-your-data-into-elements)
+      - [Update the HTML with the JSON data](#update-the-html-with-the-json-data)
+      - [Add new content](#add-new-content)
+    - [Task 3: Stretch](#task-3-stretch)
+      - [Stretch Project: Digital Timer](#stretch-project-digital-timer)
+  - [Submission Format](#submission-format)
 ## Project Description
 
 You are going to be emulating a content management system by controlling the content in the JavaScript file instead of the HTML file. This project is an exercise pointed at selecting elements and then updating them without touching the HTML file using the DOM.
