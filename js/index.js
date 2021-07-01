@@ -41,25 +41,102 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent.nav["img-src"]);
 
+// Set text content in each href
+
+//+++++++++++++++++++++++++++++++++++++
+//Long way with Node List as an Array - HELPME
+
+// const navA = document.querySelectorAll('nav a');
+// console.log(navA);
+// navA[0].setAttribute(`a.textContent`, siteContent.nav['nav-item-1']);
+// navA[1].setAttribute(`a.textContent`, siteContent.nav[`nav-item-2`]);
+// navA[2].setAttribute(`a.textContent`, siteContent.nav[`nav-item-3`]);
+// navA[3].setAttribute('a.textContent', siteContent.nav["nav-item-4"]);
+// navA[4].setAttribute('a', siteContent.nav["nav-item-5"]);
+// navA[5].setAttribute('a', siteContent.nav["nav-item-6"]);
+// console.log(navA[2]);
+
+// navA.forEach((element) => {
+//   element.style.color = 'green';
+// });
+
+// const a = document.querySelectorAll('a');
+// a.forEach((element) => {
+//   element.style.color = 'green';
+// });
+
+// const hrefs = document.querySelectorAll('href');
+// hrefs.forEach((element) => {
+//   element.style.color = 'green';
+// });
+
+//+++++++++++++++++++++++++++++++++++++++++++++
+//Long way with Real Array - GET HELP HELPME
+
+// const navA = document.querySelectorAll('nav a');
+// console.log(navA);
+// const realArrayOfNavA = Array.from(navA);
+// console.log(realArrayOfNavA);
+// realArrayOfNavA[0].setAttribute('href', siteContent.nav["nav-item-1"]);
+// realArrayOfNavA[1].setAttribute('href', siteContent.nav["nav-item-2"]);
+// realArrayOfNavA[2].setAttribute('href', siteContent.nav["nav-item-3"]);
+// realArrayOfNavA[3].setAttribute('href', siteContent.nav["nav-item-4"]);
+// realArrayOfNavA[4].setAttribute('href', siteContent.nav["nav-item-5"]);
+// realArrayOfNavA[5].setAttribute('href', siteContent.nav["nav-item-6"]);
+// console.log(realArrayOfNavA[2]);
+// realArrayOfNavA.forEach((element) => {
+//   element.style.color = 'green';
+// });
+// const hrefs = document.querySelectorAll('href');
+// hrefs.forEach((element) => {
+//   element.style.color = 'green';
+// });
+// const a = document.querySelectorAll('a');
+// a.forEach((element) => {
+//   element.style.color = 'green';
+// });
+// navA.forEach((element) => {
+//   element.style.color = 'green';
+// });
+
+//++++++++++++++++++++++++++++++++++++++
+//Short Way 
+
+//1 create array of elements
 const navA = document.querySelectorAll('nav a');
 console.log(navA);
-// const realArrayOfNav = Array.from(nav);
-// console.log(realArrayOfNav);
-navA[0].setAttribute('href', siteContent.nav["nav-item-1"]);
-// console.log(nav[0]);
-navA[1].setAttribute('href', siteContent.nav["nav-item-2"]);
-// console.log(nav[1]);
-navA[2].setAttribute('href', siteContent.nav["nav-item-3"]);
-navA[3].setAttribute('href', siteContent.nav["nav-item-4"]);
-navA[4].setAttribute('href', siteContent.nav["nav-item-5"]);
-navA[5].setAttribute('href', siteContent.nav["nav-item-6"]);
+// //2 loop through each and assign text from data supplied from JSON (above)
+for (let i = 0; i<navA.length; i++){
+  navA[i].textContent = siteContent.nav[`nav-item-${i+1}`];
+}
+console.log(navA[3]);
 
-//Change color of navigation text???? 
-// const aColor = (document.querySelector('.container').style.color = 'green');
-// console.log(aColor);
+//Change color of supplied text
+//with standard loop
+// for(let i=0; i<navA.length; i++){
+//   navA[i].style.color = 'green';
+// }
+// with forEach
+navA.forEach((element) => {
+  element.style.color = 'green';
+});
 
-// const container = document.querySelector('.container');
-// container.style.backgroundColor = 'green';
+//======================================
+//Add to Nav
+//Step 1 isolate the nav section
+const nav = document.querySelector('nav');
+console.log(nav);
+//Step 2 creat a new anchor tag
+const newNav = document.createElement('a');
+console.log(newNav);
+//Step 3 build out the anchor tag to match others
+newNav.textContent = "Home";
+newNav.href = "#";
+newNav.style.color = "green";
+//Step 4 add it to the front of the nav section
+nav.prepend(newNav);
+
+
 
 //cta image
 const cta = document.getElementById('cta-img');
@@ -68,7 +145,7 @@ cta.setAttribute('src', siteContent.cta['img-src']);
 
 //cta "h1": "DOM Is Awesome"
 const h1 = document.querySelector('h1');
-console.log(h1);
+// console.log(h1);
 h1.textContent = siteContent.cta.h1;
 console.log(h1);
 
@@ -76,3 +153,6 @@ console.log(h1);
 const ctaButton = document.querySelector('button');
 console.log(ctaButton);
 ctaButton.textContent = siteContent.cta.button;
+
+//Top Content
+// const topContent = querySelectorAll();
