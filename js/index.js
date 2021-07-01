@@ -122,7 +122,11 @@ navA.forEach((element) => {
 });
 
 //======================================
-//Add to Nav
+//Add to Nav 
+
+//+++++++++++++++++
+//prepend with "Home"
+
 //Step 1 isolate the nav section
 const nav = document.querySelector('nav');
 console.log(nav);
@@ -136,7 +140,18 @@ newNav.style.color = "green";
 //Step 4 add it to the front of the nav section
 nav.prepend(newNav);
 
+//+++++++++++++++++
+//Append with "Other"
+const newNav2 = document.createElement('a');
+newNav2.textContent = "Other";
+newNav2.href = "#";
+newNav2.style.color = "green";
+nav.append(newNav2);
 
+
+
+//====================================
+//CTA section
 
 //cta image
 const cta = document.getElementById('cta-img');
@@ -154,5 +169,7 @@ const ctaButton = document.querySelector('button');
 console.log(ctaButton);
 ctaButton.textContent = siteContent.cta.button;
 
+//==================================
 //Top Content
+
 // const topContent = querySelectorAll();
