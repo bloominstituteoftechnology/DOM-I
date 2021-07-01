@@ -232,6 +232,9 @@ const contactSectionH4 = document.querySelector('.contact h4');
 // console.log(contactSection);
 contactSectionH4.textContent = siteContent.contact["contact-h4"];
 
-const contactSectionP = document.querySelector('p');
+const contactSectionP = document.querySelectorAll('.contact p');
 console.log(contactSectionP);
+contactSectionP[0].textContent = siteContent.contact.address;
+
+
 
