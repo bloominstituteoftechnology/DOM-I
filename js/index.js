@@ -174,32 +174,47 @@ console.log(ctaButton);
 ctaButton.textContent = siteContent.cta.button;
 
 //==================================
-//Top Content
-
-const topContentP = document.querySelectorAll('.main-content p');
+//Top Content 
+//<p> tags
+const topContentP = document.querySelectorAll('.main-content .top-content p');
 console.log(topContentP);
 
-// for (let i = 0; i<topContentP.length; i++){
-//   if (topContentP[0]){
-//     topContentP[0].textContent = siteContent["main-content"][`features-content`];
-//   } else if (topContentP[1]){
-//     topContentP[1].textContent = siteContent["main-content"][`about-content`];
-//   } else if (topContentP[2]){
-//     topContentP[2].textContent = siteContent["main-content"][`services-content`];
-//   } else if (topContentP[3]){
-//     topContentP[3].textContent = siteContent["main-content"][`product-content`];
-//   } else if(topContentP[4]){
-//     topContentP[4].textContent = siteContent["main-content"][`vision-content`];
-//   }
-// }
 topContentP[0].textContent = siteContent["main-content"][`features-content`];
 console.log(topContentP[0]);
 
 topContentP[1].textContent = siteContent["main-content"][`about-content`];
 console.log(topContentP[1]);
 
-topContentP[2].textContent = siteContent["main-content"][`services-content`];
+//+++++++++++++++++
+//Top Content <h4> tags
 
-topContentP[3].textContent = siteContent["main-content"][`product-content`];
+const topContentH4 = document.querySelectorAll('.top-content h4');
+console.log(topContentH4);
 
-topContentP[4].textContent = siteContent["main-content"][`vision-content`];
+topContentH4[0].textContent = siteContent["main-content"]["features-h4"];
+
+topContentH4[1].textContent = siteContent["main-content"]["about-h4"];
+
+//====================================
+//BOTTOM CONTENT
+//<p> Tags
+const bottomContentP = document.querySelectorAll('.main-content .bottom-content p');
+console.log(topContentP);
+
+bottomContentP[0].textContent = siteContent["main-content"][`services-content`];
+
+bottomContentP[1].textContent = siteContent["main-content"][`product-content`];
+
+bottomContentP[2].textContent = siteContent["main-content"][`vision-content`];
+
+//+++++++++++++++++
+//Bottom Content <h4> tags
+
+const bottomContentH4 = document.querySelectorAll('.bottom-content h4');
+console.log(bottomContentH4);
+
+bottomContentH4[0].textContent = siteContent["main-content"]["services-h4"];
+
+bottomContentH4[1].textContent = siteContent["main-content"]["product-h4"];
+
+bottomContentH4[2].textContent = siteContent["main-content"]["vision-h4"];
