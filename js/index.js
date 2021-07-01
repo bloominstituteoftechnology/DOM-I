@@ -18,11 +18,15 @@ const siteContent = {
     "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "about-h4":"About",
     "about-content": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+
     "middle-img-src": "img/mid-page-accent.jpg",
+    
     "services-h4":"Services",
     "services-content": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+
     "product-h4":"Product",
     "product-content": "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+
     "vision-h4":"Vision",
     "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
   },
@@ -172,4 +176,30 @@ ctaButton.textContent = siteContent.cta.button;
 //==================================
 //Top Content
 
-// const topContent = querySelectorAll();
+const topContentP = document.querySelectorAll('.main-content p');
+console.log(topContentP);
+
+// for (let i = 0; i<topContentP.length; i++){
+//   if (topContentP[0]){
+//     topContentP[0].textContent = siteContent["main-content"][`features-content`];
+//   } else if (topContentP[1]){
+//     topContentP[1].textContent = siteContent["main-content"][`about-content`];
+//   } else if (topContentP[2]){
+//     topContentP[2].textContent = siteContent["main-content"][`services-content`];
+//   } else if (topContentP[3]){
+//     topContentP[3].textContent = siteContent["main-content"][`product-content`];
+//   } else if(topContentP[4]){
+//     topContentP[4].textContent = siteContent["main-content"][`vision-content`];
+//   }
+// }
+topContentP[0].textContent = siteContent["main-content"][`features-content`];
+console.log(topContentP[0]);
+
+topContentP[1].textContent = siteContent["main-content"][`about-content`];
+console.log(topContentP[1]);
+
+topContentP[2].textContent = siteContent["main-content"][`services-content`];
+
+topContentP[3].textContent = siteContent["main-content"][`product-content`];
+
+topContentP[4].textContent = siteContent["main-content"][`vision-content`];
