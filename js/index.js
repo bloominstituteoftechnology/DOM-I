@@ -246,3 +246,16 @@ contactSectionP[2].textContent = siteContent.contact.email;
 const footerP = document.querySelector('footer p');
 console.log(footerP);
 footerP.textContent = siteContent.footer.copyright;
+
+//===============================
+//Stretch Styles
+const mainHeader = document.querySelector('body');
+console.log(mainHeader);
+mainHeader.style.color = 'white';
+mainHeader.style.background = 'grey';
+mainHeader.style.display = 'flex wrap';
+mainHeader.style.flexDirection = 'column';
+mainHeader.style.alignItems = 'center';
+
+//===============================
+//Strech
