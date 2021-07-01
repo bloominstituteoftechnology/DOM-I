@@ -133,10 +133,10 @@ navA.forEach((element) => {
 
 //Step 1 isolate the nav section
 const nav = document.querySelector('nav');
-console.log(nav);
+// console.log(nav);
 //Step 2 creat a new anchor tag
 const newNav = document.createElement('a');
-console.log(newNav);
+// console.log(newNav);
 //Step 3 build out the anchor tag to match others
 newNav.textContent = "Home";
 newNav.href = "#";
@@ -166,11 +166,11 @@ cta.setAttribute('src', siteContent.cta['img-src']);
 const h1 = document.querySelector('h1');
 // console.log(h1);
 h1.textContent = siteContent.cta.h1;
-console.log(h1);
+// console.log(h1);
 
 //cta "button": "Get Started",
 const ctaButton = document.querySelector('button');
-console.log(ctaButton);
+// console.log(ctaButton);
 ctaButton.textContent = siteContent.cta.button;
 
 //==================================
@@ -218,3 +218,20 @@ bottomContentH4[0].textContent = siteContent["main-content"]["services-h4"];
 bottomContentH4[1].textContent = siteContent["main-content"]["product-h4"];
 
 bottomContentH4[2].textContent = siteContent["main-content"]["vision-h4"];
+
+//===========================================
+//Middle Image
+const middleImage = document.getElementById("middle-img");
+middleImage.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+
+
+//=====================
+//Contact Section
+const contactSectionH4 = document.querySelector('.contact h4');
+// console.log(contactSection);
+contactSectionH4.textContent = siteContent.contact["contact-h4"];
+
+const contactSectionP = document.querySelector('p');
+console.log(contactSectionP);
+
