@@ -241,6 +241,8 @@ contactSectionP[0].textContent = siteContent.contact.address;
 contactSectionP[1].textContent = siteContent.contact.phone;
 contactSectionP[2].textContent = siteContent.contact.email;
 
-
-
-
+//================================
+//Footer <p>
+const footerP = document.querySelector('footer p');
+console.log(footerP);
+footerP.textContent = siteContent.footer.copyright;
