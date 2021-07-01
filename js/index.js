@@ -142,7 +142,7 @@ newNav.textContent = "Home";
 newNav.href = "#";
 newNav.style.color = "green";
 //Step 4 add it to the front of the nav section
-nav.prepend(newNav);
+nav.prepend(newNav); 
 
 //+++++++++++++++++
 //Append with "Other"
@@ -150,7 +150,7 @@ const newNav2 = document.createElement('a');
 newNav2.textContent = "Other";
 newNav2.href = "#";
 newNav2.style.color = "green";
-nav.append(newNav2);
+nav.appendChild(newNav2); //HELPME appendChild()
 
 
 
