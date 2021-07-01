@@ -39,4 +39,40 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent.nav["img-src"]);
+
+const navA = document.querySelectorAll('nav a');
+console.log(navA);
+// const realArrayOfNav = Array.from(nav);
+// console.log(realArrayOfNav);
+navA[0].setAttribute('href', siteContent.nav["nav-item-1"]);
+// console.log(nav[0]);
+navA[1].setAttribute('href', siteContent.nav["nav-item-2"]);
+// console.log(nav[1]);
+navA[2].setAttribute('href', siteContent.nav["nav-item-3"]);
+navA[3].setAttribute('href', siteContent.nav["nav-item-4"]);
+navA[4].setAttribute('href', siteContent.nav["nav-item-5"]);
+navA[5].setAttribute('href', siteContent.nav["nav-item-6"]);
+
+//Change color of navigation text???? 
+// const aColor = (document.querySelector('.container').style.color = 'green');
+// console.log(aColor);
+
+// const container = document.querySelector('.container');
+// container.style.backgroundColor = 'green';
+
+//cta image
+const cta = document.getElementById('cta-img');
+console.log(cta);
+cta.setAttribute('src', siteContent.cta['img-src']);
+
+//cta "h1": "DOM Is Awesome"
+const h1 = document.querySelector('h1');
+console.log(h1);
+h1.textContent = siteContent.cta.h1;
+console.log(h1);
+
+//cta "button": "Get Started",
+const ctaButton = document.querySelector('button');
+console.log(ctaButton);
+ctaButton.textContent = siteContent.cta.button;
