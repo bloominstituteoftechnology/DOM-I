@@ -228,13 +228,19 @@ middleImage.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
 //=====================
 //Contact Section
+
+//<h4>
 const contactSectionH4 = document.querySelector('.contact h4');
 // console.log(contactSection);
 contactSectionH4.textContent = siteContent.contact["contact-h4"];
 
+//<p> Address, Ph, email
 const contactSectionP = document.querySelectorAll('.contact p');
 console.log(contactSectionP);
 contactSectionP[0].textContent = siteContent.contact.address;
+contactSectionP[1].textContent = siteContent.contact.phone;
+contactSectionP[2].textContent = siteContent.contact.email;
+
 
 
 
