@@ -1,12 +1,24 @@
-# Stretch Assignment - Digital Timer
+# Stretch Assignment
 
-Topics:
+- Digital Timer
+
+## Contents
+
+- [Stretch Assignment](#stretch-assignment)
+  - [Contents](#contents)
+  - [Topics:](#topics)
+  - [Objectives](#objectives)
+  - [Beginning Project](#beginning-project)
+  - [Project Description](#project-description)
+  - [Stretch On The Stretch!](#stretch-on-the-stretch)
+
+## Topics:
  * Interacting with the DOM
  * Selectors
-  * selectElementsByClassname
-  * selectElementbyId
-  * querySelector
-  * querySelectorAll
+ * selectElementsByClassname
+ * selectElementbyId
+ * querySelector
+ * querySelectorAll
  * NodeList
  * HTMLCollection
 
