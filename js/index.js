@@ -52,10 +52,12 @@ navs[4].textContent = 'About'
 navs[5].textContent = 'Contact'
 
 
-let ctatext = document.getElementsByClassName('cta-text')
-
+let ctatext = document.getElementsByTagName("h1");
 ctatext[0].textContent = 'DOM Is Awesome'
-ctatext[1].textContent = 'Get Started'
+
+let ctabutton = document.querySelector('button');
+ctabutton.textContent ='Get Started'
 
 let ctaimg = document.getElementById("cta-img");
 ctaimg.setAttribute('src', 'img/header-img.png')
+
