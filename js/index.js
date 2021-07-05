@@ -42,15 +42,13 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
-let navs = document.querySelectorAll('a')
-
+let navs = document.querySelectorAll('nav a')
 navs[0].textContent = 'Services'
 navs[1].textContent = 'Product'
 navs[2].textContent = 'Vision'
 navs[3].textContent = 'Features'
 navs[4].textContent = 'About'
 navs[5].textContent = 'Contact'
-
 
 let ctatext = document.getElementsByTagName("h1");
 ctatext[0].textContent = 'DOM Is Awesome'
@@ -87,4 +85,21 @@ let contactInfo = document.querySelectorAll('.contact p')
 contactInfo[0].textContent = "123 Way 456 Street Somewhere, USA"
 contactInfo[1].textContent = "1 (888) 888-8888"
 contactInfo[2].textContent = "sales@greatidea.io"
+
+let foot = document.querySelector("footer p")
+foot.textContent = "Copyright Great Idea! 2018"
+
+let greenButtons = document.querySelectorAll('nav a')
+greenButtons[0].style.color ="green";
+greenButtons[1].style.color ="green";
+greenButtons[2].style.color ="green";
+greenButtons[3].style.color ="green";
+greenButtons[4].style.color ="green";
+greenButtons[5].style.color ="green";
+greenButtons[6].style.color ="green";
+greenButtons[7].style.color ="green";
+
+let newNavs = document.getElementsByTagName("nav")
+newNavs.appendChild(Careers)
+newNavs.prepend(Search)
 
