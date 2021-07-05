@@ -49,12 +49,23 @@ logo.setAttribute("src", siteContent["nav"]["img-src"]);
 //nav bar
 const navs = document.querySelectorAll("a");
 for (let nav of navs) {
-  for (let i = 1; i < Object.keys(siteContent.nav).length - 1; i++) {
-    navs[i].innerHTML = siteContent.nav[`nav-item-${i}`];
+  for (let i = 0; i < navs.length; i++) {
+    navs[i].innerHTML = siteContent.nav[`nav-item-${i + 1}`];
     nav.classList.add("header", "nav", "a");
+    nav.style.color = "green";
   }
 }
-//header img
+const navBar = document.querySelector("nav");
+const home = document.createElement("a");
+const overView = document.createElement("a");
+home.classList.add("header", "nav", "a");
+home.innerText = "Home";
+home.style.color = "green";
+overView.classList.add("header", "nav", "a");
+overView.innerText = "Overview";
+overView.style.color = "green";
+navBar.prepend(home);
+navBar.appendChild(overView);
 
 const headerImg = document.querySelector("#cta-img");
 headerImg.src = "img/header-img.png";
@@ -94,8 +105,8 @@ helperInContent("content", pInContent);
 
 //contact
 
-const contact = document.querySelector(".contact");
-const childrenOfContact = contact.children;
+const contactInfo = document.querySelector(".contact");
+const childrenOfContact = contactInfo.children;
 contactValue = Object.values(siteContent["contact"]);
 for (let i = 0; i < childrenOfContact.length; i++) {
   childrenOfContact[i].innerText = contactValue[i];
