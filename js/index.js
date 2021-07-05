@@ -42,32 +42,69 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // Navigation Bar Section
-let servicesNav = document.querySelectorAll(".container nav a")[0];
-servicesNav.textContent = siteContent["nav"]["nav-item-1"];
 
-let productNav = document.querySelectorAll(".container nav a")[1];
-productNav.textContent = siteContent["nav"]["nav-item-2"];
+const navBar = document.querySelectorAll("header nav a");
+navBar.forEach((link, index) => {
+  link.textContent = siteContent.nav[`nav-item-${index + 1}`];
+});
 
-let visionNav = document.querySelectorAll(".container nav a")[2];
-visionNav.textContent = siteContent["nav"]["nav-item-3"];
+// CTA Section
 
-let featuresNav = document.querySelectorAll(".container nav a")[3];
-featureNav.textContent = siteContent["nav"]["nav-item-4"];
+const ctaH1 = document.querySelector("section div h1");
+ctaH1.textContent = siteContent.cta.h1;
 
-let aboutNav = document.querySelectorAll(".container nav a")[4];
-aboutNav.textContent = siteContent["nav"]["nav-item-5"];
+const ctaButton = document.querySelector("section div button");
+ctaButton.textContent = siteContent.cta.button;
 
-let contactNav = document.querySelectorAll(".container nav a")[5];
-contactNav.textContent = siteContent["nav"]["nav-item-6"];
+const ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute("src", siteContent.cta["img-src"]);
 
-let rangersNav = document.createElement("a");
-rangersNav.setAttribute("href", "#");
-rangersNav.textContent = "Rangers";
+// Main Content Section
 
-let powerNav = document.createElement("a");
-powerNav.setAttribute("href", "#");
-powerNav.textContent = "Power";
+const topContentH = document.querySelectorAll(".top-content h4");
+topContentH[0].textContent = siteContent["main-content"]["features-h4"];
+topContentH[1].textContent = siteContent["main-content"]["about-h4"];
 
-let extraNavBar = document.querySelector("header nav");
-extraNavBar.appendChild(rangersNav);
-extraNavBar.prepend(powerNav);
+const topContentP = document.querySelectorAll(".top-content p");
+topContentP[0].textContent = siteContent["main-content"]["features-content"];
+topContentP[1].textContent = siteContent["main-content"]["about-content"];
+
+const midImg = document.getElementById("middle-img");
+midImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+const botContentH = document.querySelectorAll(".bottom-content h4");
+botContentH[0].textContent = siteContent["main-content"]["services-h4"];
+botContentH[1].textContent = siteContent["main-content"]["product-h4"];
+botContentH[2].textContent = siteContent["main-content"]["vision-h4"];
+
+const botContentP = document.querySelectorAll(".bottom-content p");
+botContentP[0].textContent = siteContent["main-content"]["services-content"];
+botContentP[1].textContent = siteContent["main-content"]["product-content"];
+botContentP[2].textContent = siteContent["main-content"]["vision-content"];
+
+// Contact Section
+
+const contact = document.querySelector(".contact h4");
+contact.textContent = siteContent.contact["contact-h4"];
+
+const contactInfo = document.querySelectorAll(".contact p");
+contactInfo[0].textContent = siteContent.contact.address;
+contactInfo[1].textContent = siteContent.contact.phone;
+contactInfo[2].textContent = siteContent.contact.email;
+
+// Footer Section
+
+const footer = document.querySelector("footer p");
+footer.textContent = siteContent.footer.copyright;
+
+navBar.forEach((item) => {
+  item.style.color = "green";
+});
+
+const faq = document.createElement("a");
+faq.textContent = "FAQ";
+document.querySelector("nav").appendChild(faq);
+
+const info = document.createElement("a");
+info.textContent = "Info";
+document.querySelector("nav").prepend(info);
