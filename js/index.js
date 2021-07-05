@@ -40,3 +40,80 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const services = document.querySelector("a:nth-of-type(1)")
+const product = document.querySelector("a:nth-of-type(2)")
+const vision = document.querySelector("a:nth-of-type(3)")
+const features = document.querySelector("a:nth-of-type(4)")
+const about = document.querySelector("a:nth-of-type(5)")
+const contact = document.querySelector("a:nth-of-type(6)")
+
+const h1 = document.querySelector("h1")
+const button = document.querySelector("button")
+let cta = document.getElementById("cta-img")
+
+const topContent = document.querySelector(".top-content")
+const feats = topContent.querySelector(".text-content:nth-of-type(1) h4")
+const featsText = topContent.querySelector(".text-content:nth-of-type(1) p")
+const abou = topContent.querySelector(".text-content:nth-of-type(2) h4")
+const abouText = topContent.querySelector(".text-content:nth-of-type(2) p")
+let midImg = document.querySelector("#middle-img")
+const botContent = document.querySelector(".bottom-content")
+const serv = botContent.querySelector(".text-content:nth-of-type(1) h4")
+const servText = botContent.querySelector(".text-content:nth-of-type(1) p")
+const prod = botContent.querySelector(".text-content:nth-of-type(2) h4")
+const prodText = botContent.querySelector(".text-content:nth-of-type(2) p")
+const visi = botContent.querySelector(".text-content:nth-of-type(3) h4")
+const visiText = botContent.querySelector(".text-content:nth-of-type(3) p")
+
+const contactInfo = document.querySelector(".contact")
+const h4 = contactInfo.querySelector("h4")
+const address = contactInfo.querySelector("p:nth-of-type(1)")
+const phone = contactInfo.querySelector("p:nth-of-type(2)")
+const email = contactInfo.querySelector("p:nth-of-type(3)")
+
+const footer = document.querySelector("footer")
+
+const nav = document.querySelector("header nav")
+const last =document.createElement("a")
+const first =document.createElement("a")
+
+let navColor = document.querySelectorAll("header nav a")
+
+services.textContent = siteContent["nav"]["nav-item-1"]
+product.textContent = siteContent["nav"]["nav-item-2"]
+vision.textContent = siteContent["nav"]["nav-item-3"]
+features.textContent = siteContent["nav"]["nav-item-4"]
+about.textContent = siteContent["nav"]["nav-item-5"]
+contact.textContent = siteContent["nav"]["nav-item-6"]
+
+h1.textContent = siteContent["cta"]["h1"]
+button.textContent = siteContent["cta"]["button"]
+cta.setAttribute('src', siteContent["cta"]["img-src"])
+
+feats.textContent = siteContent["main-content"]["features-h4"]
+featsText.textContent = siteContent["main-content"]["features-content"]
+abou.textContent = siteContent["main-content"]["about-h4"]
+abouText.textContent = siteContent["main-content"]["about-content"]
+midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+serv.textContent = siteContent["main-content"]["services-h4"]
+servText.textContent = siteContent["main-content"]["services-content"]
+prod.textContent = siteContent["main-content"]["product-h4"]
+prodText.textContent = siteContent["main-content"]["product-content"]
+visi.textContent = siteContent["main-content"]["vision-h4"]
+visiText.textContent = siteContent["main-content"]["vision-content"]
+
+h4.textContent = siteContent["contact"]["contact-h4"]
+address.textContent = siteContent["contact"]["address"]
+phone.textContent = siteContent["contact"]["phone"]
+email.textContent = siteContent["contact"]["email"]
+
+footer.textContent = siteContent["footer"]["copyright"]
+
+last.textContent = "More stuff"
+first.textContent = "This stuff"
+nav.appendChild(last)
+nav.prepend(first)
+
+navColor = document.querySelectorAll("header nav a")
+navColor.forEach(element => element.style.color = "green")
