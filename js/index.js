@@ -41,6 +41,17 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let navBar = document.getElementsByTagName('nav')
+//image files
+let ctaImg = document.getElementById('cta-img')
+ctaImg.src = siteContent['cta']['img-src']
 
-console.log(navBar)
+let midImg = document.getElementById('middle-img')
+midImg.src = siteContent['main-content']['middle-img-src']
+
+//nav bar
+let nav = document.querySelectorAll("header nav a")
+
+nav.forEach((item,index) => {
+  item.textContent = siteContent.nav[`nav-item-${index +1}`]
+})
+
