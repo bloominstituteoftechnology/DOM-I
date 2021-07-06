@@ -41,7 +41,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-//image files
+//other image files
 let ctaImg = document.getElementById('cta-img')
 ctaImg.src = siteContent['cta']['img-src']
 
@@ -55,3 +55,30 @@ nav.forEach((item,index) => {
   item.textContent = siteContent.nav[`nav-item-${index +1}`]
 })
 
+//CTA
+let ctaTitle = document.querySelector('.cta .cta-text h1')
+ctaTitle.textContent = siteContent['cta']['h1']
+
+let ctaButton = document.querySelector('.cta .cta-text button')
+ctaButton.textContent = siteContent.cta.button
+
+//main content
+let topTitles = document.querySelectorAll('.top-content h4')
+topTitles[0].textContent = siteContent['main-content']['features-h4']
+topTitles[1].textContent = siteContent['main-content']['about-h4']
+
+let topContent = document.querySelectorAll('.top-content p')
+topContent[0].textContent = siteContent['main-content']['features-content']
+topContent[1].textContent = siteContent['main-content']['about-content']
+
+let bottomTitles = document.querySelectorAll('.bottom-content h4')
+bottomTitles[0].textContent = siteContent['main-content']['services-h4']
+bottomTitles[1].textContent = siteContent['main-content']['product-h4']
+bottomTitles[2].textContent = siteContent['main-content']['vision-h4']
+
+let bottomContent = document.querySelectorAll('.bottom-content p')
+bottomContent[0].textContent = siteContent['main-content']['services-content']
+bottomContent[1].textContent = siteContent['main-content']['product-content']
+bottomContent[2].textContent = siteContent['main-content']['vision-content']
+
+//contact
