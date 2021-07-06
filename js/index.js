@@ -143,11 +143,35 @@ aboutBody.textContent = siteContent["main-content"]["about-content"];
 //--Services
 //Use query selector to get content
 const servicesContentArea = document.querySelector(".bottom-content .text-content");
-//Use query selector to get the about h4
+//Use query selector to get the Services h4
 const servicesTitle = servicesContentArea.querySelector("h4");
-//Use textContent to apply the About h4 to the aboutTitle
+//Use textContent to apply the Services h4 to the servicesTitle
 servicesTitle.textContent = siteContent ["main-content"]["services-h4"];
-//
+//Assign to servicesBody
 const servicesBody = servicesTitle.nextElementSibling;
-//
+//Use textContent to apply the content
 servicesBody.textContent = siteContent["main-content"]["services-content"];
+
+//--Product
+//Use query selector to get content
+const productContentArea = document.querySelector(".bottom-content .text-content:nth-of-type(2)");
+//Use query selector to get the product h4
+const productTitle = productContentArea.querySelector("h4");
+//Use textContent to apply product h4 to the product Title
+productTitle.textContent = siteContent ["main-content"]["product-h4"];
+//Assign to productsBody
+const productBody = productTitle.nextElementSibling;
+//Use textContent to apply the content
+productBody.textContent = siteContent["main-content"]["product-content"];
+
+//--Vision
+//Use query selector to get content
+const visionContentArea = document.querySelector(".bottom-content .text-content:nth-of-type(3)");
+//Use query selector to get the vision h4
+const visionTitle = visionContentArea.querySelector("h4");
+//Use textContent to apply product h4 to the vision Title
+visionTitle.textContent = siteContent ["main-content"]["vision-h4"];
+//Assign to the visionBody
+const visionBody = visionTitle.nextElementSibling;
+//Use textContent to apply the content
+visionBody.textContent = siteContent["main-content"]["vision-content"];
