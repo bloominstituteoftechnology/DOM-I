@@ -71,6 +71,16 @@ contactPara[2].textContent = siteContent["contact"]["email"];
 
 document.querySelector('footer p').textContent = siteContent["footer"]["copyright"];
 
-for (let i = 0; i < navLinks.length; i++) {
-  navLinks[i].style.color = 'green';
+let nav = document.querySelector("nav");
+let preNav = document.createElement("a");
+preNav.href = "#";
+preNav.textContent = "Prelink";
+let postNav = document.createElement("a");
+postNav.href = "#";
+postNav.textContent = "Postlink";
+nav.prepend(preNav);
+nav.appendChild(postNav);
+
+for (let i = 0; i < nav.children.length; i++) {
+  nav.children[i].style.color = 'green';
 }
