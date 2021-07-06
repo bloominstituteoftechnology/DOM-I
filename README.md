@@ -1,4 +1,21 @@
-# DOM I - JavaScript Content Management System
+# DOM I (DOM IS AWESOME)
+
+- JavaScript Content Management System
+
+## Contents
+
+- [DOM I (DOM IS AWESOME)](#dom-i-dom-is-awesome)
+  - [Contents](#contents)
+  - [Project Description](#project-description)
+  - [Instructions](#instructions)
+    - [Task 1: Set Up The Project With Git](#task-1-set-up-the-project-with-git)
+    - [Task 2a: MVP](#task-2a-mvp)
+      - [Create selectors to point your data into elements](#create-selectors-to-point-your-data-into-elements)
+      - [Update the HTML with the JSON data](#update-the-html-with-the-json-data)
+      - [Add new content](#add-new-content)
+    - [Task 3: Stretch](#task-3-stretch)
+      - [Stretch Project: Digital Timer](#stretch-project-digital-timer)
+  - [Submission Format](#submission-format)
 
 ## Project Description
 
@@ -16,35 +33,35 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 
 **Follow these steps to set up and work on your project:**
 
-* [ ] Create a forked copy of this project.
-* [ ] Clone your OWN version of the repository (Not Lambda's by mistake!).
-* [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-* [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-* [ ] Push commits: git push origin `<firstName-lastName>`.
+- [ ] Create a forked copy of this project.
+- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!).
+- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+- [ ] Push commits: git push origin `<firstName-lastName>`.
 
 ### Task 2a: MVP
 
 #### Create selectors to point your data into elements
 
-* [ ] Create selectors by using any of the DOM element's methods
-* [ ] Note that IDs have been used on all images. Use the IDs to update src path content
+- [ ] Create selectors by using any of the DOM element's methods
+- [ ] Note that IDs have been used on all images. Use the IDs to update src path content
 
 #### Update the HTML with the JSON data
 
-* [ ] Remember, NO direct updating of the HTML source is allowed.
-* [ ] Using your selectors, update the content to match the example file.
-* [ ] Remember to update the src attributes on images
+- [ ] Remember, NO direct updating of the HTML source is allowed.
+- [ ] Using your selectors, update the content to match the example file.
+- [ ] Remember to update the src attributes on images
 
 #### Add new content
 
-* [ ] Change the color of the navigation text to be green.
-* [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
-* [ ] Check your work by looking at the [original html](original.html) in the browser
+- [ ] Change the color of the navigation text to be green.
+- [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
+- [ ] Check your work by looking at the [original html](original.html) in the browser
 
 ### Task 3: Stretch
 
-* [ ] Update styles throughout the page as you see fit. Study what happens when you updated the DOM using style in JavaScript.  
-* [ ] Study tomorrow's lesson on events and try to integrate a button that can update content on the site with a click of a button.  You could build a similar data object with new values to help you test the click event.
+- [ ] Update styles throughout the page as you see fit. Study what happens when you updated the DOM using style in JavaScript.  
+- [ ] Study tomorrow's lesson on events and try to integrate a button that can update content on the site with a click of a button.  You could build a similar data object with new values to help you test the click event.
 
 #### Stretch Project: Digital Timer
 
@@ -54,4 +71,6 @@ This project is heavier on logic but employs some DOM manipulation to achieve it
 
 **Follow these steps for completing your project.**
 
-* [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's  Repo). **Please don't merge your own pull request**
+- [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's  Repo). **Please don't merge your own pull request**
+
+<https://github.com/LambdaSchool/DOM-I/pull/1433>
