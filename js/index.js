@@ -44,3 +44,7 @@ for (let i = 0; i < 6; i++) {
 }
 
 document.querySelector('#logo-img').src = siteContent.nav["img-src"];
+
+document.querySelector('.cta .cta-text h1').textContent = siteContent.cta['h1'];
+document.querySelector('.cta .cta-text button').textContent = siteContent.cta['button'];
+document.querySelector('.cta #cta-img').src = siteContent.cta['img-src'];
