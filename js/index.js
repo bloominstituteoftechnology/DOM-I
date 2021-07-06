@@ -40,3 +40,111 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// creating selectors to put data into elements.
+
+//nav
+let navOne = document.querySelector('a:nth-of-type(1)');
+navOne.textContent = siteContent["nav"]["nav-item-1"];
+
+let navTwo = document.querySelector('a:nth-of-type(2)');
+navTwo.textContent = siteContent["nav"]["nav-item-2"];
+
+let navThree = document.querySelector('a:nth-of-type(3)');
+navThree.textContent = siteContent["nav"]["nav-item-3"];
+
+let navFour = document.querySelector('a:nth-of-type(4)');
+navFour.textContent = siteContent["nav"]["nav-item-4"];
+
+let navFive = document.querySelector('a:nth-of-type(5)');
+navFive.textContent = siteContent["nav"]["nav-item-5"];
+
+let navSix = document.querySelector('a:nth-of-type(6)');
+navSix.textContent = siteContent["nav"]["nav-item-6"]; // bracket notation
+
+//h1
+
+let headerOne = document.querySelector('h1');
+headerOne.textContent = siteContent.cta.h1; // dot notation
+
+//image
+
+let ctaImage = document.getElementById("cta-img");
+ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
+
+//button
+let button = document.querySelector('button');
+button.textContent = siteContent.cta.button;
+
+//features 
+let featuresOne = document.querySelector(".text-content > h4");
+featuresOne.textContent = siteContent["main-content"]["features-h4"];
+
+let featuresTwo = document.querySelector(".text-content > p");
+featuresTwo.textContent = siteContent["main-content"]["features-content"];
+
+//about 
+let aboutOne = document.querySelector(".top-content div:nth-child(2) > h4");
+aboutOne.textContent = siteContent["main-content"]["about-h4"];
+
+let aboutTwo = document.querySelector(".top-content div:nth-child(2) > p");
+aboutTwo.textContent = siteContent["main-content"]["about-content"];
+
+//middle img
+let middleImage = document.getElementById("middle-img");
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+//services
+let servicesOne = document.querySelector(".bottom-content div:nth-child(1) > h4");
+servicesOne.textContent = siteContent["main-content"]["services-h4"];
+
+let servicesTwo = document.querySelector(".bottom-content div:nth-child(1) > p");
+servicesTwo.textContent = siteContent["main-content"]["services-content"];
+
+//product
+
+let productOne = document.querySelector(".bottom-content div:nth-child(2) > h4");
+productOne.textContent = siteContent["main-content"]["product-h4"];
+
+let productTwo = document.querySelector(".bottom-content div:nth-child(2) > p");
+productTwo.textContent = siteContent["main-content"]["product-content"];
+
+//vision
+let visionOne = document.querySelector(".bottom-content div:nth-child(3) > h4");
+visionOne.textContent = siteContent["main-content"]["vision-h4"];
+
+let visionTwo = document.querySelector(".bottom-content div:nth-child(3) > p");
+visionTwo.textContent = siteContent["main-content"]["vision-content"];
+
+//contact
+let cOne = document.querySelector(".contact > h4");
+let cTwo = document.querySelector(".contact > p:nth-child(2)");
+let cThree = document.querySelector(".contact > p:nth-child(3)");
+let cFour= document.querySelector(".contact > p:nth-child(4)");
+
+cOne.textContent = siteContent["contact"]["contact-h4"];
+cTwo.textContent = siteContent["contact"]["address"];
+cThree.textContent = siteContent["contact"]["phone"];
+cFour.textContent = siteContent["contact"]["email"];
+
+//footer
+let footer = document.querySelector("footer > p");
+footer.textContent = "Copyright Great Idea! 2019";
+
+//add two new items to nav
+
+const newNavOne = document.createElement('a');
+newNavOne.textContent = "New A Tag";
+const parentElement = document.querySelector('nav');
+parentElement.append(newNavOne);
+
+const newNavTwo = document.createElement('a');
+newNavTwo.textContent = "New Tag Number Two";
+const parentElementTwo = document.querySelector('nav');
+parentElementTwo.append(newNavTwo);
+
+//change nav text to green
+const navColor = document.querySelectorAll('a');
+navColor.forEach(element => {
+  element.style.color = "green";
+});
