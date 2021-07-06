@@ -70,3 +70,7 @@ contactPara[1].textContent = siteContent["contact"]["phone"];
 contactPara[2].textContent = siteContent["contact"]["email"];
 
 document.querySelector('footer p').textContent = siteContent["footer"]["copyright"];
+
+for (let i = 0; i < navLinks.length; i++) {
+  navLinks[i].style.color = 'green';
+}
