@@ -136,3 +136,21 @@ heading5.textContent = siteContent["main-content"]["vision-h4"];
 let info5 = textContent5.querySelector('p');
 info5.textContent = siteContent["main-content"]["vision-content"];
 console.log(heading4);
+
+let textContact = document.querySelector(".contact");
+let headingContact = textContact.querySelector('h4');
+headingContact.textContent = siteContent["contact"]["contact-h4"];
+
+let infoadd = textContact.querySelector('p:nth-of-type(1)');
+infoadd.textContent=siteContent["contact"]["address"];
+
+let infoph = textContact.querySelector('p:nth-of-type(2)');
+infoph.textContent=siteContent["contact"]["phone"];
+
+let infoem = textContact.querySelector('p:nth-of-type(3)');
+infoem.textContent=siteContent["contact"]["email"];
+
+let fcontent = document.querySelector('footer');
+fcontent.textContent = siteContent["footer"]["copyright"];
+
+
