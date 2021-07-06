@@ -40,3 +40,114 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+
+// ---------- Navigation Area ----------//
+
+//---Services
+//Get services by tag name and element, assign to services
+const services = document.getElementsByTagName('a')[0];
+//Use textContent and assign nav item 1
+services.textContent = siteContent['nav']['nav-item-1'];
+
+//---Product
+//Get product by tag name and element, assign to product
+const product = document.getElementsByTagName('a')[1];
+//Use textContent and assign nav item 2
+product.textContent = siteContent['nav']['nav-item-2'];
+
+//---Vision
+//Get vision by tag name and element, assign to vision
+const vision = document.getElementsByTagName('a')[2];
+//Use textContent and assign nav item 3
+vision.textContent = siteContent['nav']['nav-item-3'];
+
+//---Features
+//Get features by tag name and element, assign to features
+const features = document.getElementsByTagName('a')[3];
+//Use textContent and assign nav item 4
+features.textContent = siteContent['nav']['nav-item-4'];
+
+//---About
+//Get about by tag name and element, assign to about
+const about = document.getElementsByTagName('a')[4];
+//Use textContent and assign nav item 5
+about.textContent = siteContent['nav']['nav-item-5'];
+
+//---Contact
+//Get contact by tag name and element, assign to contact
+const contact = document.getElementsByTagName('a')[5];
+//Use textContent and assign nav item 6
+contact.textContent = siteContent['nav']['nav-item-6'];
+
+//---------- CTA ----------//
+
+//---Big Circle logo
+//getElementById grabs cta-img. Assign to bigCircle
+const bigCircle = document.getElementById("cta-img");
+
+//Use setAttribute, place the circle in the siteContent area 
+//img-src is established in the siteContent area
+bigCircle.setAttribute('src', siteContent["cta"]["img-src"]);
+
+//---Title area
+//Use query selector to get <section> cta, <div> cta-text
+const bigText = document.querySelector(".cta .cta-text");
+//Use query selector to get h1 text and assign to pageTitle 
+const pageTitle = bigText.querySelector("h1");
+//Apply the text to pageTitle using textContent 
+pageTitle.textContent = siteContent["cta"]["h1"];
+
+//---Button
+//Use query selector to get <button>
+const getStartedButton = bigText.querySelector("button");
+
+//Apply the button text using textContent
+getStartedButton.textContent = siteContent["cta"]["button"];
+
+//---------- Main Content ---------- //
+
+//--Middle image
+//Get middle-img using getElementById
+const middleImage = document.getElementById("middle-img");
+//Use setAttribute to assign the image to siteContent area
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+//--- Main Content area
+//--Features
+//Use query selector to get content
+const featuresContentArea = document.querySelector(".main-content .top-content .text-content");
+//Use query selector to get the features h4 and assign to title
+const featuresTitle = featuresContentArea.querySelector("h4");
+//Use textContent to apply features h4 and main content
+featuresTitle.textContent = siteContent ["main-content"]["features-h4"];
+//Assign to featuresBody
+const featuresBody = featuresTitle.nextElementSibling;
+//Use text content to apply the features content
+featuresBody.textContent = siteContent["main-content"]["features-content"];
+
+//--About
+//Use query selector to get content
+const aboutContentArea = document.querySelector(".main-content .top-content .text-content:nth-of-type(2)");
+//Use query selector to get the about h4
+const aboutTitle = aboutContentArea.querySelector("h4");
+//Use textContent to apply the About h4 to the aboutTitle
+aboutTitle.textContent = siteContent ["main-content"]["about-h4"];
+//Assign to aboutBody
+const aboutBody = aboutTitle.nextElementSibling;
+//Use textContent to apply about content
+aboutBody.textContent = siteContent["main-content"]["about-content"];
+
+//--- Bottom Content Area
+//--Services
+//Use query selector to get content
+const servicesContentArea = document.querySelector(".bottom-content .text-content");
+//Use query selector to get the about h4
+const servicesTitle = servicesContentArea.querySelector("h4");
+//Use textContent to apply the About h4 to the aboutTitle
+servicesTitle.textContent = siteContent ["main-content"]["services-h4"];
+//
+const servicesBody = servicesTitle.nextElementSibling;
+//
+servicesBody.textContent = siteContent["main-content"]["services-content"];
