@@ -53,3 +53,5 @@ document.querySelectorAll('.main-content .top-content .text-content h4')[0].text
 document.querySelectorAll('.main-content .top-content .text-content h4')[1].textContent = siteContent["main-content"]["about-h4"];
 document.querySelectorAll('.main-content .top-content .text-content p')[0].textContent = siteContent["main-content"]["features-content"];
 document.querySelectorAll('.main-content .top-content .text-content p')[1].textContent = siteContent["main-content"]["about-content"];
+
+document.querySelector("#middle-img").src = siteContent["main-content"]["middle-img-src"];
