@@ -55,6 +55,19 @@ nav.forEach((item,index) => {
   item.textContent = siteContent.nav[`nav-item-${index +1}`]
 })
 
+
+let newOne = document.createElement('a')
+newOne.textContent = 'Beginning'
+let newTwo = document.createElement('a')
+newTwo.textContent = 'End'
+
+document.querySelector('nav').prepend(newOne)
+document.querySelector('nav').appendChild(newTwo)
+
+nav.forEach((item) => {
+  item.style.color = 'green'
+})
+
 //CTA
 let ctaTitle = document.querySelector('.cta .cta-text h1')
 ctaTitle.textContent = siteContent['cta']['h1']
@@ -81,4 +94,15 @@ bottomContent[0].textContent = siteContent['main-content']['services-content']
 bottomContent[1].textContent = siteContent['main-content']['product-content']
 bottomContent[2].textContent = siteContent['main-content']['vision-content']
 
-//contact
+//contact section
+let contactTitle = document.querySelector('.contact h4')
+contactTitle.textContent = siteContent.contact['contact-h4']
+
+let contactInfo = document.querySelectorAll('.contact p')
+contactInfo[0].textContent = siteContent.contact.address
+contactInfo[1].textContent = siteContent.contact.phone
+contactInfo[2].textContent = siteContent.contact.email
+
+//footer
+let footer = document.querySelector('footer p')
+footer.textContent = siteContent.footer.copyright
