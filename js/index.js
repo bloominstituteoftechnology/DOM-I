@@ -258,4 +258,39 @@ mainHeader.style.flexDirection = 'column';
 mainHeader.style.alignItems = 'center';
 
 //===============================
-//Strech
+//Strech Button even listener
+
+//Study tomorrow's lesson on events and try to integrate a button that can update content on the site with a click of a button. You could build a similar data object with new values to help you test the click event.
+
+//Step 1 isolate <section> <div class="cta-text"> it must be this specific other wise the button is appended in the wrong place. 
+const ctaSection = document.querySelector(".cta-text");
+console.log(ctaSection);
+
+//Step 2 create the new button element
+const button2 = document.createElement('button');
+console.log(button2);
+//Give it some styles and content
+button2.textContent = "IT WORKS";
+button2.background = "white";
+//Make it visible on the page... up to this point it is invisible on the DOM. 
+ctaSection.append(button2);
+button2.onclick = function (event) {
+  //debugger;
+  console.log(`${event.type}happened!`);
+};
+button2.addEventListener('click', event =>{
+  console.log(`you ${event.type}ed on the ${event.target.nodeType}`);
+});
+
+button2.addEventListener('click', event =>{
+  console.log(`Changing the DOM`)
+  event.target.style.backgroundColor = 'red';
+});
+
+button2.addEventListener('mouseenter', event => {
+  event.target.style.backgroundColor = 'black';
+});
+
+button2.addEventListener('mouseleave', event => {
+  event.target.style.backgroundColor = 'white';
+});

@@ -1,8 +1,10 @@
-# DOM I - JavaScript Content Management System
+# DOM I (DOM IS AWESOME)
+
+- JavaScript Content Management System
 
 ## Contents
 
-- [DOM I - JavaScript Content Management System](#dom-i---javascript-content-management-system)
+- [DOM I (DOM IS AWESOME)](#dom-i-dom-is-awesome)
   - [Contents](#contents)
   - [Project Description](#project-description)
   - [Instructions](#instructions)
