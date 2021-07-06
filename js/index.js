@@ -60,6 +60,8 @@ title.innerHTML = siteContent["cta"]["h1"].split(" ").join("<br>");
 //Button
 let button = document.querySelector("button");
 button.innerText = siteContent["cta"]["button"];
+button.id = "button";
+document.getElementById("button").style.backgroundColor = "#64e764";
 //Paragraphs
 let paragraphs = document.querySelectorAll("p");
 paragraphs[0].innerText = siteContent["main-content"]["features-content"];
