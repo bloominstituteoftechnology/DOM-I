@@ -48,6 +48,38 @@ logo.setAttribute("src", siteContent["nav"]["img-src"]);
 // Nav
 let nav = document.querySelectorAll("a");
 for (let i = 0; i < nav.length; i++) {
-	console.log(nav[i]);
 	nav[i].textContent = ("textcontent", siteContent["nav"][`nav-item-${i + 1}`]);
 }
+//IMGs
+let imgs = document.querySelectorAll("img");
+imgs[1].setAttribute("src", siteContent["cta"]["img-src"]);
+imgs[2].setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+//H1
+let title = document.querySelector("h1");
+title.innerHTML = siteContent["cta"]["h1"].split(" ").join("<br>");
+//Button
+let button = document.querySelector("button");
+button.innerText = siteContent["cta"]["button"];
+//Paragraphs
+let paragraphs = document.querySelectorAll("p");
+paragraphs[0].innerText = siteContent["main-content"]["features-content"];
+paragraphs[1].innerText = siteContent["main-content"]["about-content"];
+paragraphs[2].innerText = siteContent["main-content"]["services-content"];
+paragraphs[3].innerText = siteContent["main-content"]["product-content"];
+paragraphs[4].innerText = siteContent["main-content"]["vision-content"];
+paragraphs[5].innerHTML = siteContent["contact"]["address"]
+	.split("Somewhere,")
+	.join("<br> Somewhere,");
+paragraphs[6].innerText = siteContent["contact"]["phone"];
+paragraphs[7].innerText = siteContent["contact"]["email"];
+paragraphs[8].innerText = siteContent["footer"]["copyright"];
+//H1
+let h4 = document.querySelectorAll("h4");
+h4[0].innerText = siteContent["main-content"]["features-h4"];
+h4[1].innerText = siteContent["main-content"]["about-h4"];
+h4[2].innerText = siteContent["main-content"]["services-h4"];
+h4[3].innerText = siteContent["main-content"]["product-h4"];
+h4[4].innerText = siteContent["main-content"]["vision-h4"];
+h4[5].innerText = siteContent["contact"]["contact-h4"];
+//Footer
+let footer = document.querySelector("footer");
