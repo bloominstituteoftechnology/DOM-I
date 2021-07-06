@@ -62,3 +62,9 @@ for (let i = 0; i < bottomContentDivs.length; i++) {
   bottomContentDivs[i].children[0].textContent = siteContent["main-content"][`${titles[i]}-h4`];
   bottomContentDivs[i].children[1].textContent = siteContent["main-content"][`${titles[i]}-content`];
 }
+
+document.querySelector('.contact h4').textContent = siteContent["contact"]["contact-h4"];
+const contactPara = document.querySelectorAll('.contact p');
+contactPara[0].textContent = siteContent["contact"]["address"];
+contactPara[1].textContent = siteContent["contact"]["phone"];
+contactPara[2].textContent = siteContent["contact"]["email"];
