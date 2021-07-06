@@ -1,3 +1,8 @@
+/*  Tom Bielawski
+ *  Lambda School WEB45
+ *  Module 2 DOM I
+ *  7/6/2021
+ */
 const siteContent = {
   "nav": {
     "nav-item-1": "Services",
@@ -44,42 +49,50 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
 // ---------- Navigation Area ----------//
+//--Nav area text color
+//Use document query selector (all) to get 'a', assign to navA
+const colorNavA = document.querySelectorAll("a");
+//For each element in colorNavA...
+colorNavA.forEach((element) => 
+{ //...make the text green
+  element.style.color = "green";
+});
 
 //---Services
 //Get services by tag name and element, assign to services
-const services = document.getElementsByTagName('a')[0];
+const services = document.getElementsByTagName("a")[0];
 //Use textContent and assign nav item 1
-services.textContent = siteContent['nav']['nav-item-1'];
+services.textContent = siteContent["nav"]["nav-item-1"];
 
 //---Product
 //Get product by tag name and element, assign to product
-const product = document.getElementsByTagName('a')[1];
+const product = document.getElementsByTagName("a")[1];
 //Use textContent and assign nav item 2
-product.textContent = siteContent['nav']['nav-item-2'];
+product.textContent = siteContent["nav"]["nav-item-2"];
 
 //---Vision
 //Get vision by tag name and element, assign to vision
-const vision = document.getElementsByTagName('a')[2];
+const vision = document.getElementsByTagName("a")[2];
 //Use textContent and assign nav item 3
-vision.textContent = siteContent['nav']['nav-item-3'];
+vision.textContent = siteContent["nav"]["nav-item-3"];
 
 //---Features
 //Get features by tag name and element, assign to features
-const features = document.getElementsByTagName('a')[3];
+const features = document.getElementsByTagName("a")[3];
 //Use textContent and assign nav item 4
-features.textContent = siteContent['nav']['nav-item-4'];
+features.textContent = siteContent["nav"]["nav-item-4"];
 
 //---About
 //Get about by tag name and element, assign to about
-const about = document.getElementsByTagName('a')[4];
+const about = document.getElementsByTagName("a")[4];
 //Use textContent and assign nav item 5
-about.textContent = siteContent['nav']['nav-item-5'];
+about.textContent = siteContent["nav"]["nav-item-5"];
 
 //---Contact
 //Get contact by tag name and element, assign to contact
-const contact = document.getElementsByTagName('a')[5];
+const contact = document.getElementsByTagName("a")[5];
 //Use textContent and assign nav item 6
-contact.textContent = siteContent['nav']['nav-item-6'];
+contact.textContent = siteContent["nav"]["nav-item-6"];
 
 //---------- CTA ----------//
 
@@ -89,7 +102,7 @@ const bigCircle = document.getElementById("cta-img");
 
 //Use setAttribute, place the circle in the siteContent area 
 //img-src is established in the siteContent area
-bigCircle.setAttribute('src', siteContent["cta"]["img-src"]);
+bigCircle.setAttribute("src", siteContent["cta"]["img-src"]);
 
 //---Title area
 //Use query selector to get <section> cta, <div> cta-text
@@ -139,7 +152,7 @@ const aboutBody = aboutTitle.nextElementSibling;
 //Use textContent to apply about content
 aboutBody.textContent = siteContent["main-content"]["about-content"];
 
-//--- Bottom Content Area
+//---------- Middle Bottom Content Area  ----------//
 //--Services
 //Use query selector to get content
 const servicesContentArea = document.querySelector(".bottom-content .text-content");
@@ -175,3 +188,36 @@ visionTitle.textContent = siteContent ["main-content"]["vision-h4"];
 const visionBody = visionTitle.nextElementSibling;
 //Use textContent to apply the content
 visionBody.textContent = siteContent["main-content"]["vision-content"];
+
+
+//---------- Content and Footer ----------//
+
+//--- Contact Area
+//--Contact Section
+//Use query selector to get the .contact content, assign to contactSection
+const contactSection = document.querySelector(".contact");
+//Use query selector to get the contact h4
+const contactTitle = contactSection.querySelector("h4");
+//Use textContent to apply the h4 title
+contactTitle.textContent = siteContent["contact"]["contact-h4"];
+//Assign to the contact address using next sibling
+const contactAddress = contactTitle.nextElementSibling;
+//Use textContent to apply the content
+contactAddress.textContent = siteContent["contact"]["address"];
+//Use next element sibling to assign phone using next sibling
+const contactPhone = contactAddress.nextElementSibling;
+//Use textContent to apply the content
+contactPhone.textContent = siteContent["contact"]["phone"];
+//Use next element sibling to assign email using next sibling
+const contactEmail = contactPhone.nextElementSibling;
+//Use textContent to apply the content
+contactEmail.textContent = siteContent["contact"]["email"];
+
+
+//--Copyright Area
+//Use query selector to get the footer and assign to footer
+const footer = document.querySelector("footer");
+//Use query selector to get p and assign to copyright
+const copyright = footer.querySelector("p");
+//Use textContent to apply the content
+copyright.textContent = siteContent["footer"]["copyright"];
