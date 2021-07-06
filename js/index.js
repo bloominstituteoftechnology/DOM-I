@@ -55,3 +55,10 @@ document.querySelectorAll('.main-content .top-content .text-content p')[0].textC
 document.querySelectorAll('.main-content .top-content .text-content p')[1].textContent = siteContent["main-content"]["about-content"];
 
 document.querySelector("#middle-img").src = siteContent["main-content"]["middle-img-src"];
+
+const bottomContentDivs = document.querySelector(".bottom-content").children;
+const titles = ['services', 'product', 'vision'];
+for (let i = 0; i < bottomContentDivs.length; i++) {
+  bottomContentDivs[i].children[0].textContent = siteContent["main-content"][`${titles[i]}-h4`];
+  bottomContentDivs[i].children[1].textContent = siteContent["main-content"][`${titles[i]}-content`];
+}
