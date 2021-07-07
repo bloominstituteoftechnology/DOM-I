@@ -37,6 +37,68 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
+//Updates the images
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent['nav']['img-src']);
+let headimage = document.getElementById("cta-img");
+headimage.setAttribute('src', siteContent['cta']['img-src']);
+let middleimg = document.getElementById("middle-img");
+middleimg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+console.log(siteContent['nav']['img-src']);
+//updates the main header and button
+const mainheader = document.querySelector('h1');
+mainheader.textContent = siteContent['cta']['h1'];
+const bigbutton = document.querySelector('button');
+bigbutton.textContent = siteContent['cta']['button']
+//updates the h4s throughout the page
+const h4s = document.getElementsByTagName('h4');
+h4s[0].textContent = siteContent['main-content']['features-h4'];
+h4s[1].textContent = siteContent['main-content']['about-h4'];
+h4s[2].textContent = siteContent['main-content']['services-h4'];
+h4s[3].textContent = siteContent['main-content']['product-h4'];
+h4s[4].textContent = siteContent['main-content']['vision-h4'];
+h4s[5].textContent = siteContent['contact']['contact-h4'];
+//updates the paragraphs
+const theipsums = document.getElementsByTagName('p');
+theipsums[0].textContent = siteContent['main-content']['features-content'];
+theipsums[1].textContent = siteContent['main-content']['about-content'];
+theipsums[2].textContent = siteContent['main-content']['services-content'];
+theipsums[3].textContent = siteContent['main-content']['product-content'];
+theipsums[4].textContent = siteContent['main-content']['vision-content'];
+theipsums[5].textContent = siteContent['contact']['address'];
+theipsums[6].textContent = siteContent['contact']['phone'];
+theipsums[7].textContent = siteContent['contact']['email'];
+theipsums[8].textContent = siteContent['footer']['copyright'];
+//fixes the a tags
+const thelinks = document.getElementsByTagName('a');
+thelinks[0].textContent = siteContent['nav']['nav-item-1'];
+thelinks[1].textContent = siteContent['nav']['nav-item-2'];
+thelinks[2].textContent = siteContent['nav']['nav-item-3'];
+thelinks[3].textContent = siteContent['nav']['nav-item-4'];
+thelinks[4].textContent = siteContent['nav']['nav-item-5'];
+thelinks[5].textContent = siteContent['nav']['nav-item-6'];
+//add new items to the nav
+// const navbar = document.querySelector('.container nav');
+// const addelement = document.createElement('a');
+// addelement.href = '#'
+// navbar.appendChild(addelement);
+// addelement.textcontent = 'please work';
+// console.log(navbar);
+const navBar = document.querySelector(".container nav");
+const addElement = document.createElement("a");
+addElement.href = "#";
+addElement.textContent = "It works!";
+navBar.appendChild(addElement);
+console.log(navBar);
+const addElement2 = document.createElement("a");
+addElement2.href = "#";
+addElement2.textContent = "not a scam link";
+navBar.prepend(addElement2);
+console.log(navBar);
+
+
+//changing the nav color to green
+const navchange = document.getElementsByTagName('a');
+for(let i = 0; i < navchange.length;i++){
+  navchange[i].style.color = 'green';
+}
