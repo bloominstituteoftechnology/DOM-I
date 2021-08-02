@@ -42,8 +42,19 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 // My code starts here
 const navItem1 = document.querySelector('nav a');
-console.log(navItem1);
 navItem1.textContent = siteContent["nav"]["nav-item-1"];
 
 const navItem2 =  navItem1.nextElementSibling;
-console.log(navItem2);
+navItem2.textContent = siteContent["nav"]["nav-item-2"];
+
+const navItem3 = navItem2.nextElementSibling;
+navItem3.textContent = siteContent["nav"]["nav-item-3"];
+
+const navItem4 =  navItem3.nextElementSibling;
+navItem4.textContent = siteContent["nav"]["nav-item-4"];
+
+const navItem5 = navItem4.nextElementSibling;
+navItem5.textContent = siteContent["nav"]["nav-item-5"];
+
+const navItem6 =  navItem5.nextElementSibling;
+navItem6.textContent = siteContent["nav"]["nav-item-6"];
