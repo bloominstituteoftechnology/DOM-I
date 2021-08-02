@@ -40,3 +40,43 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+/*header*/
+const nav = document.querySelectorAll('nav a');
+const anchors = Array.from(nav);
+anchors[0].textContent = 'Services';
+anchors[1].textContent = 'Product';
+anchors[2].textContent = 'Vision';
+anchors[3].textContent = 'Features';
+anchors[4].textContent = 'About';
+anchors[5].textContent = 'Contact';
+
+
+/*button,top image*/
+
+let tempTxt = document.querySelector('h1');
+const lbr = '\n'
+tempTxt.style.whiteSpace = 'pre';
+tempTxt.textContent = 'DOM' + lbr + 'IS' + lbr + 'Awesome';
+
+
+let buttonTxt = document.querySelector('button');
+buttonTxt.textContent = siteContent['cta']['button'];
+
+let circularImg = document.getElementById('cta-img');
+circularImg.setAttribute('src', siteContent['cta']['img-src']);
+
+
+/*Main Content*/
+let featuresName = document.querySelector('features-h4');
+let featuresContent = document.querySelector('.top-content');
+featuresContent.textContent = siteContent["main-content"]["features-h4"];
+
+let aboutName = document.querySelector('about-h4');
+let aboutContent = document.querySelector('.top-content');
+aboutContent.textContent = siteContent["main-content"]["about-h4"];
+
+console.log(siteContent["main-content"]["features-h4"]);
+
+let mainImg = document.getElementById('middle-img');
+mainImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
