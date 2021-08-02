@@ -40,3 +40,10 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+// My code starts here
+const navItem1 = document.querySelector('nav a');
+console.log(navItem1);
+navItem1.textContent = siteContent["nav"]["nav-item-1"];
+
+const navItem2 =  navItem1.nextElementSibling;
+console.log(navItem2);
