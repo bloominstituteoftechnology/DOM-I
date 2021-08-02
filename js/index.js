@@ -73,6 +73,17 @@ addLink.prepend(newH3);
 let code = document.getElementById("cta-img");
 code.setAttribute('src', siteContent["cta"]["img-src"]);
 
+let featurescontent = document.querySelector('.top-content .text-content:nth-of-type(1) h4')
+featurescontent.textContent = 'FEATURES';
+
+let featurestext = document.querySelector('.top-content .text-content:nth-of-type(1) p')
+featurestext.textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+let aboutcontent = document.querySelector('.top-content .text-content:nth-of-type(2) h4')
+aboutcontent.textContent = 'ABOUT';
+
+let abouttext = document.querySelector('.top-content .text-content:nth-of-type(2) p')
+abouttext.textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
 
 // middle image
