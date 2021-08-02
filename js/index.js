@@ -40,3 +40,58 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const navElements = document.querySelectorAll('a');
+navElements.forEach((item, idx) => item.textContent = Object.values(siteContent.nav)[idx]);
+
+const firstEl = document.createElement("p");
+firstEl.textContent = "Example 1"
+const nav = document.querySelector('nav');
+nav.appendChild(firstEl);
+const secEl = document.createElement("p");
+secEl.textContent = "Example 1"
+nav.prepend(secEl);
+nav.style.color = "green";
+
+document.querySelector('h1').innerHTML = 'Dom <br> Is <br> Awsome';
+
+const head1Img = document.querySelector('#cta-img');
+head1Img.src = siteContent['cta']['img-src'];
+
+let smolButton = document.querySelector('.cta button');
+smolButton.textContent = siteContent['cta']['button'];
+
+let middleImg = document.querySelector('.middle-img');
+middleImg.src = siteContent['main-content']['middle-img-src'];
+
+document.querySelector('h4').innerHTML = siteContent['main-content']['features-h4'];
+
+document.querySelector('.top-content .text-content:nth-of-type(2) h4').textContent = siteContent['main-content']['about-h4'];
+
+document.querySelector('.top-content .text-content:nth-of-type(1) p').textContent = siteContent['main-content']['features-content'];
+
+document.querySelector('.top-content .text-content:nth-of-type(2) p').textContent = siteContent['main-content']['about-content'];
+
+document.querySelector('.bottom-content .text-content h4').innerHTML = siteContent['main-content']['services-h4'];
+
+document.querySelector('.bottom-content .text-content:nth-of-type(2) h4').textContent = siteContent['main-content']['product-h4'];
+
+document.querySelector('.bottom-content .text-content:nth-of-type(3) h4').textContent = siteContent['main-content']['vision-h4'];
+
+document.querySelector('.bottom-content .text-content:nth-of-type(1) p').textContent = siteContent['main-content']['services-content'];
+
+document.querySelector('.bottom-content .text-content:nth-of-type(2) p').textContent = siteContent['main-content']['product-content'];
+
+document.querySelector('.bottom-content .text-content:nth-of-type(3) p').textContent = siteContent['main-content']['vision-content'];
+
+document.querySelector('.contact h4').innerHTML = siteContent['contact']['contact-h4'];
+
+document.querySelector('.contact p').innerHTML = "123 Way 456 Street <br> Somewhere, USA";
+
+document.querySelector('.container .contact p:nth-of-type(2)').textContent = siteContent['contact']['phone'];
+
+document.querySelector('.container .contact p:nth-of-type(3)').textContent = siteContent['contact']['email'];
+
+document.querySelector('footer p').textContent = siteContent['footer']['copyright'];
+
+
