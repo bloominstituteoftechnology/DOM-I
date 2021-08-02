@@ -38,6 +38,7 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+// Nav 
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
@@ -73,20 +74,33 @@ navElements.forEach((item, idx) => item.textContent = Object.values(siteContent.
 // document.querySelector('nav a:nth-of-type(5)').text = 'About';
 // document.querySelector('nav a:nth-of-type(6)').text = 'Contact';
 
-
+//Heading
 const heading = document.querySelector('.cta h1')
 heading.innerHTML = 'DOM<br>Is<br>Awesome';
 
 const buttonSmashing = document.querySelector('.cta button')
-buttonSmashing.textContent = siteContent['cta']['button']
+buttonSmashing.textContent = siteContent['cta']['button'];
 
 let BigImg = document.querySelector('.cta img')
-BigImg.src = siteContent['cta']['img-src']
+BigImg.src = siteContent['cta']['img-src'];
+
+// Middle
+
 
 
 let skinnyImg = document.querySelector('.middle-img')
-skinnyImg.src = siteContent['main-content']['middle-img-src']
+skinnyImg.src = siteContent['main-content']['middle-img-src'];
 
 
+// Contact
+const conHeading = document.querySelector('.contact h4')
+conHeading.textContent = siteContent['contact']['contact-h4']
+
+const contactElements = document.querySelectorAll('.contact p')
+console.log(navElements);
+
+contactElements.forEach((item, idx) => item.textContent = Object.values(siteContent.contact)[idx+1]);
+ 
+// footer
 const foot = document.querySelector('footer')
 foot.textContent = siteContent['footer']['copyright']
