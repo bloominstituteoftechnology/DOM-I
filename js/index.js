@@ -45,23 +45,43 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 const navBar = document.querySelector("container nav");
 
 //a tags in nav bar
-const navItem1 = document.querySelector("nav a:nth-of-type(1)");
-navItem1.textContent = siteContent["nav"]["nav-item-1"];
+// const navItem1 = document.querySelector("nav a:nth-of-type(1)");
+// navItem1.textContent = siteContent["nav"]["nav-item-1"];
 
-const navItem2 = document.querySelector("nav a:nth-of-type(2)");
-navItem2.textContent = siteContent["nav"]["nav-item-2"];
+// const navItem2 = document.querySelector("nav a:nth-of-type(2)");
+// navItem2.textContent = siteContent["nav"]["nav-item-2"];
 
-const navItem3 = document.querySelector("nav a:nth-of-type(3)");
-navItem3.textContent = siteContent["nav"]["nav-item-3"];
+// const navItem3 = document.querySelector("nav a:nth-of-type(3)");
+// navItem3.textContent = siteContent["nav"]["nav-item-3"];
 
-const navItem4 = document.querySelector("nav a:nth-of-type(4)");
-navItem4.textContent = siteContent["nav"]["nav-item-4"];
+// const navItem4 = document.querySelector("nav a:nth-of-type(4)");
+// navItem4.textContent = siteContent["nav"]["nav-item-4"];
 
-const navItem5 = document.querySelector("nav a:nth-of-type(5)");
-navItem5.textContent = siteContent["nav"]["nav-item-5"];
+// const navItem5 = document.querySelector("nav a:nth-of-type(5)");
+// navItem5.textContent = siteContent["nav"]["nav-item-5"];
 
-const navItem6 = document.querySelector("nav a:nth-of-type(6)");
-navItem6.textContent = siteContent["nav"]["nav-item-6"];
+// const navItem6 = document.querySelector("nav a:nth-of-type(6)");
+// navItem6.textContent = siteContent["nav"]["nav-item-6"];
 
+let links = Object.entries(siteContent.nav);
+
+for (let i = 0; i <links.length - 1; i++){
+  let navItem = document.querySelector(`nav a:nth-of-type(${i + 1})`);
+  navItem.textContent = siteContent["nav"][`nav-item-${i+1}`]
+}
+
+//cta section
+
+//cta h1
+const title = document.querySelector("h1");
+title.textContent = siteContent["cta"]["h1"];
+
+//cta button 
+const ctaButton = document.querySelector(".cta button");
+ctaButton.textContent = siteContent["cta"]["button"];
+
+//cta img
+const ctaImg = document.querySelector(".cta img");
+ctaImg.src = siteContent["cta"]["img-src"];
 
 
