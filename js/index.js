@@ -90,3 +90,29 @@ abouttext.textContent = "About content elementum magna eros, ac posuere elvit te
 
 // let middleimg = document.getElementById("middle-img");
 // code.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+
+let servicescontent = document.querySelector('.bottom-content .text-content:nth-of-type(1) h4')
+servicescontent.textContent = 'SERVICES';
+
+let servicestext = document.querySelector('.bottom-content .text-content:nth-of-type(1) p')
+servicestext.textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+let productcontent = document.querySelector('.bottom-content .text-content:nth-of-type(2) h4')
+productcontent.textContent = 'PRODUCT';
+
+let producttext = document.querySelector('.bottom-content .text-content:nth-of-type(2) p')
+producttext.textContent = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+let visioncontent = document.querySelector('.bottom-content .text-content:nth-of-type(3) h4')
+visioncontent.textContent = 'VISION';
+
+let visiontext = document.querySelector('.bottom-content .text-content:nth-of-type(3) p')
+visiontext.textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+document.querySelector('.contact h4').innerHTML = siteContent['contact']['contact-h4'];
+document.querySelector('.contact p').innerHTML = '123 Way 456 Street <br> Somewhere, USA';
+document.querySelector('.container .contact p:nth-of-type(2)').textContent = siteContent['contact']['phone'];
+document.querySelector('.container .contact p:nth-of-type(3)').textContent = siteContent ['contact']['email'];
+
+document.querySelector('footer').innerHTML = siteContent['footer']['copyright'];
