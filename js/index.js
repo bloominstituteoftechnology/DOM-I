@@ -85,3 +85,41 @@ const aboutInfo = aboutTitle.nextElementSibling;
 aboutInfo.textContent = siteContent["main-content"]["about-content"];
 
 //Middle Image code
+const middleImage = document.querySelector('#middle-img');
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+//Middle body second half after image
+const serviceTitle = document.querySelector('.bottom-content .text-content h4');
+serviceTitle.textContent = siteContent["main-content"]["services-h4"];
+
+const serviceInfo = serviceTitle.nextElementSibling;
+serviceInfo.textContent = siteContent["main-content"]["services-content"];
+
+const productTitle = document.querySelector('.bottom-content .text-content:nth-of-type(2) h4');
+productTitle.textContent = siteContent["main-content"]["product-h4"];
+
+const productInfo = productTitle.nextElementSibling;
+productInfo.textContent = siteContent["main-content"]["product-content"];
+
+const visionTitle = document.querySelector('.bottom-content .text-content:nth-of-type(3) h4');
+visionTitle.textContent = siteContent["main-content"]["services-h4"];
+
+const visionInfo = visionTitle.nextElementSibling;
+visionInfo.textContent = siteContent["main-content"]["vision-content"]
+
+//contact section code
+const contactTitle = document.querySelector('.contact h4');
+contactTitle.textContent = siteContent["contact"]["contact-h4"];
+
+const contactAddress = document.querySelector('.contact p:nth-of-type(1)');
+contactAddress.textContent = siteContent["contact"]["address"];
+
+const contactPhone = document.querySelector('.contact p:nth-of-type(2)');
+contactPhone.textContent = siteContent["contact"]["phone"];
+
+const contactEmail = document.querySelector('.contact p:nth-of-type(3)');
+contactEmail.textContent = siteContent["contact"]["email"];
+
+//Footer code
+const footerNote = document.querySelector('footer p');
+footerNote.textContent = siteContent["footer"]["copyright"];
