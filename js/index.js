@@ -43,7 +43,33 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
+const addLink = document.querySelector('nav');
 
+const Links1 = document.querySelector('nav-item-1');
+
+
+
+
+const h1Body = document.querySelector('h1');
+// console.log(h1Body);
+const newline = "\n";
+h1Body.style.whiteSpace = 'pre'
+h1Body.textContent = 'DOM' + newline + 'IS' + newline + 'AWESOME';
+
+const buttonBody = document.querySelector('button');
+buttonBody.textContent = 'Get Started';
+
+
+const newAtag = document.createElement('a');
+newAtag.textContent = 'Outreach';
+newAtag.href = '#';
+newAtag.style.color = 'green';
+addLink.appendChild(newAtag);
+
+const newH3 = document.createElement('h3');
+newH3.textContent = 'Navigation:';
+newH3.style.fontSize = '20px';
+addLink.prepend(newH3);
 
 //code snippit image
 let code = document.getElementById("cta-img");
@@ -52,21 +78,22 @@ code.setAttribute('src', siteContent["cta"]["img-src"]);
 // Dom is awesome text
 
 
-let Featurescontent = document.querySelector('top-content .text-content:nth-of-type(1) h4 ')
-Featurescontent.textcontent = "FEATURES";
+// let Featurescontent = document.querySelector('top-content .text-content:nth-of-type(1) h4 ')
+// Featurescontent.textcontent = "FEATURES";
 
-let aboutcontent = document.querySelector('top-content .text-content:nth-of-type(2) h4 ')
-aboutcontent.textcontent = "ABOUT";
+// let aboutcontent = document.querySelector('top-content .text-content:nth-of-type(2) h4 ')
+// aboutcontent.textcontent = "ABOUT";
 
 // middle image
-let middleimg = document.getElementById("middle-img");
-code.setAttribute('src', siteContent["main-content"]["img-src"]);
 
-let servicescontent = document.querySelector('top-content .text-content:nth-of-type(3) h4 ')
-servicescontent.textcontent = "SERVICES";
+// let middleimg = document.getElementById("middle-img");
+// code.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
-let productcontent = document.querySelector('top-content .text-content:nth-of-type(4) h4 ')
-productcontent.textcontent = "PRODUCT";
+// let servicescontent = document.querySelector('top-content .text-content:nth-of-type(3) h4 ')
+// servicescontent.textcontent = "SERVICES";
 
-let visioncontent = document.querySelector('top-content .text-content:nth-of-type(5) h4 ')
-visioncontent.textcontent = "VISION";
+// let productcontent = document.querySelector('top-content .text-content:nth-of-type(4) h4 ')
+// productcontent.textcontent = "PRODUCT";
+
+// let visioncontent = document.querySelector('top-content .text-content:nth-of-type(5) h4 ')
+// visioncontent.textcontent = "VISION";
