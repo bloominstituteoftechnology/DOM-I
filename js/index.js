@@ -58,3 +58,30 @@ navItem5.textContent = siteContent["nav"]["nav-item-5"];
 
 const navItem6 =  navItem5.nextElementSibling;
 navItem6.textContent = siteContent["nav"]["nav-item-6"];
+
+// main H1
+const mainTitle = document.querySelector('.cta h1');
+mainTitle.textContent = siteContent["cta"]["h1"];
+
+// main Button
+const buttonMain = document.querySelector('.cta button');
+buttonMain.textContent = siteContent["cta"]["button"];
+
+//main IMG
+const imgMain = document.querySelector('#cta-img');
+imgMain.setAttribute('src', siteContent["cta"]["img-src"]);
+
+//Middle body features, about, services, etc...
+const featuresTitle = document.querySelector('.top-content .text-content h4');
+featuresTitle.textContent = siteContent["main-content"]["features-h4"];
+
+const featuresInfo =  featuresTitle.nextElementSibling;
+featuresInfo.textContent = siteContent["main-content"]["features-content"];
+
+const aboutTitle = document.querySelector('.top-content .text-content:nth-of-type(2) h4');
+aboutTitle.textContent = siteContent["main-content"]["about-h4"];
+
+const aboutInfo = aboutTitle.nextElementSibling;
+aboutInfo.textContent = siteContent["main-content"]["about-content"];
+
+//Middle Image code
