@@ -39,4 +39,26 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+let nav = document.querySelectorAll('nav a');
+const newNavArray = Array.from(nav);
+newNavArray.forEach((item, index) => item.textContent = siteContent['nav'][`nav-item-${index}`]);
+
+let ctaImg = document.querySelector("#cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let middleImg = document.querySelector(".middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+let featuresH4 = document.querySelector(".top-content .text-content:nth-child(1) h4");
+featuresH4.textContent = siteContent['main-content']['features-h4'];
+
+let featuresP = document.querySelector(".top-content .text-content:nth-child(1) p");
+featuresP.textContent = siteContent['main-content']['features-content'];
+
+let aboutH4 = document.querySelector(".top-content .text-content:nth-child(2) h4");
+aboutH4.textContent = siteContent['main-content']['about-h4'];
+
+let aboutP = document.querySelector(".top-content .text-content:nth-child(2) p");
+aboutP.textContent = siteContent['main-content']['about-content'];
