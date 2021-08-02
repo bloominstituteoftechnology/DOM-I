@@ -37,6 +37,9 @@ const siteContent = {
   },
 };
 
+let nav = document.querySelectorAll('nav a')
+const newNavArray = Array.from(nav)
+newNavArray.forEach((item,index) =>item.textContent = siteContent['nav'][`nav-item-${index}`])
 
 
 // Example: Update the img src for the logo
@@ -44,11 +47,6 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 const addLink = document.querySelector('nav');
-
-const Links1 = document.querySelector('nav-item-1');
-
-
-
 
 const h1Body = document.querySelector('h1');
 // console.log(h1Body);
@@ -75,25 +73,9 @@ addLink.prepend(newH3);
 let code = document.getElementById("cta-img");
 code.setAttribute('src', siteContent["cta"]["img-src"]);
 
-// Dom is awesome text
 
-
-// let Featurescontent = document.querySelector('top-content .text-content:nth-of-type(1) h4 ')
-// Featurescontent.textcontent = "FEATURES";
-
-// let aboutcontent = document.querySelector('top-content .text-content:nth-of-type(2) h4 ')
-// aboutcontent.textcontent = "ABOUT";
 
 // middle image
 
 // let middleimg = document.getElementById("middle-img");
 // code.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
-
-// let servicescontent = document.querySelector('top-content .text-content:nth-of-type(3) h4 ')
-// servicescontent.textcontent = "SERVICES";
-
-// let productcontent = document.querySelector('top-content .text-content:nth-of-type(4) h4 ')
-// productcontent.textcontent = "PRODUCT";
-
-// let visioncontent = document.querySelector('top-content .text-content:nth-of-type(5) h4 ')
-// visioncontent.textcontent = "VISION";
