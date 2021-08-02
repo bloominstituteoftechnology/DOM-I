@@ -123,3 +123,20 @@ contactEmail.textContent = siteContent["contact"]["email"];
 //Footer code
 const footerNote = document.querySelector('footer p');
 footerNote.textContent = siteContent["footer"]["copyright"];
+
+//Navigation color text change
+
+function changeColorNav (){
+  nav.a.style.color = "red";
+}
+
+//Append Child
+const socialMedia = document.createElement('a');
+socialMedia.textContent = 'Social Media'
+socialMedia.href = '#';
+document.querySelector('nav').appendChild(socialMedia);
+
+const register = document.createElement('a');
+register.textContent = 'Register';
+register.href = '#';
+document.querySelector('nav').prepend(register);
