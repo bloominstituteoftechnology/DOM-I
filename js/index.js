@@ -68,15 +68,15 @@ circularImg.setAttribute('src', siteContent['cta']['img-src']);
 
 
 /*Main Content*/
+
+let txtContent = document.querySelector('.text-content');;
+txtContent.style.width = '200px';
+
 let featuresName = document.querySelector('features-h4');
-let featuresContent = document.querySelector('.top-content');
-featuresContent.textContent = siteContent["main-content"]["features-h4"];
+featuresName = document.querySelector('.text-content h4:nth-of-type(1)');
+featuresName.textContent = siteContent["main-content"]["features-h4"];
 
-let aboutName = document.querySelector('about-h4');
-let aboutContent = document.querySelector('.top-content');
-aboutContent.textContent = siteContent["main-content"]["about-h4"];
+const test = featuresName.clone(true);
+document.querySelector('.text-content').appendChild(test);
 
-console.log(siteContent["main-content"]["features-h4"]);
-
-let mainImg = document.getElementById('middle-img');
-mainImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+console.log(test)
