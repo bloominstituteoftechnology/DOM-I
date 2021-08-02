@@ -39,4 +39,54 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+
+const navElements = document.querySelectorAll('a')
+console.log(navElements);
+
+navElements.forEach((item, idx) => item.textContent = Object.values(siteContent.nav)[idx])
+ 
+// const firstNav = document.querySelector('nav a')
+// firstNav.text = 'Services';
+// secondNav = firstNav.nextElementSibling
+// secondNav.text = 'Products';
+// thirdNav = secondNav.nextElementSibling
+// thirdNav.text = 'Visions';
+// fourthNav = thirdNav.nextElementSibling
+// fourthNav.text = 'Features';
+// fifthNav = fourthNav.nextElementSibling
+// fifthNav.text = 'About';
+// sixthNav = fifthNav.nextElementSibling
+// sixthNav.text = 'Contact';
+
+// firstNav.nextElementSibling.text = 'Products' 
+// firstNav.nextElementSibling.nextElementSibling.text = 'Visions'
+// firstNav.nextElementSibling.nextElementSibling.nextElementSibling.text = 'Features'
+// firstNav.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.text = 'About'
+// firstNav.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.text = 'Contact'
+
+// document.querySelector('nav a').text = 'Services';
+// document.querySelector('nav a:nth-of-type(2)').text = 'Products';
+// document.querySelector('nav a:nth-of-type(3)').text = 'Visions';
+// document.querySelector('nav a:nth-of-type(4)').text = 'Features';
+// document.querySelector('nav a:nth-of-type(5)').text = 'About';
+// document.querySelector('nav a:nth-of-type(6)').text = 'Contact';
+
+
+const heading = document.querySelector('.cta h1')
+heading.innerHTML = 'DOM<br>Is<br>Awesome';
+
+const buttonSmashing = document.querySelector('.cta button')
+buttonSmashing.textContent = siteContent['cta']['button']
+
+let BigImg = document.querySelector('.cta img')
+BigImg.src = siteContent['cta']['img-src']
+
+
+let skinnyImg = document.querySelector('.middle-img')
+skinnyImg.src = siteContent['main-content']['middle-img-src']
+
+
+const foot = document.querySelector('footer')
+foot.textContent = siteContent['footer']['copyright']
