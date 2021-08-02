@@ -37,6 +37,22 @@ const siteContent = {
   },
 };
 
+const links = document.querySelector('nav');
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+
+
+//code snippit image
+let code = document.getElementById("cta-img");
+code.setAttribute('src', siteContent["cta"]["img-src"]);
+
+// Dom is awesome text
+const ctatext = document.querySelector()
+
+//middle image
+// let middleimg = document.getElementById("middle-img");
+// code.setAttribute('src', siteContent["main-content"]["img-src"]);
+
