@@ -40,3 +40,53 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//nav
+
+let navSelectors = document.querySelectorAll('a');
+let navTargets = Object.values(siteContent.nav);
+
+for(let i = 0; i < navSelectors.length; i++) {
+  navSelectors[i].textContent = navTargets[i];
+  navSelectors[i].style.color = "slateblue";
+}
+
+//top
+
+document.querySelector('h1').innerHTML = "DOM <br>IS <br>AWESOME ";
+document.querySelector('button').innerHTML = "Get Started";
+
+let header = document.getElementById("cta-img");
+
+header.setAttribute('src', siteContent["cta"]["img-src"])
+
+//mid
+
+let midPage = document.getElementById('middle-img');
+let textContent = document.getElementsByClassName('text-content');
+let mainContent = Object.values(siteContent["main-content"]);
+
+midPage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+mainContent = mainContent.filter(a => a !== mainContent.filter(b => b.match(/img/))[0]);
+
+for(let i = 0; i < mainContent.length; i+=2) {
+  textContent[i/2].childNodes[1].innerHTML = mainContent[i];
+  textContent[i/2].childNodes[3].innerHTML = mainContent[i+1];
+}
+
+//contact
+
+let contact = document.getElementsByClassName('contact');
+let contactContent = Object.values(siteContent["contact"]);
+
+for(let i = 1; i < contact[0].childNodes.length; i+=2) {
+  contact[0].childNodes[i].textContent = contactContent.shift();
+  
+}
+
+//footer
+
+let footer = document.getElementsByTagName('footer');
+
+footer[0].childNodes[1].textContent = Object.values(siteContent['footer'])
