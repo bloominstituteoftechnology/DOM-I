@@ -41,11 +41,8 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-// Finding all the anchor tags inside the nav element
-// const links = document.querySelectorAll("nav a");
-
-//Change the nav anchor tags text content
-// links.textContent 
+// Finding the anchor tags one at a time inside the nav element
+// Changing the text content of each nav anchor tag
 
 const firstLink = document.querySelector("nav a:nth-of-type(1)");
 firstLink.textContent = "Services";
@@ -64,3 +61,9 @@ fifthLink.textContent = "About";
 
 const sixthLink = document.querySelector("nav a:nth-of-type(6)");
 sixthLink.textContent = "Contact";
+
+// Finding cta-img
+// Updating the src of cta-img
+
+const ctaImg = document.querySelector(".cta img");
+ctaImg.src = "./img/header-img.png";
