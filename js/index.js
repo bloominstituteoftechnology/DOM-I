@@ -69,14 +69,27 @@ circularImg.setAttribute('src', siteContent['cta']['img-src']);
 
 /*Main Content*/
 
-let txtContent = document.querySelector('.text-content');;
-txtContent.style.width = '200px';
+document.querySelector('.top-content .text-content:nth-of-type(1) h4').textContent = siteContent['main-content']['features-h4'];
+document.querySelector('.top-content .text-content:nth-of-type(1) p').textContent = siteContent['main-content']['features-content'];
+document.querySelector('.top-content .text-content:nth-of-type(2) h4').textContent = siteContent['main-content']['about-h4'];
+document.querySelector('.top-content .text-content:nth-of-type(2) p').textContent = siteContent['main-content']['about-content'];
 
-let featuresName = document.querySelector('features-h4');
-featuresName = document.querySelector('.text-content h4:nth-of-type(1)');
-featuresName.textContent = siteContent["main-content"]["features-h4"];
+const middleImg = document.getElementById('middle-img').setAttribute("src", siteContent['main-content']['middle-img-src']);
 
-const test = featuresName.clone(true);
-document.querySelector('.text-content').appendChild(test);
+document.querySelector('.bottom-content .text-content:nth-of-type(1) h4').textContent = siteContent['main-content']['services-h4'];
+document.querySelector('.bottom-content .text-content:nth-of-type(1) p').textContent = siteContent['main-content']['services-content'];
+document.querySelector('.bottom-content .text-content:nth-of-type(2) h4').textContent = siteContent['main-content']['product-h4'];
+document.querySelector('.bottom-content .text-content:nth-of-type(2) p').textContent = siteContent['main-content']['product-content'];
+document.querySelector('.bottom-content .text-content:nth-of-type(3) h4').textContent = siteContent['main-content']['vision-h4'];
+document.querySelector('.bottom-content .text-content:nth-of-type(3) p').textContent = siteContent['main-content']['vision-content'];
 
-console.log(test)
+/*contact*/
+document.querySelector('.contact h4').textContent = siteContent['contact']['contact-h4']
+const address = document.querySelector('.contact p:nth-of-type(1)').textContent = siteContent['contact']['address']
+const phoneNumber = document.querySelector('.contact p:nth-of-type(2)').textContent = siteContent['contact']['phone']
+const email = document.querySelector('.contact p:nth-of-type(3)').textContent = siteContent['contact']['email']
+
+console.log(address)
+
+/*footer*/
+document.querySelector('footer p').textContent = siteContent['footer']['copyright']
