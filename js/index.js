@@ -62,8 +62,25 @@ fifthLink.textContent = "About";
 const sixthLink = document.querySelector("nav a:nth-of-type(6)");
 sixthLink.textContent = "Contact";
 
+// Finding logo-img
+// Updating the src of logo-img
+
+// const logoImg = document.querySelector("header img");
+// logoImg.src = "./img/logo.png";
+
+
 // Finding cta-img
 // Updating the src of cta-img
 
 const ctaImg = document.querySelector(".cta img");
 ctaImg.src = "./img/header-img.png";
+
+// Finding and updating cta-text <h1>
+
+const phrase = document.querySelector(".cta-text h1");
+phrase.innerHTML = "DOM<br> Is<br> Awesome";
+
+// Finding and updating the cta-text <button>
+
+const ctaButton = document.querySelector(".cta-text button");
+ctaButton.textContent = "Get Started";
