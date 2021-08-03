@@ -42,14 +42,24 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 /*header*/
-const nav = document.querySelectorAll('nav a');
-const anchors = Array.from(nav);
-anchors[0].textContent = 'Services';
-anchors[1].textContent = 'Product';
-anchors[2].textContent = 'Vision';
-anchors[3].textContent = 'Features';
-anchors[4].textContent = 'About';
-anchors[5].textContent = 'Contact';
+const blogLink = document.createElement('a');
+blogLink.textContent = 'Blog';
+blogLink.href = '#';
+document.querySelector('nav').appendChild(blogLink)
+
+let navLinks = document.querySelectorAll('a');
+for(let i = 0; i < navLinks.length; i++) {
+  let individualLinks = navLinks[i];
+  individualLinks.style.color = 'green';
+}
+
+document.querySelector('nav a:nth-of-type(1)').textContent = siteContent['nav']['nav-item-1'];
+document.querySelector('nav a:nth-of-type(2)').textContent = siteContent['nav']['nav-item-2'];
+document.querySelector('nav a:nth-of-type(3)').textContent = siteContent['nav']['nav-item-3'];
+document.querySelector('nav a:nth-of-type(4) ').textContent = siteContent['nav']['nav-item-4'];
+document.querySelector('nav a:nth-of-type(5) ').textContent = siteContent['nav']['nav-item-5'];
+document.querySelector('nav a:nth-of-type(6)').textContent = siteContent['nav']['nav-item-6'];
+
 
 
 /*button,top image*/
