@@ -63,9 +63,6 @@ sixthLink.textContent = siteContent["nav"]["nav-item-6"];
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-// const logoImg = document.querySelector("header img");
-// logoImg.src = "./img/logo.png";
-
 
 // Finding cta-img
 // Updating the src of cta-img
@@ -73,8 +70,6 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 
-// const ctaImg = document.querySelector(".cta img");
-// ctaImg.src = "./img/header-img.png";
 
 // Finding and updating cta-text <h1>
 
@@ -86,6 +81,11 @@ phrase.innerHTML = siteContent["cta"]["h1"];
 
 const ctaButton = document.querySelector(".cta-text button");
 ctaButton.textContent = siteContent["cta"]["button"];
+
+// Finding and updating the middle-img
+
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
 // Finding and updating contact section
 
@@ -100,6 +100,7 @@ contactPhone.textContent = siteContent["contact"]["phone"];
 
 const contactEmail = document.querySelector(".contact p:nth-of-type(3)");
 contactEmail.textContent = siteContent["contact"]["email"];
+
 
 // Finding and updating footer
 const footer = document.querySelector(".container footer");
