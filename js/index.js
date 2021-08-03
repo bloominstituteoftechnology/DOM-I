@@ -43,10 +43,13 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 let nav = document.querySelectorAll('nav a');
 const newNavArray = Array.from(nav);
-newNavArray.forEach((item, index) => item.textContent = siteContent['nav'][`nav-item-${index}`]);
+newNavArray.forEach((item, index) => item.textContent = siteContent['nav'][`nav-item-${index + 1}`]);
 
 let ctaH1 = document.querySelector(".cta-text h1");
-ctaH1.textContent = 'DOM \n is \n Awesome'
+ctaH1.textContent = 'DOM \n is\n Awesome';
+
+let ctaButton = document.querySelector(".cta-text button");
+ctaButton.textContent = siteContent['cta']['button'];
 
 let ctaImg = document.querySelector("#cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
