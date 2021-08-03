@@ -88,8 +88,8 @@ abouttext.textContent = "About content elementum magna eros, ac posuere elvit te
 
 // middle image
 
-// let middleimg = document.getElementById("middle-img");
-// code.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+let middleImg = document.querySelector('.middle-img');
+middleImg.src = siteContent['main-content']['middle-img-src'];
 
 
 let servicescontent = document.querySelector('.bottom-content .text-content:nth-of-type(1) h4')
