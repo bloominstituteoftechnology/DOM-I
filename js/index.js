@@ -82,6 +82,15 @@ phrase.innerHTML = siteContent["cta"]["h1"];
 const ctaButton = document.querySelector(".cta-text button");
 ctaButton.textContent = siteContent["cta"]["button"];
 
+// Finding and updating <h4> tags
+
+const features = document.querySelector(".text-content h4:nth-of-type(1)");
+features.textContent = siteContent["main-content"]["features-h4"];
+
+// const about = document.querySelector(".text-content h4:nth-of-type(2)");
+// about.textContent = siteContent["main-content"]["about-h4"];
+
+
 // Finding and updating the middle-img
 
 let middleImg = document.getElementById("middle-img");
