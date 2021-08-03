@@ -42,11 +42,8 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-
 const navElements = document.querySelectorAll('a')
-console.log(navElements);
-
-navElements.forEach((item, idx) => item.textContent = Object.values(siteContent.nav)[idx])
+navElements.forEach((item, idx) => item.textContent = Object.values(siteContent.nav)[idx]);
  
 // const firstNav = document.querySelector('nav a')
 // firstNav.text = 'Services';
@@ -85,11 +82,21 @@ let BigImg = document.querySelector('.cta img')
 BigImg.src = siteContent['cta']['img-src'];
 
 // Middle
-
+document.querySelector('.top-content .text-content h4').textContent = siteContent['main-content']['features-h4'];
+document.querySelector('.top-content .text-content p').textContent = siteContent['main-content']['features-content'];
+document.querySelector('.top-content .text-content:nth-of-type(2) h4').textContent = siteContent['main-content']['about-h4'];
+document.querySelector('.top-content .text-content:nth-of-type(2) p').textContent = siteContent['main-content']['about-content'];
 
 
 let skinnyImg = document.querySelector('.middle-img')
 skinnyImg.src = siteContent['main-content']['middle-img-src'];
+
+document.querySelector('.bottom-content .text-content h4').textContent = siteContent['main-content']['services-h4'];
+document.querySelector('.bottom-content .text-content p').textContent = siteContent['main-content']['services-content'];
+document.querySelector('.bottom-content .text-content:nth-of-type(2) h4').textContent = siteContent['main-content']['product-h4'];
+document.querySelector('.bottom-content .text-content:nth-of-type(2) p').textContent = siteContent['main-content']['product-content'];
+document.querySelector('.bottom-content .text-content:nth-of-type(3) h4').textContent = siteContent['main-content']['vision-h4'];
+document.querySelector('.bottom-content .text-content:nth-of-type(3) p').textContent = siteContent['main-content']['vision-content'];
 
 
 // Contact
@@ -97,8 +104,6 @@ const conHeading = document.querySelector('.contact h4')
 conHeading.textContent = siteContent['contact']['contact-h4']
 
 const contactElements = document.querySelectorAll('.contact p')
-console.log(navElements);
-
 contactElements.forEach((item, idx) => item.textContent = Object.values(siteContent.contact)[idx+1]);
  
 // footer
