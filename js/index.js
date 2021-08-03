@@ -38,12 +38,17 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+
+
+document.title = "Great Idea!";
+
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 let nav = document.querySelectorAll('nav a');
 const newNavArray = Array.from(nav);
 newNavArray.forEach((item, index) => item.textContent = siteContent['nav'][`nav-item-${index + 1}`]);
+newNavArray.forEach(item => item.style.color = "#00A36C");
 
 let ctaH1 = document.querySelector(".cta-text h1");
 ctaH1.textContent = 'DOM \n is\n Awesome';
@@ -79,12 +84,12 @@ visionP.textContent = siteContent['main-content']['vision-content'];
 
 let contactH4 = document.querySelector(".contact h4");
 contactH4.textContent = siteContent['contact']['contact-h4'];
-
 let addressP = document.querySelector(".contact p:nth-of-type(1)");
 addressP.textContent = siteContent['contact']['address'];
-
 let phoneP = document.querySelector(".contact p:nth-of-type(2)");
 phoneP.textContent = siteContent['contact']['phone'];
-
 let emailP = document.querySelector(".contact p:nth-of-type(3)");
 emailP.textContent = siteContent['contact']['email'];
+
+let footerCopyright = document.querySelector("footer p");
+footerCopyright.textContent = siteContent['footer']['copyright'];
