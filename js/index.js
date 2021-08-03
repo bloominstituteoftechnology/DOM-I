@@ -47,10 +47,8 @@ newNavArray.forEach((item, index) => item.textContent = siteContent['nav'][`nav-
 
 let ctaH1 = document.querySelector(".cta-text h1");
 ctaH1.textContent = 'DOM \n is\n Awesome';
-
 let ctaButton = document.querySelector(".cta-text button");
 ctaButton.textContent = siteContent['cta']['button'];
-
 let ctaImg = document.querySelector("#cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 
@@ -58,7 +56,6 @@ let featuresH4 = document.querySelector(".top-content .text-content:nth-child(1)
 featuresH4.textContent = siteContent['main-content']['features-h4'];
 let featuresP = document.querySelector(".top-content .text-content:nth-child(1) p");
 featuresP.textContent = siteContent['main-content']['features-content'];
-
 let aboutH4 = document.querySelector(".top-content .text-content:nth-child(2) h4");
 aboutH4.textContent = siteContent['main-content']['about-h4'];
 let aboutP = document.querySelector(".top-content .text-content:nth-child(2) p");
@@ -71,13 +68,23 @@ let servicesH4 = document.querySelector(".bottom-content .text-content:nth-child
 servicesH4.textContent = siteContent['main-content']['services-h4'];
 let servicesP = document.querySelector(".bottom-content .text-content:nth-child(1) p");
 servicesP.textContent = siteContent['main-content']['services-content'];
-
 let productH4 = document.querySelector(".bottom-content .text-content:nth-child(2) h4");
 productH4.textContent = siteContent['main-content']['product-h4'];
 let productP = document.querySelector(".bottom-content .text-content:nth-child(2) p");
 productP.textContent = siteContent['main-content']['product-content'];
-
 let visionH4 = document.querySelector(".bottom-content .text-content:nth-child(3) h4");
 visionH4.textContent = siteContent['main-content']['vision-h4'];
 let visionP = document.querySelector(".bottom-content .text-content:nth-child(3) p");
 visionP.textContent = siteContent['main-content']['vision-content'];
+
+let contactH4 = document.querySelector(".contact h4");
+contactH4.textContent = siteContent['contact']['contact-h4'];
+
+let addressP = document.querySelector(".contact p:nth-of-type(1)");
+addressP.textContent = siteContent['contact']['address'];
+
+let phoneP = document.querySelector(".contact p:nth-of-type(2)");
+phoneP.textContent = siteContent['contact']['phone'];
+
+let emailP = document.querySelector(".contact p:nth-of-type(3)");
+emailP.textContent = siteContent['contact']['email'];
