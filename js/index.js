@@ -44,20 +44,42 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 let cta = document.getElementById("cta-img");
 cta.setAttribute('src', siteContent["cta"]["img-src"]);
 
-let navItems = document.querySelectorAll("nav a");
-const linksArray = Array.from(navItems);
-const linkItem1 = linksArray[0];
-linkItem1.textContent = "Services";
-const linkItem2 = linksArray[1];
-linkItem2.textContent = "Product";
-const linkItem3 = linksArray[2];
-linkItem3.textContent = "Vision";
-const linkItem4 = linksArray[3];
-linkItem4.textContent = "Features";
-const linkItem5 = linksArray[4];
-linkItem5.textContent = "About";
-const linkItem6 = linksArray[5];
-linkItem6.textContent = "Contact";
+let navItems = Array.from(document.querySelectorAll("nav a"));
+navItems[0].textContent = "Services";
+navItems[1].textContent = "Product";
+navItems[2].textContent = "Vision";
+navItems[3].textContent = "Features";
+navItems[4].textContent = "About";
+navItems[5].textContent = "Contact";
+
+const h1 = document.querySelector('h1');
+h1.innerHTML = "DOM <br> Is <br> Awesome";
+
+const buttonGetStarted = document.querySelector('.cta button');
+buttonGetStarted.textContent = "Get Started";
+
+const h4 = document.querySelectorAll('h4');
+h4[0].textContent = siteContent["main-content"]["features-h4"];
+h4[1].textContent = siteContent["main-content"]["about-h4"];
+h4[2].textContent = siteContent["main-content"]["services-h4"];
+h4[3].textContent = siteContent["main-content"]["product-h4"];
+h4[4].textContent = siteContent["main-content"]["vision-h4"];
+h4[5].textContent = siteContent["contact"]["contact-h4"];
+
+
+const p = document.querySelectorAll('p');
+p[0].textContent = siteContent['main-content']["features-content"];
+p[1].textContent = siteContent["main-content"]["about-content"];
+p[2].textContent = siteContent["main-content"]["services-content"];
+p[3].textContent = siteContent["main-content"]["product-content"];
+p[4].textContent = siteContent["main-content"]["vision-content"];
+p[5].innerHTML = "123 Way 456 Street <br> Somewhere, USA";
+p[6].textContent = siteContent["contact"]["phone"];
+p[7].textContent = siteContent["contact"]["email"];
+p[8].textContent = siteContent["footer"]["copyright"];
+
+const midImg = document.getElementById("middle-img");
+midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 
 
