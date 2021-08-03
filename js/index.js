@@ -86,7 +86,7 @@ let abouttext = document.querySelector('.top-content .text-content:nth-of-type(2
 abouttext.textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
 
-// middle image
+// middleimage
 
 let middleImg = document.querySelector('.middle-img');
 middleImg.src = siteContent['main-content']['middle-img-src'];
