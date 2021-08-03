@@ -9,7 +9,7 @@ const siteContent = {
         "img-src": "img/logo.png"
     },
     "cta": {
-        "h1": "DOM Is Awesome",
+        "h1": "DOM<br>Is<br>Awesome",
         "button": "Get Started",
         "img-src": "img/header-img.png"
     },
@@ -28,7 +28,7 @@ const siteContent = {
     },
     "contact": {
         "contact-h4": "Contact",
-        "address": "123 Way 456 Street Somewhere, USA",
+        "address": "123 Way 456 Street<br>Somewhere, USA",
         "phone": "1 (888) 888-8888",
         "email": "sales@greatidea.io",
     },
@@ -37,33 +37,31 @@ const siteContent = {
     },
 };
 
-// Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"]);
-
 // Finding the anchor tags one at a time inside the nav element
 // Changing the text content of each nav anchor tag
 
 const firstLink = document.querySelector("nav a:nth-of-type(1)");
-firstLink.textContent = "Services";
+firstLink.textContent = siteContent["nav"]["nav-item-1"];
 
 const secondLink = document.querySelector("nav a:nth-of-type(2)");
-secondLink.textContent = "Product";
+secondLink.textContent = siteContent["nav"]["nav-item-2"];
 
 const thirdLink = document.querySelector("nav a:nth-of-type(3)");
-thirdLink.textContent = "Vision";
+thirdLink.textContent = siteContent["nav"]["nav-item-3"];
 
 const fourthLink = document.querySelector("nav a:nth-of-type(4)");
-fourthLink.textContent = "Features";
+fourthLink.textContent = siteContent["nav"]["nav-item-4"];
 
 const fifthLink = document.querySelector("nav a:nth-of-type(5)");
-fifthLink.textContent = "About";
+fifthLink.textContent = siteContent["nav"]["nav-item-5"];
 
 const sixthLink = document.querySelector("nav a:nth-of-type(6)");
-sixthLink.textContent = "Contact";
+sixthLink.textContent = siteContent["nav"]["nav-item-6"];
 
 // Finding logo-img
 // Updating the src of logo-img
+let logo = document.getElementById("logo-img");
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 // const logoImg = document.querySelector("header img");
 // logoImg.src = "./img/logo.png";
@@ -72,15 +70,37 @@ sixthLink.textContent = "Contact";
 // Finding cta-img
 // Updating the src of cta-img
 
-const ctaImg = document.querySelector(".cta img");
-ctaImg.src = "./img/header-img.png";
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+// const ctaImg = document.querySelector(".cta img");
+// ctaImg.src = "./img/header-img.png";
 
 // Finding and updating cta-text <h1>
 
 const phrase = document.querySelector(".cta-text h1");
-phrase.innerHTML = "DOM<br> Is<br> Awesome";
+phrase.innerHTML = siteContent["cta"]["h1"];
+
 
 // Finding and updating the cta-text <button>
 
 const ctaButton = document.querySelector(".cta-text button");
-ctaButton.textContent = "Get Started";
+ctaButton.textContent = siteContent["cta"]["button"];
+
+// Finding and updating contact section
+
+const contactH4 = document.querySelector(".contact h4");
+contactH4.textContent = siteContent["contact"]["contact-h4"];
+
+const contactAddress = document.querySelector(".contact p:nth-of-type(1)");
+contactAddress.innerHTML = siteContent["contact"]["address"];
+
+const contactPhone = document.querySelector(".contact p:nth-of-type(2)");
+contactPhone.textContent = siteContent["contact"]["phone"];
+
+const contactEmail = document.querySelector(".contact p:nth-of-type(3)");
+contactEmail.textContent = siteContent["contact"]["email"];
+
+// Finding and updating footer
+const footer = document.querySelector(".container footer");
+footer.textContent = siteContent["footer"]["copyright"];
