@@ -37,8 +37,45 @@ const siteContent = {
   },
 };
 
-// Creating comment for initial push
-
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// Navigation - Getters
+
+const navItem1 = document.querySelector("nav a:nth-of-type(1)");
+const navItem2 = document.querySelector("nav a:nth-of-type(2)");
+const navItem3 = document.querySelector("nav a:nth-of-type(3)");
+const navItem4 = document.querySelector("nav a:nth-of-type(4)");
+const navItem5 = document.querySelector("nav a:nth-of-type(5)");
+const navItem6 = document.querySelector("nav a:nth-of-type(6)");
+const navImage = document.querySelector("#logo-img");
+
+// Navigation - Loading Text
+
+navItem1.textContent = siteContent['nav']["nav-item-1"];
+navItem2.textContent = siteContent['nav']['nav-item-2'];
+navItem3.textContent = siteContent['nav']['nav-item-3'];
+navItem4.textContent = siteContent['nav']['nav-item-4'];
+navItem5.textContent = siteContent['nav']['nav-item-5'];
+navItem6.textContent = siteContent['nav']['nav-item-6'];
+
+// CTA - Getters
+
+
+// CTA - Loading Text
+
+
+
+// Main Content - Getters
+
+// Main Content - Loading Text
+
+
+// Contact - Getters
+
+// Contact - Loading Text
+
+// Footer - Getters
+
+// Footer - Loading Text
