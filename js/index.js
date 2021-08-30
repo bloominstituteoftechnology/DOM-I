@@ -79,12 +79,12 @@ const featuresContent = document.querySelector(".top-content p:nth-of-type(1)");
 const aboutHeading = document.querySelector(".text-content:nth-of-type(2) h4");
 const aboutContent = document.querySelector(".text-content:nth-of-type(2) p");
 const middleImg = document.querySelector("#middle-img");
-const servicesHeading = document.querySelector(".text-content:nth-of-type(3) h4");
-const servicesContent = document.querySelector(".text-content:nth-of-type(3) p");
-const productHeading = document.querySelector(".text-content:nth-of-type(4) h4");
-const productContent = document.querySelector(".text-content:nth-of-type(4) p");
-const visionHeading = document.querySelector(".text-content h4:nth-of-type(5) h4");
-const visionContent = document.querySelector(".text-content p:nth-of-type(5) p");
+const servicesHeading = document.querySelector(".bottom-content .text-content:nth-of-type(1) h4");
+const servicesContent = document.querySelector(".bottom-content .text-content:nth-of-type(1) p");
+const productHeading = document.querySelector(".bottom-content .text-content:nth-of-type(2) h4");
+const productContent = document.querySelector(".bottom-content .text-content:nth-of-type(2) p");
+const visionHeading = document.querySelector(".bottom-content .text-content:nth-of-type(3) h4");
+const visionContent = document.querySelector(".bottom-content .text-content:nth-of-type(3) p");
 
 // Main Content - Loading Text
 
@@ -95,6 +95,7 @@ aboutContent.textContent = siteContent["main-content"]["about-content"];
 middleImg.src = siteContent["main-content"]["middle-img-src"];
 servicesHeading.textContent = siteContent["main-content"]["services-h4"];
 servicesContent.textContent = siteContent["main-content"]["services-content"];
+
 productHeading.textContent = siteContent["main-content"]["product-h4"]
 productContent.textContent = siteContent["main-content"]["product-content"];
 visionHeading.textContent = siteContent["main-content"]["vision-h4"];
@@ -103,9 +104,9 @@ visionContent.textContent = siteContent["main-content"]["vision-content"];
 // Contact - Getters
 
 const contactHeading = document.querySelector(".contact h4");
-const address = document.querySelector(".contact p:nth-of-type(6)");
-const phone = document.querySelector(".contact p:nth-of-type(7)");
-const email = document.querySelector(".contact p:nth-of-type(8)");
+const address = document.querySelector(".contact p:nth-of-type(1)");
+const phone = document.querySelector(".contact p:nth-of-type(2)");
+const email = document.querySelector(".contact p:nth-of-type(3)");
 
 // Contact - Loading Text
 
