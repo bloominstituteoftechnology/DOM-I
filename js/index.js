@@ -40,3 +40,56 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let topTextP = document.querySelector('.top-content .text-content p');
+topTextP.textContent = siteContent['main-content']['features-content'];
+
+let topTexth4 = document.querySelector('.top-content .text-content h4');
+topTexth4.textContent = siteContent['main-content']['features-h4'];
+
+let bottomH4 = document.querySelectorAll('.bottom-content h4');
+bottomH4.item(0).textContent = siteContent['main-content']['services-h4'];
+bottomH4.item(1).textContent = siteContent['main-content']['product-h4'];
+bottomH4.item(2).textContent = siteContent['main-content']['vision-h4'];
+
+let contactP1 = document.querySelector('.contact p');
+contactP1.textContent = siteContent['contact']['address'];
+
+let contactP2 = contactP1.nextElementSibling;
+contactP2.textContent = siteContent['contact']['phone'];
+
+let contactP3 = contactP2.nextElementSibling;
+contactP3.textContent = siteContent['contact']['email'];
+
+let footerP = document.querySelector('footer p');
+footerP.textContent = siteContent['footer']['copyright'];
+
+const newLink = document.createElement('a');
+newLink.textContent = 'NewLink';
+newLink.href = '#';
+
+let contacth4 = document.querySelector('.contact h4');
+contacth4.textContent = siteContent['contact']['contact-h4'];
+
+const nuLink = newLink.cloneNode(true);
+
+let nav = document.querySelector('nav');
+
+nav.appendChild(newLink);
+nav.prepend(nuLink);
+
+ctah1.textContent = siteContent[`cta`][`h1`];
+
+let ctaImg = document.querySelector('#cta-img');
+ctaImg.setAttribute('src', siteContent['cta']['img-src']);
+
+let button = document.querySelector('button');
+button.textContent = siteContent['cta']['button'];
+
+let links = document.querySelectorAll('nav a');
+console.log(links);
+
+links.forEach((link,i) => {
+  link.textContent = siteContent["nav"][`nav-item-${i}`];
+  link.style.color = 'green';
+});
