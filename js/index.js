@@ -136,5 +136,5 @@ document.querySelector("nav").prepend(navItem8);
 
 // Changing color of navigation text 
 
-const navText = document.querySelector("nav");
-navText.style.color = "green";
+const navText = document.querySelectorAll("nav a");
+navText.forEach((item => item.style.color = "green"))
