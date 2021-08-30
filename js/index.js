@@ -71,9 +71,5 @@ ctaText.textContent = siteContent['cta']['h1']
 let ctaButton = document.querySelector('.cta-text button');
 ctaButton.textContent = siteContent['cta']['button']
 
-let contactInfo = document.querySelector('.contact h4');
-contactInfo.textContent = siteContent['contact']['contact-h4']
-
-let address = document.querySelector('.contact p');
-contactInfo.textContent = siteContent['contact']['address']
-
+let topContent1 = document.querySelector('.top-content:nth-of-type(1) text-content h4')
+topContent1.textContent = siteContent['main-content']['features-h4']
