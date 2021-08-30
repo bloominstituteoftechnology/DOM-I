@@ -123,3 +123,19 @@ const footerCopyright = document.querySelector("footer p");
 // Footer - Loading Text
 
 footerCopyright.textContent = siteContent["footer"]["copyright"];
+
+
+// Adding New Links to Navigation 
+
+const navItem7 = navItem1.cloneNode(true);
+navItem7.textContent = "Team";
+const navItem8 = navItem1.cloneNode(true);
+navItem8.textContent = "Social Media";
+
+document.querySelector("nav").appendChild(navItem7);
+document.querySelector("nav").prepend(navItem8);
+
+// Changing color of navigation text 
+
+const navText = document.querySelector("nav");
+navText.style.color = "green";
