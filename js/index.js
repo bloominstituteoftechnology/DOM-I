@@ -77,4 +77,15 @@ document.querySelectorAll('.contact p').forEach((el, ndx) => el.innerHTML = Obje
 //footer
 document.querySelector('footer p').textContent = siteContent['footer']['copyright'];
 
+//stretch
+const btn = document.querySelector('.cta-text button');
+btn.style.borderRadius = '.75rem';
 
+const footNav = document.querySelector('nav').cloneNode(true);
+document.querySelector('footer').prepend(footNav);
+
+const btnClick = document.querySelector('button');
+btnClick.addEventListener('click', event => {
+  alert('Awesome!');
+  document.body.style.backgroundColor = 'grey';
+})
