@@ -76,17 +76,15 @@ ctaImg.src = siteContent['cta']['img-src'];
 
 const featuresHeading = document.querySelector(".top-content h4:nth-of-type(1)");
 const featuresContent = document.querySelector(".top-content p:nth-of-type(1)");
-
-
-const aboutHeading = document.querySelector(".top-content h4:nth-of-type(2)");
-const aboutContent = document.querySelector(".top-content p:nth-of-type(2)");
+const aboutHeading = document.querySelector(".text-content:nth-of-type(2) h4");
+const aboutContent = document.querySelector(".text-content:nth-of-type(2) p");
 const middleImg = document.querySelector("#middle-img");
-const servicesHeading = document.querySelector(".bottom-content h4:nth-of-type(3)");
-const servicesContent = document.querySelector(".bottom-content p:nth-of-type(3)");
-const productHeading = document.querySelector(".bottom-content h4:nth-of-type(4)");
-const productContent = document.querySelector(".bottom-content p:nth-of-type(4)");
-const visionHeading = document.querySelector(".bottom-content h4:nth-of-type(5)");
-const visionContent = document.querySelector(".bottom-content p:nth-of-type(5)");
+const servicesHeading = document.querySelector(".text-content:nth-of-type(3) h4");
+const servicesContent = document.querySelector(".text-content:nth-of-type(3) p");
+const productHeading = document.querySelector(".text-content:nth-of-type(4) h4");
+const productContent = document.querySelector(".text-content:nth-of-type(4) p");
+const visionHeading = document.querySelector(".text-content h4:nth-of-type(5) h4");
+const visionContent = document.querySelector(".text-content p:nth-of-type(5) p");
 
 // Main Content - Loading Text
 
