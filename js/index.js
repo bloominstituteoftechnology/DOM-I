@@ -111,8 +111,7 @@ email.textContent = siteContent['contact']['email'];
 const footer = document.querySelector('footer p');
 footer.textContent = siteContent['footer']['copyright'];
 
-const navLinks = document.querySelectorAll('.container header nav a');
-navLinks.forEach(link => link.style.color = 'green');
+
 
 // adding links
 const newLink1 = document.createElement('a');
@@ -125,3 +124,6 @@ newLink2.href = '#';
 
 document.querySelector('.container header nav').prepend(newLink1);
 document.querySelector('.container header nav').appendChild(newLink2);
+
+const navLinks = document.querySelectorAll('.container header nav a');
+navLinks.forEach(link => link.style.color = 'green');
