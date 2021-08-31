@@ -51,6 +51,7 @@ function navBuilder(array){
 
 navBuilder(siteContent);
 
+
 let h1Text = document.querySelector(".cta-text h1");
 h1Text.setAttribute('style', 'white-space: pre;');
 h1Text.textContent = "DOM \r\nIs\r\n Awesome";
@@ -70,7 +71,7 @@ let aboutContent = document.querySelector(".top-content div:nth-child(2) p")
 aboutH4.textContent = siteContent["main-content"]["about-h4"];
 aboutContent.textContent = siteContent["main-content"]["about-content"];
 
-let middleImg = document.querySelector(".middle-img");
+let middleImg = document.querySelector("#middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 let servicesH4 = document.querySelector(".bottom-content div:nth-of-type(1) h4");
