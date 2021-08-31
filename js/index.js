@@ -72,3 +72,18 @@ aboutContent.textContent = siteContent["main-content"]["about-content"];
 
 let middleImg = document.querySelector(".middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+let servicesH4 = document.querySelector(".bottom-content div:nth-of-type(1) h4");
+let servicesContent = document.querySelector(".bottom-content div:nth-of-type(1) p");
+servicesH4.textContent = siteContent["main-content"]["services-h4"];
+servicesContent.textContent = siteContent["main-content"]["services-content"];
+
+let productH4 = document.querySelector(".bottom-content div:nth-of-type(2) h4");
+let productContent = document.querySelector(".bottom-content div:nth-of-type(2) p");
+productH4.textContent = siteContent["main-content"]["product-h4"];
+productContent.textContent = siteContent["main-content"]["product-content"];
+
+let visionH4 = document.querySelector(".bottom-content div:nth-of-type(3) h4");
+let visionContent = document.querySelector(".bottom-content div:nth-of-type(3) p");
+visionH4.textContent = siteContent["main-content"]["vision-h4"];
+visionContent.textContent = siteContent["main-content"]["vision-content"];
