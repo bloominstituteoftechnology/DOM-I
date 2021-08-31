@@ -42,7 +42,7 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 function navBuilder(array){
-  const navItems = document.querySelectorAll('nav a');
+  const navItems = document.querySelectorAll("nav a");
   for(let i = 0; i < navItems.length; i++){
     navItems[i].textContent = Object.values(array.nav)[i];
   }
@@ -51,3 +51,9 @@ function navBuilder(array){
 
 navBuilder(siteContent);
 
+let h1Text = document.querySelector(".cta-text h1");
+h1Text.setAttribute('style', 'white-space: pre;');
+h1Text.textContent = "DOM \r\nIs\r\n Awesome";
+
+let ctaButton = document.querySelector(".cta-text button");
+ctaButton.textContent = "Get Started";
