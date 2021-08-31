@@ -40,3 +40,61 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const aTag = document.querySelectorAll('nav a')
+aTag[0].textContent = siteContent['nav']['nav-item-1'];
+aTag[1].textContent = siteContent['nav']['nav-item-2'];
+aTag[2].textContent = siteContent['nav']['nav-item-3'];
+aTag[3].textContent = siteContent['nav']['nav-item-4'];
+aTag[4].textContent = siteContent['nav']['nav-item-5'];
+aTag[5].textContent = siteContent['nav']['nav-item-6'];
+
+
+aTag.forEach(tag =>{tag.style.color = "green"});
+
+
+const h1El = document.querySelector('h1');
+h1El.textContent = siteContent['cta']['h1'];
+
+const button = document.querySelector('button');
+button.textContent = siteContent['cta']['button'];
+
+const image1 = document.querySelector('#cta-img');
+image1.setAttribute('src', siteContent['cta']['img-src']);
+
+const h4 = document.querySelectorAll('h4');
+h4[0].textContent = siteContent['main-content']['features-h4'];
+h4[1].textContent = siteContent['main-content']['about-h4'];
+h4[2].textContent = siteContent['main-content']['services-h4'];
+h4[3].textContent = siteContent['main-content']['product-h4'];
+h4[4].textContent = siteContent['main-content']['vision-h4'];
+h4[5].textContent = siteContent['contact']['contact-h4'];
+
+const sectionP = document.querySelectorAll('p');
+sectionP[0].textContent = siteContent['main-content']['features-content'];
+sectionP[1].textContent = siteContent['main-content']['about-content'];
+sectionP[2].textContent = siteContent['main-content']['services-content'];
+sectionP[3].textContent = siteContent['main-content']['product-content'];
+sectionP[4].textContent = siteContent['main-content']['vision-content'];
+sectionP[5].textContent = siteContent['contact']['address'];
+sectionP[6].textContent = siteContent['contact']['phone'];
+sectionP[7].textContent = siteContent['contact']['email'];
+sectionP[8].textContent = siteContent['footer']['copyright'];
+
+const middleImage = document.getElementById('middle-img');
+middleImage.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+const homeLink = document.createElement('a');
+homeLink.textContent = 'Home';
+homeLink.href = '#';
+document.querySelector('nav').prepend(homeLink);
+
+const myBlog = document.createElement('a');
+myBlog.textContent = 'Blog';
+myBlog.href = '#';
+document.querySelector('nav').appendChild(myBlog);
+
+
+
+
+
