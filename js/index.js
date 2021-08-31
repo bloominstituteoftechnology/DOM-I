@@ -41,41 +41,78 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-const nav = document.querySelector('nav');
-let parcedNav = JSON.parse("nav");
 
 const navElements = document.querySelectorAll('a');
 navElements.forEach((item, i) => item.textContent = Object.values(siteContent.nav)[i]);
 
-nav1.textContent = siteContent["nav"]["nav-item-1"];
-nav2.textContent = siteContent["nav"]["nav-item-2"];
-nav3.textContent = siteContent["nav"]["nav-item-3"];
-nav4.textContent = siteContent["nav"]["nav-item-4"];
-nav5.textContent = siteContent["nav"]["nav-item-5"];
-nav6.textContent = siteContent["nav"]["nav-item-6"];
+const topContent = document.querySelector('.top-content');
 
+const ctaHeading = document.querySelector('h1');
 ctaHeading.textContent = siteContent["cta"]["h1"];
+const ctaButton = document.querySelector('button');
 ctaButton.textContent = siteContent["cta"]["button"];
+const ctaImg = document.getElementById('cta-img');
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 
+
+const features = topContent.querySelector('.text-content:nth-of-type(1)');
+const featuresHeading = document.querySelector('h4')
 featuresHeading.textContent = siteContent["main-content"]["features-h4"];
+
+
+const featuresContent = document.querySelector('p');
 featuresContent.textContent = siteContent["main-content"]["features-content"];
+
+
+const about = topContent.querySelector('.text-content:nth-of-type(2)');
+const aboutHeading = about.querySelector('h4');
 aboutHeading.textContent = siteContent["main-content"]["about-h4"];
+const aboutContent = about.querySelector('p')
 aboutContent.textContent = siteContent["main-content"]["about-content"];
+
+
+const middleImg = document.querySelector('.middle-img');
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+
+const bottomSection = document.querySelector('.bottom-content');
+const services = bottomSection.querySelector('.text-content:nth-of-type(1)');
+const servicesHeading = services.querySelector('h4');
 servicesHeading.textContent = siteContent["main-content"]["services-h4"];
+const servicesContent = services.querySelector('p');
 servicesContent.textContent = siteContent["main-content"]["services-content"];
+
+
+const product = bottomSection.querySelector('.text-content:nth-of-type(2)');
+const productHeading = product.querySelector('h4');
 productHeading.textContent = siteContent["main-content"]["product-h4"];
+const productContent = product.querySelector('p');
 productContent.textContent = siteContent["main-content"]["product-content"];
+
+
+const vision = bottomSection.querySelector('.text-content:nth-of-type(3)');
+const visionHeading = vision.querySelector('h4');
 visionHeading.textContent = siteContent["main-content"]["vision-h4"];
+const visionContent = vision.querySelector('p');
 visionContent.textContent = siteContent["main-content"]["vision-content"];
 
+const contact = document.querySelector('.contact');
+contactHeading = contact.querySelector('h4');
 contactHeading.textContent = siteContent["contact"]["contact-h4"];
+
+const address = contact.querySelector('p:nth-of-type(1)');
 address.textContent = siteContent["contact"]["address"];
+
+const phone = contact.querySelector('p:nth-of-type(2)');
 phone.textContent = siteContent["contact"]["phone"];
+
+const email = contact.querySelector('p:nth-of-type(3)');
 email.textContent = siteContent["contact"]["email"];
 
-copywright.textContent = siteContent["footer"]["copyright"];
+
+const footer = document.querySelector('footer');
+const copyright = footer.querySelector('p');
+copyright.textContent = siteContent["footer"]["copyright"];
 
 // CHANGING CONTENT IN THE DOM
 nav1.style.color = 'green';
