@@ -296,4 +296,7 @@ footer {
     .contact {
         margin: 20px;
     }
+    .header .sky {
+        background: deepskyblue;
+    }
 }
