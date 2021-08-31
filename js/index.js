@@ -57,6 +57,18 @@ h1Text.textContent = "DOM \r\nIs\r\n Awesome";
 
 let ctaButton = document.querySelector(".cta-text button");
 ctaButton.textContent = "Get Started";
-
-let ctaImg = document.querySelector(".cta img");
+let ctaImg = document.querySelector("#cta-img");
 ctaImg.setAttribute('src', siteContent['cta']['img-src']);
+
+let featuresH4 = document.querySelector(".top-content div:nth-child(1) h4");
+let featuresContent = document.querySelector(".top-content div:nth-child(1) p")
+featuresH4.textContent = siteContent["main-content"]["features-h4"];
+featuresContent.textContent = siteContent["main-content"]["features-content"];
+
+let aboutH4 = document.querySelector(".top-content div:nth-child(2) h4");
+let aboutContent = document.querySelector(".top-content div:nth-child(2) p")
+aboutH4.textContent = siteContent["main-content"]["about-h4"];
+aboutContent.textContent = siteContent["main-content"]["about-content"];
+
+let middleImg = document.querySelector(".middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
