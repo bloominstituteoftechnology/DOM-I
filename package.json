@@ -1,0 +1,17 @@
+{
+    "name": "dom-1",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "parcel src/index.html",
+        "stretch": "parcel src/stretch-assignment/digital_timer/index.html"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/LambdaSchool/DOM-I.git"
+    },
+    "license": "ISC",
+    "homepage": "https://github.com/LambdaSchool/DOM-I#readme",
+    "devDependencies": {
+        "parcel-bundler": "^1.12.4"
+    }
+}
