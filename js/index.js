@@ -125,3 +125,8 @@ header.querySelector('nav').appendChild(careers);
 const api = document.createElement('a');
 api.text = "API";
 header.querySelector('nav').prepend('api');
+
+for (let el of navElements) {
+  el.style.color = "green";
+}
+  
