@@ -37,6 +37,96 @@ const siteContent = {
   },
 };
 
+//Adding the Nav Text and two new children
+const navLinks = document.querySelectorAll('nav a');
+const navLinksArray = Array.from(navLinks);
+const newNavLinks = ['New', 'Exit'];
+
+// navLinksArray.forEach( item => {
+//   console.log(item.textContent);
+// });
+
+// console.log(Object.values(siteContent.nav)[1]);
+for (let i = 0; i < navLinksArray.length; i++){
+  navLinksArray[i].style.color = "green";
+  navLinksArray[i].textContent = Object.values(siteContent.nav)[i];
+}
+
+function CreateNewNavLinks(navLinkElement){
+  navLinkElement.forEach( item => {
+    const newNavelemt = document.createElement('a');
+    newNavelemt.textContent = item;
+    newNavelemt.href = '#';
+    newNavelemt.style.color = 'green';
+    document.querySelector('nav').appendChild(newNavelemt);
+    navLinksArray.push(newNavelemt);
+  });
+}
+
+CreateNewNavLinks(newNavLinks);
+
+// navLinksArray.forEach( item => {
+//   console.log(item);
+// });
+
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+
+
+//setting .cta heading and button and Image
+const headingTextArray = siteContent.cta.h1.split(' ');
+let headerText = '';
+
+for (let i = 0; i < headingTextArray.length; i++){
+  if ( i < headingTextArray.length - 1){
+    headerText += `${headingTextArray[i]}<br>`;
+  }else{
+    headerText += `${headingTextArray[i]}`;
+  }
+}
+
+let ctaHeader = document.querySelector('.cta-text h1');
+let ctaButton = document.querySelector('.cta-text button');
+let ctaImage = document.getElementById("cta-img");
+
+ctaHeader.innerHTML = `<h1>${headerText}</h1>`
+ctaButton.textContent = siteContent.cta.button;
+ctaImage.setAttribute('src', siteContent['cta']['img-src']);
+
+// console.log(headerText);
+
+//Container and Images
+const mainContainerArray = Array.from(document.querySelector('.main-content').children);
+const containerValues = Object.values(siteContent["main-content"]);
+let count = 0;
+
+mainContainerArray.forEach (item => {
+  if (item.tagName === 'DIV'){
+    const textContainers = Array.from(item.querySelectorAll('.text-content'));
+    textContainers.forEach ( textCont => {
+      textCont.firstChild.textContent = containerValues[count];
+      textCont.lastChild.textContent = containerValues[count + 1];
+      count += 2;
+    });
+  }else{
+    item.setAttribute('src', containerValues[count]);
+    count += 1;
+  };
+});
+
+//lets make our footer
+const contactContent = Array.from(document.querySelector('.contact').children);
+const contactData = Object.values(siteContent.contact);
+
+contactContent.forEach ( (text, index) => {
+  text.textContent = contactData[index];
+});
+
+// console.log(contactContent);
+
+//and let copyright this work
+const footerContent = document.querySelector('footer p').textContent = siteContent.footer.copyright;
+
