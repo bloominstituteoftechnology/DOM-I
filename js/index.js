@@ -114,23 +114,14 @@ const footer = document.querySelector('footer');
 const copyright = footer.querySelector('p');
 copyright.textContent = siteContent["footer"]["copyright"];
 
-// CHANGING CONTENT IN THE DOM
-nav1.style.color = 'green';
-nav2.style.color = 'green';
-nav3.style.color = 'green';
-nav4.style.color = 'green';
-nav5.style.color = 'green';
-nav6.style.color = 'green';
+//adding new navs
 
-//new links
-const blogLink = document.createElement('a');
-blogLink.textContent = 'Blog';
-blogLink.href = '#';
-nav.appendChild(blogLink);
-blogLink.style.color = 'green';
+const container = document.querySelector('.container');
+const header = container.querySelector('header');
+const careers = document.createElement('a');
+careers.text = "Careers";
+header.querySelector('nav').appendChild(careers);
 
-const submitLink = document.createElement('a');
-submitLink.textContent = 'Submit';
-submitLink.href = '#';
-nav.prepend(submitLink);
-submitLink.style.color = 'green';
+const api = document.createElement('a');
+api.text = "API";
+header.querySelector('nav').prepend('api');
