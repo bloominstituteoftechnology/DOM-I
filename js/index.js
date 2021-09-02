@@ -72,3 +72,8 @@ ctaHOne.textContent = siteContent.cta['h1'];
 let ctaButton = document.querySelector(".cta-text button");
   ctaButton.textContent = siteContent.cta['button'];
 
+let newContact = document.querySelector(".contact h4");
+  newContact.textContent = siteContent.contact['contact-h4'];
+
+let newFooter = document.querySelector("footer p");
+  newFooter.textContent = siteContent.footer['copyright'];
