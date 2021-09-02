@@ -1,0 +1,23 @@
+{
+  "name": "dom-i",
+  "version": "1.0.0",
+  "description": "## Project Description",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/babykittenz/DOM-I.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/babykittenz/DOM-I/issues"
+  },
+  "homepage": "https://github.com/babykittenz/DOM-I#readme",
+  "dependencies": {
+    "less": "^4.1.1",
+    "less-watch-compiler": "^1.16.2"
+  }
+}
