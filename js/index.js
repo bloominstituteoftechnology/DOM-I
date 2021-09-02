@@ -37,6 +37,61 @@ const siteContent = {
   },
 };
 
+
+
+
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+//New Nav 
+const navButtons = document.querySelectorAll('nav a');
+const navArray = Array.from(navButtons);
+
+console.log(Object.values(siteContent.nav)[1]);
+
+for(let i = 0; i < navArray.length; i++){
+  navArray[i].textContent = Object.values(siteContent.nav)[i];
+}
+
+//New header image 
+const cta = document.getElementById("cta-img");
+cta.setAttribute('src', siteContent.cta["img-src"]);
+
+
+//New middle image
+
+const mimg = document.getElementById("middle-img");
+mimg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+let ctaHOne = document.querySelector(".cta-text h1");
+ctaHOne.textContent = siteContent.cta['h1'];
+
+let ctaButton = document.querySelector(".cta-text button");
+  ctaButton.textContent = siteContent.cta['button'];
+
+let newContact = document.querySelector(".contact h4");
+  newContact.textContent = siteContent.contact['contact-h4'];
+
+let newFooter = document.querySelector("footer p");
+  newFooter.textContent = siteContent.footer['copyright'];
+
+const h4 = document.querySelectorAll('h4');
+  h4[0].textContent = siteContent['main-content']['features-h4'];
+  h4[1].textContent = siteContent['main-content']['about-h4'];
+  h4[2].textContent = siteContent['main-content']['services-h4'];
+  h4[3].textContent = siteContent['main-content']['product-h4'];
+  h4[4].textContent = siteContent['main-content']['vision-h4'];
+ 
+
+  const p = document.querySelectorAll('p');
+    p[0].textContent = siteContent['main-content']['features-content'];
+    p[1].textContent = siteContent['main-content']['about-content'];
+    p[2].textContent = siteContent['main-content']['services-content'];
+    p[3].textContent = siteContent['main-content']['product-content'];
+    p[4].textContent = siteContent['main-content']['vision-content'];
+    p[5].textContent = siteContent['contact']['address'];
+    p[6].textContent = siteContent['contact']['phone'];
+    p[7].textContent = siteContent['contact']['email'];
