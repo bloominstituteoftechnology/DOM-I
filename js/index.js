@@ -51,6 +51,10 @@ navBar[3].innerHTML = 'Features';
 navBar[4].innerHTML = 'About';
 navBar[5].innerHTML = 'Contact';
 
+// Circle Img
+const logoImg = document.querySelector('#cta-img');
+logoImg.setAttribute('src', siteContent['cta']['img-src']);
+
 // CTA
 
 // h1
@@ -92,3 +96,6 @@ const contact = document.querySelectorAll('.contact p');
 contact[0].textContent = "123 Way 456 Street Somewhere, USA";
 contact[1].textContent = "1 (888) 888-8888";
 contact[2].textContent = "sales@greatidea.io";
+
+const footer = document.querySelector('footer p');
+footer.textContent = "Copyright Great Idea! 2018";
