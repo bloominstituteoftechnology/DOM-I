@@ -47,7 +47,16 @@ let anchorNL = document.querySelectorAll("nav a")
 let anchorArray = Array.from(anchorNL)
 for(let i=0; i < anchorArray.length ; i++){
   anchorArray[i].textContent = siteContent["nav"][`nav-item-${i+1}`]
+  anchorArray[i].style.color = 'green'
 }
+
+let djbLeft = document.createElement('p')
+let djbRight = document.createElement('p')
+djbLeft.textContent = "djb_left"
+djbRight.textContent = "djb_right"
+let nav = document.querySelector("nav")
+nav.prepend(djbLeft)
+nav.append(djbRight)
 
 // CTA
 let ctaImg = document.getElementById("cta-img")
