@@ -71,7 +71,7 @@ const navItem6 = document.querySelector('nav a:nth-of-type(6)');
 navItem6.textContent = siteContent['nav']['nav-item-6'];
 
 
-//updated content
+//updated cta content
 
 const cta = document.querySelector('.cta-text');
 
@@ -80,6 +80,77 @@ ctaText.textContent = siteContent['cta']['h1'];
 
 const ctaButton = cta.querySelector('button');
 ctaButton.textContent = siteContent['cta']['button'];
+
+
+//updating main content
+
+
+//features
+const features = document.querySelector('.top-content');
+
+const featureHeading = features.querySelector('h4');
+const featureText = features.querySelector('p');
+
+featureHeading.textContent = siteContent['main-content']['features-h4'];
+featureText.textContent = siteContent['main-content']['features-content'];
+
+
+//about
+const about = document.querySelector('.text-content:nth-of-type(2)');
+
+const aboutHeading = about.querySelector('h4');
+const aboutContent = about.querySelector('p');
+
+aboutHeading.textContent = siteContent['main-content']['about-h4'];
+aboutContent.textContent = siteContent['main-content']['about-content'];
+
+//services
+
+const bottom = document.querySelector('.bottom-content');
+
+const services = bottom.querySelector('.text-content');
+
+const servHeading = services.querySelector('h4');
+const servContent = services.querySelector('p');
+
+servHeading.textContent = siteContent['main-content']['services-h4'];
+servContent.textContent = siteContent['main-content']['services-content'];
+
+
+//product
+
+const product = bottom.querySelector('.text-content:nth-of-type(2)');
+
+
+const prodHeading = product.querySelector('h4');
+const prodContent = product.querySelector('p');
+
+prodHeading.textContent = siteContent['main-content']['product-h4'];
+prodContent.textContent = siteContent['main-content']['product-content'];
+
+//vision
+
+const vision = bottom.querySelector('.text-content:nth-of-type(3)');
+
+
+const visHeading = vision.querySelector('h4');
+const visContent = vision.querySelector('p');
+
+visHeading.textContent = siteContent['main-content']['vision-h4'];
+visContent.textContent = siteContent['main-content']['vision-content'];
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
