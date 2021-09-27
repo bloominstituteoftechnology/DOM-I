@@ -39,14 +39,66 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 //updating Nav in header
-let headerNav = document.querySelectorAll("nav a"); // get node list nav 
+const headerNav = document.querySelectorAll("nav a"); // get node list nav 
 for ( let i =0; i <headerNav.length; i++){             // loop the nav items to index them
   let navIndex = "nav-item-" + i;
   headerNav[i].textContent = siteContent["nav"][navIndex];
 }
+
+const h1Header = document.querySelector("h1");  // set h1 Header
+h1Header.textContent = siteContent["cta"]["h1"]; //send it to the DOM
+
+const sectionOneButton = document.querySelector("button");   //set Button Selector
+sectionOneButton.textContent = siteContent["cta"]["button"]; // send button to DOM
+
+
+const sectionOneImg = document.querySelector("#cta-img");
+sectionOneImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+const mainContentH4 = document.querySelectorAll(".main-content h4"); //query for all h4 in html
+mainContentH4[0].textContent = siteContent["main-content"]["features-h4"]; // assign each h4
+mainContentH4[1].textContent = siteContent["main-content"]["about-h4"];
+mainContentH4[2].textContent = siteContent["main-content"]["services-h4"];
+mainContentH4[3].textContent = siteContent["main-content"]["product-h4"];
+mainContentH4[4].textContent = siteContent["main-content"]["vision-h4"];
+
+const ContentP = document.querySelectorAll(".text-content p");                              //query for all P tags
+ContentP[0].textContent = siteContent["main-content"]["features-content"]; // assign all p text values
+ContentP[1].textContent = siteContent["main-content"]["about-content"];
+ContentP[2].textContent = siteContent["main-content"]["services-content"];
+ContentP[3].textContent = siteContent["main-content"]["product-content"];
+ContentP[4].textContent = siteContent["main-content"]["vision-content"];
+
+
+const middleImg = document.querySelector("#middle-img");                      //set middle img
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+
+const ContactH4 = document.querySelector(".contact h4");        //set contact section h4
+ContactH4.textContent = siteContent["contact"]["contact-h4"];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
