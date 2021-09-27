@@ -48,7 +48,27 @@ const cirImg = document.getElementById('cta-img');
 cirImg.src = 'img/header-img.png';
 
 //update middle image
-
 const midImage = document.getElementById('middle-img');
 midImage.src = 'img/mid-page-accent.jpg';
+
+//update header
+const navItem1 = document.querySelector('nav a');
+navItem1.textContent = siteContent['nav']['nav-item-1'];
+
+const navItem2 = document.querySelector('nav a:nth-of-type(2)');
+navItem2.textContent = siteContent['nav']['nav-item-2'];
+
+const navItem3 = document.querySelector('nav a:nth-of-type(3)');
+navItem3.textContent = siteContent['nav']['nav-item-3'];
+
+const navItem4 = document.querySelector('nav a:nth-of-type(4)');
+navItem4.textContent = siteContent['nav']['nav-item-4'];
+
+const navItem5 = document.querySelector('nav a:nth-of-type(5)');
+navItem5.textContent = siteContent['nav']['nav-item-5'];
+
+const navItem6 = document.querySelector('nav a:nth-of-type(6)');
+navItem6.textContent = siteContent['nav']['nav-item-6'];
+
+
 
