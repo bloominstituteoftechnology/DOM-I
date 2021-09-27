@@ -40,3 +40,29 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+let nav=document.querySelector('nav');
+nav.style.color='green';
+document.querySelector('a:nth-of-type(1)').innerText='Services'
+document.querySelector('a:nth-of-type(2)').innerText='Product'
+document.querySelector('a:nth-of-type(3)').innerText='Vision'
+document.querySelector('a:nth-of-type(4)').innerText='Features'
+document.querySelector('a:nth-of-type(5)').innerText='About'
+document.querySelector('a:nth-of-type(6)').innerText='Contact'
+let ctaimg = document.getElementById("cta-img");
+ctaimg.setAttribute('src', siteContent["cta"]["img-src"])
+//a.style.textContent='Services';
+// Create selectors by using any of the DOM element's methods
+//const container=document.querySelector('.container')
+// ] Note that IDs have been used on all images. Use the IDs to update src path content
+//let middleimg= document.getElementById("middle-img");
+//middleimg.src= siteContent["cta"]["img/header-img.png"];
+//Using your selectors, update the content to match the example file.
+//container.querySelector('a').textContent='change all the link content';
+//Change the color of the navigation text to be green.
+//const nav=querySelector('nav');
+//nav.style.color='green';
+//Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
+//const sub=document.createElement('h2');
+//const sub1=document.createElement('h1');
+//nav.appendChild(sub);
+//nav.prepend(sub1);
