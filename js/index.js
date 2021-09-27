@@ -60,6 +60,15 @@ fifthNav.textContent = siteContent['nav']['nav-item-5']
 const sixthNav = document.querySelector("a:nth-of-type(6)")
 sixthNav.textContent = siteContent['nav']['nav-item-6']
 
+const facebookLink = document.createElement('a')
+facebookLink.textContent = 'Facebook'
+facebookLink.href = '#'
+document.querySelector('nav').appendChild(facebookLink)
+const blogLink = document.createElement('a')
+blogLink.textContent = 'Blog'
+blogLink.href = '#'
+document.querySelector('nav').appendChild(blogLink)
+
 const title = document.querySelector('h1')
 title.textContent = siteContent['cta']['h1']
 
