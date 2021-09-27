@@ -78,8 +78,23 @@ const aboutPara = secondSection.querySelector('p')
 aboutHead.textContent = siteContent['main-content']['about-h4']
 aboutPara.textContent = siteContent['main-content']['about-content']
 
+const thirdSection = document.querySelector('.bottom-content .text-content:nth-of-type(1)')
+const servicesHead = thirdSection.querySelector('h4')
+const servicesPara = thirdSection.querySelector('p')
+servicesHead.textContent = siteContent['main-content']['services-h4']
+servicesPara.textContent = siteContent['main-content']['services-content']
 
+const fourthSection = document.querySelector('.bottom-content .text-content:nth-of-type(2)')
+const productHead = fourthSection.querySelector('h4')
+const productPara = fourthSection.querySelector('p')
+productHead.textContent = siteContent['main-content']['product-h4']
+productPara.textContent = siteContent['main-content']['product-content']
 
+const fifthSection = document.querySelector('.bottom-content .text-content:nth-of-type(3)')
+const visionHead = fifthSection.querySelector('h4')
+const visionPara = fifthSection.querySelector('p')
+visionHead.textContent = siteContent['main-content']['vision-h4']
+visionPara.textContent = siteContent['main-content']['vision-content']
 
 const foot = document.querySelector('footer')
 foot.textContent = siteContent['footer']['copyright']
