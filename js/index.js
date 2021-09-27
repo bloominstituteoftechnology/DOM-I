@@ -39,4 +39,30 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
+let nav = document.querySelector("nav")
+let navLinks = document.querySelectorAll('nav a')
+
+const createLink = (text) => {
+  let link = document.createElement('a')
+  link.textContent = text
+  return link
+}
+
+const createNavMenu = () => {
+  const navObject = siteContent['nav']
+  const copyNavObject = { ...navObject }
+  delete copyNavObject["img-src"]
+  const linksArray = Array.from(navLinks)
+  let counter = 1
+  const menu = linksArray.forEach(link => {
+    if (counter < linksArray.length + 1) {
+      link.textContent = siteContent['nav'][`nav-item-${counter}`]
+    }
+    counter++
+  })
+  return menu
+}
+createNavMenu()
+// nav.appendChild(createLink(siteContent["nav"]["nav-item-1"]))
+
 logo.setAttribute('src', siteContent["nav"]["img-src"])
