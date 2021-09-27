@@ -48,17 +48,17 @@ const middleImg = document.getElementById('middle-img')
 middleImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
 
 const firstNav = document.querySelector("a:nth-of-type(1)")
-firstNav.textContent = "Services"
+firstNav.textContent = siteContent['nav']['nav-item-1']
 const secondNav = document.querySelector("a:nth-of-type(2)")
-secondNav.textContent = "Product"
+secondNav.textContent = siteContent['nav']['nav-item-2']
 const thirdNav = document.querySelector("a:nth-of-type(3)")
-thirdNav.textContent = "Vision"
+thirdNav.textContent = siteContent['nav']['nav-item-3']
 const fourthNav = document.querySelector("a:nth-of-type(4)")
-fourthNav.textContent = "Features"
+fourthNav.textContent = siteContent['nav']['nav-item-4']
 const fifthNav = document.querySelector("a:nth-of-type(5)")
-fifthNav.textContent = "About"
+fifthNav.textContent = siteContent['nav']['nav-item-5']
 const sixthNav = document.querySelector("a:nth-of-type(6)")
-sixthNav.textContent = "Contact"
+sixthNav.textContent = siteContent['nav']['nav-item-6']
 
 const title = document.querySelector('h1')
 title.textContent = "Dom is awesome"
@@ -79,5 +79,10 @@ secondTitle.textContent = "About"
 secondPara.textContent = "lorem ipsum Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown ..."
 
 
-const contactHeading = document.querySelector('.contact-h4')
-contactHeading.textContent = siteContent['contact']['.contact-h4']
+const contactHeading = document.getElementsByClassName('.contact')
+contactHeading.setAttribute('h4', siteContent['contact']['.contact-h4'])
+
+
+
+const foot = document.getElementsByTagName('footer')
+foot.textContent = siteContent['footer']['copyright']
