@@ -140,6 +140,52 @@ visHeading.textContent = siteContent['main-content']['vision-h4'];
 visContent.textContent = siteContent['main-content']['vision-content'];
 
 
+//contact information
+const sectionContact = document.querySelector('.contact');
+
+const contactHeading = sectionContact.querySelector('h4');
+const address = sectionContact.querySelector('p');
+const phone = sectionContact.querySelector('p:nth-of-type(2)')
+const email = sectionContact.querySelector('p:nth-of-type(3)');
+
+
+contactHeading.textContent = siteContent['contact']['contact-h4'];
+address.textContent = siteContent['contact']['address'];
+phone.textContent = siteContent['contact']['phone'];
+email.textContent = siteContent['contact']['email'];
+
+
+//footer
+
+const footer = document.querySelector('footer p');
+
+footer.textContent= siteContent['footer']['copyright'];
+
+// update element
+
+const portfolio = document.createElement('a');
+portfolio.textContent = 'Portolio';
+portfolio.src = '#';
+
+document.querySelector('nav').appendChild(portfolio);
+
+const extra = document.createElement('a');
+portfolio.textContent = 'Extra';
+portfolio.src = '#';
+
+document.querySelector('nav').appendChild(extra);
+
+//update colors
+
+const change = document.querySelectorAll('nav a');
+
+change.forEach(function(link){
+  link.style.color = 'green';
+})
+
+
+
+
 
 
 
