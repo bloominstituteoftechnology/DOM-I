@@ -67,7 +67,7 @@ document.querySelector('nav').appendChild(facebookLink)
 const blogLink = document.createElement('a')
 blogLink.textContent = 'Blog'
 blogLink.href = '#'
-document.querySelector('nav').appendChild(blogLink)
+document.querySelector('nav').prepend(blogLink)
 
 const title = document.querySelector('h1')
 title.textContent = siteContent['cta']['h1']
