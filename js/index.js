@@ -66,16 +66,18 @@ title.textContent = siteContent['cta']['h1']
 const getStarted = document.querySelector('button')
 getStarted.textContent = siteContent['cta']['button']
 
-const firstTitle = document.querySelector('h4:nth-of-type(1)')
-const firstPara = document.querySelector('p:nth-of-type(1)')
-firstTitle.textContent = siteContent['main-content']['features-h4']
-firstPara.textContent = siteContent['main-content']['features-content']
+const firstSection = document.querySelector('.top-content .text-content:nth-of-type(1)')
+const featuresHead = firstSection.querySelector('h4')
+const featuresPara = firstSection.querySelector('p')
+featuresHead.textContent = siteContent['main-content']['features-h4']
+featuresPara.textContent = siteContent['main-content']['features-content']
 
+const secondSection = document.querySelector('.top-content .text-content:nth-of-type(2)')
+const aboutHead = secondSection.querySelector('h4')
+const aboutPara = secondSection.querySelector('p')
+aboutHead.textContent = siteContent['main-content']['about-h4']
+aboutPara.textContent = siteContent['main-content']['about-content']
 
-const secondTitle = document.querySelector('h4:nth-of-type(2)')
-const secondPara = document.querySelector('p:nth-of-type(2)')
-secondTitle.textContent = siteContent['main-content']['about-h4']
-secondPara.textContent = siteContent['main-content']['about-content']
 
 
 
