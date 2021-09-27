@@ -37,7 +37,8 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
+// Images ---------------------------------------------------------
+
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
@@ -46,6 +47,10 @@ ctaImg.setAttribute('src', siteContent['cta']['img-src'])
 
 const middleImg = document.getElementById('middle-img')
 middleImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+// End of images ---------------------------------------------------
+
+// Nav -------------------------------------------------------------
 
 const firstNav = document.querySelector("a:nth-of-type(1)")
 firstNav.textContent = siteContent['nav']['nav-item-1']
@@ -68,6 +73,10 @@ const blogLink = document.createElement('a')
 blogLink.textContent = 'Blog'
 blogLink.href = '#'
 document.querySelector('nav').prepend(blogLink)
+
+//End of Nav -------------------------------------------------------
+
+// Paragraphs with H4 ----------------------------------------------
 
 const title = document.querySelector('h1')
 title.textContent = siteContent['cta']['h1']
@@ -105,6 +114,9 @@ const visionPara = fifthSection.querySelector('p')
 visionHead.textContent = siteContent['main-content']['vision-h4']
 visionPara.textContent = siteContent['main-content']['vision-content']
 
+// End of paragraphs and H4 -------------------------------------------------
+
+// Contact section ----------------------------------------------------------
 
 const contactSection = document.querySelector('.contact')
 const contactHead = contactSection.querySelector('h4')
@@ -115,6 +127,10 @@ contactHead.textContent = siteContent['contact']['contact-h4']
 address.textContent = siteContent['contact']['address']
 phone.textContent = siteContent['contact']['phone']
 email.textContent = siteContent['contact']['email']
+
+// End of contact section ---------------------------------------------------
+
+// Footer -------------------------------------------------------------------
 
 const foot = document.querySelector('footer')
 foot.textContent = siteContent['footer']['copyright']
