@@ -74,6 +74,12 @@ blogLink.textContent = 'Blog'
 blogLink.href = '#'
 document.querySelector('nav').prepend(blogLink)
 
+const a = document.getElementsByTagName('a')  
+console.log(a)
+for (let i = 0; i < a.length; i++){
+  a[i].style.color = "green"
+}
+
 //End of Nav -------------------------------------------------------
 
 // Paragraphs with H4 ----------------------------------------------
@@ -134,3 +140,5 @@ email.textContent = siteContent['contact']['email']
 
 const foot = document.querySelector('footer')
 foot.textContent = siteContent['footer']['copyright']
+
+
