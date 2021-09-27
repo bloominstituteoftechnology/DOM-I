@@ -63,6 +63,24 @@ actionButton.textContent = siteContent["cta"]["button"]
 let middleImg = document.getElementById("middle-img")
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
+let topContentHeadersNL = document.querySelectorAll(".top-content h4")
+topContentHeadersNL[0].textContent = siteContent["main-content"]["features-h4"]
+topContentHeadersNL[1].textContent = siteContent["main-content"]["about-h4"]
+
+let topContentParaNL = document.querySelectorAll(".top-content p")
+topContentParaNL[0].textContent = siteContent["main-content"]["features-content"]
+topContentParaNL[1].textContent = siteContent["main-content"]["about-content"]
+
+let bottomContentHeadersNL = document.querySelectorAll(".bottom-content h4")
+bottomContentHeadersNL[0].textContent = siteContent["main-content"]["services-h4"]
+bottomContentHeadersNL[1].textContent = siteContent["main-content"]["product-h4"]
+bottomContentHeadersNL[2].textContent = siteContent["main-content"]["vision-h4"]
+
+let bottomContentParaNL = document.querySelectorAll(".bottom-content p")
+bottomContentParaNL[0].textContent = siteContent["main-content"]["services-content"]
+bottomContentParaNL[1].textContent = siteContent["main-content"]["product-content"]
+bottomContentParaNL[2].textContent = siteContent["main-content"]["vision-content"]
+
 // Contact
 let contactHeader = document.querySelector(".contact h4")
 contactHeader.textContent = siteContent["contact"]["contact-h4"]
