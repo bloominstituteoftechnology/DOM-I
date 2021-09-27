@@ -68,52 +68,29 @@ button.textContent = siteContent['cta']['button'];
 const image = document.querySelector('#cta-img');
 image.setAttribute('src', siteContent['cta']['img-src']);
 
-//main content - features title
-const featuresTitle = document.querySelector('.text-content h4:nth-child(1)');
-featuresTitle.textContent = siteContent['main-content']['features-h4'];
-
-//main content - features content
-const featuresContent = document.querySelector('.text-content p');
-featuresContent.textContent = siteContent['main-content']['features-content'];
-
-//main content - about title
-const aboutTitle = document.querySelector('.text-content:nth-child(2) h4');
-aboutTitle.textContent = siteContent['main-content']['about-h4'];
-
-//main content - about content
-const aboutContent = document.querySelector('.text-content:nth-child(2) p');
-aboutContent.textContent = siteContent['main-content']['about-content'];
-
 //middle img
 const middleImg = document.querySelector('#middle-img');
 middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
-//bottom content - services title
-const servicesTitle = document.querySelector('.text-content:nth-child(3) h4');
-servicesTitle.textContent = siteContent['main-content']['services-h4'];
+//main content - 
+const allContents = document.querySelectorAll('.text-content p');
+allContents[0].textContent = siteContent['main-content']['features-content'];
+allContents[1].textContent = siteContent['main-content']['about-content'];
+allContents[2].textContent = siteContent['main-content']['services-content'];
+allContents[3].textContent = siteContent['main-content']['product-content'];
+allContents[4].textContent = siteContent['main-content']['vision-content'];
 
-//bottom content - services content
-const servicesContent = document.querySelector('.text-content:nth-child(3) p');
-servicesContent.textContent = siteContent['main-content']['services-content'];
+//main content titles
+const contentTitles = document.querySelectorAll('.text-content h4');
+contentTitles[0].textContent = siteContent['main-content']['features-h4'];
+contentTitles[1].textContent = siteContent['main-content']['about-h4'];
+contentTitles[2].textContent = siteContent['main-content']['services-h4'];
+contentTitles[3].textContent = siteContent['main-content']['product-h4'];
+contentTitles[4].textContent = siteContent['main-content']['vision-h4'];
 
-//bottom content - product title
-const productTitle = document.querySelector('.text-content:nth-child(4) h4');
-productTitle.textContent = siteContent['main-content']['product-h4'];
 
-//bottom content - product content
-const productContent = document.querySelector('.text-content:nth-child(4) p');
-productContent.textContent = siteContent['main-content']['product-content'];
+//contact title
 
-//bottom content - vision title
-const visionTitle = document.querySelector('.text-content:nth-child(5) h4');
-visionTitle.textContent = siteContent['main-content']['vision-h4'];
 
-//bottom content - vision content
-const visionContent = document.querySelector('.text-content:nth-child(5) p');
-visionContent.textContent = siteContent['main-content']['vision-content'];
-
-//contact 
-const contact = document.querySelector('.contact h4');
-contact.textContent = siteContent['contact']['contact-h4'];
 
 //footer
