@@ -71,4 +71,21 @@ const navItem6 = document.querySelector('nav a:nth-of-type(6)');
 navItem6.textContent = siteContent['nav']['nav-item-6'];
 
 
+//updated content
+
+const cta = document.querySelector('.cta-text');
+
+const ctaText = cta.querySelector('h1');
+ctaText.textContent = siteContent['cta']['h1'];
+
+const ctaButton = cta.querySelector('button');
+ctaButton.textContent = siteContent['cta']['button'];
+
+
+
+
+
+
+
+
 
