@@ -43,12 +43,21 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+let anchorNL = document.querySelectorAll("nav a")
+let anchorArray = Array.from(anchorNL)
+for(let i=0; i < anchorArray.length ; i++){
+  anchorArray[i].textContent = siteContent["nav"][`nav-item-${i+1}`]
+}
+
 // CTA
 let ctaImg = document.getElementById("cta-img")
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
 
-let title = document.getElementByTagName("h1")
-title.textContent = "djb"
+let title = document.querySelector("h1")
+title.textContent = siteContent['cta']["h1"]
+
+let actionButton = document.querySelector(".cta button")
+actionButton.textContent = siteContent["cta"]["button"]
 
 // Main Content
 let middleImg = document.getElementById("middle-img")
@@ -57,6 +66,12 @@ middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 // Contact
 let contactHeader = document.querySelector(".contact h4")
 contactHeader.textContent = siteContent["contact"]["contact-h4"]
+
+let contactParaNL = document.querySelectorAll(".contact p")
+let contactParaArray = Array.from(contactParaNL)
+contactParaArray[0].textContent = siteContent["contact"]["address"]
+contactParaArray[1].textContent = siteContent["contact"]["phone"]
+contactParaArray[2].textContent = siteContent["contact"]["email"]
 
 // Footer
 let footerText = document.querySelector("footer p")
