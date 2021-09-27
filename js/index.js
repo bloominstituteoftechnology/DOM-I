@@ -47,14 +47,43 @@ for(let i = 0; i < nav.length; i++){
   nav[i].textContent = siteContent['nav'][index];
 }
 
-let h1Content = document.querySelector('.cta h1');
+const h1Content = document.querySelector('.cta h1');
 h1Content.textContent = siteContent['cta']['h1'];
 
-let ctaButton = document.querySelector('.cta button');
+const ctaButton = document.querySelector('.cta button');
 ctaButton.textContent = siteContent['cta']['button'];
 
-let headImg = document.getElementById("cta-img");
+const headImg = document.getElementById("cta-img");
 headImg.setAttribute('src', siteContent['cta']['img-src']);
 
-let featuresH4 = document.getElementsByClassName('.text-content');
-featuresH4.textContent = siteContent['text-content']['features-h4'];
+const featuresH4 = document.querySelector('.top-content:nth-child(1) h4');
+featuresH4.textContent = siteContent["main-content"]['features-h4'];
+const featuresP = document.querySelector('.top-content:nth-child(1) p');
+featuresP.textContent = siteContent['main-content']['features-content'];
+
+const aboutH4 = document.querySelector('.top-content .text-content:nth-child(2) h4');
+aboutH4.textContent = siteContent["main-content"]['about-h4'];
+const aboutP = document.querySelector('.top-content .text-content:nth-child(2) p');
+aboutP.textContent = siteContent['main-content']['about-content'];
+
+const bodyImg = document.getElementById("middle-img");
+bodyImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+
+
+
+const servicesH4 = document.querySelector('.bottom-content .text-content:nth-child(1) h4');
+servicesH4.textContent = siteContent["main-content"]['services-h4'];
+const servicesP = document.querySelector('.bottom-content .text-content:nth-child(1) p');
+servicesP.textContent = siteContent['main-content']['services-content'];
+
+const productH4 = document.querySelector('.bottom-content .text-content:nth-child(2) h4');
+productH4.textContent = siteContent["main-content"]['product-h4'];
+const productP = document.querySelector('.bottom-content .text-content:nth-child(2) p');
+productP.textContent = siteContent['main-content']['product-content'];
+
+const visionH4 = document.querySelector('.bottom-content .text-content:nth-child(3) h4');
+visionH4.textContent = siteContent['main-content']['vision-h4'];
+const visionP = document.querySelector('.bottom-content .text-content:nth-child(3) p');
+visionP.textContent = siteContent['main-content']['vision-content'];
+
