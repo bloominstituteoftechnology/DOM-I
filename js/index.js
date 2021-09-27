@@ -1,15 +1,15 @@
 const siteContent = {
   "nav": {
-    "nav-item-1": "Services",
-    "nav-item-2": "Product",
-    "nav-item-3": "Vision",
-    "nav-item-4": "Features",
-    "nav-item-5": "About",
-    "nav-item-6": "Contact",
+   const :nav1 = document.querySelector('.nav-item-1').textContent = "Services",
+   const :nav2 = document.querySelector('.nav-item-2').textContent = "Product",
+   const :nav3 = document.querySelector('.nav-item-3').textContent = "Vision",
+   const :nav4 = document.querySelector('.nav-item-4').textContent = "Features",
+   const :nav5 = document.querySelector('.nav-item-5').textContent = "About",
+   const :nav6 = document.querySelector('.nav-item-6').textContent = "Contact",
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    const :mainHeader = document.querySelector('h1').textContent = "DOM Is Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -36,6 +36,8 @@ const siteContent = {
     "copyright" : "Copyright Great Idea! 2018"
   },
 };
+
+document.querySelector('h1').textContent = "DOM<br> Is<br> Awesome";
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
