@@ -61,28 +61,23 @@ const sixthNav = document.querySelector("a:nth-of-type(6)")
 sixthNav.textContent = siteContent['nav']['nav-item-6']
 
 const title = document.querySelector('h1')
-title.textContent = "Dom is awesome"
+title.textContent = siteContent['cta']['h1']
 
 const getStarted = document.querySelector('button')
-getStarted.textContent = "Get Started"
+getStarted.textContent = siteContent['cta']['button']
 
-const firstSection = document.getElementsByClassName('.text-content:nth-of-type(1)')
-const firstTitle = document.querySelector('h4')
-const firstPara = document.querySelector('p')
-firstTitle.textContent = "Features"
-firstPara.textContent = "lorem ipsum Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown ..."
-
-const secondSection = document.getElementsByClassName('.text-content:nth-of-type(2)')
-const secondTitle = document.querySelector('h4')
-const secondPara =document.querySelector('p')
-secondTitle.textContent = "About"
-secondPara.textContent = "lorem ipsum Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown ..."
+const firstTitle = document.querySelector('h4:nth-of-type(1)')
+const firstPara = document.querySelector('p:nth-of-type(1)')
+firstTitle.textContent = siteContent['main-content']['features-h4']
+firstPara.textContent = siteContent['main-content']['features-content']
 
 
-const contactHeading = document.getElementsByClassName('.contact')
-contactHeading.setAttribute('h4', siteContent['contact']['.contact-h4'])
+const secondTitle = document.querySelector('h4:nth-of-type(2)')
+const secondPara = document.querySelector('p:nth-of-type(2)')
+secondTitle.textContent = siteContent['main-content']['about-h4']
+secondPara.textContent = siteContent['main-content']['about-content']
 
 
 
-const foot = document.getElementsByTagName('footer')
+const foot = document.querySelector('footer')
 foot.textContent = siteContent['footer']['copyright']
