@@ -113,5 +113,20 @@ email.textContent = siteContent['contact']['email'];
 const footer = document.querySelector('footer p');
 footer.textContent = siteContent['footer']['copyright'];
 
-// const navColor = document.querySelectorAll('nav a');
-// navColor.forEach(element => navColor.style.color = green;)
+
+
+const navColor = document.querySelectorAll('a');
+navColor.forEach(navColor => navColor.style.color = 'green');
+
+const blog = document.createElement('a');
+const socials = document.createElement('a');
+
+blog.textContent = 'Blog';
+blog.href = '#';
+blog.style.color = 'green'
+document.querySelector('nav').appendChild(blog);
+
+socials.textContent = 'Social';
+socials.href = '#';
+socials.style.color = 'green';
+document.querySelector('nav').prepend(socials);
