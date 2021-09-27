@@ -38,14 +38,21 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+
+// -------------------- NAV SECTION ---------------------- //
+const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-let nav = document.querySelectorAll('nav a')
+const nav2 = document.querySelector('nav');
+nav2.setAttribute('color', 'green');
+
+const nav = document.querySelectorAll('nav a')
 for(let i = 0; i < nav.length; i++){
-  let index = "nav-item-" + i;
+  let index = "nav-item-" + (i + 1);
   nav[i].textContent = siteContent['nav'][index];
 }
+
+// ------------------------- HEADER SECTION ------------------------- //
 
 const h1Content = document.querySelector('.cta h1');
 h1Content.textContent = siteContent['cta']['h1'];
@@ -55,6 +62,8 @@ ctaButton.textContent = siteContent['cta']['button'];
 
 const headImg = document.getElementById("cta-img");
 headImg.setAttribute('src', siteContent['cta']['img-src']);
+
+// ----------------------- BODY SECTION --------------------------//
 
 const featuresH4 = document.querySelector('.top-content:nth-child(1) h4');
 featuresH4.textContent = siteContent["main-content"]['features-h4'];
@@ -68,9 +77,6 @@ aboutP.textContent = siteContent['main-content']['about-content'];
 
 const bodyImg = document.getElementById("middle-img");
 bodyImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
-
-
-
 
 const servicesH4 = document.querySelector('.bottom-content .text-content:nth-child(1) h4');
 servicesH4.textContent = siteContent["main-content"]['services-h4'];
@@ -86,4 +92,20 @@ const visionH4 = document.querySelector('.bottom-content .text-content:nth-child
 visionH4.textContent = siteContent['main-content']['vision-h4'];
 const visionP = document.querySelector('.bottom-content .text-content:nth-child(3) p');
 visionP.textContent = siteContent['main-content']['vision-content'];
+
+// ---------------------- CONTACT INFO SECTION ---------------------------- //
+
+const contactH4 = document.querySelector('.contact h4');
+contactH4.textContent = siteContent['contact']['contact-h4']; 
+
+const address = document.querySelector('.contact p:nth-of-type(1)');
+address.textContent = siteContent['contact']['address'];
+
+const phoneNumber = document.querySelector('.contact p:nth-of-type(2)');
+phoneNumber.textContent = siteContent['contact']['phone'];
+
+const email = document.querySelector('.contact p:nth-of-type(3)');
+email.textContent = siteContent['contact']['email'];
+
+// --------------------- FOOTER SECTION ------------------- //
 
