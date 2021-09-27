@@ -41,12 +41,29 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-
-const links = document.querySelectorAll('nav a'); //select all navs a tags and create node list
+let links = document.querySelectorAll('nav a')
+console.log(links) //select all navs 'a' tags and create node list
 for(let i=0; i<links.length; i++){ //loop all navs in node list 
-  let index = "nav-item-" + 1; 
-  links [i].textContent = siteContent['nav'][index] //connect nav links to siteContent 
+
+  let index = "nav-item-"+i;
+
+  links[i].textContent = siteContent['nav'][index] //connect nav links to siteContent 
+  links[i].style.color='green' //change color to green
 }
+
+// //new item using appendChild()
+const blog= document.createElement('a')
+
+blog.textContent = 'Blog'
+blog.href = '#'
+document.querySelector('nav').appendChild(blog)
+
+// // //new home page 
+const home= document.createElement('a')
+home.textContent = 'Home'
+home.href = '#'
+document.querySelector('nav').prepend(home)
+
 
 let ctaText = document.querySelector('.cta-text h1')
 ctaText.textContent = siteContent['cta']['h1']
@@ -85,3 +102,4 @@ contactP[2].textContent = siteContent['contact']['email'];
 
 let footerP = document.querySelector('footer p')
 footerP.textContent = siteContent['footer']['copyright']
+
