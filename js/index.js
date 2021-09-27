@@ -119,7 +119,7 @@ const prodContent = product.querySelector('p');
 prodHeading.textContent = siteContent['main-content']['product-h4'];
 prodContent.textContent = siteContent['main-content']['product-content'];
 
-//vision
+
 
 const vision = bottom.querySelector('.text-content:nth-of-type(3)');
 
