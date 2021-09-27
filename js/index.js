@@ -45,7 +45,7 @@ const ctaImg = document.getElementById('cta-img')
 ctaImg.setAttribute('src', siteContent['cta']['img-src'])
 
 const middleImg = document.getElementById('middle-img')
-middleImg.src = 'img/mid-page-accent.jpg'
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
 
 const firstNav = document.querySelector("a:nth-of-type(1)")
 firstNav.textContent = "Services"
@@ -66,3 +66,18 @@ title.textContent = "Dom is awesome"
 const getStarted = document.querySelector('button')
 getStarted.textContent = "Get Started"
 
+const firstSection = document.getElementsByClassName('.text-content:nth-of-type(1)')
+const firstTitle = document.querySelector('h4')
+const firstPara = document.querySelector('p')
+firstTitle.textContent = "Features"
+firstPara.textContent = "lorem ipsum Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown ..."
+
+const secondSection = document.getElementsByClassName('.text-content:nth-of-type(2)')
+const secondTitle = document.querySelector('h4')
+const secondPara =document.querySelector('p')
+secondTitle.textContent = "About"
+secondPara.textContent = "lorem ipsum Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown ..."
+
+
+const contactHeading = document.querySelector('.contact-h4')
+contactHeading.textContent = siteContent['contact']['.contact-h4']
