@@ -100,8 +100,10 @@ const div2Para = div2Header.nextElementSibling;
 div2Para.classList.add('div2Para')
 div2Para.textContent = siteContent['main-content']['about-content']
 
+
 let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
 
 const div3 = document.querySelector('.bottom-content .text-content ')
 div3.classList.add('div3')
@@ -135,6 +137,7 @@ div5Header.textContent = siteContent['main-content']['vision-h4']
 const div5Para = div5Header.nextElementSibling;
 div5Para.classList.add('div5Para')
 div5Para.textContent = siteContent['main-content']['vision-content']
+
 
 const contactHeader = document.querySelector('.contact h4 ')
 contactHeader.classList.add('ConatctHeader')
