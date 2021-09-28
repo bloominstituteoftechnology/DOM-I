@@ -67,6 +67,7 @@ navLinkSix.textContent = siteContent['nav']['nav-item-6']
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+
 const ctaText = document.querySelector('.cta-text h1')
 ctaText.textContent = siteContent["cta"]['h1']
 
@@ -75,6 +76,7 @@ ctaButton.textContent = siteContent['cta']['button']
 
 let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
+
 
 const div1 = document.querySelector('div .text-content');
 div1.classList.add('div1')
@@ -101,3 +103,35 @@ div2Para.textContent = siteContent['main-content']['about-content']
 let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
+const div3 = document.querySelector('.bottom-content .text-content ')
+div3.classList.add('div3')
+
+const div3Header = document.querySelector('.div3 h4')
+div3Header.classList.add('div3Header')
+div3Header.textContent = siteContent['main-content']['services-h4']
+
+const div3Para = div3Header.nextElementSibling;
+div3Para.classList.add('div3Para')
+div3Para.textContent = siteContent['main-content']['services-content']
+
+const div4 = div3.nextElementSibling;
+div4.classList.add('div4')
+
+const div4Header = document.querySelector('.div4 h4')
+div4Header.classList.add('div4Header')
+div4Header.textContent = siteContent['main-content']['product-h4']
+
+const div4Para = div4Header.nextElementSibling;
+div4Para.classList.add('div4Para')
+div4Para.textContent = siteContent['main-content']['product-content']
+
+const div5 = div4.nextElementSibling;
+div5.classList.add('div5')
+
+const div5Header = document.querySelector('.div5 h4')
+div5Header.classList.add('div5Header')
+div5Header.textContent = siteContent['main-content']['vision-h4']
+
+const div5Para = div5Header.nextElementSibling;
+div5Para.classList.add('div5Para')
+div5Para.textContent = siteContent['main-content']['vision-content']
