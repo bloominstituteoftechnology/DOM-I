@@ -38,5 +38,109 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+let logo = document.getElementById("logo-img")
+let snippet = document.getElementById("cta-img")
+let middleImage = document.getElementById("middle-img")
+let nav = document.querySelector("nav")
+let navLinks = document.querySelectorAll('nav a')
+let ctaSection = document.getElementsByClassName("cta")[0]
+let ctaH1 = ctaSection.querySelectorAll('div h1')[0]
+let ctaButton = ctaSection.querySelectorAll('button')[0]
+// Top Content
+let mainTopContent = document.getElementsByClassName('top-content')[0]
+let featureContent = mainTopContent.getElementsByClassName("text-content")[0]
+let featureH4 = featureContent.querySelector("h4")
+let featureP = featureContent.querySelector("p")
+let aboutContent = mainTopContent.getElementsByClassName("text-content")[1]
+let aboutH4 = aboutContent.querySelector("h4")
+let aboutP = aboutContent.querySelector("p")
+// Bottom Content
+let mainBottomContent = document.getElementsByClassName('bottom-content')[0]
+let servicesContent = mainBottomContent.getElementsByClassName("text-content")[0]
+let servicesH4 = servicesContent.querySelector("h4")
+let servicesP = servicesContent.querySelector("p")
+let productContent = mainBottomContent.getElementsByClassName("text-content")[1]
+let productH4 = productContent.querySelector("h4")
+let productP = productContent.querySelector("p")
+let visionContent = mainBottomContent.getElementsByClassName("text-content")[2]
+let visionH4 = visionContent.querySelector("h4")
+let visionP = visionContent.querySelector("p")
+//contact
+let contactContent = document.getElementsByClassName('contact')[0]
+let contactH4 = contactContent.querySelector("h4")
+let address = contactContent.querySelectorAll("p")[0]
+let phone = contactContent.querySelectorAll("p")[1]
+let email = contactContent.querySelectorAll("p")[2]
+//footer
+let footerContent = document.querySelector('footer')
+let copyright = footerContent.querySelector("p")
+
+
+
+
+const createLink = (text) => {
+  let link = document.createElement('a')
+  link.textContent = text
+  return link
+}
+
+const createNavMenu = () => {
+  const navObject = siteContent['nav']
+  const copyNavObject = { ...navObject }
+  delete copyNavObject["img-src"]
+  const linksArray = Array.from(navLinks)
+  let counter = 1
+  const menu = linksArray.forEach(link => {
+    if (counter < linksArray.length + 1) {
+      link.textContent = siteContent['nav'][`nav-item-${counter}`]
+    }
+    counter++
+  })
+  return menu
+}
+createNavMenu()
+
+const blogLink = document.createElement('a'); 
+blogLink.textContent = 'Blog';
+blogLink.href = '#';
+document.querySelector('nav').appendChild(blogLink);
+
+
+const merchLink = document.createElement('a'); 
+merchLink.textContent = 'Merch';
+merchLink.href = '#';
+document.querySelector('nav').prepend(merchLink);
+
+const changeLinkColors = (color) => {
+  const navLinkArray = [...navLinks]
+  navLinkArray.push(blogLink, merchLink)
+  navLinkArray.forEach(link => {
+    link.style.color = color
+  })
+}
+changeLinkColors('green')
+
+ctaH1.textContent = siteContent["cta"]["h1"]
+ctaButton.textContent = siteContent["cta"]["button"]
+featureH4.textContent = siteContent["main-content"]["features-h4"]
+featureP.textContent = siteContent["main-content"]["features-content"]
+aboutH4.textContent = siteContent["main-content"]["about-h4"]
+aboutP.textContent = siteContent["main-content"]["about-content"]
+
+servicesH4.textContent = siteContent["main-content"]["services-h4"]
+servicesP.textContent = siteContent["main-content"]["services-content"]
+productH4.textContent = siteContent["main-content"]["product-h4"]
+productP.textContent = siteContent["main-content"]["product-content"]
+visionH4.textContent = siteContent["main-content"]["vision-h4"]
+visionP.textContent = siteContent["main-content"]["vision-content"]
+
+contactH4.textContent = siteContent["contact"]["contact-h4"]
+address.textContent = siteContent["contact"]["address"]
+phone.textContent = siteContent["contact"]["phone"]
+email.textContent = siteContent["contact"]["email"]
+copyright.textContent = siteContent["footer"]["copyright"]
+
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+snippet.setAttribute('src', siteContent["cta"]["img-src"])
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
