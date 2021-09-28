@@ -45,6 +45,10 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 let cta_img = document.getElementById("cta-img");
 cta_img.setAttribute('src', siteContent["cta"]["img-src"]);
 
+//Add Image of code snippets across the screen
+let middle = document.getElementById("middle-img");
+middle.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
 // Add nav a content
 const first_a = document.querySelector('a:nth-of-type(1)');
 first_a.innerHTML = `<a href="#"> ${siteContent["nav"]["nav-item-1"]} </a>`;
@@ -64,6 +68,12 @@ fourth_a.innerHTML = `<a href="#"> ${siteContent["nav"]["nav-item-5"]} </a>`;
 const sixth_a = document.querySelector('a:nth-of-type(6)');
 sixth_a.innerHTML = `<a href="#"> ${siteContent["nav"]["nav-item-6"]} </a>`;
 
-//Add Image of code snippets across the screen
-let middle = document.getElementById("middle-img");
-middle.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+const h1_Tag = document.querySelector('h1');
+h1_Tag.innerHTML = `<h1> DOM <br> Is<br> Awesome  </h1>`;
+
+
+const first_h4 = document.querySelector('h4:nth-of-type(1)');
+first_h4.innerHTML = `<h4> ${siteContent["main-content"]["features-h4"]} </h4>`;
+
+const second_h4 = document.querySelector('h4:nth-of-type(2)');
+second_h4.innerHTML = `<h4> ${siteContent["main-content"]["about-h4"]} </h4>`;
