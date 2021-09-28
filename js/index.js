@@ -59,7 +59,7 @@ navLink1.href = '#';
 document.querySelector('nav').prepend(navLink1);
 
 const navLink2 = document.createElement('a');
-navLink2.textContent = 'Appened Link';
+navLink2.textContent = 'Appended Link';
 navLink1.href = '#';
 document.querySelector('nav').appendChild(navLink2);
 
@@ -92,6 +92,7 @@ aboutP.textContent = siteContent['main-content']['about-content'];
 // Middle Image //
 const bodyImg = document.getElementById("middle-img");
 bodyImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+// Middle Image //
 
 const servicesH4 = document.querySelector('.bottom-content .text-content:nth-child(1) h4');
 servicesH4.textContent = siteContent["main-content"]['services-h4'];
