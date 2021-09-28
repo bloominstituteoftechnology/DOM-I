@@ -45,3 +45,21 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 let cta_img = document.getElementById("cta-img");
 cta_img.setAttribute('src', siteContent["cta"]["img-src"]);
 
+// Add nav a content
+const first_a = document.querySelector('a:nth-of-type(1)');
+first_a.innerHTML = `<a href="#"> ${siteContent["nav"]["nav-item-1"]} </a>`;
+
+const second_a = document.querySelector('a:nth-of-type(2)');
+second_a.innerHTML = `<a href="#"> ${siteContent["nav"]["nav-item-2"]} </a>`;
+
+const third_a = document.querySelector('a:nth-of-type(3)');
+third_a.innerHTML = `<a href="#"> ${siteContent["nav"]["nav-item-3"]} </a>`;
+
+const fourth_a = document.querySelector('a:nth-of-type(4)');
+fourth_a.innerHTML = `<a href="#"> ${siteContent["nav"]["nav-item-4"]} </a>`;
+
+const fifth_a = document.querySelector('a:nth-of-type(5)');
+fourth_a.innerHTML = `<a href="#"> ${siteContent["nav"]["nav-item-5"]} </a>`;
+
+const sixth_a = document.querySelector('a:nth-of-type(6)');
+sixth_a.innerHTML = `<a href="#"> ${siteContent["nav"]["nav-item-6"]} </a>`;
