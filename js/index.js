@@ -60,6 +60,11 @@ contact.textContent = siteContent['nav']['nav-item-6'];
 const greenNav = document.querySelectorAll('nav a');
 greenNav.forEach(elem => elem.style.color = 'green');
 
+//adding to nav
+const blogLink = document.createElement('a');
+blogLink.textContent = 'Blog';
+blogLink.href = '#';
+document.querySelector('nav').appendChild(blogLink);
 
 //update on DOM is awesome text
 const domIsAwesomeText = document.querySelector('.cta-text h1');
@@ -106,3 +111,4 @@ contactInfo[2].textContent = siteContent['contact']['email'];
 //footer
 const footerInfo = document.querySelector('footer p');
 footerInfo.textContent = siteContent['footer']['copyright'];
+
