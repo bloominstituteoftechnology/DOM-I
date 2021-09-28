@@ -151,3 +151,7 @@ contactPara2.textContent = siteContent['contact']['phone']
 const contactPara3 = contactPara2.nextElementSibling;
 contactPara3.classList.add('contPara3')
 contactPara3.textContent = siteContent['contact']['email']
+
+const footer = document.querySelector('footer p')
+footer.classList.add('footer')
+footer.textContent = siteContent['footer']['copyright']
