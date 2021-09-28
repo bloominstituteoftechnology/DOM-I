@@ -56,6 +56,11 @@ features.textContent = siteContent['nav']['nav-item-4'];
 about.textContent = siteContent['nav']['nav-item-5'];
 contact.textContent = siteContent['nav']['nav-item-6'];
 
+//green nav
+const greenNav = document.querySelectorAll('nav a');
+greenNav.forEach(elem => elem.style.color = 'green');
+
+
 //update on DOM is awesome text
 const domIsAwesomeText = document.querySelector('.cta-text h1');
 domIsAwesomeText.textContent = siteContent['cta']['h1']
@@ -90,10 +95,14 @@ contentTitles[4].textContent = siteContent['main-content']['vision-h4'];
 
 
 //contact
-const contactHeading = document.querySelector('.contact');
+const contactHeading = document.querySelector('.contact h4');
 contactHeading.textContent = siteContent['contact']['contact-h4'];
 
-const addressInfo = document.querySelector('.contact p:nth-child(1)');
-addressInfo.textContent = siteContent['contact']['address'];
+const contactInfo = document.querySelectorAll('.contact p');
+contactInfo[0].textContent = siteContent['contact']['address'];
+contactInfo[1].textContent = siteContent['contact']['phone'];
+contactInfo[2].textContent = siteContent['contact']['email'];
 
 //footer
+const footerInfo = document.querySelector('footer p');
+footerInfo.textContent = siteContent['footer']['copyright'];
