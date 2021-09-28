@@ -72,7 +72,7 @@ image.setAttribute('src', siteContent['cta']['img-src']);
 const middleImg = document.querySelector('#middle-img');
 middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
-//main content - 
+//main content
 const allContents = document.querySelectorAll('.text-content p');
 allContents[0].textContent = siteContent['main-content']['features-content'];
 allContents[1].textContent = siteContent['main-content']['about-content'];
@@ -89,8 +89,11 @@ contentTitles[3].textContent = siteContent['main-content']['product-h4'];
 contentTitles[4].textContent = siteContent['main-content']['vision-h4'];
 
 
-//contact title
+//contact
+const contactHeading = document.querySelector('.contact');
+contactHeading.textContent = siteContent['contact']['contact-h4'];
 
-
+const addressInfo = document.querySelector('.contact p:nth-child(1)');
+addressInfo.textContent = siteContent['contact']['address'];
 
 //footer
