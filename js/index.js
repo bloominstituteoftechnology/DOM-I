@@ -63,3 +63,7 @@ fourth_a.innerHTML = `<a href="#"> ${siteContent["nav"]["nav-item-5"]} </a>`;
 
 const sixth_a = document.querySelector('a:nth-of-type(6)');
 sixth_a.innerHTML = `<a href="#"> ${siteContent["nav"]["nav-item-6"]} </a>`;
+
+//Add Image of code snippets across the screen
+let middle = document.getElementById("middle-img");
+middle.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
