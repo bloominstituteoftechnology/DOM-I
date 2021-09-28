@@ -123,3 +123,9 @@ h4Contact.innerHTML = `<h4> ${siteContent["contact"]["contact-h4"]} </h4>`;
 addr.innerHTML = `<p> ${siteContent["contact"]["address"]} </p>`;
 tel.innerHTML = `<p> ${siteContent["contact"]["phone"]} </p>`;
 email.innerHTML = `<p> ${siteContent["contact"]["email"]} </p>`;
+
+//Add footer section
+const footerSec = document.querySelector('footer');
+const pFooter = footerSec.querySelector('p');
+
+pFooter.innerHTML = `<p> ${siteContent["footer"]["copyright"]} </p>`;
