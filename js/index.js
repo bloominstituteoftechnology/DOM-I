@@ -60,11 +60,17 @@ contact.textContent = siteContent['nav']['nav-item-6'];
 const greenNav = document.querySelectorAll('nav a');
 greenNav.forEach(elem => elem.style.color = 'green');
 
-//adding to nav
+//adding to nav apprend child
 const blogLink = document.createElement('a');
 blogLink.textContent = 'Blog';
 blogLink.href = '#';
 document.querySelector('nav').appendChild(blogLink);
+
+//adding to nav preprend
+const staffInfo = document.createElement('a');
+staffInfo.textContent = 'Staff';
+staffInfo.ahref = '#';
+document.querySelector('nav').prepend(staffInfo);
 
 //update on DOM is awesome text
 const domIsAwesomeText = document.querySelector('.cta-text h1');
