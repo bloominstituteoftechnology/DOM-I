@@ -135,3 +135,19 @@ div5Header.textContent = siteContent['main-content']['vision-h4']
 const div5Para = div5Header.nextElementSibling;
 div5Para.classList.add('div5Para')
 div5Para.textContent = siteContent['main-content']['vision-content']
+
+const contactHeader = document.querySelector('.contact h4 ')
+contactHeader.classList.add('ConatctHeader')
+contactHeader.textContent = siteContent['contact']['contact-h4']
+
+const contactPara1 = contactHeader.nextElementSibling;
+contactPara1.classList.add('ontPara1')
+contactPara1.textContent = siteContent['contact']['address']
+
+const contactPara2 = contactPara1.nextElementSibling;
+contactPara2.classList.add('contPara2')
+contactPara2.textContent = siteContent['contact']['phone']
+
+const contactPara3 = contactPara2.nextElementSibling;
+contactPara3.classList.add('contPara3')
+contactPara3.textContent = siteContent['contact']['email']
