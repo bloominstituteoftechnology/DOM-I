@@ -40,3 +40,50 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+let nav = document.querySelectorAll('nav a')
+
+// const newNavArray = Array.from(nav)
+nav.forEach((item,index) =>item.textContent = siteContent['nav'][`nav-item-${index + 1}`])
+
+
+let cta = document.querySelector('.cta')
+cta.querySelector('h1').innerHTML = "DOM <br> Is <br> Awesome"
+cta.querySelector('button').textContent =siteContent['cta']['button']
+cta.querySelector('#cta-img').setAttribute('src',siteContent['cta']['img-src'])
+
+const mainContent = document.querySelector('.main-content')
+const h4 = mainContent.querySelectorAll('h4')
+
+h4[0].innerHTML = siteContent['main-content']['features-h4']
+h4[1].innerHTML = siteContent['main-content']['about-h4']
+h4[2].innerHTML = siteContent['main-content']['services-h4']
+h4[3].innerHTML = siteContent['main-content']['product-h4']
+h4[4].innerHTML = siteContent['main-content']['vision-h4']
+
+const p = mainContent.querySelectorAll('p')
+
+p[0].innerHTML = siteContent["main-content"]['features-content']
+// p[1].innerHTML = siteContent['main-content']['about-content']
+// p[2].innerHTML = siteContent['main-content']['services-content']
+// p[3].innerHTML = siteContent['main-content']['product-content']
+// p[4].innerHTML = siteContent['main-content']['vision-content']
+
+const img = mainContent.querySelector('#middle-img')
+
+img.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+const contact = document.querySelector('.contact')
+const contactH4 = contact.querySelector('h4')
+contactH4.textContent = siteContent['contact']['contact-h4']
+
+
+const para = contact.querySelectorAll('p')
+para[0].innerHTML = '123 Way 456 Street <br> Somewhere, USA'
+para[1].innerHTML = siteContent['contact']['phone']
+para[2].innerHTML = siteContent['contact']['email']
+
+
+const footer = document.querySelector('footer p')
+footer.textContent = siteContent['footer']['copyright']
