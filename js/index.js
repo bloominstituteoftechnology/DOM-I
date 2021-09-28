@@ -91,7 +91,6 @@ const pTopRight = textContentRight.querySelector('p');
 h4TopRight.innerHTML = `<h4> ${siteContent["main-content"]["about-h4"]} </h4>`;
 pTopRight.innerHTML = `<p> ${siteContent["main-content"]["about-content"]} </p>`;
 
-
 // Add bottom Content
 const bottomContent = document.querySelector('.bottom-content');
 const textBtmContentLeft = bottomContent.querySelector('.text-content');
@@ -112,3 +111,15 @@ const h4BtmRight = textBtmContentRight.querySelector('h4');
 const pBtmRight = textBtmContentRight.querySelector('p');
 h4BtmRight.innerHTML = `<h4> ${siteContent["main-content"]["vision-h4"]} </h4>`;
 pBtmRight.innerHTML = `<p> ${siteContent["main-content"]["vision-content"]} </p>`;
+
+// Add contact section
+const contactSec = document.querySelector('.contact');
+const h4Contact = contactSec.querySelector('h4');
+const addr = h4Contact.nextElementSibling;
+const tel = addr.nextElementSibling;
+const email = tel.nextElementSibling;
+
+h4Contact.innerHTML = `<h4> ${siteContent["contact"]["contact-h4"]} </h4>`;
+addr.innerHTML = `<p> ${siteContent["contact"]["address"]} </p>`;
+tel.innerHTML = `<p> ${siteContent["contact"]["phone"]} </p>`;
+email.innerHTML = `<p> ${siteContent["contact"]["email"]} </p>`;
