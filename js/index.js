@@ -35,6 +35,7 @@ const siteContent = {
   "footer": {
     "copyright" : "Copyright Great Idea! 2018"
   },
+  
 };
 
 // Example: Update the img src for the logo
@@ -141,3 +142,14 @@ contactEmail.textContent = siteContent['contact']
 ['email'];
 
 footerText.textContent = siteContent['footer']['copyright'];
+
+//whoops i forgot to do this earlier!!
+document.querySelector('nav a').style.color = 'green';
+document.querySelector('nav a:nth-of-type(2)').style.color = 'blue';
+document.querySelector('nav a:nth-of-type(3)').style.color = 'red';
+document.querySelector('nav a:nth-of-type(4)').style.color = 'yellow';
+document.querySelector('nav a:nth-of-type(5)').style.color = 'purple';
+document.querySelector('nav a:nth-of-type(6)').style.color = 'cyan';
+
+
+
