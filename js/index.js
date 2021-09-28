@@ -68,12 +68,47 @@ fourth_a.innerHTML = `<a href="#"> ${siteContent["nav"]["nav-item-5"]} </a>`;
 const sixth_a = document.querySelector('a:nth-of-type(6)');
 sixth_a.innerHTML = `<a href="#"> ${siteContent["nav"]["nav-item-6"]} </a>`;
 
+// Add h1 tag content
 const h1_Tag = document.querySelector('h1');
-h1_Tag.innerHTML = `<h1> DOM <br> Is<br> Awesome  </h1>`;
+h1_Tag.innerHTML = `<h1>DOM <br> Is<br> Awesome  </h1>`;
+
+//Add button name
+const butn = document.querySelector('button');
+butn.textContent = siteContent["cta"]["button"];
+
+// Add top Content
+const topContent = document.querySelector('.top-content');
+const textContentLeft = topContent.querySelector('.text-content');
+const textContentRight = textContentLeft.nextElementSibling;
+
+const h4TopLeft = textContentLeft.querySelector('h4');
+const pTopLeft = textContentLeft.querySelector('p');
+h4TopLeft.innerHTML = `<h4> ${siteContent["main-content"]["features-h4"]} </h4>`;
+pTopLeft.innerHTML = `<p> ${siteContent["main-content"]["features-content"]} </p>`;
+
+const h4TopRight = textContentRight.querySelector('h4');
+const pTopRight = textContentRight.querySelector('p');
+h4TopRight.innerHTML = `<h4> ${siteContent["main-content"]["about-h4"]} </h4>`;
+pTopRight.innerHTML = `<p> ${siteContent["main-content"]["about-content"]} </p>`;
 
 
-const first_h4 = document.querySelector('h4:nth-of-type(1)');
-first_h4.innerHTML = `<h4> ${siteContent["main-content"]["features-h4"]} </h4>`;
+// Add bottom Content
+const bottomContent = document.querySelector('.bottom-content');
+const textBtmContentLeft = bottomContent.querySelector('.text-content');
+const textBtmContentMiddle = textBtmContentLeft.nextElementSibling;
+const textBtmContentRight = textBtmContentMiddle.nextElementSibling;
 
-const second_h4 = document.querySelector('h4:nth-of-type(2)');
-second_h4.innerHTML = `<h4> ${siteContent["main-content"]["about-h4"]} </h4>`;
+const h4BtmLeft = textBtmContentLeft.querySelector('h4');
+const pBtmLeft = textBtmContentLeft.querySelector('p');
+h4BtmLeft.innerHTML = `<h4> ${siteContent["main-content"]["services-h4"]} </h4>`;
+pBtmLeft.innerHTML = `<p> ${siteContent["main-content"]["services-content"]} </p>`;
+
+const h4BtmMiddle = textBtmContentMiddle.querySelector('h4');
+const pBtmMiddle = textBtmContentMiddle.querySelector('p');
+h4BtmMiddle.innerHTML = `<h4> ${siteContent["main-content"]["product-h4"]} </h4>`;
+pBtmMiddle.innerHTML = `<p> ${siteContent["main-content"]["product-content"]} </p>`;
+
+const h4BtmRight = textBtmContentRight.querySelector('h4');
+const pBtmRight = textBtmContentRight.querySelector('p');
+h4BtmRight.innerHTML = `<h4> ${siteContent["main-content"]["vision-h4"]} </h4>`;
+pBtmRight.innerHTML = `<p> ${siteContent["main-content"]["vision-content"]} </p>`;
