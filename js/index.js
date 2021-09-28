@@ -77,6 +77,7 @@ let copyright = footerContent.querySelector("p")
 
 
 
+
 const createLink = (text) => {
   let link = document.createElement('a')
   link.textContent = text
@@ -98,6 +99,26 @@ const createNavMenu = () => {
   return menu
 }
 createNavMenu()
+
+const blogLink = document.createElement('a'); 
+blogLink.textContent = 'Blog';
+blogLink.href = '#';
+document.querySelector('nav').appendChild(blogLink);
+
+
+const merchLink = document.createElement('a'); 
+merchLink.textContent = 'Merch';
+merchLink.href = '#';
+document.querySelector('nav').prepend(merchLink);
+
+const changeLinkColors = (color) => {
+  const navLinkArray = [...navLinks]
+  navLinkArray.push(blogLink, merchLink)
+  navLinkArray.forEach(link => {
+    link.style.color = color
+  })
+}
+changeLinkColors('green')
 
 ctaH1.textContent = siteContent["cta"]["h1"]
 ctaButton.textContent = siteContent["cta"]["button"]
