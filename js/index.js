@@ -40,6 +40,7 @@ const siteContent = {
 // Example: Update the img src for the logo
 
 // -------------------- NAV SECTION ---------------------- //
+
 const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
@@ -52,10 +53,23 @@ for(let i = 0; i < nav.length; i++){
   nav[i].textContent = siteContent['nav'][index];
 }
 
+const navLink1 = document.createElement('a');
+navLink1.textContent = 'Prepended Link';
+navLink1.href = '#';
+document.querySelector('nav').prepend(navLink1);
+
+const navLink2 = document.createElement('a');
+navLink2.textContent = 'Appened Link';
+navLink1.href = '#';
+document.querySelector('nav').appendChild(navLink2);
+
 // ------------------------- HEADER SECTION ------------------------- //
 
 const h1Content = document.querySelector('.cta h1');
-h1Content.textContent = siteContent['cta']['h1'];
+h1Content.innerHTML = 'DOM<br>Is<br>Awesome';
+
+// const h1Content = document.querySelector('.cta h1');
+// h1Content.textContent = siteContent['cta']['h1'];
 
 const ctaButton = document.querySelector('.cta button');
 ctaButton.textContent = siteContent['cta']['button'];
@@ -63,7 +77,7 @@ ctaButton.textContent = siteContent['cta']['button'];
 const headImg = document.getElementById("cta-img");
 headImg.setAttribute('src', siteContent['cta']['img-src']);
 
-// ----------------------- BODY SECTION --------------------------//
+// ----------------------- BODY SECTION -------------------------- //
 
 const featuresH4 = document.querySelector('.top-content:nth-child(1) h4');
 featuresH4.textContent = siteContent["main-content"]['features-h4'];
@@ -75,6 +89,7 @@ aboutH4.textContent = siteContent["main-content"]['about-h4'];
 const aboutP = document.querySelector('.top-content .text-content:nth-child(2) p');
 aboutP.textContent = siteContent['main-content']['about-content'];
 
+// Middle Image //
 const bodyImg = document.getElementById("middle-img");
 bodyImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
@@ -98,8 +113,11 @@ visionP.textContent = siteContent['main-content']['vision-content'];
 const contactH4 = document.querySelector('.contact h4');
 contactH4.textContent = siteContent['contact']['contact-h4']; 
 
-const address = document.querySelector('.contact p:nth-of-type(1)');
-address.textContent = siteContent['contact']['address'];
+const contactAddress = document.querySelector('.contact p:nth-of-type(1)');
+contactAddress.innerHTML = '123 Way 456 Street<br>Somewhere, USA';
+
+// const address = document.querySelector('.contact p:nth-of-type(1)');
+// address.textContent = siteContent['contact']['address'];
 
 const phoneNumber = document.querySelector('.contact p:nth-of-type(2)');
 phoneNumber.textContent = siteContent['contact']['phone'];
@@ -107,5 +125,7 @@ phoneNumber.textContent = siteContent['contact']['phone'];
 const email = document.querySelector('.contact p:nth-of-type(3)');
 email.textContent = siteContent['contact']['email'];
 
-// --------------------- FOOTER SECTION ------------------- //
+// --------------------- FOOTER SECTION -------------------- //
 
+const footer = document.querySelector('footer');
+footer.textContent = siteContent['footer']['copyright'];
