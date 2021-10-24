@@ -44,8 +44,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 //NOTES ON NEEDFUL:: TEXT CONTENT OF <a> nav tags!
 //Services Product Vision Features About Contact
 
-//src on logo img:: img/logo.png
-//note img id is '#logo-img'
+
 
 //cta section
 //cta text content needed for div class 'cta-text'
@@ -54,4 +53,32 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 //// img id #cta-img src needed:: img/header-img.png
 
 //main content sectionr
-//
+//class top-content 
+//// class text-content
+//////// features-h4
+//////// features-content (<p>)
+//////// about-h4
+//////// about-content (<p>)
+
+//middle-img id src needs updated to
+// middle-img-src
+
+//bottom content sectionr
+//class bottom-content
+//// class text-content
+//////// services-h4
+//////// services-content
+//////// product-h4
+//////// product-content
+//////// vision-h4
+//////// vision-content
+
+//contact sectionr
+//class contact
+//// contact-h4
+//////// address (<br> between 'Street' and 'Somewhere')
+//////// phone
+//////// email ((alle* <p>))
+
+//footer 
+//copyright <p>
