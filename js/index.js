@@ -136,8 +136,23 @@ servicesContent.textContent=(siteContent['main-content']['services-content']);
 
 //////// product-h4 [4]
 //////// product-content p[4]
+
+let productHeader = document.querySelectorAll('h4')[4];
+productHeader.textContent=(siteContent['main-content']['product-h4']);
+
+let productContent = document.querySelectorAll('.main-content p')[4];
+productContent.textContent=(siteContent['main-content']['product-content']);
+
 //////// vision-h4 [5]
 //////// vision-content p[5]
+
+let visionHeader = document.querySelectorAll('h4')[5];
+visionHeader.textContent=(siteContent['main-content']['vision-h4']);
+
+let visionContent = document.querySelectorAll('p')[6];
+visionContent.textContent=(siteContent['main-content']['vision-content']);
+
+//I am only a little bit pulling my hair over that last one
 
 //contact sectionr
 //class contact
