@@ -105,10 +105,15 @@ featuresContent.textContent=(siteContent['main-content']['features-content']);
 // let aboutHeader = document.querySelector('.main-content h4');
 // aboutHeader.textContent=(siteContent['main-content']['about-h4']);
 
+let aboutHeader=document.querySelectorAll('h4')[2];
+console.log(aboutHeader);
+
+aboutHeader.textContent=(siteContent['main-content']['about-h4']);
+
+let aboutContent=document.querySelectorAll('.main-content p')[2];
+aboutContent.textContent=(siteContent['main-content']['about-content']);
 
 
-// let aboutContent=document.querySelector('.main-content p:nth-of-type(2)');
-// aboutContent.textContent=(siteContent['main-content']['about-content']);
 
 //middle-img id src needs updated to
 // middle-img-src
@@ -119,12 +124,20 @@ middleImg.setAttribute('src',siteContent['main-content']['middle-img-src']);
 //bottom content sectionr
 //class bottom-content
 //// class text-content
-//////// services-h4
-//////// services-content
-//////// product-h4
-//////// product-content
-//////// vision-h4
-//////// vision-content
+//////// services-h4 qsAll(h4)[3]
+//////// services-content qsAll p [3]
+
+let servicesHeader = document.querySelectorAll('h4')[3];
+servicesHeader.textContent=(siteContent['main-content']['services-h4']);
+
+let servicesContent = document.querySelectorAll('.main-content p')[3];
+servicesContent.textContent=(siteContent['main-content']['services-content']);
+
+
+//////// product-h4 [4]
+//////// product-content p[4]
+//////// vision-h4 [5]
+//////// vision-content p[5]
 
 //contact sectionr
 //class contact
