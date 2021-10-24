@@ -85,10 +85,22 @@ ctaImg.setAttribute('src','img/header-img.png');
 //main content sectionr
 //class top-content 
 //// class text-content
+
+
+
 //////// features-h4
 //////// features-content (<p>)
+
+let featuresHeader = document.querySelector('h4:nth-of-type(1)');
+featuresHeader.textContent=(siteContent['main-content']['features-h4']);
+
+let featuresContent = document.querySelector('.main-content p');
+featuresContent.textContent=(siteContent['main-content']['features-content']);
+
 //////// about-h4
 //////// about-content (<p>)
+let aboutHeader = document.querySelector('h4:nth-of-type(2)');
+aboutHeader.textContent=(siteContent['main-content']['about-h4']);
 
 //middle-img id src needs updated to
 // middle-img-src
