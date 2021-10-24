@@ -65,6 +65,10 @@ navItem6.textContent=(siteContent['nav']['nav-item-6']);
 //cta section
 //cta text content needed for div class 'cta-text'
 //<h1> DOM <br> Is <br> Awesome </h1>
+
+let header = document.querySelector('h1');
+header.textContent=(siteContent['cta']['h1']);
+
 //button text content 'Get Started'
 //// img id #cta-img src needed:: img/header-img.png
 
