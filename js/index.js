@@ -91,7 +91,7 @@ ctaImg.setAttribute('src','img/header-img.png');
 //////// features-h4
 //////// features-content (<p>)
 
-let featuresHeader = document.querySelector('h4:nth-of-type(1)');
+let featuresHeader = document.querySelector('.main-content h4:nth-of-type(1)');
 featuresHeader.textContent=(siteContent['main-content']['features-h4']);
 
 let featuresContent = document.querySelector('.main-content p');
@@ -99,11 +99,17 @@ featuresContent.textContent=(siteContent['main-content']['features-content']);
 
 //////// about-h4
 //////// about-content (<p>)
-let aboutHeader = document.querySelector('h4:nth-of-type(2)');
+let aboutHeader = document.querySelector('.main-content h4:nth-of-type(2)');
 aboutHeader.textContent=(siteContent['main-content']['about-h4']);
+
+let aboutContent=document.querySelector('.main-content p:nth-of-type(2)');
+aboutContent.textContent=(siteContent['main-content']['about-content']);
 
 //middle-img id src needs updated to
 // middle-img-src
+
+let middleImg = document.getElementById('middle-img');
+middleImg.setAttribute('src','img/mid-page-accent.jpg');
 
 //bottom content sectionr
 //class bottom-content
