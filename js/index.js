@@ -42,9 +42,25 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //NOTES ON NEEDFUL:: TEXT CONTENT OF <a> nav tags!
-//Services Product Vision Features About Contact
+//ServicesX ProductX VisionX FeaturesX AboutX ContactX
 
+let navItem1 = document.querySelector('a:nth-of-type(1)');
+navItem1.textContent=(siteContent['nav']['nav-item-1']);
 
+let navItem2 = document.querySelector('a:nth-of-type(2)');
+navItem2.textContent=(siteContent['nav']['nav-item-2']);
+
+let navItem3 = document.querySelector('a:nth-of-type(3)');
+navItem3.textContent=(siteContent['nav']['nav-item-3']);
+
+let navItem4 = document.querySelector('a:nth-of-type(4)');
+navItem4.textContent=(siteContent['nav']['nav-item-4']);
+
+let navItem5 = document.querySelector('a:nth-of-type(5)');
+navItem5.textContent=(siteContent['nav']['nav-item-5']);
+
+let navItem6 = document.querySelector('a:nth-of-type(6)');
+navItem6.textContent=(siteContent['nav']['nav-item-6']);
 
 //cta section
 //cta text content needed for div class 'cta-text'
