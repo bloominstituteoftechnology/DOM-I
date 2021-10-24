@@ -86,6 +86,7 @@ ctaImg.setAttribute('src','img/header-img.png');
 //class top-content 
 //// class text-content
 //I THINK WE NEED TO SELECT MAIN CONTENT THEN SEARCH AS NODELIST!
+//ie featuresHeader[n].textContent= bla bla where n is the index of the particular thing we want to change?
 
 
 //////// features-h4
@@ -94,21 +95,25 @@ ctaImg.setAttribute('src','img/header-img.png');
 let featuresHeader = document.querySelector('.main-content h4:nth-of-type(1)');
 featuresHeader.textContent=(siteContent['main-content']['features-h4']);
 
+console.log(featuresHeader);
+
 let featuresContent = document.querySelector('.main-content p');
 featuresContent.textContent=(siteContent['main-content']['features-content']);
 
 //////// about-h4
 //////// about-content (<p>)
-let aboutHeader = document.querySelector('.main-content h4:nth-of-type(2)');
-aboutHeader.textContent=(siteContent['main-content']['about-h4']);
+// let aboutHeader = document.querySelector('.main-content h4');
+// aboutHeader.textContent=(siteContent['main-content']['about-h4']);
 
-let aboutContent=document.querySelector('.main-content p:nth-of-type(2)');
-aboutContent.textContent=(siteContent['main-content']['about-content']);
+
+
+// let aboutContent=document.querySelector('.main-content p:nth-of-type(2)');
+// aboutContent.textContent=(siteContent['main-content']['about-content']);
 
 //middle-img id src needs updated to
 // middle-img-src
 
-let middleImg = document.querySelector('middle-img');
+let middleImg = document.querySelector('.middle-img');
 middleImg.setAttribute('src',siteContent['main-content']['middle-img-src']);
 
 //bottom content sectionr
