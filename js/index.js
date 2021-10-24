@@ -69,8 +69,18 @@ navItem6.textContent=(siteContent['nav']['nav-item-6']);
 let header = document.querySelector('h1');
 header.textContent=(siteContent['cta']['h1']);
 
+//we will worry about the br later!
+
+
 //button text content 'Get Started'
+
+let button = document.querySelector('button');
+button.textContent=(siteContent['cta']['button']);
+
 //// img id #cta-img src needed:: img/header-img.png
+
+let ctaImg = document.getElementById('cta-img');
+ctaImg.setAttribute('src','img/header-img.png');
 
 //main content sectionr
 //class top-content 
