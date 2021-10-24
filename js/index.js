@@ -39,7 +39,7 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 //NOTES ON NEEDFUL:: TEXT CONTENT OF <a> nav tags!
 //ServicesX ProductX VisionX FeaturesX AboutX ContactX
@@ -85,7 +85,7 @@ ctaImg.setAttribute('src','img/header-img.png');
 //main content sectionr
 //class top-content 
 //// class text-content
-
+//I THINK WE NEED TO SELECT MAIN CONTENT THEN SEARCH AS NODELIST!
 
 
 //////// features-h4
@@ -108,8 +108,8 @@ aboutContent.textContent=(siteContent['main-content']['about-content']);
 //middle-img id src needs updated to
 // middle-img-src
 
-let middleImg = document.getElementById('middle-img');
-middleImg.setAttribute('src','img/mid-page-accent.jpg');
+let middleImg = document.querySelector('middle-img');
+middleImg.setAttribute('src',siteContent['main-content']['middle-img-src']);
 
 //bottom content sectionr
 //class bottom-content
