@@ -40,3 +40,18 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//NOTES ON NEEDFUL:: TEXT CONTENT OF <a> nav tags!
+//Services Product Vision Features About Contact
+
+//src on logo img:: img/logo.png
+//note img id is '#logo-img'
+
+//cta section
+//cta text content needed for div class 'cta-text'
+//<h1> DOM <br> Is <br> Awesome </h1>
+//button text content 'Get Started'
+//// img id #cta-img src needed:: img/header-img.png
+
+//main content sectionr
+//
