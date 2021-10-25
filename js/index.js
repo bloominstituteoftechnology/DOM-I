@@ -76,6 +76,7 @@ navItem6.textContent=(siteContent['nav']['nav-item-6']);
 
 let header = document.querySelector('h1');
 header.textContent=(siteContent['cta']['h1']);
+header.insertAdjacentHTML('afterbegin','<br>');
 
 //we will worry about the br later!
 
