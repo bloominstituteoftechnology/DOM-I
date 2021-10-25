@@ -94,3 +94,18 @@ paraFour.textContent='Product content elementum magna eros, ac posuere elvit tem
 
 const paraFive=document.querySelector('.bottom-content .text-content:nth-of-type(3) p')
 paraFive.textContent='Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisl. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+
+// footer section h4
+const contactHeader=document.querySelector('.contact h4')
+contactHeader.textContent='Contact'
+
+// footer section contact paragraphs
+const contactOne=document.querySelector('.contact p:nth-of-type(1)')
+contactOne.textContent='123 Way 456 Street Somewhere, USA'
+
+const contactTwo=document.querySelector('.contact p:nth-of-type(2)')
+contactTwo.textContent='1 (888) 888-8888'
+
+const contactThree=document.querySelector('.contact p:nth-of-type(3)')
+contactThree.textContent='sales@greatidea.io'
+
