@@ -44,23 +44,35 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
                             // Updating the nav bar 
 
+
+
+
+
+
+
 // nav link 1 assigned and updated
 let link1 = document.querySelector("nav a:nth-of-type(1)");
+link1.style.color = "green";
 link1.textContent = siteContent["nav"]["nav-item-1"];
 // nav link 2 assigned and updated
 let link2 = document.querySelector("nav a:nth-of-type(2)");
+link2.style.color = "green";
 link2.textContent = siteContent["nav"]["nav-item-2"];
 // nav link 3 assigned and updated
 let link3 = document.querySelector("nav a:nth-of-type(3)");
+link3.style.color = "green";
 link3.textContent = siteContent["nav"]["nav-item-3"];
 // nav link 4 assigned and updated
 let link4 = document.querySelector("nav a:nth-of-type(4)");
+link4.style.color = "green";
 link4.textContent = siteContent["nav"]["nav-item-4"];
 // nav link 5 assigned and updated
 let link5 = document.querySelector("nav a:nth-of-type(5)");
+link5.style.color = "green";
 link5.textContent = siteContent["nav"]["nav-item-5"];
 // nav link 6 assigned and updated
 let link6 = document.querySelector("nav a:nth-of-type(6)");
+link6.style.color = "green";
 link6.textContent = siteContent["nav"]["nav-item-6"];
 
 
@@ -96,8 +108,10 @@ const aboutDiv = document.querySelector(".text-content:nth-of-type(2)");
   let aboutDivP = aboutDiv.querySelector("p");
   aboutDivP.textContent = siteContent["main-content"]["about-content"];
 
+                          //Updating Middle image 
+
 // middle image 
-let midImg = document.querySelector(".main-content img");
+let midImg = document.getElementById("middle-img");
 // Set image attribute source 
 midImg.setAttribute("src", siteContent['main-content']['middle-img-src']);
   
@@ -157,17 +171,26 @@ const footer = document.querySelector("footer");
     footerP.textContent = siteContent["footer"]["copyright"];
 
 
+                    // Add Content !important 
 
-  
-  // // Grab the elements
 
-  // const contactHeading = document.querySelector('.contact-heading');
-  // const address = document.querySelector('.address');
-  // const phone = document.querySelector('.phone');
-  // const email = document.querySelector('.phone');
-  // // Update elemtns with data from above.
 
-  // contactHeading.textContent = data["contact"]["contact-heading"];
-  // address.textContent = data["contact"]["address"];
-  // phone.textContent = data["contact"]["phone"];
-  // email.textContent = data["contact"]["email"];
+                        // Adding new navbar links 
+
+// Getting the navbar
+const navbar = document.querySelector("nav");
+// Creating new link
+let newA1 = document.createElement("a");
+// Adding text to the anchor element
+newA1.textContent = "!ydwoH";
+newA1.style.color = "green";
+// Appending the new element to the navbar
+navbar.appendChild(newA1);
+
+// Creating second link 
+let newA2 = document.createElement("a");
+// Adding text to the anchor element
+newA2.textContent = "Howdy!";
+newA2.style.color = "green";
+// Prepending the new element to the navbar
+navbar.prepend(newA2);
