@@ -41,10 +41,20 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+// Update nav bar and links
 const navItems = document.querySelectorAll('nav a');
 for (let i = 0; i < navItems.length; i++) {
   navItems[i].textContent = siteContent.nav[`nav-item-${i}`];
 }
 
+// Top image
+const topImage=document.querySelector('#cta-img')
+topImage.setAttribute('src', 'img/header-img.png')
+
+
 const title = document.querySelector('h1');
 title.textContent = siteContent['cta']['h1'];
+
+const button = document.querySelector('button');
+button.textContent = siteContent['cta']['button'];
+
