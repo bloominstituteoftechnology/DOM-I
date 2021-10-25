@@ -40,7 +40,8 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
-// Nav Bar Selectors
+
+// Nav Bar Section
 const navItem1 = document.querySelector('a:nth-of-type(1)');
 const navItem2 = document.querySelector('a:nth-of-type(2)');
 const navItem3 = document.querySelector('a:nth-of-type(3)');
@@ -54,16 +55,20 @@ navItem4.textContent = siteContent['nav']['nav-item-4'];
 navItem5.textContent = siteContent['nav']['nav-item-5'];
 navItem6.textContent = siteContent['nav']['nav-item-6'];
 
+//Change Nav Color
+const changeColor = document.querySelectorAll('header nav a');
+changeColor.forEach((tag) => {tag.style.color = '#808000';});
 
+
+// Hero Section
 const ctaItems = document.querySelector('h1');
 ctaItems.textContent = siteContent['cta']['h1'];
-
 const ctabutton = document.querySelector('button');
 ctabutton.textContent = siteContent['cta']['button'];
 const ctaImage = document.getElementById('cta-img');
 ctaImage.setAttribute('src', siteContent['cta']['img-src']);
 
-
+// Main Content Section
 const h4Feature = document.querySelector('.top-content .text-content:nth-of-type(1) h4');
 h4Feature.textContent = siteContent['main-content']['features-h4'];
 const featuresContent = document.querySelector('.top-content .text-content p:nth-of-type(1)');
@@ -74,6 +79,7 @@ h4About.textContent = siteContent['main-content']['about-h4'];
 const aboutFeatures = document.querySelector('.top-content .text-content:nth-of-type(2) p');
 aboutFeatures.textContent = siteContent['main-content']['about-content'];
 
+//Image Between main content
 const middleImg = document.getElementById('middle-img');
 middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
@@ -102,3 +108,8 @@ phone.textContent = siteContent['contact']['phone'];
 
 const email = document.querySelector('.contact p:nth-of-type(3)');
 email.textContent = siteContent['contact']['email'];
+
+
+// Footer Section
+const copyright = document.querySelector('footer p');
+copyright.textContent = siteContent['footer']['copyright'];
