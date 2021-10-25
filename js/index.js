@@ -101,16 +101,22 @@ visionH4.textContent = siteContent['main-content']['vision-h4'];
 visionP.textContent = siteContent['main-content']['vision-content'];
 
 //! Contact Section
-//* Contact h4
+//* h4
 const contactH4 = document.querySelector('.contact h4');
 contactH4.textContent = siteContent['contact']['contact-h4'];
 
 //* Address
-const addressP = document.querySelector('.contact p');
-addressP.textContent = siteContent['contact']['address'];
+const contactP = document.querySelector('.contact p');
+contactP.textContent = siteContent['contact']['address'];
 
 //* Phone
-// const phoneNumberP = document.querySelector('.contact p');
-// phoneNumberP.textContent = siteContent['contact']['phone'];
+const contactPhone = document.querySelector('.contact p');
+contactPhone.textContent = siteContent['contact']['phone'];
 
 //* Email
+const contactEmail = document.querySelector('.contact p');
+contactEmail.textContent = siteContent['contact']['email'];
+
+//! Footer Section
+const footer = document.querySelector('footer');
+footer.textContent = siteContent['footer']['copyright'];
