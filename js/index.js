@@ -45,3 +45,6 @@ const navItems = document.querySelectorAll('nav a');
 for (let i = 0; i < navItems.length; i++) {
   navItems[i].textContent = siteContent.nav[`nav-item-${i}`];
 }
+
+const title = document.querySelector('h1');
+title.textContent = siteContent['cta']['h1'];
