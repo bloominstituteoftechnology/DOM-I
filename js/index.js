@@ -63,7 +63,7 @@ ctaText.textContent = siteContent.cta.h1;
 ctaButton.textContent = siteContent.cta.button;
 ctaImg.src = 'img/header-img.png';
 
-
+ 
 const featuresH4 = document.querySelector('.top-content .text-content h4');
 const featuresP = document.querySelector('.top-content .text-content p');
 featuresH4.textContent = siteContent['main-content']['features-h4'];
