@@ -64,11 +64,14 @@ const ctaImage = document.getElementById('cta-img');
 ctaImage.setAttribute('src', siteContent['cta']['img-src']);
 
 
+const h4Feature = document.querySelector('.top-content .text-content:nth-of-type(1) h4');
+h4Feature.textContent = siteContent['main-content']['features-h4'];
+const featuresContent = document.querySelector('.top-content .text-content p:nth-of-type(1)');
+featuresContent.textContent = siteContent['main-content']['features-content'];
 
-const mainContent = document.querySelector('.main-content');
-const contactItem = document.querySelector('.contact');
-const footItem = document.querySelector('footer');
-
-
+const h4About = document.querySelector('.top-content .text-content:nth-of-type(2) h4');
+h4About.textContent = siteContent['main-content']['about-h4'];
+const aboutFeatures = document.querySelector('.top-content .text-content:nth-of-type(2) p');
+aboutFeatures.textContent = siteContent['main-content']['about-content'];
 
 
