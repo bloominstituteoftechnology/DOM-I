@@ -62,17 +62,39 @@ h1.innerHTML = lineBreaks;
 const button = document.querySelector('button');
 button.textContent = siteContent['cta']['button'];
 
-//! Middle section 
-let featuresH4 = document.querySelector('.top-content .text-content:nth-child(1) h4');
-let featuresP = document.querySelector('.top-content .text-content:nth-child(1) p');
+//! Top Middle Section 
+//?Features
+const featuresH4 = document.querySelector('.top-content .text-content:nth-child(1) h4');
+const featuresP = document.querySelector('.top-content .text-content:nth-child(1) p');
 featuresH4.textContent = siteContent['main-content']['features-h4'];
 featuresP.textContent = siteContent['main-content']['features-content'];
 
-let aboutH4 = document.querySelector('.top-content .text-content:nth-child(2) h4');
-let aboutP = document.querySelector('.top-content .text-content:nth-child(2) p');
+//? About
+const aboutH4 = document.querySelector('.top-content .text-content:nth-child(2) h4');
+const aboutP = document.querySelector('.top-content .text-content:nth-child(2) p');
 aboutH4.textContent = siteContent['main-content']['about-h4'];
 aboutP.textContent = siteContent['main-content']['about-content'];
 
 //! Middle Image
 const middleImage = document.getElementById('middle-img');
 middleImage.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+//! Bottom Middle Section
+//? Services
+const servicesH4 = document.querySelector('.bottom-content .text-content:nth-child(1) h4');
+const servicesP = document.querySelector('.bottom-content .text-content:nth-child(1) p');
+servicesH4.textContent = siteContent['main-content']['services-h4'];
+servicesP.textContent = siteContent['main-content']['services-content'];
+
+//? Product
+const productH4 = document.querySelector('.bottom-content .text-content:nth-child(2) h4');
+const productP = document.querySelector('.bottom-content .text-content:nth-child(2) p');
+productH4.textContent = siteContent['main-content']['product-h4'];
+productP.textContent = siteContent['main-content']['product-content'];
+
+//? Vision
+const visionH4 = document.querySelector('.bottom-content .text-content:nth-child(3) h4');
+const visionP = document.querySelector('.bottom-content .text-content:nth-child(3) p');
+visionH4.textContent = siteContent['main-content']['vision-h4'];
+visionP.textContent = siteContent['main-content']['vision-content'];
+
