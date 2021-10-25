@@ -78,3 +78,19 @@ fourthH4.textContent='Product'
 
 const fifthH4=document.querySelector('.bottom-content .text-content:nth-of-type(1) h4')
 fifthH4.textContent='Services'
+
+// Middle section paragraphs
+const paraOne=document.querySelector('.top-content .text-content:nth-of-type(1) p')
+paraOne.textContent='Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+
+const paraTwo=document.querySelector('.top-content .text-content:nth-of-type(2) p')
+paraTwo.textContent='About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisl. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdi scelerisque quis.'
+
+const paraThree=document.querySelector('.bottom-content .text-content:nth-of-type(1) p')
+paraThree.textContent='Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisl. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+
+const paraFour=document.querySelector('.bottom-content .text-content:nth-of-type(2) p')
+paraFour.textContent='Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisl. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+
+const paraFive=document.querySelector('.bottom-content .text-content:nth-of-type(3) p')
+paraFive.textContent='Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisl. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
