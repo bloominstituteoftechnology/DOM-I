@@ -109,3 +109,6 @@ contactTwo.textContent='1 (888) 888-8888'
 const contactThree=document.querySelector('.contact p:nth-of-type(3)')
 contactThree.textContent='sales@greatidea.io'
 
+// Copyright
+const copyRight=document.querySelector('footer p')
+copyRight.textContent='Copyright Great Idea!'
