@@ -55,9 +55,18 @@ navItem4.textContent = siteContent['nav']['nav-item-4'];
 navItem5.textContent = siteContent['nav']['nav-item-5'];
 navItem6.textContent = siteContent['nav']['nav-item-6'];
 
+// Added Navigation bar content
+const ideas = document.createElement('a');
+ideas.textContent = 'Brainstorm';
+document.querySelector('nav').appendChild(ideas);
+const learn = document.createElement('a');
+learn.textContent = 'Learning';
+document.querySelector('nav').prepend(learn);
+
 //Change Nav Color
 const changeColor = document.querySelectorAll('header nav a');
 changeColor.forEach((tag) => {tag.style.color = '#808000';});
+
 
 
 // Hero Section
