@@ -106,15 +106,15 @@ const contactH4 = document.querySelector('.contact h4');
 contactH4.textContent = siteContent['contact']['contact-h4'];
 
 //* Address
-const contactP = document.querySelector('.contact p');
+const contactP = document.querySelector('.contact p:nth-of-type(1)');
 contactP.textContent = siteContent['contact']['address'];
 
 //* Phone
-const contactPhone = document.querySelector('.contact p');
+const contactPhone = document.querySelector('.contact p:nth-of-type(2)');
 contactPhone.textContent = siteContent['contact']['phone'];
 
 //* Email
-const contactEmail = document.querySelector('.contact p');
+const contactEmail = document.querySelector('.contact p:nth-of-type(3)');
 contactEmail.textContent = siteContent['contact']['email'];
 
 //! Footer Section
