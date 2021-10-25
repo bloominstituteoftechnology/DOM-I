@@ -66,9 +66,19 @@ about.style.color = 'green';
 contact.style.color = 'green';
 
 //Adding to the navigation
-const nav = document.querySelector('nav')
-nav.append('a');
-nav.prepend('a');
+const navBefore = document.createElement('a');
+navBefore.textContent = "Before";
+navBefore.href = '#';
+document.querySelector('nav').prepend(navBefore);
+
+const navAfter = document.createElement('a');
+navAfter.textContent = 'After';
+navAfter.href = '#';
+document.querySelector('nav').appendChild(navAfter);
+
+//Making the new things green
+navBefore.style.color = 'green';
+navAfter.style.color = 'green';
 
 //Messing with anchors (this is just me having fun, not a part of the assignment)
 const topConent = document.querySelector('.top-content');
