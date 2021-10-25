@@ -42,19 +42,33 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //Navigation Bar
+//Setting navigation variables
 const services = document.querySelector('nav a:nth-of-type(1)');
 const product = document.querySelector('nav a:nth-of-type(2)');
 const vision = document.querySelector('nav a:nth-of-type(3)');
 const features = document.querySelector('nav a:nth-of-type(4)');
 const about = document.querySelector('nav a:nth-of-type(5)');
 const contact = document.querySelector('nav a:nth-of-type(6)');
-
+//Updating the text of navigation variables
 services.textContent = siteContent.nav['nav-item-1'];
 product.textContent = siteContent.nav['nav-item-2'];
 vision.textContent = siteContent.nav['nav-item-3'];
 features.textContent = siteContent.nav['nav-item-4'];
 about.textContent = siteContent.nav['nav-item-5'];
 contact.textContent = siteContent.nav['nav-item-6'];
+
+//Changing text to green
+services.style.color = 'green';
+product.style.color = 'green';
+vision.style.color = 'green';
+features.style.color = 'green';
+about.style.color = 'green';
+contact.style.color = 'green';
+
+//Adding to the navigation
+const nav = document.querySelector('nav')
+nav.append('a');
+nav.prepend('a');
 
 //Messing with anchors (this is just me having fun, not a part of the assignment)
 const topConent = document.querySelector('.top-content');
@@ -76,21 +90,24 @@ contactLink.setAttribute('id', 'contact');
 contact.setAttribute('href', '#contact');
 
 //Call to Action
+//Setting CTA variables
 const ctaText = document.querySelector('.cta-text h1');
 const ctaButton = document.querySelector('.cta-text button');
 const ctaImage = document.querySelector('#cta-img');
 
+//Updating the text of CTA variables
 ctaText.textContent = siteContent.cta.h1;
 ctaButton.textContent = siteContent.cta.button;
 ctaImage.setAttribute('src', siteContent.cta['img-src']);
 
 //Main Contant - Top
+//Setting main content-top variables
 const featuresH4 = document.querySelector('.top-content .text-content:nth-of-type(1) h4');
 const featuresContent = document.querySelector('.top-content .text-content:nth-of-type(1) p');
 const aboutH4 = document.querySelector('.top-content .text-content:nth-of-type(2) h4');
 const aboutContent = document.querySelector('.top-content .text-content:nth-of-type(2) p');
 const middleImage = document.querySelector('#middle-img');
-
+//Updating the text of main content-top variables
 featuresH4.textContent = siteContent['main-content']['features-h4'];
 featuresContent.textContent = siteContent['main-content']['features-content'];
 aboutH4.textContent = siteContent['main-content']['about-h4'];
@@ -98,13 +115,14 @@ aboutContent.textContent = siteContent['main-content']['about-content'];
 middleImage.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
 //Main Content - Bottom
+//Setting main content-bottom variables
 const servicesTitle = document.querySelector('.bottom-content .text-content:nth-of-type(1) h4');
 const servicesContent = document.querySelector('.bottom-content .text-content:nth-of-type(1) p');
 const productTitle = document.querySelector('.bottom-content .text-content:nth-of-type(2) h4');
 const productContent = document.querySelector('.bottom-content .text-content:nth-of-type(2) p');
 const visionTitle = document.querySelector('.bottom-content .text-content:nth-of-type(3) h4');
 const visionContent = document.querySelector('.bottom-content .text-content:nth-of-type(3) p');
-
+//Updating the text of main content-bottom variables
 servicesTitle.textContent = siteContent['main-content']['services-h4'];
 servicesContent.textContent = siteContent['main-content']['services-content'];
 productTitle.textContent = siteContent['main-content']['product-h4'];
@@ -113,17 +131,19 @@ visionTitle.textContent = siteContent['main-content']['vision-h4'];
 visionContent.textContent = siteContent['main-content']['vision-content'];
 
 //Contact Content
+//Setting contact variables
 const contactTitle = document.querySelector('.contact h4');
 const address = document.querySelector('.contact p:nth-of-type(1)');
 const phone = document.querySelector('.contact p:nth-of-type(2)');
 const email = document.querySelector('.contact p:nth-of-type(3)');
-
+//Updating the text of contact variables
 contactTitle.textContent = siteContent.contact['contact-h4'];
 address.textContent = siteContent.contact.address;
 phone.textContent = siteContent.contact.phone;
 email.textContent = siteContent.contact.email;
 
 //Footer Content
+//Setting footer variables
 const footerContent = document.querySelector('footer p');
-
+//Updating the text of footer variables
 footerContent.textContent = siteContent.footer.copyright;
