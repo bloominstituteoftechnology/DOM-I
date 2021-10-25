@@ -40,3 +40,56 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//Navigation Bar
+const nav = document.querySelector('nav');
+const services = document.querySelector('nav a:nth-of-type(1)');
+const product = document.querySelector('nav a:nth-of-type(2)');
+const vision = document.querySelector('nav a:nth-of-type(3)');
+const features = document.querySelector('nav a:nth-of-type(4)');
+const about = document.querySelector('nav a:nth-of-type(5)');
+const contact = document.querySelector('nav a:nth-of-type(6)');
+
+services.textContent = siteContent.nav['nav-item-1'];
+product.textContent = siteContent.nav['nav-item-2'];
+vision.textContent = siteContent.nav['nav-item-3'];
+features.textContent = siteContent.nav['nav-item-4'];
+about.textContent = siteContent.nav['nav-item-5'];
+contact.textContent = siteContent.nav['nav-item-6'];
+
+//Call to Action
+const ctaText = document.querySelector('.cta-text h1');
+const ctaButton = document.querySelector('.cta-text button');
+const ctaImage = document.querySelector('#cta-img');
+
+ctaText.textContent = siteContent.cta.h1;
+ctaButton.textContent = siteContent.cta.button;
+ctaImage.setAttribute('src', siteContent.cta['img-src']);
+
+//Main Contant - Top
+const featuresH4 = document.querySelector('.top-content .text-content:nth-of-type(1) h4');
+const featuresContent = document.querySelector('.top-content .text-content:nth-of-type(1) p');
+const aboutH4 = document.querySelector('.top-content .text-content:nth-of-type(2) h4');
+const aboutContent = document.querySelector('.top-content .text-content:nth-of-type(2) p');
+const middleImage = document.querySelector('#middle-img');
+
+featuresH4.textContent = siteContent['main-content']['features-h4'];
+featuresContent.textContent = siteContent['main-content']['features-content'];
+aboutH4.textContent = siteContent['main-content']['about-h4'];
+aboutContent.textContent = siteContent['main-content']['about-content'];
+middleImage.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+//Main Content - Bottom
+const servicesH4 = document.querySelector('.bottom-content .text-content:nth-of-type(1) h4');
+const servicesContent = document.querySelector('.bottom-content .text-content:nth-of-type(1) p');
+const productH4 = document.querySelector('.bottom-content .text-content:nth-of-type(2) h4');
+const productContent = document.querySelector('.bottom-content .text-content:nth-of-type(2) p');
+const visionH4 = document.querySelector('.bottom-content .text-content:nth-of-type(3) h4');
+const visionContent = document.querySelector('.bottom-content .text-content:nth-of-type(3) p');
+
+servicesH4.textContent = siteContent['main-content']['services-h4'];
+servicesContent.textContent = siteContent['main-content']['services-content'];
+productH4.textContent = siteContent['main-content']['product-h4'];
+productContent.textContent = siteContent['main-content']['product-content'];
+visionH4.textContent = siteContent['main-content']['vision-h4'];
+visionContent.textContent = siteContent['main-content']['vision-content'];
