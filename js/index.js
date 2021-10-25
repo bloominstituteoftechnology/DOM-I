@@ -74,4 +74,5 @@ h4About.textContent = siteContent['main-content']['about-h4'];
 const aboutFeatures = document.querySelector('.top-content .text-content:nth-of-type(2) p');
 aboutFeatures.textContent = siteContent['main-content']['about-content'];
 
-
+const middleImg = document.getElementById('middle-img');
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
