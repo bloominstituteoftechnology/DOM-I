@@ -40,3 +40,99 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const ctaH1 = document.querySelector('div.cta-text > h1');
+
+ctaH1.textContent = siteContent["cta"]["h1"];
+
+const ctaButton = document.querySelector('div.cta-text > button');
+
+ctaButton.textContent = siteContent["cta"]["button"];
+
+const ctaImage = document.getElementById('cta-img');
+
+ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
+
+const featTitle = document.querySelector('div.text-content > h4');
+
+featTitle.textContent = siteContent["main-content"]["features-h4"];
+
+const featContent = document.querySelector('div.text-content > p');
+
+featContent.textContent = siteContent["main-content"]["features-content"];
+
+const aboutTitle = document.querySelector('div.text-content:nth-child(2) > h4');
+
+aboutTitle.textContent = siteContent["main-content"]["about-h4"];
+
+const aboutCont = document.querySelector('div.text-content:nth-child(2) > p');
+
+aboutCont.textContent = siteContent["main-content"]["about-content"];
+
+const midImage = document.getElementById('middle-img');
+
+midImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+const servTitle = document.querySelector('div.bottom-content > div.text-content > h4');
+
+servTitle.textContent = siteContent["main-content"]["services-h4"];
+
+const servCont = document.querySelector('div.bottom-content > div.text-content > p');
+
+servCont.textContent = siteContent["main-content"]["services-content"];
+
+const prodTitle = document.querySelector('div.bottom-content > div.text-content:nth-child(2) > h4');
+
+prodTitle.textContent = siteContent["main-content"]["product-h4"];
+
+const prodCont = document.querySelector('div.bottom-content > div.text-content:nth-child(2) > p');
+
+prodCont.textContent = siteContent["main-content"]["product-content"];
+
+const visionTitle = document.querySelector('div.bottom-content > div.text-content:nth-child(3) > h4');
+
+visionTitle.textContent = siteContent["main-content"]["product-h4"];
+
+const visionCont = document.querySelector('div.bottom-content > div.text-content:nth-child(3) > p');
+
+visionCont.textContent = siteContent["main-content"]["vision-content"];
+
+const contactTitle = document.querySelector('section.contact > h4');
+
+contactTitle.textContent = siteContent["contact"]["contact-h4"];
+
+const contAddress = document.querySelector('section.contact > p');
+
+contAddress.textContent = siteContent["contact"]["address"];
+
+const contPhone = document.querySelector('section.contact > p:nth-child(3)');
+
+contPhone.textContent = siteContent["contact"]["phone"];
+
+const contEmail = document.querySelector('section.contact > p:nth-child(4)');
+
+contEmail.textContent = siteContent["contact"]["email"];
+
+const fCopyright = document.querySelector('footer > p');
+
+fCopyright.textContent = siteContent["footer"]["copyright"];
+
+for (let i = 0; i < navSelect.length; i++) {
+  navSelect[i].style.color = 'green';
+}
+
+let navB = document.createElement('a');
+let newText = document.createTextNode('Worked');
+navB.appendChild(newText);
+
+let element = document.querySelector('nav');
+element.appendChild(navB);
+
+let navC = document.createElement('a');
+let newTextTwo = document.createTextNode('This');
+navC.appendChild(newTextTwo);
+
+let elementTwo = document.querySelector('nav');
+elementTwo.prepend(navC);
+
+const navSelect = document.getElementsByTagName('a');
