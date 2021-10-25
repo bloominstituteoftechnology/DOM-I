@@ -64,17 +64,9 @@ navItem6.textContent=(siteContent['nav']['nav-item-6']);
 
 //change nav text to be green!
 
-//  let navColor = document.querySelectorAll('nav a');
-navItem1.style.color = 'green';
-navItem2.style.color = 'green';
-navItem3.style.color = 'green';
-navItem4.style.color = 'green';
-navItem5.style.color = 'green';
-navItem6.style.color = 'green';
+  let navColor = document.querySelectorAll('nav a');
 
-
-
-
+  navColor.forEach(link=>link.style.color='green');  
 
 // console.log(navColor);
 
@@ -101,19 +93,18 @@ ctaImg.setAttribute('src','img/header-img.png');
 //main content sectionr
 //class top-content 
 //// class text-content
-//I THINK WE NEED TO SELECT MAIN CONTENT THEN SEARCH AS NODELIST!
-//ie featuresHeader[n].textContent= bla bla where n is the index of the particular thing we want to change?
 
+let topContent = document.querySelector('.top-content');
 
 //////// features-h4
 //////// features-content (<p>)
 
-let featuresHeader = document.querySelector('.main-content h4:nth-of-type(1)');
+let featuresHeader = topContent.querySelectorAll('h4')[1];
 featuresHeader.textContent=(siteContent['main-content']['features-h4']);
 
 console.log(featuresHeader);
 
-let featuresContent = document.querySelector('.main-content p');
+let featuresContent = topContent.querySelector('.main-content p:nth-of-type(1)');
 featuresContent.textContent=(siteContent['main-content']['features-content']);
 
 //////// about-h4
@@ -142,6 +133,7 @@ middleImg.setAttribute('src',siteContent['main-content']['middle-img-src']);
 //// class text-content
 //////// services-h4 qsAll(h4)[3]
 //////// services-content qsAll p [3]
+let bottomClass = document.querySelector('.bottom-content');
 
 let servicesHeader = document.querySelectorAll('h4')[3];
 servicesHeader.textContent=(siteContent['main-content']['services-h4']);
@@ -162,10 +154,10 @@ productContent.textContent=(siteContent['main-content']['product-content']);
 //////// vision-h4 [5]
 //////// vision-content p[5]
 
-let visionHeader = document.querySelectorAll('h4')[5];
+let visionHeader = bottomClass.querySelector('h4');
 visionHeader.textContent=(siteContent['main-content']['vision-h4']);
 
-let visionContent = document.querySelectorAll('p')[5];
+let visionContent = bottomClass.querySelector('.bottom-content p');
 visionContent.textContent=(siteContent['main-content']['vision-content']);
 
 //I am only a little bit pulling my hair over that last one
@@ -174,10 +166,16 @@ visionContent.textContent=(siteContent['main-content']['vision-content']);
 //class contact
 //// contact-h4
 
-let contactHeader = document.querySelectorAll('h4')[6];
- contactHeader.textContent=(siteContent['contact']['contact-h4']);
+// let contactHeader = document.querySelectorAll('h4')[6];
+//  contactHeader.textContent=(siteContent['contact']['contact-h4']);
+let contactClass = document.querySelector('.contact');
 
+let contactHeader = contactClass.querySelector('h4');
 console.log(contactHeader);
+
+//TODO:: FIX VISION SELECTOR, UPDATE CONTACT INFOS
+
+// console.log(contactHeader);
 
 //////// address (<br> between 'Street' and 'Somewhere')
 //////// phone
