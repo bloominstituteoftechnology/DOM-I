@@ -51,10 +51,15 @@ for (let i = 0; i < navItems.length; i++) {
 const topImage=document.querySelector('#cta-img')
 topImage.setAttribute('src', 'img/header-img.png')
 
-
+// Top Section H1
 const title = document.querySelector('h1');
 title.textContent = siteContent['cta']['h1'];
 
+// Top Section button
 const button = document.querySelector('button');
 button.textContent = siteContent['cta']['button'];
+
+// Middle image
+const codeImage=document.querySelector('#middle-img')
+codeImage.setAttribute('src', 'img/mid-page-accent.jpg')
 
