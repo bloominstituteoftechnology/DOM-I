@@ -38,10 +38,10 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let logo2 = document.getElementById("cta-img");
+const logo2 = document.getElementById("cta-img");
 logo2.setAttribute('src', siteContent["cta"]["img-src"])
 
 //! Nav Bar
@@ -53,11 +53,24 @@ navBar[3].textContent = siteContent['nav']['nav-item-4'];
 navBar[4].textContent = siteContent['nav']['nav-item-5'];
 navBar[5].textContent = siteContent['nav']['nav-item-6'];
 
-//! Middle section
-let lineBreaks = 'DOM<br>IS<br>AWESOME'
+//! Top Section
+const lineBreaks = 'DOM<br>IS<br>AWESOME'
 const h1 = document.querySelector('h1');
 // h1.textContent = siteContent['cta']['h1'];
 h1.innerHTML = lineBreaks;
 
 const button = document.querySelector('button');
 button.textContent = siteContent['cta']['button'];
+
+//! Middle section 
+let featuresH4 = document.querySelector('.top-content .text-content:nth-child(1) h4');
+let featuresP = document.querySelector('.top-content .text-content:nth-child(1) p');
+featuresH4.textContent = siteContent['main-content']['features-h4'];
+featuresP.textContent = siteContent['main-content']['features-content'];
+
+let aboutH4 = document.querySelector('.top-content .text-content:nth-child(2) h4');
+let aboutP = document.querySelector('.top-content .text-content:nth-child(2) p');
+aboutH4.textContent = siteContent['main-content']['about-h4'];
+aboutP.textContent = siteContent['main-content']['about-content'];
+
+//! Middle Image
