@@ -80,16 +80,27 @@ aboutContent.textContent = siteContent['main-content']['about-content'];
 middleImage.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
 //Main Content - Bottom
-const servicesH4 = document.querySelector('.bottom-content .text-content:nth-of-type(1) h4');
+const servicesTitle = document.querySelector('.bottom-content .text-content:nth-of-type(1) h4');
 const servicesContent = document.querySelector('.bottom-content .text-content:nth-of-type(1) p');
-const productH4 = document.querySelector('.bottom-content .text-content:nth-of-type(2) h4');
+const productTitle = document.querySelector('.bottom-content .text-content:nth-of-type(2) h4');
 const productContent = document.querySelector('.bottom-content .text-content:nth-of-type(2) p');
-const visionH4 = document.querySelector('.bottom-content .text-content:nth-of-type(3) h4');
+const visionTitle = document.querySelector('.bottom-content .text-content:nth-of-type(3) h4');
 const visionContent = document.querySelector('.bottom-content .text-content:nth-of-type(3) p');
 
-servicesH4.textContent = siteContent['main-content']['services-h4'];
+servicesTitle.textContent = siteContent['main-content']['services-h4'];
 servicesContent.textContent = siteContent['main-content']['services-content'];
-productH4.textContent = siteContent['main-content']['product-h4'];
+productTitle.textContent = siteContent['main-content']['product-h4'];
 productContent.textContent = siteContent['main-content']['product-content'];
-visionH4.textContent = siteContent['main-content']['vision-h4'];
+visionTitle.textContent = siteContent['main-content']['vision-h4'];
 visionContent.textContent = siteContent['main-content']['vision-content'];
+
+//Contact Content
+const contactTitle = document.querySelector('.contact h4');
+const address = document.querySelector('.contact p:nth-of-type(1)');
+const phone = document.querySelector('.contact p:nth-of-type(2)');
+const email = document.querySelector('.contact p:nth-of-type(3)');
+
+contactTitle.textContent = siteContent.contact['contact-h4'];
+address.textContent = siteContent.contact.address;
+phone.textContent = siteContent.contact.phone;
+email.textContent = siteContent.contact.email;
