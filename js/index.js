@@ -133,3 +133,18 @@ email.innerText = siteContent['contact']['email'];
 //footer
 const footer = document.getElementsByTagName('p')[8];
 footer.innerText = siteContent['footer']['copyright'];
+
+const lit = document.createElement('a');
+lit.textContent = 'Add Me';
+lit.href = '#';
+document.querySelector('nav').appendChild(lit);
+
+const lit2 = document.createElement('a');
+lit2.textContent = 'Wow';
+lit2.href = '#';
+document.querySelector('nav').prepend(lit2);
+
+const a = document.querySelectorAll('a');
+a.forEach(i => i.style.color = 'blue');
+
+a.forEach(i => i.style.fontSize = '1.25em');
