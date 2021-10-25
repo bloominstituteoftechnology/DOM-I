@@ -99,10 +99,11 @@ let topContent = document.querySelector('.top-content');
 //////// features-h4
 //////// features-content (<p>)
 
-let featuresHeader = topContent.querySelectorAll('h4')[1];
+let featuresHeader = topContent.querySelector('h4');
 featuresHeader.textContent=(siteContent['main-content']['features-h4']);
 
-console.log(featuresHeader);
+// let allPara = document.querySelectorAll('p');
+// console.log(allPara);
 
 let featuresContent = topContent.querySelector('.main-content p:nth-of-type(1)');
 featuresContent.textContent=(siteContent['main-content']['features-content']);
@@ -112,12 +113,12 @@ featuresContent.textContent=(siteContent['main-content']['features-content']);
 // let aboutHeader = document.querySelector('.main-content h4');
 // aboutHeader.textContent=(siteContent['main-content']['about-h4']);
 
-let aboutHeader=document.querySelectorAll('h4')[2];
+let aboutHeader=document.querySelectorAll('h4')[1];
 console.log(aboutHeader);
 
 aboutHeader.textContent=(siteContent['main-content']['about-h4']);
 
-let aboutContent=document.querySelectorAll('.main-content p')[2];
+let aboutContent=document.querySelectorAll('.main-content p')[1];
 aboutContent.textContent=(siteContent['main-content']['about-content']);
 
 
@@ -166,20 +167,28 @@ visionContent.textContent=(siteContent['main-content']['vision-content']);
 //class contact
 //// contact-h4
 
-// let contactHeader = document.querySelectorAll('h4')[6];
+// 
 //  contactHeader.textContent=(siteContent['contact']['contact-h4']);
 let contactClass = document.querySelector('.contact');
 
 let contactHeader = contactClass.querySelector('h4');
+contactHeader.textContent=(siteContent['contact']['contact-h4']);
 console.log(contactHeader);
 
-//TODO:: FIX VISION SELECTOR, UPDATE CONTACT INFOS
-
-// console.log(contactHeader);
 
 //////// address (<br> between 'Street' and 'Somewhere')
+
+let address = contactClass.querySelectorAll('p')[0];
+address.textContent=(siteContent['contact']['address']);
+
 //////// phone
+let phone = contactClass.querySelectorAll('p')[1];
+phone.textContent=(siteContent['contact']['phone']);
+
+
 //////// email ((alle* <p>))
+let email = contactClass.querySelectorAll('p')[2];
+email.textContent=(siteContent['contact']['email']);
 
 //footer 
 //copyright <p>
