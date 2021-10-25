@@ -42,7 +42,6 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //Navigation Bar
-const nav = document.querySelector('nav');
 const services = document.querySelector('nav a:nth-of-type(1)');
 const product = document.querySelector('nav a:nth-of-type(2)');
 const vision = document.querySelector('nav a:nth-of-type(3)');
@@ -56,6 +55,25 @@ vision.textContent = siteContent.nav['nav-item-3'];
 features.textContent = siteContent.nav['nav-item-4'];
 about.textContent = siteContent.nav['nav-item-5'];
 contact.textContent = siteContent.nav['nav-item-6'];
+
+//Messing with anchors (this is just me having fun, not a part of the assignment)
+const topConent = document.querySelector('.top-content');
+topConent.setAttribute('id', 'top-content');
+
+features.setAttribute('href', '#top-content');
+about.setAttribute('href', '#top-content');
+
+const botConent = document.querySelector('.bottom-content');
+botConent.setAttribute('id', 'bottom-content');
+
+services.setAttribute('href', '#bottom-content');
+product.setAttribute('href', '#bottom-content');
+vision.setAttribute('href', '#bottom-content');
+
+const contactLink = document.querySelector('.contact');
+contactLink.setAttribute('id', 'contact');
+
+contact.setAttribute('href', '#contact');
 
 //Call to Action
 const ctaText = document.querySelector('.cta-text h1');
