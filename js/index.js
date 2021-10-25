@@ -54,5 +54,7 @@ navBar[4].textContent = siteContent['nav']['nav-item-5'];
 navBar[5].textContent = siteContent['nav']['nav-item-6'];
 
 //! Middle section
+let lineBreaks = 'DOM<br>IS<br>AWESOME'
 const h1 = document.querySelector('h1');
-h1.textContent = siteContent['cta']['h1'];
+// h1.textContent = siteContent['cta']['h1'];
+h1.innerHTML = lineBreaks;
