@@ -53,3 +53,6 @@ navBar[3].textContent = siteContent['nav']['nav-item-4'];
 navBar[4].textContent = siteContent['nav']['nav-item-5'];
 navBar[5].textContent = siteContent['nav']['nav-item-6'];
 
+//! Middle section
+const h1 = document.querySelector('h1');
+h1.textContent = siteContent['cta']['h1'];
