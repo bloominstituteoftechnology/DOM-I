@@ -42,6 +42,7 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 //nav content
+
 const nav1 = document.querySelector('nav a:nth-of-type(1)');
 const nav2 = document.querySelector('nav a:nth-of-type(2)');
 const nav3 = document.querySelector('nav a:nth-of-type(3)');
@@ -55,7 +56,25 @@ nav3.textContent = siteContent["nav"]["nav-item-3"];
 nav4.textContent = siteContent["nav"]["nav-item-4"];
 nav5.textContent = siteContent["nav"]["nav-item-5"];
 nav6.textContent = siteContent["nav"]["nav-item-6"];
- 
+
+
+
+
+//add more element using append and prepend
+const nav7 = document.createElement("a");
+nav7.textContent = "Home";
+
+const nav = document.querySelector("nav")
+nav.prepend(nav7)
+
+const nav8 = document.createElement("a");
+nav8.textContent = "Feedback";
+nav.appendChild(nav8)
+
+//Change nav color 
+const navGreen = document.querySelectorAll("nav a")
+navGreen.forEach(item => item.style.color = 'green');
+
 //cta section
 const h1 = document.querySelector('.cta-text h1');
 // h1.textContent = siteContent["cta"]["h1"];
@@ -145,5 +164,11 @@ contactContent3.textContent = siteContent["contact"]["email"];
 
 const footer = document.querySelector("footer p");
 footer.textContent = siteContent["footer"]["copyright"]
+
+
+
+
+
+
 
 
