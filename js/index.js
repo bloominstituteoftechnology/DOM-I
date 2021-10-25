@@ -18,13 +18,17 @@ const siteContent = {
   "main-content": {
     "features-h4":"Features",
     "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+    ////
     "about-h4":"About",
     "about-content": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "middle-img-src": "img/mid-page-accent.jpg",
+////
     "services-h4":"Services",
     "services-content": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+    ///
     "product-h4":"Product",
     "product-content": "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+    ////
     "vision-h4":"Vision",
     "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
   },
@@ -70,9 +74,52 @@ ctaImgSrc.src = siteContent['cta']['img-src']
 //end cta section
 
 //begin main-content section
-const mainContenth4One = document.querySelector('.text-content h4:nth-of-type(1)')
-const mainContentpOne = document.querySelector('.text-content p:nth-of-type(1)')
-const mainContentpOne = document.querySelector('.text-content p:nth-of-type(1)')
+const mainContenth4One = document.querySelector('.main-content h4:nth-of-type(1)')
 mainContenth4One.textContent = siteContent['main-content']['features-h4']
+
+const mainContentpOne = document.querySelector('.text-content p:nth-of-type(1)')
 mainContentpOne.textContent = siteContent['main-content']['features-content']
+
+
+
+const mainContenth4Two = document.querySelector('.text-content:nth-of-type(2) h4')
+mainContenth4Two.textContent = siteContent['main-content']['about-h4'];
+
+const mainContentpTwo = document.querySelector('.text-content:nth-of-type(2) p')
+mainContentpTwo.textContent = siteContent['main-content']['about-content'];
+
+
+
+const middleImgSrc =document.querySelector('#middle-img')
+middleImgSrc.src = siteContent['main-content']['middle-img-src']
+
+
+
+const mainContenth4Three = document.querySelector('.bottom-content .text-content:nth-of-type(1) h4');
+mainContenth4Three.textContent = siteContent['main-content']['services-h4'];
+
+const mainContentpThree = document.querySelector('.bottom-content .text-content:nth-of-type(1) p');
+mainContentpThree.textContent = siteContent['main-content']['services-content'];
+
+
+
+const mainContenth4Four = document.querySelector('.bottom-content .text-content:nth-of-type(2) h4');
+mainContenth4Four.textContent = siteContent['main-content']['product-h4'];
+
+const mainContentpFour = document.querySelector('.bottom-content .text-content:nth-of-type(2) p');
+mainContentpFour.textContent = siteContent['main-content']['product-content'];
+
+
+
+const mainContenth4Five = document.querySelector('.bottom-content .text-content:nth-of-type(3) h4');
+mainContenth4Five.textContent = siteContent['main-content']['vision-h4'];
+
+const mainContentpFive = document.querySelector('.bottom-content .text-content:nth-of-type(3) p');
+mainContentpFive.textContent = siteContent['main-content']['vision-content'];
+
 //end main-content section
+
+const contacth4 = document.querySelector('.contact h4');
+contacth4.textContent = siteContent['contact']['contact-h4'];
+
+// const contactPOne = document.querySelector(.contact p:nth-of-typeof(1));
