@@ -62,6 +62,22 @@ navItem5.textContent=(siteContent['nav']['nav-item-5']);
 let navItem6 = document.querySelector('a:nth-of-type(6)');
 navItem6.textContent=(siteContent['nav']['nav-item-6']);
 
+//change nav text to be green!
+
+//  let navColor = document.querySelectorAll('nav a');
+navItem1.style.color = 'green';
+navItem2.style.color = 'green';
+navItem3.style.color = 'green';
+navItem4.style.color = 'green';
+navItem5.style.color = 'green';
+navItem6.style.color = 'green';
+
+
+
+
+
+// console.log(navColor);
+
 //cta section
 //cta text content needed for div class 'cta-text'
 //<h1> DOM <br> Is <br> Awesome </h1>
@@ -149,7 +165,7 @@ productContent.textContent=(siteContent['main-content']['product-content']);
 let visionHeader = document.querySelectorAll('h4')[5];
 visionHeader.textContent=(siteContent['main-content']['vision-h4']);
 
-let visionContent = document.querySelectorAll('p')[6];
+let visionContent = document.querySelectorAll('p')[5];
 visionContent.textContent=(siteContent['main-content']['vision-content']);
 
 //I am only a little bit pulling my hair over that last one
@@ -157,9 +173,18 @@ visionContent.textContent=(siteContent['main-content']['vision-content']);
 //contact sectionr
 //class contact
 //// contact-h4
+
+let contactHeader = document.querySelectorAll('h4')[6];
+ contactHeader.textContent=(siteContent['contact']['contact-h4']);
+
+console.log(contactHeader);
+
 //////// address (<br> between 'Street' and 'Somewhere')
 //////// phone
 //////// email ((alle* <p>))
 
 //footer 
 //copyright <p>
+
+let footer = document.querySelector('footer p');
+footer.textContent=(siteContent['footer']['copyright']);
