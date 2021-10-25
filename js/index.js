@@ -58,3 +58,6 @@ let lineBreaks = 'DOM<br>IS<br>AWESOME'
 const h1 = document.querySelector('h1');
 // h1.textContent = siteContent['cta']['h1'];
 h1.innerHTML = lineBreaks;
+
+const button = document.querySelector('button');
+button.textContent = siteContent['cta']['button'];
