@@ -63,6 +63,11 @@ nav5.textContent = siteContent['nav']['nav-item-5']
 nav6.textContent = siteContent['nav']['nav-item-6']
 //end nav section
 
+//need to work out logo
+// const logo = document.querySelector('#logo-img');
+// logo.src = siteContent['nav']['img-src'];
+//end logo
+
 
 //begin cta section
 const ctah1 = document.querySelector('h1');
@@ -119,7 +124,24 @@ mainContentpFive.textContent = siteContent['main-content']['vision-content'];
 
 //end main-content section
 
+
+//begin contact section
 const contacth4 = document.querySelector('.contact h4');
 contacth4.textContent = siteContent['contact']['contact-h4'];
 
-// const contactPOne = document.querySelector(.contact p:nth-of-typeof(1));
+const contactPOne = document.querySelector('.contact p:nth-of-type(1)');
+contactPOne.textContent = siteContent['contact']['address'];
+
+
+const contactPTwo = document.querySelector('.contact p:nth-of-type(2)');
+contactPTwo.textContent = siteContent['contact']['phone'];
+
+const contactPThree = document.querySelector('.contact p:nth-of-type(3)');
+contactPThree.textContent = siteContent['contact']['email'];
+//end contact section
+
+
+//begin footer section
+const footerCopyRight = document.querySelector('footer p');
+footerCopyRight.textContent = siteContent['footer']['copyright']
+//end footer section
