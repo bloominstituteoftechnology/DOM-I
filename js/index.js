@@ -61,12 +61,25 @@ nav3.textContent = siteContent['nav']['nav-item-3']
 nav4.textContent = siteContent['nav']['nav-item-4']
 nav5.textContent = siteContent['nav']['nav-item-5']
 nav6.textContent = siteContent['nav']['nav-item-6']
-//end nav section
 
-//need to work out logo
-// const logo = document.querySelector('#logo-img');
-// logo.src = siteContent['nav']['img-src'];
-//end logo
+//adding new stuff to nav
+const navElement = document.querySelector('nav');
+const newNavItem1 = document.createElement('a');
+newNavItem1.textContent = 'Adam Rocks!'
+navElement.appendChild(newNavItem1);
+
+const newNavItem2 = document.createElement('a');
+newNavItem2.textContent = 'Adam Really Rocks!'
+navElement.appendChild(newNavItem2);
+//end adding new stuff to nav
+
+//change nav bar to green
+const navBarText = document.querySelectorAll('nav a');
+for (let i = 0; i<navBarText.length; i++){
+  navBarText[i].style.color = 'green';
+}
+
+//end nav section
 
 
 //begin cta section
