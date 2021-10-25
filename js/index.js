@@ -44,7 +44,32 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //updating HTML with the JSON Data
 
-const services = document.querySelector('.container:nth-of-type(1)')
+// const services = document.querySelectorAll('nav a')
+const nav1 = document.querySelector('nav a:nth-of-type(1)');
+const nav2 = document.querySelector('nav a:nth-of-type(2)');
+const nav3 = document.querySelector('nav a:nth-of-type(3)');
+const nav4 = document.querySelector('nav a:nth-of-type(4)');
+const nav5 = document.querySelector('nav a:nth-of-type(5)');
+const nav6 = document.querySelector('nav a:nth-of-type(6)');
+
+nav1.textContent = siteContent['nav']['nav-item-1'];
+nav2.textContent = siteContent['nav']['nav-item-2'];
+nav3.textContent = siteContent['nav']['nav-item-3'];
+nav4.textContent = siteContent['nav']['nav-item-4'];
+nav5.textContent = siteContent['nav']['nav-item-5'];
+nav6.textContent = siteContent['nav']['nav-item-6'];
+
+// cta section
+const h1 = document.querySelector('.cta-text h1');
+//h1.textContent = siteContent['cta']['h1'];
+const h1Word = `${h1Word[0]} <br> ${h1Word[1]} <br> ${h1word[2]}`
+console.log(h1Word);
+
+h1.prepend(document.createElement('br'));
+//h1.inner HTML
+//h1.forEach(word => word.append(document.createElement('<br>)));
+
+
 
 // <a href="#">Services</a>
 // <a href="#">Product</a>
