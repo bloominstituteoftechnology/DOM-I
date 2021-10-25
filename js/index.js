@@ -63,3 +63,18 @@ button.textContent = siteContent['cta']['button'];
 const codeImage=document.querySelector('#middle-img')
 codeImage.setAttribute('src', 'img/mid-page-accent.jpg')
 
+// Middle section h4
+const firstH4=document.querySelector('.top-content .text-content:nth-of-type(1) h4')
+firstH4.textContent='Features'
+
+const secondH4=document.querySelector('.top-content .text-content:nth-of-type(2) h4')
+secondH4.textContent='About'
+
+const thirdH4=document.querySelector('.bottom-content .text-content:nth-of-type(3) h4')
+thirdH4.textContent='Vision'
+
+const fourthH4=document.querySelector('.bottom-content .text-content:nth-of-type(2) h4')
+fourthH4.textContent='Product'
+
+const fifthH4=document.querySelector('.bottom-content .text-content:nth-of-type(1) h4')
+fifthH4.textContent='Services'
