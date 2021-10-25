@@ -40,3 +40,85 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// Nav Bar Section
+const navItem1 = document.querySelector('a:nth-of-type(1)');
+const navItem2 = document.querySelector('a:nth-of-type(2)');
+const navItem3 = document.querySelector('a:nth-of-type(3)');
+const navItem4 = document.querySelector('a:nth-of-type(4)');
+const navItem5 = document.querySelector('a:nth-of-type(5)');
+const navItem6 = document.querySelector('a:nth-of-type(6)');
+navItem1.textContent = siteContent['nav']['nav-item-1'];
+navItem2.textContent = siteContent['nav']['nav-item-2'];
+navItem3.textContent = siteContent['nav']['nav-item-3'];
+navItem4.textContent = siteContent['nav']['nav-item-4'];
+navItem5.textContent = siteContent['nav']['nav-item-5'];
+navItem6.textContent = siteContent['nav']['nav-item-6'];
+
+// Added Navigation bar content
+const ideas = document.createElement('a');
+ideas.textContent = 'Brainstorm';
+document.querySelector('nav').appendChild(ideas);
+const learn = document.createElement('a');
+learn.textContent = 'Learning';
+document.querySelector('nav').prepend(learn);
+
+//Change Nav Color
+const changeColor = document.querySelectorAll('header nav a');
+changeColor.forEach((tag) => {tag.style.color = '#808000';});
+
+
+
+// Hero Section
+const ctaItems = document.querySelector('h1');
+ctaItems.textContent = siteContent['cta']['h1'];
+const ctabutton = document.querySelector('button');
+ctabutton.textContent = siteContent['cta']['button'];
+const ctaImage = document.getElementById('cta-img');
+ctaImage.setAttribute('src', siteContent['cta']['img-src']);
+
+// Main Content Section
+const h4Feature = document.querySelector('.top-content .text-content:nth-of-type(1) h4');
+h4Feature.textContent = siteContent['main-content']['features-h4'];
+const featuresContent = document.querySelector('.top-content .text-content p:nth-of-type(1)');
+featuresContent.textContent = siteContent['main-content']['features-content'];
+
+const h4About = document.querySelector('.top-content .text-content:nth-of-type(2) h4');
+h4About.textContent = siteContent['main-content']['about-h4'];
+const aboutFeatures = document.querySelector('.top-content .text-content:nth-of-type(2) p');
+aboutFeatures.textContent = siteContent['main-content']['about-content'];
+
+//Image Between main content
+const middleImg = document.getElementById('middle-img');
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+const h4Service = document.querySelector('.bottom-content .text-content:nth-of-type(1) h4');
+h4Service.textContent = siteContent['main-content']['services-h4'];
+const servicesContent = document.querySelector('.bottom-content .text-content:nth-of-type(1) p');
+servicesContent.textContent = siteContent['main-content']['services-content'];
+const h4Product = document.querySelector('.bottom-content .text-content:nth-of-type(2) h4');
+h4Product.textContent = siteContent['main-content']['product-h4'];
+const productContent = document.querySelector('.bottom-content .text-content:nth-of-type(2) p');
+productContent.textContent = siteContent['main-content']['product-content'];
+const h4Vision = document.querySelector('.bottom-content .text-content:nth-of-type(3) h4');
+h4Vision.textContent = siteContent['main-content']['vision-h4'];
+const visionContent = document.querySelector('.bottom-content .text-content:nth-of-type(3) p');
+visionContent.textContent = siteContent['main-content']['vision-content'];
+
+// Contact Section
+const h4Contact = document.querySelector('.contact h4');
+h4Contact.textContent = siteContent['contact']['contact-h4'];
+
+const address = document.querySelector('.contact p:nth-of-type(1)');
+address.textContent = siteContent['contact']['address'];
+
+const phone = document.querySelector('.contact p:nth-of-type(2)');
+phone.textContent = siteContent['contact']['phone'];
+
+const email = document.querySelector('.contact p:nth-of-type(3)');
+email.textContent = siteContent['contact']['email'];
+
+
+// Footer Section
+const copyright = document.querySelector('footer p');
+copyright.textContent = siteContent['footer']['copyright'];
