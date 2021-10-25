@@ -104,3 +104,8 @@ contactTitle.textContent = siteContent.contact['contact-h4'];
 address.textContent = siteContent.contact.address;
 phone.textContent = siteContent.contact.phone;
 email.textContent = siteContent.contact.email;
+
+//Footer Content
+const footerContent = document.querySelector('footer p');
+
+footerContent.textContent = siteContent.footer.copyright;
