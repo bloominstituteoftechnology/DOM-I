@@ -38,51 +38,120 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+// let logo = document.getElementById("logo-img");
+// logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
 //updating HTML with the JSON Data
 
-// const services = document.querySelectorAll('nav a')
-const nav1 = document.querySelector('nav a:nth-of-type(1)');
-const nav2 = document.querySelector('nav a:nth-of-type(2)');
-const nav3 = document.querySelector('nav a:nth-of-type(3)');
-const nav4 = document.querySelector('nav a:nth-of-type(4)');
-const nav5 = document.querySelector('nav a:nth-of-type(5)');
-const nav6 = document.querySelector('nav a:nth-of-type(6)');
+// Example: Update the img src for the logo
+let logo = document.getElementById("logo-img");
+logo.setAttribute('src', siteContent["nav"]["img-src"])
+let logo = document.getElementById('logo-img');
+logo.setAttribute('src', siteContent['nav']['img-src']);
 
-nav1.textContent = siteContent['nav']['nav-item-1'];
-nav2.textContent = siteContent['nav']['nav-item-2'];
-nav3.textContent = siteContent['nav']['nav-item-3'];
-nav4.textContent = siteContent['nav']['nav-item-4'];
-nav5.textContent = siteContent['nav']['nav-item-5'];
-nav6.textContent = siteContent['nav']['nav-item-6'];
+const links = document.querySelectorAll('a');
 
-// cta section
-const h1 = document.querySelector('.cta-text h1');
-//h1.textContent = siteContent['cta']['h1'];
-const h1Word = `${h1Word[0]} <br> ${h1Word[1]} <br> ${h1word[2]}`
-console.log(h1Word);
+links.forEach((currentValue, i) => currentValue.textContent = Object.values(siteContent.nav)[i]);
+links.forEach((currentValue, i) => (currentValue.textContent = Object.values(siteContent.nav)[i]));
 
-h1.prepend(document.createElement('br'));
-//h1.inner HTML
-//h1.forEach(word => word.append(document.createElement('<br>)));
+links.forEach(item => item.style.color = 'green');
+links.forEach((item) => (item.style.color = 'green'));
 
+const addLink = document.querySelector('nav');
 
+const newAtag = document.createElement('a');
+newAtag.textContent = "Outreach";
+newAtag.textContent = 'Outreach';
+newAtag.href = '#';
+newAtag.style.color = "green";
+newAtag.style.color = 'green';
+addLink.appendChild(newAtag);
 
-// <a href="#">Services</a>
-// <a href="#">Product</a>
-// <a href="#">Vision</a>
-// <a href="#">Features</a>
-// <a href="#">About</a>
-// <a href="#">Contact</a>
-// </nav>
+const newH3 = document.createElement('h3');
+newH3.textContent = "Navigation:";
+newH3.textContent = 'Navigation:';
+newH3.style.fontSize = '20px';
+addLink.prepend(newH3);
+
+// console.log(addLink);
 
 
-let navColor = document.getElementsByClassName('container');
-navColor.style.color = 'green';
+const ctaH1 = document.querySelectorAll('h1');
+ctaH1[0].innerHTML = siteContent.cta.h1;
 
+
+const btn = document.querySelectorAll('button');
+btn[0].textContent = siteContent.cta.button;
+// console.log(btn);
+
+const ctaImg = document.getElementById('cta-img');
+ctaImg.src = siteContent.cta["img-src"];
+ctaImg.src = siteContent.cta['img-src'];
+
+const topH4 = document.querySelectorAll('h4');
+topH4[0].textContent = siteContent['main-content']["features-h4"];
+topH4[1].textContent = siteContent['main-content']["about-h4"];
+topH4[2].textContent = siteContent['main-content']["services-h4"];
+topH4[3].textContent = siteContent['main-content']["product-h4"];
+topH4[4].textContent = siteContent['main-content']["vision-h4"];
+topH4[5].textContent = siteContent["contact"]["contact-h4"];
+topH4[0].textContent = siteContent['main-content']['features-h4'];
+topH4[1].textContent = siteContent['main-content']['about-h4'];
+topH4[2].textContent = siteContent['main-content']['services-h4'];
+topH4[3].textContent = siteContent['main-content']['product-h4'];
+topH4[4].textContent = siteContent['main-content']['vision-h4'];
+topH4[5].textContent = siteContent['contact']['contact-h4'];
+
+const pTags = document.querySelectorAll('p');
+pTags[0].textContent = siteContent["main-content"]["features-content"];
+pTags[1].textContent = siteContent["main-content"]["about-content"];
+pTags[2].textContent = siteContent["main-content"]["services-content"];
+pTags[3].textContent = siteContent["main-content"]["product-content"];
+pTags[4].textContent = siteContent["main-content"]["vision-content"];
+pTags[5].textContent = siteContent["contact"]["address"];
+pTags[6].textContent = siteContent["contact"]["phone"];
+pTags[7].textContent = siteContent["contact"]["email"];
+pTags[8].textContent = siteContent["footer"]["copyright"];
+
+const midImg = document.getElementById("middle-img");
+midImg.src = siteContent["main-content"]["middle-img-src"];
+pTags[0].textContent = siteContent['main-content']['features-content'];
+pTags[1].textContent = siteContent['main-content']['about-content'];
+pTags[2].textContent = siteContent['main-content']['services-content'];
+pTags[3].textContent = siteContent['main-content']['product-content'];
+pTags[4].textContent = siteContent['main-content']['vision-content'];
+pTags[5].textContent = siteContent['contact']['address'];
+pTags[6].textContent = siteContent['contact']['phone'];
+pTags[7].textContent = siteContent['contact']['email'];
+pTags[8].textContent = siteContent['footer']['copyright'];
+
+const midImg = document.getElementById('middle-img');
+midImg.src = siteContent['main-content']['middle-img-src'];
+
+const footer = document.querySelector('footer');
+// console.log(footer);
+const update = document.createElement('button');
+update.textContent = "update";
+update.textContent = 'update';
+footer.appendChild(update);
+update.style.fontSize = '30px';
+update.style.width = '20%';
+
+update.addEventListener('click', event => {
+  ctaH1[0].innerHTML = "<h1>Content <br>has been<br> Updated</h1>";
+  console.log("yes this works!");
+update.addEventListener('click', (event) => {
+	ctaH1[0].innerHTML = '<h1>Content <br>has been<br> Updated</h1>';
+	console.log('yes this works!');
+});
+
+footer.style.display = 'flex';
+// footer.style.alignItems = 'space-around';
+// footer.style.justifyContent = 'space-around';
+footer.style.flexDirection = 'column';
+pTags[8].style.marginBottom = '20px'; 
+pTags[8].style.marginBottom = '20px';
 
 
 
