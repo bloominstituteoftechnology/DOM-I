@@ -99,31 +99,40 @@ container.forEach((element, index) => {
 
 
   //    Grabbing Contact
+const contact = document.querySelector('.contact h4')
+   console.log(contact);
+   contact.textContent = siteContent['contact']['contact-h4'];
+   const address = document.querySelector('.contact p')
+   address.textContent = siteContent['contact']['address'];
 
+  
+  
 
-  header.remove();
-document.body.prepend(header);
+// const data = {
+//     "contact": {
+//         "contact-h4" : "Contact",
+//         "address" : "123 Way 456 Street Somewhere, USA",
+//         "phone" : "1-(888) 888-888",
+//         "email" : "sales@greatidea.io"
+//     }
+// };
+// // grab elements
 
-const data ={
-    "contact": {
-        "contact-h4" : "Contact",
-        "address" : "123 Way 456 Street Somewhere, USA",
-        "phone" : "1-(888) 888-888",
-        "email" : "sales@greatidea.io"
-    }
-};
-    const contactH = document.querySelector('.contact h4')
-    console.log(contactH);
-    contactH.textContent = siteContent['contact']['contact-h4'];
-    const contactP = document.querySelector('.contact address');
-    console.log(contactP);
-    contactP.textContent = siteContent['contact']["address"];
-    const contactPhone = document.querySelector('.contact phone');
-    console.log(contactPhone);
-    contactPhone.textContent = siteContent['contact']["phone"]
-    const contactEmail = document.querySelector('contact email');
-    console.log(contactEmail);
-    contactEmail.textContent = siteContent['contact']['email'];
+//     const contactH = document.querySelector('contact-h4')
+   
+//     const contactAddress = document.querySelector('address');
+//     console.log(contactAddress);
+    
+//     const contactPhone = document.querySelector('phone');
+//     console.log(contactPhone);
+    
+//     const contactEmail = document.querySelector('contact email');
+//     console.log(contactEmail);
+
+//     // DO NOT FORGET TO UPDATE!!!!
+//     // contactH.textContent = siteContent['contact']['contactH'];
+//       address.textContent =
+   
   
   
   
