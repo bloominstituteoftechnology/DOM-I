@@ -57,13 +57,7 @@ navBar[4].textContent = siteContent['nav']['nav-item-5'];
 navBar[5].textContent = siteContent['nav']['nav-item-6'];
 
 //! Make Nav Bar Green
-document.querySelector('header nav a').style.color = 'green';
-
 navBar.forEach((item) => (item.style.color = 'green'));
-
-// navBar.forEach(nav a => {
-//   navBar.style.color = 'green';
-// });
 
 //! Top Section
 const lineBreaks = 'DOM<br>IS<br>AWESOME'
@@ -72,6 +66,20 @@ h1.innerHTML = lineBreaks;
 
 const button = document.querySelector('button');
 button.textContent = siteContent['cta']['button'];
+
+//! Appended Nav Link
+const appendedNavLink = document.querySelector('a');
+appendedNavLink.textContent = 'Blah';
+appendedNavLink.href = '#';
+addLink.appendChild(appendedNavLink);
+
+//! Prepended Nav Link
+const addLink = document.querySelector('nav');
+const prependedNavLink = document.querySelector('a');
+prependedNavLink.textContent = 'Blah Pt. 2'
+prependedNavLink.href = '#';
+addLink.prepend(prependedNavLink);
+
 
 //! Top Middle Section 
 //* Features
