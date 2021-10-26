@@ -59,6 +59,12 @@ navBar[5].textContent = siteContent['nav']['nav-item-6'];
 //! Make Nav Bar Green
 document.querySelector('header nav a').style.color = 'green';
 
+navBar.forEach((item) => (item.style.color = 'green'));
+
+// navBar.forEach(nav a => {
+//   navBar.style.color = 'green';
+// });
+
 //! Top Section
 const lineBreaks = 'DOM<br>IS<br>AWESOME'
 const h1 = document.querySelector('h1');
@@ -109,8 +115,8 @@ const contactH4 = document.querySelector('.contact h4');
 contactH4.textContent = siteContent['contact']['contact-h4'];
 
 //* Address
-const contactP = document.querySelector('.contact p:nth-of-type(1)');
-contactP.textContent = siteContent['contact']['address'];
+const contactAddress = document.querySelector('.contact p:nth-of-type(1)');
+contactAddress.textContent = siteContent['contact']['address'];
 
 //* Phone
 const contactPhone = document.querySelector('.contact p:nth-of-type(2)');
@@ -124,4 +130,4 @@ contactEmail.textContent = siteContent['contact']['email'];
 const footer = document.querySelector('footer');
 footer.textContent = siteContent['footer']['copyright'];
 
-console.log(document);
+
