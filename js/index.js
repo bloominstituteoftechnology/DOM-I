@@ -41,18 +41,19 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-
-
+// grabbing navbar
 const container = document.querySelectorAll('nav a');
 console.log(container);
-// container[0].textContent = siteContent["nav"]["nav-item-1"];
-
-
-
- container.forEach((element, index) => { 
+// Updating TextContent for each link
+container.forEach((element, index) => { 
   console.log(index);
   element.textContent = siteContent['nav'][`nav-item-${index+1}`];
    });
-   
+
+  //  Grabbing h1 and Updating Content 
+   const h1 = document.querySelector('.cta-text h1');
+    h1.textContent = siteContent['cta']['h1'];
+
+
 
 
