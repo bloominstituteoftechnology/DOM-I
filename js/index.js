@@ -59,34 +59,28 @@ navBar[5].textContent = siteContent['nav']['nav-item-6'];
 //! Make Nav Bar Green
 navBar.forEach((item) => (item.style.color = 'green'));
 
+//! Appended Nav Link
+const blah2Link = document.createElement('a');
+blah2Link.textContent = 'Blah2';
+blah2Link.href = '#';
+document.querySelector('nav').appendChild(blah2Link);
+blah2Link.style.color = 'green';
+
+//! Prepended Nav Link
+const blah1Link = document.createElement('a');
+blah1Link.textContent = 'Blah1';
+blah1Link.href = '#';
+document.querySelector('nav').prepend(blah1Link);
+blah1Link.style.color = 'green';
+
 //! Top Section
 const lineBreaks = 'DOM<br>IS<br>AWESOME'
 const h1 = document.querySelector('h1');
 h1.innerHTML = lineBreaks;
 
+//* Get Started Button
 const button = document.querySelector('button');
 button.textContent = siteContent['cta']['button'];
-
-//! Appended Nav Link
-// const appendedNavLink = document.querySelector('a');
-// appendedNavLink.textContent = 'Blah';
-// appendedNavLink.href = '#';
-// addLink.appendChild(appendedNavLink);
-
-const blahLink = document.createElement('a');
-blahLink.textContent = 'Blah';
-blahLink.href = '#';
-document.querySelector('nav').appendChild(blahLink);
-blahLink.style.color = 'green';
-
-//! Prepended Nav Link
-// const addLink = document.querySelector('nav');
-// const prependedNavLink = document.querySelector('a');
-// prependedNavLink.textContent = 'Blah Pt. 2'
-// prependedNavLink.href = '#';
-// addLink.prepend(prependedNavLink);
-// appendedLink.style.color = 'green';
-
 
 //! Top Middle Section 
 //* Features

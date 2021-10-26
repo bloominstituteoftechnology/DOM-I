@@ -43,8 +43,8 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 
 ### Task 3: Stretch
 
-* [x] Update styles throughout the page as you see fit. Study what happens when you updated the DOM using style in JavaScript.  
-* [x] Study tomorrow's lesson on events and try to integrate a button that can update content on the site with a click of a button.  You could build a similar data object with new values to help you test the click event.
+* [ ] Update styles throughout the page as you see fit. Study what happens when you updated the DOM using style in JavaScript.  
+* [ ] Study tomorrow's lesson on events and try to integrate a button that can update content on the site with a click of a button.  You could build a similar data object with new values to help you test the click event.
 
 #### Stretch Project: Digital Timer
 
@@ -55,3 +55,4 @@ This project is heavier on logic but employs some DOM manipulation to achieve it
 **Follow these steps for completing your project.**
 
 * [x] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's  Repo). **Please don't merge your own pull request**
+
