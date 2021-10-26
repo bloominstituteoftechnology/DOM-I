@@ -99,23 +99,28 @@ container.forEach((element, index) => {
 
 
   //    Grabbing Contact
+
+  const data = {
+    "contact": {
+        "contact-h4" : "Contact",
+        "address" : "123 Way 456 Street Somewhere, USA",
+        "phone" : "1-(888) 888-888",
+        "email" : "sales@greatidea.io"
+    }
+};
+
 const contact = document.querySelector('.contact h4')
-   console.log(contact);
+
    contact.textContent = siteContent['contact']['contact-h4'];
-   const address = document.querySelector('.contact p')
+   const address = document.querySelector('address')
    address.textContent = siteContent['contact']['address'];
-
+   const phone = document.querySelector('.contact phone')
+   phone.textContent = siteContent['contact']['phone'];
+   const email = document.querySelector('.contact email')
+   email.textContent = siteContent['contact']['email'];
   
-  
 
-// const data = {
-//     "contact": {
-//         "contact-h4" : "Contact",
-//         "address" : "123 Way 456 Street Somewhere, USA",
-//         "phone" : "1-(888) 888-888",
-//         "email" : "sales@greatidea.io"
-//     }
-// };
+
 // // grab elements
 
 //     const contactH = document.querySelector('contact-h4')
