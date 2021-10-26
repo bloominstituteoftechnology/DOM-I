@@ -33,7 +33,7 @@ const siteContent = {
     "email": "sales@greatidea.io",
   },
   "footer": {
-    "copyright": "Copyright Great Idea! 2018"
+    "copyright": "Copyright Great Idea! 2021"
   },
 };
 
@@ -55,6 +55,9 @@ navBar[2].textContent = siteContent['nav']['nav-item-3'];
 navBar[3].textContent = siteContent['nav']['nav-item-4'];
 navBar[4].textContent = siteContent['nav']['nav-item-5'];
 navBar[5].textContent = siteContent['nav']['nav-item-6'];
+
+//! Make Nav Bar Green
+document.querySelector('header nav a').style.color = 'green';
 
 //! Top Section
 const lineBreaks = 'DOM<br>IS<br>AWESOME'
@@ -120,3 +123,5 @@ contactEmail.textContent = siteContent['contact']['email'];
 //! Footer Section
 const footer = document.querySelector('footer');
 footer.textContent = siteContent['footer']['copyright'];
+
+console.log(document);
