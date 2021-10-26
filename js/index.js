@@ -40,3 +40,51 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// finding across the entire DOM
+const header = document.querySelector('header');
+const nav = document.querySelector('nav');
+const cta_text = document.querySelector('.cta-text');
+const main_content = document.querySelector('.main-content');
+
+
+// Finding within one particular element
+const top_content = main_content.querySelector('top-content');
+const bottom_content = main_content.querySelector('bottom-content');
+
+//Finding all the anchor tags inside of the nav element
+const links = nav.querySelectorAll('nav a');
+
+//Assigning the Nav anchor tags textContent with the data from siteContent
+links[0].textContent = siteContent["nav"]["nav-item-1"];
+links[1].textContent = siteContent["nav"]["nav-item-2"];
+links[2].textContent = siteContent["nav"]["nav-item-3"];
+links[3].textContent = siteContent["nav"]["nav-item-4"];
+links[4].textContent = siteContent["nav"]["nav-item-5"];
+links[5].textcontent = siteContent["nav"]["nav-item-6"];
+
+//Finding the Main Image in the cta-text class
+const cta_img = document.getElementById("cta-img");
+cta_img.setAttribute('src', siteContent["cta"]["img-src"]);
+
+//Finding the middle image
+const middle_image = document.getElementById("middle-img");
+middle_image.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+//Select the h1 element - DOM Is Awesome
+const h_1 = cta_text.querySelector('h1');
+h_1.textContent = siteContent["cta"]["h1"];
+
+//Select the button - Get Started
+const mainButton = cta_text.querySelector('button');
+mainButton.textContent = siteContent["cta"]["button"];
+
+//Select the top-content
+const top_content = document.querySelector("top-content");
+const text_content1 = 
+
+
+nav.classList.add('header nav a');
+nav.classList.add('header nav a:hover');
+h_1.style.fontSize = '2.5em';
+
