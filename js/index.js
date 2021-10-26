@@ -40,3 +40,135 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// grabbing navbar
+const container = document.querySelectorAll('nav a');
+console.log(container);
+// Updating TextContent for each link
+container.forEach((element, index) => { 
+  console.log(index);
+  element.textContent = siteContent['nav'][`nav-item-${index+1}`];
+   });
+
+  //  Grabbing h1 and Updating Content 
+   const h1 = document.querySelector('.cta-text h1');
+    h1.textContent = siteContent['cta']['h1'];
+
+    // Grabbing button
+    const button = document.querySelector('.cta-text button');
+     button.textContent = siteContent['cta']['button'];
+    
+
+    // Grabbing image
+
+    const photo = document.querySelector('.cta img');
+    photo.setAttribute('src',  siteContent['cta']['img-src']) ;
+    console.log(photo);
+   
+    // Grabbing main-content 
+    const main = document.querySelectorAll('.main-content')
+    const h4s =  document.querySelectorAll('h4');
+    console.log(h4s);
+    h4s[0].textContent = siteContent['main-content']['features-h4'];
+    h4s[1].textContent = siteContent['main-content']['about-h4'];
+    h4s[2].textContent = siteContent['main-content']['product-h4'];
+    h4s[3].textContent = siteContent['main-content']['services-h4'];
+    h4s[4].textContent = siteContent['main-content']['vision-h4'];
+   
+
+
+    const ps = document.querySelectorAll('p');
+   
+    ps[0].textContent = siteContent['main-content']['features-content'];
+    ps[1].textContent = siteContent['main-content']['about-content'];
+    ps[2].textContent = siteContent['main-content']['product-content'];
+    ps[3].textContent = siteContent['main-content']['services-content'];
+    ps[4].textContent = siteContent['main-content']['vision-content'];
+
+// Grabbing Mid-Image
+  //  const photo = document.querySelector('.cta img');
+    // photo.setAttribute('src',  siteContent['cta']['img-src']) ;
+    // console.log(photo);
+
+    const midImg = document.querySelector('.main-content img');
+      midImg.setAttribute('src', siteContent['main-content']["middle-img-src"]);
+      // Pay close attn to  classes and ids
+
+ 
+
+
+
+  //    Grabbing Contact
+
+  const data = {
+    "contact": {
+        "contact-h4" : "Contact",
+        "address" : "123 Way 456 Street Somewhere, USA",
+        "phone" : "1-(888) 888-888",
+        "email" : "sales@greatidea.io"
+    }
+};
+
+const contact = document.querySelector('.contact h4')
+
+   contact.textContent = siteContent['contact']['contact-h4'];
+   const address = document.querySelector('address')
+   address.textContent = siteContent['contact']['address'];
+   const phone = document.querySelector('.contact phone')
+   phone.textContent = siteContent['contact']['phone'];
+   const email = document.querySelector('.contact email')
+   email.textContent = siteContent['contact']['email'];
+  
+
+
+// // grab elements
+
+//     const contactH = document.querySelector('contact-h4')
+   
+//     const contactAddress = document.querySelector('address');
+//     console.log(contactAddress);
+    
+//     const contactPhone = document.querySelector('phone');
+//     console.log(contactPhone);
+    
+//     const contactEmail = document.querySelector('contact email');
+//     console.log(contactEmail);
+
+//     // DO NOT FORGET TO UPDATE!!!!
+//     // contactH.textContent = siteContent['contact']['contactH'];
+//       address.textContent =
+   
+  
+  
+  
+      // const     "address" : "123 Way 456 Street Somewhere, USA",
+  // //         "phone" : "1-(888) 888-888",
+  // //         "email" : "sales@greatidea.io"
+  // //     }
+  // // };
+  
+
+  //   // const contactHeading = document.querySelector('.contact-h4');
+  //    const address = document.querySelector("address");
+  //   // const phone = document.querySelector('.phone');
+  //   // const email = document.querySelector('.email');
+  //   // console.log(contactHeading);
+  //   console.log(address);
+
+
+
+
+  
+      
+  
+    
+
+ 
+
+ 
+
+ 
+
+
+
+
