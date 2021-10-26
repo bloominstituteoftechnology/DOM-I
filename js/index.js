@@ -66,6 +66,28 @@ container.forEach((element, index) => {
     console.log(photo);
    
     // Grabbing main-content 
+    const main = document.querySelectorAll('.main-content')
+    const h4s =  document.querySelectorAll('h4');
+    console.log(h4s);
+    const ps = document.querySelector('p');
+    console.log(ps);
+    const mainImg = document.querySelector('middle-img-src');
+    console.log(mainImg);
+
+
+
+    // Grabbing Contact
+
+
+
+
+
+  
+      
+  
+    
+
+ 
 
  
 
