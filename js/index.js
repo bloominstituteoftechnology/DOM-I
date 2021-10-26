@@ -68,17 +68,24 @@ const button = document.querySelector('button');
 button.textContent = siteContent['cta']['button'];
 
 //! Appended Nav Link
-const appendedNavLink = document.querySelector('a');
-appendedNavLink.textContent = 'Blah';
-appendedNavLink.href = '#';
-addLink.appendChild(appendedNavLink);
+// const appendedNavLink = document.querySelector('a');
+// appendedNavLink.textContent = 'Blah';
+// appendedNavLink.href = '#';
+// addLink.appendChild(appendedNavLink);
+
+const blahLink = document.createElement('a');
+blahLink.textContent = 'Blah';
+blahLink.href = '#';
+document.querySelector('nav').appendChild(blahLink);
+blahLink.style.color = 'green';
 
 //! Prepended Nav Link
-const addLink = document.querySelector('nav');
-const prependedNavLink = document.querySelector('a');
-prependedNavLink.textContent = 'Blah Pt. 2'
-prependedNavLink.href = '#';
-addLink.prepend(prependedNavLink);
+// const addLink = document.querySelector('nav');
+// const prependedNavLink = document.querySelector('a');
+// prependedNavLink.textContent = 'Blah Pt. 2'
+// prependedNavLink.href = '#';
+// addLink.prepend(prependedNavLink);
+// appendedLink.style.color = 'green';
 
 
 //! Top Middle Section 
