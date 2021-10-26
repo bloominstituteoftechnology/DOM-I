@@ -54,6 +54,23 @@ container.forEach((element, index) => {
    const h1 = document.querySelector('.cta-text h1');
     h1.textContent = siteContent['cta']['h1'];
 
+    // Grabbing button
+    const button = document.querySelector('.cta-text button');
+     button.textContent = siteContent['cta']['button'];
+    
+
+    // Grabbing image
+
+    const photo = document.querySelector('.cta img');
+    photo.setAttribute('src',  siteContent['cta']['img-src']) ;
+    console.log(photo);
+   
+    // Grabbing main-content 
+
+ 
+
+ 
+
 
 
 
