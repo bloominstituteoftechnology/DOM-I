@@ -14,7 +14,7 @@ Inside `src/index.js` there is declared an object literal containing all the dat
 
 * [ ] Create a forked copy of this project.
 * [ ] Clone your OWN version of the repository.
-* [ ] Create a new branch: git `checkout -b <firstName-lastName>`.
+* [ ] Create a new branch: `git checkout -b <firstName-lastName>`.
 * [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
 * [ ] Push commits: `git push origin <firstName-lastName>`.
 
