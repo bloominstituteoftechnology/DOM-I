@@ -55,3 +55,11 @@ navVision.textContent = siteContent['nav']['nav-item-3'];
 navFeatures.textContent = siteContent['nav']['nav-item-4'];
 navAbout.textContent = siteContent['nav']['nav-item-5'];
 navContact.textContent = siteContent['nav']['nav-item-6'];
+
+const logoImage = document.getElementById('logo-img');
+
+logoImage.src = "http://localhost:9000/img/logo.png"
+
+const ctaText = document.querySelector('h1');
+
+ctaText.textContent = siteContent['cta']['h1'];
