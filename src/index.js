@@ -1,3 +1,5 @@
+const { updateExpression } = require("@babel/types");
+
 const siteContent = { // DO NOT CHANGE THIS OBJECT
   "nav": {
     "nav-item-1": "Services",
@@ -79,4 +81,4 @@ topH4[1].textContent = siteContent['main-content']['about-h4'];
 topH4[2].textContent = siteContent['main-content']['services-h4'];
 topH4[3].textContent = siteContent['main-content']['product-h4'];
 topH4[4].textContent = siteContent['main-content']['vision-h4'];
-topH4[5].textContent = siteContent['contact']['contact-h4];']
+topH4[5].textContent = siteContent['contact']['contact-h4'];
