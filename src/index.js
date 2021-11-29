@@ -41,7 +41,7 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 
 console.log('project wired!')
 
-
+const navLinkSrc = siteContent["nav"]
 const navLinks = document.querySelectorAll('nav a');
 
 
@@ -60,6 +60,14 @@ headerImage.setAttribute('src', logoSrc);
 const ctaSrc = siteContent["images"]["cta-img"];
 const ctaImage = document.querySelector('.cta img');
 ctaImage.setAttribute('src', ctaSrc);
+
+//cta text
+const ctaSection = document.querySelector(".cta-text h1");
+ctaSection.textContent = siteContent["cta"]["h1"];
+
+//cta button
+const ctaButton = document.querySelector("button")
+ctaButton.textContent = siteContent["cta"]["button"];
 
 //accent img
 const accentSrc = siteContent["images"]["accent-img"];
