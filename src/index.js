@@ -44,29 +44,30 @@ console.log('project wired!')
 
 const servicesNav = document.querySelector('nav a:nth-of-type(1)');
 servicesNav.textContent = siteContent['nav']['nav-item-1'];
-// servicesNav.classList.add('italic');
+servicesNav.classList.add('italic');
 const productNav = servicesNav.nextElementSibling;
 productNav.textContent = siteContent['nav']['nav-item-2'];
-// productNav.classList.add('italic');
+productNav.classList.add('italic');
 const visionNav = productNav.nextElementSibling;
 visionNav.textContent = siteContent['nav']['nav-item-3'];
-// visionNav.classList.add('italic');
+visionNav.classList.add('italic');
 const featuresNav = visionNav.nextElementSibling;
 featuresNav.textContent = siteContent['nav']['nav-item-4'];
-// featuresNav.classList.add('italic');
+featuresNav.classList.add('italic');
 const aboutNav = featuresNav.nextElementSibling;
 aboutNav.textContent = siteContent['nav']['nav-item-5'];
-// aboutNav.classList.add('italic');
+aboutNav.classList.add('italic');
 const contactNav = aboutNav.nextElementSibling;
 contactNav.textContent = siteContent['nav']['nav-item-6'];
-// contactNav.classList.add('italic');
+contactNav.classList.add('italic');
 
-const links = document.querySelectorAll('nav a');
-links.forEach(function(link) {
-  console.log(link);
-});
-const linksArray = Array.from(links);
-linksArray.classList.add('italic')
+// const links = document.querySelectorAll('nav a');
+// links.forEach(function(link) {
+//   const linksArray = Array.from(links);
+//   linksArray.classList.add('italic')
+// });
+
+
 
 const logo = document.getElementById('logo-img');
 logo.setAttribute('src', siteContent['images']['logo-img']);
