@@ -51,6 +51,9 @@ realLinksArray[3].textContent = siteContent["nav"]["nav-item-4"];
 realLinksArray[4].textContent = siteContent["nav"]["nav-item-5"];
 realLinksArray[5].textContent = siteContent["nav"]["nav-item-6"];
 
+for(let i = 0; i < realLinksArray.length; i++){
+  realLinksArray[i].className += ' italic';
+}
 
 const ctaText = document.querySelector('.cta-text h1');
 ctaText.textContent = siteContent['cta']['h1']
@@ -100,4 +103,6 @@ realContactInfo[0].textContent = siteContent['contact']['address'];
 realContactInfo[1].textContent = siteContent['contact']['phone'];
 realContactInfo[2].textContent = siteContent['contact']['email'];
 
-
+const footer = document.querySelector('footer a');
+footer.textContent = siteContent['footer']['copyright'];
+footer.className += ' bold';
