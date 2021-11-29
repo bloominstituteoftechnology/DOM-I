@@ -45,6 +45,7 @@ const links = document.querySelectorAll('a');
 links.forEach((currentValue, i) => (currentValue.textContent = Object.values(siteContent.nav)[i]));
 
 links.forEach((item) => (item.style.color = 'green'));
+/* comment*/ 
 
 const addLink = document.querySelector('nav');
 
@@ -111,3 +112,4 @@ footer.style.display = 'flex';
 // footer.style.justifyContent = 'space-around';
 footer.style.flexDirection = 'column';
 pTags[8].style.marginBottom = '20px';
+
