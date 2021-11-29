@@ -72,7 +72,28 @@ const aboutMainParagraph = document.querySelector(
   ".main-content .top-content .text-content:nth-of-type(2) p"
 );
 
-const mainImage = document.querySelector(".middle-img");
+const mainImage = document.querySelector(".main-content .middle-img");
+
+const servicesMain = document.querySelector(
+  ".main-content .bottom-content .text-content h4"
+);
+const servicesMainParagraph = document.querySelector(
+  ".main-content .bottom-content .text-content p"
+);
+const productMain = document.querySelector(
+  ".main-content .bottom-content .text-content:nth-of-type(2) h4"
+);
+const productMainParagraph = document.querySelector(
+  ".main-content .bottom-content .text-content:nth-of-type(2) p"
+);
+const visionMain = document.querySelector(
+  ".main-content .bottom-content .text-content:nth-of-type(3) h4"
+);
+const visionMainParagraph = document.querySelector(
+  ".main-content .bottom-content .text-content:nth-of-type(3) p"
+);
+
+const contactSection = document.querySelector(".contact h4");
 
 services.textContent = siteContent["nav"]["nav-item-1"];
 product.textContent = siteContent["nav"]["nav-item-2"];
@@ -93,3 +114,14 @@ aboutMain.textContent = siteContent["mainContent"]["about-h4"];
 aboutMainParagraph.textContent = siteContent["mainContent"]["about-content"];
 
 mainImage.src = siteContent["images"]["accent-img"];
+
+servicesMain.textContent = siteContent["mainContent"]["services-h4"];
+servicesMainParagraph.textContent =
+  siteContent["mainContent"]["services-content"];
+productMain.textContent = siteContent["mainContent"]["product-h4"];
+productMainParagraph.textContent =
+  siteContent["mainContent"]["product-content"];
+visionMain.textContent = siteContent["mainContent"]["vision-h4"];
+visionMainParagraph.textContent = siteContent["mainContent"]["vision-content"];
+
+contactSection.textContent = siteContent["contact"]["contact-h4"];
