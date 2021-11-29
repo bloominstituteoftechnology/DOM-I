@@ -63,3 +63,20 @@ const cta = document.querySelector('#cta-img');
 cta.src = siteContent.images["cta-img"];
 const accent = document.querySelector('#middle-img');
 accent.src = siteContent.images["accent-img"];
+
+const paras = document.querySelectorAll('.text-content p');
+const h4Content = document.querySelectorAll('.text-content h4');
+
+h4Content[0].textContent = siteContent["main-content"]["features-h4"];
+h4Content[1].textContent = siteContent["main-content"]["about-h4"];
+h4Content[3].textContent = siteContent["main-content"]["product-h4"];
+h4Content[2].textContent = siteContent["main-content"]["services-h4"];
+h4Content[4].textContent = siteContent["main-content"]["vision-h4"];
+
+paras[0].textContent = siteContent["main-content"]["features-content"];
+paras[1].textContent = siteContent["main-content"]['about-content'];
+paras[2].textContent = siteContent["main-content"]['services-content'];
+paras[3].textContent = siteContent["main-content"]['product-content'];
+paras[4].textContent = siteContent["main-content"]['vision-content'];
+
+console.log(h4Content);
