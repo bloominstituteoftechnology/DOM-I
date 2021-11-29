@@ -40,3 +40,15 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+
+let navItems = document.querySelectorAll('a');
+navItems[0].textContent = siteContent.nav['nav-item-1'];
+navItems[1].textContent = siteContent.nav['nav-item-2'];
+navItems[2].textContent = siteContent.nav['nav-item-3'];
+navItems[3].textContent = siteContent.nav['nav-item-4'];
+navItems[4].textContent = siteContent.nav['nav-item-5'];
+navItems[5].textContent = siteContent.nav['nav-item-6'];
+
+
+navItems.classList.add('italic');
