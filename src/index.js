@@ -100,6 +100,8 @@ const contactEmail = document.querySelector(".contact p:nth-of-type(3)");
 
 const copyrightFooter = document.querySelector("footer a");
 
+const anchorTagsInHeader = document.querySelectorAll("header nav a");
+
 services.textContent = siteContent["nav"]["nav-item-1"];
 product.textContent = siteContent["nav"]["nav-item-2"];
 vision.textContent = siteContent["nav"]["nav-item-3"];
@@ -108,8 +110,8 @@ about.textContent = siteContent["nav"]["nav-item-5"];
 contact.textContent = siteContent["nav"]["nav-item-6"];
 headerImage.src = siteContent["images"]["logo-img"];
 
-domIsAwesome.textContent = "DOM IS AWESOME";
-getStartedButton.textContent = "Get Started";
+domIsAwesome.textContent = siteContent["cta"]["h1"];
+getStartedButton.textContent = siteContent["cta"]["button"];
 topSectionImage.src = siteContent["images"]["cta-img"];
 
 featuresMain.textContent = siteContent["mainContent"]["features-h4"];
@@ -135,3 +137,6 @@ contactPhone.textContent = siteContent["contact"]["phone"];
 contactEmail.textContent = siteContent["contact"]["email"];
 
 copyrightFooter.textContent = siteContent["footer"]["copyright"];
+
+anchorTagsInHeader.classList.add("italic");
+copyrightFooter.classList.add("bold");
