@@ -33,10 +33,59 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
     "copyright": "Copyright Great Idea! 2021",
   },
   "images": {
-    "logo-img": "http://localhost:9000/img/logo.png",
-    "cta-img": "http://localhost:9000/img/cta.png",
-    "accent-img": "http://localhost:9000/img/accent.png",
+    "logo-img": "mocks/img/logo.png",
+    "cta-img": "mocks/img/cta.png",
+    "accent-img": "mocks/img/accent.png",
+
   },
 };
 
 console.log('project wired!')
+
+//Header section
+
+const header = document.querySelector("header");
+const nav = document.querySelector("nav");
+const firstLink = document.querySelector("a:nth-of-type(1)");
+const secondLink = document.querySelector("a:nth-of-type(2)");
+const thirdLink = document.querySelector("a:nth-of-type(3)");
+const fourthLink = document.querySelector("a:nth-of-type(4)");
+const fifthLink = document.querySelector("a:nth-of-type(5)");
+const sixthLink = document.querySelector("a:nth-of-type(6)");
+const logo = document.querySelector("#logo-img");
+
+// CTA section
+
+const getStarted = document.querySelector("h1");
+const getStartedButton = document.querySelector("button");
+const ctaImg = document.querySelector("#cta-img");
+
+const featuresTitle = document.querySelector(".text-content:nth-of-type(1) h4");
+const featuresParagraph = document.querySelector(".text-content:nth-of-type(1) p");
+
+const aboutTitle = document.querySelector(".text-content:nth-of-type(2) h4");
+const aboutParagraph = document.querySelector(".text-content:nth-of-type(2) p");
+
+const servicesTitle = document.querySelector(".bottom-content .text-content:nth-of-type(1) h4");
+const servicesParagraph = document.querySelector(".bottom-content .text-content:nth-of-type(1) p");
+
+const productTitle = document.querySelector(".bottom-content .text-content:nth-of-type(2) h4");
+const productParagraph = document.querySelector(".bottom-content .text-content:nth-of-type(2) p");
+
+const visionTitle = document.querySelector(".bottom-content .text-content:nth-of-type(3) h4");
+const visionParagraph = document.querySelector(".bottom-content .text-content:nth-of-type(3) p");
+
+const accentImage = document.querySelector("#middle-img");
+
+// Contact
+const contactTitle = document.querySelector(".contact h4");
+const address = document.querySelector(".contact p:nth-of-type(1)");
+const phone = document.querySelector(".contact p:nth-of-type(2)");
+const email = document.querySelector(".contact p:nth-of-type(3)");
+
+// Footer
+const footerText = document.querySelector("footer a");
+
+
+
+
