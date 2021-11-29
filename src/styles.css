@@ -60,6 +60,7 @@ h1, h2, h3, h4, h5 {
 .container {
   width: 880px;
   margin: auto;
+  padding-bottom: 20px;
 }
 
 /* Header Styles */
@@ -115,7 +116,7 @@ header .logo {
 }
 
 .cta .cta-text button {
-  border: 1px double black;
+  border: 2px double black;
   font-size: 16px;
   background: white;
   width: 170px;
