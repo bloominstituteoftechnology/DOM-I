@@ -39,4 +39,30 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
   },
 };
 
-console.log('project wired!')
+const logoImg = document.querySelector('#logo-img');
+logoImg.src = siteContent.images['logo-img'];
+
+const ctaImg = document.querySelector('#cta-img');
+ctaImg.src = siteContent.images['cta-img'];
+
+const midImg = document.querySelector('#middle-img');
+midImg.setAttribute('src', siteContent.images['accent-img']);
+
+
+
+const navItems = document.querySelectorAll('nav a');
+const nav1 = document.querySelector('nav a:nth-of-type(1)');
+const nav2 = document.querySelector('nav a:nth-of-type(2)');
+const nav3 = document.querySelector('nav a:nth-of-type(3)');
+const nav4 = document.querySelector('nav a:nth-of-type(4)');
+const nav5 = document.querySelector('nav a:nth-of-type(5)');
+const nav6 = document.querySelector('nav a:nth-of-type(6)');
+const headerImg = document.querySelector('header img');
+
+navItems.classList.add('italic');
+nav1.textContent = siteContent.nav['nav-item-1'];
+nav2.textContent = siteContent.nav['nav-item-2'];
+nav3.textContent = siteContent.nav['nav-item-3'];
+nav4.textContent = siteContent.nav['nav-item-4'];
+nav5.textContent = siteContent.nav['nav-item-5'];
+nav6.textContent = siteContent.nav['nav-item-6'];
