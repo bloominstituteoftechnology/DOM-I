@@ -39,4 +39,19 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
   },
 };
 
+
 console.log('project wired!')
+
+const navServices = document.querySelector('.nav-item-1');
+const navProduct = document.querySelector('.nav-item-2');
+const navVision = document.querySelector('.nav-item-3');
+const navFeatures = document.querySelector('.nav-item-4');
+const navAbout = document.querySelector('.nav-item-5');
+const navContact = document.querySelector('.nav-item-6');
+
+navServices.textContent = siteContent['nav']['nav-item-1'];
+navProduct.textContent = siteContent['nav']['nav-item-2'];
+navVision.textContent = siteContent['nav']['nav-item-3'];
+navFeatures.textContent = siteContent['nav']['nav-item-4'];
+navAbout.textContent = siteContent['nav']['nav-item-5'];
+navContact.textContent = siteContent['nav']['nav-item-6'];
