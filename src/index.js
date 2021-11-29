@@ -33,9 +33,9 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
     "copyright": "Copyright Great Idea! 2021",
   },
   "images": {
-    "logo-img": "mocks/img/logo.png",
-    "cta-img": "mocks/img/cta.png",
-    "accent-img": "mocks/img/accent.png",
+    "logo-img": "http://localhost:9000/img/logo.png",
+    "cta-img": "http://localhost:9000/img/cta.png",
+    "accent-img": "http://localhost:9000/img/accent.png",
   },
 };
 
@@ -53,3 +53,19 @@ console.log(linkTexts)
 navLinks.forEach(function(link, idx){
   link.textContent = linkTexts[idx]
 });
+
+const logoImage = document.querySelector('#logo-img')
+console.log(logoImage);
+logoImage.src = siteContent.images['logo-img'];
+
+const codeImage = document.querySelector('#cta-img')
+codeImage.src = siteContent.images['cta-img']
+
+// const accentImage = document.querySelector('#accent-img')
+// accentImage.src = siteContent.images['accent-img']
+
+const h1 = document.querySelector('.cta-text h1');
+h1.textContent = siteContent.cta.h1
+
+const getStartedButton = document.querySelector('.cta-text button');
+getStartedButton.textContent = siteContent.cta.button
