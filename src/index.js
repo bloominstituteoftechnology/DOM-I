@@ -78,3 +78,17 @@ accentImage.setAttribute('src', accentSrc);
 const footerSrc = siteContent["footer"]["copyright"];
 const footer = document.querySelector('footer a')
 footer.textContent = footerSrc;
+
+//top-content
+const topContent = document.querySelector('.top-content');
+const firstText = topContent.querySelector('.text-content:nth-of-type(1) h4');
+const firstPara = topContent.querySelector('.text-content:nth-of-type(1) p');
+firstText.textContent = siteContent["main-content"]["features-h4"];
+firstPara.textContent = siteContent["main-content"]["features-content"];
+
+//secont top content
+const secondText = topContent.querySelector('.text-content:nth-of-type(2) h4');
+const secondPara = topContent.querySelector('.text-content:nth-of-type(2) p');
+secondText.textContent = siteContent["main-content"]["about-h4"];
+secondPara.textContent = siteContent["main-content"]["about-content"];
+
