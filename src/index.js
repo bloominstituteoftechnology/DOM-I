@@ -91,8 +91,7 @@ product.textContent = siteContent["main-content"]["product-h4"];
 const productPara = document.querySelector(".bottom-content .text-content:nth-of-type(2) p");
 productPara.textContent = siteContent["main-content"]["product-content"];
 
-const vision = document.querySelector(".bottom-content .text-content:nth-of-type(3) h4:nth-of-type(3)");
-vision.textContent = siteContent["main-content"]["vision-h4"];
+const vision
 
 
 
