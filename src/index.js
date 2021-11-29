@@ -79,4 +79,8 @@ paras[2].textContent = siteContent["main-content"]['services-content'];
 paras[3].textContent = siteContent["main-content"]['product-content'];
 paras[4].textContent = siteContent["main-content"]['vision-content'];
 
+const footer = document.querySelector('footer a');
+footer.textContent = siteContent.footer.copyright;
+footer.classList.add('bold');
+
 console.log(h4Content);
