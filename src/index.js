@@ -106,3 +106,11 @@ realContactInfo[2].textContent = siteContent['contact']['email'];
 const footer = document.querySelector('footer a');
 footer.textContent = siteContent['footer']['copyright'];
 footer.className += ' bold';
+
+
+const images = document.querySelectorAll('img');
+const realImages = Array.from(images);
+
+realImages[0].src = siteContent['images']['logo-img'];
+realImages[1].src = siteContent['images']['cta-img'];
+realImages[2].src = siteContent['images']['accent-img'];
