@@ -40,3 +40,30 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+ 
+let logo = document.getElementById('logo-img');
+logo.setAttribute('src', siteContent['nav']['img-src']);
+
+const links = document.querySelectorAll('a');
+
+links.forEach((currentValue, i) => (currentValue.textContent =
+  Object.values(siteContent.nav)[i]));
+
+links.forEach((item) => (item.style.color='green'));
+
+const addLink = document.querySelector('nav');
+
+const newAtag = document.createElement('a');
+newAtag.textContent = 'Outreach';
+newAtag.href = '#';
+newAtag.style.color = 'green';
+addLink.appendChild(newAtag);
+
+const newH3 = document.createElement('h3');
+newH3.textContent = 'Navigation';
+newH3.style.fontSize = '20px';
+addLink.prepend(newH3);
+
+const ctaH1 = document.querySelectorAll('h1');
+ctaH1[0].innerHTML = siteContent.cta.button;
+
