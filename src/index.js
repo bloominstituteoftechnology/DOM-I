@@ -47,8 +47,12 @@ const siteContent = {
 
 console.log("project wired!");
 
+//HEADER query Selector
+//Identifying object
 const navLinks = Array.from(document.querySelectorAll("nav a"));
+//Declaring data of the object
 const textContent = siteContent.nav;
+//return an array whose elements are strings
 const keys = Object.keys(textContent);
 keys.forEach((key) => {
   const content = textContent[key];
@@ -59,3 +63,12 @@ keys.forEach((key) => {
     console.log(`could not find element using selector ".${key}"`);
   }
 });
+console.log(textContent);
+
+//Images query Selector
+const headerImg = document.querySelector("#logo-img");
+headerImg.src = siteContent["images"]["logo-img"];
+const ctaImg = document.querySelector("#cta-img");
+ctaImg.src = siteContent["images"]["cta-img"];
+const middleImage = document.querySelector("#middle-img");
+middleImage.src = siteContent["images"]["accent-img"];
