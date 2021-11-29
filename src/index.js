@@ -67,3 +67,6 @@ const accentImage = document.querySelector('.main-content img');
 accentImage.setAttribute('src', accentSrc);
 
 //footer
+const footerSrc = siteContent["footer"]["copyright"];
+const footer = document.querySelector('footer a')
+footer.textContent = footerSrc;
