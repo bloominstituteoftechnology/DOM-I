@@ -54,18 +54,24 @@ navLinks.forEach(function(link, idx){
   link.textContent = linkTexts[idx]
 });
 
-const logoImage = document.querySelector('#logo-img')
+const logoImage = document.querySelector('#logo-img');
 console.log(logoImage);
 logoImage.src = siteContent.images['logo-img'];
 
-const codeImage = document.querySelector('#cta-img')
-codeImage.src = siteContent.images['cta-img']
+const codeImage = document.querySelector('#cta-img');
+codeImage.src = siteContent.images['cta-img'];
 
-// const accentImage = document.querySelector('#accent-img')
-// accentImage.src = siteContent.images['accent-img']
+const accentImage = document.querySelector('.middle-img');
+accentImage.src = siteContent.images['accent-img'];
 
 const h1 = document.querySelector('.cta-text h1');
-h1.textContent = siteContent.cta.h1
+h1.textContent = siteContent.cta.h1;
 
 const getStartedButton = document.querySelector('.cta-text button');
-getStartedButton.textContent = siteContent.cta.button
+getStartedButton.textContent = siteContent.cta.button;
+
+const features = document.querySelector('.main-content h4');
+features.textContent = siteContent["main-content"]['features-h4'];
+
+const featContent = document.querySelector('.main-content p')
+featContent.textContent = siteContent['main-content']['features-content'];
