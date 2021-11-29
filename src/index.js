@@ -45,8 +45,25 @@ const siteContent = {
   },
 };
 let cta = document.querySelector(".cta");
-cta.querySelector("h1").innerHTML = "DOM Is <br> Awesome";
-cta.querySelector("button").innerHTML = "Get Started";
+cta.querySelector("h1").innerHTML = siteContent.cta.h1;
+cta.querySelector("button").innerHTML = siteContent.cta.button;
 
-const logoImg = document.getElementById("cta-img");
-logoImg.src = "http://localhost:9000/img/cta.png";
+let navSel = document.querySelectorAll(".italic");
+navSel.querySelector("nav a").textContent = siteContent.nav["nav-item-1"];
+navSel.querySelector("nav a").textContent = siteContent.nav["nav-item-2"];
+navSel.querySelector("nav a").textContent = siteContent.nav["nav-item-3"];
+navSel.querySelector("nav a").textContent = siteContent.nav["nav-item-4"];
+navSel.querySelector("nav a").textContent = siteContent.nav["nav-item-5"];
+navSel.querySelector("nav a").textContent = siteContent.nav["nav-item-6"];
+
+const mainContent = document.querySelector[".main-content"];
+
+const mainImg = document.getElementById("cta-img");
+mainImg.src = "http://localhost:9000/img/cta.png";
+const logoImg = document.getElementById("logo-img");
+logoImg.src = "http://localhost:9000/img/logo.png";
+
+const accentImg = document.getElementById("accent-img");
+logoImg.src = "http://localhost:9000/img/accent.png";
+
+console.log(siteContent.nav["nav-item-1"]);
