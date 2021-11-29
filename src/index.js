@@ -41,7 +41,7 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 
 
 console.log('project wired!')
-
+// Nav Section
 const navServices = document.querySelector('.nav-item-1');
 const navProduct = document.querySelector('.nav-item-2');
 const navVision = document.querySelector('.nav-item-3');
@@ -56,10 +56,15 @@ navFeatures.textContent = siteContent['nav']['nav-item-4'];
 navAbout.textContent = siteContent['nav']['nav-item-5'];
 navContact.textContent = siteContent['nav']['nav-item-6'];
 
+// Images
 const logoImage = document.getElementById('logo-img');
-
 logoImage.src = "http://localhost:9000/img/logo.png"
 
-const ctaText = document.querySelector('h1');
+const ctaImage = document.getElementById('cta-img');
+ctaImage.src = "http://localhost:9000/img/cta.png"
 
+const middleImage = document.getElementById('middle-img');
+middleImage.src = "http://localhost:9000/img/accent.png"
+
+const ctaText = document.querySelector('h1');
 ctaText.textContent = siteContent['cta']['h1'];
