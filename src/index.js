@@ -67,3 +67,16 @@ addLink.prepend(newH3);
 const ctaH1 = document.querySelectorAll('h1');
 ctaH1[0].innerHTML = siteContent.cta.button;
 
+const btn = document.querySelectorAll('button');
+btn[0].textContent = siteContent.cta.button;
+
+const ctaImg = document.getElementById('cta-img');
+ctaImg.src = siteContent.cta['img-src'];
+
+const topH4 = document.querySelectorAll('h4');
+topH4[0].textContent = siteContent['main-content']['features-h4'];
+topH4[1].textContent = siteContent['main-content']['about-h4'];
+topH4[2].textContent = siteContent['main-content']['services-h4'];
+topH4[3].textContent = siteContent['main-content']['product-h4'];
+topH4[4].textContent = siteContent['main-content']['vision-h4'];
+topH4[5].textContent = siteContent['contact']['contact-h4];']
