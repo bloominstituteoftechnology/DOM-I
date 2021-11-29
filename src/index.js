@@ -56,10 +56,38 @@ navigationLinks[5].textContent = siteContent['nav']['nav-item-6'];
 navigationLinks.forEach(i => i.className = 'italic'); // Creating a class name for each aNav
 
 //Nav Img 
-const header = document.querySelector('header')
-const logoNav = header.querySelector('img');
+const header = document.querySelector('header') // creating the DOM Place
+const logoNav = header.querySelector('img'); // Going deeper into the sections of the nav
+logoNav.src =  'http://localhost:9000/img/logo.png'; // Changing the HTML to Fit our needs
 
-logoNav.src =  'http://localhost:9000/img/logo.png';
+//Main title
+const title = document.querySelector('h1')
+title.textContent = siteContent['cta']['h1'];
+
+//Main Button 
+const mainButton = document.querySelector('.cta button')
+mainButton.textContent = siteContent['cta']['button'];
+
+//Whole H4 Content
+const topH4 = document.querySelectorAll('.text-content h4');
+const topTitles = Array.from(topH4);
+
+topTitles[0].textContent = siteContent['main-content']['features-h4'];
+topTitles[1].textContent = siteContent['main-content']['about-h4'];
+topTitles[2].textContent = siteContent['main-content']['services-h4'];
+topTitles[3].textContent = siteContent['main-content']['product-h4'];
+topTitles[4].textContent = siteContent['main-content']['vision-h4'];
+
+// Text Content
+const topContent = document.querySelectorAll('.text-content p');
+const topText = Array.from(topContent);
+
+topText[0].textContent = siteContent['main-content']['features-content'];
+topText[1].textContent = siteContent['main-content']['about-content'];
+topText[2].textContent = siteContent['main-content']['services-content'];
+topText[3].textContent = siteContent['main-content']['product-content'];
+topText[4].textContent = siteContent['main-content']['vision-content'];
+
 
 console.log('project wired!');
 console.log('Umm Hello is this working!?')
