@@ -87,3 +87,33 @@ aboutH1.textContent = siteContent["main-content"]["about-h4"];
 
 const aboutP = document.querySelector(".text-content:nth-of-type(2) p");
 aboutP.textContent = siteContent["main-content"]["about-content"];
+
+const middleImg = document.querySelector("#middle-img");
+middleImg.src = siteContent.images["accent-img"];
+
+const bottomH4 = document.querySelector(".bottom-content .text-content h4");
+bottomH4.textContent = siteContent["main-content"]["services-h4"];
+
+const bottomContent = document.querySelector(".bottom-content .text-content p");
+bottomContent.textContent = siteContent["main-content"]["services-content"];
+
+const product = document.querySelector(
+  ".bottom-content .text-content:nth-of-type(2) h4"
+);
+product.textContent = siteContent["main-content"]["product-h4"];
+
+const productContent = document.querySelector(
+  ".bottom-content .text-content:nth-of-type(2) p"
+);
+productContent.textContent = siteContent["main-content"]["product-content"];
+
+const vision = document.querySelector(
+  ".bottom-content .text-content:nth-of-type(3) h4"
+);
+vision.textContent = siteContent["main-content"]["vision-h4"];
+
+const visionP = document.querySelector(
+  ".bottom-content .text-content:nth-of-type(3) p"
+);
+visionP.textContent = siteContent["main-content"]["vision-content"];
+console.log(visionP);
