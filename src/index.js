@@ -39,9 +39,9 @@ const siteContent = {
     copyright: "Copyright Great Idea! 2021",
   },
   images: {
-    "logo-img": "http://localhost:9000/img/logo.png",
-    "cta-img": "http://localhost:9000/img/cta.png",
-    "accent-img": "http://localhost:9000/img/accent.png",
+    "logo-img": "mocks/img/logo.png",
+    "cta-img": "mocks/img/cta.png",
+    "accent-img": "mocks/img/accent.png",
   },
 };
 
@@ -53,6 +53,10 @@ const vision = document.querySelector("header nav a:nth-of-type(3)");
 const features = document.querySelector("header nav a:nth-of-type(4)");
 const about = document.querySelector("header nav a:nth-of-type(5)");
 const contact = document.querySelector("header nav a:nth-of-type(6)");
+const headerImage = document.querySelector("header .logo");
+const domIsAwesome = document.querySelector(".cta h1");
+const getStartedButton = document.querySelector(".cta .cta-text button");
+const topSectionImage = document.querySelector(".cta img");
 
 services.textContent = siteContent["nav"]["nav-item-1"];
 product.textContent = siteContent["nav"]["nav-item-2"];
@@ -60,3 +64,7 @@ vision.textContent = siteContent["nav"]["nav-item-3"];
 features.textContent = siteContent["nav"]["nav-item-4"];
 about.textContent = siteContent["nav"]["nav-item-5"];
 contact.textContent = siteContent["nav"]["nav-item-6"];
+headerImage.src = siteContent["images"]["logo-img"];
+domIsAwesome.textContent = "DOM IS AWESOME";
+getStartedButton.textContent = "Get Started";
+topSectionImage.src = siteContent["images"]["cta-img"];
