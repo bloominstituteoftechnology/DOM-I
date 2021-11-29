@@ -40,3 +40,10 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+console.log('project wired!')
+console.log('project wired!')
+console.log('project wired!')
+console.log('project wired!')
+console.log('project wired!')
+console.log('project wired!')
+
