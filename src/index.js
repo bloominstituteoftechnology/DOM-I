@@ -33,10 +33,9 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
     "copyright": "Copyright Great Idea! 2021",
   },
   "images": {
-    "logo-img": "mocks/img/logo.png",
-    "cta-img": "mocks/img/cta.png",
-    "accent-img": "mocks/img/accent.png",
-
+    "logo-img": "http://localhost:9000/img/logo.png",
+    "cta-img": "http://localhost:9000/img/cta.png",
+    "accent-img": "http://localhost:9000/img/accent.png",
   },
 };
 
@@ -80,16 +79,19 @@ const visionParagraph = document.querySelector(".bottom-content .text-content:nt
 const accentImage = document.querySelector("#middle-img");
 
 // Contact
+
 const contactTitle = document.querySelector(".contact h4");
 const address = document.querySelector(".contact p:nth-of-type(1)");
 const phone = document.querySelector(".contact p:nth-of-type(2)");
 const email = document.querySelector(".contact p:nth-of-type(3)");
 
 // Footer
+
 const footerText = document.querySelector("footer a");
 
 
 // Adding text content to header 
+
 firstLink.textContent = siteContent["nav"]["nav-item-1"];
 secondLink.textContent = siteContent["nav"]["nav-item-2"]; 
 thirdLink.textContent = siteContent["nav"]["nav-item-3"]; 
@@ -100,12 +102,10 @@ sixthLink.textContent = siteContent["nav"]["nav-item-6"];
 
 // Adding text content to cta section
 
-
 getStarted.textContent = siteContent["cta"]["h1"];
 getStartedButton.textContent = siteContent["cta"]["button"];
 
 // Adding text content to main section
-
 
 featuresTitle.textContent = siteContent["main-content"]["features-h4"];
 aboutTitle.textContent = siteContent["main-content"]["about-h4"];
@@ -132,6 +132,7 @@ footerText.textContent = siteContent["footer"]["copyright"];
 // Adding class names
 
 // Header - italic
+
 firstLink.classList.add("italic");
 secondLink.classList.add("italic");
 thirdLink.classList.add("italic");
