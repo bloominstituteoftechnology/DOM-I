@@ -41,14 +41,31 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 
 console.log('project wired!')
 
+ // Header
+ const header = document.querySelector("header");
+ const nav = document.querySelector("nav");
+ const nav1 = document.querySelector("a:nth-of-type(1)");
+ const nav2 = document.querySelector("a:nth-of-type(2)");
+ const nav3 = document.querySelector("a:nth-of-type(3)");
+ const nav4 = document.querySelector("a:nth-of-type(4)");
+ const nav5 = document.querySelector("a:nth-of-type(5)");
+ const nav6 = document.querySelector("a:nth-of-type(6)");
+ 
+ //logo
+ const logo = document.querySelector("#logo-img");
 
-let navItems = document.querySelectorAll('a');
-navItems[0].textContent = siteContent.nav['nav-item-1'];
-navItems[1].textContent = siteContent.nav['nav-item-2'];
-navItems[2].textContent = siteContent.nav['nav-item-3'];
-navItems[3].textContent = siteContent.nav['nav-item-4'];
-navItems[4].textContent = siteContent.nav['nav-item-5'];
-navItems[5].textContent = siteContent.nav['nav-item-6'];
+//add text
+nav1.textContent = siteContent["nav"]["nav-item-1"];
+nav2.textContent = siteContent["nav"]["nav-item-2"];
+nav3.textContent = siteContent["nav"]["nav-item-3"];
+nav4.textContent = siteContent["nav"]["nav-item-4"];
+nav5.textContent = siteContent["nav"]["nav-item-5"];
+nav6.textContent = siteContent["nav"]["nav-item-6"];
 
-
-navItems.classList.add('italic');
+ //class 
+ nav1.classList.add('italic');
+ nav2.classList.add('italic');
+ nav3.classList.add('italic');
+ nav4.classList.add('italic');
+ nav5.classList.add('italic');
+ nav6.classList.add('italic');
