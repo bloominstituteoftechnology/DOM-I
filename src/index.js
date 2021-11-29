@@ -33,10 +33,23 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
     "copyright": "Copyright Great Idea! 2021",
   },
   "images": {
-    "logo-img": "http://localhost:9000/img/logo.png",
-    "cta-img": "http://localhost:9000/img/cta.png",
-    "accent-img": "http://localhost:9000/img/accent.png",
+    "logo-img": "mocks/img/logo.png",
+    "cta-img": "mocks/img/cta.png",
+    "accent-img": "mocks/img/accent.png",
   },
 };
 
-console.log('project wired!')
+// console.log('project wired!')
+// let logo = document.getElementById('logo-img');
+// logo.setAttribute('src', siteContent['nav']['img-src'])
+// console.log("HEEEYYY!!!! IT'S A ME, MARIOOOO!!!!")
+
+// const nav = document.getElementsByTagName('nav')
+// const links = document.querySelectorAll('nav a')
+
+const navLinks = document.querySelectorAll('nav a');
+const linkTexts = Object.values(siteContent.nav)
+console.log(linkTexts)
+navLinks.forEach(function(link, idx){
+  link.textContent = linkTexts[idx]
+});
