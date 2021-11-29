@@ -39,4 +39,36 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
   },
 };
 
-console.log('project wired!')
+//nav bar
+
+const navLinks = document.querySelectorAll('nav a');
+const linkTexts = Object.values(siteContent.nav);
+console.log(linkTexts);
+navLinks.forEach(function(link, idx){
+  link.textContent = linkTexts[idx];
+});
+
+//logo
+const logoImg = document.querySelector('#logo-img');
+console.log(logoImg);
+logoImg.src = siteContent.images['logo-img'];
+
+//main title
+const mainTitle = document.querySelector('h1');
+mainTitle.textContent = siteContent.cta.h1;
+
+const mainTitleButton = document.querySelector('button');
+mainTitleButton.textContent = siteContent.cta.button;
+
+const mainTitleImg = document.querySelector('#cta-img');
+console.log(mainTitleImg);
+mainTitleImg.src = siteContent.images['cta-img'];
+
+//main content
+const featuresHeading = document.querySelector('.main content h4');
+features.textContent = siteContent['main-content']['features-h4'];
+
+
+
+
+
