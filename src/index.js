@@ -41,10 +41,29 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 
 console.log('project wired!')
 
-const nav = document.querySelector('nav');
-const cta = document.querySelector('cta');
-const main = document.querySelector('main-content');
-const contact = document.querySelector('contact');
-const footer = document.querySelector('footer');
-const images = document.querySelector('images');
+const navLinks = document.querySelectorAll('nav a');
+const linkTexts = Object.values(siteContent.nav);
+navLinks.forEach(function(link, idx){
+  link.textContent = linkTexts[idx];
+});
 
+//logo
+const logoImg = document.querySelector('#logo-img');
+console.log(logoImg);
+logoImg.src = siteContent.images['logo-img'];
+
+const dom = document.querySelector('.cta-text h1');
+dom.textContent = siteContent.cta.h1;
+
+const getStartedButton = document.querySelector('.cta-text Button');
+getStartedButton.textContent = siteContent.cta.button;
+
+const codeSnip = document.querySelector('#cta-img');
+codeSnip.src = siteContent.images['cta-img'];
+
+const featureTitle = document.querySelector('.main-content .top-content .text-content h4');
+featureTitle.textContent = siteContent['main-content']['feature-h4'];
+
+
+const accentImg = document.querySelector('.middle-img');
+accentImg.src = siteContent.images['accent-img'];
