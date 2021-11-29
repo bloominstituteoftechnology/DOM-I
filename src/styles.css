@@ -60,6 +60,7 @@ h1, h2, h3, h4, h5 {
 .container {
   width: 880px;
   margin: auto;
+  padding-bottom: 20px;
 }
 
 /* Header Styles */
