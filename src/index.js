@@ -40,3 +40,40 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+for(let i = 1; i<7; i++){
+  document.querySelector(`a:nth-of-type(${i})`).className = 'italic'
+  document.querySelector(`a:nth-of-type(${i})`).textContent = siteContent.nav[`nav-item-${i}`]
+}
+document.getElementById('logo-img').src = siteContent.images['logo-img']
+document.querySelector('h1').innerHTML = siteContent.cta.h1
+document.querySelector('.cta-text button').innerHTML = siteContent.cta.button
+document.querySelector('#cta-img').src = siteContent.images['cta-img']
+document.querySelector('.text-content:nth-of-type(1) h4').textContent = siteContent['main-content']['features-h4']
+document.querySelector('.text-content:nth-of-type(1) p').textContent = siteContent['main-content']['features-content']
+document.querySelector('.text-content:nth-of-type(2) h4').textContent = siteContent['main-content']['about-h4']
+document.querySelector('.text-content:nth-of-type(2) p').textContent = siteContent['main-content']['about-content']
+document.querySelector('.bottom-content .text-content:nth-of-type(1) h4').textContent = siteContent['main-content']['services-h4']
+document.querySelector('.bottom-content .text-content:nth-of-type(1) p').textContent = siteContent['main-content']['services-content']
+document.querySelector('#middle-img').src = siteContent.images['accent-img']
+
+document.querySelector('.bottom-content .text-content:nth-of-type(2) h4').textContent = siteContent['main-content']['product-h4']
+
+document.querySelector('.bottom-content .text-content:nth-of-type(2) p').textContent = siteContent['main-content']['product-content']
+
+document.querySelector('.bottom-content .text-content:nth-of-type(3) h4').textContent = siteContent['main-content']['vision-h4']
+
+document.querySelector('.bottom-content .text-content:nth-of-type(3) p').textContent = siteContent['main-content']['vision-content']
+
+document.querySelector('.contact h4').textContent = siteContent.contact['contact-h4']
+
+document.querySelector('.contact p:nth-of-type(1)').textContent = siteContent.contact.address
+
+document.querySelector('.contact p:nth-of-type(2)').textContent = siteContent.contact.phone
+
+document.querySelector('.contact p:nth-of-type(3)').textContent = siteContent.contact.email
+
+document.querySelector('footer a').className = 'bold'
+document.querySelector('footer a').textContent = siteContent.footer.copyright
+
+
