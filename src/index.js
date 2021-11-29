@@ -44,5 +44,9 @@ const siteContent = {
     "accent-img": "http://localhost:9000/img/accent.png",
   },
 };
-const logo = document.querySelector("#logo-img");
-logo.src = "http://localhost:9000/img/logo.png";
+let cta = document.querySelector(".cta");
+cta.querySelector("h1").innerHTML = "DOM Is <br> Awesome";
+cta.querySelector("button").innerHTML = "Get Started";
+
+const logoImg = document.getElementById("cta-img");
+logoImg.src = "http://localhost:9000/img/cta.png";
