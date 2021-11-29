@@ -68,6 +68,14 @@ title.textContent = siteContent['cta']['h1'];
 const mainButton = document.querySelector('.cta button')
 mainButton.textContent = siteContent['cta']['button'];
 
+//Code Image 
+const codeImage = document.querySelector('.cta img')
+codeImage.src = siteContent['images']['cta-img'];
+
+//Middle Image
+const middleImage = document.querySelector('.main-content img')
+middleImage.src = siteContent['images']['accent-img'];
+
 //Whole H4 Content
 const topH4 = document.querySelectorAll('.text-content h4');
 const topTitles = Array.from(topH4);
@@ -88,6 +96,27 @@ topText[2].textContent = siteContent['main-content']['services-content'];
 topText[3].textContent = siteContent['main-content']['product-content'];
 topText[4].textContent = siteContent['main-content']['vision-content'];
 
+//Contact
+const bottomH4 = document.querySelectorAll('.contact h4');
+const bottomTitles = Array.from(bottomH4);
+
+bottomTitles[0].textContent = siteContent['contact']['contact-h4'];
+
+// Contact Text
+const bottomContent = document.querySelectorAll('.contact p');
+const bottomText = Array.from(bottomContent);
+
+bottomText[0].textContent = siteContent['contact']['address'];
+bottomText[1].textContent = siteContent['contact']['phone'];
+bottomText[2].textContent = siteContent['contact']['email'];
+
+// Footer
+const nLink = document.querySelectorAll('footer a');
+console.log(nLink);
+
+const footerLinks = Array.from(nLink);
+
+footerLinks[0].textContent = siteContent['footer']['copyright'];
 
 console.log('project wired!');
 console.log('Umm Hello is this working!?')
