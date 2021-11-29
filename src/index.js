@@ -33,19 +33,19 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
     "copyright": "Copyright Great Idea! 2021",
   },
   "images": {
-    "logo-img": "http://localhost:9000/img/logo.png",
-    "cta-img": "http://localhost:9000/img/cta.png",
-    "accent-img": "http://localhost:9000/img/accent.png",
+    "logo-img": "mocks/img/logo.png",
+    "cta-img": "mocks/img/cta.png",
+    "accent-img": "mocks/img/accent.png",
   },
 };
 
 console.log('project wired!')
 
 
-let logo = document.getElementById("logo-img");
+const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let navItems = document.querySelectorAll("header nav a");
+const navItems = document.querySelectorAll("header nav a");
 navItems[0].innerHTML = siteContent["nav"]["nav-item-1"];
 navItems[0].style.color = "green";
 navItems[1].innerHTML = siteContent["nav"]["nav-item-2"];
@@ -59,5 +59,56 @@ navItems[4].style.color = "green";
 navItems[5].innerHTML = siteContent["nav"]["nav-item-6"];
 navItems[5].style.color = "green";
 
-let nav = document.querySelector("header nav");
+const nav = document.querySelector("header nav");
 
+const blog = document.createElement("a");
+const blogText = document.createTextNode("Blog");
+blog.appendChild(blogText);
+blog.style.color = "green";
+blog.style.cursor = "pointer";
+nav.appendChild(blog);
+
+const testimonials = document.createElement("a");
+const testimonialsText = document.createTextNode("Testimonials");
+testimonials.appendChild(testimonialsText);
+testimonials.style.color = "green";
+testimonials.style.cursor = "pointer";
+nav.prepend(testimonials);
+
+const ctaHeading = document.querySelector(".cta .cta-text h1");
+ctaHeading.innerHTML = siteContent["cta"]["h1"];
+
+const ctaButton = document.querySelector(".cta .cta-text button");
+ctaButton.innerHTML = siteContent["cta"]["button"];
+
+const ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+const featuresHeading = document.querySelectorAll(".main-content h4");
+const featuresContent = document.querySelectorAll(".main-content p");
+
+featuresHeading[0].innerHTML = siteContent["main-content"]["features-h4"];
+featuresContent[0].innerHTML = siteContent["main-content"]["features-content"];
+featuresHeading[1].innerHTML = siteContent["main-content"]["about-h4"];
+featuresContent[1].innerHTML = siteContent["main-content"]["about-content"];
+featuresHeading[2].innerHTML = siteContent["main-content"]["services-h4"];
+featuresContent[2].innerHTML = siteContent["main-content"]["services-content"];
+featuresHeading[3].innerHTML = siteContent["main-content"]["product-h4"];
+featuresContent[3].innerHTML = siteContent["main-content"]["product-content"];
+featuresHeading[4].innerHTML = siteContent["main-content"]["vision-h4"];
+featuresContent[4].innerHTML = siteContent["main-content"]["vision-content"];
+
+const middleImg = document.getElementById("accent-img");
+middleImg.setAttribute('src', siteContent["main-content"]["accent-img-src"]);
+
+
+const contactHeading = document.querySelector(".contact h4");
+contactHeading.innerHTML = siteContent["contact"]["contact-h4"];
+
+const contactContent = document.querySelectorAll(".contact p");
+contactContent[5].innerHTML = siteContent["contact"]["address"];
+contactContent[6].innerHTML = siteContent["contact"]["phone"];
+contactContent[7].innerHTML = siteContent["contact"]["email"];
+
+const footer = document.querySelector("footer");
+footer.innerHTML = siteContent["footer"]["copyright"];
