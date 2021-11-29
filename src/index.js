@@ -12,7 +12,7 @@ const siteContent = {
     h1: "DOM Is Awesome",
     button: "Get Started",
   },
-  "main-content": {
+  mainContent: {
     "features-h4": "Features",
     "features-content":
       "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
@@ -54,9 +54,25 @@ const features = document.querySelector("header nav a:nth-of-type(4)");
 const about = document.querySelector("header nav a:nth-of-type(5)");
 const contact = document.querySelector("header nav a:nth-of-type(6)");
 const headerImage = document.querySelector("header .logo");
+
 const domIsAwesome = document.querySelector(".cta h1");
 const getStartedButton = document.querySelector(".cta .cta-text button");
 const topSectionImage = document.querySelector(".cta img");
+
+const featuresMain = document.querySelector(
+  ".main-content .top-content .text-content h4"
+);
+const featuresMainParagraph = document.querySelector(
+  ".main-content .top-content .text-content p"
+);
+const aboutMain = document.querySelector(
+  ".main-content .top-content .text-content:nth-of-type(2) h4"
+);
+const aboutMainParagraph = document.querySelector(
+  ".main-content .top-content .text-content:nth-of-type(2) p"
+);
+
+const mainImage = document.querySelector(".middle-img");
 
 services.textContent = siteContent["nav"]["nav-item-1"];
 product.textContent = siteContent["nav"]["nav-item-2"];
@@ -65,6 +81,15 @@ features.textContent = siteContent["nav"]["nav-item-4"];
 about.textContent = siteContent["nav"]["nav-item-5"];
 contact.textContent = siteContent["nav"]["nav-item-6"];
 headerImage.src = siteContent["images"]["logo-img"];
+
 domIsAwesome.textContent = "DOM IS AWESOME";
 getStartedButton.textContent = "Get Started";
 topSectionImage.src = siteContent["images"]["cta-img"];
+
+featuresMain.textContent = siteContent["mainContent"]["features-h4"];
+featuresMainParagraph.textContent =
+  siteContent["mainContent"]["features-content"];
+aboutMain.textContent = siteContent["mainContent"]["about-h4"];
+aboutMainParagraph.textContent = siteContent["mainContent"]["about-content"];
+
+mainImage.src = siteContent["images"]["accent-img"];
