@@ -33,9 +33,9 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
     "copyright": "Copyright Great Idea! 2021",
   },
   "images": {
-    "logo-img": "http://localhost:9000/img/logo.png",
-    "cta-img": "http://localhost:9000/img/cta.png",
-    "accent-img": "http://localhost:9000/img/accent.png",
+    "logo-img": "mocks/img/logo.png",
+    "cta-img": "mocks/img/cta.png",
+    "accent-img": "mocks/img/accent.png",
   },
 };
 
@@ -46,12 +46,6 @@ console.log('project wired!');
   // Header
   const header = document.querySelector("header");
   const nav = document.querySelector("nav");
-  const linkOne = document.querySelector("a:nth-of-type(1)");
-  const linkTwo = document.querySelector("a:nth-of-type(2)");
-  const linkThree = document.querySelector("a:nth-of-type(3)");
-  const linkFour = document.querySelector("a:nth-of-type(4)");
-  const linkFive = document.querySelector("a:nth-of-type(5)");
-  const linkSix = document.querySelector("a:nth-of-type(6)");
   const logo = document.querySelector("#logo-img");
 
   // CTA
@@ -61,18 +55,14 @@ console.log('project wired!');
 
   // Main content
   const featuresTitle = document.querySelector(".text-content:nth-of-type(1) h4");
-  const featuresParagraph = document.querySelector(".text-content:nth-of-type(1) p");
-
   const aboutTitle = document.querySelector(".text-content:nth-of-type(2) h4");
-  const aboutParagraph = document.querySelector(".text-content:nth-of-type(2) p");
-
   const servicesTitle = document.querySelector(".bottom-content .text-content:nth-of-type(1) h4");
-  const servicesParagraph = document.querySelector(".bottom-content .text-content:nth-of-type(1) p");
-
   const productTitle = document.querySelector(".bottom-content .text-content:nth-of-type(2) h4");
-  const productParagraph = document.querySelector(".bottom-content .text-content:nth-of-type(2) p");
-
   const visionTitle = document.querySelector(".bottom-content .text-content:nth-of-type(3) h4");
+  const featuresParagraph = document.querySelector(".text-content:nth-of-type(1) p");
+  const aboutParagraph = document.querySelector(".text-content:nth-of-type(2) p");
+  const servicesParagraph = document.querySelector(".bottom-content .text-content:nth-of-type(1) p");
+  const productParagraph = document.querySelector(".bottom-content .text-content:nth-of-type(2) p");
   const visionParagraph = document.querySelector(".bottom-content .text-content:nth-of-type(3) p");
 
   const accentImage = document.querySelector("#middle-img");
@@ -89,12 +79,13 @@ console.log('project wired!');
 
 // Add text contents
   // Header
-  linkOne.textContent = siteContent["nav"]["nav-item-1"];
-  linkTwo.textContent = siteContent["nav"]["nav-item-2"];
-  linkThree.textContent = siteContent["nav"]["nav-item-3"];
-  linkFour.textContent = siteContent["nav"]["nav-item-4"];
-  linkFive.textContent = siteContent["nav"]["nav-item-5"];
-  linkSix.textContent = siteContent["nav"]["nav-item-6"];
+const navLinks = document.querySelectorAll("nav a");
+const linkTexts = Object.values(siteContent.nav);
+navLinks.forEach((link, i) => {
+  link.textContent = linkTexts[i];
+  link.classList.add("italic");
+});
+
 
   // CTA
   getStartedText.textContent = siteContent["cta"]["h1"];
@@ -125,12 +116,10 @@ console.log('project wired!');
 
 // Add class names
   // Header
-  linkOne.classList.add("italic");
-  linkTwo.classList.add("italic");
-  linkThree.classList.add("italic");
-  linkFour.classList.add("italic");
-  linkFive.classList.add("italic");
-  linkSix.classList.add("italic");
+
+  // navLinks.forEach(function(link){
+  //   link.textContent = linkTexts.classList.add("italic");
+  // });
 
   // Footer
   footerText.classList.add("bold");
