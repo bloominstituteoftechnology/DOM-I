@@ -40,3 +40,24 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+
+let logo = document.getElementById("logo-img");
+logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let navItems = document.querySelectorAll("header nav a");
+navItems[0].innerHTML = siteContent["nav"]["nav-item-1"];
+navItems[0].style.color = "green";
+navItems[1].innerHTML = siteContent["nav"]["nav-item-2"];
+navItems[1].style.color = "green";
+navItems[2].innerHTML = siteContent["nav"]["nav-item-3"];
+navItems[2].style.color = "green";
+navItems[3].innerHTML = siteContent["nav"]["nav-item-4"];
+navItems[3].style.color = "green";
+navItems[4].innerHTML = siteContent["nav"]["nav-item-5"];
+navItems[4].style.color = "green";
+navItems[5].innerHTML = siteContent["nav"]["nav-item-6"];
+navItems[5].style.color = "green";
+
+let nav = document.querySelector("header nav");
+
