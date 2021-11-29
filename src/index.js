@@ -40,3 +40,30 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+
+const navLinks = document.querySelectorAll('nav a');
+
+
+
+// Ask the question; How can I input new text using forEach with it saying object object
+// navLinks.forEach(link => {
+//    link.textContent = siteContent["nav"]["nav-item-1"];
+// });
+
+// image of logo
+const logoSrc = siteContent["images"]["logo-img"];
+const headerImage = document.querySelector('header img');
+headerImage.setAttribute('src', logoSrc);
+
+//image of cta
+const ctaSrc = siteContent["images"]["cta-img"];
+const ctaImage = document.querySelector('.cta img');
+ctaImage.setAttribute('src', ctaSrc);
+
+//accent img
+const accentSrc = siteContent["images"]["accent-img"];
+const accentImage = document.querySelector('.main-content img');
+accentImage.setAttribute('src', accentSrc);
+
+//footer
