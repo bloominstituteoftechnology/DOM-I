@@ -40,3 +40,26 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+const links = document.querySelectorAll('nav a');
+
+links.forEach(link => link.classList.add('italic'));
+
+links[0].textContent = 'Services';
+links[1].textContent = 'Product';
+links[2].textContent = 'Vision';
+links[3].textContent = 'Features';
+links[4].textContent = 'About';
+links[5].textContent = 'Contact';
+
+const h1 = document.querySelector('h1');
+h1.textContent = siteContent.cta.h1;
+const button = document.querySelector('button');
+button.textContent = siteContent.cta.button;
+
+const logo = document.querySelector('#logo-img');
+logo.src = siteContent.images["logo-img"];
+const cta = document.querySelector('#cta-img');
+cta.src = siteContent.images["cta-img"];
+const accent = document.querySelector('#middle-img');
+accent.src = siteContent.images["accent-img"];
