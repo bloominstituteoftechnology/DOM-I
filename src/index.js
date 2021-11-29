@@ -132,3 +132,5 @@ contact3.textContent = siteContent.contact.email;
 
 const footer = document.querySelector("footer a");
 footer.textContent = siteContent.footer.copyright;
+
+footer.classList.add("bold");
