@@ -40,3 +40,47 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+const links = document.querySelectorAll('nav a');
+
+links.forEach(link => link.classList.add('italic'));
+
+links[0].textContent = 'Services';
+links[1].textContent = 'Product';
+links[2].textContent = 'Vision';
+links[3].textContent = 'Features';
+links[4].textContent = 'About';
+links[5].textContent = 'Contact';
+
+const h1 = document.querySelector('h1');
+h1.textContent = siteContent.cta.h1;
+const button = document.querySelector('button');
+button.textContent = siteContent.cta.button;
+
+const logo = document.querySelector('#logo-img');
+logo.src = siteContent.images["logo-img"];
+const cta = document.querySelector('#cta-img');
+cta.src = siteContent.images["cta-img"];
+const accent = document.querySelector('#middle-img');
+accent.src = siteContent.images["accent-img"];
+
+const paras = document.querySelectorAll('.text-content p');
+const h4Content = document.querySelectorAll('.text-content h4');
+
+h4Content[0].textContent = siteContent["main-content"]["features-h4"];
+h4Content[1].textContent = siteContent["main-content"]["about-h4"];
+h4Content[3].textContent = siteContent["main-content"]["product-h4"];
+h4Content[2].textContent = siteContent["main-content"]["services-h4"];
+h4Content[4].textContent = siteContent["main-content"]["vision-h4"];
+
+paras[0].textContent = siteContent["main-content"]["features-content"];
+paras[1].textContent = siteContent["main-content"]['about-content'];
+paras[2].textContent = siteContent["main-content"]['services-content'];
+paras[3].textContent = siteContent["main-content"]['product-content'];
+paras[4].textContent = siteContent["main-content"]['vision-content'];
+
+const footer = document.querySelector('footer a');
+footer.textContent = siteContent.footer.copyright;
+footer.classList.add('bold');
+
+console.log(h4Content);
