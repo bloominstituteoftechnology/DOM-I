@@ -41,8 +41,14 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 
 console.log('project wired!')
 
-const navLinkSrc = siteContent["nav"]
+//Nav
+
 const navLinks = document.querySelectorAll('nav a');
+const linkTexts = Object.values(siteContent.nav);
+
+navLinks.forEach(function(link, idx){
+  link.textContent = linkTexts[idx];
+});
 
 
 
@@ -112,3 +118,14 @@ const visionText = bottomContent.querySelector('.text-content:nth-of-type(3) h4'
 const visionPara = bottomContent.querySelector('.text-content:nth-of-type(3) p');
 visionText.textContent = siteContent["main-content"]["vision-h4"];
 visionPara.textContent = siteContent["main-content"]["vision-content"];
+
+//contact 
+const contactPush = document.querySelector('.contact');
+const contactH4 = contactPush.querySelector('h4');
+const contactAddress = contactPush.querySelector('p:nth-of-type(1)');
+const contactPhone = contactPush.querySelector('p:nth-of-type(2)');
+const contactEmail = contactPush.querySelector('p:nth-of-type(3)');
+contactH4.textContent = siteContent["contact"]["contact-h4"]
+contactAddress.textContent = siteContent["contact"]["address"]
+contactPhone.textContent = siteContent["contact"]["phone"]
+contactEmail.textContent = siteContent["contact"]["email"]
