@@ -1,3 +1,5 @@
+const { updateExpression } = require("@babel/types");
+
 const siteContent = { // DO NOT CHANGE THIS OBJECT
   "nav": {
     "nav-item-1": "Services",
@@ -40,3 +42,43 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+ 
+let logo = document.getElementById('logo-img');
+logo.setAttribute('src', siteContent['nav']['img-src']);
+
+const links = document.querySelectorAll('a');
+
+links.forEach((currentValue, i) => (currentValue.textContent =
+  Object.values(siteContent.nav)[i]));
+
+links.forEach((item) => (item.style.color='green'));
+
+const addLink = document.querySelector('nav');
+
+const newAtag = document.createElement('a');
+newAtag.textContent = 'Outreach';
+newAtag.href = '#';
+newAtag.style.color = 'green';
+addLink.appendChild(newAtag);
+
+const newH3 = document.createElement('h3');
+newH3.textContent = 'Navigation';
+newH3.style.fontSize = '20px';
+addLink.prepend(newH3);
+
+const ctaH1 = document.querySelectorAll('h1');
+ctaH1[0].innerHTML = siteContent.cta.button;
+
+const btn = document.querySelectorAll('button');
+btn[0].textContent = siteContent.cta.button;
+
+const ctaImg = document.getElementById('cta-img');
+ctaImg.src = siteContent.cta['img-src'];
+
+const topH4 = document.querySelectorAll('h4');
+topH4[0].textContent = siteContent['main-content']['features-h4'];
+topH4[1].textContent = siteContent['main-content']['about-h4'];
+topH4[2].textContent = siteContent['main-content']['services-h4'];
+topH4[3].textContent = siteContent['main-content']['product-h4'];
+topH4[4].textContent = siteContent['main-content']['vision-h4'];
+topH4[5].textContent = siteContent['contact']['contact-h4'];
