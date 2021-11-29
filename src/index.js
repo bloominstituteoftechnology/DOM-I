@@ -39,4 +39,27 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
   },
 };
 
-console.log('project wired!')
+
+//Nav Links
+const links = document.querySelectorAll('nav a');
+console.log(links);
+
+const navigationLinks = Array.from(links); // creating an array from links
+
+navigationLinks[0].textContent = siteContent['nav']['nav-item-1'];
+navigationLinks[1].textContent = siteContent['nav']['nav-item-2'];
+navigationLinks[2].textContent = siteContent['nav']['nav-item-3'];
+navigationLinks[3].textContent = siteContent['nav']['nav-item-4'];
+navigationLinks[4].textContent = siteContent['nav']['nav-item-5'];
+navigationLinks[5].textContent = siteContent['nav']['nav-item-6'];
+
+navigationLinks.forEach(i => i.className = 'italic'); // Creating a class name for each aNav
+
+//Nav Img 
+const header = document.querySelector('header')
+const logoNav = header.querySelector('img');
+
+logoNav.src =  'http://localhost:9000/img/logo.png';
+
+console.log('project wired!');
+console.log('Umm Hello is this working!?')
