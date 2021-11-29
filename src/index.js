@@ -33,12 +33,18 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
     "copyright": "Copyright Great Idea! 2021",
   },
   "images": {
-    "logo-img": "http://localhost:9000/img/logo.png",
-    "cta-img": "http://localhost:9000/img/cta.png",
-    "accent-img": "http://localhost:9000/img/accent.png",
+    "logo-img": "mocks/img/logo.png",
+    "cta-img": "mocks/img/cta.png",
+    "accent-img": "mocks/img/accent.png",
   },
 };
 
 console.log('project wired!')
 
-const nav = document.getElementById("nav");
+const nav = document.querySelector('nav');
+const cta = document.querySelector('cta');
+const main = document.querySelector('main-content');
+const contact = document.querySelector('contact');
+const footer = document.querySelector('footer');
+const images = document.querySelector('images');
+
