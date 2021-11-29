@@ -92,3 +92,23 @@ const secondPara = topContent.querySelector('.text-content:nth-of-type(2) p');
 secondText.textContent = siteContent["main-content"]["about-h4"];
 secondPara.textContent = siteContent["main-content"]["about-content"];
 
+//bottom-content
+//service
+const bottomContent = document.querySelector(".bottom-content");
+const serviceText = bottomContent.querySelector('.text-content:nth-of-type(1) h4');
+const servicePara = bottomContent.querySelector('.text-content:nth-of-type(1) p');
+serviceText.textContent = siteContent["main-content"]["services-h4"];
+servicePara.textContent = siteContent["main-content"]["services-content"];
+
+//product 
+const productText = bottomContent.querySelector('.text-content:nth-of-type(2) h4');
+const productPara = bottomContent.querySelector('.text-content:nth-of-type(2) p');
+productText.textContent = siteContent["main-content"]["product-h4"];
+productPara.textContent = siteContent["main-content"]["product-content"];
+
+
+//vision
+const visionText = bottomContent.querySelector('.text-content:nth-of-type(3) h4');
+const visionPara = bottomContent.querySelector('.text-content:nth-of-type(3) p');
+visionText.textContent = siteContent["main-content"]["vision-h4"];
+visionPara.textContent = siteContent["main-content"]["vision-content"];
