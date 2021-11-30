@@ -110,14 +110,33 @@ const productContent = document.querySelector(
 );
 productContent.textContent = siteContent["main-content"]["product-content"];
 
+function nthOfType(selector, index) {
+  return selector + `:nth-of-type(${index})`;
+}
+
 const vision = document.querySelector(
-  ".bottom-content .text-content:nth-of-type(3) h4"
+  `.bottom-content ${nthOfType(".text-content", 3)} h4`
 );
 vision.textContent = siteContent["main-content"]["vision-h4"];
 const visionContent = document.querySelector(
   ".bottom-content .text-content:nth-of-type(3) p"
 );
 visionContent.textContent = siteContent["main-content"]["vision-content"];
-
+// Adding footer
 const footerContent = document.querySelector("footer a");
 footerContent.textContent = siteContent["footer"]["copyright"];
+//Adding the className for the footer
+const classFooter = document.querySelector("footer a");
+classFooter.classList.add("bold");
+// Adding Contact section
+const contact = document.querySelector("section.contact h4");
+contact.textContent = siteContent["contact"]["contact-h4"];
+//---Adding address
+const addressInfo = document.querySelector(".contact p:nth-of-type(1) ");
+addressInfo.textContent = siteContent["contact"]["address"];
+//----Adding phone number
+const phoneInfo = document.querySelector(".contact p:nth-of-type(3) ");
+phoneInfo.textContent = siteContent["contact"]["phone"];
+//=====Adding email
+const emailInfo = document.querySelector(".contact p:nth-of-type(2) npm");
+emailInfo.textContent = siteContent["contact"]["email"];
