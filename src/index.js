@@ -73,11 +73,11 @@ h1.textContent = siteContent.cta.h1;
 const getStartedButton = document.querySelector('.cta-text button');
 getStartedButton.textContent = siteContent.cta.button;
 
-const features = document.querySelector('.text-content h4');
-features.textContent = siteContent["main-content"]['features-h4'];
+// const features = document.querySelector('.text-content h4');
+// features.textContent = siteContent["main-content"]['features-h4'];
 
-const featContent = document.querySelector('.text-content p')
-featContent.textContent = siteContent['main-content']['features-content'];
+// const featContent = document.querySelector('.text-content p')
+// featContent.textContent = siteContent['main-content']['features-content'];
 
 // const about = document.querySelector('.main-content h4');
 // about.textContent = siteContent['main-content']['about-h4']
@@ -96,3 +96,21 @@ contact.children[0].textContent = siteContent.contact['contact-h4']
 contact.children[1].textContent = siteContent.contact['address']
 contact.children[2].textContent = siteContent.contact['phone']
 contact.children[3].textContent = siteContent.contact['email']
+
+// Top Content
+const topContent = document.querySelector('.top-content')
+topContent.children[0].children[0].textContent = siteContent['main-content']['features-h4']
+topContent.children[0].children[1].textContent = siteContent['main-content']['features-content']
+topContent.children[1].children[0].textContent = siteContent['main-content']['about-h4']
+topContent.children[1].children[1].textContent = siteContent['main-content']['about-content']
+
+// Bottom Content
+const bottomContent = document.querySelector('.bottom-content')
+const h4sBottom = bottomContent.querySelectorAll('h4')
+h4sBottom[0].textContent = siteContent['main-content']['services-h4']
+h4sBottom[1].textContent = siteContent['main-content']['product-h4']
+h4sBottom[2].textContent = siteContent['main-content']['vision-h4']
+const bottomP = bottomContent.querySelectorAll('p')
+bottomP[0].textContent = siteContent['main-content']['services-content']
+bottomP[1].textContent = siteContent['main-content']['product-content']
+bottomP[2].textContent = siteContent['main-content']['vision-content']
