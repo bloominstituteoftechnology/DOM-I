@@ -1,3 +1,5 @@
+const { text } = require("express");
+
 const siteContent = { // DO NOT CHANGE THIS OBJECT
   "nav": {
     "nav-item-1": "Services",
@@ -40,3 +42,73 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+const atags = document.querySelectorAll('nav a');
+const atagsarray = Array.from(atags);
+const navServices = document.querySelector('.nav-item-1');
+const navProduct = document.querySelector('.nav-item-2');
+const navVision = document.querySelector('.nav-item-3');
+const navFeatures = document.querySelector('.nav-item-4');
+const navAbout = document.querySelector('.nav-item-5');
+const navContact = document.querySelector('.nav-item-6');
+
+navServices.textContent = siteContent['nav']['nav-item-1']
+navProduct.textContent = siteContent['nav']['nav-item-2']
+navVision.textContent = siteContent['nav']['nav-item-3']
+navFeatures.textContent = siteContent['nav']['nav-item-4']
+navAbout.textContent = siteContent['nav']['nav-item-5']
+navContact.textContent = siteContent['nav']['nav-item-6']
+
+const navtag = document.querySelector('nav');
+navtag.textContent = 'nav';
+
+let h1text =document.getElementsByTagName("h1");
+h1text.setAttribute(textContent, siteContent["cta"]["h1"]);
+
+let buttontext =document.getElementsByTagName("button");
+buttontext.setAttribute(textContent, siteContent["cta"]["button"]);
+
+let Features =document.getElementsByClassName("text-content");
+Features.h4.textContent = siteContent["main-content"]["features-h4"];
+Features.p.textContent = siteContent["main-content"]["features-content"];
+
+let About =document.getElementsByTagClass("text-content2");
+About.h4.textContent = siteContent["main-content"]["about-h4"];
+About.p.textContent = siteContent["main-content"]["about-content"];
+
+let Services =document.getElementsByClassName("text-Content3");
+Services.h4.textContent = siteContent["main-content"]["services-h4"];
+Services.p.textContent = siteContent["main-content"]["services-content"];
+
+let Product =document.getElementsByClassName("text-Content4");
+Product.h4.textContent = siteContent["main-content"]["product-h4"];
+Product.p.textContent = siteContent["main-content"]["product-content"];
+
+
+let Vision =document.getElementsByClassName("text-Content5");
+Vision.h4.textContent = siteContent["main-content"]["vision-h4"];
+Vision.p.textContent = siteContent["main-content"]["vision-content"];
+
+let Contact =document.getElementsByClassName("contact");
+Contact.h4.textContent = siteContent["contact"]["contact-h4"];
+Contact.p.textContent = siteContent["contact"]["address"];
+Contact.p.textContent = siteContent["contact"]["phone"];
+Contact.p.textContent = siteContent["contact"]["email"];
+
+let Footer = document.getElementsByTagName("footer");
+Footer.textContent = siteContent["footer"]["copyright"];
+
+let navClass = document.getElementsByTagName("a");
+navClass.setAttribute(class, "italic");
+
+let FooterClass = document.getElementsByTagName("footer");
+FooterClass.setAttribute(class, "bold");
+
+let logo = document.getElementsById("logo-img");
+logo.setAttribute("src", siteContent["images"]["logo-img"]);
+
+let cta = document.getElementsById("cta-img");
+cta.setAttribute("src", siteContent["images"]["cta-img"]);
+
+let midimg = document.getElementsById("middle-img");
+midimg.setAttribute("src", siteContent["images"]["middle-img"]);
