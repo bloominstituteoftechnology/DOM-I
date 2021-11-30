@@ -72,3 +72,49 @@ const ctaImg = document.querySelector("#cta-img");
 ctaImg.src = siteContent["images"]["cta-img"];
 const middleImage = document.querySelector("#middle-img");
 middleImage.src = siteContent["images"]["accent-img"];
+// add class name Italic
+const classNav = document.querySelectorAll("nav a ");
+classNav.forEach((el) => (el.className = "italic"));
+
+//Selector for h1 and button
+const ctaHeader = document.querySelector("h1");
+ctaHeader.textContent = siteContent["cta"]["h1"];
+const ctaButton = document.querySelector("button");
+ctaButton.textContent = siteContent["cta"]["button"];
+
+const features = document.querySelector(".top-content:nth-of-type(1) h4");
+features.textContent = siteContent["main-content"]["features-h4"];
+const featuresContent = document.querySelector(".top-content:nth-of-type(1) p");
+featuresContent.textContent = siteContent["main-content"]["features-content"];
+
+const about = document.querySelector(".text-content:nth-of-type(2) h4");
+about.textContent = siteContent["main-content"]["about-h4"];
+const aboutContent = document.querySelector(".text-content:nth-of-type(2) p");
+aboutContent.textContent = siteContent["main-content"]["about-content"];
+
+const services = document.querySelector(
+  ".bottom-content .text-content:nth-of-type(1) h4"
+);
+services.textContent = siteContent["main-content"]["services-h4"];
+const servicesContent = document.querySelector(
+  ".bottom-content .text-content:nth-of-type(1) p"
+);
+servicesContent.textContent = siteContent["main-content"]["services-content"];
+
+const product = document.querySelector(
+  ".bottom-content .text-content:nth-of-type(2) h4"
+);
+product.textContent = siteContent["main-content"]["product-h4"];
+const productContent = document.querySelector(
+  ".bottom-content .text-content:nth-of-type(2) p"
+);
+productContent.textContent = siteContent["main-content"]["product-content"];
+
+const vision = document.querySelector(
+  ".bottom-content .text-content:nth-of-type(3) h4"
+);
+vision.textContent = siteContent["main-content"]["vision-h4"];
+const visionContent = document.querySelector(
+  ".bottom-content .text-content:nth-of-type(3) p"
+);
+visionContent.textContent = siteContent["main-content"]["vision-content"];
