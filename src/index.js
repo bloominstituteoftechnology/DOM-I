@@ -104,5 +104,5 @@ contactDetailsArr[1].textContent = siteContent.contact.phone;
 contactDetailsArr[2].textContent = siteContent.contact.email;
 
 // footer
-const footer = querySelector('footer a');
-
+const footer = document.querySelector('footer a');
+footer.textContent = siteContent.footer.copyright;
