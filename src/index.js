@@ -43,15 +43,29 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 
 // --------------------Top Content---------------------- //
 const topContent = document.querySelector('.top-content');
+
 topContent.children[0].children[0].textContent = siteContent['main-content']['features-h4'];
 topContent.children[0].children[1].textContent = siteContent['main-content']['features-content'];
 
 topContent.children[1].children[0].textContent = siteContent['main-content']['about-h4'];
-topContent.children[1].children[1].textContent = siteContent['main-content']['about-content'];
+topContent.children[1].children[1].textContent = siteContent['main-content']['product-content'];
 
+// --------------------Bottom Content---------------------- //
+const bottomContent = document.querySelector('.bottom-content');
+const bottomH4 = bottomContent.querySelectorAll('h4');
+const bottomP = bottomContent.querySelectorAll('p');
+
+bottomH4[0].textContent = siteContent['main-content']['services-h4'];
+bottomH4[1].textContent = siteContent['main-content']['product-h4'];
+bottomH4[2].textContent = siteContent['main-content']['vision-h4'];
+
+bottomP[0].textContent = siteContent['main-content']['services-content'];
+bottomP[1].textContent = siteContent['main-content']['product-content'];
+bottomP[2].textContent = siteContent['main-content']['vision-content'];
 
 // --------------------Contact---------------------- //
 const contact = document.querySelector('section.contact');
+
 contact.children[0].textContent = siteContent.contact['contact-h4'];
 contact.children[1].textContent = siteContent.contact['address'];
 contact.children[2].textContent = siteContent.contact['phone'];
@@ -59,6 +73,7 @@ contact.children[3].textContent = siteContent.contact['email'];
 
 // --------------------Footer---------------------- //
 const footerLink = document.querySelector('footer a');
+
 footerLink.textContent = siteContent.footer.copyright;
 footerLink.classList.add('bold');
 
