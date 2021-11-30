@@ -52,19 +52,6 @@ cta.querySelector("h1").innerHTML = siteContent.cta.h1;
 
 cta.querySelector("button").innerHTML = siteContent.cta.button;
 
-//turning nodeList into array
-
-// const linksRealArray = Array.from(links);
-// console.log(linksRealArray);
-
-// let nav = document.querySelectorAll("nav a");
-// nav.forEach(
-//   (item, index) =>
-//     (item.textContent = siteContent[".italic"][`nav-item-${index + 1}`])
-// );
-
-const mainContent = document.querySelector[".main-content"];
-l;
 //Images
 const logoImg = document.querySelector("#logo-img");
 logoImg.src = siteContent.images["logo-img"];
@@ -96,4 +83,21 @@ navLink.classList.add("italic");
 
 //contact
 const contact = document.querySelector("section.contact");
-contact.children[0];
+contact.children[0].textContent = siteContent.contact["contact-h4"];
+// contact.querySelector('h4').textContent = siteContent.contact['contact-h4']
+contact.children[1].textContent = siteContent.contact["address"];
+contact.children[2].textContent = siteContent.contact["phone"];
+contact.children[3].textContent = siteContent.contact["email"];
+// contact.querySelector("p:nth-of-type(2)").textContent =
+//   siteContent.contact["email"];
+
+//Top content
+const topContent = document.querySelector(".top-content");
+topContent.children[0].children[0].textContent =
+  siteContent["main-content"]["features-h4"];
+topContent.children[0].children[1].textContent =
+  siteContent["main-content"]["features-content"];
+topContent.children[1].children[0].textContent =
+  siteContent["main-content"]["about-h4"];
+topContent.children[1].children[1].textContent =
+  siteContent["main-content"]["about-content"];
