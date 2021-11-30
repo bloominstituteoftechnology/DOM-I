@@ -45,6 +45,7 @@ const navLinks = document.querySelectorAll('nav a');
 const linkTexts = Object.values(siteContent.nav);
 navLinks.forEach(function(link, idx){
   link.textContent = linkTexts[idx];
+  link.classList.add('italic');
 });
 
 //logo
@@ -79,5 +80,15 @@ topContent.children[0].children[0].textContent = siteContent['main-content']['fe
 topContent.children[0].children[1].textContent = siteContent['main-content']['features-content'];
 topContent.children[1].children[0].textContent = siteContent['main-content']['about-h4'];
 topContent.children[1].children[1].textContent = siteContent['main-content']['about-content'];
+
+const bottomContent = document.querySelector('.bottom-content');
+const h4sbottom = bottomContent.querySelectorAll('h4');
+h4sbottom[0].textContent = siteContent['main-content']['about-content'];
+h4sbottom[1].textContent = siteContent['main-content']['product-h4'];
+h4sbottom[2].textContent = siteContent['main-content']['vision-h4'];
+const psBottom = bottomContent.querySelectorAll('p');
+psBottom[0].textContent = siteContent['main-content']['services-content'];
+psBottom[1].textContent = siteContent['main-content']['product-content'];
+psBottom[2].textContent = siteContent['main-content']['vision-content'];
 
 
