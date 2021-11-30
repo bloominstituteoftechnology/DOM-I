@@ -52,20 +52,16 @@ cta.querySelector("h1").innerHTML = siteContent.cta.h1;
 
 cta.querySelector("button").innerHTML = siteContent.cta.button;
 
-//changing class name to italic on nav a
-
-const links = document.querySelectorAll("nav a");
-
 //turning nodeList into array
 
-const linksRealArray = Array.from(links);
-console.log(linksRealArray);
+// const linksRealArray = Array.from(links);
+// console.log(linksRealArray);
 
-let nav = document.querySelectorAll("nav a");
-nav.forEach(
-  (item, index) =>
-    (item.textContent = siteContent[".italic"][`nav-item-${index + 1}`])
-);
+// let nav = document.querySelectorAll("nav a");
+// nav.forEach(
+//   (item, index) =>
+//     (item.textContent = siteContent[".italic"][`nav-item-${index + 1}`])
+// );
 
 const mainContent = document.querySelector[".main-content"];
 l;
@@ -87,4 +83,17 @@ midImg.src = siteContent.images["accent-img"];
 // const accentImg = document.getElementById("accent-img");
 // logoImg.src = "http://localhost:9000/img/accent.png";
 
-console.log(siteContent.nav["nav-item-1"]);
+//footer
+
+const footerLink = document.querySelector("footer a");
+footerLink.textContent = siteContent.footer.copyright;
+footerLink.classList.add("bold");
+
+//nav link Give the anchor tags _inside the nav_ an italic style by adding the classname `italic` to them alone.
+
+const navLink = document.querySelector("nav a");
+navLink.classList.add("italic");
+
+//contact
+const contact = document.querySelector("section.contact");
+contact.children[0];
