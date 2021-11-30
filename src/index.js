@@ -65,8 +65,17 @@ console.log(mainTitleImg);
 mainTitleImg.src = siteContent.images['cta-img'];
 
 //main content
-const featuresHeading = document.querySelector('.main content h4');
-features.textContent = siteContent['main-content']['features-h4'];
+const featuresHeading = document.querySelector('.main-content h4');
+featuresHeading.textContent = siteContent['main-content']['features-h4'];
+
+const featuresContent = document.querySelector('.main-content p');
+featuresContent.textContent = siteContent['main-content']['features-content'];
+
+const aboutHeading = document.querySelector('.main-content h4');
+aboutHeading.textContent =siteContent['main-content']['about-h4'];
+
+const accentImg = document.querySelector('.middle-img');
+accentImg.src = siteContent.images['accent-img'];
 
 
 
