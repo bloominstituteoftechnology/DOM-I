@@ -40,3 +40,55 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+// navigation
+const nav = document.querySelectorAll('nav a');
+const linkTexts = Object.values(siteContent.nav)
+nav.forEach((link, idx)=> link.textContent = linkTexts[idx]);
+console.log(nav);
+
+// logo
+const logo = document.querySelector('#logo-img');
+logo.setAttribute('src', siteContent.images['logo-img']);
+
+// cta
+const callToAction = document.querySelector('h1');
+callToAction.textContent = siteContent.cta.h1;
+
+// button
+const button = document.querySelector('button');
+button.textContent = siteContent.cta.button;
+
+// cta image
+const ctaImg = document.querySelector('#cta-img');
+ctaImg.setAttribute('src', siteContent.images['cta-img']);
+
+// top content headers
+const topContentHeaders = document.querySelectorAll('.top-content .text-content h4')
+const topHeaderArr = Array.from(topContentHeaders);
+topHeaderArr[0].textContent = siteContent['main-content']['features-h4'];
+topHeaderArr[1].textContent = siteContent['main-content']['about-h4'];
+
+// top content
+const topContent = document.querySelectorAll('.top-content .text-content p');
+const topContentArr = Array.from(topContent);
+topContentArr[0].textContent = siteContent['main-content']['features-content'];
+topContentArr[1].textContent = siteContent['main-content']['about-content'];
+
+// middle img
+const midImg = document.querySelector('#middle-img')
+midImg.setAttribute('src', siteContent.images['accent-img']);
+
+// bottom content headers
+const bottomContentHeaders = document.querySelectorAll('.bottom-content .text-content h4')
+const bottomHeaderArr = Array.from(bottomContentHeaders);
+bottomHeaderArr[0].textContent = siteContent['main-content']['services-h4'];
+bottomHeaderArr[1].textContent = siteContent['main-content']['product-h4'];
+bottomHeaderArr[2].textContent = siteContent['main-content']['vision-h4'];
+
+// bottom content
+const bottomContent = document.querySelectorAll('.bottom-content .text-content p');
+const bottomContentArr = Array.from(bottomContent);
+bottomContentArr[0].textContent = siteContent['main-content']['services-content'];
+bottomContentArr[1].textContent = siteContent['main-content']['product-content'];
+bottomContentArr[2].textContent = siteContent['main-content']['vision-content'];
