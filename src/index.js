@@ -44,26 +44,47 @@ const siteContent = {
     "accent-img": "http://localhost:9000/img/accent.png",
   },
 };
+//this alters the text of the button and h1 to match the example
+
 let cta = document.querySelector(".cta");
+
 cta.querySelector("h1").innerHTML = siteContent.cta.h1;
+
 cta.querySelector("button").innerHTML = siteContent.cta.button;
 
-let navSel = document.querySelectorAll(".italic");
-navSel.querySelector("nav a").textContent = siteContent.nav["nav-item-1"];
-navSel.querySelector("nav a").textContent = siteContent.nav["nav-item-2"];
-navSel.querySelector("nav a").textContent = siteContent.nav["nav-item-3"];
-navSel.querySelector("nav a").textContent = siteContent.nav["nav-item-4"];
-navSel.querySelector("nav a").textContent = siteContent.nav["nav-item-5"];
-navSel.querySelector("nav a").textContent = siteContent.nav["nav-item-6"];
+//changing class name to italic on nav a
+
+const links = document.querySelectorAll("nav a");
+
+//turning nodeList into array
+
+const linksRealArray = Array.from(links);
+console.log(linksRealArray);
+
+let nav = document.querySelectorAll("nav a");
+nav.forEach(
+  (item, index) =>
+    (item.textContent = siteContent[".italic"][`nav-item-${index + 1}`])
+);
 
 const mainContent = document.querySelector[".main-content"];
+l;
+//Images
+const logoImg = document.querySelector("#logo-img");
+logoImg.src = siteContent.images["logo-img"];
 
-const mainImg = document.getElementById("cta-img");
-mainImg.src = "http://localhost:9000/img/cta.png";
-const logoImg = document.getElementById("logo-img");
-logoImg.src = "http://localhost:9000/img/logo.png";
+const ctaImg = document.querySelector("#cta-img");
+ctaImg.src = siteContent.images["cta-img"];
 
-const accentImg = document.getElementById("accent-img");
-logoImg.src = "http://localhost:9000/img/accent.png";
+const midImg = document.querySelector("#middle-img");
+midImg.src = siteContent.images["accent-img"];
+
+// const mainImg = document.getElementById("cta-img");
+// mainImg.src = "http://localhost:9000/img/cta.png";
+// const logoImg = document.getElementById("logo-img");
+// logoImg.src = "http://localhost:9000/img/logo.png";
+
+// const accentImg = document.getElementById("accent-img");
+// logoImg.src = "http://localhost:9000/img/accent.png";
 
 console.log(siteContent.nav["nav-item-1"]);
