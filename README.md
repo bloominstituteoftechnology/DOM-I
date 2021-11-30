@@ -1,50 +1,57 @@
-# DOM I
+# DOM I - JavaScript Content Management System
 
 ## Project Description
 
 You are going to be emulating a content management system by controlling the content in the JavaScript file instead of the HTML file. This project is an exercise pointed at selecting elements and then updating them without touching the HTML file using the DOM.
 
-Compare `src/index.html` against `src/original.html` and notice how `index.html` is lacking text content and other things. The goal is to make the page look the same as `original.html` using JavaScript. You can find a screenshot of the goal in `src/design-files/desktop-example.png`.
+Compare `index.html` against `original.html` and notice how `index.html` is lacking text content and other things. The goal is to make the page look the same as `original.html` using JavaScript.
 
-Inside `src/index.js` there is declared an object literal containing all the data needed to make the page look like the screenshot. Do not change this object! Below the declaration you should perform your DOM manipulations. Typically you would select an element and then use the data inside the object to add text content to it, or to change its attributes. Access the data using dot or square-bracket notation.
+You have been provided a [JSON object](js/index.js) with all the necessary data to accomplish this task.  Use dot or bracket notation to traverse the data provided.
 
-**THE MOST IMPORTANT RULE: You cannot update the HTML file directly. You must use JavaScript alone.**
+**ONE RULE: You cannot update the HTML or CSS files directly.  You must use JavaScript and the DOM only for your tasks today.**
 
-## Git Setup
+## Instructions
 
-* [ ] Create a forked copy of this project.
-* [ ] Clone your OWN version of the repository.
-* [ ] Create a new branch: `git checkout -b <firstName-lastName>`.
-* [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-* [ ] Push commits: `git push origin <firstName-lastName>`.
+### Task 1: Set Up The Project With Git
 
-## Running the project
+**Follow these steps to set up and work on your project:**
 
-* [ ] Run `npm install` to download the project's dependencies.
-* [ ] Run `npm start` to launch the page on `http://localhost:3000`.
-* [ ] Run `npm test` to execute auto tests against your work (you'll need a new terminal window).
+* [x ] Create a forked copy of this project.
+* [x ] Clone your OWN version of the repository (Not Lambda's by mistake!).
+* [x ] Create a new branch: git checkout -b `<firstName-lastName>`.
+* [x ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+* [x ] Push commits: git push origin `<firstName-lastName>`.
 
-## MVP
+### Task 2a: MVP
 
-### Create selectors to access the relevant elements
+#### Create selectors to point your data into elements
 
-* [ ] Declare variables pointing to the relevant DOM elements, using any of the selectors you have learned.
+* [ ] Create selectors by using any of the DOM element's methods
+* [ ] Note that IDs have been used on all images. Use the IDs to update src path content
 
-### Add text contents
+#### Update the HTML with the JSON data
 
-* [ ] Using your selectors, update the text contents of the relevant elements, matching the design file.
-* [ ] Find the correct texts for the elements inside the data object in `src/index.js`.
+* [ ] Remember, NO direct updating of the HTML source is allowed.
+* [ ] Using your selectors, update the content to match the example file.
+* [ ] Remember to update the src attributes on images
 
-### Add class names
+#### Add new content
 
-* [ ] Give the anchor tags _inside the nav_ an italic style by adding the classname `italic` to them alone.
-* [ ] Give the anchor tag _inside the footer_ a bolder appearence by adding the classname `bold` to it alone.
+* [ ] Change the color of the navigation text to be green.
+* [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
+* [ ] Check your work by looking at the [original html](original.html) in the browser
 
-### Add image sources
+### Task 3: Stretch
 
-* [ ] Make the img tags on the page display the correct images by editing their `src` attribute.
-* [ ] Find the correct URLs for the images inside the data object in `src/index.js`.
+* [ ] Update styles throughout the page as you see fit. Study what happens when you updated the DOM using style in JavaScript.  
+* [ ] Study tomorrow's lesson on events and try to integrate a button that can update content on the site with a click of a button.  You could build a similar data object with new values to help you test the click event.
+
+#### Stretch Project: Digital Timer
+
+This project is heavier on logic but employs some DOM manipulation to achieve its goals.  Go check it out here: [stretch assignment](stretch-assignment) and see how far you can get.
 
 ## Submission Format
 
-* [ ] Submit a pull request to merge `<firstName-lastName>` Branch into `main`.
+**Follow these steps for completing your project.**
+
+* [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's  Repo). **Please don't merge your own pull request**
