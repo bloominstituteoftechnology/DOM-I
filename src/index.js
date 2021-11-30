@@ -81,6 +81,7 @@ const ctaHeader = document.querySelector("h1");
 ctaHeader.textContent = siteContent["cta"]["h1"];
 const ctaButton = document.querySelector("button");
 ctaButton.textContent = siteContent["cta"]["button"];
+//---Adding top content
 
 const features = document.querySelector(".top-content:nth-of-type(1) h4");
 features.textContent = siteContent["main-content"]["features-h4"];
@@ -91,7 +92,7 @@ const about = document.querySelector(".text-content:nth-of-type(2) h4");
 about.textContent = siteContent["main-content"]["about-h4"];
 const aboutContent = document.querySelector(".text-content:nth-of-type(2) p");
 aboutContent.textContent = siteContent["main-content"]["about-content"];
-
+//---adding bottom-content
 const services = document.querySelector(
   ".bottom-content .text-content:nth-of-type(1) h4"
 );
@@ -122,21 +123,21 @@ const visionContent = document.querySelector(
   ".bottom-content .text-content:nth-of-type(3) p"
 );
 visionContent.textContent = siteContent["main-content"]["vision-content"];
-// Adding footer
+// -----Adding footer-----------
 const footerContent = document.querySelector("footer a");
 footerContent.textContent = siteContent["footer"]["copyright"];
-//Adding the className for the footer
+//------Adding the className for the footer----------
 const classFooter = document.querySelector("footer a");
 classFooter.classList.add("bold");
-// Adding Contact section
+//------ Adding Contact section-------
 const contact = document.querySelector("section.contact h4");
 contact.textContent = siteContent["contact"]["contact-h4"];
-//---Adding address
+//------Adding address-------
 const addressInfo = document.querySelector(".contact p:nth-of-type(1) ");
 addressInfo.textContent = siteContent["contact"]["address"];
-//----Adding phone number
+//----Adding phone number------
 const phoneInfo = document.querySelector(".contact p:nth-of-type(3) ");
 phoneInfo.textContent = siteContent["contact"]["phone"];
-//=====Adding email
-const emailInfo = document.querySelector(".contact p:nth-of-type(2) npm");
+//------Adding email-------
+const emailInfo = document.querySelector(".contact p:nth-of-type(2) ");
 emailInfo.textContent = siteContent["contact"]["email"];
