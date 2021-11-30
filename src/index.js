@@ -53,6 +53,7 @@ const linkTexts = Object.values(siteContent.nav)
 console.log(linkTexts)
 navLinks.forEach(function(link, idx){
   link.textContent = linkTexts[idx]
+  link.classList.add('italic')
 });
 
 // Images
