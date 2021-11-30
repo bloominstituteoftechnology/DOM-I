@@ -69,6 +69,24 @@ mainContent.children[0].children[0].children[1].textContent = siteContent['main-
 mainContent.children[0].children[1].children[0].textContent = siteContent['main-content']['about-h4']
 mainContent.children[0].children[1].children[1].textContent = siteContent['main-content']['about-content'];
 
-mainContent.children[2].children[0].children[0].textContent = siteContent["main-content"]["product-h4"]
-mainContent.children[2].children[0].children[1].textContent = siteContent["main-content"]["product-content"]
+const bottomContent = document.querySelector('.bottom-content')
 
+bottomContent.children[0].children[0].textContent = siteContent["main-content"]["product-h4"]
+bottomContent.children[0].children[1].textContent = siteContent["main-content"]["product-content"];
+
+bottomContent.children[1].children[0].textContent = siteContent['main-content']['vision-h4']
+bottomContent.children[1].children[1].textContent = siteContent['main-content']['vision-content']
+
+// navigation 
+const container = document.querySelectorAll('nav a');
+const newArr = Array.from(container)
+newArr[0].textContent = siteContent.nav['nav-item-1']
+newArr[1].textContent = siteContent.nav['nav-item-2']
+newArr[2].textContent = siteContent.nav['nav-item-3']
+newArr[3].textContent = siteContent.nav['nav-item-4']
+newArr[4].textContent = siteContent.nav['nav-item-5']
+
+// cta 
+const ctaInfo = document.querySelector('.cta-text');
+ctaInfo.children[0].textContent = siteContent.cta['h1']
+ctaInfo.children[1].textContent = siteContent.cta['button']
