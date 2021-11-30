@@ -35,69 +35,61 @@ const siteContent = {
   "footer": {
     "copyright" : "Copyright Great Idea! 2018"
   },
+  "images": {
+    "logo-img": "img/logo.png",
+    "cta-img": "img/header-img.png",
+    "accent-img": "img/mid-page-accent.jpg",
+  },
 };
 
-const navItem1 = document.querySelector('.nav-item-1');
-const navItem2 = document.querySelector('.nav-item-2');
-const navItem3 = document.querySelector('.nav-item-3');
-const navItem4 = document.querySelector('.nav-item-4');
-const navItem5 = document.querySelector('.nav-item-5');
-const navItem6 = document.querySelector('.nav-item-6');
-const navImage = document.querySelector('.img-src');
+//nav
+const navLinks = document.querySelectorAll('nav a');
+const linkTexts = Object.values(siteContent.nav)
+navLinks.forEach((link, index) => link.textContent = linkTexts[index]);
 
-const ctaHeader = document.querySelector('.h1');
-const ctaButton = document.querySelector('.button');
-const ctaImage = document.querySelector('.img-src');
+const logoImg = document.querySelector('#logo-img');
+logoImg.src = siteContent.images['logo-img'];
 
-const h4Features = document.querySelector('.features-h4');
-const featuresContent = document.querySelector('.features-content');
-const h4About = document.querySelector('.about-h4');
-const aboutContent = document.querySelector('.about-content');
-const contentImage = document.querySelector('.middle-img-src');
-const h4Services = document.querySelector('.services-h4');
-const servicesContent = document.querySelector('.services-content');
-const h4Product = document.querySelector('.product-h4');
-const productContent = document.querySelector('.product-content');
-const h4Vision = document.querySelector('.vision-h4');
-const visionContent = document.querySelector('.vision-content');
+//cta
+const ctaHeader = document.querySelector('h1');
+ctaHeader.textContent = siteContent.cta.h1;
 
-const contactHeading = document.querySelector('.contact-h4');
-const address = document.querySelector('.address');
-const phone = document.querySelector('.phone');
-const email = document.querySelector('.email');
+const ctaButton = document.querySelector('button');
+ctaButton.textContent = siteContent.cta.button;
 
-const copyright = document.querySelector('.copyright');
+const ctaImg = document.querySelector('#cta-img');
+ctaImg.src = siteContent.images['cta-img'];
 
-navItem1.textContent = siteContent['nav']['nav-item-1']
-navItem2.textContent = siteContent['nav']['nav-item-2']
-navItem3.textContent = siteContent['nav']['nav-item-3']
-navItem4.textContent = siteContent['nav']['nav-item-4']
-navItem5.textContent = siteContent['nav']['nav-item-5']
-navItem6.textContent = siteContent['nav']['nav-item-6']
-navImage.textContent = siteContent['nav']['img-src']
+//main-content
+const topContent = document.querySelector('.top-content')
+topContent.children[0].children[0].textContent = siteContent['main-content']['features-h4']
+topContent.children[0].children[1].textContent = siteContent['main-content']['features-content']
+topContent.children[1].children[0].textContent = siteContent['main-content']['about-h4']
+topContent.children[1].children[1].textContent = siteContent['main-content']['about-content']
 
-ctaHeader.textContent = siteContent['cta']['h1']
-ctaButton.textContent = siteContent['cta']['button']
-ctaImage.textContent = siteContent['cta']['img-src']
+const middleImg = document.querySelector('#middle-img');
+middleImg.src = siteContent.images['accent-img'];
 
-h4Features.textContent = siteContent['main-content']['features-h4']
-featuresContent.textContent = siteContent['main-content']['features-content']
-h4About.textContent = siteContent['main-content']['about-h4']
-aboutContent.textContent = siteContent['main-content']['about-content']
-contentImage.textContent = siteContent['main-content']['middle-img-src']
-h4Services.textContent = siteContent['main-content']['services-h4']
-servicesContent.textContent = siteContent['main-content']['services-content']
-h4Product.textContent = siteContent['main-content']['product-h4']
-productContent.textContent = siteContent['main-content']['product-content']
-h4Vision.textContent = siteContent['main-content']['vision-h4']
-visionContent.textContent = siteContent['main-content']['vision-content']
+const bottomContent = document.querySelector('.bottom-content')
+bottomContent.children[0].children[0].textContent = siteContent['main-content']['services-h4']
+bottomContent.children[0].children[1].textContent = siteContent['main-content']['services-content']
+bottomContent.children[1].children[0].textContent = siteContent['main-content']['product-h4']
+bottomContent.children[1].children[1].textContent = siteContent['main-content']['product-content']
+bottomContent.children[2].children[0].textContent = siteContent['main-content']['vision-h4']
+bottomContent.children[2].children[1].textContent = siteContent['main-content']['vision-content']
 
-contactHeading.textContent = siteContent['contact']['contact-h4'];
-address.textContent = siteContent['contact']['address'];
-phone.textContent = siteContent['contact']['phone'];
-email.textContent = siteContent['contact']['email'];
+//contact
+const contact = document.querySelector('section.contact')
+contact.querySelector('h4').textContent = siteContent.contact['contact-h4']
+contact.children[1].textContent = siteContent.contact['address']
+contact.children[2].textContent = siteContent.contact['phone']
+contact.children[3].textContent = siteContent.contact['email']
 
-copyright.textContent = siteContent['footer']['copyright'];
+//footer
+const footNote = document.querySelector('footer');
+footNote.textContent = siteContent.footer.copyright;
+footNote.classList.add('bold')
+
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
