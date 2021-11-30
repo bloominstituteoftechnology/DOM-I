@@ -81,6 +81,11 @@ h4sBottom[0].textContent = siteContent['main-content']['services-h4'];
 h4sBottom[1].textContent = siteContent['main-content']['product-h4'];
 h4sBottom[2].textContent = siteContent['main-content']['vision-h4'];
 
+const contentBottom = bottomContent.querySelectorAll('p');
+contentBottom[0].textContent = siteContent['main-content']['services-content'];
+contentBottom[1].textContent = siteContent['main-content']['product-content'];
+contentBottom[2].textContent = siteContent['main-content']['vision-content'];
+
 // bottomContent.children[2].children[0].textContent = siteContent['main-content']['services-h4'];
 // bottomContent.children[2].children[1].textContent = siteContent['main-content']['services-content'];
 // bottomContent.children[3].children[0].textContent = siteContent['main-content']['product-h4'];
