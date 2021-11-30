@@ -70,8 +70,19 @@ h1.textContent = siteContent.cta.h1;
 const getStartedButton = document.querySelector('.cta-text button');
 getStartedButton.textContent = siteContent.cta.button;
 
-const features = document.querySelector('.main-content h4');
+const features = document.querySelector('.text-content h4');
 features.textContent = siteContent["main-content"]['features-h4'];
 
-const featContent = document.querySelector('.main-content p')
+const featContent = document.querySelector('.text-content p')
 featContent.textContent = siteContent['main-content']['features-content'];
+
+// const about = document.querySelector('.main-content h4');
+// about.textContent = siteContent['main-content']['about-h4']
+
+// const aboutContent = document.querySelector('.text-content p')
+// aboutContent.textContent = siteContent['main-content']['about-content']
+
+//Footer Link
+const footerLink = document.querySelector('footer a')
+footerLink.textContent = siteContent.footer.copyright
+footerLink.classList.add('bold')
