@@ -41,24 +41,33 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 
 // console.log('project wired!')
 
+// --------------------Top Content---------------------- //
+const topContent = document.querySelector('.top-content');
+topContent.children[0].children[0].textContent = siteContent['main-content']['features-h4'];
+topContent.children[0].children[1].textContent = siteContent['main-content']['features-content'];
+
+topContent.children[1].children[0].textContent = siteContent['main-content']['about-h4'];
+topContent.children[1].children[1].textContent = siteContent['main-content']['about-content'];
+
+
 // --------------------Contact---------------------- //
-const contact = document.querySelector('section.contact')
-contact.children[0].textContent = siteContent.contact['contact-h4'] 
-contact.children[1].textContent = siteContent.contact['address'] 
-contact.children[2].textContent = siteContent.contact['phone'] 
-contact.children[3].textContent = siteContent.contact['email'] 
+const contact = document.querySelector('section.contact');
+contact.children[0].textContent = siteContent.contact['contact-h4'];
+contact.children[1].textContent = siteContent.contact['address'];
+contact.children[2].textContent = siteContent.contact['phone'];
+contact.children[3].textContent = siteContent.contact['email'];
 
 // --------------------Footer---------------------- //
-const footerLink = document.querySelector('footer a')
-footerLink.textContent = siteContent.footer.copyright
-footerLink.classList.add('bold') 
+const footerLink = document.querySelector('footer a');
+footerLink.textContent = siteContent.footer.copyright;
+footerLink.classList.add('bold');
 
 // --------------------Images---------------------- //
-const logoImg = document.querySelector('#logo-img')
-logoImg.src = siteContent.images['logo-img']
+const logoImg = document.querySelector('#logo-img');
+logoImg.src = siteContent.images['logo-img'];
 
-const ctaImg = document.querySelector('#cta-img')
-ctaImg.src = siteContent.images['cta-img']
+const ctaImg = document.querySelector('#cta-img');
+ctaImg.src = siteContent.images['cta-img'];
 
-const accentImg = document.querySelector('#middle-img')
-accentImg.src = siteContent.images['accent-img']
+const accentImg = document.querySelector('#middle-img');
+accentImg.src = siteContent.images['accent-img'];
