@@ -1,3 +1,5 @@
+const concurrently = require("concurrently");
+
 const siteContent = { // DO NOT CHANGE THIS OBJECT
   "nav": {
     "nav-item-1": "Services",
@@ -39,6 +41,7 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
   },
 };
 
+//Images
 const logoImg = document.querySelector('#logo-img');
 logoImg.src = siteContent.images['logo-img'];
 
@@ -49,20 +52,25 @@ const midImg = document.querySelector('#middle-img');
 midImg.setAttribute('src', siteContent.images['accent-img']);
 
 
+//Footer link
+const footerLink = document.querySelector('footer a')
+footerLink.textContent = siteContent.footer.copyright;
+footerLink.classList.add('bold');
 
-const navItems = document.querySelectorAll('nav a');
-const nav1 = document.querySelector('nav a:nth-of-type(1)');
-const nav2 = document.querySelector('nav a:nth-of-type(2)');
-const nav3 = document.querySelector('nav a:nth-of-type(3)');
-const nav4 = document.querySelector('nav a:nth-of-type(4)');
-const nav5 = document.querySelector('nav a:nth-of-type(5)');
-const nav6 = document.querySelector('nav a:nth-of-type(6)');
-const headerImg = document.querySelector('header img');
+//Contact
+const contact = document.querySelector('section.contact')
+// contact.children[0].textContent = siteContent.contact['contact-h4'];
+contact.querySelector('h4').textContent = siteContent.contact['contact-h4']
+contact.children[1].textContent = siteContent.contact['address']
+contact.querySelector('p:nth-of-type(2)').textContent = siteContent.contact['phone']
+contact.children[3].textContent = siteContent.contact['email']
 
-navItems.classList.add('italic');
-nav1.textContent = siteContent.nav['nav-item-1'];
-nav2.textContent = siteContent.nav['nav-item-2'];
-nav3.textContent = siteContent.nav['nav-item-3'];
-nav4.textContent = siteContent.nav['nav-item-4'];
-nav5.textContent = siteContent.nav['nav-item-5'];
-nav6.textContent = siteContent.nav['nav-item-6'];
+//Top content
+const topContent = document.querySelector('.top-content')
+topContent.children[0].children[0].textContent = siteContent['main-content']['features-h4']
+topContent.children[0].children[1].textContent = siteContent['main-content']['features-content']
+topContent.children[1].children[0].textContent = siteContent['main-content']['about-h4']
+topContent.children[1].children[1].textContent = siteContent['main-content']['about-content']
+
+//Bottom Content
+const bottomContent = document.querySelector('.bottom-content')
