@@ -60,3 +60,15 @@ sectionInfo.children[0].textContent = siteContent.contact['contact-h4']
 sectionInfo.children[1].textContent = siteContent.contact['address']
 sectionInfo.children[2].textContent = siteContent.contact['phone']
 sectionInfo.children[3].textContent = siteContent.contact['email']
+
+// main section 
+const mainContent = document.querySelector('.main-content');
+mainContent.children[0].children[0].children[0].textContent = siteContent["main-content"]["features-h4"];
+mainContent.children[0].children[0].children[1].textContent = siteContent['main-content']['features-content'];
+
+mainContent.children[0].children[1].children[0].textContent = siteContent['main-content']['about-h4']
+mainContent.children[0].children[1].children[1].textContent = siteContent['main-content']['about-content'];
+
+mainContent.children[2].children[0].children[0].textContent = siteContent["main-content"]["product-h4"]
+mainContent.children[2].children[0].children[1].textContent = siteContent["main-content"]["product-content"]
+
