@@ -41,6 +41,14 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 
 // console.log('project wired!')
 
+// --------------------Navigator---------------------- //
+const navLinks = document.querySelectorAll('header nav a');
+const navLinkText = Object.values(siteContent.nav);
+navLinks.forEach((link, i) => {
+  link.textContent = navLinkText[i];
+  link.classList.add('italic');
+});
+
 // --------------------Top Content---------------------- //
 const topContent = document.querySelector('.top-content');
 
@@ -53,12 +61,13 @@ topContent.children[1].children[1].textContent = siteContent['main-content']['pr
 // --------------------Bottom Content---------------------- //
 const bottomContent = document.querySelector('.bottom-content');
 const bottomH4 = bottomContent.querySelectorAll('h4');
-const bottomP = bottomContent.querySelectorAll('p');
+
 
 bottomH4[0].textContent = siteContent['main-content']['services-h4'];
 bottomH4[1].textContent = siteContent['main-content']['product-h4'];
 bottomH4[2].textContent = siteContent['main-content']['vision-h4'];
 
+const bottomP = bottomContent.querySelectorAll('p');
 bottomP[0].textContent = siteContent['main-content']['services-content'];
 bottomP[1].textContent = siteContent['main-content']['product-content'];
 bottomP[2].textContent = siteContent['main-content']['vision-content'];
@@ -70,6 +79,10 @@ contact.children[0].textContent = siteContent.contact['contact-h4'];
 contact.children[1].textContent = siteContent.contact['address'];
 contact.children[2].textContent = siteContent.contact['phone'];
 contact.children[3].textContent = siteContent.contact['email'];
+
+// --------------------CTA---------------------- //
+document.querySelector('.cta .cta-text h1').textContent = siteContent.cta.h1;
+document.querySelector('.cta .cta-text button').textContent = siteContent.cta.button;
 
 // --------------------Footer---------------------- //
 const footerLink = document.querySelector('footer a');
