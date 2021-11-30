@@ -82,11 +82,6 @@ const footerLink = document.querySelector("footer a");
 footerLink.textContent = siteContent.footer.copyright;
 footerLink.classList.add("bold");
 
-//nav link Give the anchor tags _inside the nav_ an italic style by adding the classname `italic` to them alone.
-
-const navLink = document.querySelector("nav a");
-navLink.classList.add("italic");
-
 //contact
 const contact = document.querySelector("section.contact");
 contact.children[0].textContent = siteContent.contact["contact-h4"];
@@ -134,3 +129,9 @@ const navLinkTexts = Object.values(siteContent.nav);
 navLinks.forEach((link, index) => {
   link.textContent = navLinkTexts[index];
 });
+
+link.classList.add("italic");
+
+// for (let link of navLinks){
+//   console.log(link)
+// }
