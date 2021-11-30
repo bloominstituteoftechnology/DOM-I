@@ -44,7 +44,7 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 console.log('project wired!')
 
 //nav
-const nav = document.querySelectorAll('nav a');
+//const nav = document.querySelectorAll('nav a');
 //nav[0].textContent = siteContent['main-content']['nav']['nav-content'];
 
 
@@ -74,7 +74,7 @@ pBottom[1].textContent = siteContent['main-content']['product-content'];
 pBottom[2].textContent = siteContent['main-content']['vision-content'];
 
 //contact
-const contanct = document.querySelector('.contact');
+//const contanct = document.querySelector('.contact');
 //contact.textContent = siteContent['main-content'][]
 
 //img
