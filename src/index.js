@@ -125,4 +125,3 @@ contactEmail.textContent = siteContent["contact"]["email"];
 // copyright
 const copyright = document.querySelector("footer a");
 copyright.textContent = siteContent["footer"]["copyright"];
-
