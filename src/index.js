@@ -45,6 +45,12 @@ const siteContent = {
   },
 };
 //this alters the text of the button and h1 to match the example
+//cta
+/**
+ * document.querySelector('.cta .cta-text h1').textContent = siteContent.cta.h1
+ *
+ * document.querySelector('.cta .cta-text button').textContent = siteContent.cta.button
+ */
 
 let cta = document.querySelector(".cta");
 
@@ -120,3 +126,11 @@ psBottom[0].textContent = siteContent["main-content"]["services-content"];
 psBottom[1].textContent = siteContent["main-content"]["product-content"];
 
 psBottom[2].textContent = siteContent["main-content"]["vision-content"];
+
+//nav links
+
+const navLinks = document.querySelectorAll("header nav a");
+const navLinkTexts = Object.values(siteContent.nav);
+navLinks.forEach((link, index) => {
+  link.textContent = navLinkTexts[index];
+});
