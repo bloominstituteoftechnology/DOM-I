@@ -118,3 +118,6 @@ const visionContent = document.querySelector(
   ".bottom-content .text-content:nth-of-type(3) p"
 );
 visionContent.textContent = siteContent["main-content"]["vision-content"];
+
+const footerContent = document.querySelector("footer a");
+footerContent.textContent = siteContent["footer"]["copyright"];
