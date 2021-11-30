@@ -28,7 +28,7 @@ Inside `src/index.js` there is declared an object literal containing all the dat
 
 ### Create selectors to access the relevant elements
 
-- [ ] Declare variables pointing to the relevant DOM elements, using any of the selectors you have learned.
+- [ ]x Declare variables pointing to the relevant DOM elements, using any of the selectors you have learned.
 
 ### Add text contents
 
@@ -38,12 +38,12 @@ Inside `src/index.js` there is declared an object literal containing all the dat
 ### Add class names
 
 - [ ] Give the anchor tags _inside the nav_ an italic style by adding the classname `italic` to them alone.
-- [ ] Give the anchor tag _inside the footer_ a bolder appearance by adding the classname `bold` to it alone.
+- [ x] Give the anchor tag _inside the footer_ a bolder appearance by adding the classname `bold` to it alone.
 
 ### Add image sources
 
 - [ ] Make the img tags on the page display the correct images by editing their `src` attribute.
-- [ ] Find the correct URLs for the images inside the data object in `src/index.js`.
+- [x ] Find the correct URLs for the images inside the data object in `src/index.js`.
 
 ## Submission Format
 
