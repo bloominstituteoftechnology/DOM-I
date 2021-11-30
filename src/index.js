@@ -44,7 +44,9 @@ console.log('project wired!')
 // navigation
 const nav = document.querySelectorAll('nav a');
 const linkTexts = Object.values(siteContent.nav)
-nav.forEach((link, idx)=> link.textContent = linkTexts[idx]);
+nav.forEach((link, idx)=> {link.textContent = linkTexts[idx]
+  link.classList.add("italic")
+});
 console.log(nav);
 
 // logo
@@ -106,3 +108,4 @@ contactDetailsArr[2].textContent = siteContent.contact.email;
 // footer
 const footer = document.querySelector('footer a');
 footer.textContent = siteContent.footer.copyright;
+footer.classList.add('bold');
