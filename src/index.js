@@ -47,6 +47,7 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 // const nav = document.getElementsByTagName('nav')
 // const links = document.querySelectorAll('nav a')
 
+// Nav Bar
 const navLinks = document.querySelectorAll('nav a');
 const linkTexts = Object.values(siteContent.nav)
 console.log(linkTexts)
@@ -54,6 +55,7 @@ navLinks.forEach(function(link, idx){
   link.textContent = linkTexts[idx]
 });
 
+// Images
 const logoImage = document.querySelector('#logo-img');
 console.log(logoImage);
 logoImage.src = siteContent.images['logo-img'];
@@ -64,6 +66,7 @@ codeImage.src = siteContent.images['cta-img'];
 const accentImage = document.querySelector('.middle-img');
 accentImage.src = siteContent.images['accent-img'];
 
+// Header
 const h1 = document.querySelector('.cta-text h1');
 h1.textContent = siteContent.cta.h1;
 
@@ -86,3 +89,10 @@ featContent.textContent = siteContent['main-content']['features-content'];
 const footerLink = document.querySelector('footer a')
 footerLink.textContent = siteContent.footer.copyright
 footerLink.classList.add('bold')
+
+// Contact
+const contact = document.querySelector('section.contact')
+contact.children[0].textContent = siteContent.contact['contact-h4']
+contact.children[1].textContent = siteContent.contact['address']
+contact.children[2].textContent = siteContent.contact['phone']
+contact.children[3].textContent = siteContent.contact['email']
