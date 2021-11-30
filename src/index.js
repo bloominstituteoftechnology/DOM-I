@@ -36,7 +36,7 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
     "logo-img": "mocks/img/logo.png",
     "cta-img": "mocks/img/cta.png",
     "accent-img": "mocks/img/accent.png",
-  }
+  },
 };
 
 console.log('project wired!')
@@ -83,21 +83,21 @@ headerImg.src = siteContent['images']['logo-img'];
 // CTA Section
 ctaTitle.textContent = siteContent.cta.h1;
 ctaBtn.textContent = siteContent.cta.button;
-ctaImg.src = 'http://localhost:9000/img/cta.png';
+ctaImg.src = siteContent['images']['cta-img'];
 
 // Top Content Section
-featSubtitle.textContent = 'Features';
-featPar.textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-aboutSubtitle.textContent = 'About';
-aboutPar.textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+featSubtitle.textContent = siteContent['main-content']['features-h4'];
+featPar.textContent = siteContent['main-content']['features-content'];
+aboutSubtitle.textContent = siteContent['main-content']['about-h4'];
+aboutPar.textContent = siteContent['main-content']['about-content'];
 
 // Middle Image
-midImg.setAttribute('src', 'http://localhost:9000/img/accent.png');
+midImg.src = siteContent['images']['accent-img'];
 
 // Bottom Content Section
-servicesSubtitle.textContent = 'Services';
-servicesPar.textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-productSubtitle.textContent = 'Product';
-productPar.textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-visionSubtitle.textContent = 'Vision';
-visionPar.textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+servicesSubtitle.textContent = siteContent['main-content']['services-h4'];
+servicesPar.textContent = siteContent['main-content']['services-content'];
+productSubtitle.textContent = siteContent['main-content']['product-h4'];
+productPar.textContent = siteContent['main-content']['product-content'];
+visionSubtitle.textContent = siteContent['main-content']['vision-h4'];
+visionPar.textContent = siteContent['main-content']['vision-content'];
