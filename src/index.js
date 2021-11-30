@@ -86,8 +86,15 @@ topContent.children[1].children[1].textContent = siteContent['main-content']['ab
 //Bottom Content
 
 const bottomContent = document.querySelector('.bottom-content')
-bottomContent.children[0].children[0].textContent = siteContent['main-content']['services-h4']
+const h4BottomContent = bottomContent.querySelectorAll('h4')
+h4BottomContent[0].textContent = siteContent['main-content']['services-h4']
+h4BottomContent[1].textContent = siteContent['main-content']['product-h4']
+h4BottomContent[2].textContent = siteContent['main-content']['vision-h4']
 
+const pBottomContent = bottomContent.querySelectorAll('p')
+pBottomContent[0].textContent = siteContent['main-content']['services-content']
+pBottomContent[1].textContent = siteContent['main-content']['product-content']
+pBottomContent[2].textContent = siteContent['main-content']['vision-content']
 // const features = document.querySelector('.text-content:nth-of-type(1) h4');
 // features.textContent = siteContent['main-content']['features-h4'];
 
