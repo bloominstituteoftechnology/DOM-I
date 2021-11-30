@@ -64,6 +64,11 @@ const productSubtitle = document.querySelector('.bottom-content .text-content:nt
 const productPar = document.querySelector('.bottom-content .text-content:nth-of-type(2) p');
 const visionSubtitle = document.querySelector('.bottom-content .text-content:nth-of-type(3) h4');
 const visionPar = document.querySelector('.bottom-content .text-content:nth-of-type(3) p');
+const contactSubtitle = document.querySelector('.contact h4');
+const address = document.querySelector('.contact p:nth-of-type(1)');
+const phone = document.querySelector('.contact p:nth-of-type(2)');
+const email = document.querySelector('.contact p:nth-of-type(3)');
+const footerLink = document.querySelector('footer a');
 
 // Header 
 nav1.classList.add('italic');
@@ -101,3 +106,13 @@ productSubtitle.textContent = siteContent['main-content']['product-h4'];
 productPar.textContent = siteContent['main-content']['product-content'];
 visionSubtitle.textContent = siteContent['main-content']['vision-h4'];
 visionPar.textContent = siteContent['main-content']['vision-content'];
+
+// Contact Section
+contactSubtitle.textContent = siteContent['contact']['contact-h4'];
+address.textContent = siteContent['contact']['address'];
+phone.textContent = siteContent['contact']['phone'];
+email.textContent = siteContent['contact']['email'];
+
+// Footer
+footerLink.classList.add('bold');
+footerLink.textContent = siteContent['footer']['copyright'];
