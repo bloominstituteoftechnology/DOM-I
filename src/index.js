@@ -1,3 +1,5 @@
+const { set } = require("msw/lib/types/context");
+
 const siteContent = { // DO NOT CHANGE THIS OBJECT
   "nav": {
     "nav-item-1": "Services",
@@ -45,6 +47,14 @@ console.log('project wired!')
 const nav = document.querySelectorAll('nav a');
 //nav[0].textContent = siteContent['main-content']['nav']['nav-content'];
 
+
+//cta
+const ctaText = document.querySelector('.cta-text h1');
+ctaText.textContent = siteContent['cta']['h1'];
+const button = document.querySelector('.cta-text button');
+button.textContent = siteContent['cta']['button'];
+
+
 //top content
 const topContent = document.querySelector('.top-content');
 topContent.children[0].children[0].textContent = siteContent['main-content']['features-h4'];
@@ -63,6 +73,10 @@ pBottom[0].textContent = siteContent['main-content']['services-content']
 pBottom[1].textContent = siteContent['main-content']['product-content'];
 pBottom[2].textContent = siteContent['main-content']['vision-content'];
 
+//contact
+const contanct = document.querySelector('.contact');
+//contact.textContent = siteContent['main-content'][]
+
 //img
 const logo = document.querySelector('#logo-img');
 logo.src = siteContent['images']['logo-img'];
@@ -73,9 +87,5 @@ ctaImg.src = siteContent['images']['cta-img'];
 const midImage = document.querySelector('#middle-img');
 midImage.src = siteContent['images']['accent-img'];
 
-//Dom & button
-const ctaText = document.querySelector('.cta-text h1');
-ctaText.textContent = siteContent['cta']['h1'];
-const button = document.querySelector('.cta-text button');
-button.textContent = siteContent['cta']['button'];
+
 
