@@ -92,3 +92,17 @@ const bottomContentArr = Array.from(bottomContent);
 bottomContentArr[0].textContent = siteContent['main-content']['services-content'];
 bottomContentArr[1].textContent = siteContent['main-content']['product-content'];
 bottomContentArr[2].textContent = siteContent['main-content']['vision-content'];
+
+// contact
+const contactTitle = document.querySelector('.contact h4');
+contactTitle.textContent = siteContent.contact['contact-h4'];
+
+const contactDetails = document.querySelectorAll('.contact p')
+contactDetailsArr = Array.from(contactDetails);
+contactDetailsArr[0].textContent = siteContent.contact.address;
+contactDetailsArr[1].textContent = siteContent.contact.phone;
+contactDetailsArr[2].textContent = siteContent.contact.email;
+
+// footer
+const footer = querySelector('footer a');
+
