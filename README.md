@@ -4,7 +4,7 @@
 
 You are going to be emulating a content management system by controlling the content in the JavaScript file instead of the HTML file. This project is an exercise pointed at selecting elements and then updating them without touching the HTML file using the DOM.
 
-Compare `src/index.html` against `src/original.html` and notice how `index.html` is lacking text content and other things. The goal is to make the page look the same as `original.html` using JavaScript. You can find a screenshot of the goal in `src/design-files/desktop-example.png`.
+Compare `src/index.html` against `src/original.html` and notice how `index.html` is lacking text content and other things. The goal is to make the page look the same as `original.html` using JavaScript. You can find a screenshot of the goal in `design-files/desktop-example.png`.
 
 Inside `src/index.js` there is declared an object literal containing all the data needed to make the page look like the screenshot. Do not change this object! Below the declaration you should perform your DOM manipulations. Typically you would select an element and then use the data inside the object to add text content to it, or to change its attributes. Access the data using dot or square-bracket notation.
 
