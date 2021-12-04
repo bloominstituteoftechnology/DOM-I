@@ -15,7 +15,7 @@ module.exports = {
       template: 'src/index.html',
     }),
   ],
-  devServer: {
+  devServer: {   
     static: path.join(__dirname, 'dist'),
     compress: true,
     port: 3000,
