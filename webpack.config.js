@@ -9,13 +9,13 @@ module.exports = {
     publicPath: '/',
     path: path.resolve(__dirname, 'dist'),
   },
-  devtool: 'source-map',
+  devtool: 'source-map',   
   plugins: [
     new HtmlWebpackPlugin({
       template: 'src/index.html',
     }),
   ],
-  devServer: {   
+  devServer: {
     static: path.join(__dirname, 'dist'),
     compress: true,
     port: 3000,
