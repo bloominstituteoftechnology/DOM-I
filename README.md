@@ -9,7 +9,7 @@ Compare `src/index.html` against `src/original.html` and notice how `index.html`
 Inside `src/index.js` there is declared an object literal containing all the data needed to make the page look like the screenshot. Do not change this object! Below the declaration you should perform your DOM manipulations. Typically you would select an element and then use the data inside the object to add text content to it, or to change its attributes. Access the data using dot or square-bracket notation.
 
 **THE MOST IMPORTANT RULE: You cannot update the HTML file directly. You must use JavaScript alone.**
-
+asd
 ## Git Setup
 
 * [ ] Create a forked copy of this project.
