@@ -33,10 +33,86 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
     "copyright": "Copyright Great Idea! 2021",
   },
   "images": {
-    "logo-img": "http://localhost:9000/img/logo.png",
-    "cta-img": "http://localhost:9000/img/cta.png",
-    "accent-img": "http://localhost:9000/img/accent.png",
+    "logo-img": "mocks/img/logo.png",
+    "cta-img": "mocks/img/cta.png",
+    "accent-img": "mocks/img/accent.png",
   },
 };
 
 console.log('project wired!')
+
+//  Access relevant elements
+const navItems = document.querySelectorAll('nav a');
+const nav1 = document.querySelector('nav a:nth-of-type(1)');
+const nav2 = document.querySelector('nav a:nth-of-type(2)');
+const nav3 = document.querySelector('nav a:nth-of-type(3)');
+const nav4 = document.querySelector('nav a:nth-of-type(4)');
+const nav5 = document.querySelector('nav a:nth-of-type(5)');
+const nav6 = document.querySelector('nav a:nth-of-type(6)');
+const headerImg = document.querySelector('header img');
+const ctaTitle = document.querySelector('.cta-text h1');
+const ctaBtn = document.querySelector('.cta-text button');
+const ctaImg = document.querySelector('#cta-img');
+const featSubtitle = document.querySelector('.top-content .text-content:nth-of-type(1) h4');
+const featPar = document.querySelector('.top-content .text-content:nth-of-type(1) p');
+const aboutSubtitle = document.querySelector('.top-content .text-content:nth-of-type(2) h4');
+const aboutPar = document.querySelector('.top-content .text-content:nth-of-type(2) p');
+const midImg = document.querySelector('.middle-img');
+const servicesSubtitle = document.querySelector('.bottom-content .text-content:nth-of-type(1) h4');
+const servicesPar = document.querySelector('.bottom-content .text-content:nth-of-type(1) p');
+const productSubtitle = document.querySelector('.bottom-content .text-content:nth-of-type(2) h4');
+const productPar = document.querySelector('.bottom-content .text-content:nth-of-type(2) p');
+const visionSubtitle = document.querySelector('.bottom-content .text-content:nth-of-type(3) h4');
+const visionPar = document.querySelector('.bottom-content .text-content:nth-of-type(3) p');
+const contactSubtitle = document.querySelector('.contact h4');
+const address = document.querySelector('.contact p:nth-of-type(1)');
+const phone = document.querySelector('.contact p:nth-of-type(2)');
+const email = document.querySelector('.contact p:nth-of-type(3)');
+const footerLink = document.querySelector('footer a');
+
+// Header 
+nav1.classList.add('italic');
+nav2.classList.add('italic');
+nav3.classList.add('italic');
+nav4.classList.add('italic');
+nav5.classList.add('italic');
+nav6.classList.add('italic');
+nav1.textContent = siteContent['nav']['nav-item-1'];
+nav2.textContent = siteContent['nav']['nav-item-2'];
+nav3.textContent = siteContent['nav']['nav-item-3'];
+nav4.textContent = siteContent['nav']['nav-item-4'];
+nav5.textContent = siteContent['nav']['nav-item-5'];
+nav6.textContent = siteContent['nav']['nav-item-6'];
+headerImg.src = siteContent['images']['logo-img'];
+
+// CTA Section
+ctaTitle.textContent = siteContent.cta.h1;
+ctaBtn.textContent = siteContent.cta.button;
+ctaImg.src = siteContent['images']['cta-img'];
+
+// Top Content Section
+featSubtitle.textContent = siteContent['main-content']['features-h4'];
+featPar.textContent = siteContent['main-content']['features-content'];
+aboutSubtitle.textContent = siteContent['main-content']['about-h4'];
+aboutPar.textContent = siteContent['main-content']['about-content'];
+
+// Middle Image
+midImg.src = siteContent['images']['accent-img'];
+
+// Bottom Content Section
+servicesSubtitle.textContent = siteContent['main-content']['services-h4'];
+servicesPar.textContent = siteContent['main-content']['services-content'];
+productSubtitle.textContent = siteContent['main-content']['product-h4'];
+productPar.textContent = siteContent['main-content']['product-content'];
+visionSubtitle.textContent = siteContent['main-content']['vision-h4'];
+visionPar.textContent = siteContent['main-content']['vision-content'];
+
+// Contact Section
+contactSubtitle.textContent = siteContent['contact']['contact-h4'];
+address.textContent = siteContent['contact']['address'];
+phone.textContent = siteContent['contact']['phone'];
+email.textContent = siteContent['contact']['email'];
+
+// Footer
+footerLink.classList.add('bold');
+footerLink.textContent = siteContent['footer']['copyright'];
