@@ -45,13 +45,41 @@ console.log('project wired!')
 
 const header = document.querySelector('header');
 
-//const logoTitle = document.querySelector('.logo');
 
-const links = document.querySelectorAll('nav');
+
+const links = document.querySelectorAll('nav a');
+const linkText = Object.values(siteContent.nav)
+for(let i = 0; i < 6; i++) {
+  links[i].textContent = linkText[i]
+}
 
 links.forEach(link => console.log(link));
 
 const realLinks = Array.from(links)
+
+/**
+ * get image from dom into js
+ * update img src attr = siteContent['images']['logo-img']
+ */
+
+const firstImage = document.querySelector('#logo-img');
+firstImage.src = siteContent['images']['logo-img'];
+
+const secondImage = document.querySelector('#cta-img');
+secondImage.src = siteContent['images']['cta-img'];
+
+const thirdImage = document.querySelector('#middle-img');
+thirdImage.src = siteContent['images']['accent-img'];
+
+const button = document.querySelector('button');
+button.textContent = 'Get Started!';
+
+const ctaText = document.querySelector('h1');
+ctaText.textContent = 'DOM IS AWESOME!';
+
+const topText = document.querySelector('h4');
+topText.textContent = 'Features';
+
 
 
 
