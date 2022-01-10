@@ -47,3 +47,15 @@ const linkTexts = Object.values(siteContent.nav)
 nav.forEach((link,idx) => {
   link.textContent = linkTexts[idx]
 });
+
+const logoTitle = document.querySelector('.logo');
+logoTitle.src = "http://localhost:9000/img/logo.png";
+
+const domHead = document.querySelector('.cta-text h1');
+domHead.textContent = siteContent.cta.h1;
+
+const awesomeButton = document.querySelector('.cta-text button');
+awesomeButton.textContent = siteContent.cta.button;
+
+const snippetImg = document.querySelector('#cta-img');
+snippetImg.src = "http://localhost:9000/img/cta.png";
