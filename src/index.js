@@ -40,3 +40,10 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+const nav = document.querySelectorAll('nav a');
+const linkTexts = Object.values(siteContent.nav)
+
+nav.forEach((link,idx) => {
+  link.textContent = linkTexts[idx]
+});
