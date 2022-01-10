@@ -40,3 +40,19 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+
+
+const header = document.querySelector('header');
+
+//const logoTitle = document.querySelector('.logo');
+
+const links = document.querySelectorAll('nav');
+
+links.forEach(link => console.log(link));
+
+const realLinks = Array.from(links)
+
+
+
+
