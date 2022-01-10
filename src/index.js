@@ -92,3 +92,18 @@ visionContent.textContent = siteContent['main-content']['vision-h4'];
 
 const visionContext = document.querySelector('.bottom-content .text-content:nth-of-type(3) p');
 visionContext.textContent = siteContent['main-content']['vision-content'];
+
+const contact = document.querySelector('.contact h4');
+contact.textContent = siteContent.contact['contact-h4'];
+
+const address = document.querySelector('.contact p');
+address.textContent = siteContent.contact.address;
+
+const phone = document.querySelector('.contact p:nth-of-type(2)');
+phone.textContent = siteContent.contact.phone;
+
+const email = document.querySelector('.contact p:nth-of-type(3)');
+email.textContent = siteContent.contact.email;
+
+const footer = document.querySelector('footer a');
+footer.textContent = siteContent.footer.copyright;
