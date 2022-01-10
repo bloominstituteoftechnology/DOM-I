@@ -45,8 +45,10 @@ const nav = document.querySelectorAll('nav a');
 const linkTexts = Object.values(siteContent.nav)
 
 nav.forEach((link,idx) => {
-  link.textContent = linkTexts[idx]
+  link.textContent = linkTexts[idx];
+  link.classList.add('italic');
 });
+
 
 const logoTitle = document.querySelector('.logo');
 logoTitle.src = "http://localhost:9000/img/logo.png";
@@ -107,3 +109,4 @@ email.textContent = siteContent.contact.email;
 
 const footer = document.querySelector('footer a');
 footer.textContent = siteContent.footer.copyright;
+footer.classList.add('bold');
