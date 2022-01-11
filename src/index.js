@@ -40,6 +40,8 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 console.log('project wired!')
 
+// button
+
 
 // IMG
 const logoImg = document.querySelector('#logo-img')
@@ -69,7 +71,7 @@ const topContent = document.querySelector('.top-content')
 topContent.children[0].children[0].textContent = siteContent['main-content']['features-h4']
 topContent.children[0].children[1].textContent = siteContent['main-content']['features-content']
 topContent.children[1].children[0].textContent = siteContent['main-content']['about-h4']
-topContent.children[1].children[1].textContent = siteContent['main-content']['about-cone']
+topContent.children[1].children[1].textContent = siteContent['main-content']['about-content']
 
 // Bot content
 
@@ -85,13 +87,14 @@ psBottom[2].textContent = siteContent['main-content']["vision-content"]
 
 // CTA
 document.querySelector('.cta .cta-text h1').textContent = siteContent.cta.h1
-document.querySelector('.cta .cta-text button').textContent = siteContent.button
+document.querySelector('.cta .cta-text button').textContent = siteContent.cta.button
 
 // Nav
 
-const navLinks =document.querySelectorAll('header nav a')
-const navLinkTexts = object.values(siteContent.nav)
+const navLinks = document.querySelectorAll('header nav a')
+const navLinkTexts = Object.values(siteContent.nav)
 navLinks.forEach((link, idx)=>{
   link.textContent = navLinkTexts[idx]
   link.classList.add('italic')
 })
+
