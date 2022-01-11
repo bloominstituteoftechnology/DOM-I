@@ -77,10 +77,22 @@ button.textContent = 'Get Started!';
 const ctaText = document.querySelector('h1');
 ctaText.textContent = 'DOM IS AWESOME!';
 
-const topText = document.querySelector('h4');
-topText.textContent = 'Features';
+const topContent = document.querySelector('.top-content');
+topContent.children[0].children[0].textContent = siteContent['main-content']['features-h4'];
+topContent.children[0].children[1].textContent = siteContent['main-content']['features-content'];
 
+topContent.children[1].children[0].textContent = siteContent['main-content']['about-h4'];
+topContent.children[1].children[1].textContent = siteContent['main-content']['about-content'];
 
+const bottomContent = document.querySelector('.bottom-content');
+bottomContent.children[0].children[0].textContent = siteContent['main-content']['services-h4'];
 
+bottomContent.children[0].children[1].textContent = siteContent['main-content']['services-content'];
 
+bottomContent.children[1].children[0].textContent = siteContent['main-content']['product-h4'];
+
+bottomContent.children[1].children[1].textContent = siteContent['main-content']['product-content'];
+
+bottomContent.children[2].children[0].textContent = siteContent['main-content']['vision-h4'];
+bottomContent.children[2].children[1].textContent = siteContent['main-content']['vision-content'];
 
