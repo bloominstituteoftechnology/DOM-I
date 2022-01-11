@@ -51,11 +51,17 @@ const links = document.querySelectorAll('nav a');
 const linkText = Object.values(siteContent.nav)
 for(let i = 0; i < 6; i++) {
   links[i].textContent = linkText[i]
+  
 }
 
-links.forEach(link => console.log(link));
 
-const realLinks = Array.from(links)
+// links.forEach(link => console.log(link));
+
+// const realLinks = Array.from(links)
+
+
+
+
 
 /**
  * get image from dom into js
