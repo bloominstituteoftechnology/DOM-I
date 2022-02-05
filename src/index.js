@@ -91,3 +91,4 @@ navLinks.forEach((link, idx) => {
   link.textContent = navLinksTexts[idx]
   link.classList.add('italic')
 })
+
