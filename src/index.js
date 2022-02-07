@@ -80,3 +80,8 @@ psBottom[0].textContent = siteContent['main-content']['services-content']
 psBottom[1].textContent = siteContent['main-content']['product-content']
 psBottom[2].textContent = siteContent['main-content']['vision-content']
 
+//Cta
+const ctaa = document.querySelector('.cta')
+ctaa.children[0].children[0].textContent = siteContent['cta']['h1']
+ctaa.children[0].children[1].textContent = siteContent['cta']['button']
+
