@@ -39,4 +39,62 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
   },
 };
 
-console.log('project wired!')
+
+//images here
+const logoImg = document.querySelector('#logo-img');
+logoImg.src = siteContent.images["logo-img"]
+
+const ctaImg = document.querySelector("#cta-img");
+ctaImg.src = siteContent.images["cta-img"]
+
+const midImg = document.querySelector("#middle-img");
+midImg.src = siteContent.images["accent-img"]
+
+//header content section is here
+const navLink = document.querySelectorAll('header nav a')
+const navLinkText = Object.values(siteContent.nav)
+navLink.forEach((link,idx)=>{
+  link.textContent = navLinkText[idx]
+  link.classList.add('italic')
+})
+
+//cta section is here
+document.querySelector('.cta .cta-text h1').textContent = siteContent.cta.h1
+document.querySelector('.cta .cta-text button').textContent = siteContent.cta.button
+
+// top content section is here
+const topcontent = document.querySelector('.top-content');
+const h4Top = topcontent.querySelectorAll('h4');
+h4Top[0].textContent = siteContent['main-content']['features-h4']
+h4Top[1].textContent = siteContent['main-content']['about-h4']
+
+const pTop = topcontent.querySelectorAll("p")
+console.log(pTop);
+pTop[0].textContent = siteContent['main-content']['features-content']
+pTop[1].textContent = siteContent['main-content']['about-content']
+
+//bottom content section is here
+const bottomContent = document.querySelector('.bottom-content')
+const h4bottom = bottomContent.querySelectorAll('h4')
+h4bottom[0].textContent = siteContent["main-content"]["services-h4"]
+h4bottom[1].textContent = siteContent["main-content"]["product-h4"]
+h4bottom[2].textContent = siteContent["main-content"]["vision-h4"]
+
+const pBottom = bottomContent.querySelectorAll('p')
+pBottom[0].textContent = siteContent["main-content"]["services-content"]
+pBottom[1].textContent = siteContent["main-content"]["product-content"]
+pBottom[2].textContent = siteContent["main-content"]["vision-content"]
+
+//contact section is here
+const contact = document.querySelector("section.contact");
+contact.querySelector('h4').textContent = siteContent.contact["contact-h4"]
+contact.querySelector("p:nth-of-type(1)").textContent = siteContent.contact['address']
+contact.querySelector("p:nth-of-type(2)").textContent = siteContent.contact['phone']
+contact.querySelector("p:nth-of-type(3)").textContent = siteContent.contact['email']
+
+
+//footer section is here
+const footLink = document.querySelector('footer a');
+footLink.classList.add('bold');
+footLink.textContent = siteContent.footer.copyright
+
