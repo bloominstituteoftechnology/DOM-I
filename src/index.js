@@ -40,3 +40,36 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+//These are my const for the header
+const headerNav = document.querySelector("header nav");
+const headerNavA = document.querySelectorAll("header nav a");
+const servicesHeader = headerNav.firstChild;
+const productHeader = servicesHeader.nextSibling;
+const visionHeader = productHeader.nextSibling;
+const featuresHeader = visionHeader.nextSibling;
+const aboutHeader = featuresHeader.nextSibling;
+const contactHeader = aboutHeader.nextSibling;
+const headerImg = document.querySelector("header .logo");
+
+
+//These are to change the class and inner text of the header
+headerNavA.className = "italic";
+servicesHeader.textContent = "Services";
+productHeader.textContent = "Product";
+visionHeader.textContent = "Vision";
+featuresHeader.textContent = "Features";
+aboutHeader.textContent = "About";
+contactHeader.textContent = "Contact";
+headerImg.src = "http://localhost:9000/img/logo.png";
+
+//These are const for the cta section 
+const ctaTextSection = document.querySelector(".cta-text");
+const cta_h1 = ctaTextSection.querySelector("h1");
+const cta_button = ctaTextSection.querySelector("button");
+const cta_img = document.querySelector("#cta-img");
+
+//These are to change to inner text of the cta
+cta_h1.textContent = "DOM Is Awesome";
+cta_button.textContent = "Get Started";
+cta_img.src = "http://localhost:9000/img/cta.png";
