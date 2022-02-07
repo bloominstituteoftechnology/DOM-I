@@ -40,3 +40,22 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+// const navigation1 = document.querySelector("header nav a")
+// navigation1.textContent = "Home"
+
+const logoImage = document.querySelector("#logo-img")
+//here i am calling the logo id in the img tag to be able to edit later
+
+logoImage.src = siteContent["images"]["logo-img"]
+
+const ctaImage = document.querySelector("#cta-img"); 
+
+ctaImage.src = siteContent["images"]["cta-img"]
+
+const middleImage = document.querySelector("#middle-img"); 
+middleImage.src = siteContent["images"]["accent-img"]
+
+
+
+
