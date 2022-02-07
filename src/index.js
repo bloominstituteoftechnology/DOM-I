@@ -38,5 +38,67 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
     "accent-img": "http://localhost:9000/img/accent.png",
   },
 };
+//array of Nav titles
+let navArr = [];
+for (let value of Object.values(siteContent.nav)) {
+    navArr.push(value)
+}
 
-console.log('project wired!')
+//retrieve nav tags
+const navTags = document.querySelectorAll('nav')[0].getElementsByTagName('a')
+//change anchor titles
+Array.from(navTags).forEach(function(item,index) {
+  item.innerHTML = navArr[index]
+  item.className = 'italic'
+})
+
+
+//change image src
+const imgArr = Object.values(siteContent.images)
+const imHold = document.querySelectorAll('img')
+imHold.forEach(function (item, index) {
+  item.setAttribute('src', imgArr[index])
+})
+
+//insert H1 text
+let divTag = document.querySelector('.cta-text h1')
+divTag.textContent = siteContent['cta'].h1
+
+//change button text
+const bttnTag = document.getElementsByTagName('button')
+bttnTag[0].textContent = siteContent.cta.button
+
+//change h4's tag text
+const txtContent = document.querySelectorAll('.main-content h4')
+const txtWithin = document.querySelectorAll('.main-content p')
+
+const h4Txt = siteContent['main-content'];
+let h4Arr = []
+let hTxtArr = []
+Object.keys(h4Txt).forEach(key => {
+  key.includes('h4') ? h4Arr.push(h4Txt[key]) : hTxtArr.push(h4Txt[key])
+})
+//change h4
+txtContent.forEach(function(item, index) {
+  item.innerHTML = h4Arr[index]
+})
+//change text within div
+txtWithin.forEach(function(item, index) {
+  item.innerHTML = hTxtArr[index]
+})
+
+//change contact h4
+let contactHeading = document.querySelectorAll('.contact h4') 
+contactHeading[0].innerHTML = siteContent.contact['contact-h4']
+
+//change all section contact items
+let contactPTag = document.querySelectorAll('.contact p')
+let contactText = siteContent.contact
+contactPTag[0].innerHTML = siteContent.contact['address']
+contactPTag[1].innerHTML = siteContent.contact['phone']
+contactPTag[2].innerHTML = siteContent.contact['email']
+
+//footer
+const footerContent = document.querySelector('footer a')
+footerContent.textContent = siteContent.footer['copyright']
+footerContent.className  = 'bold'
