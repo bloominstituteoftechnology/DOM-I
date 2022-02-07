@@ -12,39 +12,39 @@ Inside `src/index.js` there is declared an object literal containing all the dat
 
 ## Git Setup
 
-* [ ] Create a forked copy of this project.
-* [ ] Clone your OWN version of the repository.
-* [ ] Create a new branch: `git checkout -b <firstName-lastName>`.
-* [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-* [ ] Push commits: `git push origin <firstName-lastName>`.
+* [x] Create a forked copy of this project.
+* [x] Clone your OWN version of the repository.
+* [x] Create a new branch: `git checkout -b <firstName-lastName>`.
+* [x] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+* [x] Push commits: `git push origin <firstName-lastName>`.
 
 ## Running the project
 
-* [ ] Run `npm install` to download the project's dependencies.
-* [ ] Run `npm start` to launch the page on `http://localhost:3000`.
-* [ ] Run `npm test` to execute auto tests against your work (you'll need a new terminal window).
+* [x] Run `npm install` to download the project's dependencies.
+* [x] Run `npm start` to launch the page on `http://localhost:3000`.
+* [x] Run `npm test` to execute auto tests against your work (you'll need a new terminal window).
 
 ## MVP
 
 ### Create selectors to access the relevant elements
 
-* [ ] Declare variables pointing to the relevant DOM elements, using any of the selectors you have learned.
+* [x] Declare variables pointing to the relevant DOM elements, using any of the selectors you have learned.
 
 ### Add text contents
 
-* [ ] Using your selectors, update the text contents of the relevant elements, matching the design file.
-* [ ] Find the correct texts for the elements inside the data object in `src/index.js`.
+* [x] Using your selectors, update the text contents of the relevant elements, matching the design file.
+* [x] Find the correct texts for the elements inside the data object in `src/index.js`.
 
 ### Add class names
 
-* [ ] Give the anchor tags _inside the nav_ an italic style by adding the classname `italic` to them alone.
-* [ ] Give the anchor tag _inside the footer_ a bolder appearence by adding the classname `bold` to it alone.
+* [x] Give the anchor tags _inside the nav_ an italic style by adding the classname `italic` to them alone.
+* [x] Give the anchor tag _inside the footer_ a bolder appearence by adding the classname `bold` to it alone.
 
 ### Add image sources
 
-* [ ] Make the img tags on the page display the correct images by editing their `src` attribute.
-* [ ] Find the correct URLs for the images inside the data object in `src/index.js`.
+* [x] Make the img tags on the page display the correct images by editing their `src` attribute.
+* [x] Find the correct URLs for the images inside the data object in `src/index.js`.
 
 ## Submission Format
 
-* [ ] Submit a pull request to merge `<firstName-lastName>` Branch into `main`.
+* [x] Submit a pull request to merge `<firstName-lastName>` Branch into `main`.
