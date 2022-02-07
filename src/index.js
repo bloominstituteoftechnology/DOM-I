@@ -85,3 +85,12 @@ const ctaa = document.querySelector('.cta')
 ctaa.children[0].children[0].textContent = siteContent['cta']['h1']
 ctaa.children[0].children[1].textContent = siteContent['cta']['button']
 
+//Nav
+const container = document.querySelector('.container')
+const asContainer = container.querySelectorAll('a')
+asContainer[0].textContent = siteContent['nav']['nav-item-1']
+asContainer[1].textContent = siteContent['nav']['nav-item-2']
+asContainer[2].textContent = siteContent['nav']['nav-item-3']
+asContainer[3].textContent = siteContent['nav']['nav-item-4']
+asContainer[4].textContent = siteContent['nav']['nav-item-5']
+asContainer[5].textContent = siteContent['nav']['nav-item-6']
