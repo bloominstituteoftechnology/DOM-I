@@ -39,4 +39,18 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
   },
 };
 
+
+const links = document.querySelectorAll('nav a');
+const realLinks = Array.from(links);
+const header = document.querySelector('header');
+const logoImage = header.querySelector('img');
+const cta = document.querySelector('.cta');
+const heading = cta.querySelector('h1');
+const button = cta.querySelector('button');
+const mainContent = document.querySelector('.main-content');
+console.log(logoImage);
+
+logoImage.src = "http://localhost:9000/img/logo.png"
+logoImage.alt = 'Great Idea! Company Logo';
+
 console.log('project wired!')
