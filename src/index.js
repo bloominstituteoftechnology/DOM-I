@@ -40,3 +40,57 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+//Images
+const logo = document.querySelector('#logo-img');
+logo.src = siteContent.images['logo-img'];
+
+const cta = document.querySelector('#cta-img');
+cta.src = siteContent.images['cta-img'];
+
+const mid = document.querySelector('#middle-img');
+mid.setAttribute('src', siteContent.images['accent-img']);
+
+//Footer
+const footer = document.querySelector('footer a');
+footer.textContent = siteContent.footer.copyright
+
+//Contact
+const contact = document.querySelector('section.contact');
+contact.querySelector('h4').textContent = siteContent.contact['contact-h4']
+contact.querySelector('p:nth-of-type(1)').textContent = siteContent.contact['address']
+contact.querySelector('p:nth-of-type(2)').textContent = siteContent.contact['phone']
+contact.querySelector('p:nth-of-type(3)').textContent = siteContent.contact['email']
+
+//TopContent
+const top = document.querySelector('.top-content')
+top.children[0].children[0].textContent = siteContent['main-content']['features-h4']
+top.children[0].children[1].textContent = siteContent['main-content']['features-content']
+top.children[1].children[0].textContent = siteContent['main-content']['about-h4']
+top.children[1].children[1].textContent = siteContent['main-content']['about-content']
+
+//Bottom
+const bottom = document.querySelector('.bottom-content')
+const h4sBottom = bottom.querySelectorAll('h4')
+h4sBottom[0].textContent = siteContent['main-content']['services-h4']
+h4sBottom[1].textContent = siteContent['main-content']['product-h4']
+h4sBottom[2].textContent = siteContent['main-content']['vision-h4']
+const psBottom = bottom.querySelectorAll('p')
+psBottom[0].textContent = siteContent['main-content']['services-content']
+psBottom[1].textContent = siteContent['main-content']['product-content']
+psBottom[2].textContent = siteContent['main-content']['vision-content']
+
+//Cta
+const ctaa = document.querySelector('.cta')
+ctaa.children[0].children[0].textContent = siteContent['cta']['h1']
+ctaa.children[0].children[1].textContent = siteContent['cta']['button']
+
+//Nav
+const container = document.querySelector('.container')
+const asContainer = container.querySelectorAll('a')
+asContainer[0].textContent = siteContent['nav']['nav-item-1']
+asContainer[1].textContent = siteContent['nav']['nav-item-2']
+asContainer[2].textContent = siteContent['nav']['nav-item-3']
+asContainer[3].textContent = siteContent['nav']['nav-item-4']
+asContainer[4].textContent = siteContent['nav']['nav-item-5']
+asContainer[5].textContent = siteContent['nav']['nav-item-6']
