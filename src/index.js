@@ -52,6 +52,13 @@ navigation.children[4].textContent = siteContent["nav"]["nav-item-5"]
 navigation.children[5].textContent = siteContent["nav"]["nav-item-6"]
 navigation.classList.add('italic')
 
+// const navLinks = document.querySelectorAll("header nav a"); 
+// const navLinkText = Object.values(siteContent.nav)
+// navLinks.forEach((link,index)=> {
+//   link.textContent = navLinkText[index]
+// }); 
+
+
 //IMAGES BELOW
 
 const logoImage = document.querySelector("#logo-img")
@@ -96,6 +103,10 @@ topContent.children[0].children[1].textContent = siteContent["main-content"]["fe
 topContent.children[1].children[0].textContent = siteContent["main-content"]["about-h4"]
 topContent.children[1].children[1].textContent = siteContent["main-content"]["about-content"]
 
+//END TOP CONTENT
+
+//BOTTOM CONTENT 
+
 //services content 
 
 const bottomContent = document.querySelector(".bottom-content"); 
@@ -110,7 +121,14 @@ bottomContent.children[1].children[1].textContent = siteContent["main-content"][
 bottomContent.children[2].children[0].textContent = siteContent["main-content"]["vision-h4"]
 bottomContent.children[2].children[1].textContent = siteContent["main-content"]["vision-content"]
 
+//END BOTTOM CONTENT
 
+//CTA SECTION 
+
+const ctaSection = document.querySelector('.cta'); 
+
+ctaSection.children[0].children[0].textContent = siteContent["cta"]["h1"];
+ctaSection.children[0].children[1].textContent = siteContent["cta"]["button"]
 
 
 
