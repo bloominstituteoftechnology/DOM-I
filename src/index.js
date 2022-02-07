@@ -43,20 +43,24 @@ console.log('project wired!')
 
 
 //HEADER NAV BAR
-const navigation = document.querySelector("header nav")
-navigation.children[0].textContent = siteContent["nav"]["nav-item-1"]
-navigation.children[1].textContent = siteContent["nav"]["nav-item-2"]
-navigation.children[2].textContent = siteContent["nav"]["nav-item-3"]
-navigation.children[3].textContent = siteContent["nav"]["nav-item-4"]
-navigation.children[4].textContent = siteContent["nav"]["nav-item-5"]
-navigation.children[5].textContent = siteContent["nav"]["nav-item-6"]
-navigation.classList.add('italic')
+// const navigation = document.querySelector("header nav")
+// navigation.children[0].textContent = siteContent["nav"]["nav-item-1"]
+// navigation.children[1].textContent = siteContent["nav"]["nav-item-2"]
+// navigation.children[2].textContent = siteContent["nav"]["nav-item-3"]
+// navigation.children[3].textContent = siteContent["nav"]["nav-item-4"]
+// navigation.children[4].textContent = siteContent["nav"]["nav-item-5"]
+// navigation.children[5].textContent = siteContent["nav"]["nav-item-6"]
+// navigation.classList.add('italic')[0]
 
-// const navLinks = document.querySelectorAll("header nav a"); 
-// const navLinkText = Object.values(siteContent.nav)
-// navLinks.forEach((link,index)=> {
-//   link.textContent = navLinkText[index]
-// }); 
+
+const navLinks = document.querySelectorAll("header nav a"); 
+const navLinkText = Object.values(siteContent.nav)
+navLinks.forEach((link,index)=> {
+  link.textContent = navLinkText[index]
+  link.classList.add('italic')
+}); 
+
+//took this function from solution video just to see how it worked, i personally prefer the longer way for now since i can actually see what is going on and where i am adding the nav content. 
 
 
 //IMAGES BELOW
