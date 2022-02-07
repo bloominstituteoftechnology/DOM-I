@@ -55,4 +55,19 @@ mid.setAttribute('src', siteContent.images['accent-img']);
 const footer = document.querySelector('footer a');
 footer.textContent = siteContent.footer.copyright
 
-//Section
+//Contact
+const contact = document.querySelector('section.contact');
+contact.querySelector('h4').textContent = siteContent.contact['contact-h4']
+contact.querySelector('p:nth-of-type(1)').textContent = siteContent.contact['address']
+contact.querySelector('p:nth-of-type(2)').textContent = siteContent.contact['phone']
+contact.querySelector('p:nth-of-type(3)').textContent = siteContent.contact['email']
+
+//TopContent
+const top = document.querySelector('.top-content')
+top.children[0].children[0].textContent = siteContent['main-content']['features-h4']
+top.children[0].children[1].textContent = siteContent['main-content']['features-content']
+top.children[1].children[0].textContent = siteContent['main-content']['about-h4']
+top.children[1].children[1].textContent = siteContent['main-content']['about-content']
+
+//Bottom
+const bottom = document.querySelector('.bottom-content')
