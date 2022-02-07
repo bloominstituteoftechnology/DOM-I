@@ -41,8 +41,18 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 
 console.log('project wired!')
 
-// const navigation1 = document.querySelector("header nav a")
-// navigation1.textContent = "Home"
+
+//HEADER NAV BAR
+const navigation = document.querySelector("header nav")
+navigation.children[0].textContent = siteContent["nav"]["nav-item-1"]
+navigation.children[1].textContent = siteContent["nav"]["nav-item-2"]
+navigation.children[2].textContent = siteContent["nav"]["nav-item-3"]
+navigation.children[3].textContent = siteContent["nav"]["nav-item-4"]
+navigation.children[4].textContent = siteContent["nav"]["nav-item-5"]
+navigation.children[5].textContent = siteContent["nav"]["nav-item-6"]
+navigation.classList.add('italic')
+
+//IMAGES BELOW
 
 const logoImage = document.querySelector("#logo-img")
 //here i am calling the logo id in the img tag to be able to edit later
@@ -54,7 +64,27 @@ const ctaImage = document.querySelector("#cta-img");
 ctaImage.src = siteContent["images"]["cta-img"]
 
 const middleImage = document.querySelector("#middle-img"); 
-middleImage.src = siteContent["images"]["accent-img"]
+middleImage.src = siteContent["images"]["accent-img"]; 
+// IMAGES END
+
+//FOOTER 
+
+const footerLink = document.querySelector("footer a"); 
+footerLink.textContent = siteContent.footer.copyright
+footerLink.classList.add("bold")
+
+//END FOOTER
+
+//CONTACT 
+
+const contact = document.querySelector("section.contact")
+contact.children[0].textContent = siteContent["contact"]["contact-h4"];
+contact.children[1].textContent = siteContent["contact"]["address"]; 
+contact.children[2].textContent = siteContent["contact"]["phone"];
+contact.children[3].textContent = siteContent["contact"]["email"]; 
+
+
+//END CONTACT 
 
 
 
