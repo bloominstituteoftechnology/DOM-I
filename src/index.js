@@ -47,7 +47,12 @@ ctaImage.src = siteContent.images['cta-img']
 
 document.querySelector('.cta .cta-text h1').textContent = siteContent.cta.h1
 document.querySelector('.cta .cta-text button').textContent = siteContent.cta.button
-const navLinks = document.querySelector('header nav a')
+const navLinks = document.querySelectorAll('header nav a')
+const navLinkTexts = Object.values(siteContent.nav)
+navLinks.forEach((link, idx) => {
+  link.textContent = navLinkTexts[idx]
+  link.classList.add('italic')
+})
 
 const topContent = document.querySelector('.top-content')
 topContent.children[0].children[0].textContent = siteContent['main-content']['features-h4']
