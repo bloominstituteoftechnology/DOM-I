@@ -47,27 +47,28 @@ const siteContent = {
 
 console.log("project wired!");
 
-//These are my const for the header// to change the class and inner text of the header
-const headerNav = document.querySelector("header nav");
-const headerNavA = document.querySelectorAll("header nav a");
-const servicesHeader = headerNav.firstChild;
-const productHeader = servicesHeader.nextSibling;
-const visionHeader = productHeader.nextSibling;
-const featuresHeader = visionHeader.nextSibling;
-const aboutHeader = featuresHeader.nextSibling;
-const contactHeader = aboutHeader.nextSibling;
-const headerImg = document.querySelector("header .logo");
- 
-headerNavA.className = "italic";
-servicesHeader.textContent = siteContent.nav["nav-item-1"];
-productHeader.textContent = siteContent.nav["nav-item-2"];
-visionHeader.textContent = siteContent.nav["nav-item-3"];
-featuresHeader.textContent = siteContent.nav["nav-item-4"];
-aboutHeader.textContent = siteContent.nav["nav-item-5"];
-contactHeader.textContent = siteContent.nav["nav-item-6"];
+// These are to change the class and inner text of the header
+
+const containerNav = document.querySelector(".container nav");
+
+containerNav.children[0].textContent = siteContent.nav["nav-item-1"];
+containerNav.children[0].className = "italic";
+containerNav.children[1].textContent = siteContent.nav["nav-item-2"];
+containerNav.children[1].className = "italic";
+containerNav.children[2].textContent = siteContent.nav["nav-item-3"];
+containerNav.children[2].className = "italic";
+containerNav.children[3].textContent = siteContent.nav["nav-item-4"];
+containerNav.children[3].className = "italic";
+containerNav.children[4].textContent = siteContent.nav["nav-item-5"];
+containerNav.children[4].className = "italic";
+containerNav.children[5].textContent = siteContent.nav["nav-item-6"];
+containerNav.children[5].className = "italic";
+
+//These are for the logo
+const headerImg = document.querySelector("#logo-img");
 headerImg.src = siteContent.images["logo-img"];
 
-//These are const for the cta section // to change to inner text of the cta
+//These are to change to inner text of the cta
 const ctaTextSection = document.querySelector(".cta-text");
 const cta_h1 = ctaTextSection.querySelector("h1");
 const cta_button = ctaTextSection.querySelector("button");
@@ -78,30 +79,48 @@ cta_button.textContent = siteContent.cta["button"];
 cta_img.src = siteContent.images["cta-img"];
 
 //These are the const for the top content
-const topContent = document.querySelector('.top-content');
+const topContent = document.querySelector(".top-content");
 
-topContent.children[0].children[0].textContent = siteContent["main-content"]["features-h4"];
-topContent.children[0].children[1].textContent = siteContent["main-content"]["features-content"];
+topContent.children[0].children[0].textContent =
+  siteContent["main-content"]["features-h4"];
+topContent.children[0].children[1].textContent =
+  siteContent["main-content"]["features-content"];
 
-topContent.children[1].children[0].textContent = siteContent["main-content"]["about-h4"];
-topContent.children[1].children[0].textContent = siteContent["main-content"]["about-content"];
+topContent.children[1].children[0].textContent =
+  siteContent["main-content"]["about-h4"];
+topContent.children[1].children[0].textContent =
+  siteContent["main-content"]["about-content"];
 
 //These are the const to change the bottom content of the main section
+const bottomContent = document.querySelector(".bottom-content");
 
-//These are the const for the middle image // to change the middle image
+bottomContent.children[0].children[0].textContent =
+  siteContent["main-content"]["services-h4"];
+bottomContent.children[0].children[1].textContent =
+  siteContent["main-content"]["services-content"];
+bottomContent.children[1].children[0].textContent =
+  siteContent["main-content"]["product-h4"];
+bottomContent.children[1].children[1].textContent =
+  siteContent["main-content"]["product-content"];
+bottomContent.children[2].children[0].textContent =
+  siteContent["main-content"]["vision-h4"];
+bottomContent.children[2].children[1].textContent =
+  siteContent["main-content"]["vision-content"];
+
+//These are to change the middle image
 const mainMiddleImg = document.querySelector("#middle-img");
 
 mainMiddleImg.src = siteContent.images["accent-img"];
 
-//These are the const for the contact section// to change the text
+//These are to change the text in the contact area
 
 const contact = document.querySelector(".contact");
 contact.children[0].textContent = siteContent.contact["contact-h4"];
 contact.children[1].textContent = siteContent.contact["address"];
 contact.children[2].textContent = siteContent.contact["phone"];
-contact.children[3].textContent = siteContent.contact["email"]
+contact.children[3].textContent = siteContent.contact["email"];
 
-//These are the footer const // to change the a content 
+//These are to change the a content  footer const
 const copyRight = document.querySelector("footer a");
 
 copyRight.className = "bold";
