@@ -40,3 +40,66 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+// images
+
+const logoImg = document.querySelector("#logo-img");
+logoImg.src = siteContent.images["logo-img"];
+
+const ctaImg = document.querySelector("#cta-img");
+ctaImg.src = siteContent.images["cta-img"];
+
+const accentImg = document.querySelector("#middle-img");
+accentImg.src = siteContent.images["accent-img"];
+
+//nav
+
+const navContent = document.querySelectorAll("nav a");
+const navLinks = Object.values(siteContent.nav);
+navContent.forEach((link, idx) => {
+  link.textContent = navLinks[idx];
+  link.classList.add("italic");
+});
+
+
+//cta
+
+const cta = document.querySelector(".cta");
+cta.querySelector("h1").textContent = siteContent["cta"]["h1"];
+cta.querySelector("button").textContent = siteContent["cta"]["button"];
+
+//top content 
+
+const topContent = document.querySelector(".top-content");
+topContent.children[0].children[0].textContent = siteContent["main-content"]["features-h4"];
+topContent.children[0].children[1].textContent = siteContent["main-content"]["features-content"];
+topContent.children[1].children[0].textContent = siteContent["main-content"]["about-h4"];
+topContent.children[1].children[1].textContent = siteContent["main-content"]["about-content"];
+
+//bot content
+
+const bottomContent = document.querySelector(".bottom-content");
+const both4 = bottomContent.querySelectorAll("h4");
+both4[0].textContent = siteContent["main-content"]["services-h4"];
+both4[1].textContent = siteContent["main-content"]["product-h4"];
+both4[2].textContent = siteContent["main-content"]["vision-h4"];
+const botp = bottomContent.querySelectorAll("p");
+botp[0].textContent = siteContent["main-content"]["services-content"];
+botp[1].textContent = siteContent["main-content"]["product-content"];
+botp[2].textContent = siteContent["main-content"]["vision-content"];
+
+
+//contact
+
+const contact = document.querySelector("section.contact");
+contact.querySelector('h4').textContent = siteContent.contact["contact-h4"];
+contact.querySelector('p:nth-of-type(1)').textContent = siteContent.contact["address"];
+contact.querySelector('p:nth-of-type(2)').textContent = siteContent.contact["phone"];
+contact.querySelector('p:nth-of-type(3)').textContent = siteContent.contact["email"];
+
+// footer
+
+const footerLink = document.querySelector("footer a");
+footerLink.textContent = siteContent.footer.copyright;
+footerLink.classList.add("bold");
+
