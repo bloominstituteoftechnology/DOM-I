@@ -60,19 +60,18 @@ const topImg = top.querySelector('img');
 // Mid
 const main = document.querySelector('.main-content');
 const mid = main.querySelector('.top-content');
-const midTextOne = document.querySelector('.text-content:nth-of-type(1)');
-const midTextOneTitle = midTextOne.querySelector('h4');
-const midTextTwo = document.querySelector('.text-content:nth-of-type(2)');
-const midTextTwoTitle = midTextTwo.querySelector('h4');
+//const midTextOne = document.querySelector('.text-content:nth-of-type(1)');
+//const midTextOneTitle = midTextOne.querySelector('h4');
+//const midTextTwo = document.querySelector('.text-content:nth-of-type(2)');
+//const midTextTwoTitle = midTextTwo.querySelector('h4');
 const midImg = main.querySelector('.middle-img');
 
 // Bottom
-const botTextOne = document.querySelector('.text-content:nth-of-type(3)');
-const botTextOneTitle = botTextOne.querySelector('h4');
-const botTextTwo = document.querySelector('.text-content:nth-of-type(4)');
-//const botTextTwoTitle = botTextTwo.querySelector('h4');
-const botTextThree = document.querySelector('.text-content:nth-of-type(5)');
-//const botTextThreeTitle = botTextThree.querySelector('h4');
+const bot = main.querySelector('.bottom-content');
+//const botTextOne = document.querySelector('.text-content:nth-of-type(3)');
+//const botTextTwo = document.querySelector('.text-content:nth-of-type(4)');
+//const botTextThree = document.querySelector('.text-content:nth-of-type(5)');
+
 
 // Contact
 const contact = document.querySelector('.contact');
@@ -97,7 +96,20 @@ navLinks[5].textContent = siteContent.nav['nav-item-6'];
 topText.textContent = siteContent.cta['h1'];
 topButton.textContent = siteContent.cta['button'];
 
+mid.children[0].children[0].textContent = siteContent['main-content']['features-h4'];
+mid.children[0].children[1].textContent = siteContent['main-content']['features-content'];
 
+mid.children[1].children[0].textContent = siteContent['main-content']['about-h4'];
+mid.children[1].children[1].textContent = siteContent['main-content']['about-content'];
+
+bot.children[0].children[0].textContent = siteContent['main-content']['services-h4'];
+bot.children[0].children[1].textContent = siteContent['main-content']['services-content'];
+
+bot.children[1].children[0].textContent = siteContent['main-content']['product-h4'];
+bot.children[1].children[1].textContent = siteContent['main-content']['product-content'];
+
+bot.children[2].children[0].textContent = siteContent['main-content']['vision-h4'];
+bot.children[2].children[1].textContent = siteContent['main-content']['vision-content'];
 
 
 contactTitle.textContent = siteContent.contact['contact-h4'];
