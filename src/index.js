@@ -40,3 +40,97 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+
+// DOM ELEMENT VARIABLES
+// General 
+const bodyContainer = document.querySelector('.container');
+
+// Header
+const header = document.querySelector('header');
+const navLinks = document.querySelectorAll('header nav a');
+const logo = document.querySelector('#logo-img');
+
+// Top
+const top = document.querySelector('.cta');
+const topText = top.querySelector('h1');
+const topButton = top.querySelector('button');
+const topImg = top.querySelector('img');
+
+// Mid
+const main = document.querySelector('.main-content');
+const mid = main.querySelector('.top-content');
+//const midTextOne = document.querySelector('.text-content:nth-of-type(1)');
+//const midTextOneTitle = midTextOne.querySelector('h4');
+//const midTextTwo = document.querySelector('.text-content:nth-of-type(2)');
+//const midTextTwoTitle = midTextTwo.querySelector('h4');
+const midImg = main.querySelector('.middle-img');
+
+// Bottom
+const bot = main.querySelector('.bottom-content');
+//const botTextOne = document.querySelector('.text-content:nth-of-type(3)');
+//const botTextTwo = document.querySelector('.text-content:nth-of-type(4)');
+//const botTextThree = document.querySelector('.text-content:nth-of-type(5)');
+
+
+// Contact
+const contact = document.querySelector('.contact');
+const contactTitle = contact.querySelector('h4');
+const contactInfo = contact.querySelectorAll('p');
+
+// Footer
+const footer = document.querySelector('footer');
+const footerLink = footer.querySelector('a');
+
+
+
+
+// TEXT INPUT
+//navLinks[0].textContent = siteContent.nav['nav-item-1'];
+//navLinks[1].textContent = siteContent.nav['nav-item-2'];
+//navLinks[2].textContent = siteContent.nav['nav-item-3'];
+//navLinks[3].textContent = siteContent.nav['nav-item-4'];
+//navLinks[4].textContent = siteContent.nav['nav-item-5'];
+//navLinks[5].textContent = siteContent.nav['nav-item-6'];
+const navLinkTexts = Object.values(siteContent.nav);
+navLinks.forEach((link, index) => {
+  link.textContent = navLinkTexts[index];
+  link.classList.add('italic');
+});
+
+
+
+topText.textContent = siteContent.cta['h1'];
+topButton.textContent = siteContent.cta['button'];
+
+mid.children[0].children[0].textContent = siteContent['main-content']['features-h4'];
+mid.children[0].children[1].textContent = siteContent['main-content']['features-content'];
+
+mid.children[1].children[0].textContent = siteContent['main-content']['about-h4'];
+mid.children[1].children[1].textContent = siteContent['main-content']['about-content'];
+
+bot.children[0].children[0].textContent = siteContent['main-content']['services-h4'];
+bot.children[0].children[1].textContent = siteContent['main-content']['services-content'];
+
+bot.children[1].children[0].textContent = siteContent['main-content']['product-h4'];
+bot.children[1].children[1].textContent = siteContent['main-content']['product-content'];
+
+bot.children[2].children[0].textContent = siteContent['main-content']['vision-h4'];
+bot.children[2].children[1].textContent = siteContent['main-content']['vision-content'];
+
+
+contactTitle.textContent = siteContent.contact['contact-h4'];
+contact.children[1].textContent = siteContent.contact['address'];
+contact.children[2].textContent = siteContent.contact['phone'];
+contact.children[3].textContent = siteContent.contact['email'];
+
+
+footerLink.textContent = siteContent.footer['copyright'];
+footerLink.classList.add('bold');
+
+
+
+// IMAGES
+logo.src = siteContent.images['logo-img'];
+topImg.src = siteContent.images['cta-img'];
+midImg.src = siteContent.images['accent-img'];
