@@ -52,6 +52,12 @@ ctaImg.src = siteContent.images["cta-img"];
 const accentImg = document.querySelector("#middle-img");
 accentImg.src = siteContent.images["accent-img"];
 
+//cta
+
+const cta = document.querySelector(".cta");
+cta.querySelector("h1").textContent = siteContent["cta"]["h1"];
+cta.querySelector("button").textContent = siteContent["cta"]["button"];
+
 //top content 
 
 const topContent = document.querySelector(".top-content");
