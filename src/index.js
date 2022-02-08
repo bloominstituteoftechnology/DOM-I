@@ -47,7 +47,7 @@ const siteContent = {
 
 console.log("project wired!");
 
-//These are my const for the header
+//These are my const for the header// to change the class and inner text of the header
 const headerNav = document.querySelector("header nav");
 const headerNavA = document.querySelectorAll("header nav a");
 const servicesHeader = headerNav.firstChild;
@@ -57,8 +57,7 @@ const featuresHeader = visionHeader.nextSibling;
 const aboutHeader = featuresHeader.nextSibling;
 const contactHeader = aboutHeader.nextSibling;
 const headerImg = document.querySelector("header .logo");
-
-//These are to change the class and inner text of the header
+ 
 headerNavA.className = "italic";
 servicesHeader.textContent = "Services";
 productHeader.textContent = "Product";
@@ -68,13 +67,31 @@ aboutHeader.textContent = "About";
 contactHeader.textContent = "Contact";
 headerImg.src = "http://localhost:9000/img/logo.png";
 
-//These are const for the cta section
+//These are const for the cta section // to change to inner text of the cta
 const ctaTextSection = document.querySelector(".cta-text");
 const cta_h1 = ctaTextSection.querySelector("h1");
 const cta_button = ctaTextSection.querySelector("button");
 const cta_img = document.querySelector("#cta-img");
 
-//These are to change to inner text of the cta
 cta_h1.textContent = "DOM Is Awesome";
 cta_button.textContent = "Get Started";
 cta_img.src = "http://localhost:9000/img/cta.png";
+
+//These are the const for the top content
+// const topContent = document.querySelector('.top-content');
+// topContent.children[0].children[0].textContent 
+
+//These are the const for the middle image // to change the middle image
+const mainMiddleImg = document.querySelector("#middle-img");
+
+mainMiddleImg.src = "http://localhost:9000/img/accent.png";
+
+//These are the const for the contact section// to change the text
+
+
+
+//These are the footer const // to change the a content 
+const copyRight = document.querySelector("footer a");
+
+copyRight.className = "bold";
+copyRight.textContent = "Copyright Great Idea! 2021";
