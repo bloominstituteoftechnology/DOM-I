@@ -58,7 +58,9 @@ const navContent = document.querySelectorAll("nav a");
 const navLinks = Object.values(siteContent.nav);
 navContent.forEach((link, idx) => {
   link.textContent = navLinks[idx];
+  link.classList.add("italic");
 });
+
 
 //cta
 
