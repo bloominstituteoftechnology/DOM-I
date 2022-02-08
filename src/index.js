@@ -84,12 +84,12 @@ nav[5].textContent = siteContent['nav']['nav-item-6'];
 
 
 //Nav Bar Links Italics
-nav[0].classList.add('italic')
-nav[1].classList.add('italic')
-nav[2].classList.add('italic')
-nav[3].classList.add('italic')
-nav[4].classList.add('italic')
-nav[5].classList.add('italic')
+nav[0].classList.add('italic');
+nav[1].classList.add('italic');
+nav[2].classList.add('italic');
+nav[3].classList.add('italic');
+nav[4].classList.add('italic');
+nav[5].classList.add('italic');
 
 
 //Header
