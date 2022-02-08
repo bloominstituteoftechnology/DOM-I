@@ -39,4 +39,35 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
   },
 };
 
+
+const links = document.querySelector('nav a');
+//const realLinks = Array.from(links);
+const header = document.querySelector('header');
+const logoImage = header.querySelector('img');
+const cta = document.querySelector('.cta');
+const heading = cta.querySelector('h1');
+const button = cta.querySelector('button');
+const mainContent = document.querySelector('.main-content');
+
+const link1 = document.querySelector('a:nth-of-type(1)');
+link1.textContent = 'Services';
+
+const link2 = document.querySelector('a:nth-of-type(2)');
+link2.textContent = 'Product';
+
+const link3 = document.querySelector('a:nth-of-type(3)');
+link3.textContent = 'Vision';
+
+const link4 = document.querySelector('a:nth-of-type(4)');
+link4.textContent = 'Features';
+
+const link5 = document.querySelector('a:nth-of-type(5)');
+link5.textContent = 'About';
+
+const link6 = document.querySelector('a:nth-of-type(6)');
+link6.textContent = 'Contact';
+
+logoImage.src = "http://localhost:9000/img/logo.png"
+logoImage.alt = 'Great Idea! Company Logo';
+
 console.log('project wired!')
