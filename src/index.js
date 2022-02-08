@@ -40,3 +40,38 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+// General 
+const bodyContainer = document.querySelector('.container');
+
+// Header
+const header = document.querySelector('header');
+const navLinks = document.querySelectorAll('nav a');
+const logo = document.querySelector('#logo-img');
+
+// Top
+const top = document.querySelector('.cta');
+const topText = top.querySelector('h1');
+const topButton = top.querySelector('button');
+const topImg = top.querySelector('img');
+
+// Mid
+const main = document.querySelector('.main-content');
+const mid = main.querySelector('.top-content');
+const midTextOne = document.querySelector('.text-content:nth-of-type(1)');
+const midTextTwo = document.querySelector('.text-content:nth-of-type(2)');
+const midImg = main.querySelector('.middle-img');
+
+// Bottom
+const botTextOne = document.querySelector('.text-content:nth-of-type(3)');
+const botTextTwo = document.querySelector('.text-content:nth-of-type(4)');
+const botTextThree = document.querySelector('.text-content:nth-of-type(5)');
+
+// Contact
+const contact = document.querySelector('.contact');
+const contactTitle = contact.querySelector('h4');
+const contactInfo = contact.querySelectorAll('p');
+
+// Footer
+const footer = document.querySelector('footer');
+const footerLink = footer.querySelector('a');
