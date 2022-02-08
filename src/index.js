@@ -48,7 +48,7 @@ const bodyContainer = document.querySelector('.container');
 
 // Header
 const header = document.querySelector('header');
-const navLinks = document.querySelectorAll('nav a');
+const navLinks = document.querySelectorAll('header nav a');
 const logo = document.querySelector('#logo-img');
 
 // Top
@@ -86,12 +86,19 @@ const footerLink = footer.querySelector('a');
 
 
 // TEXT INPUT
-navLinks[0].textContent = siteContent.nav['nav-item-1'];
-navLinks[1].textContent = siteContent.nav['nav-item-2'];
-navLinks[2].textContent = siteContent.nav['nav-item-3'];
-navLinks[3].textContent = siteContent.nav['nav-item-4'];
-navLinks[4].textContent = siteContent.nav['nav-item-5'];
-navLinks[5].textContent = siteContent.nav['nav-item-6'];
+//navLinks[0].textContent = siteContent.nav['nav-item-1'];
+//navLinks[1].textContent = siteContent.nav['nav-item-2'];
+//navLinks[2].textContent = siteContent.nav['nav-item-3'];
+//navLinks[3].textContent = siteContent.nav['nav-item-4'];
+//navLinks[4].textContent = siteContent.nav['nav-item-5'];
+//navLinks[5].textContent = siteContent.nav['nav-item-6'];
+const navLinkTexts = Object.values(siteContent.nav);
+navLinks.forEach((link, index) => {
+  link.textContent = navLinkTexts[index];
+  link.classList.add('italic');
+});
+
+
 
 topText.textContent = siteContent.cta['h1'];
 topButton.textContent = siteContent.cta['button'];
@@ -120,8 +127,6 @@ contact.children[3].textContent = siteContent.contact['email'];
 
 footerLink.textContent = siteContent.footer['copyright'];
 footerLink.classList.add('bold');
-
-
 
 
 
