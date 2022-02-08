@@ -74,3 +74,7 @@ botContent.children[1].children[0].textContent = siteContent['main-content']['pr
 botContent.children[1].children[1].textContent = siteContent['main-content']['product-content'];
 botContent.children[2].children[0].textContent = siteContent['main-content']['vision-h4'];
 botContent.children[2].children[1].textContent = siteContent['main-content']['vision-content'];
+
+const cta = document.querySelector('.cta-text');
+cta.children[0].textContent = siteContent.cta['h1'];
+cta.children[1].textContent = siteContent.cta['button'];
