@@ -44,36 +44,52 @@ console.log('project wired!')
 
 //Begin Changes Here
 
+
+
+//Nav bar
+
+//Nav Bar Logo
 const logoImg = document.querySelector('#logo-img');
 logoImg.src = "http://localhost:9000/img/logo.png";
 
-//Navigation bar
+//Nav Bar Links
 
-const navTag1 = document.querySelector('nav a:nth-of-type(1)');
-navTag1.textContent = siteContent['nav']['nav-item-1'];
+// const navTag1 = document.querySelector('nav a:nth-of-type(1)');
+// navTag1.textContent = siteContent['nav']['nav-item-1'];
 
-const navTag2 = document.querySelector('nav a:nth-of-type(2)');
-navTag2.textContent = siteContent['nav']['nav-item-2'];
+// const navTag2 = document.querySelector('nav a:nth-of-type(2)');
+// navTag2.textContent = siteContent['nav']['nav-item-2'];
 
-const navTag3 = document.querySelector('nav a:nth-of-type(3)');
-navTag3.textContent = siteContent['nav']['nav-item-3'];
+// const navTag3 = document.querySelector('nav a:nth-of-type(3)');
+// navTag3.textContent = siteContent['nav']['nav-item-3'];
 
-const navTag4 = document.querySelector('nav a:nth-of-type(4)');
-navTag4.textContent = siteContent['nav']['nav-item-4'];
+// const navTag4 = document.querySelector('nav a:nth-of-type(4)');
+// navTag4.textContent = siteContent['nav']['nav-item-4'];
 
-const navTag5 = document.querySelector('nav a:nth-of-type(5)');
-navTag5.textContent = siteContent['nav']['nav-item-5'];
+// const navTag5 = document.querySelector('nav a:nth-of-type(5)');
+// navTag5.textContent = siteContent['nav']['nav-item-5'];
 
-const navTag6 = document.querySelector('nav a:nth-of-type(6)');
-navTag6.textContent = siteContent['nav']['nav-item-6'];
+// const navTag6 = document.querySelector('nav a:nth-of-type(6)');
+// navTag6.textContent = siteContent['nav']['nav-item-6'];
 
-// classList.add('italic')
+//Condensed Nav Bar Links
 
-//nav.index[1].textcontent = site content... then for each or loop through each 
+const nav = document.querySelectorAll('a');
+nav[0].textContent = siteContent['nav']['nav-item-1'];
+nav[1].textContent = siteContent['nav']['nav-item-2'];
+nav[2].textContent = siteContent['nav']['nav-item-3'];
+nav[3].textContent = siteContent['nav']['nav-item-4'];
+nav[4].textContent = siteContent['nav']['nav-item-5'];
+nav[5].textContent = siteContent['nav']['nav-item-6'];
 
-//Italics for the Nav bar
-// const navTags = document.querySelectorAll('nav a');
-// navTags.textContent.italics;
+
+//Nav Bar Links Italics
+nav[0].classList.add('italic')
+nav[1].classList.add('italic')
+nav[2].classList.add('italic')
+nav[3].classList.add('italic')
+nav[4].classList.add('italic')
+nav[5].classList.add('italic')
 
 
 //Header
@@ -101,7 +117,7 @@ pTop[1].textContent = siteContent['main-content']['about-content'];
 
 //Middle Accent Img
 const middleImg = document.querySelector('#middle-img');
-middleImg.src = siteContent['images']['accent-img']
+middleImg.src = siteContent['images']['accent-img'];
 
 
 //Bottom Middle Content
@@ -112,17 +128,24 @@ h4Bottom[1].textContent = siteContent['main-content']['product-h4'];
 h4Bottom[2].textContent = siteContent['main-content']['vision-h4'];
 
 const pBottom = bottomContent.querySelectorAll('p');
-pBottom[0].textContent = siteContent['main-content']['features-content'];
-pBottom[1].textContent = siteContent['main-content']['about-content'];
+pBottom[0].textContent = siteContent['main-content']['services-content'];
+pBottom[1].textContent = siteContent['main-content']['product-content'];
 pBottom[2].textContent = siteContent['main-content']['vision-content'];
 
 
 //Contact
-const contactHead = document.querySelector('.contact h4')
-contactHead.textContent = siteContent['contact']['contact-h4']
+const contactHead = document.querySelector('.contact h4');
+contactHead.textContent = siteContent['contact']['contact-h4'];
 
 const contact = document.querySelector('.contact');
-const pContact = contact.querySelectorAll('p')
-pContact[0].textContent = siteContent['contact']['address']
-pContact[1].textContent = siteContent['contact']['phone']
-pContact[2].textContent = siteContent['contact']['email']
+const pContact = contact.querySelectorAll('p');
+pContact[0].textContent = siteContent['contact']['address'];
+pContact[1].textContent = siteContent['contact']['phone'];
+pContact[2].textContent = siteContent['contact']['email'];
+
+
+//footer
+
+const footer = document.querySelector('footer a');
+footer.textContent = siteContent['footer']['copyright'];
+footer.classList.add('bold')
