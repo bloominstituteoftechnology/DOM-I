@@ -47,8 +47,11 @@ const siteContent = {
 
 console.log("project wired!");
 
-// These are to change the class and inner text of the header
+//These are for the logo
+const headerImg = document.querySelector("#logo-img");
+headerImg.src = siteContent.images["logo-img"];
 
+// These are to change the class and inner text of the header
 const containerNav = document.querySelector(".container nav");
 
 containerNav.children[0].textContent = siteContent.nav["nav-item-1"];
@@ -64,18 +67,15 @@ containerNav.children[4].className = "italic";
 containerNav.children[5].textContent = siteContent.nav["nav-item-6"];
 containerNav.children[5].className = "italic";
 
-//These are for the logo
-const headerImg = document.querySelector("#logo-img");
-headerImg.src = siteContent.images["logo-img"];
-
 //These are to change to inner text of the cta
-const ctaTextSection = document.querySelector(".cta-text");
-const cta_h1 = ctaTextSection.querySelector("h1");
-const cta_button = ctaTextSection.querySelector("button");
+const ctaText = document.querySelector(".cta-text");
+
+ctaText.children[0].textContent = siteContent.cta["h1"];
+ctaText.children[1].textContent = siteContent.cta["button"];
+
+//These are to change the cta img
 const cta_img = document.querySelector("#cta-img");
 
-cta_h1.textContent = siteContent.cta["h1"];
-cta_button.textContent = siteContent.cta["button"];
 cta_img.src = siteContent.images["cta-img"];
 
 //These are the const for the top content
@@ -88,7 +88,7 @@ topContent.children[0].children[1].textContent =
 
 topContent.children[1].children[0].textContent =
   siteContent["main-content"]["about-h4"];
-topContent.children[1].children[0].textContent =
+topContent.children[1].children[1].textContent =
   siteContent["main-content"]["about-content"];
 
 //These are the const to change the bottom content of the main section
