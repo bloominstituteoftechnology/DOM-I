@@ -38,5 +38,11 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
     "accent-img": "http://localhost:9000/img/accent.png",
   },
 };
+// renaming class name to italic
+// give a class name to nav a tags
+const navItem = document.querySelectorAll("nav-item-1");
+
+navItem.textContent = navItem["nav-item-1"]["italic"];
+
 
 console.log('project wired!')
