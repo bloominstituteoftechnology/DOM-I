@@ -68,7 +68,9 @@ topContent.children[1].children[0].textContent = siteContent['main-content']['ab
 topContent.children[1].children[1].textContent = siteContent['main-content']['about-content'];
 
 const botContent = document.querySelector('.bottom-content');
-botContent.children[0].children[0].textContent = siteContent['main-content']['product-h4'];
-botContent.children[0].children[1].textContent = siteContent['main-content']['product-content'];
-botContent.children[1].children[0].textContent = siteContent['main-content']['vision-h4'];
-botContent.children[1].children[1].textContent = siteContent['main-content']['vision-content'];
+botContent.children[0].children[0].textContent = siteContent['main-content']['services-h4'];
+botContent.children[0].children[1].textContent = siteContent['main-content']['services-content'];
+botContent.children[1].children[0].textContent = siteContent['main-content']['product-h4'];
+botContent.children[1].children[1].textContent = siteContent['main-content']['product-content'];
+botContent.children[2].children[0].textContent = siteContent['main-content']['vision-h4'];
+botContent.children[2].children[1].textContent = siteContent['main-content']['vision-content'];
