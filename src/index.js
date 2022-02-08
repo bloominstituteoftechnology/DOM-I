@@ -52,6 +52,14 @@ ctaImg.src = siteContent.images["cta-img"];
 const accentImg = document.querySelector("#middle-img");
 accentImg.src = siteContent.images["accent-img"];
 
+//nav
+
+const navContent = document.querySelectorAll("nav a");
+const navLinks = Object.values(siteContent.nav);
+navContent.forEach((link, idx) => {
+  link.textContent = navLinks[idx];
+});
+
 //cta
 
 const cta = document.querySelector(".cta");
