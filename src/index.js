@@ -39,4 +39,51 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
   },
 };
 
-console.log('project wired!')
+console.log('project wired!!!')
+
+const logoImg = document.querySelector('#logo-img')
+logoImg.src = 'http://localhost:9000/img/logo.png'
+
+const navBar = document.querySelectorAll('header nav a')
+const navText = Object.values(siteContent.nav)
+navBar.forEach((link, index) => {
+  link.textContent = navText[index]
+  link.classList.add('italic')
+})
+
+
+
+const ctaImg = document.querySelector('#cta-img')
+ctaImg.src = 'http://localhost:9000/img/cta.png'
+
+document.querySelector('.cta h1').textContent = siteContent.cta.h1
+document.querySelector('.cta button').textContent = siteContent.cta.button
+
+const topContent = document.querySelector('.top-content')
+topContent.children[0].children[0].textContent = siteContent['main-content']['features-h4']
+topContent.children[0].children[1].textContent = siteContent['main-content']['features-content']
+topContent.children[1].children[0].textContent = siteContent['main-content']['about-h4']
+topContent.children[1].children[1].textContent = siteContent['main-content']['about-content']
+
+const mainImg = document.querySelector('#middle-img')
+mainImg.src = 'http://localhost:9000/img/accent.png'
+
+const bottomContent = document.querySelector('.bottom-content')
+bottomContent.children[0].children[0].textContent = siteContent['main-content']['services-h4']
+bottomContent.children[0].children[1].textContent = siteContent['main-content']['services-content']
+bottomContent.children[1].children[0].textContent = siteContent['main-content']['product-h4']
+bottomContent.children[1].children[1].textContent = siteContent['main-content']['product-content']
+bottomContent.children[2].children[0].textContent = siteContent['main-content']['vision-h4']
+bottomContent.children[2].children[1].textContent = siteContent['main-content']['vision-content']
+
+const contact = document.querySelector('section.contact')
+contact.children[0].textContent = siteContent.contact['contact-h4']
+contact.children[1].textContent = siteContent.contact['address']
+contact.children[2].textContent = siteContent.contact['phone']
+contact.children[3].textContent = siteContent.contact['email']
+
+
+const footer = document.querySelector('footer a')
+footer.textContent = siteContent.footer.copyright
+footer.classList.add('bold')
+
