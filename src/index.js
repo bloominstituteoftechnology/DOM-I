@@ -41,27 +41,27 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 
 
 let navLinks = document.querySelectorAll('nav a'); 
-navLinks.forEach((val,i)=>{val.innerText = siteContent['nav'][`nav-item-${i+1}`];val.classList.add('italic')})
+navLinks.forEach((val,i)=>{val.textContent = siteContent['nav'][`nav-item-${i+1}`];val.classList.add('italic')})
 
 let cta_text = document.querySelector('.cta-text h1'); 
 let cta_button = document.querySelector('.cta-text button'); 
-cta_text.innerText = siteContent['cta']['h1']
-cta_button.innerText = siteContent['cta']['button']
+cta_text.textContent = siteContent['cta']['h1']
+cta_button.textContent = siteContent['cta']['button']
 
 let h4s = document.querySelectorAll('h4'); 
 let ps = document.querySelectorAll('p'); 
-h4s.forEach((val,i)=>val.innerText = siteContent['main-content'][Object.keys(siteContent['main-content'])[i*2]])
-ps.forEach((val,i)=>val.innerText = siteContent['main-content'][Object.keys(siteContent['main-content'])[(i*2)+1]])
+h4s.forEach((val,i)=>val.textContent = siteContent['main-content'][Object.keys(siteContent['main-content'])[i*2]])
+ps.forEach((val,i)=>val.textContent = siteContent['main-content'][Object.keys(siteContent['main-content'])[(i*2)+1]])
 
 let contactH4 = document.querySelector('.contact h4'); 
 let contactPs = document.querySelectorAll('.contact p'); 
-contactH4.innerText = siteContent['contact']['contact-h4']; 
+contactH4.textContent = siteContent['contact']['contact-h4']; 
 contactPs.forEach((val,i)=>{
-  val.innerText = siteContent['contact'][Object.keys(siteContent['contact'])[i+1]]
+  val.textContent = siteContent['contact'][Object.keys(siteContent['contact'])[i+1]]
 })
 
 let footer = document.querySelector('footer a'); 
-footer.innerText = siteContent['footer']['copyright']
+footer.textContent = siteContent['footer']['copyright']
 footer.classList.add('bold')
 
 
