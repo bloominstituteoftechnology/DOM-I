@@ -39,4 +39,31 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
   },
 };
 
-console.log('project wired!')
+
+let navLinks = document.querySelectorAll('nav a'); 
+navLinks.forEach((val,i)=>{val.textContent = siteContent['nav'][`nav-item-${i+1}`];val.classList.add('italic')})
+
+let cta_text = document.querySelector('.cta-text h1'); 
+let cta_button = document.querySelector('.cta-text button'); 
+cta_text.textContent = siteContent['cta']['h1']
+cta_button.textContent = siteContent['cta']['button']
+
+let h4s = document.querySelectorAll('h4'); 
+let ps = document.querySelectorAll('p'); 
+h4s.forEach((val,i)=>val.textContent = siteContent['main-content'][Object.keys(siteContent['main-content'])[i*2]])
+ps.forEach((val,i)=>val.textContent = siteContent['main-content'][Object.keys(siteContent['main-content'])[(i*2)+1]])
+
+let contactH4 = document.querySelector('.contact h4'); 
+let contactPs = document.querySelectorAll('.contact p'); 
+contactH4.textContent = siteContent['contact']['contact-h4']; 
+contactPs.forEach((val,i)=>{
+  val.textContent = siteContent['contact'][Object.keys(siteContent['contact'])[i+1]]
+})
+
+let footer = document.querySelector('footer a'); 
+footer.textContent = siteContent['footer']['copyright']
+footer.classList.add('bold')
+
+
+let imgs = document.querySelectorAll('img'); 
+imgs.forEach((val,i)=>val.setAttribute('src',siteContent['images'][Object.keys(siteContent['images'])[i]]))
