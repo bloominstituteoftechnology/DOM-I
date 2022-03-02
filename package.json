@@ -8,29 +8,29 @@
     "test": "cross-env NODE_ENV=testing jest"
   },
   "devDependencies": {
-    "@babel/core": "7.16.0",
-    "@babel/plugin-transform-runtime": "7.16.4",
-    "@babel/preset-env": "7.16.4",
-    "@testing-library/dom": "8.11.1",
-    "@testing-library/jest-dom": "5.16.1",
-    "@types/jest": "27.0.3",
+    "@babel/core": "7.17.5",
+    "@babel/plugin-transform-runtime": "7.17.0",
+    "@babel/preset-env": "7.16.11",
+    "@testing-library/dom": "8.11.3",
+    "@testing-library/jest-dom": "5.16.2",
+    "@types/jest": "27.4.1",
     "babel-loader": "8.2.3",
-    "concurrently": "6.4.0",
+    "concurrently": "7.0.0",
     "cross-env": "7.0.3",
-    "eslint": "8.4.1",
-    "fkill-cli": "7.0.0",
-    "html-loader": "3.0.1",
+    "eslint": "8.10.0",
+    "fkill-cli": "7.1.0",
+    "html-loader": "3.1.0",
     "html-webpack-plugin": "5.5.0",
-    "jest": "27.4.3",
-    "msw": "0.36.2",
+    "jest": "27.5.1",
+    "msw": "0.38.1",
     "nodemon": "2.0.15",
-    "webpack": "5.65.0",
-    "webpack-cli": "4.9.1",
-    "webpack-dev-server": "4.6.0"
+    "webpack": "5.69.1",
+    "webpack-cli": "4.9.2",
+    "webpack-dev-server": "4.7.4"
   },
   "dependencies": {
     "cors": "2.8.5",
-    "express": "4.17.1"
+    "express": "4.17.3"
   },
   "repository": {
     "type": "git",
