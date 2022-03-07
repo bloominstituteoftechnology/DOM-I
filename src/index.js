@@ -39,4 +39,39 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
   },
 };
 
-console.log('project wired!')
+const logoPic = document.querySelector('header img');
+logoPic.src = siteContent['images']['logo-img'];
+
+const headerText = document.querySelector('.cta-text h1');
+headerText.textContent = siteContent['cta']['h1'];
+
+const headerButton = document.querySelector('.cta-text button');
+headerButton.textContent = siteContent['cta']['button'];
+
+const ctaPic = document.querySelector('.cta img');
+ctaPic.src = siteContent['images']['cta-img'];
+
+const firstHeadline = document.querySelector('h4:nth-of-type(1)');
+firstHeadline.textContent = siteContent['main-content']['features-h4'];
+
+const headlinesNL = document.querySelectorAll('h4');
+const headlinesArray = Array.from(headlinesNL);
+headlinesArray[1].textContent = siteContent['main-content']['about-h4'];
+headlinesArray[2].textContent = siteContent['main-content']['services-h4'];
+headlinesArray[3].textContent = siteContent['main-content']['product-h4'];
+headlinesArray[4].textContent = siteContent['main-content']['vision-h4'];
+
+const contentNL = document.querySelectorAll('p');
+const contentArray = Array.from(contentNL);
+contentArray[0].textContent = siteContent['main-content']['features-content'];
+contentArray[1].textContent = siteContent['main-content']['about-content'];
+contentArray[2].textContent = siteContent['main-content']['services-content'];
+contentArray[3].textContent = siteContent['main-content']['product-content'];
+contentArray[4].textContent = siteContent['main-content']['vision-content'];
+
+const midImg = document.querySelector('.main-content img')
+midImg.src = siteContent['images']['accent-img']
+
+const contacth4 = document.querySelector('.contact h4');
+contacth4.textContent = siteContent['contact']['contact-h4'];
+
