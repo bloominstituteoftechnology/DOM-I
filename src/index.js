@@ -111,3 +111,20 @@ const ctaButton = cta.querySelector('button');
 
 ctaHeader.textContent = siteContent['cta']['h1'];
 ctaButton.textContent = siteContent['cta']['button'];
+
+//header
+const headerNav = document.querySelector('header nav');
+const servicesNav = headerNav.querySelector('a:nth-of-type(1)');
+const productNav = headerNav.querySelector('a:nth-of-type(2)');
+const visionNav = headerNav.querySelector('a:nth-of-type(3)');
+const featuresNav = headerNav.querySelector('a:nth-of-type(4)');
+const aboutNav = headerNav.querySelector('a:nth-of-type(5)');
+const contactNav = headerNav.querySelector('a:nth-of-type(6)');
+
+servicesNav.textContent = siteContent['nav']['nav-item-1'];
+productNav.textContent = siteContent['nav']['nav-item-2'];
+visionNav.textContent = siteContent['nav']['nav-item-3'];
+featuresNav.textContent = siteContent['nav']['nav-item-4'];
+aboutNav.textContent = siteContent['nav']['nav-item-5'];
+contactNav.textContent = siteContent['nav']['nav-item-6'];
+//product, vision, feature, about, contact
