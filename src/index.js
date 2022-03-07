@@ -61,3 +61,36 @@ secondSectionTitle.textContent="DOM Is Awesome";
 secondSectionButton.textContent="Get Started";
 secondSectionImg.src='http://localhost:9000/img/cta.png';
 
+// fixing the top of the website body
+const mainContent=document.querySelector(".main-content");
+const mainContentTop=mainContent.querySelector('.top-content');
+const mainContentTopText=mainContentTop.querySelectorAll('.text-content');
+const mainContentArray=Array.from(mainContentTopText);
+const mainContentFeatures=mainContentArray[0].querySelector('h4');
+const mainContentFeaturesContent=mainContentArray[0].querySelector('p');
+mainContentFeatures.textContent="Features";
+mainContentFeaturesContent.textContent='Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+const mainContentAbout=mainContentArray[1].querySelector('h4');
+const mainContentAboutContent=mainContentArray[1].querySelector('p');
+mainContentAbout.textContent="About";
+mainContentAboutContent.textContent='About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis';
+//adding an image in the middle 
+const middleImage=mainContent.querySelector('img');
+middleImage.src="http://localhost:9000/img/accent.png";
+// fixing the bottom of the website body
+const mainContentBottom=mainContent.querySelector('.bottom-content');
+const mainContentBottomText=mainContentBottom.querySelectorAll('.text-content');
+const bottomContentArray=Array.from(mainContentBottomText);
+console.log(bottomContentArray);
+const mainContentServices=bottomContentArray[0].querySelector('h4');
+const mainContentServicesContent=bottomContentArray[0].querySelector('p');
+mainContentServices.textContent="Services";
+mainContentServicesContent.textContent='Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+const mainContentProduct=bottomContentArray[1].querySelector('h4');
+const mainContentProductContent=bottomContentArray[1].querySelector('p');
+mainContentProduct.textContent="Product";
+mainContentProductContent.textContent='Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+const mainContentVision=bottomContentArray[2].querySelector('h4');
+const mainContentVisionContent=bottomContentArray[2].querySelector('p');
+mainContentVision.textContent='Vision';
+mainContentVisionContent.textContent='Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
