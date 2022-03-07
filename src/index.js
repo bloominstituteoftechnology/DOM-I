@@ -127,4 +127,11 @@ visionNav.textContent = siteContent['nav']['nav-item-3'];
 featuresNav.textContent = siteContent['nav']['nav-item-4'];
 aboutNav.textContent = siteContent['nav']['nav-item-5'];
 contactNav.textContent = siteContent['nav']['nav-item-6'];
+
+servicesNav.classList.add('italic');
+productNav.classList.add('italic');
+visionNav.classList.add('italic');
+featuresNav.classList.add('italic');
+aboutNav.classList.add('italic');
+contactNav.classList.add('italic');
 //product, vision, feature, about, contact
