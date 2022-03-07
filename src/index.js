@@ -56,3 +56,38 @@ const footer = document.querySelector('footer');
 const footerLink = document.querySelector('footer a');
 footerLink.classList.add('bold')
 footerLink.textContent = siteContent['footer']['copyright'];
+
+//contact
+const contact = document.querySelector('.contact');
+const contactHeading = document.querySelector('.contact h4');
+const address = document.querySelector('.contact p:nth-of-type(1)');
+const phone = document.querySelector('.contact p:nth-of-type(2)');
+const email = document.querySelector('.contact p:nth-of-type(3)');
+
+contactHeading.textContent = siteContent['contact']['contact-h4'];
+address.textContent = siteContent['contact']['address'];
+phone.textContent = siteContent['contact']['phone'];
+email.textContent = siteContent['contact']['email'];
+
+//middle content
+const mainContent = document.querySelector('.main-content');
+const topContent = mainContent.children[0];
+const bottomContent = mainContent.children[2];
+const services = bottomContent.children[0];
+const servicesH4 = services.querySelector('h4');
+const servicesText = services.querySelector('p');
+const product = bottomContent.children[1];
+const productH4 = product.querySelector('h4');
+const productText = product.querySelector('p');
+const vision = bottomContent.children[2];
+const visionH4 = vision.querySelector('h4');
+const visionText = vision.querySelector('p');
+
+servicesH4.textContent = siteContent['main-content']['services-h4'];
+servicesText.textContent = siteContent['main-content']['services-content'];
+productH4.textContent = siteContent['main-content']['product-h4'];
+productText.textContent = siteContent['main-content']['product-content'];
+visionH4.textContent = siteContent['main-content']['vision-h4'];
+visionText.textContent = siteContent['main-content']['vision-content'];
+
+
