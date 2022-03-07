@@ -40,7 +40,7 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
-
+//fixing the header
 const headerNav = document.querySelectorAll('nav a');
 const headerNavLinks=Array.from(headerNav);
 headerNavLinks[0].textContent="Services";
@@ -48,5 +48,16 @@ headerNavLinks[1].textContent="Product";
 headerNavLinks[2].textContent="Vision";
 headerNavLinks[3].textContent="Features";
 headerNavLinks[4].textContent="About";
-// headerNavLinks[5].textContent="Contact";
+headerNavLinks[5].textContent="Contact";
+const headerLogo = document.querySelector('#logo-img');
+headerLogo.src="http://localhost:9000/img/logo.png";
+
+// fixing the area directly under the header
+const secondSection = document.querySelector('.cta');
+const secondSectionTitle=secondSection.querySelector('h1');
+const secondSectionButton=secondSection.querySelector('button');
+const secondSectionImg=secondSection.querySelector('img');
+secondSectionTitle.textContent="DOM Is Awesome";
+secondSectionButton.textContent="Get Started";
+secondSectionImg.src='http://localhost:9000/img/cta.png';
 
