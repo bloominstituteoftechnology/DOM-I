@@ -58,22 +58,22 @@ console.log('project wired!')
 
 //logo image
 const logoImg = document.querySelector('#logo-img');
-logoImg.src= "http://localhost:9000/img/logo.png";
+logoImg.src= siteContent.images["logo-img"];
 
 //cta text h1
 const ctaText1 = document.querySelector("h1")
-ctaText1.textContent = 'DOM is Awesome'
+ctaText1.textContent = siteContent.cta.h1;
 
 //cta button
-const ctaButton = document.querySelector("button")
-ctaButton.textContent = 'Get Started'
+const ctaButton = document.querySelector("button");
+ctaButton.textContent = siteContent.cta.button;
 
 //cta image
-const ctaImg = document.querySelector("cta-img");
-ctaImg.src = "http://localhost:9000/img/cta.png";
+const ctaImg = document.querySelector("#cta-img");
+ctaImg.src = siteContent.images["cta-image"];
 
 //main-content h4 1
-const mainContentFirstH4 = document.querySelector("h4")
+const mainContentFirstHeader = document.querySelector("h4")
 mainContentFirstH4.textContent = siteContent["main-content"]["features-h4"];
 
 //main content p 1 
@@ -81,39 +81,41 @@ const mainContentFirstP = document.querySelectorAll("p");
 mainContentFirstP.textContent = siteContent["main-content"]["features-content"];
 
 //main-content h4 2
-const mainContentSecondH4 = document.querySelectorAll("h4"[1]);
+const mainContentSecondHeader = document.querySelectorAll("text content h4:nth-of-type(2)");
+console.log(mainContentSecondHeader);
 mainContentSecondH4.textContent = siteContent["main-content"]["about-h4"];
 
 //main content p 2 
-const mainContentSecondP = document.querySelectorAll("p"[1]);
+const mainContentSecondP = document.querySelectorAll("p:nth-of-type(2)");
+console.log(mainContentSecondP);
 mainContentSecondP.textContent = siteContent["main-content"]["about-content"];
 
 //middle image
 const accentImg = document.querySelector('#middle-img');
-accentImg.src = "http://localhost:9000/img/accent.png";
+accentImg.src = siteContent.images["accent-img"];
 
 //main-content h4 3
-const mainContentThirdH4 = document.querySelectorAll("h4"[2]);
+const mainContentThirdHeader = document.querySelectorAll("h4:nth-of-type(3)");
 mainContentThirdH4.textContent = siteContent["main-content"]["services-h4"];
 
 //main content p 3 
-const mainContentThirdP = document.querySelectorAll("p"[2]);
+const mainContentThirdP = document.querySelectorAll("p:nth-of-type(3)");
 mainContentThirdP.textContent = siteContent["main-content"]["services-content"];
 
 //main-content h4 4
-const mainContentFourthH4 = document.querySelectorAll("h4"[3]);
+const mainContentFourthHeader = document.querySelectorAll("h4:nth-of-type(4)");
 mainContentFourthH4.textContent = siteContent["main-content"]["product-h4"];
 
 //main content p 4 
-const mainContentFourthP = document.querySelectorAll("p"[3]);
+const mainContentFourthP = document.querySelectorAll("p:nth-of-type(4)");
 mainContentFourthP.textContent = siteContent["main-content"]["product-content"];
 
 //main-content h4 5
-const mainContentFifthH4 = document.querySelectorAll("h4"[4]);
+const mainContentFifthHeader = document.querySelectorAll("h4:nth-of-type(5)");
 mainContentFifthH4.textContent = siteContent["main-content"]["vision-h4"];
 
 //main content p 5
-const mainContentFifthP = document.querySelectorAll("p"[4]);
+const mainContentFifthP = document.querySelectorAll("p:nth-of-type(5)");
 mainContentFifthP.textContent = siteContent["main-content"]["vision-content"];
 
 //contact h4
@@ -135,6 +137,7 @@ contactEmail.textContent = siteContent.contact.email;
 //footer a
 const footerLink = document.querySelector('footer a');
 footerLink.textContent = siteContent.footer.copyright;
+footerLink.classList.add('bold');
 
 
 
