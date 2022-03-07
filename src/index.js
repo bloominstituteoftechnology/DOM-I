@@ -44,11 +44,17 @@ console.log('project wired!')
 const headerNav = document.querySelectorAll('nav a');
 const headerNavLinks=Array.from(headerNav);
 headerNavLinks[0].textContent="Services";
+headerNavLinks[0].classList.add('italic');
 headerNavLinks[1].textContent="Product";
+headerNavLinks[1].classList.add('italic');
 headerNavLinks[2].textContent="Vision";
+headerNavLinks[2].classList.add('italic');
 headerNavLinks[3].textContent="Features";
+headerNavLinks[3].classList.add('italic');
 headerNavLinks[4].textContent="About";
+headerNavLinks[4].classList.add('italic');
 headerNavLinks[5].textContent="Contact";
+headerNavLinks[5].classList.add('italic');
 const headerLogo = document.querySelector('#logo-img');
 headerLogo.src="http://localhost:9000/img/logo.png";
 
@@ -81,7 +87,6 @@ middleImage.src="http://localhost:9000/img/accent.png";
 const mainContentBottom=mainContent.querySelector('.bottom-content');
 const mainContentBottomText=mainContentBottom.querySelectorAll('.text-content');
 const bottomContentArray=Array.from(mainContentBottomText);
-console.log(bottomContentArray);
 const mainContentServices=bottomContentArray[0].querySelector('h4');
 const mainContentServicesContent=bottomContentArray[0].querySelector('p');
 mainContentServices.textContent="Services";
@@ -94,3 +99,16 @@ const mainContentVision=bottomContentArray[2].querySelector('h4');
 const mainContentVisionContent=bottomContentArray[2].querySelector('p');
 mainContentVision.textContent='Vision';
 mainContentVisionContent.textContent='Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+// fixing the contacts
+const contacts=document.querySelector('.contact');
+const contactsTitle=contacts.querySelector('h4');
+contactsTitle.textContent='Contacts';
+const contactsList= contacts.querySelectorAll('p');
+const contactsArray=Array.from(contactsList);
+contactsArray[0].textContent='123 Way 456 Street Somewhere, USA';
+contactsArray[1].textContent='1 (888) 888-8888';
+contactsArray[2].textContent='sales@greatidea.io';
+//fixing the footer
+const footerCopyright=document.querySelector("footer a");
+footerCopyright.classList.add('bold');
+footerCopyright.textContent="Copyright Great Idea! 2021";
