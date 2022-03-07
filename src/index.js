@@ -42,35 +42,35 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 console.log('project wired!')
 
 //header nav
-
+const headerNav = document.querySelector("nav");
 //header a1
-
+headerNav.children[0].textContent = siteContent["nav-item-1"];
 //header a2
-
+headerNav.children[1].textContent = siteContent["nav-item-2"];
 //header a3
-
+headerNav.children[2].textContent = siteContent["nav-item-3"];
 //header a4
-
+headerNav.children[3].textContent = siteContent["nav-item-4"];
 //header a5
-
+headerNav.children[4].textContent = siteContent["nav-item-5"];
 //header a6
-
+headerNav.children[5].textContent = siteContent["nav-item-6"];
 
 //logo image
 const logoImg = document.querySelector('#logo-img');
 logoImg.src= siteContent.images["logo-img"];
 
 //cta text h1
-const ctaText1 = document.querySelector("h1")
-ctaText1.textContent = siteContent.cta.h1;
+const ctaText = document.querySelector("h1")
+ctaText.textContent = siteContent.cta.h1;
 
 //cta button
 const ctaButton = document.querySelector("button");
 ctaButton.textContent = siteContent.cta.button;
 
 //cta image
-const ctaImg = document.querySelector("#cta-img");
-ctaImg.src = siteContent.images["cta-image"];
+const ctaImg = document.querySelector(".cta #cta-img");
+ctaImg.src = siteContent.images["cta-img"];
 
 //Top content 
 const topContent = document.querySelector(".top-content");
@@ -79,16 +79,16 @@ const topContent = document.querySelector(".top-content");
 topContent.children[0].children[0].textContent = siteContent["main-content"]["features-h4"];
 
 //P 1
-topContent.children[0].childre3n[1].textContent = siteContent["main-content"]["features-content"];
+topContent.children[0].children[1].textContent = siteContent["main-content"]["features-content"];
 
 //H4 2
-topContent.chidlren[1].children[0].textContent = siteContent["main-content"]["about-h4"];
+topContent.children[1].children[0].textContent = siteContent["main-content"]["about-h4"];
 
 //P 2
-topContent.chidlren[1].chidlren[1].textContent =siteContent["main-content"]["about-content"];
+topContent.children[1].children[1].textContent =siteContent["main-content"]["about-content"];
 
 //middle image
-const accentImg = document.querySelector('#middle-img');
+const accentImg = document.querySelector("#middle-img");
 accentImg.src = siteContent.images["accent-img"];
 
 //Bottom content
