@@ -132,6 +132,7 @@ visionH4.textContent = siteContent['main-content']['vision-h4']
 const visionText = vision.querySelector('p')
 visionText.textContent = siteContent['main-content']['vision-content']
 
+
 //contact
 const contact = document.querySelector('.contact')
 
@@ -147,12 +148,14 @@ phone.textContent = siteContent['contact']['phone']
 const email = contact.querySelector('p:nth-of-type(3)')
 email.textContent = siteContent['contact']['email']
 
+
 //footer
 const footer = document.querySelector('footer')
 
 const footerLink = footer.querySelector('a')
 footerLink.textContent = siteContent['footer']['copyright']
 footerLink.classList.add('bold')
+
 
 //images
 const logoImg = document.querySelector('#logo-img')
@@ -163,3 +166,4 @@ ctaImg.src = siteContent['images']['cta-img']
 
 const accentImg = document.querySelector('#middle-img');
 accentImg.src = siteContent['images']['accent-img'];
+
