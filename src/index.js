@@ -40,3 +40,13 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+const headerNav = document.querySelectorAll('nav a');
+const headerNavLinks=Array.from(headerNav);
+headerNavLinks[0].textContent="Services";
+headerNavLinks[1].textContent="Product";
+headerNavLinks[2].textContent="Vision";
+headerNavLinks[3].textContent="Features";
+headerNavLinks[4].textContent="About";
+// headerNavLinks[5].textContent="Contact";
+
