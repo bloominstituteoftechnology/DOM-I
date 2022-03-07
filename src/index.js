@@ -104,4 +104,10 @@ productText.textContent = siteContent['main-content']['product-content'];
 visionH4.textContent = siteContent['main-content']['vision-h4'];
 visionText.textContent = siteContent['main-content']['vision-content'];
 
+//cta
+const cta = document.querySelector('.cta-text');
+const ctaHeader = cta.querySelector('h1');
+const ctaButton = cta.querySelector('button');
 
+ctaHeader.textContent = siteContent['cta']['h1'];
+ctaButton.textContent = siteContent['cta']['button'];
