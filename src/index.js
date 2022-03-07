@@ -72,6 +72,20 @@ email.textContent = siteContent['contact']['email'];
 //middle content
 const mainContent = document.querySelector('.main-content');
 const topContent = mainContent.children[0];
+const features = topContent.children[0];
+const featuresH4 = features.querySelector('h4');
+const featuresText = features.querySelector('p');
+const about = topContent.children[1];
+const aboutH4 = about.querySelector('h4');
+const aboutText = about.querySelector('p');
+
+featuresH4.textContent = siteContent['main-content']['features-h4'];
+featuresText.textContent = siteContent['main-content']['features-content'];
+aboutH4.textContent = siteContent['main-content']['about-h4'];
+aboutText.textContent = siteContent['main-content']['about-content'];
+
+
+
 const bottomContent = mainContent.children[2];
 const services = bottomContent.children[0];
 const servicesH4 = services.querySelector('h4');
