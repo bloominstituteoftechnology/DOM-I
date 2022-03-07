@@ -39,4 +39,12 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
   },
 };
 
-console.log('project wired!')
+console.log('project wired!');
+
+const headerNav = document.querySelectorAll('a');
+console.log(headerNav);
+headerNav[0].textContent = 'Services';
+console.log(typeof headerNav);
+
+// const headerImg = document.querySelector('img');
+// console.log(headerImg);
