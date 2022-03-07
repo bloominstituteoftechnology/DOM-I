@@ -102,7 +102,7 @@ mainContentVisionContent.textContent='Vision content elementum magna eros, ac po
 // fixing the contacts
 const contacts=document.querySelector('.contact');
 const contactsTitle=contacts.querySelector('h4');
-contactsTitle.textContent='Contacts';
+contactsTitle.textContent='Contact';
 const contactsList= contacts.querySelectorAll('p');
 const contactsArray=Array.from(contactsList);
 contactsArray[0].textContent='123 Way 456 Street Somewhere, USA';
