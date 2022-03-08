@@ -58,3 +58,29 @@ ctaSection.querySelector('img').src = siteContent['images']['cta-img'];
 // Changing main-content img src
 const mainCont = document.querySelector(".main-content");
 mainCont.querySelector('img').src = siteContent['images']['accent-img'];
+
+// Changes Nav Links
+
+// Link One
+const serviceLink = document.querySelector('.italic:nth-of-type(1)');
+serviceLink.textContent = siteContent['nav']['nav-item-1']; 
+
+// Link Two
+const productLink = document.querySelector('.italic:nth-of-type(2)');
+productLink.textContent = siteContent['nav']['nav-item-2'];
+
+// Link Three
+const visionLink = document.querySelector('.italic:nth-of-type(3)');
+visionLink.textContent = siteContent['nav']['nav-item-3'];
+
+// Link Four
+const featuresLink = document.querySelector('.italic:nth-of-type(4)');
+featuresLink.textContent = siteContent['nav']['nav-item-4'];
+
+// Link Five
+const aboutLink = document.querySelector('.italic:nth-of-type(5)');
+aboutLink.textContent = siteContent['nav']['nav-item-5'];
+
+// Link Six
+const ContactLink = document.querySelector('.italic:nth-of-type(6)');
+ContactLink.textContent = siteContent['nav']['nav-item-6'];
