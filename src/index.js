@@ -70,3 +70,26 @@ document.querySelector('button').textContent = "Get Started"
 img0.src = "http://localhost:9000/img/logo.png"
 
 document.querySelector('#cta-img').src = "http://localhost:9000/img/cta.png"
+
+const pancake = document.getElementsByTagName('h4')
+const ptag = document.getElementsByTagName('p')
+
+pancake[2].textContent = "Services"
+
+pancake[3].textContent = "Product"
+
+pancake[4].textContent = "Vision"
+
+pancake[0].textContent = "Features"
+
+pancake[1].textContent = "About"
+
+ptag[0].textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+ptag[1].textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+ptag[2].textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+ptag[3].textContent = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+ptag[4].textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
