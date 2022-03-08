@@ -80,6 +80,7 @@ contentNL[6].textContent = siteContent['contact']['phone']
 contentNL[7].textContent = siteContent['contact']['email']
 
 const copyrightText = document.querySelector('footer a')
+copyrightText.classList.add('bold')
 copyrightText.textContent = siteContent['footer']['copyright']
 
 const navNL = document.querySelectorAll('nav a');
@@ -90,3 +91,6 @@ navArray[2].textContent = siteContent['nav']['nav-item-3']
 navArray[3].textContent = siteContent['nav']['nav-item-4']
 navArray[4].textContent = siteContent['nav']['nav-item-5']
 navArray[5].textContent = siteContent['nav']['nav-item-6']
+
+const navClassAdder = document.querySelectorAll('nav a');
+navClassAdder.classList.add('italic')
