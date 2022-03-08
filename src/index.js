@@ -59,6 +59,8 @@ ctaSection.querySelector('img').src = siteContent['images']['cta-img'];
 const mainCont = document.querySelector(".main-content");
 mainCont.querySelector('img').src = siteContent['images']['accent-img'];
 
+
+
 // Changes Nav Links
 
 // Link One
@@ -84,3 +86,13 @@ aboutLink.textContent = siteContent['nav']['nav-item-5'];
 // Link Six
 const ContactLink = document.querySelector('.italic:nth-of-type(6)');
 ContactLink.textContent = siteContent['nav']['nav-item-6'];
+
+
+
+// Changes cta section
+
+// ctaSection h1 
+ctaSection.querySelector('h1').textContent = siteContent['cta']['h1'];
+
+// ctaSection button
+ctaSection.querySelector('button').textContent = siteContent['cta']['button'];
