@@ -1,4 +1,3 @@
-
 const siteContent = {
   // DO NOT CHANGE THIS OBJECT
   nav: {
@@ -104,19 +103,42 @@ ctaSection.querySelector('button').textContent = siteContent['cta']['button'];
 
 // main content features 
 
+// Changes top section content
+const topSection = document.querySelector('.top-content');
+
+topSection.children[0].children[0].textContent = siteContent['main-content']['features-h4'];
+topSection.children[0].children[1].textContent = siteContent['main-content']['features-content'];
+topSection.children[1].children[0].textContent = siteContent['main-content']['about-h4'];
+topSection.children[1].children[1].textContent = siteContent['main-content']['about-content'];
+
+// Changes bottom section content
+const bottomSection = document.querySelector('.bottom-content');
+
+bottomSection.children[0].children[0].textContent = siteContent['main-content']['services-h4'];
+bottomSection.children[0].children[1].textContent = siteContent['main-content']['services-content'];
+bottomSection.children[1].children[0].textContent = siteContent['main-content']['product-h4'];
+bottomSection.children[1].children[1].textContent = siteContent['main-content']['product-content'];
+bottomSection.children[2].children[0].textContent = siteContent['main-content']['vision-h4'];
+bottomSection.children[2].children[1].textContent = siteContent['main-content']['vision-content'];
 
 
-// Changes Contact section
+// Changes  Contact section
 const contact = document.querySelector('.contact');
 contact.querySelector('h4').textContent = siteContent['contact']["contact-h4"];
 
+// first p tag
 const parOne = contact.querySelector('p:nth-of-type(1)');
 parOne.textContent = siteContent['contact']['address'];
 
+// second p tag
 const parTwo = contact.querySelector('p:nth-of-type(2)');
 parTwo.textContent = siteContent['contact']['phone'];
 
+// third p tag
 const parThree = contact.querySelector('p:nth-of-type(3)');
 parThree.textContent = siteContent['contact']['email'];
 
 
+// Changes footer section
+const copyright = document.querySelector("footer a");
+copyright.textContent = siteContent['footer']['copyright'];
