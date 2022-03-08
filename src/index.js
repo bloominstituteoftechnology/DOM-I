@@ -1,3 +1,4 @@
+
 const siteContent = {
   // DO NOT CHANGE THIS OBJECT
   nav: {
@@ -96,3 +97,26 @@ ctaSection.querySelector('h1').textContent = siteContent['cta']['h1'];
 
 // ctaSection button
 ctaSection.querySelector('button').textContent = siteContent['cta']['button'];
+
+
+
+// Changes main content section
+
+// main content features 
+
+
+
+// Changes Contact section
+const contact = document.querySelector('.contact');
+contact.querySelector('h4').textContent = siteContent['contact']["contact-h4"];
+
+const parOne = contact.querySelector('p:nth-of-type(1)');
+parOne.textContent = siteContent['contact']['address'];
+
+const parTwo = contact.querySelector('p:nth-of-type(2)');
+parTwo.textContent = siteContent['contact']['phone'];
+
+const parThree = contact.querySelector('p:nth-of-type(3)');
+parThree.textContent = siteContent['contact']['email'];
+
+
