@@ -40,3 +40,33 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+
+const navItal = document.getElementsByTagName('a')
+const img0 = document.querySelector('.logo')
+
+navItal[0].className = "italic"
+navItal[0].textContent = "Services"
+
+navItal[1].className = "italic"
+navItal[1].textContent = "Product"
+
+navItal[2].className = "italic"
+navItal[2].textContent = "Vision"
+
+navItal[3].className = "italic"
+navItal[3].textContent = "Features"
+
+navItal[4].className = "italic"
+navItal[4].textContent = "About"
+
+navItal[5].className = "italic"
+navItal[5].textContent = "Contact"
+
+document.querySelector('h1').textContent = "DOM Is Awesome"
+
+document.querySelector('button').textContent = "Get Started"
+
+img0.src = "http://localhost:9000/img/logo.png"
+
+document.querySelector('#cta-img').src = "http://localhost:9000/img/cta.png"
