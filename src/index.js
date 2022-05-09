@@ -39,4 +39,27 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
   },
 };
 
-console.log('project wired!')
+const logoImg = document.querySelector("#logo-img")
+const contentNav = document.querySelector(".container a");
+const cta = document.querySelector(".cta");
+const ctaImg = document.querySelector("#cta-img");
+//const mainContent = document.querySelector(".main-content");
+const midImg = document.querySelector("#middle-img");
+//const contact = document.querySelector("contact");
+//const footer = document.querySelector("footer");
+//const imgs = document.querySelector("images");
+
+logoImg.src = siteContent.images['logo-img']
+ctaImg.src = siteContent.images['cta-img']
+midImg.setAttribute('src', siteContent.images['accent-img']);
+contentNav.classList.add("italic");
+contentNav.textContent = siteContent["nav"]["nav-item-1"];
+contentNav.textContent = siteContent["nav"]["nav-item-2"];
+contentNav.textContent = siteContent["nav"]["nav-item-3"];
+contentNav.textContent = siteContent["nav"]["nav-item-4"];
+contentNav.textContent = siteContent["nav"]["nav-item-5"];
+contentNav.textContent = siteContent["nav"]["nav-item-6"];
+
+
+console.log(contentNav);
+console.log('project wired!');
