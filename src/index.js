@@ -87,15 +87,14 @@ pBottom[2].textContent = siteContent['main-content']['vision-content']
 document.querySelector('.cta .cta-text h1').textContent = siteContent.cta.h1
 document.querySelector('.cta .cta-text button').textContent = siteContent.cta.button
 
-const contentNav = document.querySelector(".container a");
-contentNav.classList.add("italic");
 
-contentNav.textContent = siteContent["nav"]["nav-item-2"];
-contentNav.textContent = siteContent["nav"]["nav-item-3"];
-contentNav.textContent = siteContent["nav"]["nav-item-4"];
-contentNav.textContent = siteContent["nav"]["nav-item-5"];
-contentNav.textContent = siteContent["nav"]["nav-item-6"];
+//Site Nav
+const navLinks = document.querySelectorAll('header nav a')
+const navLinksText = Object.values(siteContent.nav)
+navLinks.forEach((link, idx) => {
+  link.textContent = navLinksText[idx]
+  link.classList.add('italic')
+})
 
 
-console.log(contentNav);
 console.log('project wired!');
