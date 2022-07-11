@@ -40,29 +40,13 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 //header nav anchors
 const anchor = document.querySelectorAll('nav a');
-//Ask how to make more efficient
-anchor[0].textContent = siteContent.nav['nav-item-1']
-anchor[1].textContent = siteContent.nav['nav-item-2']
-anchor[2].textContent = siteContent.nav['nav-item-3']
-anchor[3].textContent = siteContent.nav['nav-item-4']
-anchor[4].textContent = siteContent.nav['nav-item-5']
-anchor[5].textContent = siteContent.nav['nav-item-6']
-// function loop(ele){
-//   for(let i = 0; i < anchor.length; i++){
-//      var inc = anchor[i]
-//      inc.textContent = siteContent.nav[ele]
-//      }
-// }
+//nav items in obj siteContent
+const navItems = Object.keys(siteContent.nav)
 
-// loop('nav-item-1')
-// loop('nav-item-2')
-// loop('nav-item-3')
-// loop('nav-item-4')
-// loop('nav-item-5')
-// loop('nav-item-6')
-
-//italic anchors in header
   for(let i = 0; i < anchor.length; i++){
+    //adding text content from navItems to every anchor tag
+    anchor[i].textContent = siteContent.nav[navItems[i]]
+    //adding class italic to every anchor tag
     anchor[i].setAttribute('class', 'italic')
   }
 
@@ -84,18 +68,23 @@ document.querySelector('.middle-img').setAttribute('src','http://localhost:9000/
 //h4 and the their child ps
 const h4 = document.querySelectorAll('h4');
 const h4Ps = document.querySelectorAll('p');
-//adding h4s
-h4[0].textContent = siteContent['main-content']['features-h4'];
-h4[1].textContent = siteContent['main-content']['about-h4'];
-h4[2].textContent = siteContent['main-content']['services-h4'];
-h4[3].textContent = siteContent['main-content']['product-h4'];
-h4[4].textContent = siteContent['main-content']['vision-h4'];
-//adding text to h4 ps
-h4Ps[0].textContent = siteContent['main-content']['features-content'];
-h4Ps[1].textContent = siteContent['main-content']['about-content'];
-h4Ps[2].textContent = siteContent['main-content']['services-content'];
-h4Ps[3].textContent = siteContent['main-content']['product-content'];
-h4Ps[4].textContent = siteContent['main-content']['vision-content'];
+//main-contents strings
+const h4s = Object.keys(siteContent["main-content"])
+//filtering every other index to recieve h4 content
+let h4Keys = h4s.filter((elem, i) => {
+  return i % 2 === 0;
+})
+//filtering every other index at index 1 to receive h4Ps content
+let h4PKeys = h4s.filter((elem, i) => {
+  return i % 2 === 1;
+})
+
+for(let i = 0; i < h4Keys.length; i++){
+  //looping through h4s to add textContent
+  h4[i].textContent = siteContent['main-content'][h4Keys[i]]
+  //looping through h4Ps to add textContent
+  h4Ps[i].textContent = siteContent['main-content'][h4PKeys[i]]
+}
 
 //footer anchor
 const footer = document.querySelector('footer a');
@@ -109,10 +98,15 @@ footer.setAttribute('class', 'bold')
 document.querySelector('.contact h4').textContent = siteContent.contact['contact-h4'];
 //selecting p elem
 const contactPs = document.querySelectorAll('.contact p');
-//adding text to p elem;
-contactPs[0].textContent = siteContent.contact['address'];
-contactPs[1].textContent = siteContent.contact['email'];
-contactPs[2].textContent = siteContent.contact['phone'];
+//strings in contact section of siteContent
+const contactPsKeys = Object.keys(siteContent.contact)
+//filtering out the h4 leaving us with the 3 ps in the contact class
+const newContactPsKeys = contactPsKeys.filter((elem,i) => i > 0)
+//adding text to p elems;
+for(let i = 0; i < newContactPsKeys.length; i++){
+  contactPs[i].textContent = siteContent.contact[newContactPsKeys[i]]
+}
+
 
 
 
