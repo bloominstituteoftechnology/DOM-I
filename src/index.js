@@ -38,5 +38,79 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
     "accent-img": "http://localhost:9000/img/accent.png",
   },
 };
+//header nav anchors
+const anchor = document.querySelectorAll('nav a');
+//nav items in obj siteContent
+const navItems = Object.keys(siteContent.nav)
 
-console.log('project wired!')
+  for(let i = 0; i < anchor.length; i++){
+    //adding text content from navItems to every anchor tag
+    anchor[i].textContent = siteContent.nav[navItems[i]]
+    //adding class italic to every anchor tag
+    anchor[i].setAttribute('class', 'italic')
+  }
+
+//cta button and header
+const h1 = document.querySelector('h1');
+const button = document.querySelector('button');
+h1.textContent = siteContent.cta.h1;
+button.textContent = siteContent.cta.button;
+
+//header img
+document.querySelector('header img').setAttribute('src','http://localhost:9000/img/logo.png');
+
+//section img
+document.querySelector('section img').setAttribute('src', 'http://localhost:9000/img/cta.png');
+
+//middle img
+document.querySelector('.middle-img').setAttribute('src','http://localhost:9000/img/accent.png');
+
+//h4 and the their child ps
+const h4 = document.querySelectorAll('h4');
+const h4Ps = document.querySelectorAll('p');
+//main-contents strings
+const h4s = Object.keys(siteContent["main-content"])
+//filtering every other index to recieve h4 content
+let h4Keys = h4s.filter((elem, i) => {
+  return i % 2 === 0;
+})
+//filtering every other index at index 1 to receive h4Ps content
+let h4PKeys = h4s.filter((elem, i) => {
+  return i % 2 === 1;
+})
+
+for(let i = 0; i < h4Keys.length; i++){
+  //looping through h4s to add textContent
+  h4[i].textContent = siteContent['main-content'][h4Keys[i]]
+  //looping through h4Ps to add textContent
+  h4Ps[i].textContent = siteContent['main-content'][h4PKeys[i]]
+}
+
+//footer anchor
+const footer = document.querySelector('footer a');
+//adding text to footer anchor
+footer.textContent = siteContent.footer['copyright'];
+//adding bold class to footer
+footer.setAttribute('class', 'bold')
+
+//contact section
+//selecting h4 elem and adding text to h4 
+document.querySelector('.contact h4').textContent = siteContent.contact['contact-h4'];
+//selecting p elem
+const contactPs = document.querySelectorAll('.contact p');
+//strings in contact section of siteContent
+const contactPsKeys = Object.keys(siteContent.contact)
+//filtering out the h4 leaving us with the 3 ps in the contact class
+const newContactPsKeys = contactPsKeys.filter((elem,i) => i > 0)
+//adding text to p elems;
+for(let i = 0; i < newContactPsKeys.length; i++){
+  contactPs[i].textContent = siteContent.contact[newContactPsKeys[i]]
+}
+
+
+
+
+
+
+
+
