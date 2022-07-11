@@ -38,5 +38,85 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
     "accent-img": "http://localhost:9000/img/accent.png",
   },
 };
+//header nav anchors
+const anchor = document.querySelectorAll('nav a');
+//Ask how to make more efficient
+anchor[0].textContent = siteContent.nav['nav-item-1']
+anchor[1].textContent = siteContent.nav['nav-item-2']
+anchor[2].textContent = siteContent.nav['nav-item-3']
+anchor[3].textContent = siteContent.nav['nav-item-4']
+anchor[4].textContent = siteContent.nav['nav-item-5']
+anchor[5].textContent = siteContent.nav['nav-item-6']
+// function loop(ele){
+//   for(let i = 0; i < anchor.length; i++){
+//      var inc = anchor[i]
+//      inc.textContent = siteContent.nav[ele]
+//      }
+// }
 
-console.log('project wired!')
+// loop('nav-item-1')
+// loop('nav-item-2')
+// loop('nav-item-3')
+// loop('nav-item-4')
+// loop('nav-item-5')
+// loop('nav-item-6')
+
+//italic anchors in header
+  for(let i = 0; i < anchor.length; i++){
+    anchor[i].setAttribute('class', 'italic')
+  }
+
+//cta button and header
+const h1 = document.querySelector('h1');
+const button = document.querySelector('button');
+h1.textContent = siteContent.cta.h1;
+button.textContent = siteContent.cta.button;
+
+//header img
+document.querySelector('header img').setAttribute('src','http://localhost:9000/img/logo.png');
+
+//section img
+document.querySelector('section img').setAttribute('src', 'http://localhost:9000/img/cta.png');
+
+//middle img
+document.querySelector('.middle-img').setAttribute('src','http://localhost:9000/img/accent.png');
+
+//h4 and the their child ps
+const h4 = document.querySelectorAll('h4');
+const h4Ps = document.querySelectorAll('p');
+//adding h4s
+h4[0].textContent = siteContent['main-content']['features-h4'];
+h4[1].textContent = siteContent['main-content']['about-h4'];
+h4[2].textContent = siteContent['main-content']['services-h4'];
+h4[3].textContent = siteContent['main-content']['product-h4'];
+h4[4].textContent = siteContent['main-content']['vision-h4'];
+//adding text to h4 ps
+h4Ps[0].textContent = siteContent['main-content']['features-content'];
+h4Ps[1].textContent = siteContent['main-content']['about-content'];
+h4Ps[2].textContent = siteContent['main-content']['services-content'];
+h4Ps[3].textContent = siteContent['main-content']['product-content'];
+h4Ps[4].textContent = siteContent['main-content']['vision-content'];
+
+//footer anchor
+const footer = document.querySelector('footer a');
+//adding text to footer anchor
+footer.textContent = siteContent.footer['copyright'];
+//adding bold class to footer
+footer.setAttribute('class', 'bold')
+
+//contact section
+//selecting h4 elem and adding text to h4 
+document.querySelector('.contact h4').textContent = siteContent.contact['contact-h4'];
+//selecting p elem
+const contactPs = document.querySelectorAll('.contact p');
+//adding text to p elem;
+contactPs[0].textContent = siteContent.contact['address'];
+contactPs[1].textContent = siteContent.contact['email'];
+contactPs[2].textContent = siteContent.contact['phone'];
+
+
+
+
+
+
+
