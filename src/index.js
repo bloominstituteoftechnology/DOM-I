@@ -40,3 +40,35 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+const anchorTags = document.querySelectorAll("header nav a")
+const anchorTagsText = Object.values(siteContent.nav)
+anchorTags.forEach((link, index) => {
+  link.textContent = anchorTagsText[index]
+  link.classList.add("italic")
+})
+
+const footerTags = document.querySelectorAll("footer a")
+const footerTagsText = Object.values(siteContent.footer)
+footerTags.forEach((link, index) => {
+  link.textContent = footerTagsText[index]
+  link.classList.add("bold")
+})
+
+const logoIMG = document.querySelector("#logo-img")
+logoIMG.setAttribute("src", siteContent.images["logo-img"])
+
+const ctaIMG = document.querySelector("#cta-img")
+ctaIMG.setAttribute("src", siteContent.images["cta-img"])
+
+const accentIMG = document.querySelector("#middle-img")
+accentIMG.setAttribute("src", siteContent.images["accent-img"])
+
+const ctaH1 = document.createElement("h1")
+const ctaButton = document.createElement("button")
+ctaH1.textContent = siteContent.cta["h1"]
+ctaButton.textContent = siteContent.cta["button"]
+document.querySelector(".cta").appendChild(ctaH1)
+document.querySelector(".cta").appendChild(ctaButton)
+
+
