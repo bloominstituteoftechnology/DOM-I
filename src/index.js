@@ -41,12 +41,44 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 
 console.log('project wired!')
 
+
+
+const topContent = document.querySelector(".top-content")
+topContent.children[0].children[0].textContent = siteContent["main-content"]["features-h4"]
+topContent.children[0].children[1].textContent = siteContent["main-content"]["features-content"]
+topContent.children[1].children[0].textContent = siteContent["main-content"]["about-h4"]
+topContent.children[1].children[1].textContent = siteContent["main-content"]["about-content"]
+
+const botomContent = document.querySelector(".bottom-content")
+botomContent.children[0].children[0].textContent = siteContent["main-content"]["services-h4"]
+botomContent.children[0].children[1].textContent = siteContent["main-content"]["services-content"]
+botomContent.children[1].children[0].textContent = siteContent["main-content"]["product-h4"]
+botomContent.children[1].children[1].textContent = siteContent["main-content"]["product-content"]
+botomContent.children[2].children[0].textContent = siteContent["main-content"]["vision-h4"]
+botomContent.children[2].children[1].textContent = siteContent["main-content"]["vision-content"]
+
+const contacts = document.querySelector(".contact")
+contacts.children[0].textContent = siteContent.contact["contact-h4"]
+contacts.children[1].textContent = siteContent.contact["address"]
+contacts.children[2].textContent = siteContent.contact["phone"]
+contacts.children[3].textContent = siteContent.contact["email"]
+
 const anchorTags = document.querySelectorAll("header nav a")
 const anchorTagsText = Object.values(siteContent.nav)
 anchorTags.forEach((link, index) => {
   link.textContent = anchorTagsText[index]
   link.classList.add("italic")
 })
+
+// const ctaH1 = document.createElement("h1")
+// const ctaButton = document.createElement("button")
+// ctaH1.textContent = siteContent.cta["h1"]
+// ctaButton.textContent = siteContent.cta["button"]
+// document.querySelector(".cta").appendChild(ctaH1)
+// document.querySelector(".cta").appendChild(ctaButton)
+const cta = document.querySelector(".cta-text")
+cta.children[0].textContent = siteContent.cta["h1"]
+cta.children[1].textContent = siteContent.cta["button"]
 
 const footerTags = document.querySelectorAll("footer a")
 const footerTagsText = Object.values(siteContent.footer)
@@ -64,11 +96,6 @@ ctaIMG.setAttribute("src", siteContent.images["cta-img"])
 const accentIMG = document.querySelector("#middle-img")
 accentIMG.setAttribute("src", siteContent.images["accent-img"])
 
-const ctaH1 = document.createElement("h1")
-const ctaButton = document.createElement("button")
-ctaH1.textContent = siteContent.cta["h1"]
-ctaButton.textContent = siteContent.cta["button"]
-document.querySelector(".cta").appendChild(ctaH1)
-document.querySelector(".cta").appendChild(ctaButton)
+
 
 
